@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetStandardWordRootRequest extends TeaModel {
     /**
+     * <p>The name of the word root.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,14 @@ public class GetStandardWordRootRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>Specifies whether to allow a null value to be returned when the word root does not exist. If set to false, an exception is thrown. Default value: true.</p>
+     */
     @NameInMap("Nullable")
     public Boolean nullable;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

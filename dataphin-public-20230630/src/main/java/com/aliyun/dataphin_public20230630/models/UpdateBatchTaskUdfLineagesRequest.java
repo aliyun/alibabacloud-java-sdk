@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateBatchTaskUdfLineagesRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateBatchTaskUdfLineagesRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The update instruction.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")
@@ -42,12 +44,14 @@ public class UpdateBatchTaskUdfLineagesRequest extends TeaModel {
 
     public static class UpdateBatchTaskUdfLineagesRequestUpdateCommandLineageGroupListInputLineageList extends TeaModel {
         /**
+         * <p>The list of lineage fields.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("ColumnList")
         public java.util.List<String> columnList;
 
         /**
+         * <p>The environment. Valid values: prod, dev, and auto.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -57,12 +61,14 @@ public class UpdateBatchTaskUdfLineagesRequest extends TeaModel {
         public String env;
 
         /**
+         * <p>Specifies whether to select the full table.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("FullTable")
         public Boolean fullTable;
 
         /**
+         * <p>The table name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -112,12 +118,14 @@ public class UpdateBatchTaskUdfLineagesRequest extends TeaModel {
 
     public static class UpdateBatchTaskUdfLineagesRequestUpdateCommandLineageGroupListOutputLineageList extends TeaModel {
         /**
+         * <p>The list of lineage fields.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("ColumnList")
         public java.util.List<String> columnList;
 
         /**
+         * <p>The environment. Valid values: prod, dev, and auto.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,12 +135,14 @@ public class UpdateBatchTaskUdfLineagesRequest extends TeaModel {
         public String env;
 
         /**
+         * <p>Specifies whether to select the full table.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("FullTable")
         public Boolean fullTable;
 
         /**
+         * <p>The table name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,12 +192,14 @@ public class UpdateBatchTaskUdfLineagesRequest extends TeaModel {
 
     public static class UpdateBatchTaskUdfLineagesRequestUpdateCommandLineageGroupList extends TeaModel {
         /**
+         * <p>The collection of lineage input tables.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("InputLineageList")
         public java.util.List<UpdateBatchTaskUdfLineagesRequestUpdateCommandLineageGroupListInputLineageList> inputLineageList;
 
         /**
+         * <p>The collection of lineage output tables.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("OutputLineageList")
@@ -218,6 +230,7 @@ public class UpdateBatchTaskUdfLineagesRequest extends TeaModel {
 
     public static class UpdateBatchTaskUdfLineagesRequestUpdateCommand extends TeaModel {
         /**
+         * <p>The node ID in the logical definition subtree.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -227,12 +240,14 @@ public class UpdateBatchTaskUdfLineagesRequest extends TeaModel {
         public Long fileId;
 
         /**
+         * <p>The list of lineage groups.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("LineageGroupList")
         public java.util.List<UpdateBatchTaskUdfLineagesRequestUpdateCommandLineageGroupList> lineageGroupList;
 
         /**
+         * <p>The project to which the node belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

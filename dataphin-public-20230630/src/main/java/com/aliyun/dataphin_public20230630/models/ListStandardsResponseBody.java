@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListStandardsResponseBody extends TeaModel {
     /**
+     * <p>Backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ListStandardsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,12 +23,17 @@ public class ListStandardsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Details of the backend response error.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Paginated query result.</p>
+     */
     @NameInMap("PageResult")
     public ListStandardsResponseBodyPageResult pageResult;
 
@@ -37,6 +46,9 @@ public class ListStandardsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -95,16 +107,23 @@ public class ListStandardsResponseBody extends TeaModel {
 
     public static class ListStandardsResponseBodyPageResultStandardListAttributeWithValueListAttributeMonitorConfig extends TeaModel {
         /**
+         * <p>Column to check.</p>
+         * 
          * <strong>example:</strong>
          * <p>column1</p>
          */
         @NameInMap("ColumnName")
         public String columnName;
 
+        /**
+         * <p>Whether case-sensitive.</p>
+         */
         @NameInMap("IsCaseSensitive")
         public Boolean isCaseSensitive;
 
         /**
+         * <p>Monitor type: METADATA for metadata monitoring, QUALITY for data quality monitoring.</p>
+         * 
          * <strong>example:</strong>
          * <p>METADATA</p>
          */
@@ -144,6 +163,8 @@ public class ListStandardsResponseBody extends TeaModel {
 
     public static class ListStandardsResponseBodyPageResultStandardListAttributeWithValueListAttributeRefAttributeAttributeFromInfoStandardReference extends TeaModel {
         /**
+         * <p>Standard ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>22</p>
          */
@@ -151,6 +172,8 @@ public class ListStandardsResponseBody extends TeaModel {
         public Long standardId;
 
         /**
+         * <p>Version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -182,12 +205,17 @@ public class ListStandardsResponseBody extends TeaModel {
 
     public static class ListStandardsResponseBodyPageResultStandardListAttributeWithValueListAttributeRefAttributeAttributeFromInfo extends TeaModel {
         /**
+         * <p>Attribute source: SYSTEM for system attribute, CUSTOM for custom attribute, STANDARD for standard.</p>
+         * 
          * <strong>example:</strong>
          * <p>CUSTOM</p>
          */
         @NameInMap("AttributeFrom")
         public String attributeFrom;
 
+        /**
+         * <p>Corresponding standard, effective when attribute source is STANDARD.</p>
+         */
         @NameInMap("StandardReference")
         public ListStandardsResponseBodyPageResultStandardListAttributeWithValueListAttributeRefAttributeAttributeFromInfoStandardReference standardReference;
 
@@ -215,10 +243,15 @@ public class ListStandardsResponseBody extends TeaModel {
     }
 
     public static class ListStandardsResponseBodyPageResultStandardListAttributeWithValueListAttributeRefAttribute extends TeaModel {
+        /**
+         * <p>Attribute source.</p>
+         */
         @NameInMap("AttributeFromInfo")
         public ListStandardsResponseBodyPageResultStandardListAttributeWithValueListAttributeRefAttributeAttributeFromInfo attributeFromInfo;
 
         /**
+         * <p>Attribute ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -250,6 +283,8 @@ public class ListStandardsResponseBody extends TeaModel {
 
     public static class ListStandardsResponseBodyPageResultStandardListAttributeWithValueListAttributeValueConfigValueRangeLookupTableReference extends TeaModel {
         /**
+         * <p>Referenced lookup table column.</p>
+         * 
          * <strong>example:</strong>
          * <p>col1</p>
          */
@@ -257,6 +292,8 @@ public class ListStandardsResponseBody extends TeaModel {
         public String column;
 
         /**
+         * <p>Lookup table ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>11</p>
          */
@@ -287,13 +324,21 @@ public class ListStandardsResponseBody extends TeaModel {
     }
 
     public static class ListStandardsResponseBodyPageResultStandardListAttributeWithValueListAttributeValueConfigValueRangeMinMaxValueConfig extends TeaModel {
+        /**
+         * <p>Whether to include the maximum value.</p>
+         */
         @NameInMap("IncludeMaxValue")
         public Boolean includeMaxValue;
 
+        /**
+         * <p>Whether to include the minimum value.</p>
+         */
         @NameInMap("IncludeMinValue")
         public Boolean includeMinValue;
 
         /**
+         * <p>Maximum value.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -301,6 +346,8 @@ public class ListStandardsResponseBody extends TeaModel {
         public String maxValue;
 
         /**
+         * <p>Minimum value.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -348,25 +395,38 @@ public class ListStandardsResponseBody extends TeaModel {
 
     public static class ListStandardsResponseBodyPageResultStandardListAttributeWithValueListAttributeValueConfigValueRange extends TeaModel {
         /**
+         * <p>Value range, effective when value constraint is DATAPHIN_ATTRIBUTE: BIZ_UNIT for data business unit, PROJECT for project, USER for user, USER_GROUP for user group.</p>
+         * 
          * <strong>example:</strong>
          * <p>DATAPHIN_ATTRIBUTE</p>
          */
         @NameInMap("DataphinAttributeType")
         public String dataphinAttributeType;
 
+        /**
+         * <p>Value range, effective when value constraint is LOOKUP_TABLE.</p>
+         */
         @NameInMap("LookupTableReference")
         public ListStandardsResponseBodyPageResultStandardListAttributeWithValueListAttributeValueConfigValueRangeLookupTableReference lookupTableReference;
 
+        /**
+         * <p>Value range, effective when value constraint is MIN_MAX.</p>
+         */
         @NameInMap("MinMaxValueConfig")
         public ListStandardsResponseBodyPageResultStandardListAttributeWithValueListAttributeValueConfigValueRangeMinMaxValueConfig minMaxValueConfig;
 
         /**
+         * <p>Value constraint: NONE for no constraint, LIST for obtaining from a list, LOOKUP_TABLE for lookup table, MIN_MAX for values between minimum and maximum, DATAPHIN_ATTRIBUTE for Dataphin system attribute, BUILT_IN_DATA_TYPES for built-in data types, BUILT_IN_DATA_CLASSIFICATION for built-in data classification, BUILT_IN_DATA_LEVEL for built-in data security level.</p>
+         * 
          * <strong>example:</strong>
          * <p>NONE</p>
          */
         @NameInMap("ValueConstraint")
         public String valueConstraint;
 
+        /**
+         * <p>Value range, effective when value constraint is LIST.</p>
+         */
         @NameInMap("ValueList")
         public java.util.List<String> valueList;
 
@@ -419,6 +479,8 @@ public class ListStandardsResponseBody extends TeaModel {
 
     public static class ListStandardsResponseBodyPageResultStandardListAttributeWithValueListAttributeValueConfig extends TeaModel {
         /**
+         * <p>Data type of the attribute value: STRING for string, BIGINT for numeric type, DOUBLE for floating-point type, DATE for date accurate to day, DATETIME for date accurate to milliseconds, BOOLEAN for boolean.</p>
+         * 
          * <strong>example:</strong>
          * <p>STRING</p>
          */
@@ -426,6 +488,8 @@ public class ListStandardsResponseBody extends TeaModel {
         public String dataType;
 
         /**
+         * <p>Default value.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -433,6 +497,8 @@ public class ListStandardsResponseBody extends TeaModel {
         public String defaultValue;
 
         /**
+         * <p>Attribute value length. If empty or -1, the length is not limited. Typically, only string types limit the attribute value length.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -440,12 +506,17 @@ public class ListStandardsResponseBody extends TeaModel {
         public Integer length;
 
         /**
+         * <p>Attribute value type: CUSTOMIZED for custom input, SINGLE_ENUM for single enumeration value, MULTIPLE_ENUMS for multiple enumeration values, RANGE for range value.</p>
+         * 
          * <strong>example:</strong>
          * <p>CUSTOMIZED</p>
          */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>Value range.</p>
+         */
         @NameInMap("ValueRange")
         public ListStandardsResponseBodyPageResultStandardListAttributeWithValueListAttributeValueConfigValueRange valueRange;
 
@@ -498,6 +569,8 @@ public class ListStandardsResponseBody extends TeaModel {
 
     public static class ListStandardsResponseBodyPageResultStandardListAttributeWithValueListAttribute extends TeaModel {
         /**
+         * <p>Attribute code.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_attr</p>
          */
@@ -505,45 +578,68 @@ public class ListStandardsResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>Description.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Whether to enable monitor configuration.</p>
+         */
         @NameInMap("EnableMonitorConfig")
         public Boolean enableMonitorConfig;
 
         /**
+         * <p>Attribute ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1011</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>Monitor configuration.</p>
+         */
         @NameInMap("MonitorConfig")
         public ListStandardsResponseBodyPageResultStandardListAttributeWithValueListAttributeMonitorConfig monitorConfig;
 
         /**
+         * <p>Attribute name.</p>
+         * 
          * <strong>example:</strong>
          * <p>attr1</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Referenced attribute information.</p>
+         */
         @NameInMap("RefAttribute")
         public ListStandardsResponseBodyPageResultStandardListAttributeWithValueListAttributeRefAttribute refAttribute;
 
+        /**
+         * <p>Whether it is required.</p>
+         */
         @NameInMap("Required")
         public Boolean required;
 
         /**
+         * <p>Attribute type: BIZ_ATTRIBUTE for business attribute, TECH_ATTRIBUTE for technical attribute, MANAGEMENT_ATTRIBUTE for management attribute, QUALITY_ATTRIBUTE for quality attribute, MASTER_DATA_ATTRIBUTE for master data attribute, LIFECYCLE_ATTRIBUTE for lifecycle attribute, SECURITY_ATTRIBUTE for security attribute.</p>
+         * 
          * <strong>example:</strong>
          * <p>BIZ_ATTRIBUTE</p>
          */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>Value configuration.</p>
+         */
         @NameInMap("ValueConfig")
         public ListStandardsResponseBodyPageResultStandardListAttributeWithValueListAttributeValueConfig valueConfig;
 
@@ -635,10 +731,15 @@ public class ListStandardsResponseBody extends TeaModel {
     }
 
     public static class ListStandardsResponseBodyPageResultStandardListAttributeWithValueList extends TeaModel {
+        /**
+         * <p>Attribute details.</p>
+         */
         @NameInMap("Attribute")
         public ListStandardsResponseBodyPageResultStandardListAttributeWithValueListAttribute attribute;
 
         /**
+         * <p>Attribute value.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -670,6 +771,8 @@ public class ListStandardsResponseBody extends TeaModel {
 
     public static class ListStandardsResponseBodyPageResultStandardListCreator extends TeaModel {
         /**
+         * <p>User ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>300000913</p>
          */
@@ -677,6 +780,8 @@ public class ListStandardsResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>User name.</p>
+         * 
          * <strong>example:</strong>
          * <p>susan</p>
          */
@@ -708,6 +813,8 @@ public class ListStandardsResponseBody extends TeaModel {
 
     public static class ListStandardsResponseBodyPageResultStandardListEffectiveTimeConfig extends TeaModel {
         /**
+         * <p>End time of the effective period.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-12-30 00:00:00</p>
          */
@@ -715,6 +822,8 @@ public class ListStandardsResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>Start time of the effective period.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
          */
@@ -722,6 +831,8 @@ public class ListStandardsResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>Effective time type: FOREVER for permanent, TIME_PERIOD for a time period.</p>
+         * 
          * <strong>example:</strong>
          * <p>TIME_PERIOD</p>
          */
@@ -761,6 +872,8 @@ public class ListStandardsResponseBody extends TeaModel {
 
     public static class ListStandardsResponseBodyPageResultStandardListLastModifier extends TeaModel {
         /**
+         * <p>User ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>300000913</p>
          */
@@ -768,6 +881,8 @@ public class ListStandardsResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>User name.</p>
+         * 
          * <strong>example:</strong>
          * <p>susan</p>
          */
@@ -799,6 +914,8 @@ public class ListStandardsResponseBody extends TeaModel {
 
     public static class ListStandardsResponseBodyPageResultStandardListOwner extends TeaModel {
         /**
+         * <p>User ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>300000913</p>
          */
@@ -806,6 +923,8 @@ public class ListStandardsResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>User name.</p>
+         * 
          * <strong>example:</strong>
          * <p>susan</p>
          */
@@ -837,6 +956,8 @@ public class ListStandardsResponseBody extends TeaModel {
 
     public static class ListStandardsResponseBodyPageResultStandardListStandardSet extends TeaModel {
         /**
+         * <p>Standard set code.</p>
+         * 
          * <strong>example:</strong>
          * <p>cc</p>
          */
@@ -844,6 +965,8 @@ public class ListStandardsResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>Directory of the standard set.</p>
+         * 
          * <strong>example:</strong>
          * <p>/dir1</p>
          */
@@ -851,6 +974,8 @@ public class ListStandardsResponseBody extends TeaModel {
         public String directory;
 
         /**
+         * <p>Standard set ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -858,6 +983,8 @@ public class ListStandardsResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>Standard set name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -905,6 +1032,8 @@ public class ListStandardsResponseBody extends TeaModel {
 
     public static class ListStandardsResponseBodyPageResultStandardListStandardTemplate extends TeaModel {
         /**
+         * <p>Standard template code.</p>
+         * 
          * <strong>example:</strong>
          * <p>1121</p>
          */
@@ -912,6 +1041,8 @@ public class ListStandardsResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>Standard template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -919,6 +1050,8 @@ public class ListStandardsResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>Standard template name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -926,6 +1059,8 @@ public class ListStandardsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Standard template source: CUSTOM for custom standard templates, SYSTEM for system built-in standard templates.</p>
+         * 
          * <strong>example:</strong>
          * <p>SYSTEM</p>
          */
@@ -933,6 +1068,8 @@ public class ListStandardsResponseBody extends TeaModel {
         public String templateFrom;
 
         /**
+         * <p>Version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -987,30 +1124,45 @@ public class ListStandardsResponseBody extends TeaModel {
     }
 
     public static class ListStandardsResponseBodyPageResultStandardList extends TeaModel {
+        /**
+         * <p>Attribute value configuration list.</p>
+         */
         @NameInMap("AttributeWithValueList")
         public java.util.List<ListStandardsResponseBodyPageResultStandardListAttributeWithValueList> attributeWithValueList;
 
         /**
+         * <p>Standard code.</p>
+         * 
          * <strong>example:</strong>
          * <p>zz</p>
          */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>Creator.</p>
+         */
         @NameInMap("Creator")
         public ListStandardsResponseBodyPageResultStandardListCreator creator;
 
         /**
+         * <p>Description.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Effective time configuration.</p>
+         */
         @NameInMap("EffectiveTimeConfig")
         public ListStandardsResponseBodyPageResultStandardListEffectiveTimeConfig effectiveTimeConfig;
 
         /**
+         * <p>Standard English name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -1018,16 +1170,23 @@ public class ListStandardsResponseBody extends TeaModel {
         public String englishName;
 
         /**
+         * <p>Standard ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>Last modifier.</p>
+         */
         @NameInMap("LastModifier")
         public ListStandardsResponseBodyPageResultStandardListLastModifier lastModifier;
 
         /**
+         * <p>Last modified time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
          */
@@ -1035,29 +1194,44 @@ public class ListStandardsResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
+         * <p>Standard name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Owner.</p>
+         */
         @NameInMap("Owner")
         public ListStandardsResponseBodyPageResultStandardListOwner owner;
 
         /**
+         * <p>Stage of the standard.</p>
+         * 
          * <strong>example:</strong>
          * <p>dev</p>
          */
         @NameInMap("Stage")
         public String stage;
 
+        /**
+         * <p>Standard set that the current standard depends on.</p>
+         */
         @NameInMap("StandardSet")
         public ListStandardsResponseBodyPageResultStandardListStandardSet standardSet;
 
+        /**
+         * <p>Standard template that the current standard depends on.</p>
+         */
         @NameInMap("StandardTemplate")
         public ListStandardsResponseBodyPageResultStandardListStandardTemplate standardTemplate;
 
         /**
+         * <p>Status of the standard.</p>
+         * 
          * <strong>example:</strong>
          * <p>draft</p>
          */
@@ -1065,6 +1239,8 @@ public class ListStandardsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>Standard type.</p>
+         * 
          * <strong>example:</strong>
          * <p>zz</p>
          */
@@ -1072,6 +1248,8 @@ public class ListStandardsResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>Version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -1222,10 +1400,15 @@ public class ListStandardsResponseBody extends TeaModel {
     }
 
     public static class ListStandardsResponseBodyPageResult extends TeaModel {
+        /**
+         * <p>Standard list.</p>
+         */
         @NameInMap("StandardList")
         public java.util.List<ListStandardsResponseBodyPageResultStandardList> standardList;
 
         /**
+         * <p>Total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>68</p>
          */

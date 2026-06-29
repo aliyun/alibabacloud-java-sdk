@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteStandardRelationsRequest extends TeaModel {
     /**
+     * <p>The delete instruction.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeleteCommand")
     public DeleteStandardRelationsRequestDeleteCommand deleteCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,7 @@ public class DeleteStandardRelationsRequest extends TeaModel {
 
     public static class DeleteStandardRelationsRequestDeleteCommandStandardRefList extends TeaModel {
         /**
+         * <p>The standard ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -67,6 +70,7 @@ public class DeleteStandardRelationsRequest extends TeaModel {
 
     public static class DeleteStandardRelationsRequestDeleteCommand extends TeaModel {
         /**
+         * <p>The standard association type: RELATIVE.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -76,6 +80,7 @@ public class DeleteStandardRelationsRequest extends TeaModel {
         public String relationType;
 
         /**
+         * <p>The standard ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -85,6 +90,7 @@ public class DeleteStandardRelationsRequest extends TeaModel {
         public Long standardId;
 
         /**
+         * <p>The list of referenced standards.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("StandardRefList")

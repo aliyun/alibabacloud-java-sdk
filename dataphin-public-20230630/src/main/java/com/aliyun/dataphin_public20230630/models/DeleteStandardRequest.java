@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteStandardRequest extends TeaModel {
     /**
+     * <p>The delete command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeleteCommand")
     public DeleteStandardRequestDeleteCommand deleteCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,7 @@ public class DeleteStandardRequest extends TeaModel {
 
     public static class DeleteStandardRequestDeleteCommand extends TeaModel {
         /**
+         * <p>The standard ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

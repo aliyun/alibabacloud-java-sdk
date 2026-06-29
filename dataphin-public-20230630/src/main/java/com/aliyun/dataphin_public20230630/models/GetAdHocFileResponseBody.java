@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetAdHocFileResponseBody extends TeaModel {
     /**
+     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The details of the custom query file.</p>
+     */
     @NameInMap("FileInfo")
     public GetAdHocFileResponseBodyFileInfo fileInfo;
 
     /**
+     * <p>The HTTP status code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetAdHocFileResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,12 +38,17 @@ public class GetAdHocFileResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -93,6 +107,8 @@ public class GetAdHocFileResponseBody extends TeaModel {
 
     public static class GetAdHocFileResponseBodyFileInfo extends TeaModel {
         /**
+         * <p>The file content.</p>
+         * 
          * <strong>example:</strong>
          * <p>select 1;</p>
          */
@@ -100,6 +116,8 @@ public class GetAdHocFileResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>The creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>12121</p>
          */
@@ -107,6 +125,8 @@ public class GetAdHocFileResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>The directory where the file is located.</p>
+         * 
          * <strong>example:</strong>
          * <p>/xx1/xx2/</p>
          */
@@ -114,6 +134,8 @@ public class GetAdHocFileResponseBody extends TeaModel {
         public String directory;
 
         /**
+         * <p>The file ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>12121111</p>
          */
@@ -121,6 +143,8 @@ public class GetAdHocFileResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The last modifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>12121</p>
          */
@@ -128,6 +152,8 @@ public class GetAdHocFileResponseBody extends TeaModel {
         public String lastModifier;
 
         /**
+         * <p>The file name.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx测试</p>
          */
@@ -135,6 +161,8 @@ public class GetAdHocFileResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>12132323</p>
          */

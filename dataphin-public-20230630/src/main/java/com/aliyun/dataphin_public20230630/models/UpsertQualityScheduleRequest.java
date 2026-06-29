@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpsertQualityScheduleRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpsertQualityScheduleRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The update instruction.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpsertCommand")
@@ -42,6 +44,8 @@ public class UpsertQualityScheduleRequest extends TeaModel {
 
     public static class UpsertQualityScheduleRequestUpsertCommand extends TeaModel {
         /**
+         * <p>The cron expression for timed scheduling.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li><ul>
@@ -54,6 +58,8 @@ public class UpsertQualityScheduleRequest extends TeaModel {
         public String cronExpression;
 
         /**
+         * <p>The ID of the schedule resource. If specified, the operation updates the existing resource. If not specified, the operation creates a new resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -61,6 +67,7 @@ public class UpsertQualityScheduleRequest extends TeaModel {
         public Long id;
 
         /**
+         * <p>The name of the schedule resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -70,6 +77,8 @@ public class UpsertQualityScheduleRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The partition expression for custom expressions.</p>
+         * 
          * <strong>example:</strong>
          * <p>ds=${yyyyMMdd}</p>
          */
@@ -77,6 +86,15 @@ public class UpsertQualityScheduleRequest extends TeaModel {
         public String partitionExpression;
 
         /**
+         * <p>The partition type. Valid values:</p>
+         * <ul>
+         * <li>EVERY_DAY: every day.</li>
+         * <li>PRE_DAY: previous day.</li>
+         * <li>TODAY: current day.</li>
+         * <li>FIRST_DAY_OF_WEEK: first day of the week (Sunday).</li>
+         * <li>CUSTOM: custom.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CUSTOM</p>
          */
@@ -84,26 +102,54 @@ public class UpsertQualityScheduleRequest extends TeaModel {
         public String partitionType;
 
         /**
+         * <p>The scheduling interval type for timed scheduling. Valid values:</p>
+         * <ul>
+         * <li>DAILY: day.</li>
+         * <li>WEEKLY: week.</li>
+         * <li>MONTHLY: month.</li>
+         * <li>HOURLY: hour.</li>
+         * <li>MINUTELY: minute.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>DAILY</p>
          */
         @NameInMap("PeriodScheduleIntervalType")
         public String periodScheduleIntervalType;
 
+        /**
+         * <p>The scheduling interval values for timed scheduling.</p>
+         */
         @NameInMap("PeriodScheduleParamList")
         public java.util.List<String> periodScheduleParamList;
 
         /**
+         * <p>The trigger method for fixed task triggers. Valid values:</p>
+         * <ul>
+         * <li>ALL_TASKS_FINISHED</li>
+         * <li>ONE_TASKS_FINISHED</li>
+         * <li>PRE_ONE_TASKS_START.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ONE_TASKS_FINISHED</p>
          */
         @NameInMap("StaticTaskTriggerType")
         public String staticTaskTriggerType;
 
+        /**
+         * <p>The checklist of trigger nodes for trigger scheduling.</p>
+         */
         @NameInMap("TriggerNodeList")
         public java.util.List<String> triggerNodeList;
 
         /**
+         * <p>The trigger method for trigger scheduling. Valid values:</p>
+         * <ul>
+         * <li>STATIC_TASK_TRIGGER: fixed task trigger.</li>
+         * <li>CODE_CHECK_TRIGGER: code check trigger.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>STATIC_TASK_TRIGGER</p>
          */
@@ -111,6 +157,14 @@ public class UpsertQualityScheduleRequest extends TeaModel {
         public String triggerType;
 
         /**
+         * <p>The scheduling type. Valid values:</p>
+         * <ul>
+         * <li>PERIOD_SCHEDULE: timed scheduling.</li>
+         * <li>MANUAL_SCHEDULE: manual trigger.</li>
+         * <li>CODE_CHECK_TRIGGER: code check trigger.</li>
+         * <li>STATIC_TASK_TRIGGER: fixed task trigger.</li>
+         * <li>DEPENDENCY_SCHEDULE: dependency scheduling.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -120,6 +174,12 @@ public class UpsertQualityScheduleRequest extends TeaModel {
         public String type;
 
         /**
+         * <p>The validation scope. Valid values:</p>
+         * <ul>
+         * <li>TASK_REFERRED_PARTITION: task update partition.</li>
+         * <li>USER_DEFINED_PARTITION: custom partition.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>TASK_REFERRED_PARTITION</p>
          */
@@ -127,6 +187,7 @@ public class UpsertQualityScheduleRequest extends TeaModel {
         public String validatePartitionType;
 
         /**
+         * <p>The ID of the monitored object.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

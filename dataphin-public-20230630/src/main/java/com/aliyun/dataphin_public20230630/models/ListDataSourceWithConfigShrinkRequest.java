@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListDataSourceWithConfigShrinkRequest extends TeaModel {
     /**
+     * <p>Paginated query</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ListQuery")
     public String listQueryShrink;
 
     /**
+     * <p>Tenant ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

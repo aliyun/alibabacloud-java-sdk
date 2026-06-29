@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteRegisterLineageRequest extends TeaModel {
     /**
+     * <p>The command for deleting registered lineage.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeleteRegisterLineageCommand")
     public DeleteRegisterLineageRequestDeleteRegisterLineageCommand deleteRegisterLineageCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,8 @@ public class DeleteRegisterLineageRequest extends TeaModel {
 
     public static class DeleteRegisterLineageRequestDeleteRegisterLineageCommandDetailedLineagesSource extends TeaModel {
         /**
+         * <p>The catalog asset property. For tables, the catalog of both compute source tables and logical tables is uniformly set to dataphin. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+         * 
          * <strong>example:</strong>
          * <p>dataphin</p>
          */
@@ -49,16 +53,23 @@ public class DeleteRegisterLineageRequest extends TeaModel {
         public String catalog;
 
         /**
+         * <p>The environment to which the asset belongs. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+         * 
          * <strong>example:</strong>
          * <p>DEV, PROD</p>
          */
         @NameInMap("Env")
         public String env;
 
+        /**
+         * <p>The extended properties.</p>
+         */
         @NameInMap("ExtProperties")
         public java.util.Map<String, ?> extProperties;
 
         /**
+         * <p>The GUID of the asset. This parameter is required when referenceType is set to BY_GUID.</p>
+         * 
          * <strong>example:</strong>
          * <p>odps.300000001.project1.table1</p>
          */
@@ -66,6 +77,8 @@ public class DeleteRegisterLineageRequest extends TeaModel {
         public String guid;
 
         /**
+         * <p>The asset type. Set this parameter based on the actual scenario.</p>
+         * 
          * <strong>example:</strong>
          * <p>COLUMN</p>
          */
@@ -73,6 +86,8 @@ public class DeleteRegisterLineageRequest extends TeaModel {
         public String metadataType;
 
         /**
+         * <p>The name of the asset. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+         * 
          * <strong>example:</strong>
          * <p>column1</p>
          */
@@ -80,6 +95,8 @@ public class DeleteRegisterLineageRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The GUID of the parent asset. If the current object is a field, parentGuid is the GUID of the table to which the field belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>odps.300000001.project1.table1</p>
          */
@@ -87,6 +104,8 @@ public class DeleteRegisterLineageRequest extends TeaModel {
         public String parentGuid;
 
         /**
+         * <p>The asset reference data type. Valid values: BY_GUID, BY_PROPERTY.</p>
+         * 
          * <strong>example:</strong>
          * <p>BY_GUID, BY_PROPERTY</p>
          */
@@ -94,6 +113,8 @@ public class DeleteRegisterLineageRequest extends TeaModel {
         public String referenceType;
 
         /**
+         * <p>The schema asset property. For tables, this is typically the project or business unit. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+         * 
          * <strong>example:</strong>
          * <p>project1, bizUnit1</p>
          */
@@ -181,6 +202,8 @@ public class DeleteRegisterLineageRequest extends TeaModel {
 
     public static class DeleteRegisterLineageRequestDeleteRegisterLineageCommandDetailedLineagesTarget extends TeaModel {
         /**
+         * <p>The catalog asset property. For tables, the catalog of both compute source tables and logical tables is uniformly set to dataphin. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+         * 
          * <strong>example:</strong>
          * <p>dataphin</p>
          */
@@ -188,16 +211,23 @@ public class DeleteRegisterLineageRequest extends TeaModel {
         public String catalog;
 
         /**
+         * <p>The environment to which the asset belongs. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+         * 
          * <strong>example:</strong>
          * <p>DEV, PROD</p>
          */
         @NameInMap("Env")
         public String env;
 
+        /**
+         * <p>The extended properties.</p>
+         */
         @NameInMap("ExtProperties")
         public java.util.Map<String, ?> extProperties;
 
         /**
+         * <p>The GUID of the asset. This parameter is required when referenceType is set to BY_GUID.</p>
+         * 
          * <strong>example:</strong>
          * <p>odps.300000001.project1.table1</p>
          */
@@ -205,6 +235,8 @@ public class DeleteRegisterLineageRequest extends TeaModel {
         public String guid;
 
         /**
+         * <p>The asset type. Set this parameter based on the actual scenario.</p>
+         * 
          * <strong>example:</strong>
          * <p>COLUMN</p>
          */
@@ -212,6 +244,8 @@ public class DeleteRegisterLineageRequest extends TeaModel {
         public String metadataType;
 
         /**
+         * <p>The name of the asset. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+         * 
          * <strong>example:</strong>
          * <p>column1</p>
          */
@@ -219,6 +253,8 @@ public class DeleteRegisterLineageRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The GUID of the parent asset. If the current object is a field, parentGuid is the GUID of the table to which the field belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>odps.300000001.project1.table1</p>
          */
@@ -226,6 +262,8 @@ public class DeleteRegisterLineageRequest extends TeaModel {
         public String parentGuid;
 
         /**
+         * <p>The asset reference data type. Valid values: BY_GUID, BY_PROPERTY.</p>
+         * 
          * <strong>example:</strong>
          * <p>BY_GUID, BY_PROPERTY</p>
          */
@@ -233,6 +271,8 @@ public class DeleteRegisterLineageRequest extends TeaModel {
         public String referenceType;
 
         /**
+         * <p>The schema asset property. For tables, this is typically the project or business unit. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+         * 
          * <strong>example:</strong>
          * <p>project1, bizUnit1</p>
          */
@@ -319,16 +359,21 @@ public class DeleteRegisterLineageRequest extends TeaModel {
     }
 
     public static class DeleteRegisterLineageRequestDeleteRegisterLineageCommandDetailedLineages extends TeaModel {
+        /**
+         * <p>Specifies whether the lineage is direct. Default value: true.</p>
+         */
         @NameInMap("IsDirect")
         public Boolean isDirect;
 
         /**
+         * <p>The source asset reference.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Source")
         public DeleteRegisterLineageRequestDeleteRegisterLineageCommandDetailedLineagesSource source;
 
         /**
+         * <p>The target asset reference.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Target")
@@ -367,6 +412,8 @@ public class DeleteRegisterLineageRequest extends TeaModel {
 
     public static class DeleteRegisterLineageRequestDeleteRegisterLineageCommandSource extends TeaModel {
         /**
+         * <p>The catalog asset property. For tables, the catalog of both compute source tables and logical tables is uniformly set to dataphin. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+         * 
          * <strong>example:</strong>
          * <p>dataphin</p>
          */
@@ -374,16 +421,23 @@ public class DeleteRegisterLineageRequest extends TeaModel {
         public String catalog;
 
         /**
+         * <p>The environment to which the asset belongs. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+         * 
          * <strong>example:</strong>
          * <p>DEV, PROD</p>
          */
         @NameInMap("Env")
         public String env;
 
+        /**
+         * <p>The extended properties.</p>
+         */
         @NameInMap("ExtProperties")
         public java.util.Map<String, ?> extProperties;
 
         /**
+         * <p>The GUID of the asset. This parameter is required when referenceType is set to BY_GUID.</p>
+         * 
          * <strong>example:</strong>
          * <p>odps.300000001.project1.table1</p>
          */
@@ -391,6 +445,8 @@ public class DeleteRegisterLineageRequest extends TeaModel {
         public String guid;
 
         /**
+         * <p>The asset subtype. Specify this parameter only when metadataType is set to TABLE and referenceType is not set to BY_GUID.</p>
+         * 
          * <strong>example:</strong>
          * <p>PHYSICAL_TABLE, PHYSICAL_VIEW, PHYSICAL_MATERIALIZED_VIEW, DATASOURCE_TABLE, DATASOURCE_VIEW, DATASOURCE_MATERIALIZED_VIEW, DIM_NORMAL, DIM_LEVEL, DIM_ENUM, DIM_VIRTUAL, FACT_EVENT, FACT_PROCESS, FACT_SNAPSHOT, SUM_BIZ_UNIT</p>
          */
@@ -398,6 +454,7 @@ public class DeleteRegisterLineageRequest extends TeaModel {
         public String metadataSubType;
 
         /**
+         * <p>The asset type. Set this parameter based on the actual scenario.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -407,6 +464,8 @@ public class DeleteRegisterLineageRequest extends TeaModel {
         public String metadataType;
 
         /**
+         * <p>The name of the asset. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+         * 
          * <strong>example:</strong>
          * <p>table1</p>
          */
@@ -414,6 +473,7 @@ public class DeleteRegisterLineageRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The asset reference data type. Valid values: BY_GUID, BY_PROPERTY.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -423,6 +483,8 @@ public class DeleteRegisterLineageRequest extends TeaModel {
         public String referenceType;
 
         /**
+         * <p>The schema asset property. For tables, this is typically the project or business unit. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+         * 
          * <strong>example:</strong>
          * <p>project1, bizUnit1</p>
          */
@@ -510,6 +572,8 @@ public class DeleteRegisterLineageRequest extends TeaModel {
 
     public static class DeleteRegisterLineageRequestDeleteRegisterLineageCommandTarget extends TeaModel {
         /**
+         * <p>The catalog asset property. For tables, the catalog of both compute source tables and logical tables is uniformly set to dataphin. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+         * 
          * <strong>example:</strong>
          * <p>dataphin</p>
          */
@@ -517,16 +581,23 @@ public class DeleteRegisterLineageRequest extends TeaModel {
         public String catalog;
 
         /**
+         * <p>The environment to which the asset belongs. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+         * 
          * <strong>example:</strong>
          * <p>DEV, PROD</p>
          */
         @NameInMap("Env")
         public String env;
 
+        /**
+         * <p>The extended properties.</p>
+         */
         @NameInMap("ExtProperties")
         public java.util.Map<String, ?> extProperties;
 
         /**
+         * <p>The GUID of the asset. This parameter is required when referenceType is set to BY_GUID.</p>
+         * 
          * <strong>example:</strong>
          * <p>odps.300000001.project1.table1</p>
          */
@@ -534,6 +605,8 @@ public class DeleteRegisterLineageRequest extends TeaModel {
         public String guid;
 
         /**
+         * <p>The asset subtype. Specify this parameter only when metadataType is set to TABLE and referenceType is not set to BY_GUID.</p>
+         * 
          * <strong>example:</strong>
          * <p>PHYSICAL_TABLE, PHYSICAL_VIEW, PHYSICAL_MATERIALIZED_VIEW, DATASOURCE_TABLE, DATASOURCE_VIEW, DATASOURCE_MATERIALIZED_VIEW, DIM_NORMAL, DIM_LEVEL, DIM_ENUM, DIM_VIRTUAL, FACT_EVENT, FACT_PROCESS, FACT_SNAPSHOT,SUM_BIZ_UNIT</p>
          */
@@ -541,6 +614,7 @@ public class DeleteRegisterLineageRequest extends TeaModel {
         public String metadataSubType;
 
         /**
+         * <p>The asset type. Set this parameter based on the actual scenario.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -550,6 +624,8 @@ public class DeleteRegisterLineageRequest extends TeaModel {
         public String metadataType;
 
         /**
+         * <p>The name of the asset. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+         * 
          * <strong>example:</strong>
          * <p>table1</p>
          */
@@ -557,6 +633,7 @@ public class DeleteRegisterLineageRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The asset reference data type. Valid values: BY_GUID, BY_PROPERTY.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -566,6 +643,8 @@ public class DeleteRegisterLineageRequest extends TeaModel {
         public String referenceType;
 
         /**
+         * <p>The schema asset property. For tables, this is typically the project or business unit. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+         * 
          * <strong>example:</strong>
          * <p>project1, bizUnit1</p>
          */
@@ -652,25 +731,35 @@ public class DeleteRegisterLineageRequest extends TeaModel {
     }
 
     public static class DeleteRegisterLineageRequestDeleteRegisterLineageCommand extends TeaModel {
+        /**
+         * <p>Specifies whether to automatically delete the object lineage after all detailed lineage entries are deleted. Default value: true.</p>
+         */
         @NameInMap("CascadeDeleteLineage")
         public Boolean cascadeDeleteLineage;
 
+        /**
+         * <p>The detailed lineage relationships. For tables, the detailed lineage relationships refer to field-level lineage.</p>
+         */
         @NameInMap("DetailedLineages")
         public java.util.List<DeleteRegisterLineageRequestDeleteRegisterLineageCommandDetailedLineages> detailedLineages;
 
         /**
+         * <p>The source of the lineage.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Source")
         public DeleteRegisterLineageRequestDeleteRegisterLineageCommandSource source;
 
         /**
+         * <p>The target of the lineage.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Target")
         public DeleteRegisterLineageRequestDeleteRegisterLineageCommandTarget target;
 
         /**
+         * <p>The tenant ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>300001234</p>
          */
@@ -678,6 +767,8 @@ public class DeleteRegisterLineageRequest extends TeaModel {
         public Long tenantId;
 
         /**
+         * <p>The ID of the current user.</p>
+         * 
          * <strong>example:</strong>
          * <p>300004567</p>
          */

@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteSecurityClassifyCatalogRequest extends TeaModel {
     /**
+     * <p>The delete instruction.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeleteCommand")
     public DeleteSecurityClassifyCatalogRequestDeleteCommand deleteCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,7 @@ public class DeleteSecurityClassifyCatalogRequest extends TeaModel {
 
     public static class DeleteSecurityClassifyCatalogRequestDeleteCommand extends TeaModel {
         /**
+         * <p>The full path of the original catalog.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -50,6 +53,9 @@ public class DeleteSecurityClassifyCatalogRequest extends TeaModel {
         @NameInMap("Path")
         public String path;
 
+        /**
+         * <p>Specifies whether to return deletion details. Default value: true.</p>
+         */
         @NameInMap("ReturnRemovedDetails")
         public Boolean returnRemovedDetails;
 

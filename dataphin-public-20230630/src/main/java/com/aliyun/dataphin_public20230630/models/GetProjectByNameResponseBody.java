@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetProjectByNameResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class GetProjectByNameResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,12 +23,17 @@ public class GetProjectByNameResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The details of the backend exception.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The project details.</p>
+     */
     @NameInMap("ProjectInfo")
     public GetProjectByNameResponseBodyProjectInfo projectInfo;
 
@@ -37,6 +46,9 @@ public class GetProjectByNameResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -95,6 +107,8 @@ public class GetProjectByNameResponseBody extends TeaModel {
 
     public static class GetProjectByNameResponseBodyProjectInfoWhiteLists extends TeaModel {
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx 白名单</p>
          */
@@ -111,6 +125,8 @@ public class GetProjectByNameResponseBody extends TeaModel {
         public String ip;
 
         /**
+         * <p>The port.</p>
+         * 
          * <strong>example:</strong>
          * <p>5432</p>
          */
@@ -150,6 +166,8 @@ public class GetProjectByNameResponseBody extends TeaModel {
 
     public static class GetProjectByNameResponseBodyProjectInfo extends TeaModel {
         /**
+         * <p>The display name of the business unit to which the project belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>测试</p>
          */
@@ -157,6 +175,8 @@ public class GetProjectByNameResponseBody extends TeaModel {
         public String bizUnitDisplayName;
 
         /**
+         * <p>The ID of the business unit to which the project belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>101131</p>
          */
@@ -164,6 +184,8 @@ public class GetProjectByNameResponseBody extends TeaModel {
         public Long bizUnitId;
 
         /**
+         * <p>The ID of the associated compute source.</p>
+         * 
          * <strong>example:</strong>
          * <p>101711</p>
          */
@@ -171,6 +193,8 @@ public class GetProjectByNameResponseBody extends TeaModel {
         public Long computeSourceId;
 
         /**
+         * <p>The name of the associated compute source.</p>
+         * 
          * <strong>example:</strong>
          * <p>ds1</p>
          */
@@ -178,6 +202,8 @@ public class GetProjectByNameResponseBody extends TeaModel {
         public String computeSourceName;
 
         /**
+         * <p>The project description.</p>
+         * 
          * <strong>example:</strong>
          * <p>测试</p>
          */
@@ -185,6 +211,8 @@ public class GetProjectByNameResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The display name of the project.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx test</p>
          */
@@ -192,6 +220,8 @@ public class GetProjectByNameResponseBody extends TeaModel {
         public String displayName;
 
         /**
+         * <p>The environment identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>DEV</p>
          */
@@ -199,6 +229,8 @@ public class GetProjectByNameResponseBody extends TeaModel {
         public String env;
 
         /**
+         * <p>The creation time, in the format of yyyy-MM-dd HH:mm:ss.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-10 10:01:01</p>
          */
@@ -206,6 +238,8 @@ public class GetProjectByNameResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The update time, in the format of yyyy-MM-dd HH:mm:ss.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-10 10:01:01</p>
          */
@@ -213,6 +247,8 @@ public class GetProjectByNameResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1030111021</p>
          */
@@ -220,6 +256,8 @@ public class GetProjectByNameResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The project mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>BASIC</p>
          */
@@ -227,6 +265,8 @@ public class GetProjectByNameResponseBody extends TeaModel {
         public String mode;
 
         /**
+         * <p>The project name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -234,6 +274,13 @@ public class GetProjectByNameResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The namespace type. Valid values:</p>
+         * <ul>
+         * <li>PUBLIC: public type</li>
+         * <li>APPLICATION: application type</li>
+         * <li>BASE: base type.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>BASE</p>
          */
@@ -241,6 +288,8 @@ public class GetProjectByNameResponseBody extends TeaModel {
         public String nameSpaceTag;
 
         /**
+         * <p>The project owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>30012011</p>
          */
@@ -248,6 +297,8 @@ public class GetProjectByNameResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The project owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>张三</p>
          */
@@ -255,6 +306,8 @@ public class GetProjectByNameResponseBody extends TeaModel {
         public String ownerName;
 
         /**
+         * <p>The ID of the associated real-time compute source.</p>
+         * 
          * <strong>example:</strong>
          * <p>201711</p>
          */
@@ -262,6 +315,8 @@ public class GetProjectByNameResponseBody extends TeaModel {
         public Long streamComputeSourceId;
 
         /**
+         * <p>The name of the associated real-time compute source.</p>
+         * 
          * <strong>example:</strong>
          * <p>ds2</p>
          */
@@ -269,12 +324,21 @@ public class GetProjectByNameResponseBody extends TeaModel {
         public String streamComputeSourceName;
 
         /**
+         * <p>The project type. Valid values:</p>
+         * <ul>
+         * <li>DISTILL: distillation project</li>
+         * <li>GENERAL: general project.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>GENERAL</p>
          */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The whitelists.</p>
+         */
         @NameInMap("WhiteLists")
         public java.util.List<GetProjectByNameResponseBodyProjectInfoWhiteLists> whiteLists;
 

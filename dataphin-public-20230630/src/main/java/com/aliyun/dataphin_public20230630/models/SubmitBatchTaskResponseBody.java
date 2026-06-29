@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitBatchTaskResponseBody extends TeaModel {
     /**
+     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class SubmitBatchTaskResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class SubmitBatchTaskResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -26,15 +32,23 @@ public class SubmitBatchTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The submit result.</p>
+     */
     @NameInMap("SubmitResult")
     public SubmitBatchTaskResponseBodySubmitResult submitResult;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -93,6 +107,8 @@ public class SubmitBatchTaskResponseBody extends TeaModel {
 
     public static class SubmitBatchTaskResponseBodySubmitResult extends TeaModel {
         /**
+         * <p>The ID of the scheduling node.</p>
+         * 
          * <strong>example:</strong>
          * <p>n_12113111</p>
          */
@@ -100,6 +116,8 @@ public class SubmitBatchTaskResponseBody extends TeaModel {
         public String nodeId;
 
         /**
+         * <p>The ID of the object pending publish.</p>
+         * 
          * <strong>example:</strong>
          * <p>1010312911</p>
          */

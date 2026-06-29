@@ -5,18 +5,21 @@ import com.aliyun.tea.*;
 
 public class OfflinePipelineShrinkRequest extends TeaModel {
     /**
+     * <p>The request context information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Context")
     public String contextShrink;
 
     /**
+     * <p>The offline command for the pipeline node.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("OfflineCommand")
     public String offlineCommandShrink;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

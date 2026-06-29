@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetTableLineagesResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class GetTableLineagesResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class GetTableLineagesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -34,9 +40,15 @@ public class GetTableLineagesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The table lineage list.</p>
+     */
     @NameInMap("TableLineageList")
     public java.util.List<GetTableLineagesResponseBodyTableLineageList> tableLineageList;
 
@@ -95,6 +107,8 @@ public class GetTableLineagesResponseBody extends TeaModel {
 
     public static class GetTableLineagesResponseBodyTableLineageList extends TeaModel {
         /**
+         * <p>The ID of the business unit to which the input table belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -102,6 +116,8 @@ public class GetTableLineagesResponseBody extends TeaModel {
         public Long inputBizUnitId;
 
         /**
+         * <p>The ID of the data source to which the input table belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -109,6 +125,8 @@ public class GetTableLineagesResponseBody extends TeaModel {
         public Long inputDataSourceId;
 
         /**
+         * <p>The type of the data source to which the input table belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>MAX_COMPUTE</p>
          */
@@ -116,16 +134,23 @@ public class GetTableLineagesResponseBody extends TeaModel {
         public String inputDataSourceType;
 
         /**
+         * <p>The ID of the project to which the input table belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>1233</p>
          */
         @NameInMap("InputProjectId")
         public Long inputProjectId;
 
+        /**
+         * <p>Indicates whether the input table has been deleted.</p>
+         */
         @NameInMap("InputTableDeleted")
         public Boolean inputTableDeleted;
 
         /**
+         * <p>The environment to which the input table belongs. Valid values: dev and prod.</p>
+         * 
          * <strong>example:</strong>
          * <p>dev</p>
          */
@@ -133,6 +158,8 @@ public class GetTableLineagesResponseBody extends TeaModel {
         public String inputTableEnv;
 
         /**
+         * <p>The GUID of the input table. Each asset has a unique identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>123211</p>
          */
@@ -140,6 +167,8 @@ public class GetTableLineagesResponseBody extends TeaModel {
         public String inputTableGuid;
 
         /**
+         * <p>The name of the input table.</p>
+         * 
          * <strong>example:</strong>
          * <p>t_input</p>
          */
@@ -147,6 +176,8 @@ public class GetTableLineagesResponseBody extends TeaModel {
         public String inputTableName;
 
         /**
+         * <p>The environment to which the task belongs. Valid values: dev and prod.</p>
+         * 
          * <strong>example:</strong>
          * <p>dev</p>
          */
@@ -154,6 +185,8 @@ public class GetTableLineagesResponseBody extends TeaModel {
         public String nodeEnv;
 
         /**
+         * <p>The task ID associated with the lineage.</p>
+         * 
          * <strong>example:</strong>
          * <p>110021</p>
          */
@@ -161,6 +194,8 @@ public class GetTableLineagesResponseBody extends TeaModel {
         public String nodeId;
 
         /**
+         * <p>The ID of the business unit to which the output table belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -168,6 +203,8 @@ public class GetTableLineagesResponseBody extends TeaModel {
         public Long outputBizUnitId;
 
         /**
+         * <p>The ID of the data source to which the output table belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -175,6 +212,8 @@ public class GetTableLineagesResponseBody extends TeaModel {
         public Long outputDataSourceId;
 
         /**
+         * <p>The type of the data source to which the output table belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>MAX_COMPUTE</p>
          */
@@ -182,16 +221,23 @@ public class GetTableLineagesResponseBody extends TeaModel {
         public String outputDataSourceType;
 
         /**
+         * <p>The ID of the project to which the output table belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>1233</p>
          */
         @NameInMap("OutputProjectId")
         public Long outputProjectId;
 
+        /**
+         * <p>Indicates whether the output table has been deleted.</p>
+         */
         @NameInMap("OutputTableDeleted")
         public Boolean outputTableDeleted;
 
         /**
+         * <p>The environment to which the output table belongs. Valid values: dev and prod.</p>
+         * 
          * <strong>example:</strong>
          * <p>dev</p>
          */
@@ -199,6 +245,8 @@ public class GetTableLineagesResponseBody extends TeaModel {
         public String outputTableEnv;
 
         /**
+         * <p>The GUID of the output table. Each asset has a unique identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>2231</p>
          */
@@ -206,6 +254,8 @@ public class GetTableLineagesResponseBody extends TeaModel {
         public String outputTableGuid;
 
         /**
+         * <p>The name of the output table.</p>
+         * 
          * <strong>example:</strong>
          * <p>t_output</p>
          */

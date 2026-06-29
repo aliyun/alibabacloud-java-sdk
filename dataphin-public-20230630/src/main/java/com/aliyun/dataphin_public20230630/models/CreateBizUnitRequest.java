@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateBizUnitRequest extends TeaModel {
     /**
+     * <p>The create request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CreateCommand")
     public CreateBizUnitRequestCreateCommand createCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,7 @@ public class CreateBizUnitRequest extends TeaModel {
 
     public static class CreateBizUnitRequestCreateCommandBizUnitAccountList extends TeaModel {
         /**
+         * <p>The user ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -67,12 +70,15 @@ public class CreateBizUnitRequest extends TeaModel {
 
     public static class CreateBizUnitRequestCreateCommand extends TeaModel {
         /**
+         * <p>The list of data domain architects.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("BizUnitAccountList")
         public java.util.List<CreateBizUnitRequestCreateCommandBizUnitAccountList> bizUnitAccountList;
 
         /**
+         * <p>The description of the business object. The description can be up to 128 characters in length.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -80,6 +86,7 @@ public class CreateBizUnitRequest extends TeaModel {
         public String description;
 
         /**
+         * <p>The display name of the business object. The name can be up to 64 characters in length and can contain only Chinese characters, letters, digits, underscores, and hyphens.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -89,6 +96,21 @@ public class CreateBizUnitRequest extends TeaModel {
         public String displayName;
 
         /**
+         * <p>The preset icon. Valid values:</p>
+         * <ul>
+         * <li>icon-e-commerce: E-commerce.</li>
+         * <li>icon-finance: Finance.</li>
+         * <li>con-cloud-computing: Cloud computing.</li>
+         * <li>icon-advertisement: Advertising and marketing.</li>
+         * <li>icon-logistics: Logistics.</li>
+         * <li>icon-entertainment: Entertainment.</li>
+         * <li>icon-traffic: Travel.</li>
+         * <li>icon-health: Health.</li>
+         * <li>icon-social-contact: Social and communication.</li>
+         * <li>con-dining: Dining.</li>
+         * <li>icon-education: Education.</li>
+         * <li>icon-environment: Environment.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -98,6 +120,12 @@ public class CreateBizUnitRequest extends TeaModel {
         public String icon;
 
         /**
+         * <p>The production mode. Valid values:</p>
+         * <ul>
+         * <li>BASIC: single-environment mode.</li>
+         * <li>DEV_PROD: development/production dual-environment mode.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>DEV_PROD</p>
          */
@@ -105,6 +133,7 @@ public class CreateBizUnitRequest extends TeaModel {
         public String mode;
 
         /**
+         * <p>The code name of the business object. The name can be up to 64 characters in length and can contain only letters, digits, and underscores. For ADB_PG engines, the code name can be up to 40 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

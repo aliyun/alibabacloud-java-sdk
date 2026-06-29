@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetAccountByRowPermissionIdResponseBody extends TeaModel {
     /**
+     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The query result.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetAccountByRowPermissionIdResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetAccountByRowPermissionIdResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,12 +38,17 @@ public class GetAccountByRowPermissionIdResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -93,12 +107,20 @@ public class GetAccountByRowPermissionIdResponseBody extends TeaModel {
 
     public static class GetAccountByRowPermissionIdResponseBodyDataUserMappingListAccounts extends TeaModel {
         /**
+         * <p>The ID of the account associated with the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>300901111</p>
          */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <p>The name of the account associated with the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("AccountName")
         public String accountName;
 
@@ -127,12 +149,17 @@ public class GetAccountByRowPermissionIdResponseBody extends TeaModel {
 
     public static class GetAccountByRowPermissionIdResponseBodyDataUserMappingList extends TeaModel {
         /**
+         * <p>The type of the account associated with the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>PERSONAL</p>
          */
         @NameInMap("AccountType")
         public String accountType;
 
+        /**
+         * <p>The accounts associated with the rule.</p>
+         */
         @NameInMap("Accounts")
         public java.util.List<GetAccountByRowPermissionIdResponseBodyDataUserMappingListAccounts> accounts;
 
@@ -161,12 +188,17 @@ public class GetAccountByRowPermissionIdResponseBody extends TeaModel {
 
     public static class GetAccountByRowPermissionIdResponseBodyData extends TeaModel {
         /**
+         * <p>The row-level permission rule IDs.</p>
+         * 
          * <strong>example:</strong>
          * <p>300001235</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The accounts associated with the rule.</p>
+         */
         @NameInMap("UserMappingList")
         public java.util.List<GetAccountByRowPermissionIdResponseBodyDataUserMappingList> userMappingList;
 

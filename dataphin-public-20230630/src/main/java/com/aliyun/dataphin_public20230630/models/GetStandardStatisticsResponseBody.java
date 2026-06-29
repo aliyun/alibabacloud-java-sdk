@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetStandardStatisticsResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The statistical results.</p>
+     */
     @NameInMap("Data")
     public GetStandardStatisticsResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetStandardStatisticsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The details of the backend exception.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -37,6 +46,9 @@ public class GetStandardStatisticsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -95,6 +107,8 @@ public class GetStandardStatisticsResponseBody extends TeaModel {
 
     public static class GetStandardStatisticsResponseBodyDataStandardTypeCountList extends TeaModel {
         /**
+         * <p>The number of standards.</p>
+         * 
          * <strong>example:</strong>
          * <p>11</p>
          */
@@ -102,6 +116,8 @@ public class GetStandardStatisticsResponseBody extends TeaModel {
         public Integer count;
 
         /**
+         * <p>The standard type.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -132,10 +148,15 @@ public class GetStandardStatisticsResponseBody extends TeaModel {
     }
 
     public static class GetStandardStatisticsResponseBodyData extends TeaModel {
+        /**
+         * <p>The mapping between standard types and the number of standards for each type. If the standard type is empty, the key is EMPTY.</p>
+         */
         @NameInMap("StandardTypeCountList")
         public java.util.List<GetStandardStatisticsResponseBodyDataStandardTypeCountList> standardTypeCountList;
 
         /**
+         * <p>The total number of standards.</p>
+         * 
          * <strong>example:</strong>
          * <p>101</p>
          */

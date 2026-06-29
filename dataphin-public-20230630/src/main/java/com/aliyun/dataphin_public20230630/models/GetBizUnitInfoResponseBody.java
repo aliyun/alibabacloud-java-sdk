@@ -4,10 +4,15 @@ package com.aliyun.dataphin_public20230630.models;
 import com.aliyun.tea.*;
 
 public class GetBizUnitInfoResponseBody extends TeaModel {
+    /**
+     * <p>The details of the data domain.</p>
+     */
     @NameInMap("BizUnitInfo")
     public GetBizUnitInfoResponseBodyBizUnitInfo bizUnitInfo;
 
     /**
+     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -15,6 +20,8 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,12 +38,17 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -93,6 +107,8 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
 
     public static class GetBizUnitInfoResponseBodyBizUnitInfoAccountList extends TeaModel {
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>20001201</p>
          */
@@ -116,6 +132,8 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
 
     public static class GetBizUnitInfoResponseBodyBizUnitInfoBusinessLeaderList extends TeaModel {
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>20001201</p>
          */
@@ -139,6 +157,8 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
 
     public static class GetBizUnitInfoResponseBodyBizUnitInfoDataLeaderList extends TeaModel {
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>20001201</p>
          */
@@ -162,6 +182,8 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
 
     public static class GetBizUnitInfoResponseBodyBizUnitInfoEnvList extends TeaModel {
         /**
+         * <p>The display name.</p>
+         * 
          * <strong>example:</strong>
          * <p>测试数据板块001_开发</p>
          */
@@ -169,6 +191,8 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
         public String displayName;
 
         /**
+         * <p>The environment identifier. Valid values: PROD and DEV.</p>
+         * 
          * <strong>example:</strong>
          * <p>DEV</p>
          */
@@ -176,6 +200,8 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
         public String envName;
 
         /**
+         * <p>The English name.</p>
+         * 
          * <strong>example:</strong>
          * <p>LD_test001_dev</p>
          */
@@ -214,10 +240,15 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
     }
 
     public static class GetBizUnitInfoResponseBodyBizUnitInfo extends TeaModel {
+        /**
+         * <p>The architects of the data domain.</p>
+         */
         @NameInMap("AccountList")
         public java.util.List<GetBizUnitInfoResponseBodyBizUnitInfoAccountList> accountList;
 
         /**
+         * <p>The number of business objects.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -225,26 +256,38 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
         public Integer bizObjectCount;
 
         /**
+         * <p>The number of business activities.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("BizProcessCount")
         public Integer bizProcessCount;
 
+        /**
+         * <p>The business owners.</p>
+         */
         @NameInMap("BusinessLeaderList")
         public java.util.List<GetBizUnitInfoResponseBodyBizUnitInfoBusinessLeaderList> businessLeaderList;
 
         /**
+         * <p>The number of subject domains.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("DataDomainCount")
         public Integer dataDomainCount;
 
+        /**
+         * <p>The data owners.</p>
+         */
         @NameInMap("DataLeaderList")
         public java.util.List<GetBizUnitInfoResponseBodyBizUnitInfoDataLeaderList> dataLeaderList;
 
         /**
+         * <p>The description of the business object.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -252,16 +295,23 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The display name.</p>
+         * 
          * <strong>example:</strong>
          * <p>测试</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The English names of the data domain for the two environments: production and development.</p>
+         */
         @NameInMap("EnvList")
         public java.util.List<GetBizUnitInfoResponseBodyBizUnitInfoEnvList> envList;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-10 10:00:00</p>
          */
@@ -269,6 +319,8 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-10 10:00:00</p>
          */
@@ -276,6 +328,8 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The icon of the data domain.</p>
+         * 
          * <strong>example:</strong>
          * <p>icon-e-commerce</p>
          */
@@ -283,6 +337,8 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
         public String icon;
 
         /**
+         * <p>The data domain ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>101001201</p>
          */
@@ -290,6 +346,8 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The ID of the user who last modified the data domain.</p>
+         * 
          * <strong>example:</strong>
          * <p>30010010</p>
          */
@@ -297,6 +355,8 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
         public String lastModifier;
 
         /**
+         * <p>The name of the user who last modified the data domain.</p>
+         * 
          * <strong>example:</strong>
          * <p>张三</p>
          */
@@ -304,6 +364,12 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
         public String lastModifierName;
 
         /**
+         * <p>The production mode. Valid values:</p>
+         * <ul>
+         * <li>BASIC: single-environment mode.</li>
+         * <li>DEV_PROD: development/production dual-environment mode.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>DEV_PROD</p>
          */
@@ -311,6 +377,8 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
         public String mode;
 
         /**
+         * <p>The name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test01</p>
          */
@@ -318,6 +386,8 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The owner of the business object.</p>
+         * 
          * <strong>example:</strong>
          * <p>张三</p>
          */
@@ -325,6 +395,8 @@ public class GetBizUnitInfoResponseBody extends TeaModel {
         public String ownerName;
 
         /**
+         * <p>The owner of the business object.</p>
+         * 
          * <strong>example:</strong>
          * <p>30010010</p>
          */

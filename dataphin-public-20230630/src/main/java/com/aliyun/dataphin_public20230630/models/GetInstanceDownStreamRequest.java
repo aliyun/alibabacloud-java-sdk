@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInstanceDownStreamRequest extends TeaModel {
     /**
+     * <p>Number of levels to expand downstream in the DAG query. Valid values: 1 to 6.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,12 @@ public class GetInstanceDownStreamRequest extends TeaModel {
     public Integer downStreamDepth;
 
     /**
+     * <p>Environment identifier.</p>
+     * <ul>
+     * <li>DEV: Development environment.</li>
+     * <li>PROD (default): Production environment.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PROD</p>
      */
@@ -21,12 +28,14 @@ public class GetInstanceDownStreamRequest extends TeaModel {
     public String env;
 
     /**
+     * <p>The request body.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceGet")
     public GetInstanceDownStreamRequestInstanceGet instanceGet;
 
     /**
+     * <p>Tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,6 +45,15 @@ public class GetInstanceDownStreamRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>Run status of the instance.</p>
+     * <ul>
+     * <li>INIT</li>
+     * <li>WATING</li>
+     * <li>RUNNING</li>
+     * <li>SUCCESS</li>
+     * <li>FAILED</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
@@ -89,6 +107,7 @@ public class GetInstanceDownStreamRequest extends TeaModel {
 
     public static class GetInstanceDownStreamRequestInstanceGet extends TeaModel {
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -98,6 +117,16 @@ public class GetInstanceDownStreamRequest extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Node type of the instance.</p>
+         * <ul>
+         * <li>BBOX_LOGIC_TABLE_NODE</li>
+         * <li>BBOX_LOGIC_FIELD_NODE</li>
+         * <li>BBOX_LOGIC_FIELD_GROUP_NODE</li>
+         * <li>BBOX_INNER_TEMP_NODE</li>
+         * <li>DATA_PROCESS</li>
+         * <li>STREAM_TASK_NODE</li>
+         * <li>FLINK_BATCH</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListDataDomainsRequest extends TeaModel {
     /**
+     * <p>The query request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ListQuery")
     public ListDataDomainsRequestListQuery listQuery;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,16 +43,24 @@ public class ListDataDomainsRequest extends TeaModel {
     }
 
     public static class ListDataDomainsRequestListQuery extends TeaModel {
+        /**
+         * <p>The IDs of the business units to which the data domains belong.</p>
+         */
         @NameInMap("BizUnitIdList")
         public java.util.List<Long> bizUnitIdList;
 
         /**
+         * <p>The search keyword. You can search by data domain name, code, or description.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("Keyword")
         public String keyword;
 
+        /**
+         * <p>The IDs of the parent data domains.</p>
+         */
         @NameInMap("ParentIdList")
         public java.util.List<Long> parentIdList;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetDataServiceMyProjectsResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class GetDataServiceMyProjectsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,12 +23,17 @@ public class GetDataServiceMyProjectsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The details of the backend exception.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The list of data service projects.</p>
+     */
     @NameInMap("ProjectList")
     public java.util.List<GetDataServiceMyProjectsResponseBodyProjectList> projectList;
 
@@ -37,6 +46,9 @@ public class GetDataServiceMyProjectsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -95,6 +107,8 @@ public class GetDataServiceMyProjectsResponseBody extends TeaModel {
 
     public static class GetDataServiceMyProjectsResponseBodyProjectList extends TeaModel {
         /**
+         * <p>The data service project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>102011</p>
          */
@@ -102,6 +116,8 @@ public class GetDataServiceMyProjectsResponseBody extends TeaModel {
         public Integer projectId;
 
         /**
+         * <p>The project name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -109,6 +125,15 @@ public class GetDataServiceMyProjectsResponseBody extends TeaModel {
         public String projectName;
 
         /**
+         * <p>The role. Valid values:</p>
+         * <ul>
+         * <li>1: super administrator</li>
+         * <li>2: developer</li>
+         * <li>3: application member</li>
+         * <li>4: service project administrator</li>
+         * <li>5: O&amp;M engineer.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

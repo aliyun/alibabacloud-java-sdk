@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAddableUsersResponseBody extends TeaModel {
     /**
+     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ListAddableUsersResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,22 +23,32 @@ public class ListAddableUsersResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The paging query result.</p>
+     */
     @NameInMap("PageResult")
     public ListAddableUsersResponseBodyPageResult pageResult;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -93,6 +107,8 @@ public class ListAddableUsersResponseBody extends TeaModel {
 
     public static class ListAddableUsersResponseBodyPageResultUserList extends TeaModel {
         /**
+         * <p>The account name.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:123@xx.com">123@xx.com</a></p>
          */
@@ -100,6 +116,8 @@ public class ListAddableUsersResponseBody extends TeaModel {
         public String accountName;
 
         /**
+         * <p>The DingTalk ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123@dingding</p>
          */
@@ -107,6 +125,8 @@ public class ListAddableUsersResponseBody extends TeaModel {
         public String dingNumber;
 
         /**
+         * <p>The display name of the user.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -114,6 +134,8 @@ public class ListAddableUsersResponseBody extends TeaModel {
         public String displayName;
 
         /**
+         * <p>The display name of the user without the status.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -121,6 +143,8 @@ public class ListAddableUsersResponseBody extends TeaModel {
         public String displayNameWithoutStatus;
 
         /**
+         * <p>Indicates whether the IP whitelist is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -128,6 +152,8 @@ public class ListAddableUsersResponseBody extends TeaModel {
         public String enableWhiteIp;
 
         /**
+         * <p>The Lark chatbot.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -135,6 +161,8 @@ public class ListAddableUsersResponseBody extends TeaModel {
         public String feiShuRobot;
 
         /**
+         * <p>The time when the user was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1717343597000</p>
          */
@@ -142,6 +170,8 @@ public class ListAddableUsersResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
+         * <p>The time when the user was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>1717343597000</p>
          */
@@ -149,6 +179,8 @@ public class ListAddableUsersResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123231</p>
          */
@@ -156,6 +188,8 @@ public class ListAddableUsersResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The email address.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:123@xx.com">123@xx.com</a></p>
          */
@@ -163,6 +197,8 @@ public class ListAddableUsersResponseBody extends TeaModel {
         public String mail;
 
         /**
+         * <p>The phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>13888888888</p>
          */
@@ -170,6 +206,8 @@ public class ListAddableUsersResponseBody extends TeaModel {
         public String mobilePhone;
 
         /**
+         * <p>The username.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -177,6 +215,8 @@ public class ListAddableUsersResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The nickname of the user.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -184,6 +224,8 @@ public class ListAddableUsersResponseBody extends TeaModel {
         public String nickName;
 
         /**
+         * <p>The ID of the parent Alibaba Cloud account to which the user belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>231313</p>
          */
@@ -191,6 +233,8 @@ public class ListAddableUsersResponseBody extends TeaModel {
         public String parentId;
 
         /**
+         * <p>The real name of the user.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -198,6 +242,8 @@ public class ListAddableUsersResponseBody extends TeaModel {
         public String realName;
 
         /**
+         * <p>The source ID of the user.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:123@xx.com">123@xx.com</a></p>
          */
@@ -205,6 +251,8 @@ public class ListAddableUsersResponseBody extends TeaModel {
         public String sourceId;
 
         /**
+         * <p>The source type of the user.</p>
+         * 
          * <strong>example:</strong>
          * <p>aliyun</p>
          */
@@ -212,6 +260,8 @@ public class ListAddableUsersResponseBody extends TeaModel {
         public String sourceType;
 
         /**
+         * <p>The WeCom chatbot.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -219,6 +269,8 @@ public class ListAddableUsersResponseBody extends TeaModel {
         public String weChatRobot;
 
         /**
+         * <p>The IP whitelist.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li></li>
@@ -388,12 +440,17 @@ public class ListAddableUsersResponseBody extends TeaModel {
 
     public static class ListAddableUsersResponseBodyPageResult extends TeaModel {
         /**
+         * <p>The total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>66</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
+        /**
+         * <p>The list of users.</p>
+         */
         @NameInMap("UserList")
         public java.util.List<ListAddableUsersResponseBodyPageResultUserList> userList;
 

@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateStandardRelationsRequest extends TeaModel {
     /**
+     * <p>The create command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CreateCommand")
     public CreateStandardRelationsRequestCreateCommand createCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,7 @@ public class CreateStandardRelationsRequest extends TeaModel {
 
     public static class CreateStandardRelationsRequestCreateCommandStandardRefList extends TeaModel {
         /**
+         * <p>The standard ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -67,6 +70,7 @@ public class CreateStandardRelationsRequest extends TeaModel {
 
     public static class CreateStandardRelationsRequestCreateCommand extends TeaModel {
         /**
+         * <p>The standard association type: RELATIVE.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -76,6 +80,7 @@ public class CreateStandardRelationsRequest extends TeaModel {
         public String relationType;
 
         /**
+         * <p>The standard ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -85,6 +90,7 @@ public class CreateStandardRelationsRequest extends TeaModel {
         public Long standardId;
 
         /**
+         * <p>The list of referenced standards.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("StandardRefList")

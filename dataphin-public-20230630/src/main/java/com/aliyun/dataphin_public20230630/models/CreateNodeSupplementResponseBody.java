@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateNodeSupplementResponseBody extends TeaModel {
     /**
+     * <p>Error code. A value of OK indicates a successful request.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class CreateNodeSupplementResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code returned by the backend</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class CreateNodeSupplementResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -26,6 +32,8 @@ public class CreateNodeSupplementResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
@@ -33,6 +41,11 @@ public class CreateNodeSupplementResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <ul>
+     * <li>Standard mode: the FlowId is returned.</li>
+     * <li>Bulk mode: the submitted JobId is returned. You can call GetOperationSubmitStatus to query the task submission status. After the submission succeeds, the FlowId is returned.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>f_2264518792396800000_20210223_2329354897145659392</p>
      */
@@ -40,6 +53,8 @@ public class CreateNodeSupplementResponseBody extends TeaModel {
     public String submitId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true/false</p>
      */

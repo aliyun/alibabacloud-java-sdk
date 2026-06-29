@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetPhysicalInstanceLogRequest extends TeaModel {
     /**
+     * <p>The environment identifier. Valid values:</p>
+     * <ul>
+     * <li>DEV: Development environment. </li>
+     * <li>PROD (default): Production environment.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PROD</p>
      */
@@ -12,6 +18,7 @@ public class GetPhysicalInstanceLogRequest extends TeaModel {
     public String env;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +28,7 @@ public class GetPhysicalInstanceLogRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +38,7 @@ public class GetPhysicalInstanceLogRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

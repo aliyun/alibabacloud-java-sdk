@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class PausePhysicalNodeRequest extends TeaModel {
     /**
+     * <p>The environment identifier. Valid values:</p>
+     * <ul>
+     * <li>DEV: development environment </li>
+     * <li>PROD (default): production environment.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PROD</p>
      */
@@ -12,6 +18,7 @@ public class PausePhysicalNodeRequest extends TeaModel {
     public String env;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +28,7 @@ public class PausePhysicalNodeRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The pause scheduling request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("PauseCommand")
@@ -57,12 +65,14 @@ public class PausePhysicalNodeRequest extends TeaModel {
 
     public static class PausePhysicalNodeRequestPauseCommand extends TeaModel {
         /**
+         * <p>The list of node IDs.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("NodeIdList")
         public java.util.List<String> nodeIdList;
 
         /**
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

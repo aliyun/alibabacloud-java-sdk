@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class CheckDataSourceConnectivityRequest extends TeaModel {
     /**
+     * <p>The object to check.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CheckCommand")
     public CheckDataSourceConnectivityRequestCheckCommand checkCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,7 @@ public class CheckDataSourceConnectivityRequest extends TeaModel {
 
     public static class CheckDataSourceConnectivityRequestCheckCommandConfigItemList extends TeaModel {
         /**
+         * <p>The configuration item.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,6 +54,7 @@ public class CheckDataSourceConnectivityRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The configuration value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -84,12 +88,14 @@ public class CheckDataSourceConnectivityRequest extends TeaModel {
 
     public static class CheckDataSourceConnectivityRequestCheckCommand extends TeaModel {
         /**
+         * <p>The connection configuration items.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("ConfigItemList")
         public java.util.List<CheckDataSourceConnectivityRequestCheckCommandConfigItemList> configItemList;
 
         /**
+         * <p>The data source type. For supported data source types, see the documentation for creating a data source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

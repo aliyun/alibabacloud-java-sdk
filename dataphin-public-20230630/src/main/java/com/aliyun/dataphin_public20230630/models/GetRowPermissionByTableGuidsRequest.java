@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class GetRowPermissionByTableGuidsRequest extends TeaModel {
     /**
+     * <p>Request command</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("GetRowPermissionByTableGuidsQuery")
     public GetRowPermissionByTableGuidsRequestGetRowPermissionByTableGuidsQuery getRowPermissionByTableGuidsQuery;
 
     /**
+     * <p>Tenant ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,7 @@ public class GetRowPermissionByTableGuidsRequest extends TeaModel {
 
     public static class GetRowPermissionByTableGuidsRequestGetRowPermissionByTableGuidsQuery extends TeaModel {
         /**
+         * <p>List of table GUIDs</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("TableGuids")

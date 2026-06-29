@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateStreamBatchJobMappingRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateStreamBatchJobMappingRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The stream-batch integrated node information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("StreamBatchJobMappingCreateCommand")
@@ -42,6 +44,7 @@ public class CreateStreamBatchJobMappingRequest extends TeaModel {
 
     public static class CreateStreamBatchJobMappingRequestStreamBatchJobMappingCreateCommand extends TeaModel {
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,6 +54,8 @@ public class CreateStreamBatchJobMappingRequest extends TeaModel {
         public String clusterId;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>这是一段任务的描述信息</p>
          */
@@ -58,6 +63,7 @@ public class CreateStreamBatchJobMappingRequest extends TeaModel {
         public String description;
 
         /**
+         * <p>The folder in which the node is generated.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -67,6 +73,7 @@ public class CreateStreamBatchJobMappingRequest extends TeaModel {
         public String directory;
 
         /**
+         * <p>The Flink DPI engine version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -76,6 +83,7 @@ public class CreateStreamBatchJobMappingRequest extends TeaModel {
         public String engineVersion;
 
         /**
+         * <p>The environment.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -85,6 +93,7 @@ public class CreateStreamBatchJobMappingRequest extends TeaModel {
         public String env;
 
         /**
+         * <p>The file name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -94,6 +103,7 @@ public class CreateStreamBatchJobMappingRequest extends TeaModel {
         public String fileName;
 
         /**
+         * <p>The file type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,6 +113,7 @@ public class CreateStreamBatchJobMappingRequest extends TeaModel {
         public String fileType;
 
         /**
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -112,6 +123,7 @@ public class CreateStreamBatchJobMappingRequest extends TeaModel {
         public Long projectId;
 
         /**
+         * <p>The queue name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -121,6 +133,7 @@ public class CreateStreamBatchJobMappingRequest extends TeaModel {
         public String queueName;
 
         /**
+         * <p>The VVP cluster type. Valid values: SESSION and PREJOB. This parameter is specific to VVP. If not applicable, leave this parameter empty or do not pass it.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

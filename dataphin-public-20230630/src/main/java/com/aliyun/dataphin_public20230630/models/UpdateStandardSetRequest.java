@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateStandardSetRequest extends TeaModel {
     /**
+     * <p>Tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateStandardSetRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>Update command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")
@@ -42,6 +44,7 @@ public class UpdateStandardSetRequest extends TeaModel {
 
     public static class UpdateStandardSetRequestUpdateCommandApprovalConfig extends TeaModel {
         /**
+         * <p>Approval process type. Valid values: BY_DEFAULT (default approval type) and BY_TEMPLATE (template-based approval).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,18 +54,22 @@ public class UpdateStandardSetRequest extends TeaModel {
         public String approvalType;
 
         /**
+         * <p>Specifies whether to enable approval.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("EnableApproval")
         public Boolean enableApproval;
 
         /**
+         * <p>Specifies whether to submit approvals in batch.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("IsSubmitInBatch")
         public Boolean isSubmitInBatch;
 
         /**
+         * <p>Approval template ID. This parameter takes effect only when the approval process type is set to BY_TEMPLATE.</p>
+         * 
          * <strong>example:</strong>
          * <p>1121</p>
          */
@@ -110,6 +117,7 @@ public class UpdateStandardSetRequest extends TeaModel {
 
     public static class UpdateStandardSetRequestUpdateCommandDirectoryReference extends TeaModel {
         /**
+         * <p>Directory.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -135,6 +143,7 @@ public class UpdateStandardSetRequest extends TeaModel {
 
     public static class UpdateStandardSetRequestUpdateCommandOfflineApprovalConfig extends TeaModel {
         /**
+         * <p>Approval process type. Valid values: BY_DEFAULT (default approval type) and BY_TEMPLATE (template-based approval).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,18 +153,22 @@ public class UpdateStandardSetRequest extends TeaModel {
         public String approvalType;
 
         /**
+         * <p>Specifies whether to enable approval.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("EnableApproval")
         public Boolean enableApproval;
 
         /**
+         * <p>Specifies whether to submit approvals in batch.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("IsSubmitInBatch")
         public Boolean isSubmitInBatch;
 
         /**
+         * <p>Approval template ID. This parameter takes effect only when the approval process type is set to BY_TEMPLATE.</p>
+         * 
          * <strong>example:</strong>
          * <p>1121</p>
          */
@@ -202,10 +215,14 @@ public class UpdateStandardSetRequest extends TeaModel {
     }
 
     public static class UpdateStandardSetRequestUpdateCommandVisibilityConfig extends TeaModel {
+        /**
+         * <p>List of specified visible users. This parameter takes effect only when the visibility type is set to SPECIFIED.</p>
+         */
         @NameInMap("SpecifiedUserList")
         public java.util.List<String> specifiedUserList;
 
         /**
+         * <p>Visibility type. Valid values: PUBLIC (public access), PRIVATE (private access, visible only to standard set members and administrators), and SPECIFIED (visible to specified users).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -238,10 +255,14 @@ public class UpdateStandardSetRequest extends TeaModel {
     }
 
     public static class UpdateStandardSetRequestUpdateCommand extends TeaModel {
+        /**
+         * <p>Publishing approval configuration.</p>
+         */
         @NameInMap("ApprovalConfig")
         public UpdateStandardSetRequestUpdateCommandApprovalConfig approvalConfig;
 
         /**
+         * <p>Standard set code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -251,6 +272,8 @@ public class UpdateStandardSetRequest extends TeaModel {
         public String code;
 
         /**
+         * <p>Default standard template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1001</p>
          */
@@ -258,25 +281,40 @@ public class UpdateStandardSetRequest extends TeaModel {
         public Long defaultStandardTemplateId;
 
         /**
+         * <p>Standard set description.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Parent directory.</p>
+         */
         @NameInMap("DirectoryReference")
         public UpdateStandardSetRequestUpdateCommandDirectoryReference directoryReference;
 
+        /**
+         * <p>Maintainers.</p>
+         */
         @NameInMap("MaintainerList")
         public java.util.List<String> maintainerList;
 
+        /**
+         * <p>Member group list.</p>
+         */
         @NameInMap("MemberGroupList")
         public java.util.List<String> memberGroupList;
 
+        /**
+         * <p>Member list.</p>
+         */
         @NameInMap("MemberList")
         public java.util.List<String> memberList;
 
         /**
+         * <p>Standard set name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -285,10 +323,14 @@ public class UpdateStandardSetRequest extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Unpublishing approval configuration.</p>
+         */
         @NameInMap("OfflineApprovalConfig")
         public UpdateStandardSetRequestUpdateCommandOfflineApprovalConfig offlineApprovalConfig;
 
         /**
+         * <p>Standard set ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -297,6 +339,9 @@ public class UpdateStandardSetRequest extends TeaModel {
         @NameInMap("StandardSetId")
         public Long standardSetId;
 
+        /**
+         * <p>Visibility configuration.</p>
+         */
         @NameInMap("VisibilityConfig")
         public UpdateStandardSetRequestUpdateCommandVisibilityConfig visibilityConfig;
 

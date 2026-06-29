@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetStandardSetRequest extends TeaModel {
     /**
+     * <p>The standard set ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,14 @@ public class GetStandardSetRequest extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>Specifies whether to allow a null value to be returned when the standard set does not exist. If set to false, an exception is thrown. Default value: true.</p>
+     */
     @NameInMap("Nullable")
     public Boolean nullable;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

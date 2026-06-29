@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateSecurityLevelRequest extends TeaModel {
     /**
+     * <p>The create command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CreateCommand")
     public CreateSecurityLevelRequestCreateCommand createCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,8 @@ public class CreateSecurityLevelRequest extends TeaModel {
 
     public static class CreateSecurityLevelRequestCreateCommand extends TeaModel {
         /**
+         * <p>The abbreviation of the classification level.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -49,6 +53,8 @@ public class CreateSecurityLevelRequest extends TeaModel {
         public String abbreviation;
 
         /**
+         * <p>The description of the classification level.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -56,6 +62,8 @@ public class CreateSecurityLevelRequest extends TeaModel {
         public String description;
 
         /**
+         * <p>The sort order of the classification level. If this parameter is not specified, the current maximum order ID is used by default.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -63,6 +71,7 @@ public class CreateSecurityLevelRequest extends TeaModel {
         public Long index;
 
         /**
+         * <p>The name of the classification level.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

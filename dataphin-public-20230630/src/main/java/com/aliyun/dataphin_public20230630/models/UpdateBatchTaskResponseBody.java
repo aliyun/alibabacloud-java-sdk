@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateBatchTaskResponseBody extends TeaModel {
     /**
+     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class UpdateBatchTaskResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class UpdateBatchTaskResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -26,15 +32,23 @@ public class UpdateBatchTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The update result.</p>
+     */
     @NameInMap("UpdateResult")
     public UpdateBatchTaskResponseBodyUpdateResult updateResult;
 
@@ -93,6 +107,8 @@ public class UpdateBatchTaskResponseBody extends TeaModel {
 
     public static class UpdateBatchTaskResponseBodyUpdateResult extends TeaModel {
         /**
+         * <p>The ID of the node in the folder tree.</p>
+         * 
          * <strong>example:</strong>
          * <p>12113111</p>
          */

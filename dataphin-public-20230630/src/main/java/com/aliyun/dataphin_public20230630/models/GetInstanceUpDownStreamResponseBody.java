@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetInstanceUpDownStreamResponseBody extends TeaModel {
     /**
+     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,16 +14,23 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The instance dag data, including the current instance and its upstream and downstream instances.</p>
+     */
     @NameInMap("InstanceDagInfo")
     public GetInstanceUpDownStreamResponseBodyInstanceDagInfo instanceDagInfo;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +38,8 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
@@ -36,6 +47,8 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -96,10 +109,15 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
     }
 
     public static class GetInstanceUpDownStreamResponseBodyInstanceDagInfoDownInstanceList extends TeaModel {
+        /**
+         * <p>The list of field IDs.</p>
+         */
         @NameInMap("FieldInstanceIdList")
         public java.util.List<String> fieldInstanceIdList;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>t_1234567</p>
          */
@@ -107,6 +125,8 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The node name.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx测试</p>
          */
@@ -114,6 +134,8 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>n_1234567</p>
          */
@@ -121,6 +143,8 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
         public String nodeId;
 
         /**
+         * <p>The node type.</p>
+         * 
          * <strong>example:</strong>
          * <p>DATA_PROCESS</p>
          */
@@ -175,10 +199,15 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
     }
 
     public static class GetInstanceUpDownStreamResponseBodyInstanceDagInfoStartInstanceList extends TeaModel {
+        /**
+         * <p>The list of field IDs.</p>
+         */
         @NameInMap("FieldInstanceIdList")
         public java.util.List<String> fieldInstanceIdList;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>t_1234567</p>
          */
@@ -186,6 +215,8 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The node name.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx测试</p>
          */
@@ -193,6 +224,8 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>n_1234567</p>
          */
@@ -200,6 +233,13 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
         public String nodeId;
 
         /**
+         * <p>The node type. Valid values:</p>
+         * <ul>
+         * <li>DATA_PROCESS: code node.</li>
+         * <li>BBOX_LOGIC_TABLE_NODE: logical table node.</li>
+         * <li>PIPELINE_NODE: pipeline node.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>DATA_PROCESS</p>
          */
@@ -254,10 +294,15 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
     }
 
     public static class GetInstanceUpDownStreamResponseBodyInstanceDagInfoUpInstanceList extends TeaModel {
+        /**
+         * <p>The list of field IDs.</p>
+         */
         @NameInMap("FieldInstanceIdList")
         public java.util.List<String> fieldInstanceIdList;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>t_1234567</p>
          */
@@ -265,6 +310,8 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The node name.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx测试</p>
          */
@@ -272,6 +319,8 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>n_1234567</p>
          */
@@ -279,6 +328,8 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
         public String nodeId;
 
         /**
+         * <p>The node type.</p>
+         * 
          * <strong>example:</strong>
          * <p>DATA_PROCESS</p>
          */
@@ -333,12 +384,21 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
     }
 
     public static class GetInstanceUpDownStreamResponseBodyInstanceDagInfo extends TeaModel {
+        /**
+         * <p>The downstream instances.</p>
+         */
         @NameInMap("DownInstanceList")
         public java.util.List<GetInstanceUpDownStreamResponseBodyInstanceDagInfoDownInstanceList> downInstanceList;
 
+        /**
+         * <p>The center instances.</p>
+         */
         @NameInMap("StartInstanceList")
         public java.util.List<GetInstanceUpDownStreamResponseBodyInstanceDagInfoStartInstanceList> startInstanceList;
 
+        /**
+         * <p>The upstream instances.</p>
+         */
         @NameInMap("UpInstanceList")
         public java.util.List<GetInstanceUpDownStreamResponseBodyInstanceDagInfoUpInstanceList> upInstanceList;
 

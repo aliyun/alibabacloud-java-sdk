@@ -4,10 +4,14 @@ package com.aliyun.dataphin_public20230630.models;
 import com.aliyun.tea.*;
 
 public class ListAlertNotificationsRequest extends TeaModel {
+    /**
+     * <p>The query conditions.</p>
+     */
     @NameInMap("ListQuery")
     public ListAlertNotificationsRequestListQuery listQuery;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,26 +42,41 @@ public class ListAlertNotificationsRequest extends TeaModel {
     }
 
     public static class ListAlertNotificationsRequestListQuery extends TeaModel {
+        /**
+         * <p>The list of alert reasons.</p>
+         */
         @NameInMap("AlertReasonList")
         public java.util.List<String> alertReasonList;
 
+        /**
+         * <p>The list of push channel types.</p>
+         */
         @NameInMap("ChannelTypeList")
         public java.util.List<String> channelTypeList;
 
+        /**
+         * <p>The list of custom message channel IDs.</p>
+         */
         @NameInMap("CustomChannelIdList")
         public java.util.List<String> customChannelIdList;
 
         /**
+         * <p>The keyword for the query.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("Keyword")
         public String keyword;
 
+        /**
+         * <p>The list of monitored item IDs.</p>
+         */
         @NameInMap("MonitoredItemIdList")
         public java.util.List<String> monitoredItemIdList;
 
         /**
+         * <p>The end time of the push.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -67,6 +86,7 @@ public class ListAlertNotificationsRequest extends TeaModel {
         public String notifyEndTime;
 
         /**
+         * <p>The start time of the push.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -76,6 +96,7 @@ public class ListAlertNotificationsRequest extends TeaModel {
         public String notifyStartTime;
 
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -85,6 +106,7 @@ public class ListAlertNotificationsRequest extends TeaModel {
         public Integer page;
 
         /**
+         * <p>The number of records per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -94,6 +116,18 @@ public class ListAlertNotificationsRequest extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The source system. Valid values:</p>
+         * <ul>
+         * <li>ALL: all.</li>
+         * <li>DQE: data quality.</li>
+         * <li>OS: data service.</li>
+         * <li>STREAM: real-time computing.</li>
+         * <li>VDM_BATCH: offline computing.</li>
+         * <li>SOP: O&amp;M platform.</li>
+         * <li>REAL_TIME_PIPELINE: real-time integration.</li>
+         * <li>KGB: baseline monitoring.</li>
+         * </ul>
+         * <p>And more.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,9 +136,15 @@ public class ListAlertNotificationsRequest extends TeaModel {
         @NameInMap("SourceSystem")
         public String sourceSystem;
 
+        /**
+         * <p>The list of push statuses.</p>
+         */
         @NameInMap("StatusList")
         public java.util.List<String> statusList;
 
+        /**
+         * <p>The list of push recipient IDs.</p>
+         */
         @NameInMap("UserIdList")
         public java.util.List<String> userIdList;
 

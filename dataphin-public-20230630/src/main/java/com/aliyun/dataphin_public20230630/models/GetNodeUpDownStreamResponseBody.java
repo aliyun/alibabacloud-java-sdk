@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetNodeUpDownStreamResponseBody extends TeaModel {
     /**
+     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,16 +23,23 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The dag data of the node.</p>
+     */
     @NameInMap("NodeDagInfo")
     public GetNodeUpDownStreamResponseBodyNodeDagInfo nodeDagInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
@@ -36,6 +47,8 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -96,10 +109,15 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
     }
 
     public static class GetNodeUpDownStreamResponseBodyNodeDagInfoDownStreamNodeList extends TeaModel {
+        /**
+         * <p>The list of field IDs.</p>
+         */
         @NameInMap("FieldIdList")
         public java.util.List<String> fieldIdList;
 
         /**
+         * <p>The node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>n_123456</p>
          */
@@ -107,6 +125,8 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The node name.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx测试</p>
          */
@@ -114,6 +134,13 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The node type. Valid values:</p>
+         * <ul>
+         * <li>DATA_PROCESS: code task.</li>
+         * <li>BBOX_LOGIC_TABLE_NODE: logical table node.</li>
+         * <li>PIPELINE_NODE: pipeline node.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>DATA_PROCESS</p>
          */
@@ -160,10 +187,15 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
     }
 
     public static class GetNodeUpDownStreamResponseBodyNodeDagInfoStartNodeList extends TeaModel {
+        /**
+         * <p>The list of field IDs.</p>
+         */
         @NameInMap("FieldIdList")
         public java.util.List<String> fieldIdList;
 
         /**
+         * <p>The node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>n_123456</p>
          */
@@ -171,6 +203,8 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The node name.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx测试</p>
          */
@@ -178,6 +212,13 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The node type. Valid values:</p>
+         * <ul>
+         * <li>DATA_PROCESS: code task.</li>
+         * <li>BBOX_LOGIC_TABLE_NODE: logical table node.</li>
+         * <li>PIPELINE_NODE: pipeline node.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>DATA_PROCESS</p>
          */
@@ -224,10 +265,15 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
     }
 
     public static class GetNodeUpDownStreamResponseBodyNodeDagInfoUpStreamNodeList extends TeaModel {
+        /**
+         * <p>The list of field IDs.</p>
+         */
         @NameInMap("FieldIdList")
         public java.util.List<String> fieldIdList;
 
         /**
+         * <p>The node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>n_123456</p>
          */
@@ -235,6 +281,8 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The node name.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx测试</p>
          */
@@ -242,6 +290,13 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The node type. Valid values:</p>
+         * <ul>
+         * <li>DATA_PROCESS: code task.</li>
+         * <li>BBOX_LOGIC_TABLE_NODE: black box logical table node.</li>
+         * <li>PIPELINE_NODE: pipeline node.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>DATA_PROCESS</p>
          */
@@ -288,12 +343,21 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
     }
 
     public static class GetNodeUpDownStreamResponseBodyNodeDagInfo extends TeaModel {
+        /**
+         * <p>The downstream nodes.</p>
+         */
         @NameInMap("DownStreamNodeList")
         public java.util.List<GetNodeUpDownStreamResponseBodyNodeDagInfoDownStreamNodeList> downStreamNodeList;
 
+        /**
+         * <p>The center nodes.</p>
+         */
         @NameInMap("StartNodeList")
         public java.util.List<GetNodeUpDownStreamResponseBodyNodeDagInfoStartNodeList> startNodeList;
 
+        /**
+         * <p>The upstream nodes.</p>
+         */
         @NameInMap("UpStreamNodeList")
         public java.util.List<GetNodeUpDownStreamResponseBodyNodeDagInfoUpStreamNodeList> upStreamNodeList;
 

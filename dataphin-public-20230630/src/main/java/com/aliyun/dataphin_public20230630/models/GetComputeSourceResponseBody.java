@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetComputeSourceResponseBody extends TeaModel {
     /**
+     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The compute source details.</p>
+     */
     @NameInMap("ComputeSourceInfo")
     public GetComputeSourceResponseBodyComputeSourceInfo computeSourceInfo;
 
     /**
+     * <p>The HTTP status code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetComputeSourceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +38,8 @@ public class GetComputeSourceResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
@@ -36,6 +47,8 @@ public class GetComputeSourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class GetComputeSourceResponseBody extends TeaModel {
 
     public static class GetComputeSourceResponseBodyComputeSourceInfo extends TeaModel {
         /**
+         * <p>Indicates whether a project is associated.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -104,6 +119,8 @@ public class GetComputeSourceResponseBody extends TeaModel {
         public Boolean bindProject;
 
         /**
+         * <p>The ID of the associated project.</p>
+         * 
          * <strong>example:</strong>
          * <p>10101101</p>
          */
@@ -111,6 +128,8 @@ public class GetComputeSourceResponseBody extends TeaModel {
         public Long bindProjectId;
 
         /**
+         * <p>The name of the associated project.</p>
+         * 
          * <strong>example:</strong>
          * <p>dp_mctest</p>
          */
@@ -118,6 +137,8 @@ public class GetComputeSourceResponseBody extends TeaModel {
         public String bindProjectName;
 
         /**
+         * <p>The ID of the compute source creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>101101</p>
          */
@@ -125,6 +146,8 @@ public class GetComputeSourceResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>The name of the compute source creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -132,6 +155,8 @@ public class GetComputeSourceResponseBody extends TeaModel {
         public String creatorName;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>compute source for xxx.</p>
          */
@@ -139,6 +164,8 @@ public class GetComputeSourceResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The display name.</p>
+         * 
          * <strong>example:</strong>
          * <p>dp_test</p>
          */
@@ -146,6 +173,8 @@ public class GetComputeSourceResponseBody extends TeaModel {
         public String displayName;
 
         /**
+         * <p>The creation timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1681881607000</p>
          */
@@ -153,6 +182,8 @@ public class GetComputeSourceResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The last modification timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1711881607000</p>
          */
@@ -160,6 +191,8 @@ public class GetComputeSourceResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The compute source ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>12356</p>
          */
@@ -167,6 +200,8 @@ public class GetComputeSourceResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The name of the compute source.</p>
+         * 
          * <strong>example:</strong>
          * <p>dp_test</p>
          */
@@ -174,6 +209,8 @@ public class GetComputeSourceResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The ID of the compute source owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>101101</p>
          */
@@ -181,6 +218,8 @@ public class GetComputeSourceResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The name of the compute source owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -188,6 +227,8 @@ public class GetComputeSourceResponseBody extends TeaModel {
         public String ownerName;
 
         /**
+         * <p>The type of the compute source.</p>
+         * 
          * <strong>example:</strong>
          * <p>MAX_COMPUTE</p>
          */

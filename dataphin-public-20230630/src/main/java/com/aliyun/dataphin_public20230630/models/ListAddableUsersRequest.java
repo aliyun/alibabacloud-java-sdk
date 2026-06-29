@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListAddableUsersRequest extends TeaModel {
     /**
+     * <p>The request object.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ListQuery")
     public ListAddableUsersRequestListQuery listQuery;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,8 @@ public class ListAddableUsersRequest extends TeaModel {
 
     public static class ListAddableUsersRequestListQuery extends TeaModel {
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -49,6 +53,8 @@ public class ListAddableUsersRequest extends TeaModel {
         public Integer page;
 
         /**
+         * <p>The number of records per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -56,6 +62,8 @@ public class ListAddableUsersRequest extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The search keyword.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */

@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteBatchTaskRequest extends TeaModel {
     /**
+     * <p>The delete request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeleteCommand")
     public DeleteBatchTaskRequestDeleteCommand deleteCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,7 @@ public class DeleteBatchTaskRequest extends TeaModel {
 
     public static class DeleteBatchTaskRequestDeleteCommand extends TeaModel {
         /**
+         * <p>The description of the delete operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,6 +54,7 @@ public class DeleteBatchTaskRequest extends TeaModel {
         public String comment;
 
         /**
+         * <p>The ID of the node in the folder.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -60,6 +64,7 @@ public class DeleteBatchTaskRequest extends TeaModel {
         public Long fileId;
 
         /**
+         * <p>The ID of the project to which the node belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

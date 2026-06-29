@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListRowPermissionByUserIdRequest extends TeaModel {
     /**
+     * <p>The request command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ListRowPermissionByUserIdQuery")
     public ListRowPermissionByUserIdRequestListRowPermissionByUserIdQuery listRowPermissionByUserIdQuery;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,7 @@ public class ListRowPermissionByUserIdRequest extends TeaModel {
 
     public static class ListRowPermissionByUserIdRequestListRowPermissionByUserIdQuery extends TeaModel {
         /**
+         * <p>The specified operator.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,6 +54,7 @@ public class ListRowPermissionByUserIdRequest extends TeaModel {
         public String operator;
 
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -60,6 +64,7 @@ public class ListRowPermissionByUserIdRequest extends TeaModel {
         public Integer pageNum;
 
         /**
+         * <p>The page size.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

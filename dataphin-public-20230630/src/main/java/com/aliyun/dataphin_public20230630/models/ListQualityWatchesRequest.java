@@ -4,10 +4,14 @@ package com.aliyun.dataphin_public20230630.models;
 import com.aliyun.tea.*;
 
 public class ListQualityWatchesRequest extends TeaModel {
+    /**
+     * <p>The paged query conditions.</p>
+     */
     @NameInMap("ListQuery")
     public ListQualityWatchesRequestListQuery listQuery;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,41 +42,93 @@ public class ListQualityWatchesRequest extends TeaModel {
     }
 
     public static class ListQualityWatchesRequestListQuery extends TeaModel {
+        /**
+         * <p>The business unit names.</p>
+         */
         @NameInMap("BizUnitNameList")
         public java.util.List<String> bizUnitNameList;
 
+        /**
+         * <p>Specifies whether to query only monitored objects owned by the current user.</p>
+         */
         @NameInMap("CurrentUserOwned")
         public Boolean currentUserOwned;
 
+        /**
+         * <p>The data source IDs.</p>
+         */
         @NameInMap("DataSourceIdList")
         public java.util.List<Long> dataSourceIdList;
 
+        /**
+         * <p>The data source owners.</p>
+         */
         @NameInMap("DataSourceOwnerList")
         public java.util.List<String> dataSourceOwnerList;
 
+        /**
+         * <p>The data source scope. Valid values:</p>
+         * <ul>
+         * <li>STREAMING: real-time only</li>
+         * <li>OFFLINE: offline only</li>
+         * <li>ALL: real-time and offline.</li>
+         * </ul>
+         */
         @NameInMap("DataSourceScopeList")
         public java.util.List<String> dataSourceScopeList;
 
+        /**
+         * <p>The data source type, such as MAX_COMPUTE, HADOOP, or MYSQL.</p>
+         */
         @NameInMap("DataSourceTypeList")
         public java.util.List<String> dataSourceTypeList;
 
+        /**
+         * <p>The metric computation type. Valid values:</p>
+         * <ul>
+         * <li>AUTO: automated coding</li>
+         * <li>CUSTOM: expert coding</li>
+         * <li>MOUNT: external table registration</li>
+         * <li>COMBINE: derived metric specific.</li>
+         * </ul>
+         */
         @NameInMap("IndexComputeTypeList")
         public java.util.List<String> indexComputeTypeList;
 
+        /**
+         * <p>The metric owners.</p>
+         */
         @NameInMap("IndexOwnerList")
         public java.util.List<String> indexOwnerList;
 
         /**
+         * <p>The search keyword. This is the name of the monitored table.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("Keyword")
         public String keyword;
 
+        /**
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li>NOT_RUN: not executed</li>
+         * <li>WAITING: waiting</li>
+         * <li>RUNNING: executing</li>
+         * <li>SUCCESS: executed successfully</li>
+         * <li>FAILED: execution failed</li>
+         * <li>CANCEL: canceled</li>
+         * <li>TIMEOUT: timed out</li>
+         * <li>OFFLINE: offline.</li>
+         * </ul>
+         */
         @NameInMap("LatestWatchTaskStatusList")
         public java.util.List<String> latestWatchTaskStatusList;
 
         /**
+         * <p>The page number. Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -80,27 +136,66 @@ public class ListQualityWatchesRequest extends TeaModel {
         public Integer pageNo;
 
         /**
+         * <p>The number of records per page. Default value: 20.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The project names.</p>
+         */
         @NameInMap("ProjectNameList")
         public java.util.List<String> projectNameList;
 
+        /**
+         * <p>The quality owners.</p>
+         */
         @NameInMap("QualityOwnerList")
         public java.util.List<String> qualityOwnerList;
 
+        /**
+         * <p>The status of the monitored object. Valid values:</p>
+         * <ul>
+         * <li>ENABLE: enabled</li>
+         * <li>DISABLE: disabled.</li>
+         * </ul>
+         */
         @NameInMap("StatusList")
         public java.util.List<String> statusList;
 
+        /**
+         * <p>The table owners.</p>
+         */
         @NameInMap("TableOwnerList")
         public java.util.List<String> tableOwnerList;
 
+        /**
+         * <p>The table type. Valid values:</p>
+         * <ul>
+         * <li>LOGIC_DIM_TABLE: logical dimension table</li>
+         * <li>LOGIC_FACT_TABLE: logical fact table</li>
+         * <li>LOGIC_SUM_TABLE: logical aggregate table</li>
+         * <li>LOGIC_LABEL_TABLE: logical label table</li>
+         * <li>PHYSICAL_TABLE: physical table</li>
+         * <li>REALTIME_LOGICAL_TABLE: real-time meta table.</li>
+         * </ul>
+         */
         @NameInMap("TableTypeList")
         public java.util.List<String> tableTypeList;
 
+        /**
+         * <p>The monitored object type. Valid values:</p>
+         * <ul>
+         * <li>TABLE: Dataphin table</li>
+         * <li>DATASOURCE_TABLE: full-domain table</li>
+         * <li>DATASOURCE: data source</li>
+         * <li>INDEX: metric</li>
+         * <li>REALTIME_LOGICAL_TABLE: real-time meta table.</li>
+         * </ul>
+         */
         @NameInMap("WatchTypeList")
         public java.util.List<String> watchTypeList;
 

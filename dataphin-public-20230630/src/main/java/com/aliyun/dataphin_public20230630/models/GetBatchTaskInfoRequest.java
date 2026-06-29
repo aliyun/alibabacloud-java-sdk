@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetBatchTaskInfoRequest extends TeaModel {
     /**
+     * <p>The environment identifier. Valid values:</p>
+     * <ul>
+     * <li>dev</li>
+     * <li>prod</li>
+     * </ul>
+     * <p>Default value: dev.</p>
+     * 
      * <strong>example:</strong>
      * <p>dev</p>
      */
@@ -12,6 +19,7 @@ public class GetBatchTaskInfoRequest extends TeaModel {
     public String env;
 
     /**
+     * <p>The node ID in the directory tree.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,10 +28,14 @@ public class GetBatchTaskInfoRequest extends TeaModel {
     @NameInMap("FileId")
     public Long fileId;
 
+    /**
+     * <p>Specifies whether to include all upstream nodes, including invalid dependencies. Default value: false.</p>
+     */
     @NameInMap("IncludeAllUpStreams")
     public Boolean includeAllUpStreams;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +45,7 @@ public class GetBatchTaskInfoRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the project to which the node belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

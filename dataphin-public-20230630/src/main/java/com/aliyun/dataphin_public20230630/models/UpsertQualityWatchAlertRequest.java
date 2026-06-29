@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpsertQualityWatchAlertRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpsertQualityWatchAlertRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The update instruction.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpsertCommand")
@@ -42,6 +44,8 @@ public class UpsertQualityWatchAlertRequest extends TeaModel {
 
     public static class UpsertQualityWatchAlertRequestUpsertCommandQualityAlertInfoAlertDutyList extends TeaModel {
         /**
+         * <p>The ID of the on-duty alert schedule.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -49,6 +53,8 @@ public class UpsertQualityWatchAlertRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>The name of the on-duty alert schedule.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -80,6 +86,8 @@ public class UpsertQualityWatchAlertRequest extends TeaModel {
 
     public static class UpsertQualityWatchAlertRequestUpsertCommandQualityAlertInfoAlertUserList extends TeaModel {
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>30012011</p>
          */
@@ -87,6 +95,8 @@ public class UpsertQualityWatchAlertRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>The username.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -117,21 +127,39 @@ public class UpsertQualityWatchAlertRequest extends TeaModel {
     }
 
     public static class UpsertQualityWatchAlertRequestUpsertCommandQualityAlertInfo extends TeaModel {
+        /**
+         * <p>The alert channels for on-duty schedules.</p>
+         */
         @NameInMap("AlertDutyChannelList")
         public java.util.List<String> alertDutyChannelList;
 
+        /**
+         * <p>The list of on-duty schedules for alerts.</p>
+         */
         @NameInMap("AlertDutyList")
         public java.util.List<UpsertQualityWatchAlertRequestUpsertCommandQualityAlertInfoAlertDutyList> alertDutyList;
 
+        /**
+         * <p>The alert channels for the quality owner.</p>
+         */
         @NameInMap("AlertQualityOwnerChannelList")
         public java.util.List<String> alertQualityOwnerChannelList;
 
+        /**
+         * <p>The alert channels for users.</p>
+         */
         @NameInMap("AlertUserChannelList")
         public java.util.List<String> alertUserChannelList;
 
+        /**
+         * <p>The list of users to receive alerts.</p>
+         */
         @NameInMap("AlertUserList")
         public java.util.List<UpsertQualityWatchAlertRequestUpsertCommandQualityAlertInfoAlertUserList> alertUserList;
 
+        /**
+         * <p>Specifies whether to enable alerts for the quality owner.</p>
+         */
         @NameInMap("EnableAlertQualityOwner")
         public Boolean enableAlertQualityOwner;
 
@@ -192,12 +220,14 @@ public class UpsertQualityWatchAlertRequest extends TeaModel {
 
     public static class UpsertQualityWatchAlertRequestUpsertCommand extends TeaModel {
         /**
+         * <p>The alert configuration details.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("QualityAlertInfo")
         public UpsertQualityWatchAlertRequestUpsertCommandQualityAlertInfo qualityAlertInfo;
 
         /**
+         * <p>The ID of the monitored object.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

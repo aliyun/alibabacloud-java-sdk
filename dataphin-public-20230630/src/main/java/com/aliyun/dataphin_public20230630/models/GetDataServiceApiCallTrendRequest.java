@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDataServiceApiCallTrendRequest extends TeaModel {
     /**
+     * <p>The end time in the format of yyyy-MM-dd HH:mm:ss.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetDataServiceApiCallTrendRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class GetDataServiceApiCallTrendRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The data service project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class GetDataServiceApiCallTrendRequest extends TeaModel {
     public Integer projectId;
 
     /**
+     * <p>The start time in the format of yyyy-MM-dd HH:mm:ss.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

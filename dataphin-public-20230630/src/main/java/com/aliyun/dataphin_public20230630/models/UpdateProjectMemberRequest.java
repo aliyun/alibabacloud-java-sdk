@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateProjectMemberRequest extends TeaModel {
     /**
+     * <p>The project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateProjectMemberRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class UpdateProjectMemberRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The update command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")
@@ -59,12 +62,14 @@ public class UpdateProjectMemberRequest extends TeaModel {
 
     public static class UpdateProjectMemberRequestUpdateCommandUserList extends TeaModel {
         /**
+         * <p>The member role. Valid values: 1: project administrator. 2: developer. 3: visitor. 4: analyst. 5: O&amp;M engineer.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("RoleList")
         public java.util.List<Integer> roleList;
 
         /**
+         * <p>The user ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -98,6 +103,7 @@ public class UpdateProjectMemberRequest extends TeaModel {
 
     public static class UpdateProjectMemberRequestUpdateCommand extends TeaModel {
         /**
+         * <p>The environment identifier.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -107,6 +113,7 @@ public class UpdateProjectMemberRequest extends TeaModel {
         public String env;
 
         /**
+         * <p>The list of user members.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("UserList")

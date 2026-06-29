@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DeleteSecurityClassifyCatalogResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The deletion result details.</p>
+     */
     @NameInMap("Data")
     public DeleteSecurityClassifyCatalogResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class DeleteSecurityClassifyCatalogResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The details of the backend exception.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -37,6 +46,9 @@ public class DeleteSecurityClassifyCatalogResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -94,12 +106,21 @@ public class DeleteSecurityClassifyCatalogResponseBody extends TeaModel {
     }
 
     public static class DeleteSecurityClassifyCatalogResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of full paths of child catalogs that were also deleted.</p>
+         */
         @NameInMap("ChildCatalogFullPathList")
         public java.util.List<String> childCatalogFullPathList;
 
+        /**
+         * <p>The list of classification IDs that were also deleted.</p>
+         */
         @NameInMap("ClassifyIdList")
         public java.util.List<Long> classifyIdList;
 
+        /**
+         * <p>Indicates whether the deletion was successful.</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 

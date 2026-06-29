@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListStandardsRequest extends TeaModel {
     /**
+     * <p>Search conditions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ListQuery")
     public ListStandardsRequestListQuery listQuery;
 
     /**
+     * <p>Tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,8 @@ public class ListStandardsRequest extends TeaModel {
 
     public static class ListStandardsRequestListQuery extends TeaModel {
         /**
+         * <p>Directory of the standard.</p>
+         * 
          * <strong>example:</strong>
          * <p>/dir1/dir2</p>
          */
@@ -49,6 +53,8 @@ public class ListStandardsRequest extends TeaModel {
         public String directory;
 
         /**
+         * <p>Search keyword: fuzzy search by standard name, English name, or code. Case-insensitive, sorted by relevance.</p>
+         * 
          * <strong>example:</strong>
          * <p>Test</p>
          */
@@ -56,6 +62,8 @@ public class ListStandardsRequest extends TeaModel {
         public String keyword;
 
         /**
+         * <p>Page number. Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -63,16 +71,22 @@ public class ListStandardsRequest extends TeaModel {
         public Integer pageNo;
 
         /**
+         * <p>Number of records per page. Default value: 20.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>Standard set ID list.</p>
+         */
         @NameInMap("StandardSetIdList")
         public java.util.List<Long> standardSetIdList;
 
         /**
+         * <p>Stage of the standard: DEV or PROD.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -81,16 +95,27 @@ public class ListStandardsRequest extends TeaModel {
         @NameInMap("StandardStage")
         public String standardStage;
 
+        /**
+         * <p>Standard status list. Standard statuses under DEV stage: DRAFT, UNDER_REVISION, UNDER_REVIEW, REVIEW_PASSED, IN_PUBLISH. Standard statuses under PROD stage: NOT_ACTIVATED, ACTIVE, EXPIRED.</p>
+         */
         @NameInMap("StandardStatusList")
         public java.util.List<String> standardStatusList;
 
+        /**
+         * <p>Standard template ID list.</p>
+         */
         @NameInMap("StandardTemplateIdList")
         public java.util.List<Long> standardTemplateIdList;
 
+        /**
+         * <p>Standard type: Basic, EMPTY indicates the standard type is empty.</p>
+         */
         @NameInMap("StandardTypeList")
         public java.util.List<String> standardTypeList;
 
         /**
+         * <p>User ID: only queries standards visible to this user ID. If empty, queries standards visible to the current user.</p>
+         * 
          * <strong>example:</strong>
          * <p>30012011</p>
          */

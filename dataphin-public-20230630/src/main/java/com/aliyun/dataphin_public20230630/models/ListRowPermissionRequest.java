@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRowPermissionRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListRowPermissionRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The request command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("PageRowPermissionQuery")
@@ -41,10 +43,17 @@ public class ListRowPermissionRequest extends TeaModel {
     }
 
     public static class ListRowPermissionRequestPageRowPermissionQuery extends TeaModel {
+        /**
+         * <p>The search keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>业务</p>
+         */
         @NameInMap("Keyword")
         public String keyword;
 
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -54,6 +63,7 @@ public class ListRowPermissionRequest extends TeaModel {
         public Integer pageNum;
 
         /**
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

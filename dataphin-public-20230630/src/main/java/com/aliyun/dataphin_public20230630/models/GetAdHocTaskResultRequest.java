@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAdHocTaskResultRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetAdHocTaskResultRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class GetAdHocTaskResultRequest extends TeaModel {
     public Long projectId;
 
     /**
+     * <p>The subtask ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class GetAdHocTaskResultRequest extends TeaModel {
     public Integer subTaskId;
 
     /**
+     * <p>The task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDataSourceConfigRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateDataSourceConfigRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The data source configuration item change.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")
@@ -42,6 +44,7 @@ public class UpdateDataSourceConfigRequest extends TeaModel {
 
     public static class UpdateDataSourceConfigRequestUpdateCommandConfigItemList extends TeaModel {
         /**
+         * <p>The key ID of the configuration item.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,6 +54,7 @@ public class UpdateDataSourceConfigRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The configuration value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -84,12 +88,14 @@ public class UpdateDataSourceConfigRequest extends TeaModel {
 
     public static class UpdateDataSourceConfigRequestUpdateCommand extends TeaModel {
         /**
+         * <p>The connection configuration items.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("ConfigItemList")
         public java.util.List<UpdateDataSourceConfigRequestUpdateCommandConfigItemList> configItemList;
 
         /**
+         * <p>The data source ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

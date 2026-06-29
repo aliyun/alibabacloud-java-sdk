@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateStandardTemplateRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateStandardTemplateRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The update command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")
@@ -42,6 +44,7 @@ public class UpdateStandardTemplateRequest extends TeaModel {
 
     public static class UpdateStandardTemplateRequestUpdateCommandAttributesConfigAttributeListRefAttributeAttributeFromInfoStandardReference extends TeaModel {
         /**
+         * <p>The standard ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,6 +54,7 @@ public class UpdateStandardTemplateRequest extends TeaModel {
         public Long standardId;
 
         /**
+         * <p>The version number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -84,6 +88,12 @@ public class UpdateStandardTemplateRequest extends TeaModel {
 
     public static class UpdateStandardTemplateRequestUpdateCommandAttributesConfigAttributeListRefAttributeAttributeFromInfo extends TeaModel {
         /**
+         * <p>The attribute source. Valid values:</p>
+         * <ul>
+         * <li>SYSTEM: system attribute.</li>
+         * <li>CUSTOM: custom attribute.</li>
+         * <li>STANDARD: standard.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -92,6 +102,9 @@ public class UpdateStandardTemplateRequest extends TeaModel {
         @NameInMap("AttributeFrom")
         public String attributeFrom;
 
+        /**
+         * <p>The corresponding standard. This parameter takes effect when the attribute source is set to STANDARD.</p>
+         */
         @NameInMap("StandardReference")
         public UpdateStandardTemplateRequestUpdateCommandAttributesConfigAttributeListRefAttributeAttributeFromInfoStandardReference standardReference;
 
@@ -120,12 +133,14 @@ public class UpdateStandardTemplateRequest extends TeaModel {
 
     public static class UpdateStandardTemplateRequestUpdateCommandAttributesConfigAttributeListRefAttribute extends TeaModel {
         /**
+         * <p>The attribute source.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("AttributeFromInfo")
         public UpdateStandardTemplateRequestUpdateCommandAttributesConfigAttributeListRefAttributeAttributeFromInfo attributeFromInfo;
 
         /**
+         * <p>The attribute ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,6 +174,8 @@ public class UpdateStandardTemplateRequest extends TeaModel {
 
     public static class UpdateStandardTemplateRequestUpdateCommandAttributesConfigAttributeListValueConfigValueRangeLookupTableReference extends TeaModel {
         /**
+         * <p>The referenced lookup table field.</p>
+         * 
          * <strong>example:</strong>
          * <p>col1</p>
          */
@@ -166,6 +183,7 @@ public class UpdateStandardTemplateRequest extends TeaModel {
         public String column;
 
         /**
+         * <p>The ID of the lookup table.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,18 +217,21 @@ public class UpdateStandardTemplateRequest extends TeaModel {
 
     public static class UpdateStandardTemplateRequestUpdateCommandAttributesConfigAttributeListValueConfigValueRangeMinMaxValueConfig extends TeaModel {
         /**
+         * <p>Specifies whether the maximum value is included.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("IncludeMaxValue")
         public Boolean includeMaxValue;
 
         /**
+         * <p>Specifies whether the minimum value is included.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("IncludeMinValue")
         public Boolean includeMinValue;
 
         /**
+         * <p>The maximum value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -220,6 +241,7 @@ public class UpdateStandardTemplateRequest extends TeaModel {
         public String maxValue;
 
         /**
+         * <p>The minimum value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -269,19 +291,44 @@ public class UpdateStandardTemplateRequest extends TeaModel {
 
     public static class UpdateStandardTemplateRequestUpdateCommandAttributesConfigAttributeListValueConfigValueRange extends TeaModel {
         /**
+         * <p>The value range. This parameter takes effect when the value source is set to DATAPHIN_ATTRIBUTE. Valid values:</p>
+         * <ul>
+         * <li>BIZ_UNIT: data board.</li>
+         * <li>PROJECT: project.</li>
+         * <li>USER: user.</li>
+         * <li>USER_GROUP: user group.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>DATAPHIN_ATTRIBUTE</p>
          */
         @NameInMap("DataphinAttributeType")
         public String dataphinAttributeType;
 
+        /**
+         * <p>The value range. This parameter takes effect when the value source is set to LOOKUP_TABLE.</p>
+         */
         @NameInMap("LookupTableReference")
         public UpdateStandardTemplateRequestUpdateCommandAttributesConfigAttributeListValueConfigValueRangeLookupTableReference lookupTableReference;
 
+        /**
+         * <p>The value range. This parameter takes effect when the value source is set to MIN_MAX.</p>
+         */
         @NameInMap("MinMaxValueConfig")
         public UpdateStandardTemplateRequestUpdateCommandAttributesConfigAttributeListValueConfigValueRangeMinMaxValueConfig minMaxValueConfig;
 
         /**
+         * <p>The value source. Valid values:</p>
+         * <ul>
+         * <li>NONE: no constraint.</li>
+         * <li>LIST: obtained from a list.</li>
+         * <li>LOOKUP_TABLE: lookup table.</li>
+         * <li>MIN_MAX: value between the minimum and maximum.</li>
+         * <li>DATAPHIN_ATTRIBUTE: Dataphin system property.</li>
+         * <li>BUILT_IN_DATA_TYPES: built-in data types.</li>
+         * <li>BUILT_IN_DATA_CLASSIFICATION: built-in data categorization.</li>
+         * <li>BUILT_IN_DATA_LEVEL: built-in data security classification.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -290,6 +337,9 @@ public class UpdateStandardTemplateRequest extends TeaModel {
         @NameInMap("ValueConstraint")
         public String valueConstraint;
 
+        /**
+         * <p>The value range. This parameter takes effect when the value source is set to LIST.</p>
+         */
         @NameInMap("ValueList")
         public java.util.List<String> valueList;
 
@@ -342,6 +392,15 @@ public class UpdateStandardTemplateRequest extends TeaModel {
 
     public static class UpdateStandardTemplateRequestUpdateCommandAttributesConfigAttributeListValueConfig extends TeaModel {
         /**
+         * <p>The data type of the attribute value. Valid values:</p>
+         * <ul>
+         * <li>STRING: string.</li>
+         * <li>BIGINT: numeric.</li>
+         * <li>DOUBLE: floating-point.</li>
+         * <li>DATE: date, accurate to the day.</li>
+         * <li>DATETIME: date, accurate to milliseconds.</li>
+         * <li>BOOLEAN: Boolean.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -351,6 +410,8 @@ public class UpdateStandardTemplateRequest extends TeaModel {
         public String dataType;
 
         /**
+         * <p>The default value.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -358,6 +419,8 @@ public class UpdateStandardTemplateRequest extends TeaModel {
         public String defaultValue;
 
         /**
+         * <p>The length of the attribute value. If this parameter is left empty or set to -1, the length is not limited. Typically, only string types have a length limit for attribute values.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -365,6 +428,13 @@ public class UpdateStandardTemplateRequest extends TeaModel {
         public Integer length;
 
         /**
+         * <p>The attribute value type. Valid values:</p>
+         * <ul>
+         * <li>CUSTOMIZED: custom input.</li>
+         * <li>SINGLE_ENUM: single enumeration value.</li>
+         * <li>MULTIPLE_ENUMS: multiple enumeration values.</li>
+         * <li>RANGE: range value.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -374,6 +444,7 @@ public class UpdateStandardTemplateRequest extends TeaModel {
         public String type;
 
         /**
+         * <p>The value range.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("ValueRange")
@@ -428,6 +499,8 @@ public class UpdateStandardTemplateRequest extends TeaModel {
 
     public static class UpdateStandardTemplateRequestUpdateCommandAttributesConfigAttributeList extends TeaModel {
         /**
+         * <p>The attribute code. This parameter is optional when a common attribute is referenced.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_attr</p>
          */
@@ -435,6 +508,8 @@ public class UpdateStandardTemplateRequest extends TeaModel {
         public String code;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -442,25 +517,47 @@ public class UpdateStandardTemplateRequest extends TeaModel {
         public String description;
 
         /**
+         * <p>The attribute name. This parameter is optional when a common attribute is referenced.</p>
+         * 
          * <strong>example:</strong>
          * <p>attr1</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The referenced attribute information.</p>
+         */
         @NameInMap("RefAttribute")
         public UpdateStandardTemplateRequestUpdateCommandAttributesConfigAttributeListRefAttribute refAttribute;
 
+        /**
+         * <p>Specifies whether the attribute is required. This parameter is optional when a common attribute is referenced.</p>
+         */
         @NameInMap("Required")
         public Boolean required;
 
         /**
+         * <p>The attribute type. This parameter is optional when a common attribute is referenced. Valid values:</p>
+         * <ul>
+         * <li>BIZ_ATTRIBUTE: business attribute.</li>
+         * <li>TECH_ATTRIBUTE: technical attribute.</li>
+         * <li>MANAGEMENT_ATTRIBUTE: management attribute.</li>
+         * <li>QUALITY_ATTRIBUTE: quality attribute.</li>
+         * <li>MASTER_DATA_ATTRIBUTE: master data attribute.</li>
+         * <li>LIFECYCLE_ATTRIBUTE: lifecycle attribute.</li>
+         * <li>SECURITY_ATTRIBUTE: security attribute.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>BIZ_ATTRIBUTE</p>
          */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The value configuration. This parameter is optional when a common attribute is referenced.</p>
+         */
         @NameInMap("ValueConfig")
         public UpdateStandardTemplateRequestUpdateCommandAttributesConfigAttributeListValueConfig valueConfig;
 
@@ -529,6 +626,7 @@ public class UpdateStandardTemplateRequest extends TeaModel {
 
     public static class UpdateStandardTemplateRequestUpdateCommandAttributesConfig extends TeaModel {
         /**
+         * <p>The list of attributes.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("AttributeList")
@@ -551,6 +649,7 @@ public class UpdateStandardTemplateRequest extends TeaModel {
 
     public static class UpdateStandardTemplateRequestUpdateCommandCodeRuleConfigAutoConfigCodeRuleListAutoIncrementSequenceConfig extends TeaModel {
         /**
+         * <p>The number of digits.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -560,12 +659,14 @@ public class UpdateStandardTemplateRequest extends TeaModel {
         public Integer digit;
 
         /**
+         * <p>Specifies whether to pad with zeros.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("NeedPaddingZero")
         public Boolean needPaddingZero;
 
         /**
+         * <p>The start value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -575,6 +676,7 @@ public class UpdateStandardTemplateRequest extends TeaModel {
         public Long startValue;
 
         /**
+         * <p>The step size.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -623,10 +725,14 @@ public class UpdateStandardTemplateRequest extends TeaModel {
     }
 
     public static class UpdateStandardTemplateRequestUpdateCommandCodeRuleConfigAutoConfigCodeRuleList extends TeaModel {
+        /**
+         * <p>The auto-increment sequence configuration.</p>
+         */
         @NameInMap("AutoIncrementSequenceConfig")
         public UpdateStandardTemplateRequestUpdateCommandCodeRuleConfigAutoConfigCodeRuleListAutoIncrementSequenceConfig autoIncrementSequenceConfig;
 
         /**
+         * <p>The position index of the code rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -636,6 +742,12 @@ public class UpdateStandardTemplateRequest extends TeaModel {
         public Integer index;
 
         /**
+         * <p>The type of the code rule. Valid values:</p>
+         * <ul>
+         * <li>FIXED_STRING: fixed string.</li>
+         * <li>AUTO_INCREMENT: auto-increment sequence.</li>
+         * <li>STANDARD_SET_CODE: standard set code.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -645,6 +757,8 @@ public class UpdateStandardTemplateRequest extends TeaModel {
         public String type;
 
         /**
+         * <p>The format or value of the code rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -692,12 +806,14 @@ public class UpdateStandardTemplateRequest extends TeaModel {
 
     public static class UpdateStandardTemplateRequestUpdateCommandCodeRuleConfigAutoConfig extends TeaModel {
         /**
+         * <p>The standard code rules.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("CodeRuleList")
         public java.util.List<UpdateStandardTemplateRequestUpdateCommandCodeRuleConfigAutoConfigCodeRuleList> codeRuleList;
 
         /**
+         * <p>Specifies whether strict validation is required.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("NeedStrongValidate")
@@ -727,10 +843,18 @@ public class UpdateStandardTemplateRequest extends TeaModel {
     }
 
     public static class UpdateStandardTemplateRequestUpdateCommandCodeRuleConfig extends TeaModel {
+        /**
+         * <p>The automatic generation configuration for standard code rules. This parameter takes effect when the generation method is set to AUTO_GENERATE.</p>
+         */
         @NameInMap("AutoConfig")
         public UpdateStandardTemplateRequestUpdateCommandCodeRuleConfigAutoConfig autoConfig;
 
         /**
+         * <p>The standard code generation method. Valid values:</p>
+         * <ul>
+         * <li>CUSTOMIZED: custom.</li>
+         * <li>AUTO_GENERATE: automatically generated based on standard code rules.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -764,6 +888,8 @@ public class UpdateStandardTemplateRequest extends TeaModel {
 
     public static class UpdateStandardTemplateRequestUpdateCommandPublishInfo extends TeaModel {
         /**
+         * <p>The publish comment.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -787,12 +913,14 @@ public class UpdateStandardTemplateRequest extends TeaModel {
 
     public static class UpdateStandardTemplateRequestUpdateCommand extends TeaModel {
         /**
+         * <p>The attribute configuration.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("AttributesConfig")
         public UpdateStandardTemplateRequestUpdateCommandAttributesConfig attributesConfig;
 
         /**
+         * <p>The code of the standard template. The code must be globally unique. The code cannot be modified if the template is referenced.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -801,10 +929,15 @@ public class UpdateStandardTemplateRequest extends TeaModel {
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The configuration for automatic generation of standard codes.</p>
+         */
         @NameInMap("CodeRuleConfig")
         public UpdateStandardTemplateRequestUpdateCommandCodeRuleConfig codeRuleConfig;
 
         /**
+         * <p>The description of the standard template.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -812,6 +945,7 @@ public class UpdateStandardTemplateRequest extends TeaModel {
         public String description;
 
         /**
+         * <p>The ID of the standard template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -820,10 +954,14 @@ public class UpdateStandardTemplateRequest extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The list of maintainers.</p>
+         */
         @NameInMap("MaintainerList")
         public java.util.List<String> maintainerList;
 
         /**
+         * <p>The name of the standard template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -832,10 +970,15 @@ public class UpdateStandardTemplateRequest extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The publish information of the standard template.</p>
+         */
         @NameInMap("PublishInfo")
         public UpdateStandardTemplateRequestUpdateCommandPublishInfo publishInfo;
 
         /**
+         * <p>The version number. If this parameter is left empty or set to -1, the latest version is used.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

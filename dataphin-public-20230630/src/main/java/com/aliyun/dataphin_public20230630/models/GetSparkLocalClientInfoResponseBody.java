@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetSparkLocalClientInfoResponseBody extends TeaModel {
     /**
+     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetSparkLocalClientInfoResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetSparkLocalClientInfoResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,12 +38,17 @@ public class GetSparkLocalClientInfoResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -93,6 +107,8 @@ public class GetSparkLocalClientInfoResponseBody extends TeaModel {
 
     public static class GetSparkLocalClientInfoResponseBodyData extends TeaModel {
         /**
+         * <p>The client file ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>XXXX-XXXX-XXXX-XXXX</p>
          */
@@ -100,6 +116,8 @@ public class GetSparkLocalClientInfoResponseBody extends TeaModel {
         public String clientFileResourceId;
 
         /**
+         * <p>The client file name.</p>
+         * 
          * <strong>example:</strong>
          * <p>spark-cleint.zip</p>
          */
@@ -107,6 +125,8 @@ public class GetSparkLocalClientInfoResponseBody extends TeaModel {
         public String clientFileResourceName;
 
         /**
+         * <p>The client name.</p>
+         * 
          * <strong>example:</strong>
          * <p>spark-clinet</p>
          */
@@ -114,6 +134,8 @@ public class GetSparkLocalClientInfoResponseBody extends TeaModel {
         public String clientName;
 
         /**
+         * <p>Indicates whether the client information is editable.</p>
+         * 
          * <strong>example:</strong>
          * <p>true/false</p>
          */

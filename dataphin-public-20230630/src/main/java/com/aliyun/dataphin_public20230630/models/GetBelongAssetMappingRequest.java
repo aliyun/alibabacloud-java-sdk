@@ -4,10 +4,14 @@ package com.aliyun.dataphin_public20230630.models;
 import com.aliyun.tea.*;
 
 public class GetBelongAssetMappingRequest extends TeaModel {
+    /**
+     * <p>Query command.</p>
+     */
     @NameInMap("AssetMappingQuery")
     public GetBelongAssetMappingRequestAssetMappingQuery assetMappingQuery;
 
     /**
+     * <p>Tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +43,7 @@ public class GetBelongAssetMappingRequest extends TeaModel {
 
     public static class GetBelongAssetMappingRequestAssetMappingQuery extends TeaModel {
         /**
+         * <p>The GUID of the belonging asset.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -48,6 +53,8 @@ public class GetBelongAssetMappingRequest extends TeaModel {
         public String belongGuid;
 
         /**
+         * <p>The mapping relationship type. Valid values: VALID (mapped) and INVALID (invalid mapping).</p>
+         * 
          * <strong>example:</strong>
          * <p>VALID</p>
          */

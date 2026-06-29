@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class AddRegisterLineageShrinkRequest extends TeaModel {
     /**
+     * <p>The command for registering and adding data lineage.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AddRegisterLineageCommand")
     public String addRegisterLineageCommandShrink;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

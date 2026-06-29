@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitQualityRuleTasksResponseBody extends TeaModel {
     /**
+     * <p>Backend response code</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class SubmitQualityRuleTasksResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP response code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class SubmitQualityRuleTasksResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Details of the backend response exception</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -34,9 +40,15 @@ public class SubmitQualityRuleTasksResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Execution result</p>
+     */
     @NameInMap("SubmitResult")
     public SubmitQualityRuleTasksResponseBodySubmitResult submitResult;
 
+    /**
+     * <p>Whether the request was successful</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -94,9 +106,15 @@ public class SubmitQualityRuleTasksResponseBody extends TeaModel {
     }
 
     public static class SubmitQualityRuleTasksResponseBodySubmitResult extends TeaModel {
+        /**
+         * <p>Rule task IDs, returned in the test run scenario</p>
+         */
         @NameInMap("RuleTaskIdList")
         public java.util.List<Long> ruleTaskIdList;
 
+        /**
+         * <p>Monitoring object task IDs, returned in non-test run scenarios</p>
+         */
         @NameInMap("WatchTaskIdList")
         public java.util.List<Long> watchTaskIdList;
 

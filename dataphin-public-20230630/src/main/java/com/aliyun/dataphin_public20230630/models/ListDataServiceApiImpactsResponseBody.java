@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDataServiceApiImpactsResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,12 +23,17 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The details of the backend exception.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The paged query result.</p>
+     */
     @NameInMap("PageResult")
     public ListDataServiceApiImpactsResponseBodyPageResult pageResult;
 
@@ -37,6 +46,9 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -113,6 +125,8 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
         public Long appKey;
 
         /**
+         * <p>The application name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -120,6 +134,8 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
         public String appName;
 
         /**
+         * <p>The number of calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>11</p>
          */
@@ -127,6 +143,8 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
         public Long callCount;
 
         /**
+         * <p>The number of client failures.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -134,6 +152,8 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
         public Long clientFailCount;
 
         /**
+         * <p>The source IP address of the access request.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.1.1</p>
          */
@@ -141,6 +161,8 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
         public String clientIp;
 
         /**
+         * <p>The number of abnormal API calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -148,6 +170,8 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
         public Long errorApiCount;
 
         /**
+         * <p>The number of errors.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -155,6 +179,8 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
         public Long errorCount;
 
         /**
+         * <p>The error rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.0</p>
          */
@@ -162,6 +188,8 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
         public String errorRate;
 
         /**
+         * <p>The most recent call time. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-30 08:00:00</p>
          */
@@ -169,6 +197,8 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
         public String lastCallTime;
 
         /**
+         * <p>The gateway statistics time. Format: yyyy_MMdd_HHmm.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025_0611_1011</p>
          */
@@ -176,6 +206,8 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
         public String minute;
 
         /**
+         * <p>The number of offline instances.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -183,6 +215,8 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
         public Long offlineCount;
 
         /**
+         * <p>The total time consumed by successful calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>99</p>
          */
@@ -190,6 +224,8 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
         public String successTimeCost;
 
         /**
+         * <p>The total number of calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>88</p>
          */
@@ -197,6 +233,8 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
         public Long totalCount;
 
         /**
+         * <p>The total time consumed by the API, including failed calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>231</p>
          */
@@ -331,10 +369,15 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
     }
 
     public static class ListDataServiceApiImpactsResponseBodyPageResult extends TeaModel {
+        /**
+         * <p>The list of API impact analysis results.</p>
+         */
         @NameInMap("ImpactList")
         public java.util.List<ListDataServiceApiImpactsResponseBodyPageResultImpactList> impactList;
 
         /**
+         * <p>The total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>68</p>
          */

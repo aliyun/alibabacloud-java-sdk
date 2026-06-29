@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpdatePipelineResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The update result of the pipeline or workflow node.</p>
+     */
     @NameInMap("Data")
     public UpdatePipelineResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class UpdatePipelineResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error details returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -37,6 +46,9 @@ public class UpdatePipelineResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -95,6 +107,8 @@ public class UpdatePipelineResponseBody extends TeaModel {
 
     public static class UpdatePipelineResponseBodyData extends TeaModel {
         /**
+         * <p>The name and IP address of the server that executed the request.</p>
+         * 
          * <strong>example:</strong>
          * <p>hostName:hostIp</p>
          */
@@ -102,6 +116,8 @@ public class UpdatePipelineResponseBody extends TeaModel {
         public String hostMachine;
 
         /**
+         * <p>The scheduling node ID of the pipeline or workflow node.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -109,6 +125,8 @@ public class UpdatePipelineResponseBody extends TeaModel {
         public String nodeId;
 
         /**
+         * <p>The pipeline or workflow ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -116,6 +134,8 @@ public class UpdatePipelineResponseBody extends TeaModel {
         public Long pipelineId;
 
         /**
+         * <p>The submit ID generated upon successful submission of the pipeline or workflow, which is added to the pending publish list and can be published through the publish domain. This value is not returned for workflow nodes because they only support PROD.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -123,6 +143,8 @@ public class UpdatePipelineResponseBody extends TeaModel {
         public Long submitId;
 
         /**
+         * <p>The version number pending publish. This value is not returned for workflow nodes because they only support PROD.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateStreamBatchJobMappingShrinkRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateStreamBatchJobMappingShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The stream-batch integrated node information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("StreamBatchJobMappingCreateCommand")

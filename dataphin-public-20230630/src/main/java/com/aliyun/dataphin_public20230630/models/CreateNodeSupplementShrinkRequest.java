@@ -5,19 +5,27 @@ import com.aliyun.tea.*;
 
 public class CreateNodeSupplementShrinkRequest extends TeaModel {
     /**
+     * <p>Create backfill request</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CreateCommand")
     public String createCommandShrink;
 
     /**
+     * <p>Environment identifier.</p>
+     * <ul>
+     * <li>DEV: development environment.</li>
+     * <li>PROD (default): production environment.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>DEV/PROD</p>
+     * <p>PROD</p>
      */
     @NameInMap("Env")
     public String env;
 
     /**
+     * <p>Tenant ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

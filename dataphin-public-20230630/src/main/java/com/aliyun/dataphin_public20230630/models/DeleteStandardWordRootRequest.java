@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteStandardWordRootRequest extends TeaModel {
     /**
+     * <p>The name of the root word.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteStandardWordRootRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

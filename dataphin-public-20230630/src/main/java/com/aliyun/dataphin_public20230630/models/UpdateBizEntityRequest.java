@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateBizEntityRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateBizEntityRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The update request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")
@@ -42,6 +44,8 @@ public class UpdateBizEntityRequest extends TeaModel {
 
     public static class UpdateBizEntityRequestUpdateCommandBizObject extends TeaModel {
         /**
+         * <p>The description of the business object. The description can be up to 128 characters in length.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -49,6 +53,7 @@ public class UpdateBizEntityRequest extends TeaModel {
         public String description;
 
         /**
+         * <p>The display name of the business object. The name can be up to 64 characters in length and can contain only Chinese characters, letters, digits, underscores, and hyphens.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -58,6 +63,7 @@ public class UpdateBizEntityRequest extends TeaModel {
         public String displayName;
 
         /**
+         * <p>The code name of the business object. The name can be up to 64 characters in length and can contain only letters, digits, and underscores. For the ADB_PG engine, the code name can be up to 40 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -67,6 +73,7 @@ public class UpdateBizEntityRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The user ID of the business object owner.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -76,12 +83,17 @@ public class UpdateBizEntityRequest extends TeaModel {
         public String ownerUserId;
 
         /**
+         * <p>The inherited entity of the business object. Only common business objects support inherited entity configuration, and only online business objects can be inherited.</p>
+         * 
          * <strong>example:</strong>
          * <p>116306</p>
          */
         @NameInMap("ParentId")
         public Long parentId;
 
+        /**
+         * <p>The list of associated online business entity IDs. If this parameter is not specified, the existing values are cleared.</p>
+         */
         @NameInMap("RefBizEntityIdList")
         public java.util.List<Long> refBizEntityIdList;
 
@@ -141,10 +153,15 @@ public class UpdateBizEntityRequest extends TeaModel {
     }
 
     public static class UpdateBizEntityRequestUpdateCommandBizProcess extends TeaModel {
+        /**
+         * <p>The list of business event activity IDs contained in the business flow activity. This parameter is valid only when the current entity is a business flow activity.</p>
+         */
         @NameInMap("BizEventEntityIdList")
         public java.util.List<Long> bizEventEntityIdList;
 
         /**
+         * <p>The description of the business process. The description can be up to 128 characters in length.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -152,6 +169,7 @@ public class UpdateBizEntityRequest extends TeaModel {
         public String description;
 
         /**
+         * <p>The display name of the business process. The name can be up to 64 characters in length and can contain only Chinese characters, letters, digits, underscores, and hyphens.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,6 +179,7 @@ public class UpdateBizEntityRequest extends TeaModel {
         public String displayName;
 
         /**
+         * <p>The code name of the business process. The name can be up to 64 characters in length and can contain only letters, digits, and underscores. For the ADB_PG engine, the code name can be up to 40 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,6 +189,7 @@ public class UpdateBizEntityRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The user ID of the business process owner.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,9 +198,15 @@ public class UpdateBizEntityRequest extends TeaModel {
         @NameInMap("OwnerUserId")
         public String ownerUserId;
 
+        /**
+         * <p>The preceding business flow activities of the business flow activity.</p>
+         */
         @NameInMap("PreBizProcessIdList")
         public java.util.List<Long> preBizProcessIdList;
 
+        /**
+         * <p>The list of associated online business entity IDs. If this parameter is not specified, the existing values are cleared.</p>
+         */
         @NameInMap("RefBizEntityIdList")
         public java.util.List<Long> refBizEntityIdList;
 
@@ -248,13 +274,20 @@ public class UpdateBizEntityRequest extends TeaModel {
     }
 
     public static class UpdateBizEntityRequestUpdateCommand extends TeaModel {
+        /**
+         * <p>The business object.</p>
+         */
         @NameInMap("BizObject")
         public UpdateBizEntityRequestUpdateCommandBizObject bizObject;
 
+        /**
+         * <p>The business process.</p>
+         */
         @NameInMap("BizProcess")
         public UpdateBizEntityRequestUpdateCommandBizProcess bizProcess;
 
         /**
+         * <p>The ID of the business unit to which the business process belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -264,6 +297,7 @@ public class UpdateBizEntityRequest extends TeaModel {
         public Long bizUnitId;
 
         /**
+         * <p>The ID of the data domain to which the business process belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -273,6 +307,7 @@ public class UpdateBizEntityRequest extends TeaModel {
         public Long dataDomainId;
 
         /**
+         * <p>The ID of the business entity.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -282,6 +317,7 @@ public class UpdateBizEntityRequest extends TeaModel {
         public Long id;
 
         /**
+         * <p>The type of the business entity. For more information, refer to the create business entity operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

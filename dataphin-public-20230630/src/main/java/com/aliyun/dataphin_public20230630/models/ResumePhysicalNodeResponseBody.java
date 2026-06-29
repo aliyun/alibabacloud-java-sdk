@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ResumePhysicalNodeResponseBody extends TeaModel {
     /**
+     * <p>Error code. A value of OK indicates a successful request.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ResumePhysicalNodeResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,16 +23,23 @@ public class ResumePhysicalNodeResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Results of the node resume scheduling operation.</p>
+     */
     @NameInMap("NodeOperateResultList")
     public java.util.List<ResumePhysicalNodeResponseBodyNodeOperateResultList> nodeOperateResultList;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
@@ -36,6 +47,8 @@ public class ResumePhysicalNodeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class ResumePhysicalNodeResponseBody extends TeaModel {
 
     public static class ResumePhysicalNodeResponseBodyNodeOperateResultList extends TeaModel {
         /**
+         * <p>Error message returned when the operation fails.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -104,6 +119,8 @@ public class ResumePhysicalNodeResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>Node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>n_123456</p>
          */
@@ -111,6 +128,8 @@ public class ResumePhysicalNodeResponseBody extends TeaModel {
         public String nodeId;
 
         /**
+         * <p>Operation result.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
          */

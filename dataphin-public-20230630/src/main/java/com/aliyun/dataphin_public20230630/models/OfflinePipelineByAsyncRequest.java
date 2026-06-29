@@ -5,18 +5,21 @@ import com.aliyun.tea.*;
 
 public class OfflinePipelineByAsyncRequest extends TeaModel {
     /**
+     * <p>The request context information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Context")
     public OfflinePipelineByAsyncRequestContext context;
 
     /**
+     * <p>The offline pipeline node command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("OfflineCommand")
     public OfflinePipelineByAsyncRequestOfflineCommand offlineCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,6 +59,11 @@ public class OfflinePipelineByAsyncRequest extends TeaModel {
 
     public static class OfflinePipelineByAsyncRequestContext extends TeaModel {
         /**
+         * <p>The environment for the current operation. Valid values:</p>
+         * <ul>
+         * <li>DEV: the development environment.</li>
+         * <li>PROD: the production environment.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -65,6 +73,7 @@ public class OfflinePipelineByAsyncRequest extends TeaModel {
         public String env;
 
         /**
+         * <p>The ID of the project to which the integration pipeline node belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -98,6 +107,8 @@ public class OfflinePipelineByAsyncRequest extends TeaModel {
 
     public static class OfflinePipelineByAsyncRequestOfflineCommand extends TeaModel {
         /**
+         * <p>The remarks.</p>
+         * 
          * <strong>example:</strong>
          * <p>comment</p>
          */
@@ -105,12 +116,15 @@ public class OfflinePipelineByAsyncRequest extends TeaModel {
         public String comment;
 
         /**
+         * <p>Specifies whether to delete the node.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Delete")
         public Boolean delete;
 
         /**
+         * <p>The file ID of the integration node. You can use this parameter to query the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -118,6 +132,8 @@ public class OfflinePipelineByAsyncRequest extends TeaModel {
         public Long fileId;
 
         /**
+         * <p>The schedule node ID of the integration node. You can use this parameter to query the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>n_123</p>
          */
@@ -125,6 +141,8 @@ public class OfflinePipelineByAsyncRequest extends TeaModel {
         public String nodeId;
 
         /**
+         * <p>The primary key ID of the integration pipeline. You can use this parameter to query the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */

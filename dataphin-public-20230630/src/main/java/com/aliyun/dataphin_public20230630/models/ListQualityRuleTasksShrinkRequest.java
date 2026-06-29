@@ -4,10 +4,14 @@ package com.aliyun.dataphin_public20230630.models;
 import com.aliyun.tea.*;
 
 public class ListQualityRuleTasksShrinkRequest extends TeaModel {
+    /**
+     * <p>The paged query conditions.</p>
+     */
     @NameInMap("ListQuery")
     public String listQueryShrink;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

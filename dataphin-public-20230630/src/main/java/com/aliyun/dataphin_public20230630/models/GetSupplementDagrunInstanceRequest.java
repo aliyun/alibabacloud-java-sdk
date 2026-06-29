@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSupplementDagrunInstanceRequest extends TeaModel {
     /**
-     * <p>Dagrun ID</p>
+     * <p>The dagrun ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,12 @@ public class GetSupplementDagrunInstanceRequest extends TeaModel {
     public String dagrunId;
 
     /**
+     * <p>The environment identifier. Valid values:</p>
+     * <ul>
+     * <li>DEV: development environment. </li>
+     * <li>PROD (default): production environment.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PROD</p>
      */
@@ -22,6 +28,7 @@ public class GetSupplementDagrunInstanceRequest extends TeaModel {
     public String env;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

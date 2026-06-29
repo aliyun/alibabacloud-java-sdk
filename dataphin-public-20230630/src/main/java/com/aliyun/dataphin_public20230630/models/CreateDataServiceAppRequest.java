@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateDataServiceAppRequest extends TeaModel {
     /**
+     * <p>The command to create a data service application.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CreateCommand")
     public CreateDataServiceAppRequestCreateCommand createCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,7 @@ public class CreateDataServiceAppRequest extends TeaModel {
 
     public static class CreateDataServiceAppRequestCreateCommand extends TeaModel {
         /**
+         * <p>The application group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,6 +54,10 @@ public class CreateDataServiceAppRequest extends TeaModel {
         public Integer appGroupId;
 
         /**
+         * <p>The application key, which must be globally unique and is used when calling APIs.
+         * The key must be 8 to 128 characters in length and can contain letters, digits, underscores (_), and hyphens (-).
+         * This parameter can be customized only when using Alibaba Cloud API Gateway or the built-in gateway. This parameter is ignored when using a dedicated cloud gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>200000001</p>
          */
@@ -58,6 +65,7 @@ public class CreateDataServiceAppRequest extends TeaModel {
         public String appKey;
 
         /**
+         * <p>The application name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -67,6 +75,11 @@ public class CreateDataServiceAppRequest extends TeaModel {
         public String appName;
 
         /**
+         * <p>The app secret.
+         * If this parameter is not specified, the system automatically generates a new AppSecret value.
+         * The secret must be 8 to 127 characters in length and can contain letters, digits, underscores (_), and hyphens (-).
+         * This parameter can be customized only when using Alibaba Cloud API Gateway or the built-in gateway. This parameter is ignored when using a dedicated cloud gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>abc123456789</p>
          */
@@ -74,12 +87,14 @@ public class CreateDataServiceAppRequest extends TeaModel {
         public String appSecret;
 
         /**
+         * <p>The list of owner IDs.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("OwnerIds")
         public java.util.List<String> ownerIds;
 
         /**
+         * <p>Common scenarios.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

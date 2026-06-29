@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDataServiceAppMembersRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetDataServiceAppMembersRequest extends TeaModel {
     public Integer appId;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

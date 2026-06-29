@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class TransferOwnershipForAllObjectRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,6 +14,9 @@ public class TransferOwnershipForAllObjectRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <p>The transfer information.</p>
+     */
     @NameInMap("PrivilegeTransferRecord")
     public TransferOwnershipForAllObjectRequestPrivilegeTransferRecord privilegeTransferRecord;
 
@@ -39,6 +43,7 @@ public class TransferOwnershipForAllObjectRequest extends TeaModel {
 
     public static class TransferOwnershipForAllObjectRequestPrivilegeTransferRecord extends TeaModel {
         /**
+         * <p>The user ID of the new owner.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -48,6 +53,7 @@ public class TransferOwnershipForAllObjectRequest extends TeaModel {
         public String newOwner;
 
         /**
+         * <p>The user ID of the original owner.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -57,6 +63,8 @@ public class TransferOwnershipForAllObjectRequest extends TeaModel {
         public String oldOwner;
 
         /**
+         * <p>The remarks.</p>
+         * 
          * <strong>example:</strong>
          * <p>comment</p>
          */

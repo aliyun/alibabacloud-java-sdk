@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveDataServiceAppMemberShrinkRequest extends TeaModel {
     /**
+     * <p>Tenant ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class RemoveDataServiceAppMemberShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>Remove regular members from a data service application</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RemoveCommand")

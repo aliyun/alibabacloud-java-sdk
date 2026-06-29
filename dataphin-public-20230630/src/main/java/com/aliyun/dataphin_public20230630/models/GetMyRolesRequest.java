@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMyRolesRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

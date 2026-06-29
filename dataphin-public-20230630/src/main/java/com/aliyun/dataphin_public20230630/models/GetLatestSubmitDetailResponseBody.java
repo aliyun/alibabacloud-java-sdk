@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetLatestSubmitDetailResponseBody extends TeaModel {
     /**
+     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -26,15 +32,23 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The pending submit details.</p>
+     */
     @NameInMap("SubmitDetailResult")
     public GetLatestSubmitDetailResponseBodySubmitDetailResult submitDetailResult;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -93,6 +107,8 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
 
     public static class GetLatestSubmitDetailResponseBodySubmitDetailResultReleaseObjectSubmitObject extends TeaModel {
         /**
+         * <p>The object ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234</p>
          */
@@ -100,6 +116,8 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
         public String objectId;
 
         /**
+         * <p>The object name.</p>
+         * 
          * <strong>example:</strong>
          * <p>abc</p>
          */
@@ -107,6 +125,8 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
         public String objectName;
 
         /**
+         * <p>The object type.</p>
+         * 
          * <strong>example:</strong>
          * <p>MAX_COMPUTE_SQL</p>
          */
@@ -146,6 +166,8 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
 
     public static class GetLatestSubmitDetailResponseBodySubmitDetailResultReleaseObject extends TeaModel {
         /**
+         * <p>The change type. Valid values: CREATE, UPDATE, and DELETE.</p>
+         * 
          * <strong>example:</strong>
          * <p>DELETE</p>
          */
@@ -153,6 +175,8 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
         public String changeType;
 
         /**
+         * <p>The node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>n_1234</p>
          */
@@ -160,6 +184,8 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
         public String nodeId;
 
         /**
+         * <p>The object version.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -167,6 +193,8 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
         public String objectVersion;
 
         /**
+         * <p>The project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234</p>
          */
@@ -174,12 +202,17 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
         public Long projectId;
 
         /**
+         * <p>The submit comment.</p>
+         * 
          * <strong>example:</strong>
          * <p>提交说明</p>
          */
         @NameInMap("SubmitComment")
         public String submitComment;
 
+        /**
+         * <p>The submit object.</p>
+         */
         @NameInMap("SubmitObject")
         public GetLatestSubmitDetailResponseBodySubmitDetailResultReleaseObjectSubmitObject submitObject;
 
@@ -240,6 +273,8 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
 
     public static class GetLatestSubmitDetailResponseBodySubmitDetailResult extends TeaModel {
         /**
+         * <p>The submit record ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234</p>
          */
@@ -247,16 +282,44 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The publish status. Valid values: </p>
+         * <ul>
+         * <li>NOT_VERIFIED: not verified.</li>
+         * <li>APPROVING: approval in progress.</li>
+         * <li>APPROVE_FAILED: approval failed.</li>
+         * <li>APPROVE_SUCCESS: approval succeeded.</li>
+         * <li>APPROVE_REVOKED: approval revoked.</li>
+         * <li>CHECKING: publish verification in progress.</li>
+         * <li>CHECK_FAILED: publish verification failed.</li>
+         * <li>CHECK_SUCCESS: publish verification succeeded.</li>
+         * <li>PUBLISHING: publishing in progress.</li>
+         * <li>FAILED: publish failed.</li>
+         * <li>SUCCESS: publish succeeded.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
          */
         @NameInMap("PublishStatus")
         public String publishStatus;
 
+        /**
+         * <p>The pending submit record object.</p>
+         */
         @NameInMap("ReleaseObject")
         public GetLatestSubmitDetailResponseBodySubmitDetailResultReleaseObject releaseObject;
 
         /**
+         * <p>The submit status. Valid values: </p>
+         * <ul>
+         * <li><p>TO_BE_PUBLISHED: pending.</p>
+         * </li>
+         * <li><p>PUBLISHED: published.</p>
+         * </li>
+         * <li><p>PUBLISHING: publishing.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>TO_BE_PUBLISHED</p>
          */
@@ -264,6 +327,8 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
         public String submitStatus;
 
         /**
+         * <p>The record tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>tag</p>
          */

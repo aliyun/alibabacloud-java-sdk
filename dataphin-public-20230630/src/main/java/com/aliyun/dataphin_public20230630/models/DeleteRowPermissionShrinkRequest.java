@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteRowPermissionShrinkRequest extends TeaModel {
     /**
+     * <p>The request command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeleteRowPermissionCommand")
     public String deleteRowPermissionCommandShrink;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

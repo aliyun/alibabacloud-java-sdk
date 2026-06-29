@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTenantComputeEngineRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateTenantComputeEngineRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The update command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")
@@ -42,12 +44,14 @@ public class UpdateTenantComputeEngineRequest extends TeaModel {
 
     public static class UpdateTenantComputeEngineRequestUpdateCommand extends TeaModel {
         /**
+         * <p>The list of cluster node endpoints.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("ClusterUrlList")
         public java.util.List<String> clusterUrlList;
 
         /**
+         * <p>The compute source type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -57,6 +61,8 @@ public class UpdateTenantComputeEngineRequest extends TeaModel {
         public String type;
 
         /**
+         * <p>The version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.0</p>
          */

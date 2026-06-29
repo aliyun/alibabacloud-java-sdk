@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class GrantResourcePermissionShrinkRequest extends TeaModel {
     /**
+     * <p>The grant request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("GrantCommand")
     public String grantCommandShrink;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

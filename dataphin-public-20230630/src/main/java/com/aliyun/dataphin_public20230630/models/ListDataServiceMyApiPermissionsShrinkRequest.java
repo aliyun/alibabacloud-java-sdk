@@ -4,10 +4,14 @@ package com.aliyun.dataphin_public20230630.models;
 import com.aliyun.tea.*;
 
 public class ListDataServiceMyApiPermissionsShrinkRequest extends TeaModel {
+    /**
+     * <p>Search conditions.</p>
+     */
     @NameInMap("ListQuery")
     public String listQueryShrink;
 
     /**
+     * <p>Tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +21,7 @@ public class ListDataServiceMyApiPermissionsShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>Data service project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

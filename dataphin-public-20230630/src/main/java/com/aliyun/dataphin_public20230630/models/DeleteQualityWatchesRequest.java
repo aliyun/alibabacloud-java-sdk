@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteQualityWatchesRequest extends TeaModel {
     /**
+     * <p>The delete instruction.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeleteCommand")
     public DeleteQualityWatchesRequestDeleteCommand deleteCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,7 @@ public class DeleteQualityWatchesRequest extends TeaModel {
 
     public static class DeleteQualityWatchesRequestDeleteCommand extends TeaModel {
         /**
+         * <p>The IDs of the monitored objects.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("WatchIdList")

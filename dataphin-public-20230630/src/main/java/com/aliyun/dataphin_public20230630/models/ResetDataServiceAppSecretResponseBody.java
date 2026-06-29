@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ResetDataServiceAppSecretResponseBody extends TeaModel {
     /**
+     * <p>Backend response code</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Reset Data Service application key result</p>
+     */
     @NameInMap("Data")
     public ResetDataServiceAppSecretResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ResetDataServiceAppSecretResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Backend exception details</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -37,6 +46,9 @@ public class ResetDataServiceAppSecretResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -95,6 +107,8 @@ public class ResetDataServiceAppSecretResponseBody extends TeaModel {
 
     public static class ResetDataServiceAppSecretResponseBodyData extends TeaModel {
         /**
+         * <p>The new application key</p>
+         * 
          * <strong>example:</strong>
          * <p>200000001</p>
          */
@@ -102,6 +116,8 @@ public class ResetDataServiceAppSecretResponseBody extends TeaModel {
         public String appKey;
 
         /**
+         * <p>The new application secret</p>
+         * 
          * <strong>example:</strong>
          * <p>abc123456789</p>
          */

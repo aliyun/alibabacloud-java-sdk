@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateDirectoryRequest extends TeaModel {
     /**
+     * <p>The create request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CreateCommand")
     public CreateDirectoryRequestCreateCommand createCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,20 @@ public class CreateDirectoryRequest extends TeaModel {
 
     public static class CreateDirectoryRequestCreateCommand extends TeaModel {
         /**
+         * <p>The menu tree category. Valid values:</p>
+         * <ul>
+         * <li>tempCode: custom query</li>
+         * <li>codeManage: code node</li>
+         * <li>offlinePipeline: offline pipeline</li>
+         * <li>offlinePipelineCustomPlugin: pipeline custom component</li>
+         * <li>dataX: synchronization task</li>
+         * <li>streamMeta: real-time meta table</li>
+         * <li>streamCustomDataSource: real-time custom source</li>
+         * <li>streamTemplate: real-time compute template</li>
+         * <li>resourceManage: resource management</li>
+         * <li>udfResource: offline function</li>
+         * <li>streamFunction: real-time function.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,6 +67,7 @@ public class CreateDirectoryRequest extends TeaModel {
         public String category;
 
         /**
+         * <p>The parent directory of the new file directory.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -60,6 +77,7 @@ public class CreateDirectoryRequest extends TeaModel {
         public String directory;
 
         /**
+         * <p>The name of the new file directory.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -69,6 +87,7 @@ public class CreateDirectoryRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

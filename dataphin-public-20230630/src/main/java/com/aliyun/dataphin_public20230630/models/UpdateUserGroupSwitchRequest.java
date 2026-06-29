@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateUserGroupSwitchRequest extends TeaModel {
     /**
+     * <p>Specifies whether to enable the user group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateUserGroupSwitchRequest extends TeaModel {
     public Boolean active;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class UpdateUserGroupSwitchRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The user group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

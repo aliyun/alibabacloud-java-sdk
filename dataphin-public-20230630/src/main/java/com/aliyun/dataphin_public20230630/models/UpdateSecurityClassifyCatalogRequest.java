@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateSecurityClassifyCatalogRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateSecurityClassifyCatalogRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The update instruction.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")
@@ -42,6 +44,7 @@ public class UpdateSecurityClassifyCatalogRequest extends TeaModel {
 
     public static class UpdateSecurityClassifyCatalogRequestUpdateCommand extends TeaModel {
         /**
+         * <p>The name of the classification folder.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -50,10 +53,15 @@ public class UpdateSecurityClassifyCatalogRequest extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The list of administrator IDs. This parameter takes effect only when the parent folder is the root folder.</p>
+         */
         @NameInMap("OwnerList")
         public java.util.List<String> ownerList;
 
         /**
+         * <p>The full path of the parent classification folder. Default value: /.</p>
+         * 
          * <strong>example:</strong>
          * <p>/d1/</p>
          */
@@ -61,6 +69,7 @@ public class UpdateSecurityClassifyCatalogRequest extends TeaModel {
         public String parentPath;
 
         /**
+         * <p>The original full path of the folder.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -70,6 +79,13 @@ public class UpdateSecurityClassifyCatalogRequest extends TeaModel {
         public String path;
 
         /**
+         * <p>The visibility scope of the classification folder. This parameter takes effect only when the parent folder is the root folder. Valid values:</p>
+         * <ul>
+         * <li>PUBLIC: visible to all users.</li>
+         * <li>PRIVATE: visible only to administrators.
+         * Default value: PUBLIC.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PUBLIC</p>
          */

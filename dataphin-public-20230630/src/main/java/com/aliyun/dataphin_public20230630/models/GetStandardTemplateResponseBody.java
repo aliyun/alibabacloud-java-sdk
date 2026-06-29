@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetStandardTemplateResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class GetStandardTemplateResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class GetStandardTemplateResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The details of the backend exception.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -34,9 +40,15 @@ public class GetStandardTemplateResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The template details.</p>
+     */
     @NameInMap("TemplateInfo")
     public GetStandardTemplateResponseBodyTemplateInfo templateInfo;
 
@@ -95,16 +107,27 @@ public class GetStandardTemplateResponseBody extends TeaModel {
 
     public static class GetStandardTemplateResponseBodyTemplateInfoAttributesConfigAttributeListMonitorConfig extends TeaModel {
         /**
+         * <p>The field to check.</p>
+         * 
          * <strong>example:</strong>
          * <p>column1</p>
          */
         @NameInMap("ColumnName")
         public String columnName;
 
+        /**
+         * <p>Indicates whether the check is case-sensitive.</p>
+         */
         @NameInMap("IsCaseSensitive")
         public Boolean isCaseSensitive;
 
         /**
+         * <p>The monitoring method. Valid values:</p>
+         * <ul>
+         * <li>METADATA: metadata monitoring.</li>
+         * <li>QUALITY: data quality monitoring.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>METADATA</p>
          */
@@ -144,6 +167,8 @@ public class GetStandardTemplateResponseBody extends TeaModel {
 
     public static class GetStandardTemplateResponseBodyTemplateInfoAttributesConfigAttributeListRefAttributeAttributeFromInfoStandardReference extends TeaModel {
         /**
+         * <p>The standard ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>22</p>
          */
@@ -151,6 +176,8 @@ public class GetStandardTemplateResponseBody extends TeaModel {
         public Long standardId;
 
         /**
+         * <p>The version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -182,12 +209,22 @@ public class GetStandardTemplateResponseBody extends TeaModel {
 
     public static class GetStandardTemplateResponseBodyTemplateInfoAttributesConfigAttributeListRefAttributeAttributeFromInfo extends TeaModel {
         /**
+         * <p>The attribute source. Valid values:</p>
+         * <ul>
+         * <li>SYSTEM: system attribute.</li>
+         * <li>CUSTOM: custom attribute.</li>
+         * <li>STANDARD: standard.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CUSTOM</p>
          */
         @NameInMap("AttributeFrom")
         public String attributeFrom;
 
+        /**
+         * <p>The corresponding standard. This parameter takes effect when the attribute source is set to STANDARD.</p>
+         */
         @NameInMap("StandardReference")
         public GetStandardTemplateResponseBodyTemplateInfoAttributesConfigAttributeListRefAttributeAttributeFromInfoStandardReference standardReference;
 
@@ -215,10 +252,15 @@ public class GetStandardTemplateResponseBody extends TeaModel {
     }
 
     public static class GetStandardTemplateResponseBodyTemplateInfoAttributesConfigAttributeListRefAttribute extends TeaModel {
+        /**
+         * <p>The attribute source.</p>
+         */
         @NameInMap("AttributeFromInfo")
         public GetStandardTemplateResponseBodyTemplateInfoAttributesConfigAttributeListRefAttributeAttributeFromInfo attributeFromInfo;
 
         /**
+         * <p>The attribute ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -250,6 +292,8 @@ public class GetStandardTemplateResponseBody extends TeaModel {
 
     public static class GetStandardTemplateResponseBodyTemplateInfoAttributesConfigAttributeListValueConfigValueRangeLookupTableReference extends TeaModel {
         /**
+         * <p>The referenced lookup table field.</p>
+         * 
          * <strong>example:</strong>
          * <p>col1</p>
          */
@@ -257,6 +301,8 @@ public class GetStandardTemplateResponseBody extends TeaModel {
         public String column;
 
         /**
+         * <p>The lookup table ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>11</p>
          */
@@ -287,13 +333,21 @@ public class GetStandardTemplateResponseBody extends TeaModel {
     }
 
     public static class GetStandardTemplateResponseBodyTemplateInfoAttributesConfigAttributeListValueConfigValueRangeMinMaxValueConfig extends TeaModel {
+        /**
+         * <p>Indicates whether the maximum value is included.</p>
+         */
         @NameInMap("IncludeMaxValue")
         public Boolean includeMaxValue;
 
+        /**
+         * <p>Indicates whether the minimum value is included.</p>
+         */
         @NameInMap("IncludeMinValue")
         public Boolean includeMinValue;
 
         /**
+         * <p>The maximum value.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -301,6 +355,8 @@ public class GetStandardTemplateResponseBody extends TeaModel {
         public String maxValue;
 
         /**
+         * <p>The minimum value.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -348,25 +404,54 @@ public class GetStandardTemplateResponseBody extends TeaModel {
 
     public static class GetStandardTemplateResponseBodyTemplateInfoAttributesConfigAttributeListValueConfigValueRange extends TeaModel {
         /**
+         * <p>The value range. This parameter takes effect when the value source is set to DATAPHIN_ATTRIBUTE. Valid values:</p>
+         * <ul>
+         * <li>BIZ_UNIT: data domain.</li>
+         * <li>PROJECT: project.</li>
+         * <li>USER: user.</li>
+         * <li>USER_GROUP: user group.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>DATAPHIN_ATTRIBUTE</p>
          */
         @NameInMap("DataphinAttributeType")
         public String dataphinAttributeType;
 
+        /**
+         * <p>The value range. This parameter takes effect when the value source is set to LOOKUP_TABLE.</p>
+         */
         @NameInMap("LookupTableReference")
         public GetStandardTemplateResponseBodyTemplateInfoAttributesConfigAttributeListValueConfigValueRangeLookupTableReference lookupTableReference;
 
+        /**
+         * <p>The value range. This parameter takes effect when the value source is set to MIN_MAX.</p>
+         */
         @NameInMap("MinMaxValueConfig")
         public GetStandardTemplateResponseBodyTemplateInfoAttributesConfigAttributeListValueConfigValueRangeMinMaxValueConfig minMaxValueConfig;
 
         /**
+         * <p>The value source. Valid values:</p>
+         * <ul>
+         * <li>NONE: no constraint.</li>
+         * <li>LIST: obtained from a list.</li>
+         * <li>LOOKUP_TABLE: lookup table.</li>
+         * <li>MIN_MAX: value between the minimum and maximum.</li>
+         * <li>DATAPHIN_ATTRIBUTE: Dataphin system property.</li>
+         * <li>BUILT_IN_DATA_TYPES: built-in data types.</li>
+         * <li>BUILT_IN_DATA_CLASSIFICATION: built-in data categorization.</li>
+         * <li>BUILT_IN_DATA_LEVEL: built-in data security classification.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>NONE</p>
          */
         @NameInMap("ValueConstraint")
         public String valueConstraint;
 
+        /**
+         * <p>The value range. This parameter takes effect when the value source is set to LIST.</p>
+         */
         @NameInMap("ValueList")
         public java.util.List<String> valueList;
 
@@ -419,6 +504,16 @@ public class GetStandardTemplateResponseBody extends TeaModel {
 
     public static class GetStandardTemplateResponseBodyTemplateInfoAttributesConfigAttributeListValueConfig extends TeaModel {
         /**
+         * <p>The data type of the attribute value. Valid values:</p>
+         * <ul>
+         * <li>STRING: string.</li>
+         * <li>BIGINT: numeric.</li>
+         * <li>DOUBLE: floating-point.</li>
+         * <li>DATE: date, accurate to the day.</li>
+         * <li>DATETIME: date, accurate to the millisecond.</li>
+         * <li>BOOLEAN: Boolean.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>STRING</p>
          */
@@ -426,6 +521,8 @@ public class GetStandardTemplateResponseBody extends TeaModel {
         public String dataType;
 
         /**
+         * <p>The default value.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -433,6 +530,8 @@ public class GetStandardTemplateResponseBody extends TeaModel {
         public String defaultValue;
 
         /**
+         * <p>The length of the attribute value. If this parameter is left empty or set to -1, the length is not limited. Typically, only string types have a length limit for attribute values.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -440,12 +539,23 @@ public class GetStandardTemplateResponseBody extends TeaModel {
         public Integer length;
 
         /**
+         * <p>The attribute value type. Valid values:</p>
+         * <ul>
+         * <li>CUSTOMIZED: custom input.</li>
+         * <li>SINGLE_ENUM: single enumeration value.</li>
+         * <li>MULTIPLE_ENUMS: multiple enumeration values.</li>
+         * <li>RANGE: range value.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CUSTOMIZED</p>
          */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The value range.</p>
+         */
         @NameInMap("ValueRange")
         public GetStandardTemplateResponseBodyTemplateInfoAttributesConfigAttributeListValueConfigValueRange valueRange;
 
@@ -498,6 +608,8 @@ public class GetStandardTemplateResponseBody extends TeaModel {
 
     public static class GetStandardTemplateResponseBodyTemplateInfoAttributesConfigAttributeList extends TeaModel {
         /**
+         * <p>The attribute code.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_attr</p>
          */
@@ -505,45 +617,77 @@ public class GetStandardTemplateResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Indicates whether monitoring configuration is enabled.</p>
+         */
         @NameInMap("EnableMonitorConfig")
         public Boolean enableMonitorConfig;
 
         /**
+         * <p>The attribute ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1011</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The monitoring configuration.</p>
+         */
         @NameInMap("MonitorConfig")
         public GetStandardTemplateResponseBodyTemplateInfoAttributesConfigAttributeListMonitorConfig monitorConfig;
 
         /**
+         * <p>The attribute name.</p>
+         * 
          * <strong>example:</strong>
          * <p>attr1</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The referenced attribute information.</p>
+         */
         @NameInMap("RefAttribute")
         public GetStandardTemplateResponseBodyTemplateInfoAttributesConfigAttributeListRefAttribute refAttribute;
 
+        /**
+         * <p>Indicates whether the attribute is required.</p>
+         */
         @NameInMap("Required")
         public Boolean required;
 
         /**
+         * <p>The attribute type. Valid values:</p>
+         * <ul>
+         * <li>BIZ_ATTRIBUTE: business attribute.</li>
+         * <li>TECH_ATTRIBUTE: technical attribute.</li>
+         * <li>MANAGEMENT_ATTRIBUTE: management attribute.</li>
+         * <li>QUALITY_ATTRIBUTE: quality attribute.</li>
+         * <li>MASTER_DATA_ATTRIBUTE: master data attribute.</li>
+         * <li>LIFECYCLE_ATTRIBUTE: lifecycle attribute.</li>
+         * <li>SECURITY_ATTRIBUTE: security attribute.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>BIZ_ATTRIBUTE</p>
          */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The value configuration.</p>
+         */
         @NameInMap("ValueConfig")
         public GetStandardTemplateResponseBodyTemplateInfoAttributesConfigAttributeListValueConfig valueConfig;
 
@@ -635,6 +779,9 @@ public class GetStandardTemplateResponseBody extends TeaModel {
     }
 
     public static class GetStandardTemplateResponseBodyTemplateInfoAttributesConfig extends TeaModel {
+        /**
+         * <p>The list of attributes.</p>
+         */
         @NameInMap("AttributeList")
         public java.util.List<GetStandardTemplateResponseBodyTemplateInfoAttributesConfigAttributeList> attributeList;
 
@@ -655,16 +802,23 @@ public class GetStandardTemplateResponseBody extends TeaModel {
 
     public static class GetStandardTemplateResponseBodyTemplateInfoCodeRuleConfigAutoConfigCodeRuleListAutoIncrementSequenceConfig extends TeaModel {
         /**
+         * <p>The number of digits.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
         @NameInMap("Digit")
         public Integer digit;
 
+        /**
+         * <p>Indicates whether zero-padding is required.</p>
+         */
         @NameInMap("NeedPaddingZero")
         public Boolean needPaddingZero;
 
         /**
+         * <p>The start value.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -672,6 +826,8 @@ public class GetStandardTemplateResponseBody extends TeaModel {
         public Long startValue;
 
         /**
+         * <p>The step size.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -718,10 +874,15 @@ public class GetStandardTemplateResponseBody extends TeaModel {
     }
 
     public static class GetStandardTemplateResponseBodyTemplateInfoCodeRuleConfigAutoConfigCodeRuleList extends TeaModel {
+        /**
+         * <p>The auto-increment sequence configuration.</p>
+         */
         @NameInMap("AutoIncrementSequenceConfig")
         public GetStandardTemplateResponseBodyTemplateInfoCodeRuleConfigAutoConfigCodeRuleListAutoIncrementSequenceConfig autoIncrementSequenceConfig;
 
         /**
+         * <p>The position index of the code rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -729,6 +890,13 @@ public class GetStandardTemplateResponseBody extends TeaModel {
         public Integer index;
 
         /**
+         * <p>The code rule type. Valid values:</p>
+         * <ul>
+         * <li>FIXED_STRING: fixed string.</li>
+         * <li>AUTO_INCREMENT: auto-increment sequence.</li>
+         * <li>STANDARD_SET_CODE: standard set code.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>FIXED_STRING</p>
          */
@@ -736,6 +904,8 @@ public class GetStandardTemplateResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The format or value of the code rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -782,9 +952,15 @@ public class GetStandardTemplateResponseBody extends TeaModel {
     }
 
     public static class GetStandardTemplateResponseBodyTemplateInfoCodeRuleConfigAutoConfig extends TeaModel {
+        /**
+         * <p>The standard code rules.</p>
+         */
         @NameInMap("CodeRuleList")
         public java.util.List<GetStandardTemplateResponseBodyTemplateInfoCodeRuleConfigAutoConfigCodeRuleList> codeRuleList;
 
+        /**
+         * <p>Indicates whether strong validation is required.</p>
+         */
         @NameInMap("NeedStrongValidate")
         public Boolean needStrongValidate;
 
@@ -812,10 +988,19 @@ public class GetStandardTemplateResponseBody extends TeaModel {
     }
 
     public static class GetStandardTemplateResponseBodyTemplateInfoCodeRuleConfig extends TeaModel {
+        /**
+         * <p>The auto-generation configuration for the standard code rule. This parameter takes effect when the generation method is set to AUTO_GENERATE.</p>
+         */
         @NameInMap("AutoConfig")
         public GetStandardTemplateResponseBodyTemplateInfoCodeRuleConfigAutoConfig autoConfig;
 
         /**
+         * <p>The standard code generation method. Valid values:</p>
+         * <ul>
+         * <li>CUSTOMIZED: custom.</li>
+         * <li>AUTO_GENERATE: automatically generated based on the standard code rule.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CUSTOMIZED</p>
          */
@@ -847,6 +1032,8 @@ public class GetStandardTemplateResponseBody extends TeaModel {
 
     public static class GetStandardTemplateResponseBodyTemplateInfoCreator extends TeaModel {
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>300000913</p>
          */
@@ -854,6 +1041,8 @@ public class GetStandardTemplateResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The username.</p>
+         * 
          * <strong>example:</strong>
          * <p>susan</p>
          */
@@ -885,6 +1074,8 @@ public class GetStandardTemplateResponseBody extends TeaModel {
 
     public static class GetStandardTemplateResponseBodyTemplateInfoLastModifier extends TeaModel {
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>300000913</p>
          */
@@ -892,6 +1083,8 @@ public class GetStandardTemplateResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The username.</p>
+         * 
          * <strong>example:</strong>
          * <p>susan</p>
          */
@@ -923,6 +1116,8 @@ public class GetStandardTemplateResponseBody extends TeaModel {
 
     public static class GetStandardTemplateResponseBodyTemplateInfoMaintainerList extends TeaModel {
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>300000913</p>
          */
@@ -930,6 +1125,8 @@ public class GetStandardTemplateResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The username.</p>
+         * 
          * <strong>example:</strong>
          * <p>susan</p>
          */
@@ -960,30 +1157,45 @@ public class GetStandardTemplateResponseBody extends TeaModel {
     }
 
     public static class GetStandardTemplateResponseBodyTemplateInfo extends TeaModel {
+        /**
+         * <p>The attribute configuration.</p>
+         */
         @NameInMap("AttributesConfig")
         public GetStandardTemplateResponseBodyTemplateInfoAttributesConfig attributesConfig;
 
         /**
+         * <p>The code of the standard template. This value is globally unique and cannot be modified when references exist.</p>
+         * 
          * <strong>example:</strong>
          * <p>test01</p>
          */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The auto-generation rule configuration for the standard code.</p>
+         */
         @NameInMap("CodeRuleConfig")
         public GetStandardTemplateResponseBodyTemplateInfoCodeRuleConfig codeRuleConfig;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The creator.</p>
+         */
         @NameInMap("Creator")
         public GetStandardTemplateResponseBodyTemplateInfoCreator creator;
 
         /**
+         * <p>The description of the standard template.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -991,19 +1203,29 @@ public class GetStandardTemplateResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The standard template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>22</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The last modifier.</p>
+         */
         @NameInMap("LastModifier")
         public GetStandardTemplateResponseBodyTemplateInfoLastModifier lastModifier;
 
+        /**
+         * <p>The list of maintainers.</p>
+         */
         @NameInMap("MaintainerList")
         public java.util.List<GetStandardTemplateResponseBodyTemplateInfoMaintainerList> maintainerList;
 
         /**
+         * <p>The modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
          */
@@ -1011,6 +1233,8 @@ public class GetStandardTemplateResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
+         * <p>The name of the standard template.</p>
+         * 
          * <strong>example:</strong>
          * <p>测试模板</p>
          */
@@ -1018,6 +1242,12 @@ public class GetStandardTemplateResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The source of the standard template. Valid values:</p>
+         * <ul>
+         * <li>CUSTOM: custom standard template.</li>
+         * <li>SYSTEM: system built-in standard template.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SYSTEM</p>
          */
@@ -1034,6 +1264,8 @@ public class GetStandardTemplateResponseBody extends TeaModel {
         public String uniqueId;
 
         /**
+         * <p>The version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

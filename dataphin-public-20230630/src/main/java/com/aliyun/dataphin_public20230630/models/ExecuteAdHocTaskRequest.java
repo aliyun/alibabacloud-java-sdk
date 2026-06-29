@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ExecuteAdHocTaskRequest extends TeaModel {
     /**
+     * <p>The execution command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ExecuteCommand")
     public ExecuteAdHocTaskRequestExecuteCommand executeCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,7 @@ public class ExecuteAdHocTaskRequest extends TeaModel {
 
     public static class ExecuteAdHocTaskRequestExecuteCommandParamList extends TeaModel {
         /**
+         * <p>The parameter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,6 +54,7 @@ public class ExecuteAdHocTaskRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The parameter value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -84,6 +88,7 @@ public class ExecuteAdHocTaskRequest extends TeaModel {
 
     public static class ExecuteAdHocTaskRequestExecuteCommand extends TeaModel {
         /**
+         * <p>The node script.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -93,6 +98,8 @@ public class ExecuteAdHocTaskRequest extends TeaModel {
         public String code;
 
         /**
+         * <p>The catalog for a database SQL task. This parameter takes effect only for data source types that require a catalog, such as Presto.</p>
+         * 
          * <strong>example:</strong>
          * <p>mysql_catalog</p>
          */
@@ -100,6 +107,8 @@ public class ExecuteAdHocTaskRequest extends TeaModel {
         public String dataSourceCatalog;
 
         /**
+         * <p>The data source ID for a database SQL task.</p>
+         * 
          * <strong>example:</strong>
          * <p>12131111</p>
          */
@@ -107,6 +116,8 @@ public class ExecuteAdHocTaskRequest extends TeaModel {
         public Long dataSourceId;
 
         /**
+         * <p>The schema for a database SQL task. This parameter takes effect only for data source types that require a schema, such as Oracle.</p>
+         * 
          * <strong>example:</strong>
          * <p>erp</p>
          */
@@ -114,6 +125,7 @@ public class ExecuteAdHocTaskRequest extends TeaModel {
         public String dataSourceSchema;
 
         /**
+         * <p>The node type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -122,10 +134,14 @@ public class ExecuteAdHocTaskRequest extends TeaModel {
         @NameInMap("OperatorType")
         public String operatorType;
 
+        /**
+         * <p>The runtime parameters.</p>
+         */
         @NameInMap("ParamList")
         public java.util.List<ExecuteAdHocTaskRequestExecuteCommandParamList> paramList;
 
         /**
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

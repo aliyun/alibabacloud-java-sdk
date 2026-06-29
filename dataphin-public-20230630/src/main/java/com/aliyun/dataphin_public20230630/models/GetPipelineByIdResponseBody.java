@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetPipelineByIdResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The pipeline task details.</p>
+     */
     @NameInMap("Data")
     public GetPipelineByIdResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetPipelineByIdResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error details returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -38,6 +47,8 @@ public class GetPipelineByIdResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +110,8 @@ public class GetPipelineByIdResponseBody extends TeaModel {
 
     public static class GetPipelineByIdResponseBodyDataNodeInfo extends TeaModel {
         /**
+         * <p>The task description.</p>
+         * 
          * <strong>example:</strong>
          * <p>comment</p>
          */
@@ -106,6 +119,8 @@ public class GetPipelineByIdResponseBody extends TeaModel {
         public String desc;
 
         /**
+         * <p>The folder of the integration pipeline task node. The default value is the root folder. The folder must exist. If it does not exist, call the relevant API operation to create a folder of the offlinePipeline type.</p>
+         * 
          * <strong>example:</strong>
          * <p>/</p>
          */
@@ -113,6 +128,8 @@ public class GetPipelineByIdResponseBody extends TeaModel {
         public String directory;
 
         /**
+         * <p>The pipeline file ID. This parameter is empty when the task is first created. When updating a pipeline task, specify at least one of pipelineId, fileId, or nodeId.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -120,6 +137,8 @@ public class GetPipelineByIdResponseBody extends TeaModel {
         public Long fileId;
 
         /**
+         * <p>The scheduling node ID of the pipeline task. This parameter is empty when the task is first created. When updating a pipeline task, specify at least one of pipelineId, fileId, or nodeId.</p>
+         * 
          * <strong>example:</strong>
          * <p>n_123</p>
          */
@@ -127,6 +146,8 @@ public class GetPipelineByIdResponseBody extends TeaModel {
         public String nodeId;
 
         /**
+         * <p>The name of the integration pipeline task.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -134,6 +155,8 @@ public class GetPipelineByIdResponseBody extends TeaModel {
         public String nodeName;
 
         /**
+         * <p>The pipeline task ID. This parameter is empty when the task is first created. When updating a pipeline task, specify at least one of pipelineId, fileId, or nodeId.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -196,10 +219,15 @@ public class GetPipelineByIdResponseBody extends TeaModel {
     }
 
     public static class GetPipelineByIdResponseBodyDataPipelineConfigHops extends TeaModel {
+        /**
+         * <p>For conditional distribution components, set this parameter to true when the downstream condition is true. Otherwise, set it to false.</p>
+         */
         @NameInMap("SendTo")
         public Boolean sendTo;
 
         /**
+         * <p>The input step name, which corresponds to Steps[*].StepName.</p>
+         * 
          * <strong>example:</strong>
          * <p>mysql_reader</p>
          */
@@ -207,6 +235,8 @@ public class GetPipelineByIdResponseBody extends TeaModel {
         public String source;
 
         /**
+         * <p>The output step name, which corresponds to Steps[*].StepName.</p>
+         * 
          * <strong>example:</strong>
          * <p>odps_writer</p>
          */
@@ -245,10 +275,19 @@ public class GetPipelineByIdResponseBody extends TeaModel {
     }
 
     public static class GetPipelineByIdResponseBodyDataPipelineConfigSteps extends TeaModel {
+        /**
+         * <p>Specifies the data distribution method when the current component has multiple downstream components. Valid values:</p>
+         * <ul>
+         * <li>true: The data of the current component is sent to all downstream components in a round-robin manner. For example, if the current component has 100 records and two downstream components, each downstream component receives 50 records. Default value: true.</li>
+         * <li>false: The full data of the current component is sent to all downstream components. For example, if the current component has 100 records and two downstream components, each downstream component receives 100 records.</li>
+         * </ul>
+         */
         @NameInMap("IsDistribute")
         public Boolean isDistribute;
 
         /**
+         * <p>The plugin ID. Each plugin has a unique identifier. Refer to the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.OABasePluginConfig#stepKey. Developers should inherit this component configuration class and implement the corresponding component configuration. Each component configuration has the same structure as the pipeline configuration created on the Dataphin console.</p>
+         * 
          * <strong>example:</strong>
          * <p>mysqlinput</p>
          */
@@ -256,6 +295,8 @@ public class GetPipelineByIdResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The specific component configuration in JSON string format. Refer to the toJsonString method of the subclasses of the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.OABasePluginConfig. Developers should inherit this component configuration class and implement the corresponding component configuration. Each component configuration has the same structure as the pipeline configuration created on the Dataphin console.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -263,6 +304,8 @@ public class GetPipelineByIdResponseBody extends TeaModel {
         public String pluginConfig;
 
         /**
+         * <p>The step name. Step names must be unique within the same pipeline task.</p>
+         * 
          * <strong>example:</strong>
          * <p>mysql_reader</p>
          */
@@ -270,6 +313,15 @@ public class GetPipelineByIdResponseBody extends TeaModel {
         public String stepName;
 
         /**
+         * <p>The component type. Valid values:</p>
+         * <ul>
+         * <li>input: an input component.</li>
+         * <li>output: an output component.</li>
+         * <li>transfrom: a transformation component.</li>
+         * <li>process: a flow control component.
+         * Refer to the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.OABasePluginConfig#stepType. Developers should inherit this component configuration class and implement the corresponding component configuration. Each component configuration has the same structure as the pipeline configuration created on the Dataphin console.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>input</p>
          */
@@ -324,9 +376,15 @@ public class GetPipelineByIdResponseBody extends TeaModel {
     }
 
     public static class GetPipelineByIdResponseBodyDataPipelineConfig extends TeaModel {
+        /**
+         * <p>The DAG (directed acyclic graph) link configuration that describes the connections between all components.</p>
+         */
         @NameInMap("Hops")
         public java.util.List<GetPipelineByIdResponseBodyDataPipelineConfigHops> hops;
 
+        /**
+         * <p>The component configurations, including detailed configurations of all components used.</p>
+         */
         @NameInMap("Steps")
         public java.util.List<GetPipelineByIdResponseBodyDataPipelineConfigSteps> steps;
 
@@ -355,19 +413,29 @@ public class GetPipelineByIdResponseBody extends TeaModel {
 
     public static class GetPipelineByIdResponseBodyData extends TeaModel {
         /**
+         * <p>The configuration mode of the integration pipeline.</p>
+         * 
          * <strong>example:</strong>
          * <p>PIPELINE</p>
          */
         @NameInMap("Mode")
         public String mode;
 
+        /**
+         * <p>The basic information of the pipeline task.</p>
+         */
         @NameInMap("NodeInfo")
         public GetPipelineByIdResponseBodyDataNodeInfo nodeInfo;
 
+        /**
+         * <p>The component configuration of the integration pipeline.</p>
+         */
         @NameInMap("PipelineConfig")
         public GetPipelineByIdResponseBodyDataPipelineConfig pipelineConfig;
 
         /**
+         * <p>The script mode configuration of the integration pipeline.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -375,6 +443,8 @@ public class GetPipelineByIdResponseBody extends TeaModel {
         public String pipelineJson;
 
         /**
+         * <p>The pipeline task type.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -382,6 +452,8 @@ public class GetPipelineByIdResponseBody extends TeaModel {
         public Integer pipelineType;
 
         /**
+         * <p>The schedule configuration of the integration pipeline. The value is a JSON string. Deserialize it by using the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.vo.OAScheduleConfigVO.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -389,6 +461,8 @@ public class GetPipelineByIdResponseBody extends TeaModel {
         public String scheduleConfig;
 
         /**
+         * <p>The channel configuration of the integration pipeline. The value is a JSON string. Deserialize it by using the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.model.OAPipelineSetting.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */

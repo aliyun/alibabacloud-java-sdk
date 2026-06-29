@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExecuteTriggerNodeRequest extends TeaModel {
     /**
+     * <p>The business date.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,13 @@ public class ExecuteTriggerNodeRequest extends TeaModel {
     public String bizDate;
 
     /**
+     * <p>The environment. Valid values:</p>
+     * <ul>
+     * <li>DEV: development environment.</li>
+     * <li>PROD: production environment.</li>
+     * </ul>
+     * <p>Default value: PROD.</p>
+     * 
      * <strong>example:</strong>
      * <p>DEV</p>
      */
@@ -21,6 +29,8 @@ public class ExecuteTriggerNodeRequest extends TeaModel {
     public String env;
 
     /**
+     * <p>If the node is an hourly or minutely node, multiple instances are generated per day. This parameter specifies the ordinal number of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -28,6 +38,7 @@ public class ExecuteTriggerNodeRequest extends TeaModel {
     public Integer index;
 
     /**
+     * <p>The node ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +48,7 @@ public class ExecuteTriggerNodeRequest extends TeaModel {
     public String nodeId;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +58,7 @@ public class ExecuteTriggerNodeRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

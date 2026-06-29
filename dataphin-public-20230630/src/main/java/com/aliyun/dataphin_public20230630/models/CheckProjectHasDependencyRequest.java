@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckProjectHasDependencyRequest extends TeaModel {
     /**
+     * <p>Project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CheckProjectHasDependencyRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>Tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

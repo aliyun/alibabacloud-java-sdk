@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListDataServiceAppsRequest extends TeaModel {
     /**
+     * <p>Query the list of all applications under the tenant.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ListQuery")
     public ListDataServiceAppsRequestListQuery listQuery;
 
     /**
+     * <p>Tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,8 @@ public class ListDataServiceAppsRequest extends TeaModel {
 
     public static class ListDataServiceAppsRequestListQuery extends TeaModel {
         /**
+         * <p>Application group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>12345</p>
          */
@@ -49,6 +53,8 @@ public class ListDataServiceAppsRequest extends TeaModel {
         public Integer appGroupId;
 
         /**
+         * <p>Application name search keyword.</p>
+         * 
          * <strong>example:</strong>
          * <p>营销看板</p>
          */
@@ -56,6 +62,8 @@ public class ListDataServiceAppsRequest extends TeaModel {
         public String keyword;
 
         /**
+         * <p>Page number. Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -63,6 +71,8 @@ public class ListDataServiceAppsRequest extends TeaModel {
         public Integer pageNo;
 
         /**
+         * <p>Number of records per page. Default value: 20.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */

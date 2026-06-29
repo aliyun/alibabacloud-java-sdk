@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetPhysicalNodeContentResponseBody extends TeaModel {
     /**
+     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The node information.</p>
+     */
     @NameInMap("Data")
     public GetPhysicalNodeContentResponseBodyData data;
 
     /**
+     * <p>The HTTP status code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetPhysicalNodeContentResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +38,8 @@ public class GetPhysicalNodeContentResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
@@ -36,6 +47,8 @@ public class GetPhysicalNodeContentResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class GetPhysicalNodeContentResponseBody extends TeaModel {
 
     public static class GetPhysicalNodeContentResponseBodyData extends TeaModel {
         /**
+         * <p>The node code content.</p>
+         * 
          * <strong>example:</strong>
          * <p>select 1;</p>
          */
@@ -104,12 +119,20 @@ public class GetPhysicalNodeContentResponseBody extends TeaModel {
         public String codeContent;
 
         /**
+         * <p>The node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>n_232411</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <p>The node name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx测试</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 

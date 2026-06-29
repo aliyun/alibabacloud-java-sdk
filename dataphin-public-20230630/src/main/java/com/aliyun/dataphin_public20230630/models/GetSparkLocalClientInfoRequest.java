@@ -5,12 +5,21 @@ import com.aliyun.tea.*;
 
 public class GetSparkLocalClientInfoRequest extends TeaModel {
     /**
+     * <p>The environment identifier. Valid values:</p>
+     * <ul>
+     * <li>DEV: development environment.</li>
+     * <li>PROD: production environment.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DEV</p>
      */
     @NameInMap("EnvEnum")
     public String envEnum;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,7 +29,11 @@ public class GetSparkLocalClientInfoRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The project ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>232432343</p>
      */
     @NameInMap("ProjectId")
     public String projectId;

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAdHocFileRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateAdHocFileRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The update request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")
@@ -42,6 +44,7 @@ public class UpdateAdHocFileRequest extends TeaModel {
 
     public static class UpdateAdHocFileRequestUpdateCommand extends TeaModel {
         /**
+         * <p>The file content.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,6 +54,7 @@ public class UpdateAdHocFileRequest extends TeaModel {
         public String content;
 
         /**
+         * <p>The file ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -60,6 +64,7 @@ public class UpdateAdHocFileRequest extends TeaModel {
         public Long fileId;
 
         /**
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetUserGroupRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetUserGroupRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The user group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

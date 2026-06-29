@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
     /**
+     * <p>Error code. OK indicates a successful request.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code returned by the backend</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,16 +23,23 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Node details</p>
+     */
     @NameInMap("NodeInfo")
     public GetPhysicalNodeByOutputNameResponseBodyNodeInfo nodeInfo;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
@@ -36,6 +47,8 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,12 +110,20 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
 
     public static class GetPhysicalNodeByOutputNameResponseBodyNodeInfoCreator extends TeaModel {
         /**
+         * <p>User ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1311131</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>Username</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx测试</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -131,12 +152,20 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
 
     public static class GetPhysicalNodeByOutputNameResponseBodyNodeInfoModifier extends TeaModel {
         /**
+         * <p>User ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1311131</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>Username</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx测试</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -165,12 +194,20 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
 
     public static class GetPhysicalNodeByOutputNameResponseBodyNodeInfoOwner extends TeaModel {
         /**
+         * <p>User ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1311131</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>Username</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx测试</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -199,12 +236,20 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
 
     public static class GetPhysicalNodeByOutputNameResponseBodyNodeInfoProjectInfo extends TeaModel {
         /**
+         * <p>Project ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1324211</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>Project name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx测试</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -233,19 +278,38 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
 
     public static class GetPhysicalNodeByOutputNameResponseBodyNodeInfo extends TeaModel {
         /**
+         * <p>Creation time</p>
+         * 
          * <strong>example:</strong>
          * <p>1717343597000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>Node creator</p>
+         */
         @NameInMap("Creator")
         public GetPhysicalNodeByOutputNameResponseBodyNodeInfoCreator creator;
 
+        /**
+         * <p>Description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx测试</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Node source</p>
+         * <ul>
+         * <li>DATA_PROCESS: Code development</li>
+         * <li>BLACK_BOX: Black box</li>
+         * <li>ONE_ID: Extraction</li>
+         * <li>PIPELINE: Pipeline</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>DATA_PROCESS</p>
          */
@@ -253,6 +317,8 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
         public String from;
 
         /**
+         * <p>Node ID</p>
+         * 
          * <strong>example:</strong>
          * <p>n_2321</p>
          */
@@ -260,39 +326,85 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>Last modified time</p>
+         * 
          * <strong>example:</strong>
          * <p>1717343597000</p>
          */
         @NameInMap("LastModifiedTime")
         public Long lastModifiedTime;
 
+        /**
+         * <p>Node modifier</p>
+         */
         @NameInMap("Modifier")
         public GetPhysicalNodeByOutputNameResponseBodyNodeInfoModifier modifier;
 
+        /**
+         * <p>Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx测试</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>Node subtype</p>
+         * <ul>
+         * <li>MAX_COMPUTE_SQL</li>
+         * <li>HIVE_SQL</li>
+         * <li>SHELL</li>
+         * <li>PYTHON</li>
+         * <li>ONE_SERVICE_SQL</li>
+         * <li>DATABASE_SQL, etc.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SHELL</p>
          */
         @NameInMap("OperatorType")
         public String operatorType;
 
+        /**
+         * <p>Node owner</p>
+         */
         @NameInMap("Owner")
         public GetPhysicalNodeByOutputNameResponseBodyNodeInfoOwner owner;
 
         /**
+         * <p>Priority</p>
+         * <ul>
+         * <li>HIGHEST</li>
+         * <li>HIGH</li>
+         * <li>MIDDLE</li>
+         * <li>LOW</li>
+         * <li>LOWEST</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>MIDDLE</p>
          */
         @NameInMap("Priority")
         public String priority;
 
+        /**
+         * <p>Project to which the node belongs</p>
+         */
         @NameInMap("ProjectInfo")
         public GetPhysicalNodeByOutputNameResponseBodyNodeInfoProjectInfo projectInfo;
 
         /**
+         * <p>Scheduling period type</p>
+         * <ul>
+         * <li>MINUTELY</li>
+         * <li>HOURLY</li>
+         * <li>DAILY</li>
+         * <li>WEEKLY</li>
+         * <li>MONTHLY</li>
+         * <li>YEARLY</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>DAILY</p>
          */
@@ -300,6 +412,8 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
         public String scheduleType;
 
         /**
+         * <p>Node scheduling status</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
          */
@@ -307,6 +421,8 @@ public class GetPhysicalNodeByOutputNameResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>Trigger configuration, used to implement field dependencies on logical tables</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;expression&quot;:&quot;any_success&quot;}</p>
          */

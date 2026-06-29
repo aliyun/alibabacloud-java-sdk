@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitQualityWatchTasksRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class SubmitQualityWatchTasksRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The submit command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SubmitCommand")
@@ -42,6 +44,8 @@ public class SubmitQualityWatchTasksRequest extends TeaModel {
 
     public static class SubmitQualityWatchTasksRequestSubmitCommand extends TeaModel {
         /**
+         * <p>The business date, in the yyyy-MM-dd format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-30</p>
          */
@@ -49,6 +53,8 @@ public class SubmitQualityWatchTasksRequest extends TeaModel {
         public String bizDate;
 
         /**
+         * <p>The partition expression. This is a custom expression.</p>
+         * 
          * <strong>example:</strong>
          * <p>ds=${yyyyMMdd}</p>
          */
@@ -56,6 +62,7 @@ public class SubmitQualityWatchTasksRequest extends TeaModel {
         public String partitionExpression;
 
         /**
+         * <p>The monitored object IDs.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("WatchIdList")

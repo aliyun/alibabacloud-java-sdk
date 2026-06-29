@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetDataSourceDependenciesResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The dependency records.</p>
+     */
     @NameInMap("DependencyList")
     public java.util.List<GetDataSourceDependenciesResponseBodyDependencyList> dependencyList;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetDataSourceDependenciesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The details of the backend exception.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -37,6 +46,9 @@ public class GetDataSourceDependenciesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -95,6 +107,8 @@ public class GetDataSourceDependenciesResponseBody extends TeaModel {
 
     public static class GetDataSourceDependenciesResponseBodyDependencyList extends TeaModel {
         /**
+         * <p>The ID of the dependency record.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -102,6 +116,8 @@ public class GetDataSourceDependenciesResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The name of the dependency record.</p>
+         * 
          * <strong>example:</strong>
          * <p>jytest</p>
          */
@@ -109,6 +125,8 @@ public class GetDataSourceDependenciesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The type of the dependency record.</p>
+         * 
          * <strong>example:</strong>
          * <p>pipeline</p>
          */
@@ -116,6 +134,8 @@ public class GetDataSourceDependenciesResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The type code of the dependency record.</p>
+         * 
          * <strong>example:</strong>
          * <p>pipeline</p>
          */

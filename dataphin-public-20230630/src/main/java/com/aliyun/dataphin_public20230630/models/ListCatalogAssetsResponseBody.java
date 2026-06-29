@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListCatalogAssetsResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data catalog asset list.</p>
+     */
     @NameInMap("Data")
     public ListCatalogAssetsResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The details of the backend response exception.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -37,6 +46,9 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -95,6 +107,8 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
 
     public static class ListCatalogAssetsResponseBodyDataAssetListDirectories extends TeaModel {
         /**
+         * <p>The directory ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>102260</p>
          */
@@ -102,6 +116,8 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public Long directoryId;
 
         /**
+         * <p>The directory name.</p>
+         * 
          * <strong>example:</strong>
          * <p>线上电商平台</p>
          */
@@ -109,6 +125,8 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public String directoryName;
 
         /**
+         * <p>The topic ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>101676</p>
          */
@@ -116,6 +134,8 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public Long topicId;
 
         /**
+         * <p>The topic name.</p>
+         * 
          * <strong>example:</strong>
          * <p>全渠道数据专题</p>
          */
@@ -163,6 +183,12 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
 
     public static class ListCatalogAssetsResponseBodyDataAssetList extends TeaModel {
         /**
+         * <p>The API call mode. Returned when the asset type is API. Valid values:</p>
+         * <ul>
+         * <li>1: synchronous call.</li>
+         * <li>2: asynchronous call.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -170,6 +196,8 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public String apiCallMode;
 
         /**
+         * <p>The API group name. Returned when the asset type is API.</p>
+         * 
          * <strong>example:</strong>
          * <p>默认API分组</p>
          */
@@ -177,6 +205,8 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public String apiGroupName;
 
         /**
+         * <p>The API ID. Returned when the asset type is API.</p>
+         * 
          * <strong>example:</strong>
          * <p>10441</p>
          */
@@ -184,6 +214,15 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public Long apiId;
 
         /**
+         * <p>The API operation type. Returned when the asset type is API. Valid values:</p>
+         * <ul>
+         * <li>1: Get.</li>
+         * <li>2: List.</li>
+         * <li>3: Create.</li>
+         * <li>4: Update.</li>
+         * <li>5: Delete.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -191,6 +230,8 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public String apiRequestMethod;
 
         /**
+         * <p>The asset description.</p>
+         * 
          * <strong>example:</strong>
          * <p>abc</p>
          */
@@ -198,6 +239,8 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public String assetDescription;
 
         /**
+         * <p>The asset display name. Returned when the asset type is TABLE, INDEX, or BIZ_INDEX.</p>
+         * 
          * <strong>example:</strong>
          * <p>abc表</p>
          */
@@ -205,6 +248,8 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public String assetDisplayName;
 
         /**
+         * <p>The asset source. For TABLE (physical table), the value is in the format &quot;Dataphin-workspace type-project Chinese name (project English name)&quot;. For TABLE (logical table), the value is in the format &quot;Dataphin-workspace type-data domain Chinese name (data domain English name)&quot;. For TABLE (data source table), the value is in the format &quot;source system name-data source name-database/schema name&quot;. For INDEX (standard modeling metric), the value is the asset source of the associated aggregate table. For INDEX (custom metric), the value is the asset source of the source table. For API, the value is the data service project name. For PAGE, the value is the application system name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Dataphin-中间层-服饰零售 (LD_Fashion)</p>
          */
@@ -212,6 +257,8 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public String assetFrom;
 
         /**
+         * <p>The asset full name. Returned when the asset type is TABLE or INDEX.</p>
+         * 
          * <strong>example:</strong>
          * <p>dwd_all.abc</p>
          */
@@ -219,16 +266,23 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public String assetFullName;
 
         /**
+         * <p>The asset name.</p>
+         * 
          * <strong>example:</strong>
          * <p>abc</p>
          */
         @NameInMap("AssetName")
         public String assetName;
 
+        /**
+         * <p>The asset tags.</p>
+         */
         @NameInMap("AssetTags")
         public java.util.List<String> assetTags;
 
         /**
+         * <p>The asset type. Valid values: TABLE (table, including views and materialized views), INDEX (technical metric), BIZ_INDEX (business metric), API, and PAGE (dashboard).</p>
+         * 
          * <strong>example:</strong>
          * <p>TABLE</p>
          */
@@ -236,6 +290,8 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public String assetType;
 
         /**
+         * <p>The BI workspace or directory to which the asset belongs. Returned when the asset type is PAGE (dashboard).</p>
+         * 
          * <strong>example:</strong>
          * <p>dataphin演示空间</p>
          */
@@ -243,6 +299,8 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public String biCatalog;
 
         /**
+         * <p>The ID of the business unit to which the asset belongs. Returned when the asset type is TABLE (logical tables only) or INDEX (technical metrics whose source table is a logical table only).</p>
+         * 
          * <strong>example:</strong>
          * <p>6865277495315392</p>
          */
@@ -250,6 +308,8 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public Long bizUnitId;
 
         /**
+         * <p>The name of the business unit to which the asset belongs. Returned when the asset type is TABLE (logical tables only) or INDEX (technical metrics whose source table is a logical table only).</p>
+         * 
          * <strong>example:</strong>
          * <p>服饰零售（LD_Fashion）</p>
          */
@@ -257,6 +317,8 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public String bizUnitName;
 
         /**
+         * <p>The total number of charts. Returned when the asset type is PAGE (dashboard).</p>
+         * 
          * <strong>example:</strong>
          * <p>23</p>
          */
@@ -264,6 +326,8 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public Long chartCount;
 
         /**
+         * <p>The ID of the subject domain to which the asset belongs. Returned when the asset type is TABLE (logical tables only) or INDEX (technical metrics whose source table is a logical table only).</p>
+         * 
          * <strong>example:</strong>
          * <p>49837403</p>
          */
@@ -271,6 +335,8 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public String dataCellId;
 
         /**
+         * <p>The name of the subject domain to which the asset belongs. Returned when the asset type is TABLE (logical tables only) or INDEX (technical metrics whose source table is a logical table only).</p>
+         * 
          * <strong>example:</strong>
          * <p>课程域</p>
          */
@@ -278,6 +344,8 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public String dataCellName;
 
         /**
+         * <p>The name of the data source to which the asset belongs. Returned when the asset type is TABLE (data source tables only) or INDEX (technical metrics whose source table is a data source table only).</p>
+         * 
          * <strong>example:</strong>
          * <p>demo_mysql</p>
          */
@@ -285,16 +353,23 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public String dataSourceName;
 
         /**
+         * <p>The ID of the data source to which the asset belongs. Returned when the asset type is TABLE (data source tables only) or INDEX (technical metrics whose source table is a data source table only).</p>
+         * 
          * <strong>example:</strong>
          * <p>7305549302863001856</p>
          */
         @NameInMap("DatasourceId")
         public Long datasourceId;
 
+        /**
+         * <p>The directories to which the asset belongs, including topic ID, topic name, directory ID, and directory name.</p>
+         */
         @NameInMap("Directories")
         public java.util.List<ListCatalogAssetsResponseBodyDataAssetListDirectories> directories;
 
         /**
+         * <p>The statistical granularity name of the technical metric. Returned when the asset type is INDEX.</p>
+         * 
          * <strong>example:</strong>
          * <p>课程</p>
          */
@@ -302,16 +377,23 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public String granularity;
 
         /**
+         * <p>The asset GUID, which serves as the unique identifier of the asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>dp_ds_table.300023201.7311626611751680256.load_test.abc</p>
          */
         @NameInMap("Guid")
         public String guid;
 
+        /**
+         * <p>Indicates whether the asset is deleted.</p>
+         */
         @NameInMap("IsDeleted")
         public Boolean isDeleted;
 
         /**
+         * <p>The highest sensitivity level. Returned when the asset type is TABLE.</p>
+         * 
          * <strong>example:</strong>
          * <p>L3</p>
          */
@@ -319,6 +401,8 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public String maxSecurityLevel;
 
         /**
+         * <p>The ID of the project to which the asset belongs. Returned when the asset type is TABLE (physical tables only) or INDEX (technical metrics whose source table is a physical table only).</p>
+         * 
          * <strong>example:</strong>
          * <p>6865331517728384</p>
          */
@@ -326,6 +410,8 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public Long projectId;
 
         /**
+         * <p>The name of the project to which the asset belongs. Returned when the asset type is TABLE (physical tables only) or INDEX (technical metrics whose source table is a physical table only).</p>
+         * 
          * <strong>example:</strong>
          * <p>train</p>
          */
@@ -333,6 +419,8 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public String projectName;
 
         /**
+         * <p>The subtype. Valid values: DIM_NORMAL (common logical dimension table), DIM_ENUM (enumeration logical dimension table), DIM_VIRTUAL (virtual logical dimension table), SUM_BIZ_UNIT (aggregate logical table), FACT_EVENT (event fact logical table), FACT_SNAPSHOT (snapshot fact logical table), DATASOURCE_TABLE (data source table), PHYSICAL_TABLE (physical table), DATASOURCE_VIEW (view - data source view), PHYSICAL_VIEW (physical view), MATERIALIZED_VIEW (materialized view), BIZ_INDEX (business metric), INDEX (technical metric - standard modeling metric), and CUSTOM_INDEX (technical metric - custom metric).</p>
+         * 
          * <strong>example:</strong>
          * <p>DIM_NORMAL</p>
          */
@@ -340,6 +428,8 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public String subType;
 
         /**
+         * <p>The GUID of the aggregate table to which the asset belongs. Returned when the asset type is INDEX.</p>
+         * 
          * <strong>example:</strong>
          * <p>odps.300023201.test.ads_gross</p>
          */
@@ -347,6 +437,8 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
         public String sumTableGuid;
 
         /**
+         * <p>The name of the aggregate table to which the asset belongs. Returned when the asset type is INDEX.</p>
+         * 
          * <strong>example:</strong>
          * <p>ads_gross</p>
          */
@@ -593,10 +685,15 @@ public class ListCatalogAssetsResponseBody extends TeaModel {
     }
 
     public static class ListCatalogAssetsResponseBodyData extends TeaModel {
+        /**
+         * <p>The asset list.</p>
+         */
         @NameInMap("AssetList")
         public java.util.List<ListCatalogAssetsResponseBodyDataAssetList> assetList;
 
         /**
+         * <p>The total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>68</p>
          */

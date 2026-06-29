@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetProjectResponseBody extends TeaModel {
     /**
+     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class GetProjectResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,16 +23,23 @@ public class GetProjectResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The project details.</p>
+     */
     @NameInMap("ProjectInfo")
     public GetProjectResponseBodyProjectInfo projectInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
@@ -36,6 +47,8 @@ public class GetProjectResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class GetProjectResponseBody extends TeaModel {
 
     public static class GetProjectResponseBodyProjectInfoWhiteLists extends TeaModel {
         /**
+         * <p>The whitelist description.</p>
+         * 
          * <strong>example:</strong>
          * <p>whitelist for xxx</p>
          */
@@ -104,7 +119,7 @@ public class GetProjectResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>ip</p>
+         * <p>The IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>10.209.47.198</p>
@@ -113,6 +128,8 @@ public class GetProjectResponseBody extends TeaModel {
         public String ip;
 
         /**
+         * <p>The port.</p>
+         * 
          * <strong>example:</strong>
          * <p>3306</p>
          */
@@ -152,34 +169,44 @@ public class GetProjectResponseBody extends TeaModel {
 
     public static class GetProjectResponseBodyProjectInfo extends TeaModel {
         /**
+         * <p>The dependent data module display name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>测试</p>
+         * <p>业务板块显示名</p>
          */
         @NameInMap("BizUnitDisplayName")
         public String bizUnitDisplayName;
 
         /**
+         * <p>The dependent data module ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>101131</p>
+         * <p>业务板块Id</p>
          */
         @NameInMap("BizUnitId")
         public Long bizUnitId;
 
         /**
+         * <p>The compute source ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>101711</p>
+         * <p>项目依赖计算源Id</p>
          */
         @NameInMap("ComputeSourceId")
         public Long computeSourceId;
 
         /**
+         * <p>The compute source name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>ds1</p>
+         * <p>项目依赖计算源名</p>
          */
         @NameInMap("ComputeSourceName")
         public String computeSourceName;
 
         /**
+         * <p>The project description.</p>
+         * 
          * <strong>example:</strong>
          * <p>project for xxx</p>
          */
@@ -187,13 +214,17 @@ public class GetProjectResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The project display name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>xx test</p>
+         * <p>项目显示名</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
+         * <p>The environment.</p>
+         * 
          * <strong>example:</strong>
          * <p>DEV</p>
          */
@@ -201,6 +232,8 @@ public class GetProjectResponseBody extends TeaModel {
         public String env;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1703048484000</p>
          */
@@ -208,6 +241,8 @@ public class GetProjectResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1703048484000</p>
          */
@@ -215,6 +250,8 @@ public class GetProjectResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>12356</p>
          */
@@ -222,6 +259,12 @@ public class GetProjectResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The project mode. Valid values:</p>
+         * <ul>
+         * <li>BASIC</li>
+         * <li>DEV_PROD</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>BASIC</p>
          */
@@ -229,6 +272,8 @@ public class GetProjectResponseBody extends TeaModel {
         public String mode;
 
         /**
+         * <p>The project name.</p>
+         * 
          * <strong>example:</strong>
          * <p>dp_test</p>
          */
@@ -236,6 +281,8 @@ public class GetProjectResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The project tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>GENERAL</p>
          */
@@ -243,6 +290,8 @@ public class GetProjectResponseBody extends TeaModel {
         public String nameSpaceTag;
 
         /**
+         * <p>The project owner ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>101111</p>
          */
@@ -250,33 +299,44 @@ public class GetProjectResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The project owner.</p>
+         * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>测试用户</p>
          */
         @NameInMap("OwnerName")
         public String ownerName;
 
         /**
+         * <p>The stream compute source ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>201711</p>
+         * <p>项目依赖实时计算源Id</p>
          */
         @NameInMap("StreamComputeSourceId")
         public Long streamComputeSourceId;
 
         /**
+         * <p>The stream compute source name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>ds2</p>
+         * <p>项目依赖实时计算源名</p>
          */
         @NameInMap("StreamComputeSourceName")
         public String streamComputeSourceName;
 
         /**
+         * <p>The project type.</p>
+         * 
          * <strong>example:</strong>
          * <p>GENERAL</p>
          */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The whitelists.</p>
+         */
         @NameInMap("WhiteLists")
         public java.util.List<GetProjectResponseBodyProjectInfoWhiteLists> whiteLists;
 

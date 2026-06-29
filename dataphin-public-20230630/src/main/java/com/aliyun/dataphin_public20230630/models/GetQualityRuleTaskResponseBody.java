@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetQualityRuleTaskResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class GetQualityRuleTaskResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class GetQualityRuleTaskResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The details of the backend exception.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -34,9 +40,15 @@ public class GetQualityRuleTaskResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The rule task details.</p>
+     */
     @NameInMap("RuleTaskInfo")
     public GetQualityRuleTaskResponseBodyRuleTaskInfo ruleTaskInfo;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -95,6 +107,8 @@ public class GetQualityRuleTaskResponseBody extends TeaModel {
 
     public static class GetQualityRuleTaskResponseBodyRuleTaskInfo extends TeaModel {
         /**
+         * <p>The business date.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-30</p>
          */
@@ -102,6 +116,8 @@ public class GetQualityRuleTaskResponseBody extends TeaModel {
         public String bizDate;
 
         /**
+         * <p>The business date format.</p>
+         * 
          * <strong>example:</strong>
          * <p>yyyy-MM-dd</p>
          */
@@ -109,6 +125,8 @@ public class GetQualityRuleTaskResponseBody extends TeaModel {
         public String bizDateFormat;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
          */
@@ -116,6 +134,8 @@ public class GetQualityRuleTaskResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>30012011</p>
          */
@@ -123,6 +143,8 @@ public class GetQualityRuleTaskResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>The end time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
          */
@@ -130,6 +152,8 @@ public class GetQualityRuleTaskResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The rule task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -137,6 +161,8 @@ public class GetQualityRuleTaskResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The ID of the user who last modified the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>30012011</p>
          */
@@ -144,6 +170,8 @@ public class GetQualityRuleTaskResponseBody extends TeaModel {
         public String modifier;
 
         /**
+         * <p>The modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
          */
@@ -151,6 +179,8 @@ public class GetQualityRuleTaskResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
+         * <p>The rule ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>11</p>
          */
@@ -158,6 +188,8 @@ public class GetQualityRuleTaskResponseBody extends TeaModel {
         public Long ruleId;
 
         /**
+         * <p>The start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
          */
@@ -165,6 +197,8 @@ public class GetQualityRuleTaskResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The task status.</p>
+         * 
          * <strong>example:</strong>
          * <p>running</p>
          */
@@ -172,6 +206,8 @@ public class GetQualityRuleTaskResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>11</p>
          */
@@ -179,6 +215,8 @@ public class GetQualityRuleTaskResponseBody extends TeaModel {
         public Long templateId;
 
         /**
+         * <p>The validation object name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -186,6 +224,8 @@ public class GetQualityRuleTaskResponseBody extends TeaModel {
         public String validateObjectName;
 
         /**
+         * <p>The validation object type.</p>
+         * 
          * <strong>example:</strong>
          * <p>column</p>
          */
@@ -193,16 +233,23 @@ public class GetQualityRuleTaskResponseBody extends TeaModel {
         public String validateObjectType;
 
         /**
+         * <p>The validation partition.</p>
+         * 
          * <strong>example:</strong>
          * <p>20251011</p>
          */
         @NameInMap("ValidatePartition")
         public String validatePartition;
 
+        /**
+         * <p>Indicates whether the validation passed.</p>
+         */
         @NameInMap("ValidateSuccess")
         public Boolean validateSuccess;
 
         /**
+         * <p>The ID of the associated monitor.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -210,6 +257,8 @@ public class GetQualityRuleTaskResponseBody extends TeaModel {
         public Long watchId;
 
         /**
+         * <p>The monitor task ID. This ID is empty for trial-run rule tasks.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

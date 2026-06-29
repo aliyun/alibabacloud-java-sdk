@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
     /**
+     * <p>Request error code. OK indicates a normal request.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ListInstancesResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Backend response HTTP code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,22 +23,32 @@ public class ListInstancesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Request error message</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Paginated result</p>
+     */
     @NameInMap("PageResult")
     public ListInstancesResponseBodyPageResult pageResult;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Whether the request was successful</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -93,12 +107,20 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyPageResultDataNodeInfoCreator extends TeaModel {
         /**
+         * <p>User ID</p>
+         * 
          * <strong>example:</strong>
          * <p>21313112</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>Username</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx测试</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -127,12 +149,20 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyPageResultDataNodeInfoModifier extends TeaModel {
         /**
+         * <p>Username</p>
+         * 
          * <strong>example:</strong>
          * <p>21313112</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>Username</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx测试</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -161,12 +191,20 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyPageResultDataNodeInfoOwnerList extends TeaModel {
         /**
+         * <p>User ID</p>
+         * 
          * <strong>example:</strong>
          * <p>21313112</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>Username</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx测试</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -194,23 +232,42 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyPageResultDataNodeInfo extends TeaModel {
+        /**
+         * <p>Business Unit</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx测试</p>
+         */
         @NameInMap("BizUnitName")
         public String bizUnitName;
 
         /**
+         * <p>Creation Time</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-05-30 16:47:13</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>Node Creator</p>
+         */
         @NameInMap("Creator")
         public ListInstancesResponseBodyPageResultDataNodeInfoCreator creator;
 
+        /**
+         * <p>Node Description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx 测试</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Whether to dry run</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -218,6 +275,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public Boolean dryRun;
 
         /**
+         * <p>Node Source</p>
+         * 
          * <strong>example:</strong>
          * <p>DATA_PROCES</p>
          */
@@ -225,6 +284,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String from;
 
         /**
+         * <p>Whether a development environment exists</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -232,6 +293,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public Boolean hasDev;
 
         /**
+         * <p>Whether a production environment exists</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -239,6 +302,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public Boolean hasProd;
 
         /**
+         * <p>Node ID</p>
+         * 
          * <strong>example:</strong>
          * <p>n_132331</p>
          */
@@ -246,38 +311,80 @@ public class ListInstancesResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>Last Modified Time</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-05-30 16:47:13</p>
          */
         @NameInMap("LastModifiedTime")
         public String lastModifiedTime;
 
+        /**
+         * <p>Modifier</p>
+         */
         @NameInMap("Modifier")
         public ListInstancesResponseBodyPageResultDataNodeInfoModifier modifier;
 
+        /**
+         * <p>Node Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx测试</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Owner</p>
+         */
         @NameInMap("OwnerList")
         public java.util.List<ListInstancesResponseBodyPageResultDataNodeInfoOwnerList> ownerList;
 
+        /**
+         * <p>Priority</p>
+         * <ul>
+         * <li>HIGHEST</li>
+         * <li>HIGH</li>
+         * <li>MIDDLE</li>
+         * <li>LOW</li>
+         * <li>LOWEST</li>
+         * </ul>
+         */
         @NameInMap("PriorityList")
         public java.util.List<String> priorityList;
 
+        /**
+         * <p>Running Resource Group</p>
+         */
         @NameInMap("ResourceGroupList")
         public java.util.List<String> resourceGroupList;
 
         /**
+         * <p>Whether scheduling is paused</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("SchedulePaused")
         public Boolean schedulePaused;
 
+        /**
+         * <p>Schedule Period</p>
+         */
         @NameInMap("SchedulePeriodList")
         public java.util.List<String> schedulePeriodList;
 
         /**
+         * <p>Sub-business Type</p>
+         * <ul>
+         * <li>MAX_COMPUTE_SQL</li>
+         * <li>HIVE_SQL</li>
+         * <li>SHELL</li>
+         * <li>PYTHON</li>
+         * <li>ONE_SERVICE_SQL</li>
+         * <li>DATABASE_SQL</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SHELL</p>
          */
@@ -285,6 +392,12 @@ public class ListInstancesResponseBody extends TeaModel {
         public String subDetailType;
 
         /**
+         * <p>Node Business Type</p>
+         * <ul>
+         * <li>SCRIPT: Script</li>
+         * <li>LOGICAL_TABLE: Logical Table</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>DATA_PROCES</p>
          */
@@ -452,6 +565,8 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyPageResultData extends TeaModel {
         /**
+         * <p>Business Date</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-05-30</p>
          */
@@ -459,6 +574,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String bizDate;
 
         /**
+         * <p>Schedule Time</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-05-30 16:47:13</p>
          */
@@ -466,6 +583,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String dueTime;
 
         /**
+         * <p>Running duration, in seconds</p>
+         * 
          * <strong>example:</strong>
          * <p>60s</p>
          */
@@ -473,6 +592,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String duration;
 
         /**
+         * <p>Execution End Time</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-05-30 16:47:13</p>
          */
@@ -480,6 +601,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long endExecuteTime;
 
         /**
+         * <p>Node extended information: specific information for instances from different business systems, such as pipeline fileId, whether the logical table has hierarchical dimensions, mid node information, and instance output name</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -487,6 +610,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String extendInfo;
 
         /**
+         * <p>Instance ID</p>
+         * 
          * <strong>example:</strong>
          * <p>t_23231</p>
          */
@@ -494,22 +619,32 @@ public class ListInstancesResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>Hourly/Minutely instance sequence number</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("Index")
         public Integer index;
 
+        /**
+         * <p>Node Details</p>
+         */
         @NameInMap("NodeInfo")
         public ListInstancesResponseBodyPageResultDataNodeInfo nodeInfo;
 
         /**
+         * <p>Execution start time</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-05-30 16:46:13</p>
          */
         @NameInMap("StartExecuteTime")
         public Long startExecuteTime;
 
+        /**
+         * <p>Instance Status</p>
+         */
         @NameInMap("StatusList")
         public java.util.List<String> statusList;
 
@@ -601,10 +736,15 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyPageResult extends TeaModel {
+        /**
+         * <p>Paginated records</p>
+         */
         @NameInMap("Data")
         public java.util.List<ListInstancesResponseBodyPageResultData> data;
 
         /**
+         * <p>Total number of records</p>
+         * 
          * <strong>example:</strong>
          * <p>107</p>
          */

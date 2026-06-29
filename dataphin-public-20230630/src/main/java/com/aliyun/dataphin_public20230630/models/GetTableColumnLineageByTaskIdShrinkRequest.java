@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTableColumnLineageByTaskIdShrinkRequest extends TeaModel {
     /**
+     * <p>Tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetTableColumnLineageByTaskIdShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>Data structure for querying table column lineage.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TableColumnLineageByTaskIdQuery")

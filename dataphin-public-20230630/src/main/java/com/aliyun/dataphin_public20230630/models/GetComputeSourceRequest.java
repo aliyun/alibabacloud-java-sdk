@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetComputeSourceRequest extends TeaModel {
     /**
+     * <p>The compute source ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetComputeSourceRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

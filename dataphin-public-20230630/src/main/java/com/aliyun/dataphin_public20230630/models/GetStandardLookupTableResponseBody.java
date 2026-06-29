@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetStandardLookupTableResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,16 +14,23 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The lookup table details.</p>
+     */
     @NameInMap("LookupTableInfo")
     public GetStandardLookupTableResponseBodyLookupTableInfo lookupTableInfo;
 
     /**
+     * <p>The details of the backend exception.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -37,6 +46,9 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -95,6 +107,8 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
 
     public static class GetStandardLookupTableResponseBodyLookupTableInfoDirectoryReference extends TeaModel {
         /**
+         * <p>The directory to which the lookup table belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>/dir1/dir2</p>
          */
@@ -118,6 +132,8 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
 
     public static class GetStandardLookupTableResponseBodyLookupTableInfoLookupTableValueList extends TeaModel {
         /**
+         * <p>The code description.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -125,6 +141,8 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The English name of the code.</p>
+         * 
          * <strong>example:</strong>
          * <p>HZ</p>
          */
@@ -132,6 +150,8 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
         public String englishName;
 
         /**
+         * <p>The code name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Hangzhou</p>
          */
@@ -139,6 +159,8 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The code value.</p>
+         * 
          * <strong>example:</strong>
          * <p>杭州</p>
          */
@@ -186,6 +208,8 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
 
     public static class GetStandardLookupTableResponseBodyLookupTableInfo extends TeaModel {
         /**
+         * <p>The code of the lookup table.</p>
+         * 
          * <strong>example:</strong>
          * <p>CITY</p>
          */
@@ -193,6 +217,8 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
          */
@@ -200,6 +226,8 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The user ID of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>30012021</p>
          */
@@ -207,6 +235,8 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>The username of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -214,16 +244,23 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
         public String creatorName;
 
         /**
+         * <p>The description of the lookup table.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The directory to which the lookup table belongs.</p>
+         */
         @NameInMap("DirectoryReference")
         public GetStandardLookupTableResponseBodyLookupTableInfoDirectoryReference directoryReference;
 
         /**
+         * <p>The lookup table ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234</p>
          */
@@ -231,6 +268,8 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The user ID of the last modifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>30012021</p>
          */
@@ -238,16 +277,23 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
         public String lastModifier;
 
         /**
+         * <p>The username of the last modifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("LastModifierName")
         public String lastModifierName;
 
+        /**
+         * <p>The list of lookup table values.</p>
+         */
         @NameInMap("LookupTableValueList")
         public java.util.List<GetStandardLookupTableResponseBodyLookupTableInfoLookupTableValueList> lookupTableValueList;
 
         /**
+         * <p>The modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
          */
@@ -255,6 +301,8 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
+         * <p>The name of the lookup table.</p>
+         * 
          * <strong>example:</strong>
          * <p>城市码表</p>
          */
@@ -262,6 +310,8 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The user ID of the owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>30012021</p>
          */
@@ -269,6 +319,8 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The username of the owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */

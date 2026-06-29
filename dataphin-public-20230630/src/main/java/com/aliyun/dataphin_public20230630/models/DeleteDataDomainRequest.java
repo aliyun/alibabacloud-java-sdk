@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDataDomainRequest extends TeaModel {
     /**
+     * <p>The business unit ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteDataDomainRequest extends TeaModel {
     public Long bizUnitId;
 
     /**
+     * <p>The subject domain ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class DeleteDataDomainRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

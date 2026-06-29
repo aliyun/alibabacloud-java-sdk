@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListDataSourceWithConfigRequest extends TeaModel {
     /**
+     * <p>Paginated query</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ListQuery")
     public ListDataSourceWithConfigRequestListQuery listQuery;
 
     /**
+     * <p>Tenant ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,16 +44,22 @@ public class ListDataSourceWithConfigRequest extends TeaModel {
 
     public static class ListDataSourceWithConfigRequestListQuery extends TeaModel {
         /**
+         * <p>Data source name</p>
+         * 
          * <strong>example:</strong>
          * <p>vcns-test</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Data source owner</p>
+         */
         @NameInMap("OwnerList")
         public java.util.List<String> ownerList;
 
         /**
+         * <p>Page number. The value starts from 1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -61,6 +69,7 @@ public class ListDataSourceWithConfigRequest extends TeaModel {
         public Integer page;
 
         /**
+         * <p>Number of records per page</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -69,12 +78,33 @@ public class ListDataSourceWithConfigRequest extends TeaModel {
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>Data source scope. Valid values:</p>
+         * <ul>
+         * <li>STREAMING: Real-time</li>
+         * <li>OFFLINE: Offline</li>
+         * <li>DIP_META_SYNC: Meta warehouse initialization</li>
+         * <li>DATA_DISTILL: Data distillation</li>
+         * <li>CUMPUTE_SOURCE_SHADOW: Shadow compute source</li>
+         * <li>LABEL: Label</li>
+         * <li>ALL: Offline + Real-time</li>
+         * </ul>
+         */
         @NameInMap("ScopeList")
         public java.util.List<String> scopeList;
 
+        /**
+         * <p>Tag marked when creating the data source</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx测试</p>
+         */
         @NameInMap("Tag")
         public String tag;
 
+        /**
+         * <p>Data source type</p>
+         */
         @NameInMap("TypeList")
         public java.util.List<String> typeList;
 

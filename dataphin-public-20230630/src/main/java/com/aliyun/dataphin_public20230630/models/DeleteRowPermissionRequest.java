@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteRowPermissionRequest extends TeaModel {
     /**
+     * <p>The request command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeleteRowPermissionCommand")
     public DeleteRowPermissionRequestDeleteRowPermissionCommand deleteRowPermissionCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,7 @@ public class DeleteRowPermissionRequest extends TeaModel {
 
     public static class DeleteRowPermissionRequestDeleteRowPermissionCommand extends TeaModel {
         /**
+         * <p>The row-level permission ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

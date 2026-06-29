@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class OfflineBatchTaskRequest extends TeaModel {
     /**
+     * <p>The remarks for the offline operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class OfflineBatchTaskRequest extends TeaModel {
     public String comment;
 
     /**
+     * <p>The node ID in the node directory tree.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class OfflineBatchTaskRequest extends TeaModel {
     public Long fileId;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class OfflineBatchTaskRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

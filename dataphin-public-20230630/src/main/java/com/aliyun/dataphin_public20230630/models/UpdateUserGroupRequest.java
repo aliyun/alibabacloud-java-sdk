@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateUserGroupRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,6 +14,9 @@ public class UpdateUserGroupRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <p>The command to edit the user group.</p>
+     */
     @NameInMap("UpdateCommand")
     public UpdateUserGroupRequestUpdateCommand updateCommand;
 
@@ -38,10 +42,15 @@ public class UpdateUserGroupRequest extends TeaModel {
     }
 
     public static class UpdateUserGroupRequestUpdateCommand extends TeaModel {
+        /**
+         * <p>The list of administrator user IDs for the user group.</p>
+         */
         @NameInMap("AdminUserIdList")
         public java.util.List<String> adminUserIdList;
 
         /**
+         * <p>The description of the user group.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -49,6 +58,7 @@ public class UpdateUserGroupRequest extends TeaModel {
         public String description;
 
         /**
+         * <p>The ID of the user group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -57,6 +67,12 @@ public class UpdateUserGroupRequest extends TeaModel {
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx测试</p>
+         */
         @NameInMap("Name")
         public String name;
 

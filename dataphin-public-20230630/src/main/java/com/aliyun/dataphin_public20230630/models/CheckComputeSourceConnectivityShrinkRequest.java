@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class CheckComputeSourceConnectivityShrinkRequest extends TeaModel {
     /**
+     * <p>The check command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CheckCommand")
     public String checkCommandShrink;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

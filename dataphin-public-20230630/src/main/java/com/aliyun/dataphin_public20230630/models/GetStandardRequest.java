@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetStandardRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetStandardRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The query command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("StandardGetQuery")
@@ -41,13 +43,20 @@ public class GetStandardRequest extends TeaModel {
     }
 
     public static class GetStandardRequestStandardGetQuery extends TeaModel {
+        /**
+         * <p>Specifies whether to return associated standards and associated lookup tables. Default value: false.</p>
+         */
         @NameInMap("NeedRelation")
         public Boolean needRelation;
 
+        /**
+         * <p>Specifies whether to return a null value when the standard does not exist. If set to false, an exception is thrown. Default value: true.</p>
+         */
         @NameInMap("Nullable")
         public Boolean nullable;
 
         /**
+         * <p>The standard ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -57,6 +66,13 @@ public class GetStandardRequest extends TeaModel {
         public Long standardId;
 
         /**
+         * <p>The stage to which the standard belongs. Valid values:</p>
+         * <ul>
+         * <li>dev: development stage.</li>
+         * <li>prod: production stage.</li>
+         * </ul>
+         * <p>Default value: prod.</p>
+         * 
          * <strong>example:</strong>
          * <p>dev</p>
          */
@@ -64,6 +80,8 @@ public class GetStandardRequest extends TeaModel {
         public String standardStage;
 
         /**
+         * <p>The version number. If left empty, the latest version is used.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

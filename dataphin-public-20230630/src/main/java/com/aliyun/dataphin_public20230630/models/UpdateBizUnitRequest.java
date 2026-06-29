@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateBizUnitRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateBizUnitRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The update request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")
@@ -42,6 +44,7 @@ public class UpdateBizUnitRequest extends TeaModel {
 
     public static class UpdateBizUnitRequestUpdateCommandBizUnitAccountList extends TeaModel {
         /**
+         * <p>The user ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -67,12 +70,14 @@ public class UpdateBizUnitRequest extends TeaModel {
 
     public static class UpdateBizUnitRequestUpdateCommand extends TeaModel {
         /**
+         * <p>The domain architects.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("BizUnitAccountList")
         public java.util.List<UpdateBizUnitRequestUpdateCommandBizUnitAccountList> bizUnitAccountList;
 
         /**
+         * <p>The data domain ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -82,6 +87,8 @@ public class UpdateBizUnitRequest extends TeaModel {
         public Long bizUnitId;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -89,6 +96,7 @@ public class UpdateBizUnitRequest extends TeaModel {
         public String description;
 
         /**
+         * <p>The display name of the data domain.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -98,6 +106,7 @@ public class UpdateBizUnitRequest extends TeaModel {
         public String displayName;
 
         /**
+         * <p>The preset icon. For more information, refer to the create data domain operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -107,6 +116,7 @@ public class UpdateBizUnitRequest extends TeaModel {
         public String icon;
 
         /**
+         * <p>The data domain code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

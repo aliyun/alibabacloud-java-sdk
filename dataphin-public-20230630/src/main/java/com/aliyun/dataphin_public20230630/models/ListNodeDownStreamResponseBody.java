@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListNodeDownStreamResponseBody extends TeaModel {
     /**
+     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ListNodeDownStreamResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,16 +23,23 @@ public class ListNodeDownStreamResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The list of nodes.</p>
+     */
     @NameInMap("NodeInfoList")
     public java.util.List<ListNodeDownStreamResponseBodyNodeInfoList> nodeInfoList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
@@ -36,6 +47,8 @@ public class ListNodeDownStreamResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,26 +110,41 @@ public class ListNodeDownStreamResponseBody extends TeaModel {
 
     public static class ListNodeDownStreamResponseBodyNodeInfoList extends TeaModel {
         /**
+         * <p>The depth level.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("Depth")
         public Integer depth;
 
+        /**
+         * <p>The list of field IDs.</p>
+         */
         @NameInMap("FieldIdList")
         public java.util.List<String> fieldIdList;
 
         /**
+         * <p>The node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>n_2423351</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The node name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx测试</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The node type.</p>
+         * 
          * <strong>example:</strong>
          * <p>DATA_PROCESS</p>
          */

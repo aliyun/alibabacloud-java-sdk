@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListSubmitRecordsRequest extends TeaModel {
     /**
+     * <p>Query command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ListQuery")
     public ListSubmitRecordsRequestListQuery listQuery;
 
     /**
+     * <p>Tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,10 +43,14 @@ public class ListSubmitRecordsRequest extends TeaModel {
     }
 
     public static class ListSubmitRecordsRequestListQuerySearchFilter extends TeaModel {
+        /**
+         * <p>List of change types (0: Create / 1: Update / 2: Delete).</p>
+         */
         @NameInMap("ChangeTypeList")
         public java.util.List<Integer> changeTypeList;
 
         /**
+         * <p>Page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -54,6 +60,7 @@ public class ListSubmitRecordsRequest extends TeaModel {
         public Integer page;
 
         /**
+         * <p>Page size.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -63,12 +70,15 @@ public class ListSubmitRecordsRequest extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Project ID.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("ProjectIdList")
         public java.util.List<Long> projectIdList;
 
         /**
+         * <p>Submission end time in the yyyy-MM-dd HH:mm:ss format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-10 10:00:00</p>
          */
@@ -76,12 +86,17 @@ public class ListSubmitRecordsRequest extends TeaModel {
         public String submitEndTime;
 
         /**
+         * <p>Submission start time in the yyyy-MM-dd HH:mm:ss format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-10 10:00:00</p>
          */
         @NameInMap("SubmitStartTime")
         public String submitStartTime;
 
+        /**
+         * <p>Submitter.</p>
+         */
         @NameInMap("SubmitterList")
         public java.util.List<String> submitterList;
 
@@ -150,6 +165,8 @@ public class ListSubmitRecordsRequest extends TeaModel {
 
     public static class ListSubmitRecordsRequestListQuery extends TeaModel {
         /**
+         * <p>Search keyword.</p>
+         * 
          * <strong>example:</strong>
          * <p>abc</p>
          */
@@ -157,6 +174,7 @@ public class ListSubmitRecordsRequest extends TeaModel {
         public String keyword;
 
         /**
+         * <p>Pending deployment record filter.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("SearchFilter")

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetQualityAlertOfAllRuleScopeByWatchIdResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class GetQualityAlertOfAllRuleScopeByWatchIdResponseBody extends TeaModel
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,12 +23,17 @@ public class GetQualityAlertOfAllRuleScopeByWatchIdResponseBody extends TeaModel
     public Integer httpStatusCode;
 
     /**
+     * <p>The details of the backend exception.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The alert settings details.</p>
+     */
     @NameInMap("QualityAlertInfo")
     public GetQualityAlertOfAllRuleScopeByWatchIdResponseBodyQualityAlertInfo qualityAlertInfo;
 
@@ -37,6 +46,9 @@ public class GetQualityAlertOfAllRuleScopeByWatchIdResponseBody extends TeaModel
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -95,6 +107,8 @@ public class GetQualityAlertOfAllRuleScopeByWatchIdResponseBody extends TeaModel
 
     public static class GetQualityAlertOfAllRuleScopeByWatchIdResponseBodyQualityAlertInfoAlertDutyList extends TeaModel {
         /**
+         * <p>The alert duty roster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -102,6 +116,8 @@ public class GetQualityAlertOfAllRuleScopeByWatchIdResponseBody extends TeaModel
         public String id;
 
         /**
+         * <p>The alert duty roster name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -133,6 +149,8 @@ public class GetQualityAlertOfAllRuleScopeByWatchIdResponseBody extends TeaModel
 
     public static class GetQualityAlertOfAllRuleScopeByWatchIdResponseBodyQualityAlertInfoAlertUserList extends TeaModel {
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>30012011</p>
          */
@@ -140,6 +158,8 @@ public class GetQualityAlertOfAllRuleScopeByWatchIdResponseBody extends TeaModel
         public String id;
 
         /**
+         * <p>The username.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -170,25 +190,45 @@ public class GetQualityAlertOfAllRuleScopeByWatchIdResponseBody extends TeaModel
     }
 
     public static class GetQualityAlertOfAllRuleScopeByWatchIdResponseBodyQualityAlertInfo extends TeaModel {
+        /**
+         * <p>The duty roster alert channels.</p>
+         */
         @NameInMap("AlertDutyChannelList")
         public java.util.List<String> alertDutyChannelList;
 
+        /**
+         * <p>The duty roster alert list.</p>
+         */
         @NameInMap("AlertDutyList")
         public java.util.List<GetQualityAlertOfAllRuleScopeByWatchIdResponseBodyQualityAlertInfoAlertDutyList> alertDutyList;
 
+        /**
+         * <p>The quality owner alert channels.</p>
+         */
         @NameInMap("AlertQualityOwnerChannelList")
         public java.util.List<String> alertQualityOwnerChannelList;
 
+        /**
+         * <p>The user alert channels.</p>
+         */
         @NameInMap("AlertUserChannelList")
         public java.util.List<String> alertUserChannelList;
 
+        /**
+         * <p>The user alert list.</p>
+         */
         @NameInMap("AlertUserList")
         public java.util.List<GetQualityAlertOfAllRuleScopeByWatchIdResponseBodyQualityAlertInfoAlertUserList> alertUserList;
 
+        /**
+         * <p>Indicates whether alerting is enabled for the quality owner.</p>
+         */
         @NameInMap("EnableAlertQualityOwner")
         public Boolean enableAlertQualityOwner;
 
         /**
+         * <p>The monitored object ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

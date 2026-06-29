@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetDataServiceApiErrorImpactResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The summary of call exception impacts.</p>
+     */
     @NameInMap("Data")
     public GetDataServiceApiErrorImpactResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetDataServiceApiErrorImpactResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The backend exception details.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -37,6 +46,9 @@ public class GetDataServiceApiErrorImpactResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -95,6 +107,8 @@ public class GetDataServiceApiErrorImpactResponseBody extends TeaModel {
 
     public static class GetDataServiceApiErrorImpactResponseBodyDataErrorApiList extends TeaModel {
         /**
+         * <p>The API name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -102,6 +116,8 @@ public class GetDataServiceApiErrorImpactResponseBody extends TeaModel {
         public String apiName;
 
         /**
+         * <p>The API ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2012</p>
          */
@@ -109,6 +125,8 @@ public class GetDataServiceApiErrorImpactResponseBody extends TeaModel {
         public Long appId;
 
         /**
+         * <p>The number of exceptions for the API.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -166,6 +184,8 @@ public class GetDataServiceApiErrorImpactResponseBody extends TeaModel {
         public Long appKey;
 
         /**
+         * <p>The app name.</p>
+         * 
          * <strong>example:</strong>
          * <p>app1</p>
          */
@@ -173,6 +193,8 @@ public class GetDataServiceApiErrorImpactResponseBody extends TeaModel {
         public String appName;
 
         /**
+         * <p>The number of exceptions for the app.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -219,9 +241,15 @@ public class GetDataServiceApiErrorImpactResponseBody extends TeaModel {
     }
 
     public static class GetDataServiceApiErrorImpactResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of APIs affected by exceptions.</p>
+         */
         @NameInMap("ErrorApiList")
         public java.util.List<GetDataServiceApiErrorImpactResponseBodyDataErrorApiList> errorApiList;
 
+        /**
+         * <p>The list of apps affected by exceptions.</p>
+         */
         @NameInMap("ErrorAppList")
         public java.util.List<GetDataServiceApiErrorImpactResponseBodyDataErrorAppList> errorAppList;
 

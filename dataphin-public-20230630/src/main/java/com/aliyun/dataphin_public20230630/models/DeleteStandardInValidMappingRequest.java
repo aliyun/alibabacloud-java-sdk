@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteStandardInValidMappingRequest extends TeaModel {
     /**
+     * <p>The delete instruction.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeleteCommand")
     public DeleteStandardInValidMappingRequestDeleteCommand deleteCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,13 +43,20 @@ public class DeleteStandardInValidMappingRequest extends TeaModel {
     }
 
     public static class DeleteStandardInValidMappingRequestDeleteCommand extends TeaModel {
+        /**
+         * <p>The list of parent GUIDs. A maximum of 1000 GUIDs are supported.</p>
+         */
         @NameInMap("BelongGuidList")
         public java.util.List<String> belongGuidList;
 
+        /**
+         * <p>The list of GUIDs. A maximum of 1000 GUIDs are supported.</p>
+         */
         @NameInMap("GuidList")
         public java.util.List<String> guidList;
 
         /**
+         * <p>The standard ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

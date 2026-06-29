@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListNodeDownStreamRequest extends TeaModel {
     /**
+     * <p>The environment identifier. Valid values:</p>
+     * <ul>
+     * <li>DEV: development environment. </li>
+     * <li>PROD (default): production environment.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PROD</p>
      */
@@ -12,12 +18,14 @@ public class ListNodeDownStreamRequest extends TeaModel {
     public String env;
 
     /**
+     * <p>The request for querying node downstream.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ListQuery")
     public ListNodeDownStreamRequestListQuery listQuery;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,6 +65,8 @@ public class ListNodeDownStreamRequest extends TeaModel {
 
     public static class ListNodeDownStreamRequestListQueryFilterList extends TeaModel {
         /**
+         * <p>Specifies whether to exclude the matched results. Default value: false.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -64,12 +74,22 @@ public class ListNodeDownStreamRequest extends TeaModel {
         public Boolean exclude;
 
         /**
+         * <p>The filter key. Valid values:</p>
+         * <ul>
+         * <li>PROJECT: project</li>
+         * <li>PHYSICAL_NODE_ID: physical node ID</li>
+         * <li>LOGICAL_TABLE_NODE_ID: logical table ID.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PROJECT</p>
          */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The list of filter values.</p>
+         */
         @NameInMap("ValueList")
         public java.util.List<String> valueList;
 
@@ -106,6 +126,8 @@ public class ListNodeDownStreamRequest extends TeaModel {
 
     public static class ListNodeDownStreamRequestListQueryNodeIdList extends TeaModel {
         /**
+         * <p>The list of field IDs. This parameter can be specified when the node ID is a logical table node ID. If this parameter is not specified, all fields in the table are used by default.</p>
+         * 
          * <strong>example:</strong>
          * <p>112</p>
          */
@@ -113,6 +135,8 @@ public class ListNodeDownStreamRequest extends TeaModel {
         public java.util.List<String> fieldIdList;
 
         /**
+         * <p>The node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>n_23431</p>
          */
@@ -144,22 +168,30 @@ public class ListNodeDownStreamRequest extends TeaModel {
 
     public static class ListNodeDownStreamRequestListQuery extends TeaModel {
         /**
+         * <p>The depth. Default value: 3.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("DownStreamDepth")
         public Integer downStreamDepth;
 
+        /**
+         * <p>The filters. You can include or exclude results based on projects or nodes. Default value: empty.</p>
+         */
         @NameInMap("FilterList")
         public java.util.List<ListNodeDownStreamRequestListQueryFilterList> filterList;
 
         /**
+         * <p>The list of nodes.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("NodeIdList")
         public java.util.List<ListNodeDownStreamRequestListQueryNodeIdList> nodeIdList;
 
         /**
+         * <p>The project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123011</p>
          */

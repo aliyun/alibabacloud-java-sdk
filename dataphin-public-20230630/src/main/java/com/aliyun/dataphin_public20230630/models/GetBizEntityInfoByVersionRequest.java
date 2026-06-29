@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetBizEntityInfoByVersionRequest extends TeaModel {
     /**
+     * <p>The business entity ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetBizEntityInfoByVersionRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class GetBizEntityInfoByVersionRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The business type. Valid values: BIZ_OBJECT and BIZ_PROCESS.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class GetBizEntityInfoByVersionRequest extends TeaModel {
     public String type;
 
     /**
+     * <p>The version.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

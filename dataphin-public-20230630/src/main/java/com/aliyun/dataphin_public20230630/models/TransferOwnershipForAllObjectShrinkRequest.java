@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class TransferOwnershipForAllObjectShrinkRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,6 +14,9 @@ public class TransferOwnershipForAllObjectShrinkRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <p>The transfer information.</p>
+     */
     @NameInMap("PrivilegeTransferRecord")
     public String privilegeTransferRecordShrink;
 

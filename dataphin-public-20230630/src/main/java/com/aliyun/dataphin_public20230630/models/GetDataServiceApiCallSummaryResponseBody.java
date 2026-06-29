@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetDataServiceApiCallSummaryResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The aggregate statistics of API calls.</p>
+     */
     @NameInMap("Data")
     public GetDataServiceApiCallSummaryResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetDataServiceApiCallSummaryResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The details of the backend exception.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -37,6 +46,9 @@ public class GetDataServiceApiCallSummaryResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -95,6 +107,8 @@ public class GetDataServiceApiCallSummaryResponseBody extends TeaModel {
 
     public static class GetDataServiceApiCallSummaryResponseBodyData extends TeaModel {
         /**
+         * <p>The number of API calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>1021</p>
          */
@@ -102,6 +116,8 @@ public class GetDataServiceApiCallSummaryResponseBody extends TeaModel {
         public Long callCount;
 
         /**
+         * <p>The number of APIs with call errors.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -109,6 +125,8 @@ public class GetDataServiceApiCallSummaryResponseBody extends TeaModel {
         public Long errorApiCount;
 
         /**
+         * <p>The number of applications affected by errors.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -116,6 +134,8 @@ public class GetDataServiceApiCallSummaryResponseBody extends TeaModel {
         public Long errorAppCount;
 
         /**
+         * <p>The number of failed calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>102</p>
          */
@@ -123,6 +143,8 @@ public class GetDataServiceApiCallSummaryResponseBody extends TeaModel {
         public Long errorCount;
 
         /**
+         * <p>The error rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.01</p>
          */
@@ -130,6 +152,8 @@ public class GetDataServiceApiCallSummaryResponseBody extends TeaModel {
         public Double errorRate;
 
         /**
+         * <p>The offline percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>2.03</p>
          */

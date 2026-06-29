@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateSecurityIdentifyResultStatusRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateSecurityIdentifyResultStatusRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The update instruction.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")
@@ -42,12 +44,14 @@ public class UpdateSecurityIdentifyResultStatusRequest extends TeaModel {
 
     public static class UpdateSecurityIdentifyResultStatusRequestUpdateCommand extends TeaModel {
         /**
+         * <p>Specifies whether the result is effective.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Enable")
         public Boolean enable;
 
         /**
+         * <p>The list of identification result IDs.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("IdentifyResultIdList")

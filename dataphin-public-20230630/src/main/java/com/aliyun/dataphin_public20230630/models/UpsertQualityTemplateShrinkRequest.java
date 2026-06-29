@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpsertQualityTemplateShrinkRequest extends TeaModel {
     /**
+     * <p>Tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpsertQualityTemplateShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>Upsert command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpsertCommand")

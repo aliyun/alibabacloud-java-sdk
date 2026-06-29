@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateComputeSourceRequest extends TeaModel {
     /**
+     * <p>The create command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CreateCommand")
     public CreateComputeSourceRequestCreateCommand createCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,7 @@ public class CreateComputeSourceRequest extends TeaModel {
 
     public static class CreateComputeSourceRequestCreateCommandConfigList extends TeaModel {
         /**
+         * <p>The configuration item.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,6 +54,7 @@ public class CreateComputeSourceRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the configuration item.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -84,12 +88,15 @@ public class CreateComputeSourceRequest extends TeaModel {
 
     public static class CreateComputeSourceRequestCreateCommand extends TeaModel {
         /**
+         * <p>The connection configuration items.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("ConfigList")
         public java.util.List<CreateComputeSourceRequestCreateCommandConfigList> configList;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -97,6 +104,7 @@ public class CreateComputeSourceRequest extends TeaModel {
         public String description;
 
         /**
+         * <p>The name of the compute source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -106,6 +114,7 @@ public class CreateComputeSourceRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The type of the compute source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

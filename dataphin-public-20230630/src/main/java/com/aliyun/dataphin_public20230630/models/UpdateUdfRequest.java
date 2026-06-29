@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateUdfRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateUdfRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The update command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")
@@ -42,6 +44,19 @@ public class UpdateUdfRequest extends TeaModel {
 
     public static class UpdateUdfRequestUpdateCommand extends TeaModel {
         /**
+         * <p>The category. Valid values:</p>
+         * <ul>
+         * <li>1: window function</li>
+         * <li>2: aggregate function</li>
+         * <li>3: numerical function</li>
+         * <li>4: string function</li>
+         * <li>5: time function</li>
+         * <li>6: IP address utility function</li>
+         * <li>7: URL-related function</li>
+         * <li>8: encoding and decoding function</li>
+         * <li>9: business-related function</li>
+         * <li>10: other.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,6 +66,7 @@ public class UpdateUdfRequest extends TeaModel {
         public Integer category;
 
         /**
+         * <p>The class name that implements the function in the resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -60,6 +76,7 @@ public class UpdateUdfRequest extends TeaModel {
         public String className;
 
         /**
+         * <p>The command format for function calling to invoke.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -69,6 +86,7 @@ public class UpdateUdfRequest extends TeaModel {
         public String commandHelp;
 
         /**
+         * <p>The commit remarks.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -78,6 +96,7 @@ public class UpdateUdfRequest extends TeaModel {
         public String comment;
 
         /**
+         * <p>The description.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +106,7 @@ public class UpdateUdfRequest extends TeaModel {
         public String description;
 
         /**
+         * <p>The ID of the user-defined function.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -96,6 +116,7 @@ public class UpdateUdfRequest extends TeaModel {
         public Long id;
 
         /**
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -105,6 +126,7 @@ public class UpdateUdfRequest extends TeaModel {
         public Long projectId;
 
         /**
+         * <p>The IDs of the referenced resources.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("RefResourceIdList")

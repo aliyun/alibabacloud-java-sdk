@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteBizEntityRequest extends TeaModel {
     /**
+     * <p>The ID of the business unit to which the entity belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteBizEntityRequest extends TeaModel {
     public Long bizUnitId;
 
     /**
+     * <p>The ID of the business entity.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class DeleteBizEntityRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class DeleteBizEntityRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The type of the business entity. For more information, refer to the create business entity operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

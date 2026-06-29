@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class OfflineBizEntityRequest extends TeaModel {
     /**
+     * <p>Offline request</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("OfflineCommand")
     public OfflineBizEntityRequestOfflineCommand offlineCommand;
 
     /**
+     * <p>Tenant ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,7 @@ public class OfflineBizEntityRequest extends TeaModel {
 
     public static class OfflineBizEntityRequestOfflineCommand extends TeaModel {
         /**
+         * <p>Business unit ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,6 +54,7 @@ public class OfflineBizEntityRequest extends TeaModel {
         public Long bizUnitId;
 
         /**
+         * <p>Offline comment</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -60,6 +64,7 @@ public class OfflineBizEntityRequest extends TeaModel {
         public String comment;
 
         /**
+         * <p>Business entity ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -69,6 +74,7 @@ public class OfflineBizEntityRequest extends TeaModel {
         public Long id;
 
         /**
+         * <p>Business entity type. For more information, see the &quot;CreateBizEntity&quot; operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

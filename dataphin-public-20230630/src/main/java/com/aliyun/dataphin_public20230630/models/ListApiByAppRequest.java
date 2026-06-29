@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListApiByAppRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListApiByAppRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The paged query parameters.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("PageQuery")
@@ -42,23 +44,30 @@ public class ListApiByAppRequest extends TeaModel {
 
     public static class ListApiByAppRequestPageQuery extends TeaModel {
         /**
-         * <p>appKey</p>
+         * <p>The application key.</p>
+         * <blockquote>
+         * <p>Notice: Deprecated. Use AppKeyStr instead.</notice>.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>10121101</p>
+         * <p>200000000</p>
          */
         @NameInMap("AppKey")
         @Deprecated
         public Long appKey;
 
         /**
+         * <p>The application key.</p>
+         * 
          * <strong>example:</strong>
-         * <p>app12345</p>
+         * <p>APP_200000000</p>
          */
         @NameInMap("AppKeyStr")
         public String appKeyStr;
 
         /**
+         * <p>The keyword.</p>
+         * 
          * <strong>example:</strong>
          * <p>apiName</p>
          */
@@ -66,6 +75,8 @@ public class ListApiByAppRequest extends TeaModel {
         public String keyword;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -73,6 +84,8 @@ public class ListApiByAppRequest extends TeaModel {
         public Integer pageNum;
 
         /**
+         * <p>The page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */

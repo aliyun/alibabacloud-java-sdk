@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateStandardTemplateResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class CreateStandardTemplateResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Standard template ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>22</p>
      */
@@ -19,6 +23,8 @@ public class CreateStandardTemplateResponseBody extends TeaModel {
     public Long data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class CreateStandardTemplateResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -41,6 +49,9 @@ public class CreateStandardTemplateResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

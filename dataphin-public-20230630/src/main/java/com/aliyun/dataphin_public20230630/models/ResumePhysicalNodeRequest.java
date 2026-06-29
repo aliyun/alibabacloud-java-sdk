@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class ResumePhysicalNodeRequest extends TeaModel {
     /**
+     * <p>Environment identifier.</p>
+     * <ul>
+     * <li>DEV: Development environment</li>
+     * <li>PROD (default): Production environment</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PROD</p>
      */
@@ -12,6 +18,7 @@ public class ResumePhysicalNodeRequest extends TeaModel {
     public String env;
 
     /**
+     * <p>Tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +28,7 @@ public class ResumePhysicalNodeRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>Resume scheduling request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResumeCommand")
@@ -57,12 +65,14 @@ public class ResumePhysicalNodeRequest extends TeaModel {
 
     public static class ResumePhysicalNodeRequestResumeCommand extends TeaModel {
         /**
+         * <p>Node ID list.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("NodeIdList")
         public java.util.List<String> nodeIdList;
 
         /**
+         * <p>Project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

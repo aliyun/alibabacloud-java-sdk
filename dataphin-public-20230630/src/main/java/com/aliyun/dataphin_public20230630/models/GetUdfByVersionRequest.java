@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetUdfByVersionRequest extends TeaModel {
     /**
+     * <p>The ID of the user-defined function.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetUdfByVersionRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class GetUdfByVersionRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class GetUdfByVersionRequest extends TeaModel {
     public Long projectId;
 
     /**
+     * <p>The version number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

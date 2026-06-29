@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class GetAccountByRowPermissionIdShrinkRequest extends TeaModel {
     /**
+     * <p>The request command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("GetAccountByRowPermissionIdQuery")
     public String getAccountByRowPermissionIdQueryShrink;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

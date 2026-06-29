@@ -4,10 +4,14 @@ package com.aliyun.dataphin_public20230630.models;
 import com.aliyun.tea.*;
 
 public class GetStandardTemplateRequest extends TeaModel {
+    /**
+     * <p>The filter condition.</p>
+     */
     @NameInMap("FilterQuery")
     public GetStandardTemplateRequestFilterQuery filterQuery;
 
     /**
+     * <p>The standard template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,10 +20,14 @@ public class GetStandardTemplateRequest extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>Specifies whether to allow a null value to be returned when the template does not exist. If set to false, an exception is thrown. Default value: true.</p>
+     */
     @NameInMap("Nullable")
     public Boolean nullable;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,6 +75,8 @@ public class GetStandardTemplateRequest extends TeaModel {
 
     public static class GetStandardTemplateRequestFilterQuery extends TeaModel {
         /**
+         * <p>The version number. If this parameter is left empty or set to -1, the latest version is used.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

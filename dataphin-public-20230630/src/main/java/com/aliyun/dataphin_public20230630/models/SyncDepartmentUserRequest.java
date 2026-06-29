@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SyncDepartmentUserRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class SyncDepartmentUserRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The request command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SyncDepartmentUserCommand")
@@ -41,10 +43,14 @@ public class SyncDepartmentUserRequest extends TeaModel {
     }
 
     public static class SyncDepartmentUserRequestSyncDepartmentUserCommandDeptUserMapping extends TeaModel {
+        /**
+         * <p>The list of department IDs to which the user belongs. If this parameter is left empty, the user-department affiliation is deleted.</p>
+         */
         @NameInMap("DepartmentIdList")
         public java.util.List<String> departmentIdList;
 
         /**
+         * <p>The user ID in the user system. This value is the unique identifier of the user.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -78,6 +84,7 @@ public class SyncDepartmentUserRequest extends TeaModel {
 
     public static class SyncDepartmentUserRequestSyncDepartmentUserCommand extends TeaModel {
         /**
+         * <p>The mapping between users and their affiliated departments.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("DeptUserMapping")

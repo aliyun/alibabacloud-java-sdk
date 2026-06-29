@@ -4,10 +4,14 @@ package com.aliyun.dataphin_public20230630.models;
 import com.aliyun.tea.*;
 
 public class ListDataServiceAuthorizedAppsShrinkRequest extends TeaModel {
+    /**
+     * <p>The query conditions.</p>
+     */
     @NameInMap("ListQuery")
     public String listQueryShrink;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +21,7 @@ public class ListDataServiceAuthorizedAppsShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the data service project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

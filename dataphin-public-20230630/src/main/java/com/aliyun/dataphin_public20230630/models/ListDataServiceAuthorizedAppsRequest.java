@@ -4,10 +4,14 @@ package com.aliyun.dataphin_public20230630.models;
 import com.aliyun.tea.*;
 
 public class ListDataServiceAuthorizedAppsRequest extends TeaModel {
+    /**
+     * <p>The query conditions.</p>
+     */
     @NameInMap("ListQuery")
     public ListDataServiceAuthorizedAppsRequestListQuery listQuery;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +21,7 @@ public class ListDataServiceAuthorizedAppsRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the data service project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,6 +61,8 @@ public class ListDataServiceAuthorizedAppsRequest extends TeaModel {
 
     public static class ListDataServiceAuthorizedAppsRequestListQuery extends TeaModel {
         /**
+         * <p>The search keyword.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -63,6 +70,8 @@ public class ListDataServiceAuthorizedAppsRequest extends TeaModel {
         public String keyword;
 
         /**
+         * <p>The page number. Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -70,6 +79,8 @@ public class ListDataServiceAuthorizedAppsRequest extends TeaModel {
         public Integer pageNo;
 
         /**
+         * <p>The number of records per page. Default value: 20.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */

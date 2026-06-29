@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListProjectsRequest extends TeaModel {
     /**
+     * <p>The query conditions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ListQuery")
     public ListProjectsRequestListQuery listQuery;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,8 @@ public class ListProjectsRequest extends TeaModel {
 
     public static class ListProjectsRequestListQuery extends TeaModel {
         /**
+         * <p>The environment identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>DEV</p>
          */
@@ -49,6 +53,8 @@ public class ListProjectsRequest extends TeaModel {
         public String env;
 
         /**
+         * <p>The keyword for fuzzy match.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -56,6 +62,8 @@ public class ListProjectsRequest extends TeaModel {
         public String keyword;
 
         /**
+         * <p>The project mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>BASIC</p>
          */
@@ -63,6 +71,8 @@ public class ListProjectsRequest extends TeaModel {
         public String mode;
 
         /**
+         * <p>The page number. Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -70,12 +80,17 @@ public class ListProjectsRequest extends TeaModel {
         public Integer pageNo;
 
         /**
+         * <p>The number of records per page. Default value: 20.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The project tags.</p>
+         */
         @NameInMap("TagList")
         public java.util.List<String> tagList;
 

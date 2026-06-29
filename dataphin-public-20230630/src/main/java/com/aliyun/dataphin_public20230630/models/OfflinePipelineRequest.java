@@ -5,18 +5,21 @@ import com.aliyun.tea.*;
 
 public class OfflinePipelineRequest extends TeaModel {
     /**
+     * <p>The request context information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Context")
     public OfflinePipelineRequestContext context;
 
     /**
+     * <p>The offline command for the pipeline node.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("OfflineCommand")
     public OfflinePipelineRequestOfflineCommand offlineCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,6 +59,11 @@ public class OfflinePipelineRequest extends TeaModel {
 
     public static class OfflinePipelineRequestContext extends TeaModel {
         /**
+         * <p>The current operating environment. Valid values:</p>
+         * <ul>
+         * <li>DEV: the development environment.</li>
+         * <li>PROD: the production environment.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -65,6 +73,7 @@ public class OfflinePipelineRequest extends TeaModel {
         public String env;
 
         /**
+         * <p>The ID of the project to which the integration pipeline node belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -98,6 +107,8 @@ public class OfflinePipelineRequest extends TeaModel {
 
     public static class OfflinePipelineRequestOfflineCommand extends TeaModel {
         /**
+         * <p>The remarks.</p>
+         * 
          * <strong>example:</strong>
          * <p>comment</p>
          */
@@ -105,12 +116,15 @@ public class OfflinePipelineRequest extends TeaModel {
         public String comment;
 
         /**
+         * <p>Specifies whether to delete the node.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Delete")
         public Boolean delete;
 
         /**
+         * <p>The file ID of the integration node. You can specify any one of PipelineId, FileId, or NodeId.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -118,6 +132,8 @@ public class OfflinePipelineRequest extends TeaModel {
         public Long fileId;
 
         /**
+         * <p>The scheduling node ID of the integration node. You can specify any one of PipelineId, FileId, or NodeId.</p>
+         * 
          * <strong>example:</strong>
          * <p>n_123</p>
          */
@@ -125,6 +141,8 @@ public class OfflinePipelineRequest extends TeaModel {
         public String nodeId;
 
         /**
+         * <p>The primary key of the integration pipeline. You can specify any one of PipelineId, FileId, or NodeId.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */

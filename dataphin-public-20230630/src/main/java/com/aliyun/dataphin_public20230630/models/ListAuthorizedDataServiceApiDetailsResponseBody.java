@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAuthorizedDataServiceApiDetailsResponseBody extends TeaModel {
     /**
+     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ListAuthorizedDataServiceApiDetailsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class ListAuthorizedDataServiceApiDetailsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>非法入参</p>
      */
@@ -26,15 +32,23 @@ public class ListAuthorizedDataServiceApiDetailsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID. It is a unique identifier for the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The query result.</p>
+     */
     @NameInMap("Result")
     public ListAuthorizedDataServiceApiDetailsResponseBodyResult result;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -93,6 +107,8 @@ public class ListAuthorizedDataServiceApiDetailsResponseBody extends TeaModel {
 
     public static class ListAuthorizedDataServiceApiDetailsResponseBodyResultDataAuthorizedDevReturnParameters extends TeaModel {
         /**
+         * <p>The example value.</p>
+         * 
          * <strong>example:</strong>
          * <p>example1</p>
          */
@@ -100,6 +116,8 @@ public class ListAuthorizedDataServiceApiDetailsResponseBody extends TeaModel {
         public String exampleValue;
 
         /**
+         * <p>The field authorization status.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -107,6 +125,8 @@ public class ListAuthorizedDataServiceApiDetailsResponseBody extends TeaModel {
         public Integer isAuthorized;
 
         /**
+         * <p>The parameter type.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -114,6 +134,8 @@ public class ListAuthorizedDataServiceApiDetailsResponseBody extends TeaModel {
         public Integer parameterDataType;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>description1</p>
          */
@@ -121,6 +143,8 @@ public class ListAuthorizedDataServiceApiDetailsResponseBody extends TeaModel {
         public String parameterDescription;
 
         /**
+         * <p>The parameter name.</p>
+         * 
          * <strong>example:</strong>
          * <p>param1</p>
          */
@@ -176,6 +200,8 @@ public class ListAuthorizedDataServiceApiDetailsResponseBody extends TeaModel {
 
     public static class ListAuthorizedDataServiceApiDetailsResponseBodyResultDataAuthorizedProdReturnParameters extends TeaModel {
         /**
+         * <p>The example value.</p>
+         * 
          * <strong>example:</strong>
          * <p>example1</p>
          */
@@ -183,6 +209,8 @@ public class ListAuthorizedDataServiceApiDetailsResponseBody extends TeaModel {
         public String exampleValue;
 
         /**
+         * <p>The field authorization status.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -190,6 +218,8 @@ public class ListAuthorizedDataServiceApiDetailsResponseBody extends TeaModel {
         public Integer isAuthorized;
 
         /**
+         * <p>The parameter type.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -197,6 +227,8 @@ public class ListAuthorizedDataServiceApiDetailsResponseBody extends TeaModel {
         public Integer parameterDataType;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>description1</p>
          */
@@ -204,6 +236,8 @@ public class ListAuthorizedDataServiceApiDetailsResponseBody extends TeaModel {
         public String parameterDescription;
 
         /**
+         * <p>The parameter name.</p>
+         * 
          * <strong>example:</strong>
          * <p>param1</p>
          */
@@ -268,6 +302,8 @@ public class ListAuthorizedDataServiceApiDetailsResponseBody extends TeaModel {
         public Long apiId;
 
         /**
+         * <p>The API name.</p>
+         * 
          * <strong>example:</strong>
          * <p>GetData</p>
          */
@@ -275,6 +311,8 @@ public class ListAuthorizedDataServiceApiDetailsResponseBody extends TeaModel {
         public String apiName;
 
         /**
+         * <p>The application ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>12345</p>
          */
@@ -282,19 +320,29 @@ public class ListAuthorizedDataServiceApiDetailsResponseBody extends TeaModel {
         public Long appId;
 
         /**
+         * <p>The permission type.</p>
+         * 
          * <strong>example:</strong>
          * <p>使用权限</p>
          */
         @NameInMap("AuthType")
         public String authType;
 
+        /**
+         * <p>The list of fields authorized for the API in the development environment.</p>
+         */
         @NameInMap("AuthorizedDevReturnParameters")
         public java.util.List<ListAuthorizedDataServiceApiDetailsResponseBodyResultDataAuthorizedDevReturnParameters> authorizedDevReturnParameters;
 
+        /**
+         * <p>The list of fields authorized for the API in the production environment.</p>
+         */
         @NameInMap("AuthorizedProdReturnParameters")
         public java.util.List<ListAuthorizedDataServiceApiDetailsResponseBodyResultDataAuthorizedProdReturnParameters> authorizedProdReturnParameters;
 
         /**
+         * <p>The API description.</p>
+         * 
          * <strong>example:</strong>
          * <p>Description1</p>
          */
@@ -302,6 +350,8 @@ public class ListAuthorizedDataServiceApiDetailsResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The validity period of the API permission in the development environment.</p>
+         * 
          * <strong>example:</strong>
          * <p>2035-12-31</p>
          */
@@ -309,6 +359,8 @@ public class ListAuthorizedDataServiceApiDetailsResponseBody extends TeaModel {
         public String devAuthPeriod;
 
         /**
+         * <p>The validity period of the API permission in the production environment.</p>
+         * 
          * <strong>example:</strong>
          * <p>2035-12-31</p>
          */
@@ -316,6 +368,8 @@ public class ListAuthorizedDataServiceApiDetailsResponseBody extends TeaModel {
         public String prodAuthPeriod;
 
         /**
+         * <p>The data service project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000</p>
          */
@@ -410,10 +464,15 @@ public class ListAuthorizedDataServiceApiDetailsResponseBody extends TeaModel {
     }
 
     public static class ListAuthorizedDataServiceApiDetailsResponseBodyResult extends TeaModel {
+        /**
+         * <p>The list of authorized API details.</p>
+         */
         @NameInMap("Data")
         public java.util.List<ListAuthorizedDataServiceApiDetailsResponseBodyResultData> data;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

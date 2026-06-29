@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateDataDomainRequest extends TeaModel {
     /**
+     * <p>The create request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CreateCommand")
     public CreateDataDomainRequestCreateCommand createCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,7 @@ public class CreateDataDomainRequest extends TeaModel {
 
     public static class CreateDataDomainRequestCreateCommand extends TeaModel {
         /**
+         * <p>The abbreviation of the data domain.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,6 +54,7 @@ public class CreateDataDomainRequest extends TeaModel {
         public String abbreviation;
 
         /**
+         * <p>The ID of the data unit to which the data domain belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -60,6 +64,8 @@ public class CreateDataDomainRequest extends TeaModel {
         public Long bizUnitId;
 
         /**
+         * <p>The description of the data domain.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -67,6 +73,7 @@ public class CreateDataDomainRequest extends TeaModel {
         public String description;
 
         /**
+         * <p>The display name of the data domain.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -76,6 +83,7 @@ public class CreateDataDomainRequest extends TeaModel {
         public String displayName;
 
         /**
+         * <p>The code of the data domain.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -85,6 +93,8 @@ public class CreateDataDomainRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The ID of the parent data domain.</p>
+         * 
          * <strong>example:</strong>
          * <p>10232311</p>
          */

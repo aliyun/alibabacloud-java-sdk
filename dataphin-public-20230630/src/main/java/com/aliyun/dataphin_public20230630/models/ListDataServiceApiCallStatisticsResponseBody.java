@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDataServiceApiCallStatisticsResponseBody extends TeaModel {
     /**
+     * <p>Backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ListDataServiceApiCallStatisticsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,12 +23,17 @@ public class ListDataServiceApiCallStatisticsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Backend error details.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Paginated query result.</p>
+     */
     @NameInMap("PageResult")
     public ListDataServiceApiCallStatisticsResponseBodyPageResult pageResult;
 
@@ -37,6 +46,9 @@ public class ListDataServiceApiCallStatisticsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -95,6 +107,8 @@ public class ListDataServiceApiCallStatisticsResponseBody extends TeaModel {
 
     public static class ListDataServiceApiCallStatisticsResponseBodyPageResultCallStatisticsList extends TeaModel {
         /**
+         * <p>API ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1003</p>
          */
@@ -102,16 +116,23 @@ public class ListDataServiceApiCallStatisticsResponseBody extends TeaModel {
         public Long apiId;
 
         /**
+         * <p>API name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("ApiName")
         public String apiName;
 
+        /**
+         * <p>Authorized application names.</p>
+         */
         @NameInMap("AppNameList")
         public java.util.List<String> appNameList;
 
         /**
+         * <p>Number of authorized applications.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -119,6 +140,8 @@ public class ListDataServiceApiCallStatisticsResponseBody extends TeaModel {
         public Integer authorizedAppCount;
 
         /**
+         * <p>Average response time, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>11</p>
          */
@@ -126,6 +149,8 @@ public class ListDataServiceApiCallStatisticsResponseBody extends TeaModel {
         public Double avgResponseTime;
 
         /**
+         * <p>Number of calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -133,6 +158,8 @@ public class ListDataServiceApiCallStatisticsResponseBody extends TeaModel {
         public Long callCount;
 
         /**
+         * <p>Creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>30012011</p>
          */
@@ -140,6 +167,8 @@ public class ListDataServiceApiCallStatisticsResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>Number of call errors.</p>
+         * 
          * <strong>example:</strong>
          * <p>22</p>
          */
@@ -147,6 +176,8 @@ public class ListDataServiceApiCallStatisticsResponseBody extends TeaModel {
         public String errorCount;
 
         /**
+         * <p>Error rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>23.2%</p>
          */
@@ -154,6 +185,8 @@ public class ListDataServiceApiCallStatisticsResponseBody extends TeaModel {
         public String errorRate;
 
         /**
+         * <p>Last call time. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-30 08:00:00</p>
          */
@@ -161,6 +194,8 @@ public class ListDataServiceApiCallStatisticsResponseBody extends TeaModel {
         public String lastCallTime;
 
         /**
+         * <p>Offline percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>23.2%</p>
          */
@@ -168,6 +203,8 @@ public class ListDataServiceApiCallStatisticsResponseBody extends TeaModel {
         public String offlineRate;
 
         /**
+         * <p>Data service project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>101201</p>
          */
@@ -175,6 +212,8 @@ public class ListDataServiceApiCallStatisticsResponseBody extends TeaModel {
         public Integer projectId;
 
         /**
+         * <p>Data service project.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -182,6 +221,8 @@ public class ListDataServiceApiCallStatisticsResponseBody extends TeaModel {
         public String projectName;
 
         /**
+         * <p>SQL table primary key.</p>
+         * 
          * <strong>example:</strong>
          * <p>1121</p>
          */
@@ -308,10 +349,15 @@ public class ListDataServiceApiCallStatisticsResponseBody extends TeaModel {
     }
 
     public static class ListDataServiceApiCallStatisticsResponseBodyPageResult extends TeaModel {
+        /**
+         * <p>API call statistics list.</p>
+         */
         @NameInMap("CallStatisticsList")
         public java.util.List<ListDataServiceApiCallStatisticsResponseBodyPageResultCallStatisticsList> callStatisticsList;
 
         /**
+         * <p>Total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>68</p>
          */

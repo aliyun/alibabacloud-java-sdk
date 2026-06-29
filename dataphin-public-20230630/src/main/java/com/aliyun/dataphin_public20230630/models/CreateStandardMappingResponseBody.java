@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateStandardMappingResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The creation result.</p>
+     */
     @NameInMap("Data")
     public CreateStandardMappingResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class CreateStandardMappingResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The details of the backend exception.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -37,6 +46,9 @@ public class CreateStandardMappingResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -94,10 +106,15 @@ public class CreateStandardMappingResponseBody extends TeaModel {
     }
 
     public static class CreateStandardMappingResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of asset GUIDs that failed to be created.</p>
+         */
         @NameInMap("FailedGuidList")
         public java.util.List<String> failedGuidList;
 
         /**
+         * <p>The number of successfully added mappings.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */

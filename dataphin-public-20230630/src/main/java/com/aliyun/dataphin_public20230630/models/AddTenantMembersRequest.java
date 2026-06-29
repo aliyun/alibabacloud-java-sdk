@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class AddTenantMembersRequest extends TeaModel {
     /**
+     * <p>The request command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AddCommand")
     public AddTenantMembersRequestAddCommand addCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,12 +44,27 @@ public class AddTenantMembersRequest extends TeaModel {
 
     public static class AddTenantMembersRequestAddCommandUserList extends TeaModel {
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1323241</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The list of roles. Valid values:</p>
+         * <ul>
+         * <li>SYSTEM_ADMIN</li>
+         * <li>DATASOURCE_MANAGER</li>
+         * <li>SECURITY_ADMIN</li>
+         * <li>QUALITY_MANAGER</li>
+         * <li>EXPORT_ADMIN</li>
+         * <li>DATA_STANDARD_MANAGER</li>
+         * <li>LABELS_BUSINESS_PLANNER</li>
+         * <li>BUSINESS_MEMBER.</li>
+         * </ul>
+         */
         @NameInMap("RoleList")
         public java.util.List<String> roleList;
 
@@ -76,6 +93,7 @@ public class AddTenantMembersRequest extends TeaModel {
 
     public static class AddTenantMembersRequestAddCommand extends TeaModel {
         /**
+         * <p>The list of members.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("UserList")

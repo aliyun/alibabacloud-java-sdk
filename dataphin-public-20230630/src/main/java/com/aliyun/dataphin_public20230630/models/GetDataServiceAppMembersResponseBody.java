@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetDataServiceAppMembersResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The member list of the data service application.</p>
+     */
     @NameInMap("Data")
     public GetDataServiceAppMembersResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetDataServiceAppMembersResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message returned from the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -37,6 +46,9 @@ public class GetDataServiceAppMembersResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -95,6 +107,8 @@ public class GetDataServiceAppMembersResponseBody extends TeaModel {
 
     public static class GetDataServiceAppMembersResponseBodyDataMemberList extends TeaModel {
         /**
+         * <p>The authorization expiration time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-12-12</p>
          */
@@ -102,6 +116,12 @@ public class GetDataServiceAppMembersResponseBody extends TeaModel {
         public String effectiveEnd;
 
         /**
+         * <p>The role of the user. Valid values:</p>
+         * <ul>
+         * <li>general: regular member.</li>
+         * <li>owner: application owner.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>general</p>
          */
@@ -109,6 +129,8 @@ public class GetDataServiceAppMembersResponseBody extends TeaModel {
         public String role;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>200000245</p>
          */
@@ -147,6 +169,9 @@ public class GetDataServiceAppMembersResponseBody extends TeaModel {
     }
 
     public static class GetDataServiceAppMembersResponseBodyData extends TeaModel {
+        /**
+         * <p>The application member list.</p>
+         */
         @NameInMap("MemberList")
         public java.util.List<GetDataServiceAppMembersResponseBodyDataMemberList> memberList;
 

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetQueueEngineVersionByEnvRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetQueueEngineVersionByEnvRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The environment.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class GetQueueEngineVersionByEnvRequest extends TeaModel {
     public String env;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class GetQueueEngineVersionByEnvRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +45,7 @@ public class GetQueueEngineVersionByEnvRequest extends TeaModel {
     public Long projectId;
 
     /**
+     * <p>The queue name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,6 +55,7 @@ public class GetQueueEngineVersionByEnvRequest extends TeaModel {
     public String queueName;
 
     /**
+     * <p>The stream-batch mode.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

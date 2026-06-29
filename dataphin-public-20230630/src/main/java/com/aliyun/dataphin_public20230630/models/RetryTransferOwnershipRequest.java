@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RetryTransferOwnershipRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,6 +14,9 @@ public class RetryTransferOwnershipRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <p>The transfer information.</p>
+     */
     @NameInMap("PrivilegeTransferRecord")
     public RetryTransferOwnershipRequestPrivilegeTransferRecord privilegeTransferRecord;
 
@@ -39,6 +43,7 @@ public class RetryTransferOwnershipRequest extends TeaModel {
 
     public static class RetryTransferOwnershipRequestPrivilegeTransferRecord extends TeaModel {
         /**
+         * <p>The ID of the transfer task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -48,6 +53,7 @@ public class RetryTransferOwnershipRequest extends TeaModel {
         public Long id;
 
         /**
+         * <p>The user ID of the recipient.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -57,6 +63,8 @@ public class RetryTransferOwnershipRequest extends TeaModel {
         public String newOwner;
 
         /**
+         * <p>The remarks.</p>
+         * 
          * <strong>example:</strong>
          * <p>comment</p>
          */

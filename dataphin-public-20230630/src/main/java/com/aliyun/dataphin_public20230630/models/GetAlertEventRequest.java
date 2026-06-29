@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAlertEventRequest extends TeaModel {
     /**
+     * <p>The alert event ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetAlertEventRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteBizMetricRequest extends TeaModel {
     /**
+     * <p>The delete request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeleteBizMetricCommand")
     public DeleteBizMetricRequestDeleteBizMetricCommand deleteBizMetricCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,7 @@ public class DeleteBizMetricRequest extends TeaModel {
 
     public static class DeleteBizMetricRequestDeleteBizMetricCommand extends TeaModel {
         /**
+         * <p>The name of the business metric to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

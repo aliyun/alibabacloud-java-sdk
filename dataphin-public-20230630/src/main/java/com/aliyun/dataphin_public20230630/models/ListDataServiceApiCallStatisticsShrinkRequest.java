@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListDataServiceApiCallStatisticsShrinkRequest extends TeaModel {
     /**
+     * <p>Search conditions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ListQuery")
     public String listQueryShrink;
 
     /**
+     * <p>Tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +22,7 @@ public class ListDataServiceApiCallStatisticsShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>Data service project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

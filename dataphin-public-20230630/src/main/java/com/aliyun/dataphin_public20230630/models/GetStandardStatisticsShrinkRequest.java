@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetStandardStatisticsShrinkRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetStandardStatisticsShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The statistical query instruction.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("StatisticsQuery")

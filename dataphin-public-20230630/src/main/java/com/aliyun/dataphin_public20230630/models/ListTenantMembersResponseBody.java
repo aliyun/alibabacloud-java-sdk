@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTenantMembersResponseBody extends TeaModel {
     /**
+     * <p>The error code. OK indicates a successful request.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ListTenantMembersResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,16 +23,23 @@ public class ListTenantMembersResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The paginated query result.</p>
+     */
     @NameInMap("PageResult")
     public ListTenantMembersResponseBodyPageResult pageResult;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
@@ -36,6 +47,8 @@ public class ListTenantMembersResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,22 +110,38 @@ public class ListTenantMembersResponseBody extends TeaModel {
 
     public static class ListTenantMembersResponseBodyPageResultUserListUserGroupList extends TeaModel {
         /**
+         * <p>Indicates whether the user group is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("Active")
         public Boolean active;
 
+        /**
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The user group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>121313</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx测试</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -157,6 +186,8 @@ public class ListTenantMembersResponseBody extends TeaModel {
 
     public static class ListTenantMembersResponseBodyPageResultUserList extends TeaModel {
         /**
+         * <p>The account name.</p>
+         * 
          * <strong>example:</strong>
          * <p>zhangsan</p>
          */
@@ -164,6 +195,8 @@ public class ListTenantMembersResponseBody extends TeaModel {
         public String accountName;
 
         /**
+         * <p>The DingTalk number.</p>
+         * 
          * <strong>example:</strong>
          * <p>dd123123</p>
          */
@@ -171,6 +204,8 @@ public class ListTenantMembersResponseBody extends TeaModel {
         public String dingNumber;
 
         /**
+         * <p>The display name of the user.</p>
+         * 
          * <strong>example:</strong>
          * <p>zhangsan</p>
          */
@@ -178,6 +213,8 @@ public class ListTenantMembersResponseBody extends TeaModel {
         public String displayName;
 
         /**
+         * <p>The display name of the user without status.</p>
+         * 
          * <strong>example:</strong>
          * <p>zhangsan</p>
          */
@@ -185,6 +222,8 @@ public class ListTenantMembersResponseBody extends TeaModel {
         public String displayNameWithoutStatus;
 
         /**
+         * <p>Indicates whether the IP address whitelist is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -192,6 +231,8 @@ public class ListTenantMembersResponseBody extends TeaModel {
         public String enableWhiteIp;
 
         /**
+         * <p>The time when the user was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1730000000000</p>
          */
@@ -199,6 +240,8 @@ public class ListTenantMembersResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
+         * <p>The time when the user was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>1730000000000</p>
          */
@@ -206,6 +249,8 @@ public class ListTenantMembersResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>132321</p>
          */
@@ -213,6 +258,8 @@ public class ListTenantMembersResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The email address.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:123@aliyun.com">123@aliyun.com</a></p>
          */
@@ -220,6 +267,8 @@ public class ListTenantMembersResponseBody extends TeaModel {
         public String mail;
 
         /**
+         * <p>The phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>13888888888</p>
          */
@@ -227,6 +276,8 @@ public class ListTenantMembersResponseBody extends TeaModel {
         public String mobilePhone;
 
         /**
+         * <p>The username.</p>
+         * 
          * <strong>example:</strong>
          * <p>zhangsan</p>
          */
@@ -234,19 +285,32 @@ public class ListTenantMembersResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The nickname of the user.</p>
+         * 
          * <strong>example:</strong>
          * <p>susan</p>
          */
         @NameInMap("NickName")
         public String nickName;
 
+        /**
+         * <p>The real name of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("RealName")
         public String realName;
 
+        /**
+         * <p>The list of member roles.</p>
+         */
         @NameInMap("RoleList")
         public java.util.List<String> roleList;
 
         /**
+         * <p>The user source ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>213213232422222</p>
          */
@@ -254,16 +318,23 @@ public class ListTenantMembersResponseBody extends TeaModel {
         public String sourceId;
 
         /**
+         * <p>The user source.</p>
+         * 
          * <strong>example:</strong>
          * <p>aliyun</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
 
+        /**
+         * <p>The list of user groups to which the user belongs.</p>
+         */
         @NameInMap("UserGroupList")
         public java.util.List<ListTenantMembersResponseBodyPageResultUserListUserGroupList> userGroupList;
 
         /**
+         * <p>The IP address whitelist.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.0.0.0/0</p>
          */
@@ -423,12 +494,17 @@ public class ListTenantMembersResponseBody extends TeaModel {
 
     public static class ListTenantMembersResponseBodyPageResult extends TeaModel {
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>110</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
+        /**
+         * <p>The list of users.</p>
+         */
         @NameInMap("UserList")
         public java.util.List<ListTenantMembersResponseBodyPageResultUserList> userList;
 

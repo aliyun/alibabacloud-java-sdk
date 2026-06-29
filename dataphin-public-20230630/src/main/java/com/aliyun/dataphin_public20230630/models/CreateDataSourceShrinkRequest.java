@@ -4,10 +4,14 @@ package com.aliyun.dataphin_public20230630.models;
 import com.aliyun.tea.*;
 
 public class CreateDataSourceShrinkRequest extends TeaModel {
+    /**
+     * <p>Request object</p>
+     */
     @NameInMap("CreateCommand")
     public String createCommandShrink;
 
     /**
+     * <p>Tenant ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

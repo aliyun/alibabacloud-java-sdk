@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class AddDataServiceProjectMemberShrinkRequest extends TeaModel {
     /**
+     * <p>The command to add project members.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AddCommand")
     public String addCommandShrink;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +22,7 @@ public class AddDataServiceProjectMemberShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The data service project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

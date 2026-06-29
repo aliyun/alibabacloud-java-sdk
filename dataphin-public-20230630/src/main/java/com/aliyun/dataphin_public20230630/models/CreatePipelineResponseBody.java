@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreatePipelineResponseBody extends TeaModel {
     /**
+     * <p>Backend response code</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Integration pipeline/workflow task creation result</p>
+     */
     @NameInMap("Data")
     public CreatePipelineResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class CreatePipelineResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Backend response exception details</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -37,6 +46,9 @@ public class CreatePipelineResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Whether the request was successful</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -95,6 +107,8 @@ public class CreatePipelineResponseBody extends TeaModel {
 
     public static class CreatePipelineResponseBodyData extends TeaModel {
         /**
+         * <p>Server-side execution machine name and IP</p>
+         * 
          * <strong>example:</strong>
          * <p>hostName:hostIp</p>
          */
@@ -102,6 +116,8 @@ public class CreatePipelineResponseBody extends TeaModel {
         public String hostMachine;
 
         /**
+         * <p>Scheduling node ID of the pipeline/workflow task after successful creation</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -109,6 +125,8 @@ public class CreatePipelineResponseBody extends TeaModel {
         public String nodeId;
 
         /**
+         * <p>Pipeline/workflow ID after successful creation</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -116,6 +134,9 @@ public class CreatePipelineResponseBody extends TeaModel {
         public Long pipelineId;
 
         /**
+         * <p>Submit ID of the pending release list generated after successfully submitting the pipeline, used for release through the release domain.
+         * Workflow tasks only support PROD, so this value is not applicable.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -123,6 +144,9 @@ public class CreatePipelineResponseBody extends TeaModel {
         public Long submitId;
 
         /**
+         * <p>Pending release version number generated after pipeline submission.
+         * Workflow tasks only support PROD, so this value is not applicable.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

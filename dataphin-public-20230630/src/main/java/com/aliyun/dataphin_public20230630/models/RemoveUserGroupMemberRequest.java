@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveUserGroupMemberRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class RemoveUserGroupMemberRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The command to remove user group members.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RemoveCommand")
@@ -42,6 +44,7 @@ public class RemoveUserGroupMemberRequest extends TeaModel {
 
     public static class RemoveUserGroupMemberRequestRemoveCommand extends TeaModel {
         /**
+         * <p>The user group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,6 +54,7 @@ public class RemoveUserGroupMemberRequest extends TeaModel {
         public String userGroupId;
 
         /**
+         * <p>The list of user IDs.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("UserIdList")

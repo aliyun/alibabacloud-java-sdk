@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class PublishObjectListRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class PublishObjectListRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The publish command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("PublishCommand")
@@ -42,6 +44,7 @@ public class PublishObjectListRequest extends TeaModel {
 
     public static class PublishObjectListRequestPublishCommand extends TeaModel {
         /**
+         * <p>The publish comment. The string can be up to 1024 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,6 +54,7 @@ public class PublishObjectListRequest extends TeaModel {
         public String comment;
 
         /**
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -60,6 +64,7 @@ public class PublishObjectListRequest extends TeaModel {
         public Long projectId;
 
         /**
+         * <p>The list of pending publish record IDs to be published. A maximum of 50 submit IDs can be specified.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("SubmitIdList")

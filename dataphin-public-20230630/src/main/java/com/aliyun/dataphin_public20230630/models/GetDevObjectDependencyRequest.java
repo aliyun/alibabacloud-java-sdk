@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetDevObjectDependencyRequest extends TeaModel {
     /**
+     * <p>Development object source.</p>
+     * <ul>
+     * <li>BLACK_BOX: Logical table</li>
+     * <li>DATA_PROCESS: Compute task</li>
+     * <li>PIPELINE: Integration task</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +20,7 @@ public class GetDevObjectDependencyRequest extends TeaModel {
     public String objectFrom;
 
     /**
+     * <p>Object ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +30,11 @@ public class GetDevObjectDependencyRequest extends TeaModel {
     public String objectId;
 
     /**
+     * <p>Development object type.</p>
+     * <ul>
+     * <li>FILE_ID: Task FileId</li>
+     * <li>MODEL_ID: Logical table</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +44,7 @@ public class GetDevObjectDependencyRequest extends TeaModel {
     public String objectType;
 
     /**
+     * <p>Tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +54,7 @@ public class GetDevObjectDependencyRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>Project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

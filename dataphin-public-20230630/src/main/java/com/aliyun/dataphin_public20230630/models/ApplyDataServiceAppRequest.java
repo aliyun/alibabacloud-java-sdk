@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ApplyDataServiceAppRequest extends TeaModel {
     /**
+     * <p>The apply command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ApplyCommand")
     public ApplyDataServiceAppRequestApplyCommand applyCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +22,7 @@ public class ApplyDataServiceAppRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The data service project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,6 +72,7 @@ public class ApplyDataServiceAppRequest extends TeaModel {
         public Integer appId;
 
         /**
+         * <p>The expiration date in the format of yyyy-MM-dd.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -78,6 +82,7 @@ public class ApplyDataServiceAppRequest extends TeaModel {
         public String expireDate;
 
         /**
+         * <p>The reason for the application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

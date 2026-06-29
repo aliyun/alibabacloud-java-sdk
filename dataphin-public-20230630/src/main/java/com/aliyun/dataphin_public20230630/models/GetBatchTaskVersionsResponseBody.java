@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetBatchTaskVersionsResponseBody extends TeaModel {
     /**
+     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The request result.</p>
+     */
     @NameInMap("Data")
     public GetBatchTaskVersionsResponseBodyData data;
 
     /**
+     * <p>The HTTP status code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetBatchTaskVersionsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,12 +38,17 @@ public class GetBatchTaskVersionsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -93,6 +107,8 @@ public class GetBatchTaskVersionsResponseBody extends TeaModel {
 
     public static class GetBatchTaskVersionsResponseBodyDataBatchTaskVersionList extends TeaModel {
         /**
+         * <p>The comment for the submission.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -100,6 +116,8 @@ public class GetBatchTaskVersionsResponseBody extends TeaModel {
         public String comment;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-10 10:10:10</p>
          */
@@ -107,6 +125,8 @@ public class GetBatchTaskVersionsResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-10 10:10:10</p>
          */
@@ -114,6 +134,8 @@ public class GetBatchTaskVersionsResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>n_10231001</p>
          */
@@ -121,16 +143,23 @@ public class GetBatchTaskVersionsResponseBody extends TeaModel {
         public String nodeId;
 
         /**
+         * <p>The project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>10232111011</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
+        /**
+         * <p>Indicates whether the version has been published to the production environment.</p>
+         */
         @NameInMap("Published")
         public Boolean published;
 
         /**
+         * <p>The ID of the user who submitted the version.</p>
+         * 
          * <strong>example:</strong>
          * <p>20110110</p>
          */
@@ -138,6 +167,8 @@ public class GetBatchTaskVersionsResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>The ID of the user who submitted the version.</p>
+         * 
          * <strong>example:</strong>
          * <p>张三</p>
          */
@@ -145,6 +176,8 @@ public class GetBatchTaskVersionsResponseBody extends TeaModel {
         public String userName;
 
         /**
+         * <p>The version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -231,6 +264,9 @@ public class GetBatchTaskVersionsResponseBody extends TeaModel {
     }
 
     public static class GetBatchTaskVersionsResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of batch task versions.</p>
+         */
         @NameInMap("BatchTaskVersionList")
         public java.util.List<GetBatchTaskVersionsResponseBodyDataBatchTaskVersionList> batchTaskVersionList;
 

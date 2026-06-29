@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class AssignQualityRuleOfAllRuleScopeSchedulesShrinkRequest extends TeaModel {
     /**
+     * <p>The assignment binding instruction.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AssignCommand")
     public String assignCommandShrink;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

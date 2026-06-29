@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReplaceProjectWhiteListsRequest extends TeaModel {
     /**
+     * <p>The project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ReplaceProjectWhiteListsRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ReplaceProjectWhiteListsRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The edit command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ReplaceCommand")
@@ -59,6 +62,8 @@ public class ReplaceProjectWhiteListsRequest extends TeaModel {
 
     public static class ReplaceProjectWhiteListsRequestReplaceCommandWhiteLists extends TeaModel {
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>测试</p>
          */
@@ -76,6 +81,7 @@ public class ReplaceProjectWhiteListsRequest extends TeaModel {
         public String ip;
 
         /**
+         * <p>The port.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +123,7 @@ public class ReplaceProjectWhiteListsRequest extends TeaModel {
 
     public static class ReplaceProjectWhiteListsRequestReplaceCommand extends TeaModel {
         /**
+         * <p>The project whitelist.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("WhiteLists")

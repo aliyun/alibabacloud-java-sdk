@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RevokeDataServiceApiShrinkRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class RevokeDataServiceApiShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The data service project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class RevokeDataServiceApiShrinkRequest extends TeaModel {
     public Integer projectId;
 
     /**
+     * <p>The revoke instruction.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RevokeCommand")

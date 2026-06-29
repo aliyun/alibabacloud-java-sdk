@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResetDataServiceAppSecretShrinkRequest extends TeaModel {
     /**
+     * <p>Tenant ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ResetDataServiceAppSecretShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>Reset Data Service Application Key</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")

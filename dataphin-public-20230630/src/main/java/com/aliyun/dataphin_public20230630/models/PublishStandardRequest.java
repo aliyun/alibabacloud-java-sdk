@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class PublishStandardRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class PublishStandardRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The publish command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("PublishCommand")
@@ -41,10 +43,14 @@ public class PublishStandardRequest extends TeaModel {
     }
 
     public static class PublishStandardRequestPublishCommand extends TeaModel {
+        /**
+         * <p>Specifies whether to automatically publish after approval. Default value: true.</p>
+         */
         @NameInMap("AutoPublishAfterApproval")
         public Boolean autoPublishAfterApproval;
 
         /**
+         * <p>The review comment. Maximum length: 128 characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -54,6 +60,7 @@ public class PublishStandardRequest extends TeaModel {
         public String comment;
 
         /**
+         * <p>The standard ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -62,10 +69,15 @@ public class PublishStandardRequest extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The specified reviewers.</p>
+         */
         @NameInMap("ReviewerIdList")
         public java.util.List<String> reviewerIdList;
 
         /**
+         * <p>The stage of the standard. Valid values: DEV and PROD. Default value: DEV.</p>
+         * 
          * <strong>example:</strong>
          * <p>DEV</p>
          */
@@ -73,6 +85,8 @@ public class PublishStandardRequest extends TeaModel {
         public String standardStage;
 
         /**
+         * <p>The version number. Default value: -1 (latest version).</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

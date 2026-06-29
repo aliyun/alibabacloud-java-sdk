@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListBizEntitiesRequest extends TeaModel {
     /**
+     * <p>The query request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ListQuery")
     public ListBizEntitiesRequestListQuery listQuery;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,27 +43,51 @@ public class ListBizEntitiesRequest extends TeaModel {
     }
 
     public static class ListBizEntitiesRequestListQueryFilterCriteria extends TeaModel {
+        /**
+         * <p>The list of business unit IDs.</p>
+         */
         @NameInMap("BizUnitIdList")
         public java.util.List<Long> bizUnitIdList;
 
+        /**
+         * <p>The list of business unit IDs.</p>
+         */
         @NameInMap("BizUnitNameList")
         public java.util.List<String> bizUnitNameList;
 
+        /**
+         * <p>The list of data domain IDs.</p>
+         */
         @NameInMap("DataDomainIdList")
         public java.util.List<Long> dataDomainIdList;
 
+        /**
+         * <p>The list of data domain IDs.</p>
+         */
         @NameInMap("DataDomainNameList")
         public java.util.List<String> dataDomainNameList;
 
+        /**
+         * <p>Specifies whether the business entity is associated with a logical table.</p>
+         */
         @NameInMap("HasTableRef")
         public Boolean hasTableRef;
 
+        /**
+         * <p>The list of owner user IDs.</p>
+         */
         @NameInMap("OwnerUserIdList")
         public java.util.List<String> ownerUserIdList;
 
+        /**
+         * <p>The list of business entity statuses. For more information, refer to the API operation for querying business entity details.</p>
+         */
         @NameInMap("StatusList")
         public java.util.List<String> statusList;
 
+        /**
+         * <p>The list of business entity subtypes. For more information, refer to the API operation for querying business entity details.</p>
+         */
         @NameInMap("SubTypeList")
         public java.util.List<String> subTypeList;
 
@@ -137,10 +163,15 @@ public class ListBizEntitiesRequest extends TeaModel {
     }
 
     public static class ListBizEntitiesRequestListQuery extends TeaModel {
+        /**
+         * <p>The filter criteria for the query.</p>
+         */
         @NameInMap("FilterCriteria")
         public ListBizEntitiesRequestListQueryFilterCriteria filterCriteria;
 
         /**
+         * <p>The search keyword.</p>
+         * 
          * <strong>example:</strong>
          * <p>object_</p>
          */
@@ -148,6 +179,8 @@ public class ListBizEntitiesRequest extends TeaModel {
         public String keyword;
 
         /**
+         * <p>The page number. Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -155,6 +188,8 @@ public class ListBizEntitiesRequest extends TeaModel {
         public Integer page;
 
         /**
+         * <p>The number of records per page. Default value: 10.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

@@ -4,10 +4,14 @@ package com.aliyun.dataphin_public20230630.models;
 import com.aliyun.tea.*;
 
 public class AddTenantMembersBySourceUserRequest extends TeaModel {
+    /**
+     * <p>The add request.</p>
+     */
     @NameInMap("AddCommand")
     public AddTenantMembersBySourceUserRequestAddCommand addCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +43,8 @@ public class AddTenantMembersBySourceUserRequest extends TeaModel {
 
     public static class AddTenantMembersBySourceUserRequestAddCommandSourceUserList extends TeaModel {
         /**
+         * <p>The account name.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:123@xx.com">123@xx.com</a></p>
          */
@@ -46,16 +52,26 @@ public class AddTenantMembersBySourceUserRequest extends TeaModel {
         public String accountName;
 
         /**
+         * <p>The DingTalk number.</p>
+         * 
          * <strong>example:</strong>
          * <p>123@dingding</p>
          */
         @NameInMap("DingNumber")
         public String dingNumber;
 
+        /**
+         * <p>The display name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx测试</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
+         * <p>The email address.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:123@xx.com">123@xx.com</a></p>
          */
@@ -63,6 +79,8 @@ public class AddTenantMembersBySourceUserRequest extends TeaModel {
         public String mail;
 
         /**
+         * <p>The phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>13888888888</p>
          */
@@ -70,6 +88,8 @@ public class AddTenantMembersBySourceUserRequest extends TeaModel {
         public String mobilePhone;
 
         /**
+         * <p>The original ID of the user.</p>
+         * 
          * <strong>example:</strong>
          * <p>2323131</p>
          */
@@ -132,6 +152,9 @@ public class AddTenantMembersBySourceUserRequest extends TeaModel {
     }
 
     public static class AddTenantMembersBySourceUserRequestAddCommand extends TeaModel {
+        /**
+         * <p>The list of source users.</p>
+         */
         @NameInMap("SourceUserList")
         public java.util.List<AddTenantMembersBySourceUserRequestAddCommandSourceUserList> sourceUserList;
 

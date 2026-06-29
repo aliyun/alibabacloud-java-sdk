@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ParseBatchTaskDependencyResponseBody extends TeaModel {
     /**
+     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,22 +23,32 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The parsing result.</p>
+     */
     @NameInMap("ParseResult")
     public ParseBatchTaskDependencyResponseBodyParseResult parseResult;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -92,10 +106,15 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
     }
 
     public static class ParseBatchTaskDependencyResponseBodyParseResultDependNodeListScheduleNodeInfoList extends TeaModel {
+        /**
+         * <p>The list of fields. This parameter applies only to logical table dependencies.</p>
+         */
         @NameInMap("FieldList")
         public java.util.List<String> fieldList;
 
         /**
+         * <p>The node ID. A value of -1 is returned if no node is found for the corresponding input table.</p>
+         * 
          * <strong>example:</strong>
          * <p>n_11013121</p>
          */
@@ -103,6 +122,8 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
         public String nodeId;
 
         /**
+         * <p>The node name. This parameter is empty if no node is found for the corresponding input table.</p>
+         * 
          * <strong>example:</strong>
          * <p>test11</p>
          */
@@ -110,6 +131,8 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
         public String nodeName;
 
         /**
+         * <p>The output name of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>t_test</p>
          */
@@ -117,6 +140,8 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
         public String outputName;
 
         /**
+         * <p>The owner of the node. This parameter is empty if no node is found for the corresponding input table.</p>
+         * 
          * <strong>example:</strong>
          * <p>张三</p>
          */
@@ -124,6 +149,8 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
         public String ownerName;
 
         /**
+         * <p>The owner of the node. This parameter is empty if no node is found for the corresponding input table.</p>
+         * 
          * <strong>example:</strong>
          * <p>201122301</p>
          */
@@ -131,6 +158,8 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
         public String ownerUserId;
 
         /**
+         * <p>The output table name of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>t_test</p>
          */
@@ -202,12 +231,17 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
 
     public static class ParseBatchTaskDependencyResponseBodyParseResultDependNodeList extends TeaModel {
         /**
+         * <p>The input/output type. Valid values: input (dependent node) and output (node output name).</p>
+         * 
          * <strong>example:</strong>
          * <p>input</p>
          */
         @NameInMap("NodeIoType")
         public String nodeIoType;
 
+        /**
+         * <p>The list of schedule nodes.</p>
+         */
         @NameInMap("ScheduleNodeInfoList")
         public java.util.List<ParseBatchTaskDependencyResponseBodyParseResultDependNodeListScheduleNodeInfoList> scheduleNodeInfoList;
 
@@ -235,6 +269,9 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
     }
 
     public static class ParseBatchTaskDependencyResponseBodyParseResult extends TeaModel {
+        /**
+         * <p>The list of dependent nodes.</p>
+         */
         @NameInMap("DependNodeList")
         public java.util.List<ParseBatchTaskDependencyResponseBodyParseResultDependNodeList> dependNodeList;
 

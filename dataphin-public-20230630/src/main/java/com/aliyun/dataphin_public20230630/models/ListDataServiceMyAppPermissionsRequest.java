@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListDataServiceMyAppPermissionsRequest extends TeaModel {
     /**
+     * <p>The query conditions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ListQuery")
     public ListDataServiceMyAppPermissionsRequestListQuery listQuery;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +22,7 @@ public class ListDataServiceMyAppPermissionsRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the data service project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,6 +62,8 @@ public class ListDataServiceMyAppPermissionsRequest extends TeaModel {
 
     public static class ListDataServiceMyAppPermissionsRequestListQuery extends TeaModel {
         /**
+         * <p>The search keyword.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -66,6 +71,8 @@ public class ListDataServiceMyAppPermissionsRequest extends TeaModel {
         public String keyword;
 
         /**
+         * <p>The page number. Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -73,6 +80,8 @@ public class ListDataServiceMyAppPermissionsRequest extends TeaModel {
         public Integer pageNo;
 
         /**
+         * <p>The number of entries per page. Default value: 20.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateBizMetricResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The operation result.</p>
+     */
     @NameInMap("Data")
     public CreateBizMetricResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class CreateBizMetricResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error details from the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -38,6 +47,8 @@ public class CreateBizMetricResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +110,8 @@ public class CreateBizMetricResponseBody extends TeaModel {
 
     public static class CreateBizMetricResponseBodyData extends TeaModel {
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -106,6 +119,12 @@ public class CreateBizMetricResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>Indicates whether the creation was successful. Valid values:</p>
+         * <ul>
+         * <li>true: Succeeded.</li>
+         * <li>false: Failed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

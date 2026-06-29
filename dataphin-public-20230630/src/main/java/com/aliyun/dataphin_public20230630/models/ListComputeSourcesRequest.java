@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListComputeSourcesRequest extends TeaModel {
     /**
+     * <p>The query conditions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ListQuery")
     public ListComputeSourcesRequestListQuery listQuery;
 
     /**
+     * <p>Tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,10 +43,15 @@ public class ListComputeSourcesRequest extends TeaModel {
     }
 
     public static class ListComputeSourcesRequestListQuery extends TeaModel {
+        /**
+         * <p>Specifies whether the compute source is bound to a project.</p>
+         */
         @NameInMap("BindProject")
         public Boolean bindProject;
 
         /**
+         * <p>The keyword used for filtering.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -52,6 +59,8 @@ public class ListComputeSourcesRequest extends TeaModel {
         public String keyword;
 
         /**
+         * <p>The page number. Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -59,6 +68,8 @@ public class ListComputeSourcesRequest extends TeaModel {
         public Integer pageNo;
 
         /**
+         * <p>The number of records per page. Default value: 20.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -66,6 +77,8 @@ public class ListComputeSourcesRequest extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The type of the compute source.</p>
+         * 
          * <strong>example:</strong>
          * <p>MaxCompute</p>
          */

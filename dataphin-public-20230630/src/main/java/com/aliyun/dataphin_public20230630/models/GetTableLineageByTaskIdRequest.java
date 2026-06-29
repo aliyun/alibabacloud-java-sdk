@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTableLineageByTaskIdRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetTableLineageByTaskIdRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The data structure for querying table lineage.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TableLineageByTaskIdQuery")
@@ -41,10 +43,15 @@ public class GetTableLineageByTaskIdRequest extends TeaModel {
     }
 
     public static class GetTableLineageByTaskIdRequestTableLineageByTaskIdQuery extends TeaModel {
+        /**
+         * <p>Specifies whether to return tables that do not exist in the asset inventory. If this parameter is not specified, non-existent tables are not returned.</p>
+         */
         @NameInMap("NeedNotExistObject")
         public Boolean needNotExistObject;
 
         /**
+         * <p>The environment of the task to query: DEV or PROD.</p>
+         * 
          * <strong>example:</strong>
          * <p>DEV</p>
          */
@@ -52,6 +59,7 @@ public class GetTableLineageByTaskIdRequest extends TeaModel {
         public String taskEnv;
 
         /**
+         * <p>The task (node) ID used to filter the query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDataServiceMyAppPermissionsResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ListDataServiceMyAppPermissionsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,12 +23,17 @@ public class ListDataServiceMyAppPermissionsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The details of the backend exception.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The paging query result.</p>
+     */
     @NameInMap("PageResult")
     public ListDataServiceMyAppPermissionsResponseBodyPageResult pageResult;
 
@@ -37,6 +46,9 @@ public class ListDataServiceMyAppPermissionsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -95,6 +107,8 @@ public class ListDataServiceMyAppPermissionsResponseBody extends TeaModel {
 
     public static class ListDataServiceMyAppPermissionsResponseBodyPageResultPermissionListRemarkForDebugList extends TeaModel {
         /**
+         * <p>The configuration item.</p>
+         * 
          * <strong>example:</strong>
          * <p>k1</p>
          */
@@ -102,6 +116,8 @@ public class ListDataServiceMyAppPermissionsResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The configuration item value.</p>
+         * 
          * <strong>example:</strong>
          * <p>v1</p>
          */
@@ -142,6 +158,8 @@ public class ListDataServiceMyAppPermissionsResponseBody extends TeaModel {
         public Integer appId;
 
         /**
+         * <p>The application name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -149,6 +167,8 @@ public class ListDataServiceMyAppPermissionsResponseBody extends TeaModel {
         public String appName;
 
         /**
+         * <p>The name of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -156,6 +176,8 @@ public class ListDataServiceMyAppPermissionsResponseBody extends TeaModel {
         public String createUserName;
 
         /**
+         * <p>The ID of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>1121</p>
          */
@@ -163,6 +185,13 @@ public class ListDataServiceMyAppPermissionsResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>The role of the current logon user relative to this record. Valid values:</p>
+         * <ul>
+         * <li>SuperAdmin: the current user is a super administrator.</li>
+         * <li>ProjMan: the current user is a project administrator for this record.</li>
+         * <li>NormalUser: the current user is a regular user for this record, meaning the user is neither a super administrator nor a project administrator.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>NormalUser</p>
          */
@@ -170,6 +199,8 @@ public class ListDataServiceMyAppPermissionsResponseBody extends TeaModel {
         public String currentUserRole;
 
         /**
+         * <p>The ID of the owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>1121</p>
          */
@@ -177,6 +208,8 @@ public class ListDataServiceMyAppPermissionsResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The name of the owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -184,6 +217,8 @@ public class ListDataServiceMyAppPermissionsResponseBody extends TeaModel {
         public String ownerUserName;
 
         /**
+         * <p>The user to whom the permission belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>1121</p>
          */
@@ -191,6 +226,11 @@ public class ListDataServiceMyAppPermissionsResponseBody extends TeaModel {
         public String privilegeBelongTo;
 
         /**
+         * <p>The source of the authorization. Valid values:</p>
+         * <ul>
+         * <li>0: owner.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -198,6 +238,8 @@ public class ListDataServiceMyAppPermissionsResponseBody extends TeaModel {
         public Integer privilegeFrom;
 
         /**
+         * <p>The project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>112101</p>
          */
@@ -205,16 +247,26 @@ public class ListDataServiceMyAppPermissionsResponseBody extends TeaModel {
         public Integer projectId;
 
         /**
+         * <p>The project name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("ProjectName")
         public String projectName;
 
+        /**
+         * <p>The description, used for troubleshooting.</p>
+         */
         @NameInMap("RemarkForDebugList")
         public java.util.List<ListDataServiceMyAppPermissionsResponseBodyPageResultPermissionListRemarkForDebugList> remarkForDebugList;
 
         /**
+         * <p>The role. Valid values:</p>
+         * <ul>
+         * <li>0: owner.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -333,10 +385,15 @@ public class ListDataServiceMyAppPermissionsResponseBody extends TeaModel {
     }
 
     public static class ListDataServiceMyAppPermissionsResponseBodyPageResult extends TeaModel {
+        /**
+         * <p>The paginated permission list.</p>
+         */
         @NameInMap("PermissionList")
         public java.util.List<ListDataServiceMyAppPermissionsResponseBodyPageResultPermissionList> permissionList;
 
         /**
+         * <p>The total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>68</p>
          */

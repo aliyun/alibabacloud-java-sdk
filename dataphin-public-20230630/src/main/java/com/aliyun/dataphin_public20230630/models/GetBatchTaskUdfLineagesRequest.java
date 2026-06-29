@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetBatchTaskUdfLineagesRequest extends TeaModel {
     /**
+     * <p>The node ID of the task directory tree.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetBatchTaskUdfLineagesRequest extends TeaModel {
     public Long fileId;
 
     /**
+     * <p>Tenant ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class GetBatchTaskUdfLineagesRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The project to which the task belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

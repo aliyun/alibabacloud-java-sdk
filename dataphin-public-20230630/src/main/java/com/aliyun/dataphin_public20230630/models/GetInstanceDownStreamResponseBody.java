@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetInstanceDownStreamResponseBody extends TeaModel {
     /**
+     * <p>Error code. OK indicates a successful request.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,16 +14,23 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Downstream instances and dependency relationships.</p>
+     */
     @NameInMap("InstanceRelationList")
     public java.util.List<GetInstanceDownStreamResponseBodyInstanceRelationList> instanceRelationList;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +38,8 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
@@ -36,6 +47,8 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
 
     public static class GetInstanceDownStreamResponseBodyInstanceRelationListFieldInstanceList extends TeaModel {
         /**
+         * <p>Field instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>t_23211</p>
          */
@@ -104,6 +119,8 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
         public String fieldInstanceId;
 
         /**
+         * <p>Run status.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
          */
@@ -111,6 +128,8 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
         public String runStatus;
 
         /**
+         * <p>Selection status of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>OPTIONAL</p>
          */
@@ -150,16 +169,26 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
 
     public static class GetInstanceDownStreamResponseBodyInstanceRelationListInstanceInfo extends TeaModel {
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>t_232411</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>Instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx测试</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>Node type.</p>
+         * 
          * <strong>example:</strong>
          * <p>DATA_PROCESS</p>
          */
@@ -199,6 +228,8 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
 
     public static class GetInstanceDownStreamResponseBodyInstanceRelationList extends TeaModel {
         /**
+         * <p>Depth level.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -206,19 +237,29 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
         public Integer downStreamDepth;
 
         /**
+         * <p>Extended information of the node instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;a&quot;:&quot;x&quot;}</p>
          */
         @NameInMap("ExtendInfo")
         public String extendInfo;
 
+        /**
+         * <p>Field instance list.</p>
+         */
         @NameInMap("FieldInstanceList")
         public java.util.List<GetInstanceDownStreamResponseBodyInstanceRelationListFieldInstanceList> fieldInstanceList;
 
+        /**
+         * <p>Instance information.</p>
+         */
         @NameInMap("InstanceInfo")
         public GetInstanceDownStreamResponseBodyInstanceRelationListInstanceInfo instanceInfo;
 
         /**
+         * <p>Run status of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
@@ -226,6 +267,14 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
         public String runStatus;
 
         /**
+         * <p>Selection status of the instance, primarily used for logical fields.</p>
+         * <ul>
+         * <li>OPTIONAL: Optional.</li>
+         * <li>SELECTED: Required.</li>
+         * <li>DISABLE: Not selectable.</li>
+         * <li>GROUP_SELECTED: Select all or deselect all.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>OPTIONAL</p>
          */
@@ -233,6 +282,22 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
         public String selectStatus;
 
         /**
+         * <p>Reason why the instance is selected.</p>
+         * <ul>
+         * <li>PK_CHANGE</li>
+         * <li>LOGIC_CHANGE</li>
+         * <li>RELATION</li>
+         * <li>BIZ_RELATIO</li>
+         * <li>MV_RELATION</li>
+         * <li>MODEL_REFRESH</li>
+         * <li>FIELD_DELETED</li>
+         * <li>FIELD_ADDED_NO_INSTANCE</li>
+         * <li>PERMISSION_DENY</li>
+         * <li>OUTSIDE_INCOMING</li>
+         * <li>INSTANCE_STATUS</li>
+         * <li>AFFECT_BY_UPSTREAM</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>FIELD_DELETED</p>
          */

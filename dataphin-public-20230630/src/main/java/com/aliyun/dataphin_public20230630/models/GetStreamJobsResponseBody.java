@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetStreamJobsResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetStreamJobsResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetStreamJobsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The details of the backend exception.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -38,6 +47,8 @@ public class GetStreamJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +110,12 @@ public class GetStreamJobsResponseBody extends TeaModel {
 
     public static class GetStreamJobsResponseBodyData extends TeaModel {
         /**
+         * <p>The environment identifier. Valid values:</p>
+         * <ul>
+         * <li>DEV: development.</li>
+         * <li>PROD: production.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>DEV</p>
          */
@@ -106,6 +123,8 @@ public class GetStreamJobsResponseBody extends TeaModel {
         public String env;
 
         /**
+         * <p>The mapping ID of the real-time node.</p>
+         * 
          * <strong>example:</strong>
          * <p>716555</p>
          */
@@ -113,6 +132,8 @@ public class GetStreamJobsResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The name of the real-time node.</p>
+         * 
          * <strong>example:</strong>
          * <p>flink_order_detail</p>
          */
@@ -120,6 +141,8 @@ public class GetStreamJobsResponseBody extends TeaModel {
         public String jobName;
 
         /**
+         * <p>The ID of the user who last modified the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>300006788</p>
          */
@@ -127,6 +150,8 @@ public class GetStreamJobsResponseBody extends TeaModel {
         public String modifierId;
 
         /**
+         * <p>The ID of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>300006788</p>
          */
@@ -134,6 +159,8 @@ public class GetStreamJobsResponseBody extends TeaModel {
         public String ownerId;
 
         /**
+         * <p>The Dataphin project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>7162269257990111</p>
          */
@@ -141,6 +168,15 @@ public class GetStreamJobsResponseBody extends TeaModel {
         public String projectId;
 
         /**
+         * <p>The node status. Valid values:</p>
+         * <ul>
+         * <li>0: draft.</li>
+         * <li>1: submitting.</li>
+         * <li>2: submitted.</li>
+         * <li>3: published.</li>
+         * <li>100: in development.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -148,6 +184,12 @@ public class GetStreamJobsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The node type. Valid values:</p>
+         * <ul>
+         * <li>FLINK_SQL</li>
+         * <li>FLINK_DATASTREAM.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>FLINK_SQL</p>
          */

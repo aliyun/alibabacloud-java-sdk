@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateStandardLookupTableRequest extends TeaModel {
     /**
+     * <p>The create command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CreateCommand")
     public CreateStandardLookupTableRequestCreateCommand createCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,7 @@ public class CreateStandardLookupTableRequest extends TeaModel {
 
     public static class CreateStandardLookupTableRequestCreateCommandDirectoryReference extends TeaModel {
         /**
+         * <p>The directory to which the lookup table belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -67,6 +70,8 @@ public class CreateStandardLookupTableRequest extends TeaModel {
 
     public static class CreateStandardLookupTableRequestCreateCommandLookupTableValueList extends TeaModel {
         /**
+         * <p>The description of the code.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -74,6 +79,8 @@ public class CreateStandardLookupTableRequest extends TeaModel {
         public String description;
 
         /**
+         * <p>The English name of the code.</p>
+         * 
          * <strong>example:</strong>
          * <p>HZ</p>
          */
@@ -81,6 +88,7 @@ public class CreateStandardLookupTableRequest extends TeaModel {
         public String englishName;
 
         /**
+         * <p>The code name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -90,6 +98,7 @@ public class CreateStandardLookupTableRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The code value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +148,7 @@ public class CreateStandardLookupTableRequest extends TeaModel {
 
     public static class CreateStandardLookupTableRequestCreateCommand extends TeaModel {
         /**
+         * <p>The code of the lookup table.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -148,19 +158,28 @@ public class CreateStandardLookupTableRequest extends TeaModel {
         public String code;
 
         /**
+         * <p>The description of the lookup table.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The directory to which the lookup table belongs.</p>
+         */
         @NameInMap("DirectoryReference")
         public CreateStandardLookupTableRequestCreateCommandDirectoryReference directoryReference;
 
+        /**
+         * <p>The list of lookup table values.</p>
+         */
         @NameInMap("LookupTableValueList")
         public java.util.List<CreateStandardLookupTableRequestCreateCommandLookupTableValueList> lookupTableValueList;
 
         /**
+         * <p>The name of the lookup table.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,6 +189,8 @@ public class CreateStandardLookupTableRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The ID of the lookup table owner. Default value: the user ID of the caller.</p>
+         * 
          * <strong>example:</strong>
          * <p>30012021</p>
          */

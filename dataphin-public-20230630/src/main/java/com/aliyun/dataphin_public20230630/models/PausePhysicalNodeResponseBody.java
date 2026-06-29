@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PausePhysicalNodeResponseBody extends TeaModel {
     /**
+     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class PausePhysicalNodeResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,16 +23,23 @@ public class PausePhysicalNodeResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The results of the pause scheduling operations on the nodes.</p>
+     */
     @NameInMap("NodeOperateResultList")
     public java.util.List<PausePhysicalNodeResponseBodyNodeOperateResultList> nodeOperateResultList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
@@ -36,6 +47,8 @@ public class PausePhysicalNodeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class PausePhysicalNodeResponseBody extends TeaModel {
 
     public static class PausePhysicalNodeResponseBodyNodeOperateResultList extends TeaModel {
         /**
+         * <p>The error message returned when the operation fails.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -104,6 +119,8 @@ public class PausePhysicalNodeResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>n_123456</p>
          */
@@ -111,6 +128,8 @@ public class PausePhysicalNodeResponseBody extends TeaModel {
         public String nodeId;
 
         /**
+         * <p>The operation result.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
          */

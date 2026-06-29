@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateSecurityClassifyCatalogRequest extends TeaModel {
     /**
+     * <p>The create command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CreateCommand")
     public CreateSecurityClassifyCatalogRequestCreateCommand createCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,7 @@ public class CreateSecurityClassifyCatalogRequest extends TeaModel {
 
     public static class CreateSecurityClassifyCatalogRequestCreateCommand extends TeaModel {
         /**
+         * <p>The name of the classification folder.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -50,10 +53,15 @@ public class CreateSecurityClassifyCatalogRequest extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The list of administrator IDs. This parameter takes effect only when the parent folder is the root folder.</p>
+         */
         @NameInMap("OwnerList")
         public java.util.List<String> ownerList;
 
         /**
+         * <p>The full path of the parent folder. Default value: /.</p>
+         * 
          * <strong>example:</strong>
          * <p>/d1/</p>
          */
@@ -61,6 +69,13 @@ public class CreateSecurityClassifyCatalogRequest extends TeaModel {
         public String parentPath;
 
         /**
+         * <p>The visibility scope of the classification folder. Valid values:</p>
+         * <ul>
+         * <li>PUBLIC: visible to all users.</li>
+         * <li>PRIVATE: visible only to administrators.
+         * Default value: PUBLIC. This parameter takes effect only when the parent folder is the root folder.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PUBLIC</p>
          */

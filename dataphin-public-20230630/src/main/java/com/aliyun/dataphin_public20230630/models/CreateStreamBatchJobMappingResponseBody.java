@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateStreamBatchJobMappingResponseBody extends TeaModel {
     /**
+     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The result returned when the node is created.</p>
+     */
     @NameInMap("Data")
     public CreateStreamBatchJobMappingResponseBodyData data;
 
     /**
+     * <p>The HTTP status code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class CreateStreamBatchJobMappingResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,12 +38,17 @@ public class CreateStreamBatchJobMappingResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -93,6 +107,8 @@ public class CreateStreamBatchJobMappingResponseBody extends TeaModel {
 
     public static class CreateStreamBatchJobMappingResponseBodyData extends TeaModel {
         /**
+         * <p>The job file ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>7083701105376640</p>
          */
@@ -100,6 +116,8 @@ public class CreateStreamBatchJobMappingResponseBody extends TeaModel {
         public String fileId;
 
         /**
+         * <p>JobId</p>
+         * 
          * <strong>example:</strong>
          * <p>123123</p>
          */
@@ -107,6 +125,8 @@ public class CreateStreamBatchJobMappingResponseBody extends TeaModel {
         public Long jobId;
 
         /**
+         * <p>The redirect relative path.</p>
+         * 
          * <strong>example:</strong>
          * <p>/dev/streamJob/7083701105376640?env=DEV&amp;projectId=7081229106458752&amp;tenantId=300001420</p>
          */

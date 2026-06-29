@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class OnlineBizEntityShrinkRequest extends TeaModel {
     /**
+     * <p>The online request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("OnlineCommand")
     public String onlineCommandShrink;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

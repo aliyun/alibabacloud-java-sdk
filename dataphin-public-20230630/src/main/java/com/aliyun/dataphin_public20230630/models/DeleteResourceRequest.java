@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteResourceRequest extends TeaModel {
     /**
+     * <p>Remarks.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteResourceRequest extends TeaModel {
     public String comment;
 
     /**
+     * <p>Resource file ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class DeleteResourceRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>Tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class DeleteResourceRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>Project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
     /**
+     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,16 +14,23 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The list of instances.</p>
+     */
     @NameInMap("InstanceList")
     public java.util.List<GetSupplementDagrunInstanceResponseBodyInstanceList> instanceList;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +38,8 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
@@ -36,6 +47,8 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
 
     public static class GetSupplementDagrunInstanceResponseBodyInstanceListNodeInfoCreator extends TeaModel {
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1001012</p>
          */
@@ -104,6 +119,8 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The username.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx测试</p>
          */
@@ -135,6 +152,8 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
 
     public static class GetSupplementDagrunInstanceResponseBodyInstanceListNodeInfoModifier extends TeaModel {
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1001012</p>
          */
@@ -142,6 +161,8 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The username.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx测试</p>
          */
@@ -173,6 +194,8 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
 
     public static class GetSupplementDagrunInstanceResponseBodyInstanceListNodeInfoOwnerList extends TeaModel {
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1001012</p>
          */
@@ -180,6 +203,8 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The username.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx测试</p>
          */
@@ -211,6 +236,8 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
 
     public static class GetSupplementDagrunInstanceResponseBodyInstanceListNodeInfo extends TeaModel {
         /**
+         * <p>The business unit.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx测试</p>
          */
@@ -218,16 +245,23 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
         public String bizUnitName;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-30 10:08:49</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The creator of the node.</p>
+         */
         @NameInMap("Creator")
         public GetSupplementDagrunInstanceResponseBodyInstanceListNodeInfoCreator creator;
 
         /**
+         * <p>The node description.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx测试</p>
          */
@@ -235,6 +269,8 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>Indicates whether the node is a dry run.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -242,6 +278,14 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
         public Boolean dryRun;
 
         /**
+         * <p>The source business system. Valid values:</p>
+         * <ul>
+         * <li>DATA_PROCESS: code development.</li>
+         * <li>BLACK_BOX: black box.</li>
+         * <li>ONE_ID: extraction.</li>
+         * <li>PIPELINE: pipeline.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>DATA_PROCESS</p>
          */
@@ -249,6 +293,8 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
         public String from;
 
         /**
+         * <p>Indicates whether the node exists in the development environment.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -256,6 +302,8 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
         public Boolean hasDev;
 
         /**
+         * <p>Indicates whether the node exists in the production environment.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -263,6 +311,8 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
         public Boolean hasProd;
 
         /**
+         * <p>The node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>n_239496</p>
          */
@@ -270,42 +320,80 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The last modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-30 10:08:49</p>
          */
         @NameInMap("LastModifiedTime")
         public String lastModifiedTime;
 
+        /**
+         * <p>The modifier.</p>
+         */
         @NameInMap("Modifier")
         public GetSupplementDagrunInstanceResponseBodyInstanceListNodeInfoModifier modifier;
 
         /**
+         * <p>The node name.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx测试</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The owners of the node.</p>
+         */
         @NameInMap("OwnerList")
         public java.util.List<GetSupplementDagrunInstanceResponseBodyInstanceListNodeInfoOwnerList> ownerList;
 
+        /**
+         * <p>The priority. Valid values:</p>
+         * <ul>
+         * <li>HIGHEST</li>
+         * <li>HIGH</li>
+         * <li>MIDDLE</li>
+         * <li>LOW</li>
+         * <li>LOWEST.</li>
+         * </ul>
+         */
         @NameInMap("PriorityList")
         public java.util.List<String> priorityList;
 
+        /**
+         * <p>The schedule resource groups.</p>
+         */
         @NameInMap("ResourceGroupList")
         public java.util.List<String> resourceGroupList;
 
         /**
+         * <p>Indicates whether the node is paused.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("SchedulePaused")
         public Boolean schedulePaused;
 
+        /**
+         * <p>The scheduling period. Valid values:</p>
+         * <ul>
+         * <li>MINUTELY</li>
+         * <li>HOURLY</li>
+         * <li>DAILY</li>
+         * <li>WEEKLY</li>
+         * <li>MONTHLY</li>
+         * <li>QUARTERLY.</li>
+         * </ul>
+         */
         @NameInMap("SchedulePeriodList")
         public java.util.List<String> schedulePeriodList;
 
         /**
+         * <p>The node subtype.</p>
+         * 
          * <strong>example:</strong>
          * <p>SHELL</p>
          */
@@ -313,6 +401,15 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
         public String subDetailType;
 
         /**
+         * <p>The node type. Valid values:</p>
+         * <ul>
+         * <li>DATA_PROCESS: code node.</li>
+         * <li>BBOX_LOGIC_TABLE_NODE: black box logical table node.</li>
+         * <li>ONE_ID_LABEL: extraction label node.</li>
+         * <li>ONE_ID_RULE: extraction label node.</li>
+         * <li>PIPELINE_NODE: pipeline node.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>DATA_PROCESS</p>
          */
@@ -480,6 +577,8 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
 
     public static class GetSupplementDagrunInstanceResponseBodyInstanceList extends TeaModel {
         /**
+         * <p>The business date.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-04-01</p>
          */
@@ -487,6 +586,8 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
         public Long bizDate;
 
         /**
+         * <p>The scheduled date.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-04-02</p>
          */
@@ -494,6 +595,8 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
         public Long dueTime;
 
         /**
+         * <p>The execution duration. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
@@ -501,6 +604,8 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
         public String duration;
 
         /**
+         * <p>The end time of the execution.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-04-12 00:25:02</p>
          */
@@ -508,6 +613,8 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
         public Long endExecuteTime;
 
         /**
+         * <p>The extended information. This field contains information specific to instances of different business systems, such as the fileId of a pipeline, whether a logical table is a hierarchy dimension table, mid-node information, and instance output names.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;a&quot;:&quot;b&quot;}</p>
          */
@@ -515,6 +622,8 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
         public String extendInfo;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>t_239496_20210411_246982077481</p>
          */
@@ -522,26 +631,50 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The sequence number of the hourly or minutely instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("Index")
         public Integer index;
 
+        /**
+         * <p>The details of the node associated with the instance.</p>
+         */
         @NameInMap("NodeInfo")
         public GetSupplementDagrunInstanceResponseBodyInstanceListNodeInfo nodeInfo;
 
         /**
+         * <p>The start time of the execution.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-04-12 00:00:00</p>
          */
         @NameInMap("StartExecuteTime")
         public Long startExecuteTime;
 
+        /**
+         * <p>The list of instance statuses. A physical instance list contains only one status. Valid values:</p>
+         * <ul>
+         * <li>NIT: init.</li>
+         * <li>WATING: waiting.</li>
+         * <li>RUNNING: running.</li>
+         * <li>SUCCESS: succeeded.</li>
+         * <li>FAILED: failed.</li>
+         * </ul>
+         */
         @NameInMap("StatusList")
         public java.util.List<String> statusList;
 
         /**
+         * <p>The instance type. Valid values:</p>
+         * <ul>
+         * <li>NORMAL: periodic instance.</li>
+         * <li>SUPPLEMENT: data backfill instance.</li>
+         * <li>MANUAL: manual instance.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SUPPLEMENT</p>
          */

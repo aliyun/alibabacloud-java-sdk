@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTableColumnsRequest extends TeaModel {
     /**
+     * <p>Asset table catalog: name of the business unit or project space.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetTableColumnsRequest extends TeaModel {
     public String catalog;
 
     /**
+     * <p>Tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class GetTableColumnsRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>Table name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

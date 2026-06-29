@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteSecurityIdentifyResultsRequest extends TeaModel {
     /**
+     * <p>The delete instruction.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeleteCommand")
     public DeleteSecurityIdentifyResultsRequestDeleteCommand deleteCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +43,9 @@ public class DeleteSecurityIdentifyResultsRequest extends TeaModel {
     }
 
     public static class DeleteSecurityIdentifyResultsRequestDeleteCommand extends TeaModel {
+        /**
+         * <p>The list of identification result IDs.</p>
+         */
         @NameInMap("IdentifyResultIdList")
         public java.util.List<Long> identifyResultIdList;
 

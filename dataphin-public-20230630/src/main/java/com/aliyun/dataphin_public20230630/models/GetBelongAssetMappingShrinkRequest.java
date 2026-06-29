@@ -4,10 +4,14 @@ package com.aliyun.dataphin_public20230630.models;
 import com.aliyun.tea.*;
 
 public class GetBelongAssetMappingShrinkRequest extends TeaModel {
+    /**
+     * <p>Query command.</p>
+     */
     @NameInMap("AssetMappingQuery")
     public String assetMappingQueryShrink;
 
     /**
+     * <p>Tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

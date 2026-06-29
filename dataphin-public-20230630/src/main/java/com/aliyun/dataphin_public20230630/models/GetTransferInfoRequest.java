@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTransferInfoRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetTransferInfoRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The transfer record ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

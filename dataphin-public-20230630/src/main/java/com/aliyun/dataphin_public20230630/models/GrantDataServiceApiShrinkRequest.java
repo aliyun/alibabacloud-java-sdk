@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class GrantDataServiceApiShrinkRequest extends TeaModel {
     /**
+     * <p>The grant command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("GrantCommand")
     public String grantCommandShrink;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +22,7 @@ public class GrantDataServiceApiShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The data service project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class GetCatalogAssetDetailsShrinkRequest extends TeaModel {
     /**
+     * <p>The paging query for the listing asset catalog list.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("GetCatalogAssetDetailsQuery")
     public String getCatalogAssetDetailsQueryShrink;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

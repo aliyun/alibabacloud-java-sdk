@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreatePipelineNodeResponseBody extends TeaModel {
     /**
+     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The pipeline node information.</p>
+     */
     @NameInMap("Data")
     public CreatePipelineNodeResponseBodyData data;
 
     /**
+     * <p>The HTTP status code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class CreatePipelineNodeResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,12 +38,17 @@ public class CreatePipelineNodeResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -92,13 +106,21 @@ public class CreatePipelineNodeResponseBody extends TeaModel {
     }
 
     public static class CreatePipelineNodeResponseBodyData extends TeaModel {
+        /**
+         * <p>The error codes.</p>
+         */
         @NameInMap("ErrorCodeList")
         public java.util.List<String> errorCodeList;
 
+        /**
+         * <p>The error messages.</p>
+         */
         @NameInMap("ErrorMessageList")
         public java.util.List<String> errorMessageList;
 
         /**
+         * <p>The ID of the pipeline created.</p>
+         * 
          * <strong>example:</strong>
          * <p>33749</p>
          */

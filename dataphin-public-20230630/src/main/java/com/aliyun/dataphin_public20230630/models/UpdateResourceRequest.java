@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateResourceRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateResourceRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The edit command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")
@@ -42,6 +44,7 @@ public class UpdateResourceRequest extends TeaModel {
 
     public static class UpdateResourceRequestUpdateCommand extends TeaModel {
         /**
+         * <p>The commit remarks.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,6 +54,11 @@ public class UpdateResourceRequest extends TeaModel {
         public String comment;
 
         /**
+         * <p>The compute engine type. Valid values:</p>
+         * <ul>
+         * <li>MAX_COMPUTE</li>
+         * <li>HADOOP.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -60,6 +68,7 @@ public class UpdateResourceRequest extends TeaModel {
         public String computeEngineType;
 
         /**
+         * <p>The resource description.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -69,6 +78,7 @@ public class UpdateResourceRequest extends TeaModel {
         public String description;
 
         /**
+         * <p>The resource ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -78,6 +88,7 @@ public class UpdateResourceRequest extends TeaModel {
         public Long id;
 
         /**
+         * <p>The resource name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +98,7 @@ public class UpdateResourceRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -96,6 +108,7 @@ public class UpdateResourceRequest extends TeaModel {
         public Long projectId;
 
         /**
+         * <p>The storage address of the resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

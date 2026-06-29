@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetDataServiceAuthorizedAppsByGroupIdRequest extends TeaModel {
     /**
+     * <p>The app group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>202102</p>
      */
@@ -12,6 +14,7 @@ public class GetDataServiceAuthorizedAppsByGroupIdRequest extends TeaModel {
     public Integer groupId;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class GetDataServiceAuthorizedAppsByGroupIdRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The data service project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

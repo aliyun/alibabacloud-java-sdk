@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class AddDataServiceProjectMemberRequest extends TeaModel {
     /**
+     * <p>The command to add project members.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AddCommand")
     public AddDataServiceProjectMemberRequestAddCommand addCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +22,7 @@ public class AddDataServiceProjectMemberRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The data service project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,6 +62,7 @@ public class AddDataServiceProjectMemberRequest extends TeaModel {
 
     public static class AddDataServiceProjectMemberRequestAddCommandProjectMemberList extends TeaModel {
         /**
+         * <p>The username of the user.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -68,6 +72,7 @@ public class AddDataServiceProjectMemberRequest extends TeaModel {
         public String accountName;
 
         /**
+         * <p>The nickname of the user.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -77,6 +82,13 @@ public class AddDataServiceProjectMemberRequest extends TeaModel {
         public String displayName;
 
         /**
+         * <p>The role of the user. Valid values:</p>
+         * <ul>
+         * <li>2: development user</li>
+         * <li>3: application member</li>
+         * <li>4: service project administrator</li>
+         * <li>5: O&amp;M user.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,6 +98,7 @@ public class AddDataServiceProjectMemberRequest extends TeaModel {
         public Integer role;
 
         /**
+         * <p>The user ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -135,6 +148,7 @@ public class AddDataServiceProjectMemberRequest extends TeaModel {
 
     public static class AddDataServiceProjectMemberRequestAddCommand extends TeaModel {
         /**
+         * <p>The list of project members to add.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("ProjectMemberList")

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListQualityWatchTasksResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,12 +23,17 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error details from the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The paged query result.</p>
+     */
     @NameInMap("PageResult")
     public ListQualityWatchTasksResponseBodyPageResult pageResult;
 
@@ -37,6 +46,9 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -95,6 +107,8 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
 
     public static class ListQualityWatchTasksResponseBodyPageResultQualityWatchTaskListRuleCountInfoStrongRuleCount extends TeaModel {
         /**
+         * <p>The number of rules that failed to execute.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -102,6 +116,8 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
         public Long errorRuleCount;
 
         /**
+         * <p>The number of rules that have been executed.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -109,6 +125,8 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
         public Long finishedRuleCount;
 
         /**
+         * <p>The number of rules that were executed successfully.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -116,6 +134,8 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
         public Long successRuleCount;
 
         /**
+         * <p>The total number of rules.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -163,6 +183,8 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
 
     public static class ListQualityWatchTasksResponseBodyPageResultQualityWatchTaskListRuleCountInfoValidateRuleCount extends TeaModel {
         /**
+         * <p>The number of rules that failed to execute.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -170,6 +192,8 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
         public Long errorRuleCount;
 
         /**
+         * <p>The number of rules that have been executed.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -177,6 +201,8 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
         public Long finishedRuleCount;
 
         /**
+         * <p>The number of rules that were executed successfully.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -184,6 +210,8 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
         public Long successRuleCount;
 
         /**
+         * <p>The total number of rules.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -231,6 +259,8 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
 
     public static class ListQualityWatchTasksResponseBodyPageResultQualityWatchTaskListRuleCountInfoWeakRuleCount extends TeaModel {
         /**
+         * <p>The number of rules that failed to execute.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -238,6 +268,8 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
         public Long errorRuleCount;
 
         /**
+         * <p>The number of rules that have been executed.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -245,6 +277,8 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
         public Long finishedRuleCount;
 
         /**
+         * <p>The number of rules that were executed successfully.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -252,6 +286,8 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
         public Long successRuleCount;
 
         /**
+         * <p>The total number of rules.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -298,12 +334,21 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
     }
 
     public static class ListQualityWatchTasksResponseBodyPageResultQualityWatchTaskListRuleCountInfo extends TeaModel {
+        /**
+         * <p>The strong rule count.</p>
+         */
         @NameInMap("StrongRuleCount")
         public ListQualityWatchTasksResponseBodyPageResultQualityWatchTaskListRuleCountInfoStrongRuleCount strongRuleCount;
 
+        /**
+         * <p>The validation rule count.</p>
+         */
         @NameInMap("ValidateRuleCount")
         public ListQualityWatchTasksResponseBodyPageResultQualityWatchTaskListRuleCountInfoValidateRuleCount validateRuleCount;
 
+        /**
+         * <p>The weak rule count.</p>
+         */
         @NameInMap("WeakRuleCount")
         public ListQualityWatchTasksResponseBodyPageResultQualityWatchTaskListRuleCountInfoWeakRuleCount weakRuleCount;
 
@@ -340,6 +385,8 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
 
     public static class ListQualityWatchTasksResponseBodyPageResultQualityWatchTaskList extends TeaModel {
         /**
+         * <p>The business date.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-30</p>
          */
@@ -347,6 +394,8 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
         public String bizDate;
 
         /**
+         * <p>The business date format.</p>
+         * 
          * <strong>example:</strong>
          * <p>yyyy-MM-dd</p>
          */
@@ -354,6 +403,8 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
         public String bizDateFormat;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
          */
@@ -361,6 +412,8 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>30012011</p>
          */
@@ -368,6 +421,8 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>The end time, in the yyyy-MM-dd HH:mm:ss format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-30 20:00:00</p>
          */
@@ -375,6 +430,8 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The quality watchtask ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -382,6 +439,8 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The user ID of the last modifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>30012011</p>
          */
@@ -389,6 +448,8 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
         public String modifier;
 
         /**
+         * <p>The modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
          */
@@ -396,6 +457,8 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
+         * <p>The user ID of the quality owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>30012011</p>
          */
@@ -403,19 +466,29 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
         public String qualityOwner;
 
         /**
+         * <p>The name of the quality owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("QualityOwnerName")
         public String qualityOwnerName;
 
+        /**
+         * <p>The quality rule count information.</p>
+         */
         @NameInMap("RuleCountInfo")
         public ListQualityWatchTasksResponseBodyPageResultQualityWatchTaskListRuleCountInfo ruleCountInfo;
 
+        /**
+         * <p>The quality rule IDs.</p>
+         */
         @NameInMap("RuleIdList")
         public java.util.List<Long> ruleIdList;
 
         /**
+         * <p>The start time, in the yyyy-MM-dd HH:mm:ss format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-30 08:00:00</p>
          */
@@ -423,6 +496,18 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The task statuses. Valid values:</p>
+         * <ul>
+         * <li>NOT_RUN: not executed.</li>
+         * <li>WAITING: waiting.</li>
+         * <li>RUNNING: running.</li>
+         * <li>SUCCESS: succeeded.</li>
+         * <li>FAILED: failed.</li>
+         * <li>CANCEL: canceled.</li>
+         * <li>TIMEOUT: timed out.</li>
+         * <li>OFFLINE: offline.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
@@ -430,6 +515,8 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The monitored object ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -564,10 +651,15 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
     }
 
     public static class ListQualityWatchTasksResponseBodyPageResult extends TeaModel {
+        /**
+         * <p>The list of quality watchtasks.</p>
+         */
         @NameInMap("QualityWatchTaskList")
         public java.util.List<ListQualityWatchTasksResponseBodyPageResultQualityWatchTaskList> qualityWatchTaskList;
 
         /**
+         * <p>The total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>68</p>
          */

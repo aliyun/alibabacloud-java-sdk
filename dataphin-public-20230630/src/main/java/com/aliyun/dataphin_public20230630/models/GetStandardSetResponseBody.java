@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetStandardSetResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class GetStandardSetResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class GetStandardSetResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The details of the backend exception.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -34,9 +40,15 @@ public class GetStandardSetResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details of the standard set.</p>
+     */
     @NameInMap("StandardSetInfo")
     public GetStandardSetResponseBodyStandardSetInfo standardSetInfo;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -95,19 +107,33 @@ public class GetStandardSetResponseBody extends TeaModel {
 
     public static class GetStandardSetResponseBodyStandardSetInfoApprovalConfig extends TeaModel {
         /**
+         * <p>The approval process type. Valid values:</p>
+         * <ul>
+         * <li>BY_DEFAULT: default approval type.</li>
+         * <li>BY_TEMPLATE: approval based on an approval template.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>BY_DEFAULT</p>
          */
         @NameInMap("ApprovalType")
         public String approvalType;
 
+        /**
+         * <p>Indicates whether approval is enabled.</p>
+         */
         @NameInMap("EnableApproval")
         public Boolean enableApproval;
 
+        /**
+         * <p>Indicates whether batch approval submission is enabled.</p>
+         */
         @NameInMap("IsSubmitInBatch")
         public Boolean isSubmitInBatch;
 
         /**
+         * <p>The approval template ID. This parameter takes effect only when the approval process type is set to BY_TEMPLATE.</p>
+         * 
          * <strong>example:</strong>
          * <p>1121</p>
          */
@@ -155,6 +181,8 @@ public class GetStandardSetResponseBody extends TeaModel {
 
     public static class GetStandardSetResponseBodyStandardSetInfoCreator extends TeaModel {
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>300000913</p>
          */
@@ -162,6 +190,8 @@ public class GetStandardSetResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The username.</p>
+         * 
          * <strong>example:</strong>
          * <p>susan</p>
          */
@@ -193,6 +223,8 @@ public class GetStandardSetResponseBody extends TeaModel {
 
     public static class GetStandardSetResponseBodyStandardSetInfoDirectoryReference extends TeaModel {
         /**
+         * <p>The parent directory.</p>
+         * 
          * <strong>example:</strong>
          * <p>/dir1</p>
          */
@@ -216,6 +248,8 @@ public class GetStandardSetResponseBody extends TeaModel {
 
     public static class GetStandardSetResponseBodyStandardSetInfoLastModifier extends TeaModel {
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>300000913</p>
          */
@@ -223,6 +257,8 @@ public class GetStandardSetResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The username.</p>
+         * 
          * <strong>example:</strong>
          * <p>susan</p>
          */
@@ -254,6 +290,8 @@ public class GetStandardSetResponseBody extends TeaModel {
 
     public static class GetStandardSetResponseBodyStandardSetInfoMaintainerList extends TeaModel {
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>300000913</p>
          */
@@ -261,6 +299,8 @@ public class GetStandardSetResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The username.</p>
+         * 
          * <strong>example:</strong>
          * <p>susan</p>
          */
@@ -292,6 +332,8 @@ public class GetStandardSetResponseBody extends TeaModel {
 
     public static class GetStandardSetResponseBodyStandardSetInfoMemberGroupList extends TeaModel {
         /**
+         * <p>The user group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1121</p>
          */
@@ -299,6 +341,8 @@ public class GetStandardSetResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The user group name.</p>
+         * 
          * <strong>example:</strong>
          * <p>testGroup</p>
          */
@@ -330,6 +374,8 @@ public class GetStandardSetResponseBody extends TeaModel {
 
     public static class GetStandardSetResponseBodyStandardSetInfoMemberList extends TeaModel {
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>300000913</p>
          */
@@ -337,6 +383,8 @@ public class GetStandardSetResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The username.</p>
+         * 
          * <strong>example:</strong>
          * <p>susan</p>
          */
@@ -368,19 +416,33 @@ public class GetStandardSetResponseBody extends TeaModel {
 
     public static class GetStandardSetResponseBodyStandardSetInfoOfflineApprovalConfig extends TeaModel {
         /**
+         * <p>The approval process type. Valid values:</p>
+         * <ul>
+         * <li>BY_DEFAULT: default approval type.</li>
+         * <li>BY_TEMPLATE: approval based on an approval template.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>BY_DEFAULT</p>
          */
         @NameInMap("ApprovalType")
         public String approvalType;
 
+        /**
+         * <p>Indicates whether approval is enabled.</p>
+         */
         @NameInMap("EnableApproval")
         public Boolean enableApproval;
 
+        /**
+         * <p>Indicates whether batch approval submission is enabled.</p>
+         */
         @NameInMap("IsSubmitInBatch")
         public Boolean isSubmitInBatch;
 
         /**
+         * <p>The approval template ID. This parameter takes effect only when the approval process type is set to BY_TEMPLATE.</p>
+         * 
          * <strong>example:</strong>
          * <p>1121</p>
          */
@@ -428,6 +490,8 @@ public class GetStandardSetResponseBody extends TeaModel {
 
     public static class GetStandardSetResponseBodyStandardSetInfoVisibilityConfigSpecifiedUserList extends TeaModel {
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>300000913</p>
          */
@@ -435,6 +499,8 @@ public class GetStandardSetResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The username.</p>
+         * 
          * <strong>example:</strong>
          * <p>susan</p>
          */
@@ -465,10 +531,20 @@ public class GetStandardSetResponseBody extends TeaModel {
     }
 
     public static class GetStandardSetResponseBodyStandardSetInfoVisibilityConfig extends TeaModel {
+        /**
+         * <p>The list of specified users who can view the standard set. This parameter takes effect only when the visibility type is set to SPECIFIED.</p>
+         */
         @NameInMap("SpecifiedUserList")
         public java.util.List<GetStandardSetResponseBodyStandardSetInfoVisibilityConfigSpecifiedUserList> specifiedUserList;
 
         /**
+         * <p>The visibility type. Valid values:</p>
+         * <ul>
+         * <li>PUBLIC: public.</li>
+         * <li>PRIVATE: private. Only standard set members and administrators can view the standard set.</li>
+         * <li>SPECIFIED: visible to specified users only.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PUBLIC</p>
          */
@@ -499,10 +575,15 @@ public class GetStandardSetResponseBody extends TeaModel {
     }
 
     public static class GetStandardSetResponseBodyStandardSetInfo extends TeaModel {
+        /**
+         * <p>The approval configuration for going online.</p>
+         */
         @NameInMap("ApprovalConfig")
         public GetStandardSetResponseBodyStandardSetInfoApprovalConfig approvalConfig;
 
         /**
+         * <p>The code of the standard set.</p>
+         * 
          * <strong>example:</strong>
          * <p>CITY</p>
          */
@@ -510,16 +591,23 @@ public class GetStandardSetResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The time when the standard set was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The creator.</p>
+         */
         @NameInMap("Creator")
         public GetStandardSetResponseBodyStandardSetInfoCreator creator;
 
         /**
+         * <p>The default standard template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1001</p>
          */
@@ -527,35 +615,56 @@ public class GetStandardSetResponseBody extends TeaModel {
         public Long defaultStandardTemplateId;
 
         /**
+         * <p>The description of the standard set.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The directory to which the standard set belongs.</p>
+         */
         @NameInMap("DirectoryReference")
         public GetStandardSetResponseBodyStandardSetInfoDirectoryReference directoryReference;
 
         /**
+         * <p>The standard set ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The user who last modified the standard set.</p>
+         */
         @NameInMap("LastModifier")
         public GetStandardSetResponseBodyStandardSetInfoLastModifier lastModifier;
 
+        /**
+         * <p>The list of maintainers.</p>
+         */
         @NameInMap("MaintainerList")
         public java.util.List<GetStandardSetResponseBodyStandardSetInfoMaintainerList> maintainerList;
 
+        /**
+         * <p>The list of member groups.</p>
+         */
         @NameInMap("MemberGroupList")
         public java.util.List<GetStandardSetResponseBodyStandardSetInfoMemberGroupList> memberGroupList;
 
+        /**
+         * <p>The list of members.</p>
+         */
         @NameInMap("MemberList")
         public java.util.List<GetStandardSetResponseBodyStandardSetInfoMemberList> memberList;
 
         /**
+         * <p>The time when the standard set was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
          */
@@ -563,15 +672,23 @@ public class GetStandardSetResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
+         * <p>The name of the standard set.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The approval configuration for going offline.</p>
+         */
         @NameInMap("OfflineApprovalConfig")
         public GetStandardSetResponseBodyStandardSetInfoOfflineApprovalConfig offlineApprovalConfig;
 
+        /**
+         * <p>The visibility configuration.</p>
+         */
         @NameInMap("VisibilityConfig")
         public GetStandardSetResponseBodyStandardSetInfoVisibilityConfig visibilityConfig;
 

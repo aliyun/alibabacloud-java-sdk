@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ApplyDataServiceApiRequest extends TeaModel {
     /**
+     * <p>The apply command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ApplyCommand")
     public ApplyDataServiceApiRequestApplyCommand applyCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +22,7 @@ public class ApplyDataServiceApiRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The data service project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,6 +62,8 @@ public class ApplyDataServiceApiRequest extends TeaModel {
 
     public static class ApplyDataServiceApiRequestApplyCommandDevFieldList extends TeaModel {
         /**
+         * <p>The API permission field ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>22</p>
          */
@@ -82,6 +87,8 @@ public class ApplyDataServiceApiRequest extends TeaModel {
 
     public static class ApplyDataServiceApiRequestApplyCommandProdFieldList extends TeaModel {
         /**
+         * <p>The API permission field ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>22</p>
          */
@@ -105,6 +112,7 @@ public class ApplyDataServiceApiRequest extends TeaModel {
 
     public static class ApplyDataServiceApiRequestApplyCommand extends TeaModel {
         /**
+         * <p>The API ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +122,7 @@ public class ApplyDataServiceApiRequest extends TeaModel {
         public Long apiId;
 
         /**
-         * <p>AppId</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1203</p>
@@ -122,26 +130,63 @@ public class ApplyDataServiceApiRequest extends TeaModel {
         @NameInMap("AppId")
         public Integer appId;
 
+        /**
+         * <p>Specifies whether to apply for permissions on operation-type APIs in the development environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("ApplyDev")
         public Boolean applyDev;
 
+        /**
+         * <p>Specifies whether to apply for permissions on operation-type APIs in the production environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("ApplyProd")
         public Boolean applyProd;
 
         /**
+         * <p>The application type. Valid values:</p>
+         * <ul>
+         * <li>APP: application.</li>
+         * <li>USER: individual account.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>APP</p>
          */
         @NameInMap("ApplyType")
         public String applyType;
 
+        /**
+         * <p>The list of permission types.</p>
+         * <ul>
+         * <li><p>When the principal is an application, the following permission types are supported. To apply for delegation permissions, you must also apply for usage permissions.</p>
+         * <ul>
+         * <li>USE: usage permission.</li>
+         * <li>DELEGATION: delegation permission.</li>
+         * </ul>
+         * </li>
+         * <li><p>When the principal is an individual, only USE (usage) permission is supported.</p>
+         * </li>
+         * <li><p>If this parameter is not specified, the default value is USE (usage) permission.</p>
+         * </li>
+         * </ul>
+         */
         @NameInMap("AuthTypes")
         public java.util.List<String> authTypes;
 
+        /**
+         * <p>The list of permission fields for query-type APIs in the development environment. This parameter is required in dev-prod mode. DevFieldList and ProdFieldList cannot both be empty.</p>
+         */
         @NameInMap("DevFieldList")
         public java.util.List<ApplyDataServiceApiRequestApplyCommandDevFieldList> devFieldList;
 
         /**
+         * <p>The expiration date in the format of yyyy-MM-dd.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -150,10 +195,14 @@ public class ApplyDataServiceApiRequest extends TeaModel {
         @NameInMap("ExpireDate")
         public String expireDate;
 
+        /**
+         * <p>The list of permission fields for query-type APIs in the production environment. This parameter is required in basic mode.</p>
+         */
         @NameInMap("ProdFieldList")
         public java.util.List<ApplyDataServiceApiRequestApplyCommandProdFieldList> prodFieldList;
 
         /**
+         * <p>The reason for the application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

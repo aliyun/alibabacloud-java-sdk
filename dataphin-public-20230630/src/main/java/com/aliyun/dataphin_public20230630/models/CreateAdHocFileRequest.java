@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateAdHocFileRequest extends TeaModel {
     /**
+     * <p>The request for creating an ad hoc query file.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CreateCommand")
     public CreateAdHocFileRequestCreateCommand createCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,7 @@ public class CreateAdHocFileRequest extends TeaModel {
 
     public static class CreateAdHocFileRequestCreateCommand extends TeaModel {
         /**
+         * <p>The file content.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,6 +54,7 @@ public class CreateAdHocFileRequest extends TeaModel {
         public String content;
 
         /**
+         * <p>The directory where the file is located.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -60,6 +64,7 @@ public class CreateAdHocFileRequest extends TeaModel {
         public String directory;
 
         /**
+         * <p>The file name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -69,6 +74,7 @@ public class CreateAdHocFileRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

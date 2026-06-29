@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetUdfResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class GetUdfResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class GetUdfResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The details of the backend exception.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -34,9 +40,15 @@ public class GetUdfResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The details of the user-defined function.</p>
+     */
     @NameInMap("UdfInfo")
     public GetUdfResponseBodyUdfInfo udfInfo;
 
@@ -95,6 +107,20 @@ public class GetUdfResponseBody extends TeaModel {
 
     public static class GetUdfResponseBodyUdfInfo extends TeaModel {
         /**
+         * <p>The category. Valid values:</p>
+         * <ul>
+         * <li>1: window function.</li>
+         * <li>2: aggregate function.</li>
+         * <li>3: numeric function.</li>
+         * <li>4: string function.</li>
+         * <li>5: time function.</li>
+         * <li>6: IP address utility function.</li>
+         * <li>7: URL-related function.</li>
+         * <li>8: encoding and decoding function.</li>
+         * <li>9: business-related function.</li>
+         * <li>10: other.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -102,6 +128,8 @@ public class GetUdfResponseBody extends TeaModel {
         public Integer category;
 
         /**
+         * <p>The registered class name.</p>
+         * 
          * <strong>example:</strong>
          * <p>com.lydaas.dataphin.UdfTest</p>
          */
@@ -109,6 +137,8 @@ public class GetUdfResponseBody extends TeaModel {
         public String className;
 
         /**
+         * <p>The command help information.</p>
+         * 
          * <strong>example:</strong>
          * <p>udf_to_lower(char x)</p>
          */
@@ -116,6 +146,8 @@ public class GetUdfResponseBody extends TeaModel {
         public String commandHelp;
 
         /**
+         * <p>The compute engine. Valid values: HADOOP, MAX_COMPUTE, and FLINK.</p>
+         * 
          * <strong>example:</strong>
          * <p>HADOOP</p>
          */
@@ -123,6 +155,8 @@ public class GetUdfResponseBody extends TeaModel {
         public String computeEngineType;
 
         /**
+         * <p>The creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>30012110</p>
          */
@@ -130,6 +164,8 @@ public class GetUdfResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -137,6 +173,8 @@ public class GetUdfResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The directory where the function is stored.</p>
+         * 
          * <strong>example:</strong>
          * <p>/</p>
          */
@@ -144,6 +182,8 @@ public class GetUdfResponseBody extends TeaModel {
         public String directory;
 
         /**
+         * <p>The creation time, in the yyyy-MM-d HH:mm:ss format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-10 10:01:01</p>
          */
@@ -151,6 +191,8 @@ public class GetUdfResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The last modification time, in the yyyy-MM-d HH:mm:ss format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-10 10:01:01</p>
          */
@@ -158,6 +200,8 @@ public class GetUdfResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The user-defined function ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1030111021</p>
          */
@@ -165,6 +209,8 @@ public class GetUdfResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The last modifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>30012110</p>
          */
@@ -172,6 +218,8 @@ public class GetUdfResponseBody extends TeaModel {
         public String lastModifier;
 
         /**
+         * <p>The function name.</p>
+         * 
          * <strong>example:</strong>
          * <p>udf_to_lower</p>
          */

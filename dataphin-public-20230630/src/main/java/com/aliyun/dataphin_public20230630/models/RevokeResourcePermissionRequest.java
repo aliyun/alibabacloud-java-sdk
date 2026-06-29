@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RevokeResourcePermissionRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class RevokeResourcePermissionRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The authorization revocation request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RevokeCommand")
@@ -42,6 +44,8 @@ public class RevokeResourcePermissionRequest extends TeaModel {
 
     public static class RevokeResourcePermissionRequestRevokeCommandResourceList extends TeaModel {
         /**
+         * <p>The resource ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>odps.300002102.beginner_test.amin_table</p>
          */
@@ -64,10 +68,15 @@ public class RevokeResourcePermissionRequest extends TeaModel {
     }
 
     public static class RevokeResourcePermissionRequestRevokeCommand extends TeaModel {
+        /**
+         * <p>The list of operations.</p>
+         */
         @NameInMap("OperateList")
         public java.util.List<String> operateList;
 
         /**
+         * <p>The reason for revoking the authorization.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -75,12 +84,14 @@ public class RevokeResourcePermissionRequest extends TeaModel {
         public String reason;
 
         /**
+         * <p>The list of resources.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("ResourceList")
         public java.util.List<RevokeResourcePermissionRequestRevokeCommandResourceList> resourceList;
 
         /**
+         * <p>The resource type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -90,6 +101,7 @@ public class RevokeResourcePermissionRequest extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The user ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

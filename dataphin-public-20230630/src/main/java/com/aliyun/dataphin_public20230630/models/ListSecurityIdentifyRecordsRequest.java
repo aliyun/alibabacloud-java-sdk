@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListSecurityIdentifyRecordsRequest extends TeaModel {
     /**
+     * <p>The query conditions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ListQuery")
     public ListSecurityIdentifyRecordsRequestListQuery listQuery;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,8 @@ public class ListSecurityIdentifyRecordsRequest extends TeaModel {
 
     public static class ListSecurityIdentifyRecordsRequestListQuery extends TeaModel {
         /**
+         * <p>The datasource environment identifier. This parameter is required only for datasource tables.</p>
+         * 
          * <strong>example:</strong>
          * <p>DEV</p>
          */
@@ -49,6 +53,8 @@ public class ListSecurityIdentifyRecordsRequest extends TeaModel {
         public String datasourceEnv;
 
         /**
+         * <p>The datasource name. This parameter is required only for datasource tables.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -56,6 +62,7 @@ public class ListSecurityIdentifyRecordsRequest extends TeaModel {
         public String datasourceName;
 
         /**
+         * <p>The field name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -64,10 +71,15 @@ public class ListSecurityIdentifyRecordsRequest extends TeaModel {
         @NameInMap("FieldName")
         public String fieldName;
 
+        /**
+         * <p>Specifies whether the table is a datasource table. Default value: false (treated as a Dataphin table).</p>
+         */
         @NameInMap("IsDatasourceTable")
         public Boolean isDatasourceTable;
 
         /**
+         * <p>The search keyword. The search scope is the field name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -75,6 +87,8 @@ public class ListSecurityIdentifyRecordsRequest extends TeaModel {
         public String keyword;
 
         /**
+         * <p>The page number. Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -82,6 +96,8 @@ public class ListSecurityIdentifyRecordsRequest extends TeaModel {
         public Integer pageNo;
 
         /**
+         * <p>The number of records per page. Default value: 20.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -89,6 +105,7 @@ public class ListSecurityIdentifyRecordsRequest extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The table catalog. For datasource tables, specify the database or schema name. For Dataphin physical tables, specify the project name in English. For Dataphin logical tables, specify the business unit name in English.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -98,6 +115,7 @@ public class ListSecurityIdentifyRecordsRequest extends TeaModel {
         public String tableCatalog;
 
         /**
+         * <p>The table name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetBelongAssetMappingResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,16 +14,23 @@ public class GetBelongAssetMappingResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The list of mapping relationships.</p>
+     */
     @NameInMap("MappingRelationList")
     public java.util.List<GetBelongAssetMappingResponseBodyMappingRelationList> mappingRelationList;
 
     /**
+     * <p>The details of the backend response exception.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -37,6 +46,9 @@ public class GetBelongAssetMappingResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -95,6 +107,8 @@ public class GetBelongAssetMappingResponseBody extends TeaModel {
 
     public static class GetBelongAssetMappingResponseBodyMappingRelationList extends TeaModel {
         /**
+         * <p>The type of the asset. Valid values: COLUMN (field) and INDEX (metric).</p>
+         * 
          * <strong>example:</strong>
          * <p>COLUMN</p>
          */
@@ -102,6 +116,8 @@ public class GetBelongAssetMappingResponseBody extends TeaModel {
         public String assetType;
 
         /**
+         * <p>The GUID of the asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>1122</p>
          */
@@ -109,6 +125,8 @@ public class GetBelongAssetMappingResponseBody extends TeaModel {
         public String guid;
 
         /**
+         * <p>The update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
          */
@@ -116,6 +134,8 @@ public class GetBelongAssetMappingResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
+         * <p>The name of the asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -123,6 +143,8 @@ public class GetBelongAssetMappingResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The code of the standard.</p>
+         * 
          * <strong>example:</strong>
          * <p>cc</p>
          */
@@ -130,6 +152,8 @@ public class GetBelongAssetMappingResponseBody extends TeaModel {
         public String standardCode;
 
         /**
+         * <p>The ID of the standard.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -137,6 +161,8 @@ public class GetBelongAssetMappingResponseBody extends TeaModel {
         public Long standardId;
 
         /**
+         * <p>The name of the standard.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -144,6 +170,8 @@ public class GetBelongAssetMappingResponseBody extends TeaModel {
         public String standardName;
 
         /**
+         * <p>The directory where the standard set is located.</p>
+         * 
          * <strong>example:</strong>
          * <p>/dir1</p>
          */
@@ -151,6 +179,8 @@ public class GetBelongAssetMappingResponseBody extends TeaModel {
         public String standardSetDirectory;
 
         /**
+         * <p>The ID of the standard set.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -158,6 +188,8 @@ public class GetBelongAssetMappingResponseBody extends TeaModel {
         public Long standardSetId;
 
         /**
+         * <p>The name of the standard set.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -165,6 +197,8 @@ public class GetBelongAssetMappingResponseBody extends TeaModel {
         public String standardSetName;
 
         /**
+         * <p>The stage of the standard.</p>
+         * 
          * <strong>example:</strong>
          * <p>PROD</p>
          */

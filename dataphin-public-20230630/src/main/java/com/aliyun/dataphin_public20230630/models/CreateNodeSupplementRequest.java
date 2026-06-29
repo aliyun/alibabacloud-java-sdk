@@ -5,19 +5,27 @@ import com.aliyun.tea.*;
 
 public class CreateNodeSupplementRequest extends TeaModel {
     /**
+     * <p>Create backfill request</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CreateCommand")
     public CreateNodeSupplementRequestCreateCommand createCommand;
 
     /**
+     * <p>Environment identifier.</p>
+     * <ul>
+     * <li>DEV: development environment.</li>
+     * <li>PROD (default): production environment.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>DEV/PROD</p>
+     * <p>PROD</p>
      */
     @NameInMap("Env")
     public String env;
 
     /**
+     * <p>Tenant ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,9 +64,18 @@ public class CreateNodeSupplementRequest extends TeaModel {
     }
 
     public static class CreateNodeSupplementRequestCreateCommandDownStreamNodeIdList extends TeaModel {
+        /**
+         * <p>Field ID</p>
+         */
         @NameInMap("FieldIdList")
         public java.util.List<String> fieldIdList;
 
+        /**
+         * <p>Node ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2323232</p>
+         */
         @NameInMap("Id")
         public String id;
 
@@ -86,12 +103,35 @@ public class CreateNodeSupplementRequest extends TeaModel {
     }
 
     public static class CreateNodeSupplementRequestCreateCommandFilterList extends TeaModel {
+        /**
+         * <p>Specifies whether to exclude the matched items. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Exclude")
         public Boolean exclude;
 
+        /**
+         * <p>Filter key. Valid values:</p>
+         * <ul>
+         * <li>PROJECT: project</li>
+         * <li>NODE_OUTPUT_NAME: node output name</li>
+         * <li>NODE_NAME: node name</li>
+         * <li>NODE_ID: node ID</li>
+         * <li>TARGETS: specified endpoints</li>
+         * <li>SOURCES: specified start points</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NODE_OUTPUT_NAME</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>Filter value list</p>
+         */
         @NameInMap("ValueList")
         public java.util.List<String> valueList;
 
@@ -127,9 +167,21 @@ public class CreateNodeSupplementRequest extends TeaModel {
     }
 
     public static class CreateNodeSupplementRequestCreateCommandGlobalParamList extends TeaModel {
+        /**
+         * <p>Parameter key</p>
+         * 
+         * <strong>example:</strong>
+         * <p>param1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>Parameter value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value1</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -157,11 +209,18 @@ public class CreateNodeSupplementRequest extends TeaModel {
     }
 
     public static class CreateNodeSupplementRequestCreateCommandNodeIdList extends TeaModel {
+        /**
+         * <p>Field ID list: Can be specified when the node is a logical table node ID. If not specified, the entire table is used by default.</p>
+         */
         @NameInMap("FieldIdList")
         public java.util.List<String> fieldIdList;
 
         /**
+         * <p>Node ID</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>n_1232324</p>
          */
         @NameInMap("Id")
         public String id;
@@ -190,9 +249,21 @@ public class CreateNodeSupplementRequest extends TeaModel {
     }
 
     public static class CreateNodeSupplementRequestCreateCommandNodeParamsListParamList extends TeaModel {
+        /**
+         * <p>Parameter key</p>
+         * 
+         * <strong>example:</strong>
+         * <p>param1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>Parameter value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value1</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -220,9 +291,18 @@ public class CreateNodeSupplementRequest extends TeaModel {
     }
 
     public static class CreateNodeSupplementRequestCreateCommandNodeParamsList extends TeaModel {
+        /**
+         * <p>Node ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>n_23324</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <p>Parameter list</p>
+         */
         @NameInMap("ParamList")
         public java.util.List<CreateNodeSupplementRequestCreateCommandNodeParamsListParamList> paramList;
 
@@ -250,34 +330,64 @@ public class CreateNodeSupplementRequest extends TeaModel {
     }
 
     public static class CreateNodeSupplementRequestCreateCommand extends TeaModel {
+        /**
+         * <p>Bulk mode: Include all downstream nodes. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("ContainAllDownStream")
         public Boolean containAllDownStream;
 
+        /**
+         * <p>Downstream node IDs. Specifies downstream nodes for execution.</p>
+         */
         @NameInMap("DownStreamNodeIdList")
         public java.util.List<CreateNodeSupplementRequestCreateCommandDownStreamNodeIdList> downStreamNodeIdList;
 
         /**
+         * <p>End business date</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>2021-06-01</p>
+         * <p>2024-05-21</p>
          */
         @NameInMap("EndBizDate")
         public String endBizDate;
 
+        /**
+         * <p>Filter list: Used together with ContainAllDownStream. You can include or exclude items based on project, node, and other criteria. Default value: empty.</p>
+         */
         @NameInMap("FilterList")
         public java.util.List<CreateNodeSupplementRequestCreateCommandFilterList> filterList;
 
+        /**
+         * <p>Runtime global parameters</p>
+         */
         @NameInMap("GlobalParamList")
         public java.util.List<CreateNodeSupplementRequestCreateCommandGlobalParamList> globalParamList;
 
+        /**
+         * <p>Latest trigger time (HH:MM). This parameter applies only to hourly tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20:59</p>
+         */
         @NameInMap("MaxDueTime")
         public String maxDueTime;
 
+        /**
+         * <p>Earliest trigger time (HH:MM). This parameter applies only to hourly tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:00</p>
+         */
         @NameInMap("MinDueTime")
         public String minDueTime;
 
         /**
+         * <p>Backfill name. If not specified, a name is automatically generated by the system.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx测试</p>
          */
@@ -285,18 +395,29 @@ public class CreateNodeSupplementRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>Root nodes for backfill. Multiple root nodes are supported.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("NodeIdList")
         public java.util.List<CreateNodeSupplementRequestCreateCommandNodeIdList> nodeIdList;
 
+        /**
+         * <p>Runtime custom parameters, configured per node</p>
+         */
         @NameInMap("NodeParamsList")
         public java.util.List<CreateNodeSupplementRequestCreateCommandNodeParamsList> nodeParamsList;
 
+        /**
+         * <p>Concurrency. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Parallelism")
         public Integer parallelism;
 
         /**
+         * <p>Project ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -306,10 +427,11 @@ public class CreateNodeSupplementRequest extends TeaModel {
         public Long projectId;
 
         /**
+         * <p>Start business date</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>2021-06-01</p>
+         * <p>2024-05-21</p>
          */
         @NameInMap("StartBizDate")
         public String startBizDate;

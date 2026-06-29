@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetResourceRequest extends TeaModel {
     /**
+     * <p>The name of the resource file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetResourceRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class GetResourceRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

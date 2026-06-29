@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetQualityRuleResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class GetQualityRuleResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,12 +23,17 @@ public class GetQualityRuleResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The details of the backend exception.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The quality rule details.</p>
+     */
     @NameInMap("QualityRuleInfo")
     public GetQualityRuleResponseBodyQualityRuleInfo qualityRuleInfo;
 
@@ -37,6 +46,9 @@ public class GetQualityRuleResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -94,13 +106,21 @@ public class GetQualityRuleResponseBody extends TeaModel {
     }
 
     public static class GetQualityRuleResponseBodyQualityRuleInfoAttributeWithValueListAttributeInfoValueConfigDefaultValue extends TeaModel {
+        /**
+         * <p>Indicates whether the maximum value is included.</p>
+         */
         @NameInMap("IncludeMaxValue")
         public Boolean includeMaxValue;
 
+        /**
+         * <p>Indicates whether the minimum value is included.</p>
+         */
         @NameInMap("IncludeMinValue")
         public Boolean includeMinValue;
 
         /**
+         * <p>The maximum value. This applies to range interval attributes.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -108,12 +128,17 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public String maxValue;
 
         /**
+         * <p>The minimum value. This applies to range interval attributes.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("MinValue")
         public String minValue;
 
+        /**
+         * <p>The list of attribute values. This applies to attributes with custom input, single-select dropdown, or multi-select dropdown input methods.</p>
+         */
         @NameInMap("ValueList")
         public java.util.List<String> valueList;
 
@@ -166,16 +191,31 @@ public class GetQualityRuleResponseBody extends TeaModel {
 
     public static class GetQualityRuleResponseBodyQualityRuleInfoAttributeWithValueListAttributeInfoValueConfig extends TeaModel {
         /**
+         * <p>The attribute field data type. Valid values:</p>
+         * <ul>
+         * <li>STRING: text</li>
+         * <li>BIGINT: integer</li>
+         * <li>DOUBLE: floating-point</li>
+         * <li>BOOLEAN: Boolean</li>
+         * <li>DATE: date</li>
+         * <li>DATETIME: datetime.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>STRING</p>
          */
         @NameInMap("DataType")
         public String dataType;
 
+        /**
+         * <p>The attribute default value.</p>
+         */
         @NameInMap("DefaultValue")
         public GetQualityRuleResponseBodyQualityRuleInfoAttributeWithValueListAttributeInfoValueConfigDefaultValue defaultValue;
 
         /**
+         * <p>The attribute field length. This constrains the maximum length of text-type attribute values.</p>
+         * 
          * <strong>example:</strong>
          * <p>6921666</p>
          */
@@ -183,12 +223,23 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public Integer length;
 
         /**
+         * <p>The attribute value input method. Valid values:</p>
+         * <ul>
+         * <li>CUSTOMIZED: custom input</li>
+         * <li>SINGLE_ENUM: single-select dropdown</li>
+         * <li>MULTIPLE_ENUMS: multi-select dropdown</li>
+         * <li>RANGE: range interval.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CUSTOMIZED</p>
          */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The attribute option values. This applies only to attributes with a single-select dropdown or multi-select dropdown input method.</p>
+         */
         @NameInMap("ValueEnumList")
         public java.util.List<String> valueEnumList;
 
@@ -241,16 +292,23 @@ public class GetQualityRuleResponseBody extends TeaModel {
 
     public static class GetQualityRuleResponseBodyQualityRuleInfoAttributeWithValueListAttributeInfo extends TeaModel {
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Indicates whether the attribute is enabled.</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
         /**
+         * <p>The attribute ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>612415804007</p>
          */
@@ -258,18 +316,29 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The attribute name.</p>
+         * 
          * <strong>example:</strong>
          * <p>attr01</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Indicates whether the attribute is required.</p>
+         */
         @NameInMap("Required")
         public Boolean required;
 
+        /**
+         * <p>Indicates whether the attribute is searchable.</p>
+         */
         @NameInMap("Searchable")
         public Boolean searchable;
 
+        /**
+         * <p>The attribute value configuration details.</p>
+         */
         @NameInMap("ValueConfig")
         public GetQualityRuleResponseBodyQualityRuleInfoAttributeWithValueListAttributeInfoValueConfig valueConfig;
 
@@ -337,13 +406,21 @@ public class GetQualityRuleResponseBody extends TeaModel {
     }
 
     public static class GetQualityRuleResponseBodyQualityRuleInfoAttributeWithValueListAttributeValue extends TeaModel {
+        /**
+         * <p>Indicates whether the maximum value is included.</p>
+         */
         @NameInMap("IncludeMaxValue")
         public Boolean includeMaxValue;
 
+        /**
+         * <p>Indicates whether the minimum value is included.</p>
+         */
         @NameInMap("IncludeMinValue")
         public Boolean includeMinValue;
 
         /**
+         * <p>The maximum value. This applies to range interval attributes.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -351,12 +428,17 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public String maxValue;
 
         /**
+         * <p>The minimum value. This applies to range interval attributes.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("MinValue")
         public String minValue;
 
+        /**
+         * <p>The list of attribute values. This applies to attributes with custom input, single-select dropdown, or multi-select dropdown input methods.</p>
+         */
         @NameInMap("ValueList")
         public java.util.List<String> valueList;
 
@@ -408,9 +490,15 @@ public class GetQualityRuleResponseBody extends TeaModel {
     }
 
     public static class GetQualityRuleResponseBodyQualityRuleInfoAttributeWithValueList extends TeaModel {
+        /**
+         * <p>The attribute details.</p>
+         */
         @NameInMap("AttributeInfo")
         public GetQualityRuleResponseBodyQualityRuleInfoAttributeWithValueListAttributeInfo attributeInfo;
 
+        /**
+         * <p>The property value.</p>
+         */
         @NameInMap("AttributeValue")
         public GetQualityRuleResponseBodyQualityRuleInfoAttributeWithValueListAttributeValue attributeValue;
 
@@ -439,6 +527,8 @@ public class GetQualityRuleResponseBody extends TeaModel {
 
     public static class GetQualityRuleResponseBodyQualityRuleInfoFormPropertyList extends TeaModel {
         /**
+         * <p>The control type.</p>
+         * 
          * <strong>example:</strong>
          * <p>expression</p>
          */
@@ -446,6 +536,8 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public String componentType;
 
         /**
+         * <p>The property name.</p>
+         * 
          * <strong>example:</strong>
          * <p>col</p>
          */
@@ -453,6 +545,8 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The property value.</p>
+         * 
          * <strong>example:</strong>
          * <p>abc</p>
          */
@@ -492,6 +586,8 @@ public class GetQualityRuleResponseBody extends TeaModel {
 
     public static class GetQualityRuleResponseBodyQualityRuleInfoScheduleBindList extends TeaModel {
         /**
+         * <p>The schedule ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -499,6 +595,8 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public Long scheduleId;
 
         /**
+         * <p>The schedule name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -530,6 +628,8 @@ public class GetQualityRuleResponseBody extends TeaModel {
 
     public static class GetQualityRuleResponseBodyQualityRuleInfoValidateConditionList extends TeaModel {
         /**
+         * <p>The condition node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>268</p>
          */
@@ -537,6 +637,8 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -544,6 +646,8 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public String metric;
 
         /**
+         * <p>The metric name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -551,6 +655,8 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public String metricName;
 
         /**
+         * <p>The operator. Valid values: EQUAL, NOT_EQUAL, LARGER, SMALLER, LARGE_OR_EQUAL, SMALLER_OR_EQUAL, AND, OR.</p>
+         * 
          * <strong>example:</strong>
          * <p>AND</p>
          */
@@ -558,6 +664,8 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public String operator;
 
         /**
+         * <p>The operator name.</p>
+         * 
          * <strong>example:</strong>
          * <p>且</p>
          */
@@ -565,6 +673,8 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public String operatorName;
 
         /**
+         * <p>The parent condition node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -572,6 +682,12 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public String parentId;
 
         /**
+         * <p>The condition type. Valid values:</p>
+         * <ul>
+         * <li>RELATION: relationship</li>
+         * <li>EXPRESSION: expression.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>RELATION</p>
          */
@@ -579,6 +695,8 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The value.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -658,6 +776,8 @@ public class GetQualityRuleResponseBody extends TeaModel {
 
     public static class GetQualityRuleResponseBodyQualityRuleInfoValidateObject extends TeaModel {
         /**
+         * <p>The validation object name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -665,6 +785,8 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The validation object type. Valid values: UNKNOWN, TABLE, COLUMN, DATASOURCE, DATASOURCE_TABLE, REALTIME, INDEX, CHAIN.</p>
+         * 
          * <strong>example:</strong>
          * <p>TABLE</p>
          */
@@ -695,13 +817,31 @@ public class GetQualityRuleResponseBody extends TeaModel {
     }
 
     public static class GetQualityRuleResponseBodyQualityRuleInfo extends TeaModel {
+        /**
+         * <p>The rule business attribute configurations.</p>
+         */
         @NameInMap("AttributeWithValueList")
         public java.util.List<GetQualityRuleResponseBodyQualityRuleInfoAttributeWithValueList> attributeWithValueList;
 
+        /**
+         * <p>The rule categories. Valid values:</p>
+         * <ul>
+         * <li>CONSISTENT: consistency</li>
+         * <li>EFFECTIVE: validity</li>
+         * <li>TIMELINESE: timeliness</li>
+         * <li>ACCURATE: accuracy</li>
+         * <li>UNIQUENESS: uniqueness</li>
+         * <li>COMPLETENESS: completeness</li>
+         * <li>STABILITY: stability</li>
+         * <li>CUSTOM: custom.</li>
+         * </ul>
+         */
         @NameInMap("CatalogList")
         public java.util.List<String> catalogList;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
          */
@@ -709,6 +849,8 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>30012011</p>
          */
@@ -716,6 +858,8 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>The creator name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -723,19 +867,29 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public String creatorName;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Indicates whether exception archiving is enabled.</p>
+         */
         @NameInMap("EnableErrorArchive")
         public Boolean enableErrorArchive;
 
+        /**
+         * <p>The rule configuration key-value pairs. These vary by templatetype. Different templatetypes return different form key-value pair configurations.</p>
+         */
         @NameInMap("FormPropertyList")
         public java.util.List<GetQualityRuleResponseBodyQualityRuleInfoFormPropertyList> formPropertyList;
 
         /**
+         * <p>The quality rule ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -743,6 +897,8 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The ID of the user who last modified the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>30012011</p>
          */
@@ -750,6 +906,8 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public String modifier;
 
         /**
+         * <p>The name of the user who last modified the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -757,6 +915,8 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public String modifierName;
 
         /**
+         * <p>The modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
          */
@@ -764,16 +924,27 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
+         * <p>The quality rule name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The list of schedules bound to the rule.</p>
+         */
         @NameInMap("ScheduleBindList")
         public java.util.List<GetQualityRuleResponseBodyQualityRuleInfoScheduleBindList> scheduleBindList;
 
         /**
+         * <p>The quality rule status. Valid values:</p>
+         * <ul>
+         * <li>ENABLE</li>
+         * <li>DISABLE.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ENABLE</p>
          */
@@ -781,6 +952,12 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The rule strength. Valid values:</p>
+         * <ul>
+         * <li>STRONG</li>
+         * <li>WEAK.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>STRONG</p>
          */
@@ -788,6 +965,8 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public String strength;
 
         /**
+         * <p>The template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -795,6 +974,8 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public Long templateId;
 
         /**
+         * <p>The template name.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -802,6 +983,14 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public String templateName;
 
         /**
+         * <p>The templatetype group. Valid values:</p>
+         * <ul>
+         * <li>SYSTEM: system preset</li>
+         * <li>CUSTOM: custom template</li>
+         * <li>TEMPLATE: union of SYSTEM and CUSTOM</li>
+         * <li>CUSTOM_SQL: custom SQL template.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CUSTOM</p>
          */
@@ -809,6 +998,41 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public String templateScope;
 
         /**
+         * <p>The templatetype. Valid values:</p>
+         * <ul>
+         * <li>FIELD_NULL_VALUE_VALIDATE: field null value check</li>
+         * <li>FIELD_EMPTY_STRING_VALIDATE: field empty character string check</li>
+         * <li>FIELD_UNIQUE_VALIDATE: field uniqueness check</li>
+         * <li>FIELD_GROUP_COUNT_VALIDATE: field unique value count check</li>
+         * <li>FIELD_DUPLICATE_VALUE_COUNT_VALIDATE: field duplicate value count check</li>
+         * <li>FUNCTION_TIME_COMPARE: time function comparison</li>
+         * <li>SINGLE_TABLE_TIME_COMPARE: non-partitioned table time field comparison</li>
+         * <li>DOUBLE_TABLE_TIME_COMPARE: two-table time field comparison</li>
+         * <li>FIELD_FORMAT_VALIDATE: field format check</li>
+         * <li>FIELD_LENGTH_VALIDATE: field length check</li>
+         * <li>FIELD_VALUE_RANGE_VALIDATE: field value range check</li>
+         * <li>CODE_TABLE_COMPARE: lookup table reference comparison</li>
+         * <li>STANDARD_CODE_TABLE_COMPARE: data standard lookup table reference comparison</li>
+         * <li>SINGLE_TABLE_FIELD_VALUE_COMPARE: non-partitioned table field value consistency comparison</li>
+         * <li>SINGLE_TABLE_FIELD_STATISTICAL_COMPARE: non-partitioned table field statistical value consistency comparison</li>
+         * <li>SINGLE_TABLE_FIELD_EXP_COMPARE: non-partitioned table field business logic consistency comparison</li>
+         * <li>DOUBLE_TABLE_FIELD_VALUE_COMPARE: two-table field value consistency comparison</li>
+         * <li>DOUBLE_TABLE_FIELD_STATISTICAL_COMPARE: two-table field statistical value consistency comparison</li>
+         * <li>CROSS_DOUBLE_TABLE_FIELD_STATISTICAL_COMPARE: cross-source two-table field statistical value consistency comparison</li>
+         * <li>DOUBLE_TABLE_FIELD_EXP_COMPARE: two-table field business logic consistency comparison</li>
+         * <li>TABLE_STABILITY_VALIDATE: table stability check</li>
+         * <li>TABLE_FLUCTUATION_VALIDATE: table fluctuation check</li>
+         * <li>FIELD_STABILITY_VALIDATE: field stability check</li>
+         * <li>FIELD_FLUCTUATION_VALIDATE: field fluctuation check</li>
+         * <li>CUSTOM_STATISTICAL_VALIDATE: custom statistical metric check</li>
+         * <li>CUSTOM_DATA_DETAILS_VALIDATE: custom data details check</li>
+         * <li>DATASOURCE_AVAILABLE_CHECK: data source connectivity monitoring</li>
+         * <li>TABLE_SCHEMA_CHECK: table schema change monitoring</li>
+         * <li>REAL_TIME_OFFLINE_COMPARE: real-time and offline comparison</li>
+         * <li>REAL_TIME_STATISTICAL_VALIDATE: real-time statistical value monitoring</li>
+         * <li>REAL_TIME_MULTI_CHAIN_COMPARE: real-time multi-link comparison, and more.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>FIELD_NULL_VALUE_VALIDATE</p>
          */
@@ -816,6 +1040,8 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public String templateType;
 
         /**
+         * <p>The ID of the most recent test run task.</p>
+         * 
          * <strong>example:</strong>
          * <p>22</p>
          */
@@ -823,22 +1049,35 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public Long testRunRuleTaskId;
 
         /**
+         * <p>The status of the most recent test run task. Valid values: NOT_RUN, WAITING, RUNNING, SUCCESS, FAILED.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
          */
         @NameInMap("TestRunRuleTaskStatus")
         public String testRunRuleTaskStatus;
 
+        /**
+         * <p>Indicates whether the test run validation passed.</p>
+         */
         @NameInMap("TestRunRuleValidateResult")
         public Boolean testRunRuleValidateResult;
 
+        /**
+         * <p>The list of validation conditions.</p>
+         */
         @NameInMap("ValidateConditionList")
         public java.util.List<GetQualityRuleResponseBodyQualityRuleInfoValidateConditionList> validateConditionList;
 
+        /**
+         * <p>The validation object.</p>
+         */
         @NameInMap("ValidateObject")
         public GetQualityRuleResponseBodyQualityRuleInfoValidateObject validateObject;
 
         /**
+         * <p>The ID of the associated monitoring task.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

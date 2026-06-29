@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetPhysicalNodeByOutputNameRequest extends TeaModel {
     /**
+     * <p>Environment identifier</p>
+     * <ul>
+     * <li>DEV: Development environment</li>
+     * <li>PROD (default): Production environment</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PROD</p>
      */
@@ -12,6 +18,7 @@ public class GetPhysicalNodeByOutputNameRequest extends TeaModel {
     public String env;
 
     /**
+     * <p>Tenant ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +28,7 @@ public class GetPhysicalNodeByOutputNameRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>Node output name</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

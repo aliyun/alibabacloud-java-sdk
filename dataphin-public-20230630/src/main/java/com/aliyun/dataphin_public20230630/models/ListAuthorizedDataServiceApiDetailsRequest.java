@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListAuthorizedDataServiceApiDetailsRequest extends TeaModel {
     /**
+     * <p>The query request.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
      */
     @NameInMap("ListQuery")
     public ListAuthorizedDataServiceApiDetailsRequestListQuery listQuery;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +47,10 @@ public class ListAuthorizedDataServiceApiDetailsRequest extends TeaModel {
 
     public static class ListAuthorizedDataServiceApiDetailsRequestListQuery extends TeaModel {
         /**
-         * <p>AppKey</p>
+         * <p>The application key.</p>
+         * <blockquote>
+         * <p>Notice: Deprecated. Use AppKeyStr instead.</notice>.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>200000000</p>
@@ -52,13 +60,16 @@ public class ListAuthorizedDataServiceApiDetailsRequest extends TeaModel {
         public Long appKey;
 
         /**
+         * <p>The application key.</p>
+         * 
          * <strong>example:</strong>
-         * <p>app12345</p>
+         * <p>APP_200000000</p>
          */
         @NameInMap("AppKeyStr")
         public String appKeyStr;
 
         /**
+         * <p>The page number, starting from 1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -68,6 +79,7 @@ public class ListAuthorizedDataServiceApiDetailsRequest extends TeaModel {
         public Integer page;
 
         /**
+         * <p>The number of entries per page. Maximum value: 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

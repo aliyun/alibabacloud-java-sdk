@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetSecuritySecretKeyResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class GetSecuritySecretKeyResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class GetSecuritySecretKeyResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The details of the backend exception.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -34,9 +40,15 @@ public class GetSecuritySecretKeyResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The security key details.</p>
+     */
     @NameInMap("SecuritySecretKeyInfo")
     public GetSecuritySecretKeyResponseBodySecuritySecretKeyInfo securitySecretKeyInfo;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -95,6 +107,8 @@ public class GetSecuritySecretKeyResponseBody extends TeaModel {
 
     public static class GetSecuritySecretKeyResponseBodySecuritySecretKeyInfo extends TeaModel {
         /**
+         * <p>The algorithm type. Valid values: AES, DES, DESEDE, SM2, SM4, RSA, and FF1.</p>
+         * 
          * <strong>example:</strong>
          * <p>AES</p>
          */
@@ -102,6 +116,8 @@ public class GetSecuritySecretKeyResponseBody extends TeaModel {
         public String algorithmType;
 
         /**
+         * <p>The alias of the algorithm type.</p>
+         * 
          * <strong>example:</strong>
          * <p>AES</p>
          */
@@ -109,16 +125,27 @@ public class GetSecuritySecretKeyResponseBody extends TeaModel {
         public String algorithmTypeAlias;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Indicates whether OpenAPI query is supported.</p>
+         */
         @NameInMap("EnableOpenapiQuery")
         public Boolean enableOpenapiQuery;
 
         /**
+         * <p>The generation method. Valid values:</p>
+         * <ul>
+         * <li>SYSTEM_GENERATION: system-generated.</li>
+         * <li>USER_GENERATION: user-generated.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SYSTEM_GENERATION</p>
          */
@@ -126,16 +153,23 @@ public class GetSecuritySecretKeyResponseBody extends TeaModel {
         public String generationType;
 
         /**
+         * <p>The key ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>Indicates whether only the owner can manage the key.</p>
+         */
         @NameInMap("IsOwnerManageOnly")
         public Boolean isOwnerManageOnly;
 
         /**
+         * <p>The key name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -143,6 +177,8 @@ public class GetSecuritySecretKeyResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>30012011</p>
          */
@@ -150,16 +186,23 @@ public class GetSecuritySecretKeyResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The owner name.</p>
+         * 
          * <strong>example:</strong>
          * <p>张三</p>
          */
         @NameInMap("OwnerName")
         public String ownerName;
 
+        /**
+         * <p>The key values.</p>
+         */
         @NameInMap("SecretKeyList")
         public java.util.List<String> secretKeyList;
 
         /**
+         * <p>The number of sub-keys.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -167,6 +210,12 @@ public class GetSecuritySecretKeyResponseBody extends TeaModel {
         public Long subKeyCount;
 
         /**
+         * <p>The key type. Valid values:</p>
+         * <ul>
+         * <li>HASH: hashing and masking.</li>
+         * <li>ENCRYPT: encryption and decryption.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>HASH</p>
          */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateQualityWatchSwitchRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateQualityWatchSwitchRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The update instruction.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")
@@ -42,12 +44,14 @@ public class UpdateQualityWatchSwitchRequest extends TeaModel {
 
     public static class UpdateQualityWatchSwitchRequestUpdateCommand extends TeaModel {
         /**
+         * <p>Specifies whether to enable the monitored object.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Open")
         public Boolean open;
 
         /**
+         * <p>The list of monitoring IDs.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("WatchIdList")

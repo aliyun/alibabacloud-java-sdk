@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class FixDataShrinkRequest extends TeaModel {
     /**
+     * <p>The environment identifier. Valid values:</p>
+     * <ul>
+     * <li>DEV: development environment. </li>
+     * <li>PROD (default): production environment.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PROD</p>
      */
@@ -12,12 +18,14 @@ public class FixDataShrinkRequest extends TeaModel {
     public String env;
 
     /**
+     * <p>The command to rerun downstream nodes to fix data link issues. You can choose to force a rerun.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("FixDataCommand")
     public String fixDataCommandShrink;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

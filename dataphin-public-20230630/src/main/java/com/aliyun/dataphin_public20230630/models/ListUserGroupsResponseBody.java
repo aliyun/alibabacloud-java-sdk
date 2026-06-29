@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListUserGroupsResponseBody extends TeaModel {
     /**
+     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ListUserGroupsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,16 +23,23 @@ public class ListUserGroupsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The paged query result.</p>
+     */
     @NameInMap("PageResult")
     public ListUserGroupsResponseBodyPageResult pageResult;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
@@ -36,6 +47,8 @@ public class ListUserGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,16 +110,26 @@ public class ListUserGroupsResponseBody extends TeaModel {
 
     public static class ListUserGroupsResponseBodyPageResultUserGroupListAdminList extends TeaModel {
         /**
+         * <p>The account name of the user.</p>
+         * 
          * <strong>example:</strong>
          * <p>zhangsan</p>
          */
         @NameInMap("AccountName")
         public String accountName;
 
+        /**
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>32313131</p>
          */
@@ -146,19 +169,32 @@ public class ListUserGroupsResponseBody extends TeaModel {
 
     public static class ListUserGroupsResponseBodyPageResultUserGroupList extends TeaModel {
         /**
+         * <p>Specifies whether the user group is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("Active")
         public Boolean active;
 
+        /**
+         * <p>The administrators of the user group.</p>
+         */
         @NameInMap("AdminList")
         public java.util.List<ListUserGroupsResponseBodyPageResultUserGroupListAdminList> adminList;
 
+        /**
+         * <p>The description of the user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx 测试</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The user group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>31313232</p>
          */
@@ -166,12 +202,20 @@ public class ListUserGroupsResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The role of the current user in the user group.</p>
+         * 
          * <strong>example:</strong>
          * <p>SECURITY_ADMIN</p>
          */
         @NameInMap("MyRole")
         public String myRole;
 
+        /**
+         * <p>The user group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx测试</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -232,12 +276,17 @@ public class ListUserGroupsResponseBody extends TeaModel {
 
     public static class ListUserGroupsResponseBodyPageResult extends TeaModel {
         /**
+         * <p>The total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>49</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
+        /**
+         * <p>The paged list.</p>
+         */
         @NameInMap("UserGroupList")
         public java.util.List<ListUserGroupsResponseBodyPageResultUserGroupList> userGroupList;
 

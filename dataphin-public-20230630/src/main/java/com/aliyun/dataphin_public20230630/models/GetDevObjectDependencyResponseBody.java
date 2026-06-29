@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetDevObjectDependencyResponseBody extends TeaModel {
     /**
+     * <p>Error code. OK indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Dependency list.</p>
+     */
     @NameInMap("DevObjectDependencyList")
     public java.util.List<GetDevObjectDependencyResponseBodyDevObjectDependencyList> devObjectDependencyList;
 
     /**
+     * <p>HTTP status code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +38,8 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
@@ -36,6 +47,8 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
 
     public static class GetDevObjectDependencyResponseBodyDevObjectDependencyListDependencyPeriod extends TeaModel {
         /**
+         * <p>Period offset. This parameter is required when the dependency period type is LAST_N_PERIOD.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -104,6 +119,14 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
         public Integer periodOffset;
 
         /**
+         * <p>Dependency period type.</p>
+         * <ul>
+         * <li>CURRENT_PERIOD</li>
+         * <li>LAST_PERIOD</li>
+         * <li>LAST_N_PERIOD</li>
+         * <li>LAST_24_HOUR</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CURRENT_PERIOD</p>
          */
@@ -135,6 +158,8 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
 
     public static class GetDevObjectDependencyResponseBodyDevObjectDependencyListOutputContextParamList extends TeaModel {
         /**
+         * <p>Default value.</p>
+         * 
          * <strong>example:</strong>
          * <p>v1</p>
          */
@@ -142,6 +167,8 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
         public String defaultValue;
 
         /**
+         * <p>Description.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxtest</p>
          */
@@ -149,6 +176,8 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>Parameter key.</p>
+         * 
          * <strong>example:</strong>
          * <p>v1</p>
          */
@@ -188,12 +217,20 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
 
     public static class GetDevObjectDependencyResponseBodyDevObjectDependencyListOwnerList extends TeaModel {
         /**
+         * <p>Node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>11123</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>Node name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx测试</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -222,6 +259,8 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
 
     public static class GetDevObjectDependencyResponseBodyDevObjectDependencyList extends TeaModel {
         /**
+         * <p>Indicates whether the task is automatically parsed.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -229,6 +268,12 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
         public Boolean autoParse;
 
         /**
+         * <p>Business type.</p>
+         * <ul>
+         * <li>SCRIPT: Script</li>
+         * <li>LOGICAL_TABLE: Logical table</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SCRIPT</p>
          */
@@ -236,16 +281,26 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
         public String bizType;
 
         /**
+         * <p>Business unit ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>13111</p>
          */
         @NameInMap("BizUnitId")
         public String bizUnitId;
 
+        /**
+         * <p>Business unit name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx测试</p>
+         */
         @NameInMap("BizUnitName")
         public String bizUnitName;
 
         /**
+         * <p>Cron expression for the scheduling node.</p>
+         * 
          * <strong>example:</strong>
          * <p>0 0 0 * * ?</p>
          */
@@ -253,19 +308,35 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
         public String cronExpression;
 
         /**
+         * <p>Indicates whether a custom cron expression is used for the scheduling node.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("CustomCronExpression")
         public Boolean customCronExpression;
 
+        /**
+         * <p>Dependency fields.</p>
+         */
         @NameInMap("DependFieldList")
         public java.util.List<String> dependFieldList;
 
+        /**
+         * <p>Dependency period configuration.</p>
+         */
         @NameInMap("DependencyPeriod")
         public GetDevObjectDependencyResponseBodyDevObjectDependencyListDependencyPeriod dependencyPeriod;
 
         /**
+         * <p>Dependency strategy.</p>
+         * <ul>
+         * <li>ALL</li>
+         * <li>FIRST</li>
+         * <li>LAST</li>
+         * <li>NEAR</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ALL</p>
          */
@@ -273,19 +344,32 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
         public String dependencyStrategy;
 
         /**
+         * <p>Indicates whether the node is a dimension table intermediate node.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("DimMidNode")
         public Boolean dimMidNode;
 
+        /**
+         * <p>Effect fields.</p>
+         */
         @NameInMap("EffectFieldList")
         public java.util.List<String> effectFieldList;
 
+        /**
+         * <p>Additional business information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>所有字段信息/hasProd/hasDev等信息</p>
+         */
         @NameInMap("ExternalBizInfo")
         public String externalBizInfo;
 
         /**
+         * <p>Indicates whether the dependency is manually added.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -293,16 +377,26 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
         public Boolean manuallyAdd;
 
         /**
+         * <p>Node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>n_13211</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <p>Node name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx测试</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
         /**
+         * <p>Node output name.</p>
+         * 
          * <strong>example:</strong>
          * <p>n_xx</p>
          */
@@ -310,6 +404,8 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
         public String nodeOutputName;
 
         /**
+         * <p>Output table information.</p>
+         * 
          * <strong>example:</strong>
          * <p>t_xx</p>
          */
@@ -317,19 +413,36 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
         public String nodeOutputTableName;
 
         /**
+         * <p>Node type.</p>
+         * <ul>
+         * <li>DATA_PROCESS: Code task</li>
+         * <li>BBOX_LOGIC_TABLE_NODE: Black box logical table node</li>
+         * <li>ONE_ID_LABEL: ID label node</li>
+         * <li>ONE_ID_RULE: ID rule node</li>
+         * <li>PIPELINE_NODE: Pipeline node</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>DATA_PROCESS</p>
          */
         @NameInMap("NodeType")
         public String nodeType;
 
+        /**
+         * <p>Cross-node output parameters.</p>
+         */
         @NameInMap("OutputContextParamList")
         public java.util.List<GetDevObjectDependencyResponseBodyDevObjectDependencyListOutputContextParamList> outputContextParamList;
 
+        /**
+         * <p>Node owners.</p>
+         */
         @NameInMap("OwnerList")
         public java.util.List<GetDevObjectDependencyResponseBodyDevObjectDependencyListOwnerList> ownerList;
 
         /**
+         * <p>Dependency period difference.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -337,16 +450,34 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
         public Integer periodDiff;
 
         /**
+         * <p>Project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123131</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
+        /**
+         * <p>Project name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx测试</p>
+         */
         @NameInMap("ProjectName")
         public String projectName;
 
         /**
+         * <p>Schedule type.</p>
+         * <ul>
+         * <li>MINUTELY: Minute</li>
+         * <li>HOURLY: Hour</li>
+         * <li>DAILY: Day</li>
+         * <li>WEEKLY: Week</li>
+         * <li>MONTHLY: Month</li>
+         * <li>YEARLY: Year</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>DAILY</p>
          */
@@ -354,6 +485,8 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
         public String scheduleType;
 
         /**
+         * <p>Indicates whether the node has a self-dependency.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -361,6 +494,16 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
         public Boolean selfDepend;
 
         /**
+         * <p>Sub-business type.</p>
+         * <ul>
+         * <li>MAX_COMPUTE_SQL</li>
+         * <li>HIVE_SQL</li>
+         * <li>SHELL</li>
+         * <li>PYTHON</li>
+         * <li>ONE_SERVICE_SQL</li>
+         * <li>DATABASE_SQL, etc.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SHELL</p>
          */
@@ -368,6 +511,8 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
         public String subBizType;
 
         /**
+         * <p>Indicates whether the configuration is valid.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

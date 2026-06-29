@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetSecurityClassifyResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class GetSecurityClassifyResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class GetSecurityClassifyResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The details of the backend exception.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -34,9 +40,15 @@ public class GetSecurityClassifyResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The data classification details.</p>
+     */
     @NameInMap("SecurityClassifyInfo")
     public GetSecurityClassifyResponseBodySecurityClassifyInfo securityClassifyInfo;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -95,6 +107,8 @@ public class GetSecurityClassifyResponseBody extends TeaModel {
 
     public static class GetSecurityClassifyResponseBodySecurityClassifyInfo extends TeaModel {
         /**
+         * <p>The classification abbreviation.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -102,6 +116,8 @@ public class GetSecurityClassifyResponseBody extends TeaModel {
         public String abbreviation;
 
         /**
+         * <p>The data classification ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -109,6 +125,8 @@ public class GetSecurityClassifyResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The security level abbreviation.</p>
+         * 
          * <strong>example:</strong>
          * <p>lv_test</p>
          */
@@ -116,6 +134,8 @@ public class GetSecurityClassifyResponseBody extends TeaModel {
         public String levelAbbreviation;
 
         /**
+         * <p>The security level index.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -123,6 +143,8 @@ public class GetSecurityClassifyResponseBody extends TeaModel {
         public Long levelIndex;
 
         /**
+         * <p>The security level name.</p>
+         * 
          * <strong>example:</strong>
          * <p>lv_teat</p>
          */
@@ -130,6 +152,8 @@ public class GetSecurityClassifyResponseBody extends TeaModel {
         public String levelName;
 
         /**
+         * <p>The classification name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -137,6 +161,8 @@ public class GetSecurityClassifyResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The classification path.</p>
+         * 
          * <strong>example:</strong>
          * <p>/a/b/c</p>
          */

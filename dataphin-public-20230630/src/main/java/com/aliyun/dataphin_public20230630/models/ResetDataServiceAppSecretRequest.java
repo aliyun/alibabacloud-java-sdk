@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResetDataServiceAppSecretRequest extends TeaModel {
     /**
+     * <p>Tenant ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ResetDataServiceAppSecretRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>Reset Data Service Application Key</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")
@@ -42,6 +44,7 @@ public class ResetDataServiceAppSecretRequest extends TeaModel {
 
     public static class ResetDataServiceAppSecretRequestUpdateCommand extends TeaModel {
         /**
+         * <p>Application ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,6 +54,10 @@ public class ResetDataServiceAppSecretRequest extends TeaModel {
         public Integer appId;
 
         /**
+         * <p>The new application key, which must be globally unique and is used when calling APIs.
+         * The length is 8 to 128 English characters, and can contain digits, underscores (_), and hyphens (-).
+         * Customization is supported only when using Alibaba Cloud API Gateway or the built-in gateway. This configuration is ignored when using a dedicated cloud gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>200000001</p>
          */
@@ -58,6 +65,11 @@ public class ResetDataServiceAppSecretRequest extends TeaModel {
         public String appKey;
 
         /**
+         * <p>The new application secret.
+         * If this parameter is left empty, the system automatically generates a new AppSecret value.
+         * The length is 8 to 127 English characters, and can contain digits, underscores (_), and hyphens (-).
+         * Customization is supported only when using Alibaba Cloud API Gateway or the built-in gateway. This configuration is ignored when using a dedicated cloud gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>abc123456789</p>
          */

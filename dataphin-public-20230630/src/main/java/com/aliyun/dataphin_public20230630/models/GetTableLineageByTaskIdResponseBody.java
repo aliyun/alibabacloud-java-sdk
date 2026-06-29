@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetTableLineageByTaskIdResponseBody extends TeaModel {
     /**
+     * <p>The error code. OK indicates a successful request.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The query results.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetTableLineageByTaskIdResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetTableLineageByTaskIdResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +38,8 @@ public class GetTableLineageByTaskIdResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
@@ -36,6 +47,8 @@ public class GetTableLineageByTaskIdResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class GetTableLineageByTaskIdResponseBody extends TeaModel {
 
     public static class GetTableLineageByTaskIdResponseBodyData extends TeaModel {
         /**
+         * <p>The business unit ID of the input table.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -104,6 +119,8 @@ public class GetTableLineageByTaskIdResponseBody extends TeaModel {
         public Long inputBizUnitId;
 
         /**
+         * <p>The data source ID of the input table.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -111,6 +128,8 @@ public class GetTableLineageByTaskIdResponseBody extends TeaModel {
         public Long inputDataSourceId;
 
         /**
+         * <p>The storage type of the input table.</p>
+         * 
          * <strong>example:</strong>
          * <p>MAX_COMPUTE</p>
          */
@@ -118,6 +137,8 @@ public class GetTableLineageByTaskIdResponseBody extends TeaModel {
         public String inputDataSourceType;
 
         /**
+         * <p>The data source type of the input table.</p>
+         * 
          * <strong>example:</strong>
          * <p>MAX_COMPUTE</p>
          */
@@ -125,6 +146,8 @@ public class GetTableLineageByTaskIdResponseBody extends TeaModel {
         public String inputDbType;
 
         /**
+         * <p>The environment of the input table: DEV or PROD.</p>
+         * 
          * <strong>example:</strong>
          * <p>DEV</p>
          */
@@ -132,16 +155,28 @@ public class GetTableLineageByTaskIdResponseBody extends TeaModel {
         public String inputEnv;
 
         /**
+         * <p>The project ID of the input table.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
         @NameInMap("InputProjectId")
         public Long inputProjectId;
 
+        /**
+         * <p>Indicates whether the input table is deleted.</p>
+         */
         @NameInMap("InputTableDeleted")
         public Boolean inputTableDeleted;
 
         /**
+         * <p>The GUID of the input table. Each asset has a unique GUID in the following format:</p>
+         * <ul>
+         * <li>Logical table: dp_table.[TenantId].[BusinessUnitName].[TableName]</li>
+         * <li>Compute source physical table: [EngineType].[TenantId].[ProjectName].[TableName]</li>
+         * <li>Data source table: dp_ds_table.[TenantId].[DataSourceId].[SchemaName].[TableName]</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>odps.123.test_project.order</p>
          */
@@ -149,6 +184,8 @@ public class GetTableLineageByTaskIdResponseBody extends TeaModel {
         public String inputTableId;
 
         /**
+         * <p>The name of the input table.</p>
+         * 
          * <strong>example:</strong>
          * <p>order</p>
          */
@@ -156,6 +193,21 @@ public class GetTableLineageByTaskIdResponseBody extends TeaModel {
         public String inputTableName;
 
         /**
+         * <p>The type of the input table. </p>
+         * <ul>
+         * <li>PHYSICAL_TABLE Physical table (compute source)</li>
+         * <li>DIM_LOGIC_TABLE Dimension logical table</li>
+         * <li>FACT_LOGIC_TABLE Fact logical table</li>
+         * <li>SUM_LOGIC_TABLE Aggregate logical table</li>
+         * <li>REAL_TIME_LOGIC_TABLE Real-time meta table</li>
+         * <li>REAL_TIME_MIRROR_TABLE Real-time mirror table</li>
+         * <li>PHYSICAL_VIEW Physical view</li>
+         * <li>LOGICAL_VIEW Logical view</li>
+         * <li>DATA_SOURCE_PHYSICAL_TABLE Data source table</li>
+         * <li>DATA_SOURCE_VIEW Data source view</li>
+         * <li>DATA_SOURCE_MATERIALIZED_VIEW Data source materialized view</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PHYSICAL_TABLE</p>
          */
@@ -163,6 +215,8 @@ public class GetTableLineageByTaskIdResponseBody extends TeaModel {
         public String inputTableType;
 
         /**
+         * <p>The business unit ID of the output table.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -170,6 +224,8 @@ public class GetTableLineageByTaskIdResponseBody extends TeaModel {
         public Long outputBizUnitId;
 
         /**
+         * <p>The data source ID of the output table.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -177,6 +233,8 @@ public class GetTableLineageByTaskIdResponseBody extends TeaModel {
         public Long outputDataSourceId;
 
         /**
+         * <p>The storage type of the output table.</p>
+         * 
          * <strong>example:</strong>
          * <p>MAX_COMPUTE</p>
          */
@@ -184,6 +242,8 @@ public class GetTableLineageByTaskIdResponseBody extends TeaModel {
         public String outputDataSourceType;
 
         /**
+         * <p>The data source type of the output table.</p>
+         * 
          * <strong>example:</strong>
          * <p>MAX_COMPUTE</p>
          */
@@ -191,6 +251,8 @@ public class GetTableLineageByTaskIdResponseBody extends TeaModel {
         public String outputDbType;
 
         /**
+         * <p>The environment of the output table: DEV or PROD.</p>
+         * 
          * <strong>example:</strong>
          * <p>DEV/PROD</p>
          */
@@ -198,16 +260,23 @@ public class GetTableLineageByTaskIdResponseBody extends TeaModel {
         public String outputEnv;
 
         /**
+         * <p>The project ID of the output table.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
         @NameInMap("OutputProjectId")
         public Long outputProjectId;
 
+        /**
+         * <p>Indicates whether the output table is deleted.</p>
+         */
         @NameInMap("OutputTableDeleted")
         public Boolean outputTableDeleted;
 
         /**
+         * <p>The GUID of the output table. Each asset has a unique GUID. For the format, see InputTableId.</p>
+         * 
          * <strong>example:</strong>
          * <p>odps.123.test_project.order</p>
          */
@@ -215,6 +284,8 @@ public class GetTableLineageByTaskIdResponseBody extends TeaModel {
         public String outputTableId;
 
         /**
+         * <p>The name of the output table.</p>
+         * 
          * <strong>example:</strong>
          * <p>order</p>
          */
@@ -222,6 +293,8 @@ public class GetTableLineageByTaskIdResponseBody extends TeaModel {
         public String outputTableName;
 
         /**
+         * <p>The type of the output table. For valid values, see InputTableType.</p>
+         * 
          * <strong>example:</strong>
          * <p>PHYSICAL_TABLE</p>
          */
@@ -229,6 +302,8 @@ public class GetTableLineageByTaskIdResponseBody extends TeaModel {
         public String outputTableType;
 
         /**
+         * <p>The environment of the task (node) associated with the lineage: DEV or PROD.</p>
+         * 
          * <strong>example:</strong>
          * <p>DEV</p>
          */
@@ -236,6 +311,8 @@ public class GetTableLineageByTaskIdResponseBody extends TeaModel {
         public String taskEnv;
 
         /**
+         * <p>The task (node) ID associated with the lineage.</p>
+         * 
          * <strong>example:</strong>
          * <p>n_123</p>
          */
@@ -243,6 +320,8 @@ public class GetTableLineageByTaskIdResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The tenant ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>12345</p>
          */

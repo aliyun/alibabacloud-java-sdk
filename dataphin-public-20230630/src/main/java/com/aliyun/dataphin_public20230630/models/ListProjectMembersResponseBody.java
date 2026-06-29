@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListProjectMembersResponseBody extends TeaModel {
     /**
+     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ListProjectMembersResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,16 +23,23 @@ public class ListProjectMembersResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The paging query result.</p>
+     */
     @NameInMap("PageResult")
     public ListProjectMembersResponseBodyPageResult pageResult;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
@@ -36,6 +47,8 @@ public class ListProjectMembersResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class ListProjectMembersResponseBody extends TeaModel {
 
     public static class ListProjectMembersResponseBodyPageResultProjectMemberList extends TeaModel {
         /**
+         * <p>The creation timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1702692675000</p>
          */
@@ -104,6 +119,8 @@ public class ListProjectMembersResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The last modified timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1721720955000</p>
          */
@@ -111,6 +128,8 @@ public class ListProjectMembersResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>12356</p>
          */
@@ -118,6 +137,8 @@ public class ListProjectMembersResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The ID of the user who last modified the record.</p>
+         * 
          * <strong>example:</strong>
          * <p>101111</p>
          */
@@ -125,16 +146,23 @@ public class ListProjectMembersResponseBody extends TeaModel {
         public String lastModifier;
 
         /**
+         * <p>The name of the user who last modified the record.</p>
+         * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>测试用户</p>
          */
         @NameInMap("LastModifierName")
         public String lastModifierName;
 
+        /**
+         * <p>The roles.</p>
+         */
         @NameInMap("RoleIdList")
         public java.util.List<Integer> roleIdList;
 
         /**
+         * <p>The user ID of the member.</p>
+         * 
          * <strong>example:</strong>
          * <p>101111</p>
          */
@@ -142,8 +170,10 @@ public class ListProjectMembersResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>The username of the member.</p>
+         * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>测试用户</p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -220,10 +250,15 @@ public class ListProjectMembersResponseBody extends TeaModel {
     }
 
     public static class ListProjectMembersResponseBodyPageResult extends TeaModel {
+        /**
+         * <p>The list of project members.</p>
+         */
         @NameInMap("ProjectMemberList")
         public java.util.List<ListProjectMembersResponseBodyPageResultProjectMemberList> projectMemberList;
 
         /**
+         * <p>The total number of project members.</p>
+         * 
          * <strong>example:</strong>
          * <p>101</p>
          */

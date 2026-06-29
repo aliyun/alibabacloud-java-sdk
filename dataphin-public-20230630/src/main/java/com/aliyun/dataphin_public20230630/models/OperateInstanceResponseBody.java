@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class OperateInstanceResponseBody extends TeaModel {
     /**
+     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,16 +14,23 @@ public class OperateInstanceResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The O&amp;M results of the instances.</p>
+     */
     @NameInMap("InstanceStatusList")
     public java.util.List<OperateInstanceResponseBodyInstanceStatusList> instanceStatusList;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +38,8 @@ public class OperateInstanceResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
@@ -36,6 +47,8 @@ public class OperateInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -96,10 +109,18 @@ public class OperateInstanceResponseBody extends TeaModel {
     }
 
     public static class OperateInstanceResponseBodyInstanceStatusList extends TeaModel {
+        /**
+         * <p>The display name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx测试</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
+         * <p>The error message returned when the operation fails.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -107,26 +128,44 @@ public class OperateInstanceResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>t_132435</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx测试</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The owner of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>121311</p>
          */
         @NameInMap("OwnerId")
         public String ownerId;
 
+        /**
+         * <p>The owner of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx测试</p>
+         */
         @NameInMap("OwnerName")
         public String ownerName;
 
         /**
+         * <p>The result of the operation, which indicates success or failure.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
          */

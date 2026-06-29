@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitQualityWatchTasksResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class SubmitQualityWatchTasksResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class SubmitQualityWatchTasksResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The details of the backend exception.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -34,9 +40,15 @@ public class SubmitQualityWatchTasksResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The execution result.</p>
+     */
     @NameInMap("SubmitResult")
     public SubmitQualityWatchTasksResponseBodySubmitResult submitResult;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -94,6 +106,9 @@ public class SubmitQualityWatchTasksResponseBody extends TeaModel {
     }
 
     public static class SubmitQualityWatchTasksResponseBodySubmitResult extends TeaModel {
+        /**
+         * <p>The list of quality watchtask IDs.</p>
+         */
         @NameInMap("WatchTaskIdList")
         public java.util.List<Long> watchTaskIdList;
 

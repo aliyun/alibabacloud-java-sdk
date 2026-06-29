@@ -4,10 +4,14 @@ package com.aliyun.dataphin_public20230630.models;
 import com.aliyun.tea.*;
 
 public class AddTenantMembersBySourceUserShrinkRequest extends TeaModel {
+    /**
+     * <p>The add request.</p>
+     */
     @NameInMap("AddCommand")
     public String addCommandShrink;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

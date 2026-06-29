@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetPipelineAsyncResultResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The asynchronous execution result.</p>
+     */
     @NameInMap("Data")
     public GetPipelineAsyncResultResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetPipelineAsyncResultResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error details returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -37,6 +46,9 @@ public class GetPipelineAsyncResultResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -95,6 +107,8 @@ public class GetPipelineAsyncResultResponseBody extends TeaModel {
 
     public static class GetPipelineAsyncResultResponseBodyData extends TeaModel {
         /**
+         * <p>The asynchronous execution query ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -102,6 +116,8 @@ public class GetPipelineAsyncResultResponseBody extends TeaModel {
         public Long asyncId;
 
         /**
+         * <p>The error code returned when the execution fails.</p>
+         * 
          * <strong>example:</strong>
          * <p>DPN.Pipeline.InnerError</p>
          */
@@ -109,6 +125,8 @@ public class GetPipelineAsyncResultResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>The error message returned when the execution fails.</p>
+         * 
          * <strong>example:</strong>
          * <p>NullPointException</p>
          */
@@ -116,6 +134,8 @@ public class GetPipelineAsyncResultResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The information about the server host that processes the execution request.</p>
+         * 
          * <strong>example:</strong>
          * <p>hostName:hostIp</p>
          */
@@ -123,6 +143,8 @@ public class GetPipelineAsyncResultResponseBody extends TeaModel {
         public String hostMachine;
 
         /**
+         * <p>The scheduling node ID of the pipeline task.</p>
+         * 
          * <strong>example:</strong>
          * <p>n_123</p>
          */
@@ -130,6 +152,8 @@ public class GetPipelineAsyncResultResponseBody extends TeaModel {
         public String nodeId;
 
         /**
+         * <p>The primary key ID of the pipeline.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -137,6 +161,13 @@ public class GetPipelineAsyncResultResponseBody extends TeaModel {
         public Long pipelineId;
 
         /**
+         * <p>The current execution status. Valid values:</p>
+         * <ul>
+         * <li>SUCCESS: execution succeeded.</li>
+         * <li>FAILED: execution failed.</li>
+         * <li>RUNNING: execution in progress.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
          */
@@ -144,6 +175,8 @@ public class GetPipelineAsyncResultResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The publish ID generated after the pipeline task is submitted. You can use this ID to publish the task through the publish domain.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -151,6 +184,8 @@ public class GetPipelineAsyncResultResponseBody extends TeaModel {
         public Long submitId;
 
         /**
+         * <p>The version number generated when the pipeline task is submitted.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

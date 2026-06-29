@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetLatestSubmitDetailRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetLatestSubmitDetailRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The pending submit query request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SubmitDetailQuery")
@@ -42,6 +44,7 @@ public class GetLatestSubmitDetailRequest extends TeaModel {
 
     public static class GetLatestSubmitDetailRequestSubmitDetailQuery extends TeaModel {
         /**
+         * <p>The object ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,6 +54,7 @@ public class GetLatestSubmitDetailRequest extends TeaModel {
         public String objectId;
 
         /**
+         * <p>The object type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

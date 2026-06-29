@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetBizMetricByNameResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The details of the business metric.</p>
+     */
     @NameInMap("Data")
     public GetBizMetricByNameResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
@@ -38,6 +47,8 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +110,8 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
 
     public static class GetBizMetricByNameResponseBodyDataAssociatedTechMetrics extends TeaModel {
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>desc</p>
          */
@@ -106,6 +119,8 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The display name.</p>
+         * 
          * <strong>example:</strong>
          * <p>display name</p>
          */
@@ -113,7 +128,7 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>guid</p>
+         * <p>The GUID.</p>
          * 
          * <strong>example:</strong>
          * <p>table1.a.b</p>
@@ -122,6 +137,8 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
         public String guid;
 
         /**
+         * <p>The name.</p>
+         * 
          * <strong>example:</strong>
          * <p>metric3</p>
          */
@@ -129,6 +146,8 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The type of the technical metric. Valid values: INDEX (modeling metric) and CUSTOM_INDEX (custom metric).</p>
+         * 
          * <strong>example:</strong>
          * <p>CUSTOM_INDEX</p>
          */
@@ -184,6 +203,8 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
 
     public static class GetBizMetricByNameResponseBodyDataCatalogs extends TeaModel {
         /**
+         * <p>The catalog description.</p>
+         * 
          * <strong>example:</strong>
          * <p>catalog desc</p>
          */
@@ -191,6 +212,8 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
         public String catalogDesc;
 
         /**
+         * <p>The catalog ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1561740764851842</p>
          */
@@ -198,6 +221,8 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
         public Long catalogId;
 
         /**
+         * <p>The catalog name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test catalog</p>
          */
@@ -205,6 +230,8 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
         public String catalogName;
 
         /**
+         * <p>The parent catalog ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1561740764851841</p>
          */
@@ -212,6 +239,8 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
         public Long parentCatalogId;
 
         /**
+         * <p>The parent path of the catalog.</p>
+         * 
          * <strong>example:</strong>
          * <p>/catalog1/</p>
          */
@@ -219,6 +248,8 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
         public String parentPath;
 
         /**
+         * <p>The topic ID to which the catalog belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>43297700</p>
          */
@@ -226,6 +257,8 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
         public Long topicId;
 
         /**
+         * <p>The topic name to which the catalog belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>test topic</p>
          */
@@ -297,12 +330,17 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
 
     public static class GetBizMetricByNameResponseBodyDataCustomAttribute extends TeaModel {
         /**
+         * <p>The code of the custom attribute.</p>
+         * 
          * <strong>example:</strong>
          * <p>CustomAttributeCode</p>
          */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The list of attribute values. 1. For custom input and single-select dropdown attributes, the first value in the list is used. 2. For multi-select dropdown attributes, all values in the list are used. 3. For hyperlink attributes, the first value is the display text and the second value is the link URL.</p>
+         */
         @NameInMap("Values")
         public java.util.List<String> values;
 
@@ -331,6 +369,8 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
 
     public static class GetBizMetricByNameResponseBodyDataRelatedBizMetrics extends TeaModel {
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>desc</p>
          */
@@ -338,6 +378,8 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The display name.</p>
+         * 
          * <strong>example:</strong>
          * <p>display name</p>
          */
@@ -345,7 +387,7 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>guid</p>
+         * <p>The GUID.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -354,6 +396,8 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
         public String guid;
 
         /**
+         * <p>The name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Metric2</p>
          */
@@ -361,6 +405,8 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The relation type. Valid values: POSITIVE (positive correlation), NEGATIVE (negative correlation), and OTHER (other).</p>
+         * 
          * <strong>example:</strong>
          * <p>POSITIVE</p>
          */
@@ -416,15 +462,23 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
 
     public static class GetBizMetricByNameResponseBodyDataViewScope extends TeaModel {
         /**
+         * <p>The type of view scope. Valid values: ALL_USERS_CAN_VIEW (visible to all users), PART_USERS_CAN_VIEW (visible to specific users), and PART_USERS_CAN_NOT_VIEW (invisible to specific users).</p>
+         * 
          * <strong>example:</strong>
          * <p>PART_USERS_CAN_NOT_VIEW</p>
          */
         @NameInMap("ScopeType")
         public String scopeType;
 
+        /**
+         * <p>The names of user groups. This parameter takes effect only when the view scope is set to PART_USERS_CAN_VIEW or PART_USERS_CAN_NOT_VIEW.</p>
+         */
         @NameInMap("UserGroupNames")
         public java.util.List<String> userGroupNames;
 
+        /**
+         * <p>The usernames of individual accounts. This parameter is valid only when the view scope is set to PART_USERS_CAN_VIEW or PART_USERS_CAN_NOT_VIEW.</p>
+         */
         @NameInMap("UserNames")
         public java.util.List<String> userNames;
 
@@ -460,23 +514,36 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
     }
 
     public static class GetBizMetricByNameResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of associated technical metrics.</p>
+         */
         @NameInMap("AssociatedTechMetrics")
         public java.util.List<GetBizMetricByNameResponseBodyDataAssociatedTechMetrics> associatedTechMetrics;
 
         /**
+         * <p>The name of the business owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>SuperAdmin</p>
          */
         @NameInMap("BizOwnerName")
         public String bizOwnerName;
 
+        /**
+         * <p>The list of affiliated catalogs.</p>
+         */
         @NameInMap("Catalogs")
         public java.util.List<GetBizMetricByNameResponseBodyDataCatalogs> catalogs;
 
+        /**
+         * <p>The list of custom attributes.</p>
+         */
         @NameInMap("CustomAttribute")
         public java.util.List<GetBizMetricByNameResponseBodyDataCustomAttribute> customAttribute;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>Metric Desc</p>
          */
@@ -484,6 +551,8 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The display name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Metric Display Name</p>
          */
@@ -491,16 +560,23 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
         public String displayName;
 
         /**
+         * <p>The GUID of the business metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>guid</p>
          */
         @NameInMap("Guid")
         public String guid;
 
+        /**
+         * <p>The list of labels.</p>
+         */
         @NameInMap("Labels")
         public java.util.List<String> labels;
 
         /**
+         * <p>The metric definition.</p>
+         * 
          * <strong>example:</strong>
          * <p>[Metric1]+[Metric2]</p>
          */
@@ -508,6 +584,8 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
         public String metricDefinition;
 
         /**
+         * <p>The expression of the metric relation diagram.</p>
+         * 
          * <strong>example:</strong>
          * <p>[Metric2]*10</p>
          */
@@ -515,6 +593,8 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
         public String metricRelationDiagramExpression;
 
         /**
+         * <p>Indicates whether the metric relation diagram is enabled. A value of true indicates that the diagram is enabled. A value of false indicates that the diagram is disabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -522,6 +602,8 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
         public Boolean metricRelationDiagramSwitchOpen;
 
         /**
+         * <p>The name of the business metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>Metric1</p>
          */
@@ -529,6 +611,8 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The text content of the operation instruction.</p>
+         * 
          * <strong>example:</strong>
          * <p>content</p>
          */
@@ -536,22 +620,32 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
         public String operateInstructionContent;
 
         /**
+         * <p>Indicates whether the operation instruction is enabled. A value of true indicates that the operation instruction is enabled. A value of false indicates that the operation instruction is disabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("OperateInstructionEnabled")
         public Boolean operateInstructionEnabled;
 
+        /**
+         * <p>The list of related business metrics.</p>
+         */
         @NameInMap("RelatedBizMetrics")
         public java.util.List<GetBizMetricByNameResponseBodyDataRelatedBizMetrics> relatedBizMetrics;
 
         /**
+         * <p>The tenant ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>30001011</p>
          */
         @NameInMap("TenantId")
         public Long tenantId;
 
+        /**
+         * <p>The view scope.</p>
+         */
         @NameInMap("ViewScope")
         public GetBizMetricByNameResponseBodyDataViewScope viewScope;
 

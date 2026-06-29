@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetMyTenantsResponseBody extends TeaModel {
     /**
+     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class GetMyTenantsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class GetMyTenantsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -26,6 +32,8 @@ public class GetMyTenantsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
@@ -33,12 +41,17 @@ public class GetMyTenantsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The list of tenants.</p>
+     */
     @NameInMap("TenantList")
     public java.util.List<GetMyTenantsResponseBodyTenantList> tenantList;
 
@@ -97,6 +110,8 @@ public class GetMyTenantsResponseBody extends TeaModel {
 
     public static class GetMyTenantsResponseBodyTenantList extends TeaModel {
         /**
+         * <p>The time when the tenant was deleted.</p>
+         * 
          * <strong>example:</strong>
          * <p>1717343597000</p>
          */
@@ -104,26 +119,44 @@ public class GetMyTenantsResponseBody extends TeaModel {
         public Long deleteTime;
 
         /**
+         * <p>Indicates whether the tenant is deleted.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("Deleted")
         public Boolean deleted;
 
+        /**
+         * <p>The tenant description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx 测试</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The tenant ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>132311</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The tenant name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx测试</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>Indicates whether the tenant is an O&amp;M tenant.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -131,6 +164,8 @@ public class GetMyTenantsResponseBody extends TeaModel {
         public Boolean opsTenant;
 
         /**
+         * <p>The ID of the user to whom the tenant belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>21323231</p>
          */
@@ -138,16 +173,23 @@ public class GetMyTenantsResponseBody extends TeaModel {
         public String ownerId;
 
         /**
+         * <p>Indicates whether resource quota calculation is performed.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("ResourceLimited")
         public Boolean resourceLimited;
 
+        /**
+         * <p>The tenant types.</p>
+         */
         @NameInMap("TenantTypeList")
         public java.util.List<String> tenantTypeList;
 
         /**
+         * <p>The title type of the tenant.</p>
+         * 
          * <strong>example:</strong>
          * <p>icon</p>
          */
@@ -155,6 +197,8 @@ public class GetMyTenantsResponseBody extends TeaModel {
         public String titleType;
 
         /**
+         * <p>Indicates whether the tenant is visible.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

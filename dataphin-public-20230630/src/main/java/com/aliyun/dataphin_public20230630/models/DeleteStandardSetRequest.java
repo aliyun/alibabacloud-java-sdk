@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteStandardSetRequest extends TeaModel {
     /**
+     * <p>The standard set ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteStandardSetRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

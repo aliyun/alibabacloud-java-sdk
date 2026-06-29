@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateBizMetricRequest extends TeaModel {
     /**
+     * <p>The create request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CreateBizMetricCommand")
     public CreateBizMetricRequestCreateBizMetricCommand createBizMetricCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,12 +44,17 @@ public class CreateBizMetricRequest extends TeaModel {
 
     public static class CreateBizMetricRequestCreateBizMetricCommandCustomAttribute extends TeaModel {
         /**
+         * <p>The code of the custom attribute.</p>
+         * 
          * <strong>example:</strong>
          * <p>CustomAttributeCode</p>
          */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The list of attribute values. 1. For custom input and single-select dropdown attributes, only the first value in the list is read. 2. For multi-select dropdown attributes, all values in the list are read. 3. For hyperlink attributes, the first value is used as the display text and the second value is used as the redirect link.</p>
+         */
         @NameInMap("Values")
         public java.util.List<String> values;
 
@@ -76,6 +83,8 @@ public class CreateBizMetricRequest extends TeaModel {
 
     public static class CreateBizMetricRequestCreateBizMetricCommandRelatedBizMetrics extends TeaModel {
         /**
+         * <p>The metric name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Metric2</p>
          */
@@ -83,6 +92,13 @@ public class CreateBizMetricRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The relationship type. Valid values:</p>
+         * <ul>
+         * <li>POSITIVE: positive correlation.</li>
+         * <li>NEGATIVE: negative correlation.</li>
+         * <li>OTHER: other.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>POSITIVE</p>
          */
@@ -114,15 +130,28 @@ public class CreateBizMetricRequest extends TeaModel {
 
     public static class CreateBizMetricRequestCreateBizMetricCommandViewScope extends TeaModel {
         /**
+         * <p>The visibility scope type. Valid values:</p>
+         * <ul>
+         * <li>ALL_USERS_CAN_VIEW: visible to all users.</li>
+         * <li>PART_USERS_CAN_VIEW: visible to specified users.</li>
+         * <li>PART_USERS_CAN_NOT_VIEW: not visible to specified users.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PART_USERS_CAN_VIEW</p>
          */
         @NameInMap("ScopeType")
         public String scopeType;
 
+        /**
+         * <p>The names of user groups. This parameter is read only when the visibility scope is set to PART_USERS_CAN_VIEW or PART_USERS_CAN_NOT_VIEW.</p>
+         */
         @NameInMap("UserGroupNames")
         public java.util.List<String> userGroupNames;
 
+        /**
+         * <p>The usernames of individual accounts. This parameter takes effect only when the visibility scope is set to PART_USERS_CAN_VIEW or PART_USERS_CAN_NOT_VIEW.</p>
+         */
         @NameInMap("UserNames")
         public java.util.List<String> userNames;
 
@@ -158,23 +187,36 @@ public class CreateBizMetricRequest extends TeaModel {
     }
 
     public static class CreateBizMetricRequestCreateBizMetricCommand extends TeaModel {
+        /**
+         * <p>The list of full names of associated technical metrics. Enter the full name in the format of &quot;OwnerTableFullName.MetricName&quot;, where &quot;OwnerTableFullName&quot; equals &quot;AssetSource.OwnerTableName&quot;. A technical metric can be associated with only one business metric and cannot be associated repeatedly.</p>
+         */
         @NameInMap("AssociatedTechMetricFullNames")
         public java.util.List<String> associatedTechMetricFullNames;
 
         /**
+         * <p>The name of the business owner. Enter the username of the owner account.</p>
+         * 
          * <strong>example:</strong>
          * <p>SuperAdmin</p>
          */
         @NameInMap("BizOwnerName")
         public String bizOwnerName;
 
+        /**
+         * <p>The IDs of the folders to which the metric belongs.</p>
+         */
         @NameInMap("CatalogIds")
         public java.util.List<Long> catalogIds;
 
+        /**
+         * <p>The custom attributes.</p>
+         */
         @NameInMap("CustomAttribute")
         public java.util.List<CreateBizMetricRequestCreateBizMetricCommandCustomAttribute> customAttribute;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>MetricDesc</p>
          */
@@ -182,16 +224,23 @@ public class CreateBizMetricRequest extends TeaModel {
         public String description;
 
         /**
+         * <p>The display name.</p>
+         * 
          * <strong>example:</strong>
          * <p>MetricDisplayName</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The asset labels.</p>
+         */
         @NameInMap("Labels")
         public java.util.List<String> labels;
 
         /**
+         * <p>The metric definition. To reference other business metrics, enclose the metric name in square brackets [ ].</p>
+         * 
          * <strong>example:</strong>
          * <p>[Metric1]+[Metric2]</p>
          */
@@ -199,6 +248,8 @@ public class CreateBizMetricRequest extends TeaModel {
         public String metricDefinition;
 
         /**
+         * <p>This parameter is read only when the metric relationship diagram is enabled. Enter a calculation expression composed of metric names selected from the related business metrics. Supported operators include +, -, *, /, (, ), %, and ∑. Each metric name must be enclosed in square brackets [ ]. If no operator is specified between two metrics, the system automatically inserts a padding placeholder. If no metric relational expression is configured, the metric relationship diagram switch is automatically shutdown.</p>
+         * 
          * <strong>example:</strong>
          * <p>[Metric1]+[Metric2]</p>
          */
@@ -206,6 +257,13 @@ public class CreateBizMetricRequest extends TeaModel {
         public String metricRelationDiagramExpression;
 
         /**
+         * <p>Specifies whether to enable the metric relationship diagram. Valid values:</p>
+         * <ul>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
+         * </ul>
+         * <p>This parameter can be set to true only when at least one related business metric exists. Otherwise, the diagram is automatically disabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -213,6 +271,7 @@ public class CreateBizMetricRequest extends TeaModel {
         public Boolean metricRelationDiagramSwitchOpen;
 
         /**
+         * <p>The name of the business metric. The name must be unique within the tenant. The name can contain letters, digits, and the following special characters: -_/\·#$^&amp;*()%+=. The name can be up to 256 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -222,6 +281,8 @@ public class CreateBizMetricRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The content of the operation instructions. Only text format is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>content</p>
          */
@@ -229,15 +290,27 @@ public class CreateBizMetricRequest extends TeaModel {
         public String operateInstructionContent;
 
         /**
+         * <p>Specifies whether to enable the operation instructions. Valid values:</p>
+         * <ul>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("OperateInstructionEnabled")
         public Boolean operateInstructionEnabled;
 
+        /**
+         * <p>The list of related business metrics. Enter the names of related business metrics and their relationships.</p>
+         */
         @NameInMap("RelatedBizMetrics")
         public java.util.List<CreateBizMetricRequestCreateBizMetricCommandRelatedBizMetrics> relatedBizMetrics;
 
+        /**
+         * <p>The visibility scope.</p>
+         */
         @NameInMap("ViewScope")
         public CreateBizMetricRequestCreateBizMetricCommandViewScope viewScope;
 

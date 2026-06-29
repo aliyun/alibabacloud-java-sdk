@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ExecuteAdHocTaskShrinkRequest extends TeaModel {
     /**
+     * <p>The execution command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ExecuteCommand")
     public String executeCommandShrink;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

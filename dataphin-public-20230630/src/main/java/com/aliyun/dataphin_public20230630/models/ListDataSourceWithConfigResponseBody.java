@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDataSourceWithConfigResponseBody extends TeaModel {
     /**
+     * <p>Error code. OK indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,16 +23,23 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Query result.</p>
+     */
     @NameInMap("PageResult")
     public ListDataSourceWithConfigResponseBodyPageResult pageResult;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
@@ -36,6 +47,8 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the request was successful</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
 
     public static class ListDataSourceWithConfigResponseBodyPageResultDataSourceListDevDataSourceInfoConfigItemList extends TeaModel {
         /**
+         * <p>Configuration item ID</p>
+         * 
          * <strong>example:</strong>
          * <p>param1</p>
          */
@@ -104,6 +119,8 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>Configuration item value</p>
+         * 
          * <strong>example:</strong>
          * <p>value1</p>
          */
@@ -134,10 +151,15 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
     }
 
     public static class ListDataSourceWithConfigResponseBodyPageResultDataSourceListDevDataSourceInfo extends TeaModel {
+        /**
+         * <p>Connection configuration items</p>
+         */
         @NameInMap("ConfigItemList")
         public java.util.List<ListDataSourceWithConfigResponseBodyPageResultDataSourceListDevDataSourceInfoConfigItemList> configItemList;
 
         /**
+         * <p>Creation time</p>
+         * 
          * <strong>example:</strong>
          * <p>1710209552704</p>
          */
@@ -145,19 +167,35 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>Creator ID</p>
+         * 
          * <strong>example:</strong>
          * <p>212211111</p>
          */
         @NameInMap("Creator")
         public String creator;
 
+        /**
+         * <p>Creator name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("CreatorName")
         public String creatorName;
 
+        /**
+         * <p>Description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx 项目</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Environment of the data source</p>
+         * 
          * <strong>example:</strong>
          * <p>DEV</p>
          */
@@ -165,6 +203,8 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
         public String env;
 
         /**
+         * <p>Data source ID</p>
+         * 
          * <strong>example:</strong>
          * <p>12313123131</p>
          */
@@ -172,26 +212,44 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>Modification time</p>
+         * 
          * <strong>example:</strong>
          * <p>1710209552704</p>
          */
         @NameInMap("ModifyTime")
         public Long modifyTime;
 
+        /**
+         * <p>Data source name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx测试</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>Owner ID</p>
+         * 
          * <strong>example:</strong>
          * <p>212211111</p>
          */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <p>Owner name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("OwnerName")
         public String ownerName;
 
         /**
+         * <p>Data source scope</p>
+         * 
          * <strong>example:</strong>
          * <p>ALL</p>
          */
@@ -199,6 +257,8 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
         public String scope;
 
         /**
+         * <p>Data source type</p>
+         * 
          * <strong>example:</strong>
          * <p>MAX_COMPUTE</p>
          */
@@ -318,6 +378,8 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
 
     public static class ListDataSourceWithConfigResponseBodyPageResultDataSourceListProdDataSourceInfoConfigItemList extends TeaModel {
         /**
+         * <p>Configuration item ID</p>
+         * 
          * <strong>example:</strong>
          * <p>param1</p>
          */
@@ -325,6 +387,8 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>Configuration item value</p>
+         * 
          * <strong>example:</strong>
          * <p>value1</p>
          */
@@ -355,10 +419,15 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
     }
 
     public static class ListDataSourceWithConfigResponseBodyPageResultDataSourceListProdDataSourceInfo extends TeaModel {
+        /**
+         * <p>Connection configuration items</p>
+         */
         @NameInMap("ConfigItemList")
         public java.util.List<ListDataSourceWithConfigResponseBodyPageResultDataSourceListProdDataSourceInfoConfigItemList> configItemList;
 
         /**
+         * <p>Creation time</p>
+         * 
          * <strong>example:</strong>
          * <p>1708303959000</p>
          */
@@ -366,19 +435,35 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>Creator ID</p>
+         * 
          * <strong>example:</strong>
          * <p>212211111</p>
          */
         @NameInMap("Creator")
         public String creator;
 
+        /**
+         * <p>Creator name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("CreatorName")
         public String creatorName;
 
+        /**
+         * <p>Description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx 测试</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Environment of the data source</p>
+         * 
          * <strong>example:</strong>
          * <p>PROD</p>
          */
@@ -386,6 +471,8 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
         public String env;
 
         /**
+         * <p>Data source ID</p>
+         * 
          * <strong>example:</strong>
          * <p>300000028799</p>
          */
@@ -393,26 +480,44 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>Modification time</p>
+         * 
          * <strong>example:</strong>
          * <p>1708303959000</p>
          */
         @NameInMap("ModifyTime")
         public Long modifyTime;
 
+        /**
+         * <p>Data source name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx测试</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>Owner ID</p>
+         * 
          * <strong>example:</strong>
          * <p>212211111</p>
          */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <p>Owner name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("OwnerName")
         public String ownerName;
 
         /**
+         * <p>Data source scope</p>
+         * 
          * <strong>example:</strong>
          * <p>ALL</p>
          */
@@ -420,6 +525,8 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
         public String scope;
 
         /**
+         * <p>Data source type</p>
+         * 
          * <strong>example:</strong>
          * <p>MAX_COMPUTE</p>
          */
@@ -539,13 +646,13 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
 
     public static class ListDataSourceWithConfigResponseBodyPageResultDataSourceList extends TeaModel {
         /**
-         * <p>开发环境数据源信息</p>
+         * <p>Development environment data source</p>
          */
         @NameInMap("DevDataSourceInfo")
         public ListDataSourceWithConfigResponseBodyPageResultDataSourceListDevDataSourceInfo devDataSourceInfo;
 
         /**
-         * <p>生产环境数据源</p>
+         * <p>Production environment data source</p>
          */
         @NameInMap("ProdDataSourceInfo")
         public ListDataSourceWithConfigResponseBodyPageResultDataSourceListProdDataSourceInfo prodDataSourceInfo;
@@ -574,10 +681,15 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
     }
 
     public static class ListDataSourceWithConfigResponseBodyPageResult extends TeaModel {
+        /**
+         * <p>Paginated list</p>
+         */
         @NameInMap("DataSourceList")
         public java.util.List<ListDataSourceWithConfigResponseBodyPageResultDataSourceList> dataSourceList;
 
         /**
+         * <p>Total number of records</p>
+         * 
          * <strong>example:</strong>
          * <p>39</p>
          */

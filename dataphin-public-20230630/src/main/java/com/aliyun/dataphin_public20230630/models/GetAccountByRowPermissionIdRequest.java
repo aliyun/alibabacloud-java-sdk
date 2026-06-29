@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class GetAccountByRowPermissionIdRequest extends TeaModel {
     /**
+     * <p>The request command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("GetAccountByRowPermissionIdQuery")
     public GetAccountByRowPermissionIdRequestGetAccountByRowPermissionIdQuery getAccountByRowPermissionIdQuery;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,7 @@ public class GetAccountByRowPermissionIdRequest extends TeaModel {
 
     public static class GetAccountByRowPermissionIdRequestGetAccountByRowPermissionIdQuery extends TeaModel {
         /**
+         * <p>The row-level permission ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,6 +54,7 @@ public class GetAccountByRowPermissionIdRequest extends TeaModel {
         public Long rowPermissionId;
 
         /**
+         * <p>The row-level permission rule IDs.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("RuleIds")

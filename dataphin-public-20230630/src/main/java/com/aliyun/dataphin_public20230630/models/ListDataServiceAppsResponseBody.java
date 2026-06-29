@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListDataServiceAppsResponseBody extends TeaModel {
     /**
+     * <p>Backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The list of all applications under the tenant.</p>
+     */
     @NameInMap("Data")
     public ListDataServiceAppsResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListDataServiceAppsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Details of the backend exception.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -37,6 +46,9 @@ public class ListDataServiceAppsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -95,6 +107,8 @@ public class ListDataServiceAppsResponseBody extends TeaModel {
 
     public static class ListDataServiceAppsResponseBodyDataAppListOwnerList extends TeaModel {
         /**
+         * <p>User ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>12345</p>
          */
@@ -102,6 +116,8 @@ public class ListDataServiceAppsResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>Username.</p>
+         * 
          * <strong>example:</strong>
          * <p>张三</p>
          */
@@ -133,6 +149,8 @@ public class ListDataServiceAppsResponseBody extends TeaModel {
 
     public static class ListDataServiceAppsResponseBodyDataAppList extends TeaModel {
         /**
+         * <p>Application group name.</p>
+         * 
          * <strong>example:</strong>
          * <p>默认分组</p>
          */
@@ -140,6 +158,8 @@ public class ListDataServiceAppsResponseBody extends TeaModel {
         public String appGroup;
 
         /**
+         * <p>Application ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>12345</p>
          */
@@ -147,15 +167,23 @@ public class ListDataServiceAppsResponseBody extends TeaModel {
         public Integer appId;
 
         /**
+         * <p>Application name.</p>
+         * 
          * <strong>example:</strong>
          * <p>默认应用</p>
          */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>Indicates whether the current user has joined the application.</p>
+         */
         @NameInMap("IsMember")
         public Boolean isMember;
 
+        /**
+         * <p>Owner list.</p>
+         */
         @NameInMap("OwnerList")
         public java.util.List<ListDataServiceAppsResponseBodyDataAppListOwnerList> ownerList;
 
@@ -207,10 +235,15 @@ public class ListDataServiceAppsResponseBody extends TeaModel {
     }
 
     public static class ListDataServiceAppsResponseBodyData extends TeaModel {
+        /**
+         * <p>Application list.</p>
+         */
         @NameInMap("AppList")
         public java.util.List<ListDataServiceAppsResponseBodyDataAppList> appList;
 
         /**
+         * <p>Total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>68</p>
          */

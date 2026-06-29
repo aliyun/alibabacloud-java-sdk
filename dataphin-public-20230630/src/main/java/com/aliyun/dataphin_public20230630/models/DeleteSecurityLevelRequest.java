@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteSecurityLevelRequest extends TeaModel {
     /**
+     * <p>The delete instruction.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeleteCommand")
     public DeleteSecurityLevelRequestDeleteCommand deleteCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,8 @@ public class DeleteSecurityLevelRequest extends TeaModel {
 
     public static class DeleteSecurityLevelRequestDeleteCommand extends TeaModel {
         /**
+         * <p>The sensitivity level of the classification level. If this parameter is not specified, the classification level is deleted based on an exact match of the classification level name.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -49,6 +53,8 @@ public class DeleteSecurityLevelRequest extends TeaModel {
         public Long index;
 
         /**
+         * <p>The classification level name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveQualityRuleSchedulesRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class RemoveQualityRuleSchedulesRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The unbinding instruction.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RemoveCommand")
@@ -42,6 +44,7 @@ public class RemoveQualityRuleSchedulesRequest extends TeaModel {
 
     public static class RemoveQualityRuleSchedulesRequestRemoveCommand extends TeaModel {
         /**
+         * <p>The rule ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,12 +54,14 @@ public class RemoveQualityRuleSchedulesRequest extends TeaModel {
         public Long ruleId;
 
         /**
+         * <p>The schedule IDs.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("ScheduleIdList")
         public java.util.List<Long> scheduleIdList;
 
         /**
+         * <p>The ID of the monitored object.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

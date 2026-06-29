@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class OfflineBizEntityShrinkRequest extends TeaModel {
     /**
+     * <p>Offline request</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("OfflineCommand")
     public String offlineCommandShrink;
 
     /**
+     * <p>Tenant ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

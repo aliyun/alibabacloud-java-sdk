@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListAlertEventsRequest extends TeaModel {
     /**
+     * <p>The query request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ListQuery")
     public ListAlertEventsRequestListQuery listQuery;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,7 @@ public class ListAlertEventsRequest extends TeaModel {
 
     public static class ListAlertEventsRequestListQuery extends TeaModel {
         /**
+         * <p>The end date of the alert.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -50,13 +53,20 @@ public class ListAlertEventsRequest extends TeaModel {
         @NameInMap("AlertEndTime")
         public String alertEndTime;
 
+        /**
+         * <p>The list of alert object types.</p>
+         */
         @NameInMap("AlertObjectTypeList")
         public java.util.List<String> alertObjectTypeList;
 
+        /**
+         * <p>The list of alert reasons.</p>
+         */
         @NameInMap("AlertReasonList")
         public java.util.List<String> alertReasonList;
 
         /**
+         * <p>The start date of the alert.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -65,20 +75,29 @@ public class ListAlertEventsRequest extends TeaModel {
         @NameInMap("AlertStartTime")
         public String alertStartTime;
 
+        /**
+         * <p>The list of business units.</p>
+         */
         @NameInMap("BizNameList")
         public java.util.List<String> bizNameList;
 
         /**
+         * <p>The keyword for the query.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("Keyword")
         public String keyword;
 
+        /**
+         * <p>The list of monitored item IDs.</p>
+         */
         @NameInMap("MonitoredItemIdList")
         public java.util.List<String> monitoredItemIdList;
 
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,6 +107,7 @@ public class ListAlertEventsRequest extends TeaModel {
         public Integer page;
 
         /**
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -96,10 +116,25 @@ public class ListAlertEventsRequest extends TeaModel {
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The list of projects.</p>
+         */
         @NameInMap("ProjectNameList")
         public java.util.List<String> projectNameList;
 
         /**
+         * <p>The source system. Valid values:</p>
+         * <ul>
+         * <li>ALL: all</li>
+         * <li>DQE: data quality</li>
+         * <li>OS: data service</li>
+         * <li>STREAM: real-time computing</li>
+         * <li>VDM_BATCH: offline computing</li>
+         * <li>SOP: O&amp;M platform</li>
+         * <li>REAL_TIME_PIPELINE: real-time integration</li>
+         * <li>KGB: baseline monitoring</li>
+         * </ul>
+         * <p>and more.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -108,9 +143,15 @@ public class ListAlertEventsRequest extends TeaModel {
         @NameInMap("SourceSystem")
         public String sourceSystem;
 
+        /**
+         * <p>The list of alert statuses.</p>
+         */
         @NameInMap("StatusList")
         public java.util.List<String> statusList;
 
+        /**
+         * <p>The list of alert contact IDs.</p>
+         */
         @NameInMap("UserIdList")
         public java.util.List<String> userIdList;
 

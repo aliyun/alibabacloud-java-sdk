@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SyncDepartmentShrinkRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class SyncDepartmentShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The request command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SyncDepartmentCommand")

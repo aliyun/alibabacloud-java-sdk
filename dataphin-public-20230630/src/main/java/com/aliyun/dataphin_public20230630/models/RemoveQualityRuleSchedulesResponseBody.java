@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RemoveQualityRuleSchedulesResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class RemoveQualityRuleSchedulesResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The request result.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class RemoveQualityRuleSchedulesResponseBody extends TeaModel {
     public Integer data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class RemoveQualityRuleSchedulesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The details of the backend exception.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -41,6 +49,9 @@ public class RemoveQualityRuleSchedulesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

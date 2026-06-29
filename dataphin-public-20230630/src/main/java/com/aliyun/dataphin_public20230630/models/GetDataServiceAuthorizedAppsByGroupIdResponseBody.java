@@ -4,10 +4,15 @@ package com.aliyun.dataphin_public20230630.models;
 import com.aliyun.tea.*;
 
 public class GetDataServiceAuthorizedAppsByGroupIdResponseBody extends TeaModel {
+    /**
+     * <p>The list of API groups.</p>
+     */
     @NameInMap("AppInfoList")
     public java.util.List<GetDataServiceAuthorizedAppsByGroupIdResponseBodyAppInfoList> appInfoList;
 
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -15,6 +20,8 @@ public class GetDataServiceAuthorizedAppsByGroupIdResponseBody extends TeaModel 
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetDataServiceAuthorizedAppsByGroupIdResponseBody extends TeaModel 
     public Integer httpStatusCode;
 
     /**
+     * <p>The details of the backend exception.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -37,6 +46,9 @@ public class GetDataServiceAuthorizedAppsByGroupIdResponseBody extends TeaModel 
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -95,16 +107,21 @@ public class GetDataServiceAuthorizedAppsByGroupIdResponseBody extends TeaModel 
 
     public static class GetDataServiceAuthorizedAppsByGroupIdResponseBodyAppInfoList extends TeaModel {
         /**
-         * <p>AppKey</p>
+         * <p>The application key.</p>
+         * <blockquote>
+         * <p>Notice: Deprecated. Use AppKeyStr instead.</notice>.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>202212</p>
+         * <p>12345</p>
          */
         @NameInMap("AppKey")
         @Deprecated
         public Long appKey;
 
         /**
+         * <p>The application key.</p>
+         * 
          * <strong>example:</strong>
          * <p>app12345</p>
          */
@@ -121,6 +138,8 @@ public class GetDataServiceAuthorizedAppsByGroupIdResponseBody extends TeaModel 
         public Integer id;
 
         /**
+         * <p>The app name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */

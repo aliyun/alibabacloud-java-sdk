@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListTenantMembersShrinkRequest extends TeaModel {
     /**
+     * <p>The request object.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ListQuery")
     public String listQueryShrink;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

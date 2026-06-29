@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateDataServiceAppShrinkRequest extends TeaModel {
     /**
+     * <p>The command to create a data service application.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CreateCommand")
     public String createCommandShrink;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

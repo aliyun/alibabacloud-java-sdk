@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ParseBatchTaskDependencyRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ParseBatchTaskDependencyRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The parse request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ParseCommand")
@@ -42,6 +44,7 @@ public class ParseBatchTaskDependencyRequest extends TeaModel {
 
     public static class ParseBatchTaskDependencyRequestParseCommand extends TeaModel {
         /**
+         * <p>The SQL code to be parsed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,6 +54,8 @@ public class ParseBatchTaskDependencyRequest extends TeaModel {
         public String code;
 
         /**
+         * <p>The catalog for a database SQL node. This parameter takes effect only for data source types that require a catalog, such as Presto.</p>
+         * 
          * <strong>example:</strong>
          * <p>mysql_catalog</p>
          */
@@ -58,6 +63,8 @@ public class ParseBatchTaskDependencyRequest extends TeaModel {
         public String dataSourceCatalog;
 
         /**
+         * <p>The data source ID for a database SQL node.</p>
+         * 
          * <strong>example:</strong>
          * <p>12131111</p>
          */
@@ -65,19 +72,28 @@ public class ParseBatchTaskDependencyRequest extends TeaModel {
         public Long dataSourceId;
 
         /**
+         * <p>The schema for a database SQL node. This parameter takes effect only for data source types that require a schema, such as Oracle.</p>
+         * 
          * <strong>example:</strong>
          * <p>erp</p>
          */
         @NameInMap("DataSourceSchema")
         public String dataSourceSchema;
 
+        /**
+         * <p>Specifies whether to include dependency information for input tables that have no corresponding nodes. Default value: false.</p>
+         */
         @NameInMap("IncludeAllInputTables")
         public Boolean includeAllInputTables;
 
+        /**
+         * <p>Specifies whether to query data lineage when querying upstream dependencies. Default value: false.</p>
+         */
         @NameInMap("NeedQueryLineages")
         public Boolean needQueryLineages;
 
         /**
+         * <p>The node type, such as MAX_COMPUTE_SQL.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +103,7 @@ public class ParseBatchTaskDependencyRequest extends TeaModel {
         public String operatorType;
 
         /**
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

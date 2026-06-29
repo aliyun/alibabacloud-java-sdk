@@ -4,10 +4,14 @@ package com.aliyun.dataphin_public20230630.models;
 import com.aliyun.tea.*;
 
 public class GetTableLineagesShrinkRequest extends TeaModel {
+    /**
+     * <p>The filter conditions.</p>
+     */
     @NameInMap("FilterQuery")
     public String filterQueryShrink;
 
     /**
+     * <p>Tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +21,7 @@ public class GetTableLineagesShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The GUID of the table, which is the unique identifier of each asset.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

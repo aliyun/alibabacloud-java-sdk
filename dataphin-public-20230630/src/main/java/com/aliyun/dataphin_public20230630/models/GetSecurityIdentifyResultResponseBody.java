@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetSecurityIdentifyResultResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The details of the backend exception.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -34,9 +40,15 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The identification result details.</p>
+     */
     @NameInMap("SecurityIdentifyResultInfo")
     public GetSecurityIdentifyResultResponseBodySecurityIdentifyResultInfo securityIdentifyResultInfo;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -95,6 +107,8 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
 
     public static class GetSecurityIdentifyResultResponseBodySecurityIdentifyResultInfo extends TeaModel {
         /**
+         * <p>The business date.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-30</p>
          */
@@ -102,6 +116,8 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
         public String bizDate;
 
         /**
+         * <p>The display name of the business unit in Chinese.</p>
+         * 
          * <strong>example:</strong>
          * <p>LD_test</p>
          */
@@ -109,6 +125,8 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
         public String bizUnitDisplayName;
 
         /**
+         * <p>The business unit ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -116,6 +134,8 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
         public Long bizUnitId;
 
         /**
+         * <p>The business unit name.</p>
+         * 
          * <strong>example:</strong>
          * <p>LD_test</p>
          */
@@ -123,6 +143,8 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
         public String bizUnitName;
 
         /**
+         * <p>The classification abbreviation.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -130,6 +152,8 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
         public String classifyAbbreviation;
 
         /**
+         * <p>The classification ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>33</p>
          */
@@ -137,6 +161,8 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
         public Long classifyId;
 
         /**
+         * <p>The classification name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -144,6 +170,8 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
         public String classifyName;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-30 10:30:30</p>
          */
@@ -151,6 +179,8 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>30012011</p>
          */
@@ -158,6 +188,8 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>The data source ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>101121</p>
          */
@@ -165,6 +197,8 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
         public Long datasourceId;
 
         /**
+         * <p>The data source name.</p>
+         * 
          * <strong>example:</strong>
          * <p>ds1</p>
          */
@@ -172,6 +206,8 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
         public String datasourceName;
 
         /**
+         * <p>The field description.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -179,6 +215,8 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
         public String fieldDescription;
 
         /**
+         * <p>The field ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>t_test.col1</p>
          */
@@ -186,16 +224,23 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
         public String fieldId;
 
         /**
+         * <p>The field name.</p>
+         * 
          * <strong>example:</strong>
          * <p>col1</p>
          */
         @NameInMap("FieldName")
         public String fieldName;
 
+        /**
+         * <p>Indicates whether a better matching result exists.</p>
+         */
         @NameInMap("HasBetterRule")
         public Boolean hasBetterRule;
 
         /**
+         * <p>The identification result ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -203,19 +248,29 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The identification record ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>99</p>
          */
         @NameInMap("IdentifyRecordId")
         public Long identifyRecordId;
 
+        /**
+         * <p>Indicates whether a custom tagging rule is used.</p>
+         */
         @NameInMap("IsCustomIdentify")
         public Boolean isCustomIdentify;
 
+        /**
+         * <p>Indicates whether the result is locked.</p>
+         */
         @NameInMap("IsLocked")
         public Boolean isLocked;
 
         /**
+         * <p>The sensitivity level abbreviation.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -223,6 +278,8 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
         public String levelAbbreviation;
 
         /**
+         * <p>The sensitivity level color.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -230,6 +287,8 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
         public Long levelColor;
 
         /**
+         * <p>The sensitivity level index.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -237,6 +296,8 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
         public Long levelIndex;
 
         /**
+         * <p>The sensitivity level name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -244,6 +305,8 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
         public String levelName;
 
         /**
+         * <p>The modifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>30012011</p>
          */
@@ -251,6 +314,8 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
         public String modifier;
 
         /**
+         * <p>The modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-30 10:30:30</p>
          */
@@ -258,6 +323,8 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
+         * <p>The display name of the project in Chinese.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -265,6 +332,8 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
         public String projectDisplayName;
 
         /**
+         * <p>The project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>101121</p>
          */
@@ -272,6 +341,8 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
         public Long projectId;
 
         /**
+         * <p>The project name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -279,6 +350,8 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
         public String projectName;
 
         /**
+         * <p>The scan task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>11</p>
          */
@@ -286,6 +359,12 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
         public Long scanTaskId;
 
         /**
+         * <p>The status. Valid values:</p>
+         * <ul>
+         * <li>ENABLE: enabled.</li>
+         * <li>DISABLE: disabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ENABLE</p>
          */
@@ -293,6 +372,8 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The table catalog.</p>
+         * 
          * <strong>example:</strong>
          * <p>testdb</p>
          */
@@ -300,6 +381,8 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
         public String tableCatalog;
 
         /**
+         * <p>The table description.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -307,6 +390,8 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
         public String tableDescription;
 
         /**
+         * <p>The table environment.</p>
+         * 
          * <strong>example:</strong>
          * <p>DEV</p>
          */
@@ -314,6 +399,8 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
         public String tableEnv;
 
         /**
+         * <p>The table ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -321,6 +408,8 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
         public String tableId;
 
         /**
+         * <p>The table name.</p>
+         * 
          * <strong>example:</strong>
          * <p>t_test</p>
          */
@@ -328,6 +417,8 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
         public String tableName;
 
         /**
+         * <p>The identification table task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>22</p>
          */
@@ -335,6 +426,18 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
         public Long tableTaskId;
 
         /**
+         * <p>The table type. Valid values:</p>
+         * <ul>
+         * <li>LOGIC_TABLE: logical table.</li>
+         * <li>LOGIC_DIM_TABLE: logical dimension table.</li>
+         * <li>LOGIC_FACT_TABLE: fact logical table.</li>
+         * <li>LOGIC_SUM_TABLE: aggregate logical table.</li>
+         * <li>LOGIC_ODM_SOURCE: source table.</li>
+         * <li>LOGIC_LABEL_TABLE: label logical table.</li>
+         * <li>PHYSICAL_TABLE: physical table.</li>
+         * <li>REAL_TIME_LOGIC_TABLE: real-time configured logical table.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>LOGIC_TABLE</p>
          */

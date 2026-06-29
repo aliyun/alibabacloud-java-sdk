@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListDataServiceApiCallStatisticsRequest extends TeaModel {
     /**
+     * <p>Search conditions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ListQuery")
     public ListDataServiceApiCallStatisticsRequestListQuery listQuery;
 
     /**
+     * <p>Tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +22,7 @@ public class ListDataServiceApiCallStatisticsRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>Data service project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,6 +62,7 @@ public class ListDataServiceApiCallStatisticsRequest extends TeaModel {
 
     public static class ListDataServiceApiCallStatisticsRequestListQuery extends TeaModel {
         /**
+         * <p>End time. Format: yyyy-MM-dd HH:mm:ss.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -68,6 +72,8 @@ public class ListDataServiceApiCallStatisticsRequest extends TeaModel {
         public String endTime;
 
         /**
+         * <p>Search keyword.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -75,6 +81,8 @@ public class ListDataServiceApiCallStatisticsRequest extends TeaModel {
         public String keyword;
 
         /**
+         * <p>Sort column. Valid values: CALL_COUNT (call count), ERROR_COUNT (error count), ERROR_RATE (error rate), AVG_RESPONSE_TIME (average response time), and OFFLINE_RATE (offline percentage). Default value: CALL_COUNT.</p>
+         * 
          * <strong>example:</strong>
          * <p>CALL_COUNT</p>
          */
@@ -82,6 +90,8 @@ public class ListDataServiceApiCallStatisticsRequest extends TeaModel {
         public String orderColumn;
 
         /**
+         * <p>Sort order. Valid values: 1 (ascending) and 2 (descending). Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -89,6 +99,8 @@ public class ListDataServiceApiCallStatisticsRequest extends TeaModel {
         public Integer orderType;
 
         /**
+         * <p>Page number. Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -96,6 +108,8 @@ public class ListDataServiceApiCallStatisticsRequest extends TeaModel {
         public Integer pageNo;
 
         /**
+         * <p>Number of entries per page. Default value: 20.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -103,6 +117,7 @@ public class ListDataServiceApiCallStatisticsRequest extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Start time. Format: yyyy-MM-dd HH:mm:ss.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

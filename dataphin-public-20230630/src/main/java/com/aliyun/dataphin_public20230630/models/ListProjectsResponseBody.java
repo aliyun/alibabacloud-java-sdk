@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListProjectsResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ListProjectsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,12 +23,17 @@ public class ListProjectsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The details of the backend exception.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The paging query result.</p>
+     */
     @NameInMap("PageResult")
     public ListProjectsResponseBodyPageResult pageResult;
 
@@ -37,6 +46,9 @@ public class ListProjectsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -95,6 +107,8 @@ public class ListProjectsResponseBody extends TeaModel {
 
     public static class ListProjectsResponseBodyPageResultProjectList extends TeaModel {
         /**
+         * <p>The business unit ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>162112</p>
          */
@@ -102,6 +116,8 @@ public class ListProjectsResponseBody extends TeaModel {
         public Long bizUnitId;
 
         /**
+         * <p>The compute source ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1121</p>
          */
@@ -109,6 +125,8 @@ public class ListProjectsResponseBody extends TeaModel {
         public Long dataSourceId;
 
         /**
+         * <p>The name of the compute source.</p>
+         * 
          * <strong>example:</strong>
          * <p>ds1</p>
          */
@@ -116,6 +134,8 @@ public class ListProjectsResponseBody extends TeaModel {
         public String dataSourceName;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>测试</p>
          */
@@ -123,6 +143,8 @@ public class ListProjectsResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The display name of the project.</p>
+         * 
          * <strong>example:</strong>
          * <p>测试</p>
          */
@@ -130,6 +152,8 @@ public class ListProjectsResponseBody extends TeaModel {
         public String displayName;
 
         /**
+         * <p>The environment identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>DEV</p>
          */
@@ -137,6 +161,8 @@ public class ListProjectsResponseBody extends TeaModel {
         public String env;
 
         /**
+         * <p>The time when the project was created, in the yyyy-MM-dd HH:mm:ss format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-10 10:01:01</p>
          */
@@ -144,6 +170,8 @@ public class ListProjectsResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The time when the project was last modified, in the yyyy-MM-dd HH:mm:ss format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-10 10:01:01</p>
          */
@@ -151,6 +179,8 @@ public class ListProjectsResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1030111021</p>
          */
@@ -158,6 +188,8 @@ public class ListProjectsResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The project mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>BASIC</p>
          */
@@ -165,6 +197,8 @@ public class ListProjectsResponseBody extends TeaModel {
         public String mode;
 
         /**
+         * <p>The project name.</p>
+         * 
          * <strong>example:</strong>
          * <p>demo</p>
          */
@@ -172,6 +206,8 @@ public class ListProjectsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The project owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>30012112</p>
          */
@@ -179,6 +215,8 @@ public class ListProjectsResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The project owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>张三</p>
          */
@@ -186,6 +224,8 @@ public class ListProjectsResponseBody extends TeaModel {
         public String ownerName;
 
         /**
+         * <p>The real-time compute source ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1122</p>
          */
@@ -193,6 +233,8 @@ public class ListProjectsResponseBody extends TeaModel {
         public Long realtimeDataSourceId;
 
         /**
+         * <p>The name of the real-time compute source.</p>
+         * 
          * <strong>example:</strong>
          * <p>ds2</p>
          */
@@ -200,6 +242,8 @@ public class ListProjectsResponseBody extends TeaModel {
         public String realtimeDataSourceName;
 
         /**
+         * <p>The project type.</p>
+         * 
          * <strong>example:</strong>
          * <p>GENERAL</p>
          */
@@ -342,10 +386,15 @@ public class ListProjectsResponseBody extends TeaModel {
     }
 
     public static class ListProjectsResponseBodyPageResult extends TeaModel {
+        /**
+         * <p>The paginated list of projects.</p>
+         */
         @NameInMap("ProjectList")
         public java.util.List<ListProjectsResponseBodyPageResultProjectList> projectList;
 
         /**
+         * <p>The total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>68</p>
          */

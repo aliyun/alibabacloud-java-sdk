@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetOperationSubmitStatusResponseBody extends TeaModel {
     /**
+     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class GetOperationSubmitStatusResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,16 +23,23 @@ public class GetOperationSubmitStatusResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The submit status of the operation.</p>
+     */
     @NameInMap("OperationSubmitJob")
     public GetOperationSubmitStatusResponseBodyOperationSubmitJob operationSubmitJob;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
@@ -36,6 +47,8 @@ public class GetOperationSubmitStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class GetOperationSubmitStatusResponseBody extends TeaModel {
 
     public static class GetOperationSubmitStatusResponseBodyOperationSubmitJob extends TeaModel {
         /**
+         * <p>The business ID. If the operation is a data backfill, this value is the data backfill workflow ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>f_122_232342</p>
          */
@@ -104,6 +119,8 @@ public class GetOperationSubmitStatusResponseBody extends TeaModel {
         public String externalBizId;
 
         /**
+         * <p>The submit ID of the data backfill request.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456</p>
          */
@@ -111,6 +128,11 @@ public class GetOperationSubmitStatusResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The operation type. Valid values:</p>
+         * <ul>
+         * <li>SUPPLY_DATA: data backfill.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SUPPLY_DATA</p>
          */
@@ -118,6 +140,8 @@ public class GetOperationSubmitStatusResponseBody extends TeaModel {
         public String operation;
 
         /**
+         * <p>The status.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
          */
@@ -125,6 +149,8 @@ public class GetOperationSubmitStatusResponseBody extends TeaModel {
         public String operationStatus;
 
         /**
+         * <p>The user ID of the submitter.</p>
+         * 
          * <strong>example:</strong>
          * <p>132344</p>
          */
@@ -132,6 +158,8 @@ public class GetOperationSubmitStatusResponseBody extends TeaModel {
         public String operator;
 
         /**
+         * <p>The progress.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */

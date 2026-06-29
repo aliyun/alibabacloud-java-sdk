@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDataServiceAppGroupRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateDataServiceAppGroupRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The update command for the data service application group.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")
@@ -42,6 +44,7 @@ public class UpdateDataServiceAppGroupRequest extends TeaModel {
 
     public static class UpdateDataServiceAppGroupRequestUpdateCommand extends TeaModel {
         /**
+         * <p>The group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,6 +54,7 @@ public class UpdateDataServiceAppGroupRequest extends TeaModel {
         public Integer groupId;
 
         /**
+         * <p>The group name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateStandardWordRootRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateStandardWordRootRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The update instruction.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")
@@ -42,6 +44,7 @@ public class UpdateStandardWordRootRequest extends TeaModel {
 
     public static class UpdateStandardWordRootRequestUpdateCommand extends TeaModel {
         /**
+         * <p>The abbreviation of the root word.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,6 +54,8 @@ public class UpdateStandardWordRootRequest extends TeaModel {
         public String abbreviation;
 
         /**
+         * <p>The description of the root word.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -58,6 +63,7 @@ public class UpdateStandardWordRootRequest extends TeaModel {
         public String description;
 
         /**
+         * <p>The full name of the root word.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -67,6 +73,7 @@ public class UpdateStandardWordRootRequest extends TeaModel {
         public String fullName;
 
         /**
+         * <p>The name of the root word.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -76,6 +83,7 @@ public class UpdateStandardWordRootRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The name of the root word before the update.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

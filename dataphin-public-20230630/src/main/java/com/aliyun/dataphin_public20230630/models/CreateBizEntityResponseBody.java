@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateBizEntityResponseBody extends TeaModel {
     /**
+     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The creation result.</p>
+     */
     @NameInMap("CreateResult")
     public CreateBizEntityResponseBodyCreateResult createResult;
 
     /**
+     * <p>The HTTP status code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class CreateBizEntityResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,12 +38,17 @@ public class CreateBizEntityResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -93,6 +107,8 @@ public class CreateBizEntityResponseBody extends TeaModel {
 
     public static class CreateBizEntityResponseBodyCreateResult extends TeaModel {
         /**
+         * <p>The ID of the business entity.</p>
+         * 
          * <strong>example:</strong>
          * <p>12113111</p>
          */

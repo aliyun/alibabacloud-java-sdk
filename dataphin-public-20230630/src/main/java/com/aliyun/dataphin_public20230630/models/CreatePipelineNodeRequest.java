@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreatePipelineNodeRequest extends TeaModel {
     /**
+     * <p>The command to create a pipeline. Both offline and real-time pipelines are supported.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CreatePipelineNodeCommand")
     public CreatePipelineNodeRequestCreatePipelineNodeCommand createPipelineNodeCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,8 @@ public class CreatePipelineNodeRequest extends TeaModel {
 
     public static class CreatePipelineNodeRequestCreatePipelineNodeCommandFileInfo extends TeaModel {
         /**
+         * <p>The file description.</p>
+         * 
          * <strong>example:</strong>
          * <p>desc</p>
          */
@@ -49,6 +53,8 @@ public class CreatePipelineNodeRequest extends TeaModel {
         public String description;
 
         /**
+         * <p>The full path of the parent directory of the file. If this parameter is left empty, the root path (/) is used.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -56,6 +62,7 @@ public class CreatePipelineNodeRequest extends TeaModel {
         public String directory;
 
         /**
+         * <p>The file name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -97,12 +104,14 @@ public class CreatePipelineNodeRequest extends TeaModel {
 
     public static class CreatePipelineNodeRequestCreatePipelineNodeCommand extends TeaModel {
         /**
+         * <p>The task file information.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("FileInfo")
         public CreatePipelineNodeRequestCreatePipelineNodeCommandFileInfo fileInfo;
 
         /**
+         * <p>The node type. Valid values: NORMAL, MANUAL, and REAL_TIME.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -112,6 +121,7 @@ public class CreatePipelineNodeRequest extends TeaModel {
         public String nodeType;
 
         /**
+         * <p>The pipeline name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -121,6 +131,7 @@ public class CreatePipelineNodeRequest extends TeaModel {
         public String pipelineName;
 
         /**
+         * <p>The pipeline type. Valid values: OFFLINE_PIPELINE and REAL_TIME_PIPELINE.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +141,7 @@ public class CreatePipelineNodeRequest extends TeaModel {
         public String pipelineType;
 
         /**
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

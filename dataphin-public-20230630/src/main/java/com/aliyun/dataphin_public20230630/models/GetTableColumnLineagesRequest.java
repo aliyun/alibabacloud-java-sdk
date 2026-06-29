@@ -4,10 +4,14 @@ package com.aliyun.dataphin_public20230630.models;
 import com.aliyun.tea.*;
 
 public class GetTableColumnLineagesRequest extends TeaModel {
+    /**
+     * <p>The filter conditions.</p>
+     */
     @NameInMap("FilterQuery")
     public GetTableColumnLineagesRequestFilterQuery filterQuery;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +21,7 @@ public class GetTableColumnLineagesRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The GUID of the table, which is the unique identifier of the asset.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,22 +60,36 @@ public class GetTableColumnLineagesRequest extends TeaModel {
     }
 
     public static class GetTableColumnLineagesRequestFilterQuery extends TeaModel {
+        /**
+         * <p>Specifies whether to query downstream lineage. Default value: true.</p>
+         */
         @NameInMap("NeedDownstream")
         public Boolean needDownstream;
 
+        /**
+         * <p>Specifies whether to return tables that do not exist in the asset inventory. Default value: false.</p>
+         */
         @NameInMap("NeedNotExistObject")
         public Boolean needNotExistObject;
 
+        /**
+         * <p>Specifies whether to query upstream lineage. Default value: true.</p>
+         */
         @NameInMap("NeedUpstream")
         public Boolean needUpstream;
 
         /**
+         * <p>The environment of the nodes to query. Valid values: dev and prod.</p>
+         * 
          * <strong>example:</strong>
          * <p>dev</p>
          */
         @NameInMap("NodeEnv")
         public String nodeEnv;
 
+        /**
+         * <p>The list of node IDs to filter.</p>
+         */
         @NameInMap("NodeIdList")
         public java.util.List<String> nodeIdList;
 

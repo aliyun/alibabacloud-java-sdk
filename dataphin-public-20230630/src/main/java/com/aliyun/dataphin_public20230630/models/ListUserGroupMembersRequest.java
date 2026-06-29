@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListUserGroupMembersRequest extends TeaModel {
     /**
+     * <p>The paged query parameters.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ListQuery")
     public ListUserGroupMembersRequestListQuery listQuery;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,8 @@ public class ListUserGroupMembersRequest extends TeaModel {
 
     public static class ListUserGroupMembersRequestListQuery extends TeaModel {
         /**
+         * <p>The username keyword.</p>
+         * 
          * <strong>example:</strong>
          * <p>a</p>
          */
@@ -49,6 +53,7 @@ public class ListUserGroupMembersRequest extends TeaModel {
         public String keyword;
 
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -58,6 +63,7 @@ public class ListUserGroupMembersRequest extends TeaModel {
         public Integer pageNo;
 
         /**
+         * <p>The number of records per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -67,12 +73,17 @@ public class ListUserGroupMembersRequest extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The user group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>232231</p>
          */
         @NameInMap("UserGroupId")
         public String userGroupId;
 
+        /**
+         * <p>The user ID.</p>
+         */
         @NameInMap("UserIdList")
         public java.util.List<String> userIdList;
 

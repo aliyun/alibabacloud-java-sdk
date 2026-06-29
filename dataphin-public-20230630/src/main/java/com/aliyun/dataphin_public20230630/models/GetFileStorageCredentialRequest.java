@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetFileStorageCredentialRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class GetFileStorageCredentialRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The project ID. This parameter is required when the temporary authorization is used to create resource files.</p>
+     * 
      * <strong>example:</strong>
      * <p>1030131021</p>
      */
@@ -21,12 +24,23 @@ public class GetFileStorageCredentialRequest extends TeaModel {
     public Long projectId;
 
     /**
+     * <p>The purpose of the authorization. Valid values:</p>
+     * <ul>
+     * <li>RESOURCE: creates resource files.</li>
+     * <li>COMPUTE_SOURCE_SETTING: stores compute source configurations.</li>
+     * <li>NONE: no specific purpose.</li>
+     * </ul>
+     * <p>Default value: NONE.</p>
+     * 
      * <strong>example:</strong>
      * <p>RESOURCE</p>
      */
     @NameInMap("Purpose")
     public String purpose;
 
+    /**
+     * <p>Specifies whether to use an internal endpoint. Default value: false.</p>
+     */
     @NameInMap("UseVpcEndpoint")
     public Boolean useVpcEndpoint;
 

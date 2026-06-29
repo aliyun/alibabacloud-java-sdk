@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class GrantDataServiceApiRequest extends TeaModel {
     /**
+     * <p>The grant command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("GrantCommand")
     public GrantDataServiceApiRequestGrantCommand grantCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +22,7 @@ public class GrantDataServiceApiRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The data service project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,6 +61,12 @@ public class GrantDataServiceApiRequest extends TeaModel {
     }
 
     public static class GrantDataServiceApiRequestGrantCommandDevFieldList extends TeaModel {
+        /**
+         * <p>The API permission field ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Id")
         public Integer id;
 
@@ -77,6 +86,12 @@ public class GrantDataServiceApiRequest extends TeaModel {
     }
 
     public static class GrantDataServiceApiRequestGrantCommandProdFieldList extends TeaModel {
+        /**
+         * <p>The API permission field ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Id")
         public Integer id;
 
@@ -97,6 +112,7 @@ public class GrantDataServiceApiRequest extends TeaModel {
 
     public static class GrantDataServiceApiRequestGrantCommand extends TeaModel {
         /**
+         * <p>The API ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -106,7 +122,7 @@ public class GrantDataServiceApiRequest extends TeaModel {
         public Long apiId;
 
         /**
-         * <p>AppID</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1201</p>
@@ -114,19 +130,47 @@ public class GrantDataServiceApiRequest extends TeaModel {
         @NameInMap("AppId")
         public Integer appId;
 
+        /**
+         * <p>Specifies whether to request development environment permissions for operation-type APIs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("ApplyDev")
         public Boolean applyDev;
 
+        /**
+         * <p>Specifies whether to request production environment permissions for operation-type APIs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("ApplyProd")
         public Boolean applyProd;
 
+        /**
+         * <p>The list of authorization permission types. Valid values:</p>
+         * <ul>
+         * <li>When the grantee is an application, the following permission types are supported. To grant delegation permissions, you must also grant usage permissions.<ul>
+         * <li>USE: usage permission.</li>
+         * <li>DELEGATION: delegation permission.</li>
+         * </ul>
+         * </li>
+         * <li>When the grantee is an individual, only USE (usage) permission is supported.</li>
+         * <li>If this parameter is not specified, the default value is USE (usage) permission.</li>
+         * </ul>
+         */
         @NameInMap("AuthTypes")
         public java.util.List<String> authTypes;
 
+        /**
+         * <p>The list of development environment permission fields for query-type APIs. This parameter is required in dev-prod mode. DevFieldList and ProdFieldList cannot both be empty. This parameter is not required for operation-type APIs.</p>
+         */
         @NameInMap("DevFieldList")
         public java.util.List<GrantDataServiceApiRequestGrantCommandDevFieldList> devFieldList;
 
         /**
+         * <p>The expiration date in the format of yyyy-MM-dd.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,16 +180,26 @@ public class GrantDataServiceApiRequest extends TeaModel {
         public String expireDate;
 
         /**
+         * <p>The authorization object type. Valid values:</p>
+         * <ul>
+         * <li>APP: application.</li>
+         * <li>USER: user.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>APP</p>
          */
         @NameInMap("GranteeType")
         public String granteeType;
 
+        /**
+         * <p>The list of production environment permission fields for query-type APIs. This parameter is required in basic mode. This parameter is not required for operation-type APIs.</p>
+         */
         @NameInMap("ProdFieldList")
         public java.util.List<GrantDataServiceApiRequestGrantCommandProdFieldList> prodFieldList;
 
         /**
+         * <p>The reason for the authorization request.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,6 +209,8 @@ public class GrantDataServiceApiRequest extends TeaModel {
         public String reason;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>12345</p>
          */

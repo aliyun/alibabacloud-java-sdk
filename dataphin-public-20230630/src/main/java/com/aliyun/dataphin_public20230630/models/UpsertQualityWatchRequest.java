@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpsertQualityWatchRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpsertQualityWatchRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The update instruction.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpsertCommand")
@@ -42,6 +44,8 @@ public class UpsertQualityWatchRequest extends TeaModel {
 
     public static class UpsertQualityWatchRequestUpsertCommandDataSourceInfo extends TeaModel {
         /**
+         * <p>The data source ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -65,6 +69,8 @@ public class UpsertQualityWatchRequest extends TeaModel {
 
     public static class UpsertQualityWatchRequestUpsertCommandIndexInfo extends TeaModel {
         /**
+         * <p>The business unit ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1121</p>
          */
@@ -72,6 +78,8 @@ public class UpsertQualityWatchRequest extends TeaModel {
         public Long bizUnitId;
 
         /**
+         * <p>The cell aggregate table name.</p>
+         * 
          * <strong>example:</strong>
          * <p>dws_all</p>
          */
@@ -79,6 +87,14 @@ public class UpsertQualityWatchRequest extends TeaModel {
         public String cellSumLogicTableName;
 
         /**
+         * <p>The metric computation type. Valid values:</p>
+         * <ul>
+         * <li>AUTO</li>
+         * <li>CUSTOM</li>
+         * <li>MOUNT</li>
+         * <li>COMBINE.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>AUTO</p>
          */
@@ -86,6 +102,8 @@ public class UpsertQualityWatchRequest extends TeaModel {
         public String computeType;
 
         /**
+         * <p>The metric data type.</p>
+         * 
          * <strong>example:</strong>
          * <p>bigint</p>
          */
@@ -93,6 +111,8 @@ public class UpsertQualityWatchRequest extends TeaModel {
         public String dateType;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -100,6 +120,8 @@ public class UpsertQualityWatchRequest extends TeaModel {
         public String description;
 
         /**
+         * <p>The metric display name.</p>
+         * 
          * <strong>example:</strong>
          * <p>logic</p>
          */
@@ -107,6 +129,8 @@ public class UpsertQualityWatchRequest extends TeaModel {
         public String displayName;
 
         /**
+         * <p>The statistical granularity name.</p>
+         * 
          * <strong>example:</strong>
          * <p>全站汇总表</p>
          */
@@ -114,6 +138,8 @@ public class UpsertQualityWatchRequest extends TeaModel {
         public String granularityDisplayName;
 
         /**
+         * <p>The statistical granularity ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>18755764</p>
          */
@@ -121,6 +147,8 @@ public class UpsertQualityWatchRequest extends TeaModel {
         public Long granularityId;
 
         /**
+         * <p>The metric ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>11</p>
          */
@@ -128,6 +156,8 @@ public class UpsertQualityWatchRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>The metric name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_idx_</p>
          */
@@ -135,6 +165,8 @@ public class UpsertQualityWatchRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1121</p>
          */
@@ -142,6 +174,11 @@ public class UpsertQualityWatchRequest extends TeaModel {
         public Long projectId;
 
         /**
+         * <p>The metric type. Valid values:</p>
+         * <ul>
+         * <li>INDEX.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>INDEX</p>
          */
@@ -253,6 +290,8 @@ public class UpsertQualityWatchRequest extends TeaModel {
 
     public static class UpsertQualityWatchRequestUpsertCommandTableInfo extends TeaModel {
         /**
+         * <p>The table ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -275,20 +314,29 @@ public class UpsertQualityWatchRequest extends TeaModel {
     }
 
     public static class UpsertQualityWatchRequestUpsertCommand extends TeaModel {
+        /**
+         * <p>The data source details.</p>
+         */
         @NameInMap("DataSourceInfo")
         public UpsertQualityWatchRequestUpsertCommandDataSourceInfo dataSourceInfo;
 
         /**
+         * <p>The monitored object ID. If this parameter is specified, the object is updated. If this parameter is not specified, a new object is created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The monitoring metrics object.</p>
+         */
         @NameInMap("IndexInfo")
         public UpsertQualityWatchRequestUpsertCommandIndexInfo indexInfo;
 
         /**
+         * <p>The quality owner.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -297,10 +345,21 @@ public class UpsertQualityWatchRequest extends TeaModel {
         @NameInMap("QualityOwner")
         public String qualityOwner;
 
+        /**
+         * <p>The monitored table object.</p>
+         */
         @NameInMap("TableInfo")
         public UpsertQualityWatchRequestUpsertCommandTableInfo tableInfo;
 
         /**
+         * <p>The monitored object type. Valid values:</p>
+         * <ul>
+         * <li>TABLE: Dataphin table.</li>
+         * <li>DATASOURCE_TABLE: global table.</li>
+         * <li>DATASOURCE: data source.</li>
+         * <li>INDEX: metric.</li>
+         * <li>REALTIME_LOGICAL_TABLE: real-time meta table.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

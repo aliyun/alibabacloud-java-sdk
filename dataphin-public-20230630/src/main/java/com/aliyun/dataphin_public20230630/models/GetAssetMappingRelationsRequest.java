@@ -4,10 +4,14 @@ package com.aliyun.dataphin_public20230630.models;
 import com.aliyun.tea.*;
 
 public class GetAssetMappingRelationsRequest extends TeaModel {
+    /**
+     * <p>The query instruction.</p>
+     */
     @NameInMap("AssetMappingQuery")
     public GetAssetMappingRelationsRequestAssetMappingQuery assetMappingQuery;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +43,11 @@ public class GetAssetMappingRelationsRequest extends TeaModel {
 
     public static class GetAssetMappingRelationsRequestAssetMappingQuery extends TeaModel {
         /**
+         * <p>The object type of the asset. Valid values:</p>
+         * <ul>
+         * <li>COLUMN: field.</li>
+         * <li>INDEX: metric.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -48,6 +57,7 @@ public class GetAssetMappingRelationsRequest extends TeaModel {
         public String assetType;
 
         /**
+         * <p>The GUID of the asset object.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -57,6 +67,11 @@ public class GetAssetMappingRelationsRequest extends TeaModel {
         public String guid;
 
         /**
+         * <p>The type of the mapping relationship. Valid values:</p>
+         * <ul>
+         * <li>VALID: mapped.</li>
+         * <li>INVALID: invalid mapping.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

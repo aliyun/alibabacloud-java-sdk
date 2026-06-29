@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSecurityClassifyRequest extends TeaModel {
     /**
+     * <p>The classification ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetSecurityClassifyRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

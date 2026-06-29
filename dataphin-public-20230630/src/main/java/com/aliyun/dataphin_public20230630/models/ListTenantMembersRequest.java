@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListTenantMembersRequest extends TeaModel {
     /**
+     * <p>The request object.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ListQuery")
     public ListTenantMembersRequestListQuery listQuery;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,7 @@ public class ListTenantMembersRequest extends TeaModel {
 
     public static class ListTenantMembersRequestListQuery extends TeaModel {
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,6 +54,7 @@ public class ListTenantMembersRequest extends TeaModel {
         public Integer page;
 
         /**
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -59,12 +63,43 @@ public class ListTenantMembersRequest extends TeaModel {
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The member roles:</p>
+         * <ul>
+         * <li>SUPER_ADMIN: Dataphin super administrator</li>
+         * <li>SYSTEM_ADMIN: system administrator</li>
+         * <li>COMMON_USER: Dataphin user</li>
+         * <li>DATA_ADMIN: Dataphin data administrator</li>
+         * <li>EXPORT_ADMIN: export administrator</li>
+         * <li>SECURITY_ADMIN: security administrator</li>
+         * <li>DATASOURCE_MANAGER: data source administrator</li>
+         * <li>QUALITY_MANAGER: asset quality manager</li>
+         * <li>DATA_STANDARD_MANAGER: data standard administrator</li>
+         * <li>LABELS_BUSINESS_PLANNER: tag business planner</li>
+         * <li>BUSINESS_MEMBER: general business user</li>
+         * <li>DATAPRO_OPERATE_SUPER_ADMIN: operations super administrator</li>
+         * <li>DATAPRO_OPERATE_ADMIN: operations administrator</li>
+         * <li>DATAPRO_OPERATE_MEMBER: operations member</li>
+         * <li>DATAPRO_BUSINESS_ANALYST: business analyst</li>
+         * <li>LABELS_BUSINESS_MEMBER: tag business member</li>
+         * <li>DATAPRO_BUSINESS_MEMBER: DATAPRO general business user</li>
+         * </ul>
+         */
         @NameInMap("RoleList")
         public java.util.List<String> roleList;
 
+        /**
+         * <p>The search keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试</p>
+         */
         @NameInMap("SearchText")
         public String searchText;
 
+        /**
+         * <p>The IDs of the user groups to which the member belongs.</p>
+         */
         @NameInMap("UserGroupIdList")
         public java.util.List<String> userGroupIdList;
 

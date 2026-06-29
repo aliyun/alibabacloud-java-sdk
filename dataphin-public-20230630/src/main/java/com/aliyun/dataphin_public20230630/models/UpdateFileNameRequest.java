@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateFileNameRequest extends TeaModel {
     /**
+     * <p>The file ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateFileNameRequest extends TeaModel {
     public Long fileId;
 
     /**
+     * <p>The new file name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class UpdateFileNameRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class UpdateFileNameRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDataServiceAppMemberRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateDataServiceAppMemberRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The command to update regular members of a data service application.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")
@@ -42,6 +44,7 @@ public class UpdateDataServiceAppMemberRequest extends TeaModel {
 
     public static class UpdateDataServiceAppMemberRequestUpdateCommandMemberList extends TeaModel {
         /**
+         * <p>The authorization expiration time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,6 +54,7 @@ public class UpdateDataServiceAppMemberRequest extends TeaModel {
         public String effectiveEnd;
 
         /**
+         * <p>The user ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -84,6 +88,7 @@ public class UpdateDataServiceAppMemberRequest extends TeaModel {
 
     public static class UpdateDataServiceAppMemberRequestUpdateCommand extends TeaModel {
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -93,6 +98,7 @@ public class UpdateDataServiceAppMemberRequest extends TeaModel {
         public Integer appId;
 
         /**
+         * <p>The list of members.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("MemberList")

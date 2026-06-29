@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveTenantMemberRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class RemoveTenantMemberRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The request command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RemoveCommand")
@@ -42,6 +44,7 @@ public class RemoveTenantMemberRequest extends TeaModel {
 
     public static class RemoveTenantMemberRequestRemoveCommand extends TeaModel {
         /**
+         * <p>The source ID of the user.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

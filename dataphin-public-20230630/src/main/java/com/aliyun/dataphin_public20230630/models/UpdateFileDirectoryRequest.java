@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateFileDirectoryRequest extends TeaModel {
     /**
+     * <p>The updated file folder after the move.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateFileDirectoryRequest extends TeaModel {
     public String directory;
 
     /**
+     * <p>The file ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class UpdateFileDirectoryRequest extends TeaModel {
     public Long fileId;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class UpdateFileDirectoryRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CheckResourcePermissionResponseBody extends TeaModel {
     /**
+     * <p>Error code. OK indicates a successful request</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class CheckResourcePermissionResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code returned by the backend</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class CheckResourcePermissionResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -26,16 +32,23 @@ public class CheckResourcePermissionResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Resource permission list</p>
+     */
     @NameInMap("ResourcePermissionList")
     public java.util.List<CheckResourcePermissionResponseBodyResourcePermissionList> resourcePermissionList;
 
     /**
+     * <p>Indicates whether the request was successful</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class CheckResourcePermissionResponseBody extends TeaModel {
 
     public static class CheckResourcePermissionResponseBodyResourcePermissionList extends TeaModel {
         /**
+         * <p>Indicates whether the user has the permission on the specified resource</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -104,6 +119,8 @@ public class CheckResourcePermissionResponseBody extends TeaModel {
         public Boolean hasPermission;
 
         /**
+         * <p>Resource ID</p>
+         * 
          * <strong>example:</strong>
          * <p>hadoop.300000806.data_distill.behavior_gameinfor_01</p>
          */

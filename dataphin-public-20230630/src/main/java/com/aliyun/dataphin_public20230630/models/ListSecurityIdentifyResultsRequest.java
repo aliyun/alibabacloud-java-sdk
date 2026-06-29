@@ -4,10 +4,14 @@ package com.aliyun.dataphin_public20230630.models;
 import com.aliyun.tea.*;
 
 public class ListSecurityIdentifyResultsRequest extends TeaModel {
+    /**
+     * <p>Query conditions.</p>
+     */
     @NameInMap("ListQuery")
     public ListSecurityIdentifyResultsRequestListQuery listQuery;
 
     /**
+     * <p>Tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,30 +42,45 @@ public class ListSecurityIdentifyResultsRequest extends TeaModel {
     }
 
     public static class ListSecurityIdentifyResultsRequestListQuery extends TeaModel {
+        /**
+         * <p>Business unit names.</p>
+         */
         @NameInMap("BizUnitNameList")
         public java.util.List<String> bizUnitNameList;
 
         /**
+         * <p>Data classification ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("ClassifyId")
         public Long classifyId;
 
+        /**
+         * <p>Data source names.</p>
+         */
         @NameInMap("DatasourceNameList")
         public java.util.List<String> datasourceNameList;
 
         /**
+         * <p>Environment identifier of the data source, project, or business unit.</p>
+         * 
          * <strong>example:</strong>
          * <p>DEV</p>
          */
         @NameInMap("Env")
         public String env;
 
+        /**
+         * <p>Whether it is locked.</p>
+         */
         @NameInMap("IsLocked")
         public Boolean isLocked;
 
         /**
+         * <p>Keyword filter. Supports matching by table catalog, table name, table display name, and field name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -69,6 +88,8 @@ public class ListSecurityIdentifyResultsRequest extends TeaModel {
         public String keyword;
 
         /**
+         * <p>Page number. Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -76,16 +97,23 @@ public class ListSecurityIdentifyResultsRequest extends TeaModel {
         public Integer pageNo;
 
         /**
+         * <p>Number of records per page. Default value: 20.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>Project names.</p>
+         */
         @NameInMap("ProjectNameList")
         public java.util.List<String> projectNameList;
 
         /**
+         * <p>Effective status filter: ENABLE or DISABLE.</p>
+         * 
          * <strong>example:</strong>
          * <p>ENABLE</p>
          */

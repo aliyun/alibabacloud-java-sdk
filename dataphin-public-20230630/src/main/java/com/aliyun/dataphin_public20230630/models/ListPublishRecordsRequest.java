@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListPublishRecordsRequest extends TeaModel {
     /**
+     * <p>Query command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ListQuery")
     public ListPublishRecordsRequestListQuery listQuery;
 
     /**
+     * <p>Tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,10 +43,14 @@ public class ListPublishRecordsRequest extends TeaModel {
     }
 
     public static class ListPublishRecordsRequestListQuerySearchFilter extends TeaModel {
+        /**
+         * <p>List of change types (0: Create, 1: Update, 2: Delete).</p>
+         */
         @NameInMap("ChangeTypeList")
         public java.util.List<Integer> changeTypeList;
 
         /**
+         * <p>Page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -54,6 +60,7 @@ public class ListPublishRecordsRequest extends TeaModel {
         public Integer page;
 
         /**
+         * <p>Page size.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -63,12 +70,15 @@ public class ListPublishRecordsRequest extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>List of project IDs.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("ProjectIdList")
         public java.util.List<Long> projectIdList;
 
         /**
+         * <p>Publish end time in the yyyy-MM-dd HH:mm:ss format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-10 10:00:00</p>
          */
@@ -76,15 +86,23 @@ public class ListPublishRecordsRequest extends TeaModel {
         public String publishEndTime;
 
         /**
+         * <p>Publish start time in the yyyy-MM-dd HH:mm:ss format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-10 10:00:00</p>
          */
         @NameInMap("PublishStartTime")
         public String publishStartTime;
 
+        /**
+         * <p>List of publish statuses (0: Failed, 1: Succeeded, 2: Publishing).</p>
+         */
         @NameInMap("PublishStatusList")
         public java.util.List<Integer> publishStatusList;
 
+        /**
+         * <p>List of submitter IDs.</p>
+         */
         @NameInMap("SubmitterList")
         public java.util.List<String> submitterList;
 
@@ -161,6 +179,8 @@ public class ListPublishRecordsRequest extends TeaModel {
 
     public static class ListPublishRecordsRequestListQuery extends TeaModel {
         /**
+         * <p>Search keyword.</p>
+         * 
          * <strong>example:</strong>
          * <p>abc</p>
          */
@@ -168,6 +188,7 @@ public class ListPublishRecordsRequest extends TeaModel {
         public String keyword;
 
         /**
+         * <p>Publish record filter.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("SearchFilter")

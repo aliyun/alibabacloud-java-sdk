@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetProjectWhiteListsResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class GetProjectWhiteListsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class GetProjectWhiteListsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The details of the backend exception.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -34,9 +40,15 @@ public class GetProjectWhiteListsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The project whitelist.</p>
+     */
     @NameInMap("WhiteLists")
     public java.util.List<GetProjectWhiteListsResponseBodyWhiteLists> whiteLists;
 
@@ -95,6 +107,8 @@ public class GetProjectWhiteListsResponseBody extends TeaModel {
 
     public static class GetProjectWhiteListsResponseBodyWhiteLists extends TeaModel {
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>测试</p>
          */
@@ -111,6 +125,8 @@ public class GetProjectWhiteListsResponseBody extends TeaModel {
         public String ip;
 
         /**
+         * <p>The port.</p>
+         * 
          * <strong>example:</strong>
          * <p>5432</p>
          */

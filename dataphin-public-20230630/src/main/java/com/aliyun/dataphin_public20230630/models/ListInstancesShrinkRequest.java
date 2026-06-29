@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class ListInstancesShrinkRequest extends TeaModel {
     /**
+     * <p>Environment identifier</p>
+     * <ul>
+     * <li>DEV: Development environment</li>
+     * <li>PROD (default): Production environment</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PROD</p>
      */
     @NameInMap("Env")
     public String env;
 
+    /**
+     * <p>Query Request</p>
+     */
     @NameInMap("ListQuery")
     public String listQueryShrink;
 
     /**
+     * <p>Tenant ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

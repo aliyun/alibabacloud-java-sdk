@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListDataDomainsResponseBody extends TeaModel {
     /**
+     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The query result.</p>
+     */
     @NameInMap("Data")
     public ListDataDomainsResponseBodyData data;
 
     /**
+     * <p>The HTTP status code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListDataDomainsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,12 +38,17 @@ public class ListDataDomainsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -93,6 +107,8 @@ public class ListDataDomainsResponseBody extends TeaModel {
 
     public static class ListDataDomainsResponseBodyDataDataDomainList extends TeaModel {
         /**
+         * <p>The abbreviation of the data domain.</p>
+         * 
          * <strong>example:</strong>
          * <p>dm_code_name</p>
          */
@@ -100,6 +116,8 @@ public class ListDataDomainsResponseBody extends TeaModel {
         public String abbreviation;
 
         /**
+         * <p>The ID of the business unit to which the data domain belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>545844456</p>
          */
@@ -107,6 +125,8 @@ public class ListDataDomainsResponseBody extends TeaModel {
         public Long bizUnitId;
 
         /**
+         * <p>The description of the business object.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -114,6 +134,8 @@ public class ListDataDomainsResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The display name of the data domain.</p>
+         * 
          * <strong>example:</strong>
          * <p>测试</p>
          */
@@ -121,6 +143,8 @@ public class ListDataDomainsResponseBody extends TeaModel {
         public String displayName;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-10 10:00:00</p>
          */
@@ -128,6 +152,8 @@ public class ListDataDomainsResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-10 10:00:00</p>
          */
@@ -135,6 +161,8 @@ public class ListDataDomainsResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The ID of the data domain.</p>
+         * 
          * <strong>example:</strong>
          * <p>1241844456</p>
          */
@@ -142,6 +170,8 @@ public class ListDataDomainsResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The ID of the user who last modified the data domain.</p>
+         * 
          * <strong>example:</strong>
          * <p>30010010</p>
          */
@@ -149,6 +179,8 @@ public class ListDataDomainsResponseBody extends TeaModel {
         public String lastModifier;
 
         /**
+         * <p>The name of the user who last modified the data domain.</p>
+         * 
          * <strong>example:</strong>
          * <p>张三</p>
          */
@@ -156,6 +188,8 @@ public class ListDataDomainsResponseBody extends TeaModel {
         public String lastModifierName;
 
         /**
+         * <p>The name of the data domain.</p>
+         * 
          * <strong>example:</strong>
          * <p>dm_code_name</p>
          */
@@ -163,6 +197,8 @@ public class ListDataDomainsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The ID of the owner of the business object.</p>
+         * 
          * <strong>example:</strong>
          * <p>张三</p>
          */
@@ -170,6 +206,8 @@ public class ListDataDomainsResponseBody extends TeaModel {
         public String ownerName;
 
         /**
+         * <p>The ID of the owner of the business object.</p>
+         * 
          * <strong>example:</strong>
          * <p>30010010</p>
          */
@@ -177,6 +215,8 @@ public class ListDataDomainsResponseBody extends TeaModel {
         public String ownerUserId;
 
         /**
+         * <p>The IDs of the parent data domains.</p>
+         * 
          * <strong>example:</strong>
          * <p>10232311</p>
          */
@@ -295,6 +335,9 @@ public class ListDataDomainsResponseBody extends TeaModel {
     }
 
     public static class ListDataDomainsResponseBodyData extends TeaModel {
+        /**
+         * <p>The details of the data domains.</p>
+         */
         @NameInMap("DataDomainList")
         public java.util.List<ListDataDomainsResponseBodyDataDataDomainList> dataDomainList;
 

@@ -4,10 +4,14 @@ package com.aliyun.dataphin_public20230630.models;
 import com.aliyun.tea.*;
 
 public class CreateDataSourceRequest extends TeaModel {
+    /**
+     * <p>Request object</p>
+     */
     @NameInMap("CreateCommand")
     public CreateDataSourceRequestCreateCommand createCommand;
 
     /**
+     * <p>Tenant ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,19 +43,21 @@ public class CreateDataSourceRequest extends TeaModel {
 
     public static class CreateDataSourceRequestCreateCommandDevDataSourceCreateDataSourceCreateConfigItemList extends TeaModel {
         /**
+         * <p>Configuration item. For the key values required by different databases, see the supplementary description at the bottom of the document.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>k1</p>
+         * <p>jdbc.username</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
+         * <p>Configuration item value</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>v1</p>
+         * <p>username</p>
          */
         @NameInMap("Value")
         public String value;
@@ -81,6 +87,8 @@ public class CreateDataSourceRequest extends TeaModel {
 
     public static class CreateDataSourceRequestCreateCommandDevDataSourceCreateDataSourceCreate extends TeaModel {
         /**
+         * <p>Whether to check connectivity</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -88,12 +96,15 @@ public class CreateDataSourceRequest extends TeaModel {
         public Boolean checkActivity;
 
         /**
+         * <p>List of connection configuration items</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("ConfigItemList")
         public java.util.List<CreateDataSourceRequestCreateCommandDevDataSourceCreateDataSourceCreateConfigItemList> configItemList;
 
         /**
+         * <p>Description</p>
+         * 
          * <strong>example:</strong>
          * <p>datasource for xxx in dev</p>
          */
@@ -101,6 +112,7 @@ public class CreateDataSourceRequest extends TeaModel {
         public String description;
 
         /**
+         * <p>Data source name</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +122,7 @@ public class CreateDataSourceRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>Data source type</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,12 +180,14 @@ public class CreateDataSourceRequest extends TeaModel {
 
     public static class CreateDataSourceRequestCreateCommandDevDataSourceCreate extends TeaModel {
         /**
-         * <p>数据源创建结构体</p>
+         * <p>Development environment data source</p>
          */
         @NameInMap("DataSourceCreate")
         public CreateDataSourceRequestCreateCommandDevDataSourceCreateDataSourceCreate dataSourceCreate;
 
         /**
+         * <p>Associated production environment data source ID. This parameter cannot be empty when only creating a development environment compute source.</p>
+         * 
          * <strong>example:</strong>
          * <p>1011</p>
          */
@@ -204,19 +219,21 @@ public class CreateDataSourceRequest extends TeaModel {
 
     public static class CreateDataSourceRequestCreateCommandProdDataSourceCreateConfigItemList extends TeaModel {
         /**
+         * <p>Configuration item. For the key values required by different databases, see the supplementary description at the bottom of the document.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>k1</p>
+         * <p>jdbc.username</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
+         * <p>Configuration item value</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>v1</p>
+         * <p>username</p>
          */
         @NameInMap("Value")
         public String value;
@@ -246,6 +263,8 @@ public class CreateDataSourceRequest extends TeaModel {
 
     public static class CreateDataSourceRequestCreateCommandProdDataSourceCreate extends TeaModel {
         /**
+         * <p>Whether to check connectivity</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -253,12 +272,15 @@ public class CreateDataSourceRequest extends TeaModel {
         public Boolean checkActivity;
 
         /**
+         * <p>List of connection configuration items</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("ConfigItemList")
         public java.util.List<CreateDataSourceRequestCreateCommandProdDataSourceCreateConfigItemList> configItemList;
 
         /**
+         * <p>Data source description</p>
+         * 
          * <strong>example:</strong>
          * <p>datasource for xx</p>
          */
@@ -266,6 +288,7 @@ public class CreateDataSourceRequest extends TeaModel {
         public String description;
 
         /**
+         * <p>Data source name</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -275,6 +298,32 @@ public class CreateDataSourceRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>Data source type:</p>
+         * <ul>
+         * <li>MAX_COMPUTE</li>
+         * <li>HDFS</li>
+         * <li>LOG_HUB</li>
+         * <li>POLARDB</li>
+         * <li>HBASE_0_9_4</li>
+         * <li>HBASE_1_1_X</li>
+         * <li>DRDS</li>
+         * <li>HIVE</li>
+         * <li>FTP</li>
+         * <li>ELASTIC_SEARCH</li>
+         * <li>MYSQL</li>
+         * <li>MONGODB</li>
+         * <li>OSS</li>
+         * <li>HANA</li>
+         * <li>SQL_SERVER</li>
+         * <li>POSTGRE_SQL</li>
+         * <li>ANALYTICDB</li>
+         * <li>ADB_FOR_MYSQL_V3</li>
+         * <li>ADB_FOR_PG</li>
+         * <li>ORACLE</li>
+         * <li>VERTICA</li>
+         * <li>DB2</li>
+         * <li>TERA_DATA, etc.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -331,11 +380,14 @@ public class CreateDataSourceRequest extends TeaModel {
     }
 
     public static class CreateDataSourceRequestCreateCommand extends TeaModel {
+        /**
+         * <p>Development environment data source</p>
+         */
         @NameInMap("DevDataSourceCreate")
         public CreateDataSourceRequestCreateCommandDevDataSourceCreate devDataSourceCreate;
 
         /**
-         * <p>数据源创建结构体</p>
+         * <p>Production environment data source</p>
          */
         @NameInMap("ProdDataSourceCreate")
         public CreateDataSourceRequestCreateCommandProdDataSourceCreate prodDataSourceCreate;

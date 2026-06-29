@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DeleteSecurityLevelResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The deletion result.</p>
+     */
     @NameInMap("DeleteResult")
     public DeleteSecurityLevelResponseBodyDeleteResult deleteResult;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class DeleteSecurityLevelResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The details of the backend exception.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -37,6 +46,9 @@ public class DeleteSecurityLevelResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -95,15 +107,23 @@ public class DeleteSecurityLevelResponseBody extends TeaModel {
 
     public static class DeleteSecurityLevelResponseBodyDeleteResult extends TeaModel {
         /**
+         * <p>The error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>E10012011</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The list of data classification IDs that are associated with the current classification level. This parameter is returned only when this error is triggered.</p>
+         */
         @NameInMap("RelatedClassifyIdList")
         public java.util.List<Long> relatedClassifyIdList;
 
+        /**
+         * <p>Indicates whether the deletion was successful.</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 

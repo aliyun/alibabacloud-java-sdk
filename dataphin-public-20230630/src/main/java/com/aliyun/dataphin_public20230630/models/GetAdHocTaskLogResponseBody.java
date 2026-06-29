@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAdHocTaskLogResponseBody extends TeaModel {
     /**
+     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,16 +14,23 @@ public class GetAdHocTaskLogResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The log details.</p>
+     */
     @NameInMap("LogInfo")
     public GetAdHocTaskLogResponseBodyLogInfo logInfo;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,12 +38,17 @@ public class GetAdHocTaskLogResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -93,19 +107,29 @@ public class GetAdHocTaskLogResponseBody extends TeaModel {
 
     public static class GetAdHocTaskLogResponseBodyLogInfo extends TeaModel {
         /**
+         * <p>The runtime log content.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>Indicates whether the next log entry exists.</p>
+         */
         @NameInMap("HasNext")
         public Boolean hasNext;
 
+        /**
+         * <p>Indicates whether the current query produces a result.</p>
+         */
         @NameInMap("HasResult")
         public Boolean hasResult;
 
         /**
+         * <p>The start position of the next log entry.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021</p>
          */
@@ -113,6 +137,8 @@ public class GetAdHocTaskLogResponseBody extends TeaModel {
         public Integer nextOffset;
 
         /**
+         * <p>The subtask ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -120,6 +146,8 @@ public class GetAdHocTaskLogResponseBody extends TeaModel {
         public Integer subTaskId;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>MaxCompute_SQL_300000843_1611548758327</p>
          */
@@ -127,6 +155,8 @@ public class GetAdHocTaskLogResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The task running status. Example: WAIT_RESOURCE indicates that the task is waiting for resources.</p>
+         * 
          * <strong>example:</strong>
          * <p>WAIT_RESOURCE</p>
          */

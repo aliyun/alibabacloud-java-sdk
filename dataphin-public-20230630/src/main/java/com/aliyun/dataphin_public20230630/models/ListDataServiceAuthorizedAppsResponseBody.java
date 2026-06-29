@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,12 +23,17 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The details of the backend exception.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The paging query result.</p>
+     */
     @NameInMap("PageResult")
     public ListDataServiceAuthorizedAppsResponseBodyPageResult pageResult;
 
@@ -37,6 +46,9 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -95,6 +107,8 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
 
     public static class ListDataServiceAuthorizedAppsResponseBodyPageResultAuthorizedAppListRemarkForDebugList extends TeaModel {
         /**
+         * <p>The configuration item.</p>
+         * 
          * <strong>example:</strong>
          * <p>k1</p>
          */
@@ -102,6 +116,8 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the configuration item.</p>
+         * 
          * <strong>example:</strong>
          * <p>v1</p>
          */
@@ -133,6 +149,8 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
 
     public static class ListDataServiceAuthorizedAppsResponseBodyPageResultAuthorizedAppList extends TeaModel {
         /**
+         * <p>The primary key ID of the application.</p>
+         * 
          * <strong>example:</strong>
          * <p>1022</p>
          */
@@ -140,6 +158,8 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
         public Integer appId;
 
         /**
+         * <p>The application name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -147,16 +167,26 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
         public String appName;
 
         /**
+         * <p>The ID of the permission account, which is the applicant ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>30012101</p>
          */
         @NameInMap("ApplyUserId")
         public String applyUserId;
 
+        /**
+         * <p>The permission account, which is the applicant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试</p>
+         */
         @NameInMap("ApplyUserName")
         public String applyUserName;
 
         /**
+         * <p>The expiration date in the format of yyyy-MM-dd.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-30</p>
          */
@@ -164,16 +194,23 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
         public String expireDate;
 
         /**
+         * <p>The application ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1121</p>
          */
         @NameInMap("Id")
         public Integer id;
 
+        /**
+         * <p>Indicates whether the current user is a project administrator.</p>
+         */
         @NameInMap("IsProjectManager")
         public Boolean isProjectManager;
 
         /**
+         * <p>The ID of the owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>1121</p>
          */
@@ -181,6 +218,8 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The name of the owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -188,6 +227,8 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
         public String ownerUserName;
 
         /**
+         * <p>The permission account. Valid values: 0: individual account.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -195,6 +236,8 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
         public Integer privilegeAccount;
 
         /**
+         * <p>The permission type. Valid values: 0: usage permission. 1: development permission.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -202,6 +245,8 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
         public Integer privilegeType;
 
         /**
+         * <p>The project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>102122</p>
          */
@@ -209,25 +254,41 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
         public Integer projectId;
 
         /**
+         * <p>The project name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("ProjectName")
         public String projectName;
 
+        /**
+         * <p>Indicates whether the user actually has owner permissions on this application. The user may lack permissions because of expiration or other reasons.</p>
+         */
         @NameInMap("RealHasOwnerPrivilege")
         public Boolean realHasOwnerPrivilege;
 
+        /**
+         * <p>Indicates whether the user actually has permissions.</p>
+         */
         @NameInMap("RealHasPrivilege")
         public Boolean realHasPrivilege;
 
+        /**
+         * <p>The descriptions used for troubleshooting.</p>
+         */
         @NameInMap("RemarkForDebugList")
         public java.util.List<ListDataServiceAuthorizedAppsResponseBodyPageResultAuthorizedAppListRemarkForDebugList> remarkForDebugList;
 
+        /**
+         * <p>Indicates whether the permissions can be returned or revoked.</p>
+         */
         @NameInMap("Revocable")
         public Boolean revocable;
 
         /**
+         * <p>The detailed status of the revoke button. Valid values: -1: super administrators cannot revoke. -2: owners cannot revoke. -3: project administrators without actual permissions are grayed out. -4: regular users without permissions cannot revoke. 1: project administrators with actual permissions can revoke. 2: regular users with permissions can revoke.</p>
+         * 
          * <strong>example:</strong>
          * <p>-1</p>
          */
@@ -386,10 +447,15 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
     }
 
     public static class ListDataServiceAuthorizedAppsResponseBodyPageResult extends TeaModel {
+        /**
+         * <p>The paginated list of authorized applications.</p>
+         */
         @NameInMap("AuthorizedAppList")
         public java.util.List<ListDataServiceAuthorizedAppsResponseBodyPageResultAuthorizedAppList> authorizedAppList;
 
         /**
+         * <p>The total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>68</p>
          */

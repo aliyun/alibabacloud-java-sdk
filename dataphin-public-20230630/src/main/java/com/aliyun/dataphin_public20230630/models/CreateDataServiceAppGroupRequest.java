@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDataServiceAppGroupRequest extends TeaModel {
     /**
+     * <p>The group name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateDataServiceAppGroupRequest extends TeaModel {
     public String groupName;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

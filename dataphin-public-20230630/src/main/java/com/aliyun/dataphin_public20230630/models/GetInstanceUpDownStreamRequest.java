@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetInstanceUpDownStreamRequest extends TeaModel {
     /**
+     * <p>The number of downstream node levels. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,12 @@ public class GetInstanceUpDownStreamRequest extends TeaModel {
     public Integer downStreamDepth;
 
     /**
+     * <p>The environment identifier. Valid values:</p>
+     * <ul>
+     * <li>DEV: development environment. </li>
+     * <li>PROD (default): production environment.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PROD</p>
      */
@@ -19,12 +27,14 @@ public class GetInstanceUpDownStreamRequest extends TeaModel {
     public String env;
 
     /**
+     * <p>The center node.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public GetInstanceUpDownStreamRequestInstanceId instanceId;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,6 +44,7 @@ public class GetInstanceUpDownStreamRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,6 +54,8 @@ public class GetInstanceUpDownStreamRequest extends TeaModel {
     public Long projectId;
 
     /**
+     * <p>The number of upstream node levels. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -103,10 +116,14 @@ public class GetInstanceUpDownStreamRequest extends TeaModel {
     }
 
     public static class GetInstanceUpDownStreamRequestInstanceId extends TeaModel {
+        /**
+         * <p>The list of field IDs. This parameter can be specified when the node is a logical table instance ID. If this parameter is not specified, the full table is used by default.</p>
+         */
         @NameInMap("FieldInstanceIdList")
         public java.util.List<String> fieldInstanceIdList;
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTenantMemberRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateTenantMemberRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The request object.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")
@@ -42,6 +44,8 @@ public class UpdateTenantMemberRequest extends TeaModel {
 
     public static class UpdateTenantMemberRequestUpdateCommandMemberList extends TeaModel {
         /**
+         * <p>The DingTalk number.</p>
+         * 
          * <strong>example:</strong>
          * <p>123@dingding</p>
          */
@@ -49,6 +53,8 @@ public class UpdateTenantMemberRequest extends TeaModel {
         public String dingNumber;
 
         /**
+         * <p>The email address.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:123@xx.com">123@xx.com</a></p>
          */
@@ -56,16 +62,23 @@ public class UpdateTenantMemberRequest extends TeaModel {
         public String mail;
 
         /**
+         * <p>The phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>13888888888</p>
          */
         @NameInMap("MobilePhone")
         public String mobilePhone;
 
+        /**
+         * <p>The list of roles.</p>
+         */
         @NameInMap("RoleList")
         public java.util.List<String> roleList;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2331</p>
          */
@@ -121,6 +134,7 @@ public class UpdateTenantMemberRequest extends TeaModel {
 
     public static class UpdateTenantMemberRequestUpdateCommand extends TeaModel {
         /**
+         * <p>The list of members.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("MemberList")

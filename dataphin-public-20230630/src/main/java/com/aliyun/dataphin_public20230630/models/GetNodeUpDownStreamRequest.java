@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetNodeUpDownStreamRequest extends TeaModel {
     /**
+     * <p>The downstream depth. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,12 @@ public class GetNodeUpDownStreamRequest extends TeaModel {
     public Integer downStreamDepth;
 
     /**
+     * <p>The environment identifier. Valid values:</p>
+     * <ul>
+     * <li>DEV: development environment. </li>
+     * <li>PROD (default): production environment.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>DEV</p>
      */
@@ -19,12 +27,14 @@ public class GetNodeUpDownStreamRequest extends TeaModel {
     public String env;
 
     /**
+     * <p>The node ID.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NodeId")
     public GetNodeUpDownStreamRequestNodeId nodeId;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,6 +44,8 @@ public class GetNodeUpDownStreamRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The project ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>113123</p>
      */
@@ -41,6 +53,8 @@ public class GetNodeUpDownStreamRequest extends TeaModel {
     public Long projectId;
 
     /**
+     * <p>The upstream depth. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -102,6 +116,8 @@ public class GetNodeUpDownStreamRequest extends TeaModel {
 
     public static class GetNodeUpDownStreamRequestNodeId extends TeaModel {
         /**
+         * <p>This parameter can be specified when the node ID is a logical table node ID. If this parameter is not specified, the full table is used by default.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -109,6 +125,7 @@ public class GetNodeUpDownStreamRequest extends TeaModel {
         public String fieldIdList;
 
         /**
+         * <p>The node ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

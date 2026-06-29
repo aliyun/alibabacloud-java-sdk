@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetPhysicalNodeOperationLogResponseBody extends TeaModel {
     /**
+     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class GetPhysicalNodeOperationLogResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,16 +23,23 @@ public class GetPhysicalNodeOperationLogResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The node operation logs.</p>
+     */
     @NameInMap("OperationLogList")
     public java.util.List<GetPhysicalNodeOperationLogResponseBodyOperationLogList> operationLogList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
@@ -36,6 +47,8 @@ public class GetPhysicalNodeOperationLogResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class GetPhysicalNodeOperationLogResponseBody extends TeaModel {
 
     public static class GetPhysicalNodeOperationLogResponseBodyOperationLogList extends TeaModel {
         /**
+         * <p>The log details.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -104,6 +119,8 @@ public class GetPhysicalNodeOperationLogResponseBody extends TeaModel {
         public String context;
 
         /**
+         * <p>The operation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-05-30 16:47:13</p>
          */
@@ -111,6 +128,18 @@ public class GetPhysicalNodeOperationLogResponseBody extends TeaModel {
         public String operationTime;
 
         /**
+         * <p>The operation type. Valid values:</p>
+         * <ul>
+         * <li>TASK_UPDATE_PRIORITY: updates the node priority.</li>
+         * <li>PAUSE_TASK: pauses scheduling.</li>
+         * <li>RESUME_TASK: resumes scheduling.</li>
+         * <li>CREATE_NODE: creates a node.</li>
+         * <li>FORCE_DELETE_NODE: force deletes a node.</li>
+         * <li>UPDATE_NODE: updates a node.</li>
+         * <li>DELETE_NODE: deletes a node.</li>
+         * <li>CHANGE_NODE_OWNER: changes the node owner.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PAUSE_TASK</p>
          */
@@ -118,12 +147,20 @@ public class GetPhysicalNodeOperationLogResponseBody extends TeaModel {
         public String operationType;
 
         /**
+         * <p>The operator ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>132222</p>
          */
         @NameInMap("Operator")
         public String operator;
 
+        /**
+         * <p>The operator name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx测试</p>
+         */
         @NameInMap("OperatorName")
         public String operatorName;
 

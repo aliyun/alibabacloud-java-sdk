@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpdateBizMetricResponseBody extends TeaModel {
     /**
+     * <p>Error code. A value of OK indicates the request was successful</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Operation result</p>
+     */
     @NameInMap("Data")
     public UpdateBizMetricResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class UpdateBizMetricResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +38,8 @@ public class UpdateBizMetricResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
@@ -36,6 +47,8 @@ public class UpdateBizMetricResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class UpdateBizMetricResponseBody extends TeaModel {
 
     public static class UpdateBizMetricResponseBodyData extends TeaModel {
         /**
+         * <p>Exception message</p>
+         * 
          * <strong>example:</strong>
          * <p>npe</p>
          */
@@ -104,6 +119,8 @@ public class UpdateBizMetricResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>Indicates whether the update was successful. Valid values: true (success) and false (failure)</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

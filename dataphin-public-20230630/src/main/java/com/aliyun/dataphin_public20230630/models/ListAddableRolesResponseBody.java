@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAddableRolesResponseBody extends TeaModel {
     /**
+     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ListAddableRolesResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class ListAddableRolesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -26,16 +32,23 @@ public class ListAddableRolesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of roles.</p>
+     */
     @NameInMap("RoleList")
     public java.util.List<ListAddableRolesResponseBodyRoleList> roleList;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,12 +110,20 @@ public class ListAddableRolesResponseBody extends TeaModel {
 
     public static class ListAddableRolesResponseBodyRoleList extends TeaModel {
         /**
+         * <p>The role code.</p>
+         * 
          * <strong>example:</strong>
          * <p>SECURITY_ADMIN</p>
          */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The role name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>安全管理员</p>
+         */
         @NameInMap("Name")
         public String name;
 

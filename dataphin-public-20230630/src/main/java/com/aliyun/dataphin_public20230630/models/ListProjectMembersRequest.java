@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListProjectMembersRequest extends TeaModel {
     /**
+     * <p>The project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListProjectMembersRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>The request object.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ListProjectMembersRequest extends TeaModel {
     public ListProjectMembersRequestListQuery listQuery;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,6 +65,7 @@ public class ListProjectMembersRequest extends TeaModel {
 
     public static class ListProjectMembersRequestListQuery extends TeaModel {
         /**
+         * <p>The project environment.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -71,6 +75,8 @@ public class ListProjectMembersRequest extends TeaModel {
         public String env;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -78,6 +84,8 @@ public class ListProjectMembersRequest extends TeaModel {
         public Integer pageNo;
 
         /**
+         * <p>The number of records per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */

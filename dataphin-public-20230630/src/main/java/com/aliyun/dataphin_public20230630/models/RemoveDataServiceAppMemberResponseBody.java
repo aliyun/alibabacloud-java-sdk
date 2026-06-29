@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RemoveDataServiceAppMemberResponseBody extends TeaModel {
     /**
+     * <p>Backend response code</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class RemoveDataServiceAppMemberResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP response code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class RemoveDataServiceAppMemberResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Backend exception details</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -34,6 +40,9 @@ public class RemoveDataServiceAppMemberResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Whether the request is successful</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

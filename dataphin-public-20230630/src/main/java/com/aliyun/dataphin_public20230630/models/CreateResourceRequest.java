@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateResourceRequest extends TeaModel {
     /**
+     * <p>The create command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CreateCommand")
     public CreateResourceRequestCreateCommand createCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,7 @@ public class CreateResourceRequest extends TeaModel {
 
     public static class CreateResourceRequestCreateCommand extends TeaModel {
         /**
+         * <p>The commit remarks.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,6 +54,12 @@ public class CreateResourceRequest extends TeaModel {
         public String comment;
 
         /**
+         * <p>The compute engine type. Valid values:</p>
+         * <ul>
+         * <li>MAX_COMPUTE</li>
+         * <li>HADOOP</li>
+         * <li>NONE.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -60,6 +69,7 @@ public class CreateResourceRequest extends TeaModel {
         public String computeEngineType;
 
         /**
+         * <p>The description of the resource file.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -69,6 +79,7 @@ public class CreateResourceRequest extends TeaModel {
         public String description;
 
         /**
+         * <p>The folder in which the resource file is stored.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -78,6 +89,7 @@ public class CreateResourceRequest extends TeaModel {
         public String directory;
 
         /**
+         * <p>The resource name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +99,7 @@ public class CreateResourceRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -96,6 +109,13 @@ public class CreateResourceRequest extends TeaModel {
         public Long projectId;
 
         /**
+         * <p>The type of the resource file. Valid values:</p>
+         * <ul>
+         * <li>FILE: common file.</li>
+         * <li>JAR: JAR file.</li>
+         * <li>PYTHON: Python file.</li>
+         * <li>OTHERS: other type of file.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -105,6 +125,7 @@ public class CreateResourceRequest extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The storage address of the resource file.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

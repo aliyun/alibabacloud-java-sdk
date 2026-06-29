@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetDataServiceApiCallTrendResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The access trend data.</p>
+     */
     @NameInMap("Data")
     public GetDataServiceApiCallTrendResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetDataServiceApiCallTrendResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The details of the backend exception.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -37,6 +46,9 @@ public class GetDataServiceApiCallTrendResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -94,10 +106,15 @@ public class GetDataServiceApiCallTrendResponseBody extends TeaModel {
     }
 
     public static class GetDataServiceApiCallTrendResponseBodyDataCallErrorImpactTrendList extends TeaModel {
+        /**
+         * <p>The API IDs.</p>
+         */
         @NameInMap("ApiIdList")
         public java.util.List<Long> apiIdList;
 
         /**
+         * <p>The number of APIs with call errors.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -105,6 +122,8 @@ public class GetDataServiceApiCallTrendResponseBody extends TeaModel {
         public Integer errorApiCount;
 
         /**
+         * <p>The number of affected applications.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -112,6 +131,8 @@ public class GetDataServiceApiCallTrendResponseBody extends TeaModel {
         public Integer errorAppCount;
 
         /**
+         * <p>The time scale in minutes, in the format of yyyy-MM-dd HH:mm.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-30 08:00</p>
          */
@@ -159,6 +180,8 @@ public class GetDataServiceApiCallTrendResponseBody extends TeaModel {
 
     public static class GetDataServiceApiCallTrendResponseBodyDataCallErrorTrendList extends TeaModel {
         /**
+         * <p>The number of calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>1021</p>
          */
@@ -166,6 +189,8 @@ public class GetDataServiceApiCallTrendResponseBody extends TeaModel {
         public Long callCount;
 
         /**
+         * <p>The number of call errors.</p>
+         * 
          * <strong>example:</strong>
          * <p>102</p>
          */
@@ -173,6 +198,8 @@ public class GetDataServiceApiCallTrendResponseBody extends TeaModel {
         public Long errorCount;
 
         /**
+         * <p>The minute in the format of yyyy_MMdd_HHmm.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -211,9 +238,15 @@ public class GetDataServiceApiCallTrendResponseBody extends TeaModel {
     }
 
     public static class GetDataServiceApiCallTrendResponseBodyData extends TeaModel {
+        /**
+         * <p>The call error impact trends, sorted by minute in ascending order.</p>
+         */
         @NameInMap("CallErrorImpactTrendList")
         public java.util.List<GetDataServiceApiCallTrendResponseBodyDataCallErrorImpactTrendList> callErrorImpactTrendList;
 
+        /**
+         * <p>The call error trends, sorted by minute in ascending order.</p>
+         */
         @NameInMap("CallErrorTrendList")
         public java.util.List<GetDataServiceApiCallTrendResponseBodyDataCallErrorTrendList> callErrorTrendList;
 

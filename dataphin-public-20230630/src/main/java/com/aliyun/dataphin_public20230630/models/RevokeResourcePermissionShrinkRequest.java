@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RevokeResourcePermissionShrinkRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class RevokeResourcePermissionShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The authorization revocation request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RevokeCommand")

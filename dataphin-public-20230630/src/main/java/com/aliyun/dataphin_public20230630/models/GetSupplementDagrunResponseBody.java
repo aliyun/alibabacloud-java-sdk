@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetSupplementDagrunResponseBody extends TeaModel {
     /**
+     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The list of dagruns.</p>
+     */
     @NameInMap("DagrunList")
     public java.util.List<GetSupplementDagrunResponseBodyDagrunList> dagrunList;
 
     /**
+     * <p>The HTTP status code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetSupplementDagrunResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +38,8 @@ public class GetSupplementDagrunResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
@@ -36,6 +47,8 @@ public class GetSupplementDagrunResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class GetSupplementDagrunResponseBody extends TeaModel {
 
     public static class GetSupplementDagrunResponseBodyDagrunList extends TeaModel {
         /**
+         * <p>The business date. The time format must conform to the partition format specified by the business unit.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-04-01</p>
          */
@@ -104,6 +119,8 @@ public class GetSupplementDagrunResponseBody extends TeaModel {
         public String bizDate;
 
         /**
+         * <p>The runtime duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>60s</p>
          */
@@ -111,6 +128,8 @@ public class GetSupplementDagrunResponseBody extends TeaModel {
         public String duration;
 
         /**
+         * <p>The execution end timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1717081789000</p>
          */
@@ -127,6 +146,8 @@ public class GetSupplementDagrunResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The execution start timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1717081729000</p>
          */
@@ -134,6 +155,18 @@ public class GetSupplementDagrunResponseBody extends TeaModel {
         public Long startExecuteTime;
 
         /**
+         * <p>The status of the data backfill instance workflow. Valid values:</p>
+         * <ul>
+         * <li>INIT: dagrun init.</li>
+         * <li>CREATE_FAILED: dagrun creation failed.</li>
+         * <li>CREATED: dagrun created.</li>
+         * <li>READY: dagrun ready for exec.</li>
+         * <li>RUNNING: dagrun running.</li>
+         * <li>KILLED: dagrun stopped.</li>
+         * <li>FAILED: dagrun failed.</li>
+         * <li>SUCCESS: dagrun succeeded.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
@@ -141,6 +174,8 @@ public class GetSupplementDagrunResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The ID of the data backfill instance workflow.</p>
+         * 
          * <strong>example:</strong>
          * <p>f_8241792_20201202_2099680</p>
          */

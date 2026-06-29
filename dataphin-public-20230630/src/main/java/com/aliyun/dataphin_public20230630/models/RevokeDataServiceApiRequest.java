@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RevokeDataServiceApiRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class RevokeDataServiceApiRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The data service project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class RevokeDataServiceApiRequest extends TeaModel {
     public Integer projectId;
 
     /**
+     * <p>The revoke instruction.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RevokeCommand")
@@ -59,6 +62,7 @@ public class RevokeDataServiceApiRequest extends TeaModel {
 
     public static class RevokeDataServiceApiRequestRevokeCommand extends TeaModel {
         /**
+         * <p>The API ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -68,6 +72,8 @@ public class RevokeDataServiceApiRequest extends TeaModel {
         public Long apiId;
 
         /**
+         * <p>The ID of the application.</p>
+         * 
          * <strong>example:</strong>
          * <p>1203</p>
          */
@@ -75,6 +81,12 @@ public class RevokeDataServiceApiRequest extends TeaModel {
         public Integer appId;
 
         /**
+         * <p>The permission type. Valid values:</p>
+         * <ul>
+         * <li>USE: use permission</li>
+         * <li>DELEGATION: delegation permission.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>USE</p>
          */
@@ -82,13 +94,25 @@ public class RevokeDataServiceApiRequest extends TeaModel {
         public String authType;
 
         /**
+         * <p>The API environment. Valid values:</p>
+         * <ul>
+         * <li>DEV: development environment</li>
+         * <li>PROD: production environment.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>DEV</p>
+         * <p>PROD</p>
          */
         @NameInMap("Env")
         public String env;
 
         /**
+         * <p>The authorization object type. Valid values:</p>
+         * <ul>
+         * <li>APP: application</li>
+         * <li>USER: user.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>APP</p>
          */
@@ -96,6 +120,7 @@ public class RevokeDataServiceApiRequest extends TeaModel {
         public String granteeType;
 
         /**
+         * <p>The reason for the request.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -105,6 +130,8 @@ public class RevokeDataServiceApiRequest extends TeaModel {
         public String reason;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>12345</p>
          */

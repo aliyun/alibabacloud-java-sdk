@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdatePipelineByAsyncResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class UpdatePipelineByAsyncResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The query ID for the asynchronous execution.</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */
@@ -19,6 +23,8 @@ public class UpdatePipelineByAsyncResponseBody extends TeaModel {
     public Long data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class UpdatePipelineByAsyncResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error details returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -41,6 +49,9 @@ public class UpdatePipelineByAsyncResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

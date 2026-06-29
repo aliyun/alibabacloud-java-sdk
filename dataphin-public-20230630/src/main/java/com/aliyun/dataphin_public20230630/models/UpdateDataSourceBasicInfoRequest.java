@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDataSourceBasicInfoRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateDataSourceBasicInfoRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The basic information to edit for the data source.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")
@@ -42,6 +44,7 @@ public class UpdateDataSourceBasicInfoRequest extends TeaModel {
 
     public static class UpdateDataSourceBasicInfoRequestUpdateCommand extends TeaModel {
         /**
+         * <p>The data source description.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,6 +54,7 @@ public class UpdateDataSourceBasicInfoRequest extends TeaModel {
         public String description;
 
         /**
+         * <p>The data source ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -60,7 +64,11 @@ public class UpdateDataSourceBasicInfoRequest extends TeaModel {
         public Long id;
 
         /**
+         * <p>The data source name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx测试</p>
          */
         @NameInMap("Name")
         public String name;

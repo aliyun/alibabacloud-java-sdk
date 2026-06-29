@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListResourcePermissionsRequest extends TeaModel {
     /**
+     * <p>Paginated request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ListQuery")
     public ListResourcePermissionsRequestListQuery listQuery;
 
     /**
+     * <p>Tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,7 @@ public class ListResourcePermissionsRequest extends TeaModel {
 
     public static class ListResourcePermissionsRequestListQuery extends TeaModel {
         /**
+         * <p>Page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,6 +54,7 @@ public class ListResourcePermissionsRequest extends TeaModel {
         public Integer page;
 
         /**
+         * <p>Number of records per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -60,6 +64,8 @@ public class ListResourcePermissionsRequest extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Search keyword.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx测试</p>
          */
@@ -67,6 +73,7 @@ public class ListResourcePermissionsRequest extends TeaModel {
         public String searchText;
 
         /**
+         * <p>Tab name. Table: TABLE. Data source: DATASOURCE.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -5,18 +5,21 @@ import com.aliyun.tea.*;
 
 public class CreatePipelineShrinkRequest extends TeaModel {
     /**
+     * <p>Request context information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Context")
     public String contextShrink;
 
     /**
+     * <p>Pipeline/workflow task creation configuration</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CreateCommand")
     public String createCommandShrink;
 
     /**
+     * <p>Tenant ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

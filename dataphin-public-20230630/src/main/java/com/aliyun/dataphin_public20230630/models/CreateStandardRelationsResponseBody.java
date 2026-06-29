@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateStandardRelationsResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The creation result.</p>
+     */
     @NameInMap("Data")
     public CreateStandardRelationsResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class CreateStandardRelationsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The details of the backend exception.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -37,6 +46,9 @@ public class CreateStandardRelationsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -94,10 +106,15 @@ public class CreateStandardRelationsResponseBody extends TeaModel {
     }
 
     public static class CreateStandardRelationsResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of standard IDs that do not exist.</p>
+         */
         @NameInMap("NotExistStandardIdList")
         public java.util.List<Long> notExistStandardIdList;
 
         /**
+         * <p>The number of successfully added items.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */

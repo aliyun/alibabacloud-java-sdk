@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class GrantResourcePermissionRequest extends TeaModel {
     /**
+     * <p>The grant request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("GrantCommand")
     public GrantResourcePermissionRequestGrantCommand grantCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,8 @@ public class GrantResourcePermissionRequest extends TeaModel {
 
     public static class GrantResourcePermissionRequestGrantCommandResourceList extends TeaModel {
         /**
+         * <p>The resource ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>hadoop.300000806.data_distill.behavior_gameinfor_01</p>
          */
@@ -65,6 +69,7 @@ public class GrantResourcePermissionRequest extends TeaModel {
 
     public static class GrantResourcePermissionRequestGrantCommand extends TeaModel {
         /**
+         * <p>The expiration timestamp, in milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -74,12 +79,15 @@ public class GrantResourcePermissionRequest extends TeaModel {
         public String effectiveEnd;
 
         /**
+         * <p>The operation types.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("OperateList")
         public java.util.List<String> operateList;
 
         /**
+         * <p>The reason for the authorization.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -87,12 +95,14 @@ public class GrantResourcePermissionRequest extends TeaModel {
         public String reason;
 
         /**
+         * <p>The list of resources.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("ResourceList")
         public java.util.List<GrantResourcePermissionRequestGrantCommandResourceList> resourceList;
 
         /**
+         * <p>The resource type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +112,7 @@ public class GrantResourcePermissionRequest extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The authorized users pending authorization.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("UserIdList")

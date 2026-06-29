@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListDataServiceApiImpactsRequest extends TeaModel {
     /**
+     * <p>The query conditions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ListQuery")
     public ListDataServiceApiImpactsRequestListQuery listQuery;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +22,7 @@ public class ListDataServiceApiImpactsRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the data service project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,6 +62,7 @@ public class ListDataServiceApiImpactsRequest extends TeaModel {
 
     public static class ListDataServiceApiImpactsRequestListQuery extends TeaModel {
         /**
+         * <p>The ID of the called API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -68,6 +72,8 @@ public class ListDataServiceApiImpactsRequest extends TeaModel {
         public Long apiId;
 
         /**
+         * <p>The application name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -75,6 +81,7 @@ public class ListDataServiceApiImpactsRequest extends TeaModel {
         public String appName;
 
         /**
+         * <p>The end time. Format: yyyy-MM-dd HH:mm:ss.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -84,6 +91,8 @@ public class ListDataServiceApiImpactsRequest extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The column used for sorting. Valid values: CALL_COUNT: the number of calls. ERROR_COUNT: the number of errors. ERROR_RATE: the error rate. Default value: CALL_COUNT.</p>
+         * 
          * <strong>example:</strong>
          * <p>CALL_COUNT</p>
          */
@@ -91,6 +100,8 @@ public class ListDataServiceApiImpactsRequest extends TeaModel {
         public String orderColumn;
 
         /**
+         * <p>The sort order. Valid values: 1: ascending order. 2: descending order. Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -98,6 +109,8 @@ public class ListDataServiceApiImpactsRequest extends TeaModel {
         public Integer orderType;
 
         /**
+         * <p>The page number. Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -105,6 +118,8 @@ public class ListDataServiceApiImpactsRequest extends TeaModel {
         public Integer pageNo;
 
         /**
+         * <p>The number of records per page. Default value: 20.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -112,6 +127,7 @@ public class ListDataServiceApiImpactsRequest extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The start time. Format: yyyy-MM-dd HH:mm:ss.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListUserGroupsRequest extends TeaModel {
     /**
+     * <p>The paged query parameters.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ListQuery")
     public ListUserGroupsRequestListQuery listQuery;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,26 +44,40 @@ public class ListUserGroupsRequest extends TeaModel {
 
     public static class ListUserGroupsRequestListQuery extends TeaModel {
         /**
+         * <p>Specifies whether the user group is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("Active")
         public Boolean active;
 
+        /**
+         * <p>The user IDs of the user group administrators.</p>
+         */
         @NameInMap("AdminIdList")
         public java.util.List<String> adminIdList;
 
         /**
+         * <p>Specifies whether to filter user groups that the current user belongs to.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("FilterMine")
         public Boolean filterMine;
 
+        /**
+         * <p>The keyword for the user group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx测试</p>
+         */
         @NameInMap("Keyword")
         public String keyword;
 
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -71,6 +87,7 @@ public class ListUserGroupsRequest extends TeaModel {
         public Integer pageNo;
 
         /**
+         * <p>The number of records per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -4,10 +4,15 @@ package com.aliyun.dataphin_public20230630.models;
 import com.aliyun.tea.*;
 
 public class GetDataServiceAppsByGroupIdResponseBody extends TeaModel {
+    /**
+     * <p>The list of application groups.</p>
+     */
     @NameInMap("AppInfoList")
     public java.util.List<GetDataServiceAppsByGroupIdResponseBodyAppInfoList> appInfoList;
 
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -15,6 +20,8 @@ public class GetDataServiceAppsByGroupIdResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetDataServiceAppsByGroupIdResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The details of the backend exception.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -37,6 +46,9 @@ public class GetDataServiceAppsByGroupIdResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -104,6 +116,8 @@ public class GetDataServiceAppsByGroupIdResponseBody extends TeaModel {
         public Integer id;
 
         /**
+         * <p>The application name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */

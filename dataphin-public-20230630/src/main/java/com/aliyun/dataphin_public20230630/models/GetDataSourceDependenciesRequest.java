@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDataSourceDependenciesRequest extends TeaModel {
     /**
+     * <p>The data source ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetDataSourceDependenciesRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

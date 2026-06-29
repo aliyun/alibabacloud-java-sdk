@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDataSourceBasicInfoShrinkRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateDataSourceBasicInfoShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The basic information to edit for the data source.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")

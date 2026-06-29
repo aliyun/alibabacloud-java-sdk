@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetPhysicalInstanceLogResponseBody extends TeaModel {
     /**
+     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class GetPhysicalInstanceLogResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class GetPhysicalInstanceLogResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -26,6 +32,8 @@ public class GetPhysicalInstanceLogResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
@@ -33,12 +41,17 @@ public class GetPhysicalInstanceLogResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>All execution logs of the instance, including logs from multiple reruns.</p>
+     */
     @NameInMap("TaskrunLogList")
     public java.util.List<GetPhysicalInstanceLogResponseBodyTaskrunLogList> taskrunLogList;
 
@@ -97,6 +110,8 @@ public class GetPhysicalInstanceLogResponseBody extends TeaModel {
 
     public static class GetPhysicalInstanceLogResponseBodyTaskrunLogList extends TeaModel {
         /**
+         * <p>The execution duration of the task. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>60s</p>
          */
@@ -104,6 +119,8 @@ public class GetPhysicalInstanceLogResponseBody extends TeaModel {
         public String duration;
 
         /**
+         * <p>The time when the task finished running.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-05-30 16:48:13</p>
          */
@@ -111,6 +128,8 @@ public class GetPhysicalInstanceLogResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The execution log content. This value is empty if the task has not been run.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -118,6 +137,8 @@ public class GetPhysicalInstanceLogResponseBody extends TeaModel {
         public String logContent;
 
         /**
+         * <p>The time when the task started running.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-05-30 16:47:13</p>
          */
@@ -125,6 +146,8 @@ public class GetPhysicalInstanceLogResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The execution status.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
          */
@@ -132,6 +155,8 @@ public class GetPhysicalInstanceLogResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The task ID for each run.</p>
+         * 
          * <strong>example:</strong>
          * <p>tr_23231</p>
          */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetPipelineAsyncResultRequest extends TeaModel {
     /**
+     * <p>The asynchronous execution ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,14 @@ public class GetPipelineAsyncResultRequest extends TeaModel {
     public Long asyncId;
 
     /**
+     * <p>The request context information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Context")
     public GetPipelineAsyncResultRequestContext context;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,6 +62,11 @@ public class GetPipelineAsyncResultRequest extends TeaModel {
 
     public static class GetPipelineAsyncResultRequestContext extends TeaModel {
         /**
+         * <p>The current operation environment. Valid values:</p>
+         * <ul>
+         * <li>DEV: development environment.</li>
+         * <li>PROD: production environment.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -68,6 +76,7 @@ public class GetPipelineAsyncResultRequest extends TeaModel {
         public String env;
 
         /**
+         * <p>The ID of the project to which the integration pipeline task belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

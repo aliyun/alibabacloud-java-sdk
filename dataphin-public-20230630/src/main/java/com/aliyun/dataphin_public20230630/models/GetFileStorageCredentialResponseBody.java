@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetFileStorageCredentialResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class GetFileStorageCredentialResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class GetFileStorageCredentialResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The details of the backend exception.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -34,9 +40,15 @@ public class GetFileStorageCredentialResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details of the temporary read/write authorization.</p>
+     */
     @NameInMap("StorageCredential")
     public GetFileStorageCredentialResponseBodyStorageCredential storageCredential;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -95,6 +107,8 @@ public class GetFileStorageCredentialResponseBody extends TeaModel {
 
     public static class GetFileStorageCredentialResponseBodyStorageCredential extends TeaModel {
         /**
+         * <p>The temporary AccessKey ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>temp.akId</p>
          */
@@ -102,6 +116,8 @@ public class GetFileStorageCredentialResponseBody extends TeaModel {
         public String accessId;
 
         /**
+         * <p>The temporary AccessKey ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>temp.akKey</p>
          */
@@ -109,6 +125,8 @@ public class GetFileStorageCredentialResponseBody extends TeaModel {
         public String accessKey;
 
         /**
+         * <p>The file storage bucket.</p>
+         * 
          * <strong>example:</strong>
          * <p>dataphin</p>
          */
@@ -116,6 +134,8 @@ public class GetFileStorageCredentialResponseBody extends TeaModel {
         public String bucket;
 
         /**
+         * <p>The endpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss-cn-shanghai.aliyuncs.com</p>
          */
@@ -123,6 +143,8 @@ public class GetFileStorageCredentialResponseBody extends TeaModel {
         public String endpoint;
 
         /**
+         * <p>The expiration time.</p>
+         * 
          * <strong>example:</strong>
          * <p>17343434343434</p>
          */
@@ -130,6 +152,8 @@ public class GetFileStorageCredentialResponseBody extends TeaModel {
         public Long expiration;
 
         /**
+         * <p>The storage object.</p>
+         * 
          * <strong>example:</strong>
          * <p>1023231111/abc</p>
          */
@@ -146,6 +170,8 @@ public class GetFileStorageCredentialResponseBody extends TeaModel {
         public String region;
 
         /**
+         * <p>The temporary security token.</p>
+         * 
          * <strong>example:</strong>
          * <p>temp.token</p>
          */
@@ -153,6 +179,8 @@ public class GetFileStorageCredentialResponseBody extends TeaModel {
         public String securityToken;
 
         /**
+         * <p>The storage cluster type. Valid values: oss and ceph.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss</p>
          */

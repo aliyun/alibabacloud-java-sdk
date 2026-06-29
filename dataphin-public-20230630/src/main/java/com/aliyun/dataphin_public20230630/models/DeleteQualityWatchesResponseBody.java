@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteQualityWatchesResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class DeleteQualityWatchesResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The number of deleted monitored objects.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class DeleteQualityWatchesResponseBody extends TeaModel {
     public Integer data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class DeleteQualityWatchesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The exception details of the backend response.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -41,6 +49,9 @@ public class DeleteQualityWatchesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

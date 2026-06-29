@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class GetPipelineByIdRequest extends TeaModel {
     /**
+     * <p>The request context information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Context")
     public GetPipelineByIdRequestContext context;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +22,7 @@ public class GetPipelineByIdRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID used to query the pipeline task.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("QueryId")
@@ -56,6 +59,11 @@ public class GetPipelineByIdRequest extends TeaModel {
 
     public static class GetPipelineByIdRequestContext extends TeaModel {
         /**
+         * <p>The current operating environment. Valid values:</p>
+         * <ul>
+         * <li>DEV: the development environment.</li>
+         * <li>PROD: the production environment.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -65,6 +73,7 @@ public class GetPipelineByIdRequest extends TeaModel {
         public String env;
 
         /**
+         * <p>The ID of the project to which the integration pipeline task belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -98,6 +107,8 @@ public class GetPipelineByIdRequest extends TeaModel {
 
     public static class GetPipelineByIdRequestQueryId extends TeaModel {
         /**
+         * <p>Supports querying by the integration task file ID (fileId).</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -105,6 +116,8 @@ public class GetPipelineByIdRequest extends TeaModel {
         public Long fileId;
 
         /**
+         * <p>Supports querying by the integration task scheduling node ID (nodeId).</p>
+         * 
          * <strong>example:</strong>
          * <p>n_123</p>
          */
@@ -112,6 +125,8 @@ public class GetPipelineByIdRequest extends TeaModel {
         public String nodeId;
 
         /**
+         * <p>Supports querying by the integration pipeline primary key (pipelineId).</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */

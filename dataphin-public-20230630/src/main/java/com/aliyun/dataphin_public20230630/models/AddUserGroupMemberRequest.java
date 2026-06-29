@@ -4,10 +4,14 @@ package com.aliyun.dataphin_public20230630.models;
 import com.aliyun.tea.*;
 
 public class AddUserGroupMemberRequest extends TeaModel {
+    /**
+     * <p>The command to add user group members.</p>
+     */
     @NameInMap("AddCommand")
     public AddUserGroupMemberRequestAddCommand addCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +43,7 @@ public class AddUserGroupMemberRequest extends TeaModel {
 
     public static class AddUserGroupMemberRequestAddCommand extends TeaModel {
         /**
+         * <p>The user group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -47,6 +52,9 @@ public class AddUserGroupMemberRequest extends TeaModel {
         @NameInMap("UserGroupId")
         public String userGroupId;
 
+        /**
+         * <p>The list of user IDs.</p>
+         */
         @NameInMap("UserIdList")
         public java.util.List<String> userIdList;
 

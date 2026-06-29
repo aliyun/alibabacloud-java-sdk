@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetProjectRequest extends TeaModel {
     /**
+     * <p>Project environment. Valid values:</p>
+     * <ul>
+     * <li>DEV: development environment.</li>
+     * <li>PROD: production environment.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>DEV</p>
      */
@@ -12,6 +18,7 @@ public class GetProjectRequest extends TeaModel {
     public String env;
 
     /**
+     * <p>Project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +28,7 @@ public class GetProjectRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>Tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

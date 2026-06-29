@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateStandardWordRootRequest extends TeaModel {
     /**
+     * <p>The create instruction.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CreateCommand")
     public CreateStandardWordRootRequestCreateCommand createCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,7 @@ public class CreateStandardWordRootRequest extends TeaModel {
 
     public static class CreateStandardWordRootRequestCreateCommand extends TeaModel {
         /**
+         * <p>The abbreviation of the root word.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,6 +54,8 @@ public class CreateStandardWordRootRequest extends TeaModel {
         public String abbreviation;
 
         /**
+         * <p>The description of the root word.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -58,6 +63,7 @@ public class CreateStandardWordRootRequest extends TeaModel {
         public String description;
 
         /**
+         * <p>The full name of the root word.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -67,6 +73,7 @@ public class CreateStandardWordRootRequest extends TeaModel {
         public String fullName;
 
         /**
+         * <p>The name of the root word.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

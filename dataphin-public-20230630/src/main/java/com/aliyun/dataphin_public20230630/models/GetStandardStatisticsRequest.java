@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetStandardStatisticsRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetStandardStatisticsRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The statistical query instruction.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("StatisticsQuery")
@@ -42,16 +44,23 @@ public class GetStandardStatisticsRequest extends TeaModel {
 
     public static class GetStandardStatisticsRequestStatisticsQueryCreateTimePeriod extends TeaModel {
         /**
+         * <p>The end time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>Specifies whether to include the end time. Default value: false.</p>
+         */
         @NameInMap("IncludeEndTime")
         public Boolean includeEndTime;
 
         /**
+         * <p>The start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-01 00:00:00</p>
          */
@@ -90,10 +99,14 @@ public class GetStandardStatisticsRequest extends TeaModel {
     }
 
     public static class GetStandardStatisticsRequestStatisticsQuery extends TeaModel {
+        /**
+         * <p>The creation time period.</p>
+         */
         @NameInMap("CreateTimePeriod")
         public GetStandardStatisticsRequestStatisticsQueryCreateTimePeriod createTimePeriod;
 
         /**
+         * <p>The folder to which the standards belong. The search includes all subfolders under this folder.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +115,9 @@ public class GetStandardStatisticsRequest extends TeaModel {
         @NameInMap("Directory")
         public String directory;
 
+        /**
+         * <p>The stages to which the standards belong.</p>
+         */
         @NameInMap("StandardStageList")
         public java.util.List<String> standardStageList;
 

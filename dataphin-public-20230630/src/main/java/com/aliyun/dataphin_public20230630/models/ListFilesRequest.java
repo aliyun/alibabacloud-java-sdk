@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListFilesRequest extends TeaModel {
     /**
+     * <p>Query conditions</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ListQuery")
     public ListFilesRequestListQuery listQuery;
 
     /**
+     * <p>Tenant ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,20 @@ public class ListFilesRequest extends TeaModel {
 
     public static class ListFilesRequestListQuery extends TeaModel {
         /**
+         * <p>Menu tree category</p>
+         * <ul>
+         * <li>Ad hoc query: tempCode</li>
+         * <li>Code task: codeManage</li>
+         * <li>Offline pipeline: offlinePipeline</li>
+         * <li>Pipeline custom component: offlinePipelineCustomPlugin</li>
+         * <li>Sync task: dataX</li>
+         * <li>Real-time meta table: streamMeta</li>
+         * <li>Real-time custom source: streamCustomDataSource</li>
+         * <li>Real-time computing template: streamTemplate</li>
+         * <li>Resource management: resourceManage</li>
+         * <li>Offline function: udfResource</li>
+         * <li>Real-time function: streamFunction</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,6 +67,7 @@ public class ListFilesRequest extends TeaModel {
         public String category;
 
         /**
+         * <p>File directory</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -60,6 +77,11 @@ public class ListFilesRequest extends TeaModel {
         public String directory;
 
         /**
+         * <p>Environment identifier</p>
+         * <ul>
+         * <li>DEV</li>
+         * <li>PROD</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -69,6 +91,7 @@ public class ListFilesRequest extends TeaModel {
         public String env;
 
         /**
+         * <p>Project ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -78,6 +101,11 @@ public class ListFilesRequest extends TeaModel {
         public Long projectId;
 
         /**
+         * <p>Whether to recursively traverse and query</p>
+         * <ul>
+         * <li>true: Yes, returns all nodes under the directory</li>
+         * <li>false: No, returns only the first-level nodes under the directory</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class OperateInstanceRequest extends TeaModel {
     /**
+     * <p>The environment identifier. Valid values:</p>
+     * <ul>
+     * <li>DEV: development environment. </li>
+     * <li>PROD (default): production environment.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PROD</p>
      */
@@ -12,6 +18,7 @@ public class OperateInstanceRequest extends TeaModel {
     public String env;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +28,7 @@ public class OperateInstanceRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operation request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("OperateCommand")
@@ -56,10 +64,14 @@ public class OperateInstanceRequest extends TeaModel {
     }
 
     public static class OperateInstanceRequestOperateCommandInstanceIdList extends TeaModel {
+        /**
+         * <p>The field instance IDs.</p>
+         */
         @NameInMap("FieldInstanceIdList")
         public java.util.List<String> fieldInstanceIdList;
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -93,12 +105,21 @@ public class OperateInstanceRequest extends TeaModel {
 
     public static class OperateInstanceRequestOperateCommand extends TeaModel {
         /**
+         * <p>The list of instances to operate on.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("InstanceIdList")
         public java.util.List<OperateInstanceRequestOperateCommandInstanceIdList> instanceIdList;
 
         /**
+         * <p>The operation to perform. Valid values:	</p>
+         * <ul>
+         * <li>RERUN: Reruns the instance.</li>
+         * <li>PAUSE: Pauses the instance.</li>
+         * <li>RESUME: Resumes the instance.</li>
+         * <li>TERMINATE: Stops the instance.</li>
+         * <li>SET_SUCCESS: Sets the instance status to successful.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -108,6 +129,7 @@ public class OperateInstanceRequest extends TeaModel {
         public String operation;
 
         /**
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

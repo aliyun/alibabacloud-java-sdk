@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDataDomainRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateDataDomainRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The update request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")
@@ -42,6 +44,7 @@ public class UpdateDataDomainRequest extends TeaModel {
 
     public static class UpdateDataDomainRequestUpdateCommand extends TeaModel {
         /**
+         * <p>The abbreviation of the data domain.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,6 +54,7 @@ public class UpdateDataDomainRequest extends TeaModel {
         public String abbreviation;
 
         /**
+         * <p>The ID of the data board.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -60,6 +64,7 @@ public class UpdateDataDomainRequest extends TeaModel {
         public Long bizUnitId;
 
         /**
+         * <p>The ID of the data domain.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -69,6 +74,8 @@ public class UpdateDataDomainRequest extends TeaModel {
         public Long dataDomainId;
 
         /**
+         * <p>The description of the data domain.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -76,6 +83,7 @@ public class UpdateDataDomainRequest extends TeaModel {
         public String description;
 
         /**
+         * <p>The display name of the data domain.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -85,6 +93,7 @@ public class UpdateDataDomainRequest extends TeaModel {
         public String displayName;
 
         /**
+         * <p>The code of the data domain.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -94,6 +103,8 @@ public class UpdateDataDomainRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The ID of the parent data domain.</p>
+         * 
          * <strong>example:</strong>
          * <p>10232311</p>
          */

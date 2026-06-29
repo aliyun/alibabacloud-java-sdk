@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveProjectMemberRequest extends TeaModel {
     /**
+     * <p>The project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class RemoveProjectMemberRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class RemoveProjectMemberRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The command to remove a member.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RemoveCommand")
@@ -59,6 +62,7 @@ public class RemoveProjectMemberRequest extends TeaModel {
 
     public static class RemoveProjectMemberRequestRemoveCommand extends TeaModel {
         /**
+         * <p>The environment identifier. Valid values: DEV and PROD.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -67,6 +71,9 @@ public class RemoveProjectMemberRequest extends TeaModel {
         @NameInMap("Env")
         public String env;
 
+        /**
+         * <p>The user IDs.</p>
+         */
         @NameInMap("UserIdList")
         public java.util.List<String> userIdList;
 

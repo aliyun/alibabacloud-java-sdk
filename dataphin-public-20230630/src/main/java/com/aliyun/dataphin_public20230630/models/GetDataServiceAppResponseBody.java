@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetDataServiceAppResponseBody extends TeaModel {
     /**
+     * <p>The response code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The details of the data service application.</p>
+     */
     @NameInMap("Data")
     public GetDataServiceAppResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetDataServiceAppResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -37,6 +46,9 @@ public class GetDataServiceAppResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -95,6 +107,8 @@ public class GetDataServiceAppResponseBody extends TeaModel {
 
     public static class GetDataServiceAppResponseBodyDataOwnerList extends TeaModel {
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>12345</p>
          */
@@ -102,6 +116,8 @@ public class GetDataServiceAppResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The username.</p>
+         * 
          * <strong>example:</strong>
          * <p>张三</p>
          */
@@ -133,6 +149,8 @@ public class GetDataServiceAppResponseBody extends TeaModel {
 
     public static class GetDataServiceAppResponseBodyData extends TeaModel {
         /**
+         * <p>The application group name.</p>
+         * 
          * <strong>example:</strong>
          * <p>默认分组</p>
          */
@@ -140,6 +158,8 @@ public class GetDataServiceAppResponseBody extends TeaModel {
         public String appGroup;
 
         /**
+         * <p>The application ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>12345</p>
          */
@@ -147,6 +167,8 @@ public class GetDataServiceAppResponseBody extends TeaModel {
         public Integer appId;
 
         /**
+         * <p>The AppKey of the application.</p>
+         * 
          * <strong>example:</strong>
          * <p>默认应用</p>
          */
@@ -154,6 +176,8 @@ public class GetDataServiceAppResponseBody extends TeaModel {
         public String appKey;
 
         /**
+         * <p>The application name.</p>
+         * 
          * <strong>example:</strong>
          * <p>默认应用</p>
          */
@@ -161,6 +185,8 @@ public class GetDataServiceAppResponseBody extends TeaModel {
         public String appName;
 
         /**
+         * <p>The AppSecret of the application.</p>
+         * 
          * <strong>example:</strong>
          * <p>默认应用</p>
          */
@@ -168,19 +194,33 @@ public class GetDataServiceAppResponseBody extends TeaModel {
         public String appSecret;
 
         /**
+         * <p>The IP whitelist addresses. Specify IP addresses or CIDR blocks separated by semicolons (;). CIDR blocks end with a slash (/) followed by a number in the range of 1 to 32. Example: 192.168.3.12/24.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("IpWhitelist")
         public String ipWhitelist;
 
+        /**
+         * <p>Indicates whether the IP whitelist is enabled. Valid values:</p>
+         * <ul>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
+         * </ul>
+         */
         @NameInMap("IpWhitelistStatus")
         public Boolean ipWhitelistStatus;
 
+        /**
+         * <p>The list of owners.</p>
+         */
         @NameInMap("OwnerList")
         public java.util.List<GetDataServiceAppResponseBodyDataOwnerList> ownerList;
 
         /**
+         * <p>The common scenarios.</p>
+         * 
          * <strong>example:</strong>
          * <p>数据分析</p>
          */

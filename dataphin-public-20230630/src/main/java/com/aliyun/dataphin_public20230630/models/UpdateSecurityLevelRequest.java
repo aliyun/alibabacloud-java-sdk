@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateSecurityLevelRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateSecurityLevelRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The update instruction.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")
@@ -42,6 +44,8 @@ public class UpdateSecurityLevelRequest extends TeaModel {
 
     public static class UpdateSecurityLevelRequestUpdateCommand extends TeaModel {
         /**
+         * <p>The classification description.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -49,6 +53,8 @@ public class UpdateSecurityLevelRequest extends TeaModel {
         public String description;
 
         /**
+         * <p>The classification order. If this parameter is not specified, the classification name is used for matching.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -56,6 +62,8 @@ public class UpdateSecurityLevelRequest extends TeaModel {
         public Long index;
 
         /**
+         * <p>The classification name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */

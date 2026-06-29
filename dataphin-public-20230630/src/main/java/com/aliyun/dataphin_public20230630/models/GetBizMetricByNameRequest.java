@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class GetBizMetricByNameRequest extends TeaModel {
     /**
+     * <p>Query request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("BizMetricByNameQuery")
     public GetBizMetricByNameRequestBizMetricByNameQuery bizMetricByNameQuery;
 
     /**
+     * <p>Tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,7 @@ public class GetBizMetricByNameRequest extends TeaModel {
 
     public static class GetBizMetricByNameRequestBizMetricByNameQuery extends TeaModel {
         /**
+         * <p>Specifies whether to query draft or published asset details. Set this parameter to True to query draft details, or False to query published details.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,6 +54,7 @@ public class GetBizMetricByNameRequest extends TeaModel {
         public Boolean draft;
 
         /**
+         * <p>The name of the business metric.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

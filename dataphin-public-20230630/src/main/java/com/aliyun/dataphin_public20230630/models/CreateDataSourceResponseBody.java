@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateDataSourceResponseBody extends TeaModel {
     /**
+     * <p>Error code. OK indicates that the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Data source creation result</p>
+     */
     @NameInMap("CreateResult")
     public CreateDataSourceResponseBodyCreateResult createResult;
 
     /**
+     * <p>HTTP status code returned by the backend</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class CreateDataSourceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +38,8 @@ public class CreateDataSourceResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
@@ -36,6 +47,8 @@ public class CreateDataSourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class CreateDataSourceResponseBody extends TeaModel {
 
     public static class CreateDataSourceResponseBodyCreateResult extends TeaModel {
         /**
+         * <p>Development environment data source ID</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -104,6 +119,8 @@ public class CreateDataSourceResponseBody extends TeaModel {
         public Long devDataSourceId;
 
         /**
+         * <p>Production environment data source ID</p>
+         * 
          * <strong>example:</strong>
          * <p>12345</p>
          */

@@ -4,10 +4,14 @@ package com.aliyun.dataphin_public20230630.models;
 import com.aliyun.tea.*;
 
 public class ListQualityRulesRequest extends TeaModel {
+    /**
+     * <p>The paged query conditions.</p>
+     */
     @NameInMap("ListQuery")
     public ListQualityRulesRequestListQuery listQuery;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,10 +42,25 @@ public class ListQualityRulesRequest extends TeaModel {
     }
 
     public static class ListQualityRulesRequestListQuery extends TeaModel {
+        /**
+         * <p>The rule type. Valid values:</p>
+         * <ul>
+         * <li>CONSISTENT: consistency.</li>
+         * <li>EFFECTIVE: validity.</li>
+         * <li>TIMELINESE: timeliness.</li>
+         * <li>ACCURATE: accuracy.</li>
+         * <li>UNIQUENESS: uniqueness.</li>
+         * <li>COMPLETENESS: completeness.</li>
+         * <li>STABILITY: stability.</li>
+         * <li>CUSTOM: custom.</li>
+         * </ul>
+         */
         @NameInMap("CatalogList")
         public java.util.List<String> catalogList;
 
         /**
+         * <p>The search keyword for filtering. Supports searching by rule name and validation object.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -49,6 +68,8 @@ public class ListQualityRulesRequest extends TeaModel {
         public String keyword;
 
         /**
+         * <p>The page number. Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -56,28 +77,76 @@ public class ListQualityRulesRequest extends TeaModel {
         public Integer pageNo;
 
         /**
+         * <p>The number of records per page. Default value: 20.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The rule strength. Valid values:</p>
+         * <ul>
+         * <li>STRONG: strong.</li>
+         * <li>WEAK: weak.</li>
+         * </ul>
+         */
         @NameInMap("RuleStrengthList")
         public java.util.List<String> ruleStrengthList;
 
+        /**
+         * <p>The rule effective status. Valid values:</p>
+         * <ul>
+         * <li>ENABLE: enabled.</li>
+         * <li>DISABLE: disabled.</li>
+         * </ul>
+         */
         @NameInMap("StatusList")
         public java.util.List<String> statusList;
 
+        /**
+         * <p>The rule template.</p>
+         */
         @NameInMap("TemplateIdList")
         public java.util.List<Long> templateIdList;
 
+        /**
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li>NOT_RUN: not executed.</li>
+         * <li>WAITING: waiting.</li>
+         * <li>RUNNING: executing.</li>
+         * <li>SUCCESS: execution succeeded.</li>
+         * <li>FAILED: execution failed.</li>
+         * <li>CANCEL: canceled.</li>
+         * <li>TIMEOUT: timed out.</li>
+         * <li>OFFLINE: offline.</li>
+         * </ul>
+         */
         @NameInMap("TestRunTaskStatusList")
         public java.util.List<String> testRunTaskStatusList;
 
+        /**
+         * <p>The trial run validation result. Valid values:</p>
+         * <ul>
+         * <li>NOT_RUN: not executed.</li>
+         * <li>WAITING: waiting for execution.</li>
+         * <li>RUNNING: executing.</li>
+         * <li>PASS: passed.</li>
+         * <li>NOT_PASS: not passed.</li>
+         * <li>FAILED: execution failed.</li>
+         * <li>OFFLINE: offline. The task needs to be restarted.</li>
+         * <li>CANCEL: task canceled.</li>
+         * <li>TIMEOUT: task timed out.</li>
+         * </ul>
+         */
         @NameInMap("TestRunTaskValidateResultList")
         public java.util.List<String> testRunTaskValidateResultList;
 
         /**
+         * <p>The monitoring ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

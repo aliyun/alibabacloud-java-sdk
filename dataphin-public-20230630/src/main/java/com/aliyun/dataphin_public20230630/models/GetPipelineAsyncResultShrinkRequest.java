@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetPipelineAsyncResultShrinkRequest extends TeaModel {
     /**
+     * <p>The asynchronous execution ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,14 @@ public class GetPipelineAsyncResultShrinkRequest extends TeaModel {
     public Long asyncId;
 
     /**
+     * <p>The request context information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Context")
     public String contextShrink;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

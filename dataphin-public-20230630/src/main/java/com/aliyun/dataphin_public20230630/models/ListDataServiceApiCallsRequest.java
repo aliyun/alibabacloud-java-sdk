@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListDataServiceApiCallsRequest extends TeaModel {
     /**
+     * <p>The query conditions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ListQuery")
     public ListDataServiceApiCallsRequestListQuery listQuery;
 
     /**
+     * <p>The ID of the tenant.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +22,7 @@ public class ListDataServiceApiCallsRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the data service project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,6 +62,8 @@ public class ListDataServiceApiCallsRequest extends TeaModel {
 
     public static class ListDataServiceApiCallsRequestListQuery extends TeaModel {
         /**
+         * <p>The ID of the API.</p>
+         * 
          * <strong>example:</strong>
          * <p>20122</p>
          */
@@ -66,6 +71,8 @@ public class ListDataServiceApiCallsRequest extends TeaModel {
         public Long apiId;
 
         /**
+         * <p>The name of the API.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -73,16 +80,21 @@ public class ListDataServiceApiCallsRequest extends TeaModel {
         public String apiName;
 
         /**
-         * <p>appKey</p>
+         * <p>The application key.</p>
+         * <blockquote>
+         * <p>Notice: This parameter is deprecated. Use AppKeyStr instead.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>1021</p>
+         * <p>12345</p>
          */
         @NameInMap("AppKey")
         @Deprecated
         public Long appKey;
 
         /**
+         * <p>The application key.</p>
+         * 
          * <strong>example:</strong>
          * <p>app12345</p>
          */
@@ -90,6 +102,8 @@ public class ListDataServiceApiCallsRequest extends TeaModel {
         public String appKeyStr;
 
         /**
+         * <p>The IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.1.1</p>
          */
@@ -97,6 +111,7 @@ public class ListDataServiceApiCallsRequest extends TeaModel {
         public String clientIp;
 
         /**
+         * <p>The end time. Format: yyyy-MM-dd HH:mm:ss.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -106,6 +121,8 @@ public class ListDataServiceApiCallsRequest extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The page number. Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -113,6 +130,8 @@ public class ListDataServiceApiCallsRequest extends TeaModel {
         public Integer pageNo;
 
         /**
+         * <p>The number of entries per page. Default value: 20.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -120,6 +139,7 @@ public class ListDataServiceApiCallsRequest extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The start time. Format: yyyy-MM-dd HH:mm:ss.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,6 +148,9 @@ public class ListDataServiceApiCallsRequest extends TeaModel {
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>Indicates whether the call was successful.</p>
+         */
         @NameInMap("Successful")
         public Boolean successful;
 

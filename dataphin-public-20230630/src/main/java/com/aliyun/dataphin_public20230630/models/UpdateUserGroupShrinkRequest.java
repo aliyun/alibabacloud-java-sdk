@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateUserGroupShrinkRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,6 +14,9 @@ public class UpdateUserGroupShrinkRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
+    /**
+     * <p>The command to edit the user group.</p>
+     */
     @NameInMap("UpdateCommand")
     public String updateCommandShrink;
 

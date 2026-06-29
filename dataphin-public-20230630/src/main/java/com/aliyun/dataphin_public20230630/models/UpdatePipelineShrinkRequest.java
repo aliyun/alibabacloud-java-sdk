@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class UpdatePipelineShrinkRequest extends TeaModel {
     /**
+     * <p>The request context information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Context")
     public String contextShrink;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +22,7 @@ public class UpdatePipelineShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The configuration for updating the pipeline or workflow node.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")

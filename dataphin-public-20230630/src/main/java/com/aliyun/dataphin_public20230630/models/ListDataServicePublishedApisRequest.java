@@ -4,10 +4,14 @@ package com.aliyun.dataphin_public20230630.models;
 import com.aliyun.tea.*;
 
 public class ListDataServicePublishedApisRequest extends TeaModel {
+    /**
+     * <p>Search conditions.</p>
+     */
     @NameInMap("ListQuery")
     public ListDataServicePublishedApisRequestListQuery listQuery;
 
     /**
+     * <p>Tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +21,7 @@ public class ListDataServicePublishedApisRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>Data service project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,6 +61,8 @@ public class ListDataServicePublishedApisRequest extends TeaModel {
 
     public static class ListDataServicePublishedApisRequestListQuery extends TeaModel {
         /**
+         * <p>API name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -63,6 +70,8 @@ public class ListDataServicePublishedApisRequest extends TeaModel {
         public String apiName;
 
         /**
+         * <p>Group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>102113</p>
          */
@@ -70,6 +79,8 @@ public class ListDataServicePublishedApisRequest extends TeaModel {
         public Integer groupId;
 
         /**
+         * <p>Page number. Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -77,6 +88,8 @@ public class ListDataServicePublishedApisRequest extends TeaModel {
         public Integer pageNo;
 
         /**
+         * <p>Number of records per page. Default value: 20.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */

@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteSecurityClassifyRequest extends TeaModel {
     /**
+     * <p>The delete instruction.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeleteCommand")
     public DeleteSecurityClassifyRequestDeleteCommand deleteCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,8 @@ public class DeleteSecurityClassifyRequest extends TeaModel {
 
     public static class DeleteSecurityClassifyRequestDeleteCommand extends TeaModel {
         /**
+         * <p>The categorization ID. If this parameter is not specified, the categorization is matched and deleted based on the categorization name and parent path.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -49,6 +53,8 @@ public class DeleteSecurityClassifyRequest extends TeaModel {
         public Long id;
 
         /**
+         * <p>The categorization name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -56,6 +62,8 @@ public class DeleteSecurityClassifyRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The categorization path. Default value: /.</p>
+         * 
          * <strong>example:</strong>
          * <p>/</p>
          */

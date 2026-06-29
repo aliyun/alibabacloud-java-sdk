@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetResourceResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class GetResourceResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class GetResourceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The details of the backend exception.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -34,9 +40,15 @@ public class GetResourceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The resource file details.</p>
+     */
     @NameInMap("ResourceInfo")
     public GetResourceResponseBodyResourceInfo resourceInfo;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -95,6 +107,8 @@ public class GetResourceResponseBody extends TeaModel {
 
     public static class GetResourceResponseBodyResourceInfo extends TeaModel {
         /**
+         * <p>The compute engine type.</p>
+         * 
          * <strong>example:</strong>
          * <p>MAX_COMPUTE</p>
          */
@@ -102,6 +116,8 @@ public class GetResourceResponseBody extends TeaModel {
         public String computeEngineType;
 
         /**
+         * <p>The creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>30011021</p>
          */
@@ -109,6 +125,8 @@ public class GetResourceResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>测试</p>
          */
@@ -116,6 +134,8 @@ public class GetResourceResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The directory where the resource is stored.</p>
+         * 
          * <strong>example:</strong>
          * <p>/</p>
          */
@@ -123,6 +143,8 @@ public class GetResourceResponseBody extends TeaModel {
         public String directory;
 
         /**
+         * <p>The creation time, in the yyyy-MM-dd HH:mm:ss format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-10 10:01:01</p>
          */
@@ -130,6 +152,8 @@ public class GetResourceResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The last modification time, in the yyyy-MM-dd HH:mm:ss format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-10 10:01:01</p>
          */
@@ -137,6 +161,8 @@ public class GetResourceResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The resource ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>10200121011</p>
          */
@@ -144,6 +170,8 @@ public class GetResourceResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The last modifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>30011021</p>
          */
@@ -151,6 +179,8 @@ public class GetResourceResponseBody extends TeaModel {
         public String lastModifier;
 
         /**
+         * <p>The name of the resource file.</p>
+         * 
          * <strong>example:</strong>
          * <p>udf_sleep.jar</p>
          */
@@ -158,6 +188,8 @@ public class GetResourceResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1030111021</p>
          */
@@ -165,6 +197,8 @@ public class GetResourceResponseBody extends TeaModel {
         public Long projectId;
 
         /**
+         * <p>The resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>JAR</p>
          */
@@ -172,6 +206,8 @@ public class GetResourceResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The size of the resource, in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>102400</p>
          */
@@ -179,6 +215,8 @@ public class GetResourceResponseBody extends TeaModel {
         public Long size;
 
         /**
+         * <p>The storage address of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>300011448/711833/cdcd1c44-f1ee-46bb-b318-1d123dbabf6c</p>
          */

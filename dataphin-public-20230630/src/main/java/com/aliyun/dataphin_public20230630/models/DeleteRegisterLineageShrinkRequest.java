@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteRegisterLineageShrinkRequest extends TeaModel {
     /**
+     * <p>The command for deleting registered lineage.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeleteRegisterLineageCommand")
     public String deleteRegisterLineageCommandShrink;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class OperateInstanceShrinkRequest extends TeaModel {
     /**
+     * <p>The environment identifier. Valid values:</p>
+     * <ul>
+     * <li>DEV: development environment. </li>
+     * <li>PROD (default): production environment.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PROD</p>
      */
@@ -12,6 +18,7 @@ public class OperateInstanceShrinkRequest extends TeaModel {
     public String env;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +28,7 @@ public class OperateInstanceShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operation request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("OperateCommand")

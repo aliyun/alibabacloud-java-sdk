@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetPhysicalNodeContentRequest extends TeaModel {
     /**
+     * <p>The environment identifier. Valid values:</p>
+     * <ul>
+     * <li>DEV: Development environment. </li>
+     * <li>PROD (default): Production environment.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PROD</p>
      */
@@ -12,6 +18,7 @@ public class GetPhysicalNodeContentRequest extends TeaModel {
     public String env;
 
     /**
+     * <p>The node ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +28,7 @@ public class GetPhysicalNodeContentRequest extends TeaModel {
     public String nodeId;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

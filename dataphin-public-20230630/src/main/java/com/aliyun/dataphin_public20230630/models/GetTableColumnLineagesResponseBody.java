@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetTableColumnLineagesResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class GetTableColumnLineagesResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class GetTableColumnLineagesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The details of the backend exception.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -34,9 +40,15 @@ public class GetTableColumnLineagesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The list of table column lineage records.</p>
+     */
     @NameInMap("TableColumnLineageList")
     public java.util.List<GetTableColumnLineagesResponseBodyTableColumnLineageList> tableColumnLineageList;
 
@@ -95,6 +107,8 @@ public class GetTableColumnLineagesResponseBody extends TeaModel {
 
     public static class GetTableColumnLineagesResponseBodyTableColumnLineageList extends TeaModel {
         /**
+         * <p>The ID of the business unit to which the input table belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -102,6 +116,8 @@ public class GetTableColumnLineagesResponseBody extends TeaModel {
         public Long inputBizUnitId;
 
         /**
+         * <p>The GUID of the input column. Format: TableGuid.ColumnName.</p>
+         * 
          * <strong>example:</strong>
          * <p>1121.col1</p>
          */
@@ -109,6 +125,8 @@ public class GetTableColumnLineagesResponseBody extends TeaModel {
         public String inputColumnGuid;
 
         /**
+         * <p>The name of the input column.</p>
+         * 
          * <strong>example:</strong>
          * <p>col1</p>
          */
@@ -116,6 +134,8 @@ public class GetTableColumnLineagesResponseBody extends TeaModel {
         public String inputColumnName;
 
         /**
+         * <p>The ID of the data source to which the input table belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -123,6 +143,8 @@ public class GetTableColumnLineagesResponseBody extends TeaModel {
         public Long inputDataSourceId;
 
         /**
+         * <p>The type of the data source to which the input table belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>MAX_COMPUTE</p>
          */
@@ -130,16 +152,23 @@ public class GetTableColumnLineagesResponseBody extends TeaModel {
         public String inputDataSourceType;
 
         /**
+         * <p>The ID of the project to which the input table belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>1233</p>
          */
         @NameInMap("InputProjectId")
         public Long inputProjectId;
 
+        /**
+         * <p>Indicates whether the input table has been deleted.</p>
+         */
         @NameInMap("InputTableDeleted")
         public Boolean inputTableDeleted;
 
         /**
+         * <p>The environment of the input table. Valid values: dev and prod.</p>
+         * 
          * <strong>example:</strong>
          * <p>dev</p>
          */
@@ -147,6 +176,8 @@ public class GetTableColumnLineagesResponseBody extends TeaModel {
         public String inputTableEnv;
 
         /**
+         * <p>The GUID of the input table. Each asset has a unique identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>123211</p>
          */
@@ -154,6 +185,8 @@ public class GetTableColumnLineagesResponseBody extends TeaModel {
         public String inputTableGuid;
 
         /**
+         * <p>The name of the input table.</p>
+         * 
          * <strong>example:</strong>
          * <p>t_input</p>
          */
@@ -161,6 +194,8 @@ public class GetTableColumnLineagesResponseBody extends TeaModel {
         public String inputTableName;
 
         /**
+         * <p>The environment of the node. Valid values: dev and prod.</p>
+         * 
          * <strong>example:</strong>
          * <p>dev</p>
          */
@@ -168,6 +203,8 @@ public class GetTableColumnLineagesResponseBody extends TeaModel {
         public String nodeEnv;
 
         /**
+         * <p>The node ID associated with the lineage.</p>
+         * 
          * <strong>example:</strong>
          * <p>110021</p>
          */
@@ -175,6 +212,8 @@ public class GetTableColumnLineagesResponseBody extends TeaModel {
         public String nodeId;
 
         /**
+         * <p>The ID of the business unit to which the output table belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -182,6 +221,8 @@ public class GetTableColumnLineagesResponseBody extends TeaModel {
         public Long outputBizUnitId;
 
         /**
+         * <p>The GUID of the output column. Format: TableId.ColumnName.</p>
+         * 
          * <strong>example:</strong>
          * <p>2231.col2</p>
          */
@@ -189,6 +230,8 @@ public class GetTableColumnLineagesResponseBody extends TeaModel {
         public String outputColumnGuid;
 
         /**
+         * <p>The name of the output column.</p>
+         * 
          * <strong>example:</strong>
          * <p>col2</p>
          */
@@ -196,6 +239,8 @@ public class GetTableColumnLineagesResponseBody extends TeaModel {
         public String outputColumnName;
 
         /**
+         * <p>The ID of the data source to which the output table belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -203,6 +248,8 @@ public class GetTableColumnLineagesResponseBody extends TeaModel {
         public Long outputDataSourceId;
 
         /**
+         * <p>The type of the data source to which the output table belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>MAX_COMPUTE</p>
          */
@@ -210,16 +257,23 @@ public class GetTableColumnLineagesResponseBody extends TeaModel {
         public String outputDataSourceType;
 
         /**
+         * <p>The ID of the project to which the output table belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>1233</p>
          */
         @NameInMap("OutputProjectId")
         public Long outputProjectId;
 
+        /**
+         * <p>Indicates whether the output table has been deleted.</p>
+         */
         @NameInMap("OutputTableDeleted")
         public Boolean outputTableDeleted;
 
         /**
+         * <p>The environment of the output table. Valid values: dev and prod.</p>
+         * 
          * <strong>example:</strong>
          * <p>dev</p>
          */
@@ -227,6 +281,8 @@ public class GetTableColumnLineagesResponseBody extends TeaModel {
         public String outputTableEnv;
 
         /**
+         * <p>The GUID of the output table. Each asset has a unique identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>2231</p>
          */
@@ -234,6 +290,8 @@ public class GetTableColumnLineagesResponseBody extends TeaModel {
         public String outputTableGuid;
 
         /**
+         * <p>The name of the output table.</p>
+         * 
          * <strong>example:</strong>
          * <p>t_output</p>
          */

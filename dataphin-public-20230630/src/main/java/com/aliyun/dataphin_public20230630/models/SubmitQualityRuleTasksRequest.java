@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitQualityRuleTasksRequest extends TeaModel {
     /**
+     * <p>Tenant ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class SubmitQualityRuleTasksRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>Submit command</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SubmitCommand")
@@ -42,6 +44,7 @@ public class SubmitQualityRuleTasksRequest extends TeaModel {
 
     public static class SubmitQualityRuleTasksRequestSubmitCommandWatchRuleIdList extends TeaModel {
         /**
+         * <p>Rule ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,6 +54,7 @@ public class SubmitQualityRuleTasksRequest extends TeaModel {
         public Long ruleId;
 
         /**
+         * <p>Monitoring object ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -84,6 +88,8 @@ public class SubmitQualityRuleTasksRequest extends TeaModel {
 
     public static class SubmitQualityRuleTasksRequestSubmitCommand extends TeaModel {
         /**
+         * <p>Business date, format: yyyy-MM-dd</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-30</p>
          */
@@ -91,12 +97,15 @@ public class SubmitQualityRuleTasksRequest extends TeaModel {
         public String bizDate;
 
         /**
+         * <p>Whether it is a test run: true for test run, false for formal run.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("IsTestRun")
         public Boolean isTestRun;
 
         /**
+         * <p>Partition expression - custom expression</p>
+         * 
          * <strong>example:</strong>
          * <p>ds=${yyyyMMdd}</p>
          */
@@ -104,6 +113,8 @@ public class SubmitQualityRuleTasksRequest extends TeaModel {
         public String partitionExpression;
 
         /**
+         * <p>Source of the test run partition expression: SCHEDULE for existing schedule, CUSTOM for custom.</p>
+         * 
          * <strong>example:</strong>
          * <p>CUSTOM</p>
          */
@@ -111,6 +122,8 @@ public class SubmitQualityRuleTasksRequest extends TeaModel {
         public String partitionExpressionFrom;
 
         /**
+         * <p>Existing schedule ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -118,6 +131,7 @@ public class SubmitQualityRuleTasksRequest extends TeaModel {
         public Long scheduleId;
 
         /**
+         * <p>Monitoring object and rule IDs</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("WatchRuleIdList")

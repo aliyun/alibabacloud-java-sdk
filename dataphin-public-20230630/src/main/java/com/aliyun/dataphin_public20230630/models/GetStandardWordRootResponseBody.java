@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetStandardWordRootResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class GetStandardWordRootResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class GetStandardWordRootResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The details of the backend exception.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -34,9 +40,15 @@ public class GetStandardWordRootResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The word root details.</p>
+     */
     @NameInMap("WordRootInfo")
     public GetStandardWordRootResponseBodyWordRootInfo wordRootInfo;
 
@@ -95,6 +107,8 @@ public class GetStandardWordRootResponseBody extends TeaModel {
 
     public static class GetStandardWordRootResponseBodyWordRootInfo extends TeaModel {
         /**
+         * <p>The abbreviation of the word root.</p>
+         * 
          * <strong>example:</strong>
          * <p>avg</p>
          */
@@ -102,6 +116,8 @@ public class GetStandardWordRootResponseBody extends TeaModel {
         public String abbreviation;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
          */
@@ -109,6 +125,8 @@ public class GetStandardWordRootResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The user ID of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>30012021</p>
          */
@@ -116,6 +134,8 @@ public class GetStandardWordRootResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>The username of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -123,6 +143,8 @@ public class GetStandardWordRootResponseBody extends TeaModel {
         public String creatorName;
 
         /**
+         * <p>The description of the word root.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -130,6 +152,8 @@ public class GetStandardWordRootResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The full name of the word root.</p>
+         * 
          * <strong>example:</strong>
          * <p>average</p>
          */
@@ -137,6 +161,8 @@ public class GetStandardWordRootResponseBody extends TeaModel {
         public String fullName;
 
         /**
+         * <p>The user ID of the last modifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>30012021</p>
          */
@@ -144,6 +170,8 @@ public class GetStandardWordRootResponseBody extends TeaModel {
         public String lastModifier;
 
         /**
+         * <p>The username of the last modifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -151,6 +179,8 @@ public class GetStandardWordRootResponseBody extends TeaModel {
         public String lastModifierName;
 
         /**
+         * <p>The modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
          */
@@ -158,6 +188,8 @@ public class GetStandardWordRootResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
+         * <p>The name of the word root.</p>
+         * 
          * <strong>example:</strong>
          * <p>平均值</p>
          */

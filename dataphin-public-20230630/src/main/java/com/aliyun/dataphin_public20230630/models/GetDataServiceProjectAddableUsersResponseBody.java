@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetDataServiceProjectAddableUsersResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class GetDataServiceProjectAddableUsersResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class GetDataServiceProjectAddableUsersResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The details of the backend exception.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -34,9 +40,15 @@ public class GetDataServiceProjectAddableUsersResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The list of project members.</p>
+     */
     @NameInMap("UserList")
     public java.util.List<GetDataServiceProjectAddableUsersResponseBodyUserList> userList;
 
@@ -95,6 +107,8 @@ public class GetDataServiceProjectAddableUsersResponseBody extends TeaModel {
 
     public static class GetDataServiceProjectAddableUsersResponseBodyUserList extends TeaModel {
         /**
+         * <p>The username of the user.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:xx@aliyuncs.com">xx@aliyuncs.com</a></p>
          */
@@ -102,6 +116,8 @@ public class GetDataServiceProjectAddableUsersResponseBody extends TeaModel {
         public String accountName;
 
         /**
+         * <p>The nickname of the user.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -109,6 +125,8 @@ public class GetDataServiceProjectAddableUsersResponseBody extends TeaModel {
         public String displayName;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>30012011</p>
          */

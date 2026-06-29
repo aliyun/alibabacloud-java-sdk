@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTablesResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ListTablesResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,12 +23,17 @@ public class ListTablesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The details of the backend exception.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The paged query result.</p>
+     */
     @NameInMap("PageResult")
     public ListTablesResponseBodyPageResult pageResult;
 
@@ -37,6 +46,9 @@ public class ListTablesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -95,6 +107,8 @@ public class ListTablesResponseBody extends TeaModel {
 
     public static class ListTablesResponseBodyPageResultTableListStreamTableConfig extends TeaModel {
         /**
+         * <p>The configuration item.</p>
+         * 
          * <strong>example:</strong>
          * <p>k1</p>
          */
@@ -102,6 +116,8 @@ public class ListTablesResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the configuration item.</p>
+         * 
          * <strong>example:</strong>
          * <p>v1</p>
          */
@@ -132,10 +148,15 @@ public class ListTablesResponseBody extends TeaModel {
     }
 
     public static class ListTablesResponseBodyPageResultTableList extends TeaModel {
+        /**
+         * <p>The asset inventory tags.</p>
+         */
         @NameInMap("AssetTagList")
         public java.util.List<String> assetTagList;
 
         /**
+         * <p>The ID of the business unit.</p>
+         * 
          * <strong>example:</strong>
          * <p>2011</p>
          */
@@ -143,6 +164,8 @@ public class ListTablesResponseBody extends TeaModel {
         public Long bizUnitId;
 
         /**
+         * <p>The name of the business unit.</p>
+         * 
          * <strong>example:</strong>
          * <p>LD_test01</p>
          */
@@ -150,6 +173,8 @@ public class ListTablesResponseBody extends TeaModel {
         public String bizUnitName;
 
         /**
+         * <p>The comment of the table.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -157,6 +182,8 @@ public class ListTablesResponseBody extends TeaModel {
         public String comment;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
          */
@@ -164,6 +191,8 @@ public class ListTablesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The ID of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>30011211</p>
          */
@@ -171,6 +200,8 @@ public class ListTablesResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>The ID of the data domain.</p>
+         * 
          * <strong>example:</strong>
          * <p>211</p>
          */
@@ -178,6 +209,8 @@ public class ListTablesResponseBody extends TeaModel {
         public Long dataDomainId;
 
         /**
+         * <p>The name of the data domain.</p>
+         * 
          * <strong>example:</strong>
          * <p>211</p>
          */
@@ -185,6 +218,8 @@ public class ListTablesResponseBody extends TeaModel {
         public String dataDomainName;
 
         /**
+         * <p>The ID of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>3301</p>
          */
@@ -192,6 +227,8 @@ public class ListTablesResponseBody extends TeaModel {
         public Long dataSourceId;
 
         /**
+         * <p>The display name of the table.</p>
+         * 
          * <strong>example:</strong>
          * <p>学生</p>
          */
@@ -199,6 +236,12 @@ public class ListTablesResponseBody extends TeaModel {
         public String displayName;
 
         /**
+         * <p>The environment. Valid values:</p>
+         * <ul>
+         * <li>dev</li>
+         * <li>prod.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>dev</p>
          */
@@ -206,6 +249,8 @@ public class ListTablesResponseBody extends TeaModel {
         public String env;
 
         /**
+         * <p>The file ID. This value is used to navigate to the ODM model.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -213,19 +258,29 @@ public class ListTablesResponseBody extends TeaModel {
         public String fileId;
 
         /**
+         * <p>The GUID of the table.</p>
+         * 
          * <strong>example:</strong>
          * <p>10011</p>
          */
         @NameInMap("Guid")
         public String guid;
 
+        /**
+         * <p>Indicates whether the project or business version to which the table belongs is in Basic mode.</p>
+         */
         @NameInMap("IsBasicMode")
         public Boolean isBasicMode;
 
+        /**
+         * <p>Indicates whether the table is a partitioned table.</p>
+         */
         @NameInMap("IsPartitionTable")
         public Boolean isPartitionTable;
 
         /**
+         * <p>The time when the table DDL was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
          */
@@ -233,6 +288,8 @@ public class ListTablesResponseBody extends TeaModel {
         public String lastDdlTime;
 
         /**
+         * <p>The time when the table data was last updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
          */
@@ -240,6 +297,8 @@ public class ListTablesResponseBody extends TeaModel {
         public String lastDmlTime;
 
         /**
+         * <p>The time when the data was last viewed.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
          */
@@ -247,6 +306,8 @@ public class ListTablesResponseBody extends TeaModel {
         public String lastQueryTime;
 
         /**
+         * <p>The lifecycle of the table, in days.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -254,6 +315,8 @@ public class ListTablesResponseBody extends TeaModel {
         public Long lifeCycle;
 
         /**
+         * <p>The name of the table.</p>
+         * 
          * <strong>example:</strong>
          * <p>t_test01</p>
          */
@@ -261,6 +324,8 @@ public class ListTablesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The Dataphin user ID of the table owner. This value may be empty if the owner is not bound.</p>
+         * 
          * <strong>example:</strong>
          * <p>30011211</p>
          */
@@ -268,6 +333,8 @@ public class ListTablesResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The ID of the parent model. This value is used to navigate to the ODM model.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -275,6 +342,8 @@ public class ListTablesResponseBody extends TeaModel {
         public String parentModelId;
 
         /**
+         * <p>The ID of the logical project.</p>
+         * 
          * <strong>example:</strong>
          * <p>1011</p>
          */
@@ -282,6 +351,8 @@ public class ListTablesResponseBody extends TeaModel {
         public Long projectId;
 
         /**
+         * <p>The name of the logical project.</p>
+         * 
          * <strong>example:</strong>
          * <p>testPrj</p>
          */
@@ -289,6 +360,8 @@ public class ListTablesResponseBody extends TeaModel {
         public String projectName;
 
         /**
+         * <p>The security classification.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -296,6 +369,8 @@ public class ListTablesResponseBody extends TeaModel {
         public Long securityLevel;
 
         /**
+         * <p>The abbreviation of the security classification name.</p>
+         * 
          * <strong>example:</strong>
          * <p>高级</p>
          */
@@ -303,6 +378,8 @@ public class ListTablesResponseBody extends TeaModel {
         public String securityLevelAbbreviation;
 
         /**
+         * <p>The name of the security classification.</p>
+         * 
          * <strong>example:</strong>
          * <p>高级</p>
          */
@@ -310,16 +387,27 @@ public class ListTablesResponseBody extends TeaModel {
         public String securityLevelName;
 
         /**
+         * <p>The storage type. Valid values:</p>
+         * <ul>
+         * <li>HIVE</li>
+         * <li>MAX_COMPUTE.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>HIVE</p>
          */
         @NameInMap("StorageType")
         public String storageType;
 
+        /**
+         * <p>The dynamic properties of the real-time meta table.</p>
+         */
         @NameInMap("StreamTableConfig")
         public java.util.List<ListTablesResponseBodyPageResultTableListStreamTableConfig> streamTableConfig;
 
         /**
+         * <p>The total storage size of the table, in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>10241024</p>
          */
@@ -327,6 +415,8 @@ public class ListTablesResponseBody extends TeaModel {
         public Long tableSizeInBytes;
 
         /**
+         * <p>The number of visits in the last 30 days.</p>
+         * 
          * <strong>example:</strong>
          * <p>22</p>
          */
@@ -589,10 +679,15 @@ public class ListTablesResponseBody extends TeaModel {
     }
 
     public static class ListTablesResponseBodyPageResult extends TeaModel {
+        /**
+         * <p>The list of tables.</p>
+         */
         @NameInMap("TableList")
         public java.util.List<ListTablesResponseBodyPageResultTableList> tableList;
 
         /**
+         * <p>The total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>68</p>
          */

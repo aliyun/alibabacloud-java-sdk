@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDataServiceApiDocumentRequest extends TeaModel {
     /**
+     * <p>The API ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetDataServiceApiDocumentRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class GetDataServiceApiDocumentRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The version.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

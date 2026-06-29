@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class GetBizMetricByNameShrinkRequest extends TeaModel {
     /**
+     * <p>Query request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("BizMetricByNameQuery")
     public String bizMetricByNameQueryShrink;
 
     /**
+     * <p>Tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

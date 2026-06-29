@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDataServiceMyApiPermissionsResponseBody extends TeaModel {
     /**
+     * <p>Backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ListDataServiceMyApiPermissionsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,12 +23,17 @@ public class ListDataServiceMyApiPermissionsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Backend response exception details.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Paginated query result.</p>
+     */
     @NameInMap("PageResult")
     public ListDataServiceMyApiPermissionsResponseBodyPageResult pageResult;
 
@@ -37,6 +46,9 @@ public class ListDataServiceMyApiPermissionsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -95,6 +107,8 @@ public class ListDataServiceMyApiPermissionsResponseBody extends TeaModel {
 
     public static class ListDataServiceMyApiPermissionsResponseBodyPageResultPermissionList extends TeaModel {
         /**
+         * <p>API ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1322</p>
          */
@@ -102,6 +116,8 @@ public class ListDataServiceMyApiPermissionsResponseBody extends TeaModel {
         public Long apiId;
 
         /**
+         * <p>API name.</p>
+         * 
          * <strong>example:</strong>
          * <p>teset</p>
          */
@@ -109,6 +125,8 @@ public class ListDataServiceMyApiPermissionsResponseBody extends TeaModel {
         public String apiName;
 
         /**
+         * <p>Creator name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -116,6 +134,8 @@ public class ListDataServiceMyApiPermissionsResponseBody extends TeaModel {
         public String createUserName;
 
         /**
+         * <p>Creator ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1121</p>
          */
@@ -123,6 +143,8 @@ public class ListDataServiceMyApiPermissionsResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>Owner ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1121</p>
          */
@@ -130,6 +152,8 @@ public class ListDataServiceMyApiPermissionsResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>Owner name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -137,6 +161,8 @@ public class ListDataServiceMyApiPermissionsResponseBody extends TeaModel {
         public String ownerUserName;
 
         /**
+         * <p>The user to whom the privilege belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>1121</p>
          */
@@ -144,6 +170,8 @@ public class ListDataServiceMyApiPermissionsResponseBody extends TeaModel {
         public String privilegeBelongTo;
 
         /**
+         * <p>Authorization source. Valid value: 0, which indicates the owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -151,6 +179,8 @@ public class ListDataServiceMyApiPermissionsResponseBody extends TeaModel {
         public Integer privilegeFrom;
 
         /**
+         * <p>Project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>102122</p>
          */
@@ -158,6 +188,8 @@ public class ListDataServiceMyApiPermissionsResponseBody extends TeaModel {
         public Integer projectId;
 
         /**
+         * <p>Project name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -165,6 +197,8 @@ public class ListDataServiceMyApiPermissionsResponseBody extends TeaModel {
         public String projectName;
 
         /**
+         * <p>Role. Valid value: 0, which indicates the owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -267,10 +301,15 @@ public class ListDataServiceMyApiPermissionsResponseBody extends TeaModel {
     }
 
     public static class ListDataServiceMyApiPermissionsResponseBodyPageResult extends TeaModel {
+        /**
+         * <p>Paginated permission list.</p>
+         */
         @NameInMap("PermissionList")
         public java.util.List<ListDataServiceMyApiPermissionsResponseBodyPageResultPermissionList> permissionList;
 
         /**
+         * <p>Total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>68</p>
          */

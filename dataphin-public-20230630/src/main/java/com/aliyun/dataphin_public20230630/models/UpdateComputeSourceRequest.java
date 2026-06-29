@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateComputeSourceRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateComputeSourceRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The edit command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")
@@ -42,6 +44,7 @@ public class UpdateComputeSourceRequest extends TeaModel {
 
     public static class UpdateComputeSourceRequestUpdateCommandConfigList extends TeaModel {
         /**
+         * <p>The key of the configuration item.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,6 +54,7 @@ public class UpdateComputeSourceRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the configuration item.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -84,12 +88,14 @@ public class UpdateComputeSourceRequest extends TeaModel {
 
     public static class UpdateComputeSourceRequestUpdateCommand extends TeaModel {
         /**
+         * <p>The connection configuration items.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("ConfigList")
         public java.util.List<UpdateComputeSourceRequestUpdateCommandConfigList> configList;
 
         /**
+         * <p>The description.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -99,6 +105,7 @@ public class UpdateComputeSourceRequest extends TeaModel {
         public String description;
 
         /**
+         * <p>The ID of the compute source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -108,6 +115,7 @@ public class UpdateComputeSourceRequest extends TeaModel {
         public Long id;
 
         /**
+         * <p>The name of the compute source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +125,7 @@ public class UpdateComputeSourceRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The type of the compute source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

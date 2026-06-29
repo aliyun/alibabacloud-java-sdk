@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class ExecuteManualNodeRequest extends TeaModel {
     /**
+     * <p>The environment identifier. Valid values:</p>
+     * <ul>
+     * <li>DEV: development environment </li>
+     * <li>PROD (default): production environment.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PROD</p>
      */
@@ -12,12 +18,14 @@ public class ExecuteManualNodeRequest extends TeaModel {
     public String env;
 
     /**
+     * <p>The request for running a manual task.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ExecuteCommand")
     public ExecuteManualNodeRequestExecuteCommand executeCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,6 +65,8 @@ public class ExecuteManualNodeRequest extends TeaModel {
 
     public static class ExecuteManualNodeRequestExecuteCommandParamList extends TeaModel {
         /**
+         * <p>The parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>param1</p>
          */
@@ -64,6 +74,8 @@ public class ExecuteManualNodeRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The parameter value.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -95,6 +107,7 @@ public class ExecuteManualNodeRequest extends TeaModel {
 
     public static class ExecuteManualNodeRequestExecuteCommand extends TeaModel {
         /**
+         * <p>The end business date.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -104,6 +117,8 @@ public class ExecuteManualNodeRequest extends TeaModel {
         public String endBizDate;
 
         /**
+         * <p>The workflow name.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx测试</p>
          */
@@ -111,6 +126,7 @@ public class ExecuteManualNodeRequest extends TeaModel {
         public String flowName;
 
         /**
+         * <p>The node ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -119,10 +135,14 @@ public class ExecuteManualNodeRequest extends TeaModel {
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <p>The runtime parameters.</p>
+         */
         @NameInMap("ParamList")
         public java.util.List<ExecuteManualNodeRequestExecuteCommandParamList> paramList;
 
         /**
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,6 +152,7 @@ public class ExecuteManualNodeRequest extends TeaModel {
         public Long projectId;
 
         /**
+         * <p>The start business date.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

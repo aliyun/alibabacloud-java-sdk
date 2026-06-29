@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetCheckConnectivityJobsResponseBody extends TeaModel {
     /**
+     * <p>The response code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -18,6 +20,8 @@ public class GetCheckConnectivityJobsResponseBody extends TeaModel {
     public java.util.List<GetCheckConnectivityJobsResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -25,6 +29,8 @@ public class GetCheckConnectivityJobsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error details returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -41,6 +47,8 @@ public class GetCheckConnectivityJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -102,6 +110,8 @@ public class GetCheckConnectivityJobsResponseBody extends TeaModel {
 
     public static class GetCheckConnectivityJobsResponseBodyData extends TeaModel {
         /**
+         * <p>The data source ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>192</p>
          */
@@ -109,6 +119,8 @@ public class GetCheckConnectivityJobsResponseBody extends TeaModel {
         public String dataSourceId;
 
         /**
+         * <p>The error message that provides a detailed error description when the task fails.</p>
+         * 
          * <strong>example:</strong>
          * <p>notFoundIp</p>
          */
@@ -116,6 +128,8 @@ public class GetCheckConnectivityJobsResponseBody extends TeaModel {
         public String errorMsg;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123123</p>
          */
@@ -123,6 +137,8 @@ public class GetCheckConnectivityJobsResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The task type, such as application-level or cluster-level.</p>
+         * 
          * <strong>example:</strong>
          * <p>application/cluster</p>
          */
@@ -130,6 +146,8 @@ public class GetCheckConnectivityJobsResponseBody extends TeaModel {
         public String jobType;
 
         /**
+         * <p>The task status.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
          */
@@ -137,6 +155,8 @@ public class GetCheckConnectivityJobsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The tenant ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>30001011</p>
          */
@@ -144,6 +164,8 @@ public class GetCheckConnectivityJobsResponseBody extends TeaModel {
         public String tenantId;
 
         /**
+         * <p>The Voldemort task ID, which is used to associate with the underlying execution task.</p>
+         * 
          * <strong>example:</strong>
          * <p>t_7572319950395080706_20251225_7572319950395080707</p>
          */

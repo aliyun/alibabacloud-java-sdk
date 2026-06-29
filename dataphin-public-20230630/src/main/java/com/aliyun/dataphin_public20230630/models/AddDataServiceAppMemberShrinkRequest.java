@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class AddDataServiceAppMemberShrinkRequest extends TeaModel {
     /**
+     * <p>The regular member to add to the data service application.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AddCommand")
     public String addCommandShrink;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

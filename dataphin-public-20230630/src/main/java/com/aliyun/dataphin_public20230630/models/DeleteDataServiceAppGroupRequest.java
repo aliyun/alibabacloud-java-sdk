@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDataServiceAppGroupRequest extends TeaModel {
     /**
+     * <p>The group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteDataServiceAppGroupRequest extends TeaModel {
     public Integer groupId;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

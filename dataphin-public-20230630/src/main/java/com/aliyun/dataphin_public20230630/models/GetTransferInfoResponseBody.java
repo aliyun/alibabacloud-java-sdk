@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetTransferInfoResponseBody extends TeaModel {
     /**
+     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The query result.</p>
+     */
     @NameInMap("Data")
     public GetTransferInfoResponseBodyData data;
 
     /**
+     * <p>The HTTP status code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetTransferInfoResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,12 +38,17 @@ public class GetTransferInfoResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -93,6 +107,8 @@ public class GetTransferInfoResponseBody extends TeaModel {
 
     public static class GetTransferInfoResponseBodyDataCreator extends TeaModel {
         /**
+         * <p>The username.</p>
+         * 
          * <strong>example:</strong>
          * <p>zhangsan</p>
          */
@@ -100,6 +116,8 @@ public class GetTransferInfoResponseBody extends TeaModel {
         public String displayName;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>30000001</p>
          */
@@ -131,6 +149,8 @@ public class GetTransferInfoResponseBody extends TeaModel {
 
     public static class GetTransferInfoResponseBodyDataLastModifier extends TeaModel {
         /**
+         * <p>The username.</p>
+         * 
          * <strong>example:</strong>
          * <p>zhangsan</p>
          */
@@ -138,6 +158,8 @@ public class GetTransferInfoResponseBody extends TeaModel {
         public String displayName;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>30000001</p>
          */
@@ -169,6 +191,8 @@ public class GetTransferInfoResponseBody extends TeaModel {
 
     public static class GetTransferInfoResponseBodyDataNewOwner extends TeaModel {
         /**
+         * <p>The username.</p>
+         * 
          * <strong>example:</strong>
          * <p>zhangsan</p>
          */
@@ -176,6 +200,8 @@ public class GetTransferInfoResponseBody extends TeaModel {
         public String displayName;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>30000001</p>
          */
@@ -207,6 +233,8 @@ public class GetTransferInfoResponseBody extends TeaModel {
 
     public static class GetTransferInfoResponseBodyDataOldOwner extends TeaModel {
         /**
+         * <p>The username.</p>
+         * 
          * <strong>example:</strong>
          * <p>zhangsan</p>
          */
@@ -214,6 +242,8 @@ public class GetTransferInfoResponseBody extends TeaModel {
         public String displayName;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>30000001</p>
          */
@@ -245,6 +275,8 @@ public class GetTransferInfoResponseBody extends TeaModel {
 
     public static class GetTransferInfoResponseBodyDataPrivilegeTransferResultEntries extends TeaModel {
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>userId is error</p>
          */
@@ -252,6 +284,8 @@ public class GetTransferInfoResponseBody extends TeaModel {
         public String errMsg;
 
         /**
+         * <p>The name of the transfer module.</p>
+         * 
          * <strong>example:</strong>
          * <p>table owner</p>
          */
@@ -259,6 +293,8 @@ public class GetTransferInfoResponseBody extends TeaModel {
         public String privilegeDisplayName;
 
         /**
+         * <p>The status of the transfer module.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
          */
@@ -297,10 +333,15 @@ public class GetTransferInfoResponseBody extends TeaModel {
     }
 
     public static class GetTransferInfoResponseBodyData extends TeaModel {
+        /**
+         * <p>The creator.</p>
+         */
         @NameInMap("Creator")
         public GetTransferInfoResponseBodyDataCreator creator;
 
         /**
+         * <p>The approval flow ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1753669315426</p>
          */
@@ -308,6 +349,8 @@ public class GetTransferInfoResponseBody extends TeaModel {
         public Long flowId;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1632036495973809</p>
          */
@@ -315,32 +358,54 @@ public class GetTransferInfoResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The last modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1632036495973809</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The last modifier.</p>
+         */
         @NameInMap("LastModifier")
         public GetTransferInfoResponseBodyDataLastModifier lastModifier;
 
+        /**
+         * <p>The new owner.</p>
+         */
         @NameInMap("NewOwner")
         public GetTransferInfoResponseBodyDataNewOwner newOwner;
 
+        /**
+         * <p>The previous owner.</p>
+         */
         @NameInMap("OldOwner")
         public GetTransferInfoResponseBodyDataOldOwner oldOwner;
 
         /**
+         * <p>The transfer mode. Valid values:</p>
+         * <ul>
+         * <li>ONE_STOP: one-click transfer.</li>
+         * <li>FUNCTION_MODULE_BASED: transfer by function module.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ONE_STOP</p>
          */
         @NameInMap("PrivilegeTransferMode")
         public String privilegeTransferMode;
 
+        /**
+         * <p>The transfer details of function modules.</p>
+         */
         @NameInMap("PrivilegeTransferResultEntries")
         public java.util.List<GetTransferInfoResponseBodyDataPrivilegeTransferResultEntries> privilegeTransferResultEntries;
 
         /**
+         * <p>The approval ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -348,6 +413,8 @@ public class GetTransferInfoResponseBody extends TeaModel {
         public Long proposalId;
 
         /**
+         * <p>The approval title.</p>
+         * 
          * <strong>example:</strong>
          * <p>transefer title</p>
          */
@@ -355,6 +422,8 @@ public class GetTransferInfoResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>The transfer description.</p>
+         * 
          * <strong>example:</strong>
          * <p>comment</p>
          */
@@ -362,6 +431,8 @@ public class GetTransferInfoResponseBody extends TeaModel {
         public String transferComment;
 
         /**
+         * <p>The transfer status.</p>
+         * 
          * <strong>example:</strong>
          * <p>APPROVED</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDataServiceAppResponseBody extends TeaModel {
     /**
+     * <p>The response code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class CreateDataServiceAppResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>-809333788831</p>
      */
@@ -19,6 +23,8 @@ public class CreateDataServiceAppResponseBody extends TeaModel {
     public Integer data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class CreateDataServiceAppResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error details returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -41,6 +49,9 @@ public class CreateDataServiceAppResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
