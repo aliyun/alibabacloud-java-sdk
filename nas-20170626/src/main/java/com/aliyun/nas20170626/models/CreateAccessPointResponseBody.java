@@ -51,7 +51,7 @@ public class CreateAccessPointResponseBody extends TeaModel {
         public String accessPointDomain;
 
         /**
-         * <p>The ID of the access point.</p>
+         * <p>The access point ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ap-ie15yd****</p>

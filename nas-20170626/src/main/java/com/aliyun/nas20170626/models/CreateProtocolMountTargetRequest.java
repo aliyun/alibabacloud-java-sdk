@@ -15,10 +15,10 @@ public class CreateProtocolMountTargetRequest extends TeaModel {
     public String accessGroupName;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
-     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How do I ensure the idempotence?</a></p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests.</p>
+     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may differ for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,12 +28,12 @@ public class CreateProtocolMountTargetRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the export directory for the protocol service. The <strong>name of the export directory</strong> appears in the console.</p>
+     * <p>The description of the protocol service export directory. This parameter is displayed as <strong>Export Directory Name</strong> in the console.</p>
      * <p>Limits:</p>
      * <ul>
-     * <li>The description must be 2 to 128 characters in length.</li>
-     * <li>The description must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</li>
-     * <li>The description can contain letters, digits, colons (:), underscores (_), and hyphens (-).</li>
+     * <li>The description must be 2 to 128 characters in length and can contain letters and Chinese characters.</li>
+     * <li>The description must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>The description can contain digits, colons (:), underscores (_), and hyphens (-).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,11 +43,13 @@ public class CreateProtocolMountTargetRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to perform a dry run. The dry run checks parameter validity and prerequisites. The dry run does not create an export directory or incur fees.</p>
+     * <p>Specifies whether to perform a dry run for this request. A dry run checks parameter validity, dependencies, and other conditions without actually creating the instance or incurring charges.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>true: performs a dry run. The system checks the request format, service limits, prerequisites, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned. No value is returned for the ExportId parameter.</li>
-     * <li>false (default): performs a dry run and sends the request. If the request passes the dry run, an export directory is created.</li>
+     * <li><p>true: sends a dry run request without creating the export directory. The dry run checks whether required parameters are specified, whether the request format is valid, and whether business limit dependencies are met. If the check fails, the corresponding error is returned. If the check succeeds, HTTP status code 200 is returned, but ExportId is empty.</p>
+     * </li>
+     * <li><p>false (default): sends a normal request. After the check succeeds, the instance is created.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,12 +69,12 @@ public class CreateProtocolMountTargetRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The ID of the fileset that you want to export.</p>
+     * <p>The ID of the fileset to export.</p>
      * <p>Limits:</p>
      * <ul>
-     * <li>The fileset already exists.</li>
-     * <li>You can create only one export directory for a fileset.</li>
-     * <li>You can specify either a fileset or a path.</li>
+     * <li>The fileset must already exist.</li>
+     * <li>Only one export directory can be created for each fileset.</li>
+     * <li>You must specify one and only one of FsetId and Path.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -82,12 +84,12 @@ public class CreateProtocolMountTargetRequest extends TeaModel {
     public String fsetId;
 
     /**
-     * <p>The path of the CPFS directory that you want to export.</p>
+     * <p>The path of the CPFS directory to export.</p>
      * <p>Limits:</p>
      * <ul>
-     * <li>The directory already exists in the CPFS file system.</li>
-     * <li>You can create only one export directory for a directory.</li>
-     * <li>You can specify either a fileset or a path.</li>
+     * <li>The directory must already exist on the CPFS file system.</li>
+     * <li>Only one export can be created for each directory.</li>
+     * <li>You must specify one and only one of FsetId and Path.</li>
      * </ul>
      * <p>Format:</p>
      * <ul>
@@ -113,8 +115,11 @@ public class CreateProtocolMountTargetRequest extends TeaModel {
     public String protocolServiceId;
 
     /**
-     * <p>The vSwitch ID of the export directory.</p>
-     * <p>If the storage redundancy type of the file system is not zone-redundant (ZRS) and the VpcId is set, this field is required.</p>
+     * <p>The ID of the vSwitch for the protocol service export.</p>
+     * <p>If the storage redundancy type of the file system is not zone-redundant storage (ZRS), this parameter is required when VpcId is specified.</p>
+     * <blockquote>
+     * <p> The vSwitch must be in the same zone as the target CPFS file system.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>vsw-2vc3c2lybvdllxyq4****</p>
@@ -126,7 +131,7 @@ public class CreateProtocolMountTargetRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The list of vSwitch IDs of the export directory.</p>
+     * <p>The list of vSwitch IDs for the protocol service export.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -135,7 +140,7 @@ public class CreateProtocolMountTargetRequest extends TeaModel {
     public java.util.List<String> vSwitchIds;
 
     /**
-     * <p>The VPC ID of the export directory.</p>
+     * <p>The ID of the VPC for the protocol service export.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-2vct297b8157bth9z****</p>

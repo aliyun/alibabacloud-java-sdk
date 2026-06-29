@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSnapshotRequest extends TeaModel {
     /**
-     * <p>The snapshot ID.</p>
+     * <p>The snapshot ID. Set this parameter to the snapshot ID obtained after a snapshot is successfully created for an Advanced Extreme NAS file system.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

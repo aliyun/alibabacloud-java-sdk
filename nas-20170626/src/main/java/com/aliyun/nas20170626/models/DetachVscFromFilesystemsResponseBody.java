@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DetachVscFromFilesystemsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2D69A58F-345C-4FDE-88E4-BF518948****</p>

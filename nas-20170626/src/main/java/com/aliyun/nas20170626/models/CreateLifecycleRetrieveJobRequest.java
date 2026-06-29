@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLifecycleRetrieveJobRequest extends TeaModel {
     /**
-     * <p>The ID of the file system.</p>
+     * <p>The file system ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateLifecycleRetrieveJobRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The directories or files that you want to retrieve. You can specify a maximum of 10 paths.</p>
+     * <p>The list of directories or file paths to retrieve. You can specify up to 10 paths.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,10 +25,10 @@ public class CreateLifecycleRetrieveJobRequest extends TeaModel {
     public java.util.List<String> paths;
 
     /**
-     * <p>The storage class.</p>
+     * <p>The storage class. Valid values:</p>
      * <ul>
-     * <li>InfrequentAccess (default): the Infrequent Access (IA) storage class.</li>
-     * <li>Archive: the Archive storage class.</li>
+     * <li>InfrequentAccess (default): IA storage class.</li>
+     * <li>Archive: Archive storage class.</li>
      * </ul>
      * 
      * <strong>example:</strong>

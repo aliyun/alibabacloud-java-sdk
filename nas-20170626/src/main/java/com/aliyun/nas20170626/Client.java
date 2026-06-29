@@ -41,7 +41,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-zhangjiakou-na62-a01", "nas.aliyuncs.com"),
             new TeaPair("cn-zhengzhou-nebula-1", "nas.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "nas.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "nas.aliyuncs.com")
+            new TeaPair("rus-west-1-pop", "nas.aliyuncs.com"),
+            new TeaPair("us-west-1", "nas.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "nas.us-east-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "nas.me-east-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "nas.me-central-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "nas.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "nas.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-jva", "nas.cn-zhengzhou-jva.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "nas.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "nas.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "nas.cn-shenzhen-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "nas.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "nas.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "nas.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "nas.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "nas.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "nas.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "nas.cn-heyuan.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "nas.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "nas.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "nas.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "nas.cn-beijing-finance-1.aliyuncs.com"),
+            new TeaPair("cn-beijing", "nas.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "nas.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "nas.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "nas.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "nas.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "nas.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-south-1", "nas.ap-south-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "nas.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "nas.ap-northeast-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("nas", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -199,22 +229,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>该接口仅适用于CPFS文件系统。</li>
-     * <li>仅CPFS 2.2.0及以上版本支持数据流动。您可以在控制台文件系统详情页面查看版本信息。</li>
-     * <li>仅支持状态为<code>Running（正常）</code>状态的数据流动添加自动更新配置。</li>
-     * <li>一个数据流动最多可以添加5个自动更新配置。</li>
-     * <li>创建自动更新配置一般耗时2～5分钟，您可以通过<a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a>查询数据流动状态。</li>
-     * <li>自动更新依赖EventBridge收集源端OSS存储的对象修改事件。需要先<a href="https://help.aliyun.com/document_detail/182246.html">开通EventBridge服务</a>。<blockquote>
-     * <p>CPFS在EventBridge创建的事件总线、事件规则带有<code>Create for cpfs auto refresh</code>的描述，事件总线、事件规则都不能修改和删除，否则自动更新无法正常工作。</p>
+     * <li>This operation applies only to Cloud Parallel File Storage (CPFS) file systems.</li>
+     * <li>Only CPFS 2.2.0 and later support data flows. You can view the version information on the file system details page in the console.</li>
+     * <li>You can add auto-refresh configurations only for data flows in the <code>Running</code> state.</li>
+     * <li>You can add up to five auto-refresh configurations for a data flow.</li>
+     * <li>It takes 2 to 5 minutes to create an auto-refresh configuration. You can call <a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a> to query the data flow status.</li>
+     * <li>Auto-refresh relies on EventBridge to collect object modification events from the source OSS storage. <a href="https://help.aliyun.com/document_detail/182246.html">Activate EventBridge</a> before you proceed.<blockquote>
+     * <p>The event buses and event rules that CPFS creates in EventBridge contain the description <code>Create for cpfs auto refresh</code>. Do not modify or delete these event buses or event rules. Otherwise, auto-refresh cannot work properly.</p>
      * </blockquote>
      * </li>
-     * <li>自动更新的作用对象是prefix，由参数RefreshPath指定。在CPFS数据流动对prefix配置自动更新时，会在用户侧创建事件总线，并创建源端OSS Bucket的prefix的事件规则。当源端OSS Bucket的prefix内发生对象修改后，会在EventBridge中产生OSS事件，由CPFS数据流动处理。</li>
-     * <li>配置自动更新（AutoRefresh）后，当源端存储数据发生变化时，变化的元数据会自动同步到CPFS文件系统，变化的数据会在用户访问文件时按需加载，或者启动数据流动任务加载数据。</li>
-     * <li>自动更新间隔（AutoRefreshInterval）指CPFS每隔该时间间隔，检查源端OSS Bucket该prefix内是否存在数据更新，如果有数据更新则启动自动更新任务。当OSS源端的对象修改事件频率超过CPFS数据流动处理能力时，自动更新任务会堆积，元数据更新会延迟，数据流动的状态为Misconfigured，您可以提升数据流动规格，或者降低OSS修改频率来解决。</li>
+     * <li>Auto-refresh targets a prefix specified by the RefreshPath parameter. When you configure auto-refresh for a prefix in a CPFS data flow, an event bus is created on the user side, and an event rule is created for the prefix of the source OSS bucket. When objects within the prefix of the source OSS bucket are modified, OSS events are generated in EventBridge and processed by the CPFS data flow.</li>
+     * <li>After you configure auto-refresh (AutoRefresh), when data changes in the source storage, the changed metadata is automatically synchronized to the CPFS file system. The changed data is loaded on demand when a user accesses the file, or loaded by starting a data flow node to load data.</li>
+     * <li>The auto-refresh interval (AutoRefreshInterval) specifies the interval at which CPFS checks whether data updates exist in the prefix of the source OSS bucket. If data updates exist, an auto-refresh node is started. When the frequency of object modification events in the source OSS bucket exceeds the processing capacity of the CPFS data flow, automatic synchronization nodes accumulate, metadata updates are delayed, and the data stream status changes to Misconfigured. To resolve this issue, upgrade the data stream specifications or reduce the modification frequency in OSS.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds AutoRefresh configurations to a dataflow.</p>
+     * <p>Configures automatic updates for a specified data flow.</p>
      * 
      * @param request ApplyDataFlowAutoRefreshRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -271,22 +301,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>该接口仅适用于CPFS文件系统。</li>
-     * <li>仅CPFS 2.2.0及以上版本支持数据流动。您可以在控制台文件系统详情页面查看版本信息。</li>
-     * <li>仅支持状态为<code>Running（正常）</code>状态的数据流动添加自动更新配置。</li>
-     * <li>一个数据流动最多可以添加5个自动更新配置。</li>
-     * <li>创建自动更新配置一般耗时2～5分钟，您可以通过<a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a>查询数据流动状态。</li>
-     * <li>自动更新依赖EventBridge收集源端OSS存储的对象修改事件。需要先<a href="https://help.aliyun.com/document_detail/182246.html">开通EventBridge服务</a>。<blockquote>
-     * <p>CPFS在EventBridge创建的事件总线、事件规则带有<code>Create for cpfs auto refresh</code>的描述，事件总线、事件规则都不能修改和删除，否则自动更新无法正常工作。</p>
+     * <li>This operation applies only to Cloud Parallel File Storage (CPFS) file systems.</li>
+     * <li>Only CPFS 2.2.0 and later support data flows. You can view the version information on the file system details page in the console.</li>
+     * <li>You can add auto-refresh configurations only for data flows in the <code>Running</code> state.</li>
+     * <li>You can add up to five auto-refresh configurations for a data flow.</li>
+     * <li>It takes 2 to 5 minutes to create an auto-refresh configuration. You can call <a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a> to query the data flow status.</li>
+     * <li>Auto-refresh relies on EventBridge to collect object modification events from the source OSS storage. <a href="https://help.aliyun.com/document_detail/182246.html">Activate EventBridge</a> before you proceed.<blockquote>
+     * <p>The event buses and event rules that CPFS creates in EventBridge contain the description <code>Create for cpfs auto refresh</code>. Do not modify or delete these event buses or event rules. Otherwise, auto-refresh cannot work properly.</p>
      * </blockquote>
      * </li>
-     * <li>自动更新的作用对象是prefix，由参数RefreshPath指定。在CPFS数据流动对prefix配置自动更新时，会在用户侧创建事件总线，并创建源端OSS Bucket的prefix的事件规则。当源端OSS Bucket的prefix内发生对象修改后，会在EventBridge中产生OSS事件，由CPFS数据流动处理。</li>
-     * <li>配置自动更新（AutoRefresh）后，当源端存储数据发生变化时，变化的元数据会自动同步到CPFS文件系统，变化的数据会在用户访问文件时按需加载，或者启动数据流动任务加载数据。</li>
-     * <li>自动更新间隔（AutoRefreshInterval）指CPFS每隔该时间间隔，检查源端OSS Bucket该prefix内是否存在数据更新，如果有数据更新则启动自动更新任务。当OSS源端的对象修改事件频率超过CPFS数据流动处理能力时，自动更新任务会堆积，元数据更新会延迟，数据流动的状态为Misconfigured，您可以提升数据流动规格，或者降低OSS修改频率来解决。</li>
+     * <li>Auto-refresh targets a prefix specified by the RefreshPath parameter. When you configure auto-refresh for a prefix in a CPFS data flow, an event bus is created on the user side, and an event rule is created for the prefix of the source OSS bucket. When objects within the prefix of the source OSS bucket are modified, OSS events are generated in EventBridge and processed by the CPFS data flow.</li>
+     * <li>After you configure auto-refresh (AutoRefresh), when data changes in the source storage, the changed metadata is automatically synchronized to the CPFS file system. The changed data is loaded on demand when a user accesses the file, or loaded by starting a data flow node to load data.</li>
+     * <li>The auto-refresh interval (AutoRefreshInterval) specifies the interval at which CPFS checks whether data updates exist in the prefix of the source OSS bucket. If data updates exist, an auto-refresh node is started. When the frequency of object modification events in the source OSS bucket exceeds the processing capacity of the CPFS data flow, automatic synchronization nodes accumulate, metadata updates are delayed, and the data stream status changes to Misconfigured. To resolve this issue, upgrade the data stream specifications or reduce the modification frequency in OSS.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds AutoRefresh configurations to a dataflow.</p>
+     * <p>Configures automatic updates for a specified data flow.</p>
      * 
      * @param request ApplyDataFlowAutoRefreshRequest
      * @return ApplyDataFlowAutoRefreshResponse
@@ -299,12 +329,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>仅CPFS智算版支持该功能。</li>
-     * <li>支持批量执行，批量执行情况下，目前仅支持1个VscId关联到多个FileSystemId，即ResourceIds.VscId需相等。</li>
+     * <li>Only CPFS for Lingjun supports this feature.</li>
+     * <li>Batch operations are supported. In batch mode, only one VscId can be associated with multiple file system IDs (FileSystemId). This means the ResourceIds.VscId values must be the same.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Associates the VSC device with the file system.</p>
+     * <p>Associates a VSC device with a file system.</p>
      * 
      * @param request AttachVscToFilesystemsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -345,12 +375,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>仅CPFS智算版支持该功能。</li>
-     * <li>支持批量执行，批量执行情况下，目前仅支持1个VscId关联到多个FileSystemId，即ResourceIds.VscId需相等。</li>
+     * <li>Only CPFS for Lingjun supports this feature.</li>
+     * <li>Batch operations are supported. In batch mode, only one VscId can be associated with multiple file system IDs (FileSystemId). This means the ResourceIds.VscId values must be the same.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Associates the VSC device with the file system.</p>
+     * <p>Associates a VSC device with a file system.</p>
      * 
      * @param request AttachVscToFilesystemsRequest
      * @return AttachVscToFilesystemsResponse
@@ -362,13 +392,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;.</p>
      * <ul>
-     * <li>Only advanced Extreme NAS file systems support this feature.</li>
+     * <li>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
+     * <li>Only Advanced Extreme NAS supports this feature.
+     * .
+     * &lt;props=&quot;intl&quot;&gt;.</li>
+     * <li>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
+     * <li>Only Advanced Extreme NAS supports this feature.
+     * .</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Removes automatic snapshot policies from one or more file systems.</p>
+     * <p>Cancels the automatic snapshot policy that is created for a file system.</p>
      * 
      * @param request CancelAutoSnapshotPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -400,13 +436,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;.</p>
      * <ul>
-     * <li>Only advanced Extreme NAS file systems support this feature.</li>
+     * <li>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
+     * <li>Only Advanced Extreme NAS supports this feature.
+     * .
+     * &lt;props=&quot;intl&quot;&gt;.</li>
+     * <li>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
+     * <li>Only Advanced Extreme NAS supports this feature.
+     * .</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Removes automatic snapshot policies from one or more file systems.</p>
+     * <p>Cancels the automatic snapshot policy that is created for a file system.</p>
      * 
      * @param request CancelAutoSnapshotPolicyRequest
      * @return CancelAutoSnapshotPolicyResponse
@@ -648,10 +690,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only General-purpose file systems support the directory quota feature.</p>
+     * <p>Only General-purpose NAS NFS file systems support the directory quota feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Cancels the directory quota of a file system.</p>
+     * <p>Cancels a directory quota for a file system.</p>
      * 
      * @param request CancelDirQuotaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -695,10 +737,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only General-purpose file systems support the directory quota feature.</p>
+     * <p>Only General-purpose NAS NFS file systems support the directory quota feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Cancels the directory quota of a file system.</p>
+     * <p>Cancels a directory quota for a file system.</p>
      * 
      * @param request CancelDirQuotaRequest
      * @return CancelDirQuotaResponse
@@ -878,7 +920,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the resource group to which a file system belongs.</p>
+     * <p>Changes the resource group to which a file system instance belongs.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -922,7 +964,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the resource group to which a file system belongs.</p>
+     * <p>Changes the resource group to which a file system instance belongs.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
@@ -935,9 +977,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>一个阿里云账号在单个地域内最多可以创建20个权限组。</li>
-     * <li>一个权限组最多支持添加300个规则。</li>
-     * <li>仅支持创建专有网络类型的权限组。</li>
+     * <li>You can create up to 20 permission groups in a single region within an Alibaba Cloud account.</li>
+     * <li>A permission group supports up to 300 rules.</li>
+     * <li>Only permission groups of the VPC network type can be created.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -986,9 +1028,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>一个阿里云账号在单个地域内最多可以创建20个权限组。</li>
-     * <li>一个权限组最多支持添加300个规则。</li>
-     * <li>仅支持创建专有网络类型的权限组。</li>
+     * <li>You can create up to 20 permission groups in a single region within an Alibaba Cloud account.</li>
+     * <li>A permission group supports up to 300 rules.</li>
+     * <li>Only permission groups of the VPC network type can be created.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1005,9 +1047,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>在使用CreateAccessPoint接口创建接入点时部分资源的生成是异步完成的。因此在执行CreateAccessPoint接口成功后，请先调用<a href="https://help.aliyun.com/document_detail/2712239.html">DescribeAccessPoints</a>或者<a href="https://help.aliyun.com/document_detail/2712240.html">DescribeAccessPoint</a>接口查询接入点状态，当接入点状态为<strong>Active</strong>后再执行挂载文件系统操作，否则可能会挂载失败。</li>
-     * <li>仅通用型NAS NFS协议文件系统支持该功能。</li>
-     * <li>如果开启RAM策略（EnabledRam），需要配置对应的RAM权限，具体请参考<a href="https://help.aliyun.com/document_detail/2545998.html">管理接入点</a>。</li>
+     * <li>When you invoke the CreateAccessPoint operation to create an access point, some resources are generated asynchronously. After the CreateAccessPoint operation succeeds, execute the <a href="https://help.aliyun.com/document_detail/2712239.html">DescribeAccessPoints</a> or <a href="https://help.aliyun.com/document_detail/2712240.html">DescribeAccessPoint</a> operation to query the access point status. Mount the file system only after the access point status becomes <strong>Active</strong>. Otherwise, the mount operation may fail.</li>
+     * <li>Only General-purpose NAS NFS file systems support this feature.</li>
+     * <li>If you enable the RAM policy (EnabledRam), configure the corresponding RAM permissions. For more information, see <a href="https://help.aliyun.com/document_detail/2545998.html">Manage access points</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1026,6 +1068,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.accessPointName)) {
             query.put("AccessPointName", request.accessPointName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.agenticSpaceId)) {
+            query.put("AgenticSpaceId", request.agenticSpaceId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.enabledRam)) {
@@ -1096,9 +1142,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>在使用CreateAccessPoint接口创建接入点时部分资源的生成是异步完成的。因此在执行CreateAccessPoint接口成功后，请先调用<a href="https://help.aliyun.com/document_detail/2712239.html">DescribeAccessPoints</a>或者<a href="https://help.aliyun.com/document_detail/2712240.html">DescribeAccessPoint</a>接口查询接入点状态，当接入点状态为<strong>Active</strong>后再执行挂载文件系统操作，否则可能会挂载失败。</li>
-     * <li>仅通用型NAS NFS协议文件系统支持该功能。</li>
-     * <li>如果开启RAM策略（EnabledRam），需要配置对应的RAM权限，具体请参考<a href="https://help.aliyun.com/document_detail/2545998.html">管理接入点</a>。</li>
+     * <li>When you invoke the CreateAccessPoint operation to create an access point, some resources are generated asynchronously. After the CreateAccessPoint operation succeeds, execute the <a href="https://help.aliyun.com/document_detail/2712239.html">DescribeAccessPoints</a> or <a href="https://help.aliyun.com/document_detail/2712240.html">DescribeAccessPoint</a> operation to query the access point status. Mount the file system only after the access point status becomes <strong>Active</strong>. Otherwise, the mount operation may fail.</li>
+     * <li>Only General-purpose NAS NFS file systems support this feature.</li>
+     * <li>If you enable the RAM policy (EnabledRam), configure the corresponding RAM permissions. For more information, see <a href="https://help.aliyun.com/document_detail/2545998.html">Manage access points</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1114,10 +1160,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>一个权限组最多支持添加300个规则。</p>
+     * <p>A maximum of 300 rules can be added to a permission group.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a rule for a permission group.</p>
+     * <p>Creates a permission rule for a permission group.</p>
      * 
      * @param request CreateAccessRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1173,10 +1219,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>一个权限组最多支持添加300个规则。</p>
+     * <p>A maximum of 300 rules can be added to a permission group.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a rule for a permission group.</p>
+     * <p>Creates a permission rule for a permission group.</p>
      * 
      * @param request CreateAccessRuleRequest
      * @return CreateAccessRuleResponse
@@ -1188,17 +1234,105 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</p>
+     * <p>适用agentic类型文件系统。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>创建Agentic空间</p>
+     * 
+     * @param request CreateAgenticSpaceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAgenticSpaceResponse
+     */
+    public CreateAgenticSpaceResponse createAgenticSpaceWithOptions(CreateAgenticSpaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.azone)) {
+            query.put("Azone", request.azone);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileSystemId)) {
+            query.put("FileSystemId", request.fileSystemId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileSystemPath)) {
+            query.put("FileSystemPath", request.fileSystemPath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.quota)) {
+            query.put("Quota", request.quota);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAgenticSpace"),
+            new TeaPair("version", "2017-06-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAgenticSpaceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>适用agentic类型文件系统。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>创建Agentic空间</p>
+     * 
+     * @param request CreateAgenticSpaceRequest
+     * @return CreateAgenticSpaceResponse
+     */
+    public CreateAgenticSpaceResponse createAgenticSpace(CreateAgenticSpaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createAgenticSpaceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;.</p>
      * <ul>
-     * <li>Only advanced Extreme NAS file systems support the snapshot feature.</li>
-     * <li>You can create a maximum of 100 automatic snapshot policies in each region for an Alibaba Cloud account.</li>
-     * <li>If an auto snapshot is being created when the scheduled time for a new auto snapshot arrives, the creation of the new snapshot is skipped. This occurs if the file system stores a large volume of data. For example, you have scheduled auto snapshots to be created at 09:00:00, 10:00:00, 11:00:00, and 12:00:00 for a file system. The system starts to create an auto snapshot at 09:00:00 and does not complete the process until 10:20:00. The process takes 80 minutes because the file system has a large volume of data. In this case, the system does not create an auto snapshot at 10:00:00, but creates an auto snapshot at 11:00:00.</li>
-     * <li>A maximum of 128 auto snapshots can be created for a file system. If the upper limit is reached, the earliest auto snapshot is deleted. This rule does not apply to manual snapshots.</li>
-     * <li>If you modify the retention period of an automatic snapshot policy, the modification applies only to subsequent snapshots, but not to the existing snapshots.</li>
-     * <li>If an auto snapshot is being created for a file system, you cannot create a manual snapshot for the file system. You must wait after the auto snapshot is created.</li>
-     * <li>You can only apply automatic snapshot policies to a file system that is in the Running state.</li>
-     * <li>All auto snapshots are named in the <code>auto_yyyyMMdd_X</code> format, where: <code>auto</code> indicates that the snapshot is created based on an automatic snapshot policy. <code>yyyyMMdd</code> indicates the date on which the snapshot is created. <code>y</code> indicates the year. <code>M</code> indicates the month. <code>d</code> indicates the day. <code>X</code> indicates the ordinal number of the snapshot on the current day. For example, <code>auto_20201018_1</code> indicates the first auto snapshot that was created on October 18, 2020.</li>
-     * <li>After an automatic snapshot policy is created, you can call the ApplyAutoSnapshotPolicy operation to apply the policy to a file system and call the ModifyAutoSnapshotPolicy operation to modify the policy.</li>
+     * <li>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
+     * <li>Only Advanced Extreme NAS supports this feature.</li>
+     * <li>You can create a maximum of 100 automatic snapshot policies per Alibaba Cloud account in each region.</li>
+     * <li>If a file system contains a large amount of data and the time required to create an automatic snapshot exceeds the interval between two scheduled time points, the next time point is automatically skipped. For example, you set 09:00, 10:00, 11:00, and 12:00 as automatic snapshot time points. Because the file system contains a large amount of data, snapshot creation starts at 09:00 and completes at 10:20, taking 80 minutes. The system skips the 10:00 time point and creates the next automatic snapshot at 11:00.</li>
+     * <li>Each file system supports a maximum of 128 automatic snapshots. After the snapshot quota is reached, the system automatically deletes the earliest automatic snapshots. Manual snapshots are not affected.</li>
+     * <li>When you modify the retention period of an automatic snapshot policy, the change takes effect only for new snapshots. Existing snapshots retain their original retention period.</li>
+     * <li>If an automatic snapshot is being created for a file system, you must wait until the automatic snapshot is complete before you can manually create a snapshot.</li>
+     * <li>Automatic snapshot policies cannot be executed on file systems that are not in the Normal state.</li>
+     * <li>Automatic snapshots follow a unified naming format: <code>auto_yyyyMMdd_X</code>. In this format, <code>auto</code> indicates an automatic snapshot, distinguishing it from manual snapshots. <code>yyyyMMdd</code> indicates the date when the snapshot is created, where <code>y</code> represents the year, <code>M</code> represents the month, and <code>d</code> represents the day. <code>X</code> indicates the sequence number of the automatic snapshot created on that day. For example, <code>auto_20201018_1</code> indicates the first automatic snapshot created on October 18, 2020.</li>
+     * <li>A created automatic snapshot policy can be applied to any file system by calling ApplyAutoSnapshotPolicy, and the policy content can be modified by calling ModifyAutoSnapshotPolicy.
+     * .
+     * &lt;props=&quot;intl&quot;&gt;.</li>
+     * <li>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
+     * <li>Only Advanced Extreme NAS supports this feature.</li>
+     * <li>You can create a maximum of 100 automatic snapshot policies per Alibaba Cloud account in each region.</li>
+     * <li>If a file system contains a large amount of data and the time required to create an automatic snapshot exceeds the interval between two scheduled time points, the next time point is automatically skipped. For example, you set 09:00, 10:00, 11:00, and 12:00 as automatic snapshot time points. Because the file system contains a large amount of data, snapshot creation starts at 09:00 and completes at 10:20, taking 80 minutes. The system skips the 10:00 time point and creates the next automatic snapshot at 11:00.</li>
+     * <li>Each file system supports a maximum of 128 automatic snapshots. After the snapshot quota is reached, the system automatically deletes the earliest automatic snapshots. Manual snapshots are not affected.</li>
+     * <li>When you modify the retention period of an automatic snapshot policy, the change takes effect only for new snapshots. Existing snapshots retain their original retention period.</li>
+     * <li>If an automatic snapshot is being created for a file system, you must wait until the automatic snapshot is complete before you can manually create a snapshot.</li>
+     * <li>Automatic snapshot policies cannot be executed on file systems that are not in the Normal state.</li>
+     * <li>Automatic snapshots follow a unified naming format: <code>auto_yyyyMMdd_X</code>. In this format, <code>auto</code> indicates an automatic snapshot, distinguishing it from manual snapshots. <code>yyyyMMdd</code> indicates the date when the snapshot is created, where <code>y</code> represents the year, <code>M</code> represents the month, and <code>d</code> represents the day. <code>X</code> indicates the sequence number of the automatic snapshot created on that day. For example, <code>auto_20201018_1</code> indicates the first automatic snapshot created on October 18, 2020.</li>
+     * <li>A created automatic snapshot policy can be applied to any file system by calling ApplyAutoSnapshotPolicy, and the policy content can be modified by calling ModifyAutoSnapshotPolicy.
+     * .</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1250,17 +1384,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;.</p>
      * <ul>
-     * <li>Only advanced Extreme NAS file systems support the snapshot feature.</li>
-     * <li>You can create a maximum of 100 automatic snapshot policies in each region for an Alibaba Cloud account.</li>
-     * <li>If an auto snapshot is being created when the scheduled time for a new auto snapshot arrives, the creation of the new snapshot is skipped. This occurs if the file system stores a large volume of data. For example, you have scheduled auto snapshots to be created at 09:00:00, 10:00:00, 11:00:00, and 12:00:00 for a file system. The system starts to create an auto snapshot at 09:00:00 and does not complete the process until 10:20:00. The process takes 80 minutes because the file system has a large volume of data. In this case, the system does not create an auto snapshot at 10:00:00, but creates an auto snapshot at 11:00:00.</li>
-     * <li>A maximum of 128 auto snapshots can be created for a file system. If the upper limit is reached, the earliest auto snapshot is deleted. This rule does not apply to manual snapshots.</li>
-     * <li>If you modify the retention period of an automatic snapshot policy, the modification applies only to subsequent snapshots, but not to the existing snapshots.</li>
-     * <li>If an auto snapshot is being created for a file system, you cannot create a manual snapshot for the file system. You must wait after the auto snapshot is created.</li>
-     * <li>You can only apply automatic snapshot policies to a file system that is in the Running state.</li>
-     * <li>All auto snapshots are named in the <code>auto_yyyyMMdd_X</code> format, where: <code>auto</code> indicates that the snapshot is created based on an automatic snapshot policy. <code>yyyyMMdd</code> indicates the date on which the snapshot is created. <code>y</code> indicates the year. <code>M</code> indicates the month. <code>d</code> indicates the day. <code>X</code> indicates the ordinal number of the snapshot on the current day. For example, <code>auto_20201018_1</code> indicates the first auto snapshot that was created on October 18, 2020.</li>
-     * <li>After an automatic snapshot policy is created, you can call the ApplyAutoSnapshotPolicy operation to apply the policy to a file system and call the ModifyAutoSnapshotPolicy operation to modify the policy.</li>
+     * <li>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
+     * <li>Only Advanced Extreme NAS supports this feature.</li>
+     * <li>You can create a maximum of 100 automatic snapshot policies per Alibaba Cloud account in each region.</li>
+     * <li>If a file system contains a large amount of data and the time required to create an automatic snapshot exceeds the interval between two scheduled time points, the next time point is automatically skipped. For example, you set 09:00, 10:00, 11:00, and 12:00 as automatic snapshot time points. Because the file system contains a large amount of data, snapshot creation starts at 09:00 and completes at 10:20, taking 80 minutes. The system skips the 10:00 time point and creates the next automatic snapshot at 11:00.</li>
+     * <li>Each file system supports a maximum of 128 automatic snapshots. After the snapshot quota is reached, the system automatically deletes the earliest automatic snapshots. Manual snapshots are not affected.</li>
+     * <li>When you modify the retention period of an automatic snapshot policy, the change takes effect only for new snapshots. Existing snapshots retain their original retention period.</li>
+     * <li>If an automatic snapshot is being created for a file system, you must wait until the automatic snapshot is complete before you can manually create a snapshot.</li>
+     * <li>Automatic snapshot policies cannot be executed on file systems that are not in the Normal state.</li>
+     * <li>Automatic snapshots follow a unified naming format: <code>auto_yyyyMMdd_X</code>. In this format, <code>auto</code> indicates an automatic snapshot, distinguishing it from manual snapshots. <code>yyyyMMdd</code> indicates the date when the snapshot is created, where <code>y</code> represents the year, <code>M</code> represents the month, and <code>d</code> represents the day. <code>X</code> indicates the sequence number of the automatic snapshot created on that day. For example, <code>auto_20201018_1</code> indicates the first automatic snapshot created on October 18, 2020.</li>
+     * <li>A created automatic snapshot policy can be applied to any file system by calling ApplyAutoSnapshotPolicy, and the policy content can be modified by calling ModifyAutoSnapshotPolicy.
+     * .
+     * &lt;props=&quot;intl&quot;&gt;.</li>
+     * <li>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
+     * <li>Only Advanced Extreme NAS supports this feature.</li>
+     * <li>You can create a maximum of 100 automatic snapshot policies per Alibaba Cloud account in each region.</li>
+     * <li>If a file system contains a large amount of data and the time required to create an automatic snapshot exceeds the interval between two scheduled time points, the next time point is automatically skipped. For example, you set 09:00, 10:00, 11:00, and 12:00 as automatic snapshot time points. Because the file system contains a large amount of data, snapshot creation starts at 09:00 and completes at 10:20, taking 80 minutes. The system skips the 10:00 time point and creates the next automatic snapshot at 11:00.</li>
+     * <li>Each file system supports a maximum of 128 automatic snapshots. After the snapshot quota is reached, the system automatically deletes the earliest automatic snapshots. Manual snapshots are not affected.</li>
+     * <li>When you modify the retention period of an automatic snapshot policy, the change takes effect only for new snapshots. Existing snapshots retain their original retention period.</li>
+     * <li>If an automatic snapshot is being created for a file system, you must wait until the automatic snapshot is complete before you can manually create a snapshot.</li>
+     * <li>Automatic snapshot policies cannot be executed on file systems that are not in the Normal state.</li>
+     * <li>Automatic snapshots follow a unified naming format: <code>auto_yyyyMMdd_X</code>. In this format, <code>auto</code> indicates an automatic snapshot, distinguishing it from manual snapshots. <code>yyyyMMdd</code> indicates the date when the snapshot is created, where <code>y</code> represents the year, <code>M</code> represents the month, and <code>d</code> represents the day. <code>X</code> indicates the sequence number of the automatic snapshot created on that day. For example, <code>auto_20201018_1</code> indicates the first automatic snapshot created on October 18, 2020.</li>
+     * <li>A created automatic snapshot policy can be applied to any file system by calling ApplyAutoSnapshotPolicy, and the policy content can be modified by calling ModifyAutoSnapshotPolicy.
+     * .</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2378,9 +2526,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Only General-purpose NAS file systems support this operation.</p>
      * <ul>
-     * <li>You can run a maximum of 20 data retrieval tasks in each region within an Alibaba Cloud account.</li>
+     * <li>Only General-purpose NAS file systems support this feature.</li>
+     * <li>Each Alibaba Cloud account can have up to 20 running data retrieval tasks in the same region.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2424,9 +2572,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Only General-purpose NAS file systems support this operation.</p>
      * <ul>
-     * <li>You can run a maximum of 20 data retrieval tasks in each region within an Alibaba Cloud account.</li>
+     * <li>Only General-purpose NAS file systems support this feature.</li>
+     * <li>Each Alibaba Cloud account can have up to 20 running data retrieval tasks in the same region.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2491,8 +2639,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>在使用CreateMountTarget接口创建挂载点时部分资源的生成是异步完成的。因此在执行CreateMountTarget接口成功后，请先调用DescribeMountTargets接口查询挂载点状态，当挂载点状态为<strong>Active</strong>后再执行挂载文件系统操作，否则可能会挂载失败。</li>
-     * <li>调用此接口将自动创建操作所需的NAS服务关联角色。更多信息，请参见<a href="https://help.aliyun.com/document_detail/208530.html">管理NAS服务关联角色</a>。</li>
+     * <li>When you call the CreateMountTarget operation to create a mount target, some resources are generated asynchronously. After the CreateMountTarget operation succeeds, first invoke the DescribeMountTargets operation to query the mount target status. Execute the file system mount operation only after the mount target status changes to <strong>Active</strong>. Otherwise, the mount operation may fail.</li>
+     * <li>Invoking this operation triggers the automatic creation of the service-linked role required for the operation. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked role for NAS</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2557,8 +2705,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>在使用CreateMountTarget接口创建挂载点时部分资源的生成是异步完成的。因此在执行CreateMountTarget接口成功后，请先调用DescribeMountTargets接口查询挂载点状态，当挂载点状态为<strong>Active</strong>后再执行挂载文件系统操作，否则可能会挂载失败。</li>
-     * <li>调用此接口将自动创建操作所需的NAS服务关联角色。更多信息，请参见<a href="https://help.aliyun.com/document_detail/208530.html">管理NAS服务关联角色</a>。</li>
+     * <li>When you call the CreateMountTarget operation to create a mount target, some resources are generated asynchronously. After the CreateMountTarget operation succeeds, first invoke the DescribeMountTargets operation to query the mount target status. Execute the file system mount operation only after the mount target status changes to <strong>Active</strong>. Otherwise, the mount operation may fail.</li>
+     * <li>Invoking this operation triggers the automatic creation of the service-linked role required for the operation. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked role for NAS</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2575,17 +2723,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><p>该接口仅适用于CPFS文件系统。</p>
+     * <li><p>This operation is applicable only to Cloud Parallel File Storage (CPFS) file systems.</p>
      * </li>
-     * <li><p>前提条件</p>
-     * <p>已创建协议服务。</p>
+     * <li><p>Before you begin</p>
+     * <p>The CPFS file system must be in the Running state and a protocol service must be created.</p>
      * </li>
-     * <li><p>其它</p>
+     * <li><p>Other information</p>
      * <ul>
-     * <li>协议服务的导出VPC网段不可与文件系统VPC网段重叠。</li>
-     * <li>一个协议服务上的多个导出VPC之间网段不可重叠。</li>
-     * <li>同一个协议服务最多可以创建10个导出目录。</li>
-     * <li>创建协议服务导出目录会消耗指定vSwitch上的IP地址（最多消耗32个IP地址），请确保目标vSwitch IP资源充足。</li>
+     * <li>The VPC CIDR block of the protocol service export cannot overlap with the VPC CIDR block of the file system.</li>
+     * <li>The VPC CIDR blocks of multiple exports on the same protocol service cannot overlap with each other.</li>
+     * <li>You can create up to 10 export directories for a single protocol service.</li>
+     * <li>Creating a protocol service export directory consumes IP addresses from the specified vSwitch (up to 32 IP addresses). Make sure that the target vSwitch has sufficient IP address resources.</li>
      * </ul>
      * </li>
      * </ul>
@@ -2664,17 +2812,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><p>该接口仅适用于CPFS文件系统。</p>
+     * <li><p>This operation is applicable only to Cloud Parallel File Storage (CPFS) file systems.</p>
      * </li>
-     * <li><p>前提条件</p>
-     * <p>已创建协议服务。</p>
+     * <li><p>Before you begin</p>
+     * <p>The CPFS file system must be in the Running state and a protocol service must be created.</p>
      * </li>
-     * <li><p>其它</p>
+     * <li><p>Other information</p>
      * <ul>
-     * <li>协议服务的导出VPC网段不可与文件系统VPC网段重叠。</li>
-     * <li>一个协议服务上的多个导出VPC之间网段不可重叠。</li>
-     * <li>同一个协议服务最多可以创建10个导出目录。</li>
-     * <li>创建协议服务导出目录会消耗指定vSwitch上的IP地址（最多消耗32个IP地址），请确保目标vSwitch IP资源充足。</li>
+     * <li>The VPC CIDR block of the protocol service export cannot overlap with the VPC CIDR block of the file system.</li>
+     * <li>The VPC CIDR blocks of multiple exports on the same protocol service cannot overlap with each other.</li>
+     * <li>You can create up to 10 export directories for a single protocol service.</li>
+     * <li>Creating a protocol service export directory consumes IP addresses from the specified vSwitch (up to 32 IP addresses). Make sure that the target vSwitch has sufficient IP address resources.</li>
      * </ul>
      * </li>
      * </ul>
@@ -2693,33 +2841,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><p>该接口仅适用于CPFS文件系统。</p>
+     * <li><p>This operation is applicable only to CPFS file systems.</p>
      * </li>
-     * <li><p>仅CPFS 2.3.0及以上版本支持协议服务。您可以通过调用<a href="https://help.aliyun.com/document_detail/163314.html">DescribeFileSystems</a>接口查询目标文件系统的版本号。</p>
+     * <li><p>Only CPFS 2.3.0 and later support protocol services. You can call the <a href="https://help.aliyun.com/document_detail/163314.html">DescribeFileSystems</a> operation to query the version of the file system.</p>
      * </li>
-     * <li><p>协议服务规格
-     * 协议服务包括两种协议类型：通用型和缓存型。缓存型相比通用型，提供热点数据缓存能力。在命中缓存的情况下，缓存型协议服务的带宽可超过CPFS文件系统的带宽，达到协议服务设定的最大带宽值。</p>
+     * <li><p>Protocol service specifications.
+     * Protocol services include two Protocol Types: General and Cache. Compared with the General type, the Cache type provides hot spot data caching. When the cache is hit, the bandwidth of the Cache type protocol service can exceed the bandwidth of the CPFS file system and reach the maximum bandwidth configured for the protocol service.</p>
      * <ul>
-     * <li>通用型：为CPFS提供NFS协议访问能力和<a href="https://help.aliyun.com/document_detail/427175.html">目录级挂载点</a>，用户无需配置POSIX客户端管理集群。该功能免费。</li>
-     * <li>缓存型：在通用型基础上提供基于LRU策略的服务端内存缓存。当数据缓存于内存中时，CPFS可提供更高的内网带宽。缓存型协议服务分为缓存1型和缓存2型两种协议服务规格，差异点为内网带宽大小和内存缓存大小。<blockquote>
-     * <p> 缓存型协议服务为收费服务，正在邀测。有关缓存型协议服务的付费方式，请参见<a href="https://help.aliyun.com/document_detail/111858.html">计费项</a>。如果您有任何反馈或疑问，欢迎加入钉钉用户群（钉钉群号：31045006299）与CPFS工程师进行交流讨论。</p>
+     * <li>General: Provides NFS protocol access and <a href="https://help.aliyun.com/document_detail/427175.html">folder-level mount targets</a> for CPFS. You do not need to configure a POSIX client cluster management. This feature is free of charge.</li>
+     * <li>Cache: Provides server-side in-memory caching based on the LRU policy in addition to the General type capabilities. When data is cached in memory, CPFS can provide higher internal network bandwidth. The Cache type protocol service is available in two specifications: Cache L1 and Cache L2, which differ in internal network bandwidth and memory cache size.<blockquote>
+     * <p> The Cache type protocol service is a paid service and is in invitational preview. For information about the billing of the Cache type protocol service, see <a href="https://help.aliyun.com/document_detail/111858.html">Billable items</a>. If you have any feedback or questions, join the DingTalk user group (group ID: 31045006299) to communicate with CPFS engineers.</p>
      * </blockquote>
      * </li>
      * </ul>
      * </li>
-     * <li><p>协议类型
-     * 仅支持NFSv3协议。</p>
+     * <li><p>Protocol type.
+     * Only NFSv3 is supported.</p>
      * </li>
-     * <li><p>其它</p>
+     * <li><p>Prerequisites.
+     * The CPFS file system must be created and in the Running state.</p>
+     * </li>
+     * <li><p>Other information.</p>
      * <ul>
-     * <li>一个CPFS文件系统只能创建一个协议服务。</li>
-     * <li>创建协议服务会消耗指定vSwitch上的IP地址（最多消耗32个IP地址），请确保目标vSwitch IP资源充足。</li>
+     * <li>Only one protocol service can be created for each CPFS file system.</li>
+     * <li>Creating a protocol service consumes IP addresses on the specified vSwitch (up to 32 IP addresses). Make sure that the target vSwitch has sufficient IP address resources.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a protocol service for a Cloud Parallel File Storage (CPFS) file system. The creation takes about 5 to 10 minutes.</p>
+     * <p>Creates a protocol service for a Cloud Parallel File Storage (CPFS) file system. The creation process takes approximately 5 to 10 minutes.</p>
      * 
      * @param request CreateProtocolServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2784,33 +2935,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><p>该接口仅适用于CPFS文件系统。</p>
+     * <li><p>This operation is applicable only to CPFS file systems.</p>
      * </li>
-     * <li><p>仅CPFS 2.3.0及以上版本支持协议服务。您可以通过调用<a href="https://help.aliyun.com/document_detail/163314.html">DescribeFileSystems</a>接口查询目标文件系统的版本号。</p>
+     * <li><p>Only CPFS 2.3.0 and later support protocol services. You can call the <a href="https://help.aliyun.com/document_detail/163314.html">DescribeFileSystems</a> operation to query the version of the file system.</p>
      * </li>
-     * <li><p>协议服务规格
-     * 协议服务包括两种协议类型：通用型和缓存型。缓存型相比通用型，提供热点数据缓存能力。在命中缓存的情况下，缓存型协议服务的带宽可超过CPFS文件系统的带宽，达到协议服务设定的最大带宽值。</p>
+     * <li><p>Protocol service specifications.
+     * Protocol services include two Protocol Types: General and Cache. Compared with the General type, the Cache type provides hot spot data caching. When the cache is hit, the bandwidth of the Cache type protocol service can exceed the bandwidth of the CPFS file system and reach the maximum bandwidth configured for the protocol service.</p>
      * <ul>
-     * <li>通用型：为CPFS提供NFS协议访问能力和<a href="https://help.aliyun.com/document_detail/427175.html">目录级挂载点</a>，用户无需配置POSIX客户端管理集群。该功能免费。</li>
-     * <li>缓存型：在通用型基础上提供基于LRU策略的服务端内存缓存。当数据缓存于内存中时，CPFS可提供更高的内网带宽。缓存型协议服务分为缓存1型和缓存2型两种协议服务规格，差异点为内网带宽大小和内存缓存大小。<blockquote>
-     * <p> 缓存型协议服务为收费服务，正在邀测。有关缓存型协议服务的付费方式，请参见<a href="https://help.aliyun.com/document_detail/111858.html">计费项</a>。如果您有任何反馈或疑问，欢迎加入钉钉用户群（钉钉群号：31045006299）与CPFS工程师进行交流讨论。</p>
+     * <li>General: Provides NFS protocol access and <a href="https://help.aliyun.com/document_detail/427175.html">folder-level mount targets</a> for CPFS. You do not need to configure a POSIX client cluster management. This feature is free of charge.</li>
+     * <li>Cache: Provides server-side in-memory caching based on the LRU policy in addition to the General type capabilities. When data is cached in memory, CPFS can provide higher internal network bandwidth. The Cache type protocol service is available in two specifications: Cache L1 and Cache L2, which differ in internal network bandwidth and memory cache size.<blockquote>
+     * <p> The Cache type protocol service is a paid service and is in invitational preview. For information about the billing of the Cache type protocol service, see <a href="https://help.aliyun.com/document_detail/111858.html">Billable items</a>. If you have any feedback or questions, join the DingTalk user group (group ID: 31045006299) to communicate with CPFS engineers.</p>
      * </blockquote>
      * </li>
      * </ul>
      * </li>
-     * <li><p>协议类型
-     * 仅支持NFSv3协议。</p>
+     * <li><p>Protocol type.
+     * Only NFSv3 is supported.</p>
      * </li>
-     * <li><p>其它</p>
+     * <li><p>Prerequisites.
+     * The CPFS file system must be created and in the Running state.</p>
+     * </li>
+     * <li><p>Other information.</p>
      * <ul>
-     * <li>一个CPFS文件系统只能创建一个协议服务。</li>
-     * <li>创建协议服务会消耗指定vSwitch上的IP地址（最多消耗32个IP地址），请确保目标vSwitch IP资源充足。</li>
+     * <li>Only one protocol service can be created for each CPFS file system.</li>
+     * <li>Creating a protocol service consumes IP addresses on the specified vSwitch (up to 32 IP addresses). Make sure that the target vSwitch has sufficient IP address resources.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a protocol service for a Cloud Parallel File Storage (CPFS) file system. The creation takes about 5 to 10 minutes.</p>
+     * <p>Creates a protocol service for a Cloud Parallel File Storage (CPFS) file system. The creation process takes approximately 5 to 10 minutes.</p>
      * 
      * @param request CreateProtocolServiceRequest
      * @return CreateProtocolServiceResponse
@@ -3014,10 +3168,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>默认权限组（DEFAULT_VPC_GROUP_NAME）不支持删除。</p>
+     * <p>The default access group (DEFAULT_VPC_GROUP_NAME) cannot be deleted.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a permission group.</p>
+     * <p>Delete an existing access group.</p>
      * 
      * @param request DeleteAccessGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3053,10 +3207,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>默认权限组（DEFAULT_VPC_GROUP_NAME）不支持删除。</p>
+     * <p>The default access group (DEFAULT_VPC_GROUP_NAME) cannot be deleted.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a permission group.</p>
+     * <p>Delete an existing access group.</p>
      * 
      * @param request DeleteAccessGroupRequest
      * @return DeleteAccessGroupResponse
@@ -3128,10 +3282,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>默认权限组（DEFAULT_VPC_GROUP_NAME）中的规则不支持删除。</p>
+     * <p>Rules in the default permission group (DEFAULT_VPC_GROUP_NAME) cannot be deleted.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a rule from a permission group.</p>
+     * <p>Deletes a permission rule from a permission group.</p>
      * 
      * @param request DeleteAccessRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3171,10 +3325,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>默认权限组（DEFAULT_VPC_GROUP_NAME）中的规则不支持删除。</p>
+     * <p>Rules in the default permission group (DEFAULT_VPC_GROUP_NAME) cannot be deleted.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a rule from a permission group.</p>
+     * <p>Deletes a permission rule from a permission group.</p>
      * 
      * @param request DeleteAccessRuleRequest
      * @return DeleteAccessRuleResponse
@@ -3182,6 +3336,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteAccessRuleResponse deleteAccessRule(DeleteAccessRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteAccessRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>适用agentic类型文件系统。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>删除Agentic空间</p>
+     * 
+     * @param request DeleteAgenticSpaceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAgenticSpaceResponse
+     */
+    public DeleteAgenticSpaceResponse deleteAgenticSpaceWithOptions(DeleteAgenticSpaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agenticSpaceId)) {
+            query.put("AgenticSpaceId", request.agenticSpaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileSystemId)) {
+            query.put("FileSystemId", request.fileSystemId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAgenticSpace"),
+            new TeaPair("version", "2017-06-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAgenticSpaceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>适用agentic类型文件系统。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>删除Agentic空间</p>
+     * 
+     * @param request DeleteAgenticSpaceRequest
+     * @return DeleteAgenticSpaceResponse
+     */
+    public DeleteAgenticSpaceResponse deleteAgenticSpace(DeleteAgenticSpaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAgenticSpaceWithOptions(request, runtime);
     }
 
     /**
@@ -3373,9 +3589,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation is supported only for CPFS file systems of version 2.2.0 or later and CPFS for AI and HPC file systems of version 2.7.0 or later. Deleting a fileset permanently removes all data in the associated directory. Use this operation with caution.</li>
-     * <li>If deletion protection is enabled, you must disable it before you can delete the fileset.</li>
-     * <li>When you delete a fileset from a CPFS file system, the disk space is released immediately. When you delete a fileset from a CPFS for AI and HPC file system, the disk space is released gradually.</li>
+     * <li>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.7.0 and later support fileset deletion. After a fileset is deleted, all data in the directory is permanently deleted and cannot be recovered. Proceed with caution.</li>
+     * <li>If deletion protection is enabled, disable it before you delete the fileset.</li>
+     * <li>All filesets on the target file system must be in the CREATED desired state before you can perform the deletion.</li>
+     * <li>Deleting a CPFS general-purpose fileset immediately releases disk space. Deleting a CPFS for Lingjun fileset gradually releases disk space. Deleted data cannot be recovered. Proceed with caution.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -3424,9 +3641,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation is supported only for CPFS file systems of version 2.2.0 or later and CPFS for AI and HPC file systems of version 2.7.0 or later. Deleting a fileset permanently removes all data in the associated directory. Use this operation with caution.</li>
-     * <li>If deletion protection is enabled, you must disable it before you can delete the fileset.</li>
-     * <li>When you delete a fileset from a CPFS file system, the disk space is released immediately. When you delete a fileset from a CPFS for AI and HPC file system, the disk space is released gradually.</li>
+     * <li>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.7.0 and later support fileset deletion. After a fileset is deleted, all data in the directory is permanently deleted and cannot be recovered. Proceed with caution.</li>
+     * <li>If deletion protection is enabled, disable it before you delete the fileset.</li>
+     * <li>All filesets on the target file system must be in the CREATED desired state before you can perform the deletion.</li>
+     * <li>Deleting a CPFS general-purpose fileset immediately releases disk space. Deleting a CPFS for Lingjun fileset gradually releases disk space. Deleted data cannot be recovered. Proceed with caution.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -3796,13 +4014,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;.</p>
      * <ul>
-     * <li>Only advanced Extreme NAS file systems support this feature.</li>
+     * <li>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
+     * <li>Only Advanced Extreme NAS file systems support this feature.
+     * &lt;props=&quot;intl&quot;&gt;.</li>
+     * <li>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
+     * <li>Only Advanced Extreme NAS file systems support this feature.
+     * .</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a snapshot or cancels a snapshot that is being created.</p>
+     * <p>Deletes a specified snapshot or cancels a snapshot task that is being created.</p>
      * 
      * @param request DeleteSnapshotRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3834,13 +4057,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;.</p>
      * <ul>
-     * <li>Only advanced Extreme NAS file systems support this feature.</li>
+     * <li>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
+     * <li>Only Advanced Extreme NAS file systems support this feature.
+     * &lt;props=&quot;intl&quot;&gt;.</li>
+     * <li>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
+     * <li>Only Advanced Extreme NAS file systems support this feature.
+     * .</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a snapshot or cancels a snapshot that is being created.</p>
+     * <p>Deletes a specified snapshot or cancels a snapshot task that is being created.</p>
      * 
      * @param request DeleteSnapshotRequest
      * @return DeleteSnapshotResponse
@@ -3852,7 +4080,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries permission groups.</p>
+     * <p>Queries permission group information.</p>
      * 
      * @param request DescribeAccessGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3900,7 +4128,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries permission groups.</p>
+     * <p>Queries permission group information.</p>
      * 
      * @param request DescribeAccessGroupsRequest
      * @return DescribeAccessGroupsResponse
@@ -3912,7 +4140,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>仅通用型NAS NFS协议文件系统支持该功能。</p>
+     * <p>Only General-purpose NAS NFS file systems support this feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of an access point.</p>
@@ -3951,7 +4179,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>仅通用型NAS NFS协议文件系统支持该功能。</p>
+     * <p>Only General-purpose NAS NFS file systems support this feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of an access point.</p>
@@ -3966,15 +4194,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>仅通用型NAS NFS协议文件系统支持该功能。</p>
+     * <p>Only General-purpose NAS NFS file systems support this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of access points.</p>
+     * <p>Queries access point information.</p>
+     * 
+     * @deprecated OpenAPI DescribeAccessPoints is deprecated, please use NAS::2017-06-26::ListAccessPoints instead.
      * 
      * @param request DescribeAccessPointsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAccessPointsResponse
      */
+    @Deprecated
+    // Deprecated
     public DescribeAccessPointsResponse describeAccessPointsWithOptions(DescribeAccessPointsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4017,14 +4249,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>仅通用型NAS NFS协议文件系统支持该功能。</p>
+     * <p>Only General-purpose NAS NFS file systems support this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of access points.</p>
+     * <p>Queries access point information.</p>
+     * 
+     * @deprecated OpenAPI DescribeAccessPoints is deprecated, please use NAS::2017-06-26::ListAccessPoints instead.
      * 
      * @param request DescribeAccessPointsRequest
      * @return DescribeAccessPointsResponse
      */
+    @Deprecated
+    // Deprecated
     public DescribeAccessPointsResponse describeAccessPoints(DescribeAccessPointsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeAccessPointsWithOptions(request, runtime);
@@ -4088,6 +4324,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeAccessRulesResponse describeAccessRules(DescribeAccessRulesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeAccessRulesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>适用 agentic 类型文件系统。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询Agentic空间</p>
+     * 
+     * @param request DescribeAgenticSpacesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAgenticSpacesResponse
+     */
+    public DescribeAgenticSpacesResponse describeAgenticSpacesWithOptions(DescribeAgenticSpacesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileSystemId)) {
+            query.put("FileSystemId", request.fileSystemId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filters)) {
+            query.put("Filters", request.filters);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAgenticSpaces"),
+            new TeaPair("version", "2017-06-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAgenticSpacesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>适用 agentic 类型文件系统。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询Agentic空间</p>
+     * 
+     * @param request DescribeAgenticSpacesRequest
+     * @return DescribeAgenticSpacesResponse
+     */
+    public DescribeAgenticSpacesResponse describeAgenticSpaces(DescribeAgenticSpacesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAgenticSpacesWithOptions(request, runtime);
     }
 
     /**
@@ -4614,7 +4912,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>This operation retrieves information about file systems.</p>
+     * <p>Queries file system information.</p>
      * 
      * @param request DescribeFileSystemsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4670,7 +4968,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>This operation retrieves information about file systems.</p>
+     * <p>Queries file system information.</p>
      * 
      * @param request DescribeFileSystemsRequest
      * @return DescribeFileSystemsResponse
@@ -4683,13 +4981,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>仅CPFS 2.2.0和CPFS智算版2.7.0及以上版本支持Fileset。您可以在控制台文件系统详情页面查看版本信息。</li>
-     * <li>筛选键（Filters）中，FsetIds需要做全字匹配，FileSystemPath、Description支持模糊匹配。</li>
-     * <li>支持组合查询。</li>
+     * <li>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.7.0 and later support filesets. You can view the version information on the file system details page in the console.</li>
+     * <li>In the filter keys (Filters), FsetIds requires an exact match, while FileSystemPath and Description support fuzzy match.</li>
+     * <li>Combination queries are supported.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about created filesets.</p>
+     * <p>Queries the list of created filesets.</p>
      * 
      * @param request DescribeFilesetsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4742,13 +5040,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>仅CPFS 2.2.0和CPFS智算版2.7.0及以上版本支持Fileset。您可以在控制台文件系统详情页面查看版本信息。</li>
-     * <li>筛选键（Filters）中，FsetIds需要做全字匹配，FileSystemPath、Description支持模糊匹配。</li>
-     * <li>支持组合查询。</li>
+     * <li>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.7.0 and later support filesets. You can view the version information on the file system details page in the console.</li>
+     * <li>In the filter keys (Filters), FsetIds requires an exact match, while FileSystemPath and Description support fuzzy match.</li>
+     * <li>Combination queries are supported.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about created filesets.</p>
+     * <p>Queries the list of created filesets.</p>
      * 
      * @param request DescribeFilesetsRequest
      * @return DescribeFilesetsResponse
@@ -4827,12 +5125,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>仅CPFS智算版支持该功能。</li>
-     * <li>支持批量执行，批量执行情况下，目前仅支持1个VscId关联到多个FileSystemId，即ResourceIds.VscId需相等。</li>
+     * <li>Only CPFS for Lingjun supports this feature.</li>
+     * <li>Batch execution is supported. In batch execution mode, only one VscId can be associated with multiple FileSystemIds, which means the values of ResourceIds.VscId must be the same.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries information about virtual storage channels associated with a file system.</p>
+     * <p>Queries the information about virtual storage channels associated with a file system.</p>
      * 
      * @param request DescribeFilesystemsVscAttachInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4877,12 +5175,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>仅CPFS智算版支持该功能。</li>
-     * <li>支持批量执行，批量执行情况下，目前仅支持1个VscId关联到多个FileSystemId，即ResourceIds.VscId需相等。</li>
+     * <li>Only CPFS for Lingjun supports this feature.</li>
+     * <li>Batch execution is supported. In batch execution mode, only one VscId can be associated with multiple FileSystemIds, which means the values of ResourceIds.VscId must be the same.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries information about virtual storage channels associated with a file system.</p>
+     * <p>Queries the information about virtual storage channels associated with a file system.</p>
      * 
      * @param request DescribeFilesystemsVscAttachInfoRequest
      * @return DescribeFilesystemsVscAttachInfoResponse
@@ -4894,10 +5192,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>仅通用型NAS文件系统和 CPFS 智算版支持该功能。</p>
+     * <p>Only General-purpose NAS file systems and CPFS for Lingjun support this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries lifecycle policies.</p>
+     * <p>Retrieves a list of lifecycle management policies.</p>
      * 
      * @param request DescribeLifecyclePoliciesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4925,10 +5223,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>仅通用型NAS文件系统和 CPFS 智算版支持该功能。</p>
+     * <p>Only General-purpose NAS file systems and CPFS for Lingjun support this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries lifecycle policies.</p>
+     * <p>Retrieves a list of lifecycle management policies.</p>
      * 
      * @param request DescribeLifecyclePoliciesRequest
      * @return DescribeLifecyclePoliciesResponse
@@ -5002,7 +5300,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the log dump information configured in log analysis.</p>
+     * <p>Lists the log analysis configurations in log analysis.</p>
      * 
      * @param request DescribeLogAnalysisRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5046,7 +5344,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the log dump information configured in log analysis.</p>
+     * <p>Lists the log analysis configurations in log analysis.</p>
      * 
      * @param request DescribeLogAnalysisRequest
      * @return DescribeLogAnalysisResponse
@@ -5673,12 +5971,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>仅CPFS智算版支持该功能。</li>
-     * <li>支持批量执行，批量执行情况下，目前仅支持1个VscId关联到多个FileSystemId，即ResourceIds.VscId需相等。</li>
+     * <li>Only CPFS for Lingjun supports this feature.</li>
+     * <li>Batch operations are supported. For batch operations, only one VscId can be associated with multiple FileSystemIds. This means the ResourceIds.VscId values must be the same.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Unassociates a VSC device from a file system.</p>
+     * <p>Dissociates a VSC device from a file system.</p>
      * 
      * @param request DetachVscFromFilesystemsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5719,12 +6017,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>仅CPFS智算版支持该功能。</li>
-     * <li>支持批量执行，批量执行情况下，目前仅支持1个VscId关联到多个FileSystemId，即ResourceIds.VscId需相等。</li>
+     * <li>Only CPFS for Lingjun supports this feature.</li>
+     * <li>Batch operations are supported. For batch operations, only one VscId can be associated with multiple FileSystemIds. This means the ResourceIds.VscId values must be the same.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Unassociates a VSC device from a file system.</p>
+     * <p>Dissociates a VSC device from a file system.</p>
      * 
      * @param request DetachVscFromFilesystemsRequest
      * @return DetachVscFromFilesystemsResponse
@@ -6040,6 +6338,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>适用 agentic 类型文件系统。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询Agentic空间</p>
+     * 
+     * @param request GetAgenticSpaceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAgenticSpaceResponse
+     */
+    public GetAgenticSpaceResponse getAgenticSpaceWithOptions(GetAgenticSpaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agenticSpaceId)) {
+            query.put("AgenticSpaceId", request.agenticSpaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileSystemId)) {
+            query.put("FileSystemId", request.fileSystemId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAgenticSpace"),
+            new TeaPair("version", "2017-06-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAgenticSpaceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>适用 agentic 类型文件系统。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询Agentic空间</p>
+     * 
+     * @param request GetAgenticSpaceRequest
+     * @return GetAgenticSpaceResponse
+     */
+    public GetAgenticSpaceResponse getAgenticSpace(GetAgenticSpaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAgenticSpaceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>This operation is available only for general-purpose NAS file systems.</p>
      * 
      * <b>summary</b> : 
@@ -6254,6 +6606,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetRecycleBinAttributeResponse getRecycleBinAttribute(GetRecycleBinAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getRecycleBinAttributeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>仅通用型 NAS NFS 协议文件系统支持。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询接入点信息</p>
+     * 
+     * @param request ListAccessPointsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAccessPointsResponse
+     */
+    public ListAccessPointsResponse listAccessPointsWithOptions(ListAccessPointsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileSystemId)) {
+            query.put("FileSystemId", request.fileSystemId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filters)) {
+            query.put("Filters", request.filters);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAccessPoints"),
+            new TeaPair("version", "2017-06-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAccessPointsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>仅通用型 NAS NFS 协议文件系统支持。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询接入点信息</p>
+     * 
+     * @param request ListAccessPointsRequest
+     * @return ListAccessPointsResponse
+     */
+    public ListAccessPointsResponse listAccessPoints(ListAccessPointsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAccessPointsWithOptions(request, runtime);
     }
 
     /**
@@ -6652,10 +7066,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only General-purpose Network File System (NFS) file systems support this operation.</p>
+     * <p>Only General-purpose NAS NFS file systems support this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the information about an access point.</p>
+     * <p>Modifies access point information.</p>
      * 
      * @param request ModifyAccessPointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6703,10 +7117,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only General-purpose Network File System (NFS) file systems support this operation.</p>
+     * <p>Only General-purpose NAS NFS file systems support this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the information about an access point.</p>
+     * <p>Modifies access point information.</p>
      * 
      * @param request ModifyAccessPointRequest
      * @return ModifyAccessPointResponse
@@ -6792,6 +7206,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyAccessRuleResponse modifyAccessRule(ModifyAccessRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyAccessRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>适用agentic类型文件系统。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>修改Agentic空间</p>
+     * 
+     * @param request ModifyAgenticSpaceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyAgenticSpaceResponse
+     */
+    public ModifyAgenticSpaceResponse modifyAgenticSpaceWithOptions(ModifyAgenticSpaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agenticSpaceId)) {
+            query.put("AgenticSpaceId", request.agenticSpaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileSystemId)) {
+            query.put("FileSystemId", request.fileSystemId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyAgenticSpace"),
+            new TeaPair("version", "2017-06-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyAgenticSpaceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>适用agentic类型文件系统。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>修改Agentic空间</p>
+     * 
+     * @param request ModifyAgenticSpaceRequest
+     * @return ModifyAgenticSpaceResponse
+     */
+    public ModifyAgenticSpaceResponse modifyAgenticSpace(ModifyAgenticSpaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyAgenticSpaceWithOptions(request, runtime);
     }
 
     /**
@@ -7799,6 +8279,76 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RetryLifecycleRetrieveJobResponse retryLifecycleRetrieveJob(RetryLifecycleRetrieveJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.retryLifecycleRetrieveJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>适用agentic类型文件系统。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>设置Agentic空间配额</p>
+     * 
+     * @param request SetAgenticSpaceQuotaRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SetAgenticSpaceQuotaResponse
+     */
+    public SetAgenticSpaceQuotaResponse setAgenticSpaceQuotaWithOptions(SetAgenticSpaceQuotaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agenticSpaceId)) {
+            query.put("AgenticSpaceId", request.agenticSpaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileCountLimit)) {
+            query.put("FileCountLimit", request.fileCountLimit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileSystemId)) {
+            query.put("FileSystemId", request.fileSystemId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sizeLimit)) {
+            query.put("SizeLimit", request.sizeLimit);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetAgenticSpaceQuota"),
+            new TeaPair("version", "2017-06-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetAgenticSpaceQuotaResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>适用agentic类型文件系统。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>设置Agentic空间配额</p>
+     * 
+     * @param request SetAgenticSpaceQuotaRequest
+     * @return SetAgenticSpaceQuotaResponse
+     */
+    public SetAgenticSpaceQuotaResponse setAgenticSpaceQuota(SetAgenticSpaceQuotaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.setAgenticSpaceQuotaWithOptions(request, runtime);
     }
 
     /**

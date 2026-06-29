@@ -6,8 +6,8 @@ import com.aliyun.tea.*;
 public class CreateMountTargetRequest extends TeaModel {
     /**
      * <p>The name of the permission group.</p>
-     * <p>This parameter is required if you create a mount target for a General-purpose NAS file system or an Extreme NAS file system.</p>
-     * <p>The default permission group for virtual private clouds (VPCs) is named DEFAULT_VPC_GROUP_NAME.</p>
+     * <p>This parameter is required if the file system is a General-purpose NAS or Extreme NAS file system.</p>
+     * <p>Default permission group: DEFAULT_VPC_GROUP_NAME (the default permission group for VPCs).</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-test</p>
@@ -16,11 +16,11 @@ public class CreateMountTargetRequest extends TeaModel {
     public String accessGroupName;
 
     /**
-     * <p>Specifies whether to perform a dry run to check for existing mount targets. This parameter is valid only for CPFS file systems.</p>
-     * <p>If you set this parameter to true, the system checks whether the request parameters are valid and whether the requested resources are available. In this case, no mount target is created and no fee is incurred.</p>
+     * <p>Specifies whether to check for existing mount targets. Only CPFS file systems are supported.</p>
+     * <p>A dry run checks parameter validity and inventory without actually creating a mount target or incurring fees.</p>
      * <ul>
-     * <li>true: performs a dry run but does not create a mount target. In the dry run, the system checks the request format, service limits, available CPFS resources, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code <code>200</code> is returned. No value is returned for the <code>MountTargetDomain</code> parameter.</li>
-     * <li>false (default): sends the request. If the request passes the dry run, a mount target is created.</li>
+     * <li>true: sends a dry run request without creating a mount target. The check items include required parameters, request format, business limits, and CPFS inventory. If the check fails, the corresponding error is returned. If the check passes, <code>200 HttpCode</code> is returned, but <code>MountTargetDomain</code> is empty.</li>
+     * <li>false (default): sends a normal request. After the check passes, a mount target is created.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,14 +30,14 @@ public class CreateMountTargetRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether to create an IPv6 domain name for the mount target.</p>
+     * <p>Specifies whether to create an IPv6 mount target.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>true: An IPv6 domain name is created for the mount target.</li>
-     * <li>false (default): No IPv6 domain name is created for the mount target.</li>
+     * <li>true: creates an IPv6 mount target.</li>
+     * <li>false (default): does not create an IPv6 mount target.</li>
      * </ul>
      * <blockquote>
-     * <p>Only Extreme NAS file systems that reside in the Chinese mainland support IPv6. If you want to create an IPv6 domain name for the mount target, you must enable IPv6 for the file system.</p>
+     * <p>IPv6 is supported only by Extreme NAS file systems in all regions in the Chinese mainland. The file system must have IPv6 enabled.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -47,11 +47,14 @@ public class CreateMountTargetRequest extends TeaModel {
     public Boolean enableIpv6;
 
     /**
-     * <p>The ID of the file system.</p>
+     * <p>The file system ID.</p>
      * <ul>
-     * <li>Sample ID of a General-purpose NAS file system: 31a8e4\<em>\</em>\<em>\</em>.</li>
-     * <li>The IDs of Extreme NAS file systems must start with <code>extreme-</code>, for example, extreme-0015\<em>\</em>\<em>\</em>.</li>
-     * <li>The IDs of CPFS file systems must start with <code>cpfs-</code>. Example: cpfs-125487\<em>\</em>\<em>\</em>.</li>
+     * <li><p>General-purpose NAS: 31a8e4\<em>\</em>\<em>\</em>.</p>
+     * </li>
+     * <li><p>Extreme NAS: The ID must start with <code>extreme-</code>, such as extreme-0015\<em>\</em>\<em>\</em>.</p>
+     * </li>
+     * <li><p>Cloud Parallel File Storage (CPFS): The ID must start with <code>cpfs-</code>, such as cpfs-125487\<em>\</em>\<em>\</em>.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -62,7 +65,7 @@ public class CreateMountTargetRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The network type of the mount target. Valid value: <strong>Vpc</strong>.</p>
+     * <p>The network type of the mount target. Set the value to <strong>Vpc</strong>, which indicates a virtual private cloud (VPC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,7 +75,7 @@ public class CreateMountTargetRequest extends TeaModel {
     public String networkType;
 
     /**
-     * <p>The ID of the security group.</p>
+     * <p>The security group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>sg-bp1fg655nh68xyz9****</p>
@@ -81,8 +84,10 @@ public class CreateMountTargetRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The ID of the vSwitch.</p>
-     * <p>This parameter is valid and required if the mount target resides in a VPC. Example: If you set the NetworkType parameter to VPC, you must specify the VSwitchId parameter.</p>
+     * <p>The vSwitch ID.</p>
+     * <p>This parameter is required and valid only when the network type is VPC.
+     * For example:
+     * If NetworkType is set to VPC, VSwitchId is required.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-2zevmwkwyztjuoffg****</p>
@@ -91,8 +96,10 @@ public class CreateMountTargetRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The ID of the VPC.</p>
-     * <p>This parameter is valid and required if the mount target resides in a VPC. Example: If you set the NetworkType parameter to VPC, you must specify the VpcId parameter.</p>
+     * <p>The VPC ID.</p>
+     * <p>This parameter is required and valid only when the network type is VPC.
+     * For example:
+     * If NetworkType is set to VPC, VpcId is required.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-2zesj9afh3y518k9o****</p>

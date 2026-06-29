@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ApplyDataFlowAutoRefreshRequest extends TeaModel {
     /**
-     * <p>The automatic update interval. CPFS checks whether data is updated in the directory at the interval specified by this parameter. If data is updated, CPFS starts an automatic update task. Unit: minute.</p>
+     * <p>The auto-refresh interval. CPFS checks the directory for data updates at this interval. If data updates exist, an auto-refresh task is started. Unit: minutes.</p>
      * <p>Valid values: 10 to 525600. Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,10 @@ public class ApplyDataFlowAutoRefreshRequest extends TeaModel {
     public Long autoRefreshInterval;
 
     /**
-     * <p>The automatic update policy. The updated data in the source storage is imported into the CPFS file system based on the policy. Valid values:</p>
+     * <p>The auto-refresh policy. This policy determines how data updates from the source are imported to CPFS. Valid values:</p>
      * <ul>
-     * <li>None (default): Updated data in the source storage is not automatically imported into the CPFS file system. You can run a dataflow task to import the updated data from the source storage.</li>
-     * <li>ImportChanged: Updated data in the source storage is automatically imported into the CPFS file system.</li>
+     * <li>None: Data updates from the source are not automatically imported to CPFS. You can use a data flow task to import data updates from the source.</li>
+     * <li>ImportChanged: Data updates from the source are automatically imported to CPFS.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,17 +28,17 @@ public class ApplyDataFlowAutoRefreshRequest extends TeaModel {
     public String autoRefreshPolicy;
 
     /**
-     * <p>The automatic update configurations.</p>
+     * <p>The collection of auto-refresh configurations.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AutoRefreshs")
     public java.util.List<ApplyDataFlowAutoRefreshRequestAutoRefreshs> autoRefreshs;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
-     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How do I ensure the idempotence?</a></p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests.</p>
+     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The value of RequestId may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may differ for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -48,7 +48,7 @@ public class ApplyDataFlowAutoRefreshRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the dataflow.</p>
+     * <p>The ID of the data flow.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,12 +58,12 @@ public class ApplyDataFlowAutoRefreshRequest extends TeaModel {
     public String dataFlowId;
 
     /**
-     * <p>Specifies whether to perform a dry run.</p>
-     * <p>During the dry run, the system checks whether the request parameters are valid and whether the requested resources are available. During the dry run, no file system is created and no fee is incurred.</p>
+     * <p>Specifies whether to perform a dry run for this request.</p>
+     * <p>A dry run checks parameter validity and resource availability without actually creating an instance or incurring charges.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>true: performs a dry run. The system checks the required parameters, request syntax, limits, and available NAS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned. No value is returned for the FileSystemId parameter.</li>
-     * <li>false (default): performs a dry run and sends the request. If the request passes the dry run, a file system is created.</li>
+     * <li>true: Sends a dry run request without creating an instance. The check items include required parameters, request format, business limits, and NAS inventory. If the check fails, the corresponding error is returned. If the check succeeds, HTTP status code 200 is returned, but FileSystemId is empty.</li>
+     * <li>false (default): Sends a normal request. After the check succeeds, the instance is created.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -145,15 +145,15 @@ public class ApplyDataFlowAutoRefreshRequest extends TeaModel {
 
     public static class ApplyDataFlowAutoRefreshRequestAutoRefreshs extends TeaModel {
         /**
-         * <p>The automatic update directory. CPFS automatically checks whether the source data only in the directory is updated and imports the updated data.</p>
+         * <p>The auto-refresh directory. CPFS automatically checks whether data in this directory on the source has been updated and imports the updated data.</p>
          * <p>Limits:</p>
          * <ul>
-         * <li>The directory must be 2 to 1,024 characters in length.</li>
-         * <li>The directory must be encoded in UTF-8.</li>
-         * <li>The directory must start and end with a forward slash (/).</li>
+         * <li>The path must be 2 to 1,024 characters in length.</li>
+         * <li>The path must be encoded in UTF-8.</li>
+         * <li>The path must start and end with a forward slash (/).</li>
          * </ul>
          * <blockquote>
-         * <p> The directory must be an existing directory in the CPFS file system and must be in a fileset where the dataflow is enabled.</p>
+         * <p>The directory must already exist in CPFS and must be in a fileset that has data flow enabled.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

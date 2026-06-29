@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLifecycleRetrieveJobResponseBody extends TeaModel {
     /**
-     * <p>The ID of the data retrieval task.</p>
+     * <p>The data retrieval task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>lrj-nfstest-ia-160****853-hshvw</p>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteFilesetRequest extends TeaModel {
     /**
-     * <p>A client-generated token that you can use to ensure the idempotence of the request. The ClientToken must be unique across requests.</p>
-     * <p>The ClientToken can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests.</p>
+     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the request ID as the ClientToken. The request ID is unique for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may differ for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,13 +18,13 @@ public class DeleteFilesetRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run for the request.</p>
-     * <p>A dry run checks for issues such as parameter validity and resource availability, but does not delete the fileset.</p>
+     * <p>Specifies whether to perform a dry run for this deletion request.</p>
+     * <p>A dry run checks parameter validity and resource availability without actually deleting the instance.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p>true: Sends a check request and does not delete the fileset. The system checks for required parameters, request format, and business limits. If the check fails, an error is returned. If the check passes, an HTTP 200 OK status code is returned.</p>
+     * <li><p>true: Sends a check request without deleting the instance. The check items include whether required parameters are specified, the request format, and business limitations. If the check fails, the corresponding error is returned. If the check passes, HTTP status code 200 is returned.</p>
      * </li>
-     * <li><p>false (Default): Sends a normal request and deletes the fileset after the check passes.</p>
+     * <li><p>false (default): Sends a normal request. After the check passes, the instance is directly deleted.</p>
      * </li>
      * </ul>
      * 
@@ -37,9 +37,9 @@ public class DeleteFilesetRequest extends TeaModel {
     /**
      * <p>The file system ID.</p>
      * <ul>
-     * <li><p>CPFS: The ID must start with <code>cpfs-</code>, such as cpfs-099394bd928c\<em>\</em>\<em>\</em>.</p>
+     * <li><p>CPFS: The ID must start with <code>cpfs-</code>, such as cpfs-099394bd928c****.</p>
      * </li>
-     * <li><p>CPFS for AI and HPC: The ID must start with <code>bmcpfs-</code>, such as bmcpfs-290w65p03ok64ya\<em>\</em>\<em>\</em>.</p>
+     * <li><p>CPFS for Lingjun: The ID must start with <code>bmcpfs-</code>, such as bmcpfs-290w65p03ok64ya****.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>

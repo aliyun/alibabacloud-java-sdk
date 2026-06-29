@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAccessGroupRequest extends TeaModel {
     /**
-     * <p>The name of the permission group to be deleted.</p>
+     * <p>The name of the access group to delete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,8 +18,8 @@ public class DeleteAccessGroupRequest extends TeaModel {
      * <p>The type of the file system.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>standard (default): General-purpose NAS file system</li>
-     * <li>extreme: Extreme NAS file system</li>
+     * <li>standard (default): General-purpose NAS</li>
+     * <li>extreme: Extreme NAS</li>
      * </ul>
      * 
      * <strong>example:</strong>

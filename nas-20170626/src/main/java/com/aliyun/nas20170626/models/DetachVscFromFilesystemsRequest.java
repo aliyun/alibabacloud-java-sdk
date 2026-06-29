@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DetachVscFromFilesystemsRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
-     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How do I ensure the idempotence?</a></p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests.</p>
+     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DetachVscFromFilesystemsRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID information of the file system and virtual storage channel. Each batch can contain up to 10 IDs.</p>
+     * <p>The ID information of file systems and virtual storage channels. A maximum of 10 entries can be specified per batch.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceIds")
@@ -58,7 +58,7 @@ public class DetachVscFromFilesystemsRequest extends TeaModel {
 
     public static class DetachVscFromFilesystemsRequestResourceIds extends TeaModel {
         /**
-         * <p>The ID of the file system.</p>
+         * <p>The file system ID.</p>
          * 
          * <strong>example:</strong>
          * <p>bmcpfs-290t15yn4uo8lid****</p>
@@ -67,7 +67,7 @@ public class DetachVscFromFilesystemsRequest extends TeaModel {
         public String fileSystemId;
 
         /**
-         * <p>The ID of the virtual storage channel.</p>
+         * <p>The virtual storage channel ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsc-8vb864o3ppwfvh****</p>

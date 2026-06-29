@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class ChangeResourceGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the new resource group.</p>
-     * <p>You can log on to the <a href="https://resourcemanager.console.aliyun.com/resource-groups?">Resource Management console</a> to view resource group IDs.</p>
+     * <p>The new resource group ID.</p>
+     * <p>You can view the resource group ID in the <a href="https://resourcemanager.console.aliyun.com/resource-groups?">Resource Management console</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class ChangeResourceGroupRequest extends TeaModel {
 
     /**
      * <p>The region ID of the zone.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2412111.html">DescribeRegions</a> operation to query the latest region list.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/2412111.html">DescribeRegions</a> to query the most recent region list.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -37,7 +37,7 @@ public class ChangeResourceGroupRequest extends TeaModel {
 
     /**
      * <p>The resource type.</p>
-     * <p>Set the value to filesystem.</p>
+     * <p>Valid values: filesystem (file system).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

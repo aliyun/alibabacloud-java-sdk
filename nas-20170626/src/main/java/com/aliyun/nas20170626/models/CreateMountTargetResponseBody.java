@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateMountTargetResponseBody extends TeaModel {
     /**
-     * <p>The IPv4 domain name of the mount target.</p>
+     * <p>The IPv4 mount target.</p>
      * 
      * <strong>example:</strong>
      * <p>174494b666-x****.cn-hangzhou.nas.aliyuncs.com</p>
@@ -14,7 +14,7 @@ public class CreateMountTargetResponseBody extends TeaModel {
     public String mountTargetDomain;
 
     /**
-     * <p>The information about the mount target.</p>
+     * <p>The mount target information.</p>
      */
     @NameInMap("MountTargetExtra")
     public CreateMountTargetResponseBodyMountTargetExtra mountTargetExtra;
@@ -59,7 +59,7 @@ public class CreateMountTargetResponseBody extends TeaModel {
 
     public static class CreateMountTargetResponseBodyMountTargetExtra extends TeaModel {
         /**
-         * <p>The dual-stack (IPv4 and IPv6) domain name of the mount target.</p>
+         * <p>The dual-stack mount target that supports both IPv4 and IPv6.</p>
          * 
          * <strong>example:</strong>
          * <p>174494b666-x****.dualstack.cn-hangzhou.nas.aliyuncs.com</p>

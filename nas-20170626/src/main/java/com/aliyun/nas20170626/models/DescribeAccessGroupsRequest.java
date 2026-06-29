@@ -8,8 +8,10 @@ public class DescribeAccessGroupsRequest extends TeaModel {
      * <p>The name of the permission group.</p>
      * <p>Limits:</p>
      * <ul>
-     * <li>The name must be 3 to 64 characters in length.</li>
-     * <li>The name must start with a letter and can contain letters, digits, underscores (_), and hyphens (-).</li>
+     * <li><p>The name must be 3 to 64 characters in length.</p>
+     * </li>
+     * <li><p>The name must start with a letter and can contain letters, digits, underscores (_), or hyphens (-).</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,9 +24,9 @@ public class DescribeAccessGroupsRequest extends TeaModel {
      * <p>The type of the file system.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>standard: General-purpose NAS</li>
-     * <li>extreme: Extreme NAS</li>
-     * <li>cpfs: CPFS</li>
+     * <li>standard (default): General-purpose NAS.</li>
+     * <li>extreme: Extreme NAS.</li>
+     * <li>cpfs: Cloud Parallel File Storage (CPFS).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,8 +36,8 @@ public class DescribeAccessGroupsRequest extends TeaModel {
     public String fileSystemType;
 
     /**
-     * <p>The page number.</p>
-     * <p>Pages start from page 1. Default value: 1.</p>
+     * <p>The page number of the list.</p>
+     * <p>Start value (default value): 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -44,7 +46,7 @@ public class DescribeAccessGroupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of permission groups returned per page.</p>
+     * <p>The number of permission groups on each page.</p>
      * <p>Valid values: 1 to 100.</p>
      * <p>Default value: 10.</p>
      * 
@@ -55,11 +57,11 @@ public class DescribeAccessGroupsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Specifies whether the time to return is displayed in UTC.</p>
+     * <p>Specifies whether the returned time is displayed in UTC.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>true (default): The time is displayed in UTC.</li>
-     * <li>false: The time is not displayed in UTC.</li>
+     * <li>true (default): The returned time is displayed in UTC.</li>
+     * <li>false: The returned time is not displayed in UTC.</li>
      * </ul>
      * 
      * <strong>example:</strong>

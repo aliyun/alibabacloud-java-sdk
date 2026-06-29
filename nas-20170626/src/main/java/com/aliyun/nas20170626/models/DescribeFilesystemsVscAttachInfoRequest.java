@@ -6,7 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeFilesystemsVscAttachInfoRequest extends TeaModel {
     /**
      * <p>The number of results for each query.</p>
-     * <p>Valid values: 10 to 100. Default value: 10.</p>
+     * <p>Valid values: 10 to 100.
+     * Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -15,7 +16,7 @@ public class DescribeFilesystemsVscAttachInfoRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Query token, which is the NextToken value returned from the previous API call.</p>
+     * <p>The query token. Set the value to the NextToken value returned in the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</p>
@@ -24,7 +25,7 @@ public class DescribeFilesystemsVscAttachInfoRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID information of the file system and virtual storage channel. Each batch can contain up to 10 IDs.</p>
+     * <p>The ID information of file systems and virtual storage channels. A maximum of 10 entries can be specified per batch.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceIds")
@@ -72,7 +73,7 @@ public class DescribeFilesystemsVscAttachInfoRequest extends TeaModel {
 
     public static class DescribeFilesystemsVscAttachInfoRequestResourceIds extends TeaModel {
         /**
-         * <p>The ID of the file system.</p>
+         * <p>The file system ID.</p>
          * 
          * <strong>example:</strong>
          * <p>bmcpfs-290t15yn4uo8lid****</p>
@@ -81,7 +82,7 @@ public class DescribeFilesystemsVscAttachInfoRequest extends TeaModel {
         public String fileSystemId;
 
         /**
-         * <p>The ID of the virtual storage channel.</p>
+         * <p>The virtual storage channel ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsc-8vb864o3ppwfvh****</p>

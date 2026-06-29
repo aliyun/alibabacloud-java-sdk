@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateProtocolServiceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the protocol service.</p>
+     * <p>The protocol service cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ptc-197ed6a00f2b****</p>

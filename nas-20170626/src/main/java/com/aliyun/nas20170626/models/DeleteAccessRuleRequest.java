@@ -15,7 +15,7 @@ public class DeleteAccessRuleRequest extends TeaModel {
     public String accessGroupName;
 
     /**
-     * <p>The rule ID.</p>
+     * <p>The ID of the permission rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,8 +28,8 @@ public class DeleteAccessRuleRequest extends TeaModel {
      * <p>The type of the file system.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>standard (default): General-purpose NAS file system.</li>
-     * <li>extreme: Extreme NAS file system.</li>
+     * <li>standard (default): General-purpose NAS.</li>
+     * <li>extreme: Extreme NAS.</li>
      * </ul>
      * 
      * <strong>example:</strong>

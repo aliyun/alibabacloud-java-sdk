@@ -5,16 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeFileSystemsRequest extends TeaModel {
     /**
-     * <p>The ID of the file system.</p>
+     * <p>The file system ID.</p>
      * <ul>
-     * <li><p>For General-purpose NAS file systems, the ID is a string of characters, such as <code>31a8e4****</code>.</p>
-     * </li>
-     * <li><p>For Extreme NAS file systems, the ID must start with <code>extreme-</code>, such as <code>extreme-0015****</code>.</p>
-     * </li>
-     * <li><p>For Cloud Parallel File System (CPFS) file systems, the ID must start with <code>cpfs-</code>, such as <code>cpfs-125487****</code>.</p>
-     * </li>
-     * <li><p>For Cloud Parallel File System SE (CPFS SE) file systems, the ID must start with <code>cpfsse-</code>, such as <code>cpfsse-022c71b134****</code>.</p>
-     * </li>
+     * <li>General-purpose NAS: 31a8e4****.</li>
+     * <li>Extreme NAS: Must start with extreme-, such as extreme-0015****.</li>
+     * <li>CPFS (locally redundant): Must start with cpfs-, such as cpfs-125487****.</li>
+     * <li>CPFS SE (zone-redundant): Must start with cpfsse-, such as cpfsse-022c71b134****.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,19 +23,14 @@ public class DescribeFileSystemsRequest extends TeaModel {
      * <p>The file system type.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p><code>all</code> (default): all file system types.</p>
-     * </li>
-     * <li><p><code>standard</code>: General-purpose NAS.</p>
-     * </li>
-     * <li><p><code>extreme</code>: Extreme NAS.</p>
-     * </li>
-     * <li><p><code>cpfs</code>: Cloud Parallel File System (CPFS).</p>
-     * </li>
-     * <li><p><code>cpfsse</code>: Cloud Parallel File System SE (CPFS SE).</p>
-     * </li>
+     * <li>all (default): queries all types.</li>
+     * <li>standard: General-purpose NAS.</li>
+     * <li>extreme: Extreme NAS.</li>
+     * <li>cpfs: Cloud Parallel File Storage (CPFS) (locally redundant).</li>
+     * <li>cpfsse: CPFS SE (zone-redundant).</li>
      * </ul>
      * <blockquote>
-     * <p>Separate multiple types with commas.</p>
+     * <p>To query multiple types, separate them with commas (,).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -50,7 +41,7 @@ public class DescribeFileSystemsRequest extends TeaModel {
 
     /**
      * <p>The page number of the file system list.</p>
-     * <p>The page number starts at 1. The default value is 1.</p>
+     * <p>Start value (default value): 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,8 +50,8 @@ public class DescribeFileSystemsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of file systems to return on each page.</p>
-     * <p>Value range: 1 to 100.</p>
+     * <p>The number of file systems on each page in a paging query.</p>
+     * <p>Valid values: 1 to 100.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -70,8 +61,8 @@ public class DescribeFileSystemsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the resource group.</p>
-     * <p>You can view this ID in the <a href="https://resourcemanager.console.aliyun.com/resource-groups?">Resource Management console</a>.</p>
+     * <p>The resource group ID.</p>
+     * <p>You can view the resource group ID in the <a href="https://resourcemanager.console.aliyun.com/resource-groups?">Resource Management console</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmwavnfef****</p>
@@ -80,14 +71,14 @@ public class DescribeFileSystemsRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The tags used to filter file systems. You can specify 1 to 20 tags.</p>
+     * <p>The tag information.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeFileSystemsRequestTag> tag;
 
     /**
-     * <p>The ID of the VPC.</p>
-     * <p>The file system and the ECS instance used for mounting must be in the same VPC.</p>
+     * <p>The virtual private cloud (VPC) ID.</p>
+     * <p>The VPC must be the same as the VPC of the Elastic Computing Service (ECS) server to which you want to mount the file system.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp1sevsgtqvk5gxbl****</p>
@@ -161,13 +152,10 @@ public class DescribeFileSystemsRequest extends TeaModel {
          * <p>The tag key.</p>
          * <p>Limits:</p>
          * <ul>
-         * <li></li>
-         * <li><p>The tag key can be up to 128 characters long.</p>
-         * </li>
-         * <li><p>It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
-         * </li>
-         * <li><p>It cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * </li>
+         * <li>Valid values of N: 1 to 20.</li>
+         * <li>The tag key can be up to 128 characters in length.</li>
+         * <li>The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
+         * <li>The tag key cannot contain <code>http://</code> or <code>https://</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -180,13 +168,10 @@ public class DescribeFileSystemsRequest extends TeaModel {
          * <p>The tag value.</p>
          * <p>Limits:</p>
          * <ul>
-         * <li></li>
-         * <li><p>The tag value can be up to 128 characters long.</p>
-         * </li>
-         * <li><p>It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
-         * </li>
-         * <li><p>It cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * </li>
+         * <li>Valid values of N: 1 to 20.</li>
+         * <li>The tag value can be up to 128 characters in length.</li>
+         * <li>The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
+         * <li>The tag value cannot contain <code>http://</code> or <code>https://</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>

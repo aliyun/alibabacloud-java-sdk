@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAccessPointResponseBody extends TeaModel {
     /**
-     * <p>The information about the access point.</p>
+     * <p>The access point information.</p>
      */
     @NameInMap("AccessPoint")
     public DescribeAccessPointResponseBodyAccessPoint accessPoint;
@@ -43,7 +43,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
 
     public static class DescribeAccessPointResponseBodyAccessPointPosixUser extends TeaModel {
         /**
-         * <p>The ID of the POSIX user group.</p>
+         * <p>The POSIX user group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -52,13 +52,13 @@ public class DescribeAccessPointResponseBody extends TeaModel {
         public Integer posixGroupId;
 
         /**
-         * <p>The IDs of the secondary user groups.</p>
+         * <p>The secondary user group ID.</p>
          */
         @NameInMap("PosixSecondaryGroupIds")
         public java.util.List<Integer> posixSecondaryGroupIds;
 
         /**
-         * <p>The ID of the POSIX user.</p>
+         * <p>The POSIX user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -99,7 +99,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
 
     public static class DescribeAccessPointResponseBodyAccessPointRootPathPermission extends TeaModel {
         /**
-         * <p>The ID of the owner group.</p>
+         * <p>The file group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -108,7 +108,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
         public Integer ownerGroupId;
 
         /**
-         * <p>The owner ID.</p>
+         * <p>The file owner ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -117,7 +117,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
         public Integer ownerUserId;
 
         /**
-         * <p>The POSIX permission.</p>
+         * <p>The POSIX permissions.</p>
          * 
          * <strong>example:</strong>
          * <p>0755</p>
@@ -158,7 +158,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
 
     public static class DescribeAccessPointResponseBodyAccessPointTags extends TeaModel {
         /**
-         * <p>The key of a tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -167,7 +167,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of a tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>
@@ -200,7 +200,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
 
     public static class DescribeAccessPointResponseBodyAccessPoint extends TeaModel {
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the access point.</p>
+         * <p>The access point ARN.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:nas:cn-hangzhou:178321033379****:accesspoint/ap-ie15yd****</p>
@@ -209,7 +209,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
         public String ARN;
 
         /**
-         * <p>The name of the permission group.</p>
+         * <p>The permission group name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -218,7 +218,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
         public String accessGroup;
 
         /**
-         * <p>The ID of the access point.</p>
+         * <p>The access point ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ap-ie15yd****</p>
@@ -227,13 +227,22 @@ public class DescribeAccessPointResponseBody extends TeaModel {
         public String accessPointId;
 
         /**
-         * <p>The name of the access point.</p>
+         * <p>The access point name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("AccessPointName")
         public String accessPointName;
+
+        /**
+         * <p>AgenticSpace Id。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agentic-229oypxjgpau2****</p>
+         */
+        @NameInMap("AgenticSpaceId")
+        public String agenticSpaceId;
 
         /**
          * <p>The time when the access point was created.</p>
@@ -245,7 +254,16 @@ public class DescribeAccessPointResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The domain name of the access point.</p>
+         * <p>The time when the AgenticSpace was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-06-10T10:08:08Z</p>
+         */
+        @NameInMap("CreateTimeUtc")
+        public String createTimeUtc;
+
+        /**
+         * <p>The access point domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>ap-ie15ydanoz.001014****-w****.cn-hangzhou.nas.aliyuncs.com</p>
@@ -263,7 +281,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
         public Boolean enabledRam;
 
         /**
-         * <p>The ID of the file system.</p>
+         * <p>The file system ID.</p>
          * 
          * <strong>example:</strong>
          * <p>31a8e4****</p>
@@ -272,13 +290,22 @@ public class DescribeAccessPointResponseBody extends TeaModel {
         public String fileSystemId;
 
         /**
-         * <p>The time when the access point was modified.</p>
+         * <p>The time when the access point was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>1709619668276167</p>
          */
         @NameInMap("ModifyTime")
         public String modifyTime;
+
+        /**
+         * <p>The time when the AgenticSpace was last modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-06-10T10:08:08Z</p>
+         */
+        @NameInMap("ModifyTimeUtc")
+        public String modifyTimeUtc;
 
         /**
          * <p>The POSIX user.</p>
@@ -305,18 +332,18 @@ public class DescribeAccessPointResponseBody extends TeaModel {
         public String rootPath;
 
         /**
-         * <p>The permissions to create the root directory.</p>
+         * <p>The permissions for creating the root directory.</p>
          */
         @NameInMap("RootPathPermission")
         public DescribeAccessPointResponseBodyAccessPointRootPathPermission rootPathPermission;
 
         /**
-         * <p>The status of the root directory.</p>
+         * <p>The current root directory status.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>0: The rootpath status is unknown.</li>
-         * <li>1: The rootpath does not exist and may be deleted.</li>
-         * <li>2: The rootpath is normal.</li>
+         * <li>0: The root path status is unknown.</li>
+         * <li>1: The root path does not exist. It may have been deleted by the user.</li>
+         * <li>2: The root path status is normal.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -326,13 +353,13 @@ public class DescribeAccessPointResponseBody extends TeaModel {
         public String rootPathStatus;
 
         /**
-         * <p>The status of the access point.</p>
+         * <p>The current access point status.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Active: The access point is available.</li>
-         * <li>Inactive: The access point is unavailable.</li>
-         * <li>Pending: The access point is being created.</li>
-         * <li>Deleting: The access point is being deleted.</li>
+         * <li>Active: active</li>
+         * <li>Inactive: inactive</li>
+         * <li>Pending: being created</li>
+         * <li>Deleting: being deleted</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -342,7 +369,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tags of the access point.</p>
+         * <p>The list of access point tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<DescribeAccessPointResponseBodyAccessPointTags> tags;
@@ -357,8 +384,8 @@ public class DescribeAccessPointResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The ID of the virtual private cloud (VPC).</p>
-         * <p>You must select the VPC of the Elastic Compute Service (ECS) instance on which you want to mount the file system.</p>
+         * <p>The VPC ID.</p>
+         * <p>The VPC must be the same as the VPC of the Elastic Computing Service (ECS) server to which you want to mount the file system.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-2zesj9afh3y518k9o****</p>
@@ -403,12 +430,28 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             return this.accessPointName;
         }
 
+        public DescribeAccessPointResponseBodyAccessPoint setAgenticSpaceId(String agenticSpaceId) {
+            this.agenticSpaceId = agenticSpaceId;
+            return this;
+        }
+        public String getAgenticSpaceId() {
+            return this.agenticSpaceId;
+        }
+
         public DescribeAccessPointResponseBodyAccessPoint setCreateTime(String createTime) {
             this.createTime = createTime;
             return this;
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public DescribeAccessPointResponseBodyAccessPoint setCreateTimeUtc(String createTimeUtc) {
+            this.createTimeUtc = createTimeUtc;
+            return this;
+        }
+        public String getCreateTimeUtc() {
+            return this.createTimeUtc;
         }
 
         public DescribeAccessPointResponseBodyAccessPoint setDomainName(String domainName) {
@@ -441,6 +484,14 @@ public class DescribeAccessPointResponseBody extends TeaModel {
         }
         public String getModifyTime() {
             return this.modifyTime;
+        }
+
+        public DescribeAccessPointResponseBodyAccessPoint setModifyTimeUtc(String modifyTimeUtc) {
+            this.modifyTimeUtc = modifyTimeUtc;
+            return this;
+        }
+        public String getModifyTimeUtc() {
+            return this.modifyTimeUtc;
         }
 
         public DescribeAccessPointResponseBodyAccessPoint setPosixUser(DescribeAccessPointResponseBodyAccessPointPosixUser posixUser) {

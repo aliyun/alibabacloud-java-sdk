@@ -18,8 +18,8 @@ public class CreateAccessRuleRequest extends TeaModel {
      * <p>The type of the file system.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>standard: General-purpose Apsara File Storage NAS (NAS) file system</li>
-     * <li>extreme: Extreme NAS file system.</li>
+     * <li>standard (default): General-purpose NAS.</li>
+     * <li>extreme: Extreme NAS.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,13 +29,13 @@ public class CreateAccessRuleRequest extends TeaModel {
     public String fileSystemType;
 
     /**
-     * <p>The IPv6 address or CIDR block of the authorized object.</p>
-     * <p>You must set this parameter to an IPv6 address or CIDR block.</p>
+     * <p>The source IPv6 CIDR block.</p>
+     * <p>The value supports CIDR format and IPv6 format address range.</p>
      * <blockquote>
      * <ul>
-     * <li>Only Extreme NAS file systems that reside in the Chinese mainland support IPv6. If you specify this parameter, you must enable IPv6 for the file system.</li>
-     * <li>Only permission groups that reside in virtual private clouds (VPCs) support IPv6.</li>
-     * <li>You cannot specify an IPv4 address and an IPv6 address at the same time.</li>
+     * <li>The IPv6 feature is supported only by Extreme NAS file systems in regions in the Chinese mainland, and IPv6 must be enabled for the file system.</li>
+     * <li>Only VPC networks are supported.</li>
+     * <li>IPv4 and IPv6 are mutually exclusive.</li>
      * </ul>
      * </blockquote>
      * 
@@ -46,8 +46,8 @@ public class CreateAccessRuleRequest extends TeaModel {
     public String ipv6SourceCidrIp;
 
     /**
-     * <p>The priority of the rule.</p>
-     * <p>The rule with the highest priority takes effect if multiple rules are attached to the authorized object.</p>
+     * <p>The priority of the permission rule.</p>
+     * <p>If an authorized address matches multiple rules, the rule with the highest priority takes effect.</p>
      * <p>Valid values: 1 to 100. The value 1 indicates the highest priority.</p>
      * 
      * <strong>example:</strong>
@@ -57,11 +57,11 @@ public class CreateAccessRuleRequest extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>The access permissions of the authorized object on the file system.</p>
+     * <p>The read and write permissions of the authorized address on the file system.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>RDWR (default): the read and write permissions.</li>
-     * <li>RDONLY: the read-only permission.</li>
+     * <li>RDWR (default): read and write.</li>
+     * <li>RDONLY: read-only.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,10 +71,10 @@ public class CreateAccessRuleRequest extends TeaModel {
     public String RWAccessType;
 
     /**
-     * <p>The IP address or CIDR block of the authorized object.</p>
-     * <p>You must set this parameter to an IP address or CIDR block.</p>
+     * <p>The IP address or CIDR block of the authorized address.</p>
+     * <p>The value must be a single IP address or a CIDR block.</p>
      * <blockquote>
-     * <p>If the permission group resides in the classic network, you must set this parameter to an IP address.</p>
+     * <p>Permission groups of the classic network type support only IP addresses.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -84,14 +84,14 @@ public class CreateAccessRuleRequest extends TeaModel {
     public String sourceCidrIp;
 
     /**
-     * <p>The access permissions for different types of users in the authorized object.</p>
+     * <p>The access permissions of the system user of the authorized address on the file system.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>no_squash (default): grants root users the permissions to access the file system.</li>
-     * <li>root_squash: grants root users the least permissions as the nobody user.</li>
-     * <li>all_squash: grants all users the least permissions as the nobody user.</li>
+     * <li>no_squash (default): allows access to the file system as the root user.</li>
+     * <li>root_squash: maps the root user to the nobody user when the root user accesses the file system.</li>
+     * <li>all_squash: maps all users to the nobody user regardless of the user identity.</li>
      * </ul>
-     * <p>The nobody user has the least permissions in Linux and can access only the public content of the file system. This ensures the security of the file system.</p>
+     * <p>The nobody user is a default user in Linux. The nobody user can access only public content on the server and has low privileges and high security. Authorization is required for the system user to access the file system.</p>
      * 
      * <strong>example:</strong>
      * <p>no_squash</p>

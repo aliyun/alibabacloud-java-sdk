@@ -8,7 +8,7 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
     public DescribeLogAnalysisResponseBodyAnalyses analyses;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -17,7 +17,7 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the log analysis entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -26,7 +26,7 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of log dump entries returned per page.</p>
+     * <p>The number of log analysis entries on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -44,7 +44,7 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of log dump entries in the region.</p>
+     * <p>The total number of log analysis entries in the region.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

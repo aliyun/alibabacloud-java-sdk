@@ -9,9 +9,9 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
      * <p>Limits:</p>
      * <ul>
      * <li>The name must be 2 to 128 characters in length.</li>
-     * <li>The name must start with a letter.</li>
-     * <li>The name can contain digits, colons (:), underscores (_), and hyphens (-). It cannot start with <code>http://</code> or <code>https://</code>.</li>
-     * <li>This parameter is empty by default.</li>
+     * <li>The name must start with a letter or a Chinese character.</li>
+     * <li>The name can contain digits, colons (:), underscores (_), or hyphens (-). It cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>Default value: empty.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,7 +22,7 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
 
     /**
      * <p>The type of the file system.</p>
-     * <p>Valid value: extreme, which indicates Extreme NAS file systems.</p>
+     * <p>Valid values: extreme (Extreme NAS).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,10 +32,10 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public String fileSystemType;
 
     /**
-     * <p>The days of a week on which to create automatic snapshots.</p>
+     * <p>The days of the week on which automatic snapshots are created.</p>
      * <p>Cycle: week.</p>
-     * <p>Valid values: 1 to 7. The values from 1 to 7 indicate the seven days in a week from Monday to Sunday.</p>
-     * <p>If you want to create multiple auto snapshots within a week, you can specify multiple days from Monday to Sunday and separate the days with commas (,). You can specify a maximum of seven days.</p>
+     * <p>Valid values: 1 to 7, which represent Monday through Sunday.</p>
+     * <p>To create automatic snapshots on multiple days in a week, specify multiple values separated by commas (,). You can specify a maximum of 7 values.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,12 +45,12 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public String repeatWeekdays;
 
     /**
-     * <p>The retention period of auto snapshots.</p>
+     * <p>The retention period of automatic snapshots.</p>
      * <p>Unit: days.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>\-1 (default). Auto snapshots are permanently retained. After the number of auto snapshots exceeds the upper limit, the earliest auto snapshot is automatically deleted.</li>
-     * <li>1 to 65536: Auto snapshots are retained for the specified days. After the retention period of auto snapshots expires, the auto snapshots are automatically deleted.</li>
+     * <li>-1 (default): Automatic snapshots are permanently retained. When the snapshot quota is reached, the earliest automatic snapshots are automatically deleted.</li>
+     * <li>1 to 65536: Automatic snapshots are retained for the specified number of days. Snapshots are subject to automatic release after the retention period expires.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,10 +60,10 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public Integer retentionDays;
 
     /**
-     * <p>The points in time at which auto snapshots were created.</p>
+     * <p>The time points at which automatic snapshots are created.</p>
      * <p>Unit: hours.</p>
-     * <p>Valid values: 0 to 23. The values from 0 to 23 indicate a total of 24 hours from 00:00 to 23:00. For example, the value 1 indicates 01:00.</p>
-     * <p>If you want to create multiple auto snapshots within a day, you can specify multiple points in time and separate the points in time with commas (,). You can specify a maximum of 24 points in time.</p>
+     * <p>Valid values: 0 to 23, which represent the 24 time points from 00:00 to 23:00. For example, 1 indicates 01:00.</p>
+     * <p>To create multiple automatic snapshots within a day, specify multiple time points separated by commas (,). You can specify a maximum of 24 time points.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

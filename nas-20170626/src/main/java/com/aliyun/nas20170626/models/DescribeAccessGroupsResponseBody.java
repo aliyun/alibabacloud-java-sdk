@@ -8,7 +8,7 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
     public DescribeAccessGroupsResponseBodyAccessGroups accessGroups;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of permission groups returned per page.</p>
+     * <p>The number of permission groups on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
