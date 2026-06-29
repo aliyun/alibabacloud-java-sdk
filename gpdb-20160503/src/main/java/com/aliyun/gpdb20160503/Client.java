@@ -16708,6 +16708,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Resets a child branch to the latest data of its parent branch. The main branch, branches without a parent branch, branches with child branches, and protected branches cannot be reset.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Resets a Supabase branch.</p>
+     * 
+     * @param request ResetBranchRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ResetBranchResponse
+     */
+    public ResetBranchResponse resetBranchWithOptions(ResetBranchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.branchId)) {
+            query.put("BranchId", request.branchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ResetBranch"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ResetBranchResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Resets a child branch to the latest data of its parent branch. The main branch, branches without a parent branch, branches with child branches, and protected branches cannot be reset.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Resets a Supabase branch.</p>
+     * 
+     * @param request ResetBranchRequest
+     * @return ResetBranchResponse
+     */
+    public ResetBranchResponse resetBranch(ResetBranchRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.resetBranchWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Resets the IMV statistics.</p>
      * 
@@ -16923,6 +16981,84 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RestartSupabaseProjectResponse restartSupabaseProject(RestartSupabaseProjectRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.restartSupabaseProjectWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Recovers a target branch to a specified point in time or LSN of the source branch. Before recovery, you can specify a backup branch name to preserve the original target branch.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Recovers a Supabase branch.</p>
+     * 
+     * @param request RestoreBranchRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RestoreBranchResponse
+     */
+    public RestoreBranchResponse restoreBranchWithOptions(RestoreBranchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.branchId)) {
+            query.put("BranchId", request.branchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.preserveUnderName)) {
+            query.put("PreserveUnderName", request.preserveUnderName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceBranchId)) {
+            query.put("SourceBranchId", request.sourceBranchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceBranchLsn)) {
+            query.put("SourceBranchLsn", request.sourceBranchLsn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceBranchTimestamp)) {
+            query.put("SourceBranchTimestamp", request.sourceBranchTimestamp);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RestoreBranch"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RestoreBranchResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Recovers a target branch to a specified point in time or LSN of the source branch. Before recovery, you can specify a backup branch name to preserve the original target branch.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Recovers a Supabase branch.</p>
+     * 
+     * @param request RestoreBranchRequest
+     * @return RestoreBranchResponse
+     */
+    public RestoreBranchResponse restoreBranch(RestoreBranchRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.restoreBranchWithOptions(request, runtime);
     }
 
     /**
@@ -17219,6 +17355,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ResumeSupabaseProjectResponse resumeSupabaseProject(ResumeSupabaseProjectRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.resumeSupabaseProjectWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Sets a specified branch as the default branch for a Supabase project.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Sets the default branch for a Supabase project.</p>
+     * 
+     * @param request SetAsDefaultBranchRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SetAsDefaultBranchResponse
+     */
+    public SetAsDefaultBranchResponse setAsDefaultBranchWithOptions(SetAsDefaultBranchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.branchId)) {
+            query.put("BranchId", request.branchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetAsDefaultBranch"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetAsDefaultBranchResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Sets a specified branch as the default branch for a Supabase project.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Sets the default branch for a Supabase project.</p>
+     * 
+     * @param request SetAsDefaultBranchRequest
+     * @return SetAsDefaultBranchResponse
+     */
+    public SetAsDefaultBranchResponse setAsDefaultBranch(SetAsDefaultBranchRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.setAsDefaultBranchWithOptions(request, runtime);
     }
 
     /**
@@ -17879,6 +18073,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UntagSupabaseProjectResponse untagSupabaseProject(UntagSupabaseProjectRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.untagSupabaseProjectWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation modifies the branch name, description, tags, protection status, and automatic deletion time upon expiration.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates Supabase branch information.</p>
+     * 
+     * @param request UpdateBranchRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateBranchResponse
+     */
+    public UpdateBranchResponse updateBranchWithOptions(UpdateBranchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.branchId)) {
+            query.put("BranchId", request.branchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.branchName)) {
+            query.put("BranchName", request.branchName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clearExpiresAt)) {
+            query.put("ClearExpiresAt", request.clearExpiresAt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expiresAt)) {
+            query.put("ExpiresAt", request.expiresAt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request._protected)) {
+            query.put("Protected", request._protected);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateBranch"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateBranchResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation modifies the branch name, description, tags, protection status, and automatic deletion time upon expiration.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates Supabase branch information.</p>
+     * 
+     * @param request UpdateBranchRequest
+     * @return UpdateBranchResponse
+     */
+    public UpdateBranchResponse updateBranch(UpdateBranchRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateBranchWithOptions(request, runtime);
     }
 
     /**
