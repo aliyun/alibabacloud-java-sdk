@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class BindInstance2VpcRequest extends TeaModel {
     /**
+     * <p>The instance name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class BindInstance2VpcRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The VPC name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class BindInstance2VpcRequest extends TeaModel {
     public String instanceVpcName;
 
     /**
+     * <p>The virtual switch ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,7 +35,7 @@ public class BindInstance2VpcRequest extends TeaModel {
     public String virtualSwitchId;
 
     /**
-     * <p>VPC ID</p>
+     * <p>The VPC ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

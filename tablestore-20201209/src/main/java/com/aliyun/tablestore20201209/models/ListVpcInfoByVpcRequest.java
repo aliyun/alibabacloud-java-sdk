@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListVpcInfoByVpcRequest extends TeaModel {
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListVpcInfoByVpcRequest extends TeaModel {
     public Long pageNum;
 
     /**
+     * <p>The number of VPCs to return on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,7 +23,7 @@ public class ListVpcInfoByVpcRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>VPC ID</p>
+     * <p>The ID of the VPC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

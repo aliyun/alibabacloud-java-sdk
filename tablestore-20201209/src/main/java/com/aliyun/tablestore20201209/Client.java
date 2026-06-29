@@ -8,7 +8,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("us-west-1", "tablestore.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "tablestore.us-east-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "tablestore.me-east-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "tablestore.me-central-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "tablestore.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "tablestore.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "tablestore.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "tablestore.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "tablestore.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "tablestore.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "tablestore.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "tablestore.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "tablestore.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "tablestore.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "tablestore.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "tablestore.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "tablestore.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-beijing", "tablestore.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "tablestore.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "tablestore.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "tablestore.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "tablestore.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "tablestore.ap-southeast-2.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "tablestore.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-south-1", "tablestore.ap-south-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "tablestore.ap-northeast-1.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("tablestore", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -28,7 +56,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>绑定vpc</p>
+     * <p>Binds an instance to a VPC.</p>
      * 
      * @param request BindInstance2VpcRequest
      * @param headers map
@@ -74,7 +102,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>绑定vpc</p>
+     * <p>Binds an instance to a VPC.</p>
      * 
      * @param request BindInstance2VpcRequest
      * @return BindInstance2VpcResponse
@@ -189,6 +217,97 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <ul>
+     * <li><strong>Before you call this operation, make sure that you fully understand the billing of Tablestore. For more information, see <a href="https://help.aliyun.com/document_detail/27291.html">Billing overview</a>.</strong></li>
+     * <li>You can create up to 10 agent storage instances within a single Alibaba Cloud account. Agent storage instance names must be unique within the same region.
+     * <a href="Deprecated">_single.params.body.props.Network.title</a> The network type of the instance. Valid values: NORMAL, VPC_CONSOLE. Default value: NORMAL.
+     * <a href="Deprecated">_single.params.body.props.Network.desc</a> The network type of the agent storage instance. Valid values: NORMAL, VPC_CONSOLE. Default value: NORMAL.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an agent storage instance.</p>
+     * 
+     * @param request CreateAgentStorageRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAgentStorageResponse
+     */
+    public CreateAgentStorageResponse createAgentStorageWithOptions(CreateAgentStorageRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentStorageDescription)) {
+            body.put("AgentStorageDescription", request.agentStorageDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.agentStorageName)) {
+            body.put("AgentStorageName", request.agentStorageName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.network)) {
+            body.put("Network", request.network);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkSourceACL)) {
+            body.put("NetworkSourceACL", request.networkSourceACL);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkTypeACL)) {
+            body.put("NetworkTypeACL", request.networkTypeACL);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policy)) {
+            body.put("Policy", request.policy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            body.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            body.put("Tags", request.tags);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAgentStorage"),
+            new TeaPair("version", "2020-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/openapi/createagentstorage"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAgentStorageResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li><strong>Before you call this operation, make sure that you fully understand the billing of Tablestore. For more information, see <a href="https://help.aliyun.com/document_detail/27291.html">Billing overview</a>.</strong></li>
+     * <li>You can create up to 10 agent storage instances within a single Alibaba Cloud account. Agent storage instance names must be unique within the same region.
+     * <a href="Deprecated">_single.params.body.props.Network.title</a> The network type of the instance. Valid values: NORMAL, VPC_CONSOLE. Default value: NORMAL.
+     * <a href="Deprecated">_single.params.body.props.Network.desc</a> The network type of the agent storage instance. Valid values: NORMAL, VPC_CONSOLE. Default value: NORMAL.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an agent storage instance.</p>
+     * 
+     * @param request CreateAgentStorageRequest
+     * @return CreateAgentStorageResponse
+     */
+    public CreateAgentStorageResponse createAgentStorage(CreateAgentStorageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createAgentStorageWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>  <strong>Before you call this operation, you must understand the billing and pricing of Tablestore. For more information, see <a href="https://help.aliyun.com/document_detail/27291.html">Billing overview</a>.</strong></p>
      * <ul>
      * <li>Each Alibaba Cloud account can create up to 10 instances. The name of an instance must be unique within the region in which the instance resides.</li>
@@ -285,8 +404,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li><strong>Before you call this operation, ensure that you understand the billing methods and pricing of Tablestore. For more information, see <a href="https://help.aliyun.com/document_detail/27291.html">Billing overview</a>.</strong></li>
+     * <li>An Alibaba Cloud account can create a maximum of 10 instances. The instance names must be unique within the same region.</li>
+     * <li>The cluster type (instance type) cannot be changed after an instance is created. Select the cluster type with caution.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建VCU实例</p>
+     * <p>Creates a VCU instance.</p>
      * 
      * @param request CreateVCUInstanceRequest
      * @param headers map
@@ -359,8 +485,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li><strong>Before you call this operation, ensure that you understand the billing methods and pricing of Tablestore. For more information, see <a href="https://help.aliyun.com/document_detail/27291.html">Billing overview</a>.</strong></li>
+     * <li>An Alibaba Cloud account can create a maximum of 10 instances. The instance names must be unique within the same region.</li>
+     * <li>The cluster type (instance type) cannot be changed after an instance is created. Select the cluster type with caution.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建VCU实例</p>
+     * <p>Creates a VCU instance.</p>
      * 
      * @param request CreateVCUInstanceRequest
      * @return CreateVCUInstanceResponse
@@ -369,6 +502,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createVCUInstanceWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>To avoid conflicts, do not create an agent store with the same name as the agent store being deleted during the deletion process.</li>
+     * <li>After an agent store is deleted, the agent store becomes unavailable, and the tables, table data, and related indexes in the agent store cannot be recovered. Proceed with caution.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an agent store.</p>
+     * 
+     * @param request DeleteAgentStorageRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAgentStorageResponse
+     */
+    public DeleteAgentStorageResponse deleteAgentStorageWithOptions(DeleteAgentStorageRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentStorageName)) {
+            body.put("AgentStorageName", request.agentStorageName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAgentStorage"),
+            new TeaPair("version", "2020-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/openapi/deleteagentstorage"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAgentStorageResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>To avoid conflicts, do not create an agent store with the same name as the agent store being deleted during the deletion process.</li>
+     * <li>After an agent store is deleted, the agent store becomes unavailable, and the tables, table data, and related indexes in the agent store cannot be recovered. Proceed with caution.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an agent store.</p>
+     * 
+     * @param request DeleteAgentStorageRequest
+     * @return DeleteAgentStorageResponse
+     */
+    public DeleteAgentStorageResponse deleteAgentStorage(DeleteAgentStorageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteAgentStorageWithOptions(request, headers, runtime);
     }
 
     /**
@@ -497,7 +689,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除VCU实例</p>
+     * <p>Deletes a VCU instance.</p>
      * 
      * @param request DeleteVCUInstanceRequest
      * @param headers map
@@ -531,7 +723,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除VCU实例</p>
+     * <p>Deletes a VCU instance.</p>
      * 
      * @param request DeleteVCUInstanceRequest
      * @return DeleteVCUInstanceResponse
@@ -544,7 +736,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries supported regions.</p>
+     * <p>Retrieves a list of available regions.</p>
      * 
      * @param request DescribeRegionsRequest
      * @param headers map
@@ -578,7 +770,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries supported regions.</p>
+     * <p>Retrieves a list of available regions.</p>
      * 
      * @param request DescribeRegionsRequest
      * @return DescribeRegionsResponse
@@ -587,6 +779,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.describeRegionsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves agent storage.</p>
+     * 
+     * @param request GetAgentStorageRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAgentStorageResponse
+     */
+    public GetAgentStorageResponse getAgentStorageWithOptions(GetAgentStorageRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentStorageName)) {
+            query.put("AgentStorageName", request.agentStorageName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAgentStorage"),
+            new TeaPair("version", "2020-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/openapi/getagentstorage"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAgentStorageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves agent storage.</p>
+     * 
+     * @param request GetAgentStorageRequest
+     * @return GetAgentStorageResponse
+     */
+    public GetAgentStorageResponse getAgentStorage(GetAgentStorageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getAgentStorageWithOptions(request, headers, runtime);
     }
 
     /**
@@ -638,7 +877,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举集群类型</p>
+     * <p>Lists agent storages.</p>
+     * 
+     * @param tmpReq ListAgentStoragesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAgentStoragesResponse
+     */
+    public ListAgentStoragesResponse listAgentStoragesWithOptions(ListAgentStoragesRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListAgentStoragesShrinkRequest request = new ListAgentStoragesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.agentStorageNameList)) {
+            request.agentStorageNameListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.agentStorageNameList, "AgentStorageNameList", "simple");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tag)) {
+            request.tagShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tag, "Tag", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentStorageName)) {
+            query.put("AgentStorageName", request.agentStorageName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.agentStorageNameListShrink)) {
+            query.put("AgentStorageNameList", request.agentStorageNameListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagShrink)) {
+            query.put("Tag", request.tagShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAgentStorages"),
+            new TeaPair("version", "2020-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/openapi/listagentstorages"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAgentStoragesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Lists agent storages.</p>
+     * 
+     * @param request ListAgentStoragesRequest
+     * @return ListAgentStoragesResponse
+     */
+    public ListAgentStoragesResponse listAgentStorages(ListAgentStoragesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listAgentStoragesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Lists the supported cluster types in the current region.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -664,7 +984,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举集群类型</p>
+     * <p>Lists the supported cluster types in the current region.</p>
      * @return ListClusterTypeResponse
      */
     public ListClusterTypeResponse listClusterType() throws Exception {
@@ -829,7 +1149,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例的vpcInfo列表</p>
+     * <p>Retrieves a list of VPC information for an instance.</p>
      * 
      * @param request ListVpcInfoByInstanceRequest
      * @param headers map
@@ -871,7 +1191,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例的vpcInfo列表</p>
+     * <p>Retrieves a list of VPC information for an instance.</p>
      * 
      * @param request ListVpcInfoByInstanceRequest
      * @return ListVpcInfoByInstanceResponse
@@ -884,7 +1204,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例的vpcInfo列表</p>
+     * <p>Retrieves a list of VpcInfo objects for a specified Virtual Private Cloud (VPC).</p>
      * 
      * @param request ListVpcInfoByVpcRequest
      * @param headers map
@@ -926,7 +1246,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例的vpcInfo列表</p>
+     * <p>Retrieves a list of VpcInfo objects for a specified Virtual Private Cloud (VPC).</p>
      * 
      * @param request ListVpcInfoByVpcRequest
      * @return ListVpcInfoByVpcResponse
@@ -994,7 +1314,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解绑vpc</p>
+     * <p>Detaches an instance from a VPC.</p>
      * 
      * @param request UnbindInstance2VpcRequest
      * @param headers map
@@ -1032,7 +1352,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解绑vpc</p>
+     * <p>Detaches an instance from a VPC.</p>
      * 
      * @param request UnbindInstance2VpcRequest
      * @return UnbindInstance2VpcResponse
@@ -1110,6 +1430,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Updates agent storage.</p>
+     * 
+     * @param request UpdateAgentStorageRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAgentStorageResponse
+     */
+    public UpdateAgentStorageResponse updateAgentStorageWithOptions(UpdateAgentStorageRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentStorageDescription)) {
+            body.put("AgentStorageDescription", request.agentStorageDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.agentStorageName)) {
+            body.put("AgentStorageName", request.agentStorageName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.aliasName)) {
+            body.put("AliasName", request.aliasName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.network)) {
+            body.put("Network", request.network);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkSourceACL)) {
+            body.put("NetworkSourceACL", request.networkSourceACL);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkTypeACL)) {
+            body.put("NetworkTypeACL", request.networkTypeACL);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAgentStorage"),
+            new TeaPair("version", "2020-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/openapi/updateagentstorage"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAgentStorageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates agent storage.</p>
+     * 
+     * @param request UpdateAgentStorageRequest
+     * @return UpdateAgentStorageResponse
+     */
+    public UpdateAgentStorageResponse updateAgentStorage(UpdateAgentStorageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateAgentStorageWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Updates instance information.</p>
      * 
      * @param request UpdateInstanceRequest
@@ -1177,8 +1564,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>Before you call this operation, you must understand the billing and pricing of Tablestore. For more information, see <a href="https://help.aliyun.com/document_detail/27291.html">Billing overview</a>.</strong></p>
      * <ul>
+     * <li><strong>Before you call this operation, you must understand the billing and pricing of Tablestore. For more information, see <a href="https://help.aliyun.com/document_detail/27291.html">Billing overview</a>.</strong></li>
      * <li>After you enable scalability for an instance, the default upper limit for the VCUs of the instance is the sum of the scalability and the reserved VCUs.</li>
      * <li>To use more computing resources when your business grows, you can modify the upper limit for the VCUs of your instance. The new upper limit for the VCUs of your instance immediately takes effect.</li>
      * </ul>
@@ -1222,8 +1609,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>Before you call this operation, you must understand the billing and pricing of Tablestore. For more information, see <a href="https://help.aliyun.com/document_detail/27291.html">Billing overview</a>.</strong></p>
      * <ul>
+     * <li><strong>Before you call this operation, you must understand the billing and pricing of Tablestore. For more information, see <a href="https://help.aliyun.com/document_detail/27291.html">Billing overview</a>.</strong></li>
      * <li>After you enable scalability for an instance, the default upper limit for the VCUs of the instance is the sum of the scalability and the reserved VCUs.</li>
      * <li>To use more computing resources when your business grows, you can modify the upper limit for the VCUs of your instance. The new upper limit for the VCUs of your instance immediately takes effect.</li>
      * </ul>

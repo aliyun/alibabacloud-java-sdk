@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteVCUInstanceRequest extends TeaModel {
     /**
+     * <p>The name of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

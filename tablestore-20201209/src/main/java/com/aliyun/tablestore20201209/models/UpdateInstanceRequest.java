@@ -51,9 +51,12 @@ public class UpdateInstanceRequest extends TeaModel {
     /**
      * <p>The new types of the network from which access is allowed. By default, all types of networks are allowed. Valid values:</p>
      * <ul>
-     * <li>INTERNET: the Internet</li>
-     * <li>VPC: VPCs</li>
-     * <li>CLASSIC: the classic network</li>
+     * <li><p>INTERNET: the Internet</p>
+     * </li>
+     * <li><p>VPC: VPCs</p>
+     * </li>
+     * <li><p>CLASSIC: the classic network</p>
+     * </li>
      * </ul>
      */
     @NameInMap("NetworkTypeACL")

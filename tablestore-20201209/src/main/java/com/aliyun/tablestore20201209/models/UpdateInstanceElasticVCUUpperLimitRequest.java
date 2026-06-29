@@ -7,7 +7,7 @@ public class UpdateInstanceElasticVCUUpperLimitRequest extends TeaModel {
     /**
      * <p>The upper limit for the VCUs of the instance.</p>
      * <blockquote>
-     * <p> Valid values of the upper limit for the VCUs of an instance: <strong>Number of reserved VCUs+0.1 to 2000</strong>. You can upgrade or downgrade configurations to modify the number of reserved VCUs by increments or decrements of 1. You can dynamically modify the upper limit for the VCUs of an instance by increments or decrements of 0.1</p>
+     * <p>Valid values of the upper limit for the VCUs of an instance: <strong>Number of reserved VCUs+0.1 to 2000</strong>. You can upgrade or downgrade configurations to modify the number of reserved VCUs by increments or decrements of 1. You can dynamically modify the upper limit for the VCUs of an instance by increments or decrements of 0.1</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateVCUInstanceResponseBody extends TeaModel {
     /**
+     * <p>The status code of the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class CreateVCUInstanceResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The name of the created instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>instance-test</p>
      */
@@ -19,6 +23,8 @@ public class CreateVCUInstanceResponseBody extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The description of the response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -26,7 +32,7 @@ public class CreateVCUInstanceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>request id</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>39871ED2-62C0-578F-A32E-B88072D5582F</p>

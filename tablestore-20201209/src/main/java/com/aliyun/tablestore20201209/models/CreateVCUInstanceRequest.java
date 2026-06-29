@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateVCUInstanceRequest extends TeaModel {
     /**
+     * <p>The alias of the instance.</p>
+     * 
      * <strong>example:</strong>
-     * <p>实例别名</p>
+     * <p>test</p>
      */
     @NameInMap("AliasName")
     public String aliasName;
 
     /**
+     * <p>The auto-renewal cycle. This parameter is required if auto-renewal is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,7 +23,7 @@ public class CreateVCUInstanceRequest extends TeaModel {
     public Long autoRenewPeriodInMonth;
 
     /**
-     * <p>cluster type</p>
+     * <p>The cluster type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,26 +33,37 @@ public class CreateVCUInstanceRequest extends TeaModel {
     public String clusterType;
 
     /**
+     * <p>Specifies whether to perform a dry run. If you perform a dry run, no instance is created.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>Specifies whether to enable auto-renewal.</p>
+     */
     @NameInMap("EnableAutoRenew")
     public Boolean enableAutoRenew;
 
+    /**
+     * <p>Specifies whether to enable instance elasticity. If you enable instance elasticity, the peak VCU usage can exceed the purchased VCU amount, but additional fees are incurred.</p>
+     */
     @NameInMap("EnableElasticVCU")
     public Boolean enableElasticVCU;
 
     /**
+     * <p>The description of the instance.</p>
+     * 
      * <strong>example:</strong>
-     * <p>实例描述</p>
+     * <p>testvcu</p>
      */
     @NameInMap("InstanceDescription")
     public String instanceDescription;
 
     /**
+     * <p>The subscription duration. Unit: month.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,7 +73,7 @@ public class CreateVCUInstanceRequest extends TeaModel {
     public Long periodInMonth;
 
     /**
-     * <p>resource group id</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmxh4em5jnbcd</p>
@@ -67,12 +82,13 @@ public class CreateVCUInstanceRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>tag</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tags")
     public java.util.List<CreateVCUInstanceRequestTags> tags;
 
     /**
+     * <p>The instance type: the number of VCUs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -176,6 +192,7 @@ public class CreateVCUInstanceRequest extends TeaModel {
 
     public static class CreateVCUInstanceRequestTags extends TeaModel {
         /**
+         * <p>The key of the tag. The key can be up to 64 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,6 +202,7 @@ public class CreateVCUInstanceRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the tag. The value can be up to 64 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

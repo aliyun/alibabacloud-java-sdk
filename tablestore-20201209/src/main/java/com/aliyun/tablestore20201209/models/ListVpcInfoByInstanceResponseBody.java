@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListVpcInfoByInstanceResponseBody extends TeaModel {
     /**
+     * <p>The name of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>mkdd-test</p>
      */
@@ -12,6 +14,8 @@ public class ListVpcInfoByInstanceResponseBody extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ListVpcInfoByInstanceResponseBody extends TeaModel {
     public Long pageNum;
 
     /**
+     * <p>The number of entries returned per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>8</p>
      */
@@ -26,6 +32,8 @@ public class ListVpcInfoByInstanceResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The ID of the request. You can use the ID to locate and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>44FDC379-4443-560E-B652-9F7476D8854F</p>
      */
@@ -33,12 +41,17 @@ public class ListVpcInfoByInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of VPCs.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
 
+    /**
+     * <p>The details of the VPCs.</p>
+     */
     @NameInMap("VpcInfos")
     public java.util.List<ListVpcInfoByInstanceResponseBodyVpcInfos> vpcInfos;
 
@@ -97,6 +110,8 @@ public class ListVpcInfoByInstanceResponseBody extends TeaModel {
 
     public static class ListVpcInfoByInstanceResponseBodyVpcInfos extends TeaModel {
         /**
+         * <p>The endpoint of the VPC.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://xu6666-mkdd-test.cn-hangzhou.vpc.ots.aliyuncs.com">http://xu6666-mkdd-test.cn-hangzhou.vpc.ots.aliyuncs.com</a></p>
          */
@@ -104,6 +119,8 @@ public class ListVpcInfoByInstanceResponseBody extends TeaModel {
         public String domain;
 
         /**
+         * <p>The endpoint of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://172.**.***.34:80/">http://172.**.***.34:80/</a></p>
          */
@@ -111,6 +128,8 @@ public class ListVpcInfoByInstanceResponseBody extends TeaModel {
         public String endpoint;
 
         /**
+         * <p>The name of the VPC.</p>
+         * 
          * <strong>example:</strong>
          * <p>xu6666</p>
          */
@@ -118,6 +137,8 @@ public class ListVpcInfoByInstanceResponseBody extends TeaModel {
         public String instanceVpcName;
 
         /**
+         * <p>The ID of the region.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -125,7 +146,7 @@ public class ListVpcInfoByInstanceResponseBody extends TeaModel {
         public String regionNo;
 
         /**
-         * <p>VPC ID</p>
+         * <p>The ID of the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-2z***********n7w3dl</p>

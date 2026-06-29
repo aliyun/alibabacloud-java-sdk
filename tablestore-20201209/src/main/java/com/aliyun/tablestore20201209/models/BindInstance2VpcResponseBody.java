@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BindInstance2VpcResponseBody extends TeaModel {
     /**
+     * <p>The domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>xu6666-mkdd-test.cn-hangzhou.vpc.ots.aliyuncs.com</p>
      */
@@ -12,6 +14,8 @@ public class BindInstance2VpcResponseBody extends TeaModel {
     public String domain;
 
     /**
+     * <p>The connection endpoint for the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>172.<strong>.</strong>*.34</p>
      */
@@ -19,6 +23,8 @@ public class BindInstance2VpcResponseBody extends TeaModel {
     public String endpoint;
 
     /**
+     * <p>The ID of the request. Use this ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>E734979F-5A44-5993-9CE5-C23103576923</p>
      */

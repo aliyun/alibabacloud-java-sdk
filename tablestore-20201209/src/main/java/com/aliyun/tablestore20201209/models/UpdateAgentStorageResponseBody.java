@@ -3,9 +3,9 @@ package com.aliyun.tablestore20201209.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteVCUInstanceResponseBody extends TeaModel {
+public class UpdateAgentStorageResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request. You can use this ID to locate and troubleshoot issues.</p>
+     * <p>The request ID, which can be used for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>39871ED2-62C0-578F-A32E-B88072D5582F</p>
@@ -13,12 +13,12 @@ public class DeleteVCUInstanceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static DeleteVCUInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteVCUInstanceResponseBody self = new DeleteVCUInstanceResponseBody();
+    public static UpdateAgentStorageResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UpdateAgentStorageResponseBody self = new UpdateAgentStorageResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteVCUInstanceResponseBody setRequestId(String requestId) {
+    public UpdateAgentStorageResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
