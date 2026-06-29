@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddOrganizationMemberResponseBody extends TeaModel {
     /**
-     * <p>The error code. This parameter is empty if the request is successful.</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -29,7 +29,7 @@ public class AddOrganizationMemberResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message. This parameter is empty if the request is successful.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>Success.</p>
@@ -119,7 +119,7 @@ public class AddOrganizationMemberResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>Indicates whether the seat was successfully assigned.</p>
+         * <p>Indicates whether the seat was assigned successfully.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

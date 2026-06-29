@@ -3,12 +3,12 @@ package com.aliyun.modelstudio20260210.models;
 
 import com.aliyun.tea.*;
 
-public class BatchAssignSeatsResponseBody extends TeaModel {
+public class SetTokenPlanOrgInviteConfigResponseBody extends TeaModel {
     /**
      * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
-     * <p>200</p>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -17,13 +17,17 @@ public class BatchAssignSeatsResponseBody extends TeaModel {
      * <p>The response message.</p>
      * 
      * <strong>example:</strong>
-     * <p>None</p>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -31,12 +35,12 @@ public class BatchAssignSeatsResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static BatchAssignSeatsResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        BatchAssignSeatsResponseBody self = new BatchAssignSeatsResponseBody();
+    public static SetTokenPlanOrgInviteConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        SetTokenPlanOrgInviteConfigResponseBody self = new SetTokenPlanOrgInviteConfigResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public BatchAssignSeatsResponseBody setCode(String code) {
+    public SetTokenPlanOrgInviteConfigResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -44,7 +48,7 @@ public class BatchAssignSeatsResponseBody extends TeaModel {
         return this.code;
     }
 
-    public BatchAssignSeatsResponseBody setMessage(String message) {
+    public SetTokenPlanOrgInviteConfigResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -52,7 +56,7 @@ public class BatchAssignSeatsResponseBody extends TeaModel {
         return this.message;
     }
 
-    public BatchAssignSeatsResponseBody setSuccess(Boolean success) {
+    public SetTokenPlanOrgInviteConfigResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

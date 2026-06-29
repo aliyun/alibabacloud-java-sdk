@@ -5,24 +5,6 @@ import com.aliyun.tea.*;
 
 public class GetSubscriptionSeatDetailsRequest extends TeaModel {
     /**
-     * <p>The ID of the caller account that initiates this call.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>acc_123456789</p>
-     */
-    @NameInMap("CallerUacAccountId")
-    public String callerUacAccountId;
-
-    /**
-     * <p>The product namespace ID. For the TokenPlan product, this field is fixed to namespace-1.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>namespace-1</p>
-     */
-    @NameInMap("NamespaceId")
-    public String namespaceId;
-
-    /**
      * <p>The page number. Default value: 1. Valid values: positive integers.</p>
      * 
      * <strong>example:</strong>
@@ -61,9 +43,9 @@ public class GetSubscriptionSeatDetailsRequest extends TeaModel {
     /**
      * <p>The seat type (specType). Valid values:</p>
      * <ul>
-     * <li>standard</li>
-     * <li>pro</li>
-     * <li>max.</li>
+     * <li>standard: standard seat.</li>
+     * <li>pro: pro seat.</li>
+     * <li>max: premium seat.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -78,34 +60,9 @@ public class GetSubscriptionSeatDetailsRequest extends TeaModel {
     @NameInMap("StatusList")
     public java.util.List<String> statusList;
 
-    /**
-     * <p>The string form of StatusList.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>[\&quot;CREATING\&quot;,\&quot;NORMAL\&quot;]</p>
-     */
-    @NameInMap("StatusListStr")
-    public String statusListStr;
-
     public static GetSubscriptionSeatDetailsRequest build(java.util.Map<String, ?> map) throws Exception {
         GetSubscriptionSeatDetailsRequest self = new GetSubscriptionSeatDetailsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetSubscriptionSeatDetailsRequest setCallerUacAccountId(String callerUacAccountId) {
-        this.callerUacAccountId = callerUacAccountId;
-        return this;
-    }
-    public String getCallerUacAccountId() {
-        return this.callerUacAccountId;
-    }
-
-    public GetSubscriptionSeatDetailsRequest setNamespaceId(String namespaceId) {
-        this.namespaceId = namespaceId;
-        return this;
-    }
-    public String getNamespaceId() {
-        return this.namespaceId;
     }
 
     public GetSubscriptionSeatDetailsRequest setPageNo(Integer pageNo) {
@@ -154,14 +111,6 @@ public class GetSubscriptionSeatDetailsRequest extends TeaModel {
     }
     public java.util.List<String> getStatusList() {
         return this.statusList;
-    }
-
-    public GetSubscriptionSeatDetailsRequest setStatusListStr(String statusListStr) {
-        this.statusListStr = statusListStr;
-        return this;
-    }
-    public String getStatusListStr() {
-        return this.statusListStr;
     }
 
 }

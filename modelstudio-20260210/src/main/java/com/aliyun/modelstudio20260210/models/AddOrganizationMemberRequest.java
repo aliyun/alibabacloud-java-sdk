@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddOrganizationMemberRequest extends TeaModel {
     /**
-     * <p>The display name. If this parameter is not empty, the name field of the account is also updated.</p>
+     * <p>The display name. If this parameter is not empty, the name field of the account is updated synchronously.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,35 +15,7 @@ public class AddOrganizationMemberRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The account information of the TokenPlan management platform.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>acc_123456789</p>
-     */
-    @NameInMap("CallerUacAccountId")
-    public String callerUacAccountId;
-
-    /**
-     * <p>The product namespace ID. For the TokenPlan product, this field is fixed to namespace-1.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>namespace-1</p>
-     */
-    @NameInMap("NamespaceId")
-    public String namespaceId;
-
-    /**
-     * <p>The organization ID.</p>
-     * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>org_123456789</p>
-     */
-    @NameInMap("OrgId")
-    public String orgId;
-
-    /**
-     * <p>The organization role code. Valid values: ORG_ADMIN and ORG_MEMBER. Default value: ORG_MEMBER.</p>
+     * <p>The organization role code. Only ORG_ADMIN or ORG_MEMBER is allowed. Default value: ORG_MEMBER.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,7 +25,12 @@ public class AddOrganizationMemberRequest extends TeaModel {
     public String orgRoleCode;
 
     /**
-     * <p>The seat specification.</p>
+     * <p>The seat specification. Valid values:</p>
+     * <ul>
+     * <li>standard: standard seat.</li>
+     * <li>pro: premium seat.</li>
+     * <li>max: exclusive seat.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>standard</p>
@@ -72,30 +49,6 @@ public class AddOrganizationMemberRequest extends TeaModel {
     }
     public String getAccountName() {
         return this.accountName;
-    }
-
-    public AddOrganizationMemberRequest setCallerUacAccountId(String callerUacAccountId) {
-        this.callerUacAccountId = callerUacAccountId;
-        return this;
-    }
-    public String getCallerUacAccountId() {
-        return this.callerUacAccountId;
-    }
-
-    public AddOrganizationMemberRequest setNamespaceId(String namespaceId) {
-        this.namespaceId = namespaceId;
-        return this;
-    }
-    public String getNamespaceId() {
-        return this.namespaceId;
-    }
-
-    public AddOrganizationMemberRequest setOrgId(String orgId) {
-        this.orgId = orgId;
-        return this;
-    }
-    public String getOrgId() {
-        return this.orgId;
     }
 
     public AddOrganizationMemberRequest setOrgRoleCode(String orgRoleCode) {

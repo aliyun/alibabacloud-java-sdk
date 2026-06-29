@@ -3,7 +3,7 @@ package com.aliyun.modelstudio20260210.models;
 
 import com.aliyun.tea.*;
 
-public class BatchAssignSeatsResponseBody extends TeaModel {
+public class RevokeTokenPlanInviteLinkResponseBody extends TeaModel {
     /**
      * <p>The response status code.</p>
      * 
@@ -17,26 +17,30 @@ public class BatchAssignSeatsResponseBody extends TeaModel {
      * <p>The response message.</p>
      * 
      * <strong>example:</strong>
-     * <p>None</p>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the API call is successful. Valid values:</p>
+     * <ul>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>True</p>
+     * <p>False</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
-    public static BatchAssignSeatsResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        BatchAssignSeatsResponseBody self = new BatchAssignSeatsResponseBody();
+    public static RevokeTokenPlanInviteLinkResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        RevokeTokenPlanInviteLinkResponseBody self = new RevokeTokenPlanInviteLinkResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public BatchAssignSeatsResponseBody setCode(String code) {
+    public RevokeTokenPlanInviteLinkResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -44,7 +48,7 @@ public class BatchAssignSeatsResponseBody extends TeaModel {
         return this.code;
     }
 
-    public BatchAssignSeatsResponseBody setMessage(String message) {
+    public RevokeTokenPlanInviteLinkResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -52,7 +56,7 @@ public class BatchAssignSeatsResponseBody extends TeaModel {
         return this.message;
     }
 
-    public BatchAssignSeatsResponseBody setSuccess(Boolean success) {
+    public RevokeTokenPlanInviteLinkResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

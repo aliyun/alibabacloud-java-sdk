@@ -29,7 +29,7 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>Indicates whether the call is successful. Valid values:</p>
      * <ul>
      * <li>true: Successful.</li>
      * <li>false: Failed.</li>
@@ -89,7 +89,7 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
         public Long cycleEndTime;
 
         /**
-         * <p>The equity code (subscription code). This does not need to be consumed in the CREDITS scenario.</p>
+         * <p>The equity code (subscription code). This does not need to be consumed in CREDITS scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -125,7 +125,7 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
         public Double cycleTotalValue;
 
         /**
-         * <p>The sequential version of the current cycle.</p>
+         * <p>The time-series version of the current cycle.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -207,7 +207,7 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
 
     public static class GetSubscriptionSeatDetailsResponseBodyDataItems extends TeaModel {
         /**
-         * <p>The email address of the member account.</p>
+         * <p>The mailbox of the member accounts.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:test@email.com">test@email.com</a></p>
@@ -216,7 +216,7 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
         public String accountEmail;
 
         /**
-         * <p>The ID of the attached member account.</p>
+         * <p>The ID of the attached member accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>acc_123456789</p>
@@ -225,7 +225,7 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>The name of the member account.</p>
+         * <p>The name of the member accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>ExampleName</p>
@@ -237,7 +237,7 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
          * <p>The assignment status. Valid values:</p>
          * <ul>
          * <li>ASSIGNED</li>
-         * <li>UNASSIGNED.</li>
+         * <li>UNASSIGNED</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -256,7 +256,7 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The currently active equity instances. For the TokenPlan product, this list contains only one active equity instance.</p>
+         * <p>The currently active equity instances. For TokenPlan products, this list contains only one active equity instance.</p>
          */
         @NameInMap("EquityList")
         public java.util.List<GetSubscriptionSeatDetailsResponseBodyDataItemsEquityList> equityList;
@@ -282,9 +282,9 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
         /**
          * <p>The seat type. Valid values: </p>
          * <ul>
-         * <li>standard</li>
-         * <li>pro</li>
-         * <li>max.</li>
+         * <li>standard: standard seat.</li>
+         * <li>pro: pro seat.</li>
+         * <li>max: premium seat.</li>
          * </ul>
          * 
          * <strong>example:</strong>

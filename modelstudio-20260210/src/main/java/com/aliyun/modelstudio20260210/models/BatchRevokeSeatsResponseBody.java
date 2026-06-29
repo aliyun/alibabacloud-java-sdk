@@ -3,9 +3,9 @@ package com.aliyun.modelstudio20260210.models;
 
 import com.aliyun.tea.*;
 
-public class BatchAssignSeatsResponseBody extends TeaModel {
+public class BatchRevokeSeatsResponseBody extends TeaModel {
     /**
-     * <p>The response status code.</p>
+     * <p>The error code. This parameter is empty if the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,10 +14,10 @@ public class BatchAssignSeatsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response message.</p>
+     * <p>The error message. This parameter is empty if the request was successful.</p>
      * 
      * <strong>example:</strong>
-     * <p>None</p>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
@@ -31,12 +31,12 @@ public class BatchAssignSeatsResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static BatchAssignSeatsResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        BatchAssignSeatsResponseBody self = new BatchAssignSeatsResponseBody();
+    public static BatchRevokeSeatsResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        BatchRevokeSeatsResponseBody self = new BatchRevokeSeatsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public BatchAssignSeatsResponseBody setCode(String code) {
+    public BatchRevokeSeatsResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -44,7 +44,7 @@ public class BatchAssignSeatsResponseBody extends TeaModel {
         return this.code;
     }
 
-    public BatchAssignSeatsResponseBody setMessage(String message) {
+    public BatchRevokeSeatsResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -52,7 +52,7 @@ public class BatchAssignSeatsResponseBody extends TeaModel {
         return this.message;
     }
 
-    public BatchAssignSeatsResponseBody setSuccess(Boolean success) {
+    public BatchRevokeSeatsResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

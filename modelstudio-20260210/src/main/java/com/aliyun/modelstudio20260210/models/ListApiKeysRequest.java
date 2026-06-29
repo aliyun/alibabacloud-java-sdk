@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListApiKeysRequest extends TeaModel {
     /**
-     * <p>Exact search by API Key ID.</p>
+     * <p>The API key ID for exact match.</p>
      * 
      * <strong>example:</strong>
      * <p>3076140</p>
@@ -14,7 +14,7 @@ public class ListApiKeysRequest extends TeaModel {
     public Long apiKeyId;
 
     /**
-     * <p>Fuzzy search by description keyword.</p>
+     * <p>The keyword for fuzzy match against the description.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -23,7 +23,7 @@ public class ListApiKeysRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Page size.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -32,7 +32,7 @@ public class ListApiKeysRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Used to return more results. This parameter is not required for the first query. The token required for subsequent queries can be obtained from the returned results.</p>
+     * <p>The token used to retrieve more results. You do not need to provide this parameter for the first query. For subsequent queries, use the token obtained from the previous response.</p>
      * 
      * <strong>example:</strong>
      * <p>w9Z+S5+TZyw=</p>
@@ -41,7 +41,37 @@ public class ListApiKeysRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Exact search by workspace ID.</p>
+     * <p>The sort order. Valid values:</p>
+     * <ul>
+     * <li><p>DESC (default)</p>
+     * </li>
+     * <li><p>ASC.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ASC</p>
+     */
+    @NameInMap("order")
+    public String order;
+
+    /**
+     * <p>The field by which to sort results. Valid values:</p>
+     * <ul>
+     * <li><p>apiKeyId (default)</p>
+     * </li>
+     * <li><p>gmtCreate.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>gmtCreate</p>
+     */
+    @NameInMap("orderBy")
+    public String orderBy;
+
+    /**
+     * <p>The workspace ID for exact match.</p>
      * 
      * <strong>example:</strong>
      * <p>ws-ac3ef438bec22dc5</p>
@@ -84,6 +114,22 @@ public class ListApiKeysRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListApiKeysRequest setOrder(String order) {
+        this.order = order;
+        return this;
+    }
+    public String getOrder() {
+        return this.order;
+    }
+
+    public ListApiKeysRequest setOrderBy(String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    public String getOrderBy() {
+        return this.orderBy;
     }
 
     public ListApiKeysRequest setWorkspaceId(String workspaceId) {
