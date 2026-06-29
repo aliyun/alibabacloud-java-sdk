@@ -8,7 +8,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("cn-beijing", "aidge.cn-beijing.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("aidge", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -1947,25 +1950,130 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Product Introduction</h2>
-     * <p>Image Translation Pro is designed specifically for e-commerce images. It integrates multimodal foundation model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. More than 100 language directions are supported, including bridged translations.</p>
-     * <h2>Scenarios</h2>
-     * <p>E-commerce product images, marketing images, and images for various other scenarios.</p>
-     * <h2>Features</h2>
+     * <p>Image Translation Plus is designed specifically for e-commerce images. It uses a Mixture of Experts (MOE) architecture and outperforms Image Translation Lite and Pro in translation accuracy for multiple minor languages. We recommend using it for the following language pairs, with more to be supported in the future.
+     * Supported language pairs:</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th><strong>No.</strong></th>
+     * <th><strong>Source Language</strong></th>
+     * <th></th>
+     * <th><strong>Target Language</strong></th>
+     * <th></th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td></td>
+     * <td>Language Code</td>
+     * <td>Language Name</td>
+     * <td>Language Code</td>
+     * <td>Language Name</td>
+     * </tr>
+     * <tr>
+     * <td>1</td>
+     * <td>en</td>
+     * <td>English</td>
+     * <td>ar</td>
+     * <td>Arabic</td>
+     * </tr>
+     * <tr>
+     * <td>2</td>
+     * <td>en</td>
+     * <td>English</td>
+     * <td>id</td>
+     * <td>Indonesian</td>
+     * </tr>
+     * <tr>
+     * <td>3</td>
+     * <td>en</td>
+     * <td>English</td>
+     * <td>th</td>
+     * <td>Thai</td>
+     * </tr>
+     * <tr>
+     * <td>4</td>
+     * <td>en</td>
+     * <td>English</td>
+     * <td>ko</td>
+     * <td>Korean</td>
+     * </tr>
+     * <tr>
+     * <td>5</td>
+     * <td>en</td>
+     * <td>English</td>
+     * <td>ja</td>
+     * <td>Japanese</td>
+     * </tr>
+     * <tr>
+     * <td>6</td>
+     * <td>en</td>
+     * <td>English</td>
+     * <td>vi</td>
+     * <td>Vietnamese</td>
+     * </tr>
+     * <tr>
+     * <td>7</td>
+     * <td>en</td>
+     * <td>English</td>
+     * <td>ru</td>
+     * <td>Russian</td>
+     * </tr>
+     * <tr>
+     * <td>8</td>
+     * <td>en</td>
+     * <td>English</td>
+     * <td>tl</td>
+     * <td>Filipino</td>
+     * </tr>
+     * <tr>
+     * <td>9</td>
+     * <td>en</td>
+     * <td>English</td>
+     * <td>es</td>
+     * <td>Spanish</td>
+     * </tr>
+     * <tr>
+     * <td>10</td>
+     * <td>en</td>
+     * <td>English</td>
+     * <td>fr</td>
+     * <td>French</td>
+     * </tr>
+     * <tr>
+     * <td>11</td>
+     * <td>en</td>
+     * <td>English</td>
+     * <td>de</td>
+     * <td>German</td>
+     * </tr>
+     * <tr>
+     * <td>12</td>
+     * <td>en</td>
+     * <td>English</td>
+     * <td>pl</td>
+     * <td>Polish</td>
+     * </tr>
+     * </tbody></table>
+     * <h2>Common scenarios</h2>
+     * <p>Main product images and detail images for cross-border e-commerce.</p>
+     * <h2>Functions and features</h2>
      * <ul>
-     * <li><strong>Product subject information protection</strong>: Specify whether to translate text on the product subject. This helps protect subject information such as embedded product names from being translated.</li>
-     * <li><strong>Post-translation editing</strong>: Specify whether to return layout information such as text position, font, and color. This can be used for secondary editing when integrated with an image editor. The editor SDK is not yet available. Follow platform notifications for updates.</li>
-     * <li><strong>Brand name protection</strong>: Specify whether to translate brand names on images. This helps protect brand name information from being translated.</li>
-     * <li><strong>Translation intervention</strong>: Customize translation results, including do-not-translate (ABC→ABC), specified translation (ABC→DEF), and remove text (ABC→empty value). This is commonly used for brand name protection. Pass the corresponding intervention glossary ID when calling the API to meet translation needs across different scenarios. You can upload up to 100,000 intervention terms. Contact the platform if you need more.</li>
+     * <li><p><strong>Product body information protection</strong>: Supports custom selection of whether to translate text on the product body. This helps protect body information such as embedded product names from being translated.</p>
+     * </li>
+     * <li><p><strong>Brand name protection</strong>: Supports custom selection of whether to translate brand names on images. This helps protect brand name information from being translated.</p>
+     * </li>
+     * <li><p><strong>Translation intervention</strong>: Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). This is commonly used for brand name protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs in different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</p>
+     * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Image Translation Pro is designed specifically for e-commerce images. It integrates multimodal foundation model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. More than 100 language directions are supported, including bridged translations.</p>
+     * <p>Image Translation Plus is designed specifically for e-commerce images. It uses a Mixture of Experts (MOE) architecture and outperforms Image Translation Lite and Pro in translation accuracy for multiple minor languages. We recommend using it for the following 8 language pairs, with more to be supported in the future.</p>
      * 
-     * @param request ImageTranslationProRequest
+     * @param request ImageTranslationPlusRequest
      * @param runtime runtime options for this request RuntimeOptions
-     * @return ImageTranslationProResponse
+     * @return ImageTranslationPlusResponse
      */
-    public ImageTranslationProResponse imageTranslationProWithOptions(ImageTranslationProRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ImageTranslationPlusResponse imageTranslationPlusWithOptions(ImageTranslationPlusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.glossary)) {
@@ -1996,8 +2104,207 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("UseImageEditor", request.useImageEditor);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.callType)) {
-            body.put("callType", request.callType);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ImageTranslationPlus"),
+            new TeaPair("version", "2026-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ImageTranslationPlusResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Product Introduction</h2>
+     * <p>Image Translation Plus is designed specifically for e-commerce images. It uses a Mixture of Experts (MOE) architecture and outperforms Image Translation Lite and Pro in translation accuracy for multiple minor languages. We recommend using it for the following language pairs, with more to be supported in the future.
+     * Supported language pairs:</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th><strong>No.</strong></th>
+     * <th><strong>Source Language</strong></th>
+     * <th></th>
+     * <th><strong>Target Language</strong></th>
+     * <th></th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td></td>
+     * <td>Language Code</td>
+     * <td>Language Name</td>
+     * <td>Language Code</td>
+     * <td>Language Name</td>
+     * </tr>
+     * <tr>
+     * <td>1</td>
+     * <td>en</td>
+     * <td>English</td>
+     * <td>ar</td>
+     * <td>Arabic</td>
+     * </tr>
+     * <tr>
+     * <td>2</td>
+     * <td>en</td>
+     * <td>English</td>
+     * <td>id</td>
+     * <td>Indonesian</td>
+     * </tr>
+     * <tr>
+     * <td>3</td>
+     * <td>en</td>
+     * <td>English</td>
+     * <td>th</td>
+     * <td>Thai</td>
+     * </tr>
+     * <tr>
+     * <td>4</td>
+     * <td>en</td>
+     * <td>English</td>
+     * <td>ko</td>
+     * <td>Korean</td>
+     * </tr>
+     * <tr>
+     * <td>5</td>
+     * <td>en</td>
+     * <td>English</td>
+     * <td>ja</td>
+     * <td>Japanese</td>
+     * </tr>
+     * <tr>
+     * <td>6</td>
+     * <td>en</td>
+     * <td>English</td>
+     * <td>vi</td>
+     * <td>Vietnamese</td>
+     * </tr>
+     * <tr>
+     * <td>7</td>
+     * <td>en</td>
+     * <td>English</td>
+     * <td>ru</td>
+     * <td>Russian</td>
+     * </tr>
+     * <tr>
+     * <td>8</td>
+     * <td>en</td>
+     * <td>English</td>
+     * <td>tl</td>
+     * <td>Filipino</td>
+     * </tr>
+     * <tr>
+     * <td>9</td>
+     * <td>en</td>
+     * <td>English</td>
+     * <td>es</td>
+     * <td>Spanish</td>
+     * </tr>
+     * <tr>
+     * <td>10</td>
+     * <td>en</td>
+     * <td>English</td>
+     * <td>fr</td>
+     * <td>French</td>
+     * </tr>
+     * <tr>
+     * <td>11</td>
+     * <td>en</td>
+     * <td>English</td>
+     * <td>de</td>
+     * <td>German</td>
+     * </tr>
+     * <tr>
+     * <td>12</td>
+     * <td>en</td>
+     * <td>English</td>
+     * <td>pl</td>
+     * <td>Polish</td>
+     * </tr>
+     * </tbody></table>
+     * <h2>Common scenarios</h2>
+     * <p>Main product images and detail images for cross-border e-commerce.</p>
+     * <h2>Functions and features</h2>
+     * <ul>
+     * <li><p><strong>Product body information protection</strong>: Supports custom selection of whether to translate text on the product body. This helps protect body information such as embedded product names from being translated.</p>
+     * </li>
+     * <li><p><strong>Brand name protection</strong>: Supports custom selection of whether to translate brand names on images. This helps protect brand name information from being translated.</p>
+     * </li>
+     * <li><p><strong>Translation intervention</strong>: Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). This is commonly used for brand name protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs in different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</p>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Image Translation Plus is designed specifically for e-commerce images. It uses a Mixture of Experts (MOE) architecture and outperforms Image Translation Lite and Pro in translation accuracy for multiple minor languages. We recommend using it for the following 8 language pairs, with more to be supported in the future.</p>
+     * 
+     * @param request ImageTranslationPlusRequest
+     * @return ImageTranslationPlusResponse
+     */
+    public ImageTranslationPlusResponse imageTranslationPlus(ImageTranslationPlusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.imageTranslationPlusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Product Introduction</h2>
+     * <p>The Image Translation Pro version is specifically designed for e-commerce images, integrating multimodal large model technology to achieve more accurate understanding of images, significantly improving translation quality, and continuously expanding and optimizing multilingual translation capabilities. It supports over 100 language pairs (including bridged translations).</p>
+     * <h2>Applicable Scenarios</h2>
+     * <p>E-commerce product images, marketing images, and images for various other scenarios</p>
+     * <h2>Features</h2>
+     * <ul>
+     * <li><strong>Product Subject Information Protection</strong>: Supports custom selection of whether to translate text on the product subject, helping you protect subject information from being translated, such as embedded product names.</li>
+     * <li><strong>Post-translation Secondary Editing</strong>: Supports custom selection of whether to return layout information such as text position, font, and color. This can be used for secondary editing when integrating with an image editor. The editor SDK package is not yet publicly available; please follow platform notifications.</li>
+     * <li><strong>Brand Name Protection</strong>: Supports custom selection of whether to translate brand names on images, helping you protect brand name information from being translated.</li>
+     * <li><strong>Translation Intervention Support</strong>: Allows customization of translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). Commonly used for brand name protection scenarios. Simply pass the corresponding glossary ID when calling the API to achieve this, meeting your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention terms. For additional needs, please contact the platform for assistance.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>The Image Translation Pro version is specifically designed for e-commerce images, integrating multimodal large model technology to achieve more accurate understanding of images, significantly improving translation quality, and continuously expanding and optimizing multilingual translation capabilities. It supports over 100 language pairs (including bridged translations).</p>
+     * 
+     * @param request ImageTranslationProRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ImageTranslationProResponse
+     */
+    public ImageTranslationProResponse imageTranslationProWithOptions(ImageTranslationProRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.async)) {
+            body.put("Async", request.async);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.glossary)) {
+            body.put("Glossary", request.glossary);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageUrl)) {
+            body.put("ImageUrl", request.imageUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.includingProductArea)) {
+            body.put("IncludingProductArea", request.includingProductArea);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceLanguage)) {
+            body.put("SourceLanguage", request.sourceLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetLanguage)) {
+            body.put("TargetLanguage", request.targetLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.translatingBrandInTheProduct)) {
+            body.put("TranslatingBrandInTheProduct", request.translatingBrandInTheProduct);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.useImageEditor)) {
+            body.put("UseImageEditor", request.useImageEditor);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2020,19 +2327,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Product Introduction</h2>
-     * <p>Image Translation Pro is designed specifically for e-commerce images. It integrates multimodal foundation model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. More than 100 language directions are supported, including bridged translations.</p>
-     * <h2>Scenarios</h2>
-     * <p>E-commerce product images, marketing images, and images for various other scenarios.</p>
+     * <p>The Image Translation Pro version is specifically designed for e-commerce images, integrating multimodal large model technology to achieve more accurate understanding of images, significantly improving translation quality, and continuously expanding and optimizing multilingual translation capabilities. It supports over 100 language pairs (including bridged translations).</p>
+     * <h2>Applicable Scenarios</h2>
+     * <p>E-commerce product images, marketing images, and images for various other scenarios</p>
      * <h2>Features</h2>
      * <ul>
-     * <li><strong>Product subject information protection</strong>: Specify whether to translate text on the product subject. This helps protect subject information such as embedded product names from being translated.</li>
-     * <li><strong>Post-translation editing</strong>: Specify whether to return layout information such as text position, font, and color. This can be used for secondary editing when integrated with an image editor. The editor SDK is not yet available. Follow platform notifications for updates.</li>
-     * <li><strong>Brand name protection</strong>: Specify whether to translate brand names on images. This helps protect brand name information from being translated.</li>
-     * <li><strong>Translation intervention</strong>: Customize translation results, including do-not-translate (ABC→ABC), specified translation (ABC→DEF), and remove text (ABC→empty value). This is commonly used for brand name protection. Pass the corresponding intervention glossary ID when calling the API to meet translation needs across different scenarios. You can upload up to 100,000 intervention terms. Contact the platform if you need more.</li>
+     * <li><strong>Product Subject Information Protection</strong>: Supports custom selection of whether to translate text on the product subject, helping you protect subject information from being translated, such as embedded product names.</li>
+     * <li><strong>Post-translation Secondary Editing</strong>: Supports custom selection of whether to return layout information such as text position, font, and color. This can be used for secondary editing when integrating with an image editor. The editor SDK package is not yet publicly available; please follow platform notifications.</li>
+     * <li><strong>Brand Name Protection</strong>: Supports custom selection of whether to translate brand names on images, helping you protect brand name information from being translated.</li>
+     * <li><strong>Translation Intervention Support</strong>: Allows customization of translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). Commonly used for brand name protection scenarios. Simply pass the corresponding glossary ID when calling the API to achieve this, meeting your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention terms. For additional needs, please contact the platform for assistance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Image Translation Pro is designed specifically for e-commerce images. It integrates multimodal foundation model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. More than 100 language directions are supported, including bridged translations.</p>
+     * <p>The Image Translation Pro version is specifically designed for e-commerce images, integrating multimodal large model technology to achieve more accurate understanding of images, significantly improving translation quality, and continuously expanding and optimizing multilingual translation capabilities. It supports over 100 language pairs (including bridged translations).</p>
      * 
      * @param request ImageTranslationProRequest
      * @return ImageTranslationProResponse
@@ -2180,6 +2487,128 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public LanguageDetectResponse languageDetect(LanguageDetectRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.languageDetectWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2><strong>适用场景</strong></h2>
+     * <ul>
+     * <li><p><strong>门店营销物料合规巡检</strong>：自动判定门店内是否按总部下发的标准陈列指引摆放 / 张贴指定营销物料（功能台卡、海报、门型展架等），识别「未摆放、摆放错误、内容不符」等典型问题。</p>
+     * </li>
+     * <li><p><strong>新品 / 活动期素材落地核验</strong>：新品发布或大促活动期间，对门店实拍图中的活动物料是否已按要求上架进行批量自动核验，替代人工抽检。</p>
+     * </li>
+     * <li><p><strong>双图比对与单图检测自适应</strong>：同一接口同时支持「参考图 + 目标图」双图比对（模式 A）与「仅目标图」单图检测（模式 B），根据是否传入 <code>ImageRefer</code> 自动切换，调用方无需区分调用方式。</p>
+     * </li>
+     * </ul>
+     * <h2><strong>功能介绍</strong></h2>
+     * <ul>
+     * <li><p><strong>多模式智能路由</strong>：内置物料类型解析能力，基于 <code>Rules</code> 自然语言文本自动识别目标物料类型，路由至对应的素材检测链路；调用方仅需传入图像 URL 与规则文本。目前已支持「功能台卡」「海报」「门型展架」「其他素材」4 套检测项路由，后续将持续增加细分营销物料类型的检测链路。</p>
+     * </li>
+     * <li><p><strong>MLLM 语义级理解 + 规则结构化协同</strong>：采用多模态大模型完成物料识别、内容比对、文字 OCR 等语义级理解，配合规则清洗与结构化模型将自然语言规则拆解为可逐条判定的步骤（S1 / S2…），在保证准确率的同时兼顾规则灵活性与可追溯性。</p>
+     * </li>
+     * <li><p><strong>结构化审核结论输出</strong>：输出统一为 <code>Result.OverallResult</code> + <code>Result.Steps[]</code> + <code>Result.Evidence</code> 的结构，整体结论由各步骤逻辑 AND 得出，每条步骤独立可见，便于直接驱动下游业务系统并支持 case 级人审追溯。</p>
+     * </li>
+     * <li><p><strong>支持的输入格式</strong>：当前支持公网可访问的图像 URL；支持单图（模式 B）与双图（模式 A）两种调用形态，输出结构完全一致。</p>
+     * </li>
+     * </ul>
+     * <h2><strong>调用方式</strong></h2>
+     * <ul>
+     * <li><p><strong>同步调用</strong>：单次请求即返回检测结果，无需轮询。响应为 <code>Code</code> / <code>Message</code> / <code>RequestId</code> / <code>Success</code> / <code>Data</code> 统一信封。</p>
+     * </li>
+     * <li><p><strong>鉴权与签名</strong>：经 Aidge 网关调用，鉴权、签名与公共参数遵循平台统一接入方式。具体请求路径以正式发布的接口文档为准。</p>
+     * </li>
+     * <li><p><strong>超时设置</strong>：建议将请求超时设置为不低于接口的最长响应时间（具体值以正式发布为准）。</p>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>物料陈列检测</p>
+     * 
+     * @param request MaterialInspectionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return MaterialInspectionResponse
+     */
+    public MaterialInspectionResponse materialInspectionWithOptions(MaterialInspectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiId)) {
+            query.put("ApiId", request.apiId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageRefer)) {
+            query.put("ImageRefer", request.imageRefer);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageUrl)) {
+            query.put("ImageUrl", request.imageUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reqId)) {
+            query.put("ReqId", request.reqId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rules)) {
+            query.put("Rules", request.rules);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "MaterialInspection"),
+            new TeaPair("version", "2026-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new MaterialInspectionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2><strong>适用场景</strong></h2>
+     * <ul>
+     * <li><p><strong>门店营销物料合规巡检</strong>：自动判定门店内是否按总部下发的标准陈列指引摆放 / 张贴指定营销物料（功能台卡、海报、门型展架等），识别「未摆放、摆放错误、内容不符」等典型问题。</p>
+     * </li>
+     * <li><p><strong>新品 / 活动期素材落地核验</strong>：新品发布或大促活动期间，对门店实拍图中的活动物料是否已按要求上架进行批量自动核验，替代人工抽检。</p>
+     * </li>
+     * <li><p><strong>双图比对与单图检测自适应</strong>：同一接口同时支持「参考图 + 目标图」双图比对（模式 A）与「仅目标图」单图检测（模式 B），根据是否传入 <code>ImageRefer</code> 自动切换，调用方无需区分调用方式。</p>
+     * </li>
+     * </ul>
+     * <h2><strong>功能介绍</strong></h2>
+     * <ul>
+     * <li><p><strong>多模式智能路由</strong>：内置物料类型解析能力，基于 <code>Rules</code> 自然语言文本自动识别目标物料类型，路由至对应的素材检测链路；调用方仅需传入图像 URL 与规则文本。目前已支持「功能台卡」「海报」「门型展架」「其他素材」4 套检测项路由，后续将持续增加细分营销物料类型的检测链路。</p>
+     * </li>
+     * <li><p><strong>MLLM 语义级理解 + 规则结构化协同</strong>：采用多模态大模型完成物料识别、内容比对、文字 OCR 等语义级理解，配合规则清洗与结构化模型将自然语言规则拆解为可逐条判定的步骤（S1 / S2…），在保证准确率的同时兼顾规则灵活性与可追溯性。</p>
+     * </li>
+     * <li><p><strong>结构化审核结论输出</strong>：输出统一为 <code>Result.OverallResult</code> + <code>Result.Steps[]</code> + <code>Result.Evidence</code> 的结构，整体结论由各步骤逻辑 AND 得出，每条步骤独立可见，便于直接驱动下游业务系统并支持 case 级人审追溯。</p>
+     * </li>
+     * <li><p><strong>支持的输入格式</strong>：当前支持公网可访问的图像 URL；支持单图（模式 B）与双图（模式 A）两种调用形态，输出结构完全一致。</p>
+     * </li>
+     * </ul>
+     * <h2><strong>调用方式</strong></h2>
+     * <ul>
+     * <li><p><strong>同步调用</strong>：单次请求即返回检测结果，无需轮询。响应为 <code>Code</code> / <code>Message</code> / <code>RequestId</code> / <code>Success</code> / <code>Data</code> 统一信封。</p>
+     * </li>
+     * <li><p><strong>鉴权与签名</strong>：经 Aidge 网关调用，鉴权、签名与公共参数遵循平台统一接入方式。具体请求路径以正式发布的接口文档为准。</p>
+     * </li>
+     * <li><p><strong>超时设置</strong>：建议将请求超时设置为不低于接口的最长响应时间（具体值以正式发布为准）。</p>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>物料陈列检测</p>
+     * 
+     * @param request MaterialInspectionRequest
+     * @return MaterialInspectionResponse
+     */
+    public MaterialInspectionResponse materialInspection(MaterialInspectionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.materialInspectionWithOptions(request, runtime);
     }
 
     /**

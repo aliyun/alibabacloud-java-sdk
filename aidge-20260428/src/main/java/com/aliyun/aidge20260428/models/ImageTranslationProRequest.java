@@ -4,8 +4,11 @@ package com.aliyun.aidge20260428.models;
 import com.aliyun.tea.*;
 
 public class ImageTranslationProRequest extends TeaModel {
+    @NameInMap("Async")
+    public Boolean async;
+
     /**
-     * <p>The ID of the intervention glossary. Optional. Create the glossary in the console and provide its ID. If the glossary ID is empty, the translation results are not modified.</p>
+     * <p>Glossary ID, optional. You need to create a glossary separately in the console and provide its ID. If the provided glossary ID is empty, the translation results will not be modified.</p>
      * 
      * <strong>example:</strong>
      * <p>glossary_1</p>
@@ -14,7 +17,7 @@ public class ImageTranslationProRequest extends TeaModel {
     public String glossary;
 
     /**
-     * <p>The URL of the original image. Required. Image requirements: width and height must not exceed 4000 × 4000. File size must not exceed 10 MB. Supported formats: png, jpeg, jpg, bmp, and webp.</p>
+     * <p>Original image URL, required. Image requirements: width and height must not exceed 4000×4000; size must not exceed 10MB; supported formats include png, jpeg, jpg, bmp, and webp.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +27,7 @@ public class ImageTranslationProRequest extends TeaModel {
     public String imageUrl;
 
     /**
-     * <p>Specifies whether to translate text on the image subject. Optional. Default value: false. This helps protect information such as embedded product names from being translated.</p>
+     * <p>Choose whether to translate text on the image subject, optional, default false. This helps you protect information by avoiding translation of embedded content such as product names.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -33,7 +36,7 @@ public class ImageTranslationProRequest extends TeaModel {
     public Boolean includingProductArea;
 
     /**
-     * <p>The source language code. Required. For supported language directions, see the supported language direction list.</p>
+     * <p>Source language code, required. See the supported language pairs list for available translation directions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +46,7 @@ public class ImageTranslationProRequest extends TeaModel {
     public String sourceLanguage;
 
     /**
-     * <p>The target language code. Required. For supported language directions, see the supported language direction list.</p>
+     * <p>Target language code, required. See the supported language pairs list for available translation directions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,7 +56,7 @@ public class ImageTranslationProRequest extends TeaModel {
     public String targetLanguage;
 
     /**
-     * <p>Specifies whether to translate brand names on images. Optional. Default value: false. This helps protect brand name information from being translated.</p>
+     * <p>Choose whether to translate brand names on the image, optional, default false. This helps you protect brand name information from being translated.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -62,7 +65,7 @@ public class ImageTranslationProRequest extends TeaModel {
     public Boolean translatingBrandInTheProduct;
 
     /**
-     * <p>Specifies whether to return layout information such as text position, font, and color. Optional. Default value: false. This can be used for secondary editing when integrated with an image editor.</p>
+     * <p>Whether to return layout information such as text position, font, and color, optional, default false. This can be used for secondary editing when integrating with an image editor.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -70,18 +73,17 @@ public class ImageTranslationProRequest extends TeaModel {
     @NameInMap("UseImageEditor")
     public Boolean useImageEditor;
 
-    /**
-     * <p>The call type. This is an internal system parameter. Optional.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>sync</p>
-     */
-    @NameInMap("callType")
-    public String callType;
-
     public static ImageTranslationProRequest build(java.util.Map<String, ?> map) throws Exception {
         ImageTranslationProRequest self = new ImageTranslationProRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ImageTranslationProRequest setAsync(Boolean async) {
+        this.async = async;
+        return this;
+    }
+    public Boolean getAsync() {
+        return this.async;
     }
 
     public ImageTranslationProRequest setGlossary(String glossary) {
@@ -138,14 +140,6 @@ public class ImageTranslationProRequest extends TeaModel {
     }
     public Boolean getUseImageEditor() {
         return this.useImageEditor;
-    }
-
-    public ImageTranslationProRequest setCallType(String callType) {
-        this.callType = callType;
-        return this;
-    }
-    public String getCallType() {
-        return this.callType;
     }
 
 }
