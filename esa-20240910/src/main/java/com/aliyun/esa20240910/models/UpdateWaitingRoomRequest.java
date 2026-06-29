@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateWaitingRoomRequest extends TeaModel {
     /**
-     * <p>The name of the custom cookie.</p>
+     * <p>The custom cookie name.</p>
      * 
      * <strong>example:</strong>
      * <p>__aliwaitingroom_example</p>
@@ -14,7 +14,7 @@ public class UpdateWaitingRoomRequest extends TeaModel {
     public String cookieName;
 
     /**
-     * <p>The content of the custom waiting room page. You must specify this parameter if you set WaitingRoomType to custom. The content must be Base64-encoded.</p>
+     * <p>The custom waiting room page content. This parameter is required when the waiting room type is set to custom. The content must be in Base64 encoding.</p>
      * 
      * <strong>example:</strong>
      * <p>SGVsbG8gd29ybGQ=</p>
@@ -26,7 +26,7 @@ public class UpdateWaitingRoomRequest extends TeaModel {
      * <p>The description of the waiting room.</p>
      * 
      * <strong>example:</strong>
-     * <p>Special event waiting room page</p>
+     * <p>特别活动排队页面</p>
      */
     @NameInMap("Description")
     public String description;
@@ -34,10 +34,8 @@ public class UpdateWaitingRoomRequest extends TeaModel {
     /**
      * <p>Specifies whether to disable session renewal. Valid values:</p>
      * <ul>
-     * <li><p>on</p>
-     * </li>
-     * <li><p>off</p>
-     * </li>
+     * <li><strong>on</strong>: Enabled.</li>
+     * <li><strong>off</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,12 +45,10 @@ public class UpdateWaitingRoomRequest extends TeaModel {
     public String disableSessionRenewalEnable;
 
     /**
-     * <p>Specifies whether to enable the waiting room. Valid values:</p>
+     * <p>The status of the waiting room. Valid values:</p>
      * <ul>
-     * <li><p>on</p>
-     * </li>
-     * <li><p>off</p>
-     * </li>
+     * <li><strong>on</strong>: Enabled.</li>
+     * <li><strong>off</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,18 +58,16 @@ public class UpdateWaitingRoomRequest extends TeaModel {
     public String enable;
 
     /**
-     * <p>The hostname and path.</p>
+     * <p>The hostname and path configurations.</p>
      */
     @NameInMap("HostNameAndPath")
     public java.util.List<UpdateWaitingRoomRequestHostNameAndPath> hostNameAndPath;
 
     /**
-     * <p>Specifies whether to enable JSON response. If JSON response is enabled, a JSON body is returned for requests to the waiting room with the header Accept: application/json. Valid values:</p>
+     * <p>Specifies whether to enable JSON response. If enabled, requests with an Accept header containing &quot;application/json&quot; return JSON data. Valid values:</p>
      * <ul>
-     * <li><p>on</p>
-     * </li>
-     * <li><p>off</p>
-     * </li>
+     * <li><strong>on</strong>: Enabled.</li>
+     * <li><strong>off</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -83,14 +77,11 @@ public class UpdateWaitingRoomRequest extends TeaModel {
     public String jsonResponseEnable;
 
     /**
-     * <p>The language of the waiting room page. You must specify this parameter if you set WaitingRoomType to default. Valid values:</p>
+     * <p>The language of the waiting room page. This parameter is required when the waiting room type is set to default. Valid values:</p>
      * <ul>
-     * <li><p>enus: English.</p>
-     * </li>
-     * <li><p>zhcn: Simplified Chinese.</p>
-     * </li>
-     * <li><p>zhhk: Traditional Chinese.</p>
-     * </li>
+     * <li><strong>enus</strong>: English.</li>
+     * <li><strong>zhcn</strong>: Simplified Chinese.</li>
+     * <li><strong>zhhk</strong>: Traditional Chinese.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -103,13 +94,13 @@ public class UpdateWaitingRoomRequest extends TeaModel {
      * <p>The name of the waiting room.</p>
      * 
      * <strong>example:</strong>
-     * <p>Holiday promotion waiting room</p>
+     * <p>节假日促销等候室</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The maximum number of new users per minute.</p>
+     * <p>The number of new users per minute.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -118,12 +109,10 @@ public class UpdateWaitingRoomRequest extends TeaModel {
     public String newUsersPerMinute;
 
     /**
-     * <p>Specifies whether to queue all requests. Valid values:</p>
+     * <p>Specifies whether to queue all visitors. Valid values:</p>
      * <ul>
-     * <li><p>on</p>
-     * </li>
-     * <li><p>off</p>
-     * </li>
+     * <li><strong>on</strong>: Enabled.</li>
+     * <li><strong>off</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -135,14 +124,10 @@ public class UpdateWaitingRoomRequest extends TeaModel {
     /**
      * <p>The queuing method. Valid values:</p>
      * <ul>
-     * <li><p>random: Users gain access to the origin randomly, regardless of the arrival time.</p>
-     * </li>
-     * <li><p>fifo: Users gain access to the origin in order of arrival.</p>
-     * </li>
-     * <li><p>passthrough: Users pass through the waiting room and go straight to the origin.</p>
-     * </li>
-     * <li><p>reject-all: Users are blocked from reaching the origin.</p>
-     * </li>
+     * <li><strong>random</strong>: random.</li>
+     * <li><strong>fifo</strong>: first-in, first-out.</li>
+     * <li><strong>passthrough</strong>: passthrough.</li>
+     * <li><strong>reject-all</strong>: reject all.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -152,14 +137,11 @@ public class UpdateWaitingRoomRequest extends TeaModel {
     public String queuingMethod;
 
     /**
-     * <p>The HTTP status code to return while a user is in the queue. Valid values:</p>
+     * <p>The HTTP status code returned by the waiting room. Valid values:</p>
      * <ul>
-     * <li><p>200</p>
-     * </li>
-     * <li><p>202</p>
-     * </li>
-     * <li><p>429</p>
-     * </li>
+     * <li><strong>200</strong></li>
+     * <li><strong>202</strong></li>
+     * <li><strong>429</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -169,7 +151,7 @@ public class UpdateWaitingRoomRequest extends TeaModel {
     public String queuingStatusCode;
 
     /**
-     * <p>The maximum duration for which a session remains valid after a user leaves the origin. Unit: minutes.</p>
+     * <p>The session duration in minutes.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -178,7 +160,7 @@ public class UpdateWaitingRoomRequest extends TeaModel {
     public String sessionDuration;
 
     /**
-     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -188,7 +170,7 @@ public class UpdateWaitingRoomRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The maximum number of active users.</p>
+     * <p>The total number of active users.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -197,7 +179,7 @@ public class UpdateWaitingRoomRequest extends TeaModel {
     public String totalActiveUsers;
 
     /**
-     * <p>The ID of the waiting room, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850279.html">ListWaitingRooms</a> operation.</p>
+     * <p>The waiting room ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850279.html">ListWaitingRooms</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -209,10 +191,8 @@ public class UpdateWaitingRoomRequest extends TeaModel {
     /**
      * <p>The type of the waiting room. Valid values:</p>
      * <ul>
-     * <li><p>default</p>
-     * </li>
-     * <li><p>custom</p>
-     * </li>
+     * <li><strong>default</strong>: default type.</li>
+     * <li><strong>custom</strong>: custom type.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -381,7 +361,7 @@ public class UpdateWaitingRoomRequest extends TeaModel {
         public String domain;
 
         /**
-         * <p>The probe path.</p>
+         * <p>The path.</p>
          * 
          * <strong>example:</strong>
          * <p>/test</p>

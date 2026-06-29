@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateHttpRequestHeaderModificationRuleShrinkRequest extends TeaModel {
     /**
-     * <p>The configuration ID. Call the <a href="https://help.aliyun.com/document_detail/2867483.html">ListHttpRequestHeaderModificationRules</a> operation to obtain it.</p>
+     * <p>Configuration ID. You can call the <a href="https://help.aliyun.com/document_detail/2867483.html">ListHttpRequestHeaderModificationRules</a> operation to obtain the configuration ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,18 +15,16 @@ public class UpdateHttpRequestHeaderModificationRuleShrinkRequest extends TeaMod
     public Long configId;
 
     /**
-     * <p>Specifies the modifications for the request header. Supported operations include <code>add</code>, <code>del</code>, and <code>modify</code>.</p>
+     * <p>Modify request headers. Three operation methods are supported: add, delete, and modify.</p>
      */
     @NameInMap("RequestHeaderModification")
     public String requestHeaderModificationShrink;
 
     /**
-     * <p>The Conditional Expression used to match User Requests. This parameter is not required for a Global Configuration. Use cases:</p>
+     * <p>Rule content. Use conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
      * <ul>
-     * <li><p>To match all incoming requests, set the value to <code>true</code>.</p>
-     * </li>
-     * <li><p>To match specific requests, use a custom expression, for example, <code>(http.host eq &quot;video.example.com&quot;)</code>.</p>
-     * </li>
+     * <li>Match all incoming requests: Set the value to true.</li>
+     * <li>Match specified requests: Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,12 +34,10 @@ public class UpdateHttpRequestHeaderModificationRuleShrinkRequest extends TeaMod
     public String rule;
 
     /**
-     * <p>Specifies whether the Rule is enabled. This parameter is not required for a Global Configuration. Valid values:</p>
+     * <p>Rule switch. This parameter is not required when adding a global configuration. Valid values:</p>
      * <ul>
-     * <li><p><code>on</code>: Enable</p>
-     * </li>
-     * <li><p><code>off</code>: Disable</p>
-     * </li>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,7 +47,7 @@ public class UpdateHttpRequestHeaderModificationRuleShrinkRequest extends TeaMod
     public String ruleEnable;
 
     /**
-     * <p>The name of the Rule. This parameter is not required for a Global Configuration.</p>
+     * <p>Rule name. This parameter is not required when adding a global configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>rule_example</p>
@@ -60,7 +56,7 @@ public class UpdateHttpRequestHeaderModificationRuleShrinkRequest extends TeaMod
     public String ruleName;
 
     /**
-     * <p>The execution priority of the Rule. A smaller value indicates a higher priority.</p>
+     * <p>Rule execution order. A smaller value indicates a higher priority.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -69,7 +65,7 @@ public class UpdateHttpRequestHeaderModificationRuleShrinkRequest extends TeaMod
     public Integer sequence;
 
     /**
-     * <p>The site ID. Call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain it.</p>
+     * <p>Site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

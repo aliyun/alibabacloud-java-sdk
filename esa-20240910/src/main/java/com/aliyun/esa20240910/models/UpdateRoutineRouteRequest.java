@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateRoutineRouteRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable bypass mode. Valid values:</p>
+     * <p>The bypass mode. Valid values:</p>
      * <ul>
-     * <li><p>on: Enabled</p>
-     * </li>
-     * <li><p>off: Disabled</p>
-     * </li>
+     * <li>on: enabled</li>
+     * <li>off: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,12 +28,10 @@ public class UpdateRoutineRouteRequest extends TeaModel {
     public Long configId;
 
     /**
-     * <p>Specifies whether to enable fallback. If enabled, requests fall back to the origin server if the function encounters an exception, such as exceeding the CPU usage limit. Valid values:</p>
+     * <p>The fallback-to-origin switch. When enabled, if the function encounters an exception such as CPU usage exceeding the limit, the request falls back to the origin server. Valid values:</p>
      * <ul>
-     * <li><p>on: Enabled</p>
-     * </li>
-     * <li><p>off: Disabled</p>
-     * </li>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,12 +41,10 @@ public class UpdateRoutineRouteRequest extends TeaModel {
     public String fallback;
 
     /**
-     * <p>Specifies whether to enable the route. Valid values:</p>
+     * <p>The route switch. Valid values:</p>
      * <ul>
-     * <li><p>on: Enabled</p>
-     * </li>
-     * <li><p>off: Disabled</p>
-     * </li>
+     * <li>on: enabled</li>
+     * <li>off: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -69,7 +63,7 @@ public class UpdateRoutineRouteRequest extends TeaModel {
     public String routeName;
 
     /**
-     * <p>The name of the Routine.</p>
+     * <p>The name of the Edge Routine.</p>
      * 
      * <strong>example:</strong>
      * <p>test-routine1</p>
@@ -78,7 +72,7 @@ public class UpdateRoutineRouteRequest extends TeaModel {
     public String routineName;
 
     /**
-     * <p>The content of the rule.</p>
+     * <p>The rule content.</p>
      * 
      * <strong>example:</strong>
      * <p>(http.host eq \&quot;video.example.com\&quot;)</p>
@@ -87,7 +81,7 @@ public class UpdateRoutineRouteRequest extends TeaModel {
     public String rule;
 
     /**
-     * <p>The execution sequence of the rule.</p>
+     * <p>The execution order of the rule.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -96,7 +90,7 @@ public class UpdateRoutineRouteRequest extends TeaModel {
     public Integer sequence;
 
     /**
-     * <p>The ID of the site. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -106,6 +100,8 @@ public class UpdateRoutineRouteRequest extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>The Edge Routine timeout period. Valid values: 5 to 60.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */

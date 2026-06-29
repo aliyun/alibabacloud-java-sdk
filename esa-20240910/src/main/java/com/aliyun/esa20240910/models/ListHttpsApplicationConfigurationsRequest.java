@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListHttpsApplicationConfigurationsRequest extends TeaModel {
     /**
-     * <p>The configuration ID.</p>
+     * <p>Configuration ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3528160969****</p>
@@ -14,14 +14,12 @@ public class ListHttpsApplicationConfigurationsRequest extends TeaModel {
     public Long configId;
 
     /**
-     * <p>The configuration type. Use this parameter to query the global configuration or rule configurations. Valid values:</p>
+     * <p>Configuration type. You can use this parameter to query global configurations or rule configurations. Valid values:</p>
      * <ul>
-     * <li><p>global: Queries the global configuration.</p>
-     * </li>
-     * <li><p>rule: Queries rule configurations.</p>
-     * </li>
+     * <li>global: Query global configurations.</li>
+     * <li>rule: Query rule configurations.</li>
      * </ul>
-     * <p>If this parameter is omitted, the query returns both global and rule configurations.</p>
+     * <p>This parameter is optional. If not specified, no distinction is made between global and rule configurations.</p>
      * 
      * <strong>example:</strong>
      * <p>global</p>
@@ -30,7 +28,7 @@ public class ListHttpsApplicationConfigurationsRequest extends TeaModel {
     public String configType;
 
     /**
-     * <p>The page number to return. If this parameter is omitted, the default value is 1.</p>
+     * <p>The page number for paginated queries. The value must be greater than or equal to 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -39,7 +37,7 @@ public class ListHttpsApplicationConfigurationsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return per page. The maximum value is 500. If this parameter is omitted, the default value is 500.</p>
+     * <p>The number of entries per page for paginated queries. Valid values: 1-500.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -48,7 +46,7 @@ public class ListHttpsApplicationConfigurationsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The rule name. This parameter filters the results to include only the rule with the specified name.</p>
+     * <p>Rule name. You can query the rule whose name matches the specified value.</p>
      * 
      * <strong>example:</strong>
      * <p>rule_example</p>
@@ -57,7 +55,7 @@ public class ListHttpsApplicationConfigurationsRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The site ID. You can obtain this ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
+     * <p>Site ID. You can obtain it by calling the <a href="~~ListSites~~">ListSites</a> API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,7 +65,7 @@ public class ListHttpsApplicationConfigurationsRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The site version. For sites with version management enabled, use this parameter to retrieve the configuration for a specific site version. The default value is 0.</p>
+     * <p>The version number of the site. For sites with version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. Default value: version 0.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

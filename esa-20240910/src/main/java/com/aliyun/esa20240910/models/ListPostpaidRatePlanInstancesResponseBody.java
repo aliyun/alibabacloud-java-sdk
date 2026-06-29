@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
     /**
-     * <p>A list of instances.</p>
+     * <p>The list of instance information.</p>
      */
     @NameInMap("InstanceInfo")
     public java.util.List<ListPostpaidRatePlanInstancesResponseBodyInstanceInfo> instanceInfo;
 
     /**
-     * <p>The page number.</p>
+     * <p>The current page number, which is the same as the PageNumber request parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,7 +29,7 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID, used for troubleshooting.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>15C66C7B-671A-4297-9187-2C4477247A123425345</p>
@@ -38,7 +38,7 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -110,7 +110,7 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
 
     public static class ListPostpaidRatePlanInstancesResponseBodyInstanceInfoSites extends TeaModel {
         /**
-         * <p>The ID of the site.</p>
+         * <p>The site ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123456****</p>
@@ -119,7 +119,7 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
         public Long siteId;
 
         /**
-         * <p>The name of the site.</p>
+         * <p>The site name.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -128,16 +128,12 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
         public String siteName;
 
         /**
-         * <p>The status of the site. Valid values:</p>
+         * <p>The site status. Valid values:</p>
          * <ul>
-         * <li><p><code>pending</code>: The site is awaiting configuration.</p>
-         * </li>
-         * <li><p><code>active</code>: The site is active.</p>
-         * </li>
-         * <li><p><code>offline</code>: The site is offline.</p>
-         * </li>
-         * <li><p><code>moved</code>: The site has been replaced.</p>
-         * </li>
+         * <li>pending: The site is pending configuration.</li>
+         * <li>active: The site is activated.</li>
+         * <li>offline: The site is offline.</li>
+         * <li>moved: The site has been replaced.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -179,9 +175,9 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
 
     public static class ListPostpaidRatePlanInstancesResponseBodyInstanceInfo extends TeaModel {
         /**
-         * <p>The billing method. Valid value:</p>
+         * <p>The billable methods. Valid values:</p>
          * <ul>
-         * <li><code>dps_month95</code>: Monthly 95th percentile.</li>
+         * <li>dps_month95: monthly 95th percentile billing.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -191,9 +187,9 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
         public String billingMethod;
 
         /**
-         * <p>The billing mode. Valid value:</p>
+         * <p>The billing mode. Valid values:</p>
          * <ul>
-         * <li><code>POSTPAY</code>: pay-as-you-go.</li>
+         * <li>POSTPAY: pay-as-you-go.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -203,14 +199,11 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
         public String billingMode;
 
         /**
-         * <p>The coverage area of the instance. Only sites within this area can be bound to the instance. If multiple areas are supported, they are separated by a comma (<code>,</code>). Valid values:</p>
+         * <p>The acceleration regions to which the instance can bindable sites. Multiple values are separated by commas (,). Valid values:</p>
          * <ul>
-         * <li><p><code>domestic</code>: Chinese mainland.</p>
-         * </li>
-         * <li><p><code>overseas</code>: Regions outside the Chinese mainland.</p>
-         * </li>
-         * <li><p><code>global</code>: Global (including the Chinese mainland).</p>
-         * </li>
+         * <li>domestic: the Chinese mainland.</li>
+         * <li>overseas: global (excluding the Chinese mainland).</li>
+         * <li>global: global (including the Chinese mainland).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -220,25 +213,25 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
         public String coverages;
 
         /**
-         * <p>The time when the instance was created.</p>
+         * <p>The time when the instance was created. The value is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
-         * <p>YYYY-MM-DDThh:mm:ssZ</p>
+         * <p>2026-04-19T11:15:20Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The time of a scheduled configuration change.</p>
+         * <p>The scheduled specification change time. The value is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
-         * <p>YYYY-MM-DDThh:mm:ssZ</p>
+         * <p>2026-04-19T11:15:20Z</p>
          */
         @NameInMap("ExpectedUpdateTime")
         public String expectedUpdateTime;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sp-xcdn-96wblslz****</p>
@@ -265,12 +258,10 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
         public String planNameCn;
 
         /**
-         * <p>The type of the plan. Valid values:</p>
+         * <p>The plan type of the instance. Valid values:</p>
          * <ul>
-         * <li><p><code>normal</code>: Normal plan.</p>
-         * </li>
-         * <li><p><code>enterprise</code>: Enterprise plan.</p>
-         * </li>
+         * <li>normal: Fixed plan.</li>
+         * <li>enterprise: Enterprise plan.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -280,7 +271,7 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
         public String planType;
 
         /**
-         * <p>The maximum number of sites that can be bound to the instance.</p>
+         * <p>The site quota.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -289,13 +280,13 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
         public String siteQuota;
 
         /**
-         * <p>A list of sites bound to the instance.</p>
+         * <p>The list of sites.</p>
          */
         @NameInMap("Sites")
         public java.util.List<ListPostpaidRatePlanInstancesResponseBodyInstanceInfoSites> sites;
 
         /**
-         * <p>The status of the instance.</p>
+         * <p>The instance status.</p>
          * 
          * <strong>example:</strong>
          * <p>online</p>

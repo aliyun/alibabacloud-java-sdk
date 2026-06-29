@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetImageTransformRequest extends TeaModel {
     /**
-     * <p>The config ID. You can obtain the config ID by calling the <a href="https://help.aliyun.com/document_detail/2869056.html">ListImageTransforms</a> operation.</p>
+     * <p>The configuration ID. You can call the <a href="https://help.aliyun.com/document_detail/2869056.html">ListImageTransforms</a> operation to obtain the configuration ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetImageTransformRequest extends TeaModel {
     public Long configId;
 
     /**
-     * <p>The site ID. You can obtain the site ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

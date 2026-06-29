@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRoutineResponseBody extends TeaModel {
     /**
-     * <p>The creation time of the edge function Routine.</p>
+     * <p>The time when the Edge Routine was created. The time follows the RFC 3339 standard in the UTC time zone.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-03-11T01:23:21Z</p>
@@ -14,7 +14,7 @@ public class GetRoutineResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The default domain name for accessing the Routine.</p>
+     * <p>The default access record.</p>
      * 
      * <strong>example:</strong>
      * <p>routine1.example.com</p>
@@ -23,7 +23,7 @@ public class GetRoutineResponseBody extends TeaModel {
     public String defaultRelatedRecord;
 
     /**
-     * <p>The description of the edge function Routine.</p>
+     * <p>The description of the Edge Routine.</p>
      * 
      * <strong>example:</strong>
      * <p>ZWRpdCByb3V0aW5lIGNvbmZpZyBkZXNjcmlwdGlvbg</p>
@@ -32,13 +32,13 @@ public class GetRoutineResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>A list of environments.</p>
+     * <p>The list of environment context.</p>
      */
     @NameInMap("Envs")
     public java.util.List<GetRoutineResponseBodyEnvs> envs;
 
     /**
-     * <p>Indicates whether the Routine includes Assets.</p>
+     * <p>Indicates whether the Routine has the Assets tag.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -110,7 +110,7 @@ public class GetRoutineResponseBody extends TeaModel {
 
     public static class GetRoutineResponseBodyEnvsCodeDeployCodeVersions extends TeaModel {
         /**
-         * <p>The code version ID.</p>
+         * <p>The code version number.</p>
          * 
          * <strong>example:</strong>
          * <p>1746583193971399525</p>
@@ -119,7 +119,7 @@ public class GetRoutineResponseBody extends TeaModel {
         public String codeVersion;
 
         /**
-         * <p>The creation time of the code version.</p>
+         * <p>The time when the code version was created. The time follows the RFC 3339 standard in the UTC time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-07-23T09:01:40Z</p>
@@ -137,7 +137,7 @@ public class GetRoutineResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The percentage of traffic routed to this code version.</p>
+         * <p>The canary release percentage of the code version.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -186,13 +186,13 @@ public class GetRoutineResponseBody extends TeaModel {
 
     public static class GetRoutineResponseBodyEnvsCodeDeploy extends TeaModel {
         /**
-         * <p>A list of deployed code versions.</p>
+         * <p>The list of deployed code version numbers.</p>
          */
         @NameInMap("CodeVersions")
         public java.util.List<GetRoutineResponseBodyEnvsCodeDeployCodeVersions> codeVersions;
 
         /**
-         * <p>The time the deployment was created.</p>
+         * <p>The time when the deployment was created. The time follows the RFC 3339 standard in the UTC time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-05-11T09:21:36Z</p>
@@ -201,7 +201,7 @@ public class GetRoutineResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The deployment ID.</p>
+         * <p>The deployment record ID.</p>
          * 
          * <strong>example:</strong>
          * <p>589267</p>
@@ -210,7 +210,7 @@ public class GetRoutineResponseBody extends TeaModel {
         public String deployId;
 
         /**
-         * <p>The deployment strategy. The default value is <code>percentage</code>.</p>
+         * <p>The deployment strategy. Default value: percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>percentage</p>
@@ -259,7 +259,7 @@ public class GetRoutineResponseBody extends TeaModel {
 
     public static class GetRoutineResponseBodyEnvs extends TeaModel {
         /**
-         * <p>Details of the canary release for a code version.</p>
+         * <p>The percentage-based canary release deployment information.</p>
          */
         @NameInMap("CodeDeploy")
         public GetRoutineResponseBodyEnvsCodeDeploy codeDeploy;

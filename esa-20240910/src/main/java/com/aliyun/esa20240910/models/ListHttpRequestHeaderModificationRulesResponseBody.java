@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel {
     /**
-     * <p>The request header modification configurations.</p>
+     * <p>The list of HTTP request header modification configurations.</p>
      */
     @NameInMap("Configs")
     public java.util.List<ListHttpRequestHeaderModificationRulesResponseBodyConfigs> configs;
 
     /**
-     * <p>The page number. Default: <strong>1</strong>.</p>
+     * <p>The current page number, which is the same as the PageNumber request parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
     public Integer pageNumber;
 
     /**
-     * <p>The page size. Default: <strong>500</strong>. Range: <strong>1 to 500</strong>.</p>
+     * <p>The number of entries per page. Default value: <strong>500</strong>. Valid values: <strong>1 to 500</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -38,7 +38,7 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
     public String requestId;
 
     /**
-     * <p>The total count of entries.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -47,7 +47,7 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
     public Integer totalCount;
 
     /**
-     * <p>The total count of pages.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -110,7 +110,7 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
 
     public static class ListHttpRequestHeaderModificationRulesResponseBodyConfigsRequestHeaderModification extends TeaModel {
         /**
-         * <p>The header name.</p>
+         * <p>The request header name.</p>
          * 
          * <strong>example:</strong>
          * <p>headerName</p>
@@ -119,14 +119,11 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
         public String name;
 
         /**
-         * <p>The operation. Valid values:</p>
+         * <p>The operation type. Valid values:</p>
          * <ul>
-         * <li><p>add: Add a header.</p>
-         * </li>
-         * <li><p>del: Delete a header.</p>
-         * </li>
-         * <li><p>modify: Modify a header.</p>
-         * </li>
+         * <li>add: adds a header.</li>
+         * <li>del: deletes a header.</li>
+         * <li>modify: modifies a header.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -138,10 +135,8 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
         /**
          * <p>The value type. Valid values:</p>
          * <ul>
-         * <li><p>static: Static value.</p>
-         * </li>
-         * <li><p>dynamic: Dynamic value.</p>
-         * </li>
+         * <li>static: static pattern.</li>
+         * <li>dynamic: dynamic schema.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -151,7 +146,7 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
         public String type;
 
         /**
-         * <p>The header value.</p>
+         * <p>The request header value.</p>
          * 
          * <strong>example:</strong>
          * <p>headerValue</p>
@@ -211,10 +206,8 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
         /**
          * <p>The configuration type. Valid values:</p>
          * <ul>
-         * <li><p>global: Global configuration.</p>
-         * </li>
-         * <li><p>rule: Rule configuration.</p>
-         * </li>
+         * <li>global: global configuration.</li>
+         * <li>rule: rule configuration.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -224,18 +217,16 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
         public String configType;
 
         /**
-         * <p>The modifications to apply to the request headers, such as adding, deleting, or modifying them.</p>
+         * <p>The request header modifications, which support add, delete, and modify operations.</p>
          */
         @NameInMap("RequestHeaderModification")
         public java.util.List<ListHttpRequestHeaderModificationRulesResponseBodyConfigsRequestHeaderModification> requestHeaderModification;
 
         /**
-         * <p>The conditional expression that determines which requests this rule applies to. This parameter is not required for global configurations. There are two use cases:</p>
+         * <p>The rule content, which uses conditional expressions to match user requests. You do not need to set this parameter when adding a global configuration. Two scenarios are supported:</p>
          * <ul>
-         * <li><p>To match all incoming requests, set the value to true.</p>
-         * </li>
-         * <li><p>To match specified requests, set the value to a custom expression, for example, (http.host eq &quot;video.example.com&quot;).</p>
-         * </li>
+         * <li>Match all incoming requests: Set the value to true.</li>
+         * <li>Match specified requests: Set the value to a custom expression, such as (http.host eq \&quot;video.example.com\&quot;).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -245,12 +236,10 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
         public String rule;
 
         /**
-         * <p>Specifies whether the rule is enabled or disabled. This parameter is not required for global configurations. Valid values:</p>
+         * <p>The rule switch. You do not need to set this parameter when adding a global configuration. Valid values:</p>
          * <ul>
-         * <li><p>on: Enabled.</p>
-         * </li>
-         * <li><p>off: Disabled.</p>
-         * </li>
+         * <li>on: enabled.</li>
+         * <li>off: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -260,7 +249,7 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
         public String ruleEnable;
 
         /**
-         * <p>The rule name. This parameter is not required for global configurations.</p>
+         * <p>The rule name. You do not need to set this parameter when adding a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -269,7 +258,7 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
         public String ruleName;
 
         /**
-         * <p>The execution priority of the rule. A smaller value indicates a higher priority.</p>
+         * <p>The execution order of the rule. A smaller value indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -278,7 +267,7 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
         public Integer sequence;
 
         /**
-         * <p>The version number of the site configuration. For sites with version management enabled, this parameter specifies the version to which the configuration applies. The default is 0.</p>
+         * <p>The version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. The default value is version 0.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

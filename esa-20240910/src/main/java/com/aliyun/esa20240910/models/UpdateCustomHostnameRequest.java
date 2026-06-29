@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateCustomHostnameRequest extends TeaModel {
     /**
-     * <p>The ID of the Alibaba Cloud Security certificate. This parameter is required when CertType is set to cas.</p>
+     * <p>The ID of the SSL Certificates Service certificate. This parameter is required when CertType is set to cas.</p>
      * 
      * <strong>example:</strong>
      * <p>30000478</p>
@@ -14,12 +14,10 @@ public class UpdateCustomHostnameRequest extends TeaModel {
     public Long casId;
 
     /**
-     * <p>The region of the Alibaba Cloud Security certificate. This parameter is required when CertType is set to cas.</p>
+     * <p>The region of the SSL Certificates Service certificate. This parameter is required when CertType is set to cas. Valid values:</p>
      * <ul>
-     * <li><p>cn-hangzhou: The value for accounts on the Alibaba Cloud China Website (www\.aliyun.com).</p>
-     * </li>
-     * <li><p>ap-southeast-1: The value for accounts on the Alibaba Cloud International Website (www\.alibabacloud.com).</p>
-     * </li>
+     * <li>Chinese mainland accounts: cn-hangzhou.</li>
+     * <li>International accounts: ap-southeast-1.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,14 +27,11 @@ public class UpdateCustomHostnameRequest extends TeaModel {
     public String casRegion;
 
     /**
-     * <p>The certificate type. This parameter is required when SslFlag is set to on.</p>
+     * <p>The certificate type. This parameter is required when SslFlag is set to on. Valid values:</p>
      * <ul>
-     * <li><p><strong>free</strong>: Free certificate.</p>
-     * </li>
-     * <li><p><strong>upload</strong>: Uploaded certificate.</p>
-     * </li>
-     * <li><p><strong>cas</strong>: Alibaba Cloud Security certificate.</p>
-     * </li>
+     * <li><strong>free</strong>: free certificate.</li>
+     * <li><strong>upload</strong>: uploaded certificate.</li>
+     * <li><strong>cas</strong>: SSL Certificates Service certificate.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,7 +41,7 @@ public class UpdateCustomHostnameRequest extends TeaModel {
     public String certType;
 
     /**
-     * <p>The content of the certificate. This parameter is required when CertType is set to upload.</p>
+     * <p>The certificate content. This parameter is required when CertType is set to upload.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE-----</p>
@@ -65,7 +60,7 @@ public class UpdateCustomHostnameRequest extends TeaModel {
     public Long hostnameId;
 
     /**
-     * <p>The private key of the certificate. This parameter is required when CertType is set to upload.</p>
+     * <p>The certificate private key. This parameter is required when CertType is set to upload.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN PRIVATE KEY-----</p>
@@ -74,7 +69,7 @@ public class UpdateCustomHostnameRequest extends TeaModel {
     public String privateKey;
 
     /**
-     * <p>The ID of the record to attach. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2850265.html">ListRecords</a> operation.</p>
+     * <p>The ID of the record to bind. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2850265.html">ListRecords</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890123</p>
@@ -83,12 +78,10 @@ public class UpdateCustomHostnameRequest extends TeaModel {
     public Long recordId;
 
     /**
-     * <p>The SSL switch.</p>
+     * <p>The SSL switch. Valid values:</p>
      * <ul>
-     * <li><p><strong>on</strong>: Enables SSL.</p>
-     * </li>
-     * <li><p><strong>off</strong>: Disables SSL.</p>
-     * </li>
+     * <li><strong>on</strong>: Enables SSL.</li>
+     * <li><strong>off</strong>: Disables SSL.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListUserRatePlanInstancesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to filter for rate plan instances that have a remaining site quota. Valid values:</p>
+     * <p>Specifies whether to filter plan instances that have remaining site quota. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Returns only rate plan instances that have a remaining site quota.</p>
-     * </li>
-     * <li><p><strong>false</strong>: Returns all rate plan instances for the user.</p>
-     * </li>
+     * <li><strong>true</strong>: Filters plan instances that have remaining site quota.</li>
+     * <li><strong>false</strong>: Queries all plan instances under the user.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class ListUserRatePlanInstancesRequest extends TeaModel {
     public String checkRemainingSiteQuota;
 
     /**
-     * <p>The ID of the rate plan instance to query.</p>
+     * <p>The plan instance ID. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>sp-xcdn-96wblslz****</p>
@@ -29,7 +27,7 @@ public class ListUserRatePlanInstancesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The page number. The default value is <strong>1</strong>. The value must be in the range of <strong>1 to 100,000</strong>.</p>
+     * <p>The page number to return in a paged query. Default value: <strong>1</strong>. Valid values: <strong>1</strong> to <strong>100000</strong>. Settings for paging take effect only when this parameter is specified.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +36,7 @@ public class ListUserRatePlanInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page in a paged query. Valid values: 1 to 500. This parameter is used for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>500</p>
@@ -46,22 +44,42 @@ public class ListUserRatePlanInstancesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The plan name in English.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>entranceplan</p>
+     */
     @NameInMap("PlanNameEn")
     public String planNameEn;
 
+    /**
+     * <p>The plan type. Valid values:</p>
+     * <ul>
+     * <li>normal: fixed-version plan</li>
+     * <li>enterprise: Enterprise Edition plan.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>enterprise</p>
+     */
     @NameInMap("PlanType")
     public String planType;
 
+    /**
+     * <p>Queries plan instances whose remaining validity period is within the specified number of days. The value must be a positive integer. Unit: days.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("RemainingExpireDays")
     public Integer remainingExpireDays;
 
     /**
-     * <p>The sort field. By default, results are sorted by creation time. Valid values:</p>
+     * <p>The field by which to sort the results. By default, results are sorted by purchase time. Valid values:</p>
      * <ul>
-     * <li><p><strong>CreateTime</strong>: Sorts by creation time.</p>
-     * </li>
-     * <li><p><strong>ExpireTime</strong>: Sorts by expiration time.</p>
-     * </li>
+     * <li><strong>CreateTime</strong>: purchase time.</li>
+     * <li><strong>ExpireTime</strong>: expiration time.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,12 +89,10 @@ public class ListUserRatePlanInstancesRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The sort order. The default is descending. Valid values:</p>
+     * <p>The sort order. Default value: desc. Valid values:</p>
      * <ul>
-     * <li><p><strong>asc</strong>: Sorts in ascending order.</p>
-     * </li>
-     * <li><p><strong>desc</strong>: Sorts in descending order.</p>
-     * </li>
+     * <li><strong>asc</strong>: ascending order.</li>
+     * <li><strong>desc</strong>: descending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -86,16 +102,12 @@ public class ListUserRatePlanInstancesRequest extends TeaModel {
     public String sortOrder;
 
     /**
-     * <p>The status of the rate plan instance. Valid values:</p>
+     * <p>The instance status. Valid values:</p>
      * <ul>
-     * <li><p><strong>online</strong>: The instance is in service.</p>
-     * </li>
-     * <li><p><strong>offline</strong>: The instance has expired and is unavailable.</p>
-     * </li>
-     * <li><p><strong>disable</strong>: The instance is released.</p>
-     * </li>
-     * <li><p><strong>overdue</strong>: The instance is overdue.</p>
-     * </li>
+     * <li><strong>online</strong>: The plan instance is in normal service.</li>
+     * <li><strong>offline</strong>: The plan instance has expired but has not exceeded the grace period and is not active.</li>
+     * <li><strong>disable</strong>: The plan instance has been released.</li>
+     * <li><strong>overdue</strong>: The plan instance has an overdue payment.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -107,6 +119,20 @@ public class ListUserRatePlanInstancesRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The plan subscription type. Valid values:</p>
+     * <ul>
+     * <li>entranceplan: Free Edition (Chinese mainland)</li>
+     * <li>entranceplan_intl: Free Edition (International)</li>
+     * <li>basicplan: Basic Edition</li>
+     * <li>standardplan: Standard Edition</li>
+     * <li>advancedplan: Premium Edition</li>
+     * <li>enterpriseplan: Enterprise Edition.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>basicplan</p>
+     */
     @NameInMap("SubscribeType")
     public String subscribeType;
 

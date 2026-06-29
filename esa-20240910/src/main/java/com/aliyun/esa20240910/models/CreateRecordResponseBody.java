@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRecordResponseBody extends TeaModel {
     /**
-     * <p>The record ID.</p>
+     * <p>The ID of the created record.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890123</p>

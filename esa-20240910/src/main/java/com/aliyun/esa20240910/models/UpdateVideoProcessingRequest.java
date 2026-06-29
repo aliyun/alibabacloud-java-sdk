@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateVideoProcessingRequest extends TeaModel {
     /**
-     * <p>The ID of the configuration. You can call the <a href="~~ListVideoProcessings~~">ListVideoProcessings</a> operation to obtain the ID.</p>
+     * <p>The configuration ID. You can call the <a href="~~ListVideoProcessings~~">ListVideoProcessings</a> operation to obtain the configuration ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateVideoProcessingRequest extends TeaModel {
     public Long configId;
 
     /**
-     * <p>The custom end parameter for FLV files.</p>
+     * <p>The custom FLV end parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>end</p>
@@ -24,7 +24,7 @@ public class UpdateVideoProcessingRequest extends TeaModel {
     public String flvSeekEnd;
 
     /**
-     * <p>The custom start parameter for FLV files.</p>
+     * <p>The custom FLV start parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>start</p>
@@ -33,10 +33,10 @@ public class UpdateVideoProcessingRequest extends TeaModel {
     public String flvSeekStart;
 
     /**
-     * <p>FLV Seeking Valid values:</p>
+     * <p>The FLV seeking mode. Valid values:</p>
      * <ul>
-     * <li>by_byte: Seek by byte.</li>
-     * <li>by_time: Seek by time.</li>
+     * <li>by_byte: seek by byte.</li>
+     * <li>by_time: seek by time.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class UpdateVideoProcessingRequest extends TeaModel {
     public String flvVideoSeekMode;
 
     /**
-     * <p>Customize the mp4 end parameter.</p>
+     * <p>The custom MP4 end parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>end</p>
@@ -55,7 +55,7 @@ public class UpdateVideoProcessingRequest extends TeaModel {
     public String mp4SeekEnd;
 
     /**
-     * <p>Customize the mp4 start parameter.</p>
+     * <p>The custom MP4 start parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>start</p>
@@ -64,10 +64,10 @@ public class UpdateVideoProcessingRequest extends TeaModel {
     public String mp4SeekStart;
 
     /**
-     * <p>The content of the rule. A conditional expression is used to match a user request. You do not need to set this parameter when you add global configuration. Two scenarios:</p>
+     * <p>The rule content, which uses a conditional expression to match user requests. You do not need to set this parameter when adding a global configuration. Two scenarios are supported:</p>
      * <ul>
-     * <li>true: Match all incoming requests</li>
-     * <li>Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;): Match the specified request</li>
+     * <li>Match all incoming requests: set the value to true.</li>
+     * <li>Match specified requests: set the value to a custom expression, such as (http.host eq \&quot;video.example.com\&quot;).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -77,10 +77,10 @@ public class UpdateVideoProcessingRequest extends TeaModel {
     public String rule;
 
     /**
-     * <p>Specifies whether to enable the rule. Valid values: You do not need to set this parameter when you add global configuration. Valid values:</p>
+     * <p>The rule switch. You do not need to set this parameter when adding a global configuration. Valid values:</p>
      * <ul>
-     * <li>on</li>
-     * <li>off</li>
+     * <li>on: enabled.</li>
+     * <li>off: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -90,7 +90,7 @@ public class UpdateVideoProcessingRequest extends TeaModel {
     public String ruleEnable;
 
     /**
-     * <p>The rule name. You do not need to set this parameter when you add global configuration.</p>
+     * <p>The rule name. You do not need to set this parameter when adding a global configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>rule_example</p>
@@ -99,7 +99,7 @@ public class UpdateVideoProcessingRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The order in which the rule is executed. A smaller value gives priority to the rule.</p>
+     * <p>The rule execution order. A smaller value indicates a higher priority.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -108,7 +108,7 @@ public class UpdateVideoProcessingRequest extends TeaModel {
     public Integer sequence;
 
     /**
-     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -118,10 +118,10 @@ public class UpdateVideoProcessingRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>Video seeking. Valid values:</p>
+     * <p>Specifies whether to enable the video seeking feature. Valid values:</p>
      * <ul>
-     * <li>on</li>
-     * <li>off</li>
+     * <li>on: enabled.</li>
+     * <li>off: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>

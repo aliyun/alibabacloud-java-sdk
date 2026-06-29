@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
     /**
-     * <p>Response body configuration.</p>
+     * <p>The configurations returned.</p>
      */
     @NameInMap("Configs")
     public java.util.List<ListHttpsBasicConfigurationsResponseBodyConfigs> configs;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number, which is the same as the PageNumber request parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Page size.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EDBD3EB3-97DA-5465-AEF5-8DCA5DC5E395</p>
@@ -38,7 +38,7 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total number of records.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -47,7 +47,7 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>Total number of pages.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -110,7 +110,7 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
 
     public static class ListHttpsBasicConfigurationsResponseBodyConfigs extends TeaModel {
         /**
-         * <p>Custom ciphersuite, indicating the specific encryption algorithm selected when CiphersuiteGroup is set to custom.</p>
+         * <p>The custom cipher suite, which specifies the encryption algorithms selected when CiphersuiteGroup is set to custom.</p>
          * 
          * <strong>example:</strong>
          * <p>TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256</p>
@@ -119,14 +119,11 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
         public String ciphersuite;
 
         /**
-         * <p>Ciphersuite group, defaults to enabling all ciphersuites. Value range:</p>
+         * <p>The cipher suite group. All cipher suites are enabled by default. Valid values:</p>
          * <ul>
-         * <li><p>all: all ciphersuites.</p>
-         * </li>
-         * <li><p>strict: strong ciphersuites.</p>
-         * </li>
-         * <li><p>custom: custom ciphersuites.</p>
-         * </li>
+         * <li>all: all cipher suites.</li>
+         * <li>strict: strong cipher suites.</li>
+         * <li>custom: custom cipher suites.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -136,7 +133,7 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
         public String ciphersuiteGroup;
 
         /**
-         * <p>Configuration ID.</p>
+         * <p>The configuration ID.</p>
          * 
          * <strong>example:</strong>
          * <p>395386449776640</p>
@@ -145,12 +142,10 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
         public Long configId;
 
         /**
-         * <p>Configuration type, which can be used to query global or rule configurations. Value range:</p>
+         * <p>The configuration type. You can use this parameter to query global or rule configurations. Valid values:</p>
          * <ul>
-         * <li><p>global: Query global configuration.</p>
-         * </li>
-         * <li><p>rule: Query rule configuration.</p>
-         * </li>
+         * <li>global: queries global configurations.</li>
+         * <li>rule: queries rule configurations.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -160,12 +155,10 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
         public String configType;
 
         /**
-         * <p>Whether to enable HTTP2, default is on. Value range:</p>
+         * <p>Specifies whether to enable HTTP/2. HTTP/2 is enabled by default. Valid values:</p>
          * <ul>
-         * <li><p>on: enabled.</p>
-         * </li>
-         * <li><p>off: disabled.</p>
-         * </li>
+         * <li>on: enabled.</li>
+         * <li>off: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -175,12 +168,10 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
         public String http2;
 
         /**
-         * <p>Whether to enable HTTP3, default is on. Value range:</p>
+         * <p>Specifies whether to enable HTTP/3. HTTP/3 is enabled by default. Valid values:</p>
          * <ul>
-         * <li><p>on: enabled.</p>
-         * </li>
-         * <li><p>off: disabled.</p>
-         * </li>
+         * <li>on: enabled.</li>
+         * <li>off: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -190,11 +181,11 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
         public String http3;
 
         /**
-         * <p>Whether to enable HTTPS, default is enabled. Value range:</p>
+         * <p>Specifies whether to enable HTTPS. HTTPS is enabled by default. Valid values:</p>
          * <ul>
-         * <li><p>on: Enable.</p>
+         * <li><p>on: enabled.</p>
          * </li>
-         * <li><p>off: Disable.</p>
+         * <li><p>off: disabled.</p>
          * </li>
          * </ul>
          * 
@@ -205,12 +196,10 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
         public String https;
 
         /**
-         * <p>Whether to enable OCSP, default is off. Value range:</p>
+         * <p>Specifies whether to enable OCSP stapling. OCSP stapling is disabled by default. Valid values:</p>
          * <ul>
-         * <li><p>on: enabled.</p>
-         * </li>
-         * <li><p>off: disabled.</p>
-         * </li>
+         * <li>on: enabled.</li>
+         * <li>off: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -220,12 +209,10 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
         public String ocspStapling;
 
         /**
-         * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+         * <p>The rule content, which uses a conditional expression to match user requests. You do not need to set this parameter when adding a global configuration. Two scenarios are supported:</p>
          * <ul>
-         * <li><p>Match all incoming requests: Set the value to true.</p>
-         * </li>
-         * <li><p>Match specific requests: Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;)</p>
-         * </li>
+         * <li>Match all incoming requests: set the value to true.</li>
+         * <li>Match specified requests: set the value to a custom expression, such as (http.host eq \&quot;video.example.com\&quot;).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -235,12 +222,10 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
         public String rule;
 
         /**
-         * <p>Rule switch. This parameter is not required when adding a global configuration. Value range:</p>
+         * <p>The rule switch. You do not need to set this parameter when adding a global configuration. Valid values:</p>
          * <ul>
-         * <li><p>on: Enable.</p>
-         * </li>
-         * <li><p>off: Disable.</p>
-         * </li>
+         * <li>on: enabled.</li>
+         * <li>off: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -250,7 +235,7 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
         public String ruleEnable;
 
         /**
-         * <p>Rule name. This parameter is not required when adding a global configuration.</p>
+         * <p>The rule name. You do not need to set this parameter when adding a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -259,7 +244,7 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>Rule execution order. The smaller the value, the higher the priority.</p>
+         * <p>The rule execution order. A smaller value indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -268,12 +253,10 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
         public Integer sequence;
 
         /**
-         * <p>Whether to enable TLS1.0, default is disabled. Value range:</p>
+         * <p>Specifies whether to enable TLS 1.0. TLS 1.0 is disabled by default. Valid values:</p>
          * <ul>
-         * <li><p>on: Enable.</p>
-         * </li>
-         * <li><p>off: Disable.</p>
-         * </li>
+         * <li>on: enabled.</li>
+         * <li>off: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -283,12 +266,10 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
         public String tls10;
 
         /**
-         * <p>Whether to enable TLS1.1, default is disabled. Value range:</p>
+         * <p>Specifies whether to enable TLS 1.1. TLS 1.1 is disabled by default. Valid values:</p>
          * <ul>
-         * <li><p>on: Enable.</p>
-         * </li>
-         * <li><p>off: Disable.</p>
-         * </li>
+         * <li>on: enabled.</li>
+         * <li>off: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -298,12 +279,10 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
         public String tls11;
 
         /**
-         * <p>Whether to enable TLS1.2, default is disabled. Value range:</p>
+         * <p>Specifies whether to enable TLS 1.2. TLS 1.2 is disabled by default. Valid values:</p>
          * <ul>
-         * <li><p>on: Enable.</p>
-         * </li>
-         * <li><p>off: Disable.</p>
-         * </li>
+         * <li>on: enabled.</li>
+         * <li>off: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -313,12 +292,10 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
         public String tls12;
 
         /**
-         * <p>Whether to enable TLS1.3, default is disabled. Value range:</p>
+         * <p>Specifies whether to enable TLS 1.3. TLS 1.3 is disabled by default. Valid values:</p>
          * <ul>
-         * <li><p>on: Enable.</p>
-         * </li>
-         * <li><p>off: Disable.</p>
-         * </li>
+         * <li>on: enabled.</li>
+         * <li>off: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>

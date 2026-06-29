@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateTransportLayerApplicationShrinkRequest extends TeaModel {
     /**
-     * <p>Enables or disables network optimization for access from the Chinese mainland. This feature is disabled by default. Valid values:</p>
+     * <p>Specifies whether to enable network access optimization for the Chinese mainland. This feature is disabled by default. Valid values:</p>
      * <ul>
-     * <li><p><code>on</code>: Enables the optimization.</p>
-     * </li>
-     * <li><p><code>off</code>: Disables the optimization.</p>
-     * </li>
+     * <li>on: enabled.</li>
+     * <li>off: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,12 +18,10 @@ public class CreateTransportLayerApplicationShrinkRequest extends TeaModel {
     public String crossBorderOptimization;
 
     /**
-     * <p>Applies IP access rules from Web Application Firewall (WAF) to this Transport Layer Application. Valid values:</p>
+     * <p>The IP access rule switch. When enabled, IP access rules in WAF take effect for the Layer 4 application. Valid values:</p>
      * <ul>
-     * <li><p><code>on</code>: Enables the feature.</p>
-     * </li>
-     * <li><p><code>off</code>: Disables the feature.</p>
-     * </li>
+     * <li>on: enabled.</li>
+     * <li>off: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,7 +31,11 @@ public class CreateTransportLayerApplicationShrinkRequest extends TeaModel {
     public String ipAccessRule;
 
     /**
-     * <p>Enables or disables IPv6 support.</p>
+     * <p>Specifies whether to enable IPv6. This feature is disabled by default. Valid values:</p>
+     * <ul>
+     * <li>on: enabled.</li>
+     * <li>off: disabled.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>off</p>
@@ -44,13 +44,20 @@ public class CreateTransportLayerApplicationShrinkRequest extends TeaModel {
     public String ipv6;
 
     /**
-     * <p>Enables or disables keep-alive protection.</p>
+     * <p>Specifies whether to enable keep-alive protection. This feature is disabled by default. Valid values:</p>
+     * <ul>
+     * <li>on: enabled.</li>
+     * <li>off: disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
      */
     @NameInMap("KeepAliveProtection")
     public String keepAliveProtection;
 
     /**
-     * <p>The domain name of the Transport Layer Application.</p>
+     * <p>The domain name of the Layer 4 application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,7 +74,7 @@ public class CreateTransportLayerApplicationShrinkRequest extends TeaModel {
     public String rulesShrink;
 
     /**
-     * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</p>
+     * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID. The site must be activated.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -76,6 +83,16 @@ public class CreateTransportLayerApplicationShrinkRequest extends TeaModel {
     @NameInMap("SiteId")
     public Long siteId;
 
+    /**
+     * <p>Specifies whether to enable static IP. This feature is disabled by default. Valid values:</p>
+     * <ul>
+     * <li>on: enabled.</li>
+     * <li>off: disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
     @NameInMap("StaticIp")
     public String staticIp;
 

@@ -5,20 +5,17 @@ import com.aliyun.tea.*;
 
 public class UpdateRecordRequest extends TeaModel {
     /**
-     * <p>The origin authentication settings for the CNAME record.</p>
+     * <p>The origin authentication information of the CNAME record.</p>
      */
     @NameInMap("AuthConf")
     public UpdateRecordRequestAuthConf authConf;
 
     /**
-     * <p>The use case for proxy acceleration. Omit this parameter if proxy acceleration is disabled. Valid values:</p>
+     * <p>The business scenario for record acceleration. This parameter is not required for records without acceleration enabled. Valid values:</p>
      * <ul>
-     * <li><p><strong>video_image</strong>: Video and images.</p>
-     * </li>
-     * <li><p><strong>api</strong>: APIs.</p>
-     * </li>
-     * <li><p><strong>web</strong>: Web pages.</p>
-     * </li>
+     * <li><strong>video_image</strong>: video and image.</li>
+     * <li><strong>api</strong>: API.</li>
+     * <li><strong>web</strong>: web page.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +25,7 @@ public class UpdateRecordRequest extends TeaModel {
     public String bizName;
 
     /**
-     * <p>A comment for the record.</p>
+     * <p>The comment for the record.</p>
      * 
      * <strong>example:</strong>
      * <p>This is a remark.</p>
@@ -37,7 +34,7 @@ public class UpdateRecordRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>The DNS data for the record. The required content varies based on the record type. For more information, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/document_detail/2708761.html">Documentation</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/doc-detail/2708761.html">Documentation</a>.</p>
+     * <p>The DNS information of the record. The content varies depending on the record type. For more information, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/document_detail/2708761.html">documentation</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/doc-detail/2708761.html">documentation</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,12 +46,10 @@ public class UpdateRecordRequest extends TeaModel {
     public UpdateRecordRequestData data;
 
     /**
-     * <p>The origin HOST policy. This policy, which applies only to CNAME records, determines the value of the <code>HOST</code> header in requests sent to the origin. Valid values:</p>
+     * <p>The back-to-origin HOST policy. This parameter takes effect when the record type is CNAME. Settings the HOST policy for back-to-origin requests. Valid values:</p>
      * <ul>
-     * <li><p><strong>follow_hostname</strong>: Follows the host record.</p>
-     * </li>
-     * <li><p><strong>follow_origin_domain</strong>: Follows the origin domain name.</p>
-     * </li>
+     * <li><strong>follow_hostname</strong>: follows the host record.</li>
+     * <li><strong>follow_origin_domain</strong>: follows the Origin Domain Name.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -70,12 +65,10 @@ public class UpdateRecordRequest extends TeaModel {
     public String httpsPorts;
 
     /**
-     * <p>Indicates whether to enable proxy acceleration for the record. Only CNAME and A/AAAA records support proxy acceleration. Valid values:</p>
+     * <p>Specifies whether to enable proxy acceleration for the record. Only CNAME records and A/AAAA records support proxy acceleration. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Enables proxy acceleration.</p>
-     * </li>
-     * <li><p><strong>false</strong>: Disables proxy acceleration.</p>
-     * </li>
+     * <li><strong>true</strong>: Enable proxy acceleration.</li>
+     * <li><strong>false</strong>: Disable proxy acceleration.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -85,7 +78,7 @@ public class UpdateRecordRequest extends TeaModel {
     public Boolean proxied;
 
     /**
-     * <p>The record ID. Call the <a href="https://help.aliyun.com/document_detail/2850265.html">ListRecords</a> operation to get this ID.</p>
+     * <p>The ID of the record. You can call <a href="https://help.aliyun.com/document_detail/2850265.html">ListRecords</a> to obtain the record ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -95,20 +88,15 @@ public class UpdateRecordRequest extends TeaModel {
     public Long recordId;
 
     /**
-     * <p>The origin type for the CNAME record. This parameter is required for CNAME records. Valid values:</p>
+     * <p>The origin server type of the CNAME record. This parameter is required when you add a CNAME record. Valid values:</p>
      * <ul>
-     * <li><p><strong>OSS</strong>: An OSS origin.</p>
-     * </li>
-     * <li><p><strong>S3</strong>: An S3 origin.</p>
-     * </li>
-     * <li><p><strong>LB</strong>: A load balancer origin.</p>
-     * </li>
-     * <li><p><strong>OP</strong>: An origin address pool origin.</p>
-     * </li>
-     * <li><p><strong>Domain</strong>: A standard domain name origin.</p>
-     * </li>
+     * <li><strong>OSS</strong>: OSS origin server.</li>
+     * <li><strong>S3</strong>: S3 origin server.</li>
+     * <li><strong>LB</strong>: load balancing origin server.</li>
+     * <li><strong>OP</strong>: IPAM pool origin server.</li>
+     * <li><strong>Domain</strong>: standard domain name origin server.</li>
      * </ul>
-     * <p>If this parameter is omitted or left empty, the default value is <code>Domain</code>.</p>
+     * <p>If this parameter is not specified or is left empty, the default value is Domain, which indicates a standard domain name origin server type.</p>
      * 
      * <strong>example:</strong>
      * <p>OSS</p>
@@ -117,7 +105,7 @@ public class UpdateRecordRequest extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>The record\&quot;s time to live (TTL) in seconds. The value must be an integer from <strong>30 to 86400</strong> or 1. A value of 1 sets the TTL to automatic.</p>
+     * <p>The time-to-live (TTL) of the record, in seconds. Valid values: <strong>30 to 86400</strong>, or 1. A value of 1 indicates that the TTL of the record is automatically determined.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -125,6 +113,12 @@ public class UpdateRecordRequest extends TeaModel {
     @NameInMap("Ttl")
     public Integer ttl;
 
+    /**
+     * <p>The DNS type of the record, such as A/AAAA, CNAME, or TXT.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A/AAAA</p>
+     */
     @NameInMap("Type")
     public String type;
 
@@ -231,7 +225,7 @@ public class UpdateRecordRequest extends TeaModel {
 
     public static class UpdateRecordRequestAuthConf extends TeaModel {
         /**
-         * <p>The access key for the account that owns the origin. This is required for private, cross-account access to OSS origins, and for S3 origins where the authentication type is <strong>private</strong>.</p>
+         * <p>The AccessKey of the account to which the origin server belongs. This parameter is required when the origin server type is OSS and the origin authentication type is private cross-account read, or when the origin server type is S3 and the origin authentication type is private read.</p>
          * 
          * <strong>example:</strong>
          * <p>VIxuvJSA2S03f******kp208dy5w7</p>
@@ -240,14 +234,11 @@ public class UpdateRecordRequest extends TeaModel {
         public String accessKey;
 
         /**
-         * <p>The origin authentication type. This parameter is required when the <strong>SourceType</strong> is <strong>OSS</strong> or <strong>S3</strong>. Supported authentication types vary depending on the origin type. Valid values:</p>
+         * <p>The origin authentication type. Different origin server types support different authentication types. The origin server type refers to the SourceType parameter in this operation. When the origin server type is OSS or S3, you must specify the origin authentication type. Valid values:</p>
          * <ul>
-         * <li><p><strong>public</strong>: Public read. Use for publicly readable OSS or S3 origins.</p>
-         * </li>
-         * <li><p><strong>private</strong>: Private read. Use for private S3 origins.</p>
-         * </li>
-         * <li><p><strong>private_same_account</strong>: Private read within the same account. Use for private OSS origins accessed from the same Alibaba Cloud account.</p>
-         * </li>
+         * <li><strong>public</strong>: public read. Select this value when the origin server type is OSS or S3 and the origin server allows public read access.</li>
+         * <li><strong>private</strong>: private read. Select this value when the origin server type is S3 and the origin server allows only private read access.</li>
+         * <li><strong>private_same_account</strong>: private same-account read. Select this value when the origin server type is OSS, the origin server is under the same Alibaba Cloud account, and the origin server allows only private read access.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -257,14 +248,14 @@ public class UpdateRecordRequest extends TeaModel {
         public String authType;
 
         /**
-         * <p>The region where the origin is located. This parameter is required when the origin type is S3. You can find the region ID on the official S3 website.</p>
+         * <p>The signature algorithm version. This parameter is required when the origin server type is S3 and the origin authentication type is private read. Valid values:</p>
          * <ul>
          * <li><p><strong>v2</strong></p>
          * </li>
          * <li><p><strong>v4</strong></p>
          * </li>
          * </ul>
-         * <p>If you do not specify a value, it defaults to v4.</p>
+         * <p>Default value: v4.</p>
          * 
          * <strong>example:</strong>
          * <p>v2</p>
@@ -273,7 +264,7 @@ public class UpdateRecordRequest extends TeaModel {
         public String region;
 
         /**
-         * <p>The secret key for the account that owns the origin. This is required for private, cross-account access to OSS origins, and for S3 origins where the authentication type is <strong>private</strong>.</p>
+         * <p>The SecretKey of the account to which the origin server belongs. This parameter is required when the origin server type is OSS and the origin authentication type is private cross-account read, or when the origin server type is S3 and the origin authentication type is private read.</p>
          * 
          * <strong>example:</strong>
          * <p>u0Nkg5gBK*******QF5wvKMM504JUHt</p>
@@ -282,7 +273,7 @@ public class UpdateRecordRequest extends TeaModel {
         public String secretKey;
 
         /**
-         * <p>The signing algorithm version. This parameter is required when the origin type is S3 and the authentication type is <strong>private</strong>. Supported versions: v2 and v4. If this parameter is not specified, the default value is v4.</p>
+         * <p>The region to which the origin server belongs. This parameter is required when the origin server type is S3. Obtain the region from the official S3 website.</p>
          * 
          * <strong>example:</strong>
          * <p>us-east-1</p>
@@ -339,7 +330,7 @@ public class UpdateRecordRequest extends TeaModel {
 
     public static class UpdateRecordRequestData extends TeaModel {
         /**
-         * <p>The encryption algorithm specified in the record. The value must be an integer from <strong>0 to 255</strong>. This parameter is required for CERT and SSHFP records.</p>
+         * <p>The encryption algorithm used by the record. Valid values: <strong>0 to 255</strong>. This parameter is required when you add CERT or SSHFP records.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -348,7 +339,7 @@ public class UpdateRecordRequest extends TeaModel {
         public Integer algorithm;
 
         /**
-         * <p>The public key certificate data for the record. This parameter is required for CERT, SMIMEA, and TLSA records.</p>
+         * <p>The public key certificate information of the record. This parameter is required when you add CERT, SMIMEA, or TLSA records.</p>
          * 
          * <strong>example:</strong>
          * <p>dGVzdGFkYWxrcw==</p>
@@ -357,7 +348,7 @@ public class UpdateRecordRequest extends TeaModel {
         public String certificate;
 
         /**
-         * <p>The public key fingerprint for the record. This parameter is required for SSHFP records.</p>
+         * <p>The public key fingerprint value of the record. This parameter is required when you add SSHFP records.</p>
          * 
          * <strong>example:</strong>
          * <p>abcdef1234567890</p>
@@ -366,7 +357,7 @@ public class UpdateRecordRequest extends TeaModel {
         public String fingerprint;
 
         /**
-         * <p>The flag for the record. For a CAA record, this flag indicates its priority and handling behavior. The value must be an integer from <strong>0 to 255</strong>. This parameter is required for CAA records.</p>
+         * <p>The flag of the record. The Flag of a CAA record indicates its priority and processing method. Valid values: <strong>0 to 255</strong>. This parameter is required when you add CAA records.</p>
          * 
          * <strong>example:</strong>
          * <p>128</p>
@@ -375,7 +366,7 @@ public class UpdateRecordRequest extends TeaModel {
         public Integer flag;
 
         /**
-         * <p>The public key identifier for the record. The value must be an integer from <strong>0 to 65535</strong>. This parameter is required for CERT records.</p>
+         * <p>The public key identifier of the record. Valid values: <strong>0 to 65535</strong>. This parameter is required when you add CERT records.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -384,7 +375,7 @@ public class UpdateRecordRequest extends TeaModel {
         public Integer keyTag;
 
         /**
-         * <p>The algorithm policy used to match or validate the certificate. The value must be an integer from <strong>0 to 255</strong>. This parameter is required for SMIMEA and TLSA records.</p>
+         * <p>The algorithm policy used by the record for matching or verifying certificates. Valid values: <strong>0 to 255</strong>. This parameter is required when you add SMIMEA or TLSA records.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -393,7 +384,7 @@ public class UpdateRecordRequest extends TeaModel {
         public Integer matchingType;
 
         /**
-         * <p>The port number for the record. The value must be an integer from <strong>0 to 65535</strong>. This parameter is required for SRV records.</p>
+         * <p>The port of the record. Valid values: <strong>0 to 65535</strong>. This parameter is required when you add SRV records.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -402,7 +393,7 @@ public class UpdateRecordRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The record\&quot;s priority. The value must be an integer from <strong>0 to 65535</strong>, where a lower value indicates higher priority. This parameter is required for MX, SRV, and URI records.</p>
+         * <p>The priority of the record. Valid values: <strong>0 to 65535</strong>. A smaller value indicates a higher priority. This parameter is required when you add MX, SRV, or URI records.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -411,7 +402,7 @@ public class UpdateRecordRequest extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The type of certificate or public key specified in the record. The value must be an integer from <strong>0 to 255</strong>. This parameter is required for SMIMEA and TLSA records.</p>
+         * <p>The type of certificate or public key used by the record. Valid values: <strong>0 to 255</strong>. This parameter is required when you add SMIMEA or TLSA records.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -420,7 +411,7 @@ public class UpdateRecordRequest extends TeaModel {
         public Integer selector;
 
         /**
-         * <p>The tag for the record. For a CAA record, the tag specifies the record\&quot;s type and purpose. This parameter is required for CAA records.</p>
+         * <p>The tag of the record. The Tag of a CAA record indicates its specific type and purpose. This parameter is required when you add CAA records.</p>
          * 
          * <strong>example:</strong>
          * <p>issue</p>
@@ -429,7 +420,7 @@ public class UpdateRecordRequest extends TeaModel {
         public String tag;
 
         /**
-         * <p>The certificate type for a CERT record, or the public key type for an SSHFP record. This parameter is required for CERT and SSHFP records.</p>
+         * <p>The certificate type of the record (for CERT records) or the public key type (for SSHFP records). This parameter is required when you add CERT or SSHFP records.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -438,7 +429,7 @@ public class UpdateRecordRequest extends TeaModel {
         public Integer type;
 
         /**
-         * <p>The usage identifier for the record. The value must be an integer from <strong>0 to 255</strong>. This parameter is required for SMIMEA and TLSA records.</p>
+         * <p>The usage identifier of the record. Valid values: <strong>0 to 255</strong>. This parameter is required when you add SMIMEA or TLSA records.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -447,24 +438,16 @@ public class UpdateRecordRequest extends TeaModel {
         public Integer usage;
 
         /**
-         * <p>The value of the record or part of its content. This parameter is required for A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI records. The meaning of this parameter varies by record type:</p>
+         * <p>The record value or partial content. This parameter is required when you add A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, or URI records. The meaning varies depending on the record type:</p>
          * <ul>
-         * <li><p><strong>A/AAAA</strong>: The target IP address. To specify multiple IP addresses, separate them with a comma (,). At least one IPv4 address is required.</p>
-         * </li>
-         * <li><p><strong>CNAME</strong>: The target domain name.</p>
-         * </li>
-         * <li><p><strong>NS</strong>: The name server for the domain.</p>
-         * </li>
-         * <li><p><strong>MX</strong>: A valid domain name for the target mail server.</p>
-         * </li>
-         * <li><p><strong>TXT</strong>: A valid text string.</p>
-         * </li>
-         * <li><p><strong>CAA</strong>: A valid domain name for the certificate authority.</p>
-         * </li>
-         * <li><p><strong>SRV</strong>: A valid domain name for the target host.</p>
-         * </li>
-         * <li><p><strong>URI</strong>: A valid URI string.</p>
-         * </li>
+         * <li><strong>A/AAAA</strong>: The IP address to which the record points. Separate multiple IP addresses with commas (,). At least one IPv4 address is required.</li>
+         * <li><strong>CNAME</strong>: The target domain name to which the record points.</li>
+         * <li><strong>NS</strong>: The name server for the specified domain name.</li>
+         * <li><strong>MX</strong>: A valid target mail server domain name.</li>
+         * <li><strong>TXT</strong>: A valid text string.</li>
+         * <li><strong>CAA</strong>: A valid certification authority domain name.</li>
+         * <li><strong>SRV</strong>: A valid target host domain name.</li>
+         * <li><strong>URI</strong>: A valid URI string.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -474,7 +457,7 @@ public class UpdateRecordRequest extends TeaModel {
         public String value;
 
         /**
-         * <p>The weight of the record. The value must be an integer from <strong>0 to 65535</strong>. This parameter is required for SRV and URI records.</p>
+         * <p>The weight of the record. Valid values: <strong>0 to 65535</strong>. This parameter is required when you add SRV or URI records.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

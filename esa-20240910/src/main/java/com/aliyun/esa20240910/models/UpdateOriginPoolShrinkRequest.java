@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateOriginPoolShrinkRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the origin pool:</p>
+     * <p>Specifies whether the origin address pool is enabled. Valid values:</p>
      * <ul>
-     * <li><p>true: Enables the origin pool.</p>
-     * </li>
-     * <li><p>false: Disables the origin pool.</p>
-     * </li>
+     * <li>true: Enabled.</li>
+     * <li>false: Not enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class UpdateOriginPoolShrinkRequest extends TeaModel {
     public Boolean enabled;
 
     /**
-     * <p>The origin pool ID. Get this ID by calling the <a href="~~ListOriginPools~~">ListOriginPools</a> operation.</p>
+     * <p>The origin address pool ID. You can call the <a href="~~ListOriginPools~~">ListOriginPools</a> operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,13 +28,13 @@ public class UpdateOriginPoolShrinkRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>An array of origin configurations.</p>
+     * <p>The origin server information added to the origin address pool. Use an array to pass multiple origin servers.</p>
      */
     @NameInMap("Origins")
     public String originsShrink;
 
     /**
-     * <p>The site ID. Get this ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
+     * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

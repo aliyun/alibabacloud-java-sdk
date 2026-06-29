@@ -60,7 +60,7 @@ public class GetCustomHostnameResponseBody extends TeaModel {
         public Long certApplyCode;
 
         /**
-         * <p>The error description for the free certificate application.</p>
+         * <p>The error message for the free certificate application.</p>
          * 
          * <strong>example:</strong>
          * <p>canceled</p>
@@ -69,7 +69,7 @@ public class GetCustomHostnameResponseBody extends TeaModel {
         public String certApplyMessage;
 
         /**
-         * <p>The certificate verification HTTP address.</p>
+         * <p>The HTTP address for certificate verification.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://custom.site.com/.well-known/acme-challenge/jLmMHlEaZ3jb352Qo3ciaSoAC8KZ5Hk0F-4_1xLQtgc">http://custom.site.com/.well-known/acme-challenge/jLmMHlEaZ3jb352Qo3ciaSoAC8KZ5Hk0F-4_1xLQtgc</a></p>
@@ -78,7 +78,7 @@ public class GetCustomHostnameResponseBody extends TeaModel {
         public String certHttpKey;
 
         /**
-         * <p>The certificate verification HTTP content.</p>
+         * <p>The HTTP content for certificate verification.</p>
          * 
          * <strong>example:</strong>
          * <p>jLmMHlEaZ3jb352Qo3ciaSoAC8KZ5Hk0F-4_1xLQtgc.GridYdfJJB5PgFEL-t89XfaFvMPB4f2-I9fwLpKl6e0</p>
@@ -96,7 +96,7 @@ public class GetCustomHostnameResponseBody extends TeaModel {
         public String certId;
 
         /**
-         * <p>The certificate expiration time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The certificate expiration time, in ISO 8601 format with UTC time. The format is yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-19T11:15:20Z</p>
@@ -121,7 +121,7 @@ public class GetCustomHostnameResponseBody extends TeaModel {
         public String certStatus;
 
         /**
-         * <p>The certificate verification TXT name.</p>
+         * <p>The TXT name for certificate verification.</p>
          * 
          * <strong>example:</strong>
          * <p>_acme-challenge.custom.site.com</p>
@@ -130,7 +130,7 @@ public class GetCustomHostnameResponseBody extends TeaModel {
         public String certTxtKey;
 
         /**
-         * <p>The certificate verification TXT content.</p>
+         * <p>The TXT content for certificate verification.</p>
          * 
          * <strong>example:</strong>
          * <p>lcKYad3UQXgrZLvMm_6TBUYKK4xTkGmninV0Mzx4gjM</p>
@@ -168,6 +168,7 @@ public class GetCustomHostnameResponseBody extends TeaModel {
          * <li><strong>existing_record</strong>: Conflicts with an existing site record.</li>
          * <li><strong>existing_load_balancer</strong>: Conflicts with an existing load balancing instance.</li>
          * <li><strong>existing_origin_pool</strong>: Conflicts with an existing origin IPAM pool.</li>
+         * <li><strong>existing_site</strong>: Conflicts with an existing site.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -177,7 +178,7 @@ public class GetCustomHostnameResponseBody extends TeaModel {
         public String conflictWith;
 
         /**
-         * <p>The time when the SaaS domain name was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the SaaS domain name was created, in ISO 8601 format with UTC time. The format is yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-19T11:15:20Z</p>
@@ -210,7 +211,7 @@ public class GetCustomHostnameResponseBody extends TeaModel {
          * <li><strong>internally_disabled</strong>: Disabled by the system.</li>
          * <li><strong>missing_icp</strong>: The domain name does not have an ICP filing.</li>
          * <li><strong>content_violation</strong>: Content violation.</li>
-         * <li><strong>proactively_disabled</strong>: You proactively disabled the domain name or the usage cap that you configured was reached.</li>
+         * <li><strong>proactively_disabled</strong>: You proactively disabled the domain name or the usage cap you configured was reached.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -294,7 +295,7 @@ public class GetCustomHostnameResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the SaaS domain name was last updated. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the SaaS domain name was last updated, in ISO 8601 format with UTC time. The format is yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-19T11:15:20Z</p>
@@ -303,7 +304,7 @@ public class GetCustomHostnameResponseBody extends TeaModel {
         public String updateTime;
 
         /**
-         * <p>The domain verification TXT content.</p>
+         * <p>The TXT content for domain verification.</p>
          * 
          * <strong>example:</strong>
          * <p>verify_16ab7f4d389d4dff6655f995c6a997bd</p>
@@ -312,7 +313,7 @@ public class GetCustomHostnameResponseBody extends TeaModel {
         public String verifyCode;
 
         /**
-         * <p>The domain verification TXT name.</p>
+         * <p>The TXT name for domain verification.</p>
          * 
          * <strong>example:</strong>
          * <p>_esa_custom_hostname.custom.site.com</p>

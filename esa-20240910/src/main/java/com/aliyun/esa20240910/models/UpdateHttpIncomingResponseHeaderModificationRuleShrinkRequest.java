@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateHttpIncomingResponseHeaderModificationRuleShrinkRequest extends TeaModel {
     /**
-     * <p>The configuration ID. You can obtain this ID by calling the <code>ListHttpIncomingResponseHeaderModificationRules</code> operation.</p>
+     * <p>The configuration ID. You can call the ListHttpIncomingResponseHeaderModificationRules operation to obtain the configuration ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,18 +15,16 @@ public class UpdateHttpIncomingResponseHeaderModificationRuleShrinkRequest exten
     public Long configId;
 
     /**
-     * <p>A list of objects specifying modifications to response headers. Supported operations include <code>add</code>, <code>del</code>, and <code>modify</code>.</p>
+     * <p>The response header modifications. Three operation types are supported: add, delete, and modify.</p>
      */
     @NameInMap("ResponseHeaderModification")
     public String responseHeaderModificationShrink;
 
     /**
-     * <p>The condition expression used to match incoming requests. This parameter is not required for a global configuration. You can use this parameter in two ways:</p>
+     * <p>The rule content, which uses a conditional expression to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
      * <ul>
-     * <li><p>To match all incoming requests, set the value to <code>true</code>.</p>
-     * </li>
-     * <li><p>To match specific requests, set the value to a custom expression, such as <code>(http.host eq &quot;video.example.com&quot;)</code>.</p>
-     * </li>
+     * <li>Match all incoming requests: Set the value to true.</li>
+     * <li>Match specified requests: Set the value to a custom expression, for example, (http.host eq \&quot;video.example.com\&quot;).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,12 +34,10 @@ public class UpdateHttpIncomingResponseHeaderModificationRuleShrinkRequest exten
     public String rule;
 
     /**
-     * <p>The status of the rule. This parameter is not required for a global configuration. Valid values:</p>
+     * <p>The rule switch. This parameter is not required when adding a global configuration. Valid values:</p>
      * <ul>
-     * <li><p><code>on</code>: Enables the rule.</p>
-     * </li>
-     * <li><p><code>off</code>: Disables the rule.</p>
-     * </li>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,7 +47,7 @@ public class UpdateHttpIncomingResponseHeaderModificationRuleShrinkRequest exten
     public String ruleEnable;
 
     /**
-     * <p>The name of the rule. This parameter is not required for a global configuration.</p>
+     * <p>The rule name. This parameter is not required when adding a global configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>rule_example</p>
@@ -60,7 +56,7 @@ public class UpdateHttpIncomingResponseHeaderModificationRuleShrinkRequest exten
     public String ruleName;
 
     /**
-     * <p>The priority of the rule. Rules with a lower value are executed first.</p>
+     * <p>The rule execution order. A smaller value indicates a higher priority.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -69,7 +65,7 @@ public class UpdateHttpIncomingResponseHeaderModificationRuleShrinkRequest exten
     public Integer sequence;
 
     /**
-     * <p>The site ID. You can obtain this ID by calling the <code>ListSites</code> operation.</p>
+     * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

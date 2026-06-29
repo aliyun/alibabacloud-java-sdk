@@ -7,10 +7,8 @@ public class UpdateCompressionRuleRequest extends TeaModel {
     /**
      * <p>Brotli compression. Valid values:</p>
      * <ul>
-     * <li><p>on: Enable.</p>
-     * </li>
-     * <li><p>off: Disable.</p>
-     * </li>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class UpdateCompressionRuleRequest extends TeaModel {
     public String brotli;
 
     /**
-     * <p>Configuration ID. Get this value by calling the <a href="~~ListCompressionRules~~">ListCompressionRules</a> API.</p>
+     * <p>The configuration ID. You can call the <a href="~~ListCompressionRules~~">ListCompressionRules</a> operation to obtain the configuration ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,10 +30,8 @@ public class UpdateCompressionRuleRequest extends TeaModel {
     /**
      * <p>Gzip compression. Valid values:</p>
      * <ul>
-     * <li><p>on: Enable.</p>
-     * </li>
-     * <li><p>off: Disable.</p>
-     * </li>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,12 +41,10 @@ public class UpdateCompressionRuleRequest extends TeaModel {
     public String gzip;
 
     /**
-     * <p>Rule content, using a conditional expression to match user requests. Do not set this parameter when adding a global configuration. Two scenarios apply:</p>
+     * <p>The rule content, which uses a conditional expression to match user requests. You do not need to set this parameter when adding a global configuration. Two scenarios are supported:</p>
      * <ul>
-     * <li><p>Match all incoming requests: Set the value to true.</p>
-     * </li>
-     * <li><p>Match specific requests: Set the value to a custom expression, such as: (http.host eq &quot;video.example.com&quot;)</p>
-     * </li>
+     * <li>Match all incoming requests: Set the value to true.</li>
+     * <li>Match specified requests: Set the value to a custom expression, such as (http.host eq \&quot;video.example.com\&quot;).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,12 +54,10 @@ public class UpdateCompressionRuleRequest extends TeaModel {
     public String rule;
 
     /**
-     * <p>Rule switch. Do not set this parameter when adding a global configuration. Valid values:</p>
+     * <p>The rule switch. You do not need to set this parameter when adding a global configuration. Valid values:</p>
      * <ul>
-     * <li><p>on: Enable.</p>
-     * </li>
-     * <li><p>off: Disable.</p>
-     * </li>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,7 +67,7 @@ public class UpdateCompressionRuleRequest extends TeaModel {
     public String ruleEnable;
 
     /**
-     * <p>Rule name. Do not set this parameter when adding a global configuration.</p>
+     * <p>The rule name. You do not need to set this parameter when adding a global configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>rule_example</p>
@@ -84,7 +76,7 @@ public class UpdateCompressionRuleRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>Rule execution order. Rules with smaller values take precedence.</p>
+     * <p>The rule execution order. A smaller value indicates a higher priority.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,7 +85,7 @@ public class UpdateCompressionRuleRequest extends TeaModel {
     public Integer sequence;
 
     /**
-     * <p>Site ID. Get this value by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
+     * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -105,10 +97,8 @@ public class UpdateCompressionRuleRequest extends TeaModel {
     /**
      * <p>Zstd compression. Valid values:</p>
      * <ul>
-     * <li><p>on: Enable.</p>
-     * </li>
-     * <li><p>off: Disable.</p>
-     * </li>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>

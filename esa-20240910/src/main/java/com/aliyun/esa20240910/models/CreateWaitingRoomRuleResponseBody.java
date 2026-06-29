@@ -14,7 +14,7 @@ public class CreateWaitingRoomRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The waiting room bypass rule ID.</p>
+     * <p>The ID of the waiting room bypass rule.</p>
      * 
      * <strong>example:</strong>
      * <p>420072638347264</p>

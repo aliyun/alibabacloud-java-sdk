@@ -5,16 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListTransportLayerApplicationsRequest extends TeaModel {
     /**
-     * <p>The match type for the host record of the Layer 4 application. The default is an exact search. Valid values:</p>
+     * <p>The query type for the host record of Layer 4 applications. The following four types are supported, and the default is exact match.</p>
      * <ul>
-     * <li><p>fuzzy: fuzzy search.</p>
-     * </li>
-     * <li><p>exact: exact search.</p>
-     * </li>
-     * <li><p>prefix: prefix search.</p>
-     * </li>
-     * <li><p>suffix: suffix search.</p>
-     * </li>
+     * <li>fuzzy: Fuzzy match.</li>
+     * <li>exact: Exact match.</li>
+     * <li>prefix: Prefix match.</li>
+     * <li>suffix: Suffix match.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,7 +20,7 @@ public class ListTransportLayerApplicationsRequest extends TeaModel {
     public String matchType;
 
     /**
-     * <p>The page number. The minimum value is 1. The default value is 1.</p>
+     * <p>The page number for paginated queries. The value must be greater than or equal to 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -33,7 +29,7 @@ public class ListTransportLayerApplicationsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. The maximum value is 500.</p>
+     * <p>The number of entries per page for paginated queries. Valid values: 1-500.</p>
      * 
      * <strong>example:</strong>
      * <p>500</p>
@@ -51,7 +47,7 @@ public class ListTransportLayerApplicationsRequest extends TeaModel {
     public String recordName;
 
     /**
-     * <p>The site ID. Call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain it.</p>
+     * <p>Site ID. You can obtain it by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

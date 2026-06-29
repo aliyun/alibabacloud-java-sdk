@@ -5,25 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpdateSiteCoverageRequest extends TeaModel {
     /**
-     * <p>The target acceleration area to modify. Valid values:</p>
+     * <p>The target acceleration region to change to. Valid values:</p>
      * <ul>
-     * <li><p><strong>domestic</strong>: Only the Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>global</strong>: Global.</p>
-     * </li>
-     * <li><p><strong>overseas</strong>: Global (excluding the Chinese mainland).</p>
-     * </li>
+     * <li><strong>domestic</strong>: the Chinese mainland only.</li>
+     * <li><strong>global</strong>: global.</li>
+     * <li><strong>overseas</strong>: global (excluding the Chinese mainland).</li>
      * </ul>
+     * <p>&lt;props=&quot;china&quot;&gt;If the value is set to domestic or global, the site corresponding to SiteId must have a valid ICP filing..</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>global</p>
+     * <p>overseas</p>
      */
     @NameInMap("Coverage")
     public String coverage;
 
     /**
-     * <p>The site ID. Get this by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
+     * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to query the site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

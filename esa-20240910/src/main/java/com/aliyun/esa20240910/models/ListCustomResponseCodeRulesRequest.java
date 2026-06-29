@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCustomResponseCodeRulesRequest extends TeaModel {
     /**
-     * <p>The configuration ID.</p>
+     * <p>Configuration ID.</p>
      * 
      * <strong>example:</strong>
      * <p>436490043994112</p>
@@ -14,12 +14,10 @@ public class ListCustomResponseCodeRulesRequest extends TeaModel {
     public Long configId;
 
     /**
-     * <p>The configuration type. Use this parameter to query global or rule configurations. Valid values:</p>
+     * <p>Configuration type. You can use this parameter to query global or rule configurations. Valid values:</p>
      * <ul>
-     * <li><p>global: Queries global configurations.</p>
-     * </li>
-     * <li><p>rule: Queries rule configurations.</p>
-     * </li>
+     * <li>global: queries global configurations.</li>
+     * <li>rule: queries rule configurations.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,7 +27,7 @@ public class ListCustomResponseCodeRulesRequest extends TeaModel {
     public String configType;
 
     /**
-     * <p>The page number. The default value is 1 if you do not specify this parameter.</p>
+     * <p>Page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +36,7 @@ public class ListCustomResponseCodeRulesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. The maximum value is 500. The default value is 500 if you do not specify this parameter.</p>
+     * <p>Number of entries per page. Maximum value: 500. Default value: 500.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -47,7 +45,7 @@ public class ListCustomResponseCodeRulesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The rule name.</p>
+     * <p>Rule name.</p>
      * 
      * <strong>example:</strong>
      * <p>rule_example</p>
@@ -56,7 +54,7 @@ public class ListCustomResponseCodeRulesRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The site ID. For more information, see <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a>.</p>
+     * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,7 +64,7 @@ public class ListCustomResponseCodeRulesRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The version number of the site configuration. For sites with configuration version control enabled, specify the site version for which the configuration takes effect using this parameter. The default value is version 0.</p>
+     * <p>The version number of the site configuration. For sites with configuration version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

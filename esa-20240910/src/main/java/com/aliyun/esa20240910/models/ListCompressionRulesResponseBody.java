@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListCompressionRulesResponseBody extends TeaModel {
     /**
-     * <p>List of compression rule configurations.</p>
+     * <p>The list of compression rule configurations.</p>
      */
     @NameInMap("Configs")
     public java.util.List<ListCompressionRulesResponseBodyConfigs> configs;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number, which is the same as the PageNumber request parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListCompressionRulesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Page size.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -29,7 +29,7 @@ public class ListCompressionRulesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</p>
@@ -38,7 +38,7 @@ public class ListCompressionRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total number of items.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>16</p>
@@ -47,7 +47,7 @@ public class ListCompressionRulesResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>Total number of pages.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -110,10 +110,10 @@ public class ListCompressionRulesResponseBody extends TeaModel {
 
     public static class ListCompressionRulesResponseBodyConfigs extends TeaModel {
         /**
-         * <p>Brotli compression. Possible values:</p>
+         * <p>Brotli compression. Valid values:</p>
          * <ul>
-         * <li>on: Enabled.</li>
-         * <li>off: Disabled.</li>
+         * <li>on: enabled.</li>
+         * <li>off: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -123,7 +123,7 @@ public class ListCompressionRulesResponseBody extends TeaModel {
         public String brotli;
 
         /**
-         * <p>Configuration ID.</p>
+         * <p>The configuration ID.</p>
          * 
          * <strong>example:</strong>
          * <p>35281609698****</p>
@@ -132,10 +132,10 @@ public class ListCompressionRulesResponseBody extends TeaModel {
         public Long configId;
 
         /**
-         * <p>Configuration type. Possible values:</p>
+         * <p>The configuration type. Valid values:</p>
          * <ul>
-         * <li>global: Global configuration.</li>
-         * <li>rule: Rule-based configuration.</li>
+         * <li>global: global configuration.</li>
+         * <li>rule: rule configuration.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -145,10 +145,10 @@ public class ListCompressionRulesResponseBody extends TeaModel {
         public String configType;
 
         /**
-         * <p>Gzip compression. Possible values:</p>
+         * <p>Gzip compression. Valid values:</p>
          * <ul>
-         * <li>on: Enabled.</li>
-         * <li>off: Disabled.</li>
+         * <li>on: enabled.</li>
+         * <li>off: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -158,10 +158,10 @@ public class ListCompressionRulesResponseBody extends TeaModel {
         public String gzip;
 
         /**
-         * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+         * <p>The rule content, which uses a conditional expression to match user requests. You do not need to set this parameter when adding a global configuration. Two scenarios are supported:</p>
          * <ul>
-         * <li>Match all incoming requests: Set the value to true</li>
-         * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</li>
+         * <li>Match all incoming requests: Set the value to true.</li>
+         * <li>Match specified requests: Set the value to a custom expression, for example, (http.host eq \&quot;video.example.com\&quot;).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -171,10 +171,10 @@ public class ListCompressionRulesResponseBody extends TeaModel {
         public String rule;
 
         /**
-         * <p>Rule switch. This parameter is not required when adding a global configuration. Possible values:</p>
+         * <p>The rule switch. You do not need to set this parameter when adding a global configuration. Valid values:</p>
          * <ul>
-         * <li>on: Enabled.</li>
-         * <li>off: Disabled.</li>
+         * <li>on: enabled.</li>
+         * <li>off: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -184,7 +184,7 @@ public class ListCompressionRulesResponseBody extends TeaModel {
         public String ruleEnable;
 
         /**
-         * <p>Rule name. This parameter is not required when adding a global configuration.</p>
+         * <p>The rule name. You do not need to set this parameter when adding a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -193,7 +193,7 @@ public class ListCompressionRulesResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>Rule execution order. The smaller the value, the higher the priority.</p>
+         * <p>The rule execution order. A smaller value indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -202,7 +202,7 @@ public class ListCompressionRulesResponseBody extends TeaModel {
         public Integer sequence;
 
         /**
-         * <p>Version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the effective version of the site configuration, defaulting to version 0.</p>
+         * <p>The version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -211,7 +211,11 @@ public class ListCompressionRulesResponseBody extends TeaModel {
         public Integer siteVersion;
 
         /**
-         * <p>Zstd compression. Value range: - on: Enable. - off: Disable.</p>
+         * <p>Zstd compression. Valid values:</p>
+         * <ul>
+         * <li>on: enabled.</li>
+         * <li>off: disabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>on</p>

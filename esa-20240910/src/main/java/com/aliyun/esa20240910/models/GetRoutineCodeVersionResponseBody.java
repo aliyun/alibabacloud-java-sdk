@@ -14,7 +14,7 @@ public class GetRoutineCodeVersionResponseBody extends TeaModel {
     public String codeDescription;
 
     /**
-     * <p>The time when the version was created.</p>
+     * <p>The creation time. The time follows the RFC 3339 standard in the UTC time zone.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-03-11T01:23:21Z</p>

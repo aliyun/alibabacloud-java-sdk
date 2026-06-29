@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateIPv6Request extends TeaModel {
     /**
-     * <p>Whether to enable IPv6. Valid values:</p>
+     * <p>The switch. Valid values:</p>
      * <ul>
-     * <li><p><strong>on</strong>: Enables IPv6.</p>
-     * </li>
-     * <li><p><strong>off</strong>: Disables IPv6.</p>
-     * </li>
+     * <li><strong>on</strong>: enabled.</li>
+     * <li><strong>off</strong>: disabled.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -21,12 +19,10 @@ public class UpdateIPv6Request extends TeaModel {
     public String enable;
 
     /**
-     * <p>The region in which to enable IPv6. The default value is x.x.</p>
+     * <p>The region in which IPv6 is enabled. Default value: x.x.</p>
      * <ul>
-     * <li><p>x.x: global</p>
-     * </li>
-     * <li><p>cn.cn: Chinese mainland</p>
-     * </li>
+     * <li>x.x: global.</li>
+     * <li>cn.cn: Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +32,7 @@ public class UpdateIPv6Request extends TeaModel {
     public String region;
 
     /**
-     * <p>The site ID. You can get this ID by calling <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a>.</p>
+     * <p>The website ID, which can be obtained by calling <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

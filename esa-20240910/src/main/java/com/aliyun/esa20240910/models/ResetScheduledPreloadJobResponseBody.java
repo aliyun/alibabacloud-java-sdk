@@ -14,7 +14,7 @@ public class ResetScheduledPreloadJobResponseBody extends TeaModel {
     public String aliUid;
 
     /**
-     * <p>The time when the job was created, in ISO 8601 format (for example, 2024-01-01T00:00:00+Z).</p>
+     * <p>The time when the task was created, in ISO 8601 format (for example, 2024-01-01T00:00:00+Z).</p>
      * 
      * <strong>example:</strong>
      * <p>2024-06-02T02:23:26Z</p>
@@ -23,7 +23,7 @@ public class ResetScheduledPreloadJobResponseBody extends TeaModel {
     public String createdAt;
 
     /**
-     * <p>The list of preload domains.</p>
+     * <p>The list of domain names to prefetch.</p>
      * 
      * <strong>example:</strong>
      * <p>testurl.com</p>
@@ -50,7 +50,7 @@ public class ResetScheduledPreloadJobResponseBody extends TeaModel {
     public String failedFileOss;
 
     /**
-     * <p>The file ID of the URL list, which is used for downloading.</p>
+     * <p>The ID of the URL list file, which is used for downloading.</p>
      * 
      * <strong>example:</strong>
      * <p>665d3b48621bccf3fe29e1a7</p>
@@ -59,7 +59,7 @@ public class ResetScheduledPreloadJobResponseBody extends TeaModel {
     public String fileId;
 
     /**
-     * <p>The job ID.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>665d3af3621bccf3fe29e1a4</p>
@@ -68,7 +68,11 @@ public class ResetScheduledPreloadJobResponseBody extends TeaModel {
     public String id;
 
     /**
-     * <p>The URL insertion method.</p>
+     * <p>The URL insertion method. Valid values:</p>
+     * <ul>
+     * <li>oss: URLs are imported in batches from an OSS file.</li>
+     * <li>testBox: URLs are entered one by one in a text box.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>oss</p>
@@ -77,7 +81,7 @@ public class ResetScheduledPreloadJobResponseBody extends TeaModel {
     public String insertWay;
 
     /**
-     * <p>The job name.</p>
+     * <p>The task name.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -104,7 +108,7 @@ public class ResetScheduledPreloadJobResponseBody extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The number of URLs that have been submitted to the system for preloading.</p>
+     * <p>The number of URLs that have been submitted to the system for prefetching.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -113,7 +117,12 @@ public class ResetScheduledPreloadJobResponseBody extends TeaModel {
     public Integer taskSubmitted;
 
     /**
-     * <p>The task type (refresh/preload).</p>
+     * <p>The task type (refresh or prefetch). Valid values:</p>
+     * <ul>
+     * <li>path: directory refresh.</li>
+     * <li>refresh: URL refresh.</li>
+     * <li>preload: URL prefetch.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>preload</p>

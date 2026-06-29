@@ -11,7 +11,7 @@ public class PurgeCachesRequest extends TeaModel {
     public PurgeCachesRequestContent content;
 
     /**
-     * <p>Specifies whether to refresh edge computing cached resources. For example, this allows you to refresh content cached by the Edge Routine CacheAPI API operation using the edge function.</p>
+     * <p>Specifies whether to refresh edge computing cached resources. For example, this allows refreshing content cached by the Edge Routine Cache API operation function.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -26,7 +26,7 @@ public class PurgeCachesRequest extends TeaModel {
      * <li><strong>false</strong>: Refreshes only the changed resources under the corresponding directory.</li>
      * </ul>
      * <blockquote>
-     * <p> This parameter takes effect for directory refresh, cache tag refresh, parameter-ignored refresh, hostname refresh, and full site refresh.</p>
+     * <p> This parameter takes effect for directory refresh, cache tag refresh, parameter-ignored refresh, hostname refresh, and full site cache refresh.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class PurgeCachesRequest extends TeaModel {
      * <li><strong>cachekey</strong>: cache key refresh.</li>
      * <li><strong>cachetag</strong>: cache label refresh.</li>
      * <li><strong>directory</strong>: folder refresh.</li>
-     * <li><strong>ignoreParams</strong>: parameter-ignored refresh. This refers to removing the question mark (?) and all parameters after it from the request URL. When you commit a parameter-stripped URL through this API operation, the committed URL is matched against cached resource URLs after their parameters are also stripped. If a cached resource URL matches the committed URL after parameter stripping, the point of presence executes the refresh on the cached resource.</li>
+     * <li><strong>ignoreParams</strong>: parameter-ignored refresh. This refers to removing the question mark (?) and all parameters after it from the request URL. When you commit a parameter-stripped URL through this API operation, the submitted URL is matched against cached resource URLs after their parameters are also stripped. If a cached resource URL matches the submitted URL after parameter stripping, the point of presence executes the refresh on the cached resource.</li>
      * <li><strong>hostname</strong>: hostname refresh.</li>
      * <li><strong>purgeall</strong>: refreshes all cached content under the site.</li>
      * </ul>
@@ -111,7 +111,7 @@ public class PurgeCachesRequest extends TeaModel {
 
     public static class PurgeCachesRequestContentCacheKeys extends TeaModel {
         /**
-         * <p>The header information corresponding to the cache key specified during the refresh. When the custom cache key feature is enabled, the cache key is generated based on the specified headers for the refresh.</p>
+         * <p>The header information corresponding to the cache key for the refresh. When the custom cache key feature is enabled, the cache key is generated based on the specified headers for the refresh.</p>
          * <p><strong>UserGeo: country/region</strong></p>
          * <ul>
          * <li>Country/region codes follow the ISO 3166-2 standard.</li>
@@ -203,7 +203,7 @@ public class PurgeCachesRequest extends TeaModel {
         public java.util.List<String> ignoreParams;
 
         /**
-         * <p>Specifies whether to refresh the entire site. Default value: false. Set this parameter to true when Type is set to purgeall.</p>
+         * <p>Specifies whether to refresh all cached content under the site. Default value: false. Set this parameter to true when Type is set to purgeall.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

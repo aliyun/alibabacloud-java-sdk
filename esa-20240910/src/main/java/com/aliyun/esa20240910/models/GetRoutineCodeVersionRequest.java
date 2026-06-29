@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRoutineCodeVersionRequest extends TeaModel {
     /**
-     * <p>The code version.</p>
+     * <p>The code version number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetRoutineCodeVersionRequest extends TeaModel {
     public String codeVersion;
 
     /**
-     * <p>The routine name.</p>
+     * <p>The name of the Edge Routine.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,13 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpdateSitePauseRequest extends TeaModel {
     /**
-     * <p>Indicates whether to pause proxy acceleration for the site. If set to <code>true</code>, DNS queries for the site return the record values directly to the client. Valid values:</p>
+     * <p>Specifies whether to temporarily pause the proxy acceleration feature for the entire site. After the feature is paused, all DNS records directly return record values to the client. Valid values:</p>
      * <ul>
-     * <li><p>true: Pauses proxy acceleration for the site.</p>
-     * </li>
-     * <li><p>false: Resumes proxy acceleration for the site.</p>
-     * </li>
+     * <li>true: Pauses site acceleration.</li>
+     * <li>false: Resumes normal site acceleration.</li>
      * </ul>
+     * <p>When site acceleration is paused, only activated sites with NS access mode are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +20,7 @@ public class UpdateSitePauseRequest extends TeaModel {
     public Boolean paused;
 
     /**
-     * <p>The site ID. To obtain this ID, call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID. Check the Status field to confirm the site status and the AccessType field to confirm the access mode of the site.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

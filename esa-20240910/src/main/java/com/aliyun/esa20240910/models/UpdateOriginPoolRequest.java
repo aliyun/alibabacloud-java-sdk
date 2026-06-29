@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateOriginPoolRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the origin pool:</p>
+     * <p>Specifies whether the origin address pool is enabled. Valid values:</p>
      * <ul>
-     * <li><p>true: Enables the origin pool.</p>
-     * </li>
-     * <li><p>false: Disables the origin pool.</p>
-     * </li>
+     * <li>true: Enabled.</li>
+     * <li>false: Not enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class UpdateOriginPoolRequest extends TeaModel {
     public Boolean enabled;
 
     /**
-     * <p>The origin pool ID. Get this ID by calling the <a href="~~ListOriginPools~~">ListOriginPools</a> operation.</p>
+     * <p>The origin address pool ID. You can call the <a href="~~ListOriginPools~~">ListOriginPools</a> operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,13 +28,13 @@ public class UpdateOriginPoolRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>An array of origin configurations.</p>
+     * <p>The origin server information added to the origin address pool. Use an array to pass multiple origin servers.</p>
      */
     @NameInMap("Origins")
     public java.util.List<UpdateOriginPoolRequestOrigins> origins;
 
     /**
-     * <p>The site ID. Get this ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
+     * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -84,7 +82,7 @@ public class UpdateOriginPoolRequest extends TeaModel {
 
     public static class UpdateOriginPoolRequestOriginsAuthConf extends TeaModel {
         /**
-         * <p>The access key for private authentication. Required for private origins.</p>
+         * <p>The AccessKey required for private authentication.</p>
          * 
          * <strong>example:</strong>
          * <p>yourAccessKeyID</p>
@@ -95,14 +93,10 @@ public class UpdateOriginPoolRequest extends TeaModel {
         /**
          * <p>The authentication type. Valid values:</p>
          * <ul>
-         * <li><p>public: For public OSS or S3 origins.</p>
-         * </li>
-         * <li><p>private_same_account: For private OSS origins in the same account.</p>
-         * </li>
-         * <li><p>private_cross_account: For private OSS origins that use cross-account authentication.</p>
-         * </li>
-         * <li><p>private: For private S3 origins.</p>
-         * </li>
+         * <li>public: public read/write. Use this value when the origin server is OSS or S3 with public read/write access.</li>
+         * <li>private_same_account: private same-account. Use this value when the origin server is OSS with same-account private authentication.</li>
+         * <li>private_cross_account: private cross-account. Use this value when the origin server is OSS with cross-account private authentication.</li>
+         * <li>private: Use this value when the origin server is S3 with private authentication.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -112,7 +106,7 @@ public class UpdateOriginPoolRequest extends TeaModel {
         public String authType;
 
         /**
-         * <p>The region of the origin. This parameter is required if the origin type is S3.</p>
+         * <p>The region of the origin server required when the origin server is AWS S3.</p>
          * 
          * <strong>example:</strong>
          * <p>us-east-1</p>
@@ -121,7 +115,7 @@ public class UpdateOriginPoolRequest extends TeaModel {
         public String region;
 
         /**
-         * <p>The secret key for private authentication. Required for private origins.</p>
+         * <p>The SecretKey required for private authentication.</p>
          * 
          * <strong>example:</strong>
          * <p>yourAccessKeySecret</p>
@@ -130,7 +124,7 @@ public class UpdateOriginPoolRequest extends TeaModel {
         public String secretKey;
 
         /**
-         * <p>The signature version. This parameter is required if the origin type is S3.</p>
+         * <p>The signature version required when the origin server is AWS S3.</p>
          * 
          * <strong>example:</strong>
          * <p>v2</p>
@@ -187,7 +181,7 @@ public class UpdateOriginPoolRequest extends TeaModel {
 
     public static class UpdateOriginPoolRequestOrigins extends TeaModel {
         /**
-         * <p>The origin\&quot;s domain name or IP address.</p>
+         * <p>The addresses of the origin server, such as <a href="http://www.example.com">www.example.com</a>.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -196,18 +190,16 @@ public class UpdateOriginPoolRequest extends TeaModel {
         public String address;
 
         /**
-         * <p>The authentication configuration. Required for private OSS or S3 origins.</p>
+         * <p>The authentication information. This parameter is required when the origin server is OSS, S3, or another origin server that requires authentication.</p>
          */
         @NameInMap("AuthConf")
         public UpdateOriginPoolRequestOriginsAuthConf authConf;
 
         /**
-         * <p>Specifies whether to enable the origin:</p>
+         * <p>Specifies whether the origin server is enabled. Valid values:</p>
          * <ul>
-         * <li><p>true: Enables the origin.</p>
-         * </li>
-         * <li><p>false: Disables the origin.</p>
-         * </li>
+         * <li>true: Enabled.</li>
+         * <li>false: Not enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -217,7 +209,7 @@ public class UpdateOriginPoolRequest extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The request header to add to back-to-origin requests. Only the Host header is supported.</p>
+         * <p>The request header included in back-to-origin requests. Only Host is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -230,16 +222,12 @@ public class UpdateOriginPoolRequest extends TeaModel {
         public Object header;
 
         /**
-         * <p>The IP version policy for back-to-origin requests. Valid values:</p>
+         * <p>The IP protocol version used for back-to-origin requests. Valid values:</p>
          * <ul>
-         * <li><p>round_robin: (Default) Randomly selects an IPv4 or IPv6 origin.</p>
-         * </li>
-         * <li><p>ipv4_first: Prioritizes IPv4 origins.</p>
-         * </li>
-         * <li><p>ipv6_first: Prioritizes IPv6 origins.</p>
-         * </li>
-         * <li><p>follow: Uses the same IP version as the client request.</p>
-         * </li>
+         * <li>round_robin: default policy. Randomly polls IPv4 or IPv6 origin servers.</li>
+         * <li>ipv4_first: preferentially uses IPv4 origin servers.</li>
+         * <li>ipv6_first: preferentially uses IPv6 origin servers.</li>
+         * <li>follow: preferentially follows the IP version used by the client.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -249,7 +237,7 @@ public class UpdateOriginPoolRequest extends TeaModel {
         public String ipVersionPolicy;
 
         /**
-         * <p>The name of the origin. The name must be unique within the origin pool.</p>
+         * <p>The origin server name. The name must be unique within an origin address pool.</p>
          * 
          * <strong>example:</strong>
          * <p>origin1</p>
@@ -258,14 +246,11 @@ public class UpdateOriginPoolRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The origin type. Valid values:</p>
+         * <p>The origin server type. Valid values:</p>
          * <ul>
-         * <li><p>ip_domain: An IP address or a domain name.</p>
-         * </li>
-         * <li><p>OSS: An OSS origin.</p>
-         * </li>
-         * <li><p>S3: An AWS S3 origin.</p>
-         * </li>
+         * <li>ip_domain: an IP address or domain name-based origin server.</li>
+         * <li>OSS: an OSS address-based origin server.</li>
+         * <li>S3: an AWS S3 origin server.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -275,7 +260,7 @@ public class UpdateOriginPoolRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The weight of the origin. The value must be an integer from 0 to 100.</p>
+         * <p>The weight. The value is an integer from 0 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>

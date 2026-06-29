@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListTransportLayerApplicationsResponseBody extends TeaModel {
     /**
-     * <p>A list of transport layer applications.</p>
+     * <p>The list of Layer 4 applications.</p>
      */
     @NameInMap("Applications")
     public java.util.List<ListTransportLayerApplicationsResponseBodyApplications> applications;
 
     /**
-     * <p>The current page number.</p>
+     * <p>The current page number, same as the PageNumber request parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +38,7 @@ public class ListTransportLayerApplicationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of transport layer applications.</p>
+     * <p>The total number of Layer 4 applications.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,16 +93,12 @@ public class ListTransportLayerApplicationsResponseBody extends TeaModel {
 
     public static class ListTransportLayerApplicationsResponseBodyApplicationsRules extends TeaModel {
         /**
-         * <p>Specifies whether and how to pass the client\&quot;s IP address to the origin server. Valid values:</p>
+         * <p>The client IP pass-through protocol. Supported values:</p>
          * <ul>
-         * <li><p><strong>off</strong>: Disables client IP pass-through.</p>
-         * </li>
-         * <li><p><strong>PPv1</strong>: The PROXY Protocol v1, which supports client IP pass-through for TCP traffic.</p>
-         * </li>
-         * <li><p><strong>PPv2</strong>: The PROXY Protocol v2, which supports client IP pass-through for both TCP and UDP traffic.</p>
-         * </li>
-         * <li><p><strong>SPP</strong>: The Simple Proxy Protocol, which supports client IP pass-through for UDP traffic.</p>
-         * </li>
+         * <li><strong>off</strong>: Disabled.</li>
+         * <li><strong>PPv1</strong>: PROXY Protocol v1, which supports client IP pass-through for TCP protocol.</li>
+         * <li><strong>PPv2</strong>: PROXY Protocol v2, which supports client IP pass-through for TCP and UDP protocols.</li>
+         * <li><strong>SPP</strong>: Simple Proxy Protocol, which supports client IP pass-through for UDP protocol.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -121,14 +117,11 @@ public class ListTransportLayerApplicationsResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>The edge port. The following formats are supported:</p>
+         * <p>The edge port. Supported formats:</p>
          * <ul>
-         * <li><p>A single port, for example, <code>80</code>.</p>
-         * </li>
-         * <li><p>A port range, for example, <code>81-85</code>, which includes ports 81, 82, 83, 84, and 85.</p>
-         * </li>
-         * <li><p>A combination of ports and port ranges separated by commas, for example, <code>80,81-85,90</code>, which includes ports 80, 81, 82, 83, 84, 85, and 90.</p>
-         * </li>
+         * <li>A single port, such as 80.</li>
+         * <li>A port range, such as 81-85, which represents ports 81, 82, 83, 84, and 85.</li>
+         * <li>A combination of ports and port ranges separated by commas, such as 80,81-85,90, which represents ports 80, 81, 82, 83, 84, 85, and 90.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -140,10 +133,8 @@ public class ListTransportLayerApplicationsResponseBody extends TeaModel {
         /**
          * <p>The protocol of the forwarding rule. Valid values:</p>
          * <ul>
-         * <li><p><strong>TCP</strong>: The TCP protocol.</p>
-         * </li>
-         * <li><p><strong>UDP</strong>: The UDP protocol.</p>
-         * </li>
+         * <li>TCP: TCP protocol.</li>
+         * <li>UDP: UDP protocol.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -153,7 +144,7 @@ public class ListTransportLayerApplicationsResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The unique ID of the forwarding rule.</p>
+         * <p>The Layer 4 acceleration rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>20258028****</p>
@@ -162,7 +153,7 @@ public class ListTransportLayerApplicationsResponseBody extends TeaModel {
         public Long ruleId;
 
         /**
-         * <p>The origin address. The value of this parameter must match the <code>SourceType</code>.</p>
+         * <p>The specific value of the origin, which must match the origin type.</p>
          * 
          * <strong>example:</strong>
          * <p>1.1.1.1</p>
@@ -171,12 +162,10 @@ public class ListTransportLayerApplicationsResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The origin port. The following formats are supported:</p>
+         * <p>The origin port. Supported formats:</p>
          * <ul>
-         * <li><p>A single port. If you specify a single origin port, you can use any valid combination of edge ports.</p>
-         * </li>
-         * <li><p>A port range. The origin port can be a port range only if the edge port is also a port range. The number of ports in the origin port range must be the same as that in the edge port range. For example, if the edge port range is <code>90-93</code> (which contains 4 ports), you cannot set the origin port range to <code>81-85</code> (which contains 5 ports) because their sizes do not match.</p>
-         * </li>
+         * <li>A single port. When the origin port is a single port, any valid combination of edge ports is supported.</li>
+         * <li>A port range. The origin port can be set to a port range only when the edge port is a port range, and the range size must be the same as that of the edge port. For example, if the edge port is 90-93, the origin port cannot be set to 81-85, because the origin port range size is 5 while the edge port range size is 3, which are inconsistent.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -186,16 +175,12 @@ public class ListTransportLayerApplicationsResponseBody extends TeaModel {
         public String sourcePort;
 
         /**
-         * <p>The origin type. Valid values:</p>
+         * <p>The origin type. Supported values:</p>
          * <ul>
-         * <li><p><strong>ip</strong>: An IP address.</p>
-         * </li>
-         * <li><p><strong>domain</strong>: A domain name.</p>
-         * </li>
-         * <li><p><strong>OP</strong>: An origin pool.</p>
-         * </li>
-         * <li><p><strong>LB</strong>: A load balancer.</p>
-         * </li>
+         * <li><strong>ip</strong>: IP address.</li>
+         * <li><strong>domain</strong>: Domain name.</li>
+         * <li><strong>OP</strong>: Origin pool.</li>
+         * <li><strong>LB</strong>: Load balancer.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -286,14 +271,11 @@ public class ListTransportLayerApplicationsResponseBody extends TeaModel {
         public String address;
 
         /**
-         * <p>The health status of the IP address. Valid values:</p>
+         * <p>The status of the IP address. Valid values:</p>
          * <ul>
-         * <li><p>healthy: The IP address is passing health checks.</p>
-         * </li>
-         * <li><p>unhealthy: The IP address is failing health checks.</p>
-         * </li>
-         * <li><p>unknown: The IP address is being provisioned.</p>
-         * </li>
+         * <li>healthy: Healthy.</li>
+         * <li>unhealthy: Unhealthy.</li>
+         * <li>unknown: IP address is being prepared.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -327,7 +309,7 @@ public class ListTransportLayerApplicationsResponseBody extends TeaModel {
 
     public static class ListTransportLayerApplicationsResponseBodyApplications extends TeaModel {
         /**
-         * <p>The transport layer application ID.</p>
+         * <p>The Layer 4 application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>170997271816****</p>
@@ -336,7 +318,7 @@ public class ListTransportLayerApplicationsResponseBody extends TeaModel {
         public Long applicationId;
 
         /**
-         * <p>The CNAME for the transport layer application. This parameter is returned only when the site is onboarded by using a CNAME record.</p>
+         * <p>The CNAME domain name corresponding to the Layer 4 acceleration application. This field is non-empty only when the site is connected via the CNAME method.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com.ialicdn.com</p>
@@ -345,12 +327,10 @@ public class ListTransportLayerApplicationsResponseBody extends TeaModel {
         public String cname;
 
         /**
-         * <p>Specifies whether cross-border optimization is enabled for Chinese mainland network access. By default, this feature is disabled. Valid values:</p>
+         * <p>Indicates whether mainland China network access optimization is enabled. Disabled by default. Valid values:</p>
          * <ul>
-         * <li><p>on: Enabled.</p>
-         * </li>
-         * <li><p>off: Disabled.</p>
-         * </li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -360,12 +340,10 @@ public class ListTransportLayerApplicationsResponseBody extends TeaModel {
         public String crossBorderOptimization;
 
         /**
-         * <p>Specifies whether the IP access rule feature is enabled. When enabled, the IP access rules in WAF apply to this transport layer application.</p>
+         * <p>The IP access rule switch. When enabled, the IP access rules in WAF take effect for the Layer 4 application.</p>
          * <ul>
-         * <li><p>on: Enabled.</p>
-         * </li>
-         * <li><p>off: Disabled.</p>
-         * </li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -375,7 +353,11 @@ public class ListTransportLayerApplicationsResponseBody extends TeaModel {
         public String ipAccessRule;
 
         /**
-         * <p>Specifies whether IPv6 is enabled.</p>
+         * <p>The IPv6 switch. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -384,13 +366,20 @@ public class ListTransportLayerApplicationsResponseBody extends TeaModel {
         public String ipv6;
 
         /**
-         * <p>Specifies whether keep-alive protection is enabled.</p>
+         * <p>Indicates whether keep-alive protection is enabled. Disabled by default. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         @NameInMap("KeepAliveProtection")
         public String keepAliveProtection;
 
         /**
-         * <p>The domain name of the transport layer application.</p>
+         * <p>The domain name of the Layer 4 application.</p>
          * 
          * <strong>example:</strong>
          * <p>test.example.com</p>
@@ -399,13 +388,13 @@ public class ListTransportLayerApplicationsResponseBody extends TeaModel {
         public String recordName;
 
         /**
-         * <p>A list of forwarding rules.</p>
+         * <p>The list of forwarding rules.</p>
          */
         @NameInMap("Rules")
         public java.util.List<ListTransportLayerApplicationsResponseBodyApplicationsRules> rules;
 
         /**
-         * <p>The number of forwarding rules in the transport layer application.</p>
+         * <p>The number of forwarding rules contained in the Layer 4 acceleration application.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -423,12 +412,10 @@ public class ListTransportLayerApplicationsResponseBody extends TeaModel {
         public Long siteId;
 
         /**
-         * <p>Specifies whether the static IP feature is enabled. By default, this feature is disabled. Valid values:</p>
+         * <p>Indicates whether static IP is enabled. Disabled by default. Valid values:</p>
          * <ul>
-         * <li><p>on: Enabled.</p>
-         * </li>
-         * <li><p>off: Disabled.</p>
-         * </li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -438,19 +425,17 @@ public class ListTransportLayerApplicationsResponseBody extends TeaModel {
         public String staticIp;
 
         /**
-         * <p>A list of static IPv4 addresses assigned to the application when the static IP feature is enabled.</p>
+         * <p>The list of static IPv4 addresses assigned to this Layer 4 application after the static IP feature is enabled.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("StaticIpV4List")
         public java.util.List<ListTransportLayerApplicationsResponseBodyApplicationsStaticIpV4List> staticIpV4List;
 
         /**
-         * <p>The status of the transport layer application. Valid values:</p>
+         * <p>The status of the Layer 4 application.</p>
          * <ul>
-         * <li><p><strong>deploying</strong>: The application is being deployed. You cannot modify or delete the application in this state.</p>
-         * </li>
-         * <li><p><strong>active</strong>: The application is running.</p>
-         * </li>
+         * <li><strong>deploying</strong>: Deploying. Modification and deletion are not allowed in this state.</li>
+         * <li><strong>active</strong>: Active.</li>
          * </ul>
          * 
          * <strong>example:</strong>

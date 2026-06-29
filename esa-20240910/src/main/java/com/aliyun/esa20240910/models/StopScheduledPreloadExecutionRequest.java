@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopScheduledPreloadExecutionRequest extends TeaModel {
     /**
-     * <p>The prefetch plan ID. You can obtain this value from the SuccessExecutions[].Id field returned by CreateScheduledPreloadExecutions. Before calling this operation, create a prefetch job by calling CreateScheduledPreloadJob, and then create an execution plan by calling CreateScheduledPreloadExecutions.</p>
+     * <p>The preload plan ID, obtained from the SuccessExecutions[].Id field returned by CreateScheduledPreloadExecutions. Before calling this API, you must first create a preload task by calling CreateScheduledPreloadJob, and then create an execution plan by calling CreateScheduledPreloadExecutions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -14,14 +14,12 @@ public class ListOriginRulesRequest extends TeaModel {
     public Long configId;
 
     /**
-     * <p>Filters the results by configuration type. Valid values:</p>
+     * <p>The configuration type. You can use this parameter to query global or rule configurations. Valid values:</p>
      * <ul>
-     * <li><p><code>global</code>: Queries the global configuration.</p>
-     * </li>
-     * <li><p><code>rule</code>: Queries rule configurations.</p>
-     * </li>
+     * <li>global: Query global configurations.</li>
+     * <li>rule: Query rule configurations.</li>
      * </ul>
-     * <p>If you do not specify this parameter, the operation returns both global and rule configurations.</p>
+     * <p>This parameter is optional. If not specified, both global and rule configurations are returned without distinction.</p>
      * 
      * <strong>example:</strong>
      * <p>global</p>
@@ -30,7 +28,7 @@ public class ListOriginRulesRequest extends TeaModel {
     public String configType;
 
     /**
-     * <p>The page number. The default value is 1.</p>
+     * <p>The page number for paginated queries. The value must be greater than or equal to 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -39,7 +37,7 @@ public class ListOriginRulesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. The maximum value is 500, and the default value is 20.</p>
+     * <p>The number of entries per page for paginated queries. Valid values: 1 to 500. Default value: 500.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -48,7 +46,7 @@ public class ListOriginRulesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The rule name. This parameter is not required when querying the global configuration.</p>
+     * <p>The rule name. You do not need to set this parameter when adding a global configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -57,7 +55,7 @@ public class ListOriginRulesRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The site ID. You can obtain this ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
+     * <p>The site ID. You can obtain the site ID by calling the <a href="~~ListSites~~">ListSites</a> API operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,7 +65,7 @@ public class ListOriginRulesRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>Specifies the site version to query. This parameter applies only to sites that have version management enabled. The default value is 0.</p>
+     * <p>The version number of the site. For sites with version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRedirectRuleResponseBody extends TeaModel {
     /**
-     * <p>The config ID.</p>
+     * <p>The configuration ID.</p>
      * 
      * <strong>example:</strong>
      * <p>35281609698****</p>

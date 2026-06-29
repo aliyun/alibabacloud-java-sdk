@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListHttpIncomingResponseHeaderModificationRulesResponseBody extends TeaModel {
     /**
-     * <p>The list of incoming response header modification rules.</p>
+     * <p>The list of configurations for modifying HTTP incoming response headers.</p>
      */
     @NameInMap("Configs")
     public java.util.List<ListHttpIncomingResponseHeaderModificationRulesResponseBodyConfigs> configs;
 
     /**
-     * <p>The number of the returned page. Default value: 1</p>
+     * <p>The current page number, which is the same as the PageNumber request parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -47,7 +47,7 @@ public class ListHttpIncomingResponseHeaderModificationRulesResponseBody extends
     public Integer totalCount;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -110,7 +110,7 @@ public class ListHttpIncomingResponseHeaderModificationRulesResponseBody extends
 
     public static class ListHttpIncomingResponseHeaderModificationRulesResponseBodyConfigsResponseHeaderModification extends TeaModel {
         /**
-         * <p>The name of the response header.</p>
+         * <p>The response header name.</p>
          * 
          * <strong>example:</strong>
          * <p>headerName</p>
@@ -119,7 +119,7 @@ public class ListHttpIncomingResponseHeaderModificationRulesResponseBody extends
         public String name;
 
         /**
-         * <p>The action. Specifies whether to check the image used by the instance supports hot migration. Valid values:</p>
+         * <p>The operation type. Valid values:</p>
          * <ul>
          * <li>add: adds a response header.</li>
          * <li>del: deletes a response header.</li>
@@ -133,10 +133,10 @@ public class ListHttpIncomingResponseHeaderModificationRulesResponseBody extends
         public String operation;
 
         /**
-         * <p>The type of the header. Valid values:</p>
+         * <p>The value type. Valid values:</p>
          * <ul>
-         * <li>static</li>
-         * <li>dynamic</li>
+         * <li>static: static pattern.</li>
+         * <li>dynamic: dynamic schema.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -146,7 +146,7 @@ public class ListHttpIncomingResponseHeaderModificationRulesResponseBody extends
         public String type;
 
         /**
-         * <p>The value of the response header.</p>
+         * <p>The response header value.</p>
          * 
          * <strong>example:</strong>
          * <p>headerValue</p>
@@ -204,7 +204,7 @@ public class ListHttpIncomingResponseHeaderModificationRulesResponseBody extends
         public Long configId;
 
         /**
-         * <p>The type of the configuration. Specifies whether to check the image used by the instance supports hot migration. Valid values:</p>
+         * <p>The configuration type. Valid values:</p>
          * <ul>
          * <li>global: global configuration.</li>
          * <li>rule: rule configuration.</li>
@@ -217,16 +217,16 @@ public class ListHttpIncomingResponseHeaderModificationRulesResponseBody extends
         public String configType;
 
         /**
-         * <p>The configurations of modifying response headers. You can add, delete, or modify a response header.</p>
+         * <p>The response header modifications. Three operations are supported: add, delete, and modify.</p>
          */
         @NameInMap("ResponseHeaderModification")
         public java.util.List<ListHttpIncomingResponseHeaderModificationRulesResponseBodyConfigsResponseHeaderModification> responseHeaderModification;
 
         /**
-         * <p>The content of the rule. A conditional expression is used to match a user request. You do not need to set this parameter when you add global configuration. Use cases:</p>
+         * <p>The rule content, which uses a conditional expression to match user requests. This parameter does not need to be set when adding a global configuration. Two scenarios are supported:</p>
          * <ul>
-         * <li>true: Match all incoming requests.</li>
-         * <li>Set the value to a custom expression, for example:(http.host eq &quot;video.example.com&quot;): Match the specified request.</li>
+         * <li>Match all incoming requests: set the value to true.</li>
+         * <li>Match specified requests: set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -236,10 +236,10 @@ public class ListHttpIncomingResponseHeaderModificationRulesResponseBody extends
         public String rule;
 
         /**
-         * <p>Specifies whether to enable the rule. Valid values: You do not need to set this parameter when you add global configuration. Specifies whether to check the image used by the instance supports hot migration. Valid values:</p>
+         * <p>The rule switch. This parameter does not need to be set when adding a global configuration. Valid values:</p>
          * <ul>
-         * <li>on</li>
-         * <li>off</li>
+         * <li>on: enabled.</li>
+         * <li>off: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -249,7 +249,7 @@ public class ListHttpIncomingResponseHeaderModificationRulesResponseBody extends
         public String ruleEnable;
 
         /**
-         * <p>The rule name. You do not need to set this parameter when you add global configuration.</p>
+         * <p>The rule name. This parameter does not need to be set when adding a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -258,7 +258,7 @@ public class ListHttpIncomingResponseHeaderModificationRulesResponseBody extends
         public String ruleName;
 
         /**
-         * <p>The order in which the rule is executed. A smaller value gives priority to the rule.</p>
+         * <p>The execution order of the rule. A smaller value indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -267,7 +267,7 @@ public class ListHttpIncomingResponseHeaderModificationRulesResponseBody extends
         public Integer sequence;
 
         /**
-         * <p>The version number of the website configurations. You can use this parameter to specify a version of your website to apply the feature settings. By default, version 0 is used.</p>
+         * <p>The version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. The default value is version 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

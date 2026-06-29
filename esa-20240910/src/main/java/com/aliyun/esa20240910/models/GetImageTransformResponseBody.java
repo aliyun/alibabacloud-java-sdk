@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetImageTransformResponseBody extends TeaModel {
     /**
+     * <p>Specifies whether to enable adaptive AVIF. Valid values:</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -12,6 +18,12 @@ public class GetImageTransformResponseBody extends TeaModel {
     public String autoAvif;
 
     /**
+     * <p>Specifies whether to enable adaptive WebP. Valid values:</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -19,7 +31,7 @@ public class GetImageTransformResponseBody extends TeaModel {
     public String autoWebp;
 
     /**
-     * <p>The config ID.</p>
+     * <p>The configuration ID.</p>
      * 
      * <strong>example:</strong>
      * <p>352816096987136</p>
@@ -30,10 +42,8 @@ public class GetImageTransformResponseBody extends TeaModel {
     /**
      * <p>The configuration type. Valid values:</p>
      * <ul>
-     * <li><p>global: The global configuration.</p>
-     * </li>
-     * <li><p>rule: A rule configuration.</p>
-     * </li>
+     * <li>global: global configuration.</li>
+     * <li>rule: rule configuration.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,12 +53,10 @@ public class GetImageTransformResponseBody extends TeaModel {
     public String configType;
 
     /**
-     * <p>Indicates whether image transformation is enabled. Valid values:</p>
+     * <p>Specifies whether to enable image transformation. Valid values:</p>
      * <ul>
-     * <li><p>on: Enabled.</p>
-     * </li>
-     * <li><p>off: Disabled.</p>
-     * </li>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,12 +75,10 @@ public class GetImageTransformResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The conditional expression of the rule, used to match user requests. This parameter is relevant only for a rule configuration.</p>
+     * <p>The rule content, which uses a conditional expression to match user requests. This parameter does not need to be set when you add a global configuration. Two scenarios are supported:</p>
      * <ul>
-     * <li><p>A value of true matches all incoming requests.</p>
-     * </li>
-     * <li><p>A custom expression, such as (http.host eq &quot;video.example.com&quot;), matches specific requests.</p>
-     * </li>
+     * <li>Match all incoming requests: Set the value to true.</li>
+     * <li>Match specified requests: Set the value to a custom expression, such as (http.host eq \&quot;video.example.com\&quot;).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -82,12 +88,10 @@ public class GetImageTransformResponseBody extends TeaModel {
     public String rule;
 
     /**
-     * <p>The status of the rule. This parameter is relevant only for a rule configuration. Valid values:</p>
+     * <p>The rule switch. This parameter does not need to be set when you add a global configuration. Valid values:</p>
      * <ul>
-     * <li><p>on: Enabled.</p>
-     * </li>
-     * <li><p>off: Disabled.</p>
-     * </li>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,7 +101,7 @@ public class GetImageTransformResponseBody extends TeaModel {
     public String ruleEnable;
 
     /**
-     * <p>The rule name. This parameter is relevant only for a rule configuration.</p>
+     * <p>The rule name. This parameter does not need to be set when you add a global configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -106,7 +110,7 @@ public class GetImageTransformResponseBody extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The execution sequence of the rule. A smaller value indicates a higher execution priority.</p>
+     * <p>The rule execution order. A smaller value indicates a higher priority.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -115,7 +119,7 @@ public class GetImageTransformResponseBody extends TeaModel {
     public Integer sequence;
 
     /**
-     * <p>The version number of the site configuration. For a site that has configuration versioning enabled, this value indicates the version to which the configuration applies. The default value is 0.</p>
+     * <p>The version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. The default value is version 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

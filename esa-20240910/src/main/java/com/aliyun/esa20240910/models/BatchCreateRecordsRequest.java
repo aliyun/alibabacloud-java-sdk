@@ -12,7 +12,7 @@ public class BatchCreateRecordsRequest extends TeaModel {
     public java.util.List<BatchCreateRecordsRequestRecordList> recordList;
 
     /**
-     * <p>The ID of the site. You can get this ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class BatchCreateRecordsRequest extends TeaModel {
 
     public static class BatchCreateRecordsRequestRecordListAuthConf extends TeaModel {
         /**
-         * <p>The access key ID of the account that owns the origin. This parameter is required when the origin type is <code>OSS</code> and the authentication type is <code>private_cross_account</code>, or when the origin type is <code>S3</code> and the authentication type is <code>private</code>.</p>
+         * <p>The AccessKey of the account to which the origin belongs. This parameter is required when the origin type is OSS and the authentication type is private cross-account read, or when the origin type is S3 and the authentication type is private read.</p>
          * 
          * <strong>example:</strong>
          * <p>u0Nkg5gBK*******QF5wvKMM504JUHt</p>
@@ -53,16 +53,12 @@ public class BatchCreateRecordsRequest extends TeaModel {
         public String accessKey;
 
         /**
-         * <p>The type of origin authentication. Supported authentication types depend on the origin type, which is specified by the <code>SourceType</code> parameter. This parameter is required when the origin type is <code>OSS</code> or <code>S3</code>. Valid values:</p>
+         * <p>The origin authentication type. Different origin types support different authentication types. The origin type refers to the SourceType parameter in this operation. When the origin type is OSS or S3, you must specify the authentication type. Valid values:</p>
          * <ul>
-         * <li><p><strong>public</strong>: For OSS or S3 origins with public read access.</p>
-         * </li>
-         * <li><p><strong>private</strong>: For S3 origins with private read access.</p>
-         * </li>
-         * <li><p><strong>private_same_account</strong>: For OSS origins with private read access within the same Alibaba Cloud account.</p>
-         * </li>
-         * <li><p><strong>private_cross_account</strong>: For OSS origins with private read access from a different Alibaba Cloud account.</p>
-         * </li>
+         * <li><strong>public</strong>: public read. Select this value when the origin type is OSS or S3 and the origin allows public read access.</li>
+         * <li><strong>private</strong>: private read. Select this value when the origin type is S3 and the origin allows only private read access.</li>
+         * <li><strong>private_same_account</strong>: private same-account read. Select this value when the origin type is OSS, the origin is under the same Alibaba Cloud account, and the origin allows only private read access.</li>
+         * <li><strong>private_cross_account</strong>: private cross-account read. Select this value when the origin type is OSS, the origin is under a different Alibaba Cloud account, and the origin allows only private read access.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -72,7 +68,7 @@ public class BatchCreateRecordsRequest extends TeaModel {
         public String authType;
 
         /**
-         * <p>The region where the S3 origin is located. This parameter is required when the origin type is <code>S3</code>. For a list of valid region IDs, refer to the official S3 documentation.</p>
+         * <p>The region of the origin. This parameter is required when the origin type is S3. Obtain the region from the official S3 website.</p>
          * 
          * <strong>example:</strong>
          * <p>us-east-1</p>
@@ -81,7 +77,7 @@ public class BatchCreateRecordsRequest extends TeaModel {
         public String region;
 
         /**
-         * <p>The secret key associated with the specified AccessKey. This parameter is required when the origin type is <code>OSS</code> and the authentication type is <code>private_cross_account</code>, or when the origin type is <code>S3</code> and the authentication type is <code>private</code>.</p>
+         * <p>The SecretKey of the account to which the origin belongs. This parameter is required when the origin type is OSS and the authentication type is private cross-account read, or when the origin type is S3 and the authentication type is private read.</p>
          * 
          * <strong>example:</strong>
          * <p>VIxuvJSA2S03f******kp208dy5w7</p>
@@ -90,14 +86,12 @@ public class BatchCreateRecordsRequest extends TeaModel {
         public String secretKey;
 
         /**
-         * <p>The signature algorithm version. This parameter is applicable when the origin type is <code>S3</code> and the authentication type is <code>private</code>. Supported versions:</p>
+         * <p>The signature algorithm version. This parameter is available when the origin type is S3 and the authentication type is private read. Valid values:</p>
          * <ul>
-         * <li><p><strong>v2</strong></p>
-         * </li>
-         * <li><p><strong>v4</strong></p>
-         * </li>
+         * <li><strong>v2</strong></li>
+         * <li><strong>v4</strong></li>
          * </ul>
-         * <p>If omitted, the default version is <code>v4</code>.</p>
+         * <p>Default value: v4.</p>
          * 
          * <strong>example:</strong>
          * <p>v4</p>
@@ -154,7 +148,7 @@ public class BatchCreateRecordsRequest extends TeaModel {
 
     public static class BatchCreateRecordsRequestRecordListData extends TeaModel {
         /**
-         * <p>The algorithm identifier for the record. Valid values range from <strong>0-255</strong>. This parameter applies to CERT and SSHFP records.</p>
+         * <p>The encryption algorithm used by the record. Value range: <strong>0 to 255</strong>. This parameter applies to CERT and SSHFP records.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -163,7 +157,7 @@ public class BatchCreateRecordsRequest extends TeaModel {
         public Integer algorithm;
 
         /**
-         * <p>The certificate or public key data for the record. This parameter applies to CERT, SMIMEA, and TLSA records.</p>
+         * <p>The public key certificate information of the record. This parameter applies to CERT, SMIMEA, and TLSA records.</p>
          * 
          * <strong>example:</strong>
          * <p>dGVzdGFkYWxrcw==</p>
@@ -172,7 +166,7 @@ public class BatchCreateRecordsRequest extends TeaModel {
         public String certificate;
 
         /**
-         * <p>The public key fingerprint for the record. This parameter applies to SSHFP records.</p>
+         * <p>The public key fingerprint of the record. This parameter applies to SSHFP records.</p>
          * 
          * <strong>example:</strong>
          * <p>abcdef1234567890</p>
@@ -181,7 +175,7 @@ public class BatchCreateRecordsRequest extends TeaModel {
         public String fingerprint;
 
         /**
-         * <p>The flag for the CAA record, which specifies how a Certificate Authority must handle the record. Valid values range from <strong>0-255</strong>.</p>
+         * <p>The flag of the CAA record, which indicates its priority and processing method. Value range: <strong>0 to 255</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>128</p>
@@ -190,7 +184,7 @@ public class BatchCreateRecordsRequest extends TeaModel {
         public Integer flag;
 
         /**
-         * <p>The public key identifier for the record. Valid values range from <strong>0-65535</strong>. This parameter applies to CERT records.</p>
+         * <p>The public key identifier of the record. Value range: <strong>0 to 65535</strong>. This parameter applies to CERT records.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -199,7 +193,7 @@ public class BatchCreateRecordsRequest extends TeaModel {
         public Integer keyTag;
 
         /**
-         * <p>The algorithm policy used to match or validate a certificate. Valid values range from <strong>0-255</strong>. This parameter applies to SMIMEA and TLSA records.</p>
+         * <p>The algorithm policy used to match or verify certificates. Value range: <strong>0 to 255</strong>. This parameter applies to SMIMEA and TLSA records.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -208,7 +202,7 @@ public class BatchCreateRecordsRequest extends TeaModel {
         public Integer matchingType;
 
         /**
-         * <p>The port number for the record. Valid values range from <strong>0-65535</strong>. This parameter applies only to SRV records.</p>
+         * <p>The port of the record. Value range: <strong>0 to 65535</strong>. This parameter applies only to SRV records.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -217,7 +211,7 @@ public class BatchCreateRecordsRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The priority of the record. Valid values range from <strong>0-65535</strong>. A lower value indicates a higher priority. This parameter is required for MX, SRV, or URI records.</p>
+         * <p>The priority of the record. Value range: <strong>0 to 65535</strong>. A smaller value indicates a higher priority. This parameter is required when you add MX, SRV, or URI records.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -226,7 +220,7 @@ public class BatchCreateRecordsRequest extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The type of certificate or public key used by the record. Valid values range from <strong>0-255</strong>. This parameter applies to SMIMEA and TLSA records.</p>
+         * <p>The type of certificate or public key used by the record. Value range: <strong>0 to 255</strong>. This parameter applies to SMIMEA and TLSA records.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -235,7 +229,7 @@ public class BatchCreateRecordsRequest extends TeaModel {
         public Integer selector;
 
         /**
-         * <p>The tag for the CAA record, which specifies its type and purpose, such as <code>issue</code>, <code>issuewild</code>, or <code>iodef</code>.</p>
+         * <p>The tag of the CAA record, which indicates its specific type and purpose, such as issue, issuewild, or iodef.</p>
          * 
          * <strong>example:</strong>
          * <p>issue</p>
@@ -244,7 +238,7 @@ public class BatchCreateRecordsRequest extends TeaModel {
         public String tag;
 
         /**
-         * <p>The certificate type for a CERT record or the public key type for an SSHFP record.</p>
+         * <p>The certificate type (for CERT records) or public key type (for SSHFP records) of the record.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -253,7 +247,7 @@ public class BatchCreateRecordsRequest extends TeaModel {
         public Integer type;
 
         /**
-         * <p>The usage identifier for the record. Valid values range from <strong>0-255</strong>. This parameter applies to SMIMEA and TLSA records.</p>
+         * <p>The usage identifier of the record. Value range: <strong>0 to 255</strong>. This parameter applies to SMIMEA and TLSA records.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -262,22 +256,15 @@ public class BatchCreateRecordsRequest extends TeaModel {
         public Integer usage;
 
         /**
-         * <p>The record value. The format depends on the record type.</p>
+         * <p>The record value or partial content. The meaning varies by record type:</p>
          * <ul>
-         * <li><p><strong>A/AAAA</strong>: An IP address.</p>
-         * </li>
-         * <li><p><strong>CNAME</strong>: The target domain name.</p>
-         * </li>
-         * <li><p><strong>MX</strong>: The domain name of the target mail server.</p>
-         * </li>
-         * <li><p><strong>TXT</strong>: A text string.</p>
-         * </li>
-         * <li><p><strong>CAA</strong>: The domain name of a Certificate Authority.</p>
-         * </li>
-         * <li><p><strong>SRV</strong>: The domain name of the target host.</p>
-         * </li>
-         * <li><p><strong>URI</strong>: A URI string.</p>
-         * </li>
+         * <li><strong>A/AAAA</strong>: the IP address.</li>
+         * <li><strong>CNAME</strong>: the target domain name.</li>
+         * <li><strong>MX</strong>: a valid target mail server domain name.</li>
+         * <li><strong>TXT</strong>: a valid text string.</li>
+         * <li><strong>CAA</strong>: a valid certification authority domain name.</li>
+         * <li><strong>SRV</strong>: a valid target host domain name.</li>
+         * <li><strong>URI</strong>: a valid URI string.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -287,7 +274,7 @@ public class BatchCreateRecordsRequest extends TeaModel {
         public String value;
 
         /**
-         * <p>The weight of the record. Valid values range from <strong>0-65535</strong>. This parameter applies to SRV and URI records.</p>
+         * <p>The weight of the record. Value range: <strong>0 to 65535</strong>. This parameter applies to SRV and URI records.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -416,20 +403,17 @@ public class BatchCreateRecordsRequest extends TeaModel {
 
     public static class BatchCreateRecordsRequestRecordList extends TeaModel {
         /**
-         * <p>The origin authentication information for the CNAME record.</p>
+         * <p>The origin authentication information of the CNAME record.</p>
          */
         @NameInMap("AuthConf")
         public BatchCreateRecordsRequestRecordListAuthConf authConf;
 
         /**
-         * <p>The use case for proxy acceleration. Valid values:</p>
+         * <p>The business scenario for record acceleration. Valid values:</p>
          * <ul>
-         * <li><p><strong>image_video</strong>: Images and videos.</p>
-         * </li>
-         * <li><p><strong>api</strong>: APIs.</p>
-         * </li>
-         * <li><p><strong>web</strong>: Web pages.</p>
-         * </li>
+         * <li><strong>image_video</strong>: video and image.</li>
+         * <li><strong>api</strong>: API.</li>
+         * <li><strong>web</strong>: web page.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -439,7 +423,7 @@ public class BatchCreateRecordsRequest extends TeaModel {
         public String bizName;
 
         /**
-         * <p>The content of the DNS record. The required fields depend on the record type.</p>
+         * <p>The DNS information of the record. Different fields are required based on the record type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -457,12 +441,10 @@ public class BatchCreateRecordsRequest extends TeaModel {
         public String httpsPorts;
 
         /**
-         * <p>Specifies whether to enable proxy acceleration for the record. Only CNAME and A/AAAA records support proxy acceleration. Valid values:</p>
+         * <p>Specifies whether to enable proxied acceleration for the record. Only CNAME records and A/AAAA records support proxied acceleration. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: Enables proxy acceleration.</p>
-         * </li>
-         * <li><p><strong>false</strong>: Disables proxy acceleration.</p>
-         * </li>
+         * <li><strong>true</strong>: Proxied acceleration is enabled.</li>
+         * <li><strong>false</strong>: Proxied acceleration is disabled.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -473,7 +455,7 @@ public class BatchCreateRecordsRequest extends TeaModel {
         public Boolean proxied;
 
         /**
-         * <p>The name of the record.</p>
+         * <p>The record name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -483,20 +465,15 @@ public class BatchCreateRecordsRequest extends TeaModel {
         public String recordName;
 
         /**
-         * <p>The origin type for the CNAME record. This parameter is required when you add a CNAME record. Valid values:</p>
+         * <p>The origin type of the CNAME record. This parameter is required when you add a CNAME record. Valid values:</p>
          * <ul>
-         * <li><p><strong>OSS</strong>: An OSS origin.</p>
-         * </li>
-         * <li><p><strong>S3</strong>: An S3 origin.</p>
-         * </li>
-         * <li><p><strong>LB</strong>: A load balancer origin.</p>
-         * </li>
-         * <li><p><strong>OP</strong>: An origin pool origin.</p>
-         * </li>
-         * <li><p><strong>Domain</strong>: A domain name origin.</p>
-         * </li>
+         * <li><strong>OSS</strong>: OSS origin.</li>
+         * <li><strong>S3</strong>: S3 origin.</li>
+         * <li><strong>LB</strong>: load balancing origin.</li>
+         * <li><strong>OP</strong>: IPAM pool origin.</li>
+         * <li><strong>Domain</strong>: common domain name origin.</li>
          * </ul>
-         * <p>If omitted or left empty, this parameter defaults to <code>Domain</code>.</p>
+         * <p>If this parameter is left empty or not specified, the default value is Domain, which indicates a common domain name origin.</p>
          * 
          * <strong>example:</strong>
          * <p>OSS</p>
@@ -505,7 +482,7 @@ public class BatchCreateRecordsRequest extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The Time to Live (TTL) for the record, in seconds. A value of <code>1</code> indicates an automatic TTL.</p>
+         * <p>The time-to-live (TTL) of the record, in seconds. A value of 1 indicates that the TTL is set to automatic.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -515,7 +492,7 @@ public class BatchCreateRecordsRequest extends TeaModel {
         public Integer ttl;
 
         /**
-         * <p>The type of the DNS record.</p>
+         * <p>The DNS type of the record.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

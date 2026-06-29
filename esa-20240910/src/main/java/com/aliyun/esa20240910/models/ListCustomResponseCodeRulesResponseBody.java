@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListCustomResponseCodeRulesResponseBody extends TeaModel {
     /**
-     * <p>You can modify the response code configuration list.</p>
+     * <p>The list of custom response code configurations.</p>
      */
     @NameInMap("Configs")
     public java.util.List<ListCustomResponseCodeRulesResponseBodyConfigs> configs;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>Page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListCustomResponseCodeRulesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The page size. Default value: 500. Valid values: 1 to 500.</p>
+     * <p>Page size. Default value: 500. Valid values: 1 to 500.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -29,7 +29,7 @@ public class ListCustomResponseCodeRulesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -38,7 +38,7 @@ public class ListCustomResponseCodeRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>Total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -47,7 +47,7 @@ public class ListCustomResponseCodeRulesResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The total number of pages.</p>
+     * <p>Total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -110,7 +110,7 @@ public class ListCustomResponseCodeRulesResponseBody extends TeaModel {
 
     public static class ListCustomResponseCodeRulesResponseBodyConfigs extends TeaModel {
         /**
-         * <p>The configuration ID.</p>
+         * <p>Configuration ID.</p>
          * 
          * <strong>example:</strong>
          * <p>395386449776640</p>
@@ -121,10 +121,8 @@ public class ListCustomResponseCodeRulesResponseBody extends TeaModel {
         /**
          * <p>The configuration type. Valid values:</p>
          * <ul>
-         * <li><p>global: Global configuration.</p>
-         * </li>
-         * <li><p>rule: Rule configuration.</p>
-         * </li>
+         * <li>global: global configuration.</li>
+         * <li>rule: rule configuration.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -152,12 +150,10 @@ public class ListCustomResponseCodeRulesResponseBody extends TeaModel {
         public String returnCode;
 
         /**
-         * <p>The rule content. Use a conditional expression to match user requests. Do not set this parameter when adding a global configuration. There are two scenarios:</p>
+         * <p>The rule content, which uses conditional expressions to match user requests. You do not need to set this parameter when adding a global configuration. Two usage scenarios are supported:</p>
          * <ul>
-         * <li><p>Match all incoming requests: Set the value to true.</p>
-         * </li>
-         * <li><p>Match specific requests: Set the value to a custom expression, such as (http.host eq &quot;video.example.com&quot;).</p>
-         * </li>
+         * <li>Match all incoming requests: set the value to true.</li>
+         * <li>Match specific requests: set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -167,12 +163,10 @@ public class ListCustomResponseCodeRulesResponseBody extends TeaModel {
         public String rule;
 
         /**
-         * <p>The rule switch. Do not set this parameter when adding a global configuration. Valid values:</p>
+         * <p>The rule switch. You do not need to set this parameter when adding a global configuration. Valid values:</p>
          * <ul>
-         * <li><p>on: Enabled.</p>
-         * </li>
-         * <li><p>off: Disabled.</p>
-         * </li>
+         * <li>on: enables the rule.</li>
+         * <li>off: disables the rule.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -182,7 +176,7 @@ public class ListCustomResponseCodeRulesResponseBody extends TeaModel {
         public String ruleEnable;
 
         /**
-         * <p>The rule name. Do not set this parameter when adding a global configuration.</p>
+         * <p>The rule name. You do not need to set this parameter when adding a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -191,7 +185,7 @@ public class ListCustomResponseCodeRulesResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The rule execution order. A smaller value indicates higher priority.</p>
+         * <p>The execution order of the rule. A smaller value indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -200,7 +194,7 @@ public class ListCustomResponseCodeRulesResponseBody extends TeaModel {
         public Integer sequence;
 
         /**
-         * <p>The version number of the site configuration. For sites with configuration version control enabled, this parameter specifies the site version for which the configuration takes effect. The default value is version 0.</p>
+         * <p>The version number of the site configuration. For sites with configuration version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

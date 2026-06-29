@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateImageTransformRequest extends TeaModel {
     /**
+     * <p>The adaptive AVIF setting.</p>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -12,6 +14,8 @@ public class UpdateImageTransformRequest extends TeaModel {
     public String autoAvif;
 
     /**
+     * <p>The adaptive WebP setting.</p>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -19,7 +23,7 @@ public class UpdateImageTransformRequest extends TeaModel {
     public String autoWebp;
 
     /**
-     * <p>The configuration ID. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2869056.html">ListImageTransforms</a> operation.</p>
+     * <p>The configuration ID. You can call the <a href="https://help.aliyun.com/document_detail/2869056.html">ListImageTransforms</a> operation to obtain the configuration ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,12 +33,10 @@ public class UpdateImageTransformRequest extends TeaModel {
     public Long configId;
 
     /**
-     * <p>Specifies whether to enable image transform. Valid values:</p>
+     * <p>Specifies whether to enable image transformation. Valid values:</p>
      * <ul>
-     * <li><p><code>on</code>: Enables image transform.</p>
-     * </li>
-     * <li><p><code>off</code>: Disables image transform.</p>
-     * </li>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,12 +46,10 @@ public class UpdateImageTransformRequest extends TeaModel {
     public String enable;
 
     /**
-     * <p>The rule content, which is a conditional expression for matching user requests. This parameter is not required when you configure a global rule. The expression can be used in the following ways:</p>
+     * <p>The rule content, which uses a conditional expression to match user requests. You do not need to set this parameter when adding a global configuration. Two scenarios are supported:</p>
      * <ul>
-     * <li><p>To match all incoming requests, set the value to <code>true</code>.</p>
-     * </li>
-     * <li><p>To match specific requests, set the value to a custom expression, for example, <code>(http.host eq &quot;video.example.com&quot;)</code>.</p>
-     * </li>
+     * <li>Match all incoming requests: Set the value to true.</li>
+     * <li>Match specified requests: Set the value to a custom expression, such as (http.host eq \&quot;video.example.com\&quot;).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -59,12 +59,10 @@ public class UpdateImageTransformRequest extends TeaModel {
     public String rule;
 
     /**
-     * <p>Specifies whether to enable the rule. This parameter is not required when you configure a global rule. Valid values:</p>
+     * <p>The rule switch. You do not need to set this parameter when adding a global configuration. Valid values:</p>
      * <ul>
-     * <li><p><code>on</code>: Enables the rule.</p>
-     * </li>
-     * <li><p><code>off</code>: Disables the rule.</p>
-     * </li>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -74,7 +72,7 @@ public class UpdateImageTransformRequest extends TeaModel {
     public String ruleEnable;
 
     /**
-     * <p>The rule name. This parameter is not required when you configure a global rule.</p>
+     * <p>The rule name. You do not need to set this parameter when adding a global configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -83,7 +81,7 @@ public class UpdateImageTransformRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The execution priority of the rule. A smaller value indicates a higher priority.</p>
+     * <p>The execution order of the rule. A smaller value indicates a higher priority.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -92,7 +90,7 @@ public class UpdateImageTransformRequest extends TeaModel {
     public Integer sequence;
 
     /**
-     * <p>The site ID. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

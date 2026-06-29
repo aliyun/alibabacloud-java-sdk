@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTransportLayerApplicationRequest extends TeaModel {
     /**
-     * <p>The application ID. Call the <a href="~~ListTransportLayerApplications~~">ListTransportLayerApplications</a> API to obtain this ID.</p>
+     * <p>The application ID, which can be obtained by calling the <a href="~~ListTransportLayerApplications~~">ListTransportLayerApplications</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetTransportLayerApplicationRequest extends TeaModel {
     public Long applicationId;
 
     /**
-     * <p>The site ID. Call the <a href="~~ListSites~~">ListSites</a> API to obtain this ID.</p>
+     * <p>The site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

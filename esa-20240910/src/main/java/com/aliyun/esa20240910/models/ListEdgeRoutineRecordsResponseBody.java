@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEdgeRoutineRecordsResponseBody extends TeaModel {
     /**
-     * <p>The total number of pages returned.</p>
+     * <p>The current page number, which is the same as the PageNumber request parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListEdgeRoutineRecordsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of records displayed per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +38,7 @@ public class ListEdgeRoutineRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of records returned.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>121</p>
@@ -93,7 +93,7 @@ public class ListEdgeRoutineRecordsResponseBody extends TeaModel {
 
     public static class ListEdgeRoutineRecordsResponseBodyRecords extends TeaModel {
         /**
-         * <p>The time when the record was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The creation time of the record. The time is in ISO 8601 format and displayed in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-12-24T02:01:11Z</p>
@@ -102,7 +102,7 @@ public class ListEdgeRoutineRecordsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The CNAME. If you use CNAME setup when you add your website to ESA, the value is the CNAME that you configured then.</p>
+         * <p>The CNAME of the record. When the site uses CNAME access, this is the CNAME value that needs to be configured for the record.</p>
          * 
          * <strong>example:</strong>
          * <p>a.example.com.cnamezone.com</p>
@@ -120,7 +120,7 @@ public class ListEdgeRoutineRecordsResponseBody extends TeaModel {
         public String recordName;
 
         /**
-         * <p>The website ID.</p>
+         * <p>The site ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5407498413****</p>
@@ -129,7 +129,7 @@ public class ListEdgeRoutineRecordsResponseBody extends TeaModel {
         public Long siteId;
 
         /**
-         * <p>The website name.</p>
+         * <p>The name of the site to which the record belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -138,7 +138,7 @@ public class ListEdgeRoutineRecordsResponseBody extends TeaModel {
         public String siteName;
 
         /**
-         * <p>The time when the record was updated. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The update time of the record. The time is in ISO 8601 format and displayed in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-12-22T08:32:02Z</p>

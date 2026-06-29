@@ -14,7 +14,7 @@ public class StopScheduledPreloadExecutionResponseBody extends TeaModel {
     public String aliUid;
 
     /**
-     * <p>The end time of the scheduled prefetch plan, in ISO 8601 format (such as 2024-01-01T00:00:00+Z).</p>
+     * <p>The end time of the scheduled preload plan, in ISO 8601 format (e.g., 2024-01-01T00:00:00+Z).</p>
      * 
      * <strong>example:</strong>
      * <p>2024-05-31T18:10:48.849+08:00</p>
@@ -23,7 +23,7 @@ public class StopScheduledPreloadExecutionResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The prefetch plan ID.</p>
+     * <p>The preload plan ID.</p>
      * 
      * <strong>example:</strong>
      * <p>66599bd7397885b43804901c</p>
@@ -32,7 +32,7 @@ public class StopScheduledPreloadExecutionResponseBody extends TeaModel {
     public String id;
 
     /**
-     * <p>The interval between each batch execution of the scheduled prefetch plan, in seconds.</p>
+     * <p>The execution interval between batches in the scheduled preload plan, in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -41,7 +41,7 @@ public class StopScheduledPreloadExecutionResponseBody extends TeaModel {
     public Integer interval;
 
     /**
-     * <p>The prefetch job ID.</p>
+     * <p>The preload task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>665d3af3621bccf3fe29e1a4</p>
@@ -59,7 +59,7 @@ public class StopScheduledPreloadExecutionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of URLs prefetched per batch.</p>
+     * <p>The number of URLs per batch in the scheduled preload.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -68,7 +68,7 @@ public class StopScheduledPreloadExecutionResponseBody extends TeaModel {
     public Integer sliceLen;
 
     /**
-     * <p>The start time of the scheduled prefetch plan, in ISO 8601 format (such as 2024-01-01T00:00:00+Z).</p>
+     * <p>The start time of the scheduled preload plan, in ISO 8601 format (e.g., 2024-01-01T00:00:00+Z).</p>
      * 
      * <strong>example:</strong>
      * <p>2024-05-31T17:10:48.849+08:00</p>
@@ -77,13 +77,13 @@ public class StopScheduledPreloadExecutionResponseBody extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The status of the scheduled prefetch plan. Valid values:</p>
+     * <p>The status of the scheduled preload plan. Valid values:</p>
      * <ul>
-     * <li><strong>waiting</strong>: waiting to be executed.</li>
-     * <li><strong>running</strong>: being executed.</li>
-     * <li><strong>finished</strong>: execution completed.</li>
-     * <li><strong>failed</strong>: execution failed.</li>
-     * <li><strong>stopped</strong>: execution paused.</li>
+     * <li><strong>waiting</strong>: Waiting to be executed.</li>
+     * <li><strong>running</strong>: Being executed.</li>
+     * <li><strong>finished</strong>: Execution completed.</li>
+     * <li><strong>failed</strong>: Execution failed.</li>
+     * <li><strong>stopped</strong>: Execution paused.</li>
      * </ul>
      * 
      * <strong>example:</strong>

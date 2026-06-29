@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEdgeRoutineRecordsRequest extends TeaModel {
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The page number for a paged query. The value must be greater than or equal to 1. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListEdgeRoutineRecordsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: <strong>500</strong>.</p>
+     * <p>The number of records per page for a paged query. Valid values: 1 to 500. Default value: <strong>500</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,16 +23,12 @@ public class ListEdgeRoutineRecordsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The match mode to filter the record names.</p>
+     * <p>The matching mode used to filter by record name. Valid values:</p>
      * <ul>
-     * <li><p><strong>fuzzy</strong>: fuzzy match.</p>
-     * </li>
-     * <li><p><strong>prefix</strong>: match by prefix.</p>
-     * </li>
-     * <li><p><strong>suffix</strong>: match by suffix.</p>
-     * </li>
-     * <li><p><strong>exact</strong> (default): exact match .</p>
-     * </li>
+     * <li><strong>fuzzy</strong>: fuzzy match.</li>
+     * <li><strong>prefix</strong>: prefix match.</li>
+     * <li><strong>suffix</strong>: suffix match.</li>
+     * <li><strong>exact</strong>: exact match (default).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,7 +38,7 @@ public class ListEdgeRoutineRecordsRequest extends TeaModel {
     public String recordMatchType;
 
     /**
-     * <p>The record name.</p>
+     * <p>Filters by the specified record name.</p>
      * 
      * <strong>example:</strong>
      * <p>a.example.com</p>
@@ -51,7 +47,7 @@ public class ListEdgeRoutineRecordsRequest extends TeaModel {
     public String recordName;
 
     /**
-     * <p>The website ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</p>
+     * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

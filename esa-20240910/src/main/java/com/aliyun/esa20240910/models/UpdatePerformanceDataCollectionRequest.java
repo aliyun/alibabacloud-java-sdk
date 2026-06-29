@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdatePerformanceDataCollectionRequest extends TeaModel {
     /**
-     * <p>Enables or disables Performance Data Collection. Valid values:</p>
+     * <p>Specifies whether to enable quality data collection. Valid values:</p>
      * <ul>
-     * <li><p><code>on</code>: Enables the Feature.</p>
-     * </li>
-     * <li><p><code>off</code>: Disables the Feature.</p>
-     * </li>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -21,7 +19,7 @@ public class UpdatePerformanceDataCollectionRequest extends TeaModel {
     public String enable;
 
     /**
-     * <p>The ID of the Site. You can get this ID by calling the <a href="~~ListSites~~">ListSites</a> API.</p>
+     * <p>The site ID. You can obtain the ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -29,7 +29,7 @@ public class ListCustomHostnamesRequest extends TeaModel {
     public String nameMatchType;
 
     /**
-     * <p>The page number, starting from 1. Default value: 1.</p>
+     * <p>The page number for a paged query. The value must be greater than or equal to 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,10 +38,10 @@ public class ListCustomHostnamesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 100. Maximum value: 500.</p>
+     * <p>The number of entries per page for a paged query. Valid values: 1 to 500.</p>
      * 
      * <strong>example:</strong>
-     * <p>100</p>
+     * <p>500</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

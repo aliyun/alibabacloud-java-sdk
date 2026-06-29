@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateHttpIncomingResponseHeaderModificationRuleRequest extends TeaModel {
     /**
-     * <p>The configuration ID. You can obtain this ID by calling the <code>ListHttpIncomingResponseHeaderModificationRules</code> operation.</p>
+     * <p>The configuration ID. You can call the ListHttpIncomingResponseHeaderModificationRules operation to obtain the configuration ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,18 +15,16 @@ public class UpdateHttpIncomingResponseHeaderModificationRuleRequest extends Tea
     public Long configId;
 
     /**
-     * <p>A list of objects specifying modifications to response headers. Supported operations include <code>add</code>, <code>del</code>, and <code>modify</code>.</p>
+     * <p>The response header modifications. Three operation types are supported: add, delete, and modify.</p>
      */
     @NameInMap("ResponseHeaderModification")
     public java.util.List<UpdateHttpIncomingResponseHeaderModificationRuleRequestResponseHeaderModification> responseHeaderModification;
 
     /**
-     * <p>The condition expression used to match incoming requests. This parameter is not required for a global configuration. You can use this parameter in two ways:</p>
+     * <p>The rule content, which uses a conditional expression to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
      * <ul>
-     * <li><p>To match all incoming requests, set the value to <code>true</code>.</p>
-     * </li>
-     * <li><p>To match specific requests, set the value to a custom expression, such as <code>(http.host eq &quot;video.example.com&quot;)</code>.</p>
-     * </li>
+     * <li>Match all incoming requests: Set the value to true.</li>
+     * <li>Match specified requests: Set the value to a custom expression, for example, (http.host eq \&quot;video.example.com\&quot;).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,12 +34,10 @@ public class UpdateHttpIncomingResponseHeaderModificationRuleRequest extends Tea
     public String rule;
 
     /**
-     * <p>The status of the rule. This parameter is not required for a global configuration. Valid values:</p>
+     * <p>The rule switch. This parameter is not required when adding a global configuration. Valid values:</p>
      * <ul>
-     * <li><p><code>on</code>: Enables the rule.</p>
-     * </li>
-     * <li><p><code>off</code>: Disables the rule.</p>
-     * </li>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,7 +47,7 @@ public class UpdateHttpIncomingResponseHeaderModificationRuleRequest extends Tea
     public String ruleEnable;
 
     /**
-     * <p>The name of the rule. This parameter is not required for a global configuration.</p>
+     * <p>The rule name. This parameter is not required when adding a global configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>rule_example</p>
@@ -60,7 +56,7 @@ public class UpdateHttpIncomingResponseHeaderModificationRuleRequest extends Tea
     public String ruleName;
 
     /**
-     * <p>The priority of the rule. Rules with a lower value are executed first.</p>
+     * <p>The rule execution order. A smaller value indicates a higher priority.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -69,7 +65,7 @@ public class UpdateHttpIncomingResponseHeaderModificationRuleRequest extends Tea
     public Integer sequence;
 
     /**
-     * <p>The site ID. You can obtain this ID by calling the <code>ListSites</code> operation.</p>
+     * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -141,7 +137,7 @@ public class UpdateHttpIncomingResponseHeaderModificationRuleRequest extends Tea
 
     public static class UpdateHttpIncomingResponseHeaderModificationRuleRequestResponseHeaderModification extends TeaModel {
         /**
-         * <p>The name of the response header.</p>
+         * <p>The response header name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,14 +147,11 @@ public class UpdateHttpIncomingResponseHeaderModificationRuleRequest extends Tea
         public String name;
 
         /**
-         * <p>The operation to perform. Valid values:</p>
+         * <p>The operation type. Valid values:</p>
          * <ul>
-         * <li><p><code>add</code>: Adds a response header.</p>
-         * </li>
-         * <li><p><code>del</code>: Deletes a response header.</p>
-         * </li>
-         * <li><p><code>modify</code>: Modifies an existing response header.</p>
-         * </li>
+         * <li>add: Add.</li>
+         * <li>del: Delete.</li>
+         * <li>modify: Modify.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -169,12 +162,10 @@ public class UpdateHttpIncomingResponseHeaderModificationRuleRequest extends Tea
         public String operation;
 
         /**
-         * <p>The type of the header value. This parameter is required when <code>Operation</code> is <code>add</code> or <code>modify</code>. Valid values:</p>
+         * <p>The value type. Valid values:</p>
          * <ul>
-         * <li><p><code>static</code>: The value is a fixed string.</p>
-         * </li>
-         * <li><p><code>dynamic</code>: The value is a variable.</p>
-         * </li>
+         * <li>static: Static pattern.</li>
+         * <li>dynamic: Dynamic schema.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -184,7 +175,7 @@ public class UpdateHttpIncomingResponseHeaderModificationRuleRequest extends Tea
         public String type;
 
         /**
-         * <p>The value of the response header. This parameter is required when <code>Operation</code> is <code>add</code> or <code>modify</code>.</p>
+         * <p>The response header value.</p>
          * 
          * <strong>example:</strong>
          * <p>headerValue</p>

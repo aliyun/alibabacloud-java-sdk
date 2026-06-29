@@ -5,12 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateWaitingRoomRuleRequest extends TeaModel {
     /**
-     * <p>The rule content, which uses a conditional expression to match user requests. This parameter is not required when you add a global configuration. Two scenarios are supported:</p>
+     * <p>The rule content. Use a conditional expression to match user requests. This parameter is not required when you add a global configuration. Two scenarios are supported:</p>
      * <ul>
      * <li>Match all incoming requests: Set the value to true.</li>
      * <li>Match specified requests: Set the value to a custom expression, for example, (http.host eq \&quot;video.example.com\&quot;).</li>
      * </ul>
-     * <p>For the complete syntax of rule expressions, see &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/edge-security-acceleration/esa/user-guide/work-with-rules-engine/">https://www.alibabacloud.com/help/en/edge-security-acceleration/esa/user-guide/work-with-rules-engine/</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/edge-security-acceleration/esa/user-guide/work-with-rules-engine/">https://www.alibabacloud.com/help/edge-security-acceleration/esa/user-guide/work-with-rules-engine/</a>.</p>
+     * <p>For the complete syntax of rule expressions, refer to &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/edge-security-acceleration/esa/user-guide/work-with-rules-engine/">https://www.alibabacloud.com/help/en/edge-security-acceleration/esa/user-guide/work-with-rules-engine/</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/edge-security-acceleration/esa/user-guide/work-with-rules-engine/">https://www.alibabacloud.com/help/edge-security-acceleration/esa/user-guide/work-with-rules-engine/</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class CreateWaitingRoomRuleRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

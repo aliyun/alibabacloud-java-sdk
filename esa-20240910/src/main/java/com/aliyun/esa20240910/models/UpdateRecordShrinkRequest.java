@@ -5,20 +5,17 @@ import com.aliyun.tea.*;
 
 public class UpdateRecordShrinkRequest extends TeaModel {
     /**
-     * <p>The origin authentication settings for the CNAME record.</p>
+     * <p>The origin authentication information of the CNAME record.</p>
      */
     @NameInMap("AuthConf")
     public String authConfShrink;
 
     /**
-     * <p>The use case for proxy acceleration. Omit this parameter if proxy acceleration is disabled. Valid values:</p>
+     * <p>The business scenario for record acceleration. This parameter is not required for records without acceleration enabled. Valid values:</p>
      * <ul>
-     * <li><p><strong>video_image</strong>: Video and images.</p>
-     * </li>
-     * <li><p><strong>api</strong>: APIs.</p>
-     * </li>
-     * <li><p><strong>web</strong>: Web pages.</p>
-     * </li>
+     * <li><strong>video_image</strong>: video and image.</li>
+     * <li><strong>api</strong>: API.</li>
+     * <li><strong>web</strong>: web page.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +25,7 @@ public class UpdateRecordShrinkRequest extends TeaModel {
     public String bizName;
 
     /**
-     * <p>A comment for the record.</p>
+     * <p>The comment for the record.</p>
      * 
      * <strong>example:</strong>
      * <p>This is a remark.</p>
@@ -37,7 +34,7 @@ public class UpdateRecordShrinkRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>The DNS data for the record. The required content varies based on the record type. For more information, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/document_detail/2708761.html">Documentation</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/doc-detail/2708761.html">Documentation</a>.</p>
+     * <p>The DNS information of the record. The content varies depending on the record type. For more information, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/document_detail/2708761.html">documentation</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/doc-detail/2708761.html">documentation</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,12 +46,10 @@ public class UpdateRecordShrinkRequest extends TeaModel {
     public String dataShrink;
 
     /**
-     * <p>The origin HOST policy. This policy, which applies only to CNAME records, determines the value of the <code>HOST</code> header in requests sent to the origin. Valid values:</p>
+     * <p>The back-to-origin HOST policy. This parameter takes effect when the record type is CNAME. Settings the HOST policy for back-to-origin requests. Valid values:</p>
      * <ul>
-     * <li><p><strong>follow_hostname</strong>: Follows the host record.</p>
-     * </li>
-     * <li><p><strong>follow_origin_domain</strong>: Follows the origin domain name.</p>
-     * </li>
+     * <li><strong>follow_hostname</strong>: follows the host record.</li>
+     * <li><strong>follow_origin_domain</strong>: follows the Origin Domain Name.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -70,12 +65,10 @@ public class UpdateRecordShrinkRequest extends TeaModel {
     public String httpsPorts;
 
     /**
-     * <p>Indicates whether to enable proxy acceleration for the record. Only CNAME and A/AAAA records support proxy acceleration. Valid values:</p>
+     * <p>Specifies whether to enable proxy acceleration for the record. Only CNAME records and A/AAAA records support proxy acceleration. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Enables proxy acceleration.</p>
-     * </li>
-     * <li><p><strong>false</strong>: Disables proxy acceleration.</p>
-     * </li>
+     * <li><strong>true</strong>: Enable proxy acceleration.</li>
+     * <li><strong>false</strong>: Disable proxy acceleration.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -85,7 +78,7 @@ public class UpdateRecordShrinkRequest extends TeaModel {
     public Boolean proxied;
 
     /**
-     * <p>The record ID. Call the <a href="https://help.aliyun.com/document_detail/2850265.html">ListRecords</a> operation to get this ID.</p>
+     * <p>The ID of the record. You can call <a href="https://help.aliyun.com/document_detail/2850265.html">ListRecords</a> to obtain the record ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -95,20 +88,15 @@ public class UpdateRecordShrinkRequest extends TeaModel {
     public Long recordId;
 
     /**
-     * <p>The origin type for the CNAME record. This parameter is required for CNAME records. Valid values:</p>
+     * <p>The origin server type of the CNAME record. This parameter is required when you add a CNAME record. Valid values:</p>
      * <ul>
-     * <li><p><strong>OSS</strong>: An OSS origin.</p>
-     * </li>
-     * <li><p><strong>S3</strong>: An S3 origin.</p>
-     * </li>
-     * <li><p><strong>LB</strong>: A load balancer origin.</p>
-     * </li>
-     * <li><p><strong>OP</strong>: An origin address pool origin.</p>
-     * </li>
-     * <li><p><strong>Domain</strong>: A standard domain name origin.</p>
-     * </li>
+     * <li><strong>OSS</strong>: OSS origin server.</li>
+     * <li><strong>S3</strong>: S3 origin server.</li>
+     * <li><strong>LB</strong>: load balancing origin server.</li>
+     * <li><strong>OP</strong>: IPAM pool origin server.</li>
+     * <li><strong>Domain</strong>: standard domain name origin server.</li>
      * </ul>
-     * <p>If this parameter is omitted or left empty, the default value is <code>Domain</code>.</p>
+     * <p>If this parameter is not specified or is left empty, the default value is Domain, which indicates a standard domain name origin server type.</p>
      * 
      * <strong>example:</strong>
      * <p>OSS</p>
@@ -117,7 +105,7 @@ public class UpdateRecordShrinkRequest extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>The record\&quot;s time to live (TTL) in seconds. The value must be an integer from <strong>30 to 86400</strong> or 1. A value of 1 sets the TTL to automatic.</p>
+     * <p>The time-to-live (TTL) of the record, in seconds. Valid values: <strong>30 to 86400</strong>, or 1. A value of 1 indicates that the TTL of the record is automatically determined.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -125,6 +113,12 @@ public class UpdateRecordShrinkRequest extends TeaModel {
     @NameInMap("Ttl")
     public Integer ttl;
 
+    /**
+     * <p>The DNS type of the record, such as A/AAAA, CNAME, or TXT.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A/AAAA</p>
+     */
     @NameInMap("Type")
     public String type;
 

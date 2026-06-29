@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTransportLayerApplicationRequest extends TeaModel {
     /**
-     * <p>The transport layer application ID. You can obtain this ID by calling the <a href="~~ListTransportLayerApplications~~">ListTransportLayerApplications</a> operation.</p>
+     * <p>The Layer 4 application ID. You can call the <a href="~~ListTransportLayerApplications~~">ListTransportLayerApplications</a> operation to obtain the application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,12 +15,10 @@ public class UpdateTransportLayerApplicationRequest extends TeaModel {
     public Long applicationId;
 
     /**
-     * <p>Specifies whether to enable cross-border optimization for network access from the Chinese mainland. This feature is disabled by default. Valid values:</p>
+     * <p>Specifies whether to enable network access optimization for the Chinese mainland. This feature is disabled by default. Valid values:</p>
      * <ul>
-     * <li><p>on: Enables the feature.</p>
-     * </li>
-     * <li><p>off: Disables the feature.</p>
-     * </li>
+     * <li>on: enabled.</li>
+     * <li>off: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,12 +28,10 @@ public class UpdateTransportLayerApplicationRequest extends TeaModel {
     public String crossBorderOptimization;
 
     /**
-     * <p>Specifies whether to enable IP access rules. If enabled, the IP access rules in WAF apply to the transport layer application. Valid values:</p>
+     * <p>The IP access rule switch. When enabled, WAF IP access rules take effect for the Layer 4 application. Valid values:</p>
      * <ul>
-     * <li><p>on: Enables the feature.</p>
-     * </li>
-     * <li><p>off: Disables the feature.</p>
-     * </li>
+     * <li>on: enabled.</li>
+     * <li>off: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,7 +41,11 @@ public class UpdateTransportLayerApplicationRequest extends TeaModel {
     public String ipAccessRule;
 
     /**
-     * <p>Specifies whether to enable IPv6. Valid values: <code>on</code> and <code>off</code>.</p>
+     * <p>The IPv6 switch. Valid values:</p>
+     * <ul>
+     * <li>on: enabled.</li>
+     * <li>off: disabled.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>on</p>
@@ -53,17 +53,27 @@ public class UpdateTransportLayerApplicationRequest extends TeaModel {
     @NameInMap("Ipv6")
     public String ipv6;
 
+    /**
+     * <p>Specifies whether to enable keep-alive protection. This feature is disabled by default. Valid values:</p>
+     * <ul>
+     * <li>on: enabled.</li>
+     * <li>off: disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
     @NameInMap("KeepAliveProtection")
     public String keepAliveProtection;
 
     /**
-     * <p>A list of forwarding rules. For each rule, all parameters are required except for <code>Comment</code>.</p>
+     * <p>The list of forwarding rules. For each rule, all parameters except the comment are required.</p>
      */
     @NameInMap("Rules")
     public java.util.List<UpdateTransportLayerApplicationRequestRules> rules;
 
     /**
-     * <p>The site ID. You can obtain this ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
+     * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,6 +82,16 @@ public class UpdateTransportLayerApplicationRequest extends TeaModel {
     @NameInMap("SiteId")
     public Long siteId;
 
+    /**
+     * <p>Specifies whether to enable static IP. This feature is disabled by default. Valid values:</p>
+     * <ul>
+     * <li>on: enabled.</li>
+     * <li>off: disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
     @NameInMap("StaticIp")
     public String staticIp;
 
@@ -146,16 +166,12 @@ public class UpdateTransportLayerApplicationRequest extends TeaModel {
 
     public static class UpdateTransportLayerApplicationRequestRules extends TeaModel {
         /**
-         * <p>Specifies the protocol for client IP pass-through. Valid values:</p>
+         * <p>The client IP pass-through protocol. Valid values:</p>
          * <ul>
-         * <li><p><strong>off</strong>: Disables client IP pass-through.</p>
-         * </li>
-         * <li><p><strong>PPv1</strong>: PROXY Protocol v1. Supports client IP pass-through for the TCP protocol.</p>
-         * </li>
-         * <li><p><strong>PPv2</strong>: PROXY Protocol v2. Supports client IP pass-through for both TCP and UDP protocols.</p>
-         * </li>
-         * <li><p><strong>SPP</strong>: Simple Proxy Protocol. Supports client IP pass-through for the UDP protocol.</p>
-         * </li>
+         * <li><strong>off</strong>: disabled.</li>
+         * <li><strong>PPv1</strong>: PROXY Protocol v1, which supports client IP pass-through for TCP.</li>
+         * <li><strong>PPv2</strong>: PROXY Protocol v2, which supports client IP pass-through for TCP and UDP.</li>
+         * <li><strong>SPP</strong>: Simple Proxy Protocol, which supports client IP pass-through for UDP.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -165,7 +181,7 @@ public class UpdateTransportLayerApplicationRequest extends TeaModel {
         public String clientIPPassThroughMode;
 
         /**
-         * <p>An optional comment for the forwarding rule.</p>
+         * <p>The comment for the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -174,16 +190,12 @@ public class UpdateTransportLayerApplicationRequest extends TeaModel {
         public String comment;
 
         /**
-         * <p>The edge port. The following formats are supported:</p>
+         * <p>The edge port. Valid values:</p>
          * <ul>
-         * <li><p>A single port, for example, <code>80</code>.</p>
-         * </li>
-         * <li><p>A port range, for example, <code>81-85</code>. This range includes ports 81, 82, 83, 84, and 85.</p>
-         * </li>
-         * <li><p>A combination of ports and port ranges separated by commas, for example, <code>80,81-85,90</code>. This includes ports 80, 81, 82, 83, 84, 85, and 90.</p>
-         * </li>
-         * <li><p>Edge ports cannot overlap within a single rule or across multiple rules.</p>
-         * </li>
+         * <li>A single port, such as 80.</li>
+         * <li>A port range, such as 81-85, which represents ports 81, 82, 83, 84, and 85.</li>
+         * <li>A combination of ports and port ranges separated by commas, such as 80,81-85,90, which represents ports 80, 81, 82, 83, 84, 85, and 90.</li>
+         * <li>Edge ports within a single rule and across multiple rules cannot overlap.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -193,12 +205,10 @@ public class UpdateTransportLayerApplicationRequest extends TeaModel {
         public String edgePort;
 
         /**
-         * <p>The forwarding protocol. Valid values:</p>
+         * <p>The forwarding rule protocol. Valid values:</p>
          * <ul>
-         * <li><p>TCP: Transmission Control Protocol.</p>
-         * </li>
-         * <li><p>UDP: User Datagram Protocol.</p>
-         * </li>
+         * <li>TCP: TCP protocol.</li>
+         * <li>UDP: UDP protocol.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -208,7 +218,7 @@ public class UpdateTransportLayerApplicationRequest extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The source, which must correspond to the specified <code>SourceType</code>. For example, if <code>SourceType</code> is <code>ip</code>, this parameter must be an IP address.</p>
+         * <p>The specific value of the origin.</p>
          * 
          * <strong>example:</strong>
          * <p>1.1.1.1</p>
@@ -217,12 +227,10 @@ public class UpdateTransportLayerApplicationRequest extends TeaModel {
         public String source;
 
         /**
-         * <p>The source port. The following formats are supported:</p>
+         * <p>Origin Server Port. Valid values:</p>
          * <ul>
-         * <li><p>A single port. When a single source port is used, any valid format can be used for the edge port.</p>
-         * </li>
-         * <li><p>A port range. You can specify a port range for the source port only if the edge port is also a port range, and their sizes must match. For example, if <code>EdgePort</code> is <code>90-93</code>, you cannot set <code>SourcePort</code> to <code>81-85</code> because their sizes (4 and 5 ports, respectively) do not match.</p>
-         * </li>
+         * <li>A single port. When Origin Server Port is a single port, any valid edge port combination is supported.</li>
+         * <li>A port range. Origin Server Port can be set to a port range only when the edge port is a port range, and the range size must match the edge port range. For example, if the edge port is 90-93, you cannot set Origin Server Port to 81-85 because Origin Server Port range is 5 while the edge port range is 4, which are inconsistent.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -232,16 +240,12 @@ public class UpdateTransportLayerApplicationRequest extends TeaModel {
         public String sourcePort;
 
         /**
-         * <p>The type of the source. Valid values:</p>
+         * <p>The origin type. Valid values:</p>
          * <ul>
-         * <li><p><strong>ip</strong>: An IP address.</p>
-         * </li>
-         * <li><p><strong>domain</strong>: A domain name.</p>
-         * </li>
-         * <li><p><strong>OP</strong>: An origin pool.</p>
-         * </li>
-         * <li><p><strong>LB</strong>: A load balancer.</p>
-         * </li>
+         * <li><strong>ip</strong>: IP address.</li>
+         * <li><strong>domain</strong>: domain name.</li>
+         * <li><strong>OP</strong>: origin IPAM pool.</li>
+         * <li><strong>LB</strong>: load balancing.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -7,9 +7,9 @@ public class ListSitesShrinkRequest extends TeaModel {
     /**
      * <p>The access type. Valid values:</p>
      * <ul>
-     * <li><p><strong>NS</strong>: NS access.</p>
+     * <li><p><strong>NS</strong>: NS-based access.</p>
      * </li>
-     * <li><p><strong>CNAME</strong>: CNAME access.</p>
+     * <li><p><strong>CNAME</strong>: CNAME-based access.</p>
      * </li>
      * </ul>
      * 
@@ -22,12 +22,9 @@ public class ListSitesShrinkRequest extends TeaModel {
     /**
      * <p>The acceleration region. Valid values:</p>
      * <ul>
-     * <li><p><strong>domestic</strong>: Chinese mainland only.</p>
-     * </li>
-     * <li><p><strong>global</strong>: Global.</p>
-     * </li>
-     * <li><p><strong>overseas</strong>: Global (excluding the Chinese mainland).</p>
-     * </li>
+     * <li><strong>domestic</strong>: the Chinese mainland only.</li>
+     * <li><strong>global</strong>: global.</li>
+     * <li><strong>overseas</strong>: global (excluding the Chinese mainland).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,7 +34,7 @@ public class ListSitesShrinkRequest extends TeaModel {
     public String coverage;
 
     /**
-     * <p>Specifies whether to return only sites that use the Enterprise Edition.</p>
+     * <p>Specifies whether to query only Enterprise Edition sites. Set this parameter to <strong>true</strong> to query only Enterprise Edition sites.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -46,12 +43,10 @@ public class ListSitesShrinkRequest extends TeaModel {
     public Boolean onlyEnterprise;
 
     /**
-     * <p>The field to sort the results by. By default, results are sorted by creation time (gmtCreate). Supported values:</p>
+     * <p>The sort field. By default, results are sorted by creation time. Valid values:</p>
      * <ul>
-     * <li><p><code>gmtCreate</code>: site creation time</p>
-     * </li>
-     * <li><p><code>visitTime</code>: site access time</p>
-     * </li>
+     * <li>gmtCreate: site creation time.</li>
+     * <li>visitTime: site access time.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -61,7 +56,7 @@ public class ListSitesShrinkRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The number of the page to return. The default value is <strong>1</strong>.</p>
+     * <p>The page number for paging. The value must be greater than or equal to 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -70,7 +65,7 @@ public class ListSitesShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. The default value is <strong>500</strong>.</p>
+     * <p>The number of entries per page for paging. Valid values: 1 to 500.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -79,16 +74,12 @@ public class ListSitesShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The subscription plan type. Valid values:</p>
+     * <p>The plan subscription type. Valid values:</p>
      * <ul>
-     * <li><p><strong>basicplan</strong>: Basic Edition.</p>
-     * </li>
-     * <li><p><strong>standardplan</strong>: Standard Edition.</p>
-     * </li>
-     * <li><p><strong>advancedplan</strong>: Advanced Edition.</p>
-     * </li>
-     * <li><p><strong>enterpriseplan</strong>: Enterprise Edition.</p>
-     * </li>
+     * <li><strong>basicplan</strong>: Basic Edition.</li>
+     * <li><strong>standardplan</strong>: Standard Edition.</li>
+     * <li><strong>advancedplan</strong>: Premium Edition.</li>
+     * <li><strong>enterpriseplan</strong>: Enterprise Edition.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -98,7 +89,7 @@ public class ListSitesShrinkRequest extends TeaModel {
     public String planSubscribeType;
 
     /**
-     * <p>The resource group ID, used to filter query results.</p>
+     * <p>The resource group ID. Used as a filter condition for the query.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aekzd3styujvyei</p>
@@ -107,7 +98,7 @@ public class ListSitesShrinkRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The site name, used to filter query results.</p>
+     * <p>The site name. Used as a filter condition for the query.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -116,16 +107,12 @@ public class ListSitesShrinkRequest extends TeaModel {
     public String siteName;
 
     /**
-     * <p>The match mode for the <code>SiteName</code> parameter. The default value is <code>exact</code>. Valid values:</p>
+     * <p>The search matching mode for the site name. Default is exact match. Valid values:</p>
      * <ul>
-     * <li><p><strong>prefix</strong>: prefix match.</p>
-     * </li>
-     * <li><p><strong>suffix</strong>: suffix match.</p>
-     * </li>
-     * <li><p><strong>exact</strong>: exact match.</p>
-     * </li>
-     * <li><p><strong>fuzzy</strong>: fuzzy match.</p>
-     * </li>
+     * <li><strong>prefix</strong>: prefix match.</li>
+     * <li><strong>suffix</strong>: suffix match.</li>
+     * <li><strong>exact</strong>: exact match.</li>
+     * <li><strong>fuzzy</strong>: fuzzy match.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -135,7 +122,7 @@ public class ListSitesShrinkRequest extends TeaModel {
     public String siteSearchType;
 
     /**
-     * <p>The site status, used to filter query results.</p>
+     * <p>The site status. Used as a filter condition for the query.</p>
      * 
      * <strong>example:</strong>
      * <p>pending</p>
@@ -144,7 +131,7 @@ public class ListSitesShrinkRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>A list of tags to use for filtering sites.</p>
+     * <p>The tag filter rules.</p>
      */
     @NameInMap("TagFilter")
     public String tagFilterShrink;

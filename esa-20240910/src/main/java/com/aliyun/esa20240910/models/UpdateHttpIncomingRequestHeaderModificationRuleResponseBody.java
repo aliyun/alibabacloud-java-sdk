@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateHttpIncomingRequestHeaderModificationRuleResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>BFEF3861-8BB7-5B63-954C-6575EA7FB2CA</p>

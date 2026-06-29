@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class UpdateWaitingRoomRuleRequest extends TeaModel {
     /**
-     * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding global configuration. There are two usage scenarios:</p>
+     * <p>The rule content. A conditional expression is used to match user requests. This parameter is not required when you add a global configuration. Two scenarios are supported:</p>
      * <ul>
-     * <li>Match all incoming requests: Set the value to true</li>
-     * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;)</li>
+     * <li>Match all incoming requests: set the value to true.</li>
+     * <li>Match specified requests: set the value to a custom expression, for example, (http.host eq \&quot;video.example.com\&quot;).</li>
      * </ul>
+     * <p>For the complete syntax of rule expressions, refer to
+     * &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/edge-security-acceleration/esa/user-guide/work-with-rules-engine/">https://www.alibabacloud.com/help/en/edge-security-acceleration/esa/user-guide/work-with-rules-engine/</a>
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/edge-security-acceleration/esa/user-guide/work-with-rules-engine/">https://www.alibabacloud.com/help/edge-security-acceleration/esa/user-guide/work-with-rules-engine/</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -19,10 +22,10 @@ public class UpdateWaitingRoomRuleRequest extends TeaModel {
     public String rule;
 
     /**
-     * <p>Rule switch. This parameter is not required when adding global configuration. Value range:</p>
+     * <p>Specifies whether to enable the rule. This parameter is not required when you add a global configuration. Valid values:</p>
      * <ul>
-     * <li>on: Enable.</li>
-     * <li>off: Disable.</li>
+     * <li>on: enabled.</li>
+     * <li>off: disabled.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -33,7 +36,7 @@ public class UpdateWaitingRoomRuleRequest extends TeaModel {
     public String ruleEnable;
 
     /**
-     * <p>Rule name. This parameter is not required when adding global configuration.</p>
+     * <p>The rule name. This parameter is not required when you add a global configuration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +46,7 @@ public class UpdateWaitingRoomRuleRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
+     * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,7 +56,7 @@ public class UpdateWaitingRoomRuleRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The ID of the waiting room bypass rule to be updated, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850279.html">ListWaitingRoomRules</a> interface.</p>
+     * <p>The ID of the waiting room bypass rule to update. You can obtain this ID after creating a rule by calling CreateWaitingRoomRule, or by calling the <a href="https://help.aliyun.com/document_detail/2850279.html">ListWaitingRoomRules</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListPostpaidRatePlanInstancesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to return only instances that have remaining site quota. Valid values:</p>
+     * <p>Specifies whether to check for remaining site quota. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: Returns only instances with remaining site quota.</p>
+     * <li><p>true: Queries instances that have remaining site quota.</p>
      * </li>
-     * <li><p><code>false</code>: Returns all instances, regardless of site quota.</p>
+     * <li><p>false: Does not filter by this condition.</p>
      * </li>
      * </ul>
      * 
@@ -20,7 +20,7 @@ public class ListPostpaidRatePlanInstancesRequest extends TeaModel {
     public String checkRemainingSiteQuota;
 
     /**
-     * <p>The ID of the instance to query.</p>
+     * <p>The instance ID. Use this parameter to query a specific instance.</p>
      * 
      * <strong>example:</strong>
      * <p>sp-dps-xxxxxx</p>
@@ -29,7 +29,7 @@ public class ListPostpaidRatePlanInstancesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The page number. The value must be greater than or equal to 1.</p>
+     * <p>The page number for paging. The value must be greater than or equal to 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +38,7 @@ public class ListPostpaidRatePlanInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. The maximum value is 500.</p>
+     * <p>The number of entries per page for paging. Valid values: 1 to 500.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>
@@ -47,9 +47,9 @@ public class ListPostpaidRatePlanInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The field to sort the results by. Valid value:</p>
+     * <p>The field by which to sort the results. Valid values:</p>
      * <ul>
-     * <li><code>CreateTime</code>: Sorts by creation time.</li>
+     * <li>CreateTime: sorts by creation time.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -61,9 +61,9 @@ public class ListPostpaidRatePlanInstancesRequest extends TeaModel {
     /**
      * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li><p><code>asc</code>: ascending</p>
+     * <li><p>asc: ascending order</p>
      * </li>
-     * <li><p><code>desc</code>: descending</p>
+     * <li><p>desc: descending order.</p>
      * </li>
      * </ul>
      * 
@@ -76,11 +76,11 @@ public class ListPostpaidRatePlanInstancesRequest extends TeaModel {
     /**
      * <p>The instance status. Valid values:</p>
      * <ul>
-     * <li><p><code>online</code>: The instance is running.</p>
+     * <li><p>online: Normal.</p>
      * </li>
-     * <li><p><code>overdue</code>: The payment for the instance is overdue.</p>
+     * <li><p>overdue: Overdue payment.</p>
      * </li>
-     * <li><p><code>disable</code>: The instance is released.</p>
+     * <li><p>disable: Released.</p>
      * </li>
      * </ul>
      * 
@@ -91,7 +91,7 @@ public class ListPostpaidRatePlanInstancesRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The type of add-on service to filter by, such as <code>bot</code> or <code>ddos</code>.</p>
+     * <p>Specifies whether the instance has purchased additional bot or DDoS protection.</p>
      * 
      * <strong>example:</strong>
      * <p>bot</p>

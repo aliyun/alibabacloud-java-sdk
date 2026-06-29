@@ -14,7 +14,7 @@ public class CreateRewriteUrlRuleResponseBody extends TeaModel {
     public Long configId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CB1A380B-09F0-41BB-280B-72F8FD6DA2FE</p>

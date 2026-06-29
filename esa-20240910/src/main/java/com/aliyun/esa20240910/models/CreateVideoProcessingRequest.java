@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateVideoProcessingRequest extends TeaModel {
     /**
-     * <p>Set custom end parameters for FLV files.</p>
+     * <p>The custom FLV end parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>end</p>
@@ -14,7 +14,7 @@ public class CreateVideoProcessingRequest extends TeaModel {
     public String flvSeekEnd;
 
     /**
-     * <p>The custom start parameter for FLV files.</p>
+     * <p>The custom FLV start parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>start</p>
@@ -23,9 +23,9 @@ public class CreateVideoProcessingRequest extends TeaModel {
     public String flvSeekStart;
 
     /**
-     * <p>FLV seeking. Valid values:</p>
+     * <p>The FLV seek mode. Valid values:</p>
      * <ul>
-     * <li>by_byte: seek by byte</li>
+     * <li>by_byte: seek by byte.</li>
      * <li>by_time: seek by time.</li>
      * </ul>
      * 
@@ -36,7 +36,7 @@ public class CreateVideoProcessingRequest extends TeaModel {
     public String flvVideoSeekMode;
 
     /**
-     * <p>Customize the mp4 end parameter.</p>
+     * <p>The custom MP4 end parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>end</p>
@@ -45,7 +45,7 @@ public class CreateVideoProcessingRequest extends TeaModel {
     public String mp4SeekEnd;
 
     /**
-     * <p>Customize the mp4 start parameter.</p>
+     * <p>The custom MP4 start parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>start</p>
@@ -54,10 +54,10 @@ public class CreateVideoProcessingRequest extends TeaModel {
     public String mp4SeekStart;
 
     /**
-     * <p>The content of the rule. A conditional expression is used to match a user request. You do not need to set this parameter when you add global configuration. Use cases:</p>
+     * <p>The rule content, which uses conditional expressions to match user requests. You do not need to set this parameter when adding a global configuration. Two usage scenarios are supported:</p>
      * <ul>
-     * <li>true: Match all incoming requests.</li>
-     * <li>Set the value to a custom expression, for example:(http.host eq &quot;video.example.com&quot;): Match the specified request.</li>
+     * <li>Match all incoming requests: set the value to true.</li>
+     * <li>Match specified requests: set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,10 +67,10 @@ public class CreateVideoProcessingRequest extends TeaModel {
     public String rule;
 
     /**
-     * <p>Specifies whether to enable the rule. Valid values: You do not need to set this parameter when you add global configuration. Specifies whether to check the image used by the instance supports hot migration. Valid values:</p>
+     * <p>The rule switch. You do not need to set this parameter when adding a global configuration. Valid values:</p>
      * <ul>
-     * <li>on</li>
-     * <li>off</li>
+     * <li>on: enabled.</li>
+     * <li>off: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -80,7 +80,7 @@ public class CreateVideoProcessingRequest extends TeaModel {
     public String ruleEnable;
 
     /**
-     * <p>The name of the scheduling rule. You do not need to set this parameter when you add global configuration.</p>
+     * <p>The rule name. You do not need to set this parameter when adding a global configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>rule_example</p>
@@ -89,7 +89,7 @@ public class CreateVideoProcessingRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The order in which the rule is executed. A smaller value gives priority to the rule.</p>
+     * <p>The rule execution order. A smaller value indicates a higher priority.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -98,7 +98,7 @@ public class CreateVideoProcessingRequest extends TeaModel {
     public Integer sequence;
 
     /**
-     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -108,7 +108,7 @@ public class CreateVideoProcessingRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The version number of the website configurations. You can use this parameter to specify a version of your website to apply the feature settings. By default, version 0 is used.</p>
+     * <p>The version number of the site configuration. For sites with configuration version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. The default value is version 0.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -117,10 +117,10 @@ public class CreateVideoProcessingRequest extends TeaModel {
     public Integer siteVersion;
 
     /**
-     * <p>Video seeking. Valid values:</p>
+     * <p>The video seek (drag-and-play) switch. Valid values:</p>
      * <ul>
-     * <li>on</li>
-     * <li>off</li>
+     * <li>on: enabled.</li>
+     * <li>off: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>

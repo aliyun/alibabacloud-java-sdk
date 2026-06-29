@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListVideoProcessingsResponseBody extends TeaModel {
     /**
-     * <p>The configurations.</p>
+     * <p>The list of configurations.</p>
      */
     @NameInMap("Configs")
     public java.util.List<ListVideoProcessingsResponseBodyConfigs> configs;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The current page number, which is the same as the PageNumber request parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +38,7 @@ public class ListVideoProcessingsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>55</p>
@@ -47,7 +47,7 @@ public class ListVideoProcessingsResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The total number of pages returned.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -119,7 +119,7 @@ public class ListVideoProcessingsResponseBody extends TeaModel {
         public Long configId;
 
         /**
-         * <p>The type of the configuration. Valid values:</p>
+         * <p>The configuration type. Valid values:</p>
          * <ul>
          * <li>global: global configuration.</li>
          * <li>rule: rule configuration.</li>
@@ -132,7 +132,7 @@ public class ListVideoProcessingsResponseBody extends TeaModel {
         public String configType;
 
         /**
-         * <p>The custom end parameter for FLV files.</p>
+         * <p>The custom FLV end parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>end</p>
@@ -141,7 +141,7 @@ public class ListVideoProcessingsResponseBody extends TeaModel {
         public String flvSeekEnd;
 
         /**
-         * <p>The custom start parameter for FLV files.</p>
+         * <p>The custom FLV start parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>start</p>
@@ -150,10 +150,10 @@ public class ListVideoProcessingsResponseBody extends TeaModel {
         public String flvSeekStart;
 
         /**
-         * <p>FLV seeking. Valid values:</p>
+         * <p>The FLV seeking mode. Valid values:</p>
          * <ul>
-         * <li>by_byte: Seek by byte.</li>
-         * <li>by_time: Seek by time.</li>
+         * <li>by_byte: seek by byte.</li>
+         * <li>by_time: seek by time.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -163,7 +163,7 @@ public class ListVideoProcessingsResponseBody extends TeaModel {
         public String flvVideoSeekMode;
 
         /**
-         * <p>Customize the mp4 end parameter.</p>
+         * <p>The custom MP4 end parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>end</p>
@@ -172,7 +172,7 @@ public class ListVideoProcessingsResponseBody extends TeaModel {
         public String mp4SeekEnd;
 
         /**
-         * <p>Customize the mp4 start parameter.</p>
+         * <p>The custom MP4 start parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>start</p>
@@ -190,10 +190,10 @@ public class ListVideoProcessingsResponseBody extends TeaModel {
         public String rule;
 
         /**
-         * <p>Indicates whether the rule is enabled. Valid values:</p>
+         * <p>The rule switch. Valid values:</p>
          * <ul>
-         * <li>on</li>
-         * <li>off</li>
+         * <li>on: enabled.</li>
+         * <li>off: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -212,7 +212,7 @@ public class ListVideoProcessingsResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The order in which the rule is executed. The smaller the value, the higher the priority.</p>
+         * <p>The execution order of the rule. A smaller value indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -221,7 +221,7 @@ public class ListVideoProcessingsResponseBody extends TeaModel {
         public Integer sequence;
 
         /**
-         * <p>The version number of the website configurations.</p>
+         * <p>The version number of the site configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -230,10 +230,12 @@ public class ListVideoProcessingsResponseBody extends TeaModel {
         public Integer siteVersion;
 
         /**
-         * <p>Video seeking. Valid values:</p>
+         * <p>The audio seeking switch. Valid values:</p>
          * <ul>
-         * <li>on</li>
-         * <li>off</li>
+         * <li><p>on: enabled.</p>
+         * </li>
+         * <li><p>off: disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

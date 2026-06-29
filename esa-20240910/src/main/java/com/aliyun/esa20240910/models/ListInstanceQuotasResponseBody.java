@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstanceQuotasResponseBody extends TeaModel {
     /**
-     * <p>The plan ID.</p>
+     * <p>The plan instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>sp-xcdn-96wblslz****</p>
@@ -14,7 +14,7 @@ public class ListInstanceQuotasResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The quotas in the plan.</p>
+     * <p>The list of plan instance quotas.</p>
      */
     @NameInMap("Quotas")
     public java.util.List<ListInstanceQuotasResponseBodyQuotas> quotas;
@@ -29,11 +29,11 @@ public class ListInstanceQuotasResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The plan status. Valid values:</p>
+     * <p>The plan instance status. Valid values:</p>
      * <ul>
-     * <li>online: The plan is in service.</li>
-     * <li>offline: The plan has expired within an allowable period. In this state, the plan is unavailable.</li>
-     * <li>disable: The plan is released.</li>
+     * <li><strong>online</strong>: The instance is in normal service.</li>
+     * <li><strong>offline</strong>: The instance has expired but has not exceeded the grace period and is unavailable.</li>
+     * <li><strong>disable</strong>: The instance has been released.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -101,11 +101,11 @@ public class ListInstanceQuotasResponseBody extends TeaModel {
         /**
          * <p>The threshold type of the quota. Valid values:</p>
          * <ul>
-         * <li>value: enumerates the values of the quota.</li>
-         * <li>bool: specifies whether the quota is available.</li>
-         * <li>num: the upper limit of the quota.</li>
-         * <li>range: the value range for the quota.</li>
-         * <li>custom: other types than the preceding four quota threshold types.</li>
+         * <li><strong>value</strong>: enumeration type. The enumeration range of quota values.</li>
+         * <li><strong>bool</strong>: Boolean type. Indicates whether the quota is available.</li>
+         * <li><strong>num</strong>: numeric type. The maximum usage of the quota.</li>
+         * <li><strong>range</strong>: range type. The value range of the quota.</li>
+         * <li><strong>custom</strong>: custom type. Other types that do not fall into the preceding four threshold types.</li>
          * </ul>
          * 
          * <strong>example:</strong>
