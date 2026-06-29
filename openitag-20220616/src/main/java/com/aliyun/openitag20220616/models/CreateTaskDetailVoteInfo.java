@@ -4,9 +4,17 @@ package com.aliyun.openitag20220616.models;
 import com.aliyun.tea.*;
 
 public class CreateTaskDetailVoteInfo extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("MinVote")
     public Long minVote;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("VoteNum")
     public Long voteNum;
 

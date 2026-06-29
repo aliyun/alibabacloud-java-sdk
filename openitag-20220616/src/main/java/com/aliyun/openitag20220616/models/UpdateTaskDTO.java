@@ -4,15 +4,33 @@ package com.aliyun.openitag20220616.models;
 import com.aliyun.tea.*;
 
 public class UpdateTaskDTO extends TeaModel {
+    /**
+     * <p>Extended field</p>
+     */
     @NameInMap("Exif")
     public java.util.Map<String, String> exif;
 
+    /**
+     * <p>Remark information</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo</p>
+     */
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <p>List of labels</p>
+     */
     @NameInMap("Tags")
     public java.util.List<String> tags;
 
+    /**
+     * <p>Task Name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo</p>
+     */
     @NameInMap("TaskName")
     public String taskName;
 

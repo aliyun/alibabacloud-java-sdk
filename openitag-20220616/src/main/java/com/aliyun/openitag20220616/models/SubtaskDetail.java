@@ -4,39 +4,108 @@ package com.aliyun.openitag20220616.models;
 import com.aliyun.tea.*;
 
 public class SubtaskDetail extends TeaModel {
+    /**
+     * <p>is discardable</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("CanDiscard")
     public Boolean canDiscard;
 
+    /**
+     * <p>Can assign</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("CanReassign")
     public Boolean canReassign;
 
+    /**
+     * <p>is releasable</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("CanRelease")
     public Boolean canRelease;
 
+    /**
+     * <p>current File Type</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MARK</p>
+     */
     @NameInMap("CurrentWorkNode")
     public String currentWorkNode;
 
+    /**
+     * <p>extra parameters</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ExtConfigs")
     public String extConfigs;
 
+    /**
+     * <p>List of items in the sub-job</p>
+     */
     @NameInMap("Items")
     public java.util.List<SubtaskDetailItems> items;
 
+    /**
+     * <p>status</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FINISHED</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>Subtask ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1500***457270333440</p>
+     */
     @NameInMap("SubtaskId")
     public String subtaskId;
 
+    /**
+     * <p>parent job ID of the sub-job</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1511***994667356160</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <p>Job weight</p>
+     * 
+     * <strong>example:</strong>
+     * <p>631548</p>
+     */
     @NameInMap("Weight")
     public Long weight;
 
+    /**
+     * <p>Current edge zone status</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FINISHED</p>
+     */
     @NameInMap("WorkNodeState")
     public String workNodeState;
 
+    /**
+     * <p>list of annotators assigned to the sub-job</p>
+     */
     @NameInMap("Workforce")
     public java.util.List<Workforce> workforce;
 
@@ -142,33 +211,93 @@ public class SubtaskDetail extends TeaModel {
     }
 
     public static class SubtaskDetailItems extends TeaModel {
+        /**
+         * <p>Abandon mark</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
+         */
         @NameInMap("AbandonFlag")
         public Boolean abandonFlag;
 
+        /**
+         * <p>discard reason</p>
+         * 
+         * <strong>example:</strong>
+         * <p>原始数据错误</p>
+         */
         @NameInMap("AbandonRemark")
         public String abandonRemark;
 
+        /**
+         * <p>Date ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1957578084</p>
+         */
         @NameInMap("DataId")
         public String dataId;
 
+        /**
+         * <p>feedback mark</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
+         */
         @NameInMap("FeedbackFlag")
         public Boolean feedbackFlag;
 
+        /**
+         * <p>Validate feedback</p>
+         * 
+         * <strong>example:</strong>
+         * <p>标注内容合格</p>
+         */
         @NameInMap("FeedbackRemark")
         public String feedbackRemark;
 
+        /**
+         * <p>Failed mark</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
+         */
         @NameInMap("FixedFlag")
         public Boolean fixedFlag;
 
+        /**
+         * <p>Is assigned to me</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Mine")
         public Long mine;
 
+        /**
+         * <p>skip mark</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
+         */
         @NameInMap("RejectFlag")
         public Boolean rejectFlag;
 
+        /**
+         * <p>status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HANDLING</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>Weight</p>
+         * 
+         * <strong>example:</strong>
+         * <p>311011</p>
+         */
         @NameInMap("Weight")
         public Long weight;
 

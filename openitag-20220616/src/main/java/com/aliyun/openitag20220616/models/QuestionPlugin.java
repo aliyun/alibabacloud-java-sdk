@@ -4,68 +4,143 @@ package com.aliyun.openitag20220616.models;
 import com.aliyun.tea.*;
 
 public class QuestionPlugin extends TeaModel {
+    /**
+     * <p>Whether it can be selected</p>
+     * 
+     * <strong>example:</strong>
+     * <p>False</p>
+     */
     @NameInMap("CanSelect")
     public Boolean canSelect;
 
+    /**
+     * <p>List of child widgets</p>
+     */
     @NameInMap("Children")
     public java.util.List<QuestionPlugin> children;
 
+    /**
+     * <p>Default result</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("DefaultResult")
     public String defaultResult;
 
     /**
+     * <p>Whether it is displayed</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
      */
     @NameInMap("Display")
     public Boolean display;
 
+    /**
+     * <p>Additional remarks</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Exif")
     public java.util.Map<String, ?> exif;
 
+    /**
+     * <p>Keyboard shortcut map</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("HotKeyMap")
     public String hotKeyMap;
 
     /**
+     * <p>Widget title</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>内部单选</p>
      */
     @NameInMap("MarkTitle")
     public String markTitle;
 
+    /**
+     * <p>Question alias</p>
+     * 
+     * <strong>example:</strong>
+     * <p>单选</p>
+     */
     @NameInMap("MarkTitleAlias")
     public String markTitleAlias;
 
     /**
+     * <p>Whether it is required</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>False</p>
      */
     @NameInMap("MustFill")
     public Boolean mustFill;
 
     /**
+     * <p>List of options configuration</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Options")
     public java.util.List<QuestionOption> options;
 
+    /**
+     * <p>List of predefined options for fill-in-the-blank questions</p>
+     */
     @NameInMap("PreOptions")
     public java.util.List<String> preOptions;
 
     /**
+     * <p>Question widget ID</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("QuestionId")
     public String questionId;
 
+    /**
+     * <p>Regular expression, validation rule</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("Rule")
     public String rule;
 
+    /**
+     * <p>Selection group</p>
+     * 
+     * <strong>example:</strong>
+     * <p>g1</p>
+     */
     @NameInMap("SelectGroup")
     public String selectGroup;
 
+    /**
+     * <p>Whether it is selected</p>
+     * 
+     * <strong>example:</strong>
+     * <p>False</p>
+     */
     @NameInMap("Selected")
     public Boolean selected;
 
     /**
+     * <p>Widget type</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RADIO</p>
      */
     @NameInMap("Type")
     public String type;

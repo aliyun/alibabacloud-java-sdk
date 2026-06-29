@@ -4,6 +4,12 @@ package com.aliyun.openitag20220616.models;
 import com.aliyun.tea.*;
 
 public class GetJobRequest extends TeaModel {
+    /**
+     * <p>Task Type. Currently, only DOWNLOWD_MARKRESULT_FLOW is available.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DOWNLOWD_MARKRESULT_FLOW</p>
+     */
     @NameInMap("JobType")
     public String jobType;
 

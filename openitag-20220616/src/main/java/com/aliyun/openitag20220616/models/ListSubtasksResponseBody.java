@@ -4,39 +4,100 @@ package com.aliyun.openitag20220616.models;
 import com.aliyun.tea.*;
 
 public class ListSubtasksResponseBody extends TeaModel {
+    /**
+     * <p>Return code. The default value is 0, indicating normal execution.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>Details.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("Details")
     public String details;
 
+    /**
+     * <p>Error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
+     * <p>Response message of the request.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Page number of the returned subtask list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>Number of subtasks displayed per page in the response.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>90ABA848-AD74-1F6E-84BC-4182A7F1****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>List of subtasks.</p>
+     */
     @NameInMap("Subtasks")
     public java.util.List<SubtaskDetail> subtasks;
 
+    /**
+     * <p>Indicates whether the operation succeeded.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>Total number of subtasks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>Total number of pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalPage")
     public Integer totalPage;
 

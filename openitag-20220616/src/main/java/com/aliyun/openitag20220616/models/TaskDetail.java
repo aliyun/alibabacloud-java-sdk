@@ -4,108 +4,315 @@ package com.aliyun.openitag20220616.models;
 import com.aliyun.tea.*;
 
 public class TaskDetail extends TeaModel {
+    /**
+     * <p>List of job administrators.</p>
+     */
     @NameInMap("Admins")
     public java.util.List<SimpleUser> admins;
 
+    /**
+     * <p>Alert time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12412312</p>
+     */
     @NameInMap("AlertTime")
     public Long alertTime;
 
+    /**
+     * <p>Indicates whether data appending is allowed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("AllowAppendData")
     public Boolean allowAppendData;
 
+    /**
+     * <p>Indicates whether the job has been archived.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Archived")
     public Boolean archived;
 
+    /**
+     * <p>Data archiving information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ArchivedInfos")
     public String archivedInfos;
 
+    /**
+     * <p>Job assignment configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("AssignConfig")
     public java.util.Map<String, ?> assignConfig;
 
+    /**
+     * <p>Creator information.</p>
+     */
     @NameInMap("Creator")
     public SimpleUser creator;
 
+    /**
+     * <p>List of Data proxy relationships.</p>
+     */
     @NameInMap("DatasetProxyRelations")
     public java.util.List<TaskDetailDatasetProxyRelations> datasetProxyRelations;
 
+    /**
+     * <p>Additional configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("Exif")
     public java.util.Map<String, ?> exif;
 
+    /**
+     * <p>Creation UTC time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-07-04 11:42:57</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <p>UTC time of the last modification.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-08-16 18:38:42</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    /**
+     * <p>Annotation style.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("LabelStyle")
     public String labelStyle;
 
+    /**
+     * <p>My configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("MineConfigs")
     public java.util.Map<String, ?> mineConfigs;
 
+    /**
+     * <p>Updated By information.</p>
+     */
     @NameInMap("Modifier")
     public SimpleUser modifier;
 
+    /**
+     * <p>Notice configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;DingHook&quot;:&quot;&quot;,&quot;ListenActions&quot;:[],&quot;SubTaskAlertGap&quot;:&quot;&quot;}</p>
+     */
     @NameInMap("NoticeConfig")
     public java.util.Map<String, ?> noticeConfig;
 
+    /**
+     * <p>Time configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;periodConfigId&quot;:&quot;&quot;,&quot;status&quot;:&quot;&quot;}</p>
+     */
     @NameInMap("PeriodConfig")
     public java.util.Map<String, ?> periodConfig;
 
+    /**
+     * <p>Auto triggered task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12312414</p>
+     */
     @NameInMap("RefTaskId")
     public String refTaskId;
 
+    /**
+     * <p>Related job configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("RelateTaskConfig")
     public java.util.Map<String, ?> relateTaskConfig;
 
+    /**
+     * <p>Remark information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <p>Result callback configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;RetMsgMode&quot;:&quot;&quot;,&quot;Exif&quot;:{}}</p>
+     */
     @NameInMap("ResultCallbackConfig")
     public java.util.Map<String, ?> resultCallbackConfig;
 
+    /**
+     * <p>Current edge zone. Possible values:</p>
+     * <ul>
+     * <li>MARK: Annotating.</li>
+     * <li>CHECK: Checking.</li>
+     * <li>SAMPLING: Validating.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>MARK</p>
+     */
     @NameInMap("Stage")
     public String stage;
 
+    /**
+     * <p>Task Status. Possible values:</p>
+     * <ul>
+     * <li>CREATED</li>
+     * <li>SUCCESS</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>CREATED</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>List of job tags.</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Tags")
     public java.util.List<String> tags;
 
+    /**
+     * <p>Job ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15438***8306500608</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <p>Task Name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试任务</p>
+     */
     @NameInMap("TaskName")
     public String taskName;
 
+    /**
+     * <p>Supplementary configuration for the Job template.</p>
+     */
     @NameInMap("TaskTemplateConfig")
     public TaskDetailTaskTemplateConfig taskTemplateConfig;
 
+    /**
+     * <p>Task Type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NORMAL</p>
+     */
     @NameInMap("TaskType")
     public String taskType;
 
+    /**
+     * <p>List of job stream configurations.</p>
+     */
     @NameInMap("TaskWorkflow")
     public java.util.List<TaskDetailTaskWorkflow> taskWorkflow;
 
+    /**
+     * <p>Template ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1529***348342353920</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <p>Tenant ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GA***W134</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 
+    /**
+     * <p>Tenant name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试任务202208101424</p>
+     */
     @NameInMap("TenantName")
     public String tenantName;
 
+    /**
+     * <p>UUID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>paiworkspace-0001</p>
+     */
     @NameInMap("UUID")
     public String UUID;
 
+    /**
+     * <p>Voting configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;1&quot;:{&quot;VoteNum&quot;:1,&quot;MinVote&quot;:1}}</p>
+     */
     @NameInMap("VoteConfigs")
     public java.util.Map<String, ?> voteConfigs;
 
+    /**
+     * <p>List of pipeline nodes.</p>
+     */
     @NameInMap("WorkflowNodes")
     public java.util.List<String> workflowNodes;
 
+    /**
+     * <p>Run message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxx</p>
+     */
     @NameInMap("runMsg")
     public String runMsg;
 
@@ -395,21 +602,57 @@ public class TaskDetail extends TeaModel {
     }
 
     public static class TaskDetailDatasetProxyRelations extends TeaModel {
+        /**
+         * <p>Dataset ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>102***124</p>
+         */
         @NameInMap("DatasetId")
         public String datasetId;
 
+        /**
+         * <p>Dataset type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LABEL</p>
+         */
         @NameInMap("DatasetType")
         public String datasetType;
 
+        /**
+         * <p>Additional information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Exif")
         public java.util.Map<String, ?> exif;
 
+        /**
+         * <p>Dataset source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PAI</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>Source business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-24eyimdzdn4a98jktk</p>
+         */
         @NameInMap("SourceBizId")
         public String sourceBizId;
 
+        /**
+         * <p>Source dataset ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2312124</p>
+         */
         @NameInMap("SourceDatasetId")
         public String sourceDatasetId;
 
@@ -469,21 +712,54 @@ public class TaskDetail extends TeaModel {
     }
 
     public static class TaskDetailTaskTemplateConfig extends TeaModel {
+        /**
+         * <p>Additional information for template configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Exif")
         public java.util.Map<String, ?> exif;
 
+        /**
+         * <p>Resource key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>picture1</p>
+         */
         @NameInMap("ResourceKey")
         public String resourceKey;
 
+        /**
+         * <p>Robot configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("RobotConfig")
         public java.util.Map<String, ?> robotConfig;
 
+        /**
+         * <p>If the number of questions in the Job is less than that in the template, you can select the required questions from the List.</p>
+         */
         @NameInMap("SelectQuestions")
         public java.util.List<String> selectQuestions;
 
+        /**
+         * <p>Options configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;1&quot;:[{&quot;label&quot;:&quot;label1&quot;,&quot;key&quot;:&quot;label1&quot;}]}</p>
+         */
         @NameInMap("TemplateOptionMap")
         public java.util.Map<String, ?> templateOptionMap;
 
+        /**
+         * <p>Template relation ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("TemplateRelationId")
         public String templateRelationId;
 
@@ -543,15 +819,38 @@ public class TaskDetail extends TeaModel {
     }
 
     public static class TaskDetailTaskWorkflow extends TeaModel {
+        /**
+         * <p>Extra information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Exif")
         public java.util.Map<String, ?> exif;
 
+        /**
+         * <p>Group list.</p>
+         */
         @NameInMap("Groups")
         public java.util.List<String> groups;
 
+        /**
+         * <p>Edge zone name. Possible values:  </p>
+         * <ul>
+         * <li>MARK  </li>
+         * <li>CHECK  </li>
+         * <li>SAMPLING</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MARK</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
+        /**
+         * <p>User List.</p>
+         */
         @NameInMap("Users")
         public java.util.List<SimpleUser> users;
 

@@ -4,9 +4,18 @@ package com.aliyun.openitag20220616.models;
 import com.aliyun.tea.*;
 
 public class SimpleWorkforce extends TeaModel {
+    /**
+     * <p>List of personnel information.</p>
+     */
     @NameInMap("UserIds")
     public java.util.List<Long> userIds;
 
+    /**
+     * <p>Node ID. For more information, see <a href="https://help.aliyun.com/document_detail/454697.html">GetTaskWorkforce</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("WorkNodeId")
     public Integer workNodeId;
 

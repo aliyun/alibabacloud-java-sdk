@@ -4,24 +4,67 @@ package com.aliyun.openitag20220616.models;
 import com.aliyun.tea.*;
 
 public class TemplateQuestion extends TeaModel {
+    /**
+     * <p>List of child nodes</p>
+     */
     @NameInMap("Children")
     public java.util.List<TemplateQuestion> children;
 
+    /**
+     * <p>Additional properties</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("Exif")
     public java.util.Map<String, ?> exif;
 
+    /**
+     * <p>Title</p>
+     * 
+     * <strong>example:</strong>
+     * <p>题目1</p>
+     */
     @NameInMap("MarkTitle")
     public String markTitle;
 
+    /**
+     * <p>List of options</p>
+     */
     @NameInMap("Options")
     public java.util.List<QuestionOption> options;
 
+    /**
+     * <p>List of pre-filled values</p>
+     */
     @NameInMap("PreOptions")
     public java.util.List<String> preOptions;
 
+    /**
+     * <p>Question ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("QuestionId")
     public Long questionId;
 
+    /**
+     * <p>Type, including the following:  </p>
+     * <ul>
+     * <li>TEXT_EDIT  </li>
+     * <li>CHECKBOX  </li>
+     * <li>INPUT  </li>
+     * <li>PICTURE  </li>
+     * <li>VIDEO  </li>
+     * <li>OPEN_ENDED  </li>
+     * <li>SLOT  </li>
+     * <li>RADIO</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>RADIO</p>
+     */
     @NameInMap("Type")
     public String type;
 

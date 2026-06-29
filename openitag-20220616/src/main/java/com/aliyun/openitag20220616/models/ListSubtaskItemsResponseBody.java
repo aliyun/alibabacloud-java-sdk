@@ -4,39 +4,104 @@ package com.aliyun.openitag20220616.models;
 import com.aliyun.tea.*;
 
 public class ListSubtaskItemsResponseBody extends TeaModel {
+    /**
+     * <p>Return encoding. The default value is 0, indicating normal execution.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>Details.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("Details")
     public String details;
 
+    /**
+     * <p>Error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>List of data items.</p>
+     */
     @NameInMap("Items")
     public java.util.List<SubtaskItemDetail> items;
 
     /**
+     * <p>Return message of the request.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Page number of the queried task package annotation data returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>Quantity of annotated task package data entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>90ABA848-AD74-1F6E-84BC-4182A7F1****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request succeeded. Possible values:  </p>
+     * <ul>
+     * <li>true: The request succeeded.  </li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>Total quantity of annotated data in the task package.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>Total number of pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalPage")
     public Integer totalPage;
 

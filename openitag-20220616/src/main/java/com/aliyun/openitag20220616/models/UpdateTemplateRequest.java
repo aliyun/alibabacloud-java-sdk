@@ -4,6 +4,9 @@ package com.aliyun.openitag20220616.models;
 import com.aliyun.tea.*;
 
 public class UpdateTemplateRequest extends TeaModel {
+    /**
+     * <p>template</p>
+     */
     @NameInMap("body")
     public TemplateDTO body;
 

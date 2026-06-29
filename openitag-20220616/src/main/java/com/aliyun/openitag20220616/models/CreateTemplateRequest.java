@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTemplateRequest extends TeaModel {
     /**
+     * <p>Template information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

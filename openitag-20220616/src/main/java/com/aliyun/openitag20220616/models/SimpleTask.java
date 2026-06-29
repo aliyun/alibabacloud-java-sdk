@@ -4,60 +4,187 @@ package com.aliyun.openitag20220616.models;
 import com.aliyun.tea.*;
 
 public class SimpleTask extends TeaModel {
+    /**
+     * <p>Indicates whether the job is archived. Possible values:  </p>
+     * <ul>
+     * <li>false: Not archived.  </li>
+     * <li>true: Archived.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Archived")
     public Boolean archived;
 
+    /**
+     * <p>Data archiving information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ArchivedInfos")
     public String archivedInfos;
 
+    /**
+     * <p>Creator information.</p>
+     */
     @NameInMap("Creator")
     public SimpleUser creator;
 
+    /**
+     * <p>UTC creation time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-07-07 16:09:20</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <p>UTC time of the last update.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-07-07 16:09:20</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    /**
+     * <p>Label style.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IMG</p>
+     */
     @NameInMap("LabelStyle")
     public String labelStyle;
 
+    /**
+     * <p>Updated By information.</p>
+     */
     @NameInMap("Modifier")
     public SimpleUser modifier;
 
+    /**
+     * <p>Auto triggered task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123***5124</p>
+     */
     @NameInMap("RefTaskId")
     public String refTaskId;
 
+    /**
+     * <p>Remarks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>备注</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <p>Current streaming node. Possible values:  </p>
+     * <ul>
+     * <li>MARK: Annotating.  </li>
+     * <li>CHECK: Checking.  </li>
+     * <li>FINISHED: Completed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>MARK</p>
+     */
     @NameInMap("Stage")
     public String stage;
 
+    /**
+     * <p>Task Status. Possible values:  </p>
+     * <ul>
+     * <li>CREATED  </li>
+     * <li>SUCCESS</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>CREATED</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>List of job labels.</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Tags")
     public java.util.List<String> tags;
 
+    /**
+     * <p>Job ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15438***8306500608</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <p>Job name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo</p>
+     */
     @NameInMap("TaskName")
     public String taskName;
 
+    /**
+     * <p>Task Type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NORMAL</p>
+     */
     @NameInMap("TaskType")
     public String taskType;
 
+    /**
+     * <p>Template ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1529***348342353920</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <p>Tenant ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GA***W134</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 
+    /**
+     * <p>UUID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>paiworkspace-****</p>
+     */
     @NameInMap("UUID")
     public String UUID;
 
+    /**
+     * <p>Pipeline nodes.</p>
+     */
     @NameInMap("WorkflowNodes")
     public java.util.List<String> workflowNodes;
 

@@ -4,18 +4,51 @@ package com.aliyun.openitag20220616.models;
 import com.aliyun.tea.*;
 
 public class SimpleUser extends TeaModel {
+    /**
+     * <p>Account ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>166***9980757310</p>
+     */
     @NameInMap("AccountNo")
     public String accountNo;
 
+    /**
+     * <p>Account Type</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALIYUN</p>
+     */
     @NameInMap("AccountType")
     public String accountType;
 
+    /**
+     * <p>Role</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ADMIN</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Role")
     public String role;
 
+    /**
+     * <p>User ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>166***9980757311</p>
+     */
     @NameInMap("UserId")
     public Long userId;
 
+    /**
+     * <p>Username</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:txdemo@test.aliyunid.com">txdemo@test.aliyunid.com</a></p>
+     */
     @NameInMap("UserName")
     public String userName;
 

@@ -4,27 +4,67 @@ package com.aliyun.openitag20220616.models;
 import com.aliyun.tea.*;
 
 public class CreateTaskResponseBody extends TeaModel {
+    /**
+     * <p>Total amount of data under the conditions of this request. This parameter is optional and does not need to be returned by default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>Details</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("Details")
     public String details;
 
+    /**
+     * <p>Error code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
+     * <p>Response message of the request</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Request ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>90ABA848-AD74-1F6E-84BC-4182A7F1F29E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the operation succeeded.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>Job ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>154***2518306500608</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

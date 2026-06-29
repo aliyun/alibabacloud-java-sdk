@@ -4,39 +4,108 @@ package com.aliyun.openitag20220616.models;
 import com.aliyun.tea.*;
 
 public class ListJobsResponseBody extends TeaModel {
+    /**
+     * <p>Return code. The default value is 0, indicating normal execution.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>Details.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("Details")
     public String details;
 
+    /**
+     * <p>Error code.</p>
+     * <ul>
+     * <li>When Success is false, returns a business error code.</li>
+     * <li>When Success is true, returns an empty value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>List of jobs.</p>
+     */
     @NameInMap("Jobs")
     public java.util.List<Job> jobs;
 
     /**
+     * <p>Response message of the request.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Page number of the returned list of queried annotation results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>Number of annotation results displayed per page in the response.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>90ABA848-AD74-1F6E-84BC-4182A7F1****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the operation succeeded. Valid values:</p>
+     * <ul>
+     * <li>true: Succeeded.</li>
+     * <li>false: Failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>Total number of annotation results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>Total number of pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalPage")
     public Integer totalPage;
 

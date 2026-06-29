@@ -4,15 +4,36 @@ package com.aliyun.openitag20220616.models;
 import com.aliyun.tea.*;
 
 public class ListTemplatesRequest extends TeaModel {
+    /**
+     * <p>Page number</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>Page size</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Search content</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo</p>
+     */
     @NameInMap("SearchKey")
     public String searchKey;
 
+    /**
+     * <p>List of application types.</p>
+     */
     @NameInMap("Types")
     public java.util.List<String> types;
 

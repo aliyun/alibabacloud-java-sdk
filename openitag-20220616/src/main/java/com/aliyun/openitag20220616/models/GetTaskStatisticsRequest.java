@@ -4,6 +4,16 @@ package com.aliyun.openitag20220616.models;
 import com.aliyun.tea.*;
 
 public class GetTaskStatisticsRequest extends TeaModel {
+    /**
+     * <p>Statistics Type. Valid values:</p>
+     * <ul>
+     * <li>OPERATORCELL: Operation cell.</li>
+     * <li>ITEM: Single item.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ITEM</p>
+     */
     @NameInMap("StatType")
     public String statType;
 

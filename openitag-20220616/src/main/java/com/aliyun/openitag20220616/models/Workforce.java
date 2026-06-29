@@ -4,12 +4,27 @@ package com.aliyun.openitag20220616.models;
 import com.aliyun.tea.*;
 
 public class Workforce extends TeaModel {
+    /**
+     * <p>Node name.<br>Valid values include: SAMPLING, CHECK, MARK.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CHECK</p>
+     */
     @NameInMap("NodeType")
     public String nodeType;
 
+    /**
+     * <p>List of user information</p>
+     */
     @NameInMap("Users")
     public java.util.List<SimpleUser> users;
 
+    /**
+     * <p>Node ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("WorkNodeId")
     public Integer workNodeId;
 

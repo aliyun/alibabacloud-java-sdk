@@ -4,6 +4,9 @@ package com.aliyun.openitag20220616.models;
 import com.aliyun.tea.*;
 
 public class UpdateTaskWorkforceRequest extends TeaModel {
+    /**
+     * <p>User List.</p>
+     */
     @NameInMap("Workforce")
     public java.util.List<SimpleWorkforce> workforce;
 

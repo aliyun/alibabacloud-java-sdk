@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTaskRequest extends TeaModel {
     /**
+     * <p>Job details</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

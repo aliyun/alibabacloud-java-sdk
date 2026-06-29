@@ -5,44 +5,96 @@ import com.aliyun.tea.*;
 
 public class ViewPlugin extends TeaModel {
     /**
+     * <p>Field mapping to a field in the dataset.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>url</p>
      */
     @NameInMap("BindField")
     public String bindField;
 
+    /**
+     * <p>Array transformation UDF.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("Convertor")
     public String convertor;
 
     /**
+     * <p>Whether to handle cross-domain requests.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("CorsProxy")
     public Boolean corsProxy;
 
     /**
+     * <p>Whether to display the original image.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("DisplayOriImg")
     public Boolean displayOriImg;
 
+    /**
+     * <p>Extra information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Exif")
     public java.util.Map<String, ?> exif;
 
+    /**
+     * <p>Whether to hide.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Hide")
     public Boolean hide;
 
+    /**
+     * <p>Nested widgets.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
+     */
     @NameInMap("Plugins")
     public java.util.Map<String, ?> plugins;
 
+    /**
+     * <p>List of associated questions.</p>
+     */
     @NameInMap("RelationQuestionIds")
     public java.util.List<String> relationQuestionIds;
 
     /**
+     * <p>Widget type. Valid values:</p>
+     * <ul>
+     * <li>Image: Image.</li>
+     * <li>Text: Text.</li>
+     * <li>Video: Video.</li>
+     * <li>Audio: Audio.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Text</p>
      */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <p>Access information.</p>
+     */
     @NameInMap("VisitInfo")
     public ViewPluginVisitInfo visitInfo;
 
@@ -132,9 +184,21 @@ public class ViewPlugin extends TeaModel {
     }
 
     public static class ViewPluginVisitInfo extends TeaModel {
+        /**
+         * <p>AFTS configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;expiredTime&quot;:1}</p>
+         */
         @NameInMap("aftsConf")
         public java.util.Map<String, ?> aftsConf;
 
+        /**
+         * <p>OSS configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ossEndpoint&quot;:&quot;&quot;,&quot;ossAk&quot;:&quot;&quot;,&quot;ossAs&quot;:&quot;&quot;,&quot;ossOwner&quot;:&quot;&quot;,&quot;ossBucket&quot;:&quot;&quot;,&quot;folder&quot;:&quot;&quot;,&quot;expiredTime&quot;:&quot;&quot;}</p>
+         */
         @NameInMap("ossConf")
         public java.util.Map<String, ?> ossConf;
 

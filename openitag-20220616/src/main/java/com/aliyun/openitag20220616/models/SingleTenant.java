@@ -4,18 +4,48 @@ package com.aliyun.openitag20220616.models;
 import com.aliyun.tea.*;
 
 public class SingleTenant extends TeaModel {
+    /**
+     * <p>Tenant description</p>
+     * 
+     * <strong>example:</strong>
+     * <p>该租户用来测试</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Tenant status</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CREATED</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>Tenant ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GA***134</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 
+    /**
+     * <p>Tenant name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo</p>
+     */
     @NameInMap("TenantName")
     public String tenantName;
 
+    /**
+     * <p>Tenant UUID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>paiworkspace-0001</p>
+     */
     @NameInMap("UUID")
     public String UUID;
 

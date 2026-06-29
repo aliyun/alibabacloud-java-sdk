@@ -8,7 +8,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("cn-shenzhen", "openitag.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "openitag.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "openitag.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-beijing", "openitag.cn-beijing.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("openitag", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -27,8 +33,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 增加结点任务人力
-     *
+     * <b>summary</b> : 
+     * <p>Assign personnel to the worker nodes (annotation, quality inspection, and validation) of an annotation job.</p>
+     * 
      * @param request AddWorkNodeWorkforceRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -60,8 +67,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 增加结点任务人力
-     *
+     * <b>summary</b> : 
+     * <p>Assign personnel to the worker nodes (annotation, quality inspection, and validation) of an annotation job.</p>
+     * 
      * @param request AddWorkNodeWorkforceRequest
      * @return AddWorkNodeWorkforceResponse
      */
@@ -72,8 +80,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 数据追加
-     *
+     * <b>summary</b> : 
+     * <p>Append data to a job.</p>
+     * 
      * @param request AppendAllDataToTaskRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -100,8 +109,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 数据追加
-     *
+     * <b>summary</b> : 
+     * <p>Append data to a job.</p>
+     * 
      * @param request AppendAllDataToTaskRequest
      * @return AppendAllDataToTaskResponse
      */
@@ -112,8 +122,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建标注任务
-     *
+     * <b>summary</b> : 
+     * <p>Create an annotation job for the current tenant.</p>
+     * 
      * @param request CreateTaskRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -140,8 +151,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建标注任务
-     *
+     * <b>summary</b> : 
+     * <p>Create an annotation job for the current tenant.</p>
+     * 
      * @param request CreateTaskRequest
      * @return CreateTaskResponse
      */
@@ -152,8 +164,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建标注模版
-     *
+     * <b>summary</b> : 
+     * <p>You can add a new template for the current tenant and customize the annotation template based on your business requirements.</p>
+     * 
      * @param request CreateTemplateRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -180,8 +193,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建标注模版
-     *
+     * <b>summary</b> : 
+     * <p>You can add a new template for the current tenant and customize the annotation template based on your business requirements.</p>
+     * 
      * @param request CreateTemplateRequest
      * @return CreateTemplateResponse
      */
@@ -192,8 +206,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建租户内用户
-     *
+     * <b>summary</b> : 
+     * <p>Add a member to the tenant.</p>
+     * 
      * @param request CreateUserRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -237,8 +252,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建租户内用户
-     *
+     * <b>summary</b> : 
+     * <p>Add a member to the tenant.</p>
+     * 
      * @param request CreateUserRequest
      * @return CreateUserResponse
      */
@@ -249,8 +265,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除任务
-     *
+     * <b>summary</b> : 
+     * <p>Delete a job under the current tenant.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteTaskResponse
@@ -274,8 +291,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除任务
-     *
+     * <b>summary</b> : 
+     * <p>Delete a job under the current tenant.</p>
      * @return DeleteTaskResponse
      */
     public DeleteTaskResponse deleteTask(String TenantId, String TaskId) throws Exception {
@@ -285,8 +302,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除租户下的单个模板
-     *
+     * <b>summary</b> : 
+     * <p>Delete the template under the current tenant.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteTemplateResponse
@@ -310,8 +328,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除租户下的单个模板
-     *
+     * <b>summary</b> : 
+     * <p>Delete the template under the current tenant.</p>
      * @return DeleteTemplateResponse
      */
     public DeleteTemplateResponse deleteTemplate(String TenantId, String TemplateId) throws Exception {
@@ -321,8 +339,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除用户
-     *
+     * <b>summary</b> : 
+     * <p>Delete a member within a tenant.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteUserResponse
@@ -346,8 +365,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除用户
-     *
+     * <b>summary</b> : 
+     * <p>Delete a member within a tenant.</p>
      * @return DeleteUserResponse
      */
     public DeleteUserResponse deleteUser(String TenantId, String UserId) throws Exception {
@@ -357,8 +376,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取任务导出结果
-     *
+     * <b>summary</b> : 
+     * <p>Export the result data of an annotation job.</p>
+     * 
      * @param request ExportAnnotationsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -398,8 +418,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取任务导出结果
-     *
+     * <b>summary</b> : 
+     * <p>Export the result data of an annotation job.</p>
+     * 
      * @param request ExportAnnotationsRequest
      * @return ExportAnnotationsResponse
      */
@@ -410,8 +431,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取异步任务Job
-     *
+     * <b>summary</b> : 
+     * <p>Query the information of a single annotation export result.</p>
+     * 
      * @param request GetJobRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -443,8 +465,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取异步任务Job
-     *
+     * <b>summary</b> : 
+     * <p>Query the information of a single annotation export result.</p>
+     * 
      * @param request GetJobRequest
      * @return GetJobResponse
      */
@@ -455,8 +478,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取单个子任务信息
-     *
+     * <b>summary</b> : 
+     * <p>Query the information of a single subtask package.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetSubtaskResponse
@@ -480,8 +504,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取单个子任务信息
-     *
+     * <b>summary</b> : 
+     * <p>Query the information of a single subtask package.</p>
      * @return GetSubtaskResponse
      */
     public GetSubtaskResponse getSubtask(String TenantId, String TaskID, String SubtaskId) throws Exception {
@@ -491,8 +515,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取子任务单个ITEM信息
-     *
+     * <b>summary</b> : 
+     * <p>Query a single annotated data item in a subtask package.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetSubtaskItemResponse
@@ -516,8 +541,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取子任务单个ITEM信息
-     *
+     * <b>summary</b> : 
+     * <p>Query a single annotated data item in a subtask package.</p>
      * @return GetSubtaskItemResponse
      */
     public GetSubtaskItemResponse getSubtaskItem(String TenantId, String TaskId, String SubtaskId, String ItemId) throws Exception {
@@ -527,8 +552,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取任务状态信息
-     *
+     * <b>summary</b> : 
+     * <p>Query the information of a single annotation job.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTaskResponse
@@ -552,8 +578,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取任务状态信息
-     *
+     * <b>summary</b> : 
+     * <p>Query the information of a single annotation job.</p>
      * @return GetTaskResponse
      */
     public GetTaskResponse getTask(String TenantId, String TaskId) throws Exception {
@@ -563,8 +589,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取任务统计信息
-     *
+     * <b>summary</b> : 
+     * <p>Query the current statistics information of a job.</p>
+     * 
      * @param request GetTaskStatisticsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -596,8 +623,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取任务统计信息
-     *
+     * <b>summary</b> : 
+     * <p>Query the current statistics information of a job.</p>
+     * 
      * @param request GetTaskStatisticsRequest
      * @return GetTaskStatisticsResponse
      */
@@ -608,8 +636,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取任务状态信息
-     *
+     * <b>summary</b> : 
+     * <p>Query the current status of a job.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTaskStatusResponse
@@ -633,8 +662,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取任务状态信息
-     *
+     * <b>summary</b> : 
+     * <p>Query the current status of a job.</p>
      * @return GetTaskStatusResponse
      */
     public GetTaskStatusResponse getTaskStatus(String TenantId, String TaskId) throws Exception {
@@ -644,8 +673,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取任务模版信息
-     *
+     * <b>summary</b> : 
+     * <p>Query the current template information of a job.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTaskTemplateResponse
@@ -669,8 +699,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取任务模版信息
-     *
+     * <b>summary</b> : 
+     * <p>Query the current template information of a job.</p>
      * @return GetTaskTemplateResponse
      */
     public GetTaskTemplateResponse getTaskTemplate(String TenantId, String TaskId) throws Exception {
@@ -680,8 +710,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取任务题目信息
-     *
+     * <b>summary</b> : 
+     * <p>Query job template questions.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTaskTemplateQuestionsResponse
@@ -705,8 +736,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取任务题目信息
-     *
+     * <b>summary</b> : 
+     * <p>Query job template questions.</p>
      * @return GetTaskTemplateQuestionsResponse
      */
     public GetTaskTemplateQuestionsResponse getTaskTemplateQuestions(String TenantId, String TaskId) throws Exception {
@@ -716,8 +747,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取任务题目信息
-     *
+     * <b>summary</b> : 
+     * <p>Query the data display information in the job template.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTaskTemplateViewsResponse
@@ -741,8 +773,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取任务题目信息
-     *
+     * <b>summary</b> : 
+     * <p>Query the data display information in the job template.</p>
      * @return GetTaskTemplateViewsResponse
      */
     public GetTaskTemplateViewsResponse getTaskTemplateViews(String TenantId, String TaskId) throws Exception {
@@ -752,8 +784,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取任务人力
-     *
+     * <b>summary</b> : 
+     * <p>Query the personnel configuration information of each node in a job.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTaskWorkforceResponse
@@ -777,8 +810,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取任务人力
-     *
+     * <b>summary</b> : 
+     * <p>Query the personnel configuration information of each node in a job.</p>
      * @return GetTaskWorkforceResponse
      */
     public GetTaskWorkforceResponse getTaskWorkforce(String TenantId, String TaskId) throws Exception {
@@ -788,8 +821,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取任务人力统计信息
-     *
+     * <b>summary</b> : 
+     * <p>Query statistics of each member in a job.</p>
+     * 
      * @param request GetTaskWorkforceStatisticRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -829,8 +863,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取任务人力统计信息
-     *
+     * <b>summary</b> : 
+     * <p>Query statistics of each member in a job.</p>
+     * 
      * @param request GetTaskWorkforceStatisticRequest
      * @return GetTaskWorkforceStatisticResponse
      */
@@ -841,8 +876,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取租户下单个模板
-     *
+     * <b>summary</b> : 
+     * <p>Query template information under a tenant.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTemplateResponse
@@ -866,8 +902,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取租户下单个模板
-     *
+     * <b>summary</b> : 
+     * <p>Query template information under a tenant.</p>
      * @return GetTemplateResponse
      */
     public GetTemplateResponse getTemplate(String TenantId, String TemplateId) throws Exception {
@@ -877,8 +913,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取租户下单个模板问题
-     *
+     * <b>summary</b> : 
+     * <p>Query question information such as Radio and Multiple Choice in a template.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTemplateQuestionsResponse
@@ -902,8 +939,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取租户下单个模板问题
-     *
+     * <b>summary</b> : 
+     * <p>Query question information such as Radio and Multiple Choice in a template.</p>
      * @return GetTemplateQuestionsResponse
      */
     public GetTemplateQuestionsResponse getTemplateQuestions(String TenantId, String TemplateId) throws Exception {
@@ -913,8 +950,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取租户下模板视图
-     *
+     * <b>summary</b> : 
+     * <p>Query the display information such as images, text, and audio in the template.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTemplateViewResponse
@@ -938,8 +976,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取租户下模板视图
-     *
+     * <b>summary</b> : 
+     * <p>Query the display information such as images, text, and audio in the template.</p>
      * @return GetTemplateViewResponse
      */
     public GetTemplateViewResponse getTemplateView(String TenantId, String TemplateId) throws Exception {
@@ -949,8 +987,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取租户信息
-     *
+     * <b>summary</b> : 
+     * <p>Query information about the iTAG tenant.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTenantResponse
@@ -974,8 +1013,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取租户信息
-     *
+     * <b>summary</b> : 
+     * <p>Query information about the iTAG tenant.</p>
      * @return GetTenantResponse
      */
     public GetTenantResponse getTenant(String TenantId) throws Exception {
@@ -985,8 +1024,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取用户
-     *
+     * <b>summary</b> : 
+     * <p>Query the details of a single member in a tenant.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetUserResponse
@@ -1010,8 +1050,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取用户
-     *
+     * <b>summary</b> : 
+     * <p>Query the details of a single member in a tenant.</p>
      * @return GetUserResponse
      */
     public GetUserResponse getUser(String TenantId, String UserId) throws Exception {
@@ -1021,8 +1061,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取异步任务Job列表
-     *
+     * <b>summary</b> : 
+     * <p>Displays a list of all exported annotation results.</p>
+     * 
      * @param request ListJobsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1062,8 +1103,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取异步任务Job列表
-     *
+     * <b>summary</b> : 
+     * <p>Displays a list of all exported annotation results.</p>
+     * 
      * @param request ListJobsRequest
      * @return ListJobsResponse
      */
@@ -1074,8 +1116,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取子任务ITEM列表页信息
-     *
+     * <b>summary</b> : 
+     * <p>Display the annotation data of a single subtask package.</p>
+     * 
      * @param request ListSubtaskItemsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1111,8 +1154,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取子任务ITEM列表页信息
-     *
+     * <b>summary</b> : 
+     * <p>Display the annotation data of a single subtask package.</p>
+     * 
      * @param request ListSubtaskItemsRequest
      * @return ListSubtaskItemsResponse
      */
@@ -1123,8 +1167,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取子任务列表页信息
-     *
+     * <b>summary</b> : 
+     * <p>Displays the list of subtask packages.</p>
+     * 
      * @param request ListSubtasksRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1160,8 +1205,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取子任务列表页信息
-     *
+     * <b>summary</b> : 
+     * <p>Displays the list of subtask packages.</p>
+     * 
      * @param request ListSubtasksRequest
      * @return ListSubtasksResponse
      */
@@ -1172,8 +1218,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取任务列表页信息
-     *
+     * <b>summary</b> : 
+     * <p>Displays the list of annotation jobs for the current tenant.</p>
+     * 
      * @param request ListTasksRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1209,8 +1256,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取任务列表页信息
-     *
+     * <b>summary</b> : 
+     * <p>Displays the list of annotation jobs for the current tenant.</p>
+     * 
      * @param request ListTasksRequest
      * @return ListTasksResponse
      */
@@ -1221,8 +1269,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取租户模板信息列表
-     *
+     * <b>summary</b> : 
+     * <p>Display the template list of the current tenant.</p>
+     * 
      * @param tmpReq ListTemplatesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1272,8 +1321,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取租户模板信息列表
-     *
+     * <b>summary</b> : 
+     * <p>Display the template list of the current tenant.</p>
+     * 
      * @param request ListTemplatesRequest
      * @return ListTemplatesResponse
      */
@@ -1284,8 +1334,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取租户列表
-     *
+     * <b>summary</b> : 
+     * <p>Query iTAG tenants under an Alibaba Cloud account.</p>
+     * 
      * @param request ListTenantsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1321,8 +1372,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取租户列表
-     *
+     * <b>summary</b> : 
+     * <p>Query iTAG tenants under an Alibaba Cloud account.</p>
+     * 
      * @param request ListTenantsRequest
      * @return ListTenantsResponse
      */
@@ -1333,8 +1385,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取用户列表
-     *
+     * <b>summary</b> : 
+     * <p>Displays all annotate members under the current tenant.</p>
+     * 
      * @param request ListUsersRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1370,8 +1423,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取用户列表
-     *
+     * <b>summary</b> : 
+     * <p>Displays all annotate members under the current tenant.</p>
+     * 
      * @param request ListUsersRequest
      * @return ListUsersResponse
      */
@@ -1382,8 +1436,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除结点人力
-     *
+     * <b>summary</b> : 
+     * <p>Delete Node Personnel</p>
+     * 
      * @param request RemoveWorkNodeWorkforceRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1415,8 +1470,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除结点人力
-     *
+     * <b>summary</b> : 
+     * <p>Delete Node Personnel</p>
+     * 
      * @param request RemoveWorkNodeWorkforceRequest
      * @return RemoveWorkNodeWorkforceResponse
      */
@@ -1427,8 +1483,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新标注任务基础信息
-     *
+     * <b>summary</b> : 
+     * <p>Modify a job under the current tenant.</p>
+     * 
      * @param request UpdateTaskRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1455,8 +1512,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新标注任务基础信息
-     *
+     * <b>summary</b> : 
+     * <p>Modify a job under the current tenant.</p>
+     * 
      * @param request UpdateTaskRequest
      * @return UpdateTaskResponse
      */
@@ -1467,8 +1525,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新任务人力
-     *
+     * <b>summary</b> : 
+     * <p>Update job members.</p>
+     * 
      * @param request UpdateTaskWorkforceRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1500,8 +1559,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新任务人力
-     *
+     * <b>summary</b> : 
+     * <p>Update job members.</p>
+     * 
      * @param request UpdateTaskWorkforceRequest
      * @return UpdateTaskWorkforceResponse
      */
@@ -1512,8 +1572,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新标注模版
-     *
+     * <b>summary</b> : 
+     * <p>Modify the template under the current tenant.</p>
+     * 
      * @param request UpdateTemplateRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1540,8 +1601,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新标注模版
-     *
+     * <b>summary</b> : 
+     * <p>Modify the template under the current tenant.</p>
+     * 
      * @param request UpdateTemplateRequest
      * @return UpdateTemplateResponse
      */
@@ -1552,8 +1614,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新租户信息
-     *
+     * <b>summary</b> : 
+     * <p>Modify the information of an iTAG tenant.</p>
+     * 
      * @param request UpdateTenantRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1589,8 +1652,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新租户信息
-     *
+     * <b>summary</b> : 
+     * <p>Modify the information of an iTAG tenant.</p>
+     * 
      * @param request UpdateTenantRequest
      * @return UpdateTenantResponse
      */
@@ -1601,8 +1665,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新用户信息
-     *
+     * <b>summary</b> : 
+     * <p>Update member information within a tenant.</p>
+     * 
      * @param request UpdateUserRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1638,8 +1703,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新用户信息
-     *
+     * <b>summary</b> : 
+     * <p>Update member information within a tenant.</p>
+     * 
      * @param request UpdateUserRequest
      * @return UpdateUserResponse
      */

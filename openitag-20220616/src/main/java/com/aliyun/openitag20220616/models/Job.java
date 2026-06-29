@@ -4,24 +4,68 @@ package com.aliyun.openitag20220616.models;
 import com.aliyun.tea.*;
 
 public class Job extends TeaModel {
+    /**
+     * <p>Job creator.</p>
+     */
     @NameInMap("Creator")
     public SimpleUser creator;
 
+    /**
+     * <p>Creation Time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-12-28 11:42:19</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <p>Updated At.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-12-28 11:42:20</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    /**
+     * <p>Job ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>147***441221943296</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <p>Task Result.</p>
+     */
     @NameInMap("JobResult")
     public JobJobResult jobResult;
 
+    /**
+     * <p>Task Type. Currently, only DOWNLOWD_MARKRESULT_FLOW is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DOWNLOWD_MARKRESULT_FLOW</p>
+     */
     @NameInMap("JobType")
     public String jobType;
 
+    /**
+     * <p>Job status. Possible values:</p>
+     * <ul>
+     * <li>init: initialization</li>
+     * <li>running: running</li>
+     * <li>pause: pause</li>
+     * <li>stop: stopped</li>
+     * <li>succ: Succeeded</li>
+     * <li>fail: failed</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>succ</p>
+     */
     @NameInMap("Status")
     public String status;
 
@@ -87,6 +131,12 @@ public class Job extends TeaModel {
     }
 
     public static class JobJobResult extends TeaModel {
+        /**
+         * <p>Return value link, which is the OSS path where the annotation results are stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://****-hz-oss.oss-cn-hangzhou.aliyuncs.com/output/ocr_demo001.manifest</p>
+         */
         @NameInMap("ResultLink")
         public String resultLink;
 

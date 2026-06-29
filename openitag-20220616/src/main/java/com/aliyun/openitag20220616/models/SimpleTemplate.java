@@ -4,36 +4,99 @@ package com.aliyun.openitag20220616.models;
 import com.aliyun.tea.*;
 
 public class SimpleTemplate extends TeaModel {
+    /**
+     * <p>Reasons for template deprecation</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;无效&quot;]</p>
+     */
     @NameInMap("AbandonReasons")
     public String abandonReasons;
 
+    /**
+     * <p>Template description</p>
+     * 
+     * <strong>example:</strong>
+     * <p>图片分割的模板</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Creation Time</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-07-12 14:21:08</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <p>Update Time</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-07-12 14:21:08</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    /**
+     * <p>Is shared</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALL</p>
+     */
     @NameInMap("SharedMode")
     public String sharedMode;
 
+    /**
+     * <p>Status</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DRAFT</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>List of tags</p>
+     */
     @NameInMap("Tags")
     public java.util.List<String> tags;
 
+    /**
+     * <p>Template ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>154***1431673270272</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <p>Template Name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>图片分割组合77aa</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 
+    /**
+     * <p>Tenant ID of the template</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GA***W134</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 
+    /**
+     * <p>Type</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CUSTOM</p>
+     */
     @NameInMap("Type")
     public String type;
 

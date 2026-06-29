@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTaskRequest extends TeaModel {
     /**
+     * <p>Task Status</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

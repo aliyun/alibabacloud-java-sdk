@@ -4,21 +4,61 @@ package com.aliyun.openitag20220616.models;
 import com.aliyun.tea.*;
 
 public class FlowJobInfo extends TeaModel {
+    /**
+     * <p>Whether to display. Possible values are:</p>
+     * <ul>
+     * <li>true: Display.</li>
+     * <li>false: Do not display.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Display")
     public Boolean display;
 
+    /**
+     * <p>Job ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1475***441221943296</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <p>Task Type. Currently, only DOWNLOWD_MARKRESULT_FLOW is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DOWNLOWD_MARKRESULT_FLOW</p>
+     */
     @NameInMap("JobType")
     public String jobType;
 
+    /**
+     * <p>Message ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>792B76F4000E681A95155146A002D5F8</p>
+     */
     @NameInMap("MessageId")
     public String messageId;
 
+    /**
+     * <p>Processing information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NEW_INIT</p>
+     */
     @NameInMap("ProcessType")
     public String processType;
 
+    /**
+     * <p>Job ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1543***518306500608</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

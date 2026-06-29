@@ -4,40 +4,82 @@ package com.aliyun.openitag20220616.models;
 import com.aliyun.tea.*;
 
 public class TemplateDTO extends TeaModel {
+    /**
+     * <p>Template categorization</p>
+     * 
+     * <strong>example:</strong>
+     * <p>picture</p>
+     */
     @NameInMap("Classify")
     public String classify;
 
+    /**
+     * <p>Template description</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Template additional information</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Exif")
     public java.util.Map<String, ?> exif;
 
     /**
+     * <p>List of question widget configurations</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("QuestionConfigs")
     public java.util.List<QuestionPlugin> questionConfigs;
 
+    /**
+     * <p>List of assisted annotation configurations</p>
+     */
     @NameInMap("RobotConfigs")
     public java.util.List<java.util.Map<String, ?>> robotConfigs;
 
+    /**
+     * <p>Template shared mode</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("SharedMode")
     public String sharedMode;
 
+    /**
+     * <p>List of tag information</p>
+     */
     @NameInMap("Tags")
     public java.util.List<String> tags;
 
+    /**
+     * <p>Template ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1529***48342353920</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 
     /**
+     * <p>Template Name</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo</p>
      */
     @NameInMap("TemplateName")
     public String templateName;
 
     /**
+     * <p>View layer configuration</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ViewConfigs")
@@ -129,6 +171,9 @@ public class TemplateDTO extends TeaModel {
     }
 
     public static class TemplateDTOViewConfigs extends TeaModel {
+        /**
+         * <p>List of view widgets</p>
+         */
         @NameInMap("ViewPlugins")
         public java.util.List<ViewPlugin> viewPlugins;
 

@@ -4,12 +4,27 @@ package com.aliyun.openitag20220616.models;
 import com.aliyun.tea.*;
 
 public class SubtaskItemDetail extends TeaModel {
+    /**
+     * <p>List of annotation results</p>
+     */
     @NameInMap("Annotations")
     public java.util.List<SubtaskItemDetailAnnotations> annotations;
 
+    /**
+     * <p>data source</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("DataSource")
     public java.util.Map<String, ?> dataSource;
 
+    /**
+     * <p>Item ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1500***47176994816</p>
+     */
     @NameInMap("ItemId")
     public Long itemId;
 
@@ -43,33 +58,93 @@ public class SubtaskItemDetail extends TeaModel {
     }
 
     public static class SubtaskItemDetailAnnotations extends TeaModel {
+        /**
+         * <p>Abandon mark</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
+         */
         @NameInMap("AbandonFlag")
         public Boolean abandonFlag;
 
+        /**
+         * <p>Abandonment remark</p>
+         * 
+         * <strong>example:</strong>
+         * <p>原始数据错误</p>
+         */
         @NameInMap("AbandonRemark")
         public String abandonRemark;
 
+        /**
+         * <p>Date ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1957578084</p>
+         */
         @NameInMap("DataId")
         public String dataId;
 
+        /**
+         * <p>Feedback mark</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
+         */
         @NameInMap("FeedbackFlag")
         public Boolean feedbackFlag;
 
+        /**
+         * <p>Validation feedback</p>
+         * 
+         * <strong>example:</strong>
+         * <p>验收成功/所有投票结果都未被采纳</p>
+         */
         @NameInMap("FeedbackRemark")
         public String feedbackRemark;
 
+        /**
+         * <p>Failure mark</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
+         */
         @NameInMap("FixedFlag")
         public Boolean fixedFlag;
 
+        /**
+         * <p>Is assigned to me</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Mine")
         public Long mine;
 
+        /**
+         * <p>Skip mark</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
+         */
         @NameInMap("RejectFlag")
         public Boolean rejectFlag;
 
+        /**
+         * <p>Status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HANDLING</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>weight</p>
+         * 
+         * <strong>example:</strong>
+         * <p>311011</p>
+         */
         @NameInMap("Weight")
         public Long weight;
 

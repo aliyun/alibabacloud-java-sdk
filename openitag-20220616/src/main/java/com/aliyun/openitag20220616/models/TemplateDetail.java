@@ -4,54 +4,138 @@ package com.aliyun.openitag20220616.models;
 import com.aliyun.tea.*;
 
 public class TemplateDetail extends TeaModel {
+    /**
+     * <p>Reasons for deprecation.</p>
+     */
     @NameInMap("AbandonReasons")
     public java.util.List<String> abandonReasons;
 
+    /**
+     * <p>Template categorization.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>picture</p>
+     */
     @NameInMap("Classify")
     public String classify;
 
+    /**
+     * <p>Creator.</p>
+     */
     @NameInMap("Creator")
     public SimpleUser creator;
 
+    /**
+     * <p>Template description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Additional template information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Exif")
     public java.util.Map<String, ?> exif;
 
+    /**
+     * <p>Creation Time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-07-07 16:09:20</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <p>Updated At.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-07-07 16:09:20</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    /**
+     * <p>Modifier.</p>
+     */
     @NameInMap("Modifier")
     public SimpleUser modifier;
 
+    /**
+     * <p>Question widget configuration.</p>
+     */
     @NameInMap("QuestionConfigs")
     public java.util.List<QuestionPlugin> questionConfigs;
 
+    /**
+     * <p>Template shared mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("SharedMode")
     public String sharedMode;
 
+    /**
+     * <p>Template status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CREATED</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>Label information.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<String> tags;
 
+    /**
+     * <p>Template ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1529***48342353920</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <p>Template Name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 
+    /**
+     * <p>Tenant where the template resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GA***W134</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 
+    /**
+     * <p>Template type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>picture</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <p>View layer configuration.</p>
+     */
     @NameInMap("ViewConfigs")
     public TemplateDetailViewConfigs viewConfigs;
 
@@ -197,6 +281,9 @@ public class TemplateDetail extends TeaModel {
     }
 
     public static class TemplateDetailViewConfigs extends TeaModel {
+        /**
+         * <p>View widgets.</p>
+         */
         @NameInMap("ViewPlugins")
         public java.util.List<ViewPlugin> viewPlugins;
 

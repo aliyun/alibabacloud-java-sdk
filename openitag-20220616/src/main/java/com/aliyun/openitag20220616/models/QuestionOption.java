@@ -4,27 +4,56 @@ package com.aliyun.openitag20220616.models;
 import com.aliyun.tea.*;
 
 public class QuestionOption extends TeaModel {
+    /**
+     * <p>List of child options.</p>
+     */
     @NameInMap("Children")
     public java.util.List<QuestionOption> children;
 
+    /**
+     * <p>Color.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>#239125</p>
+     */
     @NameInMap("Color")
     public String color;
 
     /**
+     * <p>Tag Name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
      */
     @NameInMap("Key")
     public String key;
 
     /**
+     * <p>Label display name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dog</p>
      */
     @NameInMap("Label")
     public String label;
 
+    /**
+     * <p>Remark.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>第一道题目</p>
+     */
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <p>Keyboard shortcut.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Shortcut")
     public String shortcut;
 

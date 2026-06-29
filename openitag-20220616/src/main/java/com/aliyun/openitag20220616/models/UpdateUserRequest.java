@@ -5,13 +5,26 @@ import com.aliyun.tea.*;
 
 public class UpdateUserRequest extends TeaModel {
     /**
+     * <p>Role. Possible values:</p>
+     * <ul>
+     * <li>OPERATOR: Annotator.</li>
+     * <li>ADMIN: Administrator.</li>
+     * <li>LEADER: Annotation team leader.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ADMIN</p>
      */
     @NameInMap("Role")
     public String role;
 
     /**
+     * <p>Username.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user1</p>
      */
     @NameInMap("UserName")
     public String userName;

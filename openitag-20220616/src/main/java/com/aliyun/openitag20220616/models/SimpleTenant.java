@@ -4,30 +4,78 @@ package com.aliyun.openitag20220616.models;
 import com.aliyun.tea.*;
 
 public class SimpleTenant extends TeaModel {
+    /**
+     * <p>Creator</p>
+     */
     @NameInMap("Creator")
     public SimpleUser creator;
 
+    /**
+     * <p>Description</p>
+     * 
+     * <strong>example:</strong>
+     * <p>这是一个测试租户</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Creation Time</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-07-07 16:09:20</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <p>Updated At</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-07-07 16:09:20</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    /**
+     * <p>Updated By Information</p>
+     */
     @NameInMap("Modifier")
     public SimpleUser modifier;
 
+    /**
+     * <p>Role Information</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ADMIN</p>
+     */
     @NameInMap("Role")
     public String role;
 
+    /**
+     * <p>Tenant ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GA***W134</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 
+    /**
+     * <p>Tenant Name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo</p>
+     */
     @NameInMap("TenantName")
     public String tenantName;
 
+    /**
+     * <p>Unique Identifier</p>
+     * 
+     * <strong>example:</strong>
+     * <p>paiworkspace-0001</p>
+     */
     @NameInMap("UUID")
     public String UUID;
 

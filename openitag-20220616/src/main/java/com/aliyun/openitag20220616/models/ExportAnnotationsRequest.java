@@ -5,14 +5,34 @@ import com.aliyun.tea.*;
 
 public class ExportAnnotationsRequest extends TeaModel {
     /**
+     * <p>OSS path.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://***-hz-oss.oss-cn-hangzhou.aliyuncs.com/output/</p>
      */
     @NameInMap("OssPath")
     public String ossPath;
 
+    /**
+     * <p>Specifies whether to register the result as a PAI dataset. Valid values:</p>
+     * <ul>
+     * <li>true: Registers the annotation result as a PAI dataset.</li>
+     * <li>false: Exports the annotation result directly to an OSS folder without registering it as a dataset.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("RegisterDataset")
     public String registerDataset;
 
+    /**
+     * <p>Target.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PAI</p>
+     */
     @NameInMap("Target")
     public String target;
 

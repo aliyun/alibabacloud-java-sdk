@@ -4,36 +4,102 @@ package com.aliyun.openitag20220616.models;
 import com.aliyun.tea.*;
 
 public class UserStatistic extends TeaModel {
+    /**
+     * <p>Quantity of Data items passed</p>
+     * 
+     * <strong>example:</strong>
+     * <p>172</p>
+     */
     @NameInMap("AcceptedMarkItemsCount")
     public Float acceptedMarkItemsCount;
 
+    /**
+     * <p>Total inspection count</p>
+     * 
+     * <strong>example:</strong>
+     * <p>140</p>
+     */
     @NameInMap("CheckCount")
     public Float checkCount;
 
+    /**
+     * <p>Quantity passed in inspection</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("CheckedAcceptedCount")
     public Float checkedAcceptedCount;
 
+    /**
+     * <p>Inspection accuracy.<br>Inspection accuracy = Number Of Error inspected / Quantity inspected</p>
+     * 
+     * <strong>example:</strong>
+     * <p>95.33</p>
+     */
     @NameInMap("CheckedAccuracy")
     public Float checkedAccuracy;
 
+    /**
+     * <p>Annotation efficiency. Unit: items/hour<br>Annotation efficiency = Quantity annotated / Annotation duration (including rejections)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.1</p>
+     */
     @NameInMap("MarkEfficiency")
     public Float markEfficiency;
 
+    /**
+     * <p>Annotation duration. Unit: hours</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.1</p>
+     */
     @NameInMap("MarkTime")
     public Float markTime;
 
+    /**
+     * <p>Sampling accuracy.<br>Validated accuracy = Number Of Error validated / Quantity validated</p>
+     * 
+     * <strong>example:</strong>
+     * <p>84.92</p>
+     */
     @NameInMap("SamplingAccuracy")
     public Float samplingAccuracy;
 
+    /**
+     * <p>Total sampling quantity</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("SamplingCount")
     public Float samplingCount;
 
+    /**
+     * <p>Number Of Error in sampling</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("SamplingErrorCount")
     public Float samplingErrorCount;
 
+    /**
+     * <p>Total Data items</p>
+     * 
+     * <strong>example:</strong>
+     * <p>172</p>
+     */
     @NameInMap("TotalMarkItemsCount")
     public Float totalMarkItemsCount;
 
+    /**
+     * <p>User ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>166***9980757311</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
