@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateHttpApiRouteRequest extends TeaModel {
     /**
-     * <p>The backend service configurations for the route.</p>
+     * <p>The backend service configuration of the route.</p>
      */
     @NameInMap("backendConfig")
     public CreateHttpApiRouteRequestBackendConfig backendConfig;
 
     /**
-     * <p>deployConfigs</p>
+     * <p>The API deployment configurations.</p>
      */
     @NameInMap("deployConfigs")
     public java.util.List<HttpApiDeployConfig> deployConfigs;
@@ -26,7 +26,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The list of domain IDs.</p>
+     * <p>The domain name IDs.</p>
      */
     @NameInMap("domainIds")
     public java.util.List<String> domainIds;
@@ -47,7 +47,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
     public HttpRouteMatch match;
 
     /**
-     * <p>The MCP route configuration</p>
+     * <p>The MCP route configuration.</p>
      */
     @NameInMap("mcpRouteConfig")
     public CreateHttpApiRouteRequestMcpRouteConfig mcpRouteConfig;
@@ -62,7 +62,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The route-level policy configurations</p>
+     * <p>The policy type.</p>
      */
     @NameInMap("policyConfigs")
     public java.util.List<HttpApiPolicyConfigs> policyConfigs;
@@ -146,7 +146,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
 
     public static class CreateHttpApiRouteRequestBackendConfigServices extends TeaModel {
         /**
-         * <p>The service port (omit for dynamic ports).</p>
+         * <p>The service port. Do not specify this parameter for dynamic ports.</p>
          * 
          * <strong>example:</strong>
          * <p>8080</p>
@@ -157,8 +157,8 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         /**
          * <p>The service protocol. Valid values:</p>
          * <ul>
-         * <li>HTTP</li>
-         * <li>HTTPS</li>
+         * <li>HTTP.</li>
+         * <li>HTTPS.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -177,7 +177,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         public String serviceId;
 
         /**
-         * <p>The service version (valid only in tag-based scenarios).</p>
+         * <p>The service version. This parameter is valid only in the tag-based scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>
@@ -186,7 +186,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         public String version;
 
         /**
-         * <p>The traffic weight percentage.</p>
+         * <p>The percentage value of the traffic ratio.</p>
          * 
          * <strong>example:</strong>
          * <p>49</p>
@@ -245,10 +245,10 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         /**
          * <p>The backend service scenario. Valid values:</p>
          * <ul>
-         * <li>SingleService</li>
-         * <li>MultiServiceByRatio</li>
-         * <li>Mock</li>
-         * <li>Redirect</li>
+         * <li>SingleService: Single service.</li>
+         * <li>MultiServiceByRatio: Multiple services with ratio-based canary release.</li>
+         * <li>Mock: Mock service.</li>
+         * <li>Redirect: Redirect service.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -288,7 +288,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
 
     public static class CreateHttpApiRouteRequestMcpRouteConfig extends TeaModel {
         /**
-         * <p>The exposed URI path</p>
+         * <p>The exposed URI path.</p>
          * 
          * <strong>example:</strong>
          * <p>/v1/chat/completions</p>
@@ -297,7 +297,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         public String exposedUriPath;
 
         /**
-         * <p>mcpStatisticsEnable</p>
+         * <p>Specifies whether to enable MCP observability. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -306,7 +306,12 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         public Boolean mcpStatisticsEnable;
 
         /**
-         * <p>The MCP protocol</p>
+         * <p>The service protocol. Valid values:</p>
+         * <ul>
+         * <li>TCP.</li>
+         * <li>HTTP.</li>
+         * <li>DUBBO.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>HTTP,HTTPS</p>

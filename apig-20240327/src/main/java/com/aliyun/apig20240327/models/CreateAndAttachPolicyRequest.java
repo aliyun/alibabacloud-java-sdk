@@ -5,22 +5,22 @@ import com.aliyun.tea.*;
 
 public class CreateAndAttachPolicyRequest extends TeaModel {
     /**
-     * <p>The IDs of the resources to be associated with the policy.</p>
+     * <p>List of attachment point IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("attachResourceIds")
     public java.util.List<String> attachResourceIds;
 
     /**
-     * <p>The supported resource type. Valid values:</p>
+     * <p>Types of attachment points supported by the policy.</p>
      * <ul>
-     * <li>HttpApi: an HTTP API</li>
-     * <li>Operation: an operation in an HTTP API</li>
-     * <li>GatewayRoute: a route</li>
-     * <li>GatewayService: a service</li>
-     * <li>GatewayServicePort: a service port</li>
-     * <li>Domain: a domain name</li>
-     * <li>Gateway: an instance</li>
+     * <li>HttpApi: HttpApi.</li>
+     * <li>Operation: Operation of HttpApi.</li>
+     * <li>GatewayRoute: Gateway route.</li>
+     * <li>GatewayService: Gateway service.</li>
+     * <li>GatewayServicePort: Gateway service port.</li>
+     * <li>Domain: Gateway domain.</li>
+     * <li>Gateway: Gateway.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -31,28 +31,48 @@ public class CreateAndAttachPolicyRequest extends TeaModel {
     public String attachResourceType;
 
     /**
-     * <p>The class name supported by the policy. Different policies support different resources. This parameter is used in combination with AttachResourceType.</p>
+     * <p>The class name types supported by the policy. Different policies support different attachment points, to be used in conjunction with <code>attachResourceType</code>.</p>
      * <ul>
-     * <li>RateLimit: throttles traffic. Supported: HttpApi, Operation, and GatewayRoute.</li>
-     * <li>ConcurrencyLimit: controls concurrency. Supported: HttpApi, Operation, and GatewayRoute.</li>
-     * <li>CircuitBreaker: breaks circuits and downgrades traffic. Supported: HttpApi, Operation, and GatewayRoute.</li>
-     * <li>HttpRewrite: rewrites HTTP traffic. Supported: HttpApi, Operation, and GatewayRoute.</li>
-     * <li>HeaderModify: modifies headers. Supported: HttpApi, Operation, and GatewayRoute.</li>
-     * <li>Cors: supports CORS. Supported: HttpApi, Operation, and GatewayRoute.</li>
-     * <li>FlowCopy: replicates traffic. Supported: HttpApi, Operation, and GatewayRoute.</li>
-     * <li>Timeout: times out requests. Supported: HttpApi, Operation, and GatewayRoute.</li>
-     * <li>Retry: retries requests. Supported: HttpApi, Operation, and GatewayRoute.</li>
-     * <li>IpAccessControl: implements IP address-based access control. Supported: HttpApi, Operation, GatewayRoute, Domain, and Gateway.</li>
-     * <li>DirectResponse: mocks responses. Supported: Operation and GatewayRoute.</li>
-     * <li>Redirect: redirects traffic. Supported: GatewayRoute.</li>
-     * <li>Fallback: implements fallback. Supported: Operation and GatewayRoute.</li>
-     * <li>ServiceTls: implements TLS authentication. Supported: GatewayService.</li>
-     * <li>ServiceLb: balances loads. Supported: GatewayService.</li>
-     * <li>ServicePortTls: implements service port TLS authentication. Supported: GatewayServicePort.</li>
-     * <li>Waf: implements WAF protection. Supported: GatewayRoute and Gateway.</li>
-     * <li>JWTAuth: implements global JWT authentication. Supported: Gateway.</li>
-     * <li>OIDCAuth: implements global OIDC authentication. Supported: Gateway.</li>
-     * <li>ExternalZAuth: implements custom authentication. Supported: Gateway.</li>
+     * <li><p>RateLimit: Traffic control, supports HttpApi, Operation, GatewayRoute.</p>
+     * </li>
+     * <li><p>ConcurrencyLimit: Concurrency control, supports HttpApi, Operation, GatewayRoute.</p>
+     * </li>
+     * <li><p>CircuitBreaker: Circuit breaking and degradation, supports HttpApi, Operation, GatewayRoute.</p>
+     * </li>
+     * <li><p>HttpRewrite: HTTP rewrite, supports HttpApi, Operation, GatewayRoute.</p>
+     * </li>
+     * <li><p>HeaderModify: Header modification, supports HttpApi, Operation, GatewayRoute.</p>
+     * </li>
+     * <li><p>Cors: Cross-origin, supports HttpApi, Operation, GatewayRoute.</p>
+     * </li>
+     * <li><p>FlowCopy: Traffic replication, supports HttpApi, Operation, GatewayRoute.</p>
+     * </li>
+     * <li><p>Timeout: Timeout, supports HttpApi, Operation, GatewayRoute.</p>
+     * </li>
+     * <li><p>Retry: Retry, supports HttpApi, Operation, GatewayRoute.</p>
+     * </li>
+     * <li><p>IpAccessControl: IP access control, supports HttpApi, Operation, GatewayRoute, Domain, Gateway.</p>
+     * </li>
+     * <li><p>DirectResponse: Mock, supports Operation, GatewayRoute.</p>
+     * </li>
+     * <li><p>Redirect: Redirection, supports GatewayRoute.</p>
+     * </li>
+     * <li><p>Fallback: Fallback, supports Operation, GatewayRoute.</p>
+     * </li>
+     * <li><p>ServiceTls: Service TLS authentication, supports GatewayService.</p>
+     * </li>
+     * <li><p>ServiceLb: Service load balancing, supports GatewayService.</p>
+     * </li>
+     * <li><p>ServicePortTls: Service port TLS authentication, supports GatewayServicePort.</p>
+     * </li>
+     * <li><p>Waf: WAF protection, supports GatewayRoute, Gateway.</p>
+     * </li>
+     * <li><p>JWTAuth: JWT global authentication, supports Gateway.</p>
+     * </li>
+     * <li><p>OIDCAuth: OIDC global authentication, supports Gateway.</p>
+     * </li>
+     * <li><p>ExternalZAuth: Custom authorization, supports Gateway.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -63,7 +83,7 @@ public class CreateAndAttachPolicyRequest extends TeaModel {
     public String className;
 
     /**
-     * <p>The policy configurations.</p>
+     * <p>Configuration information.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,7 +93,7 @@ public class CreateAndAttachPolicyRequest extends TeaModel {
     public String config;
 
     /**
-     * <p>The policy description.</p>
+     * <p>Policy description.</p>
      * 
      * <strong>example:</strong>
      * <p>这是策略描述</p>
@@ -82,7 +102,7 @@ public class CreateAndAttachPolicyRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The environment ID.</p>
+     * <p>Environment ID.</p>
      * 
      * <strong>example:</strong>
      * <p>env-cq7l5s5lhtgi6qasrdc0</p>
@@ -91,7 +111,7 @@ public class CreateAndAttachPolicyRequest extends TeaModel {
     public String environmentId;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>Gateway ID.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-cq7l5s5lhtgi6qasrdc0</p>
@@ -100,7 +120,7 @@ public class CreateAndAttachPolicyRequest extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The policy name.</p>
+     * <p>Policy name.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

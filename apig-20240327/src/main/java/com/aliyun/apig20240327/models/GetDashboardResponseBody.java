@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDashboardResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class GetDashboardResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public GetDashboardResponseBodyData data;
 
     /**
-     * <p>The error code.</p>
+     * <p>The backend error code.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -110,7 +110,7 @@ public class GetDashboardResponseBody extends TeaModel {
 
     public static class GetDashboardResponseBodyData extends TeaModel {
         /**
-         * <p>The instance ID.</p>
+         * <p>The unique identifier of the gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-co370icmjeu****</p>

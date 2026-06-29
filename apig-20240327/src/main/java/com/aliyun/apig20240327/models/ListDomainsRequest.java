@@ -21,11 +21,7 @@ public class ListDomainsRequest extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The gateway type used for filtering. Valid values:</p>
-     * <ul>
-     * <li><strong>AI</strong></li>
-     * <li><strong>API</strong>.</li>
-     * </ul>
+     * <p>The gateway type used for filtering. Valid values: <strong>AI</strong> and <strong>API</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>API</p>

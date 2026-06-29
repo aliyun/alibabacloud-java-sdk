@@ -5,61 +5,88 @@ import com.aliyun.tea.*;
 
 public class AiNetworkConfigSearchEngine extends TeaModel {
     /**
-     * <p>Required. The API key to authenticate requests to the search engine service.</p>
+     * <p>The API key of the search engine.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sk-xxx</p>
      */
     @NameInMap("apiKey")
     public String apiKey;
 
     /**
-     * <p>The search content mode, which determines how the service interprets the query and returns results.</p>
+     * <p>Quark-specific: the content mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>summary</p>
      */
     @NameInMap("contentMode")
     public String contentMode;
 
     /**
-     * <p>The number of search results to return. If this parameter is omitted, the service uses a default value.</p>
+     * <p>The number of results returned per search.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("count")
     public Integer count;
 
     /**
-     * <p>The endpoint URL for the search engine service.</p>
+     * <p>The endpoint of the search engine.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://cloud-iqs.aliyuncs.com">https://cloud-iqs.aliyuncs.com</a></p>
      */
     @NameInMap("endpoint")
     public String endpoint;
 
     /**
-     * <p>The industry context for tailoring search results to a specific domain.</p>
+     * <p>Quark-specific: the industry filter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>互联网</p>
      */
     @NameInMap("industry")
     public String industry;
 
     /**
-     * <p>Optional. A key-value map for service-specific parameters not covered by the standard configuration.</p>
+     * <p>The search engine-specific parameters in key-value pair format.</p>
      */
     @NameInMap("optionArgs")
     public java.util.Map<String, String> optionArgs;
 
     /**
-     * <p>The starting offset for the search results, used for pagination. For example, a value of 10 skips the first 10 results. The default is 0.</p>
+     * <p>The offset of search results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("start")
     public Integer start;
 
     /**
-     * <p>The time range for filtering results by their creation or modification date.</p>
+     * <p>Quark-specific: the time range filter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7d</p>
      */
     @NameInMap("timeRange")
     public String timeRange;
 
     /**
-     * <p>The request timeout in milliseconds. If a request exceeds this time, the service terminates it.</p>
+     * <p>The API call timeout period, in milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5000</p>
      */
     @NameInMap("timeoutMillisecond")
     public Integer timeoutMillisecond;
 
     /**
-     * <p>Specifies the search engine service to use.</p>
+     * <p>The search engine type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aliyunQuark</p>
      */
     @NameInMap("type")
     public String type;

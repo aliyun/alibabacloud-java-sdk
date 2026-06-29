@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class AiToolSelectionConfig extends TeaModel {
     /**
-     * <p>Conditions for activating the tool selection feature.</p>
+     * <p>The enable conditions configuration. Controls when the overall feature is triggered.</p>
      */
     @NameInMap("enableConditions")
     public AiToolSelectionConfigEnableConditions enableConditions;
 
     /**
-     * <p>The status of the AI tool selection plugin.</p>
+     * <p>The plug-in running status.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -20,13 +20,13 @@ public class AiToolSelectionConfig extends TeaModel {
     public AiPluginStatus pluginStatus;
 
     /**
-     * <p>Configuration for query rewriting, which optimizes user queries before tool selection.</p>
+     * <p>The query rewrite configuration. Rewrites user queries before tool reranking to improve matching precision.</p>
      */
     @NameInMap("queryRewriting")
     public AiToolSelectionConfigQueryRewriting queryRewriting;
 
     /**
-     * <p>Configuration for tool reranking, which controls how tools are scored and filtered.</p>
+     * <p>The tool reranking configuration. Uses a model to rank and filter candidate tools.</p>
      */
     @NameInMap("toolReranking")
     public AiToolSelectionConfigToolReranking toolReranking;
@@ -70,7 +70,10 @@ public class AiToolSelectionConfig extends TeaModel {
 
     public static class AiToolSelectionConfigEnableConditions extends TeaModel {
         /**
-         * <p>The minimum number of tools required to activate tool selection.</p>
+         * <p>The tool count threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("toolCountThreshold")
         public Integer toolCountThreshold;
@@ -92,13 +95,19 @@ public class AiToolSelectionConfig extends TeaModel {
 
     public static class AiToolSelectionConfigQueryRewritingContextSelection extends TeaModel {
         /**
-         * <p>The strategy for selecting the conversation context.</p>
+         * <p>The context selection method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>allMessages</p>
          */
         @NameInMap("type")
         public String type;
 
         /**
-         * <p>The value associated with the context selection strategy, such as the number of messages to include.</p>
+         * <p>The number of retained messages or characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("value")
         public Integer value;
@@ -128,19 +137,28 @@ public class AiToolSelectionConfig extends TeaModel {
 
     public static class AiToolSelectionConfigQueryRewritingModelService extends TeaModel {
         /**
-         * <p>The name of the model used for query rewriting.</p>
+         * <p>The model name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gte-rerank-v2</p>
          */
         @NameInMap("modelName")
         public String modelName;
 
         /**
-         * <p>The ID of the model service used for query rewriting.</p>
+         * <p>The model service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>svc-xxx</p>
          */
         @NameInMap("serviceId")
         public String serviceId;
 
         /**
-         * <p>The request timeout in milliseconds for the query rewriting model service.</p>
+         * <p>The request timeout period, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5000</p>
          */
         @NameInMap("timeoutMillisecond")
         public Integer timeoutMillisecond;
@@ -178,13 +196,19 @@ public class AiToolSelectionConfig extends TeaModel {
 
     public static class AiToolSelectionConfigQueryRewritingPromptConfig extends TeaModel {
         /**
-         * <p>The custom prompt template for query rewriting. This parameter is required if <code>type</code> is set to <code>custom</code>.</p>
+         * <p>The custom prompt content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>请将以下用户问题改写为...</p>
          */
         @NameInMap("customPrompt")
         public String customPrompt;
 
         /**
-         * <p>The type of prompt, such as default or custom.</p>
+         * <p>The prompt type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>builtIn</p>
          */
         @NameInMap("type")
         public String type;
@@ -214,7 +238,10 @@ public class AiToolSelectionConfig extends TeaModel {
 
     public static class AiToolSelectionConfigQueryRewritingTriggerConditions extends TeaModel {
         /**
-         * <p>The minimum number of messages in the conversation history required to activate query rewriting.</p>
+         * <p>The number of conversation turns after which rewriting is triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("messageCountThreshold")
         public Integer messageCountThreshold;
@@ -236,43 +263,52 @@ public class AiToolSelectionConfig extends TeaModel {
 
     public static class AiToolSelectionConfigQueryRewriting extends TeaModel {
         /**
-         * <p>Method for selecting the conversation context for query rewriting.</p>
+         * <p>The context selection configuration.</p>
          */
         @NameInMap("contextSelection")
         public AiToolSelectionConfigQueryRewritingContextSelection contextSelection;
 
         /**
-         * <p>Whether to enable query rewriting.</p>
+         * <p>Specifies whether query rewrite is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
 
         /**
-         * <p>The fallback strategy used if query rewriting fails or returns no results.</p>
+         * <p>The fallback strategy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>skip</p>
          */
         @NameInMap("fallbackStrategy")
         public String fallbackStrategy;
 
         /**
-         * <p>The maximum number of tokens to generate for the rewritten query.</p>
+         * <p>The maximum number of output tokens for rewriting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("maxOutputTokens")
         public Integer maxOutputTokens;
 
         /**
-         * <p>Model service configuration for query rewriting.</p>
+         * <p>The rewriting model service configuration.</p>
          */
         @NameInMap("modelService")
         public AiToolSelectionConfigQueryRewritingModelService modelService;
 
         /**
-         * <p>Prompt configuration for query rewriting.</p>
+         * <p>The prompt configuration.</p>
          */
         @NameInMap("promptConfig")
         public AiToolSelectionConfigQueryRewritingPromptConfig promptConfig;
 
         /**
-         * <p>Conditions for activating query rewriting.</p>
+         * <p>The trigger condition configuration.</p>
          */
         @NameInMap("triggerConditions")
         public AiToolSelectionConfigQueryRewritingTriggerConditions triggerConditions;
@@ -342,19 +378,28 @@ public class AiToolSelectionConfig extends TeaModel {
 
     public static class AiToolSelectionConfigToolRerankingModelService extends TeaModel {
         /**
-         * <p>The name of the model used for reranking.</p>
+         * <p>The model name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gte-rerank-v2</p>
          */
         @NameInMap("modelName")
         public String modelName;
 
         /**
-         * <p>The ID of the model service used for reranking.</p>
+         * <p>The model service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>svc-xxx</p>
          */
         @NameInMap("serviceId")
         public String serviceId;
 
         /**
-         * <p>The request timeout in milliseconds for the reranking model service.</p>
+         * <p>The request timeout period, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5000</p>
          */
         @NameInMap("timeoutMillisecond")
         public Integer timeoutMillisecond;
@@ -392,37 +437,52 @@ public class AiToolSelectionConfig extends TeaModel {
 
     public static class AiToolSelectionConfigToolReranking extends TeaModel {
         /**
-         * <p>The fallback strategy used if tool reranking fails or returns no results.</p>
+         * <p>The fallback strategy upon failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>skip</p>
          */
         @NameInMap("fallbackStrategy")
         public String fallbackStrategy;
 
         /**
-         * <p>The method for filtering tools after reranking.</p>
+         * <p>The filtering method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>topN</p>
          */
         @NameInMap("filteringMethod")
         public String filteringMethod;
 
         /**
-         * <p>Model service configuration for tool reranking.</p>
+         * <p>The reranking model service configuration.</p>
          */
         @NameInMap("modelService")
         public AiToolSelectionConfigToolRerankingModelService modelService;
 
         /**
-         * <p>The minimum score a tool must have to be selected. Tools with scores below this threshold are filtered out.</p>
+         * <p>The score threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
          */
         @NameInMap("scoreThreshold")
         public Float scoreThreshold;
 
         /**
-         * <p>The percentage of top-ranked tools to select. This parameter only applies when <code>filteringMethod</code> is set to a percentage-based method.</p>
+         * <p>The retention percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("topKPercent")
         public Integer topKPercent;
 
         /**
-         * <p>The number of top-ranked tools to select. This parameter only applies when <code>filteringMethod</code> is set to a count-based method.</p>
+         * <p>The retention count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("topNCount")
         public Integer topNCount;

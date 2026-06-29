@@ -5,55 +5,70 @@ import com.aliyun.tea.*;
 
 public class AiSecurityGuardConfig extends TeaModel {
     /**
-     * <p>The buffer limit in bytes for streaming content checks. The service buffers content up to this limit before sending it for analysis.</p>
+     * <p>The response buffer size in KB. Default value: 1000. Valid values: 1 to 1500.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
      */
     @NameInMap("bufferLimit")
     public Integer bufferLimit;
 
     /**
-     * <p>Specifies whether to check the content of incoming requests.</p>
+     * <p>Specifies whether to check request content.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("checkRequest")
     public Boolean checkRequest;
 
     /**
-     * <p>Specifies whether to check incoming requests for image content. Requires <code>checkRequest</code> to be <code>true</code>.</p>
+     * <p>Specifies whether to check request images.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("checkRequestImage")
     public Boolean checkRequestImage;
 
     /**
-     * <p>Specifies whether to check the content of outgoing responses.</p>
+     * <p>Specifies whether to check response content.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("checkResponse")
     public Boolean checkResponse;
 
     /**
-     * <p>Specifies whether to check outgoing responses for image content. Requires <code>checkResponse</code> to be <code>true</code>.</p>
+     * <p>Specifies whether to check response images.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("checkResponseImage")
     public Boolean checkResponseImage;
 
     /**
-     * <p>Specifies consumer-specific configurations for the request check service.</p>
+     * <p>The consumer-level request detection service configuration.</p>
      */
     @NameInMap("consumerRequestCheckService")
     public java.util.List<AiSecurityGuardConfigConsumerRequestCheckService> consumerRequestCheckService;
 
     /**
-     * <p>Specifies consumer-specific configurations for the response check service.</p>
+     * <p>The consumer-level response detection service configuration.</p>
      */
     @NameInMap("consumerResponseCheckService")
     public java.util.List<AiSecurityGuardConfigConsumerResponseCheckService> consumerResponseCheckService;
 
     /**
-     * <p>Specifies customized risk thresholds for different consumers.</p>
+     * <p>The consumer-level risk level configuration.</p>
      */
     @NameInMap("consumerRiskLevel")
     public java.util.List<AiSecurityGuardConfigConsumerRiskLevel> consumerRiskLevel;
 
     /**
-     * <p>Controls whether the AI Security Guard plugin is enabled or disabled.</p>
+     * <p>The plugin running status.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -62,43 +77,61 @@ public class AiSecurityGuardConfig extends TeaModel {
     public AiPluginStatus pluginStatus;
 
     /**
-     * <p>The identifier of the request check service for text content.</p>
+     * <p>The ServiceCode of the request text detection service (system-injected default value).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>query_security_check</p>
      */
     @NameInMap("requestCheckService")
     public String requestCheckService;
 
     /**
-     * <p>The identifier of the request check service for image content.</p>
+     * <p>The ServiceCode of the request image detection service (system-injected default value).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>img_query_guard</p>
      */
     @NameInMap("requestImageCheckService")
     public String requestImageCheckService;
 
     /**
-     * <p>The identifier of the response check service for text content.</p>
+     * <p>The ServiceCode of the response text detection service (system-injected default value).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>response_security_check</p>
      */
     @NameInMap("responseCheckService")
     public String responseCheckService;
 
     /**
-     * <p>The identifier of the response check service for image content.</p>
+     * <p>The ServiceCode of the response image detection service (system-injected default value).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>img_response_guard</p>
      */
     @NameInMap("responseImageCheckService")
     public String responseImageCheckService;
 
     /**
-     * <p>The risk alert level. The service triggers an alert when a detected risk meets or exceeds this level.</p>
+     * <p>The global risk alert level.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>high</p>
      */
     @NameInMap("riskAlertLevel")
     public String riskAlertLevel;
 
     /**
-     * <p>Specifies general risk configurations.</p>
+     * <p>The risk dimension configuration list (system-injected, normalized from ConsumerRiskLevel).</p>
      */
     @NameInMap("riskConfig")
     public java.util.List<AiSecurityGuardConfigRiskConfig> riskConfig;
 
     /**
-     * <p>The service address of the security check endpoint.</p>
+     * <p>The security guardrail service address (green-cip endpoint). Use the VPC internal address when the gateway and security guardrail are in the same region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://green-cip-vpc.cn-shanghai.aliyuncs.com">https://green-cip-vpc.cn-shanghai.aliyuncs.com</a></p>
      */
     @NameInMap("serviceAddress")
     public String serviceAddress;
@@ -238,31 +271,46 @@ public class AiSecurityGuardConfig extends TeaModel {
 
     public static class AiSecurityGuardConfigConsumerRequestCheckService extends TeaModel {
         /**
-         * <p>The match type for identifying the consumer. For example: <code>header</code> or <code>query</code>.</p>
+         * <p>The consumer matching method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exact</p>
          */
         @NameInMap("matchType")
         public String matchType;
 
         /**
-         * <p>The modality type for this rule. For example: <code>text</code> or <code>image</code>.</p>
+         * <p>The modality type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Text</p>
          */
         @NameInMap("modalityType")
         public String modalityType;
 
         /**
-         * <p>The identifier of the consumer.</p>
+         * <p>The consumer name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>consumer-a</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>The identifier of the request check service for text content for this consumer.</p>
+         * <p>The check service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>query_security_check</p>
          */
         @NameInMap("requestCheckService")
         public String requestCheckService;
 
         /**
-         * <p>The identifier of the request check service for image content for this consumer.</p>
+         * <p>The image check service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>img_query_guard</p>
          */
         @NameInMap("requestImageCheckService")
         public String requestImageCheckService;
@@ -316,31 +364,46 @@ public class AiSecurityGuardConfig extends TeaModel {
 
     public static class AiSecurityGuardConfigConsumerResponseCheckService extends TeaModel {
         /**
-         * <p>The match type for identifying the consumer. For example: <code>header</code> or <code>query</code>.</p>
+         * <p>The consumer matching method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exact</p>
          */
         @NameInMap("matchType")
         public String matchType;
 
         /**
-         * <p>The modality type for this rule. For example: <code>text</code> or <code>image</code>.</p>
+         * <p>The modality type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Text</p>
          */
         @NameInMap("modalityType")
         public String modalityType;
 
         /**
-         * <p>The identifier of the consumer.</p>
+         * <p>The consumer name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>consumer-a</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>The identifier of the response check service for text content for this consumer.</p>
+         * <p>The check service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>query_security_check</p>
          */
         @NameInMap("responseCheckService")
         public String responseCheckService;
 
         /**
-         * <p>The identifier of the response check service for image content for this consumer.</p>
+         * <p>The image check service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>img_query_guard</p>
          */
         @NameInMap("responseImageCheckService")
         public String responseImageCheckService;
@@ -394,25 +457,37 @@ public class AiSecurityGuardConfig extends TeaModel {
 
     public static class AiSecurityGuardConfigConsumerRiskLevel extends TeaModel {
         /**
-         * <p>The risk level to apply to the specified consumer and risk type. For example: <code>low</code>, <code>medium</code>, or <code>high</code>.</p>
+         * <p>The risk level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
          */
         @NameInMap("level")
         public String level;
 
         /**
-         * <p>The match type for identifying the consumer. For example: <code>header</code> or <code>query</code>.</p>
+         * <p>The consumer matching method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exact</p>
          */
         @NameInMap("matchType")
         public String matchType;
 
         /**
-         * <p>The identifier of the consumer.</p>
+         * <p>The consumer name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>consumer-a</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>The type of risk to configure. For example: <code>profanity</code> or <code>spam</code>.</p>
+         * <p>The risk dimension type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ContentModeration</p>
          */
         @NameInMap("type")
         public String type;
@@ -458,13 +533,19 @@ public class AiSecurityGuardConfig extends TeaModel {
 
     public static class AiSecurityGuardConfigRiskConfigConsumerRules extends TeaModel {
         /**
-         * <p>The location in the request to search for the <code>pattern</code>. For example: <code>header</code> or <code>query</code>.</p>
+         * <p>The matching method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Exact</p>
          */
         @NameInMap("matchType")
         public String matchType;
 
         /**
-         * <p>The pattern for matching a consumer. This can be a regular expression.</p>
+         * <p>The consumer matching pattern value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>consumer-a</p>
          */
         @NameInMap("pattern")
         public String pattern;
@@ -494,19 +575,25 @@ public class AiSecurityGuardConfig extends TeaModel {
 
     public static class AiSecurityGuardConfigRiskConfig extends TeaModel {
         /**
-         * <p>Contains rules that override the default settings for specific consumers.</p>
+         * <p>The consumer-level matching rules.</p>
          */
         @NameInMap("consumerRules")
         public AiSecurityGuardConfigRiskConfigConsumerRules consumerRules;
 
         /**
-         * <p>The default risk level for this risk type. For example: <code>low</code>, <code>medium</code>, or <code>high</code>.</p>
+         * <p>The risk level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
          */
         @NameInMap("level")
         public String level;
 
         /**
-         * <p>The type of risk to configure. For example: <code>profanity</code> or <code>spam</code>.</p>
+         * <p>The risk dimension type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ContentModeration</p>
          */
         @NameInMap("type")
         public String type;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSourceRequest extends TeaModel {
     /**
-     * <p>The gateway instance ID.</p>
+     * <p>The gateway ID.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-cq7l5s5lhtgi6q***</p>
@@ -14,13 +14,13 @@ public class CreateSourceRequest extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The source configuration when the source type is K8S.</p>
+     * <p>The Container Service source configuration.</p>
      */
     @NameInMap("k8sSourceConfig")
     public CreateSourceRequestK8sSourceConfig k8sSourceConfig;
 
     /**
-     * <p>The source configuration when the source type is MSE_NACOS.</p>
+     * <p>The MSE Nacos source configuration.</p>
      */
     @NameInMap("nacosSourceConfig")
     public CreateSourceRequestNacosSourceConfig nacosSourceConfig;
@@ -37,8 +37,8 @@ public class CreateSourceRequest extends TeaModel {
     /**
      * <p>The source type. Valid values:</p>
      * <ul>
-     * <li>MSE_NACOS: MSE Nacos</li>
-     * <li>K8S: Container Service for Kubernetes (ACK)</li>
+     * <li>MSE_NACOS: MSE Nacos.</li>
+     * <li>K8S: Container Service.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -109,7 +109,7 @@ public class CreateSourceRequest extends TeaModel {
         public java.util.List<String> portRanges;
 
         /**
-         * <p>The ID of a security group.</p>
+         * <p>The security group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-bp14w4fa4j***</p>
@@ -150,13 +150,13 @@ public class CreateSourceRequest extends TeaModel {
 
     public static class CreateSourceRequestK8sSourceConfig extends TeaModel {
         /**
-         * <p>The security group rules.</p>
+         * <p>The list of gateway security group authorization rule configurations.</p>
          */
         @NameInMap("authorizeSecurityGroupRules")
         public java.util.List<CreateSourceRequestK8sSourceConfigAuthorizeSecurityGroupRules> authorizeSecurityGroupRules;
 
         /**
-         * <p>The ID of the ACK cluster.</p>
+         * <p>The Container Service cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c3fbe6caaaece4062b*****</p>

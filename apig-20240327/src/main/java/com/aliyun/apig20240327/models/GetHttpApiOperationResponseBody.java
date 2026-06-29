@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetHttpApiOperationResponseBody extends TeaModel {
     /**
-     * <p>Response status code.</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -20,7 +20,7 @@ public class GetHttpApiOperationResponseBody extends TeaModel {
     public HttpApiOperationInfo data;
 
     /**
-     * <p>Response message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -29,7 +29,7 @@ public class GetHttpApiOperationResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B725275B-50C6-5A49-A9FD-F0332FCB3351</p>

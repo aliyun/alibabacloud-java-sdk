@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetDashboardShrinkRequest extends TeaModel {
     /**
-     * <p>The language. Valid values: zh (Chinese) and en (English).</p>
+     * <p>The language. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -14,7 +18,7 @@ public class GetDashboardShrinkRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>API ID</p>
+     * <p>The unique ID of the API.</p>
      * 
      * <strong>example:</strong>
      * <p>api-ctl7no6m1h****</p>
@@ -23,16 +27,16 @@ public class GetDashboardShrinkRequest extends TeaModel {
     public String apiId;
 
     /**
-     * <p>The filter configurations.</p>
+     * <p>The filter configuration.</p>
      */
     @NameInMap("filter")
     public String filterShrink;
 
     /**
-     * <p>The dashboard name.</p>
+     * <p>The dashboard name. Valid values:</p>
      * <ul>
-     * <li>LOG: access logs</li>
-     * <li>PLUGIN: plug-in logs</li>
+     * <li>LOG: access log</li>
+     * <li>PLUGIN: plug-in log</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +75,7 @@ public class GetDashboardShrinkRequest extends TeaModel {
     /**
      * <p>The dashboard source. Valid values:</p>
      * <ul>
-     * <li>SLS: Simple Log Service</li>
+     * <li>SLS: log dashboard</li>
      * </ul>
      * 
      * <strong>example:</strong>

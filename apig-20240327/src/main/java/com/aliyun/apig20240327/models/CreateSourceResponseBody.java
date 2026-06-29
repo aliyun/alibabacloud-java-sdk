@@ -20,7 +20,7 @@ public class CreateSourceResponseBody extends TeaModel {
     public CreateSourceResponseBodyData data;
 
     /**
-     * <p>Response message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -29,7 +29,7 @@ public class CreateSourceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>393E2630-DBE7-5221-AB35-9E740675491A</p>
@@ -76,7 +76,7 @@ public class CreateSourceResponseBody extends TeaModel {
 
     public static class CreateSourceResponseBodyData extends TeaModel {
         /**
-         * <p>Source ID</p>
+         * <p>The source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>src-crdddallhtgt***</p>

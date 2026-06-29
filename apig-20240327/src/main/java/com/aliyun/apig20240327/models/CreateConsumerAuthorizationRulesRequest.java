@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateConsumerAuthorizationRulesRequest extends TeaModel {
     /**
-     * <p>Consumer authorization rules.</p>
+     * <p>The consumer authentication rules.</p>
      */
     @NameInMap("authorizationRules")
     public java.util.List<CreateConsumerAuthorizationRulesRequestAuthorizationRules> authorizationRules;
@@ -25,7 +25,7 @@ public class CreateConsumerAuthorizationRulesRequest extends TeaModel {
 
     public static class CreateConsumerAuthorizationRulesRequestAuthorizationRulesResourceIdentifier extends TeaModel {
         /**
-         * <p>Environment ID.</p>
+         * <p>The environment ID.</p>
          * 
          * <strong>example:</strong>
          * <p>env-******</p>
@@ -34,7 +34,7 @@ public class CreateConsumerAuthorizationRulesRequest extends TeaModel {
         public String environmentId;
 
         /**
-         * <p>Parent resource ID.</p>
+         * <p>The parent resource ID.</p>
          * 
          * <strong>example:</strong>
          * <p>api-******</p>
@@ -43,7 +43,7 @@ public class CreateConsumerAuthorizationRulesRequest extends TeaModel {
         public String parentResourceId;
 
         /**
-         * <p>Resource ID.</p>
+         * <p>The resource ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ha-cn-li942gy8p03</p>
@@ -52,7 +52,7 @@ public class CreateConsumerAuthorizationRulesRequest extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>Resource information.</p>
+         * <p>The resource information.</p>
          */
         @NameInMap("resources")
         public java.util.List<String> resources;
@@ -98,7 +98,7 @@ public class CreateConsumerAuthorizationRulesRequest extends TeaModel {
 
     public static class CreateConsumerAuthorizationRulesRequestAuthorizationRules extends TeaModel {
         /**
-         * <p>Consumer ID.</p>
+         * <p>The consumer ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-******</p>
@@ -107,7 +107,7 @@ public class CreateConsumerAuthorizationRulesRequest extends TeaModel {
         public String consumerId;
 
         /**
-         * <p>Expiration mode. Currently only LongTerm is supported.</p>
+         * <p>The expiration mode. Currently, only LongTerm is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>LongTerm</p>
@@ -116,7 +116,7 @@ public class CreateConsumerAuthorizationRulesRequest extends TeaModel {
         public String expireMode;
 
         /**
-         * <p>Expiration time.</p>
+         * <p>The expiration time.</p>
          * 
          * <strong>example:</strong>
          * <p>174116222x</p>
@@ -125,13 +125,13 @@ public class CreateConsumerAuthorizationRulesRequest extends TeaModel {
         public Long expireTimestamp;
 
         /**
-         * <p>Resource identifier, provided to non-standard code sources as a unique identifier for space reuse</p>
+         * <p>The resource identifier, which serves as a unique identifier for non-standard code sources for space reuse.</p>
          */
         @NameInMap("resourceIdentifier")
         public CreateConsumerAuthorizationRulesRequestAuthorizationRulesResourceIdentifier resourceIdentifier;
 
         /**
-         * <p>Resource type.</p>
+         * <p>The resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>HttpApiRoute</p>

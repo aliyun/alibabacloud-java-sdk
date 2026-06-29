@@ -5,19 +5,25 @@ import com.aliyun.tea.*;
 
 public class AiPluginStatus extends TeaModel {
     /**
-     * <p>An object containing error logs, where each key is a string identifying an error and the value is a string describing that error.</p>
+     * <p>The list of plug-in runtime error logs. Each item is a map[string]any key-value pair.</p>
      */
     @NameInMap("errorLogs")
     public java.util.List<java.util.Map<String, ?>> errorLogs;
 
     /**
-     * <p>The unique identifier of the plugin.</p>
+     * <p>The plug-in instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pi-xxx</p>
      */
     @NameInMap("pluginId")
     public String pluginId;
 
     /**
-     * <p>Indicates if the service is healthy. <code>true</code> indicates normal operation, and <code>false</code> indicates an issue.</p>
+     * <p>Indicates whether the backend service that the plug-in depends on is healthy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("serviceHealthy")
     public Boolean serviceHealthy;

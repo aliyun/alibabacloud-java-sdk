@@ -70,9 +70,17 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
     }
 
     public static class ResetGatewayQuotaRuleResponseBodyDataConflictPreviewItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>week</p>
+         */
         @NameInMap("conflictPeriodType")
         public String conflictPeriodType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>calendar</p>
+         */
         @NameInMap("conflictType")
         public String conflictType;
 

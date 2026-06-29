@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPolicyClassesResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -14,13 +14,13 @@ public class ListPolicyClassesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>An array of policy template information.</p>
+     * <p>The policy template information.</p>
      */
     @NameInMap("data")
     public ListPolicyClassesResponseBodyData data;
 
     /**
-     * <p>The response message returned.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -76,13 +76,13 @@ public class ListPolicyClassesResponseBody extends TeaModel {
 
     public static class ListPolicyClassesResponseBodyData extends TeaModel {
         /**
-         * <p>The templates.</p>
+         * <p>The list of policy templates.</p>
          */
         @NameInMap("items")
         public java.util.List<PolicyClassInfo> items;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

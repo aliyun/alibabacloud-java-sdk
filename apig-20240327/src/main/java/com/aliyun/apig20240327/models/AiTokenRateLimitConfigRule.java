@@ -5,37 +5,55 @@ import com.aliyun.tea.*;
 
 public class AiTokenRateLimitConfigRule extends TeaModel {
     /**
-     * <p>The action to take when a request exceeds the token rate limit.</p>
+     * <p>The throttling mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TokenPerMinute</p>
      */
     @NameInMap("limitMode")
     public String limitMode;
 
     /**
-     * <p>The scope of the rate limit, such as per user or per project.</p>
+     * <p>The throttling type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Consumer</p>
      */
     @NameInMap("limitType")
     public String limitType;
 
     /**
-     * <p>The maximum number of tokens allowed within the defined time period. For example, if the time unit is one minute, this value represents the tokens-per-minute (TPM) limit.</p>
+     * <p>The throttling value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
      */
     @NameInMap("limitValue")
     public Integer limitValue;
 
     /**
-     * <p>The key that identifies the request source. Its value is extracted from the request context to apply the rule.</p>
+     * <p>The match key name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>X-API-Key</p>
      */
     @NameInMap("matchKey")
     public String matchKey;
 
     /**
-     * <p>The matching logic applied to the value of <code>matchKey</code>.</p>
+     * <p>The matching method.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Exact</p>
      */
     @NameInMap("matchType")
     public String matchType;
 
     /**
-     * <p>The value to match. The rate limit applies only when the value of <code>matchKey</code> in the request matches this value, according to the <code>matchType</code>.</p>
+     * <p>The match value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>consumer-a</p>
      */
     @NameInMap("matchValue")
     public String matchValue;

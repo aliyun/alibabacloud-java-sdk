@@ -66,9 +66,17 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>China (Beijing)</p>
+         */
         @NameInMap("localName")
         public String localName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("regionId")
         public String regionId;
 

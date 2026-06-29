@@ -5,19 +5,22 @@ import com.aliyun.tea.*;
 
 public class AiTokenRateLimitConfig extends TeaModel {
     /**
-     * <p>Controls whether global rules are enabled. If set to <code>true</code>, the rules in <code>globalRules</code> are applied. Defaults to <code>false</code>.</p>
+     * <p>Specifies whether to enable global (API-level) throttling rules. Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("enableGlobalRules")
     public Boolean enableGlobalRules;
 
     /**
-     * <p>A list of global rate limit rules. These rules are applied when no specific rule in <code>rules</code> is matched.</p>
+     * <p>The list of global throttling rules. Only the LimitByGlobal type is allowed.</p>
      */
     @NameInMap("globalRules")
     public java.util.List<AiTokenRateLimitConfigRule> globalRules;
 
     /**
-     * <p>Specifies the status of the plugin, such as <code>enabled</code> or <code>disabled</code>.</p>
+     * <p>The running status of the plugin.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -26,7 +29,7 @@ public class AiTokenRateLimitConfig extends TeaModel {
     public AiPluginStatus pluginStatus;
 
     /**
-     * <p>Specifies the Redis configuration for distributed rate limiting.</p>
+     * <p>The Redis configuration.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -35,7 +38,7 @@ public class AiTokenRateLimitConfig extends TeaModel {
     public AiPolicyRedisConfig redisConfig;
 
     /**
-     * <p>A list of specific rate limit rules.</p>
+     * <p>The list of throttling rules.</p>
      */
     @NameInMap("rules")
     public java.util.List<AiTokenRateLimitConfigRule> rules;

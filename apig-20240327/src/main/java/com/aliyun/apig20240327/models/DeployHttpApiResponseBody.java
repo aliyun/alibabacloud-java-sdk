@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeployHttpApiResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -14,7 +14,7 @@ public class DeployHttpApiResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public DeployHttpApiResponseBodyData data;
@@ -76,7 +76,10 @@ public class DeployHttpApiResponseBody extends TeaModel {
 
     public static class DeployHttpApiResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the HTTP API.</p>
+         * <p>HTTP API ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api-xxx</p>
          */
         @NameInMap("httpApiId")
         public String httpApiId;

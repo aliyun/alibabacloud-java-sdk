@@ -12,13 +12,13 @@ public class DeployHttpApiRequest extends TeaModel {
     public DeployHttpApiRequestHttpApiConfig httpApiConfig;
 
     /**
-     * <p>The REST API deployment configuration. This parameter is required when you deploy an HTTP API as a REST API.</p>
+     * <p>The deployment configuration for the REST API. This parameter is required when the HTTP API to be published is a REST API.</p>
      */
     @NameInMap("restApiConfig")
     public DeployHttpApiRequestRestApiConfig restApiConfig;
 
     /**
-     * <p>The route ID. This parameter is required when you deploy a route for an HTTP API.</p>
+     * <p>The route ID. This parameter is required when you publish a route of an HTTP API.</p>
      * 
      * <strong>example:</strong>
      * <p>hr-cr82undlhtgrl***</p>
@@ -67,7 +67,7 @@ public class DeployHttpApiRequest extends TeaModel {
         public String gatewayId;
 
         /**
-         * <p>A list of route IDs.</p>
+         * <p>The route IDs.</p>
          */
         @NameInMap("routeIds")
         public java.util.List<String> routeIds;
@@ -97,7 +97,7 @@ public class DeployHttpApiRequest extends TeaModel {
 
     public static class DeployHttpApiRequestRestApiConfigEnvironmentServiceConfigs extends TeaModel {
         /**
-         * <p>The conditions that a request must meet to be routed to this service. This parameter is used for content-based routing.</p>
+         * <p>The match condition configuration related to API publishing.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;change_order_revision\&quot;:\&quot;3.657.33_fc-hz-yunqi.1662568293908382_faas-eerouter\&quot;}</p>
@@ -115,12 +115,10 @@ public class DeployHttpApiRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The service protocol.</p>
+         * <p>The service protocol. Valid values:</p>
          * <ul>
-         * <li><p>HTTP</p>
-         * </li>
-         * <li><p>HTTPS</p>
-         * </li>
+         * <li>HTTP</li>
+         * <li>HTTPS</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -148,7 +146,7 @@ public class DeployHttpApiRequest extends TeaModel {
         public String version;
 
         /**
-         * <p>The weight, which must be an integer from 1 to 100. This parameter applies only to the canary release by ratio scenario.</p>
+         * <p>The weight. Valid values: 1 to 100. This parameter takes effect only in the ratio-based scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>49</p>
@@ -213,7 +211,7 @@ public class DeployHttpApiRequest extends TeaModel {
 
     public static class DeployHttpApiRequestRestApiConfigEnvironment extends TeaModel {
         /**
-         * <p>The API deployment scenario.</p>
+         * <p>The API publish scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>SingleService</p>
@@ -223,7 +221,7 @@ public class DeployHttpApiRequest extends TeaModel {
         public String backendScene;
 
         /**
-         * <p>A list of custom domain IDs.</p>
+         * <p>The list of custom domain names.</p>
          */
         @NameInMap("customDomainIds")
         public java.util.List<String> customDomainIds;
@@ -239,7 +237,7 @@ public class DeployHttpApiRequest extends TeaModel {
         public String environmentId;
 
         /**
-         * <p>The configurations for one or more backend services. A single-service scenario allows only one entry, while other scenarios, such as canary release by ratio and content-based routing, allow multiple entries.</p>
+         * <p>The existing service configurations. In the single-service scenario, only one entry is allowed. In ratio-based or content-based scenarios, multiple entries are allowed.</p>
          * 
          * <strong>if can be null:</strong>
          * <p>true</p>
@@ -301,7 +299,7 @@ public class DeployHttpApiRequest extends TeaModel {
         public String action;
 
         /**
-         * <p>The unique ID of the operation.</p>
+         * <p>The unique identifier of the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>op-xxx</p>
@@ -334,7 +332,7 @@ public class DeployHttpApiRequest extends TeaModel {
 
     public static class DeployHttpApiRequestRestApiConfig extends TeaModel {
         /**
-         * <p>The deployment description.</p>
+         * <p>The publish description.</p>
          * 
          * <strong>example:</strong>
          * <p>用户服务API发布。</p>
@@ -343,7 +341,7 @@ public class DeployHttpApiRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The deployment environment configuration.</p>
+         * <p>The publish environment configuration.</p>
          */
         @NameInMap("environment")
         public DeployHttpApiRequestRestApiConfigEnvironment environment;
@@ -358,20 +356,20 @@ public class DeployHttpApiRequest extends TeaModel {
         public String gatewayId;
 
         /**
-         * <p>A list of operation-level deployment controls.</p>
+         * <p>The operation-level deployment control list.</p>
          */
         @NameInMap("operationDeployments")
         public java.util.List<DeployHttpApiRequestRestApiConfigOperationDeployments> operationDeployments;
 
         /**
-         * <p>A list of operation IDs.</p>
+         * <p>The operation IDs.</p>
          */
         @NameInMap("operationIds")
         @Deprecated
         public java.util.List<String> operationIds;
 
         /**
-         * <p>The revision ID. If you specify this parameter, the deployment uses the settings from the specified revision.</p>
+         * <p>The historical version number. If this parameter is specified, the publish information is based on the historical version.</p>
          * 
          * <strong>example:</strong>
          * <p>apr-xxx</p>

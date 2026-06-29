@@ -5,19 +5,25 @@ import com.aliyun.tea.*;
 
 public class AiStatisticsConfig extends TeaModel {
     /**
-     * <p>Specifies whether to record the body of incoming requests.</p>
+     * <p>Specifies whether to log request content (controls whether question-related attributes are generated).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("logRequestContent")
     public Boolean logRequestContent;
 
     /**
-     * <p>Specifies whether to record the body of outgoing responses.</p>
+     * <p>Specifies whether to log response content (controls whether answer-related attributes are generated).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("logResponseContent")
     public Boolean logResponseContent;
 
     /**
-     * <p>An array of configurations for extracting data from specific paths.</p>
+     * <p>The list of custom field collection configurations, configured by API path.</p>
      */
     @NameInMap("pathFieldConfigs")
     public java.util.List<AiStatisticsConfigPathFieldConfigs> pathFieldConfigs;
@@ -53,13 +59,16 @@ public class AiStatisticsConfig extends TeaModel {
 
     public static class AiStatisticsConfigPathFieldConfigs extends TeaModel {
         /**
-         * <p>A key-value map for extracting fields. Keys are custom names, and values are paths to the data within the request or response body.</p>
+         * <p>The field collection configuration.</p>
          */
         @NameInMap("fieldPaths")
         public java.util.Map<String, AiStatisticsPathField> fieldPaths;
 
         /**
-         * <p>The API endpoint path to which this configuration applies, such as /user/id.</p>
+         * <p>The API path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/v1/chat/completions</p>
          */
         @NameInMap("path")
         public String path;

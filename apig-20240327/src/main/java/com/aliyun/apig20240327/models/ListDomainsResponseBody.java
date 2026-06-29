@@ -76,7 +76,7 @@ public class ListDomainsResponseBody extends TeaModel {
 
     public static class ListDomainsResponseBodyData extends TeaModel {
         /**
-         * <p>域名信息列表。</p>
+         * <p>The list of domain name information.</p>
          */
         @NameInMap("items")
         public java.util.List<DomainInfo> items;

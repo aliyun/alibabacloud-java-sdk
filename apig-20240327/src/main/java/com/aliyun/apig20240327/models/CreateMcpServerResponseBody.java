@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateMcpServerResponseBody extends TeaModel {
     /**
-     * <p>code</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -14,13 +14,13 @@ public class CreateMcpServerResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>object</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public CreateMcpServerResponseBodyData data;
 
     /**
-     * <p>message</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -85,7 +85,7 @@ public class CreateMcpServerResponseBody extends TeaModel {
         public String mcpServerId;
 
         /**
-         * <p>MCP server name</p>
+         * <p>The MCP server name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-mcp</p>

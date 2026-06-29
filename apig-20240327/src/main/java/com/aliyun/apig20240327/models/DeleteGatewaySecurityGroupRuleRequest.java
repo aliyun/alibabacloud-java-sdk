@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteGatewaySecurityGroupRuleRequest extends TeaModel {
     /**
-     * <p>Specifies whether to delete the cascaded security group rule.</p>
+     * <p>Indicates whether to cascade delete security group rules.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

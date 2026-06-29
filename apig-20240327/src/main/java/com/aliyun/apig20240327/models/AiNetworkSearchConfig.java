@@ -5,25 +5,34 @@ import com.aliyun.tea.*;
 
 public class AiNetworkSearchConfig extends TeaModel {
     /**
-     * <p>Whether the network search feature is enabled by default.</p>
+     * <p>Specifies whether the plug-in feature is enabled by default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("defaultEnable")
     public Boolean defaultEnable;
 
     /**
-     * <p>The default language for the search query.</p>
+     * <p>The default search language code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh-CN</p>
      */
     @NameInMap("defaultLang")
     public String defaultLang;
 
     /**
-     * <p>Whether to include references in the search results.</p>
+     * <p>Specifies whether to add reference sources in the answer.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("needReference")
     public Boolean needReference;
 
     /**
-     * <p>The status of the AI plugin.</p>
+     * <p>The plug-in running status.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -32,13 +41,19 @@ public class AiNetworkSearchConfig extends TeaModel {
     public AiPluginStatus pluginStatus;
 
     /**
-     * <p>The format of the references.</p>
+     * <p>The format template for reference content. The template must contain at least one %s placeholder.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>参考来源:\n%s</p>
      */
     @NameInMap("referenceFormat")
     public String referenceFormat;
 
     /**
-     * <p>The location of the references in the response.</p>
+     * <p>The reference location.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>head</p>
      */
     @NameInMap("referenceLocation")
     public String referenceLocation;
@@ -50,13 +65,13 @@ public class AiNetworkSearchConfig extends TeaModel {
     public AiNetworkConfigSearchEngine searchEngineConfig;
 
     /**
-     * <p>A list of search engine configurations for the network search.</p>
+     * <p>The list of search engines (multi-engine configuration).</p>
      */
     @NameInMap("searchFrom")
     public java.util.List<AiNetworkConfigSearchEngine> searchFrom;
 
     /**
-     * <p>Configuration for search query rewriting.</p>
+     * <p>The search term rewriting configuration.</p>
      */
     @NameInMap("searchRewrite")
     public AiNetworkSearchConfigSearchRewrite searchRewrite;
@@ -140,31 +155,46 @@ public class AiNetworkSearchConfig extends TeaModel {
 
     public static class AiNetworkSearchConfigSearchRewrite extends TeaModel {
         /**
-         * <p>Whether to enable the search query rewrite feature.</p>
+         * <p>Specifies whether to enable search query rewriting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("enable")
         public Boolean enable;
 
         /**
-         * <p>The maximum number of rewritten queries to generate.</p>
+         * <p>The maximum number of search queries after rewriting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("maxCount")
         public Integer maxCount;
 
         /**
-         * <p>The name of the model to use for query rewriting.</p>
+         * <p>The name of the model used for rewriting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-max</p>
          */
         @NameInMap("modelName")
         public String modelName;
 
         /**
-         * <p>The ID of the query rewriting service.</p>
+         * <p>The ID of the rewriting service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>svc-xxx</p>
          */
         @NameInMap("serviceId")
         public String serviceId;
 
         /**
-         * <p>Timeout for the query rewriting operation, in milliseconds.</p>
+         * <p>The timeout period for the rewriting request, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5000</p>
          */
         @NameInMap("timeoutMillisecond")
         public Integer timeoutMillisecond;

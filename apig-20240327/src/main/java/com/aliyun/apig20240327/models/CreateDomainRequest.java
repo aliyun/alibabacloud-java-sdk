@@ -61,7 +61,7 @@ public class CreateDomainRequest extends TeaModel {
     public String gatewayType;
 
     /**
-     * <p>The HTTP/2 setting.</p>
+     * <p>The HTTP/2 settings.</p>
      * 
      * <strong>example:</strong>
      * <p>Open</p>
@@ -70,7 +70,7 @@ public class CreateDomainRequest extends TeaModel {
     public String http2Option;
 
     /**
-     * <p>Specifies whether to enable mutual TLS (mTLS) authentication.</p>
+     * <p>Specifies whether to enable mTLS mutual authentication.</p>
      */
     @NameInMap("mTLSEnabled")
     public Boolean mTLSEnabled;
@@ -114,7 +114,7 @@ public class CreateDomainRequest extends TeaModel {
     public TlsCipherSuitesConfig tlsCipherSuitesConfig;
 
     /**
-     * <p>The maximum TLS version. TLS 1.3 is the maximum supported version.</p>
+     * <p>The maximum TLS protocol version. TLS 1.3 is the maximum supported version.</p>
      * 
      * <strong>example:</strong>
      * <p>TLS1.3</p>
@@ -123,7 +123,7 @@ public class CreateDomainRequest extends TeaModel {
     public String tlsMax;
 
     /**
-     * <p>The minimum TLS version. TLS 1.0 is the minimum supported version.</p>
+     * <p>The minimum TLS protocol version. TLS 1.0 is the minimum supported version.</p>
      * 
      * <strong>example:</strong>
      * <p>TLS1.0</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class HttpApiDeployConfig extends TeaModel {
     /**
-     * <p>Whether to enable automatic deployment.</p>
+     * <p>Specifies whether to automatically deploy.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class HttpApiDeployConfig extends TeaModel {
     public Boolean autoDeploy;
 
     /**
-     * <p>Deployment scenario.</p>
+     * <p>The publishing scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>SingleService</p>
@@ -22,29 +22,38 @@ public class HttpApiDeployConfig extends TeaModel {
     @NameInMap("backendScene")
     public String backendScene;
 
+    /**
+     * <p>The list of built-in route names.</p>
+     */
     @NameInMap("builtinRouteNames")
     public java.util.List<String> builtinRouteNames;
 
     /**
-     * <p>List of custom domain IDs.</p>
+     * <p>The list of custom domain name IDs.</p>
      */
     @NameInMap("customDomainIds")
     public java.util.List<String> customDomainIds;
 
     /**
-     * <p>List of custom domain details.</p>
+     * <p>The list of custom domain name details.</p>
      */
     @NameInMap("customDomainInfos")
     public java.util.List<HttpApiDeployConfigCustomDomainInfos> customDomainInfos;
 
+    /**
+     * <p>The list of environment domain name IDs. If this parameter is not specified, all environment domain names are associated. An empty array indicates that no environment domain names are associated.</p>
+     */
     @NameInMap("envDomainIds")
     public java.util.List<String> envDomainIds;
 
+    /**
+     * <p>The list of environment domain name details.</p>
+     */
     @NameInMap("envDomainInfos")
     public java.util.List<HttpApiDeployConfigEnvDomainInfos> envDomainInfos;
 
     /**
-     * <p>Environment ID.</p>
+     * <p>The environment ID.</p>
      * 
      * <strong>example:</strong>
      * <p>env-xxx</p>
@@ -53,7 +62,7 @@ public class HttpApiDeployConfig extends TeaModel {
     public String environmentId;
 
     /**
-     * <p>Gateway instance ID.</p>
+     * <p>The gateway instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-xx</p>
@@ -62,7 +71,7 @@ public class HttpApiDeployConfig extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>Gateway information.</p>
+     * <p>The gateway information.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -71,7 +80,7 @@ public class HttpApiDeployConfig extends TeaModel {
     public GatewayInfo gatewayInfo;
 
     /**
-     * <p>Gateway type.</p>
+     * <p>The gateway type.</p>
      * 
      * <strong>example:</strong>
      * <p>API</p>
@@ -80,7 +89,7 @@ public class HttpApiDeployConfig extends TeaModel {
     public String gatewayType;
 
     /**
-     * <p>Mock configuration.</p>
+     * <p>The mock configuration.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -89,13 +98,13 @@ public class HttpApiDeployConfig extends TeaModel {
     public HttpApiMockContract mock;
 
     /**
-     * <p>List of policy configurations.</p>
+     * <p>The list of policy configurations.</p>
      */
     @NameInMap("policyConfigs")
     public java.util.List<HttpApiPolicyConfigs> policyConfigs;
 
     /**
-     * <p>Backend service information.</p>
+     * <p>The backend service information.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -104,13 +113,13 @@ public class HttpApiDeployConfig extends TeaModel {
     public Backend routeBackend;
 
     /**
-     * <p>List of service configurations.</p>
+     * <p>The list of service configurations.</p>
      */
     @NameInMap("serviceConfigs")
     public java.util.List<HttpApiDeployConfigServiceConfigs> serviceConfigs;
 
     /**
-     * <p>List of second-level domain details.</p>
+     * <p>The list of subdomain details.</p>
      */
     @NameInMap("subDomains")
     public java.util.List<HttpApiDeployConfigSubDomains> subDomains;
@@ -250,7 +259,7 @@ public class HttpApiDeployConfig extends TeaModel {
 
     public static class HttpApiDeployConfigCustomDomainInfos extends TeaModel {
         /**
-         * <p>Domain ID.</p>
+         * <p>The domain name ID.</p>
          * 
          * <strong>example:</strong>
          * <p>d-cshee6dlhtgk******</p>
@@ -259,7 +268,7 @@ public class HttpApiDeployConfig extends TeaModel {
         public String domainId;
 
         /**
-         * <p>Domain name.</p>
+         * <p>The domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>hello-server.com</p>
@@ -268,7 +277,7 @@ public class HttpApiDeployConfig extends TeaModel {
         public String name;
 
         /**
-         * <p>Protocol.</p>
+         * <p>The protocol.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP</p>
@@ -308,12 +317,30 @@ public class HttpApiDeployConfig extends TeaModel {
     }
 
     public static class HttpApiDeployConfigEnvDomainInfos extends TeaModel {
+        /**
+         * <p>The domain name ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-env-xxx</p>
+         */
         @NameInMap("domainId")
         public String domainId;
 
+        /**
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api.example.com</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTPS</p>
+         */
         @NameInMap("protocol")
         public String protocol;
 
@@ -350,7 +377,7 @@ public class HttpApiDeployConfig extends TeaModel {
 
     public static class HttpApiDeployConfigServiceConfigsObservabilityRouteConfig extends TeaModel {
         /**
-         * <p>Routing mode.</p>
+         * <p>The routing mode.</p>
          * 
          * <strong>example:</strong>
          * <p>LeastBusy</p>
@@ -359,7 +386,7 @@ public class HttpApiDeployConfig extends TeaModel {
         public String mode;
 
         /**
-         * <p>Queue size.</p>
+         * <p>The queue size.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -368,7 +395,7 @@ public class HttpApiDeployConfig extends TeaModel {
         public Integer queueSize;
 
         /**
-         * <p>Maximum traffic ratio for a single service.</p>
+         * <p>The maximum traffic ratio for a single service.</p>
          * 
          * <strong>example:</strong>
          * <p>0.8</p>
@@ -409,7 +436,7 @@ public class HttpApiDeployConfig extends TeaModel {
 
     public static class HttpApiDeployConfigServiceConfigs extends TeaModel {
         /**
-         * <p>Gateway service ID.</p>
+         * <p>The gateway service ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-svc-abc123</p>
@@ -418,7 +445,7 @@ public class HttpApiDeployConfig extends TeaModel {
         public String gatewayServiceId;
 
         /**
-         * <p>Intent code.</p>
+         * <p>The intent code.</p>
          * 
          * <strong>example:</strong>
          * <p>INQUIRY</p>
@@ -427,13 +454,13 @@ public class HttpApiDeployConfig extends TeaModel {
         public String intentCode;
 
         /**
-         * <p>Matching conditions.</p>
+         * <p>The matching condition.</p>
          */
         @NameInMap("match")
         public HttpApiBackendMatchConditions match;
 
         /**
-         * <p>Model name.</p>
+         * <p>The model name.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen-max</p>
@@ -442,7 +469,7 @@ public class HttpApiDeployConfig extends TeaModel {
         public String modelName;
 
         /**
-         * <p>Model name matching rule.</p>
+         * <p>The model name matching rule.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen-*</p>
@@ -451,7 +478,7 @@ public class HttpApiDeployConfig extends TeaModel {
         public String modelNamePattern;
 
         /**
-         * <p>Multi-service routing strategy type.</p>
+         * <p>The multi-service routing strategy type.</p>
          * 
          * <strong>example:</strong>
          * <p>ByWeight</p>
@@ -460,7 +487,7 @@ public class HttpApiDeployConfig extends TeaModel {
         public String multiServiceRouteStrategy;
 
         /**
-         * <p>Service display name.</p>
+         * <p>The service display name.</p>
          * 
          * <strong>example:</strong>
          * <p>Qwen-Max-Service</p>
@@ -469,7 +496,7 @@ public class HttpApiDeployConfig extends TeaModel {
         public String name;
 
         /**
-         * <p>Observability-based routing configuration.</p>
+         * <p>The observability metric routing configuration.</p>
          * 
          * <strong>if can be null:</strong>
          * <p>true</p>
@@ -478,7 +505,7 @@ public class HttpApiDeployConfig extends TeaModel {
         public HttpApiDeployConfigServiceConfigsObservabilityRouteConfig observabilityRouteConfig;
 
         /**
-         * <p>Service port number.</p>
+         * <p>The service port number.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -487,7 +514,7 @@ public class HttpApiDeployConfig extends TeaModel {
         public Integer port;
 
         /**
-         * <p>Service protocol (HTTP/HTTPS).</p>
+         * <p>The service protocol (HTTP/HTTPS).</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP</p>
@@ -496,7 +523,7 @@ public class HttpApiDeployConfig extends TeaModel {
         public String protocol;
 
         /**
-         * <p>Service ID.</p>
+         * <p>The service ID.</p>
          * 
          * <strong>example:</strong>
          * <p>svc-xxx</p>
@@ -505,7 +532,7 @@ public class HttpApiDeployConfig extends TeaModel {
         public String serviceId;
 
         /**
-         * <p>Service version tag.</p>
+         * <p>The service version label.</p>
          * 
          * <strong>example:</strong>
          * <p>V2</p>
@@ -514,7 +541,7 @@ public class HttpApiDeployConfig extends TeaModel {
         public String version;
 
         /**
-         * <p>Service weight.</p>
+         * <p>The service weight.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -635,7 +662,7 @@ public class HttpApiDeployConfig extends TeaModel {
 
     public static class HttpApiDeployConfigSubDomains extends TeaModel {
         /**
-         * <p>Domain ID.</p>
+         * <p>The domain name ID.</p>
          * 
          * <strong>example:</strong>
          * <p>d-csmn42um******</p>
@@ -644,7 +671,7 @@ public class HttpApiDeployConfig extends TeaModel {
         public String domainId;
 
         /**
-         * <p>Domain name.</p>
+         * <p>The domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -653,7 +680,7 @@ public class HttpApiDeployConfig extends TeaModel {
         public String name;
 
         /**
-         * <p>Network type.</p>
+         * <p>The network type.</p>
          * 
          * <strong>example:</strong>
          * <p>Intranet</p>
@@ -662,7 +689,7 @@ public class HttpApiDeployConfig extends TeaModel {
         public String networkType;
 
         /**
-         * <p>Protocol.</p>
+         * <p>The protocol.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP</p>

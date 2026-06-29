@@ -4,16 +4,24 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class ExportHttpApiRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to export plug-in configurations.</p>
+     */
     @NameInMap("extensionConfig")
     public ExportHttpApiRequestExtensionConfig extensionConfig;
 
     /**
+     * <p>The gateway instance ID. This parameter is required when you export gateway extension information.</p>
+     * 
      * <strong>example:</strong>
      * <p>gw-xxx</p>
      */
     @NameInMap("gatewayId")
     public String gatewayId;
 
+    /**
+     * <p>The IDs of specific operations to export when you export a REST API.</p>
+     */
     @NameInMap("operationIds")
     public java.util.List<String> operationIds;
 
@@ -47,18 +55,33 @@ public class ExportHttpApiRequest extends TeaModel {
     }
 
     public static class ExportHttpApiRequestExtensionConfig extends TeaModel {
+        /**
+         * <p>Specifies whether to export consumer authorization configurations for operations or routes.</p>
+         */
         @NameInMap("withAuthConfig")
         public Boolean withAuthConfig;
 
+        /**
+         * <p>Specifies whether to export authorized consumers.</p>
+         */
         @NameInMap("withAuthConsumer")
         public Boolean withAuthConsumer;
 
+        /**
+         * <p>Specifies whether to export plug-in configurations.</p>
+         */
         @NameInMap("withPlugin")
         public Boolean withPlugin;
 
+        /**
+         * <p>Specifies whether to export policy configurations.</p>
+         */
         @NameInMap("withPolicy")
         public Boolean withPolicy;
 
+        /**
+         * <p>Specifies whether to export backend services.</p>
+         */
         @NameInMap("withService")
         public Boolean withService;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExportHttpApiResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -14,7 +14,7 @@ public class ExportHttpApiResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The API definition.</p>
+     * <p>The API definition information.</p>
      */
     @NameInMap("data")
     public ExportHttpApiResponseBodyData data;

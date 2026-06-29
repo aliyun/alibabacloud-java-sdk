@@ -18,9 +18,17 @@ public class ResetGatewayQuotaRuleRequest extends TeaModel {
     @NameInMap("dryRun")
     public Boolean dryRun;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("overwrite")
     public Boolean overwrite;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("periodMultiplier")
     public Long periodMultiplier;
 
@@ -45,6 +53,10 @@ public class ResetGatewayQuotaRuleRequest extends TeaModel {
     @NameInMap("timezone")
     public String timezone;
 
+    /**
+     * <strong>example:</strong>
+     * <p>calendar</p>
+     */
     @NameInMap("windowAlignment")
     public String windowAlignment;
 

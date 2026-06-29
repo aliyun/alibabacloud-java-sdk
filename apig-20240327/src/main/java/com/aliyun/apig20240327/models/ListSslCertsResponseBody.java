@@ -76,7 +76,7 @@ public class ListSslCertsResponseBody extends TeaModel {
 
     public static class ListSslCertsResponseBodyData extends TeaModel {
         /**
-         * <p>证书信息列表。</p>
+         * <p>The list of certificate information.</p>
          */
         @NameInMap("items")
         public java.util.List<SslCertMetaInfo> items;

@@ -5,61 +5,96 @@ import com.aliyun.tea.*;
 
 public class AiStatisticsPathField extends TeaModel {
     /**
-     * <p>The category to which the field belongs, used for grouping and organizing fields.</p>
+     * <p>The secondary category.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>conversation</p>
      */
     @NameInMap("category")
     public String category;
 
     /**
-     * <p>A detailed description that provides additional context about the field\&quot;s purpose and usage.</p>
+     * <p>The field description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>用户输入的问题内容</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The unique key used to identify the field in statistical results.</p>
+     * <p>The log key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>question</p>
      */
     @NameInMap("fieldKey")
     public String fieldKey;
 
     /**
-     * <p>Specifies whether the field is an input or an output. Valid values are typically <code>IN</code> or <code>OUT</code>.</p>
+     * <p>The request or response direction.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>request</p>
      */
     @NameInMap("io")
     public String io;
 
     /**
-     * <p>The JSONPath expression to extract the field value from the source data.</p>
+     * <p>The corresponding JSON path (GJSON syntax).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>messages.#.content</p>
      */
     @NameInMap("jsonPath")
     public String jsonPath;
 
     /**
-     * <p>The display name of the field, used for labeling in user interfaces or reports.</p>
+     * <p>The display name of the field.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>问题内容</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>Specifies whether logging is enabled for this field. If set to <code>true</code>, the system records the field\&quot;s value in logs.</p>
+     * <p>Specifies whether collection is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("recordEnabled")
     public Boolean recordEnabled;
 
     /**
-     * <p>A rule or condition applied to the extracted field. The rule\&quot;s format and effect are implementation-specific.</p>
+     * <p>The rule used for streaming response extraction. Valid values:</p>
+     * <ul>
+     * <li>append: appends content</li>
+     * <li>first: retrieves the first value</li>
+     * <li>replace: retrieves the last value</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>append</p>
      */
     @NameInMap("rule")
     public String rule;
 
     /**
-     * <p>Indicates whether the field contains sensitive information. If set to <code>true</code>, the system may apply masking or other security measures.</p>
+     * <p>Indicates whether the field is sensitive.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("sensitive")
     public Boolean sensitive;
 
     /**
-     * <p>The data source from which the field is extracted. For example, <code>Request</code> or <code>Response</code>.</p>
+     * <p>The data source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>request_body</p>
      */
     @NameInMap("source")
     public String source;

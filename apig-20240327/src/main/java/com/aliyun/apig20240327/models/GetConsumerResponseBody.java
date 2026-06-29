@@ -5,25 +5,34 @@ import com.aliyun.tea.*;
 
 public class GetConsumerResponseBody extends TeaModel {
     /**
-     * <p>O código de resposta.</p>
+     * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Ok</p>
      */
     @NameInMap("code")
     public String code;
 
     /**
-     * <p>Os dados de resposta.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public GetConsumerResponseBodyData data;
 
     /**
-     * <p>A mensagem de resposta.</p>
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>O ID da solicitação.</p>
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>880C61B3-7B90-5570-A3F7-D6D92C0E2D36</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -67,61 +76,82 @@ public class GetConsumerResponseBody extends TeaModel {
 
     public static class GetConsumerResponseBodyData extends TeaModel {
         /**
-         * <p>As configurações de autenticação por par de AccessKey.</p>
+         * <p>The AK/SK identity authentication configurations.</p>
          */
         @NameInMap("akSkIdentityConfigs")
         public java.util.List<AkSkIdentityConfig> akSkIdentityConfigs;
 
         /**
-         * <p>A configuração de autenticação de chave de API.</p>
+         * <p>The API key identity authentication configuration.</p>
          */
         @NameInMap("apiKeyIdentityConfig")
         public ApiKeyIdentityConfig apiKeyIdentityConfig;
 
         /**
-         * <p>O ID do consumidor de API.</p>
+         * <p>The consumer ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cs-cvgbtk6m1hkji5sb8dr0</p>
          */
         @NameInMap("consumerId")
         public String consumerId;
 
         /**
-         * <p>O carimbo de data/hora de criação.</p>
+         * <p>The creation timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1719386834548</p>
          */
         @NameInMap("createTimestamp")
         public Long createTimestamp;
 
         /**
-         * <p>O status de publicação da API no ambiente atual.</p>
+         * <p>The publish status of the API in the current environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("deployStatus")
         public String deployStatus;
 
         /**
-         * <p>A descrição.</p>
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试专用消费者</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>Indica se o consumidor de API está habilitado.</p>
+         * <p>Indicates whether the consumer is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("enable")
         public Boolean enable;
 
         /**
-         * <p>A configuração de autenticação JWT.</p>
+         * <p>The JWT identity authentication configuration.</p>
          */
         @NameInMap("jwtIdentityConfig")
         public JwtIdentityConfig jwtIdentityConfig;
 
         /**
-         * <p>O nome do consumidor de API.</p>
+         * <p>The consumer name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>consumer-1</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>O carimbo de data/hora de atualização.</p>
+         * <p>The update timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1719386834548</p>
          */
         @NameInMap("updateTimestamp")
         public Long updateTimestamp;

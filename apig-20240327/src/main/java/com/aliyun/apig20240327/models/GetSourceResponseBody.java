@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSourceResponseBody extends TeaModel {
     /**
-     * <p>Response status code.</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -14,13 +14,13 @@ public class GetSourceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Response data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public GetSourceResponseBodyData data;
 
     /**
-     * <p>Response message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -76,7 +76,7 @@ public class GetSourceResponseBody extends TeaModel {
 
     public static class GetSourceResponseBodyDataK8SSourceInfo extends TeaModel {
         /**
-         * <p>Container Service cluster ID.</p>
+         * <p>The container service cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c2d290b2d8b5d4935864cace5f0173f31</p>
@@ -101,7 +101,7 @@ public class GetSourceResponseBody extends TeaModel {
 
     public static class GetSourceResponseBodyDataNacosSourceInfo extends TeaModel {
         /**
-         * <p>Nacos instance access address.</p>
+         * <p>The access address of the Nacos instance.</p>
          * 
          * <strong>example:</strong>
          * <p>mse</p>
@@ -110,7 +110,7 @@ public class GetSourceResponseBody extends TeaModel {
         public String address;
 
         /**
-         * <p>Cluster ID.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>fluss-cn-w7k4hann601</p>
@@ -119,7 +119,7 @@ public class GetSourceResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>Nacos instance ID.</p>
+         * <p>The Nacos instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>hgprecn-cn-cfn47q7oh001</p>
@@ -174,7 +174,7 @@ public class GetSourceResponseBody extends TeaModel {
         public String associationStatus;
 
         /**
-         * <p>Creation timestamp.</p>
+         * <p>The creation timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1719386834548</p>
@@ -183,7 +183,7 @@ public class GetSourceResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
-         * <p>Gateway ID.</p>
+         * <p>The gateway ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-cq2vundlhtg***</p>
@@ -192,19 +192,19 @@ public class GetSourceResponseBody extends TeaModel {
         public String gatewayId;
 
         /**
-         * <p>K8s source information.</p>
+         * <p>The Kubernetes source information.</p>
          */
         @NameInMap("k8SSourceInfo")
         public GetSourceResponseBodyDataK8SSourceInfo k8SSourceInfo;
 
         /**
-         * <p>MSE Nacos source information.</p>
+         * <p>The Microservices Engine (MSE) Nacos source information.</p>
          */
         @NameInMap("nacosSourceInfo")
         public GetSourceResponseBodyDataNacosSourceInfo nacosSourceInfo;
 
         /**
-         * <p>Name.</p>
+         * <p>The name.</p>
          * 
          * <strong>example:</strong>
          * <p>import-test</p>
@@ -213,7 +213,7 @@ public class GetSourceResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Resource group ID.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekz4us4iruleja</p>
@@ -222,7 +222,7 @@ public class GetSourceResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>Source ID.</p>
+         * <p>The source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>src-crdddallhtgt***</p>
@@ -231,7 +231,7 @@ public class GetSourceResponseBody extends TeaModel {
         public String sourceId;
 
         /**
-         * <p>Type.</p>
+         * <p>The type.</p>
          * 
          * <strong>example:</strong>
          * <p>K8S</p>
@@ -240,7 +240,7 @@ public class GetSourceResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>Update timestamp.</p>
+         * <p>The update timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1719386834548</p>

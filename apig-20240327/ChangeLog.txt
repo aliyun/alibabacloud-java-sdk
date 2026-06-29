@@ -1,3 +1,9 @@
+2026-06-29 Version: 10.2.0
+- Support API ListTagResources.
+- Support API TagResources.
+- Support API UntagResources.
+
+
 2026-06-26 Version: 10.1.1
 - Generated java 2024-03-27 for APIG.
 

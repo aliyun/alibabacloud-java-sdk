@@ -5,22 +5,22 @@ import com.aliyun.tea.*;
 
 public class UpdateAndAttachPolicyRequest extends TeaModel {
     /**
-     * <p>The association IDs.</p>
+     * <p>The list of mount point IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("attachResourceIds")
     public java.util.List<String> attachResourceIds;
 
     /**
-     * <p>The supported associated resource type. Valid values:</p>
+     * <p>The type of mount point supported by the policy. Valid values:</p>
      * <ul>
-     * <li>HttpApi: an HTTP API</li>
-     * <li>Operation: an operation in an HTTP API</li>
-     * <li>GatewayRoute: a route</li>
-     * <li>GatewayService: a service</li>
-     * <li>GatewayServicePort: a service port</li>
-     * <li>Domain: a domain name</li>
-     * <li>Gateway: an instance</li>
+     * <li>HttpApi: HttpApi.</li>
+     * <li>Operation: Operation of HttpApi.</li>
+     * <li>GatewayRoute: gateway rule.</li>
+     * <li>GatewayService: gateway service.</li>
+     * <li>GatewayServicePort: gateway service port.</li>
+     * <li>Domain: gateway domain name.</li>
+     * <li>Gateway: gateway.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -31,7 +31,7 @@ public class UpdateAndAttachPolicyRequest extends TeaModel {
     public String attachResourceType;
 
     /**
-     * <p>The policy configurations. The value is a JSON string.</p>
+     * <p>The configuration information. The value is a JSON string.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,7 +59,7 @@ public class UpdateAndAttachPolicyRequest extends TeaModel {
     public String environmentId;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>The gateway ID.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-cq2avtllhtgja4dk5djg</p>
