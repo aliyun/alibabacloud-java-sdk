@@ -2522,6 +2522,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建模型算子 API KEY</p>
+     * 
+     * @param request CreateModelOperatorApiKeyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateModelOperatorApiKeyResponse
+     */
+    public CreateModelOperatorApiKeyResponse createModelOperatorApiKeyWithOptions(CreateModelOperatorApiKeyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateModelOperatorApiKey"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateModelOperatorApiKeyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建模型算子 API KEY</p>
+     * 
+     * @param request CreateModelOperatorApiKeyRequest
+     * @return CreateModelOperatorApiKeyResponse
+     */
+    public CreateModelOperatorApiKeyResponse createModelOperatorApiKey(CreateModelOperatorApiKeyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createModelOperatorApiKeyWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Before you call this operation, review the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</p>
      * 
@@ -8678,6 +8722,132 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取模型算子 API KEY 详情</p>
+     * 
+     * @param request DescribeModelOperatorApiKeyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeModelOperatorApiKeyResponse
+     */
+    public DescribeModelOperatorApiKeyResponse describeModelOperatorApiKeyWithOptions(DescribeModelOperatorApiKeyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiKeyId)) {
+            query.put("ApiKeyId", request.apiKeyId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeModelOperatorApiKey"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeModelOperatorApiKeyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取模型算子 API KEY 详情</p>
+     * 
+     * @param request DescribeModelOperatorApiKeyRequest
+     * @return DescribeModelOperatorApiKeyResponse
+     */
+    public DescribeModelOperatorApiKeyResponse describeModelOperatorApiKey(DescribeModelOperatorApiKeyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeModelOperatorApiKeyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取模型算子用量</p>
+     * 
+     * @param tmpReq DescribeModelOperatorUsageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeModelOperatorUsageResponse
+     */
+    public DescribeModelOperatorUsageResponse describeModelOperatorUsageWithOptions(DescribeModelOperatorUsageRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DescribeModelOperatorUsageShrinkRequest request = new DescribeModelOperatorUsageShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.apiKeyIds)) {
+            request.apiKeyIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.apiKeyIds, "ApiKeyIds", "simple");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.keys)) {
+            request.keysShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.keys, "Keys", "simple");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.modelNames)) {
+            request.modelNamesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.modelNames, "ModelNames", "simple");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiKeyIdsShrink)) {
+            query.put("ApiKeyIds", request.apiKeyIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupBy)) {
+            query.put("GroupBy", request.groupBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keysShrink)) {
+            query.put("Keys", request.keysShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelNamesShrink)) {
+            query.put("ModelNames", request.modelNamesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            query.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeModelOperatorUsage"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeModelOperatorUsageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取模型算子用量</p>
+     * 
+     * @param request DescribeModelOperatorUsageRequest
+     * @return DescribeModelOperatorUsageResponse
+     */
+    public DescribeModelOperatorUsageResponse describeModelOperatorUsage(DescribeModelOperatorUsageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeModelOperatorUsageWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <h2><a href="#"></a>Usage notes</h2>
      * <p>This interface is used to view the details of a model service.</p>
@@ -12713,6 +12883,102 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListInstanceExtensionsResponse listInstanceExtensions(ListInstanceExtensionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listInstanceExtensionsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取模型算子 API KEY 列表</p>
+     * 
+     * @param request ListModelOperatorApiKeysRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListModelOperatorApiKeysResponse
+     */
+    public ListModelOperatorApiKeysResponse listModelOperatorApiKeysWithOptions(ListModelOperatorApiKeysRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListModelOperatorApiKeys"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListModelOperatorApiKeysResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取模型算子 API KEY 列表</p>
+     * 
+     * @param request ListModelOperatorApiKeysRequest
+     * @return ListModelOperatorApiKeysResponse
+     */
+    public ListModelOperatorApiKeysResponse listModelOperatorApiKeys(ListModelOperatorApiKeysRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listModelOperatorApiKeysWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取模型服务列表</p>
+     * 
+     * @param request ListModelOperatorServicesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListModelOperatorServicesResponse
+     */
+    public ListModelOperatorServicesResponse listModelOperatorServicesWithOptions(ListModelOperatorServicesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListModelOperatorServices"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListModelOperatorServicesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取模型服务列表</p>
+     * 
+     * @param request ListModelOperatorServicesRequest
+     * @return ListModelOperatorServicesResponse
+     */
+    public ListModelOperatorServicesResponse listModelOperatorServices(ListModelOperatorServicesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listModelOperatorServicesWithOptions(request, runtime);
     }
 
     /**
