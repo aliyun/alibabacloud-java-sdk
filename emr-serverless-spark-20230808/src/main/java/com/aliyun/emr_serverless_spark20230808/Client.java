@@ -8,7 +8,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("us-west-1", "emr-serverless-spark.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "emr-serverless-spark.us-east-1.aliyuncs.com"),
+            new TeaPair("na-south-1", "emr-serverless-spark.na-south-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "emr-serverless-spark.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "emr-serverless-spark.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "emr-serverless-spark.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "emr-serverless-spark.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "emr-serverless-spark.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "emr-serverless-spark.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "emr-serverless-spark.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "emr-serverless-spark.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-beijing", "emr-serverless-spark.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "emr-serverless-spark.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "emr-serverless-spark.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "emr-serverless-spark.ap-northeast-1.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("emr-serverless-spark", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -1590,7 +1607,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取CacheCluster详情</p>
+     * <p>Retrieves the details of a Cache cluster.</p>
      * 
      * @param request GetCacheClusterRequest
      * @param headers map
@@ -1624,7 +1641,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取CacheCluster详情</p>
+     * <p>Retrieves the details of a Cache cluster.</p>
      * 
      * @param request GetCacheClusterRequest
      * @return GetCacheClusterResponse
@@ -2042,6 +2059,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getRayJobWithOptions(workspaceId, submissionId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the log of a Ray job.</p>
+     * 
+     * @param request GetRayLogRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRayLogResponse
+     */
+    public GetRayLogResponse getRayLogWithOptions(String workspaceId, String instanceId, GetRayLogRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bucketName)) {
+            query.put("bucketName", request.bucketName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.path)) {
+            query.put("path", request.path);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetRayLog"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/interactive/v1/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/ray/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/log"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRayLogResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the log of a Ray job.</p>
+     * 
+     * @param request GetRayLogRequest
+     * @return GetRayLogResponse
+     */
+    public GetRayLogResponse getRayLog(String workspaceId, String instanceId, GetRayLogRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getRayLogWithOptions(workspaceId, instanceId, request, headers, runtime);
     }
 
     /**
@@ -3220,6 +3288,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listRayJobWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Lists Ray logs.</p>
+     * 
+     * @param request ListRayLogsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRayLogsResponse
+     */
+    public ListRayLogsResponse listRayLogsWithOptions(String workspaceId, String instanceId, ListRayLogsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bucketName)) {
+            query.put("bucketName", request.bucketName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.delimiter)) {
+            query.put("delimiter", request.delimiter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.marker)) {
+            query.put("marker", request.marker);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxKeys)) {
+            query.put("maxKeys", request.maxKeys);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.prefix)) {
+            query.put("prefix", request.prefix);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListRayLogs"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/interactive/v1/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/ray/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/logs"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRayLogsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Lists Ray logs.</p>
+     * 
+     * @param request ListRayLogsRequest
+     * @return ListRayLogsResponse
+     */
+    public ListRayLogsResponse listRayLogs(String workspaceId, String instanceId, ListRayLogsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listRayLogsWithOptions(workspaceId, instanceId, request, headers, runtime);
     }
 
     /**
