@@ -3,12 +3,12 @@ package com.aliyun.yike20260319.models;
 
 import com.aliyun.tea.*;
 
-public class SubmitYikeAIAppJobResponseBody extends TeaModel {
+public class SubmitYikeProjectExportJobResponseBody extends TeaModel {
     /**
      * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>ab4802364a2e49208c99efab82df****</p>
+     * <p>task_abc123def456</p>
      */
     @NameInMap("JobId")
     public String jobId;
@@ -17,17 +17,17 @@ public class SubmitYikeAIAppJobResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>4E84BE44-58A7-<strong><strong>-</strong></strong>-FBEBEA16EF94</p>
+     * <p>req_create_20260420_001</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static SubmitYikeAIAppJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        SubmitYikeAIAppJobResponseBody self = new SubmitYikeAIAppJobResponseBody();
+    public static SubmitYikeProjectExportJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        SubmitYikeProjectExportJobResponseBody self = new SubmitYikeProjectExportJobResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public SubmitYikeAIAppJobResponseBody setJobId(String jobId) {
+    public SubmitYikeProjectExportJobResponseBody setJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
@@ -35,7 +35,7 @@ public class SubmitYikeAIAppJobResponseBody extends TeaModel {
         return this.jobId;
     }
 
-    public SubmitYikeAIAppJobResponseBody setRequestId(String requestId) {
+    public SubmitYikeProjectExportJobResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

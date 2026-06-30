@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitYikePromptExpansionVoiceFixJobResponseBody extends TeaModel {
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>68ca759e798b40b4903b255********</p>
      */
@@ -12,6 +14,8 @@ public class SubmitYikePromptExpansionVoiceFixJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
      */

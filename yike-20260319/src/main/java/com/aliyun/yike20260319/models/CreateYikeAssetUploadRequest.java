@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateYikeAssetUploadRequest extends TeaModel {
     /**
+     * <p>The file name extension.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class CreateYikeAssetUploadRequest extends TeaModel {
     public String fileExt;
 
     /**
+     * <p>The file type. Default value: Media.</p>
+     * 
      * <strong>example:</strong>
      * <p>StoryboardInput</p>
      */

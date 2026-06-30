@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class SetYikeCallbackConfigRequest extends TeaModel {
     /**
+     * <p>The callback configuration. CallbackEventList supports multiple events, including:</p>
+     * <ul>
+     * <li>EventType: the event type. Valid values:<ul>
+     * <li>UserCreated: The user is created.</li>
+     * <li>UserCreditAdded: Credits are added to the user.</li>
+     * </ul>
+     * </li>
+     * <li>UserData: a JSON object that contains user-defined data.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +23,7 @@ public class SetYikeCallbackConfigRequest extends TeaModel {
     public String callbackConfig;
 
     /**
+     * <p>The HTTP callback URL.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

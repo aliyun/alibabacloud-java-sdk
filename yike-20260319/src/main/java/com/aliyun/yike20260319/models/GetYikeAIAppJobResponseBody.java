@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetYikeAIAppJobResponseBody extends TeaModel {
     /**
+     * <p>The AI application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>app-****</p>
      */
@@ -12,6 +14,8 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
     public String appId;
 
     /**
+     * <p>The input parameters for the AI application run. The value is a string obtained after JSON serialize.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;LoadImage.1.TargetImage\&quot;:\&quot;MediaId1\&quot;}</p>
      */
@@ -19,6 +23,8 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
     public String appParams;
 
     /**
+     * <p>The time when the task ended. The time is in the yyyy-mm-ddTHH:mm:ssZ format (UTC).</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-02-06T18:53:18.809+08:00</p>
      */
@@ -26,6 +32,8 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
     public String executionFinishTime;
 
     /**
+     * <p>The time when the task started. The time is in the yyyy-mm-ddTHH:mm:ssZ format (UTC).</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-02-06T18:53:34.001+08:00</p>
      */
@@ -33,6 +41,8 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
     public String executionStartTime;
 
     /**
+     * <p>The folder ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>folder-u3ilwhoc36ux9a****</p>
      */
@@ -40,6 +50,8 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
     public String folderId;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>cdb3e74639973036bc84</strong></strong></p>
      */
@@ -47,6 +59,8 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The project ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>cdb3e74639973036bc84</strong></strong></p>
      */
@@ -54,16 +68,30 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
     public String productionId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0622C702-41BE-467E-AF2E-883D4517962E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The task execution result.</p>
+     */
     @NameInMap("Result")
     public GetYikeAIAppJobResponseBodyResult result;
 
     /**
+     * <p>The task status. Valid values:</p>
+     * <ul>
+     * <li>Created: The task is created.</li>
+     * <li>Queuing: The task is queuing.</li>
+     * <li>Executing: The task is being executed.</li>
+     * <li>Finished: The task is finished.</li>
+     * <li>Failed: The task failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Created</p>
      */
@@ -157,6 +185,8 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
 
     public static class GetYikeAIAppJobResponseBodyResultAudioResult extends TeaModel {
         /**
+         * <p>The media asset ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1a7852b032c371f0b64fe6f6c74b****</p>
          */
@@ -164,6 +194,8 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
         public String mediaId;
 
         /**
+         * <p>The output file URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://outin-***.oss-cn-shanghai.aliyuncs.com/stream/48555e8b-181dd5a8c07/48555e8b-181dd5a8c07.mp3">http://outin-***.oss-cn-shanghai.aliyuncs.com/stream/48555e8b-181dd5a8c07/48555e8b-181dd5a8c07.mp3</a></p>
          */
@@ -195,6 +227,8 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
 
     public static class GetYikeAIAppJobResponseBodyResultImageResult extends TeaModel {
         /**
+         * <p>The media asset ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1a7852b032c371f0b64fe6f6c74b****</p>
          */
@@ -202,6 +236,8 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
         public String mediaId;
 
         /**
+         * <p>The output file URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://outin-***.oss-cn-shanghai.aliyuncs.com/stream/48555e8b-181dd5a8c07/48555e8b-181dd5a8c07.png">http://outin-***.oss-cn-shanghai.aliyuncs.com/stream/48555e8b-181dd5a8c07/48555e8b-181dd5a8c07.png</a></p>
          */
@@ -233,6 +269,8 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
 
     public static class GetYikeAIAppJobResponseBodyResultVideoResult extends TeaModel {
         /**
+         * <p>The media asset ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1a7852b032c371f0b64fe6f6c74b****</p>
          */
@@ -240,6 +278,8 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
         public String mediaId;
 
         /**
+         * <p>The output file URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://outin-***.oss-cn-shanghai.aliyuncs.com/stream/48555e8b-181dd5a8c07/48555e8b-181dd5a8c07.mp4">http://outin-***.oss-cn-shanghai.aliyuncs.com/stream/48555e8b-181dd5a8c07/48555e8b-181dd5a8c07.mp4</a></p>
          */
@@ -270,12 +310,21 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
     }
 
     public static class GetYikeAIAppJobResponseBodyResult extends TeaModel {
+        /**
+         * <p>The audio task result.</p>
+         */
         @NameInMap("AudioResult")
         public java.util.List<GetYikeAIAppJobResponseBodyResultAudioResult> audioResult;
 
+        /**
+         * <p>The image task result.</p>
+         */
         @NameInMap("ImageResult")
         public java.util.List<GetYikeAIAppJobResponseBodyResultImageResult> imageResult;
 
+        /**
+         * <p>The video task result.</p>
+         */
         @NameInMap("VideoResult")
         public java.util.List<GetYikeAIAppJobResponseBodyResultVideoResult> videoResult;
 

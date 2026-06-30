@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateYikeWorkspaceResponseBody extends TeaModel {
     /**
+     * <p>The project ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ProductionId</p>
      */
@@ -21,6 +23,8 @@ public class CreateYikeWorkspaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm-zna577pdximvztk5</p>
      */

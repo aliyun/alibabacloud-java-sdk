@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class SubYikeUserCreditResponseBody extends TeaModel {
     /**
+     * <p>The error code returned when the deduction fails.</p>
+     * <ul>
+     * <li>NOT_ENOUGH_ALLOCATE_CREDIT_QUOTA: the account credit balance is insufficient.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>NOT_ENOUGH_ALLOCATE_CREDIT_QUOTA</p>
      */
@@ -21,6 +26,12 @@ public class SubYikeUserCreditResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <ul>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListYikeProductionsResponseBody extends TeaModel {
     /**
+     * <p>The maximum number of results to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -12,16 +14,23 @@ public class ListYikeProductionsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token for the next page.</p>
+     * 
      * <strong>example:</strong>
      * <p>Token</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The list of projects.</p>
+     */
     @NameInMap("ProductionList")
     public java.util.List<ListYikeProductionsResponseBodyProductionList> productionList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */
@@ -67,6 +76,8 @@ public class ListYikeProductionsResponseBody extends TeaModel {
 
     public static class ListYikeProductionsResponseBodyProductionList extends TeaModel {
         /**
+         * <p>The authentication method.</p>
+         * 
          * <strong>example:</strong>
          * <p>Manage</p>
          */
@@ -74,6 +85,8 @@ public class ListYikeProductionsResponseBody extends TeaModel {
         public String auth;
 
         /**
+         * <p>The cover URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://tagvvcloud-material-center-prod.oss-cn-hangzhou.aliyuncs.com/sumvideo/utils_image/sumvideo-video-cover.png">https://tagvvcloud-material-center-prod.oss-cn-hangzhou.aliyuncs.com/sumvideo/utils_image/sumvideo-video-cover.png</a></p>
          */
@@ -81,6 +94,8 @@ public class ListYikeProductionsResponseBody extends TeaModel {
         public String coverUrl;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-01-07T02:21:36Z</p>
          */
@@ -88,6 +103,8 @@ public class ListYikeProductionsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The username of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>aliyun_183*************</p>
          */
@@ -95,6 +112,8 @@ public class ListYikeProductionsResponseBody extends TeaModel {
         public String createUserName;
 
         /**
+         * <p>The project description.</p>
+         * 
          * <strong>example:</strong>
          * <p>Swas_QuerySwasInstanceByRegion</p>
          */
@@ -102,6 +121,8 @@ public class ListYikeProductionsResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pd_463862****</p>
          */
@@ -109,6 +130,8 @@ public class ListYikeProductionsResponseBody extends TeaModel {
         public String productionId;
 
         /**
+         * <p>The project title.</p>
+         * 
          * <strong>example:</strong>
          * <p>Harvest</p>
          */
@@ -116,6 +139,8 @@ public class ListYikeProductionsResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>llm-m3r546h1n9kq3mtm</p>
          */

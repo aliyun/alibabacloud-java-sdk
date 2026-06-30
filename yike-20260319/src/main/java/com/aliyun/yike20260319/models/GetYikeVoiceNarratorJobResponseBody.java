@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetYikeVoiceNarratorJobResponseBody extends TeaModel {
     /**
+     * <p>The error code. This parameter is returned only when JobStatus is Failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>WorkflowTaskFailed</p>
      */
@@ -12,6 +14,8 @@ public class GetYikeVoiceNarratorJobResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>task_abc123def456</p>
      */
@@ -19,16 +23,28 @@ public class GetYikeVoiceNarratorJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The input parameters of the task, in JSON string format.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;TextType\&quot;:2,\&quot;TextContent\&quot;:\&quot;Today, Beijing held a press conference to announce plans to further optimize the city\&quot;s transportation network, including adding three new subway lines within the next three years....\&quot;,\&quot;AspectRatio\&quot;:\&quot;16:9\&quot;, \&quot;Resolution\&quot;:\&quot;720P\&quot;, \&quot;OutputLanguages\&quot;:[\&quot;CN\&quot;,\&quot;YUE\&quot;]&quot;}</p>
      */
     @NameInMap("JobParams")
     public String jobParams;
 
+    /**
+     * <p>The task results. This parameter is valid only when JobStatus is Succeeded.</p>
+     */
     @NameInMap("JobResult")
     public java.util.List<GetYikeVoiceNarratorJobResponseBodyJobResult> jobResult;
 
     /**
+     * <p>The task status. Valid values:</p>
+     * <ul>
+     * <li>Running</li>
+     * <li>Succeeded</li>
+     * <li>Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Running</p>
      */
@@ -36,6 +52,8 @@ public class GetYikeVoiceNarratorJobResponseBody extends TeaModel {
     public String jobStatus;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>req_query_20260420_002</p>
      */
@@ -43,6 +61,8 @@ public class GetYikeVoiceNarratorJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The custom user data passed in when the task was created. The value is returned as-is.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;newsKey\&quot;:\&quot;NEWS_20260420_001\&quot;,\&quot;key1\&quot;:\&quot;value1\&quot;, \&quot;NotifyAddress\&quot;:\&quot;<a href="https://cms.example.com/callback/video-task%5C%5C%22%7D">https://cms.example.com/callback/video-task\\&quot;}</a></p>
      */
@@ -112,6 +132,8 @@ public class GetYikeVoiceNarratorJobResponseBody extends TeaModel {
 
     public static class GetYikeVoiceNarratorJobResponseBodyJobResult extends TeaModel {
         /**
+         * <p>The online editing project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>01a6adbbd181437eb5030d3d93e0182d</p>
          */
@@ -119,6 +141,8 @@ public class GetYikeVoiceNarratorJobResponseBody extends TeaModel {
         public String editingProjectId;
 
         /**
+         * <p>The asset ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>9d7e982012c671f1b803e7f6d75a6302</p>
          */
@@ -126,6 +150,8 @@ public class GetYikeVoiceNarratorJobResponseBody extends TeaModel {
         public String mediaId;
 
         /**
+         * <p>The output language.</p>
+         * 
          * <strong>example:</strong>
          * <p>CN</p>
          */
@@ -133,6 +159,8 @@ public class GetYikeVoiceNarratorJobResponseBody extends TeaModel {
         public String outputLanguage;
 
         /**
+         * <p>The download URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://test.oss-cn-shanghai.aliyuncs.com/videos/task_abc123def456.mp4">https://test.oss-cn-shanghai.aliyuncs.com/videos/task_abc123def456.mp4</a></p>
          */

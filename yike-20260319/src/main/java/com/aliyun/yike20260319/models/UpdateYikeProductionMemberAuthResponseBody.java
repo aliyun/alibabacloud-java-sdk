@@ -14,6 +14,8 @@ public class UpdateYikeProductionMemberAuthResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the permissions were set successfully.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitYikeStoryboardJobResponseBody extends TeaModel {
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ab0e3e76-1e9d-11ed-ba64-0c42a1b73d66</p>
      */
@@ -12,6 +14,8 @@ public class SubmitYikeStoryboardJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
      */

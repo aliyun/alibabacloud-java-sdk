@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateYikeProductionRequest extends TeaModel {
     /**
+     * <p>The project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class UpdateYikeProductionRequest extends TeaModel {
     public String productionId;
 
     /**
+     * <p>The project title.</p>
+     * 
      * <strong>example:</strong>
      * <p>title</p>
      */

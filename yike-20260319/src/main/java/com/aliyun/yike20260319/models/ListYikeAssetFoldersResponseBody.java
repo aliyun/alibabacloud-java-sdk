@@ -4,21 +4,45 @@ package com.aliyun.yike20260319.models;
 import com.aliyun.tea.*;
 
 public class ListYikeAssetFoldersResponseBody extends TeaModel {
+    /**
+     * <p>The folder list.</p>
+     */
     @NameInMap("FolderList")
     public java.util.List<ListYikeAssetFoldersResponseBodyFolderList> folderList;
 
+    /**
+     * <p>The maximum number of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token for the next page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Token</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of folders.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>78</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -68,21 +92,57 @@ public class ListYikeAssetFoldersResponseBody extends TeaModel {
     }
 
     public static class ListYikeAssetFoldersResponseBodyFolderList extends TeaModel {
+        /**
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-06-03T02:23:01Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The folder ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fd-YhFKIuciRP</p>
+         */
         @NameInMap("FolderId")
         public String folderId;
 
+        /**
+         * <p>The folder name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("FolderName")
         public String folderName;
 
+        /**
+         * <p>Indicates whether the folder is the default folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
+        /**
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pd_1833************</p>
+         */
         @NameInMap("ProductionId")
         public String productionId;
 
+        /**
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-odl2p61i4vfbph4g</p>
+         */
         @NameInMap("WorkspaceId")
         public String workspaceId;
 

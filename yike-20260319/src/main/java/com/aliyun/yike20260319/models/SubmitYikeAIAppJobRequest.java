@@ -5,22 +5,27 @@ import com.aliyun.tea.*;
 
 public class SubmitYikeAIAppJobRequest extends TeaModel {
     /**
+     * <p>The AI application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>sys-ao-smith-1</p>
+     * <p>app_test</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
+     * <p>The runtime parameters of the AI application. The value is a string produced by JSON serialization.</p>
+     * 
      * <strong>example:</strong>
-     * <p>sys-ao-smith-1</p>
+     * <p>{&quot;testKey&quot;:&quot;testValue&quot;}</p>
      */
     @NameInMap("AppParams")
     public String appParams;
 
     /**
+     * <p>The folder ID. This parameter is used to save results to the specified folder.</p>
+     * 
      * <strong>example:</strong>
      * <p>fd-cReaEcVqQK</p>
      */
@@ -28,6 +33,8 @@ public class SubmitYikeAIAppJobRequest extends TeaModel {
     public String folderId;
 
     /**
+     * <p>The project ID. This parameter is used to save results to the specified project.</p>
+     * 
      * <strong>example:</strong>
      * <p>ProductionId</p>
      */

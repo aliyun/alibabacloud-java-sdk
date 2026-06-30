@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitYikeAvatarNarratorJobResponseBody extends TeaModel {
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>task_abc123def456</p>
      */
@@ -12,6 +14,8 @@ public class SubmitYikeAvatarNarratorJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>req_create_20260420_001</p>
      */

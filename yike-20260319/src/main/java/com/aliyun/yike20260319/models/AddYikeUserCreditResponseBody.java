@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class AddYikeUserCreditResponseBody extends TeaModel {
     /**
+     * <p>The error code returned when the increase fails. Valid values:</p>
+     * <ul>
+     * <li>NOT_ENOUGH_ALLOCATE_CREDIT_QUOTA: The primary account does not have sufficient credit balance.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>NOT_ENOUGH_ALLOCATE_CREDIT_QUOTA</p>
      */
@@ -21,6 +26,8 @@ public class AddYikeUserCreditResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the credits were increased successfully.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

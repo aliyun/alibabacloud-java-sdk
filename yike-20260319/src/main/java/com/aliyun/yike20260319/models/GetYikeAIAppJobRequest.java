@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetYikeAIAppJobRequest extends TeaModel {
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
      */

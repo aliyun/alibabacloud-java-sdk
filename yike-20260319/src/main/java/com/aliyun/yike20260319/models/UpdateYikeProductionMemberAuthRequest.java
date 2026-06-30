@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class UpdateYikeProductionMemberAuthRequest extends TeaModel {
     /**
+     * <p>The permission name. Valid values:</p>
+     * <ul>
+     * <li>Manage: manageable</li>
+     * <li>Edit: editable.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +19,7 @@ public class UpdateYikeProductionMemberAuthRequest extends TeaModel {
     public String auth;
 
     /**
+     * <p>The project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,7 +29,11 @@ public class UpdateYikeProductionMemberAuthRequest extends TeaModel {
     public String productionId;
 
     /**
+     * <p>The RAM user ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21******</p>
      */
     @NameInMap("YikeUserId")
     public String yikeUserId;

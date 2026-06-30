@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateYikeProductionResponseBody extends TeaModel {
     /**
+     * <p>The project ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pd_12334**</p>
      */

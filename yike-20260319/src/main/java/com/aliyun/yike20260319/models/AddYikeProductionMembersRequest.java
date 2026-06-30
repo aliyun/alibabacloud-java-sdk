@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddYikeProductionMembersRequest extends TeaModel {
     /**
+     * <p>The project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class AddYikeProductionMembersRequest extends TeaModel {
     public String productionId;
 
     /**
+     * <p>The IDs of the RAM users.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

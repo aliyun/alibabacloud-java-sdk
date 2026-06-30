@@ -13,6 +13,9 @@ public class GetYikeUserResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The user information.</p>
+     */
     @NameInMap("UserInfo")
     public GetYikeUserResponseBodyUserInfo userInfo;
 
@@ -39,6 +42,8 @@ public class GetYikeUserResponseBody extends TeaModel {
 
     public static class GetYikeUserResponseBodyUserInfo extends TeaModel {
         /**
+         * <p>The nickname.</p>
+         * 
          * <strong>example:</strong>
          * <p>nick</p>
          */
@@ -46,6 +51,8 @@ public class GetYikeUserResponseBody extends TeaModel {
         public String nickname;
 
         /**
+         * <p>The username.</p>
+         * 
          * <strong>example:</strong>
          * <p>name</p>
          */
@@ -53,6 +60,8 @@ public class GetYikeUserResponseBody extends TeaModel {
         public String userName;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>spaceId</p>
          */
@@ -60,6 +69,8 @@ public class GetYikeUserResponseBody extends TeaModel {
         public String workspaceId;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>id</p>
          */

@@ -14,12 +14,17 @@ public class ListYikeWorkspacesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of workspaces</p>
+     * 
      * <strong>example:</strong>
      * <p>54</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>Workspace list</p>
+     */
     @NameInMap("WorkspaceList")
     public java.util.List<ListYikeWorkspacesResponseBodyWorkspaceList> workspaceList;
 
@@ -54,6 +59,8 @@ public class ListYikeWorkspacesResponseBody extends TeaModel {
 
     public static class ListYikeWorkspacesResponseBodyWorkspaceList extends TeaModel {
         /**
+         * <p>Workspace code</p>
+         * 
          * <strong>example:</strong>
          * <p>ABCD12</p>
          */
@@ -61,6 +68,8 @@ public class ListYikeWorkspacesResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>Creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-04-29T10:22:44Z</p>
          */
@@ -68,6 +77,8 @@ public class ListYikeWorkspacesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Default project ID</p>
+         * 
          * <strong>example:</strong>
          * <p>pd_1234***</p>
          */
@@ -75,6 +86,8 @@ public class ListYikeWorkspacesResponseBody extends TeaModel {
         public String defaultProductionId;
 
         /**
+         * <p>Workspace status</p>
+         * 
          * <strong>example:</strong>
          * <p>Online</p>
          */
@@ -82,6 +95,8 @@ public class ListYikeWorkspacesResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>Title</p>
+         * 
          * <strong>example:</strong>
          * <p>workspace title</p>
          */
@@ -89,6 +104,8 @@ public class ListYikeWorkspacesResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>Number of users in the workspace</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -96,6 +113,8 @@ public class ListYikeWorkspacesResponseBody extends TeaModel {
         public String userCount;
 
         /**
+         * <p>Workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ws_1243****</p>
          */

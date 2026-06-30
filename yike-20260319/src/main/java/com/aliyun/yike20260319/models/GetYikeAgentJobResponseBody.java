@@ -4,20 +4,36 @@ package com.aliyun.yike20260319.models;
 import com.aliyun.tea.*;
 
 public class GetYikeAgentJobResponseBody extends TeaModel {
+    /**
+     * <p>The time when the task started. The time is in the yyyy-mm-ddTHH:mm:ssZ format (UTC).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2026-02-06T18:53:34.001+08:00</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
     /**
+     * <p>The error code. This parameter is returned only when the task is in the Failed state.</p>
+     * 
      * <strong>example:</strong>
      * <p>WorkflowTaskFailed</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The time when the task ended. The time is in the yyyy-mm-ddTHH:mm:ssZ format (UTC).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2026-02-06T18:53:34.001+08:00</p>
+     */
     @NameInMap("FinishTime")
     public String finishTime;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ab4802364a2e49208c99efab82df****</p>
      */
@@ -25,16 +41,28 @@ public class GetYikeAgentJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The input parameters of the task. The value is a JSON string.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;TextType\&quot;:2,\&quot;TextContent\&quot;:\&quot;Today, Beijing held a press conference to announce plans to further optimize the city\&quot;s transportation network, including adding three new subway lines within the next three years....\&quot;,\&quot;AspectRatio\&quot;:\&quot;16:9\&quot;, \&quot;Resolution\&quot;:\&quot;720P\&quot;, \&quot;OutputLanguages\&quot;:[\&quot;CN\&quot;,\&quot;YUE\&quot;]&quot;}</p>
      */
     @NameInMap("JobParams")
     public String jobParams;
 
+    /**
+     * <p>The task results. This parameter is valid only when the task is in the Succeeded state.</p>
+     */
     @NameInMap("JobResult")
     public java.util.List<GetYikeAgentJobResponseBodyJobResult> jobResult;
 
     /**
+     * <p>The task status. Valid values:</p>
+     * <ul>
+     * <li>Running</li>
+     * <li>Succeeded</li>
+     * <li>Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Running</p>
      */
@@ -42,6 +70,13 @@ public class GetYikeAgentJobResponseBody extends TeaModel {
     public String jobStatus;
 
     /**
+     * <p>The agent task type. Valid values:</p>
+     * <ul>
+     * <li>VoiceNarrator: narration video without a digital human.</li>
+     * <li>AvatarNarrator: narration video with a digital human.</li>
+     * <li>VideoClone: video cloning.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>VoiceNarrator</p>
      */
@@ -49,6 +84,8 @@ public class GetYikeAgentJobResponseBody extends TeaModel {
     public String jobType;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */
@@ -56,6 +93,8 @@ public class GetYikeAgentJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The custom user data that was passed in when the task was created. The value is returned as-is.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;newsKey\&quot;:\&quot;NEWS_20260420_001\&quot;,\&quot;key1\&quot;:\&quot;value1\&quot;, \&quot;NotifyAddress\&quot;:\&quot;<a href="https://cms.example.com/callback/video-task%5C%5C%22%7D">https://cms.example.com/callback/video-task\\&quot;}</a></p>
      */
@@ -149,6 +188,8 @@ public class GetYikeAgentJobResponseBody extends TeaModel {
 
     public static class GetYikeAgentJobResponseBodyJobResult extends TeaModel {
         /**
+         * <p>The online editing project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>01a6adbbd181437eb5030d3d93e0182d</p>
          */
@@ -156,6 +197,8 @@ public class GetYikeAgentJobResponseBody extends TeaModel {
         public String editingProjectId;
 
         /**
+         * <p>The asset ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>9d7e982012c671f1b803e7f6d75a6302</p>
          */
@@ -163,6 +206,8 @@ public class GetYikeAgentJobResponseBody extends TeaModel {
         public String mediaId;
 
         /**
+         * <p>The output language.</p>
+         * 
          * <strong>example:</strong>
          * <p>CN</p>
          */
@@ -170,6 +215,8 @@ public class GetYikeAgentJobResponseBody extends TeaModel {
         public String outputLanguage;
 
         /**
+         * <p>The download URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://test.oss-cn-shanghai.aliyuncs.com/videos/task_abc123def456.mp4">https://test.oss-cn-shanghai.aliyuncs.com/videos/task_abc123def456.mp4</a></p>
          */

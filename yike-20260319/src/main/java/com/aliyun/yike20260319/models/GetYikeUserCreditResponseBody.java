@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetYikeUserCreditResponseBody extends TeaModel {
     /**
+     * <p>The total allocated credits.</p>
+     * 
      * <strong>example:</strong>
      * <p>10417.0</p>
      */
@@ -12,6 +14,8 @@ public class GetYikeUserCreditResponseBody extends TeaModel {
     public String creditTotal;
 
     /**
+     * <p>The remaining available credits.</p>
+     * 
      * <strong>example:</strong>
      * <p>165.0</p>
      */

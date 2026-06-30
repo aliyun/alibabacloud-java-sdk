@@ -14,6 +14,8 @@ public class AddYikeProductionMembersResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the member is added.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

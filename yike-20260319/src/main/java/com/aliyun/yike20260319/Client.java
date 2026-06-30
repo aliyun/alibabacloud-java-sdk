@@ -8,7 +8,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("cn-shanghai", "yike.cn-shanghai.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("yike", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -28,7 +31,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>增加一刻项目成员</p>
+     * <p>Adds a member to a Yike project.</p>
      * 
      * @param request AddYikeProductionMembersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -64,7 +67,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>增加一刻项目成员</p>
+     * <p>Adds a member to a Yike project.</p>
      * 
      * @param request AddYikeProductionMembersRequest
      * @return AddYikeProductionMembersResponse
@@ -76,7 +79,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>增加用户积分</p>
+     * <p>Increases user credits.</p>
      * 
      * @param request AddYikeUserCreditRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -112,7 +115,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>增加用户积分</p>
+     * <p>Increases user credits.</p>
      * 
      * @param request AddYikeUserCreditRequest
      * @return AddYikeUserCreditResponse
@@ -124,7 +127,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量获取一刻AI应用生成任务</p>
+     * <p>Retrieves multiple Yike AI application generation tasks in a batch.</p>
      * 
      * @param request BatchGetYikeAIAppJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -156,7 +159,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量获取一刻AI应用生成任务</p>
+     * <p>Retrieves multiple Yike AI application generation tasks in a batch.</p>
      * 
      * @param request BatchGetYikeAIAppJobRequest
      * @return BatchGetYikeAIAppJobResponse
@@ -168,7 +171,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量获取媒资信息</p>
+     * <p>Retrieves information about multiple media assets in a batch.</p>
      * 
      * @param request BatchGetYikeAssetMediaInfosRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -200,7 +203,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量获取媒资信息</p>
+     * <p>Retrieves information about multiple media assets in a batch.</p>
      * 
      * @param request BatchGetYikeAssetMediaInfosRequest
      * @return BatchGetYikeAssetMediaInfosResponse
@@ -212,7 +215,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一刻媒资上传凭证</p>
+     * <p>Retrieves the upload credential for a media asset.</p>
      * 
      * @param request CreateYikeAssetUploadRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -248,7 +251,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一刻媒资上传凭证</p>
+     * <p>Retrieves the upload credential for a media asset.</p>
      * 
      * @param request CreateYikeAssetUploadRequest
      * @return CreateYikeAssetUploadResponse
@@ -260,7 +263,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建一刻项目</p>
+     * <p>Creates a project.</p>
      * 
      * @param request CreateYikeProductionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -296,7 +299,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建一刻项目</p>
+     * <p>Creates a project.</p>
      * 
      * @param request CreateYikeProductionRequest
      * @return CreateYikeProductionResponse
@@ -308,7 +311,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建一刻子用户</p>
+     * <p>Creates a sub-account user in WonderClip.</p>
      * 
      * @param request CreateYikeUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -356,7 +359,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建一刻子用户</p>
+     * <p>Creates a sub-account user in WonderClip.</p>
      * 
      * @param request CreateYikeUserRequest
      * @return CreateYikeUserResponse
@@ -368,7 +371,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建工作室</p>
+     * <p>Creates a workspace.</p>
      * 
      * @param request CreateYikeWorkspaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -404,7 +407,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建工作室</p>
+     * <p>Creates a workspace.</p>
      * 
      * @param request CreateYikeWorkspaceRequest
      * @return CreateYikeWorkspaceResponse
@@ -416,7 +419,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除媒资信息</p>
+     * <p>Deletes media asset information.</p>
      * 
      * @param request DeleteYikeAssetMediaInfosRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -452,7 +455,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除媒资信息</p>
+     * <p>Deletes media asset information.</p>
      * 
      * @param request DeleteYikeAssetMediaInfosRequest
      * @return DeleteYikeAssetMediaInfosResponse
@@ -464,7 +467,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一刻AI应用任务</p>
+     * <p>Retrieves the details of an AI application task.</p>
      * 
      * @param request GetYikeAIAppJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -496,7 +499,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一刻AI应用任务</p>
+     * <p>Retrieves the details of an AI application task.</p>
      * 
      * @param request GetYikeAIAppJobRequest
      * @return GetYikeAIAppJobResponse
@@ -508,7 +511,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询一刻口播视频生成任务</p>
+     * <p>Queries an agent task.</p>
      * 
      * @param request GetYikeAgentJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -540,7 +543,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询一刻口播视频生成任务</p>
+     * <p>Queries an agent task.</p>
      * 
      * @param request GetYikeAgentJobRequest
      * @return GetYikeAgentJobResponse
@@ -552,7 +555,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一刻媒资内容信息</p>
+     * <p>Retrieves the content information of a media asset.</p>
      * 
      * @param request GetYikeAssetMediaInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -584,7 +587,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一刻媒资内容信息</p>
+     * <p>Retrieves the content information of a media asset.</p>
      * 
      * @param request GetYikeAssetMediaInfoRequest
      * @return GetYikeAssetMediaInfoResponse
@@ -596,7 +599,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询一刻提示词扩写和音频修复视频生成任务</p>
+     * <p>Queries the information and results of an editing project export task.</p>
+     * 
+     * @param request GetYikeProjectExportJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetYikeProjectExportJobResponse
+     */
+    public GetYikeProjectExportJobResponse getYikeProjectExportJobWithOptions(GetYikeProjectExportJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetYikeProjectExportJob"),
+            new TeaPair("version", "2026-03-19"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetYikeProjectExportJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information and results of an editing project export task.</p>
+     * 
+     * @param request GetYikeProjectExportJobRequest
+     * @return GetYikeProjectExportJobResponse
+     */
+    public GetYikeProjectExportJobResponse getYikeProjectExportJob(GetYikeProjectExportJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getYikeProjectExportJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a Yike prompt enhancement and audio repair video generation task.</p>
      * 
      * @param request GetYikePromptExpansionVoiceFixJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -628,7 +675,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询一刻提示词扩写和音频修复视频生成任务</p>
+     * <p>Queries a Yike prompt enhancement and audio repair video generation task.</p>
      * 
      * @param request GetYikePromptExpansionVoiceFixJobRequest
      * @return GetYikePromptExpansionVoiceFixJobResponse
@@ -640,7 +687,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一刻故事板任务</p>
+     * <p>Retrieves a storyboard task.</p>
      * 
      * @param request GetYikeStoryboardJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -672,7 +719,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一刻故事板任务</p>
+     * <p>Retrieves a storyboard task.</p>
      * 
      * @param request GetYikeStoryboardJobRequest
      * @return GetYikeStoryboardJobResponse
@@ -684,7 +731,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一刻子用户信息</p>
+     * <p>Retrieves information about a WonderClip sub-account.</p>
      * 
      * @param request GetYikeUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -716,7 +763,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一刻子用户信息</p>
+     * <p>Retrieves information about a WonderClip sub-account.</p>
      * 
      * @param request GetYikeUserRequest
      * @return GetYikeUserResponse
@@ -728,7 +775,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询一刻用户积分</p>
+     * <p>Queries the credit balance of a WonderClip user.</p>
      * 
      * @param request GetYikeUserCreditRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -760,7 +807,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询一刻用户积分</p>
+     * <p>Queries the credit balance of a WonderClip user.</p>
      * 
      * @param request GetYikeUserCreditRequest
      * @return GetYikeUserCreditResponse
@@ -772,7 +819,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询一刻口播视频生成任务</p>
+     * <p>Queries an intelligent video generation task for a narration-only video without a digital human.</p>
      * 
      * @param request GetYikeVoiceNarratorJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -804,7 +851,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询一刻口播视频生成任务</p>
+     * <p>Queries an intelligent video generation task for a narration-only video without a digital human.</p>
      * 
      * @param request GetYikeVoiceNarratorJobRequest
      * @return GetYikeVoiceNarratorJobResponse
@@ -816,7 +863,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一刻文件夹列表</p>
+     * <p>Retrieves the list of folders.</p>
      * 
      * @param request ListYikeAssetFoldersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -856,7 +903,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一刻文件夹列表</p>
+     * <p>Retrieves the list of folders.</p>
      * 
      * @param request ListYikeAssetFoldersRequest
      * @return ListYikeAssetFoldersResponse
@@ -868,7 +915,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一刻项目列表</p>
+     * <p>Retrieves a list of Yike projects.</p>
      * 
      * @param request ListYikeProductionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -916,7 +963,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一刻项目列表</p>
+     * <p>Retrieves a list of Yike projects.</p>
      * 
      * @param request ListYikeProductionsRequest
      * @return ListYikeProductionsResponse
@@ -928,7 +975,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一刻工作室列表</p>
+     * <p>Get Yike Workspace List</p>
      * 
      * @param request ListYikeWorkspacesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -964,7 +1011,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一刻工作室列表</p>
+     * <p>Get Yike Workspace List</p>
      * 
      * @param request ListYikeWorkspacesRequest
      * @return ListYikeWorkspacesResponse
@@ -976,7 +1023,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>检查应用参数是否合法</p>
+     * <p>Checks whether the application parameters are valid.</p>
      * 
      * @param request PrecheckYikeAIAppJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1012,7 +1059,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>检查应用参数是否合法</p>
+     * <p>Checks whether the application parameters are valid.</p>
      * 
      * @param request PrecheckYikeAIAppJobRequest
      * @return PrecheckYikeAIAppJobResponse
@@ -1024,7 +1071,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>注册一刻媒资</p>
+     * <p>Registers a Yike media asset.</p>
      * 
      * @param request RegisterYikeAssetMediaInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1068,7 +1115,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>注册一刻媒资</p>
+     * <p>Registers a Yike media asset.</p>
      * 
      * @param request RegisterYikeAssetMediaInfoRequest
      * @return RegisterYikeAssetMediaInfoResponse
@@ -1080,7 +1127,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>故事板任务恢复继续执行任务</p>
+     * <p>Resumes the execution of a storyboard task.</p>
      * 
      * @param request ResumeYikeStoryboardJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1112,7 +1159,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>故事板任务恢复继续执行任务</p>
+     * <p>Resumes the execution of a storyboard task.</p>
      * 
      * @param request ResumeYikeStoryboardJobRequest
      * @return ResumeYikeStoryboardJobResponse
@@ -1124,7 +1171,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>配置一刻事件回调</p>
+     * <p>Configures event callbacks for the business system.</p>
      * 
      * @param request SetYikeCallbackConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1160,7 +1207,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>配置一刻事件回调</p>
+     * <p>Configures event callbacks for the business system.</p>
      * 
      * @param request SetYikeCallbackConfigRequest
      * @return SetYikeCallbackConfigResponse
@@ -1172,7 +1219,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>设置用户角色</p>
+     * <p>Sets the user role.</p>
      * 
      * @param request SetYikeUserRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1208,7 +1255,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>设置用户角色</p>
+     * <p>Sets the user role.</p>
      * 
      * @param request SetYikeUserRoleRequest
      * @return SetYikeUserRoleResponse
@@ -1220,7 +1267,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>扣减用户积分</p>
+     * <p>Reclaims credits from a user.</p>
      * 
      * @param request SubYikeUserCreditRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1256,7 +1303,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>扣减用户积分</p>
+     * <p>Reclaims credits from a user.</p>
      * 
      * @param request SubYikeUserCreditRequest
      * @return SubYikeUserCreditResponse
@@ -1268,7 +1315,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交一刻AI应用任务</p>
+     * <p>Submits an AI application task to Yike AI.</p>
      * 
      * @param request SubmitYikeAIAppJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1312,7 +1359,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交一刻AI应用任务</p>
+     * <p>Submits an AI application task to Yike AI.</p>
      * 
      * @param request SubmitYikeAIAppJobRequest
      * @return SubmitYikeAIAppJobResponse
@@ -1323,8 +1370,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This API operation generates a video featuring a virtual human delivering an oral broadcast based on the provided text content and other parameters such as digital human information and common scenario type. You must specify key configuration items including the text type (raw script or oral broadcast script), video dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. In addition, you can pass custom parameters through the <code>UserData</code> field, which are returned as-is in the callback.</p>
+     * 
      * <b>summary</b> : 
-     * <p>提交一刻数字人口播视频生成任务</p>
+     * <p>Creates an intelligent video production task for a digital human oral broadcasting scenario. This task is applicable to video scenarios such as influencer product promotion and knowledge sharing.</p>
      * 
      * @param request SubmitYikeAvatarNarratorJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1359,8 +1410,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This API operation generates a video featuring a virtual human delivering an oral broadcast based on the provided text content and other parameters such as digital human information and common scenario type. You must specify key configuration items including the text type (raw script or oral broadcast script), video dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. In addition, you can pass custom parameters through the <code>UserData</code> field, which are returned as-is in the callback.</p>
+     * 
      * <b>summary</b> : 
-     * <p>提交一刻数字人口播视频生成任务</p>
+     * <p>Creates an intelligent video production task for a digital human oral broadcasting scenario. This task is applicable to video scenarios such as influencer product promotion and knowledge sharing.</p>
      * 
      * @param request SubmitYikeAvatarNarratorJobRequest
      * @return SubmitYikeAvatarNarratorJobResponse
@@ -1372,7 +1427,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交一刻提示词扩写和音频修复视频生成任务</p>
+     * <p>Submits an online editing project export task that supports exporting pure audio and SRT subtitles.</p>
+     * 
+     * @param request SubmitYikeProjectExportJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitYikeProjectExportJobResponse
+     */
+    public SubmitYikeProjectExportJobResponse submitYikeProjectExportJobWithOptions(SubmitYikeProjectExportJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.exportType)) {
+            query.put("ExportType", request.exportType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
+            query.put("UserData", request.userData);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitYikeProjectExportJob"),
+            new TeaPair("version", "2026-03-19"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitYikeProjectExportJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Submits an online editing project export task that supports exporting pure audio and SRT subtitles.</p>
+     * 
+     * @param request SubmitYikeProjectExportJobRequest
+     * @return SubmitYikeProjectExportJobResponse
+     */
+    public SubmitYikeProjectExportJobResponse submitYikeProjectExportJob(SubmitYikeProjectExportJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitYikeProjectExportJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Submits a video generation task with prompt enhancement and audio repair.</p>
      * 
      * @param request SubmitYikePromptExpansionVoiceFixJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1408,7 +1515,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交一刻提示词扩写和音频修复视频生成任务</p>
+     * <p>Submits a video generation task with prompt enhancement and audio repair.</p>
      * 
      * @param request SubmitYikePromptExpansionVoiceFixJobRequest
      * @return SubmitYikePromptExpansionVoiceFixJobResponse
@@ -1419,8 +1526,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Ensure that your credits remain above 5,000 when calling this operation. Insufficient credits may cause the task to be interrupted.</p>
+     * 
      * <b>summary</b> : 
-     * <p>提交一刻故事板全链路编排任务</p>
+     * <p>Submits a storyboard generation task.</p>
      * 
      * @param request SubmitYikeStoryboardJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1509,8 +1619,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Ensure that your credits remain above 5,000 when calling this operation. Insufficient credits may cause the task to be interrupted.</p>
+     * 
      * <b>summary</b> : 
-     * <p>提交一刻故事板全链路编排任务</p>
+     * <p>Submits a storyboard generation task.</p>
      * 
      * @param request SubmitYikeStoryboardJobRequest
      * @return SubmitYikeStoryboardJobResponse
@@ -1522,7 +1635,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交一刻口播视频生成任务</p>
+     * <p>Creates an intelligent video generation task for a voiceover-only scenario (without a digital human). This task is applicable to video scenarios such as product showcases and news broadcasts.</p>
      * 
      * @param request SubmitYikeVoiceNarratorJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1558,7 +1671,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交一刻口播视频生成任务</p>
+     * <p>Creates an intelligent video generation task for a voiceover-only scenario (without a digital human). This task is applicable to video scenarios such as product showcases and news broadcasts.</p>
      * 
      * @param request SubmitYikeVoiceNarratorJobRequest
      * @return SubmitYikeVoiceNarratorJobResponse
@@ -1570,7 +1683,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新一刻项目</p>
+     * <p>Update a Yike project</p>
      * 
      * @param request UpdateYikeProductionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1606,7 +1719,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新一刻项目</p>
+     * <p>Update a Yike project</p>
      * 
      * @param request UpdateYikeProductionRequest
      * @return UpdateYikeProductionResponse
@@ -1618,7 +1731,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改一刻项目成员权限</p>
+     * <p>Modifies the permissions of a Yike project member.</p>
      * 
      * @param request UpdateYikeProductionMemberAuthRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1658,7 +1771,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改一刻项目成员权限</p>
+     * <p>Modifies the permissions of a Yike project member.</p>
      * 
      * @param request UpdateYikeProductionMemberAuthRequest
      * @return UpdateYikeProductionMemberAuthResponse
