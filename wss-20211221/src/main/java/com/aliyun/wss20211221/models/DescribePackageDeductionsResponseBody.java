@@ -4,10 +4,15 @@ package com.aliyun.wss20211221.models;
 import com.aliyun.tea.*;
 
 public class DescribePackageDeductionsResponseBody extends TeaModel {
+    /**
+     * <p>The deduction details.</p>
+     */
     @NameInMap("Deductions")
     public java.util.List<DescribePackageDeductionsResponseBodyDeductions> deductions;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -22,6 +29,8 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>833C4D2C-09C7-5CE6-8159-06758B964970</p>
      */
@@ -29,15 +38,29 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of matching entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
 
+    /**
+     * <p>The total core-hours deducted for all matching entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.1</p>
+     */
     @NameInMap("TotalUsedCoreTime")
     public Float totalUsedCoreTime;
 
+    /**
+     * <p>The total usage duration of all matching entries, in seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100000</p>
+     */
     @NameInMap("TotalUsedTime")
     public Long totalUsedTime;
 
@@ -115,6 +138,8 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
 
     public static class DescribePackageDeductionsResponseBodyDeductions extends TeaModel {
         /**
+         * <p>The number of vCPUs.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -122,6 +147,8 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         public Integer cpu;
 
         /**
+         * <p>The cloud computer ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ecd-6wye9optu0kag****</p>
          */
@@ -129,6 +156,8 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         public String desktopId;
 
         /**
+         * <p>The cloud computer name.</p>
+         * 
          * <strong>example:</strong>
          * <p>DemoComputer</p>
          */
@@ -136,6 +165,8 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         public String desktopName;
 
         /**
+         * <p>The desktop type.</p>
+         * 
          * <strong>example:</strong>
          * <p>eds.enterprise_office.4c8g</p>
          */
@@ -143,6 +174,8 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         public String desktopType;
 
         /**
+         * <p>The billing cycle end time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-07-31T03:00Z</p>
          */
@@ -156,6 +189,8 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The core-hour package state.</p>
+         * 
          * <strong>example:</strong>
          * <p>Deleted</p>
          */
@@ -166,6 +201,8 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         public String instanceType;
 
         /**
+         * <p>The memory size, in MB.</p>
+         * 
          * <strong>example:</strong>
          * <p>8192</p>
          */
@@ -173,6 +210,8 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         public Long memory;
 
         /**
+         * <p>The OS of the cloud computer.</p>
+         * 
          * <strong>example:</strong>
          * <p>Windows</p>
          */
@@ -180,12 +219,20 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         public String osType;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Desktop</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
@@ -193,6 +240,8 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>The billing cycle start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-07-31T02:00Z</p>
          */
@@ -200,6 +249,8 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         public String staTime;
 
         /**
+         * <p>The deducted core-hours.</p>
+         * 
          * <strong>example:</strong>
          * <p>4.0</p>
          */
@@ -207,6 +258,8 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         public Float usedCoreTime;
 
         /**
+         * <p>The usage duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>3600</p>
          */

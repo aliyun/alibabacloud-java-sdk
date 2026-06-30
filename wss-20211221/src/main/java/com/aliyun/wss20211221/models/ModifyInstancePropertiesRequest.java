@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ModifyInstancePropertiesRequest extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>mdp-0c62ayep0nk4v****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The instance ID.</p>
+     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
+     * <p>The key of the attribute.</p>
+     * 
      * <strong>example:</strong>
      * <p>PackageUsedUpStrategy</p>
      */
@@ -22,6 +29,10 @@ public class ModifyInstancePropertiesRequest extends TeaModel {
     public String key;
 
     /**
+     * <p>The resource type.</p>
+     * <blockquote>
+     * <p>This parameter is case-sensitive. Ensure that the value is spelled correctly.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,6 +42,16 @@ public class ModifyInstancePropertiesRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>The value of the attribute.</p>
+     * <ul>
+     * <li>PackageUsedUpStrategy: Valid values:<ul>
+     * <li>Postpaid: Enters the pay-as-you-go phase.</li>
+     * <li>Shutdown: Hibernation.</li>
+     * <li>Maintenance: Shuts down and enters O&amp;M mode. Client connections are not allowed.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Postpaid</p>
      */

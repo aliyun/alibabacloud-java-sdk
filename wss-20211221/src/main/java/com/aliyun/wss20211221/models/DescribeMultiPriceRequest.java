@@ -4,10 +4,15 @@ package com.aliyun.wss20211221.models;
 import com.aliyun.tea.*;
 
 public class DescribeMultiPriceRequest extends TeaModel {
+    /**
+     * <p>The order items.</p>
+     */
     @NameInMap("OrderItems")
     public java.util.List<DescribeMultiPriceRequestOrderItems> orderItems;
 
     /**
+     * <p>The order type.</p>
+     * 
      * <strong>example:</strong>
      * <p>create</p>
      */
@@ -15,6 +20,8 @@ public class DescribeMultiPriceRequest extends TeaModel {
     public String orderType;
 
     /**
+     * <p>The package code. This parameter is not required for non-package types.</p>
+     * 
      * <strong>example:</strong>
      * <p>pacakge</p>
      */
@@ -22,6 +29,8 @@ public class DescribeMultiPriceRequest extends TeaModel {
     public String packageCode;
 
     /**
+     * <p>The ID of the user who owns the resource in the reseller model. This parameter is not required in non-reseller mode.</p>
+     * 
      * <strong>example:</strong>
      * <p>182864463481****</p>
      */
@@ -67,6 +76,8 @@ public class DescribeMultiPriceRequest extends TeaModel {
 
     public static class DescribeMultiPriceRequestOrderItemsComponents extends TeaModel {
         /**
+         * <p>The key of the component.</p>
+         * 
          * <strong>example:</strong>
          * <p>RegionId</p>
          */
@@ -74,6 +85,61 @@ public class DescribeMultiPriceRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the component.</p>
+         * <p>The following are the keys and their sample or enumerated values for a monthly duration package of the enterprise edition:</p>
+         * <ul>
+         * <li><p><code>RegionId</code>: cn-shanghai</p>
+         * </li>
+         * <li><p><code>InstanceType</code>: eds.enterprise_office.4c8g</p>
+         * </li>
+         * <li><p><code>DurationType</code> (in hours): [enum]</p>
+         * <ul>
+         * <li><p>120</p>
+         * </li>
+         * <li><p>250</p>
+         * </li>
+         * </ul>
+         * </li>
+         * <li><p><code>OsType</code>: [enum]</p>
+         * <ul>
+         * <li><p>Windows</p>
+         * </li>
+         * <li><p>Linux</p>
+         * </li>
+         * </ul>
+         * </li>
+         * <li><p><code>RootDiskSize</code> (in GiB): 80</p>
+         * </li>
+         * <li><p><code>RootDiskCategory</code>: [enum]</p>
+         * <ul>
+         * <li><p><code>cloud_efficiency</code> (Ultra Cloud Disk)</p>
+         * </li>
+         * <li><p><code>cloud_auto</code> (AutoPL Cloud Disk)</p>
+         * </li>
+         * <li><p><code>cloud_essd</code> (Enhanced SSD (ESSD), available only for specific instance types)</p>
+         * </li>
+         * </ul>
+         * </li>
+         * <li><p><code>RootPerformanceLevel</code>: [enum]</p>
+         * <ul>
+         * <li><p>PL0</p>
+         * </li>
+         * <li><p>PL1</p>
+         * </li>
+         * <li><p>PL2</p>
+         * </li>
+         * <li><p>PL3</p>
+         * </li>
+         * </ul>
+         * </li>
+         * <li><p><code>DataDiskSize</code> (in GiB): Same as <code>RootDiskSize</code>.</p>
+         * </li>
+         * <li><p><code>DataDiskCategory</code>: Same as <code>RootDiskCategory</code>.</p>
+         * </li>
+         * <li><p><code>DataPerformanceLevel</code>: Same as <code>RootPerformanceLevel</code>.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
          */
@@ -105,22 +171,38 @@ public class DescribeMultiPriceRequest extends TeaModel {
 
     public static class DescribeMultiPriceRequestOrderItems extends TeaModel {
         /**
+         * <p>The quantity to purchase.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("Amount")
         public Integer amount;
 
+        /**
+         * <p>A list of components.</p>
+         */
         @NameInMap("Components")
         public java.util.List<DescribeMultiPriceRequestOrderItemsComponents> components;
 
         @NameInMap("Data")
         public String data;
 
+        /**
+         * <p>A list of instance IDs.</p>
+         */
         @NameInMap("InstanceIds")
         public java.util.List<String> instanceIds;
 
         /**
+         * <p>The subscription period. Valid values:</p>
+         * <ul>
+         * <li><p>If <code>PeriodUnit</code> is <code>Year</code>, the valid values are 1, 2, and 3.</p>
+         * </li>
+         * <li><p>If <code>PeriodUnit</code> is <code>Month</code>, the valid values are 1, 2, 3, and 6.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -128,6 +210,8 @@ public class DescribeMultiPriceRequest extends TeaModel {
         public Integer period;
 
         /**
+         * <p>The unit of the subscription period.</p>
+         * 
          * <strong>example:</strong>
          * <p>Year</p>
          */
@@ -135,16 +219,26 @@ public class DescribeMultiPriceRequest extends TeaModel {
         public String periodUnit;
 
         /**
+         * <p>The promotion ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>youhuiquan_promotion_option_id_for_blank</p>
          */
         @NameInMap("PromotionId")
         public String promotionId;
 
+        /**
+         * <p>A list of resource IDs.</p>
+         */
         @NameInMap("ResourceIds")
         public java.util.List<String> resourceIds;
 
         /**
+         * <p>The resource type.</p>
+         * <blockquote>
+         * <p>The value is case-sensitive.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>DurationPackage</p>
          */

@@ -4,20 +4,33 @@ package com.aliyun.wss20211221.models;
 import com.aliyun.tea.*;
 
 public class DescribeCreditPackageAgentsRequest extends TeaModel {
+    /**
+     * <p>An array of agent IDs to query. Example: <code>[&quot;agent-1&quot;,&quot;agent-2&quot;]</code>.</p>
+     */
     @NameInMap("AgentIds")
     public java.util.List<String> agentIds;
 
     /**
+     * <p>The agent type. Valid values: <code>CREDIT_PACKAGE</code>, <code>JVS_CLAW</code>, <code>OPEN_CLAW</code>, and <code>JVS_COPILOT</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>JVS_COPILOT</p>
      */
     @NameInMap("AgentType")
     public String agentType;
 
+    /**
+     * <p>The business type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BUSINESS</p>
+     */
     @NameInMap("BizType")
     public String bizType;
 
     /**
+     * <p>The maximum number of results to return per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -25,6 +38,8 @@ public class DescribeCreditPackageAgentsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token to retrieve the next page of results. Obtain this value from the <code>NextToken</code> parameter of the previous response. For the first request, set this parameter to an empty string.</p>
+     * 
      * <strong>example:</strong>
      * <p>eyJvZmZzZXQiOjIwfQ==</p>
      */

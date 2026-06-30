@@ -7,16 +7,24 @@ public class CreateMultiOrderRequest extends TeaModel {
     @NameInMap("ChannelCookie")
     public String channelCookie;
 
+    /**
+     * <p>The items in the order.</p>
+     */
     @NameInMap("OrderItems")
     public java.util.List<CreateMultiOrderRequestOrderItems> orderItems;
 
     /**
+     * <p>The order type.</p>
+     * 
      * <strong>example:</strong>
      * <p>create</p>
      */
     @NameInMap("OrderType")
     public String orderType;
 
+    /**
+     * <p>The extended properties.</p>
+     */
     @NameInMap("Properties")
     public java.util.Map<String, String> properties;
 
@@ -70,6 +78,8 @@ public class CreateMultiOrderRequest extends TeaModel {
 
     public static class CreateMultiOrderRequestOrderItemsComponents extends TeaModel {
         /**
+         * <p>The key of the component.</p>
+         * 
          * <strong>example:</strong>
          * <p>RegionId</p>
          */
@@ -77,6 +87,61 @@ public class CreateMultiOrderRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the component.</p>
+         * <p>Example and valid values for the keys of a monthly duration package (Enterprise Edition):</p>
+         * <ul>
+         * <li><p>RegionId: cn-shanghai</p>
+         * </li>
+         * <li><p>InstanceType: eds.enterprise_office.4c8g</p>
+         * </li>
+         * <li><p>DurationType (in hours): Valid values:</p>
+         * <ul>
+         * <li><p>120</p>
+         * </li>
+         * <li><p>250</p>
+         * </li>
+         * </ul>
+         * </li>
+         * <li><p>OsType: Valid values:</p>
+         * <ul>
+         * <li><p>Windows</p>
+         * </li>
+         * <li><p>Linux</p>
+         * </li>
+         * </ul>
+         * </li>
+         * <li><p>RootDiskSize (in GiB): 80</p>
+         * </li>
+         * <li><p>RootDiskCategory: Valid values:</p>
+         * <ul>
+         * <li><p>cloud_efficiency (Ultra Disk)</p>
+         * </li>
+         * <li><p>cloud_auto (ESSD AutoPL Disk)</p>
+         * </li>
+         * <li><p><code>cloud_essd</code> (Enhanced SSD). This value is supported only by specific instance types.</p>
+         * </li>
+         * </ul>
+         * </li>
+         * <li><p>RootPerformanceLevel: Valid values:</p>
+         * <ul>
+         * <li><p>PL0</p>
+         * </li>
+         * <li><p>PL1</p>
+         * </li>
+         * <li><p>PL2</p>
+         * </li>
+         * <li><p>PL3</p>
+         * </li>
+         * </ul>
+         * </li>
+         * <li><p>DataDiskSize (in GiB): Same as <code>RootDiskSize</code>.</p>
+         * </li>
+         * <li><p>DataDiskCategory: Same as <code>RootDiskCategory</code>.</p>
+         * </li>
+         * <li><p>DataPerformanceLevel: Same as <code>RootPerformanceLevel</code>.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
          */
@@ -108,6 +173,8 @@ public class CreateMultiOrderRequest extends TeaModel {
 
     public static class CreateMultiOrderRequestOrderItems extends TeaModel {
         /**
+         * <p>The number of resources to purchase.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -115,6 +182,8 @@ public class CreateMultiOrderRequest extends TeaModel {
         public Integer amount;
 
         /**
+         * <p>Specifies whether to enable automatic payment.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -122,6 +191,8 @@ public class CreateMultiOrderRequest extends TeaModel {
         public Boolean autoPay;
 
         /**
+         * <p>Specifies whether to enable auto-renewal.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -131,6 +202,9 @@ public class CreateMultiOrderRequest extends TeaModel {
         @NameInMap("BuyChange")
         public Boolean buyChange;
 
+        /**
+         * <p>The components that define the resource.</p>
+         */
         @NameInMap("Components")
         public java.util.List<CreateMultiOrderRequestOrderItemsComponents> components;
 
@@ -138,6 +212,14 @@ public class CreateMultiOrderRequest extends TeaModel {
         public java.util.List<String> instanceIds;
 
         /**
+         * <p>The subscription period. Valid values:</p>
+         * <ul>
+         * <li><p>If <code>PeriodUnit</code> is set to <code>Year</code>, the valid values are 1, 2, 3, and 5.</p>
+         * </li>
+         * <li><p>If <code>PeriodUnit</code> is set to <code>Month</code>, the valid values are 1, 2, 3, and 6.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -145,6 +227,11 @@ public class CreateMultiOrderRequest extends TeaModel {
         public Integer period;
 
         /**
+         * <p>The time unit of the subscription duration.</p>
+         * <blockquote>
+         * <p>This parameter is required for prepaid instances and is case-sensitive.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>Year</p>
          */
@@ -152,16 +239,28 @@ public class CreateMultiOrderRequest extends TeaModel {
         public String periodUnit;
 
         /**
+         * <p>The promotion ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>youhuiquan_promotion_option_id_for_blank</p>
          */
         @NameInMap("PromotionId")
         public String promotionId;
 
+        /**
+         * <p>A list of resource IDs.</p>
+         * <blockquote>
+         * <p>For a monthly duration package, this parameter specifies the IDs of the cloud desktops. This parameter is required unless the <code>OrderType</code> is <code>create</code>.</p>
+         * </blockquote>
+         */
         @NameInMap("ResourceIds")
         public java.util.List<String> resourceIds;
 
         /**
+         * <p>The type of the resource.</p>
+         * <blockquote>
+         * <p>This parameter is case-sensitive.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

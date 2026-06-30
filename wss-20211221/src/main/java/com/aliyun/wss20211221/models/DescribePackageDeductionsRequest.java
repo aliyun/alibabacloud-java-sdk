@@ -4,16 +4,30 @@ package com.aliyun.wss20211221.models;
 import com.aliyun.tea.*;
 
 public class DescribePackageDeductionsRequest extends TeaModel {
+    /**
+     * <p>The end time, in Unix timestamp format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1709117383000</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>An array of instance IDs. If you specify this parameter, the <code>PackageIds</code> parameter is required.</p>
+     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
+    /**
+     * <p>An array of package IDs.</p>
+     */
     @NameInMap("PackageIds")
     public java.util.List<String> packageIds;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +35,8 @@ public class DescribePackageDeductionsRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>The number of entries per page. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -28,8 +44,10 @@ public class DescribePackageDeductionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The resource type.</p>
+     * 
      * <strong>example:</strong>
-     * <p>CorePackage</p>
+     * <p>Desktop</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -37,6 +55,12 @@ public class DescribePackageDeductionsRequest extends TeaModel {
     @NameInMap("ResourceTypes")
     public java.util.List<String> resourceTypes;
 
+    /**
+     * <p>The start time, in Unix timestamp format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1709117383000</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

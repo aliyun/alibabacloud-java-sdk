@@ -4,10 +4,15 @@ package com.aliyun.wss20211221.models;
 import com.aliyun.tea.*;
 
 public class DescribeDeductionStatisticResponseBody extends TeaModel {
+    /**
+     * <p>The deduction data.</p>
+     */
     @NameInMap("Data")
     public DescribeDeductionStatisticResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A1B2C3D4-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
      */
@@ -36,10 +41,18 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
     }
 
     public static class DescribeDeductionStatisticResponseBodyDataAvailableCorePackages extends TeaModel {
+        /**
+         * <p>The Alibaba Cloud account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1568857911493620</p>
+         */
         @NameInMap("AliUid")
         public Long aliUid;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-01 00:00:00</p>
          */
@@ -47,6 +60,8 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The end time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-12-31 23:59:59</p>
          */
@@ -54,6 +69,8 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The expiration time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-12-31 23:59:59</p>
          */
@@ -61,6 +78,8 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
         public String expiredTime;
 
         /**
+         * <p>The group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>g-xxxxx</p>
          */
@@ -68,19 +87,32 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
         public String groupId;
 
         /**
+         * <p>The group resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>CoreHour</p>
          */
         @NameInMap("GroupResourceType")
         public String groupResourceType;
 
+        /**
+         * <p>Indicates whether the resource is a No-Lx resource.</p>
+         */
         @NameInMap("NoLx")
         public Boolean noLx;
 
+        /**
+         * <p>The source of the No-Lx resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无凌霄来源示例值</p>
+         */
         @NameInMap("NoLxSource")
         public String noLxSource;
 
         /**
+         * <p>The resource ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>res-xxxxx</p>
          */
@@ -88,6 +120,8 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>The group resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>CoreHour</p>
          */
@@ -95,6 +129,8 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-01 00:00:00</p>
          */
@@ -102,15 +138,29 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Active</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The total duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000000</p>
+         */
         @NameInMap("TotalTime")
         public Long totalTime;
 
+        /**
+         * <p>The used duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40000</p>
+         */
         @NameInMap("UsedTime")
         public Long usedTime;
 
@@ -234,10 +284,18 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
     }
 
     public static class DescribeDeductionStatisticResponseBodyDataDeductions extends TeaModel {
+        /**
+         * <p>The consumption duration in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7000</p>
+         */
         @NameInMap("ConsumeSecond")
         public Long consumeSecond;
 
         /**
+         * <p>The deduction date.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-01</p>
          */
@@ -245,6 +303,8 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
         public String deductionDate;
 
         /**
+         * <p>The resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>CloudDesktop</p>
          */
@@ -283,10 +343,18 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
     }
 
     public static class DescribeDeductionStatisticResponseBodyDataUsages extends TeaModel {
+        /**
+         * <p><strong>The consumption duration in seconds.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000</p>
+         */
         @NameInMap("ConsumeSecond")
         public Long consumeSecond;
 
         /**
+         * <p><strong>The time period.</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-01</p>
          */
@@ -294,6 +362,8 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
         public String period;
 
         /**
+         * <p><strong>The resource type.</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>CloudDesktop</p>
          */
@@ -332,12 +402,21 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
     }
 
     public static class DescribeDeductionStatisticResponseBodyData extends TeaModel {
+        /**
+         * <p><strong>The available core-hour packages.</strong></p>
+         */
         @NameInMap("AvailableCorePackages")
         public java.util.List<DescribeDeductionStatisticResponseBodyDataAvailableCorePackages> availableCorePackages;
 
+        /**
+         * <p>The deduction details.</p>
+         */
         @NameInMap("Deductions")
         public java.util.List<DescribeDeductionStatisticResponseBodyDataDeductions> deductions;
 
+        /**
+         * <p><strong>The usage details.</strong></p>
+         */
         @NameInMap("Usages")
         public java.util.List<DescribeDeductionStatisticResponseBodyDataUsages> usages;
 
