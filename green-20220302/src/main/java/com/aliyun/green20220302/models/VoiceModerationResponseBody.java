@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class VoiceModerationResponseBody extends TeaModel {
     /**
-     * <p>The returned HTTP status code.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class VoiceModerationResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The data structure of the returned task information.</p>
      */
     @NameInMap("Data")
     public VoiceModerationResponseBodyData data;
 
     /**
-     * <p>The message that is returned in response to the request.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -29,7 +29,7 @@ public class VoiceModerationResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -76,7 +76,7 @@ public class VoiceModerationResponseBody extends TeaModel {
 
     public static class VoiceModerationResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the moderated object.</p>
+         * <p>The value of the dataId parameter that you specify in the API request. If you do not specify this parameter in the request, this field is not returned.</p>
          * 
          * <strong>example:</strong>
          * <p>data1234</p>

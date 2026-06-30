@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UrlAsyncModerationResponseBody extends TeaModel {
     /**
-     * <p>The returned HTTP status code.</p>
+     * <p>The return code. A value of 200 indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class UrlAsyncModerationResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public UrlAsyncModerationResponseBodyData data;
 
     /**
-     * <p>The message that is returned in response to the request.</p>
+     * <p>The response message for the current request.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -76,7 +76,7 @@ public class UrlAsyncModerationResponseBody extends TeaModel {
 
     public static class UrlAsyncModerationResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the moderated object.</p>
+         * <p>The value of dataId that you specified in the API request. If you did not specify this parameter in the request, this field is not returned.</p>
          * 
          * <strong>example:</strong>
          * <p>26769ada6e264e7ba9aa048241e12be9</p>
@@ -85,7 +85,7 @@ public class UrlAsyncModerationResponseBody extends TeaModel {
         public String dataId;
 
         /**
-         * <p>The reqId field returned by the Url Async Moderation API.</p>
+         * <p>The ReqId field returned by the enhanced URL asynchronous moderation API. You can use this field to query the detection results.</p>
          * 
          * <strong>example:</strong>
          * <p>A07B3DB9-D762-5C56-95B1-8EC55CF176D2</p>

@@ -5,17 +5,7 @@ import com.aliyun.tea.*;
 
 public class TextModerationRequest extends TeaModel {
     /**
-     * <p>The type of the moderation service. Valid values: nickname_detection: user nickname chat_detection: chat interactions comment_detection: dynamic comments pgc_detection: professionally-generated content (PGC) teaching materials</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>pgc_detection: moderation of PGC teaching materials</li>
-     * <li>nickname_detection: user nickname moderation</li>
-     * <li>comment_multilingual_pro: multi-language moderation in international business scenarios</li>
-     * <li>chat_detection: moderation of interactive content of private chats</li>
-     * <li>ad_compliance_detection: advertising law compliance identification</li>
-     * <li>comment_detection: moderation of comment content of public chats</li>
-     * <li>ai_art_detection: AI-generated text identfication</li>
-     * </ul>
+     * <p>The type of moderation service. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>nickname_detection</p>
@@ -24,10 +14,10 @@ public class TextModerationRequest extends TeaModel {
     public String service;
 
     /**
-     * <p>The parameters required by the moderation service. The value is a JSON string.</p>
+     * <p>The parameters for the moderation service. The value must be a JSON string.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;content&quot;:&quot;Content to be moderated&quot;}</p>
+     * <p>{&quot;content&quot;:&quot;The map is still black&quot;}</p>
      */
     @NameInMap("ServiceParameters")
     public String serviceParameters;

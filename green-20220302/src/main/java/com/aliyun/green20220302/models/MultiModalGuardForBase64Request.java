@@ -12,8 +12,6 @@ public class MultiModalGuardForBase64Request extends TeaModel {
     public String imageBase64Str;
 
     /**
-     * <p>Service</p>
-     * 
      * <strong>example:</strong>
      * <p>query_security_check</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUploadTokenResponseBody extends TeaModel {
     /**
-     * <p>The returned HTTP status code.</p>
+     * <p>The return code. A value of 200 indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public DescribeUploadTokenResponseBodyData data;
 
     /**
-     * <p>The message that is returned in response to the request.</p>
+     * <p>The response message for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -76,7 +76,7 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
 
     public static class DescribeUploadTokenResponseBodyData extends TeaModel {
         /**
-         * <p>The AccessKey ID.</p>
+         * <p>The AccessKey ID of the temporary credential for file upload.</p>
          * 
          * <strong>example:</strong>
          * <p>STS.NUEUjvDqMuvH6oQA1TXxxH4wVR</p>
@@ -85,7 +85,7 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
         public String accessKeyId;
 
         /**
-         * <p>The AccessKey secret.</p>
+         * <p>The temporary authorization secret.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx</p>
@@ -103,7 +103,7 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
         public String bucketName;
 
         /**
-         * <p>The time when the file sharing link expires.</p>
+         * <p>The expiration time.</p>
          * 
          * <strong>example:</strong>
          * <p>1720577200</p>
@@ -121,7 +121,7 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
         public String fileNamePrefix;
 
         /**
-         * <p>the oss intranet point.</p>
+         * <p>The internal endpoint of OSS.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://oss-cn-shanghai-internal.aliyuncs.com">https://oss-cn-shanghai-internal.aliyuncs.com</a></p>
@@ -130,7 +130,7 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
         public String ossInternalEndPoint;
 
         /**
-         * <p>the oss internet point.</p>
+         * <p>The Internet endpoint of OSS.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://oss-cn-shanghai.aliyuncs.com">https://oss-cn-shanghai.aliyuncs.com</a></p>
@@ -139,7 +139,7 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
         public String ossInternetEndPoint;
 
         /**
-         * <p>The security token.</p>
+         * <p>The security token of the temporary credential for file upload.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx</p>

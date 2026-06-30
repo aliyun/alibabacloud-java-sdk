@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImageModerationResultResponseBody extends TeaModel {
     /**
-     * <p>The returned HTTP status code.</p>
+     * <p>The error code. This is the same as the HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The image moderation results.</p>
+     * <p>The results of the image content moderation.</p>
      */
     @NameInMap("Data")
     public DescribeImageModerationResultResponseBodyData data;
 
     /**
-     * <p>The message that is returned in response to the request.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -29,7 +29,7 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
     public String msg;
 
     /**
-     * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+     * <p>The unique ID of the request. Alibaba Cloud generates this ID for each request. Use this ID to troubleshoot and locate issues.</p>
      * 
      * <strong>example:</strong>
      * <p>2881AD4F-638B-52A3-BA20-F74C5B1CEAE3</p>
@@ -76,7 +76,7 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
 
     public static class DescribeImageModerationResultResponseBodyDataResult extends TeaModel {
         /**
-         * <p>The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places.</p>
+         * <p>The confidence score. The value ranges from 0 to 100. The value is accurate to two decimal places.</p>
          * 
          * <strong>example:</strong>
          * <p>81.22</p>
@@ -85,16 +85,16 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         public Float confidence;
 
         /**
-         * <p>The description of the result.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>no risk</p>
+         * <p>未检测出风险</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The labels returned after the image moderation.</p>
+         * <p>The label returned after the image content is moderated.</p>
          * 
          * <strong>example:</strong>
          * <p>violent_explosion</p>
@@ -103,7 +103,7 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>Risk Level</p>
+         * <p>The risk level.</p>
          * 
          * <strong>example:</strong>
          * <p>high</p>
@@ -151,11 +151,17 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
     }
 
     public static class DescribeImageModerationResultResponseBodyData extends TeaModel {
+        /**
+         * <p>The AccountId specified in the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
+         */
         @NameInMap("AccountId")
         public String accountId;
 
         /**
-         * <p>The value of dataId that is specified in the API request. If this parameter is not specified in the API request, this field is not available in the response.</p>
+         * <p>The value of the \<code>dataId\\</code> parameter specified in the API request. This field is not returned if \<code>dataId\\</code> was not specified.</p>
          * 
          * <strong>example:</strong>
          * <p>2a5389eb-4ff8-4584-ac99-644e2a539aa1</p>
@@ -164,7 +170,7 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         public String dataId;
 
         /**
-         * <p>The information about the captured frames.</p>
+         * <p>Information about the image frames.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;result&quot;:[{&quot;confidence&quot;:81.22,&quot;label&quot;:&quot;violent_explosion&quot;}]}]</p>
@@ -173,7 +179,7 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         public String frame;
 
         /**
-         * <p>The number of frames.</p>
+         * <p>The number of result frames.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -181,11 +187,17 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         @NameInMap("FrameNum")
         public Integer frameNum;
 
+        /**
+         * <p>The ID of the manual review task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx-xxxxx</p>
+         */
         @NameInMap("ManualTaskId")
         public String manualTaskId;
 
         /**
-         * <p>The reqId field returned by the Image Async Moderation API.</p>
+         * <p>The \<code>ReqId\\</code> returned by the asynchronous Image Moderation Pro API.</p>
          * 
          * <strong>example:</strong>
          * <p>B0963D30-BAB4-562F-9ED0-7A23AEC51C7C</p>
@@ -194,13 +206,13 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         public String reqId;
 
         /**
-         * <p>The results of image moderation parameters such as the label parameter and the confidence parameter.</p>
+         * <p>The results of the image moderation, including risk labels and confidence scores.</p>
          */
         @NameInMap("Result")
         public java.util.List<DescribeImageModerationResultResponseBodyDataResult> result;
 
         /**
-         * <p>Risk Level.</p>
+         * <p>The risk level.</p>
          * 
          * <strong>example:</strong>
          * <p>high</p>

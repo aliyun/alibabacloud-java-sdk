@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeMultimodalModerationResultRequest extends TeaModel {
     /**
+     * <p>The ReqId field returned by the asynchronous moderation API.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAA-BBBBB-AIXI-1314-CCCCC</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUrlModerationResultResponseBody extends TeaModel {
     /**
-     * <p>The returned HTTP status code. The status code 200 indicates that the request was successful.</p>
+     * <p>The return code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public DescribeUrlModerationResultResponseBodyData data;
 
     /**
-     * <p>The message that is returned in response to the request.</p>
+     * <p>The response message of this request.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -29,7 +29,7 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
     public String msg;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of this request.</p>
      * 
      * <strong>example:</strong>
      * <p>01F9144A-2088-5D87-935B-2DB865284B1A</p>
@@ -76,25 +76,25 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
 
     public static class DescribeUrlModerationResultResponseBodyDataExtraInfo extends TeaModel {
         /**
-         * <p>The ICP number.</p>
+         * <p>The ICP filing number.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx</p>
+         * <p>ICP备123456789</p>
          */
         @NameInMap("IcpNo")
         public String icpNo;
 
         /**
-         * <p>The type of the ICP filing.</p>
+         * <p>The ICP filing type.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx</p>
+         * <p>企业</p>
          */
         @NameInMap("IcpType")
         public String icpType;
 
         /**
-         * <p>The type of site</p>
+         * <p>The website type</p>
          * 
          * <strong>example:</strong>
          * <p>game</p>
@@ -135,7 +135,7 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
 
     public static class DescribeUrlModerationResultResponseBodyDataResult extends TeaModel {
         /**
-         * <p>The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places.</p>
+         * <p>The confidence score, ranging from 0 to 100, with two decimal places.</p>
          * 
          * <strong>example:</strong>
          * <p>81.22</p>
@@ -144,7 +144,7 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
         public Float confidence;
 
         /**
-         * <p>The labels returned after the asynchronous URL moderation.</p>
+         * <p>The label returned after URL moderation.</p>
          * 
          * <strong>example:</strong>
          * <p>sexual_url</p>
@@ -177,7 +177,7 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
 
     public static class DescribeUrlModerationResultResponseBodyData extends TeaModel {
         /**
-         * <p>The value of dataId that is specified in the API request. If this parameter is not specified in the API request, this field is not available in the response.</p>
+         * <p>The value of the dataId parameter passed in the API request. This field is not returned if the parameter is not passed in the request.</p>
          * 
          * <strong>example:</strong>
          * <p>26769ada6e264e7ba9aa048241e12be9</p>
@@ -186,13 +186,13 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
         public String dataId;
 
         /**
-         * <p>The supplementary information.</p>
+         * <p>Additional information.</p>
          */
         @NameInMap("ExtraInfo")
         public DescribeUrlModerationResultResponseBodyDataExtraInfo extraInfo;
 
         /**
-         * <p>The ReqId field returned by an asynchronous URL moderation operation.</p>
+         * <p>The ReqId field returned by the asynchronous URL moderation operation</p>
          * 
          * <strong>example:</strong>
          * <p>B0963D30-BAB4-562F-9ED0-7A23AEC51C7C</p>
@@ -201,7 +201,7 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
         public String reqId;
 
         /**
-         * <p>The returned results.</p>
+         * <p>The returned collection.</p>
          */
         @NameInMap("Result")
         public java.util.List<DescribeUrlModerationResultResponseBodyDataResult> result;

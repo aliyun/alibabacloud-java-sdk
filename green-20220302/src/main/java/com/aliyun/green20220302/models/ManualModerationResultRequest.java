@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ManualModerationResultRequest extends TeaModel {
     /**
-     * <p>Set of parameters required by the service, in JSON string format.</p>
+     * <p>The set of parameters required by the service, in JSON string format.</p>
      * <ul>
      * <li>TaskId: The task ID returned when the task was submitted.</li>
      * </ul>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class VideoModerationResultResponseBody extends TeaModel {
     /**
-     * <p>The returned HTTP status code. The status code 200 indicates that the request was successful.</p>
+     * <p>The response code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class VideoModerationResultResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The moderation results.</p>
+     * <p>The moderation result data.</p>
      */
     @NameInMap("Data")
     public VideoModerationResultResponseBodyData data;
 
     /**
-     * <p>The message that is returned in response to the request.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success finished</p>
@@ -76,16 +76,16 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     public static class VideoModerationResultResponseBodyDataAudioResultAudioSummarys extends TeaModel {
         /**
-         * <p>The description of the labels.</p>
+         * <p>The label descriptions.</p>
          * 
          * <strong>example:</strong>
-         * <p>no risk</p>
+         * <p>疑似违禁内容</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The voice label.</p>
+         * <p>The video audio label.</p>
          * 
          * <strong>example:</strong>
          * <p>profanity</p>
@@ -94,7 +94,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>The number of times that the label is matched.</p>
+         * <p>The number of times the label appears.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -133,18 +133,174 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     }
 
+    public static class VideoModerationResultResponseBodyDataAudioResultSliceDetailsResultCustomizedHit extends TeaModel {
+        @NameInMap("KeyWords")
+        public String keyWords;
+
+        @NameInMap("LibName")
+        public String libName;
+
+        public static VideoModerationResultResponseBodyDataAudioResultSliceDetailsResultCustomizedHit build(java.util.Map<String, ?> map) throws Exception {
+            VideoModerationResultResponseBodyDataAudioResultSliceDetailsResultCustomizedHit self = new VideoModerationResultResponseBodyDataAudioResultSliceDetailsResultCustomizedHit();
+            return TeaModel.build(map, self);
+        }
+
+        public VideoModerationResultResponseBodyDataAudioResultSliceDetailsResultCustomizedHit setKeyWords(String keyWords) {
+            this.keyWords = keyWords;
+            return this;
+        }
+        public String getKeyWords() {
+            return this.keyWords;
+        }
+
+        public VideoModerationResultResponseBodyDataAudioResultSliceDetailsResultCustomizedHit setLibName(String libName) {
+            this.libName = libName;
+            return this;
+        }
+        public String getLibName() {
+            return this.libName;
+        }
+
+    }
+
+    public static class VideoModerationResultResponseBodyDataAudioResultSliceDetailsResultRiskPositions extends TeaModel {
+        @NameInMap("EndPos")
+        public Integer endPos;
+
+        @NameInMap("RiskWord")
+        public String riskWord;
+
+        @NameInMap("StartPos")
+        public Integer startPos;
+
+        public static VideoModerationResultResponseBodyDataAudioResultSliceDetailsResultRiskPositions build(java.util.Map<String, ?> map) throws Exception {
+            VideoModerationResultResponseBodyDataAudioResultSliceDetailsResultRiskPositions self = new VideoModerationResultResponseBodyDataAudioResultSliceDetailsResultRiskPositions();
+            return TeaModel.build(map, self);
+        }
+
+        public VideoModerationResultResponseBodyDataAudioResultSliceDetailsResultRiskPositions setEndPos(Integer endPos) {
+            this.endPos = endPos;
+            return this;
+        }
+        public Integer getEndPos() {
+            return this.endPos;
+        }
+
+        public VideoModerationResultResponseBodyDataAudioResultSliceDetailsResultRiskPositions setRiskWord(String riskWord) {
+            this.riskWord = riskWord;
+            return this;
+        }
+        public String getRiskWord() {
+            return this.riskWord;
+        }
+
+        public VideoModerationResultResponseBodyDataAudioResultSliceDetailsResultRiskPositions setStartPos(Integer startPos) {
+            this.startPos = startPos;
+            return this;
+        }
+        public Integer getStartPos() {
+            return this.startPos;
+        }
+
+    }
+
+    public static class VideoModerationResultResponseBodyDataAudioResultSliceDetailsResult extends TeaModel {
+        @NameInMap("Confidence")
+        public Float confidence;
+
+        @NameInMap("CustomizedHit")
+        public java.util.List<VideoModerationResultResponseBodyDataAudioResultSliceDetailsResultCustomizedHit> customizedHit;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Label")
+        public String label;
+
+        @NameInMap("RiskLevel")
+        public String riskLevel;
+
+        @NameInMap("RiskPositions")
+        public java.util.List<VideoModerationResultResponseBodyDataAudioResultSliceDetailsResultRiskPositions> riskPositions;
+
+        @NameInMap("RiskWords")
+        public String riskWords;
+
+        public static VideoModerationResultResponseBodyDataAudioResultSliceDetailsResult build(java.util.Map<String, ?> map) throws Exception {
+            VideoModerationResultResponseBodyDataAudioResultSliceDetailsResult self = new VideoModerationResultResponseBodyDataAudioResultSliceDetailsResult();
+            return TeaModel.build(map, self);
+        }
+
+        public VideoModerationResultResponseBodyDataAudioResultSliceDetailsResult setConfidence(Float confidence) {
+            this.confidence = confidence;
+            return this;
+        }
+        public Float getConfidence() {
+            return this.confidence;
+        }
+
+        public VideoModerationResultResponseBodyDataAudioResultSliceDetailsResult setCustomizedHit(java.util.List<VideoModerationResultResponseBodyDataAudioResultSliceDetailsResultCustomizedHit> customizedHit) {
+            this.customizedHit = customizedHit;
+            return this;
+        }
+        public java.util.List<VideoModerationResultResponseBodyDataAudioResultSliceDetailsResultCustomizedHit> getCustomizedHit() {
+            return this.customizedHit;
+        }
+
+        public VideoModerationResultResponseBodyDataAudioResultSliceDetailsResult setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public VideoModerationResultResponseBodyDataAudioResultSliceDetailsResult setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+        public VideoModerationResultResponseBodyDataAudioResultSliceDetailsResult setRiskLevel(String riskLevel) {
+            this.riskLevel = riskLevel;
+            return this;
+        }
+        public String getRiskLevel() {
+            return this.riskLevel;
+        }
+
+        public VideoModerationResultResponseBodyDataAudioResultSliceDetailsResult setRiskPositions(java.util.List<VideoModerationResultResponseBodyDataAudioResultSliceDetailsResultRiskPositions> riskPositions) {
+            this.riskPositions = riskPositions;
+            return this;
+        }
+        public java.util.List<VideoModerationResultResponseBodyDataAudioResultSliceDetailsResultRiskPositions> getRiskPositions() {
+            return this.riskPositions;
+        }
+
+        public VideoModerationResultResponseBodyDataAudioResultSliceDetailsResult setRiskWords(String riskWords) {
+            this.riskWords = riskWords;
+            return this;
+        }
+        public String getRiskWords() {
+            return this.riskWords;
+        }
+
+    }
+
     public static class VideoModerationResultResponseBodyDataAudioResultSliceDetails extends TeaModel {
         /**
-         * <p>The description of the labels.</p>
+         * <p>The label descriptions.</p>
          * 
          * <strong>example:</strong>
-         * <p>no risk</p>
+         * <p>疑似违禁内容</p>
          */
         @NameInMap("Descriptions")
         public String descriptions;
 
         /**
-         * <p>The end time of the text after voice-to-text conversion. Unit: seconds.</p>
+         * <p>The end time of the segment, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -153,7 +309,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The end timestamp of the segment. Unit: milliseconds.</p>
+         * <p>The end timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1685245261939</p>
@@ -162,7 +318,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public Long endTimestamp;
 
         /**
-         * <p>A reserved parameter.</p>
+         * <p>The extended field.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;consoleProduct\&quot;:\&quot;slbnext\&quot;}</p>
@@ -171,7 +327,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public String extend;
 
         /**
-         * <p>The details of the labels.</p>
+         * <p>The violation labels that are hit.</p>
          * 
          * <strong>example:</strong>
          * <p>porn</p>
@@ -179,8 +335,21 @@ public class VideoModerationResultResponseBody extends TeaModel {
         @NameInMap("Labels")
         public String labels;
 
+        @NameInMap("Result")
+        public java.util.List<VideoModerationResultResponseBodyDataAudioResultSliceDetailsResult> result;
+
         /**
-         * <p>Risk Level.</p>
+         * <p>The risk level, returned based on the configured high and low risk score thresholds. Valid values:</p>
+         * <ul>
+         * <li><p>high: High risk.</p>
+         * </li>
+         * <li><p>medium: Medium risk.</p>
+         * </li>
+         * <li><p>low: Low risk.</p>
+         * </li>
+         * <li><p>none: No risk detected.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>high</p>
@@ -189,7 +358,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public String riskLevel;
 
         /**
-         * <p>Subcategory labels. Multiple labels are separated by commas (,).</p>
+         * <p>The details of the hit risk.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -198,7 +367,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public String riskTips;
 
         /**
-         * <p>The risk words that are hit. Multiple words are separated by commas (,).</p>
+         * <p>The risk keywords that are hit.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -216,7 +385,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public Float score;
 
         /**
-         * <p>The start time of the text after voice-to-text conversion. Unit: seconds.</p>
+         * <p>The start time of the segment, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -225,7 +394,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public Long startTime;
 
         /**
-         * <p>The start timestamp of the segment. Unit: milliseconds.</p>
+         * <p>The start timestamp, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1659935002123</p>
@@ -234,16 +403,16 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public Long startTimestamp;
 
         /**
-         * <p>The text converted from voice.</p>
+         * <p>The transcribed text of the audio segment.</p>
          * 
          * <strong>example:</strong>
-         * <p>Disgusting</p>
+         * <p>今天天气真不错</p>
          */
         @NameInMap("Text")
         public String text;
 
         /**
-         * <p>If the moderation object is a voice stream, this parameter indicates the temporary access URL of the voice stream to which the text entry corresponds. The validity period of the URL is 30 minutes. You must prepare another URL to store the voice stream at the earliest opportunity.</p>
+         * <p>The temporary URL of the audio segment file.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://xxxx.abc.img">http://xxxx.abc.img</a></p>
@@ -294,6 +463,14 @@ public class VideoModerationResultResponseBody extends TeaModel {
         }
         public String getLabels() {
             return this.labels;
+        }
+
+        public VideoModerationResultResponseBodyDataAudioResultSliceDetails setResult(java.util.List<VideoModerationResultResponseBodyDataAudioResultSliceDetailsResult> result) {
+            this.result = result;
+            return this;
+        }
+        public java.util.List<VideoModerationResultResponseBodyDataAudioResultSliceDetailsResult> getResult() {
+            return this.result;
         }
 
         public VideoModerationResultResponseBodyDataAudioResultSliceDetails setRiskLevel(String riskLevel) {
@@ -364,13 +541,23 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     public static class VideoModerationResultResponseBodyDataAudioResult extends TeaModel {
         /**
-         * <p>Summary of voice labels.</p>
+         * <p>The audio label summary.</p>
          */
         @NameInMap("AudioSummarys")
         public java.util.List<VideoModerationResultResponseBodyDataAudioResultAudioSummarys> audioSummarys;
 
         /**
-         * <p>Risk Level.</p>
+         * <p>The risk level, returned based on the configured high and low risk score thresholds. Valid values:</p>
+         * <ul>
+         * <li><p>high: High risk.</p>
+         * </li>
+         * <li><p>medium: Medium risk.</p>
+         * </li>
+         * <li><p>low: Low risk.</p>
+         * </li>
+         * <li><p>none: No risk detected.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>high</p>
@@ -379,7 +566,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public String riskLevel;
 
         /**
-         * <p>The details about the text in the moderated voice. The value is a JSON array that contains one or more elements. Each element corresponds to a text entry.</p>
+         * <p>The list of audio segments.</p>
          */
         @NameInMap("SliceDetails")
         public java.util.List<VideoModerationResultResponseBodyDataAudioResultSliceDetails> sliceDetails;
@@ -416,24 +603,76 @@ public class VideoModerationResultResponseBody extends TeaModel {
     }
 
     public static class VideoModerationResultResponseBodyDataExtAigcDataAIGC extends TeaModel {
+        /**
+         * <p>The code or name of the service provider, used to identify the content producer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>001191******M000100Y43</p>
+         */
         @NameInMap("ContentProducer")
         public String contentProducer;
 
+        /**
+         * <p>The name, ID, or code of the propagation platform. For services that provide artificial intelligence-generated content, this value can be the same as ContentProducer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>001191******M000100Y43</p>
+         */
         @NameInMap("ContentPropagator")
         public String contentPropagator;
 
+        /**
+         * <p>Indicates whether the content is generated by artificial intelligence (AI). Valid values:</p>
+         * <ul>
+         * <li><p>1: The content is generated through artificial intelligence content generation.</p>
+         * </li>
+         * <li><p>2: (Propagation platforms only) The content may be generated through artificial intelligence content generation.</p>
+         * </li>
+         * <li><p>3: (Propagation platforms only) The content is suspected to be generated through artificial intelligence content generation.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <p>The content production ID, which is the unique identifier used by the production platform to trace synthesized content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123******456</p>
+         */
         @NameInMap("ProduceID")
         public String produceID;
 
+        /**
+         * <p>The content propagation ID, which is the unique identifier assigned by the propagation platform to the propagated AI-generated content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123******456</p>
+         */
         @NameInMap("PropagateID")
         public String propagateID;
 
+        /**
+         * <p>The reserved field.</p>
+         * <p>This field can store information used by the content generation service provider for self-initiated security protection to safeguard content and identifier integrity. A hashing mechanism based on ContentProducer and ProduceID can be used to securely store and verify critical information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d41d**********427e</p>
+         */
         @NameInMap("ReservedCode1")
         public String reservedCode1;
 
+        /**
+         * <p>The reserved field.</p>
+         * <p>This field can be used by the content propagation service provider for self-initiated security protection to safeguard content and identifier integrity. A hashing mechanism based on ContentProducer and ProduceID can be used to securely store and verify critical information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d41d**********427e</p>
+         */
         @NameInMap("ReservedCode2")
         public String reservedCode2;
 
@@ -501,9 +740,18 @@ public class VideoModerationResultResponseBody extends TeaModel {
     }
 
     public static class VideoModerationResultResponseBodyDataExtAigcData extends TeaModel {
+        /**
+         * <p>The AIGC metadata.</p>
+         */
         @NameInMap("AIGC")
         public VideoModerationResultResponseBodyDataExtAigcDataAIGC AIGC;
 
+        /**
+         * <p>The detection result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
+         */
         @NameInMap("Result")
         public String result;
 
@@ -531,6 +779,9 @@ public class VideoModerationResultResponseBody extends TeaModel {
     }
 
     public static class VideoModerationResultResponseBodyDataExt extends TeaModel {
+        /**
+         * <p>The AIGC metadata detection result.</p>
+         */
         @NameInMap("AigcData")
         public VideoModerationResultResponseBodyDataExtAigcData aigcData;
 
@@ -551,16 +802,16 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     public static class VideoModerationResultResponseBodyDataFrameResultFrameSummarys extends TeaModel {
         /**
-         * <p>The description of the result.</p>
+         * <p>The description of the Label field.</p>
          * 
          * <strong>example:</strong>
-         * <p>no risk</p>
+         * <p>未检测出风险</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The label against which a captured frame is matched.</p>
+         * <p>The video frame label.</p>
          * 
          * <strong>example:</strong>
          * <p>violent_armedForces</p>
@@ -569,7 +820,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>The number of times that the label is matched.</p>
+         * <p>The number of times the label appears.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -670,7 +921,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public Integer w;
 
         /**
-         * <p>The distance from the top-left corner of the text area to the y-axis, with the top-left corner of the image as the origin. Unit: pixels.</p>
+         * <p>The distance from the upper-left corner of the text area to the y-axis, with the upper-left corner of the image as the origin. Unit: pixels.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -679,7 +930,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public Integer x;
 
         /**
-         * <p>The distance from the top-left corner of the text area to the x-axis, with the top-left corner of the image as the origin. Unit: pixels.</p>
+         * <p>The distance from the upper-left corner of the text area to the x-axis, with the upper-left corner of the image as the origin. Unit: pixels.</p>
          * 
          * <strong>example:</strong>
          * <p>222</p>
@@ -728,16 +979,16 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     public static class VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLogo extends TeaModel {
         /**
-         * <p>Confidence score, ranging from 0 to 100, with two decimal places.</p>
+         * <p>The confidence score, ranging from 0 to 100, rounded to two decimal places.</p>
          * 
          * <strong>example:</strong>
-         * <p>99.10</p>
+         * <p>99.1</p>
          */
         @NameInMap("confidence")
         public Long confidence;
 
         /**
-         * <p>label</p>
+         * <p>The hit label.</p>
          * 
          * <strong>example:</strong>
          * <p>pt_logotoSocialNetwork</p>
@@ -746,10 +997,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>Logo name.</p>
+         * <p>The logo name.</p>
          * 
          * <strong>example:</strong>
-         * <p>**logo</p>
+         * <p>**卫视</p>
          */
         @NameInMap("name")
         public String name;
@@ -787,13 +1038,13 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     public static class VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoData extends TeaModel {
         /**
-         * <p>The location of the logo.</p>
+         * <p>The text line and coordinate information.</p>
          */
         @NameInMap("Location")
         public VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLocation location;
 
         /**
-         * <p>Logo information.</p>
+         * <p>The logo identification information.</p>
          */
         @NameInMap("Logo")
         public java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLogo> logo;
@@ -822,15 +1073,39 @@ public class VideoModerationResultResponseBody extends TeaModel {
     }
 
     public static class VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigureLocation extends TeaModel {
+        /**
+         * <p>The height.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>222</p>
+         */
         @NameInMap("H")
         public Integer h;
 
+        /**
+         * <p>The width.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
+         */
         @NameInMap("W")
         public Integer w;
 
+        /**
+         * <p>The x-coordinate of the starting point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
+         */
         @NameInMap("X")
         public Integer x;
 
+        /**
+         * <p>The y-coordinate of the starting point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>222</p>
+         */
         @NameInMap("Y")
         public Integer y;
 
@@ -875,7 +1150,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     public static class VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigure extends TeaModel {
         /**
-         * <p>The information about the code of the identified figure.</p>
+         * <p>The code of the recognized public figure.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx001</p>
@@ -883,9 +1158,18 @@ public class VideoModerationResultResponseBody extends TeaModel {
         @NameInMap("FigureId")
         public String figureId;
 
+        /**
+         * <p>The name of the recognized public figure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("FigureName")
         public String figureName;
 
+        /**
+         * <p>The location of the recognized public figure.</p>
+         */
         @NameInMap("Location")
         public java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigureLocation> location;
 
@@ -922,7 +1206,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     public static class VideoModerationResultResponseBodyDataFrameResultFramesResultsResult extends TeaModel {
         /**
-         * <p>The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places.</p>
+         * <p>The confidence score, ranging from 0 to 100, rounded to two decimal places.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -931,16 +1215,16 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public Float confidence;
 
         /**
-         * <p>The description of the result.</p>
+         * <p>The description of the Label field.</p>
          * 
          * <strong>example:</strong>
-         * <p>no risk</p>
+         * <p>未检测出风险</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The label returned after a frame is moderated. Multiple risk labels and the corresponding scores of confidence levels may be returned for a frame.</p>
+         * <p>The classification of the detection result.</p>
          * 
          * <strong>example:</strong>
          * <p>bloody</p>
@@ -980,6 +1264,12 @@ public class VideoModerationResultResponseBody extends TeaModel {
     }
 
     public static class VideoModerationResultResponseBodyDataFrameResultFramesResultsVlContent extends TeaModel {
+        /**
+         * <p>The output text from the foundation model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>in the picture XXX</p>
+         */
         @NameInMap("OutputText")
         public String outputText;
 
@@ -1000,31 +1290,31 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     public static class VideoModerationResultResponseBodyDataFrameResultFramesResults extends TeaModel {
         /**
-         * <p>If a custom image library is hit, information about the custom image library is returned.</p>
+         * <p>The custom image library information that is hit. This field is returned only when a custom image library is hit.</p>
          */
         @NameInMap("CustomImage")
         public java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResultsCustomImage> customImage;
 
         /**
-         * <p>Returns logo information when the video contains a logo.</p>
+         * <p>The logo information returned when the video contains a logo.</p>
          */
         @NameInMap("LogoData")
         public java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoData> logoData;
 
         /**
-         * <p>If the video contains a specific figure, the code of the identified figure is returned.</p>
+         * <p>The recognized public figure codes returned when the video contains specific public figures.</p>
          */
         @NameInMap("PublicFigure")
         public java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigure> publicFigure;
 
         /**
-         * <p>The results of frame moderation parameters such as the label parameter and the confidence parameter.</p>
+         * <p>The hit result details.</p>
          */
         @NameInMap("Result")
         public java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResultsResult> result;
 
         /**
-         * <p>The moderation service that is called.</p>
+         * <p>The image moderation service type.</p>
          * 
          * <strong>example:</strong>
          * <p>tonalityImprove</p>
@@ -1033,11 +1323,14 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public String service;
 
         /**
-         * <p>The information about the text hit in the image is returned.</p>
+         * <p>The text information in the image that is hit.</p>
          */
         @NameInMap("TextInImage")
         public java.util.Map<String, ?> textInImage;
 
+        /**
+         * <p>The foundation model result.</p>
+         */
         @NameInMap("VlContent")
         public VideoModerationResultResponseBodyDataFrameResultFramesResultsVlContent vlContent;
 
@@ -1106,7 +1399,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     public static class VideoModerationResultResponseBodyDataFrameResultFrames extends TeaModel {
         /**
-         * <p>The interval between the start of the video file and the captured frame. Unit: seconds.</p>
+         * <p>The offset of the captured frame.</p>
          * 
          * <strong>example:</strong>
          * <p>338</p>
@@ -1115,13 +1408,23 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public Float offset;
 
         /**
-         * <p>The results of frame moderation parameters such as the label parameter and the confidence parameter.</p>
+         * <p>The frame detection result details.</p>
          */
         @NameInMap("Results")
         public java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResults> results;
 
         /**
-         * <p>Risk Level.</p>
+         * <p>The risk level, returned based on the configured high and low risk score thresholds. Valid values:</p>
+         * <ul>
+         * <li><p>high: High risk.</p>
+         * </li>
+         * <li><p>medium: Medium risk.</p>
+         * </li>
+         * <li><p>low: Low risk.</p>
+         * </li>
+         * <li><p>none: No risk detected.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>high</p>
@@ -1130,7 +1433,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public String riskLevel;
 
         /**
-         * <p>The temporary URL of a captured frame.</p>
+         * <p>The temporary URL of the captured frame image.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://xxxx.abc.jpg">http://xxxx.abc.jpg</a></p>
@@ -1196,7 +1499,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     public static class VideoModerationResultResponseBodyDataFrameResult extends TeaModel {
         /**
-         * <p>The number of captured frames that are returned for the video file.</p>
+         * <p>The number of result frames.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -1205,19 +1508,29 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public Integer frameNum;
 
         /**
-         * <p>The summary of the labels against which captured frames are matched.</p>
+         * <p>The video frame label summary.</p>
          */
         @NameInMap("FrameSummarys")
         public java.util.List<VideoModerationResultResponseBodyDataFrameResultFrameSummarys> frameSummarys;
 
         /**
-         * <p>The information about the frames that match the labels.</p>
+         * <p>The information about video frames that contain hit labels.</p>
          */
         @NameInMap("Frames")
         public java.util.List<VideoModerationResultResponseBodyDataFrameResultFrames> frames;
 
         /**
-         * <p>Risk Level.</p>
+         * <p>The risk level, returned based on the configured high and low risk score thresholds. Valid values:</p>
+         * <ul>
+         * <li><p>high: High risk.</p>
+         * </li>
+         * <li><p>medium: Medium risk.</p>
+         * </li>
+         * <li><p>low: Low risk.</p>
+         * </li>
+         * <li><p>none: No risk detected.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>high</p>
@@ -1266,13 +1579,13 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     public static class VideoModerationResultResponseBodyData extends TeaModel {
         /**
-         * <p>The voice moderation results. The moderation results contain a structure.</p>
+         * <p>The segmented results of video audio moderation.</p>
          */
         @NameInMap("AudioResult")
         public VideoModerationResultResponseBodyDataAudioResult audioResult;
 
         /**
-         * <p>The value of dataId that is specified in the API request. If this parameter is not specified in the API request, the dataId field is not available in the response.</p>
+         * <p>The value of dataId passed in the API request. This field is not returned if dataId was not specified in the request.</p>
          * 
          * <strong>example:</strong>
          * <p>product_content-2055763</p>
@@ -1280,11 +1593,14 @@ public class VideoModerationResultResponseBody extends TeaModel {
         @NameInMap("DataId")
         public String dataId;
 
+        /**
+         * <p>The extended information.</p>
+         */
         @NameInMap("Ext")
         public VideoModerationResultResponseBodyDataExt ext;
 
         /**
-         * <p>The image moderation results. If the call is successful, the HTTP status code 200 and moderation results are returned. The moderation results contain a structure.</p>
+         * <p>The list of video frame capture results.</p>
          */
         @NameInMap("FrameResult")
         public VideoModerationResultResponseBodyDataFrameResult frameResult;
@@ -1298,11 +1614,27 @@ public class VideoModerationResultResponseBody extends TeaModel {
         @NameInMap("LiveId")
         public String liveId;
 
+        /**
+         * <p>The manual review task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx-xxxxx</p>
+         */
         @NameInMap("ManualTaskId")
         public String manualTaskId;
 
         /**
-         * <p>Risk Level.</p>
+         * <p>The risk level, returned based on the configured high and low risk score thresholds. Valid values:</p>
+         * <ul>
+         * <li><p>high: High risk.</p>
+         * </li>
+         * <li><p>medium: Medium risk.</p>
+         * </li>
+         * <li><p>low: Low risk.</p>
+         * </li>
+         * <li><p>none: No risk detected.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>high</p>

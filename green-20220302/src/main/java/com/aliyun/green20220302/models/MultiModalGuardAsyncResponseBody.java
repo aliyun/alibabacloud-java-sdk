@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class MultiModalGuardAsyncResponseBody extends TeaModel {
     /**
+     * <p>The response code. A value of 200 indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public MultiModalGuardAsyncResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -22,7 +29,7 @@ public class MultiModalGuardAsyncResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -69,6 +76,8 @@ public class MultiModalGuardAsyncResponseBody extends TeaModel {
 
     public static class MultiModalGuardAsyncResponseBodyData extends TeaModel {
         /**
+         * <p>The custom data ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>dataIdxxx</p>
          */
@@ -76,6 +85,8 @@ public class MultiModalGuardAsyncResponseBody extends TeaModel {
         public String dataId;
 
         /**
+         * <p>The ID of the asynchronous task.</p>
+         * 
          * <strong>example:</strong>
          * <p>au_f_xxxxx</p>
          */

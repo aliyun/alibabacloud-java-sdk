@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class MultiModalGuardResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public MultiModalGuardResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -22,6 +29,8 @@ public class MultiModalGuardResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
@@ -67,16 +76,26 @@ public class MultiModalGuardResponseBody extends TeaModel {
 
     public static class MultiModalGuardResponseBodyDataDetailResult extends TeaModel {
         /**
+         * <p>The confidence score. Valid values: 0 to 100. The value is accurate to two decimal places.</p>
+         * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>100</p>
          */
         @NameInMap("Confidence")
         public Float confidence;
 
+        /**
+         * <p>The description of the label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>疑似违禁行为</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The extended information about the detection results.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -84,6 +103,8 @@ public class MultiModalGuardResponseBody extends TeaModel {
         public Object ext;
 
         /**
+         * <p>The label.</p>
+         * 
          * <strong>example:</strong>
          * <p>contraband_act</p>
          */
@@ -91,6 +112,8 @@ public class MultiModalGuardResponseBody extends TeaModel {
         public String label;
 
         /**
+         * <p>The risk level.</p>
+         * 
          * <strong>example:</strong>
          * <p>none</p>
          */
@@ -146,16 +169,23 @@ public class MultiModalGuardResponseBody extends TeaModel {
 
     public static class MultiModalGuardResponseBodyDataDetail extends TeaModel {
         /**
+         * <p>The risk level.</p>
+         * 
          * <strong>example:</strong>
          * <p>none</p>
          */
         @NameInMap("Level")
         public String level;
 
+        /**
+         * <p>The detection results.</p>
+         */
         @NameInMap("Result")
         public java.util.List<MultiModalGuardResponseBodyDataDetailResult> result;
 
         /**
+         * <p>The moderation suggestion. Valid values: -<strong>block</strong>: The content is non-compliant. -<strong>pass</strong>: The content is compliant.</p>
+         * 
          * <strong>example:</strong>
          * <p>pass</p>
          */
@@ -163,6 +193,8 @@ public class MultiModalGuardResponseBody extends TeaModel {
         public String suggestion;
 
         /**
+         * <p>The type.</p>
+         * 
          * <strong>example:</strong>
          * <p>contentModeration</p>
          */
@@ -210,16 +242,23 @@ public class MultiModalGuardResponseBody extends TeaModel {
 
     public static class MultiModalGuardResponseBodyData extends TeaModel {
         /**
+         * <p>The data ID of the detection object.</p>
+         * 
          * <strong>example:</strong>
          * <p>data1234</p>
          */
         @NameInMap("DataId")
         public String dataId;
 
+        /**
+         * <p>The detection details.</p>
+         */
         @NameInMap("Detail")
         public java.util.List<MultiModalGuardResponseBodyDataDetail> detail;
 
         /**
+         * <p>The moderation suggestion. Valid values: -block: The content is non-compliant. -pass: The content is compliant.</p>
+         * 
          * <strong>example:</strong>
          * <p>pass</p>
          */

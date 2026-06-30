@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeFileModerationResultResponseBody extends TeaModel {
     /**
-     * <p>The returned HTTP status code. The status code 200 indicates that the request was successful.</p>
+     * <p>The return code. A value of 200 indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public DescribeFileModerationResultResponseBodyData data;
 
     /**
-     * <p>The message that is returned in response to the request.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -29,7 +29,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6CF2815C-C8C7-4A01-B52E-FF6E24F53492</p>
@@ -76,7 +76,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
 
     public static class DescribeFileModerationResultResponseBodyDataPageResultImageResultLabelResult extends TeaModel {
         /**
-         * <p>The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places.</p>
+         * <p>The confidence score.</p>
          * 
          * <strong>example:</strong>
          * <p>25.0</p>
@@ -88,13 +88,13 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>This is a title.</p>
+         * <p>这个是标题</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The details of the labels.</p>
+         * <p>The label.</p>
          * 
          * <strong>example:</strong>
          * <p>nonlabel</p>
@@ -135,7 +135,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
 
     public static class DescribeFileModerationResultResponseBodyDataPageResultImageResultLocation extends TeaModel {
         /**
-         * <p>The H value of the coordinate point.</p>
+         * <p>The height of the detected area.</p>
          * 
          * <strong>example:</strong>
          * <p>44</p>
@@ -144,7 +144,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         public Integer h;
 
         /**
-         * <p>The W value of the coordinate point.</p>
+         * <p>The width of the detected area.</p>
          * 
          * <strong>example:</strong>
          * <p>33</p>
@@ -153,7 +153,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         public Integer w;
 
         /**
-         * <p>The X value of the coordinate point.</p>
+         * <p>The X coordinate of the point.</p>
          * 
          * <strong>example:</strong>
          * <p>11</p>
@@ -162,7 +162,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         public Integer x;
 
         /**
-         * <p>The Y value of the coordinate point.</p>
+         * <p>The Y-coordinate of the point.</p>
          * 
          * <strong>example:</strong>
          * <p>22</p>
@@ -214,7 +214,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>This is a title.</p>
+         * <p>这个是标题</p>
          */
         @NameInMap("Description")
         public String description;
@@ -226,13 +226,13 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         public java.util.List<DescribeFileModerationResultResponseBodyDataPageResultImageResultLabelResult> labelResult;
 
         /**
-         * <p>The location information</p>
+         * <p>The location information.</p>
          */
         @NameInMap("Location")
         public DescribeFileModerationResultResponseBodyDataPageResultImageResultLocation location;
 
         /**
-         * <p>Risk Level</p>
+         * <p>The risk level.</p>
          * 
          * <strong>example:</strong>
          * <p>high</p>
@@ -241,7 +241,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         public String riskLevel;
 
         /**
-         * <p>The moderation service.</p>
+         * <p>The service that was called.</p>
          * 
          * <strong>example:</strong>
          * <p>baselineCheck</p>
@@ -301,22 +301,22 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>This is a title.</p>
+         * <p>这是一个标题</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The description of the labels.</p>
+         * <p>The description of the label.</p>
          * 
          * <strong>example:</strong>
-         * <p>no risk</p>
+         * <p>疑似广告内容</p>
          */
         @NameInMap("Descriptions")
         public String descriptions;
 
         /**
-         * <p>The details of the labels.</p>
+         * <p>The value of the label.</p>
          * 
          * <strong>example:</strong>
          * <p>porn</p>
@@ -325,7 +325,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         public String labels;
 
         /**
-         * <p>Risk Level</p>
+         * <p>The risk level.</p>
          * 
          * <strong>example:</strong>
          * <p>high</p>
@@ -334,7 +334,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         public String riskLevel;
 
         /**
-         * <p>The risk details that are hit.</p>
+         * <p>Details about the hit risk.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -343,7 +343,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         public String riskTips;
 
         /**
-         * <p>The risk words that are hit.</p>
+         * <p>The risk keywords that were hit.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -352,7 +352,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         public String riskWords;
 
         /**
-         * <p>The moderation service.</p>
+         * <p>The service.</p>
          * 
          * <strong>example:</strong>
          * <p>chat_detection</p>
@@ -364,13 +364,13 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
          * <p>The text content.</p>
          * 
          * <strong>example:</strong>
-         * <p>This is a text.</p>
+         * <p>吧啦吧啦</p>
          */
         @NameInMap("Text")
         public String text;
 
         /**
-         * <p>The text segmentation information.</p>
+         * <p>Information about the text segment.</p>
          * 
          * <strong>example:</strong>
          * <p>[0,999]</p>
@@ -465,7 +465,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         public java.util.List<DescribeFileModerationResultResponseBodyDataPageResultImageResult> imageResult;
 
         /**
-         * <p>The image URL.</p>
+         * <p>The URL of the image.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.jpg">https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.jpg</a></p>
@@ -489,7 +489,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         public java.util.List<DescribeFileModerationResultResponseBodyDataPageResultTextResult> textResult;
 
         /**
-         * <p>The text URL.</p>
+         * <p>The URL where the text content is stored.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.txt">https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.txt</a></p>
@@ -546,7 +546,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
 
     public static class DescribeFileModerationResultResponseBodyDataPageSummaryImageSummaryImageLabels extends TeaModel {
         /**
-         * <p>The description.</p>
+         * <p>The description of the label.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -555,7 +555,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The details of the labels.</p>
+         * <p>The label.</p>
          * 
          * <strong>example:</strong>
          * <p>contraband</p>
@@ -564,7 +564,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>The number of times that the label is matched.</p>
+         * <p>The number of times the label appears.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -605,13 +605,13 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
 
     public static class DescribeFileModerationResultResponseBodyDataPageSummaryImageSummary extends TeaModel {
         /**
-         * <p>Image Label</p>
+         * <p>The image labels.</p>
          */
         @NameInMap("ImageLabels")
         public java.util.List<DescribeFileModerationResultResponseBodyDataPageSummaryImageSummaryImageLabels> imageLabels;
 
         /**
-         * <p>Risk Level</p>
+         * <p>The risk level.</p>
          * 
          * <strong>example:</strong>
          * <p>high</p>
@@ -644,16 +644,16 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
 
     public static class DescribeFileModerationResultResponseBodyDataPageSummaryTextSummaryTextLabels extends TeaModel {
         /**
-         * <p>The description of the labels.</p>
+         * <p>The description of the label.</p>
          * 
          * <strong>example:</strong>
-         * <p>no risk</p>
+         * <p>未检测出风险</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The details of the labels.</p>
+         * <p>The label.</p>
          * 
          * <strong>example:</strong>
          * <p>contraband</p>
@@ -662,7 +662,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>The number of times that the label is matched.</p>
+         * <p>The number of times the label appears.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -703,7 +703,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
 
     public static class DescribeFileModerationResultResponseBodyDataPageSummaryTextSummary extends TeaModel {
         /**
-         * <p>Risk Level</p>
+         * <p>The risk level.</p>
          * 
          * <strong>example:</strong>
          * <p>high</p>
@@ -712,7 +712,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         public String riskLevel;
 
         /**
-         * <p>Text Label</p>
+         * <p>The text labels.</p>
          */
         @NameInMap("TextLabels")
         public java.util.List<DescribeFileModerationResultResponseBodyDataPageSummaryTextSummaryTextLabels> textLabels;
@@ -742,13 +742,13 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
 
     public static class DescribeFileModerationResultResponseBodyDataPageSummary extends TeaModel {
         /**
-         * <p>Image Results Summary</p>
+         * <p>The image summary information.</p>
          */
         @NameInMap("ImageSummary")
         public DescribeFileModerationResultResponseBodyDataPageSummaryImageSummary imageSummary;
 
         /**
-         * <p>Number of pages</p>
+         * <p>The total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -757,7 +757,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         public Integer pageSum;
 
         /**
-         * <p>Text Results Summary</p>
+         * <p>The text summary information.</p>
          */
         @NameInMap("TextSummary")
         public DescribeFileModerationResultResponseBodyDataPageSummaryTextSummary textSummary;
@@ -794,11 +794,17 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
     }
 
     public static class DescribeFileModerationResultResponseBodyData extends TeaModel {
+        /**
+         * <p>The AccountId specified in the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>accountIdtest123</p>
+         */
         @NameInMap("AccountId")
         public String accountId;
 
         /**
-         * <p>The ID of the moderated object.</p>
+         * <p>The ID of the data.</p>
          * 
          * <strong>example:</strong>
          * <p>26769ada6e264e7ba9aa048241e12be9</p>
@@ -807,7 +813,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         public String dataId;
 
         /**
-         * <p>Optional. The document type.</p>
+         * <p>The document type. This parameter is optional.</p>
          * 
          * <strong>example:</strong>
          * <p>doc</p>
@@ -816,19 +822,19 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         public String docType;
 
         /**
-         * <p>An array that consists of the moderation results.</p>
+         * <p>A list of moderation results.</p>
          */
         @NameInMap("PageResult")
         public java.util.List<DescribeFileModerationResultResponseBodyDataPageResult> pageResult;
 
         /**
-         * <p>Summary of results</p>
+         * <p>The summary information.</p>
          */
         @NameInMap("PageSummary")
         public DescribeFileModerationResultResponseBodyDataPageSummary pageSummary;
 
         /**
-         * <p>Risk Level</p>
+         * <p>The risk level.</p>
          * 
          * <strong>example:</strong>
          * <p>high</p>
@@ -837,7 +843,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         public String riskLevel;
 
         /**
-         * <p>The URL of the moderated object.</p>
+         * <p>The download URL for the file.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.pdf">https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.pdf</a></p>

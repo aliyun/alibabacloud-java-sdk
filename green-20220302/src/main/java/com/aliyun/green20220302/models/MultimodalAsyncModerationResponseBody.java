@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class MultimodalAsyncModerationResponseBody extends TeaModel {
     /**
+     * <p>Return code. A value of 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>Returned data.</p>
+     */
     @NameInMap("Data")
     public MultimodalAsyncModerationResponseBodyData data;
 
     /**
+     * <p>The response message for this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -69,6 +76,8 @@ public class MultimodalAsyncModerationResponseBody extends TeaModel {
 
     public static class MultimodalAsyncModerationResponseBodyData extends TeaModel {
         /**
+         * <p>The value of dataId passed in the API request. This field is absent if dataId was not included in the request.</p>
+         * 
          * <strong>example:</strong>
          * <p>26769ada6e264e7ba9aa048241e12be9</p>
          */
@@ -76,6 +85,8 @@ public class MultimodalAsyncModerationResponseBody extends TeaModel {
         public String dataId;
 
         /**
+         * <p>The ReqId field returned by the URL asynchronous enhanced moderation API. Use this field to query moderation results.</p>
+         * 
          * <strong>example:</strong>
          * <p>A07B3DB9-D762-5C56-95B1-8EC55CF176D2</p>
          */

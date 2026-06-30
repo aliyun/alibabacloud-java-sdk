@@ -5,16 +5,17 @@ import com.aliyun.tea.*;
 
 public class VoiceModerationRequest extends TeaModel {
     /**
-     * <p>The type of the moderation service.</p>
+     * <p>The ServiceCode for voice moderation.</p>
      * 
      * <strong>example:</strong>
-     * <p>nickname_detection</p>
+     * <p>audio_media_detection</p>
      */
     @NameInMap("Service")
     public String service;
 
     /**
-     * <p>The parameters required by the moderation service. The value is a JSON string.</p>
+     * <p>The set of parameters that are required for the moderation service. The value must be a JSON string.</p>
+     * <p>url: Required. The URL of the object to be detected. Make sure that the URL is accessible over the Internet. dataId: Optional. The data ID of the object to be detected. For more information, see ServiceParameter.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;url&quot;: &quot;<a href="http://aliyundoc.com/test.flv">http://aliyundoc.com/test.flv</a>&quot;, &quot;dataId&quot;: &quot;data1234&quot;}</p>

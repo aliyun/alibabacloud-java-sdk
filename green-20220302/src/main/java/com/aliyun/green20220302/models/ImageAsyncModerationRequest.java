@@ -5,7 +5,25 @@ import com.aliyun.tea.*;
 
 public class ImageAsyncModerationRequest extends TeaModel {
     /**
-     * <p>The type of the moderation service.</p>
+     * <p>The detection service supported by the enhanced image moderation feature. Valid values:</p>
+     * <ul>
+     * <li><p>baselineCheck: common baseline moderation</p>
+     * </li>
+     * <li><p>baselineCheck_pro: common baseline moderation Professional Edition</p>
+     * </li>
+     * <li><p>baselineCheck_cb: common baseline moderation for services outside China</p>
+     * </li>
+     * <li><p>tonalityImprove: content administration moderation</p>
+     * </li>
+     * <li><p>aigcCheck: AIGC image moderation</p>
+     * </li>
+     * <li><p>profilePhotoCheck: profile picture moderation</p>
+     * </li>
+     * <li><p>advertisingCheck: ad material moderation</p>
+     * </li>
+     * <li><p>liveStreamCheck: video or live stream screenshot moderation</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>baselineCheck</p>
@@ -14,7 +32,7 @@ public class ImageAsyncModerationRequest extends TeaModel {
     public String service;
 
     /**
-     * <p>The parameters required by the moderation service. The value is a JSON string.</p>
+     * <p>A set of parameters related to the content to be moderated. The value must be a JSON string.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;imageUrl&quot;:&quot;<a href="https://img.alicdn.com/tfs/TB1U4r9AeH2gK0jSZJnXXaT1FXa-2880-480.png%22,%22dataId%22:%22img123****%22%7D">https://img.alicdn.com/tfs/TB1U4r9AeH2gK0jSZJnXXaT1FXa-2880-480.png&quot;,&quot;dataId&quot;:&quot;img123****&quot;}</a></p>

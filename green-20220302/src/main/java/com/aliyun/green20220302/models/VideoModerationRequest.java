@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class VideoModerationRequest extends TeaModel {
     /**
-     * <p>The type of the moderation service.</p>
+     * <p>The service code for video moderation.</p>
      * 
      * <strong>example:</strong>
      * <p>videoDetection</p>
@@ -14,10 +14,15 @@ public class VideoModerationRequest extends TeaModel {
     public String service;
 
     /**
-     * <p>The parameters required by the moderation service. The value is a JSON string.</p>
+     * <p>The parameters that are required for the moderation service. The value must be a JSON string.</p>
+     * <ul>
+     * <li>url: Required. The URL of the object to be moderated. Make sure that the URL can be accessed over the Internet.</li>
+     * <li>dataId: Optional. The data ID of the object to be moderated.</li>
+     * </ul>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/2505810.html">ServiceParameter</a>.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;url\&quot;: \&quot;<a href="https://talesofai.oss-cn-shanghai.aliyuncs.com/xxx.mp4%5C%5C">https://talesofai.oss-cn-shanghai.aliyuncs.com/xxx.mp4\\</a>&quot;, \&quot;dataId\&quot;: \&quot;94db0b88-f521-11ed-806e-fae21c1f239c\&quot;}</p>
+     * <p>{&quot;url&quot;: &quot;<a href="https://talesofai.oss-cn-shanghai.aliyuncs.com/xxx.mp4">https://talesofai.oss-cn-shanghai.aliyuncs.com/xxx.mp4</a>&quot;, &quot;dataId&quot;: &quot;data1234&quot;}</p>
      */
     @NameInMap("ServiceParameters")
     public String serviceParameters;

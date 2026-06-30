@@ -14,10 +14,10 @@ public class ManualModerationRequest extends TeaModel {
     public String service;
 
     /**
-     * <p>Parameter set required for the review service, in JSON string format.</p>
+     * <p>Parameters required by the moderation service, in JSON string format.</p>
      * <ul>
-     * <li>url: The URL of the object to be checked. Please ensure that this URL is publicly accessible.</li>
-     * <li>dataId: Optional, the data ID corresponding to the object being checked.</li>
+     * <li>url: The URL of the object to be inspected. Make sure the URL is accessible through the public network.</li>
+     * <li>dataId: Optional. The data ID corresponding to the object being inspected.</li>
      * </ul>
      * 
      * <strong>example:</strong>

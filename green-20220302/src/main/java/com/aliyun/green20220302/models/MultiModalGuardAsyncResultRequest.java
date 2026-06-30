@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class MultiModalGuardAsyncResultRequest extends TeaModel {
     /**
+     * <p>The moderation service to run.</p>
+     * 
      * <strong>example:</strong>
      * <p>audio_security_check</p>
      */
@@ -12,9 +14,11 @@ public class MultiModalGuardAsyncResultRequest extends TeaModel {
     public String service;
 
     /**
+     * <p>The parameters for the moderation service, provided as a JSON string.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
-     *   &quot;url&quot;: &quot;<a href="https://xxx.mp4">https://xxx.mp4</a>&quot;
+     *   &quot;taskId&quot;: &quot;au_f_xxxxx&quot;
      * }</p>
      */
     @NameInMap("ServiceParameters")

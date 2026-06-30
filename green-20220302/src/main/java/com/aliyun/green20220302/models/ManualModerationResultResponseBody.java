@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ManualModerationResultResponseBody extends TeaModel {
     /**
-     * <p>Error code.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class ManualModerationResultResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>Returned data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public ManualModerationResultResponseBodyData data;
 
     /**
-     * <p>Error message</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -29,7 +29,7 @@ public class ManualModerationResultResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>ID of the request</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -76,16 +76,16 @@ public class ManualModerationResultResponseBody extends TeaModel {
 
     public static class ManualModerationResultResponseBodyDataResult extends TeaModel {
         /**
-         * <p>Label description</p>
+         * <p>The label description.</p>
          * 
          * <strong>example:</strong>
-         * <p>no risk</p>
+         * <p>未检测出风险</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>Risk label</p>
+         * <p>The risk label.</p>
          * 
          * <strong>example:</strong>
          * <p>violent_explosion</p>
@@ -118,7 +118,7 @@ public class ManualModerationResultResponseBody extends TeaModel {
 
     public static class ManualModerationResultResponseBodyData extends TeaModel {
         /**
-         * <p>The value of dataId passed during the API request. This field will not be present if it was not provided during the request.</p>
+         * <p>The value of dataId passed in the API request. This field is not returned if dataId was not specified in the request.</p>
          * 
          * <strong>example:</strong>
          * <p>data1234</p>
@@ -127,19 +127,22 @@ public class ManualModerationResultResponseBody extends TeaModel {
         public String dataId;
 
         /**
-         * <p>Detailed label results.</p>
+         * <p>The detailed label results.</p>
          */
         @NameInMap("Result")
         public java.util.List<ManualModerationResultResponseBodyDataResult> result;
 
+        @NameInMap("ReviewCount")
+        public String reviewCount;
+
         /**
-         * <p>Risk level, returned based on the set high and low risk scores. Possible values include:</p>
+         * <p>The risk level, returned based on the configured high and low risk scores. Valid values:</p>
          * <ul>
-         * <li><p>high: High risk</p>
+         * <li><p>high: high risk</p>
          * </li>
-         * <li><p>low: Low risk</p>
+         * <li><p>low: low risk</p>
          * </li>
-         * <li><p>none: No risk detected</p>
+         * <li><p>none: no risk detected</p>
          * </li>
          * </ul>
          * 
@@ -150,7 +153,7 @@ public class ManualModerationResultResponseBody extends TeaModel {
         public String riskLevel;
 
         /**
-         * <p>Task ID</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxxx-xxxxx</p>
@@ -177,6 +180,14 @@ public class ManualModerationResultResponseBody extends TeaModel {
         }
         public java.util.List<ManualModerationResultResponseBodyDataResult> getResult() {
             return this.result;
+        }
+
+        public ManualModerationResultResponseBodyData setReviewCount(String reviewCount) {
+            this.reviewCount = reviewCount;
+            return this;
+        }
+        public String getReviewCount() {
+            return this.reviewCount;
         }
 
         public ManualModerationResultResponseBodyData setRiskLevel(String riskLevel) {

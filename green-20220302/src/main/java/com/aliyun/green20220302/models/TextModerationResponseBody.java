@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TextModerationResponseBody extends TeaModel {
     /**
-     * <p>The returned HTTP status code.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class TextModerationResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The moderation results.</p>
+     * <p>The moderation result data.</p>
      */
     @NameInMap("Data")
     public TextModerationResponseBodyData data;
 
     /**
-     * <p>The message that is returned in response to the request.</p>
+     * <p>The response message for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -75,6 +75,12 @@ public class TextModerationResponseBody extends TeaModel {
     }
 
     public static class TextModerationResponseBodyDataExtLlmContent extends TeaModel {
+        /**
+         * <p>The output content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>正常。文本中无风险内容。</p>
+         */
         @NameInMap("outputText")
         public String outputText;
 
@@ -94,6 +100,9 @@ public class TextModerationResponseBody extends TeaModel {
     }
 
     public static class TextModerationResponseBodyDataExt extends TeaModel {
+        /**
+         * <p>The output from the Large Language Model (LLM).</p>
+         */
         @NameInMap("llmContent")
         public TextModerationResponseBodyDataExtLlmContent llmContent;
 
@@ -114,7 +123,7 @@ public class TextModerationResponseBody extends TeaModel {
 
     public static class TextModerationResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the Alibaba Cloud account.</p>
+         * <p>The \<code>accountId\\</code> specified in the request.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -123,7 +132,10 @@ public class TextModerationResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>The ID of the moderated object.</p>
+         * <p>The data ID of the moderated object.</p>
+         * <blockquote>
+         * <p>If you specify the dataId parameter in the request, its value is returned in this parameter.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>text1234</p>
@@ -132,16 +144,16 @@ public class TextModerationResponseBody extends TeaModel {
         public String dataId;
 
         /**
-         * <p>The description of the labels.</p>
+         * <p>The description of the label.</p>
          * 
          * <strong>example:</strong>
-         * <p>no risk</p>
+         * <p>疑似广告内容</p>
          */
         @NameInMap("descriptions")
         public String descriptions;
 
         /**
-         * <p>The device ID.</p>
+         * <p>The \<code>deviceId\\</code> specified in the request.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxxxx</p>
@@ -149,11 +161,14 @@ public class TextModerationResponseBody extends TeaModel {
         @NameInMap("deviceId")
         public String deviceId;
 
+        /**
+         * <p>Auxiliary reference information for the text.</p>
+         */
         @NameInMap("ext")
         public TextModerationResponseBodyDataExt ext;
 
         /**
-         * <p>The labels. Multiple labels are separated by commas (,). Valid values: ad: ad violation profanity: abuse contraband: contraband sexual_content: pornography violence: violence nonsense: irrigation spam: spam negative_content: undesirable content cyberbullying: cyberbullying C_customized: custom library that is hit</p>
+         * <p>The moderation labels. If multiple labels are returned, they are separated by commas (,). Valid values: ad: advertisement profanity: profanity contraband: contraband sexual_content: sexual content violence: violent and terrorist content nonsense: meaningless content spam: spam negative_content: undesirable content cyberbullying: cyberbullying C_customized: A match in a custom library</p>
          * 
          * <strong>example:</strong>
          * <p>porn</p>
@@ -161,14 +176,42 @@ public class TextModerationResponseBody extends TeaModel {
         @NameInMap("labels")
         public String labels;
 
+        /**
+         * <p>The ID of the manual review task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx-xxxxx</p>
+         */
         @NameInMap("manualTaskId")
         public String manualTaskId;
 
         /**
-         * <p>The JSON string used to locate the cause. Valid values: riskTips: subcategory label riskWords: risk words adNums: hit advertising number customizedWords: customized words customizedLibs: customized libraries</p>
+         * <p>A JSON string that contains the reason for the moderation result. The string includes the following fields:</p>
+         * <ol>
+         * <li><p>riskTips: The sub-labels.</p>
+         * </li>
+         * <li><p>riskWords: The detected risk words.</p>
+         * </li>
+         * <li><p>adNums: The detected ad-related numbers.</p>
+         * </li>
+         * <li><p>customizedWords: The detected custom words.</p>
+         * </li>
+         * <li><p>customizedLibs: The names of the custom libraries that contain a match.</p>
+         * </li>
+         * <li><p>riskLevel: The risk level, which is recommended by the system. Valid values:</p>
+         * </li>
+         * </ol>
+         * <ul>
+         * <li><p>high: high risk</p>
+         * </li>
+         * <li><p>medium: medium risk</p>
+         * </li>
+         * <li><p>low: low risk</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;detectedLanguage\&quot;:\&quot;ar\&quot;,\&quot;riskTips\&quot;:\&quot;sexuality_Suggestive\&quot;,\&quot;riskWords\&quot;:\&quot;pxxxxy\&quot;,\&quot;translatedContent\&quot;:\&quot;pxxxxy sxxxx\&quot;}</p>
+         * <p>{\&quot;riskLevel\&quot;:\&quot;high\&quot;,\&quot;riskTips\&quot;:\&quot;色情_低俗词\&quot;,\&quot;riskWords\&quot;:\&quot;色情服务\&quot;}</p>
          */
         @NameInMap("reason")
         public String reason;

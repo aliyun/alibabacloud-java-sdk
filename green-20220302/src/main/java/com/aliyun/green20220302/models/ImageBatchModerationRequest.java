@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class ImageBatchModerationRequest extends TeaModel {
     /**
-     * <p>The types of detection supported by the enhanced image review, separated by English commas. Values:</p>
+     * <p>The detection services supported by Image Moderation Pro. Separate multiple services with commas. Valid values:</p>
      * <ul>
-     * <li>baselineCheck：General Baseline Detection</li>
-     * <li>baselineCheck_pro：General Baseline Detection_Pro Edition</li>
-     * <li>tonalityImprove：Content governance monitoring</li>
-     * <li>aigcCheck：AIGC image detection</li>
+     * <li><p>baselineCheck: General baseline check</p>
+     * </li>
+     * <li><p>baselineCheck_pro: General baseline check (Professional Edition)</p>
+     * </li>
+     * <li><p>tonalityImprove: Content administration check</p>
+     * </li>
+     * <li><p>aigcCheck: AIGC image check</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +24,7 @@ public class ImageBatchModerationRequest extends TeaModel {
     public String service;
 
     /**
-     * <p>The set of relevant parameters for content detection objects.</p>
+     * <p>The parameters for the content to moderate.</p>
      * 
      * <strong>example:</strong>
      * <p>{

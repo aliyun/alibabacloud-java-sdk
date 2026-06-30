@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeMultimodalModerationResultResponseBody extends TeaModel {
     /**
+     * <p>The error code, which matches the HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public DescribeMultimodalModerationResultResponseBodyData data;
 
     /**
+     * <p>The response message for this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -22,6 +29,8 @@ public class DescribeMultimodalModerationResultResponseBody extends TeaModel {
     public String msg;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
@@ -66,10 +75,18 @@ public class DescribeMultimodalModerationResultResponseBody extends TeaModel {
     }
 
     public static class DescribeMultimodalModerationResultResponseBodyDataCommentDatasCommentDatasResults extends TeaModel {
+        /**
+         * <p>Description of the Label field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>疑似含有烟火类内容元素</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Risk label.</p>
+         * 
          * <strong>example:</strong>
          * <p>violent_explosion</p>
          */
@@ -100,6 +117,9 @@ public class DescribeMultimodalModerationResultResponseBody extends TeaModel {
     }
 
     public static class DescribeMultimodalModerationResultResponseBodyDataCommentDatasCommentDatas extends TeaModel {
+        /**
+         * <p>Comment moderation results.</p>
+         */
         @NameInMap("Results")
         public java.util.List<DescribeMultimodalModerationResultResponseBodyDataCommentDatasCommentDatasResults> results;
 
@@ -119,10 +139,18 @@ public class DescribeMultimodalModerationResultResponseBody extends TeaModel {
     }
 
     public static class DescribeMultimodalModerationResultResponseBodyDataCommentDatasResults extends TeaModel {
+        /**
+         * <p>Description of the Label field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>疑似含有烟火类内容元素</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Risk label.</p>
+         * 
          * <strong>example:</strong>
          * <p>violent_explosion</p>
          */
@@ -153,9 +181,15 @@ public class DescribeMultimodalModerationResultResponseBody extends TeaModel {
     }
 
     public static class DescribeMultimodalModerationResultResponseBodyDataCommentDatas extends TeaModel {
+        /**
+         * <p>Moderation results.</p>
+         */
         @NameInMap("CommentDatas")
         public java.util.List<DescribeMultimodalModerationResultResponseBodyDataCommentDatasCommentDatas> commentDatas;
 
+        /**
+         * <p>Comment moderation results.</p>
+         */
         @NameInMap("Results")
         public java.util.List<DescribeMultimodalModerationResultResponseBodyDataCommentDatasResults> results;
 
@@ -183,10 +217,18 @@ public class DescribeMultimodalModerationResultResponseBody extends TeaModel {
     }
 
     public static class DescribeMultimodalModerationResultResponseBodyDataMainDataResults extends TeaModel {
+        /**
+         * <p>Description of the Label field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>疑似含有烟火类内容元素</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Risk label.</p>
+         * 
          * <strong>example:</strong>
          * <p>violent_explosion</p>
          */
@@ -217,6 +259,9 @@ public class DescribeMultimodalModerationResultResponseBody extends TeaModel {
     }
 
     public static class DescribeMultimodalModerationResultResponseBodyDataMainData extends TeaModel {
+        /**
+         * <p>Main post moderation results.</p>
+         */
         @NameInMap("Results")
         public java.util.List<DescribeMultimodalModerationResultResponseBodyDataMainDataResults> results;
 
@@ -236,20 +281,30 @@ public class DescribeMultimodalModerationResultResponseBody extends TeaModel {
     }
 
     public static class DescribeMultimodalModerationResultResponseBodyData extends TeaModel {
+        /**
+         * <p>Comment moderation results.</p>
+         */
         @NameInMap("CommentDatas")
         public java.util.List<DescribeMultimodalModerationResultResponseBodyDataCommentDatas> commentDatas;
 
         /**
+         * <p>The dataId value passed in the API request. This field is absent if no dataId was provided in the request.</p>
+         * 
          * <strong>example:</strong>
          * <p>data1234</p>
          */
         @NameInMap("DataId")
         public String dataId;
 
+        /**
+         * <p>Main post moderation results.</p>
+         */
         @NameInMap("MainData")
         public DescribeMultimodalModerationResultResponseBodyDataMainData mainData;
 
         /**
+         * <p>The ReqId field returned by the asynchronous moderation API.</p>
+         * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
@@ -257,6 +312,8 @@ public class DescribeMultimodalModerationResultResponseBody extends TeaModel {
         public String reqId;
 
         /**
+         * <p>Risk level.</p>
+         * 
          * <strong>example:</strong>
          * <p>high</p>
          */
