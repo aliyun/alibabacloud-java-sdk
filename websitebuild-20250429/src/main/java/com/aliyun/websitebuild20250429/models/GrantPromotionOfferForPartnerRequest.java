@@ -4,6 +4,9 @@ package com.aliyun.websitebuild20250429.models;
 import com.aliyun.tea.*;
 
 public class GrantPromotionOfferForPartnerRequest extends TeaModel {
+    @NameInMap("ActivityCode")
+    public String activityCode;
+
     /**
      * <p>The activity ID.</p>
      * 
@@ -52,6 +55,14 @@ public class GrantPromotionOfferForPartnerRequest extends TeaModel {
     public static GrantPromotionOfferForPartnerRequest build(java.util.Map<String, ?> map) throws Exception {
         GrantPromotionOfferForPartnerRequest self = new GrantPromotionOfferForPartnerRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GrantPromotionOfferForPartnerRequest setActivityCode(String activityCode) {
+        this.activityCode = activityCode;
+        return this;
+    }
+    public String getActivityCode() {
+        return this.activityCode;
     }
 
     public GrantPromotionOfferForPartnerRequest setActivityId(String activityId) {

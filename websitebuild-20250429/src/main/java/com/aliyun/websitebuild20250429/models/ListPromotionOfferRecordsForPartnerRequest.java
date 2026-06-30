@@ -14,7 +14,7 @@ public class ListPromotionOfferRecordsForPartnerRequest extends TeaModel {
     public String activityCode;
 
     /**
-     * <p>The belonging ID.</p>
+     * <p>The belong ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>

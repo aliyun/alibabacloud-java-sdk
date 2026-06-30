@@ -1,3 +1,7 @@
+2026-06-30 Version: 2.30.1
+- Update API GrantPromotionOfferForPartner: add request parameters ActivityCode.
+
+
 2026-06-29 Version: 2.30.0
 - Support API CreateInspiration.
 

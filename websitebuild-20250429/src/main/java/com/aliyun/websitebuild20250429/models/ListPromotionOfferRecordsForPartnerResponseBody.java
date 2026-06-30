@@ -14,7 +14,7 @@ public class ListPromotionOfferRecordsForPartnerResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed.</p>
+     * <p>Indicates whether a retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -99,7 +99,7 @@ public class ListPromotionOfferRecordsForPartnerResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>The exception message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>系统异常</p>
@@ -429,7 +429,7 @@ public class ListPromotionOfferRecordsForPartnerResponseBody extends TeaModel {
         public java.util.List<ListPromotionOfferRecordsForPartnerResponseBodyModuleRecords> records;
 
         /**
-         * <p>The total number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
