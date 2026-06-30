@@ -40,6 +40,36 @@ public class UpdateApiKeyRequest extends TeaModel {
         return this.description;
     }
 
+    public static class UpdateApiKeyRequestAuthModelAccessScope extends TeaModel {
+        @NameInMap("accessibleModels")
+        public java.util.List<String> accessibleModels;
+
+        @NameInMap("allowAllModels")
+        public Boolean allowAllModels;
+
+        public static UpdateApiKeyRequestAuthModelAccessScope build(java.util.Map<String, ?> map) throws Exception {
+            UpdateApiKeyRequestAuthModelAccessScope self = new UpdateApiKeyRequestAuthModelAccessScope();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateApiKeyRequestAuthModelAccessScope setAccessibleModels(java.util.List<String> accessibleModels) {
+            this.accessibleModels = accessibleModels;
+            return this;
+        }
+        public java.util.List<String> getAccessibleModels() {
+            return this.accessibleModels;
+        }
+
+        public UpdateApiKeyRequestAuthModelAccessScope setAllowAllModels(Boolean allowAllModels) {
+            this.allowAllModels = allowAllModels;
+            return this;
+        }
+        public Boolean getAllowAllModels() {
+            return this.allowAllModels;
+        }
+
+    }
+
     public static class UpdateApiKeyRequestAuth extends TeaModel {
         /**
          * <p>The IP access whitelist.</p>
@@ -51,6 +81,9 @@ public class UpdateApiKeyRequest extends TeaModel {
          */
         @NameInMap("accessIps")
         public java.util.List<String> accessIps;
+
+        @NameInMap("modelAccessScope")
+        public UpdateApiKeyRequestAuthModelAccessScope modelAccessScope;
 
         /**
          * <p>Valid values:</p>
@@ -76,6 +109,14 @@ public class UpdateApiKeyRequest extends TeaModel {
         }
         public java.util.List<String> getAccessIps() {
             return this.accessIps;
+        }
+
+        public UpdateApiKeyRequestAuth setModelAccessScope(UpdateApiKeyRequestAuthModelAccessScope modelAccessScope) {
+            this.modelAccessScope = modelAccessScope;
+            return this;
+        }
+        public UpdateApiKeyRequestAuthModelAccessScope getModelAccessScope() {
+            return this.modelAccessScope;
         }
 
         public UpdateApiKeyRequestAuth setType(String type) {

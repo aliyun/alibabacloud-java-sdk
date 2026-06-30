@@ -4,10 +4,14 @@ package com.aliyun.modelstudio20260210.models;
 import com.aliyun.tea.*;
 
 public class UpdateOrganizationMemberRequest extends TeaModel {
+    /**
+     * <p>The list of account IDs for batch operations.</p>
+     */
     @NameInMap("AccountIds")
     public java.util.List<String> accountIds;
 
     /**
+     * <p>The code of the new role. When you perform a batch operation, all specified accounts are changed to this role.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

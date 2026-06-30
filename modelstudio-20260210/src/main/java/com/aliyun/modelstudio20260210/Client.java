@@ -1592,7 +1592,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改组织成员角色</p>
+     * <p>Modifies the roles of organization members.</p>
      * 
      * @param request UpdateOrganizationMemberRequest
      * @param headers map
@@ -1630,7 +1630,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改组织成员角色</p>
+     * <p>Modifies the roles of organization members.</p>
      * 
      * @param request UpdateOrganizationMemberRequest
      * @return UpdateOrganizationMemberResponse

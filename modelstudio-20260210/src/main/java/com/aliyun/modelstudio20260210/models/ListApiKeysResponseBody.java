@@ -163,12 +163,45 @@ public class ListApiKeysResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListApiKeysResponseBodyApiKeysAuthModelAccessScope extends TeaModel {
+        @NameInMap("accessibleModels")
+        public java.util.List<String> accessibleModels;
+
+        @NameInMap("allowAllModels")
+        public Boolean allowAllModels;
+
+        public static ListApiKeysResponseBodyApiKeysAuthModelAccessScope build(java.util.Map<String, ?> map) throws Exception {
+            ListApiKeysResponseBodyApiKeysAuthModelAccessScope self = new ListApiKeysResponseBodyApiKeysAuthModelAccessScope();
+            return TeaModel.build(map, self);
+        }
+
+        public ListApiKeysResponseBodyApiKeysAuthModelAccessScope setAccessibleModels(java.util.List<String> accessibleModels) {
+            this.accessibleModels = accessibleModels;
+            return this;
+        }
+        public java.util.List<String> getAccessibleModels() {
+            return this.accessibleModels;
+        }
+
+        public ListApiKeysResponseBodyApiKeysAuthModelAccessScope setAllowAllModels(Boolean allowAllModels) {
+            this.allowAllModels = allowAllModels;
+            return this;
+        }
+        public Boolean getAllowAllModels() {
+            return this.allowAllModels;
+        }
+
+    }
+
     public static class ListApiKeysResponseBodyApiKeysAuth extends TeaModel {
         /**
          * <p>The IP address whitelist.</p>
          */
         @NameInMap("accessIps")
         public java.util.List<String> accessIps;
+
+        @NameInMap("modelAccessScope")
+        public ListApiKeysResponseBodyApiKeysAuthModelAccessScope modelAccessScope;
 
         /**
          * <p>All: all permissions. Custom: custom permissions.</p>
@@ -190,6 +223,14 @@ public class ListApiKeysResponseBody extends TeaModel {
         }
         public java.util.List<String> getAccessIps() {
             return this.accessIps;
+        }
+
+        public ListApiKeysResponseBodyApiKeysAuth setModelAccessScope(ListApiKeysResponseBodyApiKeysAuthModelAccessScope modelAccessScope) {
+            this.modelAccessScope = modelAccessScope;
+            return this;
+        }
+        public ListApiKeysResponseBodyApiKeysAuthModelAccessScope getModelAccessScope() {
+            return this.modelAccessScope;
         }
 
         public ListApiKeysResponseBodyApiKeysAuth setType(String type) {
