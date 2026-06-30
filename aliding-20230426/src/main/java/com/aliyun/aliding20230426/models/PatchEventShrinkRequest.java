@@ -9,9 +9,6 @@ public class PatchEventShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>primary</p>
      */
     @NameInMap("CalendarId")
     public String calendarId;
@@ -27,9 +24,6 @@ public class PatchEventShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>iiiP35sJadba8aBSgjrwPRKgiEiF</p>
      */
     @NameInMap("EventId")
     public String eventId;
@@ -37,10 +31,6 @@ public class PatchEventShrinkRequest extends TeaModel {
     @NameInMap("Extra")
     public String extraShrink;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("IsAllDay")
     public Boolean isAllDay;
 

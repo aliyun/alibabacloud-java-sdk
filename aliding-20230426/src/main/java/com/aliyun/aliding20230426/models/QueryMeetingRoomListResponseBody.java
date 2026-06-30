@@ -19,8 +19,6 @@ public class QueryMeetingRoomListResponseBody extends TeaModel {
     public Long nextToken;
 
     /**
-     * <p>requestId</p>
-     * 
      * <strong>example:</strong>
      * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */

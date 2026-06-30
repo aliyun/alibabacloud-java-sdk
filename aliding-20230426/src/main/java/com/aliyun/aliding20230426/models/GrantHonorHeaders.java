@@ -32,10 +32,6 @@ public class GrantHonorHeaders extends TeaModel {
     }
 
     public static class GrantHonorHeadersAccountContext extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>null</p>
-         */
         @NameInMap("accountId")
         public String accountId;
 

@@ -4,10 +4,6 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class DocBlocksDeleteResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 

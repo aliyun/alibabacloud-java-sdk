@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class GetOrgOrWebOpenDocContentTaskIdShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>20eMKjyp810mMdK4Hz4B5BA6JxAZB1Gv</p>
      */
     @NameInMap("DentryUuid")
     public String dentryUuid;
@@ -23,10 +20,6 @@ public class GetOrgOrWebOpenDocContentTaskIdShrinkRequest extends TeaModel {
     @NameInMap("ScopeType")
     public Integer scopeType;
 
-    /**
-     * <strong>example:</strong>
-     * <p>markdown</p>
-     */
     @NameInMap("TargetFormat")
     public String targetFormat;
 

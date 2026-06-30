@@ -4,45 +4,21 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class UpdateVideoConferenceSettingShrinkRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("AllowUnmuteSelf")
     public Boolean allowUnmuteSelf;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("AutoTransferHost")
     public Boolean autoTransferHost;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("ForbiddenShareScreen")
     public Boolean forbiddenShareScreen;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("LockConference")
     public Boolean lockConference;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("MuteAll")
     public Boolean muteAll;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("OnlyInternalEmployeesJoin")
     public Boolean onlyInternalEmployeesJoin;
 

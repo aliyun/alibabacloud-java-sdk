@@ -11,7 +11,7 @@ public class GetUserIdByOpenDingtalkIdShrinkRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>DTOJdYJ2IQC4HuexhtjsSXXXX</p>
+     * <p>DTOJdYJ2IQC4HuexhtjsS8QiEiE</p>
      */
     @NameInMap("openDingtalkId")
     public String openDingtalkId;

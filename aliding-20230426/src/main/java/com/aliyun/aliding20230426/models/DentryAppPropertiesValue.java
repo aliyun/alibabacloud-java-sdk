@@ -4,24 +4,12 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class DentryAppPropertiesValue extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>test</p>
-     */
     @NameInMap("Name")
     public String name;
 
-    /**
-     * <strong>example:</strong>
-     * <p>value</p>
-     */
     @NameInMap("Value")
     public String value;
 
-    /**
-     * <strong>example:</strong>
-     * <p>PUBLIC</p>
-     */
     @NameInMap("Visibility")
     public String visibility;
 

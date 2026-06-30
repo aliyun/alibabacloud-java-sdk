@@ -32,10 +32,6 @@ public class CreateOrgHonorTemplateHeaders extends TeaModel {
     }
 
     public static class CreateOrgHonorTemplateHeadersAccountContext extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>208579</p>
-         */
         @NameInMap("accountId")
         public String accountId;
 

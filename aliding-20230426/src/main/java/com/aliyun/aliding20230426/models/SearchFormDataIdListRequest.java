@@ -78,10 +78,6 @@ public class SearchFormDataIdListRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <strong>example:</strong>
-     * <p>{}</p>
-     */
     @NameInMap("SearchFieldJson")
     public String searchFieldJson;
 

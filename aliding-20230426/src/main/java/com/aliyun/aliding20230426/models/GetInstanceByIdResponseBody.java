@@ -90,10 +90,6 @@ public class GetInstanceByIdResponseBody extends TeaModel {
     @NameInMap("vendorType")
     public String vendorType;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("version")
     public Long version;
 

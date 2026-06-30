@@ -4,17 +4,9 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class ListSkillResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>{}</p>
-     */
     @NameInMap("Data")
     public Object data;
 
-    /**
-     * <strong>example:</strong>
-     * <p>2715B4D3-A3FB-5FC7-AFA0-4471687B1EC6</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

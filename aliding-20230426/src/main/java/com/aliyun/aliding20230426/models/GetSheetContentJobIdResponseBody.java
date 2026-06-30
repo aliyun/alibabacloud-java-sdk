@@ -4,10 +4,6 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class GetSheetContentJobIdResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>14640056080</p>
-     */
     @NameInMap("jobId")
     public String jobId;
 
@@ -18,10 +14,6 @@ public class GetSheetContentJobIdResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>init</p>
-     */
     @NameInMap("status")
     public String status;
 

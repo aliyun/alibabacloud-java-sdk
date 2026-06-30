@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class AddMultiDimTableRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>r1R7q3QmWew5lo02fxB7nxxxxxxxx</p>
      */
     @NameInMap("BaseId")
     public String baseId;
@@ -71,9 +68,6 @@ public class AddMultiDimTableRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>text</p>
          */
         @NameInMap("Type")
         public String type;

@@ -4,16 +4,10 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class GetTemplateListByUserIdResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>12312131231</p>
-     */
     @NameInMap("nextCursor")
     public Long nextCursor;
 
     /**
-     * <p>requestId</p>
-     * 
      * <strong>example:</strong>
      * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */
@@ -59,17 +53,9 @@ public class GetTemplateListByUserIdResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <strong>example:</strong>
-         * <p>11111</p>
-         */
         @NameInMap("ReportCode")
         public String reportCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p><a href="https://scsss/sss">https://scsss/sss</a></p>
-         */
         @NameInMap("Url")
         public String url;
 

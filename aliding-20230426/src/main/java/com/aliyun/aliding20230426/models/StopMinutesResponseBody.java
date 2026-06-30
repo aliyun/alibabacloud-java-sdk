@@ -4,10 +4,6 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class StopMinutesResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("code")
     public String code;
 

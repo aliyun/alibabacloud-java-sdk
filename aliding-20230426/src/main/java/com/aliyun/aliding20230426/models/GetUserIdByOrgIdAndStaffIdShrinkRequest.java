@@ -4,10 +4,6 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class GetUserIdByOrgIdAndStaffIdShrinkRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>123456</p>
-     */
     @NameInMap("OrgId")
     public Long orgId;
 

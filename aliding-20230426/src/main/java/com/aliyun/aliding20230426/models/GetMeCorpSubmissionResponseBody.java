@@ -570,10 +570,6 @@ public class GetMeCorpSubmissionResponseBody extends TeaModel {
         @NameInMap("ProcessCode")
         public String processCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>52330</p>
-         */
         @NameInMap("ProcessId")
         public Long processId;
 

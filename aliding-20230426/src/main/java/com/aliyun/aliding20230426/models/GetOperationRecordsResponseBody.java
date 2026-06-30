@@ -206,10 +206,6 @@ public class GetOperationRecordsResponseBody extends TeaModel {
         @NameInMap("TaskExecuteType")
         public String taskExecuteType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2021-01-01</p>
-         */
         @NameInMap("TaskHoldTimeGMT")
         public Long taskHoldTimeGMT;
 

@@ -49,24 +49,12 @@ public class AddWorkspaceMembersRequest extends TeaModel {
     }
 
     public static class AddWorkspaceMembersRequestMembers extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>012345</p>
-         */
         @NameInMap("MemberId")
         public String memberId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>USER</p>
-         */
         @NameInMap("MemberType")
         public String memberType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>EDITOR</p>
-         */
         @NameInMap("RoleType")
         public String roleType;
 

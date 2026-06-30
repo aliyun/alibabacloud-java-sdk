@@ -7,17 +7,9 @@ public class GetFileUploadInfoRequest extends TeaModel {
     @NameInMap("Option")
     public GetFileUploadInfoRequestOption option;
 
-    /**
-     * <strong>example:</strong>
-     * <p>dentryUuid</p>
-     */
     @NameInMap("ParentDentryUuid")
     public String parentDentryUuid;
 
-    /**
-     * <strong>example:</strong>
-     * <p>HEADER_SIGNATURE</p>
-     */
     @NameInMap("Protocol")
     public String protocol;
 
@@ -62,17 +54,9 @@ public class GetFileUploadInfoRequest extends TeaModel {
     }
 
     public static class GetFileUploadInfoRequestOptionPreCheckParam extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>None</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <strong>example:</strong>
-         * <p>None</p>
-         */
         @NameInMap("Size")
         public Long size;
 
@@ -103,24 +87,12 @@ public class GetFileUploadInfoRequest extends TeaModel {
         @NameInMap("PreCheckParam")
         public GetFileUploadInfoRequestOptionPreCheckParam preCheckParam;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("PreferIntranet")
         public Boolean preferIntranet;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ZHANGJIAKOU</p>
-         */
         @NameInMap("PreferRegion")
         public String preferRegion;
 
-        /**
-         * <strong>example:</strong>
-         * <p>DINGTALK</p>
-         */
         @NameInMap("StorageDriver")
         public String storageDriver;
 

@@ -11,10 +11,6 @@ public class GetDocContentResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>task123abc</p>
-     */
     @NameInMap("taskId")
     public Long taskId;
 

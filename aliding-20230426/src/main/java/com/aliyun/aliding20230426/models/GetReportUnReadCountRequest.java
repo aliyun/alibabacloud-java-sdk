@@ -4,10 +4,6 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class GetReportUnReadCountRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>null</p>
-     */
     @NameInMap("Request")
     public java.util.Map<String, ?> request;
 

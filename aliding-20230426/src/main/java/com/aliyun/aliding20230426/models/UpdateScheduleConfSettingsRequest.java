@@ -7,10 +7,6 @@ public class UpdateScheduleConfSettingsRequest extends TeaModel {
     @NameInMap("ScheduleConfSettingModel")
     public UpdateScheduleConfSettingsRequestScheduleConfSettingModel scheduleConfSettingModel;
 
-    /**
-     * <strong>example:</strong>
-     * <p>f6fb627e-a7e8-403e-b1f8-26e85450f4a9</p>
-     */
     @NameInMap("ScheduleConferenceId")
     public String scheduleConferenceId;
 
@@ -167,34 +163,18 @@ public class UpdateScheduleConfSettingsRequest extends TeaModel {
         @NameInMap("CloudRecordOwnerUserId")
         public String cloudRecordOwnerUserId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("EnableChat")
         public Integer enableChat;
 
         @NameInMap("EnableWebAnonymousJoin")
         public Boolean enableWebAnonymousJoin;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("JoinBeforeHost")
         public Integer joinBeforeHost;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("LockMediaStatusMicMute")
         public Integer lockMediaStatusMicMute;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("LockNick")
         public Integer lockNick;
 
@@ -213,10 +193,6 @@ public class UpdateScheduleConfSettingsRequest extends TeaModel {
         @NameInMap("PushMinutesCard")
         public Boolean pushMinutesCard;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("WaitingRoom")
         public Integer waitingRoom;
 
@@ -327,24 +303,12 @@ public class UpdateScheduleConfSettingsRequest extends TeaModel {
         @NameInMap("CohostUserIds")
         public java.util.List<String> cohostUserIds;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ding********</p>
-         */
         @NameInMap("ConfAllowedCorpId")
         public String confAllowedCorpId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>012345</p>
-         */
         @NameInMap("HostUserId")
         public String hostUserId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("LockRoom")
         public Integer lockRoom;
 
@@ -354,17 +318,9 @@ public class UpdateScheduleConfSettingsRequest extends TeaModel {
         @NameInMap("MoziConfVirtualExtraSetting")
         public UpdateScheduleConfSettingsRequestScheduleConfSettingModelMoziConfVirtualExtraSetting moziConfVirtualExtraSetting;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("MuteOnJoin")
         public Integer muteOnJoin;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("ScreenShareForbidden")
         public Integer screenShareForbidden;
 

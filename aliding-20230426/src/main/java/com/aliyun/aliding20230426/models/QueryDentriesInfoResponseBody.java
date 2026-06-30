@@ -66,10 +66,6 @@ public class QueryDentriesInfoResponseBody extends TeaModel {
     }
 
     public static class QueryDentriesInfoResponseBodyDentryProperties extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>True</p>
-         */
         @NameInMap("ReadOnly")
         public Boolean readOnly;
 
@@ -89,24 +85,12 @@ public class QueryDentriesInfoResponseBody extends TeaModel {
     }
 
     public static class QueryDentriesInfoResponseBodyDentryThumbnail extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>720</p>
-         */
         @NameInMap("Height")
         public Integer height;
 
-        /**
-         * <strong>example:</strong>
-         * <p>xxx</p>
-         */
         @NameInMap("Url")
         public String url;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1920</p>
-         */
         @NameInMap("Width")
         public Integer width;
 
@@ -145,58 +129,30 @@ public class QueryDentriesInfoResponseBody extends TeaModel {
         @NameInMap("AppProperties")
         public java.util.Map<String, java.util.List<DentryAppPropertiesValue>> appProperties;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2025-03-26T02:19:35Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>qt8bGiSa7WnHKeRPtMuoiSJwiE</p>
-         */
         @NameInMap("CreatorId")
         public String creatorId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>txt</p>
-         */
         @NameInMap("Extension")
         public String extension;
 
-        /**
-         * <strong>example:</strong>
-         * <p>140901622636</p>
-         */
         @NameInMap("Id")
         public String id;
 
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>qt8bGiSa7WnHKeRPtMuoiSJwiE</p>
-         */
         @NameInMap("ModifierId")
         public String modifierId;
 
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("ParentId")
         public String parentId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>PUBLIC_OSS_PARTITION</p>
-         */
         @NameInMap("PartitionType")
         public String partitionType;
 
@@ -206,55 +162,27 @@ public class QueryDentriesInfoResponseBody extends TeaModel {
         @NameInMap("Properties")
         public QueryDentriesInfoResponseBodyDentryProperties properties;
 
-        /**
-         * <strong>example:</strong>
-         * <p>512</p>
-         */
         @NameInMap("Size")
         public Long size;
 
-        /**
-         * <strong>example:</strong>
-         * <p>22443475065</p>
-         */
         @NameInMap("SpaceId")
         public String spaceId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>NORMAL</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <strong>example:</strong>
-         * <p>DINGTALK</p>
-         */
         @NameInMap("StorageDriver")
         public String storageDriver;
 
         @NameInMap("Thumbnail")
         public QueryDentriesInfoResponseBodyDentryThumbnail thumbnail;
 
-        /**
-         * <strong>example:</strong>
-         * <p>FILE</p>
-         */
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1716258459684</p>
-         */
         @NameInMap("Uuid")
         public String uuid;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Version")
         public Long version;
 

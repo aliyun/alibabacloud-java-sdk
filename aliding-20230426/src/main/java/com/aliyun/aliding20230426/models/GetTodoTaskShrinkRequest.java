@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class GetTodoTaskShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>OPJpwtxxxx</p>
      */
     @NameInMap("TaskId")
     public String taskId;

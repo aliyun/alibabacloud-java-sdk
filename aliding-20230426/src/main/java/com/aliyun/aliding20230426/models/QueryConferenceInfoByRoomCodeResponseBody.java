@@ -25,10 +25,6 @@ public class QueryConferenceInfoByRoomCodeResponseBody extends TeaModel {
     @NameInMap("hasMore")
     public Boolean hasMore;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1296</p>
-     */
     @NameInMap("nextToken")
     public String nextToken;
 
@@ -39,10 +35,6 @@ public class QueryConferenceInfoByRoomCodeResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>20</p>
-     */
     @NameInMap("totalCount")
     public Integer totalCount;
 
@@ -130,76 +122,36 @@ public class QueryConferenceInfoByRoomCodeResponseBody extends TeaModel {
     }
 
     public static class QueryConferenceInfoByRoomCodeResponseBodyConferenceList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("BizType")
         public String bizType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1000</p>
-         */
         @NameInMap("ConfDuration")
         public Long confDuration;
 
-        /**
-         * <strong>example:</strong>
-         * <p>636cf59f2b032f014ae32902</p>
-         */
         @NameInMap("ConferenceId")
         public String conferenceId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>527079</p>
-         */
         @NameInMap("CreatorId")
         public String creatorId;
 
         @NameInMap("CreatorNick")
         public String creatorNick;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1668087732000</p>
-         */
         @NameInMap("EndTime")
         public Long endTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>https//:xxx</p>
-         */
         @NameInMap("ExternalLinkUrl")
         public String externalLinkUrl;
 
-        /**
-         * <strong>example:</strong>
-         * <p>123456789</p>
-         */
         @NameInMap("RoomCode")
         public String roomCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2d79cbde-b9d8-4256-9788-78b05834944e</p>
-         */
         @NameInMap("ScheduleConferenceId")
         public String scheduleConferenceId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1668087731000</p>
-         */
         @NameInMap("StartTime")
         public Long startTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("Status")
         public Integer status;
 

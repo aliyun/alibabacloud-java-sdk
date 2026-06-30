@@ -4,10 +4,6 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class UpdatePermissionRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>kDnRL6jAJMLgNkw7tBnw5aY4VyMoPYe1</p>
-     */
     @NameInMap("DentryUuid")
     public String dentryUuid;
 
@@ -20,10 +16,6 @@ public class UpdatePermissionRequest extends TeaModel {
     @NameInMap("Option")
     public UpdatePermissionRequestOption option;
 
-    /**
-     * <strong>example:</strong>
-     * <p>READER</p>
-     */
     @NameInMap("RoleId")
     public String roleId;
 
@@ -129,10 +121,6 @@ public class UpdatePermissionRequest extends TeaModel {
     }
 
     public static class UpdatePermissionRequestOption extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("Duration")
         public Long duration;
 

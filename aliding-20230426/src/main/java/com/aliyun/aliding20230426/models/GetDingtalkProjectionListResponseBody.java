@@ -100,45 +100,21 @@ public class GetDingtalkProjectionListResponseBody extends TeaModel {
     }
 
     public static class GetDingtalkProjectionListResponseBodyData extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>IN</p>
-         */
         @NameInMap("callStatus")
         public String callStatus;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ABCD</p>
-         */
         @NameInMap("code")
         public String code;
 
-        /**
-         * <strong>example:</strong>
-         * <p>3424242</p>
-         */
         @NameInMap("devUid")
         public Long devUid;
 
-        /**
-         * <strong>example:</strong>
-         * <p>517169</p>
-         */
         @NameInMap("duration")
         public String duration;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1757729705000</p>
-         */
         @NameInMap("endTs")
         public Long endTs;
 
-        /**
-         * <strong>example:</strong>
-         * <p>342456</p>
-         */
         @NameInMap("nickCode")
         public String nickCode;
 
@@ -149,10 +125,6 @@ public class GetDingtalkProjectionListResponseBody extends TeaModel {
         @NameInMap("orgId")
         public Long orgId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>4234242</p>
-         */
         @NameInMap("recvClientId")
         public String recvClientId;
 
@@ -177,24 +149,12 @@ public class GetDingtalkProjectionListResponseBody extends TeaModel {
         @NameInMap("sendClientName")
         public String sendClientName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>24324</p>
-         */
         @NameInMap("sendClientWorkNo")
         public String sendClientWorkNo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1765502676356</p>
-         */
         @NameInMap("startTs")
         public Long startTs;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2432424</p>
-         */
         @NameInMap("timeStr")
         public String timeStr;
 

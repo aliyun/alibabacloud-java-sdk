@@ -108,8 +108,6 @@ public class GetCardTemplateResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Id</p>
-         * 
          * <strong>example:</strong>
          * <p>lastMessage</p>
          */

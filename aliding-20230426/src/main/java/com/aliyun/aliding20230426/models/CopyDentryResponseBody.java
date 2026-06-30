@@ -104,10 +104,6 @@ public class CopyDentryResponseBody extends TeaModel {
     @NameInMap("updatedTime")
     public Long updatedTime;
 
-    /**
-     * <strong>example:</strong>
-     * <p>{\&quot;UserId\&quot;: \&quot;353851\&quot;, \&quot;Name\&quot;: u\&quot;\u848b\u7fbd\u4e2d\&quot;}</p>
-     */
     @NameInMap("updater")
     public java.util.Map<String, ?> updater;
 
@@ -426,17 +422,9 @@ public class CopyDentryResponseBody extends TeaModel {
     }
 
     public static class CopyDentryResponseBodySpaceHdIconVO extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>http://</p>
-         */
         @NameInMap("Icon")
         public String icon;
 
-        /**
-         * <strong>example:</strong>
-         * <p>type</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -464,17 +452,9 @@ public class CopyDentryResponseBody extends TeaModel {
     }
 
     public static class CopyDentryResponseBodySpaceIconVO extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>http://</p>
-         */
         @NameInMap("Icon")
         public String icon;
 
-        /**
-         * <strong>example:</strong>
-         * <p>type</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -721,10 +701,6 @@ public class CopyDentryResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <strong>example:</strong>
-         * <p>012345</p>
-         */
         @NameInMap("UserId")
         public String userId;
 
@@ -755,10 +731,6 @@ public class CopyDentryResponseBody extends TeaModel {
         @NameInMap("DentryActions")
         public java.util.List<String> dentryActions;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("RoleCode")
         public String roleCode;
 

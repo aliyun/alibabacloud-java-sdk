@@ -9,18 +9,12 @@ public class QueryDentriesInfoShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>140901622636</p>
      */
     @NameInMap("DentryId")
     public String dentryId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>22443475065</p>
      */
     @NameInMap("SpaceId")
     public String spaceId;
@@ -28,10 +22,6 @@ public class QueryDentriesInfoShrinkRequest extends TeaModel {
     @NameInMap("TenantContext")
     public String tenantContextShrink;
 
-    /**
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("WithThumbnail")
     public Boolean withThumbnail;
 

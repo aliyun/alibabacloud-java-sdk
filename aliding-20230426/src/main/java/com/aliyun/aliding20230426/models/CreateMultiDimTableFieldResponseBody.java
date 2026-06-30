@@ -4,10 +4,6 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class CreateMultiDimTableFieldResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>UhfysgH</p>
-     */
     @NameInMap("Id")
     public String id;
 
@@ -17,10 +13,6 @@ public class CreateMultiDimTableFieldResponseBody extends TeaModel {
     @NameInMap("Property")
     public java.util.Map<String, ?> property;
 
-    /**
-     * <strong>example:</strong>
-     * <p>text</p>
-     */
     @NameInMap("Type")
     public String type;
 

@@ -56,10 +56,6 @@ public class GetDingtalkMeetingListRequest extends TeaModel {
     @NameInMap("startTime")
     public Long startTime;
 
-    /**
-     * <strong>example:</strong>
-     * <p>34343</p>
-     */
     @NameInMap("workNo")
     public String workNo;
 

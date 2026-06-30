@@ -6,27 +6,18 @@ import com.aliyun.tea.*;
 public class GetMultiDimTableRecordRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>101114</p>
      */
     @NameInMap("BaseId")
     public String baseId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>xxx</p>
      */
     @NameInMap("RecordId")
     public String recordId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>xxx</p>
      */
     @NameInMap("SheetIdOrName")
     public String sheetIdOrName;

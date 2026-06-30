@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class SaveContentResponseBody extends TeaModel {
     /**
-     * <p>requestId</p>
-     * 
      * <strong>example:</strong>
      * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */
@@ -16,10 +14,6 @@ public class SaveContentResponseBody extends TeaModel {
     @NameInMap("result")
     public String result;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("success")
     public Boolean success;
 

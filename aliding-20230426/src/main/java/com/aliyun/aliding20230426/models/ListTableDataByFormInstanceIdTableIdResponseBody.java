@@ -7,10 +7,6 @@ public class ListTableDataByFormInstanceIdTableIdResponseBody extends TeaModel {
     @NameInMap("data")
     public java.util.List<String> data;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("pageNumber")
     public Long pageNumber;
 
@@ -21,10 +17,6 @@ public class ListTableDataByFormInstanceIdTableIdResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>20</p>
-     */
     @NameInMap("totalCount")
     public Long totalCount;
 

@@ -12,18 +12,12 @@ public class AddAttendeeShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>primary</p>
      */
     @NameInMap("CalendarId")
     public String calendarId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cnNTbW1YbU9sL2p6aFJZdEgvdlQrQT08</p>
      */
     @NameInMap("EventId")
     public String eventId;

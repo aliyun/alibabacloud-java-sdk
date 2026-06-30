@@ -10,10 +10,6 @@ public class GetSkillsShrinkRequest extends TeaModel {
     @NameInMap("SkillIds")
     public String skillIdsShrink;
 
-    /**
-     * <strong>example:</strong>
-     * <p>xxx</p>
-     */
     @NameInMap("SourceIdOfAssistantId")
     public String sourceIdOfAssistantId;
 

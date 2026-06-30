@@ -66,24 +66,12 @@ public class GetNewestInnerGroupsResponseBody extends TeaModel {
     }
 
     public static class GetNewestInnerGroupsResponseBodyGroupInfos extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>@lADOADma*****QKA</p>
-         */
         @NameInMap("Icon")
         public String icon;
 
-        /**
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("MemberAmount")
         public String memberAmount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cid1e******==</p>
-         */
         @NameInMap("OpenConversationId")
         public String openConversationId;
 

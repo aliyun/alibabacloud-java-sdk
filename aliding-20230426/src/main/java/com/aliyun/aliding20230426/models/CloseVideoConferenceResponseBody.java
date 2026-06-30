@@ -4,17 +4,9 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class CloseVideoConferenceResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>success</p>
-     */
     @NameInMap("cause")
     public String cause;
 
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("code")
     public Long code;
 

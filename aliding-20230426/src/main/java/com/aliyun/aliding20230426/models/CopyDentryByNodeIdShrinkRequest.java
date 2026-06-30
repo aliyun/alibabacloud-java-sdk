@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class CopyDentryByNodeIdShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>P7QG4Yx2Jpx4OolYC1QPg5BaJ9dEq3XD</p>
      */
     @NameInMap("DentryUuid")
     public String dentryUuid;
@@ -22,24 +19,12 @@ public class CopyDentryByNodeIdShrinkRequest extends TeaModel {
     @NameInMap("TenantContext")
     public String tenantContextShrink;
 
-    /**
-     * <strong>example:</strong>
-     * <p>P7QG4Yx2Jpx4OolYC1QPg5BaJ9dEq3XD</p>
-     */
     @NameInMap("ToNextNodeId")
     public String toNextNodeId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>P7QG4Yx2Jpx4OolYC1QPg5BaJ9dEq3XD</p>
-     */
     @NameInMap("ToParentNodeId")
     public String toParentNodeId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>P7QG4Yx2Jpx4OolYC1QPg5BaJ9dEq3XD</p>
-     */
     @NameInMap("ToPrevNodeId")
     public String toPrevNodeId;
 

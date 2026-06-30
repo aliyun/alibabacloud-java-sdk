@@ -6,18 +6,12 @@ import com.aliyun.tea.*;
 public class AddTicketMemoShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>eKWh3xxxxiE</p>
      */
     @NameInMap("OpenTeamId")
     public String openTeamId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Dq9hP8Sk2v6vQxxxxiE</p>
      */
     @NameInMap("OpenTicketId")
     public String openTicketId;

@@ -4,30 +4,18 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class CommitFileShrinkRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>None</p>
-     */
     @NameInMap("Name")
     public String name;
 
     @NameInMap("Option")
     public String optionShrink;
 
-    /**
-     * <strong>example:</strong>
-     * <p>dentryUuid</p>
-     */
     @NameInMap("ParentDentryUuid")
     public String parentDentryUuid;
 
     @NameInMap("TenantContext")
     public String tenantContextShrink;
 
-    /**
-     * <strong>example:</strong>
-     * <p>upload_key</p>
-     */
     @NameInMap("UploadKey")
     public String uploadKey;
 

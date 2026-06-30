@@ -9,18 +9,12 @@ public class AssignTicketRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>eKWh3xxxxiE</p>
      */
     @NameInMap("OpenTeamId")
     public String openTeamId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Dq9hP8Sk2v6vQxxxxiE</p>
      */
     @NameInMap("OpenTicketId")
     public String openTicketId;
@@ -91,10 +85,6 @@ public class AssignTicketRequest extends TeaModel {
         @NameInMap("GroupNoticeReceiverUserIds")
         public java.util.List<String> groupNoticeReceiverUserIds;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("NoticeAllGroupMember")
         public Boolean noticeAllGroupMember;
 
@@ -156,17 +146,9 @@ public class AssignTicketRequest extends TeaModel {
     }
 
     public static class AssignTicketRequestTicketMemoAttachments extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>ticket/image/44708069/43003/e27aec4499.txt</p>
-         */
         @NameInMap("FileName")
         public String fileName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>wahaha.txt</p>
-         */
         @NameInMap("Key")
         public String key;
 

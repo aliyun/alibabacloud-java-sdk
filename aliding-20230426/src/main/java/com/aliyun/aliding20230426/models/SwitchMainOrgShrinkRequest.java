@@ -4,10 +4,6 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class SwitchMainOrgShrinkRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>21001</p>
-     */
     @NameInMap("TargetOrgId")
     public Long targetOrgId;
 

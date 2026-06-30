@@ -7,10 +7,6 @@ public class InitMultipartFileUploadShrinkRequest extends TeaModel {
     @NameInMap("Option")
     public String optionShrink;
 
-    /**
-     * <strong>example:</strong>
-     * <p>dentryUuid</p>
-     */
     @NameInMap("ParentDentryUuid")
     public String parentDentryUuid;
 

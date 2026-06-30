@@ -50,10 +50,6 @@ public class CreateTodoTaskRequest extends TeaModel {
     @NameInMap("notifyConfigs")
     public CreateTodoTaskRequestNotifyConfigs notifyConfigs;
 
-    /**
-     * <strong>example:</strong>
-     * <p>12345</p>
-     */
     @NameInMap("operatorId")
     public String operatorId;
 
@@ -374,8 +370,6 @@ public class CreateTodoTaskRequest extends TeaModel {
 
     public static class CreateTodoTaskRequestContentFieldList extends TeaModel {
         /**
-         * <p>fieldKey</p>
-         * 
          * <strong>example:</strong>
          * <p>fieldKey</p>
          */
@@ -383,8 +377,6 @@ public class CreateTodoTaskRequest extends TeaModel {
         public String fieldKey;
 
         /**
-         * <p>fieldValue</p>
-         * 
          * <strong>example:</strong>
          * <p>fieldValue</p>
          */

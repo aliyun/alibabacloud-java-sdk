@@ -54,27 +54,18 @@ public class UpdateWorkspaceMembersRequest extends TeaModel {
     public static class UpdateWorkspaceMembersRequestMembers extends TeaModel {
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>012345</p>
          */
         @NameInMap("MemberId")
         public String memberId;
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>USER</p>
          */
         @NameInMap("MemberType")
         public String memberType;
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ONLY_VIEWER</p>
          */
         @NameInMap("RoleType")
         public String roleType;

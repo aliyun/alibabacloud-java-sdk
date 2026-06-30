@@ -27,7 +27,7 @@ public class GetTodoTaskResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>012345</p>
+     * <p>PUoiinWIpxxx</p>
      */
     @NameInMap("creatorId")
     public String creatorId;
@@ -89,7 +89,7 @@ public class GetTodoTaskResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>012345</p>
+     * <p>PUoiinWxxx</p>
      */
     @NameInMap("modifierId")
     public String modifierId;

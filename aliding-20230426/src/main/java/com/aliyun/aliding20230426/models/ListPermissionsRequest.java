@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class ListPermissionsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>KGZLxjv9VGkoG9YwHE5wx7k2V6EDybno</p>
      */
     @NameInMap("DentryUuid")
     public String dentryUuid;
@@ -52,17 +49,9 @@ public class ListPermissionsRequest extends TeaModel {
         @NameInMap("FilterRoleIds")
         public java.util.List<String> filterRoleIds;
 
-        /**
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("MaxResults")
         public Integer maxResults;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("NextToken")
         public String nextToken;
 

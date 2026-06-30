@@ -7,10 +7,6 @@ public class SwitchMainOrgResponseBody extends TeaModel {
     @NameInMap("content")
     public SwitchMainOrgResponseBodyContent content;
 
-    /**
-     * <strong>example:</strong>
-     * <p>0</p>
-     */
     @NameInMap("errorCode")
     public String errorCode;
 
@@ -20,24 +16,12 @@ public class SwitchMainOrgResponseBody extends TeaModel {
     @NameInMap("errorMsg")
     public String errorMsg;
 
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("httpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("success")
     public Boolean success;
 
@@ -103,10 +87,6 @@ public class SwitchMainOrgResponseBody extends TeaModel {
     }
 
     public static class SwitchMainOrgResponseBodyContent extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>null</p>
-         */
         @NameInMap("data")
         public Object data;
 

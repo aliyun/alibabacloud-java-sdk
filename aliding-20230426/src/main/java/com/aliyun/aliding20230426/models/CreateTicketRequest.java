@@ -4,10 +4,6 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class CreateTicketRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>[]</p>
-     */
     @NameInMap("CustomFields")
     public String customFields;
 
@@ -16,18 +12,12 @@ public class CreateTicketRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>G3IOe205RLciE</p>
      */
     @NameInMap("OpenTeamId")
     public String openTeamId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>xxxx</p>
      */
     @NameInMap("OpenTemplateBizId")
     public String openTemplateBizId;
@@ -40,9 +30,6 @@ public class CreateTicketRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>SG</p>
      */
     @NameInMap("Scene")
     public String scene;
@@ -55,9 +42,6 @@ public class CreateTicketRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Killer Ball Wo Mouichido</p>
      */
     @NameInMap("Title")
     public String title;
@@ -143,10 +127,6 @@ public class CreateTicketRequest extends TeaModel {
         @NameInMap("GroupNoticeReceiverUserIds")
         public java.util.List<String> groupNoticeReceiverUserIds;
 
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("NoticeAllGroupMember")
         public Boolean noticeAllGroupMember;
 
@@ -185,17 +165,9 @@ public class CreateTicketRequest extends TeaModel {
     }
 
     public static class CreateTicketRequestSceneContextGroupMsgs extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Anchor")
         public Boolean anchor;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1234567</p>
-         */
         @NameInMap("OpenMsgId")
         public String openMsgId;
 
@@ -226,20 +198,12 @@ public class CreateTicketRequest extends TeaModel {
         @NameInMap("GroupMsgs")
         public java.util.List<CreateTicketRequestSceneContextGroupMsgs> groupMsgs;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cidDKVAOW8yVWPEN+WZfwSSAQ==</p>
-         */
         @NameInMap("OpenConversationId")
         public String openConversationId;
 
         @NameInMap("RelevantorUserIds")
         public java.util.List<String> relevantorUserIds;
 
-        /**
-         * <strong>example:</strong>
-         * <p>42674892</p>
-         */
         @NameInMap("TopicId")
         public String topicId;
 

@@ -299,7 +299,7 @@ public class GetOrgLiveListResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>012345</p>
+         * <p>ersqqdddf</p>
          */
         @NameInMap("AnchorUserId")
         public String anchorUserId;

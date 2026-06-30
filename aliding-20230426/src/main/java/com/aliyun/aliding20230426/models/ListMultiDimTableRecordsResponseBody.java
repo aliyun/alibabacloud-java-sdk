@@ -100,10 +100,6 @@ public class ListMultiDimTableRecordsResponseBody extends TeaModel {
     }
 
     public static class ListMultiDimTableRecordsResponseBodyRecordsCreatedBy extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>012345</p>
-         */
         @NameInMap("UserId")
         public String userId;
 
@@ -123,10 +119,6 @@ public class ListMultiDimTableRecordsResponseBody extends TeaModel {
     }
 
     public static class ListMultiDimTableRecordsResponseBodyRecordsLastModifiedBy extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>012345</p>
-         */
         @NameInMap("UserId")
         public String userId;
 
@@ -149,34 +141,18 @@ public class ListMultiDimTableRecordsResponseBody extends TeaModel {
         @NameInMap("CreatedBy")
         public ListMultiDimTableRecordsResponseBodyRecordsCreatedBy createdBy;
 
-        /**
-         * <strong>example:</strong>
-         * <p>xxx</p>
-         */
         @NameInMap("CreatedTime")
         public Long createdTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>title,shortTitle</p>
-         */
         @NameInMap("Fields")
         public java.util.Map<String, ?> fields;
 
-        /**
-         * <strong>example:</strong>
-         * <p>123</p>
-         */
         @NameInMap("Id")
         public String id;
 
         @NameInMap("LastModifiedBy")
         public ListMultiDimTableRecordsResponseBodyRecordsLastModifiedBy lastModifiedBy;
 
-        /**
-         * <strong>example:</strong>
-         * <p>xxx</p>
-         */
         @NameInMap("LastModifiedTime")
         public Long lastModifiedTime;
 

@@ -9,9 +9,6 @@ public class PatchEventRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>primary</p>
      */
     @NameInMap("CalendarId")
     public String calendarId;
@@ -27,9 +24,6 @@ public class PatchEventRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>iiiP35sJadba8aBSgjrwPRKgiEiF</p>
      */
     @NameInMap("EventId")
     public String eventId;
@@ -37,10 +31,6 @@ public class PatchEventRequest extends TeaModel {
     @NameInMap("Extra")
     public java.util.Map<String, String> extra;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("IsAllDay")
     public Boolean isAllDay;
 
@@ -224,17 +214,9 @@ public class PatchEventRequest extends TeaModel {
     }
 
     public static class PatchEventRequestAttendees extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>123456</p>
-         */
         @NameInMap("id")
         public String id;
 
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("isOptional")
         public Boolean isOptional;
 
@@ -292,24 +274,12 @@ public class PatchEventRequest extends TeaModel {
     }
 
     public static class PatchEventRequestEnd extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2020-01-01</p>
-         */
         @NameInMap("date")
         public String date;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2020-01-01T10:15:30+08:00</p>
-         */
         @NameInMap("dateTime")
         public String dateTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Asia/Shanghai</p>
-         */
         @NameInMap("timeZone")
         public String timeZone;
 
@@ -345,10 +315,6 @@ public class PatchEventRequest extends TeaModel {
     }
 
     public static class PatchEventRequestLocation extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>room 1-2-3</p>
-         */
         @NameInMap("displayName")
         public String displayName;
 
@@ -368,38 +334,18 @@ public class PatchEventRequest extends TeaModel {
     }
 
     public static class PatchEventRequestRecurrencePattern extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("dayOfMonth")
         public Integer dayOfMonth;
 
-        /**
-         * <strong>example:</strong>
-         * <p>sunday</p>
-         */
         @NameInMap("daysOfWeek")
         public String daysOfWeek;
 
-        /**
-         * <strong>example:</strong>
-         * <p>last</p>
-         */
         @NameInMap("index")
         public String index;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("interval")
         public Integer interval;
 
-        /**
-         * <strong>example:</strong>
-         * <p>daily</p>
-         */
         @NameInMap("type")
         public String type;
 
@@ -451,24 +397,12 @@ public class PatchEventRequest extends TeaModel {
     }
 
     public static class PatchEventRequestRecurrenceRange extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2021-12-31T10:15:30+08:00</p>
-         */
         @NameInMap("endDate")
         public String endDate;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("numberOfOccurrences")
         public Integer numberOfOccurrences;
 
-        /**
-         * <strong>example:</strong>
-         * <p>endDate</p>
-         */
         @NameInMap("type")
         public String type;
 
@@ -534,17 +468,9 @@ public class PatchEventRequest extends TeaModel {
     }
 
     public static class PatchEventRequestReminders extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>dingtalk</p>
-         */
         @NameInMap("method")
         public String method;
 
-        /**
-         * <strong>example:</strong>
-         * <p>15</p>
-         */
         @NameInMap("minutes")
         public Integer minutes;
 
@@ -572,24 +498,12 @@ public class PatchEventRequest extends TeaModel {
     }
 
     public static class PatchEventRequestStart extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2020-01-01</p>
-         */
         @NameInMap("date")
         public String date;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2020-01-01T10:15:30+08:00</p>
-         */
         @NameInMap("dateTime")
         public String dateTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Asia/Shanghai</p>
-         */
         @NameInMap("timeZone")
         public String timeZone;
 

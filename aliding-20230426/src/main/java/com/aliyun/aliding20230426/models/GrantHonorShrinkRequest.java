@@ -7,10 +7,6 @@ public class GrantHonorShrinkRequest extends TeaModel {
     @NameInMap("TenantContext")
     public String tenantContextShrink;
 
-    /**
-     * <strong>example:</strong>
-     * <p>null</p>
-     */
     @NameInMap("expirationTime")
     public Long expirationTime;
 
@@ -28,24 +24,13 @@ public class GrantHonorShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>21659398</p>
      */
     @NameInMap("honorId")
     public String honorId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("noticeAnnouncer")
     public Boolean noticeAnnouncer;
 
-    /**
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("noticeSingle")
     public Boolean noticeSingle;
 
@@ -54,9 +39,6 @@ public class GrantHonorShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>345391052</p>
      */
     @NameInMap("orgId")
     public Long orgId;
@@ -69,9 +51,6 @@ public class GrantHonorShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>363784</p>
      */
     @NameInMap("senderUserId")
     public String senderUserId;

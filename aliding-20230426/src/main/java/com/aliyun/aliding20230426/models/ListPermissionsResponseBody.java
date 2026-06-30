@@ -4,17 +4,9 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class ListPermissionsResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>59886</p>
-     */
     @NameInMap("duration")
     public Long duration;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("nextToken")
     public String nextToken;
 

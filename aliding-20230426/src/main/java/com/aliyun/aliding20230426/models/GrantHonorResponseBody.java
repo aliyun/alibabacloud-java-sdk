@@ -7,12 +7,6 @@ public class GrantHonorResponseBody extends TeaModel {
     @NameInMap("failedUserIds")
     public java.util.List<String> failedUserIds;
 
-    /**
-     * <p>requestId</p>
-     * 
-     * <strong>example:</strong>
-     * <p>45b4d029-ab94-4672-aa0f-bd79590374cb</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 

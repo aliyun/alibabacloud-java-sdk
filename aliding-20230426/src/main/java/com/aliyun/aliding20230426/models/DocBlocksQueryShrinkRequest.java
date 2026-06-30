@@ -4,10 +4,6 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class DocBlocksQueryShrinkRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>heading</p>
-     */
     @NameInMap("BlockType")
     public String blockType;
 

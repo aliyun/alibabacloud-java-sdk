@@ -25,10 +25,6 @@ public class GetAssistantCapabilityResponseBody extends TeaModel {
     @NameInMap("capabilityAssessment")
     public GetAssistantCapabilityResponseBodyCapabilityAssessment capabilityAssessment;
 
-    /**
-     * <strong>example:</strong>
-     * <p>requestId</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 

@@ -11,10 +11,6 @@ public class GetOrgOrWebOpenDocContentTaskIdResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>158740210521</p>
-     */
     @NameInMap("taskId")
     public Long taskId;
 

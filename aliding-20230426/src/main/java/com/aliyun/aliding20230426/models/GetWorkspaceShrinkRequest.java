@@ -7,18 +7,11 @@ public class GetWorkspaceShrinkRequest extends TeaModel {
     @NameInMap("TenantContext")
     public String tenantContextShrink;
 
-    /**
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("WithPermissionRole")
     public Boolean withPermissionRole;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>MJ0pDSKMV9dO20E4</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;

@@ -49,10 +49,6 @@ public class AddWorkspaceRequest extends TeaModel {
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <strong>example:</strong>
-         * <p>lHiicjNFM2iSFYSdz2iPuI8ZwiEiE</p>
-         */
         @NameInMap("TeamId")
         public String teamId;
 

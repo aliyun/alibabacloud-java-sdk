@@ -4,10 +4,6 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class CheckAlibabaStaffShrinkRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>156****9665</p>
-     */
     @NameInMap("Mobile")
     public String mobile;
 

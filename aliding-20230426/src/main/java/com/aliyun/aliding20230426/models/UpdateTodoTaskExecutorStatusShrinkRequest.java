@@ -19,9 +19,6 @@ public class UpdateTodoTaskExecutorStatusShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>15002141</p>
      */
     @NameInMap("taskId")
     public String taskId;

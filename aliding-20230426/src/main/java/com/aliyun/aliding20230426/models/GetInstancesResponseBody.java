@@ -395,10 +395,6 @@ public class GetInstancesResponseBody extends TeaModel {
         @NameInMap("Title")
         public String title;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1.0</p>
-         */
         @NameInMap("Version")
         public Long version;
 

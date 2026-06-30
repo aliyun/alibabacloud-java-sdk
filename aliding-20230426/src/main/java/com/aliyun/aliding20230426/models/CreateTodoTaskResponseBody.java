@@ -104,8 +104,6 @@ public class CreateTodoTaskResponseBody extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>requestId</p>
-     * 
      * <strong>example:</strong>
      * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */
@@ -323,8 +321,6 @@ public class CreateTodoTaskResponseBody extends TeaModel {
 
     public static class CreateTodoTaskResponseBodyContentFieldList extends TeaModel {
         /**
-         * <p>fieldKey</p>
-         * 
          * <strong>example:</strong>
          * <p>fieldKey</p>
          */
@@ -332,8 +328,6 @@ public class CreateTodoTaskResponseBody extends TeaModel {
         public String fieldKey;
 
         /**
-         * <p>fieldValue</p>
-         * 
          * <strong>example:</strong>
          * <p>fieldValue</p>
          */

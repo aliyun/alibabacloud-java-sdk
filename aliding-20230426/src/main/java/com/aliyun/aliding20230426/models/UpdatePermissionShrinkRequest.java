@@ -4,10 +4,6 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class UpdatePermissionShrinkRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>kDnRL6jAJMLgNkw7tBnw5aY4VyMoPYe1</p>
-     */
     @NameInMap("DentryUuid")
     public String dentryUuid;
 
@@ -20,10 +16,6 @@ public class UpdatePermissionShrinkRequest extends TeaModel {
     @NameInMap("Option")
     public String optionShrink;
 
-    /**
-     * <strong>example:</strong>
-     * <p>READER</p>
-     */
     @NameInMap("RoleId")
     public String roleId;
 

@@ -4,33 +4,19 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class QueryRobotUnsubscriptionResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("pageNo")
     public Integer pageNo;
 
-    /**
-     * <strong>example:</strong>
-     * <p>50</p>
-     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
     /**
-     * <p>requestId</p>
-     * 
      * <strong>example:</strong>
      * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>500</p>
-     */
     @NameInMap("totalCount")
     public Integer totalCount;
 

@@ -4,17 +4,9 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class GetScheduleShrinkRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>2020-01-01T10:15:30+08:00</p>
-     */
     @NameInMap("EndTime")
     public String endTime;
 
-    /**
-     * <strong>example:</strong>
-     * <p>2020-01-01T10:15:30+08:00</p>
-     */
     @NameInMap("StartTime")
     public String startTime;
 

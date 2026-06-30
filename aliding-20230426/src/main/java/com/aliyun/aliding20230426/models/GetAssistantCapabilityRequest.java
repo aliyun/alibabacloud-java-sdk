@@ -24,15 +24,11 @@ public class GetAssistantCapabilityRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>originalAssistantId1</p>
+     * <p>assistantId2</p>
      */
     @NameInMap("originalAssistantId")
     public String originalAssistantId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>cfp</p>
-     */
     @NameInMap("protocol")
     public String protocol;
 

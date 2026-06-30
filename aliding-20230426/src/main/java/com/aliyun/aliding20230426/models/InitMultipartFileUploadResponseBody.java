@@ -11,17 +11,9 @@ public class InitMultipartFileUploadResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>DINGTALK</p>
-     */
     @NameInMap("storageDriver")
     public String storageDriver;
 
-    /**
-     * <strong>example:</strong>
-     * <p>xhy89xxxxx</p>
-     */
     @NameInMap("uploadKey")
     public String uploadKey;
 

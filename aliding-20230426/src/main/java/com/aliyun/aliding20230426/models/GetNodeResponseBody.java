@@ -8,8 +8,6 @@ public class GetNodeResponseBody extends TeaModel {
     public GetNodeResponseBodyNode node;
 
     /**
-     * <p>requestId</p>
-     * 
      * <strong>example:</strong>
      * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */
@@ -38,10 +36,6 @@ public class GetNodeResponseBody extends TeaModel {
     }
 
     public static class GetNodeResponseBodyNodeStatisticalInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>200</p>
-         */
         @NameInMap("WordCount")
         public Long wordCount;
 
@@ -131,10 +125,6 @@ public class GetNodeResponseBody extends TeaModel {
         @NameInMap("PermissionRole")
         public String permissionRole;
 
-        /**
-         * <strong>example:</strong>
-         * <p>123123</p>
-         */
         @NameInMap("Size")
         public Long size;
 

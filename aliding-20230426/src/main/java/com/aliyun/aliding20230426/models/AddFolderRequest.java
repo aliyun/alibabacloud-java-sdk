@@ -15,18 +15,12 @@ public class AddFolderRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>140822073803</p>
      */
     @NameInMap("ParentId")
     public String parentId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>xPar2SZ63KodG3aV</p>
      */
     @NameInMap("SpaceId")
     public String spaceId;
@@ -82,27 +76,18 @@ public class AddFolderRequest extends TeaModel {
     public static class AddFolderRequestOptionAppProperties extends TeaModel {
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>value</p>
          */
         @NameInMap("Value")
         public String value;
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>PUBLIC</p>
          */
         @NameInMap("Visibility")
         public String visibility;

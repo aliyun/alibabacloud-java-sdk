@@ -15,8 +15,6 @@ public class ListEventsViewResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>requestId</p>
-     * 
      * <strong>example:</strong>
      * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */
@@ -317,10 +315,6 @@ public class ListEventsViewResponseBody extends TeaModel {
         @NameInMap("ResponseStatus")
         public String responseStatus;
 
-        /**
-         * <strong>example:</strong>
-         * <p>c10315a8b4e740a317813ab6fxxxxxx</p>
-         */
         @NameInMap("RoomId")
         public String roomId;
 

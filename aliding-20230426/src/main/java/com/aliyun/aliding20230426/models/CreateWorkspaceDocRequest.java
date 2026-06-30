@@ -119,7 +119,7 @@ public class CreateWorkspaceDocRequest extends TeaModel {
     public static class CreateWorkspaceDocRequestTenantContext extends TeaModel {
         /**
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>xxxxxx</p>
          */
         @NameInMap("tenantId")
         public String tenantId;

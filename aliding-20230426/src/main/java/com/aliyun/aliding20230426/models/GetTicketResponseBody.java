@@ -348,21 +348,9 @@ public class GetTicketResponseBody extends TeaModel {
     }
 
     public static class GetTicketResponseBodyTemplate extends TeaModel {
-        /**
-         * <p>OpenTemplateBizId</p>
-         * 
-         * <strong>example:</strong>
-         * <p>OpenTemplateBizId</p>
-         */
         @NameInMap("OpenTemplateBizId")
         public String openTemplateBizId;
 
-        /**
-         * <p>OpenTemplateBizId</p>
-         * 
-         * <strong>example:</strong>
-         * <p>OpenTemplateBizId</p>
-         */
         @NameInMap("OpenTemplateId")
         public String openTemplateId;
 

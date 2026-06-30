@@ -34,9 +34,6 @@ public class DeleteEventHeaders extends TeaModel {
     public static class DeleteEventHeadersAccountContext extends TeaModel {
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123456</p>
          */
         @NameInMap("accountId")
         public String accountId;

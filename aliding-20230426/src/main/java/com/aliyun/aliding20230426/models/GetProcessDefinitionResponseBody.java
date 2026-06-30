@@ -853,10 +853,6 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <strong>example:</strong>
-         * <p>792</p>
-         */
         @NameInMap("TaskId")
         public Long taskId;
 

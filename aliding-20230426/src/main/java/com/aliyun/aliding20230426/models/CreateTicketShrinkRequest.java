@@ -4,10 +4,6 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class CreateTicketShrinkRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>[]</p>
-     */
     @NameInMap("CustomFields")
     public String customFields;
 
@@ -16,18 +12,12 @@ public class CreateTicketShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>G3IOe205RLciE</p>
      */
     @NameInMap("OpenTeamId")
     public String openTeamId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>xxxx</p>
      */
     @NameInMap("OpenTemplateBizId")
     public String openTemplateBizId;
@@ -40,9 +30,6 @@ public class CreateTicketShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>SG</p>
      */
     @NameInMap("Scene")
     public String scene;
@@ -55,9 +42,6 @@ public class CreateTicketShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Killer Ball Wo Mouichido</p>
      */
     @NameInMap("Title")
     public String title;

@@ -13,10 +13,6 @@ public class GetMultipartFileUploadInfosShrinkRequest extends TeaModel {
     @NameInMap("TenantContext")
     public String tenantContextShrink;
 
-    /**
-     * <strong>example:</strong>
-     * <p>hwHPAAAAAipHxxxxx</p>
-     */
     @NameInMap("UploadKey")
     public String uploadKey;
 

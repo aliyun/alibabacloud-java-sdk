@@ -15,8 +15,6 @@ public class ListNodesResponseBody extends TeaModel {
     public java.util.List<ListNodesResponseBodyNodes> nodes;
 
     /**
-     * <p>requestId</p>
-     * 
      * <strong>example:</strong>
      * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */
@@ -104,10 +102,6 @@ public class ListNodesResponseBody extends TeaModel {
         @NameInMap("Extension")
         public String extension;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("HasChildren")
         public Boolean hasChildren;
 

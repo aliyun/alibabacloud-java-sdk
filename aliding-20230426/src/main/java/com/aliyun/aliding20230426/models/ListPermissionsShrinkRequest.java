@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class ListPermissionsShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>KGZLxjv9VGkoG9YwHE5wx7k2V6EDybno</p>
      */
     @NameInMap("DentryUuid")
     public String dentryUuid;

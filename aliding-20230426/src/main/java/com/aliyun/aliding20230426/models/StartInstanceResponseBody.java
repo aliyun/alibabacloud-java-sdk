@@ -11,10 +11,6 @@ public class StartInstanceResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>f30233fb-72e1-xxx-xxx</p>
-     */
     @NameInMap("result")
     public String result;
 

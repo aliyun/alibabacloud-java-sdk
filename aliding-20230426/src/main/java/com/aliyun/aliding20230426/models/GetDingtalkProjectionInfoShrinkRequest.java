@@ -21,17 +21,9 @@ public class GetDingtalkProjectionInfoShrinkRequest extends TeaModel {
     @NameInMap("endTs")
     public Long endTs;
 
-    /**
-     * <strong>example:</strong>
-     * <p>21001</p>
-     */
     @NameInMap("orgId")
     public String orgId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>342342</p>
-     */
     @NameInMap("pubWorkNo")
     public String pubWorkNo;
 

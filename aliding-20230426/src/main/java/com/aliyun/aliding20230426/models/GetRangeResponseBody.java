@@ -33,8 +33,6 @@ public class GetRangeResponseBody extends TeaModel {
     public java.util.List<java.util.List<GetRangeResponseBodyHyperlinks>> hyperlinks;
 
     /**
-     * <p>requestId</p>
-     * 
      * <strong>example:</strong>
      * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */
@@ -103,8 +101,6 @@ public class GetRangeResponseBody extends TeaModel {
 
     public static class GetRangeResponseBodyBackgroundColors extends TeaModel {
         /**
-         * <p>red</p>
-         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -112,8 +108,6 @@ public class GetRangeResponseBody extends TeaModel {
         public Integer red;
 
         /**
-         * <p>green</p>
-         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -121,8 +115,6 @@ public class GetRangeResponseBody extends TeaModel {
         public Integer green;
 
         /**
-         * <p>blue</p>
-         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -130,8 +122,6 @@ public class GetRangeResponseBody extends TeaModel {
         public Integer blue;
 
         /**
-         * <p>hexString</p>
-         * 
          * <strong>example:</strong>
          * <p>#000000</p>
          */

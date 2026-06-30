@@ -13,10 +13,6 @@ public class GetMultipartFileUploadInfosRequest extends TeaModel {
     @NameInMap("TenantContext")
     public GetMultipartFileUploadInfosRequestTenantContext tenantContext;
 
-    /**
-     * <strong>example:</strong>
-     * <p>hwHPAAAAAipHxxxxx</p>
-     */
     @NameInMap("UploadKey")
     public String uploadKey;
 
@@ -58,10 +54,6 @@ public class GetMultipartFileUploadInfosRequest extends TeaModel {
     }
 
     public static class GetMultipartFileUploadInfosRequestOption extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("PreferIntranet")
         public Boolean preferIntranet;
 

@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class UpdateAlidingAssistantRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1234</p>
      */
     @NameInMap("AssistantId")
     public String assistantId;
@@ -19,20 +16,12 @@ public class UpdateAlidingAssistantRequest extends TeaModel {
     @NameInMap("Ext")
     public java.util.Map<String, String> ext;
 
-    /**
-     * <strong>example:</strong>
-     * <p>fallbackContent</p>
-     */
     @NameInMap("FallbackContent")
     public String fallbackContent;
 
     @NameInMap("Feature")
     public java.util.Map<String, String> feature;
 
-    /**
-     * <strong>example:</strong>
-     * <p>@lADPDetfgMsFFUvNAkjNAkg</p>
-     */
     @NameInMap("Icon")
     public String icon;
 

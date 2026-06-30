@@ -11,10 +11,6 @@ public class QueryCloudRecordVideoPlayInfoResponseBody extends TeaModel {
     @NameInMap("duration")
     public Long duration;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1127942</p>
-     */
     @NameInMap("fileSize")
     public Long fileSize;
 
@@ -33,8 +29,6 @@ public class QueryCloudRecordVideoPlayInfoResponseBody extends TeaModel {
     public String playUrl;
 
     /**
-     * <p>requestId</p>
-     * 
      * <strong>example:</strong>
      * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */

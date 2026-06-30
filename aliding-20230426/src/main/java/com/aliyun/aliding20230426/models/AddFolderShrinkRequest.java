@@ -15,18 +15,12 @@ public class AddFolderShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>140822073803</p>
      */
     @NameInMap("ParentId")
     public String parentId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>xPar2SZ63KodG3aV</p>
      */
     @NameInMap("SpaceId")
     public String spaceId;

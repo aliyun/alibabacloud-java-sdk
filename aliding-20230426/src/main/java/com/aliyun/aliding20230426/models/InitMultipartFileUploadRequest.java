@@ -7,10 +7,6 @@ public class InitMultipartFileUploadRequest extends TeaModel {
     @NameInMap("Option")
     public InitMultipartFileUploadRequestOption option;
 
-    /**
-     * <strong>example:</strong>
-     * <p>dentryUuid</p>
-     */
     @NameInMap("ParentDentryUuid")
     public String parentDentryUuid;
 
@@ -47,31 +43,15 @@ public class InitMultipartFileUploadRequest extends TeaModel {
     }
 
     public static class InitMultipartFileUploadRequestOptionPreCheckParam extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>md5</p>
-         */
         @NameInMap("Md5")
         public String md5;
 
-        /**
-         * <strong>example:</strong>
-         * <p>name</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("ParentId")
         public String parentId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("Size")
         public Long size;
 
@@ -118,17 +98,9 @@ public class InitMultipartFileUploadRequest extends TeaModel {
         @NameInMap("PreCheckParam")
         public InitMultipartFileUploadRequestOptionPreCheckParam preCheckParam;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ZHANGJIAKOU</p>
-         */
         @NameInMap("PreferRegion")
         public String preferRegion;
 
-        /**
-         * <strong>example:</strong>
-         * <p>DINGTALK</p>
-         */
         @NameInMap("StorageDriver")
         public String storageDriver;
 

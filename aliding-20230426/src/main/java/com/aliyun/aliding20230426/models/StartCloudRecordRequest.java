@@ -4,17 +4,9 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class StartCloudRecordRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>speech</p>
-     */
     @NameInMap("Mode")
     public String mode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>relative_right</p>
-     */
     @NameInMap("SmallWindowPosition")
     public String smallWindowPosition;
 

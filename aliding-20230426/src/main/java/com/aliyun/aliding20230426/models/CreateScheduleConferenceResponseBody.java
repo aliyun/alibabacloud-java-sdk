@@ -12,8 +12,6 @@ public class CreateScheduleConferenceResponseBody extends TeaModel {
     public java.util.List<String> phones;
 
     /**
-     * <p>requestId</p>
-     * 
      * <strong>example:</strong>
      * <p>1234567</p>
      */

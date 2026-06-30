@@ -4,30 +4,18 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class CommitFileRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>None</p>
-     */
     @NameInMap("Name")
     public String name;
 
     @NameInMap("Option")
     public CommitFileRequestOption option;
 
-    /**
-     * <strong>example:</strong>
-     * <p>dentryUuid</p>
-     */
     @NameInMap("ParentDentryUuid")
     public String parentDentryUuid;
 
     @NameInMap("TenantContext")
     public CommitFileRequestTenantContext tenantContext;
 
-    /**
-     * <strong>example:</strong>
-     * <p>upload_key</p>
-     */
     @NameInMap("UploadKey")
     public String uploadKey;
 
@@ -77,24 +65,12 @@ public class CommitFileRequest extends TeaModel {
     }
 
     public static class CommitFileRequestOptionAppProperties extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>property_name</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <strong>example:</strong>
-         * <p>property_value</p>
-         */
         @NameInMap("Value")
         public String value;
 
-        /**
-         * <strong>example:</strong>
-         * <p>PUBLIC</p>
-         */
         @NameInMap("Visibility")
         public String visibility;
 
@@ -133,31 +109,15 @@ public class CommitFileRequest extends TeaModel {
         @NameInMap("AppProperties")
         public java.util.List<CommitFileRequestOptionAppProperties> appProperties;
 
-        /**
-         * <strong>example:</strong>
-         * <p>AUTO_RENAME</p>
-         */
         @NameInMap("ConflictStrategy")
         public String conflictStrategy;
 
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("ConvertToOnlineDoc")
         public Boolean convertToOnlineDoc;
 
-        /**
-         * <strong>example:</strong>
-         * <p>DOC</p>
-         */
         @NameInMap("ConvertToOnlineDocTargetDocumentType")
         public String convertToOnlineDocTargetDocumentType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>512</p>
-         */
         @NameInMap("Size")
         public Long size;
 

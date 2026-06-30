@@ -13,10 +13,6 @@ public class GetReportTemplateByNameResponseBody extends TeaModel {
     @NameInMap("fields")
     public java.util.List<GetReportTemplateByNameResponseBodyFields> fields;
 
-    /**
-     * <strong>example:</strong>
-     * <p>11111</p>
-     */
     @NameInMap("id")
     public String id;
 
@@ -24,8 +20,6 @@ public class GetReportTemplateByNameResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>requestId</p>
-     * 
      * <strong>example:</strong>
      * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */
@@ -35,10 +29,6 @@ public class GetReportTemplateByNameResponseBody extends TeaModel {
     @NameInMap("userName")
     public String userName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1234</p>
-     */
     @NameInMap("userid")
     public String userid;
 
@@ -112,10 +102,6 @@ public class GetReportTemplateByNameResponseBody extends TeaModel {
     }
 
     public static class GetReportTemplateByNameResponseBodyDefaultReceivedConvs extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>cid12334##2341</p>
-         */
         @NameInMap("ConversationId")
         public String conversationId;
 
@@ -149,10 +135,6 @@ public class GetReportTemplateByNameResponseBody extends TeaModel {
         @NameInMap("UserName")
         public String userName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1234</p>
-         */
         @NameInMap("Userid")
         public String userid;
 
@@ -180,24 +162,12 @@ public class GetReportTemplateByNameResponseBody extends TeaModel {
     }
 
     public static class GetReportTemplateByNameResponseBodyFields extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>key1</p>
-         */
         @NameInMap("FieldName")
         public String fieldName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("Sort")
         public Long sort;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Type")
         public Long type;
 

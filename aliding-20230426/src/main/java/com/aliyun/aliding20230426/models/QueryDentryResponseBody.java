@@ -81,8 +81,6 @@ public class QueryDentryResponseBody extends TeaModel {
     public String path;
 
     /**
-     * <p>requestId</p>
-     * 
      * <strong>example:</strong>
      * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */
@@ -284,10 +282,6 @@ public class QueryDentryResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <strong>example:</strong>
-         * <p>012345</p>
-         */
         @NameInMap("UserId")
         public String userId;
 
@@ -432,17 +426,9 @@ public class QueryDentryResponseBody extends TeaModel {
     }
 
     public static class QueryDentryResponseBodySpaceHdIconVO extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>http://</p>
-         */
         @NameInMap("Icon")
         public String icon;
 
-        /**
-         * <strong>example:</strong>
-         * <p>type</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -470,17 +456,9 @@ public class QueryDentryResponseBody extends TeaModel {
     }
 
     public static class QueryDentryResponseBodySpaceIconVO extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>http://</p>
-         */
         @NameInMap("Icon")
         public String icon;
 
-        /**
-         * <strong>example:</strong>
-         * <p>type</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -727,10 +705,6 @@ public class QueryDentryResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <strong>example:</strong>
-         * <p>012345</p>
-         */
         @NameInMap("UserId")
         public String userId;
 
@@ -761,10 +735,6 @@ public class QueryDentryResponseBody extends TeaModel {
         @NameInMap("DentryActions")
         public java.util.List<String> dentryActions;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("RoleCode")
         public String roleCode;
 
@@ -1285,10 +1255,6 @@ public class QueryDentryResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <strong>example:</strong>
-         * <p>012345</p>
-         */
         @NameInMap("UserId")
         public String userId;
 
@@ -1319,10 +1285,6 @@ public class QueryDentryResponseBody extends TeaModel {
         @NameInMap("DentryActions")
         public java.util.List<String> dentryActions;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("RoleCode")
         public String roleCode;
 

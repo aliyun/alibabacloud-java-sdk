@@ -7,27 +7,17 @@ public class QueryConferenceInfoByRoomCodeRequest extends TeaModel {
     @NameInMap("TenantContext")
     public QueryConferenceInfoByRoomCodeRequestTenantContext tenantContext;
 
-    /**
-     * <strong>example:</strong>
-     * <p>20</p>
-     */
     @NameInMap("maxResults")
     public Integer maxResults;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>0</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>583 480 813</p>
      */
     @NameInMap("roomCode")
     public String roomCode;

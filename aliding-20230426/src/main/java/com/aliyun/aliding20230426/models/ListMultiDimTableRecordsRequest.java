@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class ListMultiDimTableRecordsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>101114</p>
      */
     @NameInMap("BaseId")
     public String baseId;
@@ -16,25 +13,14 @@ public class ListMultiDimTableRecordsRequest extends TeaModel {
     @NameInMap("Filter")
     public ListMultiDimTableRecordsRequestFilter filter;
 
-    /**
-     * <strong>example:</strong>
-     * <p>100</p>
-     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    /**
-     * <strong>example:</strong>
-     * <p>AAAAAUUg5QSTWwHyeElt8z5z4Qo=</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>xxx</p>
      */
     @NameInMap("SheetIdOrName")
     public String sheetIdOrName;
@@ -96,17 +82,9 @@ public class ListMultiDimTableRecordsRequest extends TeaModel {
     }
 
     public static class ListMultiDimTableRecordsRequestFilterConditions extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>Sandbox</p>
-         */
         @NameInMap("Field")
         public String field;
 
-        /**
-         * <strong>example:</strong>
-         * <p>equal</p>
-         */
         @NameInMap("Operator")
         public String operator;
 
@@ -145,10 +123,6 @@ public class ListMultiDimTableRecordsRequest extends TeaModel {
     }
 
     public static class ListMultiDimTableRecordsRequestFilter extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>and</p>
-         */
         @NameInMap("Combination")
         public String combination;
 

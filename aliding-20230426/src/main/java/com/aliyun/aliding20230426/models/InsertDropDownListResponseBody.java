@@ -4,10 +4,6 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class InsertDropDownListResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>A3:C3</p>
-     */
     @NameInMap("a1Notation")
     public String a1Notation;
 

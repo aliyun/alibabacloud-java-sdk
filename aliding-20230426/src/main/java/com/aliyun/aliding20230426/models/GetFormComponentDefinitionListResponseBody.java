@@ -66,31 +66,15 @@ public class GetFormComponentDefinitionListResponseBody extends TeaModel {
     }
 
     public static class GetFormComponentDefinitionListResponseBodyResult extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>FooterYida</p>
-         */
         @NameInMap("ComponentName")
         public String componentName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>formContainer_kksjiuk</p>
-         */
         @NameInMap("FieldId")
         public String fieldId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>{&quot;en_US&quot;:&quot;&quot;}</p>
-         */
         @NameInMap("Label")
         public String label;
 
-        /**
-         * <strong>example:</strong>
-         * <p>formContainer_kksjiuk</p>
-         */
         @NameInMap("ParentId")
         public String parentId;
 

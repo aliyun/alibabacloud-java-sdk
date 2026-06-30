@@ -7,12 +7,6 @@ public class GetUserIdShrinkRequest extends TeaModel {
     @NameInMap("TenantContext")
     public String tenantContextShrink;
 
-    /**
-     * <p>unionId</p>
-     * 
-     * <strong>example:</strong>
-     * <p>****iE</p>
-     */
     @NameInMap("UnionId")
     public String unionId;
 

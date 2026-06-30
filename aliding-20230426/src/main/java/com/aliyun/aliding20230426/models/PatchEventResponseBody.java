@@ -13,10 +13,6 @@ public class PatchEventResponseBody extends TeaModel {
     @NameInMap("categories")
     public java.util.List<PatchEventResponseBodyCategories> categories;
 
-    /**
-     * <strong>example:</strong>
-     * <p>2022-10-25T02:26:14Z</p>
-     */
     @NameInMap("createTime")
     public String createTime;
 
@@ -29,17 +25,9 @@ public class PatchEventResponseBody extends TeaModel {
     @NameInMap("freeBusyStatus")
     public String freeBusyStatus;
 
-    /**
-     * <strong>example:</strong>
-     * <p>123456</p>
-     */
     @NameInMap("id")
     public String id;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("isAllDay")
     public Boolean isAllDay;
 
@@ -58,12 +46,6 @@ public class PatchEventResponseBody extends TeaModel {
     @NameInMap("reminders")
     public java.util.List<PatchEventResponseBodyReminders> reminders;
 
-    /**
-     * <p>requestId</p>
-     * 
-     * <strong>example:</strong>
-     * <p>4248DCC9-785F-5A14-8BE0-830FD52E1261</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -79,10 +61,6 @@ public class PatchEventResponseBody extends TeaModel {
     @NameInMap("uiConfigs")
     public java.util.List<PatchEventResponseBodyUiConfigs> uiConfigs;
 
-    /**
-     * <strong>example:</strong>
-     * <p>2020-01-01T10:15:30+08:00</p>
-     */
     @NameInMap("updateTime")
     public String updateTime;
 
@@ -252,38 +230,18 @@ public class PatchEventResponseBody extends TeaModel {
     }
 
     public static class PatchEventResponseBodyAttendees extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>tony</p>
-         */
         @NameInMap("DisplayName")
         public String displayName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>123456</p>
-         */
         @NameInMap("Id")
         public String id;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("IsOptional")
         public Boolean isOptional;
 
-        /**
-         * <strong>example:</strong>
-         * <p>accepted</p>
-         */
         @NameInMap("ResponseStatus")
         public String responseStatus;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Self")
         public Boolean self;
 
@@ -395,24 +353,12 @@ public class PatchEventResponseBody extends TeaModel {
     }
 
     public static class PatchEventResponseBodyEnd extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2020-01-01</p>
-         */
         @NameInMap("Date")
         public String date;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2020-01-01T10:15:30+08:00</p>
-         */
         @NameInMap("DateTime")
         public String dateTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Asia/Shanghai</p>
-         */
         @NameInMap("TimeZone")
         public String timeZone;
 
@@ -448,10 +394,6 @@ public class PatchEventResponseBody extends TeaModel {
     }
 
     public static class PatchEventResponseBodyLocation extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("DisplayName")
         public String displayName;
 
@@ -523,31 +465,15 @@ public class PatchEventResponseBody extends TeaModel {
     }
 
     public static class PatchEventResponseBodyOrganizer extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>tony</p>
-         */
         @NameInMap("DisplayName")
         public String displayName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>123456</p>
-         */
         @NameInMap("Id")
         public String id;
 
-        /**
-         * <strong>example:</strong>
-         * <p>accepted</p>
-         */
         @NameInMap("ResponseStatus")
         public String responseStatus;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Self")
         public Boolean self;
 
@@ -591,38 +517,18 @@ public class PatchEventResponseBody extends TeaModel {
     }
 
     public static class PatchEventResponseBodyRecurrencePattern extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>14</p>
-         */
         @NameInMap("DayOfMonth")
         public Integer dayOfMonth;
 
-        /**
-         * <strong>example:</strong>
-         * <p>sunday</p>
-         */
         @NameInMap("DaysOfWeek")
         public String daysOfWeek;
 
-        /**
-         * <strong>example:</strong>
-         * <p>first</p>
-         */
         @NameInMap("Index")
         public String index;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Interval")
         public Integer interval;
 
-        /**
-         * <strong>example:</strong>
-         * <p>daily</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -674,24 +580,12 @@ public class PatchEventResponseBody extends TeaModel {
     }
 
     public static class PatchEventResponseBodyRecurrenceRange extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2020-01-01T10:15:30+08:00</p>
-         */
         @NameInMap("EndDate")
         public String endDate;
 
-        /**
-         * <strong>example:</strong>
-         * <p>5</p>
-         */
         @NameInMap("NumberOfOccurrences")
         public Integer numberOfOccurrences;
 
-        /**
-         * <strong>example:</strong>
-         * <p>noEnd</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -757,17 +651,9 @@ public class PatchEventResponseBody extends TeaModel {
     }
 
     public static class PatchEventResponseBodyReminders extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>dingtalk</p>
-         */
         @NameInMap("Method")
         public String method;
 
-        /**
-         * <strong>example:</strong>
-         * <p>15</p>
-         */
         @NameInMap("Minutes")
         public String minutes;
 
@@ -814,24 +700,12 @@ public class PatchEventResponseBody extends TeaModel {
     }
 
     public static class PatchEventResponseBodyStart extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2020-01-01</p>
-         */
         @NameInMap("Date")
         public String date;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2020-01-01T10:15:30+08:00</p>
-         */
         @NameInMap("DateTime")
         public String dateTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Asia/Shanghai</p>
-         */
         @NameInMap("TimeZone")
         public String timeZone;
 

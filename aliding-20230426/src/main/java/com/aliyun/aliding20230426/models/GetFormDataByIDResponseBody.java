@@ -177,10 +177,6 @@ public class GetFormDataByIDResponseBody extends TeaModel {
         @NameInMap("Name")
         public GetFormDataByIDResponseBodyOriginatorName name;
 
-        /**
-         * <strong>example:</strong>
-         * <p>012345</p>
-         */
         @NameInMap("UserId")
         public String userId;
 

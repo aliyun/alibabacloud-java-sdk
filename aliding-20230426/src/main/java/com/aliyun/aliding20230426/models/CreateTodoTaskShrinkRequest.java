@@ -50,10 +50,6 @@ public class CreateTodoTaskShrinkRequest extends TeaModel {
     @NameInMap("notifyConfigs")
     public String notifyConfigsShrink;
 
-    /**
-     * <strong>example:</strong>
-     * <p>12345</p>
-     */
     @NameInMap("operatorId")
     public String operatorId;
 

@@ -36,7 +36,7 @@ public class ListEventsHeaders extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>208579</p>
+         * <p>012345</p>
          */
         @NameInMap("accountId")
         public String accountId;

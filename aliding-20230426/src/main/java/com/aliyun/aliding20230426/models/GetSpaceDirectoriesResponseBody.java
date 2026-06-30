@@ -7,23 +7,13 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
     @NameInMap("children")
     public java.util.List<GetSpaceDirectoriesResponseBodyChildren> children;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("hasMore")
     public Boolean hasMore;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1296</p>
-     */
     @NameInMap("nextToken")
     public String nextToken;
 
     /**
-     * <p>requestId</p>
-     * 
      * <strong>example:</strong>
      * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */
@@ -223,17 +213,9 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
     }
 
     public static class GetSpaceDirectoriesResponseBodyChildrenSpaceHdIconVO extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p><a href="https://img.alicdn.com/imgextra/i1/xxxxx.png">https://img.alicdn.com/imgextra/i1/xxxxx.png</a></p>
-         */
         @NameInMap("Icon")
         public String icon;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -261,17 +243,9 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
     }
 
     public static class GetSpaceDirectoriesResponseBodyChildrenSpaceIconVO extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p><a href="https://img.alicdn.com/imgextra/i1/xxxxx.png">https://img.alicdn.com/imgextra/i1/xxxxx.png</a></p>
-         */
         @NameInMap("Icon")
         public String icon;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -543,12 +517,6 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
     }
 
     public static class GetSpaceDirectoriesResponseBodyChildrenStatisticalInfo extends TeaModel {
-        /**
-         * <p>WordCount</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("WordCount")
         public Long wordCount;
 
@@ -575,10 +543,6 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <strong>example:</strong>
-         * <p>012345</p>
-         */
         @NameInMap("UserId")
         public String userId;
 
@@ -609,10 +573,6 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
         @NameInMap("DentryActions")
         public java.util.List<String> dentryActions;
 
-        /**
-         * <strong>example:</strong>
-         * <p>OWNER</p>
-         */
         @NameInMap("RoleCode")
         public String roleCode;
 

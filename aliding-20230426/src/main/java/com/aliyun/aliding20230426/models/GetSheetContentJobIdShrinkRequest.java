@@ -4,17 +4,9 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class GetSheetContentJobIdShrinkRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>MNDoBb60VLYDGNPytQe7Gzp4JlemrZQ3</p>
-     */
     @NameInMap("DentryUuid")
     public String dentryUuid;
 
-    /**
-     * <strong>example:</strong>
-     * <p>dingTalksheetToxlsx</p>
-     */
     @NameInMap("ExportType")
     public String exportType;
 

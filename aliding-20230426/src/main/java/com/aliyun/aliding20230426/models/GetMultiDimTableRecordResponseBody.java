@@ -7,34 +7,18 @@ public class GetMultiDimTableRecordResponseBody extends TeaModel {
     @NameInMap("CreatedBy")
     public GetMultiDimTableRecordResponseBodyCreatedBy createdBy;
 
-    /**
-     * <strong>example:</strong>
-     * <p>xxx</p>
-     */
     @NameInMap("CreatedTime")
     public Long createdTime;
 
-    /**
-     * <strong>example:</strong>
-     * <p>xxx</p>
-     */
     @NameInMap("Fields")
     public java.util.Map<String, ?> fields;
 
-    /**
-     * <strong>example:</strong>
-     * <p>xxx</p>
-     */
     @NameInMap("Id")
     public String id;
 
     @NameInMap("LastModifiedBy")
     public GetMultiDimTableRecordResponseBodyLastModifiedBy lastModifiedBy;
 
-    /**
-     * <strong>example:</strong>
-     * <p>xxx</p>
-     */
     @NameInMap("LastModifiedTime")
     public Long lastModifiedTime;
 
@@ -137,10 +121,6 @@ public class GetMultiDimTableRecordResponseBody extends TeaModel {
     }
 
     public static class GetMultiDimTableRecordResponseBodyCreatedBy extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>012345</p>
-         */
         @NameInMap("UserId")
         public String userId;
 
@@ -160,10 +140,6 @@ public class GetMultiDimTableRecordResponseBody extends TeaModel {
     }
 
     public static class GetMultiDimTableRecordResponseBodyLastModifiedBy extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>012345</p>
-         */
         @NameInMap("UserId")
         public String userId;
 

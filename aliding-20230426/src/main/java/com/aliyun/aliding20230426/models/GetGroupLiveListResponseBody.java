@@ -73,10 +73,6 @@ public class GetGroupLiveListResponseBody extends TeaModel {
         @NameInMap("AnchorNickname")
         public String anchorNickname;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Eijxx</p>
-         */
         @NameInMap("AnchorUnionId")
         public String anchorUnionId;
 

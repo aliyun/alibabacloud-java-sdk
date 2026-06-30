@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class DeleteSubscribedCalendarRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>MzM5Mxxx</p>
      */
     @NameInMap("CalendarId")
     public String calendarId;

@@ -10,10 +10,6 @@ public class GetSkillsRequest extends TeaModel {
     @NameInMap("SkillIds")
     public java.util.List<String> skillIds;
 
-    /**
-     * <strong>example:</strong>
-     * <p>xxx</p>
-     */
     @NameInMap("SourceIdOfAssistantId")
     public String sourceIdOfAssistantId;
 

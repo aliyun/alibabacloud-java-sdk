@@ -19,7 +19,7 @@ public class CreateRunRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>assistantId</p>
+     * <p>assistantId2</p>
      */
     @NameInMap("originalAssistantId")
     public String originalAssistantId;

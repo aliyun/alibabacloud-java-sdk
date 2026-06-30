@@ -4,10 +4,6 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class ListSkillRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>qweq-1231-jbarr-9940-asdf</p>
-     */
     @NameInMap("groupId")
     public String groupId;
 

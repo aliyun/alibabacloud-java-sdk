@@ -4,10 +4,6 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class GetScencegroupFileDownloadurlResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>An https download connection</p>
-     */
     @NameInMap("downloadUrl")
     public String downloadUrl;
 

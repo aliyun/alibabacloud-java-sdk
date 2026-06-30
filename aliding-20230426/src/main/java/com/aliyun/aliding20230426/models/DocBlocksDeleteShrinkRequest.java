@@ -8,7 +8,7 @@ public class DocBlocksDeleteShrinkRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>mgokkwiovcq5eu02le8</p>
+     * <p>1</p>
      */
     @NameInMap("BlockId")
     public String blockId;

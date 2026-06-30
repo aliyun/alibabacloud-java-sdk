@@ -4,20 +4,12 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class GetFileDownloadInfoRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>798xxxxx</p>
-     */
     @NameInMap("DentryId")
     public String dentryId;
 
     @NameInMap("Option")
     public GetFileDownloadInfoRequestOption option;
 
-    /**
-     * <strong>example:</strong>
-     * <p>854xxxx</p>
-     */
     @NameInMap("SpaceId")
     public String spaceId;
 
@@ -62,17 +54,9 @@ public class GetFileDownloadInfoRequest extends TeaModel {
     }
 
     public static class GetFileDownloadInfoRequestOption extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("PreferIntranet")
         public Boolean preferIntranet;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Version")
         public Long version;
 

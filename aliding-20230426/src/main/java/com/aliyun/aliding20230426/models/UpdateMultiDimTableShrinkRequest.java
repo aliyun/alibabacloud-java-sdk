@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class UpdateMultiDimTableShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>r1R7q3QmWew5lo02fxB7noNyJxxxxxx</p>
      */
     @NameInMap("BaseId")
     public String baseId;

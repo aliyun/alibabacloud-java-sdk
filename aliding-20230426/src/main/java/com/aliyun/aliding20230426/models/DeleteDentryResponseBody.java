@@ -14,10 +14,6 @@ public class DeleteDentryResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>task123abc</p>
-     */
     @NameInMap("taskId")
     public String taskId;
 

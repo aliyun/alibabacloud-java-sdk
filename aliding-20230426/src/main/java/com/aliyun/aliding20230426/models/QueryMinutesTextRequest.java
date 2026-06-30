@@ -9,33 +9,19 @@ public class QueryMinutesTextRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>607452e01401526ee39609e1</p>
      */
     @NameInMap("conferenceId")
     public String conferenceId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>0</p>
      */
     @NameInMap("direction")
     public String direction;
 
-    /**
-     * <strong>example:</strong>
-     * <p>20</p>
-     */
     @NameInMap("maxResults")
     public Long maxResults;
 
-    /**
-     * <strong>example:</strong>
-     * <p>0</p>
-     */
     @NameInMap("nextToken")
     public String nextToken;
 

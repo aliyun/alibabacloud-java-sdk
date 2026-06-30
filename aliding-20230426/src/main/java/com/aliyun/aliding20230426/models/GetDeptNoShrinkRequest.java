@@ -9,9 +9,6 @@ public class GetDeptNoShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>012345</p>
      */
     @NameInMap("deptId")
     public String deptId;

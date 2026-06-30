@@ -23,12 +23,6 @@ public class InvokeSkillResponseBody extends TeaModel {
     @NameInMap("Metadata")
     public Object metadata;
 
-    /**
-     * <p>RequestId</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2715B4D3-A3FB-5FC7-AFA0-4471687B1EC6</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

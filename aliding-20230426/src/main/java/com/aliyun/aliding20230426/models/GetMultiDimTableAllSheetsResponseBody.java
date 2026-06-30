@@ -70,17 +70,9 @@ public class GetMultiDimTableAllSheetsResponseBody extends TeaModel {
     }
 
     public static class GetMultiDimTableAllSheetsResponseBodyValue extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>xxx</p>
-         */
         @NameInMap("Id")
         public String id;
 
-        /**
-         * <strong>example:</strong>
-         * <p>xxx</p>
-         */
         @NameInMap("Name")
         public String name;
 

@@ -32,12 +32,6 @@ public class GetSkillDetailHeaders extends TeaModel {
     }
 
     public static class GetSkillDetailHeadersAccountContext extends TeaModel {
-        /**
-         * <p>Buc SsoTicket</p>
-         * 
-         * <strong>example:</strong>
-         * <p>bucxxx</p>
-         */
         @NameInMap("SsoTicket")
         public String ssoTicket;
 

@@ -35,10 +35,6 @@ public class GetDingtalkProjectionListShrinkRequest extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
-    /**
-     * <strong>example:</strong>
-     * <p>343242</p>
-     */
     @NameInMap("projectorWorkNo")
     public String projectorWorkNo;
 

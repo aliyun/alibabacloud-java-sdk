@@ -102,7 +102,7 @@ public class ListApplicationResponseBody extends TeaModel {
     public static class ListApplicationResponseBodyData extends TeaModel {
         /**
          * <strong>example:</strong>
-         * <p>{\&quot;ODIN_TOPIC_ID\&quot;:\&quot;256\&quot;}</p>
+         * <p>{&quot;ODIN_TOPIC_ID&quot;:&quot;256&quot;}</p>
          */
         @NameInMap("AppConfig")
         public String appConfig;

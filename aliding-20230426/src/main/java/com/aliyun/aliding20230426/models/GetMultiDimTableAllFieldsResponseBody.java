@@ -70,31 +70,15 @@ public class GetMultiDimTableAllFieldsResponseBody extends TeaModel {
     }
 
     public static class GetMultiDimTableAllFieldsResponseBodyValue extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>stxxxx</p>
-         */
         @NameInMap("Id")
         public String id;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Sheet1</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <strong>example:</strong>
-         * <p>xxx</p>
-         */
         @NameInMap("Property")
         public java.util.Map<String, ?> property;
 
-        /**
-         * <strong>example:</strong>
-         * <p>xxx</p>
-         */
         @NameInMap("Type")
         public String type;
 

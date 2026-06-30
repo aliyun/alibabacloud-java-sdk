@@ -15,9 +15,6 @@ public class AddScenegroupMemberRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>123xx,224xx</p>
      */
     @NameInMap("UserIds")
     public String userIds;

@@ -7,12 +7,6 @@ public class GetUserIdRequest extends TeaModel {
     @NameInMap("TenantContext")
     public GetUserIdRequestTenantContext tenantContext;
 
-    /**
-     * <p>unionId</p>
-     * 
-     * <strong>example:</strong>
-     * <p>****iE</p>
-     */
     @NameInMap("UnionId")
     public String unionId;
 

@@ -6,18 +6,12 @@ import com.aliyun.tea.*;
 public class GetMultiDimTableAllFieldsShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>338534</p>
      */
     @NameInMap("BaseId")
     public String baseId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>xxx</p>
      */
     @NameInMap("SheetIdOrName")
     public String sheetIdOrName;

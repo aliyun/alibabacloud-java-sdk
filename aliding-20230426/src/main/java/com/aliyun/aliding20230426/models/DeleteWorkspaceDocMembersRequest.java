@@ -12,9 +12,6 @@ public class DeleteWorkspaceDocMembersRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>YRBGv0xxx</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
@@ -24,9 +21,6 @@ public class DeleteWorkspaceDocMembersRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>YRBGvyxxx</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;
@@ -71,18 +65,12 @@ public class DeleteWorkspaceDocMembersRequest extends TeaModel {
     public static class DeleteWorkspaceDocMembersRequestMembers extends TeaModel {
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>012345</p>
          */
         @NameInMap("MemberId")
         public String memberId;
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>USER</p>
          */
         @NameInMap("MemberType")
         public String memberType;

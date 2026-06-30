@@ -4,10 +4,6 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class CreateAlidingAssistantRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>f5cb37a0fb44441ab7b74c6f4a679dd3</p>
-     */
     @NameInMap("AppCode")
     public String appCode;
 
@@ -22,9 +18,6 @@ public class CreateAlidingAssistantRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>@lADPDetfgMsFFUvNAkjNAkg</p>
      */
     @NameInMap("Icon")
     public String icon;
@@ -46,17 +39,10 @@ public class CreateAlidingAssistantRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>11</p>
      */
     @NameInMap("Source")
     public Integer source;
 
-    /**
-     * <strong>example:</strong>
-     * <p>chatBot-123</p>
-     */
     @NameInMap("SourceIdentityId")
     public String sourceIdentityId;
 

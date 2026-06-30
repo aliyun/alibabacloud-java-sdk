@@ -4,24 +4,12 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class GetSkillDetailRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>xxx</p>
-     */
     @NameInMap("GroupId")
     public String groupId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>8f6a2111-3828-4a9f-a3ce-51ce73c6ec9b</p>
-     */
     @NameInMap("SkillId")
     public String skillId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>xxx</p>
-     */
     @NameInMap("SourceIdOfAssistantId")
     public String sourceIdOfAssistantId;
 

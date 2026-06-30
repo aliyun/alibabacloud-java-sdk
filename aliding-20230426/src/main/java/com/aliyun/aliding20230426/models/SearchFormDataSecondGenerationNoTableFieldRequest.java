@@ -50,10 +50,6 @@ public class SearchFormDataSecondGenerationNoTableFieldRequest extends TeaModel 
     @NameInMap("ModifiedToTimeGMT")
     public String modifiedToTimeGMT;
 
-    /**
-     * <strong>example:</strong>
-     * <p>{}</p>
-     */
     @NameInMap("OrderConfigJson")
     public String orderConfigJson;
 
@@ -78,10 +74,6 @@ public class SearchFormDataSecondGenerationNoTableFieldRequest extends TeaModel 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <strong>example:</strong>
-     * <p>{}</p>
-     */
     @NameInMap("SearchCondition")
     public String searchCondition;
 

@@ -13,45 +13,27 @@ public class GetOrgLiveListRequest extends TeaModel {
     @NameInMap("CorpId")
     public String corpId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1720211800000</p>
-     */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1719211800000</p>
-     */
     @NameInMap("StartTime")
     public Long startTime;
 
     @NameInMap("TenantContext")
     public GetOrgLiveListRequestTenantContext tenantContext;
 
-    /**
-     * <strong>example:</strong>
-     * <p>012345</p>
-     */
     @NameInMap("UserId")
     public String userId;
 

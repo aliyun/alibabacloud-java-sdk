@@ -62,7 +62,7 @@ public class SearchEmployeeFieldValuesRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>{\&quot;textField_annandfa\&quot;:\&quot;1212\&quot;}</p>
+     * <p>{&quot;textField_annandfa&quot;:&quot;1212&quot;}</p>
      */
     @NameInMap("SearchFieldJson")
     public String searchFieldJson;
@@ -76,7 +76,7 @@ public class SearchEmployeeFieldValuesRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>[\&quot;textField_xahdfna\&quot;]</p>
+     * <p>[&quot;textField_xahdfna&quot;]</p>
      */
     @NameInMap("TargetFieldJson")
     public String targetFieldJson;

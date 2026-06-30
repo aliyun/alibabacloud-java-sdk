@@ -9,27 +9,18 @@ public class RecallHonorRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>21660610</p>
      */
     @NameInMap("honorId")
     public String honorId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>345391052</p>
      */
     @NameInMap("orgId")
     public Long orgId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>363784</p>
      */
     @NameInMap("userId")
     public String userId;
@@ -72,10 +63,6 @@ public class RecallHonorRequest extends TeaModel {
     }
 
     public static class RecallHonorRequestTenantContext extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>4</p>
-         */
         @NameInMap("tenantId")
         public String tenantId;
 

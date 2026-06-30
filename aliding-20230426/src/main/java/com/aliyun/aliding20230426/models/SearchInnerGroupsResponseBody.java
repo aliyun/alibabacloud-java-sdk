@@ -66,24 +66,12 @@ public class SearchInnerGroupsResponseBody extends TeaModel {
     }
 
     public static class SearchInnerGroupsResponseBodyGroupInfos extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>@lAD*****</p>
-         */
         @NameInMap("Icon")
         public String icon;
 
-        /**
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("MemberAmount")
         public String memberAmount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cid13*****==</p>
-         */
         @NameInMap("OpenConversationId")
         public String openConversationId;
 

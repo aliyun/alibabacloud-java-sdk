@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class GetMultiDimTableAllSheetsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>144972</p>
      */
     @NameInMap("BaseId")
     public String baseId;

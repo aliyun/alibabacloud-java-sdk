@@ -4,10 +4,6 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class ExecuteBatchTaskResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("failNumber")
     public Integer failNumber;
 
@@ -18,17 +14,9 @@ public class ExecuteBatchTaskResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>2</p>
-     */
     @NameInMap("successNumber")
     public Integer successNumber;
 
-    /**
-     * <strong>example:</strong>
-     * <p>3</p>
-     */
     @NameInMap("total")
     public Integer total;
 

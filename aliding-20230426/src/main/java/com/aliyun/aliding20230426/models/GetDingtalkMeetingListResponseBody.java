@@ -128,10 +128,6 @@ public class GetDingtalkMeetingListResponseBody extends TeaModel {
         @NameInMap("creatorNick")
         public String creatorNick;
 
-        /**
-         * <strong>example:</strong>
-         * <p>3423423</p>
-         */
         @NameInMap("creatorWorkNo")
         public String creatorWorkNo;
 

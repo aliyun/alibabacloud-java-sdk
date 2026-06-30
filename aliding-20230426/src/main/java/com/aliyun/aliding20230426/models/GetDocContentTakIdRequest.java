@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class GetDocContentTakIdRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>qnYMoO1rWxrkmoj2I5L2PYkoJ47Z3je9</p>
      */
     @NameInMap("DentryUuid")
     public String dentryUuid;
@@ -16,10 +13,6 @@ public class GetDocContentTakIdRequest extends TeaModel {
     @NameInMap("GenerateCp")
     public Boolean generateCp;
 
-    /**
-     * <strong>example:</strong>
-     * <p>markdown</p>
-     */
     @NameInMap("TargetFormat")
     public String targetFormat;
 

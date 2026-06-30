@@ -66,10 +66,6 @@ public class UpdateMultiDimTableRecordsResponseBody extends TeaModel {
     }
 
     public static class UpdateMultiDimTableRecordsResponseBodyValue extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>[]</p>
-         */
         @NameInMap("Id")
         public String id;
 

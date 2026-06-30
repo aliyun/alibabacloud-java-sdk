@@ -6,18 +6,12 @@ import com.aliyun.tea.*;
 public class AddTicketMemoRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>eKWh3xxxxiE</p>
      */
     @NameInMap("OpenTeamId")
     public String openTeamId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Dq9hP8Sk2v6vQxxxxiE</p>
      */
     @NameInMap("OpenTicketId")
     public String openTicketId;
@@ -89,17 +83,9 @@ public class AddTicketMemoRequest extends TeaModel {
     }
 
     public static class AddTicketMemoRequestTicketMemoAttachments extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>&quot;ticket/image/44xxxx9/43003/e27204b38xxxx1640499.txt</p>
-         */
         @NameInMap("FileName")
         public String fileName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>wahaha.txt</p>
-         */
         @NameInMap("Key")
         public String key;
 

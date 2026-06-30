@@ -14,10 +14,6 @@ public class GetFieldDefByUuidResponseBody extends TeaModel {
     @NameInMap("result")
     public java.util.List<GetFieldDefByUuidResponseBodyResult> result;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("success")
     public Boolean success;
 
@@ -81,48 +77,24 @@ public class GetFieldDefByUuidResponseBody extends TeaModel {
     }
 
     public static class GetFieldDefByUuidResponseBodyResult extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>NORMAL</p>
-         */
         @NameInMap("Behavior")
         public String behavior;
 
         @NameInMap("Children")
         public String children;
 
-        /**
-         * <strong>example:</strong>
-         * <p>TextareaField</p>
-         */
         @NameInMap("ComponentName")
         public String componentName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>textField_laq7xxx</p>
-         */
         @NameInMap("FieldId")
         public String fieldId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>{}</p>
-         */
         @NameInMap("Label")
         public Object label;
 
-        /**
-         * <strong>example:</strong>
-         * <p>{}</p>
-         */
         @NameInMap("Props")
         public Object props;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Success")
         public Boolean success;
 

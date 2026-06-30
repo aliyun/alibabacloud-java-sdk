@@ -4,18 +4,11 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class InvokeSkillShrinkRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>{}</p>
-     */
     @NameInMap("Params")
     public String paramsShrink;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>a1d033dd-xxxx-49cf-b49b-2068081bb551</p>
      */
     @NameInMap("SkillId")
     public String skillId;

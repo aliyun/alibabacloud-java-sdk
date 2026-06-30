@@ -4,10 +4,6 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class AddMultiDimTableResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>r1R7q3QmWew5lo02fxB7xxxxxxx</p>
-     */
     @NameInMap("Id")
     public String id;
 

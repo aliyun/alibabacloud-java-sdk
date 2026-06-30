@@ -4,10 +4,6 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class GetLiveReplayUrlResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p><a href="https://xxxxxxxx">https://xxxxxxxx</a></p>
-     */
     @NameInMap("replayUrl")
     public String replayUrl;
 

@@ -6,27 +6,18 @@ import com.aliyun.tea.*;
 public class RespondEventRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>primary</p>
      */
     @NameInMap("CalendarId")
     public String calendarId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>RHN2REJFc2w4VHNiUUlvcVB0ejFydz09</p>
      */
     @NameInMap("EventId")
     public String eventId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>accepted</p>
      */
     @NameInMap("ResponseStatus")
     public String responseStatus;

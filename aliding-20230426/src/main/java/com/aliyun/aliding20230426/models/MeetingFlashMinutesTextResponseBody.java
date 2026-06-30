@@ -7,10 +7,6 @@ public class MeetingFlashMinutesTextResponseBody extends TeaModel {
     @NameInMap("hasNext")
     public Boolean hasNext;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1778490366045000_62XXX</p>
-     */
     @NameInMap("nextToken")
     public String nextToken;
 

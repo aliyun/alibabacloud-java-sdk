@@ -7,17 +7,9 @@ public class MeetingFlashMinutesResponseBody extends TeaModel {
     @NameInMap("basicInfo")
     public MeetingFlashMinutesResponseBodyBasicInfo basicInfo;
 
-    /**
-     * <strong>example:</strong>
-     * <p><a href="https://shanji.dingtalk.com/app/transcribes/76XXX">https://shanji.dingtalk.com/app/transcribes/76XXX</a></p>
-     */
     @NameInMap("flashMinutesUrl")
     public String flashMinutesUrl;
 
-    /**
-     * <strong>example:</strong>
-     * <p>XXX</p>
-     */
     @NameInMap("fullSummary")
     public String fullSummary;
 
@@ -107,45 +99,21 @@ public class MeetingFlashMinutesResponseBody extends TeaModel {
     }
 
     public static class MeetingFlashMinutesResponseBodyBasicInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>500529</p>
-         */
         @NameInMap("duration")
         public Long duration;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1778490089000</p>
-         */
         @NameInMap("endTime")
         public Long endTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1778490089000</p>
-         */
         @NameInMap("startTime")
         public Long startTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>u0VGeOiPUBSVMypV3Hylp7wXXX</p>
-         */
         @NameInMap("taskCreator")
         public String taskCreator;
 
-        /**
-         * <strong>example:</strong>
-         * <p>XXX</p>
-         */
         @NameInMap("title")
         public String title;
 
-        /**
-         * <strong>example:</strong>
-         * <p><a href="https://shanji.dingtalk.com/app/transcribes/76XXX">https://shanji.dingtalk.com/app/transcribes/76XXX</a></p>
-         */
         @NameInMap("url")
         public String url;
 
@@ -205,24 +173,12 @@ public class MeetingFlashMinutesResponseBody extends TeaModel {
     }
 
     public static class MeetingFlashMinutesResponseBodyTodosDingtalkTodoListExecutorList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p><a href="https://XXX221rNAbjNAbg_440_440.png">https://XXX221rNAbjNAbg_440_440.png</a></p>
-         */
         @NameInMap("avatar")
         public String avatar;
 
-        /**
-         * <strong>example:</strong>
-         * <p>XXX</p>
-         */
         @NameInMap("nick")
         public String nick;
 
-        /**
-         * <strong>example:</strong>
-         * <p>u0VGeOiPUBSVMypV3Hylp7wXXX</p>
-         */
         @NameInMap("unionId")
         public String unionId;
 
@@ -258,55 +214,27 @@ public class MeetingFlashMinutesResponseBody extends TeaModel {
     }
 
     public static class MeetingFlashMinutesResponseBodyTodosDingtalkTodoList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1778490089000</p>
-         */
         @NameInMap("createdTime")
         public Long createdTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>u0VGeOiPUBSVMypV3Hylp7wXXX</p>
-         */
         @NameInMap("creatorUnionId")
         public String creatorUnionId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>deadline</p>
-         */
         @NameInMap("deadline")
         public String deadline;
 
-        /**
-         * <strong>example:</strong>
-         * <p>dingtalkTodoId</p>
-         */
         @NameInMap("dingtalkTodoId")
         public String dingtalkTodoId;
 
         @NameInMap("executorList")
         public java.util.List<MeetingFlashMinutesResponseBodyTodosDingtalkTodoListExecutorList> executorList;
 
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("isDone")
         public Boolean isDone;
 
-        /**
-         * <strong>example:</strong>
-         * <p>minutesTodoId</p>
-         */
         @NameInMap("minutesTodoId")
         public String minutesTodoId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>XXX</p>
-         */
         @NameInMap("title")
         public String title;
 

@@ -4,27 +4,15 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class UpdateConvExtensionShrinkRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p><a href="https://xxx">https://xxx</a></p>
-     */
     @NameInMap("MobileUrl")
     public String mobileUrl;
 
-    /**
-     * <strong>example:</strong>
-     * <p><a href="https://xxx">https://xxx</a></p>
-     */
     @NameInMap("PcUrl")
     public String pcUrl;
 
     @NameInMap("StaffIdList")
     public String staffIdListShrink;
 
-    /**
-     * <strong>example:</strong>
-     * <p>546374856</p>
-     */
     @NameInMap("SystemUid")
     public String systemUid;
 

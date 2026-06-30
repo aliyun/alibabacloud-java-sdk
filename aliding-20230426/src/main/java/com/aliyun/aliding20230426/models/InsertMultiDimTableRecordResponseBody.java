@@ -66,10 +66,6 @@ public class InsertMultiDimTableRecordResponseBody extends TeaModel {
     }
 
     public static class InsertMultiDimTableRecordResponseBodyValue extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>hfauVBFJIo</p>
-         */
         @NameInMap("Id")
         public String id;
 

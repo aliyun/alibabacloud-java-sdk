@@ -49,10 +49,6 @@ public class GetWorkspacesRequest extends TeaModel {
     }
 
     public static class GetWorkspacesRequestOption extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("WithPermissionRole")
         public Boolean withPermissionRole;
 

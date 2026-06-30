@@ -7,17 +7,9 @@ public class GetFileUploadInfoShrinkRequest extends TeaModel {
     @NameInMap("Option")
     public String optionShrink;
 
-    /**
-     * <strong>example:</strong>
-     * <p>dentryUuid</p>
-     */
     @NameInMap("ParentDentryUuid")
     public String parentDentryUuid;
 
-    /**
-     * <strong>example:</strong>
-     * <p>HEADER_SIGNATURE</p>
-     */
     @NameInMap("Protocol")
     public String protocol;
 

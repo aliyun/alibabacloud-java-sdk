@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class DocUpdateContentRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>[]</p>
      */
     @NameInMap("Content")
     public String content;
@@ -22,9 +19,6 @@ public class DocUpdateContentRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>4j6OJzVEG4jJO3p8</p>
      */
     @NameInMap("DocKey")
     public String docKey;

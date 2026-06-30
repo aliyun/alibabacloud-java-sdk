@@ -6,18 +6,12 @@ import com.aliyun.tea.*;
 public class DeleteDentryShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>b9XJlZ44W3NeDGyA</p>
      */
     @NameInMap("DentryId")
     public String dentryId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>nb9XJx4EPx16QGyA</p>
      */
     @NameInMap("SpaceId")
     public String spaceId;

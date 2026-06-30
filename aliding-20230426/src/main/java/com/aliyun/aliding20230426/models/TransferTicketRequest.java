@@ -9,18 +9,12 @@ public class TransferTicketRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>eKWh3xxxxiE</p>
      */
     @NameInMap("OpenTeamId")
     public String openTeamId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Dq9hP8Sk2v6vQxxxxiE</p>
      */
     @NameInMap("OpenTicketId")
     public String openTicketId;
@@ -91,10 +85,6 @@ public class TransferTicketRequest extends TeaModel {
         @NameInMap("GroupNoticeReceiverUserIds")
         public java.util.List<String> groupNoticeReceiverUserIds;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("NoticeAllGroupMember")
         public Boolean noticeAllGroupMember;
 
@@ -156,17 +146,9 @@ public class TransferTicketRequest extends TeaModel {
     }
 
     public static class TransferTicketRequestTicketMemoAttachments extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>auto-test-1727143229007.pdf</p>
-         */
         @NameInMap("FileName")
         public String fileName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>key1</p>
-         */
         @NameInMap("Key")
         public String key;
 

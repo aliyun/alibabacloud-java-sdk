@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class DeleteAlidingAssistantShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1234</p>
      */
     @NameInMap("AssistantId")
     public String assistantId;

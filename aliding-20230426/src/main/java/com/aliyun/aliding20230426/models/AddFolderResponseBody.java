@@ -66,10 +66,6 @@ public class AddFolderResponseBody extends TeaModel {
     }
 
     public static class AddFolderResponseBodyDentryProperties extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("ReadOnly")
         public Boolean readOnly;
 
@@ -106,17 +102,9 @@ public class AddFolderResponseBody extends TeaModel {
         @NameInMap("CreatorId")
         public String creatorId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>txt</p>
-         */
         @NameInMap("Extension")
         public String extension;
 
-        /**
-         * <strong>example:</strong>
-         * <p>dentry_id</p>
-         */
         @NameInMap("Id")
         public String id;
 
@@ -127,24 +115,12 @@ public class AddFolderResponseBody extends TeaModel {
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>modifier_id</p>
-         */
         @NameInMap("ModifierId")
         public String modifierId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>dentry_name</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <strong>example:</strong>
-         * <p>163201723391</p>
-         */
         @NameInMap("ParentId")
         public String parentId;
 
@@ -165,17 +141,9 @@ public class AddFolderResponseBody extends TeaModel {
         @NameInMap("Properties")
         public AddFolderResponseBodyDentryProperties properties;
 
-        /**
-         * <strong>example:</strong>
-         * <p>6020771</p>
-         */
         @NameInMap("Size")
         public Long size;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Ao01nSzzBxZQ68JW</p>
-         */
         @NameInMap("SpaceId")
         public String spaceId;
 
@@ -200,17 +168,9 @@ public class AddFolderResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <strong>example:</strong>
-         * <p>80a7201602b34450a7a97d8d4e255421</p>
-         */
         @NameInMap("Uuid")
         public String uuid;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Version")
         public Long version;
 

@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class ListMultiDimTableRecordsShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>101114</p>
      */
     @NameInMap("BaseId")
     public String baseId;
@@ -16,25 +13,14 @@ public class ListMultiDimTableRecordsShrinkRequest extends TeaModel {
     @NameInMap("Filter")
     public String filterShrink;
 
-    /**
-     * <strong>example:</strong>
-     * <p>100</p>
-     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    /**
-     * <strong>example:</strong>
-     * <p>AAAAAUUg5QSTWwHyeElt8z5z4Qo=</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>xxx</p>
      */
     @NameInMap("SheetIdOrName")
     public String sheetIdOrName;

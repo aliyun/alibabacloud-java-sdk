@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class DeletePermissionRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>a9E05BDRVQRkezKGCE3nlwPDJ63zgkYA</p>
      */
     @NameInMap("DentryUuid")
     public String dentryUuid;

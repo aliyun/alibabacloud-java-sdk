@@ -4,17 +4,9 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class QueryMinutesTextResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("hasMore")
     public Boolean hasMore;
 
-    /**
-     * <strong>example:</strong>
-     * <p>0</p>
-     */
     @NameInMap("nextToken")
     public String nextToken;
 

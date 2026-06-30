@@ -54,18 +54,12 @@ public class DeleteWorkspaceMembersRequest extends TeaModel {
     public static class DeleteWorkspaceMembersRequestMembers extends TeaModel {
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>012345</p>
          */
         @NameInMap("MemberId")
         public String memberId;
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>USER</p>
          */
         @NameInMap("MemberType")
         public String memberType;
