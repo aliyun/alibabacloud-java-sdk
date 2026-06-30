@@ -34,6 +34,9 @@ public class CreateAppInstanceShrinkRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>List of modules</p>
+     */
     @NameInMap("Components")
     public String componentsShrink;
 
@@ -70,6 +73,13 @@ public class CreateAppInstanceShrinkRequest extends TeaModel {
      */
     @NameInMap("DashboardUsername")
     public String dashboardUsername;
+
+    /**
+     * <strong>example:</strong>
+     * <p>test_database_01</p>
+     */
+    @NameInMap("Database")
+    public String database;
 
     /**
      * <p>The idempotency token. The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
@@ -222,6 +232,14 @@ public class CreateAppInstanceShrinkRequest extends TeaModel {
     }
     public String getDashboardUsername() {
         return this.dashboardUsername;
+    }
+
+    public CreateAppInstanceShrinkRequest setDatabase(String database) {
+        this.database = database;
+        return this;
+    }
+    public String getDatabase() {
+        return this.database;
     }
 
     public CreateAppInstanceShrinkRequest setDatabasePassword(String databasePassword) {

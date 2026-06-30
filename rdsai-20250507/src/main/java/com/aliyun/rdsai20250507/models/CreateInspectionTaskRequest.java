@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateInspectionTaskRequest extends TeaModel {
     /**
-     * <p>The end time of the inspection task. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. By default, the time range of the task is the latest 24 hours.</p>
+     * <p>The end of the inspection time range. The time must be in UTC and formatted as YYYY-MM-DDTHH:mm:ssZ. If StartTime and EndTime are not specified, the inspection covers the last 24 hours.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-01-30T02:10:48Z</p>
@@ -14,21 +14,33 @@ public class CreateInspectionTaskRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The inspection items. Separates multiple items with commas (,). If this parameter is empty or not specified, all inspection items are executed.</p>
-     * <h3><a href="#"></a>Valid values:</h3>
+     * <p>The inspection items to run, separated by commas. If this parameter is omitted, all inspection items are run.</p>
+     * <h3>Inspection items</h3>
      * <ul>
-     * <li>instance_info</li>
-     * <li>resource_usage</li>
-     * <li>connection_session_management</li>
-     * <li>performance_metrics</li>
-     * <li>slow_query_analysis</li>
-     * <li>error_log_analysis</li>
-     * <li>lock_wait_deadlock_analysis</li>
-     * <li>backup_recovery_analysis</li>
-     * <li>high_availability_disaster_recovery_analysis</li>
-     * <li>security_configuration_analysis</li>
-     * <li>storage_engine_analysis</li>
-     * <li>schema_object_analysis</li>
+     * <li><p><code>instance_info</code> (instance information)</p>
+     * </li>
+     * <li><p><code>resource_usage</code> (resource usage)</p>
+     * </li>
+     * <li><p><code>connection_session_management</code> (connection and session management)</p>
+     * </li>
+     * <li><p><code>performance_metrics</code> (performance metrics)</p>
+     * </li>
+     * <li><p><code>slow_query_analysis</code> (slow query analysis)</p>
+     * </li>
+     * <li><p><code>error_log_analysis</code> (error log analysis)</p>
+     * </li>
+     * <li><p><code>lock_wait_deadlock_analysis</code> (lock wait and deadlock analysis)</p>
+     * </li>
+     * <li><p><code>backup_recovery_analysis</code> (backup and recovery analysis)</p>
+     * </li>
+     * <li><p><code>high_availability_disaster_recovery_analysis</code> (high availability and disaster recovery inspection)</p>
+     * </li>
+     * <li><p><code>security_configuration_analysis</code> (security configuration inspection)</p>
+     * </li>
+     * <li><p><code>storage_engine_analysis</code> (storage engine inspection)</p>
+     * </li>
+     * <li><p><code>schema_object_analysis</code> (schema and object inspection)</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,7 +50,7 @@ public class CreateInspectionTaskRequest extends TeaModel {
     public String inspectionItems;
 
     /**
-     * <p>The instances covered by the task. Separates multiple instance IDs with commas (,).</p>
+     * <p>The IDs of the instances to inspect. Separate multiple instance IDs with a comma.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-2ze6mk259v322****,rm-2zef3b65430j0****</p>
@@ -46,20 +58,29 @@ public class CreateInspectionTaskRequest extends TeaModel {
     @NameInMap("InstanceIds")
     public String instanceIds;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The language of the inspection report. Valid values are zh-CN (Simplified Chinese) and en-US (English). The default value is en-US.</p>
+     */
     @NameInMap("ReportLanguage")
     public String reportLanguage;
 
     @NameInMap("ReportRegionId")
     public String reportRegionId;
 
+    /**
+     * <p>The format of the inspection report. Valid values are pdf and json. The default value is pdf.</p>
+     */
     @NameInMap("ReportType")
     public String reportType;
 
     /**
-     * <p>The start time of the inspection task. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. By default, the time range of the task is the latest 24 hours.</p>
+     * <p>The beginning of the inspection time range. The time must be in UTC and formatted as YYYY-MM-DDTHH:mm:ssZ. If StartTime and EndTime are not specified, the inspection covers the last 24 hours.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-12-28T16:00:00Z</p>

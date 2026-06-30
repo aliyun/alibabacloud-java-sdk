@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCustomAgentResponseBody extends TeaModel {
     /**
-     * <p>The creation time of the agent.</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-11-27 16:01:28</p>
@@ -14,7 +14,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
     public String createdAt;
 
     /**
-     * <p>Indicates whether tools are enabled.</p>
+     * <p>Specifies whether to enable tools.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -33,6 +33,9 @@ public class CreateCustomAgentResponseBody extends TeaModel {
 
     /**
      * <p>The name of the agent.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>查询实例列表Agent</p>
      */
     @NameInMap("Name")
     public String name;
@@ -50,13 +53,16 @@ public class CreateCustomAgentResponseBody extends TeaModel {
     public java.util.List<CreateCustomAgentResponseBodySkills> skills;
 
     /**
-     * <p>The system prompts.</p>
+     * <p>The system prompt.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>我是您用来查询实例列表的专属Agent</p>
      */
     @NameInMap("SystemPrompt")
     public String systemPrompt;
 
     /**
-     * <p>The information about the tool.</p>
+     * <p>The tool information.</p>
      */
     @NameInMap("Tools")
     public java.util.List<String> tools;

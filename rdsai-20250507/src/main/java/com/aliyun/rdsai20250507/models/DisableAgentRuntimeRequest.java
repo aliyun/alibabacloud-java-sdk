@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DisableAgentRuntimeRequest extends TeaModel {
     /**
+     * <p>An idempotent parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>0c593ea1-3bea-11e9-b96b-88**********</p>
      */
@@ -12,6 +14,7 @@ public class DisableAgentRuntimeRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The ID of the AI application instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class DisableAgentRuntimeRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The ID of the region where the instance is located.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */

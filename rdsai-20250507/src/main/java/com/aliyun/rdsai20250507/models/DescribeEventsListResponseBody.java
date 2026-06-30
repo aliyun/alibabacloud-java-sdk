@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEventsListResponseBody extends TeaModel {
     /**
-     * <p>The total number of events.</p>
+     * <p>The count for each event code.</p>
      * 
      * <strong>example:</strong>
      * <p>OtherException:3,MysqlIOException:1</p>
@@ -14,13 +14,13 @@ public class DescribeEventsListResponseBody extends TeaModel {
     public String eventCodeCounts;
 
     /**
-     * <p>The information about the events.</p>
+     * <p>A list of events.</p>
      */
     @NameInMap("Events")
     public java.util.List<DescribeEventsListResponseBodyEvents> events;
 
     /**
-     * <p>The total number of pages.</p>
+     * <p>The number of pages returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,7 +29,7 @@ public class DescribeEventsListResponseBody extends TeaModel {
     public Long pageCount;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +38,7 @@ public class DescribeEventsListResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -50,13 +50,13 @@ public class DescribeEventsListResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>FE9C65D7-930F-57A5-A207-8C396329241C</p>
+     * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -65,7 +65,7 @@ public class DescribeEventsListResponseBody extends TeaModel {
     public Long totalCount;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -153,7 +153,7 @@ public class DescribeEventsListResponseBody extends TeaModel {
         public String eventCode;
 
         /**
-         * <p>The state of the event.</p>
+         * <p>The event status.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -162,13 +162,16 @@ public class DescribeEventsListResponseBody extends TeaModel {
         public String eventStatus;
 
         /**
-         * <p>The event.</p>
+         * <p>A list of event times.</p>
          */
         @NameInMap("EventTimeList")
         public java.util.List<String> eventTimeList;
 
         /**
-         * <p>The description of the instance.</p>
+         * <p>The instance description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试实例</p>
          */
         @NameInMap("InstanceDescription")
         public String instanceDescription;
@@ -177,7 +180,7 @@ public class DescribeEventsListResponseBody extends TeaModel {
          * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-2zecnb327gp36e7lh</p>
+         * <p>rm-2zecnb327gp36****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -191,6 +194,9 @@ public class DescribeEventsListResponseBody extends TeaModel {
         @NameInMap("RecoveryTime")
         public String recoveryTime;
 
+        /**
+         * <p>The region ID.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListApiKeysRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rds_copilot***_public_cn-*********6</p>
      */
@@ -12,6 +14,8 @@ public class ListApiKeysRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ListApiKeysRequest extends TeaModel {
     public Integer page;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

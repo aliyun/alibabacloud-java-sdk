@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateMOQuotaAlertThresholdResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
@@ -13,10 +13,15 @@ public class UpdateMOQuotaAlertThresholdResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The result list.</p>
+     */
     @NameInMap("Results")
     public java.util.List<UpdateMOQuotaAlertThresholdResponseBodyResults> results;
 
     /**
+     * <p>A value of <code>true</code> indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -54,7 +59,7 @@ public class UpdateMOQuotaAlertThresholdResponseBody extends TeaModel {
 
     public static class UpdateMOQuotaAlertThresholdResponseBodyResults extends TeaModel {
         /**
-         * <p>API Key</p>
+         * <p>The API key.</p>
          * 
          * <strong>example:</strong>
          * <p>sk-rds-*****</p>
@@ -63,6 +68,8 @@ public class UpdateMOQuotaAlertThresholdResponseBody extends TeaModel {
         public String apikey;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rds_copilot***_public_cn-o*****1</p>
          */
@@ -70,6 +77,8 @@ public class UpdateMOQuotaAlertThresholdResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The API key name.</p>
+         * 
          * <strong>example:</strong>
          * <p>api-*****</p>
          */
@@ -77,12 +86,20 @@ public class UpdateMOQuotaAlertThresholdResponseBody extends TeaModel {
         public String keyName;
 
         /**
+         * <p>The key type.</p>
+         * 
          * <strong>example:</strong>
          * <p>system / custom</p>
          */
         @NameInMap("KeyType")
         public String keyType;
 
+        /**
+         * <p>The alert threshold percentage. For example, a value of 80 triggers an alert when usage reaches 80% of the usage quota. The alert is reset after the usage falls below this percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[0, 100]，0 会清理告警设置</p>
+         */
         @NameInMap("ThresholdPercent")
         public Integer thresholdPercent;
 

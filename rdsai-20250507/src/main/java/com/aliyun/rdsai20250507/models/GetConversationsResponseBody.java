@@ -95,12 +95,18 @@ public class GetConversationsResponseBody extends TeaModel {
 
         /**
          * <p>The introduction to the conversation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试搜索RDS资源</p>
          */
         @NameInMap("Introduction")
         public String introduction;
 
         /**
          * <p>The name of the history conversation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>搜索RDS资源。</p>
          */
         @NameInMap("Name")
         public String name;

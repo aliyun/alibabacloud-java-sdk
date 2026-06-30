@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeModelOperatorRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rds_copilot***_public_cn-*********6</p>
      */

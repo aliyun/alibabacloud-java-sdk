@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetCustomAgentRequest extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to <strong>GetCustomAgent</strong>.</p>
+     * <p>The ID of the custom agent.</p>
      * 
      * <strong>example:</strong>
-     * <p>ebe44453-3b41-4c74-94d1-01d088d7xxxx</p>
+     * <p>ebe44453-3b41-4c74-94d1-01d088d7****</p>
      */
     @NameInMap("CustomAgentId")
     public String customAgentId;

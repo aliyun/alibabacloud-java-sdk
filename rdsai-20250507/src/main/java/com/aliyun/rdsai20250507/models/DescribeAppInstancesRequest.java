@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAppInstancesRequest extends TeaModel {
     /**
-     * <p>The ID of the RDS for PostgreSQL instance with which the RDS Supabase instances are associated. If you specify this parameter, the RDS Supabase instances associated with the specified RDS for PostgreSQL instance are queried.</p>
+     * <p>The application type. The only supported value is <strong>supabase</strong>, which indicates <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>supabase</p>
@@ -14,7 +14,7 @@ public class DescribeAppInstancesRequest extends TeaModel {
     public String appType;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The ID of an RDS PostgreSQL instance to return only the associated AI application instances.</p>
      * 
      * <strong>example:</strong>
      * <p>pgm-2ze49qv594vi****</p>
@@ -23,7 +23,7 @@ public class DescribeAppInstancesRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The number of records per page. Valid values: <strong>1 to 50</strong>.</p>
+     * <p>The page number of the results to return. The value must be greater than 0.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class DescribeAppInstancesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The application type. Only <strong>supabase</strong> is supported. For more information, see <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a>.</p>
+     * <p>The number of AI application instances to return on each page. Valid values: <strong>1 to 50</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -41,7 +41,7 @@ public class DescribeAppInstancesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The operation that you want to perform. Set the value to <strong>DescribeAppInstances</strong>.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>

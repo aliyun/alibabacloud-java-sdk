@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class UpdateMOQuotaAlertThresholdRequest extends TeaModel {
     /**
+     * <p>A list of API keys.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Apikey")
     public java.util.List<UpdateMOQuotaAlertThresholdRequestApikey> apikey;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +44,7 @@ public class UpdateMOQuotaAlertThresholdRequest extends TeaModel {
 
     public static class UpdateMOQuotaAlertThresholdRequestApikey extends TeaModel {
         /**
-         * <p>ApiKey</p>
+         * <p>The API key.</p>
          * 
          * <strong>example:</strong>
          * <p>sk-rds-*****</p>
@@ -50,6 +52,12 @@ public class UpdateMOQuotaAlertThresholdRequest extends TeaModel {
         @NameInMap("Apikey")
         public String apikey;
 
+        /**
+         * <p>The alert threshold percentage. For example, a value of 80 triggers an alert when usage reaches 80% of the usage quota. The alert is reset after the usage falls below this percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[0, 100]，0 会清理告警设置</p>
+         */
         @NameInMap("ThresholdPercent")
         public Integer thresholdPercent;
 

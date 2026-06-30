@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeWhitelistIpsRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rds_copilot****_public_cn-4****02</p>
      */

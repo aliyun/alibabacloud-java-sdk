@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCustomAgentShrinkRequest extends TeaModel {
     /**
-     * <p>The system prompts.</p>
+     * <p>Specifies whether to enable tools.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,10 @@ public class CreateCustomAgentShrinkRequest extends TeaModel {
     public Boolean enableTools;
 
     /**
-     * <p>The operation that you want to perform. Set the value to <strong>CreateCustomAgent</strong>.</p>
+     * <p>The name of the agent.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>查询实例列表Agent</p>
      */
     @NameInMap("Name")
     public String name;
@@ -23,14 +26,17 @@ public class CreateCustomAgentShrinkRequest extends TeaModel {
     public String skillIdsShrink;
 
     /**
-     * <p>The name of the dedicated agent.</p>
+     * <p>The system prompt.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>我是您用来查询实例列表的专属Agent</p>
      */
     @NameInMap("SystemPrompt")
     public String systemPrompt;
 
     /**
-     * <p>Specifies whether to enable tools.</p>
+     * <p>The tool information.</p>
      */
     @NameInMap("Tools")
     public String toolsShrink;

@@ -14,7 +14,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
     public String enableTools;
 
     /**
-     * <p>The ID of the agent.</p>
+     * <p>AgentId.</p>
      * 
      * <strong>example:</strong>
      * <p>82cf3d62-0add-47bd-869f-877131f7****</p>
@@ -23,7 +23,10 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
     public String id;
 
     /**
-     * <p>The name of the agent.</p>
+     * <p>The name of the custom agent.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>查询实例列表Agent</p>
      */
     @NameInMap("Name")
     public String name;
@@ -41,13 +44,16 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
     public java.util.List<UpdateCustomAgentResponseBodySkills> skills;
 
     /**
-     * <p>The system prompts.</p>
+     * <p>The system prompt.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>我是您用来查询实例列表的专属Agent</p>
      */
     @NameInMap("SystemPrompt")
     public String systemPrompt;
 
     /**
-     * <p>The information about the tool.</p>
+     * <p>The tools that the custom agent can use.</p>
      */
     @NameInMap("Tools")
     public java.util.List<String> tools;

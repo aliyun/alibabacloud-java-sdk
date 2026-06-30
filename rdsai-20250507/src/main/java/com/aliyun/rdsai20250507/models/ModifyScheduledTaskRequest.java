@@ -5,24 +5,35 @@ import com.aliyun.tea.*;
 
 public class ModifyScheduledTaskRequest extends TeaModel {
     /**
-     * <p>The description of the new inspection configuration.</p>
+     * <p>The new description of the inspection configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>定时RDS实例巡检任务</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The new inspection frequency. Separate multiple values with commas (,). Default value: DAILY. Valid values:</p>
+     * <p>The new inspection frequency. Separate multiple values with a comma (,). The default value is DAILY. Valid values:</p>
      * <ul>
-     * <li>DAILY</li>
-     * <li>Monday</li>
-     * <li>Tuesday</li>
-     * <li>Wednesday</li>
-     * <li>Thursday</li>
-     * <li>Friday</li>
-     * <li>Saturday</li>
-     * <li>Sunday</li>
+     * <li><p>DAILY: Every day</p>
+     * </li>
+     * <li><p>Monday: Every Monday</p>
+     * </li>
+     * <li><p>Tuesday: Every Tuesday</p>
+     * </li>
+     * <li><p>Wednesday: Every Wednesday</p>
+     * </li>
+     * <li><p>Thursday: Every Thursday</p>
+     * </li>
+     * <li><p>Friday: Every Friday</p>
+     * </li>
+     * <li><p>Saturday: Every Saturday</p>
+     * </li>
+     * <li><p>Sunday: Every Sunday</p>
+     * </li>
      * </ul>
-     * <h3><a href="#daily--dailymonday--daily-"></a>Note: DAILY takes precedence over other values. For example, if you enter DAILY,Monday, the backend will use DAILY as the inspection frequency.</h3>
+     * <h3>Note: <code>DAILY</code> overrides all other day-of-the-week settings. For example, if you specify <code>DAILY,Monday</code>, the system uses <code>DAILY</code> as the inspection frequency.</h3>
      * 
      * <strong>example:</strong>
      * <p>Monday</p>
@@ -34,7 +45,7 @@ public class ModifyScheduledTaskRequest extends TeaModel {
     public String inspectionItems;
 
     /**
-     * <p>The new list of related instances. Separate multiple instances with commas (,).</p>
+     * <p>The new instance IDs to associate with the task. Separate multiple IDs with a comma (,).</p>
      * 
      * <strong>example:</strong>
      * <p>rm-2ze6mk259v322****,rm-2zef3b65430j0****</p>
@@ -43,7 +54,10 @@ public class ModifyScheduledTaskRequest extends TeaModel {
     public String instanceIds;
 
     /**
-     * <p>The name of the new inspection configuration.</p>
+     * <p>The new name of the inspection configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RDS巡检任务</p>
      */
     @NameInMap("Name")
     public String name;
@@ -62,7 +76,7 @@ public class ModifyScheduledTaskRequest extends TeaModel {
     public String scheduledId;
 
     /**
-     * <p>The new execution time of the inspection task. Specify the time in the ISO 8601 standard in the HH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The new time to run the inspection task. The time must be in the <code>HH:mm:ssZ</code> format and in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>02:00:00Z</p>
@@ -71,7 +85,7 @@ public class ModifyScheduledTaskRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The inspection time range. The default value is the latest 24 hours. Valid values: 1 to 168. The maximum value is 7 days.</p>
+     * <p>The inspection time range in hours. The default is 24, which means data from the last 24 hours is inspected. Valid values: 1 to 168. The maximum supported range is 7 days.</p>
      * 
      * <strong>example:</strong>
      * <p>24</p>

@@ -12,6 +12,9 @@ public class GetScheduledInstancesResponseBody extends TeaModel {
 
     /**
      * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>获取巡检实例ID列表成功</p>
      */
     @NameInMap("Message")
     public String message;
@@ -134,6 +137,9 @@ public class GetScheduledInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The instance description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>巡检测试实例。</p>
          */
         @NameInMap("InstanceDesc")
         public String instanceDesc;

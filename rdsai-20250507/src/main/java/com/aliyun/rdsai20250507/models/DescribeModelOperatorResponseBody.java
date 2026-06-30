@@ -4,10 +4,15 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class DescribeModelOperatorResponseBody extends TeaModel {
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public DescribeModelOperatorResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -15,7 +20,7 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329241C</p>
@@ -24,6 +29,8 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -69,6 +76,8 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
 
     public static class DescribeModelOperatorResponseBodyDataDailyUsage extends TeaModel {
         /**
+         * <p>The date of the usage record.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-03-31</p>
          */
@@ -76,6 +85,8 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
         public String date;
 
         /**
+         * <p>The number of tokens used on this date.</p>
+         * 
          * <strong>example:</strong>
          * <p>100000</p>
          */
@@ -107,6 +118,8 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
 
     public static class DescribeModelOperatorResponseBodyDataKeyUsageListDailyUsage extends TeaModel {
         /**
+         * <p>The date of the usage record.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-03-31</p>
          */
@@ -114,6 +127,8 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
         public String date;
 
         /**
+         * <p>The number of tokens used by the API key on this date.</p>
+         * 
          * <strong>example:</strong>
          * <p>2000</p>
          */
@@ -145,7 +160,7 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
 
     public static class DescribeModelOperatorResponseBodyDataKeyUsageList extends TeaModel {
         /**
-         * <p>API Key</p>
+         * <p>The API key.</p>
          * 
          * <strong>example:</strong>
          * <p>sk-rds-*****</p>
@@ -153,10 +168,15 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
         @NameInMap("ApiKey")
         public String apiKey;
 
+        /**
+         * <p>The daily usage for the API key.</p>
+         */
         @NameInMap("DailyUsage")
         public java.util.List<DescribeModelOperatorResponseBodyDataKeyUsageListDailyUsage> dailyUsage;
 
         /**
+         * <p>Indicates whether the API key has been deleted.</p>
+         * 
          * <strong>example:</strong>
          * <p>fase</p>
          */
@@ -164,6 +184,8 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
         public Boolean deleted;
 
         /**
+         * <p>The name of the API key.</p>
+         * 
          * <strong>example:</strong>
          * <p>api-*****</p>
          */
@@ -171,6 +193,8 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
         public String keyName;
 
         /**
+         * <p>The type of the API key.</p>
+         * 
          * <strong>example:</strong>
          * <p>fixed</p>
          */
@@ -178,6 +202,8 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
         public String keyType;
 
         /**
+         * <p>The total number of tokens used by this API key.</p>
+         * 
          * <strong>example:</strong>
          * <p>100000</p>
          */
@@ -185,6 +211,8 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
         public String keyUsed;
 
         /**
+         * <p>The token usage for the current cycle.</p>
+         * 
          * <strong>example:</strong>
          * <p>2000000</p>
          */
@@ -256,6 +284,8 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
 
     public static class DescribeModelOperatorResponseBodyData extends TeaModel {
         /**
+         * <p>The API key.</p>
+         * 
          * <strong>example:</strong>
          * <p>sk-rds-xxx</p>
          */
@@ -263,6 +293,14 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
         public String apiKey;
 
         /**
+         * <p>Indicates whether auto-renewal is enabled for the instance. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong> (default): Disabled.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>False</p>
          */
@@ -270,6 +308,8 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
         public Boolean autoRenew;
 
         /**
+         * <p>The endpoint URL for model requests.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://xxx.yy/v1">http://xxx.yy/v1</a></p>
          */
@@ -277,16 +317,23 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
         public String baseUrl;
 
         /**
+         * <p>The billing method. Valid values: <code>PREPAY</code> (subscription) and <code>POSTPAY</code> (pay-as-you-go).</p>
+         * 
          * <strong>example:</strong>
          * <p>PREPAY / POSTPAY</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
 
+        /**
+         * <p>The daily token usage.</p>
+         */
         @NameInMap("DailyUsage")
         public java.util.List<DescribeModelOperatorResponseBodyDataDailyUsage> dailyUsage;
 
         /**
+         * <p>The UNIX timestamp, in milliseconds, indicating when the instance expires.</p>
+         * 
          * <strong>example:</strong>
          * <p>1775145600000</p>
          */
@@ -294,6 +341,8 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
         public Long endTime;
 
         /**
+         * <p>The instance type.</p>
+         * 
          * <strong>example:</strong>
          * <p>xlarge</p>
          */
@@ -301,19 +350,35 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
         public String instanceClass;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rds_copilot***_public_cn-*********6</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The usage of each API key, including deleted keys.</p>
+         */
         @NameInMap("KeyUsageList")
         public java.util.List<DescribeModelOperatorResponseBodyDataKeyUsageList> keyUsageList;
 
+        /**
+         * <p>Indicates whether prefix caching is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("PrefixCacheEnabled")
         public Boolean prefixCacheEnabled;
 
+        @NameInMap("SessionIds")
+        public java.util.List<String> sessionIds;
+
         /**
+         * <p>The UNIX timestamp, in milliseconds, indicating when the instance started.</p>
+         * 
          * <strong>example:</strong>
          * <p>1772439028000</p>
          */
@@ -321,6 +386,8 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
         public Long startTime;
 
         /**
+         * <p>The status.</p>
+         * 
          * <strong>example:</strong>
          * <p>active/creating</p>
          */
@@ -328,6 +395,8 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The total quota for the current cycle, such as the monthly quota.</p>
+         * 
          * <strong>example:</strong>
          * <p>200000000</p>
          */
@@ -335,6 +404,8 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
         public Long totalQuota;
 
         /**
+         * <p>The usage in the current cycle, such as the monthly usage.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000000</p>
          */
@@ -424,6 +495,14 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
         }
         public Boolean getPrefixCacheEnabled() {
             return this.prefixCacheEnabled;
+        }
+
+        public DescribeModelOperatorResponseBodyData setSessionIds(java.util.List<String> sessionIds) {
+            this.sessionIds = sessionIds;
+            return this;
+        }
+        public java.util.List<String> getSessionIds() {
+            return this.sessionIds;
         }
 
         public DescribeModelOperatorResponseBodyData setStartTime(Long startTime) {

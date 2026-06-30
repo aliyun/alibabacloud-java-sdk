@@ -15,8 +15,6 @@ public class ModifyAppInstanceResponseBody extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>Id of the request</p>
-     * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
      */

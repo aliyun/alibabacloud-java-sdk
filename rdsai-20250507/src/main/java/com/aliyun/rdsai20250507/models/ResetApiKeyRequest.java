@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResetApiKeyRequest extends TeaModel {
     /**
-     * <p>Api Key</p>
+     * <p>The API key.</p>
      * 
      * <strong>example:</strong>
      * <p>sk-rds-*****</p>
@@ -14,6 +14,7 @@ public class ResetApiKeyRequest extends TeaModel {
     public String apiKey;
 
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

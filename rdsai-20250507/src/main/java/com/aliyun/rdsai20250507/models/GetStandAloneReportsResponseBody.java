@@ -6,12 +6,15 @@ import com.aliyun.tea.*;
 public class GetStandAloneReportsResponseBody extends TeaModel {
     /**
      * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>获取巡检报告列表成功</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The page number. Pages start from 1. Default value: 1.</p>
+     * <p>The page number. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +23,7 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of records on each page. Default value: 20. Maximum value: 100.</p>
+     * <p>The number of entries per page. The default value is 20 and the maximum value is 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +32,7 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The reports.</p>
+     * <p>A list of inspection reports.</p>
      */
     @NameInMap("Reports")
     public java.util.List<GetStandAloneReportsResponseBodyReports> reports;
@@ -44,7 +47,7 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned results.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -53,7 +56,7 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of records.</p>
+     * <p>The total number of entries across all pages.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -124,7 +127,7 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
 
     public static class GetStandAloneReportsResponseBodyReports extends TeaModel {
         /**
-         * <p>The creation time of the inspection task.</p>
+         * <p>The time the inspection task was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-22T08:20:31Z</p>
@@ -133,7 +136,7 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
         public String createdTime;
 
         /**
-         * <p>The end time of the inspection. The time is in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+         * <p>The end time of the inspection. The time is in UTC and uses the <code>YYYY-MM-DDTHH:mm:ssZ</code> format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-23T08:20:31Z</p>
@@ -144,6 +147,9 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
         @NameInMap("InspectionItems")
         public String inspectionItems;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
@@ -154,7 +160,7 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
         public String reportType;
 
         /**
-         * <p>The start time of the inspection. The time is in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+         * <p>The start time of the inspection. The time is in UTC and uses the <code>YYYY-MM-DDTHH:mm:ssZ</code> format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-23T08:00:31Z</p>
@@ -172,7 +178,7 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the inspection report.</p>
+         * <p>The ID of the inspection task.</p>
          * 
          * <strong>example:</strong>
          * <p>0f19210c-7bb8-4e38-a099-f94152df****</p>

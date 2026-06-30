@@ -4,10 +4,18 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class DescribeMOTokenUsageDetailRequest extends TeaModel {
+    /**
+     * <p>The API key used for the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sk-rds-*****</p>
+     */
     @NameInMap("ApiKey")
     public String apiKey;
 
     /**
+     * <p>The consumer associated with the API key.</p>
+     * 
      * <strong>example:</strong>
      * <p>16<strong><strong><strong>4_rds_copilot</strong></strong>_public_cn-4</strong>**02</p>
      */
@@ -15,6 +23,8 @@ public class DescribeMOTokenUsageDetailRequest extends TeaModel {
     public String consumerName;
 
     /**
+     * <p>The cursor-based pagination token. This parameter takes priority over Page. Leave this parameter empty for the first call. For subsequent calls, use the NextCursor value returned in the previous response.</p>
+     * 
      * <strong>example:</strong>
      * <p>eyJpZCI6MTIzNDUsInRzIjoiMjAyNi0wNC0wOFQwMDowMDowMFoifQ==</p>
      */
@@ -22,6 +32,8 @@ public class DescribeMOTokenUsageDetailRequest extends TeaModel {
     public String cursor;
 
     /**
+     * <p>The end time in ISO 8601 format (UTC).</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-12-13T16:00:00Z</p>
      */
@@ -29,6 +41,7 @@ public class DescribeMOTokenUsageDetailRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +51,8 @@ public class DescribeMOTokenUsageDetailRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The model that was called.</p>
+     * 
      * <strong>example:</strong>
      * <p>qwen-flash</p>
      */
@@ -45,6 +60,8 @@ public class DescribeMOTokenUsageDetailRequest extends TeaModel {
     public String model;
 
     /**
+     * <p>The page number. Minimum value: 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -52,6 +69,8 @@ public class DescribeMOTokenUsageDetailRequest extends TeaModel {
     public Integer page;
 
     /**
+     * <p>The number of records per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -59,6 +78,8 @@ public class DescribeMOTokenUsageDetailRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region in which the instance resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -66,11 +87,22 @@ public class DescribeMOTokenUsageDetailRequest extends TeaModel {
     public String region;
 
     /**
+     * <p>The start time in ISO 8601 format (UTC).</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-01-04T16:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
+
+    /**
+     * <p>The type of usage to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>text</p>
+     */
+    @NameInMap("UsageType")
+    public String usageType;
 
     public static DescribeMOTokenUsageDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeMOTokenUsageDetailRequest self = new DescribeMOTokenUsageDetailRequest();
@@ -155,6 +187,14 @@ public class DescribeMOTokenUsageDetailRequest extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
+    }
+
+    public DescribeMOTokenUsageDetailRequest setUsageType(String usageType) {
+        this.usageType = usageType;
+        return this;
+    }
+    public String getUsageType() {
+        return this.usageType;
     }
 
 }

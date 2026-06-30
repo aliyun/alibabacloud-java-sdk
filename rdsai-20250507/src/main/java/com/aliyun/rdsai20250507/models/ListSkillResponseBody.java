@@ -94,6 +94,9 @@ public class ListSkillResponseBody extends TeaModel {
     public static class ListSkillResponseBodyData extends TeaModel {
         /**
          * <p>The content of the skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;MySQL&quot;: &quot;MySQL 优化指南...&quot;,&quot;PostgreSQL&quot;: &quot;PostgreSQL 优化指南...&quot;}</p>
          */
         @NameInMap("Content")
         public java.util.Map<String, ?> content;
@@ -115,6 +118,9 @@ public class ListSkillResponseBody extends TeaModel {
 
         /**
          * <p>The description of the skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SQL审查专家：全面审核SQL的安全性、性能与规范性，识别风险并提供优化建议。用户提交SQL或询问“SQL审核”“SQL Review”“有风险吗”“如何优化”时，立即启用。</p>
          */
         @NameInMap("Description")
         public String description;

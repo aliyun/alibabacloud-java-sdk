@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceAuthInfoRequest extends TeaModel {
     /**
-     * <p>The region ID.</p>
+     * <p>The instance ID of the AI application.</p>
      * 
      * <strong>example:</strong>
      * <p>ra-supabase-8moov5lxba****</p>
@@ -14,7 +14,7 @@ public class DescribeInstanceAuthInfoRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The operation that you want to perform. Set the value to <strong>DescribeInstanceAuthInfo</strong>.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyWhitelistIpsRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rds_copilot***_public_cn-*********6</p>
      */
@@ -12,6 +14,8 @@ public class ModifyWhitelistIpsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The IP whitelist. Before you modify the IP whitelist, call the DescribeInstanceIpWhitelist operation to query the existing IP whitelist of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1,192.168.1.0/24</p>
      */

@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class ChatMessagesResponseBody extends TeaModel {
     /**
-     * <p>The answer.</p>
+     * <p>The content of the generated answer.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>您询问的实例rm-bp14as9914vd3**** 磁盘使用率为23%，暂时不需要进行扩容。如果您需要进一步查看某个实例的详细配置、性能监控或进行其他操作，请告诉我你的具体需求！</p>
      */
     @NameInMap("Answer")
     public String answer;
@@ -20,7 +23,7 @@ public class ChatMessagesResponseBody extends TeaModel {
     public String conversationId;
 
     /**
-     * <p>The creation time of the conversation.</p>
+     * <p>The time when the message was created. This value is a UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1763986004</p>
@@ -29,7 +32,7 @@ public class ChatMessagesResponseBody extends TeaModel {
     public Long createdAt;
 
     /**
-     * <p>The event.</p>
+     * <p>The event associated with the message.</p>
      * 
      * <strong>example:</strong>
      * <p>MysqlIOException</p>
@@ -38,7 +41,7 @@ public class ChatMessagesResponseBody extends TeaModel {
     public String event;
 
     /**
-     * <p>The message ID.</p>
+     * <p>The ID of the message, which is distinct from <code>MessageId</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>60b335ca-124d-4ee1-864b-de554987****</p>
@@ -47,7 +50,7 @@ public class ChatMessagesResponseBody extends TeaModel {
     public String id;
 
     /**
-     * <p>The message ID.</p>
+     * <p>The unique ID of the message.</p>
      * 
      * <strong>example:</strong>
      * <p>oas8pwy2-slxw-sf98-bx83-cb2hkktl****</p>
@@ -57,12 +60,15 @@ public class ChatMessagesResponseBody extends TeaModel {
 
     /**
      * <p>The query mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>以后会下线，不用关注。</p>
      */
     @NameInMap("Mode")
     public String mode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>

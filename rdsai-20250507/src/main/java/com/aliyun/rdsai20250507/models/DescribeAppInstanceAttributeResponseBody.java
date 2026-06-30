@@ -14,7 +14,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>The application type. Only <strong>supabase</strong> is supported. For more information, see <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a>.</p>
+     * <p>The application type. Currently, only <strong>supabase</strong> is supported, which indicates <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>supabase</p>
@@ -26,7 +26,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public java.util.List<DescribeAppInstanceAttributeResponseBodyComponents> components;
 
     /**
-     * <p>The ID of the RDS for PostgreSQL instance with which the RDS Supabase instances are associated.</p>
+     * <p>The instance ID of the ApsaraDB RDS for PostgreSQL database to which the AI application is connected.</p>
      * 
      * <strong>example:</strong>
      * <p>pgm-2ze49qv594vi****</p>
@@ -41,7 +41,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String eipStatus;
 
     /**
-     * <p>The instance type of the RDS Supabase instance.</p>
+     * <p>The instance type of the AI application.</p>
      * 
      * <strong>example:</strong>
      * <p>rdsai.supabase.basic</p>
@@ -50,7 +50,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String instanceClass;
 
     /**
-     * <p>The minor version number of RDS Supabase instance.</p>
+     * <p>The minor version of the RDS AI application instance.</p>
      * 
      * <strong>example:</strong>
      * <p>20241231</p>
@@ -59,13 +59,16 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String instanceMinorVersion;
 
     /**
-     * <p>The ID of the RDS Supabase instance.</p>
+     * <p>The instance ID of the AI application.</p>
      * 
      * <strong>example:</strong>
      * <p>ra-supabase-8moov5lxba****</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
+
+    @NameInMap("LoginToken")
+    public String loginToken;
 
     @NameInMap("NatCreatedBy")
     public String natCreatedBy;
@@ -103,8 +106,14 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("RetentionHours")
+    public String retentionHours;
+
+    @NameInMap("SqlExtendMoInstanceId")
+    public String sqlExtendMoInstanceId;
+
     /**
-     * <p>The status of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/2623972.html">Instance state table</a>.</p>
+     * <p>The instance status. For more information, see <a href="https://help.aliyun.com/document_detail/2623972.html">Instance status</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -112,8 +121,14 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("UploadKey")
+    public String uploadKey;
+
+    @NameInMap("UploadKeyList")
+    public java.util.List<DescribeAppInstanceAttributeResponseBodyUploadKeyList> uploadKeyList;
+
     /**
-     * <p>The ID of the vSwitch.</p>
+     * <p>The vSwitch ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-2zeaepb8k4ku05ov2****</p>
@@ -216,6 +231,14 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         return this.instanceName;
     }
 
+    public DescribeAppInstanceAttributeResponseBody setLoginToken(String loginToken) {
+        this.loginToken = loginToken;
+        return this;
+    }
+    public String getLoginToken() {
+        return this.loginToken;
+    }
+
     public DescribeAppInstanceAttributeResponseBody setNatCreatedBy(String natCreatedBy) {
         this.natCreatedBy = natCreatedBy;
         return this;
@@ -264,12 +287,44 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeAppInstanceAttributeResponseBody setRetentionHours(String retentionHours) {
+        this.retentionHours = retentionHours;
+        return this;
+    }
+    public String getRetentionHours() {
+        return this.retentionHours;
+    }
+
+    public DescribeAppInstanceAttributeResponseBody setSqlExtendMoInstanceId(String sqlExtendMoInstanceId) {
+        this.sqlExtendMoInstanceId = sqlExtendMoInstanceId;
+        return this;
+    }
+    public String getSqlExtendMoInstanceId() {
+        return this.sqlExtendMoInstanceId;
+    }
+
     public DescribeAppInstanceAttributeResponseBody setStatus(String status) {
         this.status = status;
         return this;
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public DescribeAppInstanceAttributeResponseBody setUploadKey(String uploadKey) {
+        this.uploadKey = uploadKey;
+        return this;
+    }
+    public String getUploadKey() {
+        return this.uploadKey;
+    }
+
+    public DescribeAppInstanceAttributeResponseBody setUploadKeyList(java.util.List<DescribeAppInstanceAttributeResponseBodyUploadKeyList> uploadKeyList) {
+        this.uploadKeyList = uploadKeyList;
+        return this;
+    }
+    public java.util.List<DescribeAppInstanceAttributeResponseBodyUploadKeyList> getUploadKeyList() {
+        return this.uploadKeyList;
     }
 
     public DescribeAppInstanceAttributeResponseBody setVSwitchId(String vSwitchId) {
@@ -322,6 +377,69 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+    }
+
+    public static class DescribeAppInstanceAttributeResponseBodyUploadKeyList extends TeaModel {
+        @NameInMap("IsSystemKey")
+        public Boolean isSystemKey;
+
+        @NameInMap("Remark")
+        public String remark;
+
+        @NameInMap("SlsStorageBytes")
+        public Long slsStorageBytes;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("UploadKey")
+        public String uploadKey;
+
+        public static DescribeAppInstanceAttributeResponseBodyUploadKeyList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAppInstanceAttributeResponseBodyUploadKeyList self = new DescribeAppInstanceAttributeResponseBodyUploadKeyList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAppInstanceAttributeResponseBodyUploadKeyList setIsSystemKey(Boolean isSystemKey) {
+            this.isSystemKey = isSystemKey;
+            return this;
+        }
+        public Boolean getIsSystemKey() {
+            return this.isSystemKey;
+        }
+
+        public DescribeAppInstanceAttributeResponseBodyUploadKeyList setRemark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+        public String getRemark() {
+            return this.remark;
+        }
+
+        public DescribeAppInstanceAttributeResponseBodyUploadKeyList setSlsStorageBytes(Long slsStorageBytes) {
+            this.slsStorageBytes = slsStorageBytes;
+            return this;
+        }
+        public Long getSlsStorageBytes() {
+            return this.slsStorageBytes;
+        }
+
+        public DescribeAppInstanceAttributeResponseBodyUploadKeyList setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeAppInstanceAttributeResponseBodyUploadKeyList setUploadKey(String uploadKey) {
+            this.uploadKey = uploadKey;
+            return this;
+        }
+        public String getUploadKey() {
+            return this.uploadKey;
         }
 
     }

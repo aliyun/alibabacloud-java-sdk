@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RenameApiKeyResponseBody extends TeaModel {
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -12,7 +14,7 @@ public class RenameApiKeyResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329241C</p>
@@ -21,6 +23,8 @@ public class RenameApiKeyResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates if the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

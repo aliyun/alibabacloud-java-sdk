@@ -9,7 +9,7 @@ public class DescribeInstanceRAGConfigRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ra-supabase-8moov5lxba***</p>
+     * <p>ra-supabase-8moov5lxba****</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;

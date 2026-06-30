@@ -34,6 +34,9 @@ public class CreateAppInstanceRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>List of modules</p>
+     */
     @NameInMap("Components")
     public java.util.List<CreateAppInstanceRequestComponents> components;
 
@@ -70,6 +73,13 @@ public class CreateAppInstanceRequest extends TeaModel {
      */
     @NameInMap("DashboardUsername")
     public String dashboardUsername;
+
+    /**
+     * <strong>example:</strong>
+     * <p>test_database_01</p>
+     */
+    @NameInMap("Database")
+    public String database;
 
     /**
      * <p>The idempotency token. The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
@@ -224,6 +234,14 @@ public class CreateAppInstanceRequest extends TeaModel {
         return this.dashboardUsername;
     }
 
+    public CreateAppInstanceRequest setDatabase(String database) {
+        this.database = database;
+        return this;
+    }
+    public String getDatabase() {
+        return this.database;
+    }
+
     public CreateAppInstanceRequest setDatabasePassword(String databasePassword) {
         this.databasePassword = databasePassword;
         return this;
@@ -289,6 +307,12 @@ public class CreateAppInstanceRequest extends TeaModel {
     }
 
     public static class CreateAppInstanceRequestComponents extends TeaModel {
+        /**
+         * <p>Module type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>supabase</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -309,6 +333,8 @@ public class CreateAppInstanceRequest extends TeaModel {
 
     public static class CreateAppInstanceRequestDBInstanceConfig extends TeaModel {
         /**
+         * <p>The instance type of the database instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>pg.n2.2c.1m</p>
          */
@@ -316,6 +342,8 @@ public class CreateAppInstanceRequest extends TeaModel {
         public String DBInstanceClass;
 
         /**
+         * <p>The storage capacity of the database instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -323,6 +351,8 @@ public class CreateAppInstanceRequest extends TeaModel {
         public Integer DBInstanceStorage;
 
         /**
+         * <p>The payment type of the database instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>Postpaid</p>
          */

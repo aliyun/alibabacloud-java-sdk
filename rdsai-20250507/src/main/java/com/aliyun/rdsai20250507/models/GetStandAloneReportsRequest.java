@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetStandAloneReportsRequest extends TeaModel {
     /**
-     * <p>The task end time based on which the reports are filtered. If you do not specify this parameter, all reports are returned.</p>
+     * <p>The end of the query\&quot;s time range. The time must be in UTC and in the <code>YYYY-MM-DDTHH:mm:ssZ</code> format. If omitted, no end time filter is applied.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-01-19T02:20:20Z</p>
@@ -14,7 +14,7 @@ public class GetStandAloneReportsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The page number. Pages start from 1. Default value: 1.</p>
+     * <p>The number of the page to return. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class GetStandAloneReportsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of records on each page. Default value: 20. Maximum value: 100.</p>
+     * <p>The number of entries to return on each page. Default: 20. Maximum: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -35,7 +35,7 @@ public class GetStandAloneReportsRequest extends TeaModel {
     public String reportType;
 
     /**
-     * <p>The task start time based on which the reports are filtered. If you do not specify this parameter, all reports are returned.</p>
+     * <p>The start of the query\&quot;s time range. The time must be in UTC and in the <code>YYYY-MM-DDTHH:mm:ssZ</code> format. If omitted, no start time filter is applied.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-03-11T02:09:00Z</p>

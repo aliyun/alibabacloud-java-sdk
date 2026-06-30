@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeSandboxTemplatesResponseBody extends TeaModel {
     /**
+     * <p>This parameter is reserved.</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
@@ -12,6 +14,8 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token to retrieve the next page of results. If this parameter is empty, all results have been returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAc3HCuYhJi/wvpk4xOr0VLYz/NvD85HpgBeRBCusEIeVQ0dHZH9jr+NP3X9Jx0iSoql55b9nd4PIDm252/a0f+U=</p>
      */
@@ -19,6 +23,8 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries returned on the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -33,7 +41,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
@@ -41,10 +49,15 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>A list of sandbox templates.</p>
+     */
     @NameInMap("SandboxTemplates")
     public java.util.List<DescribeSandboxTemplatesResponseBodySandboxTemplates> sandboxTemplates;
 
     /**
+     * <p>The total number of entries that match the query.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -113,7 +126,12 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
     }
 
     public static class DescribeSandboxTemplatesResponseBodySandboxTemplates extends TeaModel {
+        @NameInMap("CreatedBy")
+        public String createdBy;
+
         /**
+         * <p>The default number of CPUs for a sandbox created from this template.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -121,6 +139,8 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         public String defaultCpu;
 
         /**
+         * <p>The default memory size for a sandbox created from this template.</p>
+         * 
          * <strong>example:</strong>
          * <p>4Gi</p>
          */
@@ -128,6 +148,8 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         public String defaultMemory;
 
         /**
+         * <p>The description of the sandbox template.</p>
+         * 
          * <strong>example:</strong>
          * <p>code-interpreter-vpc</p>
          */
@@ -135,6 +157,8 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>Specifies whether sandboxes created from this template can access resources in the VPC of the parent RDS Supabase instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -142,6 +166,8 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         public String enableVpcAccess;
 
         /**
+         * <p>The name of the sandbox template.</p>
+         * 
          * <strong>example:</strong>
          * <p>code-interpreter</p>
          */
@@ -152,6 +178,8 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         public Long replicas;
 
         /**
+         * <p>The ID of the sandbox template. Use this ID when you create a sandbox.</p>
+         * 
          * <strong>example:</strong>
          * <p>code-interpreter-asdxxxx</p>
          */
@@ -161,6 +189,14 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         public static DescribeSandboxTemplatesResponseBodySandboxTemplates build(java.util.Map<String, ?> map) throws Exception {
             DescribeSandboxTemplatesResponseBodySandboxTemplates self = new DescribeSandboxTemplatesResponseBodySandboxTemplates();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSandboxTemplatesResponseBodySandboxTemplates setCreatedBy(String createdBy) {
+            this.createdBy = createdBy;
+            return this;
+        }
+        public String getCreatedBy() {
+            return this.createdBy;
         }
 
         public DescribeSandboxTemplatesResponseBodySandboxTemplates setDefaultCpu(String defaultCpu) {

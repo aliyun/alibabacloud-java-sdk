@@ -11,6 +11,9 @@ public class ModifyMessagesFeedbacksRequest extends TeaModel {
      * <li>like</li>
      * <li>dislike</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>无法理解上下文；答非所问</p>
      */
     @NameInMap("Content")
     public String content;

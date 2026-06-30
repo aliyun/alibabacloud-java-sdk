@@ -4,10 +4,15 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class CreateApiKeyResponseBody extends TeaModel {
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public CreateApiKeyResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -15,7 +20,7 @@ public class CreateApiKeyResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
@@ -24,6 +29,8 @@ public class CreateApiKeyResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -69,7 +76,7 @@ public class CreateApiKeyResponseBody extends TeaModel {
 
     public static class CreateApiKeyResponseBodyDataCustomKeyList extends TeaModel {
         /**
-         * <p>Api Key</p>
+         * <p>The API key.</p>
          * 
          * <strong>example:</strong>
          * <p>sk-rds-*****</p>
@@ -77,7 +84,12 @@ public class CreateApiKeyResponseBody extends TeaModel {
         @NameInMap("ApiKey")
         public String apiKey;
 
+        @NameInMap("DailyTokenQuota")
+        public Long dailyTokenQuota;
+
         /**
+         * <p>The API key name.</p>
+         * 
          * <strong>example:</strong>
          * <p>api-*****</p>
          */
@@ -85,6 +97,8 @@ public class CreateApiKeyResponseBody extends TeaModel {
         public String keyName;
 
         /**
+         * <p>The quota ratio. This parameter takes effect only when <strong>LimitType</strong> is set to <strong>ratio</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.2</p>
          */
@@ -92,6 +106,16 @@ public class CreateApiKeyResponseBody extends TeaModel {
         public Float limitRate;
 
         /**
+         * <p>The quota allocation method. Valid values:</p>
+         * <ul>
+         * <li><p><strong>fixed</strong>: The quota is a fixed value.</p>
+         * </li>
+         * <li><p><strong>ratio</strong>: The quota is specified as a ratio of the total available resources.</p>
+         * </li>
+         * <li><p><strong>auto</strong>: The quota is automatically allocated.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>fixed</p>
          */
@@ -99,6 +123,8 @@ public class CreateApiKeyResponseBody extends TeaModel {
         public String limitType;
 
         /**
+         * <p>The token quota for the API key.</p>
+         * 
          * <strong>example:</strong>
          * <p>100000</p>
          */
@@ -116,6 +142,14 @@ public class CreateApiKeyResponseBody extends TeaModel {
         }
         public String getApiKey() {
             return this.apiKey;
+        }
+
+        public CreateApiKeyResponseBodyDataCustomKeyList setDailyTokenQuota(Long dailyTokenQuota) {
+            this.dailyTokenQuota = dailyTokenQuota;
+            return this;
+        }
+        public Long getDailyTokenQuota() {
+            return this.dailyTokenQuota;
         }
 
         public CreateApiKeyResponseBodyDataCustomKeyList setKeyName(String keyName) {
@@ -154,16 +188,23 @@ public class CreateApiKeyResponseBody extends TeaModel {
 
     public static class CreateApiKeyResponseBodyData extends TeaModel {
         /**
+         * <p>The endpoint for model invocation.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://xxx.yy/v1">http://xxx.yy/v1</a></p>
          */
         @NameInMap("BaseUrl")
         public String baseUrl;
 
+        /**
+         * <p>The list of custom API keys.</p>
+         */
         @NameInMap("CustomKeyList")
         public java.util.List<CreateApiKeyResponseBodyDataCustomKeyList> customKeyList;
 
         /**
+         * <p>The system-generated API key.</p>
+         * 
          * <strong>example:</strong>
          * <p>sk-rds-xxx</p>
          */

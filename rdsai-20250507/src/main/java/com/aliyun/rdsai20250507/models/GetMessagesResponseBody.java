@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetMessagesResponseBody extends TeaModel {
     /**
-     * <p>The returned results.</p>
+     * <p>A list of message objects.</p>
      */
     @NameInMap("Data")
     public java.util.List<GetMessagesResponseBodyData> data;
 
     /**
-     * <p>Indicates whether the current page is followed by a page.</p>
+     * <p>Indicates whether there are more messages to retrieve.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -20,7 +20,7 @@ public class GetMessagesResponseBody extends TeaModel {
     public Boolean hasMore;
 
     /**
-     * <p>The maximum number of entries to return.</p>
+     * <p>The value of the Limit parameter used for this request.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -29,7 +29,7 @@ public class GetMessagesResponseBody extends TeaModel {
     public Long limit;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique identifier for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
@@ -106,13 +106,16 @@ public class GetMessagesResponseBody extends TeaModel {
 
     public static class GetMessagesResponseBodyData extends TeaModel {
         /**
-         * <p>The response to the query.</p>
+         * <p>The AI-generated response to the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>您询问的实例rm-bp14as9914vd3**** 磁盘使用率为23%，暂时不需要进行扩容。如果您需要进一步查看某个实例的详细配置、性能监控或进行其他操作，请告诉我具体需求！</p>
          */
         @NameInMap("Answer")
         public String answer;
 
         /**
-         * <p>The ID of the conversation.</p>
+         * <p>The unique identifier for the conversation.</p>
          * 
          * <strong>example:</strong>
          * <p>9cbbe885-b240-4803-9d15-6781a3fd****</p>
@@ -121,7 +124,7 @@ public class GetMessagesResponseBody extends TeaModel {
         public String conversationId;
 
         /**
-         * <p>The creation time of the conversation.</p>
+         * <p>The Unix timestamp (in seconds) when the message was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1763986004</p>
@@ -133,7 +136,7 @@ public class GetMessagesResponseBody extends TeaModel {
         public java.util.List<GetMessagesResponseBodyDataEvents> events;
 
         /**
-         * <p>The feedback.</p>
+         * <p>The user\&quot;s feedback on the answer, such as &quot;like&quot; or &quot;dislike&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>like</p>
@@ -151,7 +154,7 @@ public class GetMessagesResponseBody extends TeaModel {
         public String generationStatus;
 
         /**
-         * <p>The message ID.</p>
+         * <p>The unique identifier for the message.</p>
          * 
          * <strong>example:</strong>
          * <p>84dc9f9b-424a-404d-9c36-35e9d000****</p>
@@ -163,13 +166,16 @@ public class GetMessagesResponseBody extends TeaModel {
         public String lastSentEntryId;
 
         /**
-         * <p>The query statement.</p>
+         * <p>The user\&quot;s query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>实例rm-bp14as9914vd3**** 磁盘使用率，是否需要扩容</p>
          */
         @NameInMap("Query")
         public String query;
 
         /**
-         * <p>The retriever resources.</p>
+         * <p>The resources that were retrieved to generate the answer.</p>
          */
         @NameInMap("RetrieverResources")
         public java.util.List<?> retrieverResources;

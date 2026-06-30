@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
     /**
+     * <p>The cursor for the next page. An empty value indicates the last page.</p>
+     * 
      * <strong>example:</strong>
      * <p>eyJpZCI6MTIzNDUsInRzIjoiMjAyNi0wNC0wOFQwMDowMDowMFoifQ==</p>
      */
@@ -12,6 +14,8 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
     public String nextCursor;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,12 +23,17 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
     public Integer page;
 
     /**
+     * <p>The number of records per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The list of records returned.</p>
+     */
     @NameInMap("Records")
     public java.util.List<DescribeMOTokenUsageDetailResponseBodyRecords> records;
 
@@ -38,11 +47,22 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records that match the query conditions.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
+
+    /**
+     * <p>The usage type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>text</p>
+     */
+    @NameInMap("UsageType")
+    public String usageType;
 
     public static DescribeMOTokenUsageDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMOTokenUsageDetailResponseBody self = new DescribeMOTokenUsageDetailResponseBody();
@@ -97,8 +117,18 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public DescribeMOTokenUsageDetailResponseBody setUsageType(String usageType) {
+        this.usageType = usageType;
+        return this;
+    }
+    public String getUsageType() {
+        return this.usageType;
+    }
+
     public static class DescribeMOTokenUsageDetailResponseBodyRecords extends TeaModel {
         /**
+         * <p>The consumer associated with the API key.</p>
+         * 
          * <strong>example:</strong>
          * <p>16<strong><strong><strong>4_rds_copilot</strong></strong>_public_cn-4</strong>**02</p>
          */
@@ -106,6 +136,17 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
         public String consumerName;
 
         /**
+         * <p>The additional information passed by the user in the extra_info field during the request. The value is a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;label&quot;: &quot;test&quot;}</p>
+         */
+        @NameInMap("ExtraInfo")
+        public String extraInfo;
+
+        /**
+         * <p>The number of input tokens consumed.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000</p>
          */
@@ -113,6 +154,8 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
         public Double inputTokens;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rds_copilot***_public_cn-*********6</p>
          */
@@ -120,6 +163,8 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The model that was called.</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen-flash</p>
          */
@@ -127,6 +172,8 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
         public String model;
 
         /**
+         * <p>The number of output tokens consumed.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000</p>
          */
@@ -134,6 +181,8 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
         public Double outputTokens;
 
         /**
+         * <p>The region in which the instance resides.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -141,6 +190,8 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
         public String region;
 
         /**
+         * <p>The request time in ISO 8601 format (UTC).</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-04-01T01:00:00Z</p>
          */
@@ -148,6 +199,8 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
         public String requestTime;
 
         /**
+         * <p>The total number of tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>100000</p>
          */
@@ -165,6 +218,14 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
         }
         public String getConsumerName() {
             return this.consumerName;
+        }
+
+        public DescribeMOTokenUsageDetailResponseBodyRecords setExtraInfo(String extraInfo) {
+            this.extraInfo = extraInfo;
+            return this;
+        }
+        public String getExtraInfo() {
+            return this.extraInfo;
         }
 
         public DescribeMOTokenUsageDetailResponseBodyRecords setInputTokens(Double inputTokens) {

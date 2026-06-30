@@ -12,6 +12,9 @@ public class GetInspectionReportResponseBody extends TeaModel {
 
     /**
      * <p>The report text in the markdown format.</p>
+     * 
+     * <strong>example:</strong>
+     * <h1>RDS批量巡检汇总报告\n\n&gt; 本次批量巡检共检查 <strong>1</strong> 个实例；发现 <strong>1</strong> 个实例存在警告（共 1 项警告）……</h1>
      */
     @NameInMap("MarkdownText")
     public String markdownText;
@@ -131,6 +134,9 @@ public class GetInspectionReportResponseBody extends TeaModel {
 
         /**
          * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>实例运行状态正常</p>
          */
         @NameInMap("Message")
         public String message;
@@ -325,6 +331,9 @@ public class GetInspectionReportResponseBody extends TeaModel {
 
         /**
          * <p>The description of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试实例</p>
          */
         @NameInMap("InstanceDesc")
         public String instanceDesc;
@@ -350,6 +359,9 @@ public class GetInspectionReportResponseBody extends TeaModel {
          * <li>If the InstanceId parameter is not specified, all content of the inspection report is returned. However, the MarkdownText field is empty.</li>
          * <li>If the InstanceId parameter is specified, the content related to the instance is returned in the MarkdownText field.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <h1>RDS实例巡检报告\n\n<strong>实例ID</strong>: <code>rm-2zep6e5u6l2yu****</code>\n\n<strong>引擎类型</strong>: MySQL\n\n<strong>地域</strong>: cn-beijing\n\n<strong>时间范围(UTC)</strong>: 2026-02-04T03:31:00Z ~ 2026-02-05T03:31:00Z\n\n&gt; 本次巡检共包含 <strong>60</strong> 项检查，其中 1项警告、57项正常、2项数据获取失败。……</h1>
          */
         @NameInMap("MarkdownText")
         public String markdownText;

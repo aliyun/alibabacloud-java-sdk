@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateInspectionTaskResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the result is returned.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public CreateInspectionTaskResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>任务创建成功</p>
      */
     @NameInMap("Message")
     public String message;

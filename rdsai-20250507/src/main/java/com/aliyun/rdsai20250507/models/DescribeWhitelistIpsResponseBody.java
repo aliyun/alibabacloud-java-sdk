@@ -4,10 +4,15 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class DescribeWhitelistIpsResponseBody extends TeaModel {
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public DescribeWhitelistIpsResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -15,7 +20,7 @@ public class DescribeWhitelistIpsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
@@ -24,6 +29,8 @@ public class DescribeWhitelistIpsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -69,6 +76,8 @@ public class DescribeWhitelistIpsResponseBody extends TeaModel {
 
     public static class DescribeWhitelistIpsResponseBodyData extends TeaModel {
         /**
+         * <p>The domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.test123.com">www.test123.com</a></p>
          */
@@ -76,6 +85,8 @@ public class DescribeWhitelistIpsResponseBody extends TeaModel {
         public String domain;
 
         /**
+         * <p>The list of IP addresses and CIDR blocks on the whitelist.</p>
+         * 
          * <strong>example:</strong>
          * <p>127.0.0.1,192.168.1.0/24</p>
          */

@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class UpdateApiKeyQuotaShrinkRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rds_copilot***_public_cn-*********6</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>A list of API keys.</p>
+     */
     @NameInMap("Keys")
     public String keysShrink;
 

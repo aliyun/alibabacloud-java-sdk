@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DisableAgentRuntimeResponseBody extends TeaModel {
     /**
+     * <p>The ID of the AI application instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>ra-supabase-8moov5lxba****</p>
      */
@@ -12,7 +14,7 @@ public class DisableAgentRuntimeResponseBody extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D984FD38-6C2D-55DF-B0D7-8BCAC2E1F8C2</p>

@@ -98,6 +98,8 @@ public class ModifyInstanceRAGConfigRequest extends TeaModel {
 
     public static class ModifyInstanceRAGConfigRequestConfigList extends TeaModel {
         /**
+         * <p>The name of the configuration item.</p>
+         * 
          * <strong>example:</strong>
          * <p>LLM_MODEL</p>
          */
@@ -105,6 +107,8 @@ public class ModifyInstanceRAGConfigRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The value of the configuration item.</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen-flash</p>
          */

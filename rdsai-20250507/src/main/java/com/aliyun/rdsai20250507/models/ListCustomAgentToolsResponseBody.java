@@ -52,6 +52,9 @@ public class ListCustomAgentToolsResponseBody extends TeaModel {
 
         /**
          * <p>The description in Japanese.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS インスタンスの一覧を照会します。</p>
          */
         @NameInMap("Ja")
         public String ja;
@@ -67,6 +70,9 @@ public class ListCustomAgentToolsResponseBody extends TeaModel {
 
         /**
          * <p>The description in Traditional Chinese.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>查詢 RDS 實例清單。</p>
          */
         @NameInMap("Tc")
         public String tc;
@@ -82,6 +88,9 @@ public class ListCustomAgentToolsResponseBody extends TeaModel {
 
         /**
          * <p>The description in Simplified Chinese.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>查询RDS实例列表。</p>
          */
         @NameInMap("Zh")
         public String zh;

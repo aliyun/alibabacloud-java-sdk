@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateSkillResponseBody extends TeaModel {
     /**
      * <p>The database engine-specific content.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;MySQL&quot;: &quot;MySQL 优化指南...&quot;,&quot;PostgreSQL&quot;: &quot;PostgreSQL 优化指南...&quot;}</p>
      */
     @NameInMap("Content")
     public java.util.Map<String, ?> content;
@@ -27,6 +30,9 @@ public class CreateSkillResponseBody extends TeaModel {
 
     /**
      * <p>The description of the skill.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SQL查询优化技能。</p>
      */
     @NameInMap("Description")
     public String description;

@@ -77,6 +77,17 @@ public class ModifyInstanceStorageConfigRequest extends TeaModel {
 
     public static class ModifyInstanceStorageConfigRequestConfigList extends TeaModel {
         /**
+         * <p>The name of the configuration item. Valid values:</p>
+         * <ul>
+         * <li><strong>AWS_SESSION_TOKEN</strong> (optional): The temporary session token for OSS. If this parameter is not provided, validation is performed using the AccessKey ID and AccessKey secret.</li>
+         * <li><strong>AWS_ACCESS_KEY_ID</strong>: The AccessKey ID for OSS.</li>
+         * <li><strong>AWS_SECRET_ACCESS_KEY</strong>: The AccessKey secret for OSS.</li>
+         * <li><strong>GLOBAL_S3_BUCKET</strong>: The bucket name in OSS.</li>
+         * <li><strong>TENANT_ID</strong>: The folder name in OSS. No manual creation is required.</li>
+         * <li><strong>GLOBAL_S3_ENDPOINT</strong>: The endpoint (access domain name) for OSS.</li>
+         * <li><strong>REGION</strong>: The region of OSS.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>TENANT_ID</p>
          */
@@ -84,6 +95,8 @@ public class ModifyInstanceStorageConfigRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The value of the configuration item.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-prefix</p>
          */

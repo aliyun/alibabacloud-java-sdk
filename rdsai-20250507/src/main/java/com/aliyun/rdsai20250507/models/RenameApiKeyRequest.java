@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RenameApiKeyRequest extends TeaModel {
     /**
-     * <p>API KEY</p>
+     * <p>The API key to rename.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,8 @@ public class RenameApiKeyRequest extends TeaModel {
     public String apiKey;
 
     /**
+     * <p>The ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>rds_copilot***_public_cn-*********6</p>
      */
@@ -22,6 +24,7 @@ public class RenameApiKeyRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The new name for the API key.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

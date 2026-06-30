@@ -4,10 +4,15 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class DescribeMonitorDataResponseBody extends TeaModel {
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeMonitorDataResponseBodyData> data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -15,7 +20,7 @@ public class DescribeMonitorDataResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329241C</p>
@@ -24,6 +29,8 @@ public class DescribeMonitorDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -69,6 +76,8 @@ public class DescribeMonitorDataResponseBody extends TeaModel {
 
     public static class DescribeMonitorDataResponseBodyDataValue extends TeaModel {
         /**
+         * <p>The timestamp of the data point.</p>
+         * 
          * <strong>example:</strong>
          * <p>1774972800</p>
          */
@@ -76,6 +85,8 @@ public class DescribeMonitorDataResponseBody extends TeaModel {
         public String time;
 
         /**
+         * <p>The value of the metric at the specified timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
@@ -107,12 +118,17 @@ public class DescribeMonitorDataResponseBody extends TeaModel {
 
     public static class DescribeMonitorDataResponseBodyData extends TeaModel {
         /**
+         * <p>The metric name.</p>
+         * 
          * <strong>example:</strong>
          * <p>qps</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>An array of data points for the metric.</p>
+         */
         @NameInMap("Value")
         public java.util.List<DescribeMonitorDataResponseBodyDataValue> value;
 

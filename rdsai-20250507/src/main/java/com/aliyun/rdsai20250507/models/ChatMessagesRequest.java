@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChatMessagesRequest extends TeaModel {
     /**
-     * <p>The query content.</p>
+     * <p>The ID of the conversation.</p>
      * 
      * <strong>example:</strong>
      * <p>fea7bdca-e848-44dd-b1ae-852472b8****</p>
@@ -17,13 +17,13 @@ public class ChatMessagesRequest extends TeaModel {
     public String eventMode;
 
     /**
-     * <p>The ID of the parent message.</p>
+     * <p>The inputs for the task.</p>
      */
     @NameInMap("Inputs")
     public ChatMessagesRequestInputs inputs;
 
     /**
-     * <p>The ID of the conversation.</p>
+     * <p>The ID of the parent message.</p>
      * 
      * <strong>example:</strong>
      * <p>84dc9f9b-424a-404d-9c36-35e9d000****</p>
@@ -32,8 +32,11 @@ public class ChatMessagesRequest extends TeaModel {
     public String parentMessageId;
 
     /**
-     * <p>The operation that you want to perform. Set the value to <strong>ChatMessages</strong>.</p>
+     * <p>The content of the query.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>实例rm-bp14as9914vd3**** 磁盘使用率，是否需要进行扩容</p>
      */
     @NameInMap("Query")
     public String query;
@@ -85,13 +88,20 @@ public class ChatMessagesRequest extends TeaModel {
 
     public static class ChatMessagesRequestInputs extends TeaModel {
         /**
+         * <p>The custom agent ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>d1b7d639-f34e-44c7-8231-987da14d****</p>
          */
         @NameInMap("CustomAgentId")
         public String customAgentId;
 
+        @NameInMap("EnableThinking")
+        public String enableThinking;
+
         /**
+         * <p>The language of the conversation.</p>
+         * 
          * <strong>example:</strong>
          * <p>zh-cn</p>
          */
@@ -99,13 +109,20 @@ public class ChatMessagesRequest extends TeaModel {
         public String language;
 
         /**
+         * <p>The ID of the region.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ThinkEffort")
+        public String thinkEffort;
+
         /**
+         * <p>The time zone. Default value: <strong>Asia/Shanghai</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>UTC</p>
          */
@@ -125,6 +142,14 @@ public class ChatMessagesRequest extends TeaModel {
             return this.customAgentId;
         }
 
+        public ChatMessagesRequestInputs setEnableThinking(String enableThinking) {
+            this.enableThinking = enableThinking;
+            return this;
+        }
+        public String getEnableThinking() {
+            return this.enableThinking;
+        }
+
         public ChatMessagesRequestInputs setLanguage(String language) {
             this.language = language;
             return this;
@@ -139,6 +164,14 @@ public class ChatMessagesRequest extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public ChatMessagesRequestInputs setThinkEffort(String thinkEffort) {
+            this.thinkEffort = thinkEffort;
+            return this;
+        }
+        public String getThinkEffort() {
+            return this.thinkEffort;
         }
 
         public ChatMessagesRequestInputs setTimezone(String timezone) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteApiKeyRequest extends TeaModel {
     /**
-     * <p>Api Key</p>
+     * <p>The API key to delete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,8 @@ public class DeleteApiKeyRequest extends TeaModel {
     public String apiKey;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rds_copilot***_public_cn-*********6</p>
      */

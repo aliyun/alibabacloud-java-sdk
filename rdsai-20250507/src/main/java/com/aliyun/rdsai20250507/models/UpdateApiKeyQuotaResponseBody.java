@@ -4,10 +4,15 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class UpdateApiKeyQuotaResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public UpdateApiKeyQuotaResponseBodyData data;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -15,7 +20,7 @@ public class UpdateApiKeyQuotaResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
@@ -24,6 +29,8 @@ public class UpdateApiKeyQuotaResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -69,7 +76,7 @@ public class UpdateApiKeyQuotaResponseBody extends TeaModel {
 
     public static class UpdateApiKeyQuotaResponseBodyDataCustomKeyList extends TeaModel {
         /**
-         * <p>Api Key</p>
+         * <p>The API key.</p>
          * 
          * <strong>example:</strong>
          * <p>sk-rds-xxx</p>
@@ -79,12 +86,31 @@ public class UpdateApiKeyQuotaResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>1000000000</p>
+         */
+        @NameInMap("DailyTokenQuota")
+        public Long dailyTokenQuota;
+
+        /**
+         * <p>The limit rate.</p>
+         * 
+         * <strong>example:</strong>
          * <p>0.2</p>
          */
         @NameInMap("LimitRate")
         public Float limitRate;
 
         /**
+         * <p>The quota limiting method. Valid values:</p>
+         * <ul>
+         * <li><p><code>ratio</code>: Sets the limit based on a ratio.</p>
+         * </li>
+         * <li><p><code>fixed</code>: Sets the limit to a fixed value.</p>
+         * </li>
+         * <li><p><code>auto</code>: Allocates the limit automatically.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>fixed</p>
          */
@@ -92,6 +118,8 @@ public class UpdateApiKeyQuotaResponseBody extends TeaModel {
         public String limitType;
 
         /**
+         * <p>The token quota for the API key.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000</p>
          */
@@ -109,6 +137,14 @@ public class UpdateApiKeyQuotaResponseBody extends TeaModel {
         }
         public String getApiKey() {
             return this.apiKey;
+        }
+
+        public UpdateApiKeyQuotaResponseBodyDataCustomKeyList setDailyTokenQuota(Long dailyTokenQuota) {
+            this.dailyTokenQuota = dailyTokenQuota;
+            return this;
+        }
+        public Long getDailyTokenQuota() {
+            return this.dailyTokenQuota;
         }
 
         public UpdateApiKeyQuotaResponseBodyDataCustomKeyList setLimitRate(Float limitRate) {
@@ -138,6 +174,9 @@ public class UpdateApiKeyQuotaResponseBody extends TeaModel {
     }
 
     public static class UpdateApiKeyQuotaResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of custom API keys.</p>
+         */
         @NameInMap("CustomKeyList")
         public java.util.List<UpdateApiKeyQuotaResponseBodyDataCustomKeyList> customKeyList;
 
