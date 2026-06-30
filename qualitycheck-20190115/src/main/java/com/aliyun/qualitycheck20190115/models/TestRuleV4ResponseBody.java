@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class TestRuleV4ResponseBody extends TeaModel {
     /**
+     * <p>Result code. 200 indicates success. Other values indicate failure. Callers can use this field to identify the cause of failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Full response body.</p>
+     */
     @NameInMap("Data")
     public TestRuleV4ResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class TestRuleV4ResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error details when an error occurs. Returns successful when the request succeeds.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +38,8 @@ public class TestRuleV4ResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>96138D8D-XXXX-4E41-XXXX-77AED1088BBD</p>
      */
@@ -36,6 +47,8 @@ public class TestRuleV4ResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded. Callers can use this field to determine success: true means success; false or null means failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class TestRuleV4ResponseBody extends TeaModel {
 
     public static class TestRuleV4ResponseBodyDataHitRuleReviewInfoListBranchInfoList extends TeaModel {
         /**
+         * <p>Check item type.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -104,6 +119,8 @@ public class TestRuleV4ResponseBody extends TeaModel {
         public Integer checkType;
 
         /**
+         * <p>Index number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -111,25 +128,41 @@ public class TestRuleV4ResponseBody extends TeaModel {
         public Integer index;
 
         /**
+         * <p>Lambda expression.</p>
+         * 
          * <strong>example:</strong>
          * <p>a&amp;&amp;b</p>
          */
         @NameInMap("Lambda")
         public String lambda;
 
+        /**
+         * <p>Node name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>节点A</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>ID of the next flow node.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
         @NameInMap("NextNodeId")
         public Long nextNodeId;
 
+        /**
+         * <p>Flow node condition.</p>
+         */
         @NameInMap("Situation")
         public NextNodeSituations situation;
 
+        /**
+         * <p>List of trigger IDs.</p>
+         */
         @NameInMap("Triggers")
         public java.util.List<String> triggers;
 
@@ -198,16 +231,26 @@ public class TestRuleV4ResponseBody extends TeaModel {
 
     public static class TestRuleV4ResponseBodyDataHitRuleReviewInfoListConditionHitInfoListKeyWords extends TeaModel {
         /**
+         * <p>Condition ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
         @NameInMap("Cid")
         public String cid;
 
+        /**
+         * <p>Internal field. Ignore this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("CustomizeCode")
         public String customizeCode;
 
         /**
+         * <p>Starting character position for highlighting. Index starts at 0. Maximum value is the total number of characters in the sentence minus 1. The character at position from is included in the highlight.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -215,38 +258,74 @@ public class TestRuleV4ResponseBody extends TeaModel {
         public Integer from;
 
         /**
+         * <p>Operator ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
         @NameInMap("Oid")
         public String oid;
 
+        /**
+         * <p>Key information matched by the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("OperatorKey")
         public String operatorKey;
 
         /**
+         * <p>Index of this sentence in the full list of sentences. This is the index of the sentence in the dialogues array of the request parameters, starting from 0.</p>
+         * 
          * <strong>example:</strong>
          * <p>13</p>
          */
         @NameInMap("Pid")
         public Integer pid;
 
+        /**
+         * <p>Similar phrase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>您好</p>
+         */
         @NameInMap("SimilarPhrase")
         public String similarPhrase;
 
+        /**
+         * <p>Internal use only. Ignore this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("Tid")
         public String tid;
 
         /**
+         * <p>The position of the character that follows the highlighted keyword. The character at the \<code>to\\</code> position is not included in the highlight. For example, if \<code>from\\</code> is 0 and \<code>to\\</code> is 3, the highlighted keyword consists of the characters at indices 0, 1, and 2. The maximum value is one less than the total number of characters in the sentence.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
         @NameInMap("To")
         public Integer to;
 
+        /**
+         * <p>Internal use only. Ignore this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 
+        /**
+         * <p>Key information matched by the operator. For details, see <strong>Detailed explanation of Val key information</strong> in the response parameter description below.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>你好</p>
+         */
         @NameInMap("Val")
         public String val;
 
@@ -347,6 +426,8 @@ public class TestRuleV4ResponseBody extends TeaModel {
 
     public static class TestRuleV4ResponseBodyDataHitRuleReviewInfoListConditionHitInfoListPhrase extends TeaModel {
         /**
+         * <p>Start time offset of this sentence relative to the start of the full dialogue, in milliseconds. For example, if the total audio duration is 2 minutes and 10 seconds, and a customer starts speaking at 1 minute and 12 seconds and finishes at 1 minute and 20 seconds, then begin equals 72000 and end equals 80000.</p>
+         * 
          * <strong>example:</strong>
          * <p>72000</p>
          */
@@ -354,6 +435,8 @@ public class TestRuleV4ResponseBody extends TeaModel {
         public Long begin;
 
         /**
+         * <p>Start time of this sentence. Example: 2019-11-25 15:37:16.</p>
+         * 
          * <strong>example:</strong>
          * <p>2019-11-25 15:37:16</p>
          */
@@ -361,16 +444,26 @@ public class TestRuleV4ResponseBody extends TeaModel {
         public String beginTime;
 
         /**
+         * <p>Channel ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("ChannelId")
         public Integer channelId;
 
+        /**
+         * <p>Internal use only. Ignore this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>忽略</p>
+         */
         @NameInMap("EmotionFineGrainedValue")
         public Integer emotionFineGrainedValue;
 
         /**
+         * <p>Emotion intensity score. Value equals volume in decibels divided by 10. Valid range: [1, 10]. Higher values indicate stronger emotion.</p>
+         * 
          * <strong>example:</strong>
          * <p>7</p>
          */
@@ -378,6 +471,8 @@ public class TestRuleV4ResponseBody extends TeaModel {
         public Integer emotionValue;
 
         /**
+         * <p>End time offset of this sentence relative to the start of the full dialogue, in milliseconds. For example, if the total audio duration is 2 minutes and 10 seconds, and a customer starts speaking at 1 minute and 12 seconds and finishes at 1 minute and 20 seconds, then begin equals 72000 and end equals 80000.</p>
+         * 
          * <strong>example:</strong>
          * <p>80000</p>
          */
@@ -385,6 +480,14 @@ public class TestRuleV4ResponseBody extends TeaModel {
         public Long end;
 
         /**
+         * <p>Hit status. Valid values:</p>
+         * <ul>
+         * <li><p><strong>0</strong>: Not hit</p>
+         * </li>
+         * <li><p><strong>1</strong>: Hit</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -392,32 +495,62 @@ public class TestRuleV4ResponseBody extends TeaModel {
         public Integer hitStatus;
 
         /**
+         * <p>Start time of this sentence in hh:mm:ss format.</p>
+         * 
          * <strong>example:</strong>
          * <p>10:00:00</p>
          */
         @NameInMap("HourMinSec")
         public String hourMinSec;
 
+        /**
+         * <p>Role identifier. In offline voice scenarios, roles are limited to agent or customer. In offline text quality check scenarios, this field shows the identity value passed in during upload.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>客服</p>
+         */
         @NameInMap("Identity")
         public String identity;
 
         /**
+         * <p>Index of this sentence in the full list of sentences. This is the index of the sentence in the dialogues array of the request parameters, starting from 0.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
         @NameInMap("Pid")
         public Integer pid;
 
+        /**
+         * <p>Internal use only. Ignore this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("RenterId")
         public Long renterId;
 
+        /**
+         * <p>Speaker role for this sentence. Valid values: agent and customer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>客服</p>
+         */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <p>Internal use only. Ignore this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("Sid")
         public Long sid;
 
         /**
+         * <p>Silence duration, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -425,15 +558,29 @@ public class TestRuleV4ResponseBody extends TeaModel {
         public Integer silenceDuration;
 
         /**
+         * <p>Average speech rate for this sentence, in words per minute.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
         @NameInMap("SpeechRate")
         public Integer speechRate;
 
+        /**
+         * <p>Internal use only. Ignore this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 
+        /**
+         * <p>Dialogue content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>你好，请问有什么可以帮您</p>
+         */
         @NameInMap("Words")
         public String words;
 
@@ -581,12 +728,21 @@ public class TestRuleV4ResponseBody extends TeaModel {
     }
 
     public static class TestRuleV4ResponseBodyDataHitRuleReviewInfoListConditionHitInfoList extends TeaModel {
+        /**
+         * <p>Condition ID.</p>
+         */
         @NameInMap("Cid")
         public java.util.List<String> cid;
 
+        /**
+         * <p>Key information that was hit. This information appears highlighted on the review page. Examples include keywords matched by a keyword-check operator or category information matched by an agent-model-check operator.</p>
+         */
         @NameInMap("KeyWords")
         public java.util.List<TestRuleV4ResponseBodyDataHitRuleReviewInfoListConditionHitInfoListKeyWords> keyWords;
 
+        /**
+         * <p>Sentence details for the current hit check item.</p>
+         */
         @NameInMap("Phrase")
         public TestRuleV4ResponseBodyDataHitRuleReviewInfoListConditionHitInfoListPhrase phrase;
 
@@ -623,25 +779,44 @@ public class TestRuleV4ResponseBody extends TeaModel {
 
     public static class TestRuleV4ResponseBodyDataHitRuleReviewInfoList extends TeaModel {
         /**
+         * <p>ID of the hit branch.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("BranchHitId")
         public Long branchHitId;
 
+        /**
+         * <p>List of branch information.</p>
+         */
         @NameInMap("BranchInfoList")
         public java.util.List<TestRuleV4ResponseBodyDataHitRuleReviewInfoListBranchInfoList> branchInfoList;
 
+        /**
+         * <p>Information about hit conditions.</p>
+         */
         @NameInMap("ConditionHitInfoList")
         public java.util.List<TestRuleV4ResponseBodyDataHitRuleReviewInfoListConditionHitInfoList> conditionHitInfoList;
 
+        /**
+         * <p>List of conditions.</p>
+         */
         @NameInMap("ConditionInfoList")
         public java.util.List<ConditionBasicInfo> conditionInfoList;
 
+        /**
+         * <p>Judgement node name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>判断节点A</p>
+         */
         @NameInMap("JudgeNodeName")
         public String judgeNodeName;
 
         /**
+         * <p>Lambda expression. Example: a&amp;\&amp;b.</p>
+         * 
          * <strong>example:</strong>
          * <p>a&amp;&amp;b</p>
          */
@@ -649,6 +824,8 @@ public class TestRuleV4ResponseBody extends TeaModel {
         public String lambda;
 
         /**
+         * <p>Whether the rule was hit.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -656,6 +833,8 @@ public class TestRuleV4ResponseBody extends TeaModel {
         public Boolean matched;
 
         /**
+         * <p>Node type.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -663,16 +842,26 @@ public class TestRuleV4ResponseBody extends TeaModel {
         public String nodeType;
 
         /**
+         * <p>Check item ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>451</p>
          */
         @NameInMap("Rid")
         public Long rid;
 
+        /**
+         * <p>Rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>规则A</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
+         * <p>Whether scoring applies. Valid values: 1 (no scoring) and 3 (scoring).</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -680,6 +869,8 @@ public class TestRuleV4ResponseBody extends TeaModel {
         public Integer ruleScoreType;
 
         /**
+         * <p>Scoring type. Valid values: 0 (add or subtract points on hit) and 1 (one-time score on hit).</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -687,6 +878,8 @@ public class TestRuleV4ResponseBody extends TeaModel {
         public Integer scoreNumType;
 
         /**
+         * <p>Flow ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -805,16 +998,27 @@ public class TestRuleV4ResponseBody extends TeaModel {
     }
 
     public static class TestRuleV4ResponseBodyDataHitTaskFlowList extends TeaModel {
+        /**
+         * <p>Flowchart canvas.</p>
+         */
         @NameInMap("GraphFlow")
         public TaskGraphFlow graphFlow;
 
         /**
+         * <p>Rule ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("Rid")
         public Long rid;
 
+        /**
+         * <p>Flowchart type. Deprecated. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("TaskFlowType")
         public Integer taskFlowType;
 
@@ -850,10 +1054,15 @@ public class TestRuleV4ResponseBody extends TeaModel {
     }
 
     public static class TestRuleV4ResponseBodyDataUnhitRuleReviewInfoList extends TeaModel {
+        /**
+         * <p>List of conditions.</p>
+         */
         @NameInMap("ConditionInfoList")
         public java.util.List<ConditionBasicInfo> conditionInfoList;
 
         /**
+         * <p>Whether the rule was hit.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -861,12 +1070,20 @@ public class TestRuleV4ResponseBody extends TeaModel {
         public Boolean matched;
 
         /**
+         * <p>The ID of the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
         @NameInMap("Rid")
         public Long rid;
 
+        /**
+         * <p>Flowchart type. Deprecated. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>忽略</p>
+         */
         @NameInMap("TaskFlowType")
         public Integer taskFlowType;
 
@@ -910,12 +1127,21 @@ public class TestRuleV4ResponseBody extends TeaModel {
     }
 
     public static class TestRuleV4ResponseBodyData extends TeaModel {
+        /**
+         * <p>Information about hit check items.</p>
+         */
         @NameInMap("HitRuleReviewInfoList")
         public java.util.List<TestRuleV4ResponseBodyDataHitRuleReviewInfoList> hitRuleReviewInfoList;
 
+        /**
+         * <p>List of hit advanced flow nodes.</p>
+         */
         @NameInMap("HitTaskFlowList")
         public java.util.List<TestRuleV4ResponseBodyDataHitTaskFlowList> hitTaskFlowList;
 
+        /**
+         * <p>Information about rules that were not hit.</p>
+         */
         @NameInMap("UnhitRuleReviewInfoList")
         public java.util.List<TestRuleV4ResponseBodyDataUnhitRuleReviewInfoList> unhitRuleReviewInfoList;
 

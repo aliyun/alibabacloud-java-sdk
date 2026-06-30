@@ -5,13 +5,20 @@ import com.aliyun.tea.*;
 
 public class HandleComplaintRequest extends TeaModel {
     /**
-     * <p>baseMeAgentId</p>
+     * <p>The ID of the business space.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
     /**
+     * <p>A JSON string that contains the request parameters. For details, see the following section.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;taskId&quot;:&quot;任务ID&quot;}</p>
      */
     @NameInMap("JsonStr")
     public String jsonStr;

@@ -6,11 +6,15 @@ import com.aliyun.tea.*;
 public class UpdateQualityCheckDataRequest extends TeaModel {
     /**
      * <p>baseMeAgentId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
     /**
+     * <p>Complete JSON string containing detailed information. For specific content, see the details below.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

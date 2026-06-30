@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetBusinessCategoryListResponseBody extends TeaModel {
     /**
+     * <p>Result code. The value <strong>200</strong> indicates success. Any other value indicates failure, and the caller can determine the cause of failure based on this field.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -15,6 +17,8 @@ public class GetBusinessCategoryListResponseBody extends TeaModel {
     public GetBusinessCategoryListResponseBodyData data;
 
     /**
+     * <p>When an error occurs, this field provides error details; when successful, the value is <strong>successful</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -22,6 +26,8 @@ public class GetBusinessCategoryListResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>A186A419-FDBE-464C-AED4-7121CAC73BF1</p>
      */
@@ -29,6 +35,12 @@ public class GetBusinessCategoryListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded. The caller can use this field to determine the request outcome:</p>
+     * <ul>
+     * <li><strong>true</strong> indicates success</li>
+     * <li><strong>false/null</strong> indicates failure</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class SyncQualityCheckRequest extends TeaModel {
     /**
-     * <p>baseMeAgentId</p>
+     * <p>Workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1244721</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
     /**
+     * <p>Complete JSON string information. See the details below.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

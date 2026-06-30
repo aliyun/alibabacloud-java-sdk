@@ -5,25 +5,41 @@ import com.aliyun.tea.*;
 
 public class GetRulesCountListRequest extends TeaModel {
     /**
-     * <p>baseMeAgentId</p>
+     * <p>Workspace ID.</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
+    /**
+     * <p>Business name to which the rule belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>电话业务</p>
+     */
     @NameInMap("BusinessName")
     public String businessName;
 
     /**
+     * <p>Broad business category.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("BusinessRange")
     public Integer businessRange;
 
+    /**
+     * <p>Category name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>分类名称A</p>
+     */
     @NameInMap("CategoryName")
     public String categoryName;
 
     /**
+     * <p>Whether to count the total number.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -31,6 +47,8 @@ public class GetRulesCountListRequest extends TeaModel {
     public Boolean countTotal;
 
     /**
+     * <p>Rule creator ID. Same as CreateUserId. Use either one.</p>
+     * 
      * <strong>example:</strong>
      * <p>63</p>
      */
@@ -38,6 +56,8 @@ public class GetRulesCountListRequest extends TeaModel {
     public String createEmpid;
 
     /**
+     * <p>Rule creator ID. Same as CreateEmpid. Use either one.</p>
+     * 
      * <strong>example:</strong>
      * <p>63</p>
      */
@@ -45,6 +65,8 @@ public class GetRulesCountListRequest extends TeaModel {
     public Long createUserId;
 
     /**
+     * <p>Current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -52,6 +74,8 @@ public class GetRulesCountListRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>Filter by creation time (start of range).</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-10-08 23:59:59</p>
      */
@@ -59,6 +83,8 @@ public class GetRulesCountListRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>Rule updater ID. Same as UpdateUserId. Use either one.</p>
+     * 
      * <strong>example:</strong>
      * <p>63</p>
      */
@@ -66,6 +92,8 @@ public class GetRulesCountListRequest extends TeaModel {
     public String lastUpdateEmpid;
 
     /**
+     * <p>Page number of the rule list.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -73,16 +101,23 @@ public class GetRulesCountListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Required fields.</p>
+     */
     @NameInMap("RequireInfos")
     public java.util.List<String> requireInfos;
 
     /**
+     * <p>Search by rule ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */
@@ -90,6 +125,8 @@ public class GetRulesCountListRequest extends TeaModel {
     public Long rid;
 
     /**
+     * <p>Search by rule ID or rule name.</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */
@@ -97,6 +134,8 @@ public class GetRulesCountListRequest extends TeaModel {
     public String ruleIdOrRuleName;
 
     /**
+     * <p>Scoring type.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -104,6 +143,8 @@ public class GetRulesCountListRequest extends TeaModel {
     public Integer ruleScoreSingleType;
 
     /**
+     * <p>Rule category.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -111,6 +152,8 @@ public class GetRulesCountListRequest extends TeaModel {
     public Integer ruleType;
 
     /**
+     * <p>Quality inspection scheme ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */
@@ -118,6 +161,8 @@ public class GetRulesCountListRequest extends TeaModel {
     public Long schemeId;
 
     /**
+     * <p>Source type.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -125,6 +170,8 @@ public class GetRulesCountListRequest extends TeaModel {
     public Integer sourceType;
 
     /**
+     * <p>Filter by creation time (end of range).</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-10-07 00:00:00</p>
      */
@@ -132,6 +179,8 @@ public class GetRulesCountListRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>Rule status:</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -139,16 +188,26 @@ public class GetRulesCountListRequest extends TeaModel {
     public Integer status;
 
     /**
+     * <p>Type value of the rule category to which the rule belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("Type")
     public Integer type;
 
+    /**
+     * <p>Name of the rule category to which the rule belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>全部类别</p>
+     */
     @NameInMap("TypeName")
     public String typeName;
 
     /**
+     * <p>Filter by update time (end of range).</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-10-08 23:59:59</p>
      */
@@ -156,6 +215,8 @@ public class GetRulesCountListRequest extends TeaModel {
     public String updateEndTime;
 
     /**
+     * <p>Filter by update time (start of range).</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-10-07 00:00:00</p>
      */
@@ -163,6 +224,8 @@ public class GetRulesCountListRequest extends TeaModel {
     public String updateStartTime;
 
     /**
+     * <p>Rule updater ID. Same as LastUpdateEmpid. Use either one.</p>
+     * 
      * <strong>example:</strong>
      * <p>63</p>
      */

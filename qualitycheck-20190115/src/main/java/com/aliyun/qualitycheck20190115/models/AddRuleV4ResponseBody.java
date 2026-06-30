@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class AddRuleV4ResponseBody extends TeaModel {
     /**
+     * <p>The result code. \<code>**200**\\</code> indicates that the request was successful. Other values indicate that the request failed. You can use this parameter to identify the cause of a failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The ID of the new rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Data")
     public Long data;
 
     /**
+     * <p>The HTTP status code. A value of 200 indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +32,8 @@ public class AddRuleV4ResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -32,6 +44,8 @@ public class AddRuleV4ResponseBody extends TeaModel {
     public AddRuleV4ResponseBodyMessages messages;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>106C6CA0-282D-4AF7-85F0-D2D24***</p>
      */
@@ -39,6 +53,8 @@ public class AddRuleV4ResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. \<code>true\\</code>: The request was successful. \<code>false\\</code> or \<code>null\\</code>: The request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

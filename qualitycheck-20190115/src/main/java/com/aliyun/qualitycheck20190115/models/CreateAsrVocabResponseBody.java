@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateAsrVocabResponseBody extends TeaModel {
     /**
+     * <p>Result code. <strong>200</strong> means success. Any other value means failure. Use this field to diagnose errors.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class CreateAsrVocabResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Hotword ID</p>
+     * 
      * <strong>example:</strong>
      * <p>71b1795ac8634bd8bdf4d3878480c7c2</p>
      */
@@ -19,6 +23,8 @@ public class CreateAsrVocabResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>Error details if the call fails. Returns <strong>successful</strong> on success.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -26,6 +32,8 @@ public class CreateAsrVocabResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>96138D8D-8D26-4E41-BFF4-77AED1088BBD</p>
      */
@@ -33,6 +41,8 @@ public class CreateAsrVocabResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded. true means success. <strong>false</strong> or <strong>null</strong> means failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

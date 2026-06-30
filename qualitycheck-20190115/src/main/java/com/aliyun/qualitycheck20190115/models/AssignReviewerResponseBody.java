@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AssignReviewerResponseBody extends TeaModel {
     /**
+     * <p>Result code. <strong>200</strong> means success. Any other value means failure. Use this field to identify the cause of failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class AssignReviewerResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Error details if the call fails. Returns successful if the call succeeds.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -19,6 +23,8 @@ public class AssignReviewerResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>82C91484-B2D5-4D2A-A21F-A6D73F4D55C6</p>
      */
@@ -26,6 +32,8 @@ public class AssignReviewerResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded. true means success. false or null means failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

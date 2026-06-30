@@ -5,11 +5,20 @@ import com.aliyun.tea.*;
 
 public class UpdateQualityCheckSchemeRequest extends TeaModel {
     /**
-     * <p>baseMeAgentId</p>
+     * <p>The workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
+    /**
+     * <p>The request parameters in JSON format. For more information, see the supplementary description of request parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("jsonStr")
     public String jsonStr;
 

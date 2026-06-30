@@ -4,27 +4,69 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class SchemeCheckType extends TeaModel {
+    /**
+     * <p>Check item name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>流程规则</p>
+     */
     @NameInMap("CheckName")
     public String checkName;
 
+    /**
+     * <p>Quality inspection dimension ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CheckType")
     public Long checkType;
 
+    /**
+     * <p>Is enabled</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Enable")
     public Integer enable;
 
+    /**
+     * <p>Quality inspection scheme ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("SchemeId")
     public Long schemeId;
 
+    /**
+     * <p>List of scoring items under the check item. See SchemeScoreInfo.</p>
+     */
     @NameInMap("SchemeScoreInfoList")
     public java.util.List<SchemeCheckTypeSchemeScoreInfoList> schemeScoreInfoList;
 
+    /**
+     * <p>Final score</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("Score")
     public Integer score;
 
+    /**
+     * <p>Original score</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("SourceScore")
     public Integer sourceScore;
 
+    /**
+     * <p>List of scoring items under the check item. See TaskFlowScoreInfo.</p>
+     */
     @NameInMap("TaskFlowScoreInfoList")
     public java.util.List<SchemeCheckTypeTaskFlowScoreInfoList> taskFlowScoreInfoList;
 
@@ -98,27 +140,75 @@ public class SchemeCheckType extends TeaModel {
     }
 
     public static class SchemeCheckTypeSchemeScoreInfoList extends TeaModel {
+        /**
+         * <p>Rule Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Rule ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Rid")
         public Long rid;
 
+        /**
+         * <p>Agent rating: default 0, [0, 100]</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ScoreNum")
         public Integer scoreNum;
 
+        /**
+         * <p>0 – Add or subtract points after triggering a rule</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ScoreNumType")
         public Integer scoreNumType;
 
+        /**
+         * <p>0 – Score when hitting an edge zone</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ScoreRuleHitType")
         public Integer scoreRuleHitType;
 
+        /**
+         * <p>1 for adding points, 3 for deducting points; default is 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ScoreType")
         public Integer scoreType;
 
+        /**
+         * <p>Flow ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TaskFlowId")
         public Long taskFlowId;
 
+        /**
+         * <p>Flow name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("TaskFlowName")
         public String taskFlowName;
 
@@ -194,27 +284,75 @@ public class SchemeCheckType extends TeaModel {
     }
 
     public static class SchemeCheckTypeTaskFlowScoreInfoListSchemeScoreInfoList extends TeaModel {
+        /**
+         * <p>Rule Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Rule ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Rid")
         public Long rid;
 
+        /**
+         * <p>Agent score: default is 0, range [0, 100]</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
+         */
         @NameInMap("ScoreNum")
         public Integer scoreNum;
 
+        /**
+         * <p>0 – Points added or deducted after a rule is triggered</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ScoreNumType")
         public Integer scoreNumType;
 
+        /**
+         * <p>0—score when a hit occurs at an edge zone</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ScoreRuleHitType")
         public Integer scoreRuleHitType;
 
+        /**
+         * <p>1 for adding points, 3 for deducting points; default is 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ScoreType")
         public Integer scoreType;
 
+        /**
+         * <p>Flow ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TaskFlowId")
         public Long taskFlowId;
 
+        /**
+         * <p>flow name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("TaskFlowName")
         public String taskFlowName;
 
@@ -290,15 +428,36 @@ public class SchemeCheckType extends TeaModel {
     }
 
     public static class SchemeCheckTypeTaskFlowScoreInfoList extends TeaModel {
+        /**
+         * <p>list of scoring items</p>
+         */
         @NameInMap("SchemeScoreInfoList")
         public java.util.List<SchemeCheckTypeTaskFlowScoreInfoListSchemeScoreInfoList> schemeScoreInfoList;
 
+        /**
+         * <p>Flow ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TaskFlowId")
         public Long taskFlowId;
 
+        /**
+         * <p>flow name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("TaskFlowName")
         public String taskFlowName;
 
+        /**
+         * <p>\&quot;Flow version: 0: tree, 1: graph\&quot;</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TaskFlowType")
         public Integer taskFlowType;
 

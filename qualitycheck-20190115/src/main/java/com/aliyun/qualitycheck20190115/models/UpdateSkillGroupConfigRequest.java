@@ -5,12 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateSkillGroupConfigRequest extends TeaModel {
     /**
-     * <p>baseMeAgentId</p>
+     * <p>The ID of the workspace.</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
     /**
+     * <p>The complete JSON string. For more information, see the details that follow.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

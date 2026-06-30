@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteQualityCheckSchemeRequest extends TeaModel {
     /**
-     * <p>baseMeAgentId</p>
+     * <p>Workspace ID</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
     /**
+     * <p>JSON request body. For details, see the parameter description below.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;schemeId&quot;:191}</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetCustomizationConfigListResponseBody extends TeaModel {
     /**
+     * <p>The result code. A value of <strong>200</strong> indicates that the request succeeded. Other values indicate failure. Use this field to identify the cause of a failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -15,6 +17,8 @@ public class GetCustomizationConfigListResponseBody extends TeaModel {
     public GetCustomizationConfigListResponseBodyData data;
 
     /**
+     * <p>If an error occurs, this field contains error details. If the request succeeds, the value is \<code>successful\\</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -22,6 +26,8 @@ public class GetCustomizationConfigListResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>106C6CA0-282D-4AF7-85F0-D2D24F4CE647</p>
      */
@@ -29,6 +35,8 @@ public class GetCustomizationConfigListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded. Use this field to check the request status. A value of \<code>true\\</code> means success. A value of \<code>false\\</code> or \<code>null\\</code> means failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

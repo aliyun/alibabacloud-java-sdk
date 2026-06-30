@@ -5,11 +5,20 @@ import com.aliyun.tea.*;
 
 public class UpdateSchemeTaskConfigRequest extends TeaModel {
     /**
-     * <p>baseMeAgentId</p>
+     * <p>Workspace ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
+    /**
+     * <p>Input parameter JSON. For details, see the request parameters section.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;schemeTaskConfigId&quot;:368,&quot;status&quot;:1,&quot;name&quot;:&quot;检测任务 2022-09-21 16:59:50&quot;}</p>
+     */
     @NameInMap("jsonStr")
     public String jsonStr;
 

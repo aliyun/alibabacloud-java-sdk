@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetRuleV4Request extends TeaModel {
     /**
+     * <p>Rule ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>531</p>
      */
     @NameInMap("RuleId")
     public Long ruleId;

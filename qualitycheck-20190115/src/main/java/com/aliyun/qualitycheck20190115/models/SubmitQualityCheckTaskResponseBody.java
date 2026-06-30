@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitQualityCheckTaskResponseBody extends TeaModel {
     /**
+     * <p>Result code. <strong>200</strong> indicates success. Any other value indicates failure. Use this field to determine the cause of failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,16 +14,26 @@ public class SubmitQualityCheckTaskResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F6C2B68F-2311-4495-82AC-DAE86C9****</p>
      */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>Error details if the request failed. Returns &quot;successful&quot; on success.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>00A044A2-D59B-4104-96BA-84060AE8345F</p>
      */
@@ -29,6 +41,8 @@ public class SubmitQualityCheckTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded. true means success. false or null means failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

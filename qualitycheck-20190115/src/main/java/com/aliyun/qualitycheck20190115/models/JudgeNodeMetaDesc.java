@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class JudgeNodeMetaDesc extends TeaModel {
     /**
+     * <p>Actual value</p>
+     * 
      * <strong>example:</strong>
      * <p>xx</p>
      */
@@ -12,6 +14,8 @@ public class JudgeNodeMetaDesc extends TeaModel {
     public String actualValue;
 
     /**
+     * <p>Data type</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +26,8 @@ public class JudgeNodeMetaDesc extends TeaModel {
     public JudgeNodeMetaDescExpressionMetaDesc expressionMetaDesc;
 
     /**
+     * <p>System field</p>
+     * 
      * <strong>example:</strong>
      * <p>remark1</p>
      */
@@ -29,6 +35,8 @@ public class JudgeNodeMetaDesc extends TeaModel {
     public String field;
 
     /**
+     * <p>Field data source type: 1: System predefined field. 2: Quality inspection field for passed parameters.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -36,6 +44,8 @@ public class JudgeNodeMetaDesc extends TeaModel {
     public Integer fieldType;
 
     /**
+     * <p>Expression</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -43,6 +53,8 @@ public class JudgeNodeMetaDesc extends TeaModel {
     public Integer symbol;
 
     /**
+     * <p>Preset value</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */

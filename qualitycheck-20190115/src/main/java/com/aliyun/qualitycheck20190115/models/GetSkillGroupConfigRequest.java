@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetSkillGroupConfigRequest extends TeaModel {
     /**
-     * <p>baseMeAgentId</p>
+     * <p>The workspace ID.</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
     /**
+     * <p>The complete JSON string. For more information, see the details below.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;id&quot;:&quot;配置ID&quot;}</p>
      */
     @NameInMap("JsonStr")
     public String jsonStr;

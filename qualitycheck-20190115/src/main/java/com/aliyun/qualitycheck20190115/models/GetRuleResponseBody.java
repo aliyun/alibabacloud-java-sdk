@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetRuleResponseBody extends TeaModel {
     /**
+     * <p>The result code. <strong>200</strong> means success. Any other value means failure. Use this field to identify the cause of failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response data</p>
+     */
     @NameInMap("Data")
     public GetRuleResponseBodyData data;
 
     /**
+     * <p>Error details if the request fails. Returns <strong>successful</strong> if the request succeeds.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -22,6 +29,8 @@ public class GetRuleResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>F190ADE9-619A-447D-84E3-7E241A5C428E</p>
      */
@@ -29,6 +38,8 @@ public class GetRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded. true means success. <strong>false</strong> or <strong>null</strong> means failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

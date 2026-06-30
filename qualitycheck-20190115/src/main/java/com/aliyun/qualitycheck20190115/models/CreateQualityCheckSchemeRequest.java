@@ -5,13 +5,20 @@ import com.aliyun.tea.*;
 
 public class CreateQualityCheckSchemeRequest extends TeaModel {
     /**
-     * <p>baseMeAgentId</p>
+     * <p>Workspace ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
     /**
+     * <p>JSON request body. For details, see the parameter description in the request parameters section.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;dataType&quot;:1,&quot;name&quot;:&quot;质检方案A&quot;,&quot;type&quot;:1}</p>
      */
     @NameInMap("jsonStr")
     public String jsonStr;

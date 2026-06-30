@@ -6,11 +6,15 @@ import com.aliyun.tea.*;
 public class UpdateSyncQualityCheckDataRequest extends TeaModel {
     /**
      * <p>baseMeAgentId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
     /**
+     * <p>jsonStr is a JSON string that contains all Custom Parameters for this API. For details, see <strong>jsonStr property description</strong> below.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

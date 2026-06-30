@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateTaskAssignRuleResponseBody extends TeaModel {
     /**
+     * <p>The result code. A value of <strong>200</strong> indicates success. Any other value indicates failure. Use this field to identify the cause of failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class UpdateTaskAssignRuleResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The error message if the request fails. If the request succeeds, the value is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -19,6 +23,8 @@ public class UpdateTaskAssignRuleResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>106C6CA0-282D-4AF7-85F0-D2D24F4CE647</p>
      */
@@ -26,6 +32,8 @@ public class UpdateTaskAssignRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded. A value of true means success. A value of false or null means failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

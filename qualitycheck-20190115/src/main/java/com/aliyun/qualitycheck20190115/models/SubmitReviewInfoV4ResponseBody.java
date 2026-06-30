@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitReviewInfoV4ResponseBody extends TeaModel {
     /**
+     * <p>Result code. Use this field to identify failure causes.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class SubmitReviewInfoV4ResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Error details if the request failed. Returns <strong>successful</strong> if the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -19,7 +23,7 @@ public class SubmitReviewInfoV4ResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>Request ID</p>
      * 
      * <strong>example:</strong>
      * <p>106C6CA0-282D-4AF7-85F0-D2D24***</p>
@@ -28,6 +32,8 @@ public class SubmitReviewInfoV4ResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded. true = success, false or null = failure</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

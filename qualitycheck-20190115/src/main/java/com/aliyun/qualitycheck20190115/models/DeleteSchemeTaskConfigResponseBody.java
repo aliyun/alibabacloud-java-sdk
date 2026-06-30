@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteSchemeTaskConfigResponseBody extends TeaModel {
     /**
+     * <p>The status code of the response. A value of <strong>200</strong> indicates that the request was successful. Other values indicate that the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class DeleteSchemeTaskConfigResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code. A value of 200 indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class DeleteSchemeTaskConfigResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The message returned for the request. If the request is successful, successful is returned. If the request fails, an error message is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +35,8 @@ public class DeleteSchemeTaskConfigResponseBody extends TeaModel {
     public DeleteSchemeTaskConfigResponseBodyMessages messages;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>82C91484-B2D5-4D2A-A21F-A6D73F4D55C6</p>
      */
@@ -36,6 +44,8 @@ public class DeleteSchemeTaskConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. A value of true indicates success. A value of false or null indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

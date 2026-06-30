@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RulesInfo extends TeaModel {
     /**
+     * <p>Rule condition information; conditions for multiple rules are all placed in a single list</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class RulesInfo extends TeaModel {
     public java.util.List<ConditionBasicInfo> conditions;
 
     /**
+     * <p>Total number of entries</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -19,6 +23,8 @@ public class RulesInfo extends TeaModel {
     public Integer count;
 
     /**
+     * <p>Testing copy</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -26,6 +32,8 @@ public class RulesInfo extends TeaModel {
     public java.util.List<RuleTestDialogue> dialogues;
 
     /**
+     * <p>Current page</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,12 +41,17 @@ public class RulesInfo extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Page size</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Basic rule information; multiple rules may exist</p>
+     */
     @NameInMap("Rules")
     public java.util.List<RuleInfo> rules;
 

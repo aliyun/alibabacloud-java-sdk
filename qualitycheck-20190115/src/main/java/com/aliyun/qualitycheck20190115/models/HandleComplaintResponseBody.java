@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class HandleComplaintResponseBody extends TeaModel {
     /**
+     * <p>The result code. A value of <strong>200</strong> indicates that the request was successful. Other values indicate that the request failed. You can use this code to identify the cause of the error.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Data")
     public String data;
 
     /**
+     * <p>The response message. If the request is successful, <strong>successful</strong> is returned. If the request fails, an error message is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -22,6 +32,8 @@ public class HandleComplaintResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9987D326-83D9-4A42-B9A5-0B27F9B40539</p>
      */
@@ -29,6 +41,8 @@ public class HandleComplaintResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded. A value of <strong>true</strong> indicates success, and <strong>false or null</strong> indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

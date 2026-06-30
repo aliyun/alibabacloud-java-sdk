@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetAsrVocabResponseBody extends TeaModel {
     /**
+     * <p>The result code. A value of <strong>200</strong> means success. Any other value means failure. Use this field to identify the cause of failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public GetAsrVocabResponseBodyData data;
 
     /**
+     * <p>Error details if the request fails. If successful, the value is <strong>successful</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -22,6 +29,8 @@ public class GetAsrVocabResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3CEA0495-341B-4482-9AD9-8191EF4***</p>
      */
@@ -29,6 +38,14 @@ public class GetAsrVocabResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded. Use this field to check the result:</p>
+     * <ul>
+     * <li><p><strong>true</strong> means success</p>
+     * </li>
+     * <li><p>false or <strong>null</strong> means failure</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -130,13 +147,33 @@ public class GetAsrVocabResponseBody extends TeaModel {
     }
 
     public static class GetAsrVocabResponseBodyData extends TeaModel {
+        /**
+         * <p>The ASR version.</p>
+         * <ul>
+         * <li><p>2 or <strong>null</strong>: V2 (Intelligent Speech Interaction ASR)</p>
+         * </li>
+         * <li><p><strong>3</strong>: V3 (Paraformer ASR)</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("AsrVersion")
         public Integer asrVersion;
 
+        /**
+         * <p>The language model ID. This field appears only for V3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>paraformer-8k-v2</p>
+         */
         @NameInMap("ModelCustomizationId")
         public String modelCustomizationId;
 
         /**
+         * <p>The hotword group name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */

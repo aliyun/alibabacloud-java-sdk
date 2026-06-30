@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ApplyWsTokenResponseBody extends TeaModel {
     /**
+     * <p>Response code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Return Result</p>
+     */
     @NameInMap("Data")
     public ApplyWsTokenResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -69,6 +76,8 @@ public class ApplyWsTokenResponseBody extends TeaModel {
 
     public static class ApplyWsTokenResponseBodyData extends TeaModel {
         /**
+         * <p>Session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>42e59bcd-7206-44c5-ad34-525d364687c4</p>
          */
@@ -76,6 +85,8 @@ public class ApplyWsTokenResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>User access token</p>
+         * 
          * <strong>example:</strong>
          * <p>5607b21d1728700640</p>
          */
@@ -83,6 +94,8 @@ public class ApplyWsTokenResponseBody extends TeaModel {
         public String token;
 
         /**
+         * <p>WebSocket connection domain name</p>
+         * 
          * <strong>example:</strong>
          * <p>wss://ws-gateway-real-voice.aliyuncs.com</p>
          */

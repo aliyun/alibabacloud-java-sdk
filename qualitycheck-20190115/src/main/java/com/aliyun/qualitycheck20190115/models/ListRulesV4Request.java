@@ -5,21 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListRulesV4Request extends TeaModel {
     /**
-     * <p>baseMeAgentId</p>
+     * <p>Workspace ID.</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
+    /**
+     * <p>Name of the business that owns the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>所有业务</p>
+     */
     @NameInMap("BusinessName")
     public String businessName;
 
+    /**
+     * <p>Top-level business category.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("BusinessRange")
     public Integer businessRange;
 
+    /**
+     * <p>Category name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>分类名称A</p>
+     */
     @NameInMap("CategoryName")
     public String categoryName;
 
     /**
+     * <p>Whether to count the total number of items.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -27,6 +47,8 @@ public class ListRulesV4Request extends TeaModel {
     public Boolean countTotal;
 
     /**
+     * <p>ID of the rule creator. Same as CreateUserId. Specify one only.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -34,6 +56,8 @@ public class ListRulesV4Request extends TeaModel {
     public String createEmpid;
 
     /**
+     * <p>ID of the rule creator. Same as CreateEmpId. Specify one only.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -41,6 +65,8 @@ public class ListRulesV4Request extends TeaModel {
     public Long createUserId;
 
     /**
+     * <p>Current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -48,6 +74,8 @@ public class ListRulesV4Request extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>Filter by creation time (right boundary).</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-11-29 19:11:09</p>
      */
@@ -55,6 +83,8 @@ public class ListRulesV4Request extends TeaModel {
     public String endTime;
 
     /**
+     * <p>ID of the rule updater. Same as UpdateUserId. Specify one only.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -62,6 +92,8 @@ public class ListRulesV4Request extends TeaModel {
     public String lastUpdateEmpid;
 
     /**
+     * <p>Current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -69,16 +101,23 @@ public class ListRulesV4Request extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Number of items per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Required fields.</p>
+     */
     @NameInMap("RequireInfos")
     public java.util.List<String> requireInfos;
 
     /**
+     * <p>Search by rule ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>895EAD5312634F5AA708E3B3FA79662E</p>
      */
@@ -86,6 +125,8 @@ public class ListRulesV4Request extends TeaModel {
     public Long rid;
 
     /**
+     * <p>Search by rule ID or rule name.</p>
+     * 
      * <strong>example:</strong>
      * <p>xx</p>
      */
@@ -93,6 +134,8 @@ public class ListRulesV4Request extends TeaModel {
     public String ruleIdOrRuleName;
 
     /**
+     * <p>Scoring type.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -100,6 +143,8 @@ public class ListRulesV4Request extends TeaModel {
     public Integer ruleScoreSingleType;
 
     /**
+     * <p>Rule category.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -107,6 +152,8 @@ public class ListRulesV4Request extends TeaModel {
     public Integer ruleType;
 
     /**
+     * <p>Quality inspection scheme ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000000090</p>
      */
@@ -114,6 +161,8 @@ public class ListRulesV4Request extends TeaModel {
     public Long schemeId;
 
     /**
+     * <p>Source type.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -121,6 +170,8 @@ public class ListRulesV4Request extends TeaModel {
     public Integer sourceType;
 
     /**
+     * <p>Filter by creation time (left boundary).</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-11-29 18:11:09</p>
      */
@@ -128,6 +179,8 @@ public class ListRulesV4Request extends TeaModel {
     public String startTime;
 
     /**
+     * <p>Rule status.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -135,16 +188,26 @@ public class ListRulesV4Request extends TeaModel {
     public Integer status;
 
     /**
+     * <p>Type value of the rule category that the rule belongs to.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("Type")
     public Integer type;
 
+    /**
+     * <p>Name of the rule category that the rule belongs to.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>所有类型</p>
+     */
     @NameInMap("TypeName")
     public String typeName;
 
     /**
+     * <p>Filter by update time (right boundary).</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-11-29 18:11:09</p>
      */
@@ -152,6 +215,8 @@ public class ListRulesV4Request extends TeaModel {
     public String updateEndTime;
 
     /**
+     * <p>Filter by update time (left boundary).</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-11-29 16:11:09</p>
      */
@@ -159,6 +224,8 @@ public class ListRulesV4Request extends TeaModel {
     public String updateStartTime;
 
     /**
+     * <p>ID of the rule updater. Same as LastUpdateEmpId. Specify one only.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

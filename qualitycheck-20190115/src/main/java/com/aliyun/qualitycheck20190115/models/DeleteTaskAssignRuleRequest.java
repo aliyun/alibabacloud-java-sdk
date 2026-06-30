@@ -5,12 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteTaskAssignRuleRequest extends TeaModel {
     /**
-     * <p>baseMeAgentId</p>
+     * <p>Workspace ID</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
     /**
+     * <p>A complete JSON string. For details, see the input parameter description below.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

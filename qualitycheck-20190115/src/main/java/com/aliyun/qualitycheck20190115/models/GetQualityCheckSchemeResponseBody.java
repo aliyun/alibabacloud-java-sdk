@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetQualityCheckSchemeResponseBody extends TeaModel {
     /**
+     * <p>The result code. A value of 200 indicates success. Other values indicate failure. Use this code to determine the cause of a failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The QualityCheckScheme object. This is the JSON object of the quality check plan. For more information, see <a href="https://help.aliyun.com/document_detail/453292.html"><code>Description of quality check task objects</code></a>.</p>
+     */
     @NameInMap("Data")
     public GetQualityCheckSchemeResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,16 +29,23 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>If an error occurs, this field provides details about the error. If the request is successful, the value is <strong>successful</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The list of returned messages.</p>
+     */
     @NameInMap("Messages")
     public java.util.List<String> messages;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>96138D8D-8D26-4E41-BFF4-77AED1088BBD</p>
      */
@@ -39,6 +53,8 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. A value of true indicates success. A value of false or null indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -107,10 +123,18 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
     }
 
     public static class GetQualityCheckSchemeResponseBodyDataSchemeCheckTypeList extends TeaModel {
+        /**
+         * <p>The name of the quality check dimension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>服务规范性检测</p>
+         */
         @NameInMap("CheckName")
         public String checkName;
 
         /**
+         * <p>The ID of the quality check dimension type.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -118,6 +142,8 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         public Long checkType;
 
         /**
+         * <p>The status. Valid values: 0 (disabled) and 1 (enabled).</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -125,6 +151,8 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         public Integer enable;
 
         /**
+         * <p>The quality check plan ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>32</p>
          */
@@ -132,6 +160,8 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         public Long schemeId;
 
         /**
+         * <p>The score of the quality check dimension.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -139,6 +169,8 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         public Integer score;
 
         /**
+         * <p>The original score.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -202,6 +234,8 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
 
     public static class GetQualityCheckSchemeResponseBodyData extends TeaModel {
         /**
+         * <p>The time when the task was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1616113198000</p>
          */
@@ -209,6 +243,8 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The username of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -216,35 +252,62 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         public String createUserName;
 
         /**
+         * <p>The data type of the quality check plan. Valid values: 0 (text) and 1 (audio).</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("DataType")
         public Integer dataType;
 
+        /**
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>售前使用</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The total score of the quality check plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("InitScore")
         public String initScore;
 
         /**
+         * <p>The name of the quality check plan.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The list of associated rule IDs.</p>
+         */
         @NameInMap("RuleIds")
         public java.util.List<String> ruleIds;
 
+        /**
+         * <p>The list of rules.</p>
+         */
         @NameInMap("RuleList")
         public java.util.List<RulesInfo> ruleList;
 
+        /**
+         * <p>The list of quality check dimensions.</p>
+         */
         @NameInMap("SchemeCheckTypeList")
         public java.util.List<GetQualityCheckSchemeResponseBodyDataSchemeCheckTypeList> schemeCheckTypeList;
 
         /**
+         * <p>The quality check plan ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>112**</p>
          */
@@ -252,6 +315,8 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         public Long schemeId;
 
         /**
+         * <p>The quality check plan template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -259,6 +324,8 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         public Long schemeTemplateId;
 
         /**
+         * <p>The status. Valid values: 0 (deleted), 1 (published), 2 (unpublished), and 3 (updated but not published). Default value: 2.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -266,6 +333,8 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         public Integer status;
 
         /**
+         * <p>The type of the quality check plan template. Valid values: 1 (system-built) and 2 (custom).</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -273,6 +342,8 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         public Integer templateType;
 
         /**
+         * <p>The type of the quality check plan. Valid values: 0 (system-built) and 1 (custom).</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -280,6 +351,8 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         public Integer type;
 
         /**
+         * <p>The time when the plan was last updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>1616113198000</p>
          */
@@ -287,6 +360,8 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         public String updateTime;
 
         /**
+         * <p>The username of the user who last updated the plan.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -294,6 +369,8 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         public String updateUserName;
 
         /**
+         * <p>The version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1616113198000</p>
          */

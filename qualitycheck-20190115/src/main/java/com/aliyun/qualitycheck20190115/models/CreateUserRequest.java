@@ -5,11 +5,20 @@ import com.aliyun.tea.*;
 
 public class CreateUserRequest extends TeaModel {
     /**
-     * <p>baseMeAgentId</p>
+     * <p>Workspace ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
+    /**
+     * <p>A complete <strong>JSON string</strong>. For details, see the table below.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;aliUid&quot;:123,&quot;roleName&quot;:&quot;AGENT&quot;,&quot;userName&quot;:&quot;kefu01&quot;}]</p>
+     */
     @NameInMap("JsonStr")
     public String jsonStr;
 

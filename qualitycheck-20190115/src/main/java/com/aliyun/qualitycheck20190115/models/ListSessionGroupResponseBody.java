@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListSessionGroupResponseBody extends TeaModel {
     /**
+     * <p>The result code. A value of \<code>200\\</code> indicates that the request was successful. Other values indicate that the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class ListSessionGroupResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>2228</p>
      */
@@ -19,6 +23,8 @@ public class ListSessionGroupResponseBody extends TeaModel {
     public Integer count;
 
     /**
+     * <p>The number of the returned page. The default value is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -29,6 +35,8 @@ public class ListSessionGroupResponseBody extends TeaModel {
     public ListSessionGroupResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -36,6 +44,8 @@ public class ListSessionGroupResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The data marker. To retrieve more than 10,000 records, include the LastDataId from the previous response in the next request.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -43,6 +53,8 @@ public class ListSessionGroupResponseBody extends TeaModel {
     public String lastDataId;
 
     /**
+     * <p>The error details if the request fails. \<code>successful\\</code> is returned if the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -53,6 +65,8 @@ public class ListSessionGroupResponseBody extends TeaModel {
     public ListSessionGroupResponseBodyMessages messages;
 
     /**
+     * <p>The number of the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -60,6 +74,8 @@ public class ListSessionGroupResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -67,16 +83,26 @@ public class ListSessionGroupResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>F190ADE9-619A-447D-84E3-7E241A5C428E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>A reserved parameter. You can ignore this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>忽略</p>
+     */
     @NameInMap("ResultCountId")
     public String resultCountId;
 
     /**
+     * <p>Indicates whether the request was successful. A value of \<code>true\\</code> indicates that the request was successful. A value of \<code>false\\</code> or \<code>null\\</code> indicates that the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

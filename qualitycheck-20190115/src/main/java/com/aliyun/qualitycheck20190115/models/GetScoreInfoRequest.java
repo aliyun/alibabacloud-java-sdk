@@ -5,12 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetScoreInfoRequest extends TeaModel {
     /**
-     * <p>baseMeAgentId</p>
+     * <p>Workspace ID.</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
     /**
+     * <p>Paged queries are not supported. Pass an empty string.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

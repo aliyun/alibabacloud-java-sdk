@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AssignReviewerBySessionGroupResponseBody extends TeaModel {
     /**
+     * <p>Result code. A value of 200 indicates success. Any other value indicates failure. Use this field to identify the cause of failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class AssignReviewerBySessionGroupResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class AssignReviewerBySessionGroupResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error details if the request failed. Returns successful if the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +35,8 @@ public class AssignReviewerBySessionGroupResponseBody extends TeaModel {
     public AssignReviewerBySessionGroupResponseBodyMessages messages;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>F190ADE9-619A-447D-84E3-7E241A5C428E</p>
      */
@@ -36,6 +44,8 @@ public class AssignReviewerBySessionGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded. Set to true for success. Set to false or null for failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

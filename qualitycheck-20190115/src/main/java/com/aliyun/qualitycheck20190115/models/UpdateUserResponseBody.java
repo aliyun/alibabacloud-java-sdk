@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateUserResponseBody extends TeaModel {
     /**
+     * <p>Result code. <strong>200</strong> indicates success. Other values indicate failure. Use this field to determine the cause of failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class UpdateUserResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Error details on failure. &quot;successful&quot; on success.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -19,6 +23,8 @@ public class UpdateUserResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>106C6CA0-282D-4AF7-85F0-D2D24F4CE647</p>
      */
@@ -26,6 +32,8 @@ public class UpdateUserResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates if the request succeeded. Use this field to determine if the request succeeded: \<code>true\\</code> for success; \<code>false\\</code>/\<code>null\\</code> for failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

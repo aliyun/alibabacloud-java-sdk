@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetRuleV4ResponseBody extends TeaModel {
     /**
+     * <p>Result code. A value of <strong>200</strong> indicates success. Other values indicate failure. Use this field to identify the cause of failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Rule information.</p>
+     */
     @NameInMap("Data")
     public RulesInfo data;
 
     /**
+     * <p>HTTP status code returned by the request. A value of 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,16 +29,23 @@ public class GetRuleV4ResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error details if the request failed. Returns <strong>successful</strong> if the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Error details if the request failed. Use this field when returning multiple messages.</p>
+     */
     @NameInMap("Messages")
     public java.util.List<String> messages;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>106C6CA0-282D-4AF7-85F0-D2D24***</p>
      */
@@ -39,6 +53,8 @@ public class GetRuleV4ResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded. Set to true for success. Set to false or null for failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

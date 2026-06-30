@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class UpdateRuleToSchemeRequest extends TeaModel {
     /**
-     * <p>baseMeAgentId</p>
+     * <p>Workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1232927</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
     /**
+     * <p>Request JSON. For details, see the request parameter description below.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;schemeId&quot;:&quot;10&quot;,&quot;schemeRules&quot;:[{&quot;ruleId&quot;:229,&quot;checkType&quot;:0}]}</p>
      */

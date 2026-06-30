@@ -4,10 +4,18 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class ListRulesV4ResponseBody extends TeaModel {
+    /**
+     * <p>Business type. This field has no practical use. Ignore it.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("BusinessType")
     public Integer businessType;
 
     /**
+     * <p>Result code. <strong>200</strong> means success. Any other value means failure. Callers can use this field to identify the cause of failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -15,6 +23,8 @@ public class ListRulesV4ResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Total number of items.</p>
+     * 
      * <strong>example:</strong>
      * <p>219</p>
      */
@@ -22,16 +32,23 @@ public class ListRulesV4ResponseBody extends TeaModel {
     public Integer count;
 
     /**
+     * <p>Current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>Response data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<RuleCountInfo> data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -39,16 +56,23 @@ public class ListRulesV4ResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error details if the request failed. Returns <strong>successful</strong> if the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Error details if the request failed. Use this field when multiple messages are returned.</p>
+     */
     @NameInMap("Messages")
     public java.util.List<String> messages;
 
     /**
+     * <p>Current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -56,6 +80,8 @@ public class ListRulesV4ResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Number of rows per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -63,6 +89,8 @@ public class ListRulesV4ResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>96138D8D-8D26-4E41-BFF4-77AED1088BBD</p>
      */
@@ -70,6 +98,8 @@ public class ListRulesV4ResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded. Callers can use this field to determine success: true means success. <strong>false</strong> or <strong>null</strong> means failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -77,6 +107,8 @@ public class ListRulesV4ResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Total number of items.</p>
+     * 
      * <strong>example:</strong>
      * <p>219</p>
      */

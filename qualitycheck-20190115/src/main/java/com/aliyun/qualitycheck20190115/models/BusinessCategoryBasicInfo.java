@@ -4,18 +4,39 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class BusinessCategoryBasicInfo extends TeaModel {
+    /**
+     * <p>Business ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Bid")
     public Integer bid;
 
+    /**
+     * <p>Business name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>全部</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>originalId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("OriginalId")
     public Long originalId;
 
+    /**
+     * <p>Service Type (ServiceCategory).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ServiceType")
     public Integer serviceType;
 

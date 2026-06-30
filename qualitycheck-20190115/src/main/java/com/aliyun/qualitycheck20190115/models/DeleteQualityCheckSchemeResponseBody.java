@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteQualityCheckSchemeResponseBody extends TeaModel {
     /**
+     * <p>Result code. A value of 200 means success. Any other value means failure. Use this field to identify the cause of failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class DeleteQualityCheckSchemeResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class DeleteQualityCheckSchemeResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error details if the request failed. Returns &quot;successful&quot; if the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +35,8 @@ public class DeleteQualityCheckSchemeResponseBody extends TeaModel {
     public DeleteQualityCheckSchemeResponseBodyMessages messages;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>106C6CA0-282D-4AF7-85F0-D2D24***</p>
      */
@@ -36,6 +44,8 @@ public class DeleteQualityCheckSchemeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded. If true, the request succeeded. If <strong>false</strong> or <strong>null</strong>, the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

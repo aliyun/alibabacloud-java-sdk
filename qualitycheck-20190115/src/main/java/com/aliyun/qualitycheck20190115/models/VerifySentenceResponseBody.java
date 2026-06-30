@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class VerifySentenceResponseBody extends TeaModel {
     /**
+     * <p>Result code. <strong>200</strong> indicates success. Any other value indicates failure. Use this field to identify the cause of failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -15,6 +17,8 @@ public class VerifySentenceResponseBody extends TeaModel {
     public VerifySentenceResponseBodyData data;
 
     /**
+     * <p>Number of incorrect characters in this sentence.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -22,6 +26,8 @@ public class VerifySentenceResponseBody extends TeaModel {
     public Integer incorrectWords;
 
     /**
+     * <p>Error details if the request failed. Returns successful if the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +35,8 @@ public class VerifySentenceResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>106C6CA0-282D-4AF7-85F0-D2D24F4CE647</p>
      */
@@ -36,6 +44,8 @@ public class VerifySentenceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Correct role after manual verification. Valid values: 0 (agent), 1 (customer).</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -43,6 +53,8 @@ public class VerifySentenceResponseBody extends TeaModel {
     public Integer sourceRole;
 
     /**
+     * <p>Indicates whether the request succeeded. Set to true for success. Set to false or null for failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -50,6 +62,8 @@ public class VerifySentenceResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Transcribed role. Valid values: 0 (agent), 1 (customer).</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

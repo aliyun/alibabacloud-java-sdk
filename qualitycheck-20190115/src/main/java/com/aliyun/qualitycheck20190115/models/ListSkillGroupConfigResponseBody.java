@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListSkillGroupConfigResponseBody extends TeaModel {
     /**
+     * <p>The result code. A value of 200 indicates success. Any other value indicates failure. Use this field to determine the cause of failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -15,6 +17,8 @@ public class ListSkillGroupConfigResponseBody extends TeaModel {
     public ListSkillGroupConfigResponseBodyData data;
 
     /**
+     * <p>Details of the error if the request failed. If successful, the value is &quot;successful&quot;.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -22,6 +26,8 @@ public class ListSkillGroupConfigResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3CEA0495-341B-4482-9AD9-8191EF4***</p>
      */
@@ -29,6 +35,8 @@ public class ListSkillGroupConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded. A value of true means success. A value of false or null means failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

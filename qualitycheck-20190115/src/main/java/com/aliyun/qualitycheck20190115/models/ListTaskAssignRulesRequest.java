@@ -5,12 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListTaskAssignRulesRequest extends TeaModel {
     /**
-     * <p>baseMeAgentId</p>
+     * <p>Workspace ID.</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
     /**
+     * <p>Complete JSON string information. See the details below for specific content.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

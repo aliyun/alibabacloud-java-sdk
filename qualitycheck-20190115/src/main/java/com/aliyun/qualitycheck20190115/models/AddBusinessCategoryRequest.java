@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class AddBusinessCategoryRequest extends TeaModel {
     /**
-     * <p>baseMeAgentId</p>
+     * <p>Workspace ID</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
     /**
+     * <p>A complete JSON string. For details, see the table below.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;name&quot;:&quot;适用业务名称&quot;}</p>
      */
     @NameInMap("JsonStr")
     public String jsonStr;

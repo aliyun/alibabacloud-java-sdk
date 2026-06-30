@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTaskAssignRulesResponseBody extends TeaModel {
     /**
+     * <p>Result code. <strong>200</strong> indicates success. Other values indicate failure. Callers can use this field to determine the cause of failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>23</p>
      */
@@ -22,6 +26,8 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
     public ListTaskAssignRulesResponseBodyData data;
 
     /**
+     * <p>Error details if an error occurs. &quot;successful&quot; if the request succeeds.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +35,8 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -36,6 +44,8 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -43,6 +53,8 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>106C6CA0-282D-4AF7-85F0-D2D24F4CE647</p>
      */
@@ -50,6 +62,8 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Callers can use this field to determine if the request succeeded: true for success, false/null for failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

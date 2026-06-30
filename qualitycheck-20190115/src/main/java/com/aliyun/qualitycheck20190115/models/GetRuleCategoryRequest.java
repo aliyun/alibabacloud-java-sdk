@@ -5,12 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetRuleCategoryRequest extends TeaModel {
     /**
-     * <p>baseMeAgentId</p>
+     * <p>The workspace ID.</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
     /**
+     * <p>Set the value to an empty string.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

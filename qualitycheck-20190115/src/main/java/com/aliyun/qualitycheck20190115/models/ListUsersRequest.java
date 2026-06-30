@@ -5,12 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListUsersRequest extends TeaModel {
     /**
-     * <p>baseMeAgentId</p>
+     * <p>The workspace ID.</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
     /**
+     * <p>The complete JSON string. For more information, see the details below.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

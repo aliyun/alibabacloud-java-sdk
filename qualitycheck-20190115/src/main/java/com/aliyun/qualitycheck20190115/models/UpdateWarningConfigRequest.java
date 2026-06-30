@@ -5,12 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateWarningConfigRequest extends TeaModel {
     /**
-     * <p>baseMeAgentId</p>
+     * <p>workspace ID</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
     /**
+     * <p>The complete JSON string. For details, see the detailed information below.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

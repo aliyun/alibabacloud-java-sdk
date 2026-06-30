@@ -4,10 +4,18 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class GetRulesCountListResponseBody extends TeaModel {
+    /**
+     * <p>Business type. This field has no practical meaning and can be ignored.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>忽略</p>
+     */
     @NameInMap("BusinessType")
     public Integer businessType;
 
     /**
+     * <p>Result code. <strong>200</strong> indicates success. Any other value indicates failure. Use this field to identify the cause of failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -15,6 +23,8 @@ public class GetRulesCountListResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -22,6 +32,8 @@ public class GetRulesCountListResponseBody extends TeaModel {
     public Integer count;
 
     /**
+     * <p>Current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -32,6 +44,8 @@ public class GetRulesCountListResponseBody extends TeaModel {
     public GetRulesCountListResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -39,6 +53,8 @@ public class GetRulesCountListResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error details if the request failed. Returns &quot;successful&quot; on success.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -49,6 +65,8 @@ public class GetRulesCountListResponseBody extends TeaModel {
     public GetRulesCountListResponseBodyMessages messages;
 
     /**
+     * <p>Current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -56,6 +74,8 @@ public class GetRulesCountListResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Number of rows per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -63,6 +83,8 @@ public class GetRulesCountListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9987D326-83D9-4A42-B9A5-0B27F9B40539</p>
      */
@@ -70,6 +92,8 @@ public class GetRulesCountListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded. Use this field to determine request success: true means success; false or null means failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -77,6 +101,8 @@ public class GetRulesCountListResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>7</p>
      */

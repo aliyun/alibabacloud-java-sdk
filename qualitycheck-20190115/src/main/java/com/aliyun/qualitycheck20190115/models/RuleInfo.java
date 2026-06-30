@@ -4,171 +4,489 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class RuleInfo extends TeaModel {
+    /**
+     * <p>The review option. This parameter is used for compatibility with the v4.0 protocol. Valid values: <code>1</code> (Manual review) and <code>3</code> (Automatic review).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("AutoReview")
     public Integer autoReview;
 
+    /**
+     * <p>A list of business category names.</p>
+     */
     @NameInMap("BusinessCategoryNameList")
     public java.util.List<String> businessCategoryNameList;
 
+    /**
+     * <p>The check type. Valid values: <code>0</code> (Service compliance check), <code>1</code> (Service attitude check), <code>2</code> (Service professionalism check), <code>3</code> (Customer attitude check), and <code>4</code> (Service process correctness check).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("CheckType")
     public Long checkType;
 
+    /**
+     * <p>Remarks on the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>违规</p>
+     */
     @NameInMap("Comments")
     public String comments;
 
+    /**
+     * <p>The configuration type. This parameter is used for compatibility with the v4.0 protocol. Valid values: <code>1</code> (Simple condition configuration) and <code>2</code> (Advanced configuration). Default: <code>1</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ConfigType")
     public Integer configType;
 
+    /**
+     * <p>The name of the creator.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>张三</p>
+     */
     @NameInMap("CreateEmpName")
     public String createEmpName;
 
+    /**
+     * <p>The employee ID of the creator.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CreateEmpid")
     public String createEmpid;
 
+    /**
+     * <p>The creation time. This value is a Unix timestamp in milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1641277321000</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>Indicates whether editing the rule is denied. Valid values: <code>1</code> (denied), <code>0</code> or <code>null</code> (allowed).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Deny")
     public Integer deny;
 
+    /**
+     * <p>A list of test dialogues.</p>
+     */
     @NameInMap("Dialogues")
     public java.util.List<RuleTestDialogue> dialogues;
 
+    /**
+     * <p>Indicates whether the rule is in effect. Valid values: <code>0</code> (No) and <code>1</code> (Yes).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Effective")
     public Integer effective;
 
+    /**
+     * <p>The effective end time of the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OperationMode</p>
+     */
     @NameInMap("EffectiveEndTime")
     public String effectiveEndTime;
 
+    /**
+     * <p>The effective start time of the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OperationMode</p>
+     */
     @NameInMap("EffectiveStartTime")
     public String effectiveStartTime;
 
+    /**
+     * <p>The end time. This value is a Unix timestamp in milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1641277321000</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The external property.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ExternalProperty")
     public Integer externalProperty;
 
+    /**
+     * <p>Indicates whether the rule is effective throughout its lifecycle. Valid values: <code>0</code> (No) and <code>1</code> (Yes).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("FullCycle")
     public Integer fullCycle;
 
+    /**
+     * <p>The graph flow.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("GraphFlow")
     public Object graphFlow;
 
+    /**
+     * <p>Indicates whether the rule is deleted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("IsDelete")
     public Integer isDelete;
 
+    /**
+     * <p>Indicates whether the rule is online.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("IsOnline")
     public Integer isOnline;
 
+    /**
+     * <p>The conditional expression, such as <code>a&amp;&amp;b</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a&amp;&amp;b</p>
+     */
     @NameInMap("Lambda")
     public String lambda;
 
+    /**
+     * <p>The name of the employee who last updated the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>张三</p>
+     */
     @NameInMap("LastUpdateEmpName")
     public String lastUpdateEmpName;
 
+    /**
+     * <p>The ID of the employee who last updated the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("LastUpdateEmpid")
     public String lastUpdateEmpid;
 
+    /**
+     * <p>The last update time. This value is a Unix timestamp in milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1641277321000</p>
+     */
     @NameInMap("LastUpdateTime")
     public String lastUpdateTime;
 
+    /**
+     * <p>The severity level of the rule. Valid values: <code>0</code> (Severe violation), <code>1</code> (Moderate violation), and <code>2</code> (Minor violation).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Level")
     public Integer level;
 
+    /**
+     * <p>Indicates whether the conditions are met.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Meet")
     public Integer meet;
 
+    /**
+     * <p>Indicates whether the rule has been modified within the quality check scheme.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ModifyType")
     public Integer modifyType;
 
+    /**
+     * <p>The rule name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>开头语规则</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The operation mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("OperationMode")
     public Integer operationMode;
 
     @NameInMap("PreqRule")
     public RuleInfoPreqRule preqRule;
 
+    /**
+     * <p>The quality check type. This parameter is used for compatibility with the v4.0 protocol. Valid values: <code>0</code> (offline quality check) and <code>1</code> (real-time quality check).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("QualityCheckType")
     public Integer qualityCheckType;
 
+    /**
+     * <p>The rule ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Rid")
     public String rid;
 
+    /**
+     * <p>The name of the rule category.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>正向规则</p>
+     */
     @NameInMap("RuleCategoryName")
     public String ruleCategoryName;
 
+    /**
+     * <p>Specifies whether to score the rule. This parameter is used for compatibility with the v4.0 protocol. Valid values: <code>1</code> (Do not score) and <code>3</code> (Score).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("RuleScoreType")
     public Integer ruleScoreType;
 
+    /**
+     * <p>The rule type. This parameter is used for compatibility with the v4.0 protocol. Valid values: <code>0</code> (Default) and <code>1</code> (User-created).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RuleType")
     public Integer ruleType;
 
+    /**
+     * <p>The quality check dimension object.</p>
+     */
     @NameInMap("SchemeCheckType")
     public SchemeCheckType schemeCheckType;
 
+    /**
+     * <p>The ID of the quality check scheme to which the rule belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("SchemeId")
     public Long schemeId;
 
+    /**
+     * <p>The name of the quality check scheme.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>通用方案</p>
+     */
     @NameInMap("SchemeName")
     public String schemeName;
 
+    /**
+     * <p>The mapping ID between the quality check scheme and the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("SchemeRuleMappingId")
     public Long schemeRuleMappingId;
 
+    /**
+     * <p>Indicates whether the scoring item is deleted. A deleted item may be displayed as grayed out.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ScoreDeleted")
     public Boolean scoreDeleted;
 
+    /**
+     * <p>The ID of the main scoring item.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ScoreId")
     public Long scoreId;
 
+    /**
+     * <p>The name of the main scoring item.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>违规</p>
+     */
     @NameInMap("ScoreName")
     public String scoreName;
 
+    /**
+     * <p>The score value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ScoreNum")
     public Float scoreNum;
 
+    /**
+     * <p>The scoring method. This parameter is used for compatibility with the v4.0 protocol. Valid values: <code>0</code> (Add/deduct points when the rule is triggered) and <code>1</code> (Assign a one-time score when the rule is triggered).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ScoreNumType")
     public Integer scoreNumType;
 
+    /**
+     * <p>The scoring trigger. Valid values: <code>0</code> (Score when a node is hit).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("ScoreRuleHitType")
     public Integer scoreRuleHitType;
 
+    /**
+     * <p>The ID of the scoring subitem.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ScoreSubId")
     public Long scoreSubId;
 
+    /**
+     * <p>The name of the scoring subitem.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ScoreSubName")
     public String scoreSubName;
 
+    /**
+     * <p>Indicates whether to add or deduct points.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ScoreType")
     public Integer scoreType;
 
+    /**
+     * <p>The sort order of the rule in the quality check dimension.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("SortIndex")
     public Integer sortIndex;
 
+    /**
+     * <p>The start time. This value is a Unix timestamp in milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1641277321000</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The status of the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Status")
     public Integer status;
 
+    /**
+     * <p>The rule category. This parameter is used for compatibility with the v4.0 protocol. Valid values: <code>10</code> (General rule for quality check schemes) and <code>11</code> (Flow rule for quality check schemes).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TargetType")
     public Integer targetType;
 
+    /**
+     * <p>The ID of the flowchart.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>111111111</p>
+     */
     @NameInMap("TaskFlowId")
     public Long taskFlowId;
 
+    /**
+     * <p>The type of the flowchart. This parameter is deprecated. The default value is <code>1</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TaskFlowType")
     public Integer taskFlowType;
 
+    /**
+     * <p>A list of triggers.</p>
+     */
     @NameInMap("Triggers")
     public java.util.List<String> triggers;
 
+    /**
+     * <p>The rule category. This parameter is used for compatibility with the v4.0 protocol. Valid values: <code>2</code> (Public opinion monitoring) and <code>3</code> (Business).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("Type")
     public Integer type;
 
+    /**
+     * <p>The weight of the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Weight")
     public String weight;
 

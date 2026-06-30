@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListUsersResponseBody extends TeaModel {
     /**
+     * <p>The result code. A value of <code>200</code> indicates success. Other values indicate failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class ListUsersResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>12</p>
      */
@@ -22,6 +26,8 @@ public class ListUsersResponseBody extends TeaModel {
     public ListUsersResponseBodyData data;
 
     /**
+     * <p>The message returned. The value is successful if the request is successful. Otherwise, an error message is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +35,8 @@ public class ListUsersResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -36,6 +44,8 @@ public class ListUsersResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries displayed per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -43,6 +53,8 @@ public class ListUsersResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>106C6CA0-282D-4AF7-85F0-D2D24F4CE647</p>
      */
@@ -50,6 +62,8 @@ public class ListUsersResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. A value of true indicates success. A value of false or null indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

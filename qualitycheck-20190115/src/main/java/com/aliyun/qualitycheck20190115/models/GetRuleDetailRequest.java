@@ -5,12 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetRuleDetailRequest extends TeaModel {
     /**
-     * <p>baseMeAgentId</p>
+     * <p>The workspace ID.</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
     /**
+     * <p>A complete JSON string. See the details below for the exact format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

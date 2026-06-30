@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListDataSetRequest extends TeaModel {
     /**
-     * <p>baseMeAgentId</p>
+     * <p>Workspace ID</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
     /**
+     * <p>Input parameter JSON string</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;pageNumber&quot;:1,&quot;pageSize&quot;:10}</p>
      */

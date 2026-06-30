@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteRuleV4ResponseBody extends TeaModel {
     /**
+     * <p>The result code. <strong>200</strong> indicates success. Other values indicate failure. Callers can use this field to determine the cause of failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class DeleteRuleV4ResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class DeleteRuleV4ResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Provides error details if an error occurs. If successful, the value is <strong>successful</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +35,8 @@ public class DeleteRuleV4ResponseBody extends TeaModel {
     public DeleteRuleV4ResponseBodyMessages messages;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>F190ADE9-619A-447D-84E3-7E241A5C428E</p>
      */
@@ -36,6 +44,8 @@ public class DeleteRuleV4ResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Callers can use this field to determine if the request succeeded: true means success; false/null means failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

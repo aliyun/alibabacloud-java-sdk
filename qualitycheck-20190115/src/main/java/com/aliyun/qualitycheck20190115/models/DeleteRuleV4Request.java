@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteRuleV4Request extends TeaModel {
     /**
-     * <p>baseMeAgentId</p>
+     * <p>Workspace ID</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
     /**
+     * <p>Whether to delete the rule even if it is associated with quality inspection tasks.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -18,6 +20,7 @@ public class DeleteRuleV4Request extends TeaModel {
     public Boolean forceDelete;
 
     /**
+     * <p>Rule ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

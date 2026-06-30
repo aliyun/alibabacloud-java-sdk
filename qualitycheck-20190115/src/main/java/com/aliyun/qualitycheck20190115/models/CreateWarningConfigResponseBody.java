@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateWarningConfigResponseBody extends TeaModel {
     /**
+     * <p>Result code. <strong>200</strong> indicates success. Other values indicate failure. The caller can determine the failure reason based on this field.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class CreateWarningConfigResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The ID of the warning configuration successfully created.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -19,6 +23,8 @@ public class CreateWarningConfigResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>Error details when an error occurs. Returns \&quot;successful\&quot; on success.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -26,6 +32,8 @@ public class CreateWarningConfigResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>82C91484-B2D5-4D2A-A21F-A6D73F4D55C6</p>
      */
@@ -33,6 +41,8 @@ public class CreateWarningConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the request was successful. The caller can determine if the request was successful based on this field: true indicates success, false/null indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

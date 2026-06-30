@@ -5,12 +5,13 @@ import com.aliyun.tea.*;
 
 public class InvalidRuleRequest extends TeaModel {
     /**
-     * <p>baseMeAgentId</p>
+     * <p>Workspace ID</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
     /**
+     * <p>Full JSON string information. See the following details for specific content.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

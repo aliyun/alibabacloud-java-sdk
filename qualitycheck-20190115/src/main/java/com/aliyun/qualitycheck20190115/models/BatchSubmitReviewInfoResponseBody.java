@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BatchSubmitReviewInfoResponseBody extends TeaModel {
     /**
+     * <p>The result code. A value of <strong>200</strong> indicates success. Other values indicate failure. You can use this code to identify the cause of a failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class BatchSubmitReviewInfoResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class BatchSubmitReviewInfoResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error details if the request fails. If the request is successful, the value is \<code>successful\\</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +35,8 @@ public class BatchSubmitReviewInfoResponseBody extends TeaModel {
     public BatchSubmitReviewInfoResponseBodyMessages messages;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>F190ADE9-619A-447D-84E3-7E241A5C428E</p>
      */
@@ -36,6 +44,8 @@ public class BatchSubmitReviewInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. A value of \<code>true\\</code> indicates success. A value of \<code>false\\</code> or \<code>null\\</code> indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

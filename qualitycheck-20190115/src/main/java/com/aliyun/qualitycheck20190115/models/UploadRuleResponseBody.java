@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UploadRuleResponseBody extends TeaModel {
     /**
+     * <p>Result code. <strong>200</strong> means success. Any other value indicates failure. Use this field to diagnose errors.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -15,6 +17,8 @@ public class UploadRuleResponseBody extends TeaModel {
     public UploadRuleResponseBodyData data;
 
     /**
+     * <p>Error details if the call fails. <strong>successful</strong> if successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -22,6 +26,8 @@ public class UploadRuleResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4987D326-83D9-4A42-B9A5-0B27F9B40539</p>
      */
@@ -29,6 +35,14 @@ public class UploadRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the request succeeded. Use this field to verify success:</p>
+     * <ul>
+     * <li><p><strong>true</strong> means success.</p>
+     * </li>
+     * <li><p>false or <strong>null</strong> means failure.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

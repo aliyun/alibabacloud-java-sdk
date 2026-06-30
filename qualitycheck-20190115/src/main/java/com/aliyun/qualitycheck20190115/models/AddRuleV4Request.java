@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class AddRuleV4Request extends TeaModel {
     /**
-     * <p>baseMeAgentId</p>
+     * <p>The workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
     /**
+     * <p>Specifies whether to copy the rule. Set this to \<code>true\\</code> to copy the rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -18,7 +23,11 @@ public class AddRuleV4Request extends TeaModel {
     public Boolean isCopy;
 
     /**
+     * <p>For more information about JsonStrForRule, see <a href="https://help.aliyun.com/document_detail/453053.html"><code>Rule object description</code></a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
      */
     @NameInMap("JsonStrForRule")
     public String jsonStrForRule;

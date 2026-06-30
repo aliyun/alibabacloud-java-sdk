@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetSchemeTaskConfigRequest extends TeaModel {
     /**
+     * <p>Workspace ID</p>
+     * 
      * <strong>example:</strong>
      * <p>12345</p>
      */
@@ -12,6 +14,8 @@ public class GetSchemeTaskConfigRequest extends TeaModel {
     public Long baseMeAgentId;
 
     /**
+     * <p>A complete JSON string. See the detailed information below.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;sourceDataType&quot;:3,&quot;id&quot;:588}</p>
      */

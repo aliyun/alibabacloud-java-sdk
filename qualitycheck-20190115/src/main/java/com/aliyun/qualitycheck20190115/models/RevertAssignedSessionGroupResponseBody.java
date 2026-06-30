@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RevertAssignedSessionGroupResponseBody extends TeaModel {
     /**
+     * <p>The result code. A value of <strong>200</strong> indicates success. Other values indicate failure. Use this code to identify the cause of a failed request.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class RevertAssignedSessionGroupResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class RevertAssignedSessionGroupResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>If the request fails, this parameter provides error details. If the request succeeds, the value is \<code>successful\\</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +35,8 @@ public class RevertAssignedSessionGroupResponseBody extends TeaModel {
     public RevertAssignedSessionGroupResponseBodyMessages messages;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>106C6CA0-282D-4AF7-85F0-D2D24F4CE647</p>
      */
@@ -36,6 +44,15 @@ public class RevertAssignedSessionGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * <p>The caller can use this field to determine whether the request succeeded.</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p>false or <strong>null</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

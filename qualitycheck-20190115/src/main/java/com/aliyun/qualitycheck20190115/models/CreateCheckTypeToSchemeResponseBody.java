@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateCheckTypeToSchemeResponseBody extends TeaModel {
     /**
+     * <p>Result code. <strong>200</strong> means success. Any other value means failure. Callers can use this field to identify the cause of failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class CreateCheckTypeToSchemeResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Quality check dimension ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -19,6 +23,8 @@ public class CreateCheckTypeToSchemeResponseBody extends TeaModel {
     public Long data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class CreateCheckTypeToSchemeResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error details when the request fails. Returns <strong>successful</strong> on success.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -36,6 +44,8 @@ public class CreateCheckTypeToSchemeResponseBody extends TeaModel {
     public CreateCheckTypeToSchemeResponseBodyMessages messages;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>106C6CA0-282D-4AF7-85F0-D2D24F4CE647</p>
      */
@@ -43,6 +53,8 @@ public class CreateCheckTypeToSchemeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded. Callers can use this field to determine success: true means success. false or null means failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

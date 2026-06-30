@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteWarningConfigResponseBody extends TeaModel {
     /**
+     * <p>The result code. A value of <strong>200</strong> indicates that the request was successful. Other values indicate that the request failed. You can use this field to determine the cause of the failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class DeleteWarningConfigResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>If the request fails, this field provides the error details. If the request is successful, the value is \<code>successful\\</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -19,6 +23,8 @@ public class DeleteWarningConfigResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>82C91484-B2D5-4D2A-A21F-A6D73F4D55C6</p>
      */
@@ -26,6 +32,8 @@ public class DeleteWarningConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. A value of \<code>true\\</code> indicates success. A value of \<code>false\\</code> or \<code>null\\</code> indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

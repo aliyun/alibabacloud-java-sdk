@@ -4,10 +4,15 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class GraphFlowNode extends TeaModel {
+    /**
+     * <p>Operator information.</p>
+     */
     @NameInMap("Conditions")
     public java.util.List<ConditionBasicInfo> conditions;
 
     /**
+     * <p>Used for frontend display.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -15,6 +20,8 @@ public class GraphFlowNode extends TeaModel {
     public String content;
 
     /**
+     * <p>Node ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,7 +29,7 @@ public class GraphFlowNode extends TeaModel {
     public Long id;
 
     /**
-     * <p>index</p>
+     * <p>Index</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -30,23 +37,39 @@ public class GraphFlowNode extends TeaModel {
     @NameInMap("Index")
     public Integer index;
 
+    /**
+     * <p>Node name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>开始节点</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>Child nodes</p>
+     */
     @NameInMap("NextNodes")
     public java.util.List<GraphFlowNodeNextNodes> nextNodes;
 
     /**
+     * <p>Node Type</p>
+     * 
      * <strong>example:</strong>
      * <p>startNode</p>
      */
     @NameInMap("NodeType")
     public String nodeType;
 
+    /**
+     * <p>Node properties</p>
+     */
     @NameInMap("Properties")
     public GraphFlowNodeProperties properties;
 
     /**
+     * <p>Rule ID. \<code>rid\\</code> is empty if the rule is not persisted. If the rule is persisted, \<code>rid\\</code> equals \<code>ID\\</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -54,6 +77,8 @@ public class GraphFlowNode extends TeaModel {
     public Long rid;
 
     /**
+     * <p>Whether to use operator matching or legacy matching.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -147,6 +172,8 @@ public class GraphFlowNode extends TeaModel {
 
     public static class GraphFlowNodeNextNodes extends TeaModel {
         /**
+         * <p>Quality check dimension</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -154,6 +181,8 @@ public class GraphFlowNode extends TeaModel {
         public Integer checkType;
 
         /**
+         * <p>Flow branch priority. A smaller value indicates higher priority.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -161,6 +190,8 @@ public class GraphFlowNode extends TeaModel {
         public Integer index;
 
         /**
+         * <p>Lambda expression for the next hop.</p>
+         * 
          * <strong>example:</strong>
          * <p>a</p>
          */
@@ -168,6 +199,8 @@ public class GraphFlowNode extends TeaModel {
         public String lambda;
 
         /**
+         * <p>Conditional branch name.</p>
+         * 
          * <strong>example:</strong>
          * <p>a</p>
          */
@@ -175,12 +208,17 @@ public class GraphFlowNode extends TeaModel {
         public String name;
 
         /**
+         * <p>Next node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>31533</p>
          */
         @NameInMap("NextNodeId")
         public Long nextNodeId;
 
+        /**
+         * <p>Operators to follow.</p>
+         */
         @NameInMap("Triggers")
         public java.util.List<String> triggers;
 
@@ -241,6 +279,8 @@ public class GraphFlowNode extends TeaModel {
 
     public static class GraphFlowNodeProperties extends TeaModel {
         /**
+         * <p>1: Do not auto-review.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -248,6 +288,8 @@ public class GraphFlowNode extends TeaModel {
         public Integer autoReview;
 
         /**
+         * <p>Enable branch judgment.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -255,6 +297,8 @@ public class GraphFlowNode extends TeaModel {
         public Boolean branchJudge;
 
         /**
+         * <p>Maximum N sentences to check.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -262,6 +306,8 @@ public class GraphFlowNode extends TeaModel {
         public Integer checkMoreSize;
 
         /**
+         * <p>Quality check dimension</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -269,26 +315,41 @@ public class GraphFlowNode extends TeaModel {
         public Integer checkType;
 
         /**
+         * <p>General operator logic.</p>
+         * 
          * <strong>example:</strong>
          * <p>a</p>
          */
         @NameInMap("Lambda")
         public String lambda;
 
+        /**
+         * <p>Role when the type is \<code>single\\</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>客户</p>
+         */
         @NameInMap("Role")
         public String role;
 
         /**
+         * <p>Is scored.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("RuleScoreType")
         public Integer ruleScoreType;
 
+        /**
+         * <p>Indicates expression when the type is \<code>single\\</code>.</p>
+         */
         @NameInMap("SayType")
         public String sayType;
 
         /**
+         * <p>Score value</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -296,6 +357,8 @@ public class GraphFlowNode extends TeaModel {
         public Integer scoreNum;
 
         /**
+         * <p>0: Add or deduct points after the rule is triggered; 1: Score once after the rule is triggered.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -303,6 +366,8 @@ public class GraphFlowNode extends TeaModel {
         public Integer scoreNumType;
 
         /**
+         * <p>0: Score when the node is hit.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -310,16 +375,23 @@ public class GraphFlowNode extends TeaModel {
         public Integer scoreRuleHitType;
 
         /**
+         * <p>1: Add points; 3: Deduct points; default is 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("ScoreType")
         public Integer scoreType;
 
+        /**
+         * <p>Operators to follow.</p>
+         */
         @NameInMap("Triggers")
         public java.util.List<String> triggers;
 
         /**
+         * <p>Property type</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */

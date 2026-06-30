@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetResultRequest extends TeaModel {
     /**
-     * <p>baseMeAgentId</p>
+     * <p>Workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
     /**
+     * <p>Full JSON string. See the detailed description below.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

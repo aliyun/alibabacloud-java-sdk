@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ApplyWsTokenRequest extends TeaModel {
     /**
+     * <p>Workspace ID</p>
+     * 
      * <strong>example:</strong>
      * <p>123456</p>
      */
@@ -12,6 +14,8 @@ public class ApplyWsTokenRequest extends TeaModel {
     public Long baseMeAgentId;
 
     /**
+     * <p>Complete JSON string information. For details, see the following specifications.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *     &quot;business&quot;: &quot;test&quot;,

@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class GetSchemeTaskConfigResponseBody extends TeaModel {
     /**
+     * <p>Result code. <strong>200</strong> means success.</p>
+     * <blockquote>
+     * <p>Any other value means failure. The caller can use this field to identify the cause.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Response data. See the additional notes below.</p>
+     */
     @NameInMap("Data")
     public GetSchemeTaskConfigResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +32,8 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
+     * <p>Error details if the request failed. Returns successful if the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +41,8 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>3CEA0495-341B-4482-9AD9-8191EF4***</p>
      */
@@ -36,6 +50,8 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded. Use this field to check the result: true means success, false or null means failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,16 +113,35 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
 
     public static class GetSchemeTaskConfigResponseBodyDataDataConfigAssignConfigsAssignConfigContests extends TeaModel {
         /**
+         * <p>Type of the value</p>
+         * <ul>
+         * <li><p>0: String</p>
+         * </li>
+         * <li><p>1: Number</p>
+         * </li>
+         * <li><p>2: List (use list type for all parameter values when using =)</p>
+         * </li>
+         * <li><p>3: Date</p>
+         * </li>
+         * <li><p>4: List_Json</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
         @NameInMap("DataType")
         public Integer dataType;
 
+        /**
+         * <p>List of on-the-fly recording data</p>
+         */
         @NameInMap("ListObject")
         public java.util.List<?> listObject;
 
         /**
+         * <p>Check item name</p>
+         * 
          * <strong>example:</strong>
          * <p>callStartTime</p>
          */
@@ -114,6 +149,32 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Operator</p>
+         * <ul>
+         * <li><p>1: ==</p>
+         * </li>
+         * <li><p>2: &gt;</p>
+         * </li>
+         * <li><p>3: &lt;</p>
+         * </li>
+         * <li><p>4: range</p>
+         * </li>
+         * <li><p>5: &gt;=</p>
+         * </li>
+         * <li><p>6: &lt;=</p>
+         * </li>
+         * <li><p>7: !=</p>
+         * </li>
+         * <li><p>8: null</p>
+         * </li>
+         * <li><p>9: not null</p>
+         * </li>
+         * <li><p>10: contains</p>
+         * </li>
+         * <li><p>11: does not contain</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -121,6 +182,8 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
         public Integer symbol;
 
         /**
+         * <p>Matching value for on-the-fly recording data</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;start\&quot;:\&quot;2022-09-01 00:00:00\&quot;,\&quot;end\&quot;:\&quot;2022-09-30 00:00:00\&quot;}</p>
          */
@@ -175,6 +238,9 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
     }
 
     public static class GetSchemeTaskConfigResponseBodyDataDataConfigAssignConfigs extends TeaModel {
+        /**
+         * <p>Parameter matching configurations for on-the-fly recording</p>
+         */
         @NameInMap("AssignConfigContests")
         public java.util.List<GetSchemeTaskConfigResponseBodyDataDataConfigAssignConfigsAssignConfigContests> assignConfigContests;
 
@@ -194,10 +260,15 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
     }
 
     public static class GetSchemeTaskConfigResponseBodyDataDataConfig extends TeaModel {
+        /**
+         * <p>Data screening items for on-the-fly recording</p>
+         */
         @NameInMap("AssignConfigs")
         public java.util.List<GetSchemeTaskConfigResponseBodyDataDataConfigAssignConfigs> assignConfigs;
 
         /**
+         * <p>Dataset task. Manage datasets.</p>
+         * 
          * <strong>example:</strong>
          * <p>[]</p>
          */
@@ -205,6 +276,8 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
         public String dataSets;
 
         /**
+         * <p>Index number</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -212,6 +285,8 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
         public Long index;
 
         /**
+         * <p>JSON text for filtering conditions used in secondary quality inspection. For details, see the request parameters of the GetResult API.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -258,10 +333,18 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
     }
 
     public static class GetSchemeTaskConfigResponseBodyDataSchemeList extends TeaModel {
+        /**
+         * <p>Quality inspection scheme name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>质检方案B</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>Quality inspection scheme ID</p>
+         * 
          * <strong>example:</strong>
          * <p>158</p>
          */
@@ -292,45 +375,98 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
     }
 
     public static class GetSchemeTaskConfigResponseBodyData extends TeaModel {
+        /**
+         * <p>Task priority:</p>
+         * <ul>
+         * <li><p>0 (low)</p>
+         * </li>
+         * <li><p>1 (medium)</p>
+         * </li>
+         * <li><p>2 (high)</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("AsrTaskPriority")
         public Integer asrTaskPriority;
 
+        /**
+         * <p>Assignment type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AssignType")
         public Integer assignType;
 
+        /**
+         * <p>Data configuration</p>
+         */
         @NameInMap("DataConfig")
         public GetSchemeTaskConfigResponseBodyDataDataConfig dataConfig;
 
         /**
+         * <p>Quality inspection task ID</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>Manual review</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ManualReview")
         public Integer manualReview;
 
+        /**
+         * <p>Language model ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cdae396590b*****ec40f3476e274fc</p>
+         */
         @NameInMap("ModeCustomizationId")
         public String modeCustomizationId;
 
+        /**
+         * <p>Language model name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>自定义模型</p>
+         */
         @NameInMap("ModelName")
         public String modelName;
 
         /**
+         * <p>Quality inspection task name</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Quality inspection scheme IDs</p>
+         */
         @NameInMap("SchemeIdList")
         public java.util.List<Long> schemeIdList;
 
+        /**
+         * <p>Quality inspection schemes</p>
+         */
         @NameInMap("SchemeList")
         public java.util.List<GetSchemeTaskConfigResponseBodyDataSchemeList> schemeList;
 
         /**
+         * <p>Quality inspection task ID</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -338,6 +474,28 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
         public Long schemeTaskConfigId;
 
         /**
+         * <p>Quality inspection result type:</p>
+         * <ul>
+         * <li><p>1: offline voice</p>
+         * </li>
+         * <li><p>2: offline text</p>
+         * </li>
+         * <li><p>3: real-time voice</p>
+         * </li>
+         * <li><p>4: real-time text</p>
+         * </li>
+         * <li><p>5: contact center secondary quality inspection</p>
+         * </li>
+         * <li><p>51: call center voice secondary quality inspection</p>
+         * </li>
+         * <li><p>52: call center text secondary quality inspection</p>
+         * </li>
+         * <li><p>11: dataset voice</p>
+         * </li>
+         * <li><p>12: dataset text</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -345,6 +503,8 @@ public class GetSchemeTaskConfigResponseBody extends TeaModel {
         public String sourceDataType;
 
         /**
+         * <p>Enable status. Valid values: 0 (disabled) or 1 (enabled)</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

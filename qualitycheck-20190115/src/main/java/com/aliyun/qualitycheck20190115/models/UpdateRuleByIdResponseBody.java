@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateRuleByIdResponseBody extends TeaModel {
     /**
+     * <p>Result code. <strong>200</strong> indicates success. Other values indicate failure. Callers can use this field to determine the cause of failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class UpdateRuleByIdResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class UpdateRuleByIdResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Provides error details on failure, and <strong>successful</strong> on success.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +35,8 @@ public class UpdateRuleByIdResponseBody extends TeaModel {
     public UpdateRuleByIdResponseBodyMessages messages;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>82C91484-B2D5-4D2A-A21F-A6D73F4D55C6</p>
      */
@@ -36,6 +44,8 @@ public class UpdateRuleByIdResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Callers can use this field to determine if the request succeeded: true for success, false/null for failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

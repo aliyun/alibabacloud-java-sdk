@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class AddRuleCategoryResponseBody extends TeaModel {
     /**
+     * <p>Response code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Return Result</p>
+     */
     @NameInMap("Data")
     public AddRuleCategoryResponseBodyData data;
 
     /**
+     * <p>Response message</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Request ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D10B9203-1A6A-49DA-AE56-4D160DD37DBC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -77,9 +92,21 @@ public class AddRuleCategoryResponseBody extends TeaModel {
     }
 
     public static class AddRuleCategoryResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether the newly added rule category is selected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Select")
         public Boolean select;
 
+        /**
+         * <p>Rule category ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Type")
         public Integer type;
 

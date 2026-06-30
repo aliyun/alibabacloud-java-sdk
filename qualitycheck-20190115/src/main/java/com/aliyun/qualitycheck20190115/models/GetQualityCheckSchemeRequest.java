@@ -6,11 +6,16 @@ import com.aliyun.tea.*;
 public class GetQualityCheckSchemeRequest extends TeaModel {
     /**
      * <p>baseMeAgentId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
     /**
+     * <p>The request parameters in JSON format. For more information, see the additional information for request parameters.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;schemeId&quot;:&quot;187&quot;,&quot;ruleRequireInfos&quot;:[&quot;BusinessNameInfo&quot;,&quot;RuleCategory&quot;]}</p>
      */

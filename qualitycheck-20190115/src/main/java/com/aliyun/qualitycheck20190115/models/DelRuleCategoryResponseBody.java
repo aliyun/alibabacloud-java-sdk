@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DelRuleCategoryResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public DelRuleCategoryResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -22,6 +29,8 @@ public class DelRuleCategoryResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -29,6 +38,8 @@ public class DelRuleCategoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +93,8 @@ public class DelRuleCategoryResponseBody extends TeaModel {
 
     public static class DelRuleCategoryResponseBodyData extends TeaModel {
         /**
+         * <p>Indicates whether to select a new rule category.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */

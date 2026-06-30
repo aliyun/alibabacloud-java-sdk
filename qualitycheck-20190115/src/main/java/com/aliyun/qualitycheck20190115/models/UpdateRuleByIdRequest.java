@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class UpdateRuleByIdRequest extends TeaModel {
     /**
-     * <p>baseMeAgentId</p>
+     * <p>Workspace ID</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
     /**
+     * <p>Whether to copy. Setting to true is equivalent to copying the rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -18,6 +20,7 @@ public class UpdateRuleByIdRequest extends TeaModel {
     public Boolean isCopy;
 
     /**
+     * <p>For more information about the format of JsonStrForlRule, see <a href="https://help.aliyun.com/document_detail/453053.html"><code>Rule object description</code></a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +30,8 @@ public class UpdateRuleByIdRequest extends TeaModel {
     public String jsonStrForRule;
 
     /**
+     * <p>Returns the IDs and names of quality inspection schemes associated with this rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -34,6 +39,8 @@ public class UpdateRuleByIdRequest extends TeaModel {
     public Boolean returnRelatedSchemes;
 
     /**
+     * <p>Rule ID. Not required when creating, required when modifying.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

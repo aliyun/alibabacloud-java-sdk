@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class VerifyFileResponseBody extends TeaModel {
     /**
+     * <p>Result code. <strong>200</strong> indicates success. Other values indicate failure. Callers can determine the failure reason using this field.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class VerifyFileResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Current detection accuracy: Number of incorrect characters in verified files / Total number of characters in verified files.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.9485294</p>
      */
@@ -19,6 +23,8 @@ public class VerifyFileResponseBody extends TeaModel {
     public Float data;
 
     /**
+     * <p>Error details when an error occurs. Successful when successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>s</p>
      */
@@ -26,6 +32,8 @@ public class VerifyFileResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>106C6CA0-282D-4AF7-85F0-D2D24F4CE647</p>
      */
@@ -33,6 +41,8 @@ public class VerifyFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Callers can determine if the request was successful using this field: true indicates success; false/null indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

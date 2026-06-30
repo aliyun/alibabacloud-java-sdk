@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateRuleV4ResponseBody extends TeaModel {
     /**
+     * <p>Result code. A value of 200 indicates success. Any other value indicates failure. The caller can use this field to determine the reason for failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class UpdateRuleV4ResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The updated rule ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class UpdateRuleV4ResponseBody extends TeaModel {
     public Long data;
 
     /**
+     * <p>The HTTP response status code returned by the HTTP Request. A value of 200 indicates that the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class UpdateRuleV4ResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>When an error occurs, this field provides error details. When the request succeeds, the value is <strong>successful</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -36,6 +44,8 @@ public class UpdateRuleV4ResponseBody extends TeaModel {
     public UpdateRuleV4ResponseBodyMessages messages;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>106C6CA0-282D-4AF7-85F0-D2D24***</p>
      */
@@ -43,6 +53,8 @@ public class UpdateRuleV4ResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded. The caller can use this field to determine the request status: true indicates success; false or null indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

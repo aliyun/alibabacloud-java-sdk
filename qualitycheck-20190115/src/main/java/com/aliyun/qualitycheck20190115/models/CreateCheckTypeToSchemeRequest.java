@@ -5,11 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateCheckTypeToSchemeRequest extends TeaModel {
     /**
-     * <p>baseMeAgentId</p>
+     * <p>Workspace ID</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
+    /**
+     * <p>Request parameter in JSON format. For details, see the additional information about request parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;schemeId&quot;:&quot;187&quot;,&quot;checkName&quot;:&quot;质检维度名&quot;,&quot;sourceScore&quot;:20}</p>
+     */
     @NameInMap("jsonStr")
     public String jsonStr;
 

@@ -4,24 +4,63 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class TaskGraphFlow extends TeaModel {
+    /**
+     * <p>Flow scoring logic settings</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("FlowRuleScoreType")
     public Integer flowRuleScoreType;
 
+    /**
+     * <p>Canvas ID of the flow</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>All nodes in the flow</p>
+     */
     @NameInMap("Nodes")
     public java.util.List<GraphFlowNode> nodes;
 
+    /**
+     * <p>Rule ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Rid")
     public Long rid;
 
+    /**
+     * <p>Rule Name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>违规</p>
+     */
     @NameInMap("RuleName")
     public String ruleName;
 
+    /**
+     * <p>Used for frontend display</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("ShowProperties")
     public String showProperties;
 
+    /**
+     * <p>Skip if the first session node is not hit</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("SkipWhenFirstSessionNodeMiss")
     public Boolean skipWhenFirstSessionNodeMiss;
 

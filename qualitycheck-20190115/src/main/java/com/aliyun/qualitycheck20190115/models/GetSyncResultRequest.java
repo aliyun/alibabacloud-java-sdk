@@ -6,11 +6,15 @@ import com.aliyun.tea.*;
 public class GetSyncResultRequest extends TeaModel {
     /**
      * <p>baseMeAgentId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
     /**
+     * <p>Complete JSON string. For details, see the following information.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

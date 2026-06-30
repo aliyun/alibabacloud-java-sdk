@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateSchemeTaskConfigResponseBody extends TeaModel {
     /**
+     * <p>Result code. <strong>200</strong> indicates success. Any other value indicates failure. The caller can use this field to determine the cause of failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class CreateSchemeTaskConfigResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>ID of the newly created quality inspection job.</p>
+     * 
      * <strong>example:</strong>
      * <p>22</p>
      */
@@ -19,6 +23,8 @@ public class CreateSchemeTaskConfigResponseBody extends TeaModel {
     public Long data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class CreateSchemeTaskConfigResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>When an error occurs, this field provides error details. When the operation succeeds, the value is &quot;successful&quot;.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -36,6 +44,8 @@ public class CreateSchemeTaskConfigResponseBody extends TeaModel {
     public CreateSchemeTaskConfigResponseBodyMessages messages;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3CEA0495-341B-4482-9AD9-8191EF4***</p>
      */
@@ -43,6 +53,8 @@ public class CreateSchemeTaskConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded. The caller can use this field to determine the request outcome: true indicates success; false or null indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

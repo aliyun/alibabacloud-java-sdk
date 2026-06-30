@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UploadDataV4Request extends TeaModel {
     /**
+     * <p>The workspace ID. Use this parameter to select a specific workspace when you have multiple workspaces. If you do not specify this parameter, the default workspace is used.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456</p>
      */
@@ -12,6 +14,7 @@ public class UploadDataV4Request extends TeaModel {
     public Long baseMeAgentId;
 
     /**
+     * <p>The JSON string that contains all the custom parameters for this API. For more information, see the description of jsonStr properties below.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

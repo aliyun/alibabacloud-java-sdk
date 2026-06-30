@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddBusinessCategoryResponseBody extends TeaModel {
     /**
+     * <p>Response code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class AddBusinessCategoryResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Business category ID</p>
+     * 
      * <strong>example:</strong>
      * <p>348193421</p>
      */
@@ -19,6 +23,8 @@ public class AddBusinessCategoryResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>Response message</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -26,6 +32,8 @@ public class AddBusinessCategoryResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>76DB5D8C-5BD9-42A7-B527-5AF3A5F83F12</p>
      */
@@ -33,6 +41,8 @@ public class AddBusinessCategoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

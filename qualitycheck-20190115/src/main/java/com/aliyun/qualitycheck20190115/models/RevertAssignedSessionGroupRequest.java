@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class RevertAssignedSessionGroupRequest extends TeaModel {
     /**
-     * <p>baseMeAgentId</p>
+     * <p>The ID of the baseMeAgent.</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
     /**
+     * <p>For more information, see the description of the request parameters.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;isSchemeData&quot;:1,&quot;forceRevertSessionGroup&quot;:true,&quot;sessionGroupIdList&quot;:[&quot;1&quot;]}</p>
      */

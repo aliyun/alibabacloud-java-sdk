@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitPrecisionTaskResponseBody extends TeaModel {
     /**
+     * <p>Result code. A value of <strong>200</strong> indicates success. Any other value indicates failure. Use this field to identify the cause of failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class SubmitPrecisionTaskResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>ID of the created task.</p>
+     * 
      * <strong>example:</strong>
      * <p>EA701F66-8CA2-4A79-8E3C-A6F2FA****</p>
      */
@@ -19,6 +23,8 @@ public class SubmitPrecisionTaskResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>Error details if the call fails. Returns successful if the call succeeds.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -26,6 +32,8 @@ public class SubmitPrecisionTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>106C6CA0-282D-4AF7-85F0-D2D24F4CE647</p>
      */
@@ -33,6 +41,8 @@ public class SubmitPrecisionTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded. true means success. false or null means failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

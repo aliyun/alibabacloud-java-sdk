@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetScoreInfoResponseBody extends TeaModel {
     /**
+     * <p>The result code. A value of <strong>200</strong> means the call succeeded. Any other value means the call failed. Use this field to identify the cause of failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -15,6 +17,8 @@ public class GetScoreInfoResponseBody extends TeaModel {
     public GetScoreInfoResponseBodyData data;
 
     /**
+     * <p>Details about the error if the call fails. If the call succeeds, this value is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -22,6 +26,8 @@ public class GetScoreInfoResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>106C6CA0-282D-4AF7-85F0-D2D24***</p>
      */
@@ -29,6 +35,8 @@ public class GetScoreInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded. A value of true means success. A value of false or null means failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

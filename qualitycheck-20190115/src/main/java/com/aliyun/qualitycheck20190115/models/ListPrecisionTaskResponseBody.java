@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPrecisionTaskResponseBody extends TeaModel {
     /**
+     * <p>Result code. A value of <strong>200</strong> means success. Any other value means failure. Use this field to identify the cause of failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class ListPrecisionTaskResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Total number of items.</p>
+     * 
      * <strong>example:</strong>
      * <p>22</p>
      */
@@ -22,6 +26,8 @@ public class ListPrecisionTaskResponseBody extends TeaModel {
     public ListPrecisionTaskResponseBodyData data;
 
     /**
+     * <p>Error details if the request failed. Returns successful if the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +35,8 @@ public class ListPrecisionTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -36,6 +44,8 @@ public class ListPrecisionTaskResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Number of items per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -43,6 +53,8 @@ public class ListPrecisionTaskResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>106C6CA0-282D-4AF7-85F0-D2D24F4CE647</p>
      */
@@ -50,6 +62,8 @@ public class ListPrecisionTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded. If true, the request succeeded. If false or null, the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,11 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetAsrVocabRequest extends TeaModel {
     /**
-     * <p>baseMeAgentId</p>
+     * <p>Workspace ID</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
+    /**
+     * <p>A complete JSON string. For details, see the following information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;vocabId&quot;:&quot;指定热词Id&quot;}</p>
+     */
     @NameInMap("JsonStr")
     public String jsonStr;
 

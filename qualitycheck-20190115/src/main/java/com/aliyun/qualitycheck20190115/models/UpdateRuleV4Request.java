@@ -6,17 +6,26 @@ import com.aliyun.tea.*;
 public class UpdateRuleV4Request extends TeaModel {
     /**
      * <p>baseMeAgentId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
     /**
+     * <p>For details about JsonStrForRule, see the document <a href="https://help.aliyun.com/document_detail/453053.html"><code>Rule Object Description</code></a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
      */
     @NameInMap("JsonStrForRule")
     public String jsonStrForRule;
 
     /**
+     * <p>Rule ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

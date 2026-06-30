@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateSchemeTaskConfigResponseBody extends TeaModel {
     /**
+     * <p>Result code. <strong>200</strong> means success. Other values mean failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class UpdateSchemeTaskConfigResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class UpdateSchemeTaskConfigResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error details if an error occurs. When successful, the value is <strong>successful</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +35,8 @@ public class UpdateSchemeTaskConfigResponseBody extends TeaModel {
     public UpdateSchemeTaskConfigResponseBodyMessages messages;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>106C6CA0-282D-4AF7-85F0-D2D24***</p>
      */
@@ -36,6 +44,8 @@ public class UpdateSchemeTaskConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded. true means success. false or null means failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

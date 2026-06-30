@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetNextResultToVerifyResponseBody extends TeaModel {
     /**
+     * <p>The result code. A value of <strong>200</strong> indicates success. Other values indicate failure. The caller can determine the cause of failure using this field.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>File details.</p>
+     */
     @NameInMap("Data")
     public GetNextResultToVerifyResponseBodyData data;
 
     /**
+     * <p>Error details if an error occurs. If successful, the value is \&quot;successful\&quot;.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -22,6 +29,8 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>106C6CA0-282D-4AF7-85F0-D2D24F4CE647</p>
      */
@@ -29,6 +38,8 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. The caller can determine if the request was successful using this field: \<code>true\\</code> indicates success; \<code>false\\</code>/\<code>null\\</code> indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -421,6 +432,8 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
 
     public static class GetNextResultToVerifyResponseBodyData extends TeaModel {
         /**
+         * <p>The protocol of the audio URL. Possible values: http, https.</p>
+         * 
          * <strong>example:</strong>
          * <p>http</p>
          */
@@ -428,6 +441,8 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
         public String audioScheme;
 
         /**
+         * <p>The audio URL, excluding http/https.</p>
+         * 
          * <strong>example:</strong>
          * <p>sca-bucket.oss-cn-hangzhou.aliyuncs.com/upload_1173636551461420/dateset_1584674455133_SzC/%E4%BA%BA%E5%B7%A5%E6%A0%A1%E9%AA%8C%E6%B5%8B%E8%AF%95-%E6%9F%A5%E5%8C%97%E4%BA%AC%E5%A4%A9%E6%B0%94.wav?Expires=1584847372&amp;OSSAccessKeyId=<em><strong><strong>&amp;Signature=HccAKnLOJwoYvzE</strong></strong></em>****</p>
          */
@@ -438,6 +453,8 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
         public GetNextResultToVerifyResponseBodyDataDialogues dialogues;
 
         /**
+         * <p>The total duration of files in the current task, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>23421</p>
          */
@@ -445,6 +462,8 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
         public Integer duration;
 
         /**
+         * <p>File ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>e790e6c919d84b82b64ee*****</p>
          */
@@ -452,6 +471,8 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
         public String fileId;
 
         /**
+         * <p>File name.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx.wav</p>
          */
@@ -459,6 +480,8 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
         public String fileName;
 
         /**
+         * <p>The number of incorrect words in the transcription.</p>
+         * 
          * <strong>example:</strong>
          * <p>23</p>
          */
@@ -466,6 +489,8 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
         public Integer incorrectWords;
 
         /**
+         * <p>The index of the current file. Pass this value when manually verifying the next data entry. It starts from 1, so the first entry has a value of 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -473,6 +498,8 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
         public Integer index;
 
         /**
+         * <p>Current recognition accuracy.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.97079998</p>
          */
@@ -480,6 +507,8 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
         public Float precision;
 
         /**
+         * <p>File status. Possible values: 0: Not completed; 1: Not completed; 2: Completed; 3: Completed.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -487,6 +516,8 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
         public Integer status;
 
         /**
+         * <p>The total number of files for this task.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -494,6 +525,8 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
         public Integer totalCount;
 
         /**
+         * <p>Last update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-03-20T11:26Z</p>
          */
@@ -501,6 +534,8 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
         public String updateTime;
 
         /**
+         * <p>Indicates whether manual verification has been performed. Possible values: \<code>false\\</code>: Not yet verified; \<code>true\\</code>: Already verified.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -508,6 +543,8 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
         public Boolean verified;
 
         /**
+         * <p>The total number of verified files.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */

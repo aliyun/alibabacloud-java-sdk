@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetRuleDetailResponseBody extends TeaModel {
     /**
+     * <p>The result code. <strong>200</strong> means success. Any other value means failure. Use this field to identify the cause of failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public GetRuleDetailResponseBodyData data;
 
     /**
+     * <p>The error message if the request fails. If the request succeeds, the value is <strong>successful</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -22,6 +29,8 @@ public class GetRuleDetailResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4987D326-83D9-4A42-B9A5-0B27F9B40539</p>
      */
@@ -29,6 +38,14 @@ public class GetRuleDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded. Use this field to check the result:</p>
+     * <ul>
+     * <li><p><strong>true</strong> means success.</p>
+     * </li>
+     * <li><p>false or <strong>null</strong> means failure.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -963,6 +980,8 @@ public class GetRuleDetailResponseBody extends TeaModel {
         public GetRuleDetailResponseBodyDataConditions conditions;
 
         /**
+         * <p>The total number of items.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -970,6 +989,8 @@ public class GetRuleDetailResponseBody extends TeaModel {
         public Integer count;
 
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -977,6 +998,8 @@ public class GetRuleDetailResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of items per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

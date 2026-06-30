@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class InvalidRuleResponseBody extends TeaModel {
     /**
+     * <p>Result code. <strong>200</strong> indicates success. Other values indicate failure. The caller can determine the cause of failure based on this field.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class InvalidRuleResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Indicates whether the deletion was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class InvalidRuleResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>Indicates error details on failure. For success, the value is <strong>successful</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -26,6 +32,8 @@ public class InvalidRuleResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>9987D326-83D9-4A42-B9A5-0B27F9B40539</p>
      */
@@ -33,6 +41,8 @@ public class InvalidRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. The caller can determine if the request succeeded based on this field: <strong>true</strong> indicates success, and <strong>false/null</strong> indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class VerifyFileRequest extends TeaModel {
     /**
-     * <p>baseMeAgentId</p>
+     * <p>Workspace ID.</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
     /**
+     * <p>Complete JSON string information. For details, see the following information.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;{&quot;taskId&quot;:&quot;EA701F66-8CA2-4A79-8E3C-A6F2****&quot;,&quot;fileName&quot;:&quot;人工校验测试-订购茶叶.wav&quot;}&quot;</p>
      */
     @NameInMap("JsonStr")
     public String jsonStr;

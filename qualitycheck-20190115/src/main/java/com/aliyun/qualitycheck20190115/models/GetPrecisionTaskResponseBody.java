@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetPrecisionTaskResponseBody extends TeaModel {
     /**
+     * <p>The result code. A value of <strong>200</strong> indicates that the request was successful. Other values indicate that the request failed. Use this field to determine the cause of the failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The task details.</p>
+     */
     @NameInMap("Data")
     public GetPrecisionTaskResponseBodyData data;
 
     /**
+     * <p>If the request fails, this field provides the error details. If the request is successful, the value is \<code>successful\\</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -22,6 +29,8 @@ public class GetPrecisionTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>106C6CA0-282D-4AF7-85F0-D2D24F4CE647</p>
      */
@@ -29,6 +38,8 @@ public class GetPrecisionTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. A value of \<code>true\\</code> indicates success. A value of \<code>false\\</code> or \<code>null\\</code> indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -164,16 +175,26 @@ public class GetPrecisionTaskResponseBody extends TeaModel {
 
     public static class GetPrecisionTaskResponseBodyData extends TeaModel {
         /**
+         * <p>If the source is a dataset, this is the dataset ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1212</p>
          */
         @NameInMap("DataSetId")
         public Long dataSetId;
 
+        /**
+         * <p>If the source is a dataset, this is the dataset name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>数据集名称</p>
+         */
         @NameInMap("DataSetName")
         public String dataSetName;
 
         /**
+         * <p>The total duration of the audio recording.</p>
+         * 
          * <strong>example:</strong>
          * <p>3423</p>
          */
@@ -181,12 +202,20 @@ public class GetPrecisionTaskResponseBody extends TeaModel {
         public Integer duration;
 
         /**
+         * <p>The number of incorrectly transcribed words.</p>
+         * 
          * <strong>example:</strong>
          * <p>23</p>
          */
         @NameInMap("IncorrectWords")
         public Integer incorrectWords;
 
+        /**
+         * <p>The task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>任务名称</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -194,6 +223,8 @@ public class GetPrecisionTaskResponseBody extends TeaModel {
         public GetPrecisionTaskResponseBodyDataPrecisions precisions;
 
         /**
+         * <p>The source of the file. Possible values: 3: Dataset. 0: Call center.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -201,6 +232,8 @@ public class GetPrecisionTaskResponseBody extends TeaModel {
         public Integer source;
 
         /**
+         * <p>The task status. Possible values: 0: Transcribing. 1: Transcription complete.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -208,6 +241,8 @@ public class GetPrecisionTaskResponseBody extends TeaModel {
         public Integer status;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>7C1DEF5F-2C18-4D36-99C6-8C27*****</p>
          */
@@ -215,6 +250,8 @@ public class GetPrecisionTaskResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The total number of files in the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -222,6 +259,8 @@ public class GetPrecisionTaskResponseBody extends TeaModel {
         public Integer totalCount;
 
         /**
+         * <p>The time when the task was last updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-03-10 20:26:29</p>
          */
@@ -229,6 +268,8 @@ public class GetPrecisionTaskResponseBody extends TeaModel {
         public String updateTime;
 
         /**
+         * <p>The total number of verified files.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */

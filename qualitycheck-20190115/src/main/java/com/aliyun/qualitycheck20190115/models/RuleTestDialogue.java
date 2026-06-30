@@ -4,15 +4,36 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class RuleTestDialogue extends TeaModel {
+    /**
+     * <p>Content</p>
+     */
     @NameInMap("Content")
     public java.util.List<RuleTestDialogueContent> content;
 
+    /**
+     * <p>Conversation ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>Conversation Name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xx</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>group</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xx</p>
+     */
     @NameInMap("UserGroup")
     public String userGroup;
 
@@ -54,33 +75,93 @@ public class RuleTestDialogue extends TeaModel {
     }
 
     public static class RuleTestDialogueContent extends TeaModel {
+        /**
+         * <p>Start Time in long</p>
+         * 
+         * <strong>example:</strong>
+         * <p>360</p>
+         */
         @NameInMap("Begin")
         public Long begin;
 
+        /**
+         * <p>Start Time in long</p>
+         * 
+         * <strong>example:</strong>
+         * <p>350</p>
+         */
         @NameInMap("BeginTime")
         public Long beginTime;
 
+        /**
+         * <p>Emotion energy value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("EmotionValue")
         public Integer emotionValue;
 
+        /**
+         * <p>End time in long</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1360</p>
+         */
         @NameInMap("End")
         public Long end;
 
+        /**
+         * <p>Hour, minute, second</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:00:00</p>
+         */
         @NameInMap("HourMinSec")
         public String hourMinSec;
 
+        /**
+         * <p>Identity</p>
+         * 
+         * <strong>example:</strong>
+         * <p>客户</p>
+         */
         @NameInMap("Identity")
         public String identity;
 
+        /**
+         * <p>Role</p>
+         * 
+         * <strong>example:</strong>
+         * <p>客户</p>
+         */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <p>Silence duration</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("SilenceDuration")
         public Long silenceDuration;
 
+        /**
+         * <p>Speech rate</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("SpeechRate")
         public Long speechRate;
 
+        /**
+         * <p>Dialogue</p>
+         * 
+         * <strong>example:</strong>
+         * <p>方便</p>
+         */
         @NameInMap("Words")
         public String words;
 

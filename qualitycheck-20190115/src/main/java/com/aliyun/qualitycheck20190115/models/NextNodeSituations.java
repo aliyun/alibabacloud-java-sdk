@@ -4,9 +4,18 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class NextNodeSituations extends TeaModel {
+    /**
+     * <p>Judgment Conditions</p>
+     */
     @NameInMap("ConditionGroup")
     public java.util.List<NextNodeSituationsConditionGroup> conditionGroup;
 
+    /**
+     * <p>The matching relationship between conditions: currently all are OR relationships.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Type")
     public String type;
 
@@ -32,9 +41,18 @@ public class NextNodeSituations extends TeaModel {
     }
 
     public static class NextNodeSituationsConditionGroup extends TeaModel {
+        /**
+         * <p>Collection of matching conditions</p>
+         */
         @NameInMap("Conditions")
         public java.util.List<JudgeNodeMetaDesc> conditions;
 
+        /**
+         * <p>The matching relationship between conditions</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Type")
         public String type;
 

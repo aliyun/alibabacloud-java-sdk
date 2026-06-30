@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteCheckTypeToSchemeRequest extends TeaModel {
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456</p>
      */
@@ -12,6 +14,8 @@ public class DeleteCheckTypeToSchemeRequest extends TeaModel {
     public Long baseMeAgentId;
 
     /**
+     * <p>A JSON string that contains the custom parameters for the operation. For more information, see the <strong>jsonStr properties</strong> section below.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;schemeId&quot;:&quot;1376&quot;,&quot;checkType&quot;:&quot;4&quot;}</p>
      */

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetResultToReviewResponseBody extends TeaModel {
     /**
+     * <p>Result code. <strong>200</strong> means success. Any other value means failure. Use this field to identify the cause.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Detailed response data.</p>
+     */
     @NameInMap("Data")
     public GetResultToReviewResponseBodyData data;
 
     /**
+     * <p>Error details if the call fails. Returns <strong>successful</strong> on success.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -22,6 +29,8 @@ public class GetResultToReviewResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>82C91484-B2D5-4D2A-A21F-A6D73F4***</p>
      */
@@ -29,6 +38,8 @@ public class GetResultToReviewResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded. true means success. <strong>false</strong> or <strong>null</strong> means failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -1470,6 +1481,8 @@ public class GetResultToReviewResponseBody extends TeaModel {
 
     public static class GetResultToReviewResponseBodyData extends TeaModel {
         /**
+         * <p>Protocol used in the audio URL. Possible values: http, https.</p>
+         * 
          * <strong>example:</strong>
          * <p>https</p>
          */
@@ -1477,6 +1490,8 @@ public class GetResultToReviewResponseBody extends TeaModel {
         public String audioScheme;
 
         /**
+         * <p>Audio URL without the protocol prefix (http\:// or https\://). Combine with AudioScheme to form the full URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>sca-ccc-test.oss-cn-beijing.aliyuncs.com/xxxxx</p>
          */
@@ -1484,6 +1499,8 @@ public class GetResultToReviewResponseBody extends TeaModel {
         public String audioURL;
 
         /**
+         * <p>Review comments.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -1494,6 +1511,8 @@ public class GetResultToReviewResponseBody extends TeaModel {
         public GetResultToReviewResponseBodyDataDialogues dialogues;
 
         /**
+         * <p>File ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>e790e6c919d84b82b64ee*****</p>
          */
@@ -1501,6 +1520,8 @@ public class GetResultToReviewResponseBody extends TeaModel {
         public String fileId;
 
         /**
+         * <p>File name.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx.wav</p>
          */
@@ -1520,6 +1541,8 @@ public class GetResultToReviewResponseBody extends TeaModel {
         public GetResultToReviewResponseBodyDataReviewTypeIdList reviewTypeIdList;
 
         /**
+         * <p>Current task status. 0: incomplete. 1: complete. Use this field to check completion. Any other value indicates an error.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -1527,6 +1550,8 @@ public class GetResultToReviewResponseBody extends TeaModel {
         public Integer status;
 
         /**
+         * <p>Quality inspection score.</p>
+         * 
          * <strong>example:</strong>
          * <p>99</p>
          */
@@ -1534,6 +1559,8 @@ public class GetResultToReviewResponseBody extends TeaModel {
         public Integer totalScore;
 
         /**
+         * <p>File ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>6fa76916-3ce6-45d8-ac64-01b7f31***</p>
          */

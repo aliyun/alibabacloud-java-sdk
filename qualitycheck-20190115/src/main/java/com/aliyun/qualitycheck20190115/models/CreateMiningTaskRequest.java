@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class CreateMiningTaskRequest extends TeaModel {
     /**
+     * <p>Workspace ID</p>
+     * 
      * <strong>example:</strong>
      * <p>123456</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
+    /**
+     * <p>Webhook address</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://xxxxxxxxk.com">https://xxxxxxxxk.com</a></p>
+     */
     @NameInMap("CallbackUrl")
     public String callbackUrl;
 
     /**
+     * <p>File path</p>
+     * 
      * <strong>example:</strong>
      * <p>123.22.com/11.csv</p>
      */
@@ -22,6 +32,8 @@ public class CreateMiningTaskRequest extends TeaModel {
     public String filePath;
 
     /**
+     * <p>Task parameters</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;startDate&quot;:&quot;20250505&quot;}</p>
      */
@@ -29,6 +41,8 @@ public class CreateMiningTaskRequest extends TeaModel {
     public String param;
 
     /**
+     * <p>Task type</p>
+     * 
      * <strong>example:</strong>
      * <p>demandMining</p>
      */

@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteSchemeTaskConfigRequest extends TeaModel {
     /**
-     * <p>baseMeAgentId</p>
+     * <p>The workspace ID.</p>
      */
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
     /**
+     * <p>A JSON object that contains the request parameters. For more information, see the parameter details.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;schemeId&quot;:&quot;329&quot;}</p>
      */
