@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddEntriesToAclResponseBody extends TeaModel {
     /**
-     * <p>The ACL ID.</p>
+     * <p>The ID of the access control policy group.</p>
      * 
      * <strong>example:</strong>
      * <p>nacl-hp34s2h0xx1ht4nwo****</p>

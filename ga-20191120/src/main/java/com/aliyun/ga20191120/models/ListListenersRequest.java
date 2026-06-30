@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListListenersRequest extends TeaModel {
     /**
-     * <p>The ID of the GA instance.</p>
+     * <p>The ID of the Global Accelerator instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListListenersRequest extends TeaModel {
     public String acceleratorId;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The default value is <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -24,7 +24,7 @@ public class ListListenersRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries to return on each page. The maximum value is <strong>50</strong>. The default value is <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,11 +32,17 @@ public class ListListenersRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The transport layer protocol used by the listener.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HTTP</p>
+     */
     @NameInMap("Protocol")
     public String protocol;
 
     /**
-     * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>The ID of the region where the Global Accelerator instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

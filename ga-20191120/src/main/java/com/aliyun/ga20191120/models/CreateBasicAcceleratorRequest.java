@@ -7,8 +7,10 @@ public class CreateBasicAcceleratorRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
-     * <li><strong>false:</strong> disables automatic payment. If you select this option, you must go to the Order Center to complete the payment after an order is generated. This is the default value.</li>
-     * <li><strong>true:</strong> enables automatic payment. Payments are automatically completed.</li>
+     * <li><p><strong>false</strong> (default): disables automatic payment. After an order is generated, go to the Order Center to complete the payment.</p>
+     * </li>
+     * <li><p><strong>true</strong>: enables automatic payment. The order is automatically paid.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +20,12 @@ public class CreateBasicAcceleratorRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>Specifies whether to enable auto-renewal for the basic GA instance. Valid values:</p>
+     * <p>Specifies whether to enable auto-renewal.</p>
      * <ul>
-     * <li><strong>true:</strong> enables auto-renewal for the basic GA instance.</li>
-     * <li><strong>false:</strong> disables auto-renewal for the basic GA instance. This is the default value.</li>
+     * <li><p><strong>true</strong>: enables auto-renewal.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): disables auto-renewal.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,7 +38,7 @@ public class CreateBasicAcceleratorRequest extends TeaModel {
      * <p>The auto-renewal duration. Unit: months.</p>
      * <p>Valid values: <strong>1</strong> to <strong>12</strong>. Default value: <strong>1</strong>.</p>
      * <blockquote>
-     * <p> This parameter takes effect only when the <strong>AutoPay</strong> parameter is set to <strong>true</strong>.</p>
+     * <p>This parameter takes effect only when <strong>AutoRenew</strong> is set to <strong>true</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,13 +48,15 @@ public class CreateBasicAcceleratorRequest extends TeaModel {
     public Integer autoRenewDuration;
 
     /**
-     * <p>Specifies whether to automatically apply coupons to your bills. Valid values:</p>
+     * <p>Specifies whether to use coupons for automatic payment of the bill. Valid values:</p>
      * <ul>
-     * <li><strong>true:</strong> automatically applies coupons to your bills.</li>
-     * <li><strong>false:</strong> does not automatically apply coupons to your bills. This is the default value.</li>
+     * <li><p><strong>true</strong>: uses coupons.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): does not use coupons.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter takes effect only when the <strong>AutoPay</strong> parameter is set to <strong>true</strong>.</p>
+     * <p>This parameter takes effect only when <strong>AutoPay</strong> is set to <strong>true</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -62,9 +68,9 @@ public class CreateBasicAcceleratorRequest extends TeaModel {
     /**
      * <p>The bandwidth billing method. Valid values:</p>
      * <ul>
-     * <li><strong>BandwidthPackage:</strong> billed based on bandwidth plans.</li>
-     * <li><strong>CDT:</strong> billed based on data transfer. The bills are managed by using Cloud Data Transfer (CDT).</li>
-     * <li><strong>CDT95:</strong> billed based on the 95th percentile bandwidth. The bills are managed by using Cloud Data Transfer (CDT). This bandwidth billing method is not available by default. Contact your Alibaba Cloud account manager for more information.</li>
+     * <li><strong>BandwidthPackage</strong>: billed by bandwidth plan.</li>
+     * <li><strong>CDT</strong>: billed by traffic and settled through unified settlement by Cloud Data Transfer (CDT).</li>
+     * <li><strong>CDT95</strong>: billed by the 95th percentile bandwidth and settled through unified settlement by CDT. This bandwidth billing method is available only to users in the whitelist.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -76,8 +82,8 @@ public class CreateBasicAcceleratorRequest extends TeaModel {
     /**
      * <p>The billing method. Valid values:</p>
      * <ul>
-     * <li><strong>PREPAY</strong> (default)</li>
-     * <li><strong>POSTPAY</strong></li>
+     * <li><strong>PREPAY (default)</strong>: subscription.</li>
+     * <li><strong>POSTPAY</strong>: pay-as-you-go.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -88,9 +94,9 @@ public class CreateBasicAcceleratorRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -102,8 +108,8 @@ public class CreateBasicAcceleratorRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true:</strong> performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong>: performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed. This is the default value.</li>
+     * <li><strong>true</strong>: performs a dry run without creating the resource. The system checks the required parameters, request syntax, and business limitations. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the check succeeds, an HTTP 2xx status code is returned and the operation is performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -113,10 +119,12 @@ public class CreateBasicAcceleratorRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The subscription duration of the GA instance.</p>
+     * <p>The subscription duration.</p>
      * <ul>
-     * <li>If you set <strong>PricingCycle</strong> to <strong>Month</strong>, the valid values for <strong>Duration</strong> are <strong>1</strong> to <strong>9</strong>.</li>
-     * <li>If you set <strong>PricingCycle</strong> to <strong>Year</strong>, the valid values for <strong>Duration</strong> are <strong>1</strong> to <strong>3</strong>.</li>
+     * <li><p>If <strong>PricingCycle</strong> is set to <strong>Month</strong>, valid values of <strong>Duration</strong> are <strong>1</strong> to <strong>9</strong>.</p>
+     * </li>
+     * <li><p>If <strong>PricingCycle</strong> is set to <strong>Year</strong>, valid values of <strong>Duration</strong> are <strong>1</strong> to <strong>3</strong>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -128,8 +136,10 @@ public class CreateBasicAcceleratorRequest extends TeaModel {
     /**
      * <p>The billing cycle. Valid values:</p>
      * <ul>
-     * <li><strong>Month</strong></li>
-     * <li><strong>Year</strong></li>
+     * <li><p><strong>Month</strong>: billed on a monthly basis.</p>
+     * </li>
+     * <li><p><strong>Year</strong>: billed on a yearly basis.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -139,9 +149,9 @@ public class CreateBasicAcceleratorRequest extends TeaModel {
     public String pricingCycle;
 
     /**
-     * <p>The code of the coupon.</p>
+     * <p>The coupon number.</p>
      * <blockquote>
-     * <p> This parameter takes effect only for accounts registered on the international site (alibabacloud.com).</p>
+     * <p>This parameter is applicable only to the China site (aliyun.com).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -151,7 +161,7 @@ public class CreateBasicAcceleratorRequest extends TeaModel {
     public String promotionOptionNo;
 
     /**
-     * <p>The ID of the region where the basic GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>The region ID of the basic Alibaba Cloud Global Accelerator (GA) instance. Set the value to <strong>cn-hangzhou</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -161,7 +171,7 @@ public class CreateBasicAcceleratorRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the basic GA instance belongs.</p>
+     * <p>The ID of the resource group to which the basic Alibaba Cloud Global Accelerator (GA) instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmxshhcsn****</p>
@@ -170,7 +180,7 @@ public class CreateBasicAcceleratorRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The tags of the basic GA instance.</p>
+     * <p>The labels of the basic Alibaba Cloud Global Accelerator (GA) instance.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateBasicAcceleratorRequestTag> tag;
@@ -294,9 +304,9 @@ public class CreateBasicAcceleratorRequest extends TeaModel {
 
     public static class CreateBasicAcceleratorRequestTag extends TeaModel {
         /**
-         * <p>The tag key. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
-         * <p>You can specify up to 20 tag keys.</p>
+         * <p>The label key of the basic Alibaba Cloud Global Accelerator (GA) instance. If you specify this parameter, the value cannot be an empty string.</p>
+         * <p>The label key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>You can specify up to 20 label keys.</p>
          * 
          * <strong>example:</strong>
          * <p>tag-key</p>
@@ -305,9 +315,9 @@ public class CreateBasicAcceleratorRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. The tag value cannot be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
-         * <p>You can specify up to 20 tag values.</p>
+         * <p>The label value of the basic Alibaba Cloud Global Accelerator (GA) instance. If you specify this parameter, the value cannot be an empty string.</p>
+         * <p>The label value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>You can specify up to 20 label values.</p>
          * 
          * <strong>example:</strong>
          * <p>tag-value</p>

@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateAcceleratorRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable automatic payment. Default value: false. Valid values:</p>
+     * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
-     * <li><strong>false:</strong> disables automatic payment. If you select this option, you must go to the Order Center to complete the payment after an order is generated.</li>
-     * <li><strong>true:</strong> enables automatic payment. Payments are automatically completed.</li>
+     * <li><p><strong>false</strong> (default): Disables automatic payment. After an order is generated, go to the Order Hub to complete the payment.</p>
+     * </li>
+     * <li><p><strong>true</strong>: Enables automatic payment. The system automatically completes the payment.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +20,12 @@ public class CreateAcceleratorRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>Specifies whether to enable auto-renewal for the GA instance. Default value: false. Valid values:</p>
+     * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
      * <ul>
-     * <li><strong>true:</strong> enables auto-renewal.</li>
-     * <li><strong>false:</strong> disables auto-renewal.</li>
+     * <li><p><strong>true</strong>: Yes.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): No.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,10 +35,10 @@ public class CreateAcceleratorRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The auto-renewal duration. Unit: months.</p>
+     * <p>The auto-renewal duration. Unit: month.</p>
      * <p>Valid values: <strong>1</strong> to <strong>12</strong>. Default value: <strong>1</strong>.</p>
      * <blockquote>
-     * <p> This parameter takes effect only when <strong>AutoRenew</strong> is set to <strong>true</strong>.</p>
+     * <p>This parameter is valid only when <strong>AutoRenew</strong> is set to <strong>true</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,13 +48,15 @@ public class CreateAcceleratorRequest extends TeaModel {
     public Integer autoRenewDuration;
 
     /**
-     * <p>Specifies whether to automatically use coupons when making payments. Default value: false. Valid values:</p>
+     * <p>Specifies whether to automatically apply coupons to your bills. Valid values:</p>
      * <ul>
-     * <li><strong>true:</strong> automatically pays bill by using coupons.</li>
-     * <li><strong>false:</strong> does not automatically pay bills by using coupons.</li>
+     * <li><p><strong>true</strong>: Yes.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): No.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter takes effect only when <strong>AutoPay</strong> is set to <strong>true</strong>.</p>
+     * <p>This parameter is valid only when <strong>AutoPay</strong> is set to <strong>true</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -59,15 +65,26 @@ public class CreateAcceleratorRequest extends TeaModel {
     @NameInMap("AutoUseCoupon")
     public String autoUseCoupon;
 
+    /**
+     * <p>The bandwidth of the standard GA instance. Unit: <strong>Mbps</strong>.</p>
+     * <p>Valid values: 200 to 5000.</p>
+     * <blockquote>
+     * <p>This parameter is required and valid only when the access mode of the acceleration area is Anycast.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
     /**
      * <p>The bandwidth billing method.</p>
      * <ul>
-     * <li><strong>BandwidthPackage:</strong> billed based on bandwidth plans.</li>
-     * <li><strong>CDT:</strong> billed based on data transfer.</li>
-     * <li><strong>CDT95:</strong> billed based on the 95th percentile bandwidth. The billing is managed by Cloud Data Transfer (CDT). This bandwidth billing method is not available by default. Contact your Alibaba Cloud account manager for more information.</li>
+     * <li><p><strong>BandwidthPackage</strong>: Billed by bandwidth plan.</p>
+     * </li>
+     * <li><p><strong>CDT</strong>: Billed by data transfer.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -77,10 +94,10 @@ public class CreateAcceleratorRequest extends TeaModel {
     public String bandwidthBillingType;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>A client token that is used to ensure the idempotence of the request.</p>
+     * <p>Generate a parameter value from your client to make sure that the value is unique among different requests. The ClientToken parameter can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -90,10 +107,12 @@ public class CreateAcceleratorRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true:</strong> performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><p><strong>true</strong>: Performs a dry run. The system checks the required parameters, request format, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): Sends a normal request. If the request passes the check, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -103,13 +122,15 @@ public class CreateAcceleratorRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The subscription duration of the GA instance.</p>
+     * <p>The subscription duration.</p>
      * <ul>
-     * <li>If the <strong>PricingCycle</strong> parameter is set to <strong>Month</strong>, the valid values for the <strong>Duration</strong> parameter are <strong>1</strong> to <strong>9</strong>.</li>
-     * <li>If the <strong>PricingCycle</strong> parameter is set to <strong>Year</strong>, the valid values for the <strong>Duration</strong> parameter are <strong>1</strong> to <strong>3</strong>.</li>
+     * <li><p>If <strong>PricingCycle</strong> is set to <strong>Month</strong>, the valid values for <strong>Duration</strong> are <strong>1</strong> to <strong>9</strong>.</p>
+     * </li>
+     * <li><p>If <strong>PricingCycle</strong> is set to <strong>Year</strong>, the valid values for <strong>Duration</strong> are <strong>1</strong> to <strong>3</strong>.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If the <strong>InstanceChargeType</strong> parameter is set to <strong>PREPAY</strong>, you must configure this parameter.</p>
+     * <p>This parameter is required if <strong>InstanceChargeType</strong> (the billing method of the GA instance) is set to <strong>PREPAY</strong> (subscription).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -121,8 +142,10 @@ public class CreateAcceleratorRequest extends TeaModel {
     /**
      * <p>The billing method of the GA instance.</p>
      * <ul>
-     * <li>PREPAY (default): subscription</li>
-     * <li>POSTPAY: pay-as-you-go</li>
+     * <li><p>PREPAY (default): subscription.</p>
+     * </li>
+     * <li><p>POSTPAY: pay-as-you-go.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -139,7 +162,7 @@ public class CreateAcceleratorRequest extends TeaModel {
 
     /**
      * <p>The name of the GA instance.</p>
-     * <p>The name must be 2 to 128 characters in length and can contain digits, underscores (_), and hyphens (-). It must start with a letter.</p>
+     * <p>The name must be 1 to 128 characters in length, start with a letter, and can contain digits, underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -148,13 +171,15 @@ public class CreateAcceleratorRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The billing cycle of the GA instance. Valid values:</p>
+     * <p>The billing cycle. Valid values:</p>
      * <ul>
-     * <li><strong>Month:</strong> billed on a monthly basis.</li>
-     * <li><strong>Year:</strong> billed on an annual basis.</li>
+     * <li><p><strong>Month</strong>: Billed by month.</p>
+     * </li>
+     * <li><p><strong>Year</strong>: Billed by year.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If the <strong>InstanceChargeType</strong> parameter is set to <strong>PREPAY</strong>, you must configure this parameter.</p>
+     * <p>This parameter is required if <strong>InstanceChargeType</strong> (the billing method of the GA instance) is set to <strong>PREPAY</strong> (subscription).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -165,6 +190,9 @@ public class CreateAcceleratorRequest extends TeaModel {
 
     /**
      * <p>The coupon code.</p>
+     * <blockquote>
+     * <p>This parameter is available only on the Alibaba Cloud International Website (www\.alibabacloud.com).</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>50003298014****</p>
@@ -173,7 +201,7 @@ public class CreateAcceleratorRequest extends TeaModel {
     public String promotionOptionNo;
 
     /**
-     * <p>The ID of the region in which to create the GA instance. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>The region ID of the GA instance. Set the value to <strong>cn-hangzhou</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -193,32 +221,50 @@ public class CreateAcceleratorRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The type of the GA instance. Valid values:</p>
+     * <p>The instance type of the GA instance. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: Small Ⅰ.</li>
-     * <li><strong>2</strong>: Small Ⅱ.</li>
-     * <li><strong>3</strong>: Small Ⅲ.</li>
-     * <li><strong>5</strong>: Medium Ⅰ.</li>
-     * <li><strong>8</strong>: Medium Ⅱ.</li>
-     * <li><strong>10</strong>: Medium Ⅲ.</li>
-     * <li><strong>20</strong>: Large Ⅰ.</li>
-     * <li><strong>30</strong>: Large Ⅱ.</li>
-     * <li><strong>40</strong>: Large Ⅲ.</li>
-     * <li><strong>50</strong>: Large IV.</li>
-     * <li><strong>60</strong>: Large V.</li>
-     * <li><strong>70</strong>: Large VI.</li>
-     * <li><strong>80</strong>: Large VII.</li>
-     * <li><strong>90</strong>: Large VIII.</li>
-     * <li><strong>100</strong>: Super Large Ⅰ.</li>
-     * <li><strong>200</strong>: Super Large Ⅱ.</li>
+     * <li><p><strong>1</strong>: Small I</p>
+     * </li>
+     * <li><p><strong>2</strong>: Small II</p>
+     * </li>
+     * <li><p><strong>3</strong>: Small III</p>
+     * </li>
+     * <li><p><strong>5</strong>: Medium I</p>
+     * </li>
+     * <li><p><strong>8</strong>: Medium II</p>
+     * </li>
+     * <li><p><strong>10</strong>: Medium III</p>
+     * </li>
+     * <li><p><strong>20</strong>: Large I</p>
+     * </li>
+     * <li><p><strong>30</strong>: Large II</p>
+     * </li>
+     * <li><p><strong>40</strong>: Large III</p>
+     * </li>
+     * <li><p><strong>50</strong>: Large IV</p>
+     * </li>
+     * <li><p><strong>60</strong>: Large V</p>
+     * </li>
+     * <li><p><strong>70</strong>: Large VI</p>
+     * </li>
+     * <li><p><strong>80</strong>: Large VII</p>
+     * </li>
+     * <li><p><strong>90</strong>: Large VIII</p>
+     * </li>
+     * <li><p><strong>100</strong>: Super Large I</p>
+     * </li>
+     * <li><p><strong>200</strong>: Super Large II</p>
+     * </li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>GA instances Large III and above are not available by default. To use these instances, contact your Alibaba Cloud account manager.</li>
-     * <li>If the <strong>InstanceChargeType</strong> parameter is set to <strong>PREPAY</strong>, you must configure this parameter.</li>
+     * <li><p>Currently, the Large III and higher instance types are available only to users on the whitelist. To use these instance types, contact your account manager.</p>
+     * </li>
+     * <li><p>This parameter is required if <strong>InstanceChargeType</strong> (the billing method of the GA instance) is set to <strong>PREPAY</strong> (subscription).</p>
+     * </li>
      * </ul>
      * </blockquote>
-     * <p>Different specifications provide different capabilities. For more information, see <a href="https://help.aliyun.com/document_detail/153127.html">Instance type</a>.</p>
+     * <p>The definitions of different instance types are different. For more information, see <a href="https://help.aliyun.com/document_detail/153127.html">Instance types</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -386,8 +432,10 @@ public class CreateAcceleratorRequest extends TeaModel {
         /**
          * <p>The access mode of the acceleration area. Valid values:</p>
          * <ul>
-         * <li><strong>UserDefine:</strong> custom nearby access mode. You can select acceleration areas and regions based on your business requirements. GA allocates a separate EIP to each acceleration region.</li>
-         * <li><strong>Anycast:</strong> automatic nearby access mode. You do not need to specify an acceleration area. GA allocates an Anycast EIP to multiple regions across the globe. Users can connect to the nearest access point of the Alibaba Cloud global transmission network by sending requests to the Anycast EIP.</li>
+         * <li><p><strong>UserDefine</strong>: Custom nearby access mode. Select acceleration areas and regions as needed. Global Accelerator provides a separate elastic IP address (EIP) for each acceleration region.</p>
+         * </li>
+         * <li><p><strong>Anycast</strong>: Automatic nearby access mode. You do not need to configure an acceleration area. Global Accelerator provides an Anycast EIP for multiple regions. Users connect to the nearest access point of the Alibaba Cloud network using the Anycast EIP.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -414,7 +462,7 @@ public class CreateAcceleratorRequest extends TeaModel {
     public static class CreateAcceleratorRequestTag extends TeaModel {
         /**
          * <p>The tag key of the GA instance. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>You can specify up to 20 tag keys.</p>
          * 
          * <strong>example:</strong>
@@ -424,8 +472,8 @@ public class CreateAcceleratorRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the GA instance. The tag value cannot be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * <p>The tag value of the GA instance. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>You can specify up to 20 tag values.</p>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAcceleratorsRequest extends TeaModel {
     /**
-     * <p>The ID of the GA instance.</p>
+     * <p>The ID of the Global Accelerator instance.</p>
      * 
      * <strong>example:</strong>
      * <p>ga-bp1odcab8tmno0hdq****</p>
@@ -32,7 +32,7 @@ public class ListAcceleratorsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>The region ID of the Global Accelerator instance. Set the value to <strong>cn-hangzhou</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,15 +52,22 @@ public class ListAcceleratorsRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The status of the GA instance. Valid values:</p>
+     * <p>The state of the Global Accelerator instance. Valid values:</p>
      * <ul>
-     * <li><strong>init</strong>: The GA instance is being initialized.</li>
-     * <li><strong>active</strong>: The GA instance is available.</li>
-     * <li><strong>configuring</strong>: The GA instance is being configured.</li>
-     * <li><strong>binding</strong>: The GA instance is being associated.</li>
-     * <li><strong>unbinding</strong>: The GA instance is being disassociated.</li>
-     * <li><strong>deleting</strong>: The GA instance is being deleted.</li>
-     * <li><strong>finacialLocked</strong>: The GA instance is locked due to overdue payments.</li>
+     * <li><p><strong>init</strong>: The instance is being initialized.</p>
+     * </li>
+     * <li><p><strong>active</strong>: The instance is active.</p>
+     * </li>
+     * <li><p><strong>configuring</strong>: The instance is being configured.</p>
+     * </li>
+     * <li><p><strong>binding</strong>: The instance is being bound.</p>
+     * </li>
+     * <li><p><strong>unbinding</strong>: The instance is being unbound.</p>
+     * </li>
+     * <li><p><strong>deleting</strong>: The instance is being deleted.</p>
+     * </li>
+     * <li><p><strong>finacialLocked</strong>: The instance is locked due to an overdue payment.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -70,7 +77,7 @@ public class ListAcceleratorsRequest extends TeaModel {
     public String state;
 
     /**
-     * <p>The tags of the GA instance.</p>
+     * <p>The tags of the resource.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListAcceleratorsRequestTag> tag;
@@ -139,8 +146,8 @@ public class ListAcceleratorsRequest extends TeaModel {
 
     public static class ListAcceleratorsRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the GA resource. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * <p>The tag key of the Global Accelerator resource. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>You can specify up to 20 tag keys.</p>
          * 
          * <strong>example:</strong>
@@ -150,8 +157,8 @@ public class ListAcceleratorsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the GA resource. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * <p>The tag value of the Global Accelerator resource. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>You can specify up to 20 tag values.</p>
          * 
          * <strong>example:</strong>

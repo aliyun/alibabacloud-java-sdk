@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEndpointGroupsRequest extends TeaModel {
     /**
-     * <p>The ID of the GA instance.</p>
+     * <p>The ID of the Global Accelerator instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,12 @@ public class ListEndpointGroupsRequest extends TeaModel {
     public String acceleratorId;
 
     /**
-     * <p>Specifies whether the access logging feature is enabled. Default value: off. Valid values:</p>
+     * <p>Whether to enable the access log. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong>: The access logging feature is enabled.</li>
-     * <li><strong>off</strong>: The access logging feature is disabled.</li>
+     * <li><p><strong>on</strong>: enables the access log.</p>
+     * </li>
+     * <li><p><strong>off</strong> (default): disables the access log.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,12 +38,18 @@ public class ListEndpointGroupsRequest extends TeaModel {
     @NameInMap("EndpointGroupId")
     public String endpointGroupId;
 
+    @NameInMap("EndpointGroupRegion")
+    public String endpointGroupRegion;
+
     /**
-     * <p>The type of the endpoint group. Valid values: Valid values:</p>
+     * <p>The type of the endpoint group. Valid values:</p>
      * <ul>
-     * <li><strong>default</strong></li>
-     * <li><strong>virtual</strong></li>
-     * <li>If you leave this parameter empty, all default and virtual endpoint groups are queried.</li>
+     * <li><p><strong>default</strong>: a default endpoint group.</p>
+     * </li>
+     * <li><p><strong>virtual</strong>: a virtual endpoint group.</p>
+     * </li>
+     * <li><p>If you omit this parameter, the operation returns all default and virtual endpoint groups.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -69,7 +77,7 @@ public class ListEndpointGroupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries to return on each page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -78,7 +86,7 @@ public class ListEndpointGroupsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>The ID of the region where the Global Accelerator instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -88,7 +96,7 @@ public class ListEndpointGroupsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The tag of the endpoint group.</p>
+     * <p>The tags used to filter endpoint groups. You can specify up to 20 tags.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>false</p>
@@ -123,6 +131,14 @@ public class ListEndpointGroupsRequest extends TeaModel {
     }
     public String getEndpointGroupId() {
         return this.endpointGroupId;
+    }
+
+    public ListEndpointGroupsRequest setEndpointGroupRegion(String endpointGroupRegion) {
+        this.endpointGroupRegion = endpointGroupRegion;
+        return this;
+    }
+    public String getEndpointGroupRegion() {
+        return this.endpointGroupRegion;
     }
 
     public ListEndpointGroupsRequest setEndpointGroupType(String endpointGroupType) {
@@ -175,9 +191,8 @@ public class ListEndpointGroupsRequest extends TeaModel {
 
     public static class ListEndpointGroupsRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the endpoint group. It cannot be an empty string.</p>
-         * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
-         * <p>You can specify up to 20 tag keys.</p>
+         * <p>The tag key. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be up to 64 characters long and cannot start with <code>aliyun</code> or <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>test-key</p>
@@ -186,9 +201,8 @@ public class ListEndpointGroupsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the endpoint group. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
-         * <p>You can specify up to 20 tag values.</p>
+         * <p>The tag value. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters long and cannot start with <code>aliyun</code> or <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>test-value</p>

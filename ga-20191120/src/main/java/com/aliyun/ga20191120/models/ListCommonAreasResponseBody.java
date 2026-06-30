@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCommonAreasResponseBody extends TeaModel {
     /**
-     * <p>The information about the areas.</p>
+     * <p>The area information.</p>
      */
     @NameInMap("Areas")
     public java.util.List<ListCommonAreasResponseBodyAreas> areas;
@@ -102,7 +102,7 @@ public class ListCommonAreasResponseBody extends TeaModel {
         public String localName;
 
         /**
-         * <p>The information about the regions.</p>
+         * <p>The region list.</p>
          */
         @NameInMap("RegionList")
         public java.util.List<ListCommonAreasResponseBodyAreasRegionList> regionList;

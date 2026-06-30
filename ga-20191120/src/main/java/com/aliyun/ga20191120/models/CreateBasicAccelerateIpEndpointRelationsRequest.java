@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateBasicAccelerateIpEndpointRelationsRequest extends TeaModel {
     /**
-     * <p>A list of accelerated IP addresses and the endpoints with which the accelerated IP addresses are associated.</p>
+     * <p>The list of attachments between accelerated IP addresses and endpoints for the basic Global Accelerator instance.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AccelerateIpEndpointRelations")
     public java.util.List<CreateBasicAccelerateIpEndpointRelationsRequestAccelerateIpEndpointRelations> accelerateIpEndpointRelations;
 
     /**
-     * <p>The ID of the basic GA instance.</p>
+     * <p>The ID of the basic Global Accelerator instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,9 +23,9 @@ public class CreateBasicAccelerateIpEndpointRelationsRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> value as the <strong>ClientToken</strong> value. The <strong>RequestId</strong> value is different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class CreateBasicAccelerateIpEndpointRelationsRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>The region ID of the Global Accelerator instance. Set the value to <strong>cn-hangzhou</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -83,9 +83,9 @@ public class CreateBasicAccelerateIpEndpointRelationsRequest extends TeaModel {
 
     public static class CreateBasicAccelerateIpEndpointRelationsRequestAccelerateIpEndpointRelations extends TeaModel {
         /**
-         * <p>The IDs of the accelerated IP addresses.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2253393.html">ListBasicAccelerateIps</a> operation to query the IDs of the accelerated IP addresses.</p>
-         * <p>You can specify up to 20 IP address IDs.</p>
+         * <p>The ID of the accelerated IP address of the basic Global Accelerator instance.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/2253393.html">ListBasicAccelerateIps</a> to query accelerated IP address IDs.</p>
+         * <p>You can specify up to 20 accelerated IP address IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>gaip-bp1****</p>
@@ -94,8 +94,8 @@ public class CreateBasicAccelerateIpEndpointRelationsRequest extends TeaModel {
         public String accelerateIpId;
 
         /**
-         * <p>The IDs of the endpoints.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2253406.html">ListBasicEndpoints</a> to query the IDs of the endpoints.</p>
+         * <p>The endpoint ID of the basic Global Accelerator instance.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/2253406.html">ListBasicEndpoints</a> to query endpoint IDs.</p>
          * <p>You can specify up to 20 endpoint IDs.</p>
          * 
          * <strong>example:</strong>

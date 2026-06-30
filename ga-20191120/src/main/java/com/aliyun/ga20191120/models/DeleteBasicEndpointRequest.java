@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteBasicEndpointRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>Set this parameter to a value that is generated from your client to make sure that the value is unique among different requests. The ClientToken value supports only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> value as the <strong>ClientToken</strong> value. The <strong>RequestId</strong> value is different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DeleteBasicEndpointRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the endpoint group to which the endpoint to be deleted belongs.</p>
+     * <p>The ID of the endpoint group to which the endpoint that you want to delete belongs. You can call the <a href="~~~~">ListBasicEndpointGroups</a> operation to query the endpoint group ID of a basic Alibaba Cloud Global Accelerator (GA) instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class DeleteBasicEndpointRequest extends TeaModel {
     public String endpointGroupId;
 
     /**
-     * <p>The ID of the endpoint that you want to delete.</p>
+     * <p>The ID of the endpoint that you want to delete from the basic Alibaba Cloud Global Accelerator (GA) instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class DeleteBasicEndpointRequest extends TeaModel {
     public String endpointId;
 
     /**
-     * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>The region ID of the Global Accelerator instance. Set the value to <strong>ap-southeast-1</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

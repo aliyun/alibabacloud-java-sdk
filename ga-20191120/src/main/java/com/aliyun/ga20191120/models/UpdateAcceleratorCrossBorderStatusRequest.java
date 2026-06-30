@@ -30,8 +30,10 @@ public class UpdateAcceleratorCrossBorderStatusRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the cross-border acceleration feature for the GA instance. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

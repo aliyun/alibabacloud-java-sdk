@@ -44,8 +44,10 @@ public class ListAvailableBusiRegionsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the region is in the Chinese mainland. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -66,8 +68,10 @@ public class ListAvailableBusiRegionsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether it is a point of presence (PoP) of Alibaba Cloud. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

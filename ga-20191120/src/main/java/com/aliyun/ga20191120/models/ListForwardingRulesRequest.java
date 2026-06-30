@@ -18,7 +18,7 @@ public class ListForwardingRulesRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -58,8 +58,10 @@ public class ListForwardingRulesRequest extends TeaModel {
     /**
      * <p>The token that is used for the next query. Valid values:</p>
      * <ul>
-     * <li>If this is your first query or no subsequent query is to be sent, ignore this parameter.</li>
-     * <li>If a next query is to be sent, set the value to the value of <strong>NextToken</strong> that is returned from the last call.</li>
+     * <li><p>If this is your first query or no subsequent query is to be sent, ignore this parameter.</p>
+     * </li>
+     * <li><p>If a next query is to be sent, set the value to the value of <strong>NextToken</strong> that is returned from the last call.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -15,10 +15,10 @@ public class CreateEndpointGroupRequest extends TeaModel {
     public String acceleratorId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>The client token used to ensure request idempotence.</p>
+     * <p>You can generate this token, but you must ensure it is unique for each request. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the request as the <strong>ClientToken</strong>. Each request has a unique <strong>RequestId</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class CreateEndpointGroupRequest extends TeaModel {
 
     /**
      * <p>The description of the endpoint group.</p>
-     * <p>The description can be up to 200 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description can be up to 200 characters long and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>EndpointGroup</p>
@@ -38,10 +38,12 @@ public class CreateEndpointGroupRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to perform a dry run, without sending the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, a 2xx HTTP status code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><p><strong>true</strong>: performs a dry run. The system checks the required parameters, request format, and service limits. If the request fails the dry run, the system returns an error message. If the request passes the dry run, the system returns an HTTP 2xx status code.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): sends a normal request. If the request passes the check, the system returns an HTTP 2xx status code and creates the endpoint group.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,13 +53,13 @@ public class CreateEndpointGroupRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The configurations of the endpoints in the endpoint group.</p>
+     * <p>The endpoint configurations.</p>
      */
     @NameInMap("EndpointConfigurations")
     public java.util.List<CreateEndpointGroupRequestEndpointConfigurations> endpointConfigurations;
 
     /**
-     * <p>The ID of the region in which to create the endpoint group.</p>
+     * <p>The ID of the region where the endpoint group is deployed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,11 +71,13 @@ public class CreateEndpointGroupRequest extends TeaModel {
     /**
      * <p>The type of the endpoint group. Valid values:</p>
      * <ul>
-     * <li><strong>default</strong> (default): a default endpoint group.</li>
-     * <li><strong>virtual</strong>: a virtual endpoint group.</li>
+     * <li><p><strong>default</strong> (default): a default endpoint group.</p>
+     * </li>
+     * <li><p><strong>virtual</strong>: a virtual endpoint group.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> When you call this operation to create a virtual endpoint group for a Layer 4 listener, make sure that a default endpoint group is created.</p>
+     * <p>Before you create a virtual endpoint group for a Layer 4 listener, make sure that you have created a default endpoint group.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -82,17 +86,33 @@ public class CreateEndpointGroupRequest extends TeaModel {
     @NameInMap("EndpointGroupType")
     public String endpointGroupType;
 
+    /**
+     * <p>The IP version used to communicate with the backend service. Valid values:</p>
+     * <ul>
+     * <li><p><strong>IPv4</strong> (default): GA uses only IPv4 to communicate with the backend service.</p>
+     * </li>
+     * <li><p><strong>IPv6</strong>: GA uses only IPv6 to communicate with the backend service.</p>
+     * </li>
+     * <li><p><strong>ProtocolAffinity</strong>: GA uses the same IP version as the client request to communicate with the backend service.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>IPv4</p>
+     */
     @NameInMap("EndpointIpVersion")
     public String endpointIpVersion;
 
     /**
-     * <p>The backend service protocol. Valid values:</p>
+     * <p>The version of the backend service protocol. Valid values:</p>
      * <ul>
-     * <li><strong>HTTP1.1</strong> (default)</li>
-     * <li><strong>HTTP2</strong></li>
+     * <li><p><strong>HTTP1.1</strong> (default): HTTP/1.1.</p>
+     * </li>
+     * <li><p><strong>HTTP2</strong>: HTTP/2.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is required only when you set the EndpointRequestProtocol parameter to HTTPS.</p>
+     * <p>This parameter is available only when <code>EndpointRequestProtocol</code> is set to HTTPS.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -102,15 +122,19 @@ public class CreateEndpointGroupRequest extends TeaModel {
     public String endpointProtocolVersion;
 
     /**
-     * <p>The protocol that is used by the backend service. Default value: HTTP. Valid values:</p>
+     * <p>The protocol used by the backend service. Valid values:</p>
      * <ul>
-     * <li><strong>HTTP</strong></li>
-     * <li><strong>HTTPS</strong></li>
+     * <li><p><strong>HTTP</strong> (default)</p>
+     * </li>
+     * <li><p><strong>HTTPS</strong></p>
+     * </li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>You can set this parameter only when the listener that is associated with the endpoint group uses <strong>HTTP</strong> or <strong>HTTPS</strong>.</li>
-     * <li>For an <strong>HTTP</strong> listener, the backend service protocol must be <strong>HTTP</strong>.</li>
+     * <li><p>This parameter is available only for endpoint groups of <strong>HTTP</strong> or <strong>HTTPS</strong> listeners.</p>
+     * </li>
+     * <li><p>For an <strong>HTTP</strong> listener, the backend service protocol must be <strong>HTTP</strong>.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -121,10 +145,12 @@ public class CreateEndpointGroupRequest extends TeaModel {
     public String endpointRequestProtocol;
 
     /**
-     * <p>Specifies whether to enable the health check feature. Valid values:</p>
+     * <p>Specifies whether to enable health checks. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: enables health checks.</p>
+     * </li>
+     * <li><p><strong>false</strong>: disables health checks.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -133,11 +159,17 @@ public class CreateEndpointGroupRequest extends TeaModel {
     @NameInMap("HealthCheckEnabled")
     public Boolean healthCheckEnabled;
 
+    /**
+     * <p>The domain name used for health checks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.taobao.com">www.taobao.com</a></p>
+     */
     @NameInMap("HealthCheckHost")
     public String healthCheckHost;
 
     /**
-     * <p>The interval at which health checks are performed. Unit: seconds.</p>
+     * <p>The health check interval, in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -146,7 +178,7 @@ public class CreateEndpointGroupRequest extends TeaModel {
     public Integer healthCheckIntervalSeconds;
 
     /**
-     * <p>The path to which to send health check requests.</p>
+     * <p>The path used for health checks.</p>
      * 
      * <strong>example:</strong>
      * <p>/healthcheck</p>
@@ -155,7 +187,7 @@ public class CreateEndpointGroupRequest extends TeaModel {
     public String healthCheckPath;
 
     /**
-     * <p>The port that is used for health checks.</p>
+     * <p>The port used for health checks.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -164,11 +196,14 @@ public class CreateEndpointGroupRequest extends TeaModel {
     public Integer healthCheckPort;
 
     /**
-     * <p>The protocol over which to send health check requests. Valid values:</p>
+     * <p>The protocol used for health checks. Valid values:</p>
      * <ul>
-     * <li><strong>tcp</strong> or <strong>TCP</strong></li>
-     * <li><strong>http</strong> or <strong>HTTP</strong></li>
-     * <li><strong>https</strong> or <strong>HTTPS</strong></li>
+     * <li><p><strong>tcp</strong> or <strong>TCP</strong>: TCP</p>
+     * </li>
+     * <li><p><strong>http</strong> or <strong>HTTP</strong>: HTTP</p>
+     * </li>
+     * <li><p><strong>https</strong> or <strong>HTTPS</strong>: HTTPS</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -189,7 +224,7 @@ public class CreateEndpointGroupRequest extends TeaModel {
 
     /**
      * <p>The name of the endpoint group.</p>
-     * <p>The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name must be 1 to 128 characters long, start with a letter or a Chinese character, and can contain digits, periods (.), underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>group1</p>
@@ -198,13 +233,13 @@ public class CreateEndpointGroupRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The port mappings.</p>
+     * <p>The listener-to-endpoint port mappings.</p>
      */
     @NameInMap("PortOverrides")
     public java.util.List<CreateEndpointGroupRequestPortOverrides> portOverrides;
 
     /**
-     * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -214,14 +249,13 @@ public class CreateEndpointGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Tags of GA instances.</p>
+     * <p>The tags of the endpoint group.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateEndpointGroupRequestTag> tag;
 
     /**
-     * <p>The number of consecutive health check failures that must occur before a healthy endpoint group is considered unhealthy, or the number of consecutive health check successes that must occur before an unhealthy endpoint group is considered healthy.</p>
-     * <p>Valid values: <strong>2</strong> to <strong>10</strong>. Default value: <strong>3</strong>.</p>
+     * <p>The number of consecutive health checks that must succeed or fail before an endpoint\&quot;s status changes between healthy and unhealthy. Valid values: <strong>2</strong> to <strong>10</strong>. Default value: <strong>3</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -230,8 +264,7 @@ public class CreateEndpointGroupRequest extends TeaModel {
     public Integer thresholdCount;
 
     /**
-     * <p>The traffic ratio for the endpoint group when the specified listener is associated with multiple endpoint groups.</p>
-     * <p>Valid values: <strong>1</strong> to <strong>100</strong>.</p>
+     * <p>The percentage of traffic distributed to the endpoint group when the listener is associated with multiple endpoint groups. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -429,22 +462,29 @@ public class CreateEndpointGroupRequest extends TeaModel {
     }
 
     public static class CreateEndpointGroupRequestEndpointConfigurations extends TeaModel {
+        /**
+         * <p>The API keys for the AI service.</p>
+         */
         @NameInMap("ApiKeys")
         public java.util.List<String> apiKeys;
 
         /**
-         * <p>Specifies whether to automatically preserve client IP addresses. Valid values:</p>
+         * <p>Specifies whether to preserve client source IP addresses. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong> (default)</li>
+         * <li><p><strong>true</strong>: preserves client source IP addresses.</p>
+         * </li>
+         * <li><p><strong>false</strong> (default): does not preserve client source IP addresses.</p>
+         * </li>
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>By default, client IP address preservation is disabled for an endpoint group of a UDP or TCP listener. You can configure this parameter based on your business requirements.</li>
-         * <li>By default, client IP address preservation is enabled for an endpoint group of an HTTP or HTTP listener. You can obtain client IP addresses by using the X-Forwarded-For header. You cannot disable the feature.</li>
-         * <li>EnableClientIPPreservation and EnableProxyProtocol cannot be set to true at the same time.<blockquote>
-         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/158080.html">Preserve client IP addresses</a>.</p>
-         * </blockquote>
+         * <li><p>By default, this feature is disabled for endpoint groups that are associated with TCP or UDP listeners. You can enable this feature based on your business requirements.</p>
+         * </li>
+         * <li><p>By default, this feature is enabled for endpoint groups that are associated with HTTP or HTTPS listeners. The source IP address is retrieved from the X-Forwarded-For header field. This feature cannot be disabled.</p>
+         * </li>
+         * <li><p><code>EnableClientIPPreservation</code> and <code>EnableProxyProtocol</code> cannot both be set to <code>true</code>.</p>
+         * </li>
+         * <li><p>For more information, see <a href="https://help.aliyun.com/document_detail/158080.html">Preserve client source IP addresses</a>.</p>
          * </li>
          * </ul>
          * </blockquote>
@@ -456,17 +496,20 @@ public class CreateEndpointGroupRequest extends TeaModel {
         public Boolean enableClientIPPreservation;
 
         /**
-         * <p>Specifies whether to use the proxy protocol to preserve client IP addresses. Valid values:</p>
+         * <p>Specifies whether to use the PROXY protocol to preserve client source IP addresses. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong> (default)</li>
+         * <li><p><strong>true</strong>: uses the PROXY protocol.</p>
+         * </li>
+         * <li><p><strong>false</strong> (default): does not use the PROXY protocol.</p>
+         * </li>
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>This parameter is available only to endpoint groups of TCP listeners.</li>
-         * <li>EnableClientIPPreservation and EnableProxyProtocol cannot be set to true at the same time.<blockquote>
-         * <p> For more information, see <a href="https://help.aliyun.com/document_detail/158080.html">Preserve client IP addresses</a>.</p>
-         * </blockquote>
+         * <li><p>This parameter can be configured only for endpoint groups that are associated with TCP listeners.</p>
+         * </li>
+         * <li><p><code>EnableClientIPPreservation</code> and <code>EnableProxyProtocol</code> cannot both be set to <code>true</code>.</p>
+         * </li>
+         * <li><p>For more information, see <a href="https://help.aliyun.com/document_detail/158080.html">Preserve client source IP addresses</a>.</p>
          * </li>
          * </ul>
          * </blockquote>
@@ -478,7 +521,7 @@ public class CreateEndpointGroupRequest extends TeaModel {
         public Boolean enableProxyProtocol;
 
         /**
-         * <p>The IP address, domain name, or instance ID based on the value of Type.</p>
+         * <p>The IP address, domain name, or resource ID of the endpoint. The value of this parameter depends on the value of the <code>Type</code> parameter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -488,6 +531,8 @@ public class CreateEndpointGroupRequest extends TeaModel {
         public String endpoint;
 
         /**
+         * <p>The AI service provider. Set this to <code>BAILIAN</code> to use Alibaba Cloud Model Studio.</p>
+         * 
          * <strong>example:</strong>
          * <p>BAILIAN</p>
          */
@@ -497,11 +542,11 @@ public class CreateEndpointGroupRequest extends TeaModel {
         /**
          * <p>The private IP address of the ENI.</p>
          * <blockquote>
-         * <p> This parameter is available only when you set the endpoint type to <strong>ENI</strong>. If you leave this parameter empty, the primary private IP address of the ENI is used.</p>
+         * <p>This parameter applies only when the endpoint type is set to <strong>ENI</strong>. If you omit this parameter, the primary private IP address of the ENI is used.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>172.168.XX.XX</p>
+         * <p>172.168.X.X</p>
          */
         @NameInMap("SubAddress")
         public String subAddress;
@@ -509,27 +554,41 @@ public class CreateEndpointGroupRequest extends TeaModel {
         /**
          * <p>The type of the endpoint. Valid values:</p>
          * <ul>
-         * <li><strong>Domain</strong>: a custom domain name.</li>
-         * <li><strong>Ip</strong>: a custom IP address.</li>
-         * <li><strong>IpTarget</strong>: a custom private IP address.</li>
-         * <li><strong>PublicIp</strong>: a public IP address provided by Alibaba Cloud.</li>
-         * <li><strong>ECS</strong>: an Elastic Compute Service (ECS) instance.</li>
-         * <li><strong>SLB</strong>: a Server Load Balancer (SLB) instance.</li>
-         * <li><strong>ALB</strong>: an Application Load Balancer (ALB) instance.</li>
-         * <li><strong>OSS</strong>: an Object Storage Service (OSS) bucket.</li>
-         * <li><strong>ENI</strong>: an elastic network interface (ENI).</li>
-         * <li><strong>NLB</strong>: a Network Load Balancer (NLB) instance.</li>
+         * <li><p><strong>Domain</strong>: a custom domain name.</p>
+         * </li>
+         * <li><p><strong>Ip</strong>: a custom IP address.</p>
+         * </li>
+         * <li><p><strong>IpTarget</strong>: a custom private IP address.</p>
+         * </li>
+         * <li><p><strong>PublicIp</strong>: an Alibaba Cloud public IP address.</p>
+         * </li>
+         * <li><p><strong>ECS</strong>: an Elastic Compute Service (ECS) instance.</p>
+         * </li>
+         * <li><p><strong>SLB</strong>: a Server Load Balancer (SLB) instance.</p>
+         * </li>
+         * <li><p><strong>ALB</strong>: an Application Load Balancer (ALB) instance.</p>
+         * </li>
+         * <li><p><strong>OSS</strong>: an Object Storage Service (OSS) bucket.</p>
+         * </li>
+         * <li><p><strong>ENI</strong>: an elastic network interface (ENI).</p>
+         * </li>
+         * <li><p><strong>NLB</strong>: a Network Load Balancer (NLB) instance.</p>
+         * </li>
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>If you set this parameter to <strong>ECS</strong>, <strong>ENI</strong>, <strong>SLB</strong>, <strong>ALB</strong>, <strong>NLB</strong>, or <strong>IpTarget</strong> and the AliyunServiceRoleForGaVpcEndpoint service-linked role does not exist, the system automatically creates the role.</li>
-         * <li>If you set this parameter to <strong>ALB</strong> and the AliyunServiceRoleForGaAlb service-linked role does not exist, the system automatically creates the role.</li>
-         * <li>If you set this parameter to <strong>OSS</strong> and the AliyunServiceRoleForGaOss service-linked role does not exist, the system automatically creates the role.</li>
-         * <li>If you set this parameter to <strong>NLB</strong> and the AliyunServiceRoleForGaNlb service-linked role does not exist, the system automatically creates the role.<blockquote>
-         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/178360.html">Service-linked roles</a>.</p>
-         * </blockquote>
+         * <li><p>If you set the endpoint type to <strong>ECS</strong>, <strong>ENI</strong>, <strong>SLB</strong>, <strong>ALB</strong>, <strong>NLB</strong>, or <strong>IpTarget</strong>, the system automatically creates a service-linked role named AliyunServiceRoleForGaVpcEndpoint if the role does not exist.</p>
+         * </li>
+         * <li><p>If you set the endpoint type to <strong>ALB</strong>, the system automatically creates a service-linked role named AliyunServiceRoleForGaAlb if the role does not exist.</p>
+         * </li>
+         * <li><p>If you set the endpoint type to <strong>OSS</strong>, the system automatically creates a service-linked role named AliyunServiceRoleForGaOss if the role does not exist.</p>
+         * </li>
+         * <li><p>If you set the endpoint type to <strong>NLB</strong>, the system automatically creates a service-linked role named AliyunServiceRoleForGaNlb if the role does not exist.</p>
          * </li>
          * </ul>
+         * <blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/178360.html">Service-linked roles</a>.</p>
+         * </blockquote>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -540,16 +599,16 @@ public class CreateEndpointGroupRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The IDs of vSwitches that are deployed in the VPC.</p>
+         * <p>A list of vSwitches in the VPC.</p>
          */
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;
 
         /**
-         * <p>The virtual private cloud (VPC) ID.</p>
-         * <p>You can specify one VPC ID for an endpoint group of an intelligent routing listener.</p>
+         * <p>The ID of the Virtual Private Cloud (VPC).</p>
+         * <p>You can specify at most one VPC ID for an endpoint group of an intelligent routing listener.</p>
          * <blockquote>
-         * <p> This parameter is valid and required only if Type is set to <strong>IpTarget</strong>.</p>
+         * <p>This parameter is required only when the endpoint type is set to <strong>IpTarget</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -562,7 +621,7 @@ public class CreateEndpointGroupRequest extends TeaModel {
          * <p>The weight of the endpoint.</p>
          * <p>Valid values: <strong>0</strong> to <strong>255</strong>.</p>
          * <blockquote>
-         * <p> If you set the weight of an endpoint to 0, GA stops distributing traffic to the endpoint. Proceed with caution.</p>
+         * <p>If you set the weight of an endpoint to 0, GA stops distributing traffic to it. Proceed with caution.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -661,7 +720,7 @@ public class CreateEndpointGroupRequest extends TeaModel {
 
     public static class CreateEndpointGroupRequestPortOverrides extends TeaModel {
         /**
-         * <p>The endpoint port that is mapped to the listener port.</p>
+         * <p>The endpoint port for the port mapping.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -670,12 +729,15 @@ public class CreateEndpointGroupRequest extends TeaModel {
         public Integer endpointPort;
 
         /**
-         * <p>The listener port that is mapped to the endpoint port.</p>
+         * <p>The listener port for the port mapping.</p>
          * <blockquote>
          * <ul>
-         * <li>You cannot configure port mappings for virtual endpoint groups of TCP listeners. If a virtual endpoint group already exists on the listener, you cannot configure port mappings for the default endpoint group. If port mappings are configured for the default endpoint group, you cannot add a virtual endpoint group.</li>
-         * <li>If you configure port mappings for a listener, you cannot modify the listener protocol. You can only switch between HTTP and HTTPS.</li>
-         * <li>Listener port: When you modify the listener port range, make sure that the port range includes the ports configured in port mappings. For example, if you set the listener port range to 80 to 82 and map the listener ports to endpoint ports 100 to 102, you cannot change the listener port range to 80 to 81.</li>
+         * <li><p>For TCP listeners, you cannot configure port mappings for virtual endpoint groups. If a listener is associated with a virtual endpoint group, you cannot configure port mappings for the default endpoint group. If a default endpoint group has port mappings configured, you cannot add a virtual endpoint group.</p>
+         * </li>
+         * <li><p>After you configure port mappings, you cannot change the listener protocol, except for switching between HTTP and HTTPS.</p>
+         * </li>
+         * <li><p>When you modify the listener port range, the new range must include all listener ports used in port mappings. For example, if the listener port range is 80-82 and the listener ports are mapped to endpoint ports 100-102, you cannot change the listener port range to 80-81.</p>
+         * </li>
          * </ul>
          * </blockquote>
          * 
@@ -710,8 +772,8 @@ public class CreateEndpointGroupRequest extends TeaModel {
 
     public static class CreateEndpointGroupRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the GA instance. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * <p>The tag key. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be up to 64 characters long and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>You can specify up to 20 tag keys.</p>
          * 
          * <strong>example:</strong>
@@ -721,8 +783,8 @@ public class CreateEndpointGroupRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the GA instance. The tag value cannot be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * <p>The tag value. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters long and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>You can specify up to 20 tag values.</p>
          * 
          * <strong>example:</strong>

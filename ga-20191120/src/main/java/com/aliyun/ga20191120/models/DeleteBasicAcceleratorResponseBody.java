@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteBasicAcceleratorResponseBody extends TeaModel {
     /**
-     * <p>The ID of the basic GA instance.</p>
+     * <p>The instance ID of the basic Alibaba Cloud Global Accelerator (GA) instance.</p>
      * 
      * <strong>example:</strong>
      * <p>ga-bp17frjjh0udz4qz****</p>
@@ -14,7 +14,7 @@ public class DeleteBasicAcceleratorResponseBody extends TeaModel {
     public String acceleratorId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>54B48E3D-DF70-471B-AA93-08E683A1B45</p>

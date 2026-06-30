@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateForwardingRulesResponseBody extends TeaModel {
     /**
-     * <p>The forwarding rules.</p>
+     * <p>The details of the forwarding rules.</p>
      */
     @NameInMap("ForwardingRules")
     public java.util.List<CreateForwardingRulesResponseBodyForwardingRules> forwardingRules;
@@ -42,7 +42,7 @@ public class CreateForwardingRulesResponseBody extends TeaModel {
 
     public static class CreateForwardingRulesResponseBodyForwardingRules extends TeaModel {
         /**
-         * <p>The ID of the forwarding rule.</p>
+         * <p>The forwarding rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>frule-bp1dii16gu9qdvb34****</p>

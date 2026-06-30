@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AttachDdosToAcceleratorResponseBody extends TeaModel {
     /**
-     * <p>The ID of the Anti-DDoS Pro/Premium instance that is associated with the GA instance.</p>
+     * <p>The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance associated with the Global Accelerator (GA) instance.</p>
      * 
      * <strong>example:</strong>
      * <p>ddoscoo-cn-zz11vq7j****</p>
@@ -15,7 +15,7 @@ public class AttachDdosToAcceleratorResponseBody extends TeaModel {
     public String ddosId;
 
     /**
-     * <p>The ID of the GA instance that is associated with the Anti-DDoS Pro/Premium instance.</p>
+     * <p>The ID of the Global Accelerator (GA) instance with which the Anti-DDoS Pro or Anti-DDoS Premium instance is associated.</p>
      * 
      * <strong>example:</strong>
      * <p>ga-bp1odcab8tmno0hdq****</p>
@@ -24,7 +24,7 @@ public class AttachDdosToAcceleratorResponseBody extends TeaModel {
     public String gaId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DE77A7F3-3B74-41C0-A5BC-CAFD188C28B6</p>

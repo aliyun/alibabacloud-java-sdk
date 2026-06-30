@@ -7,11 +7,13 @@ public class UpdateBandwidthPackageRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong>: disables automatic payment. This is the default value. If you select this option, you must go to <a href="https://usercenter2-intl.aliyun.com/order/list">Order Center</a> to complete the payment after an order is generated.</li>
-     * <li><strong>true</strong>: enables automatic payment. Payments are automatically completed.</li>
+     * <li><p><strong>false</strong> (default): disables automatic payment. After an order is generated, you must go to the &lt;props=&quot;china&quot;&gt;<a href="https://usercenter2.aliyun.com/order/list">Order Hub</a>&lt;props=&quot;intl&quot;&gt;<a href="https://usercenter2-intl.aliyun.com/order/list">Order Hub</a> to complete the payment.</p>
+     * </li>
+     * <li><p><strong>true</strong>: enables automatic payment. The system automatically pays the bill.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter takes effect only if you call the UpdateBandwidthPackage operation to upgrade a bandwidth plan.</p>
+     * <p>This parameter is required only for upgrade orders.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -23,8 +25,10 @@ public class UpdateBandwidthPackageRequest extends TeaModel {
     /**
      * <p>Specifies whether to use coupons. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong> (default)</li>
+     * <li><p><strong>true</strong>: yes.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): no.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,7 +38,7 @@ public class UpdateBandwidthPackageRequest extends TeaModel {
     public Boolean autoUseCoupon;
 
     /**
-     * <p>The bandwidth value of the bandwidth plan. Unit: Mbit/s.</p>
+     * <p>The bandwidth of the bandwidth plan. Unit: Mbit/s.</p>
      * <p>Valid values: <strong>2</strong> to <strong>2000</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -54,14 +58,17 @@ public class UpdateBandwidthPackageRequest extends TeaModel {
     public String bandwidthPackageId;
 
     /**
-     * <p>The type of bandwidth. Valid values:</p>
+     * <p>The bandwidth type. Valid values:</p>
      * <ul>
-     * <li><strong>Basic</strong></li>
-     * <li><strong>Enhanced</strong></li>
-     * <li><strong>Advanced</strong></li>
+     * <li><p><strong>Basic</strong>: standard bandwidth.</p>
+     * </li>
+     * <li><p><strong>Enhanced</strong>: enhanced bandwidth.</p>
+     * </li>
+     * <li><p><strong>Advanced</strong>: premium bandwidth.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You can upgrade <strong>Basic</strong> bandwidth to <strong>Enhanced</strong> bandwidth or downgrade Enhanced bandwidth to Basic bandwidth. You cannot change <strong>Advanced</strong> bandwidth to another type of bandwidth.</p>
+     * <p>You can upgrade a Basic bandwidth plan to Enhanced, or downgrade an <strong>Enhanced</strong> bandwidth plan to <strong>Basic</strong>. You cannot change the bandwidth type of an <strong>Advanced</strong> bandwidth plan.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -81,7 +88,8 @@ public class UpdateBandwidthPackageRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The name of the bandwidth plan. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name of the bandwidth plan.
+     * The name must be 1 to 128 characters in length, start with a letter or a Chinese character, and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>testName</p>
@@ -90,7 +98,7 @@ public class UpdateBandwidthPackageRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The region ID of the GA instance. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>The ID of the region where the Global Accelerator instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

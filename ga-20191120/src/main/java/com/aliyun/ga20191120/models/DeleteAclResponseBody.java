@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAclResponseBody extends TeaModel {
     /**
-     * <p>The ID of the ACL.</p>
+     * <p>The ID of the access control policy group.</p>
      * 
      * <strong>example:</strong>
      * <p>nacl-hp34s2h0xx1ht4nwo****</p>

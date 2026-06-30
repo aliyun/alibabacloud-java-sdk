@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteBasicAccelerateIpEndpointRelationRequest extends TeaModel {
     /**
-     * <p>The ID of the accelerated IP address.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2253393.html">ListBasicAccelerateIps</a> operation to query the ID of the accelerated IP address.</p>
+     * <p>The accelerated IP address instance ID of the basic GA instance.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/2253393.html">ListBasicAccelerateIps</a> to query the accelerated IP address instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,10 +26,10 @@ public class DeleteBasicAccelerateIpEndpointRelationRequest extends TeaModel {
     public String acceleratorId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of a request.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> value as the <strong>ClientToken</strong> value. The <strong>RequestId</strong> value is different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -39,8 +39,8 @@ public class DeleteBasicAccelerateIpEndpointRelationRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the endpoint.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2253406.html">ListBasicEndpoints</a> operation to query the ID of the endpoint.</p>
+     * <p>The endpoint ID of the basic GA instance.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/2253406.html">ListBasicEndpoints</a> to query the endpoint ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,7 +50,7 @@ public class DeleteBasicAccelerateIpEndpointRelationRequest extends TeaModel {
     public String endpointId;
 
     /**
-     * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>The region ID of the Global Accelerator instance. Set the value to <strong>ap-southeast-1</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

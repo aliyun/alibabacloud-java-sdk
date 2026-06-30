@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListEndpointGroupsResponseBody extends TeaModel {
     /**
-     * <p>The configurations of the endpoint groups.</p>
+     * <p>The list of endpoint groups.</p>
      */
     @NameInMap("EndpointGroups")
     public java.util.List<ListEndpointGroupsResponseBodyEndpointGroups> endpointGroups;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,7 +29,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A052D49E-CCC2-41DB-816C-DC3381503194</p>
@@ -92,14 +92,19 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
     }
 
     public static class ListEndpointGroupsResponseBodyEndpointGroupsEndpointConfigurations extends TeaModel {
+        /**
+         * <p>The API keys in the endpoint configuration.</p>
+         */
         @NameInMap("ApiKeys")
         public java.util.List<String> apiKeys;
 
         /**
-         * <p>Indicates whether the client IP address preservation feature is enabled. Valid values:</p>
+         * <p>Specifies whether to preserve client IP addresses.</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: Client IP preservation is enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Client IP preservation is disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -109,17 +114,19 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         public Boolean enableClientIPPreservation;
 
         /**
-         * <p>Indicates whether the proxy protocol is used to preserve client IP addresses. Valid values:</p>
+         * <p>Specifies whether to use Proxy Protocol to preserve client IP addresses.</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: Proxy Protocol is enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Proxy Protocol is disabled.</p>
+         * </li>
          * </ul>
          */
         @NameInMap("EnableProxyProtocol")
         public Boolean enableProxyProtocol;
 
         /**
-         * <p>The IP address or domain name of the endpoint.</p>
+         * <p>The endpoint\&quot;s IP address, domain name, or instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>47.1.XX.XX</p>
@@ -137,7 +144,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         public String endpointId;
 
         /**
-         * <p>The port that is used to monitor latency.</p>
+         * <p>The port used for latency monitoring probes.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -146,10 +153,12 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         public Integer probePort;
 
         /**
-         * <p>The protocol that is used to monitor latency.</p>
+         * <p>The protocol that is used for latency monitoring probes.</p>
          * <ul>
-         * <li><strong>icmp</strong></li>
-         * <li><strong>tcp</strong></li>
+         * <li><p><strong>icmp</strong>: ICMP</p>
+         * </li>
+         * <li><p><strong>tcp</strong>: TCP</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -159,6 +168,8 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         public String probeProtocol;
 
         /**
+         * <p>The service provider.</p>
+         * 
          * <strong>example:</strong>
          * <p>BAILIAN</p>
          */
@@ -166,7 +177,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         public String provider;
 
         /**
-         * <p>The private IP address of the ENI.</p>
+         * <p>The private IP address of the elastic network interface.</p>
          * 
          * <strong>example:</strong>
          * <p>172.168.XX.XX</p>
@@ -175,18 +186,28 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         public String subAddress;
 
         /**
-         * <p>The type of the endpoint. Valid values:</p>
+         * <p>The type of endpoint. Valid values:</p>
          * <ul>
-         * <li><strong>Domain</strong>: a custom domain name.</li>
-         * <li><strong>Ip</strong>: a custom IP address.</li>
-         * <li><strong>IpTarget</strong>: a custom private IP address.</li>
-         * <li><strong>PublicIp</strong>: a public IP address provided by Alibaba Cloud.</li>
-         * <li><strong>ECS</strong>: an Elastic Compute Service (ECS) instance.</li>
-         * <li><strong>SLB</strong>: a Server Load Balancer (SLB) instance.</li>
-         * <li><strong>ALB</strong>: an Application Load Balancer (ALB) instance.</li>
-         * <li><strong>OSS</strong>: an Object Storage Service (OSS) bucket.</li>
-         * <li><strong>ENI</strong>: an elastic network interface (ENI).</li>
-         * <li><strong>NLB</strong>: a Network Load Balancer (NLB) instance.</li>
+         * <li><p><strong>Domain</strong>: a custom domain name.</p>
+         * </li>
+         * <li><p><strong>Ip</strong>: a custom IP address.</p>
+         * </li>
+         * <li><p><strong>IpTarget</strong>: a custom private IP address.</p>
+         * </li>
+         * <li><p><strong>PublicIp</strong>: an Alibaba Cloud public IP address.</p>
+         * </li>
+         * <li><p><strong>ECS</strong>: an Alibaba Cloud ECS instance.</p>
+         * </li>
+         * <li><p><strong>SLB</strong>: an Alibaba Cloud SLB instance.</p>
+         * </li>
+         * <li><p><strong>ALB</strong>: an Alibaba Cloud ALB instance.</p>
+         * </li>
+         * <li><p><strong>OSS</strong>: an Alibaba Cloud OSS bucket.</p>
+         * </li>
+         * <li><p><strong>ENI</strong>: an Alibaba Cloud elastic network interface.</p>
+         * </li>
+         * <li><p><strong>NLB</strong>: an Alibaba Cloud NLB instance.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -196,13 +217,13 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The IDs of vSwitches that are deployed in the VPC.</p>
+         * <p>A list of vSwitches in the VPC.</p>
          */
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The ID of the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-8vbhucmd5b2q2fpqqu****</p>
@@ -334,9 +355,21 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         @NameInMap("CIDR")
         public String CIDR;
 
+        /**
+         * <p>The private IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.19.115.37</p>
+         */
         @NameInMap("PrivateIp")
         public String privateIp;
 
+        /**
+         * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gsw-0jl6tmriqep1ga***</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
@@ -415,14 +448,20 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
 
     public static class ListEndpointGroupsResponseBodyEndpointGroupsServiceManagedInfos extends TeaModel {
         /**
-         * <p>The name of the action that was performed on the managed instance. Valid values:</p>
+         * <p>The name of the action on the managed instance. Valid values:</p>
          * <ul>
-         * <li><strong>Create:</strong> Create an instance.</li>
-         * <li><strong>Update:</strong> Update the current instance.</li>
-         * <li><strong>Delete:</strong> Delete the current instance.</li>
-         * <li><strong>Associate:</strong> Reference the current instance.</li>
-         * <li><strong>UserUnmanaged:</strong> Unmanage the instance.</li>
-         * <li><strong>CreateChild:</strong> Create a child resource in the current instance.</li>
+         * <li><p><strong>Create</strong>: creates an instance.</p>
+         * </li>
+         * <li><p><strong>Update</strong>: updates the instance.</p>
+         * </li>
+         * <li><p><strong>Delete</strong>: deletes the instance.</p>
+         * </li>
+         * <li><p><strong>Associate</strong>: associates the instance with other resources.</p>
+         * </li>
+         * <li><p><strong>UserUnmanaged</strong>: Reverts the instance to an unmanaged state.</p>
+         * </li>
+         * <li><p><strong>CreateChild</strong>: creates a child resource for the instance.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -434,16 +473,23 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         /**
          * <p>The type of the child resource. Valid values:</p>
          * <ul>
-         * <li><strong>Listener:</strong> listener.</li>
-         * <li><strong>IpSet:</strong> acceleration region.</li>
-         * <li><strong>EndpointGroup:</strong> endpoint group.</li>
-         * <li><strong>ForwardingRule:</strong> forwarding rule.</li>
-         * <li><strong>Endpoint:</strong> endpoint.</li>
-         * <li><strong>EndpointGroupDestination:</strong> the protocol mapping of an endpoint group associated with a custom routing listener.</li>
-         * <li><strong>EndpointPolicy:</strong> the traffic policy of an endpoint associated with a custom routing listener.</li>
+         * <li><p><strong>Listener</strong>: a listener.</p>
+         * </li>
+         * <li><p><strong>IpSet</strong>: an acceleration region.</p>
+         * </li>
+         * <li><p><strong>EndpointGroup</strong>: an endpoint group.</p>
+         * </li>
+         * <li><p><strong>ForwardingRule</strong>: a forwarding rule.</p>
+         * </li>
+         * <li><p><strong>Endpoint</strong>: an endpoint.</p>
+         * </li>
+         * <li><p><strong>EndpointGroupDestination</strong>: a protocol mapping for an endpoint group of a custom routing listener.</p>
+         * </li>
+         * <li><p><strong>EndpointPolicy</strong>: a traffic policy for an endpoint of a custom routing listener.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> This parameter takes effect only if you set <strong>Action</strong> to <strong>CreateChild</strong>.</p>
+         * <p>This parameter is returned only if <strong>Action</strong> is set to <strong>CreateChild</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -453,10 +499,12 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         public String childType;
 
         /**
-         * <p>Indicates whether the specified actions are managed. Valid values:</p>
+         * <p>Specifies whether the action is managed. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The specified actions are managed, and users cannot perform the specified actions on the managed instance.</li>
-         * <li><strong>false</strong>: The specified actions are not managed, and users can perform the specified actions on the managed instance.</li>
+         * <li><p><strong>true</strong>: The action is managed. You cannot perform the specified action on the managed instance.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The action is not managed. You can perform the specified action on the managed instance.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -498,7 +546,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
 
     public static class ListEndpointGroupsResponseBodyEndpointGroupsTags extends TeaModel {
         /**
-         * <p>The tag key of the endpoint group.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>test-key</p>
@@ -507,7 +555,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the endpoint group.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>test-value</p>
@@ -540,7 +588,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
 
     public static class ListEndpointGroupsResponseBodyEndpointGroups extends TeaModel {
         /**
-         * <p>The ID of the GA instance.</p>
+         * <p>The ID of the Global Accelerator instance.</p>
          * 
          * <strong>example:</strong>
          * <p>ga-bp1odcab8tmno0hdq****</p>
@@ -558,7 +606,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The configurations of the endpoints in the endpoint group.</p>
+         * <p>A list of endpoint configurations.</p>
          */
         @NameInMap("EndpointConfigurations")
         public java.util.List<ListEndpointGroupsResponseBodyEndpointGroupsEndpointConfigurations> endpointConfigurations;
@@ -573,13 +621,17 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         public String endpointGroupId;
 
         /**
-         * <p>The endpoint group IP addresses.</p>
+         * <p>A list of public egress IP addresses of the endpoint group.</p>
+         * <blockquote>
+         * <p>Notice: </p>
+         * </blockquote>
+         * <p>For endpoint groups connected to private backend services, the console shows only the private source IP addresses, not the public ones. If the network connection type of a backend service changes (for example, from private to public), monitor the source IP addresses and update the backend service\&quot;s access control list (ACL).</p>
          */
         @NameInMap("EndpointGroupIpList")
         public java.util.List<String> endpointGroupIpList;
 
         /**
-         * <p>The ID of the region where the endpoint group is created.</p>
+         * <p>The ID of the region where the endpoint group is deployed.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -590,8 +642,10 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         /**
          * <p>The type of the endpoint group. Valid values:</p>
          * <ul>
-         * <li><strong>default</strong>: a default endpoint group</li>
-         * <li><strong>virtual:</strong> a virtual endpoint group.</li>
+         * <li><p><strong>default</strong>: a default endpoint group.</p>
+         * </li>
+         * <li><p><strong>virtual</strong>: a virtual endpoint group.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -601,32 +655,56 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         public String endpointGroupType;
 
         /**
-         * <p>The endpoint group IP addresses to be confirmed after the GA instance is upgraded.</p>
+         * <p>The list of new IP addresses in the endpoint group that require confirmation after a Global Accelerator instance is upgraded.</p>
          */
         @NameInMap("EndpointGroupUnconfirmedIpList")
         public java.util.List<String> endpointGroupUnconfirmedIpList;
 
+        /**
+         * <p>The IP protocol of the backend service. Valid values:</p>
+         * <ul>
+         * <li><p><strong>IPv4</strong> (default): Connections to the backend service use IPv4.</p>
+         * </li>
+         * <li><p><strong>IPv6</strong>: Connections to the backend service use IPv6.</p>
+         * </li>
+         * <li><p><strong>ProtocolAffinity</strong>: The connection to the backend service uses the same IP protocol as the client request.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv4</p>
+         */
         @NameInMap("EndpointIpVersion")
         public String endpointIpVersion;
 
+        /**
+         * <p>A list of private IP addresses of the endpoints.</p>
+         */
         @NameInMap("EndpointPrivateIpList")
         public java.util.List<ListEndpointGroupsResponseBodyEndpointGroupsEndpointPrivateIpList> endpointPrivateIpList;
 
         /**
-         * <p>The protocol version that is used by the backend service. Valid values:</p>
+         * <p>The version of the backend service protocol. Valid values:</p>
          * <ul>
-         * <li><strong>HTTP1.1</strong></li>
-         * <li><strong>HTTP2</strong></li>
+         * <li><p><strong>HTTP1.1</strong>: HTTP/1.1</p>
+         * </li>
+         * <li><p><strong>HTTP2</strong>: HTTP/2</p>
+         * </li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP1.1</p>
          */
         @NameInMap("EndpointProtocolVersion")
         public String endpointProtocolVersion;
 
         /**
-         * <p>The protocol that is used by the backend server.</p>
+         * <p>The protocol of the backend service. Valid values:</p>
          * <ul>
-         * <li><strong>HTTP</strong></li>
-         * <li><strong>HTTPS</strong></li>
+         * <li><p><strong>HTTP</strong>: HTTP</p>
+         * </li>
+         * <li><p><strong>HTTPS</strong>: HTTPS</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -636,16 +714,18 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         public String endpointRequestProtocol;
 
         /**
-         * <p>The IDs of the forwarding rules that are associated with the endpoint group.</p>
+         * <p>The IDs of forwarding rules associated with the endpoint group.</p>
          */
         @NameInMap("ForwardingRuleIds")
         public java.util.List<String> forwardingRuleIds;
 
         /**
-         * <p>Indicates whether the health check feature is enabled.</p>
+         * <p>Specifies whether to enable health checks.</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: Health checks are enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Health checks are disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -654,11 +734,17 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         @NameInMap("HealthCheckEnabled")
         public Boolean healthCheckEnabled;
 
+        /**
+         * <p>The domain name used for health checks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.taobao.com">www.taobao.com</a></p>
+         */
         @NameInMap("HealthCheckHost")
         public String healthCheckHost;
 
         /**
-         * <p>The interval at which you want to perform health checks. Unit: seconds.</p>
+         * <p>The health check interval, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -667,7 +753,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         public Integer healthCheckIntervalSeconds;
 
         /**
-         * <p>The path that is used for health checks.</p>
+         * <p>The health check path.</p>
          * 
          * <strong>example:</strong>
          * <p>/healthcheck</p>
@@ -676,7 +762,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         public String healthCheckPath;
 
         /**
-         * <p>The port that is used for health checks.</p>
+         * <p>The port used for health checks.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -685,11 +771,14 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         public Integer healthCheckPort;
 
         /**
-         * <p>The protocol over which health check requests are sent. Valid values:</p>
+         * <p>The protocol used for health checks.</p>
          * <ul>
-         * <li><strong>tcp</strong> or <strong>TCP</strong></li>
-         * <li><strong>http</strong> or <strong>HTTP</strong></li>
-         * <li><strong>https</strong> or <strong>HTTPS</strong></li>
+         * <li><p><strong>tcp</strong> or <strong>TCP</strong>: TCP</p>
+         * </li>
+         * <li><p><strong>http</strong> or <strong>HTTP</strong>: HTTP</p>
+         * </li>
+         * <li><p><strong>https</strong> or <strong>HTTPS</strong>: HTTPS</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -717,15 +806,15 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The port mapping.</p>
+         * <p>The port mappings.</p>
          */
         @NameInMap("PortOverrides")
         public java.util.List<ListEndpointGroupsResponseBodyEndpointGroupsPortOverrides> portOverrides;
 
         /**
-         * <p>The service that manages the instance.</p>
+         * <p>The ID of the service that manages the instance.</p>
          * <blockquote>
-         * <p> This parameter takes effect only if the value of <strong>Service managed</strong> is <strong>true</strong>.</p>
+         * <p>This parameter is returned only if <strong>ServiceManaged</strong> is <strong>true</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -735,10 +824,12 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         public String serviceId;
 
         /**
-         * <p>Indicates whether the GA instance is managed. Valid values:</p>
+         * <p>Specifies whether the instance is managed. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: The instance is a managed instance.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The instance is not a managed instance.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -748,11 +839,13 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         public Boolean serviceManaged;
 
         /**
-         * <p>The actions that users can perform on the managed instance.</p>
+         * <p>The actions that you can perform on the managed instance.</p>
          * <blockquote>
          * <ul>
-         * <li>This parameter takes effect only if the value of <strong>ServiceManaged</strong> is <strong>true</strong>.</li>
-         * <li>Users can perform only specific actions on a managed instance.</li>
+         * <li><p>This parameter is returned only if <strong>ServiceManaged</strong> is <strong>true</strong>.</p>
+         * </li>
+         * <li><p>Your permissions to operate on a managed instance are restricted.</p>
+         * </li>
          * </ul>
          * </blockquote>
          */
@@ -760,12 +853,16 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         public java.util.List<ListEndpointGroupsResponseBodyEndpointGroupsServiceManagedInfos> serviceManagedInfos;
 
         /**
-         * <p>The status of the endpoint group. Valid values:</p>
+         * <p>The state of the endpoint group.</p>
          * <ul>
-         * <li><strong>init:</strong> The endpoint group is being initialized.</li>
-         * <li><strong>active:</strong> The endpoint group is running normally.</li>
-         * <li>**updating:**The endpoint group is being updated.</li>
-         * <li><strong>deleteing:</strong> The endpoint group is being deleted.</li>
+         * <li><p><strong>init</strong>: The endpoint group is initializing.</p>
+         * </li>
+         * <li><p><strong>active</strong>: The endpoint group is stable.</p>
+         * </li>
+         * <li><p><strong>updating</strong>: The endpoint group is updating.</p>
+         * </li>
+         * <li><p><strong>deleting</strong>: The endpoint group is deleting.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -775,13 +872,13 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The tag of the endpoint group.</p>
+         * <p>The tags attached to the endpoint group.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListEndpointGroupsResponseBodyEndpointGroupsTags> tags;
 
         /**
-         * <p>The number of consecutive failed health checks that must occur before an endpoint is considered unhealthy.</p>
+         * <p>The number of consecutive failed health checks required to mark an endpoint as unhealthy.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -790,10 +887,10 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         public Integer thresholdCount;
 
         /**
-         * <p>The value of the traffic distribution ratio. If a listener is associated with multiple endpoint groups, you can set this parameter to distribute different percentages of traffic to the endpoint groups.</p>
+         * <p>The percentage of traffic routed to the endpoint group. This parameter applies only if a listener is associated with multiple endpoint groups.</p>
          * 
          * <strong>example:</strong>
-         * <p>20</p>
+         * <p>100</p>
          */
         @NameInMap("TrafficPercentage")
         public Integer trafficPercentage;

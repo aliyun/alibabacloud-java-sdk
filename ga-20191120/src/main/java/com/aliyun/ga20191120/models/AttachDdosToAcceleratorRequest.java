@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AttachDdosToAcceleratorRequest extends TeaModel {
     /**
-     * <p>The ID of the GA instance with which the Anti-DDoS Pro/Premium instance is associated.</p>
+     * <p>The ID of the Global Accelerator (GA) instance with which you want to associate the Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,11 +14,14 @@ public class AttachDdosToAcceleratorRequest extends TeaModel {
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
+    /**
+     * <p>The list of Anti-DDoS Pro or Anti-DDoS Premium instances to associate with the Global Accelerator (GA) instance.</p>
+     */
     @NameInMap("DdosConfigList")
     public java.util.List<AttachDdosToAcceleratorRequestDdosConfigList> ddosConfigList;
 
     /**
-     * <p>The ID of the Anti-DDoS Pro/Premium instance to be associated with the GA instance.</p>
+     * <p>The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance to associate with the Global Accelerator (GA) instance.</p>
      * 
      * <strong>example:</strong>
      * <p>ddoscoo-cn-zz11vq7j****</p>
@@ -28,10 +31,12 @@ public class AttachDdosToAcceleratorRequest extends TeaModel {
     public String ddosId;
 
     /**
-     * <p>The region where the Anti-DDoS Pro/Premium instance is deployed. Valid values:</p>
+     * <p>The region of the Anti-DDoS Pro or Anti-DDoS Premium instance. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou</strong>: regions in the Chinese mainland</li>
-     * <li><strong>ap-southeast-1</strong>: regions outside the Chinese mainland</li>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,11 +46,23 @@ public class AttachDdosToAcceleratorRequest extends TeaModel {
     @Deprecated
     public String ddosRegionId;
 
+    /**
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: performs a dry run without actually associating the instances. The system checks the required parameters, request syntax, and business limits. If the check fails, the corresponding error is returned. If the check passes, an HTTP 2xx status code is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): sends the request. After the request passes the check, an HTTP 2xx status code is returned and the operation is performed.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>The region ID of the Global Accelerator (GA) instance. Set the value to <strong>cn-hangzhou</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -109,9 +126,27 @@ public class AttachDdosToAcceleratorRequest extends TeaModel {
     }
 
     public static class AttachDdosToAcceleratorRequestDdosConfigList extends TeaModel {
+        /**
+         * <p>The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance to associate with the Global Accelerator (GA) instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-zz11vq7j****</p>
+         */
         @NameInMap("DdosId")
         public String ddosId;
 
+        /**
+         * <p>The region of the Anti-DDoS Pro or Anti-DDoS Premium instance. Valid values:</p>
+         * <ul>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("DdosRegionId")
         public String ddosRegionId;
 

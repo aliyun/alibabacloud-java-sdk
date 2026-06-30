@@ -4,11 +4,14 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class GetGlobalAcceleratorResourcesResponseBody extends TeaModel {
+    /**
+     * <p>List of linked instances.</p>
+     */
     @NameInMap("AssociatedResources")
     public java.util.List<GetGlobalAcceleratorResourcesResponseBodyAssociatedResources> associatedResources;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>DE77A7F3-3B74-41C0-A5BC-CAFD188C28B6</p>
@@ -39,6 +42,8 @@ public class GetGlobalAcceleratorResourcesResponseBody extends TeaModel {
 
     public static class GetGlobalAcceleratorResourcesResponseBodyAssociatedResources extends TeaModel {
         /**
+         * <p>Instance ID of Alibaba Cloud Global Accelerator (GA).</p>
+         * 
          * <strong>example:</strong>
          * <p>ga-bp1odcab8tmno0hdq****</p>
          */
@@ -46,6 +51,12 @@ public class GetGlobalAcceleratorResourcesResponseBody extends TeaModel {
         public String acceleratorId;
 
         /**
+         * <p>Association pattern:  </p>
+         * <ul>
+         * <li><strong>Managed</strong>: Managed mode, where GA restricts user operations based on management policies.  </li>
+         * <li><strong>Associated</strong> (default): Loose coupling association, where GA does not restrict user operations; WAF uses loose coupling.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Associated</p>
          */
@@ -53,6 +64,8 @@ public class GetGlobalAcceleratorResourcesResponseBody extends TeaModel {
         public String associatedMode;
 
         /**
+         * <p>ID of the linked instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>waf_v2_public_cn-x0r****gr1i</p>
          */
@@ -60,6 +73,8 @@ public class GetGlobalAcceleratorResourcesResponseBody extends TeaModel {
         public String associatedResourceId;
 
         /**
+         * <p>Region ID of the linked instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -67,6 +82,8 @@ public class GetGlobalAcceleratorResourcesResponseBody extends TeaModel {
         public String associatedResourceRegionId;
 
         /**
+         * <p>Resource type of the linked instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>WAF</p>
          */
@@ -74,6 +91,18 @@ public class GetGlobalAcceleratorResourcesResponseBody extends TeaModel {
         public String associatedResourceType;
 
         /**
+         * <p>Status of the association between the Alibaba Cloud Global Accelerator (GA) instance and other cloud product resources.  </p>
+         * <ul>
+         * <li><p><strong>active</strong>: The resource is active.  </p>
+         * </li>
+         * <li><p><strong>binding</strong>: The resource is being attached.  </p>
+         * </li>
+         * <li><p><strong>unBinding</strong>: The resource is being detached.  </p>
+         * </li>
+         * <li><p><strong>wafRelease</strong>: The WAF instance has been released.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>active</p>
          */

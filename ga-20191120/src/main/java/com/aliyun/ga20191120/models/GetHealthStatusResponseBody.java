@@ -13,9 +13,12 @@ public class GetHealthStatusResponseBody extends TeaModel {
     /**
      * <p>The health status of endpoints and endpoint groups. Valid values:</p>
      * <ul>
-     * <li><strong>normal</strong></li>
-     * <li><strong>abnormal</strong></li>
-     * <li><strong>partiallyAbnormal</strong></li>
+     * <li><p><strong>normal</strong></p>
+     * </li>
+     * <li><p><strong>abnormal</strong></p>
+     * </li>
+     * <li><p><strong>partiallyAbnormal</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -101,11 +104,11 @@ public class GetHealthStatusResponseBody extends TeaModel {
         /**
          * <p>The health check details of the endpoint.</p>
          * <blockquote>
-         * <p> This parameter is unavailable.</p>
+         * <p>This parameter is unavailable.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>null</p>
+         * <p>无</p>
          */
         @NameInMap("HealthDetail")
         public String healthDetail;
@@ -113,9 +116,12 @@ public class GetHealthStatusResponseBody extends TeaModel {
         /**
          * <p>The health status of the endpoint. Valid values:</p>
          * <ul>
-         * <li><strong>init:</strong> The endpoint is being initialized.</li>
-         * <li><strong>normal:</strong> The endpoint is normal.</li>
-         * <li><strong>abnormal:</strong> The endpoint is abnormal.</li>
+         * <li><p><strong>init:</strong> The endpoint is being initialized.</p>
+         * </li>
+         * <li><p><strong>normal:</strong> The endpoint is normal.</p>
+         * </li>
+         * <li><p><strong>abnormal:</strong> The endpoint is abnormal.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -136,15 +142,24 @@ public class GetHealthStatusResponseBody extends TeaModel {
         /**
          * <p>The type of the endpoint. Valid values:</p>
          * <ul>
-         * <li><strong>Domain:</strong> a custom domain name.</li>
-         * <li><strong>Ip:</strong> a custom IP address.</li>
-         * <li><strong>PublicIp:</strong> a public IP address provided by Alibaba Cloud.</li>
-         * <li><strong>ECS:</strong> an Elastic Compute Service (ECS) instance.</li>
-         * <li><strong>SLB:</strong> a Classic Load Balancer (CLB) instance.</li>
-         * <li><strong>ALB:</strong> an Application Load Balancer (ALB) instance.</li>
-         * <li><strong>OSS:</strong> an Object Storage Service (OSS) bucket.</li>
-         * <li><strong>ENI:</strong> an elastic network interface (ENI).</li>
-         * <li><strong>NLB:</strong> a Network Load Balancer (NLB) instance.</li>
+         * <li><p><strong>Domain:</strong> a custom domain name.</p>
+         * </li>
+         * <li><p><strong>Ip:</strong> a custom IP address.</p>
+         * </li>
+         * <li><p><strong>PublicIp:</strong> a public IP address provided by Alibaba Cloud.</p>
+         * </li>
+         * <li><p><strong>ECS:</strong> an Elastic Compute Service (ECS) instance.</p>
+         * </li>
+         * <li><p><strong>SLB:</strong> a Classic Load Balancer (CLB) instance.</p>
+         * </li>
+         * <li><p><strong>ALB:</strong> an Application Load Balancer (ALB) instance.</p>
+         * </li>
+         * <li><p><strong>OSS:</strong> an Object Storage Service (OSS) bucket.</p>
+         * </li>
+         * <li><p><strong>ENI:</strong> an elastic network interface (ENI).</p>
+         * </li>
+         * <li><p><strong>NLB:</strong> a Network Load Balancer (NLB) instance.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -221,8 +236,10 @@ public class GetHealthStatusResponseBody extends TeaModel {
         /**
          * <p>The type of the endpoint group. Valid values:</p>
          * <ul>
-         * <li><strong>default:</strong> the default endpoint group.</li>
-         * <li><strong>virtual:</strong> a virtual endpoint group.</li>
+         * <li><p><strong>default:</strong> the default endpoint group.</p>
+         * </li>
+         * <li><p><strong>virtual:</strong> a virtual endpoint group.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -246,10 +263,14 @@ public class GetHealthStatusResponseBody extends TeaModel {
         /**
          * <p>The health status of the endpoint group. Valid values:</p>
          * <ul>
-         * <li><strong>init:</strong> The endpoint group is being initialized.</li>
-         * <li><strong>normal:</strong> The endpoint group is normal.</li>
-         * <li><strong>abnormal:</strong> The endpoint group is abnormal.</li>
-         * <li><strong>partiallyAbnormal:</strong> The endpoint group is partially abnormal.</li>
+         * <li><p><strong>init:</strong> The endpoint group is being initialized.</p>
+         * </li>
+         * <li><p><strong>normal:</strong> The endpoint group is normal.</p>
+         * </li>
+         * <li><p><strong>abnormal:</strong> The endpoint group is abnormal.</p>
+         * </li>
+         * <li><p><strong>partiallyAbnormal:</strong> The endpoint group is partially abnormal.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

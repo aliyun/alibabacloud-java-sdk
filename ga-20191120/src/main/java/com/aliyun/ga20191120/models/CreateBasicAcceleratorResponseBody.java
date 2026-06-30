@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateBasicAcceleratorResponseBody extends TeaModel {
     /**
-     * <p>The ID of the basic GA instance.</p>
+     * <p>The instance ID of the basic Alibaba Cloud Global Accelerator (GA) instance.</p>
      * 
      * <strong>example:</strong>
      * <p>ga-bp17frjjh0udz4qz****</p>
@@ -15,8 +15,9 @@ public class CreateBasicAcceleratorResponseBody extends TeaModel {
 
     /**
      * <p>The order ID.</p>
-     * <p>This parameter is returned only if ChargeType is set to PREPAY.</p>
-     * <p>If <strong>AutoPay</strong> is set to <strong>false</strong>, go to <a href="https://usercenter2-intl.aliyun.com/order/list">Order Center</a> to complete the payment after an order is generated.</p>
+     * <p>This parameter is returned only when ChargeType is set to PREPAY (upfront).</p>
+     * <p>If <strong>AutoPay</strong> is set to <strong>false</strong>, which means automatic payment of the bill is not enabled, go to the &lt;props=&quot;china&quot;&gt;<a href="https://usercenter2.aliyun.com/order/list">Order Center</a>
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://usercenter2-intl.aliyun.com/order/list">Order Center</a> to complete the payment.</p>
      * 
      * <strong>example:</strong>
      * <p>2082574365</p>
@@ -25,7 +26,7 @@ public class CreateBasicAcceleratorResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F591955F-5CB5-4CCE-A75D-17CF2085CE22</p>

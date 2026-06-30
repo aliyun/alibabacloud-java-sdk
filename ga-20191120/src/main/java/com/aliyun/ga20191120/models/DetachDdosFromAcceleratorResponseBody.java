@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DetachDdosFromAcceleratorResponseBody extends TeaModel {
     /**
-     * <p>The ID of the Anti-DDoS Pro/Premium instance that was disassociated from the GA instance.</p>
+     * <p>The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance that is detached from the Global Accelerator instance.</p>
      * 
      * <strong>example:</strong>
      * <p>ddoscoo-cn-zz11vq7j****</p>
@@ -15,7 +15,7 @@ public class DetachDdosFromAcceleratorResponseBody extends TeaModel {
     public String ddosId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</p>

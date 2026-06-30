@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCustomRoutingEndpointTrafficPoliciesRequest extends TeaModel {
     /**
-     * <p>The ID of the GA instance to which the traffic policies belong.</p>
+     * <p>The instance ID of the Alibaba Cloud Global Accelerator (GA) instance for which you want to query traffic policies.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListCustomRoutingEndpointTrafficPoliciesRequest extends TeaModel {
     public String acceleratorId;
 
     /**
-     * <p>The IP address of the traffic destination.</p>
+     * <p>The IP address of the traffic policy destination.</p>
      * 
      * <strong>example:</strong>
      * <p>10.0.XX.XX</p>
@@ -24,7 +24,7 @@ public class ListCustomRoutingEndpointTrafficPoliciesRequest extends TeaModel {
     public String address;
 
     /**
-     * <p>The ID of the endpoint group to which the traffic policies belong.</p>
+     * <p>The ID of the endpoint group for which you want to query traffic policies.</p>
      * 
      * <strong>example:</strong>
      * <p>lsr-bp1bpn0kn908w4nbw****</p>
@@ -33,7 +33,7 @@ public class ListCustomRoutingEndpointTrafficPoliciesRequest extends TeaModel {
     public String endpointGroupId;
 
     /**
-     * <p>The ID of the endpoint to which the traffic policies belong.</p>
+     * <p>The ID of the endpoint for which you want to query traffic policies.</p>
      * 
      * <strong>example:</strong>
      * <p>ep-bp16jdc00bhe97sr5****</p>
@@ -42,7 +42,7 @@ public class ListCustomRoutingEndpointTrafficPoliciesRequest extends TeaModel {
     public String endpointId;
 
     /**
-     * <p>The ID of the listener to which the traffic policies belong.</p>
+     * <p>The ID of the listener for which you want to query traffic policies.</p>
      * 
      * <strong>example:</strong>
      * <p>lsr-bp1bpn0kn908w4nbw****</p>
@@ -51,7 +51,7 @@ public class ListCustomRoutingEndpointTrafficPoliciesRequest extends TeaModel {
     public String listenerId;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the list. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -60,7 +60,7 @@ public class ListCustomRoutingEndpointTrafficPoliciesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: <strong>1 to 50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page for a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -69,7 +69,7 @@ public class ListCustomRoutingEndpointTrafficPoliciesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the Global Accelerator (GA) instance. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>The region ID of the Alibaba Cloud Global Accelerator (GA) instance. Set the value to <strong>ap-southeast-1</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

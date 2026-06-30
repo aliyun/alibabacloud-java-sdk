@@ -15,7 +15,7 @@ public class DescribeListenerRequest extends TeaModel {
     public String listenerId;
 
     /**
-     * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>The ID of the region where the Alibaba Cloud Global Accelerator (GA) instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

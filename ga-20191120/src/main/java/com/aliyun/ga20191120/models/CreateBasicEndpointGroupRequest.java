@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateBasicEndpointGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the basic GA instance.</p>
+     * <p>The instance ID of the basic Alibaba Cloud Global Accelerator (GA).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,9 +16,9 @@ public class CreateBasicEndpointGroupRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> value as the <strong>ClientToken</strong> value. The <strong>RequestId</strong> value is different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class CreateBasicEndpointGroupRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the endpoint group.</p>
+     * <p>The description of the endpoint group for the basic Alibaba Cloud Global Accelerator (GA) instance.</p>
      * <p>The description can be up to 200 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class CreateBasicEndpointGroupRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The endpoint address.</p>
+     * <p>The address of the endpoint.</p>
      * 
      * <strong>example:</strong>
      * <p>eni-bp1a05txelswuj8g****</p>
@@ -47,8 +47,8 @@ public class CreateBasicEndpointGroupRequest extends TeaModel {
     public String endpointAddress;
 
     /**
-     * <p>The ID of the region to which the endpoint group belongs.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2253223.html">ListAvailableBusiRegions</a> operation to query the region ID.</p>
+     * <p>The region ID of the endpoint group for the basic Alibaba Cloud Global Accelerator (GA) instance.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/2253223.html">ListAvailableBusiRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,10 +59,10 @@ public class CreateBasicEndpointGroupRequest extends TeaModel {
 
     /**
      * <p>The secondary address of the endpoint.</p>
-     * <p>You must specify this parameter when the accelerated IP address is associated with the secondary private IP address of an Elastic Compute Service (ECS) instance or an elastic network interface (ENI).</p>
+     * <p>Specify this parameter when the accelerated IP address is associated with a secondary private IP address of an ECS instance or an ENI.</p>
      * <ul>
-     * <li>When the endpoint type is <strong>ECS</strong>, you can set <strong>EndpointSubAddress</strong> to the secondary private IP address of the primary ENI. If the parameter is left empty, the primary private IP address of the primary ENI is used.</li>
-     * <li>If the endpoint type is <strong>ENI</strong>, you can set <strong>EndpointSubAddress</strong> to the secondary private IP address of the secondary ENI. If the parameter is left empty, the primary private IP address of the secondary ENI is used.</li>
+     * <li>If the endpoint type is <strong>ECS</strong>, EndpointSubAddress can be set to a secondary private IP address of the primary ENI. If this parameter is left empty, the primary private IP address of the primary ENI is used.</li>
+     * <li>If the endpoint type is <strong>ENI</strong>, EndpointSubAddress can be set to a secondary private IP address of the secondary ENI. If this parameter is left empty, the primary private IP address of the secondary ENI is used.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -72,11 +72,11 @@ public class CreateBasicEndpointGroupRequest extends TeaModel {
     public String endpointSubAddress;
 
     /**
-     * <p>The type of the endpoint. Valid values:</p>
+     * <p>The endpoint type. Valid values:</p>
      * <ul>
-     * <li><strong>ENI</strong></li>
-     * <li><strong>SLB</strong></li>
-     * <li><strong>ECS</strong></li>
+     * <li><strong>ENI</strong>: elastic network interface (ENI).</li>
+     * <li><strong>SLB</strong>: Classic Load Balancer (CLB) instance.</li>
+     * <li><strong>ECS</strong>: ECS instance.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -86,8 +86,8 @@ public class CreateBasicEndpointGroupRequest extends TeaModel {
     public String endpointType;
 
     /**
-     * <p>The name of the endpoint group.</p>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name of the endpoint group for the basic Alibaba Cloud Global Accelerator (GA) instance.</p>
+     * <p>The name must be 1 to 128 characters in length and must start with a letter or a Chinese character. The name can contain digits, periods (.), underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>group1</p>
@@ -96,7 +96,7 @@ public class CreateBasicEndpointGroupRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The region ID of the GA instance. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>The region ID of the basic Alibaba Cloud Global Accelerator (GA) instance. Set the value to <strong>ap-southeast-1</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

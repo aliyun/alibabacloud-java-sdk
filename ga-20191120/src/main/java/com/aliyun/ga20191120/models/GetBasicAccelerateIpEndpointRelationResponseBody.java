@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetBasicAccelerateIpEndpointRelationResponseBody extends TeaModel {
     /**
-     * <p>The ID of the accelerated IP address.</p>
+     * <p>The accelerated IP address instance ID of the basic Global Accelerator (GA) instance.</p>
      * 
      * <strong>example:</strong>
      * <p>gaip-bp1****</p>
@@ -14,7 +14,7 @@ public class GetBasicAccelerateIpEndpointRelationResponseBody extends TeaModel {
     public String accelerateIpId;
 
     /**
-     * <p>The ID of the basic GA instance.</p>
+     * <p>The instance ID of the basic Global Accelerator (GA) instance.</p>
      * 
      * <strong>example:</strong>
      * <p>ga-bp11v53zfftax68b0daws</p>
@@ -32,7 +32,7 @@ public class GetBasicAccelerateIpEndpointRelationResponseBody extends TeaModel {
     public String endpointAddress;
 
     /**
-     * <p>The ID of the endpoint.</p>
+     * <p>The endpoint ID of the basic Global Accelerator (GA) instance.</p>
      * 
      * <strong>example:</strong>
      * <p>ep-bp14sz7ftcwwjgrdm****</p>
@@ -41,7 +41,7 @@ public class GetBasicAccelerateIpEndpointRelationResponseBody extends TeaModel {
     public String endpointId;
 
     /**
-     * <p>The name of the endpoint.</p>
+     * <p>The name of the endpoint of the basic Global Accelerator (GA) instance.</p>
      * 
      * <strong>example:</strong>
      * <p>ep01</p>
@@ -51,11 +51,11 @@ public class GetBasicAccelerateIpEndpointRelationResponseBody extends TeaModel {
 
     /**
      * <p>The secondary address of the endpoint.</p>
-     * <p>This parameter is returned if the endpoint type is <strong>ECS</strong>, <strong>ENI</strong>, or <strong>NLB</strong>.</p>
+     * <p>This parameter is returned when the endpoint type attached to the accelerated IP address is <strong>ECS</strong>, <strong>ENI</strong>, or <strong>NLB</strong>.</p>
      * <ul>
-     * <li>If the endpoint type is <strong>ECS</strong>, <strong>EndpointSubAddress</strong> returns the primary or secondary private IP address of the primary ENI.</li>
-     * <li>If the endpoint type is <strong>ENI</strong>, <strong>EndpointSubAddress</strong> returns the primary or secondary private IP address of the secondary ENI.</li>
-     * <li>If the endpoint type is <strong>NLB</strong>, <strong>EndpointSubAddress</strong> returns the primary private IP address of the NLB backend server.</li>
+     * <li>If the endpoint type is <strong>ECS</strong>, EndpointSubAddress is the secondary private IP address or the primary private IP address of the primary network interface controller (NIC).</li>
+     * <li>If the endpoint type is <strong>ENI</strong>, EndpointSubAddress is the secondary private IP address or the primary private IP address of the secondary elastic network interface (ENI).</li>
+     * <li>If the endpoint type is <strong>NLB</strong>, EndpointSubAddress is the primary private IP address of the NLB backend server.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,12 +65,12 @@ public class GetBasicAccelerateIpEndpointRelationResponseBody extends TeaModel {
     public String endpointSubAddress;
 
     /**
-     * <p>The type of the secondary address of the endpoint.</p>
+     * <p>The type of the secondary address of the endpoint. Valid values:</p>
      * <ul>
-     * <li><strong>primary</strong>: a primary private IP address.</li>
-     * <li><strong>secondary</strong>: a secondary private IP address.</li>
+     * <li><strong>primary</strong>: The secondary address type is the primary private IP address.</li>
+     * <li><strong>secondary</strong>: The secondary address type is the secondary private IP address.</li>
      * </ul>
-     * <p>This parameter is returned if the endpoint type is <strong>ECS</strong>, <strong>ENI</strong>, or <strong>NLB</strong>. If the endpoint type is set to <strong>NLB</strong>, <strong>primary</strong> is returned.</p>
+     * <p>This parameter is returned when the endpoint type bound to the accelerated IP address is <strong>ECS</strong>, <strong>ENI</strong>, or <strong>NLB</strong>. If the endpoint type is <strong>NLB</strong>, only <strong>primary</strong> is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>primary</p>
@@ -79,12 +79,12 @@ public class GetBasicAccelerateIpEndpointRelationResponseBody extends TeaModel {
     public String endpointSubAddressType;
 
     /**
-     * <p>The type of endpoint. Valid values:</p>
+     * <p>The endpoint type. Valid values:</p>
      * <ul>
-     * <li><strong>ENI</strong>: elastic network interface (ENI).</li>
-     * <li><strong>SLB</strong>: Classic Load Balancer (CLB) instance.</li>
-     * <li><strong>ECS</strong>: Elastic Compute Service (ECS) instance.</li>
-     * <li><strong>NLB</strong>: Network Load Balancer (NLB) instance.</li>
+     * <li><strong>ENI</strong>: an Alibaba Cloud elastic network interface (ENI).</li>
+     * <li><strong>SLB</strong>: an Alibaba Cloud Classic Load Balancer (CLB) instance.</li>
+     * <li><strong>ECS</strong>: an Alibaba Cloud ECS instance.</li>
+     * <li><strong>NLB</strong>: an Alibaba Cloud Network Load Balancer (NLB) instance.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -94,8 +94,8 @@ public class GetBasicAccelerateIpEndpointRelationResponseBody extends TeaModel {
     public String endpointType;
 
     /**
-     * <p>The ID of the zone where the endpoint is created.</p>
-     * <p>This parameter is returned only when the endpoint type is <strong>NLB</strong>.</p>
+     * <p>The zone ID of the endpoint.</p>
+     * <p>Currently, this parameter is returned only when the endpoint type bound to the accelerated IP address is <strong>NLB</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-g</p>
@@ -104,7 +104,7 @@ public class GetBasicAccelerateIpEndpointRelationResponseBody extends TeaModel {
     public String endpointZoneId;
 
     /**
-     * <p>The accelerated IP address of the basic GA instance.</p>
+     * <p>The accelerated IP address of the basic Global Accelerator (GA) instance.</p>
      * 
      * <strong>example:</strong>
      * <p>116.132.XX.XX</p>
@@ -113,7 +113,7 @@ public class GetBasicAccelerateIpEndpointRelationResponseBody extends TeaModel {
     public String ipAddress;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
@@ -122,8 +122,8 @@ public class GetBasicAccelerateIpEndpointRelationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The association status between the accelerated IP address and endpoint.</p>
-     * <p>A value of <strong>active</strong> indicates that the accelerated IP address is associated with the endpoint.</p>
+     * <p>The status of the attachment between the accelerated IP address and the endpoint of the basic Global Accelerator (GA) instance.</p>
+     * <p>The value <strong>active</strong> indicates that the accelerated IP address is attached to the endpoint.</p>
      * 
      * <strong>example:</strong>
      * <p>active</p>

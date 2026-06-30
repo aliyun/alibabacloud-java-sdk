@@ -22,8 +22,10 @@ public class ListForwardingRulesResponseBody extends TeaModel {
     /**
      * <p>The token that is used for the next query. Valid values:</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is not returned, it indicates that no additional results exist.</li>
-     * <li>If <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+     * <li><p>If <strong>NextToken</strong> is not returned, it indicates that no additional results exist.</p>
+     * </li>
+     * <li><p>If <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -99,7 +101,7 @@ public class ListForwardingRulesResponseBody extends TeaModel {
         /**
          * <p>The endpoint group ID.</p>
          * <blockquote>
-         * <p> GA instances created after July 12, 2022 support all forwarding condition types and action types. We recommend that you query forwarding conditions and actions by calling the <strong>RuleActionType</strong> and <strong>RuleActionValue</strong> operations.</p>
+         * <p>GA instances created after July 12, 2022 support all forwarding condition types and action types. We recommend that you query forwarding conditions and actions by calling the <strong>RuleActionType</strong> and <strong>RuleActionValue</strong> operations.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -127,7 +129,7 @@ public class ListForwardingRulesResponseBody extends TeaModel {
         /**
          * <p>The information about the endpoint groups.</p>
          * <blockquote>
-         * <p> GA instances created after July 12, 2022 support all forwarding condition types and action types. We recommend that you query forwarding conditions and actions by calling the <strong>RuleActionType</strong> and <strong>RuleActionValue</strong> operations.</p>
+         * <p>GA instances created after July 12, 2022 support all forwarding condition types and action types. We recommend that you query forwarding conditions and actions by calling the <strong>RuleActionType</strong> and <strong>RuleActionValue</strong> operations.</p>
          * </blockquote>
          */
         @NameInMap("ServerGroupTuples")
@@ -152,7 +154,7 @@ public class ListForwardingRulesResponseBody extends TeaModel {
         /**
          * <p>The forwarding action configuration.</p>
          * <blockquote>
-         * <p> GA instances created after July 12, 2022 support all forwarding condition types and action types. We recommend that you query forwarding conditions and actions by calling the <strong>RuleActionType</strong> and <strong>RuleActionValue</strong> operations.</p>
+         * <p>GA instances created after July 12, 2022 support all forwarding condition types and action types. We recommend that you query forwarding conditions and actions by calling the <strong>RuleActionType</strong> and <strong>RuleActionValue</strong> operations.</p>
          * </blockquote>
          */
         @NameInMap("ForwardGroupConfig")
@@ -161,7 +163,7 @@ public class ListForwardingRulesResponseBody extends TeaModel {
         /**
          * <p>The forwarding priority.</p>
          * <blockquote>
-         * <p> This parameter does not take effect.</p>
+         * <p>This parameter does not take effect.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -173,13 +175,20 @@ public class ListForwardingRulesResponseBody extends TeaModel {
         /**
          * <p>The type of the forwarding action. Valid values:</p>
          * <ul>
-         * <li><strong>ForwardGroup</strong>: forwards a request.</li>
-         * <li><strong>Redirect</strong>: redirects a request.</li>
-         * <li><strong>FixResponse</strong>: returns a fixed response.</li>
-         * <li><strong>Rewrite</strong>: rewrites a request.</li>
-         * <li><strong>AddHeader</strong>: adds a header to a request.</li>
-         * <li><strong>RemoveHeaderConfig</strong>: deletes the header from a request.</li>
-         * <li><strong>Drop</strong>: drops a request.</li>
+         * <li><p><strong>ForwardGroup</strong>: forwards a request.</p>
+         * </li>
+         * <li><p><strong>Redirect</strong>: redirects a request.</p>
+         * </li>
+         * <li><p><strong>FixResponse</strong>: returns a fixed response.</p>
+         * </li>
+         * <li><p><strong>Rewrite</strong>: rewrites a request.</p>
+         * </li>
+         * <li><p><strong>AddHeader</strong>: adds a header to a request.</p>
+         * </li>
+         * <li><p><strong>RemoveHeaderConfig</strong>: deletes the header from a request.</p>
+         * </li>
+         * <li><p><strong>Drop</strong>: drops a request.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -194,41 +203,58 @@ public class ListForwardingRulesResponseBody extends TeaModel {
          * <ul>
          * <li><p>If you set <strong>RuleActionType</strong> to <strong>ForwardGroup</strong>, the information about a virtual endpoint group is returned. The following section describes the parameters:</p>
          * <ul>
-         * <li><code>type</code>: <code>endpointgroup</code> is returned.</li>
-         * <li><code>value</code>: the ID of the virtual endpoint group.</li>
+         * <li><p><code>type</code>: <code>endpointgroup</code> is returned.</p>
+         * </li>
+         * <li><p><code>value</code>: the ID of the virtual endpoint group.</p>
+         * </li>
          * </ul>
          * </li>
          * <li><p>If you set <strong>RuleActionType</strong> to <strong>Redirect</strong>, the redirecting configuration is returned. The following section describes the parameters:</p>
          * <ul>
-         * <li><code>protocol</code>: the protocol of requests after the requests are redirected.</li>
-         * <li><code>domain</code>: the domain name to which requests are redirected.</li>
-         * <li><code>port</code>: the port to which requests are redirected.</li>
-         * <li><code>path</code>: the path to which requests are redirected.</li>
-         * <li><code>query</code>: the query string of the requests that are redirected.</li>
-         * <li><code>code</code>: the redirecting code.</li>
+         * <li><p><code>protocol</code>: the protocol of requests after the requests are redirected.</p>
+         * </li>
+         * <li><p><code>domain</code>: the domain name to which requests are redirected.</p>
+         * </li>
+         * <li><p><code>port</code>: the port to which requests are redirected.</p>
+         * </li>
+         * <li><p><code>path</code>: the path to which requests are redirected.</p>
+         * </li>
+         * <li><p><code>query</code>: the query string of the requests that are redirected.</p>
+         * </li>
+         * <li><p><code>code</code>: the redirecting code.</p>
+         * </li>
          * </ul>
          * </li>
          * <li><p>If you set <strong>RuleActionType</strong> to <strong>FixResponse</strong>, the information about the fixed response that you configured is returned. The following section describes the parameters:</p>
          * <ul>
-         * <li><code>code</code>: the HTTP status code.</li>
-         * <li><code>type</code>: the content type of the response.</li>
-         * <li><code>content</code>: the content of the response.</li>
+         * <li><p><code>code</code>: the HTTP status code.</p>
+         * </li>
+         * <li><p><code>type</code>: the content type of the response.</p>
+         * </li>
+         * <li><p><code>content</code>: the content of the response.</p>
+         * </li>
          * </ul>
          * </li>
          * <li><p>If <strong>RuleActionType</strong> is set to <strong>AddHeader</strong>, the information about the HTTP header that is added is returned. The following section describes the parameters:</p>
          * <ul>
-         * <li><code>name</code>: the name of the HTTP header.</li>
-         * <li><code>type</code>: the content type of the HTTP header.</li>
-         * <li><code>value</code>: the content of the HTTP header.</li>
+         * <li><p><code>name</code>: the name of the HTTP header.</p>
+         * </li>
+         * <li><p><code>type</code>: the content type of the HTTP header.</p>
+         * </li>
+         * <li><p><code>value</code>: the content of the HTTP header.</p>
+         * </li>
          * </ul>
          * </li>
          * <li><p>If you set <strong>RuleActionType</strong> to <strong>RemoveHeader</strong>, the information about the HTTP header that is deleted is returned.</p>
          * </li>
          * <li><p>If you set <strong>RuleActionType</strong> to <strong>Rewrite</strong>, the rewriting configuration is returned. The following section describes the parameters:</p>
          * <ul>
-         * <li><code>domain</code>: the domain name to which requests are redirected.</li>
-         * <li><code>path</code>: the path to which requests are redirected.</li>
-         * <li><code>query</code>: the query string of the requests that are redirected.</li>
+         * <li><p><code>domain</code>: the domain name to which requests are redirected.</p>
+         * </li>
+         * <li><p><code>path</code>: the path to which requests are redirected.</p>
+         * </li>
+         * <li><p><code>query</code>: the query string of the requests that are redirected.</p>
+         * </li>
          * </ul>
          * </li>
          * <li><p>If you set <strong>RuleActionType</strong> to <strong>Drop</strong>, an empty string is returned.</p>
@@ -284,7 +310,7 @@ public class ListForwardingRulesResponseBody extends TeaModel {
         /**
          * <p>The domain name configuration.</p>
          * <blockquote>
-         * <p> GA instances created after July 12, 2022 support all forwarding condition types and action types. We recommend that you query forwarding conditions and actions by calling the <strong>RuleActionType</strong> and <strong>RuleActionValue</strong> operations.</p>
+         * <p>GA instances created after July 12, 2022 support all forwarding condition types and action types. We recommend that you query forwarding conditions and actions by calling the <strong>RuleActionType</strong> and <strong>RuleActionValue</strong> operations.</p>
          * </blockquote>
          */
         @NameInMap("Values")
@@ -309,7 +335,7 @@ public class ListForwardingRulesResponseBody extends TeaModel {
         /**
          * <p>The path configuration.</p>
          * <blockquote>
-         * <p> GA instances created after July 12, 2022 support all forwarding condition types and action types. We recommend that you query forwarding conditions and actions by calling the <strong>RuleActionType</strong> and <strong>RuleActionValue</strong> operations.</p>
+         * <p>GA instances created after July 12, 2022 support all forwarding condition types and action types. We recommend that you query forwarding conditions and actions by calling the <strong>RuleActionType</strong> and <strong>RuleActionValue</strong> operations.</p>
          * </blockquote>
          */
         @NameInMap("Values")
@@ -334,7 +360,7 @@ public class ListForwardingRulesResponseBody extends TeaModel {
         /**
          * <p>The domain name configuration.</p>
          * <blockquote>
-         * <p> GA instances created after July 12, 2022 support all forwarding condition types and action types. We recommend that you query forwarding conditions and actions by calling the <strong>RuleActionType</strong> and <strong>RuleActionValue</strong> operations.</p>
+         * <p>GA instances created after July 12, 2022 support all forwarding condition types and action types. We recommend that you query forwarding conditions and actions by calling the <strong>RuleActionType</strong> and <strong>RuleActionValue</strong> operations.</p>
          * </blockquote>
          */
         @NameInMap("HostConfig")
@@ -343,7 +369,7 @@ public class ListForwardingRulesResponseBody extends TeaModel {
         /**
          * <p>The path configuration.</p>
          * <blockquote>
-         * <p> GA instances created after July 12, 2022 support all forwarding condition types and action types. We recommend that you query forwarding conditions and actions by calling the <strong>RuleActionType</strong> and <strong>RuleActionValue</strong> operations.</p>
+         * <p>GA instances created after July 12, 2022 support all forwarding condition types and action types. We recommend that you query forwarding conditions and actions by calling the <strong>RuleActionType</strong> and <strong>RuleActionValue</strong> operations.</p>
          * </blockquote>
          */
         @NameInMap("PathConfig")
@@ -352,13 +378,20 @@ public class ListForwardingRulesResponseBody extends TeaModel {
         /**
          * <p>The type of the forwarding condition. Valid values:</p>
          * <ul>
-         * <li><strong>Host:</strong> domain name.</li>
-         * <li><strong>Path:</strong> path.</li>
-         * <li><strong>RequestHeader:</strong> HTTP header.</li>
-         * <li><strong>Query:</strong> query string.</li>
-         * <li><strong>Method:</strong> HTTP method.</li>
-         * <li><strong>Cookie:</strong> cookie.</li>
-         * <li><strong>SourceIP:</strong> source IP address.</li>
+         * <li><p><strong>Host:</strong> domain name.</p>
+         * </li>
+         * <li><p><strong>Path:</strong> path.</p>
+         * </li>
+         * <li><p><strong>RequestHeader:</strong> HTTP header.</p>
+         * </li>
+         * <li><p><strong>Query:</strong> query string.</p>
+         * </li>
+         * <li><p><strong>Method:</strong> HTTP method.</p>
+         * </li>
+         * <li><p><strong>Cookie:</strong> cookie.</p>
+         * </li>
+         * <li><p><strong>SourceIP:</strong> source IP address.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -371,13 +404,20 @@ public class ListForwardingRulesResponseBody extends TeaModel {
          * <p>The value of the forwarding condition type.</p>
          * <p>Different JSON strings are returned based on the value of the <strong>RuleConditionType</strong> parameter.</p>
          * <ul>
-         * <li>If you set <strong>RuleConditionType</strong> to <strong>Host</strong>, a domain name condition is returned. If multiple domain names are returned in a forwarding condition, the relationship between the domain names is OR.</li>
-         * <li>If you set <strong>RuleConditionType</strong> to <strong>Path</strong>, a path condition is returned. If multiple forwarding conditions of the path type are returned in a forwarding rule, the relationship between the forwarding conditions is OR. If multiple paths are returned in a forwarding condition, the relationship between the paths is OR.</li>
-         * <li>If you set <strong>RuleConditionType</strong> to <strong>RequestHeader</strong>, an HTTP header condition that consists of key-value pairs is returned.</li>
-         * <li>If you set <strong>RuleConditionType</strong> to <strong>Query</strong>, a query string condition that consists of key-value pairs is returned.</li>
-         * <li>If you set <strong>RuleConditionType</strong> to <strong>Method</strong>, an HTTP method condition is returned.</li>
-         * <li>If you set <strong>RuleConditionType</strong> to <strong>Cookie</strong>, a cookie condition that consists of key-value pairs is returned.</li>
-         * <li>If you set <strong>RuleConditionType</strong> to <strong>SourceIP</strong>, a source IP address condition is returned. If multiple source IP addresses are returned in a forwarding condition, the relationship between the source IP addresses is OR.</li>
+         * <li><p>If you set <strong>RuleConditionType</strong> to <strong>Host</strong>, a domain name condition is returned. If multiple domain names are returned in a forwarding condition, the relationship between the domain names is OR.</p>
+         * </li>
+         * <li><p>If you set <strong>RuleConditionType</strong> to <strong>Path</strong>, a path condition is returned. If multiple forwarding conditions of the path type are returned in a forwarding rule, the relationship between the forwarding conditions is OR. If multiple paths are returned in a forwarding condition, the relationship between the paths is OR.</p>
+         * </li>
+         * <li><p>If you set <strong>RuleConditionType</strong> to <strong>RequestHeader</strong>, an HTTP header condition that consists of key-value pairs is returned.</p>
+         * </li>
+         * <li><p>If you set <strong>RuleConditionType</strong> to <strong>Query</strong>, a query string condition that consists of key-value pairs is returned.</p>
+         * </li>
+         * <li><p>If you set <strong>RuleConditionType</strong> to <strong>Method</strong>, an HTTP method condition is returned.</p>
+         * </li>
+         * <li><p>If you set <strong>RuleConditionType</strong> to <strong>Cookie</strong>, a cookie condition that consists of key-value pairs is returned.</p>
+         * </li>
+         * <li><p>If you set <strong>RuleConditionType</strong> to <strong>SourceIP</strong>, a source IP address condition is returned. If multiple source IP addresses are returned in a forwarding condition, the relationship between the source IP addresses is OR.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -429,12 +469,18 @@ public class ListForwardingRulesResponseBody extends TeaModel {
         /**
          * <p>The name of the action that you can perform on the managed instance. Valid values:</p>
          * <ul>
-         * <li><strong>Create</strong>: Create an instance.</li>
-         * <li><strong>Update</strong>: Update the current instance.</li>
-         * <li><strong>Delete</strong>: Delete the current instance.</li>
-         * <li><strong>Associate</strong>: Reference the current instance.</li>
-         * <li><strong>UserUnmanaged</strong>: Unmanage the instance.</li>
-         * <li><strong>CreateChild</strong>: Create a child resource on the current instance.</li>
+         * <li><p><strong>Create</strong>: Create an instance.</p>
+         * </li>
+         * <li><p><strong>Update</strong>: Update the current instance.</p>
+         * </li>
+         * <li><p><strong>Delete</strong>: Delete the current instance.</p>
+         * </li>
+         * <li><p><strong>Associate</strong>: Reference the current instance.</p>
+         * </li>
+         * <li><p><strong>UserUnmanaged</strong>: Unmanage the instance.</p>
+         * </li>
+         * <li><p><strong>CreateChild</strong>: Create a child resource on the current instance.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -446,16 +492,23 @@ public class ListForwardingRulesResponseBody extends TeaModel {
         /**
          * <p>The type of the child resource. Valid values:</p>
          * <ul>
-         * <li><strong>Listener</strong>: listener.</li>
-         * <li><strong>IpSet</strong>: acceleration region.</li>
-         * <li><strong>EndpointGroup</strong>: endpoint group.</li>
-         * <li><strong>ForwardingRule</strong>: forwarding rule.</li>
-         * <li><strong>Endpoint</strong>: endpoint.</li>
-         * <li><strong>EndpointGroupDestination</strong>: the protocol mapping of an endpoint group associated with a custom routing listener.</li>
-         * <li><strong>EndpointPolicy</strong>: the traffic policy of an endpoint associated with a custom routing listener.</li>
+         * <li><p><strong>Listener</strong>: listener.</p>
+         * </li>
+         * <li><p><strong>IpSet</strong>: acceleration region.</p>
+         * </li>
+         * <li><p><strong>EndpointGroup</strong>: endpoint group.</p>
+         * </li>
+         * <li><p><strong>ForwardingRule</strong>: forwarding rule.</p>
+         * </li>
+         * <li><p><strong>Endpoint</strong>: endpoint.</p>
+         * </li>
+         * <li><p><strong>EndpointGroupDestination</strong>: the protocol mapping of an endpoint group associated with a custom routing listener.</p>
+         * </li>
+         * <li><p><strong>EndpointPolicy</strong>: the traffic policy of an endpoint associated with a custom routing listener.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is returned only if the value of <strong>Action</strong> is <strong>CreateChild</strong>.</p>
+         * <p>This parameter is returned only if the value of <strong>Action</strong> is <strong>CreateChild</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -467,8 +520,10 @@ public class ListForwardingRulesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the specified actions are managed. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The specified actions are managed, and users cannot perform the specified actions on the managed instance.</li>
-         * <li><strong>false</strong>: The specified actions are not managed, and users can perform the specified actions on the managed instance.</li>
+         * <li><p><strong>true</strong>: The specified actions are managed, and users cannot perform the specified actions on the managed instance.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The specified actions are not managed, and users can perform the specified actions on the managed instance.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -540,9 +595,12 @@ public class ListForwardingRulesResponseBody extends TeaModel {
         /**
          * <p>The state of the forwarding rule. Valid values:</p>
          * <ul>
-         * <li><strong>active:</strong> The forwarding rule is normal.</li>
-         * <li><strong>configuring:</strong> The forwarding rule is being modified.</li>
-         * <li><strong>deleting:</strong> The forwarding rule is being deleted.</li>
+         * <li><p><strong>active:</strong> The forwarding rule is normal.</p>
+         * </li>
+         * <li><p><strong>configuring:</strong> The forwarding rule is being modified.</p>
+         * </li>
+         * <li><p><strong>deleting:</strong> The forwarding rule is being deleted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -585,7 +643,7 @@ public class ListForwardingRulesResponseBody extends TeaModel {
         /**
          * <p>The ID of the service that manages the instance.</p>
          * <blockquote>
-         * <p> This parameter is returned only if the value of <strong>ServiceManaged</strong> is <strong>true</strong>.</p>
+         * <p>This parameter is returned only if the value of <strong>ServiceManaged</strong> is <strong>true</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -597,8 +655,10 @@ public class ListForwardingRulesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the GA instance is managed. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The GA instance is managed.</li>
-         * <li><strong>false</strong>: The GA instance is not managed.</li>
+         * <li><p><strong>true</strong>: The GA instance is managed.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The GA instance is not managed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -610,7 +670,7 @@ public class ListForwardingRulesResponseBody extends TeaModel {
         /**
          * <p>The actions that you can perform on the managed instance.</p>
          * <blockquote>
-         * <p> This parameter takes effect only if <strong>ServiceManaged</strong> is set to <strong>True</strong>.</p>
+         * <p>This parameter takes effect only if <strong>ServiceManaged</strong> is set to <strong>True</strong>.</p>
          * </blockquote>
          * <ul>
          * <li>You can perform only specific actions on the managed instance.</li>

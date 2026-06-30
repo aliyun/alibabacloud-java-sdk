@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCustomRoutingEndpointGroupsRequest extends TeaModel {
     /**
-     * <p>The ID of the GA instance.</p>
+     * <p>The ID of the Alibaba Cloud Global Accelerator (GA) instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,9 +16,9 @@ public class CreateCustomRoutingEndpointGroupsRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request is different.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> value as the <strong>ClientToken</strong> value. The <strong>RequestId</strong> value is different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -30,8 +30,8 @@ public class CreateCustomRoutingEndpointGroupsRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><strong>true</strong>: performs a dry run without creating custom routing type endpoint groups. The system checks the required parameters, request format, and business limits. If the request fails the dry run, the corresponding error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): sends a normal request. If the request passes the check, an HTTP 2xx status code is returned and the custom routing type endpoint groups are created.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,15 +41,15 @@ public class CreateCustomRoutingEndpointGroupsRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The information about the endpoint groups.</p>
-     * <p>You can specify at most five endpoint groups.</p>
+     * <p>The endpoint group configurations.</p>
+     * <p>You can specify up to 5 endpoint group configurations.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("EndpointGroupConfigurations")
     public java.util.List<CreateCustomRoutingEndpointGroupsRequestEndpointGroupConfigurations> endpointGroupConfigurations;
 
     /**
-     * <p>The ID of the custom routing listener.</p>
+     * <p>The ID of the custom routing type listener.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,7 +59,7 @@ public class CreateCustomRoutingEndpointGroupsRequest extends TeaModel {
     public String listenerId;
 
     /**
-     * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>The region ID of the Alibaba Cloud Global Accelerator (GA) instance. Set the value to <strong>ap-southeast-1</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -123,9 +123,9 @@ public class CreateCustomRoutingEndpointGroupsRequest extends TeaModel {
 
     public static class CreateCustomRoutingEndpointGroupsRequestEndpointGroupConfigurationsDestinationConfigurations extends TeaModel {
         /**
-         * <p>The first backend service port for the endpoint group.</p>
-         * <p>Valid values: <strong>1</strong> to <strong>65499</strong>. The value of <strong>FromPort</strong> must be smaller than or equal to the value of <strong>ToPort</strong>.</p>
-         * <p>You can specify at most 20 first backend service ports for each endpoint group.</p>
+         * <p>The start port of the backend service for the endpoint group.</p>
+         * <p>Valid values: <strong>1</strong> to <strong>65499</strong>. The value of <strong>FromPort</strong> must be less than or equal to the value of <strong>ToPort</strong>.</p>
+         * <p>You can specify up to 20 start port entries for each endpoint group.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -134,16 +134,16 @@ public class CreateCustomRoutingEndpointGroupsRequest extends TeaModel {
         public Integer fromPort;
 
         /**
-         * <p>The backend service protocol.</p>
-         * <p>You can specify up to four backend service protocols in each mapping configuration.</p>
+         * <p>The protocol types of the backend service for the endpoint group.</p>
+         * <p>You can specify up to 4 backend service protocol types in each mapping port range and protocol type entry for the endpoint group.</p>
          */
         @NameInMap("Protocols")
         public java.util.List<String> protocols;
 
         /**
-         * <p>The last backend service port for the endpoint group.</p>
-         * <p>Valid values: <strong>1</strong> to <strong>65499</strong>. The value of <strong>FromPort</strong> must be smaller than or equal to the value of <strong>ToPort</strong>.</p>
-         * <p>You can specify at most 20 last backend service ports for each endpoint group.</p>
+         * <p>The end port of the backend service for the endpoint group.</p>
+         * <p>Valid values: <strong>1</strong> to <strong>65499</strong>. The value of <strong>FromPort</strong> must be less than or equal to the value of <strong>ToPort</strong>.</p>
+         * <p>You can specify up to 20 end port entries for each endpoint group.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -184,9 +184,9 @@ public class CreateCustomRoutingEndpointGroupsRequest extends TeaModel {
 
     public static class CreateCustomRoutingEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurationsPolicyConfigurationsPortRanges extends TeaModel {
         /**
-         * <p>The first port of the destination port range. The value of this parameter must fall within the port range of the endpoint group.</p>
+         * <p>The start port of the traffic destination that can receive traffic. The port value must fall within the backend service port range of the endpoint group.</p>
          * <p>This parameter takes effect only when <strong>TrafficToEndpointPolicy</strong> is set to <strong>AllowCustom</strong>.</p>
-         * <p>You can specify port ranges for at most 20 destinations in each endpoint and specify at most five first ports for each destination.</p>
+         * <p>You can specify up to 20 port ranges for traffic destinations for each endpoint, and up to 5 start ports for each traffic destination.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -195,9 +195,9 @@ public class CreateCustomRoutingEndpointGroupsRequest extends TeaModel {
         public Integer fromPort;
 
         /**
-         * <p>The last port of the destination port range. The value of this parameter must fall within the port range of the endpoint group.</p>
+         * <p>The end port of the traffic destination that can receive traffic. The port value must fall within the backend service port range of the endpoint group.</p>
          * <p>This parameter takes effect only when <strong>TrafficToEndpointPolicy</strong> is set to <strong>AllowCustom</strong>.</p>
-         * <p>You can specify port ranges for at most 20 destinations in each endpoint and specify at most five last ports for each destination.</p>
+         * <p>You can specify up to 20 port ranges for traffic destinations for each endpoint, and up to 5 end ports for each traffic destination.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -230,9 +230,9 @@ public class CreateCustomRoutingEndpointGroupsRequest extends TeaModel {
 
     public static class CreateCustomRoutingEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurationsPolicyConfigurations extends TeaModel {
         /**
-         * <p>The IP address of the destination to which traffic is forwarded.</p>
+         * <p>The IP address of the traffic destination that can receive traffic.</p>
          * <p>This parameter takes effect only when <strong>TrafficToEndpointPolicy</strong> is set to <strong>AllowCustom</strong>.</p>
-         * <p>You can specify at most 20 destination IP addresses for each endpoint.</p>
+         * <p>You can specify up to 20 traffic destination IP addresses for each endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.XX.XX</p>
@@ -241,10 +241,10 @@ public class CreateCustomRoutingEndpointGroupsRequest extends TeaModel {
         public String address;
 
         /**
-         * <p>The port range of the destination to which traffic is forwarded. The value of this parameter must fall within the port range of the endpoint group.</p>
-         * <p>If you leave this parameter empty, traffic is forwarded to all destination ports.</p>
+         * <p>The port range of the traffic destination that can receive traffic. The port range must fall within the backend service port range of the endpoint group.</p>
+         * <p>If this parameter is left empty, all ports of the traffic destination are supported.</p>
          * <p>This parameter takes effect only when <strong>TrafficToEndpointPolicy</strong> is set to <strong>AllowCustom</strong>.</p>
-         * <p>You can specify port ranges for at most 20 destinations in each endpoint and specify at most five port ranges for each destination.</p>
+         * <p>You can specify up to 20 port ranges for traffic destinations for each endpoint, and up to 5 port ranges for each traffic destination.</p>
          */
         @NameInMap("PortRanges")
         public java.util.List<CreateCustomRoutingEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurationsPolicyConfigurationsPortRanges> portRanges;
@@ -274,7 +274,7 @@ public class CreateCustomRoutingEndpointGroupsRequest extends TeaModel {
 
     public static class CreateCustomRoutingEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations extends TeaModel {
         /**
-         * <p>The name of the vSwitch that is specified as an endpoint.</p>
+         * <p>The name of the endpoint vSwitch instance.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-test01</p>
@@ -283,20 +283,23 @@ public class CreateCustomRoutingEndpointGroupsRequest extends TeaModel {
         public String endpoint;
 
         /**
-         * <p>The destination to which traffic is forwarded.</p>
-         * <p>You can specify at most 20 destinations for each endpoint.</p>
+         * <p>The traffic destination configurations.</p>
+         * <p>You can specify up to 20 traffic destinations for each endpoint.</p>
          */
         @NameInMap("PolicyConfigurations")
         public java.util.List<CreateCustomRoutingEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurationsPolicyConfigurations> policyConfigurations;
 
         /**
-         * <p>The traffic policy that is used to process traffic to the endpoint. Valid values:</p>
+         * <p>The traffic policy for the backend service. Valid values:</p>
          * <ul>
-         * <li><strong>AllowAll</strong>: allows all traffic to the endpoint.</li>
-         * <li><strong>DenyAll</strong> (default): denies all traffic to the endpoint.</li>
-         * <li><strong>AllowCustom</strong>: allows traffic only to specified destinations in the endpoint.</li>
+         * <li><p><strong>AllowAll</strong>: allows all traffic to access the specified backend service.</p>
+         * </li>
+         * <li><p><strong>DenyAll</strong> (default): denies all traffic from accessing the specified backend service.</p>
+         * </li>
+         * <li><p><strong>AllowCustom</strong>: allows traffic to access specified destinations.
+         * You must specify the IP address and port range of the destination. If the port range is left empty, all ports of the destination are supported.</p>
+         * </li>
          * </ul>
-         * <p>If you set this parameter to AllowCustom, you must specify IP addresses and port ranges as the destinations to which traffic is distributed. If you specify only IP addresses and do not specify port ranges, GA can forward traffic to the specified IP addresses over all destination ports.</p>
          * 
          * <strong>example:</strong>
          * <p>DenyAll</p>
@@ -305,8 +308,8 @@ public class CreateCustomRoutingEndpointGroupsRequest extends TeaModel {
         public String trafficToEndpointPolicy;
 
         /**
-         * <p>The type of endpoint.</p>
-         * <p>Set the value to <strong>PrivateSubNet</strong>, which specifies a private CIDR block. This is the default value.</p>
+         * <p>The type of the backend service for the endpoint. Valid values:</p>
+         * <p> <strong>PrivateSubNet</strong> (default): private CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>PrivateSubNet</p>
@@ -356,8 +359,8 @@ public class CreateCustomRoutingEndpointGroupsRequest extends TeaModel {
     public static class CreateCustomRoutingEndpointGroupsRequestEndpointGroupConfigurations extends TeaModel {
         /**
          * <p>The description of the endpoint group.</p>
-         * <p>The description cannot exceed 256 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>You can specify at most five endpoint group descriptions.</p>
+         * <p>The description can be up to 256 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>You can specify up to 5 endpoint group descriptions.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -366,23 +369,23 @@ public class CreateCustomRoutingEndpointGroupsRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The mapping configuration of the endpoint group.</p>
-         * <p>You need to specify the backend service ports and protocols for the endpoint group. The ports are mapped to listener ports.</p>
-         * <p>You can specify at most 20 mapping configurations for each endpoint group.</p>
+         * <p>The mapping configurations of the endpoint group.</p>
+         * <p>You must specify the backend service port range and protocol type for the endpoint group. The specified information forms a mapping relationship with the associated listener port range.</p>
+         * <p>You can specify up to 20 mapping port range and protocol type entries for each endpoint group.</p>
          */
         @NameInMap("DestinationConfigurations")
         public java.util.List<CreateCustomRoutingEndpointGroupsRequestEndpointGroupConfigurationsDestinationConfigurations> destinationConfigurations;
 
         /**
-         * <p>The information about the endpoints.</p>
-         * <p>You can specify at most 10 endpoints for each endpoint group.</p>
+         * <p>The endpoint configurations.</p>
+         * <p>You can specify up to 10 endpoint configurations for each endpoint group.</p>
          */
         @NameInMap("EndpointConfigurations")
         public java.util.List<CreateCustomRoutingEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations> endpointConfigurations;
 
         /**
-         * <p>The ID of the region in which the endpoint group resides.</p>
-         * <p>You can specify at most five region IDs.</p>
+         * <p>The region ID of the endpoint group.</p>
+         * <p>You can specify up to 5 endpoint group region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -393,8 +396,8 @@ public class CreateCustomRoutingEndpointGroupsRequest extends TeaModel {
 
         /**
          * <p>The name of the endpoint group.</p>
-         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
-         * <p>You can specify at most five endpoint group names.</p>
+         * <p>The name must be 1 to 128 characters in length and must start with a letter or Chinese character. The name can contain digits, underscores (_), and hyphens (-).</p>
+         * <p>You can specify up to 5 endpoint group names.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

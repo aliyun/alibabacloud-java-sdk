@@ -81,8 +81,7 @@ public class DescribeLogStoreOfEndpointGroupResponseBody extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>on - binding
-     * off - unbinding</p>
+     * <p>on</p>
      */
     @NameInMap("Status")
     public String status;

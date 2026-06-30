@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
     public Integer pageSize;
 
     /**
-     * <p>A list of traffic policies.</p>
+     * <p>The list of traffic policies.</p>
      */
     @NameInMap("Policies")
     public java.util.List<ListCustomRoutingEndpointTrafficPoliciesResponseBodyPolicies> policies;
@@ -93,7 +93,7 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
 
     public static class ListCustomRoutingEndpointTrafficPoliciesResponseBodyPoliciesPortRanges extends TeaModel {
         /**
-         * <p>The first port of the port range used by the traffic destination to process requests.</p>
+         * <p>The start port of the traffic policy destination for processing requests.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -102,7 +102,7 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
         public Integer fromPort;
 
         /**
-         * <p>The last port of the port range used by the traffic destination to process requests.</p>
+         * <p>The end port of the traffic policy destination for processing requests.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -135,14 +135,14 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
 
     public static class ListCustomRoutingEndpointTrafficPoliciesResponseBodyPoliciesServiceManagedInfos extends TeaModel {
         /**
-         * <p>The name of the action on the managed instance. Valid values:</p>
+         * <p>The name of the managed policy action. Valid values:</p>
          * <ul>
          * <li><strong>Create</strong>: Create an instance.</li>
          * <li><strong>Update</strong>: Update the current instance.</li>
          * <li><strong>Delete</strong>: Delete the current instance.</li>
-         * <li><strong>Associate</strong>: Reference the current instance.</li>
+         * <li><strong>Associate</strong>: Reference or be referenced by the current instance.</li>
          * <li><strong>UserUnmanaged</strong>: Unmanage the instance.</li>
-         * <li><strong>CreateChild</strong>: Create a child resource in the current instance.</li>
+         * <li><strong>CreateChild</strong>: Create a child resource under the current instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -154,16 +154,23 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
         /**
          * <p>The type of the child resource. Valid values:</p>
          * <ul>
-         * <li><strong>Listener</strong>: listener.</li>
-         * <li><strong>IpSet</strong>: acceleration region.</li>
-         * <li><strong>EndpointGroup</strong>: endpoint group.</li>
-         * <li><strong>ForwardingRule</strong>: forwarding rule.</li>
-         * <li><strong>Endpoint</strong>: endpoint.</li>
-         * <li><strong>EndpointGroupDestination</strong>: protocol mapping of an endpoint group associated with a custom routing listener.</li>
-         * <li><strong>EndpointPolicy</strong>: traffic policy of an endpoint associated with a custom routing listener.</li>
+         * <li><p><strong>Listener</strong>: listener resource.</p>
+         * </li>
+         * <li><p><strong>IpSet</strong>: acceleration region resource.</p>
+         * </li>
+         * <li><p><strong>EndpointGroup</strong>: endpoint group resource.</p>
+         * </li>
+         * <li><p><strong>ForwardingRule</strong>: forwarding rule resource.</p>
+         * </li>
+         * <li><p><strong>Endpoint</strong>: endpoint resource.</p>
+         * </li>
+         * <li><p><strong>EndpointGroupDestination</strong>: protocol mapping resource of the endpoint group under the custom routing listener.</p>
+         * </li>
+         * <li><p><strong>EndpointPolicy</strong>: traffic policy resource of the endpoint under the custom routing listener.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is returned only if the value of <strong>Action</strong> is <strong>CreateChild</strong>.</p>
+         * <p>This parameter is valid only when <strong>Action</strong> is set to <strong>CreateChild</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -173,10 +180,12 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
         public String childType;
 
         /**
-         * <p>Indicates whether the specified actions are managed. Valid values:</p>
+         * <p>Indicates whether the managed policy action is managed. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The specified actions are managed, and users cannot perform the specified actions on the managed instance.</li>
-         * <li><strong>false</strong>: The specified actions are not managed, and users can perform the specified actions on the managed instance.</li>
+         * <li><p><strong>true</strong>: The managed policy action is managed. The user cannot perform the action specified by Action on the managed instance.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The managed policy action is not managed. The user can perform the action specified by Action on the managed instance.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -218,7 +227,7 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
 
     public static class ListCustomRoutingEndpointTrafficPoliciesResponseBodyPolicies extends TeaModel {
         /**
-         * <p>The ID of the GA instance to which the endpoint belongs.</p>
+         * <p>The instance ID of the Alibaba Cloud Global Accelerator (GA) instance to which the endpoint belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>ga-bp1odcab8tmno0hdq****</p>
@@ -227,7 +236,7 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
         public String acceleratorId;
 
         /**
-         * <p>The IP addresses of the traffic policies.</p>
+         * <p>The IP address of the traffic policy destination.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.XX.XX</p>
@@ -254,7 +263,7 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
         public String endpointId;
 
         /**
-         * <p>The ID of the custom routing listener to which the endpoint belongs.</p>
+         * <p>The ID of the custom routing type listener to which the endpoint belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>lsr-bp1bpn0kn908w4nbw****</p>
@@ -263,7 +272,7 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
         public String listenerId;
 
         /**
-         * <p>The ID of the traffic policy.</p>
+         * <p>The traffic policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ply-bp1dmlohjjz4kqaun****</p>
@@ -272,15 +281,15 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
         public String policyId;
 
         /**
-         * <p>The port range of the traffic policy.</p>
+         * <p>The port range of the traffic policy destination.</p>
          */
         @NameInMap("PortRanges")
         public java.util.List<ListCustomRoutingEndpointTrafficPoliciesResponseBodyPoliciesPortRanges> portRanges;
 
         /**
-         * <p>The ID of the service that manages the instance.</p>
+         * <p>The ID of the service to which the managed instance belongs.</p>
          * <blockquote>
-         * <p> This parameter is returned only if the value of <strong>ServiceManaged</strong> is <strong>true</strong>.</p>
+         * <p>This parameter is valid only when <strong>ServiceManaged</strong> is set to <strong>True</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -292,8 +301,8 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
         /**
          * <p>Indicates whether the instance is managed. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The GA instance is managed.</li>
-         * <li><strong>false</strong>: The GA instance is not managed.</li>
+         * <li><strong>true</strong>: The instance is managed.</li>
+         * <li><strong>false</strong>: The instance is not managed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -303,11 +312,11 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
         public Boolean serviceManaged;
 
         /**
-         * <p>The actions that users can perform on the managed instance.</p>
+         * <p>The list of action policies that the user can perform on the managed instance.</p>
          * <blockquote>
          * <ul>
-         * <li>This parameter is returned only if the value of <strong>ServiceManaged</strong> is <strong>true</strong>.</li>
-         * <li>Users can perform only specific actions on a managed instance.</li>
+         * <li>This parameter is valid only when <strong>ServiceManaged</strong> is set to <strong>True</strong>.</li>
+         * <li>When the instance is in the managed state, user operations on the instance are restricted, and certain operations are prohibited.</li>
          * </ul>
          * </blockquote>
          */

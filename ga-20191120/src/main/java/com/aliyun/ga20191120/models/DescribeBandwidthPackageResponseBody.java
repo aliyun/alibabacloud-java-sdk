@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBandwidthPackageResponseBody extends TeaModel {
     /**
-     * <p>The ID of the GA instance that is associated with the bandwidth plan.</p>
+     * <p>The instance ID of the Alibaba Cloud Global Accelerator (GA) instance attached to the bandwidth plan.</p>
      */
     @NameInMap("Accelerators")
     public java.util.List<String> accelerators;
@@ -20,7 +20,7 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
     public Integer bandwidth;
 
     /**
-     * <p>The ID of the bandwidth plan.</p>
+     * <p>The bandwidth plan ID.</p>
      * 
      * <strong>example:</strong>
      * <p>gbwp-bp1sgzldyj6b4q7cx****</p>
@@ -29,11 +29,14 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
     public String bandwidthPackageId;
 
     /**
-     * <p>The type of the bandwidth. Valid values:</p>
+     * <p>The bandwidth type. Valid values:</p>
      * <ul>
-     * <li><strong>Basic</strong>: basic bandwidth</li>
-     * <li><strong>Enhanced</strong>: enhanced bandwidth</li>
-     * <li><strong>Advanced</strong>: premium bandwidth</li>
+     * <li><p><strong>Basic</strong>: standard acceleration bandwidth.</p>
+     * </li>
+     * <li><p><strong>Enhanced</strong>: enhanced acceleration bandwidth.</p>
+     * </li>
+     * <li><p><strong>Advanced</strong>: premium acceleration bandwidth.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,10 +46,10 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
     public String bandwidthType;
 
     /**
-     * <p>The metering method that is used when you use the pay-as-you-go billing method. Valid values:</p>
+     * <p>The billable methods for the pay-as-you-go billing method. Valid values:</p>
      * <ul>
-     * <li><strong>PayByTraffic</strong>: pay-by-data-transfer</li>
-     * <li><strong>PayBY95</strong>: pay-by-95th-percentile</li>
+     * <li><strong>PayByTraffic</strong>: pay-by-data-transfer.</li>
+     * <li><strong>PayBY95</strong>: pay-by-95th-percentile.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,8 +59,8 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
     public String billingType;
 
     /**
-     * <p>Area A specified in the cross-region acceleration bandwidth plan. Only <strong>China-mainland</strong> (the Chinese mainland) is returned.</p>
-     * <p>This parameter is returned only if you call this operation on the International site (alibabacloud.com).</p>
+     * <p>The interconnected area A of the cross-border acceleration bandwidth plan. The value is returned only as <strong>China-mainland</strong> (the Chinese mainland).</p>
+     * <p>This parameter is returned only on the Alibaba Cloud International Website (<a href="http://www.alibabacloud.com">www.alibabacloud.com</a>).</p>
      * 
      * <strong>example:</strong>
      * <p>China-mainland</p>
@@ -66,8 +69,8 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
     public String cbnGeographicRegionIdA;
 
     /**
-     * <p>Area B specified in the cross-region acceleration bandwidth plan. Only <strong>Global</strong> (global) is returned.</p>
-     * <p>This parameter is returned only if you call this operation on the International site (alibabacloud.com).</p>
+     * <p>The interconnected area B of the cross-border acceleration bandwidth plan. The value is returned only as <strong>Global</strong>.</p>
+     * <p>This parameter is returned only on the Chinese site (Chinese mainland).</p>
      * 
      * <strong>example:</strong>
      * <p>Global</p>
@@ -76,9 +79,9 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
     public String cbnGeographicRegionIdB;
 
     /**
-     * <p>The billing method of the bandwidth plan.</p>
+     * <p>The billing method. Valid values:</p>
      * <ul>
-     * <li><strong>PREPAY</strong>: subscription. This is the default value.</li>
+     * <li><strong>PREPAY</strong> (default): subscription.</li>
      * <li><strong>POSTPAY</strong>: pay-as-you-go.</li>
      * </ul>
      * 
@@ -89,7 +92,7 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The timestamp that indicates when the bandwidth plan was created.</p>
+     * <p>The timestamp when the bandwidth plan was created.</p>
      * 
      * <strong>example:</strong>
      * <p>1578966918000</p>
@@ -107,7 +110,7 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The timestamp that indicates when the bandwidth plan expires.</p>
+     * <p>The timestamp when the bandwidth plan expires.</p>
      * 
      * <strong>example:</strong>
      * <p>1578966918000</p>
@@ -125,7 +128,7 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The percentage of the minimum bandwidth guaranteed if the pay-by-95th-percentile-bandwidth metering method is used. Valid values: <strong>30</strong> to <strong>100</strong>.</p>
+     * <p>The minimum percentage for the pay-by-95th-percentile metering method. Valid values: <strong>30</strong> to <strong>100</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -134,7 +137,7 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
     public Integer ratio;
 
     /**
-     * <p>The ID of the region where GA instance is deployed. <strong>cn-hangzhou</strong> is returned.</p>
+     * <p>The region ID of the Alibaba Cloud Global Accelerator (GA) instance. Set the value to <strong>cn-hangzhou</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -143,7 +146,7 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4B6DBBB0-2D01-4C6A-A384-4129266E6B78</p>
@@ -152,7 +155,7 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfnvueepcihjiq</p>
@@ -161,16 +164,24 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The state of the bandwidth plan. Valid values:</p>
+     * <p>The status of the bandwidth plan. Valid values:</p>
      * <ul>
-     * <li><strong>init</strong>: The bandwidth plan is being initialized.</li>
-     * <li><strong>active</strong>: The bandwidth plan is available.</li>
-     * <li><strong>binded</strong>: The bandwidth plan is associated with a GA instance.</li>
-     * <li><strong>binding</strong>: The bandwidth plan is being associated.</li>
-     * <li><strong>unbinding</strong>: The bandwidth plan is being disassociated.</li>
-     * <li><strong>updating</strong>: The bandwidth plan is being updated.</li>
-     * <li><strong>finacialLocked</strong>: The bandwidth plan is locked due to overdue payments.</li>
-     * <li><strong>Locked</strong>: The bandwidth plan is locked.</li>
+     * <li><p><strong>init</strong>: initialization.</p>
+     * </li>
+     * <li><p><strong>active</strong>: active.</p>
+     * </li>
+     * <li><p><strong>binded</strong>: attached.</p>
+     * </li>
+     * <li><p><strong>binding</strong>: being attached.</p>
+     * </li>
+     * <li><p><strong>unbinding</strong>: being disassociated.</p>
+     * </li>
+     * <li><p><strong>updating</strong>: being updated.</p>
+     * </li>
+     * <li><p><strong>finacialLocked</strong>: locked due to overdue payment.</p>
+     * </li>
+     * <li><p><strong>locked</strong>: locked.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -180,7 +191,7 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
     public String state;
 
     /**
-     * <p>Tag objects.</p>
+     * <p>The resource tags.</p>
      */
     @NameInMap("Tags")
     public java.util.List<DescribeBandwidthPackageResponseBodyTags> tags;
@@ -188,10 +199,12 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
     /**
      * <p>The type of the bandwidth plan. Valid values:</p>
      * <ul>
-     * <li><strong>Basic</strong>: a basic bandwidth plan</li>
-     * <li><strong>CrossDomain</strong>: a cross-region acceleration bandwidth plan</li>
+     * <li><p><strong>Basic</strong>: basic bandwidth plan.</p>
+     * </li>
+     * <li><p><strong>CrossDomain</strong>: cross-border acceleration bandwidth plan.</p>
+     * </li>
      * </ul>
-     * <p>If you call this operation on the Alibaba Cloud China Site (aliyun.com), only <strong>Basic</strong> is returned.</p>
+     * <p>Only <strong>Basic</strong> is returned on the Alibaba Cloud China Website (<a href="http://www.aliyun.com">www.aliyun.com</a>).</p>
      * 
      * <strong>example:</strong>
      * <p>Basic</p>
@@ -358,7 +371,7 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
 
     public static class DescribeBandwidthPackageResponseBodyTags extends TeaModel {
         /**
-         * <p>The key of tag N that is added to the bandwidth plan.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>tag-key</p>
@@ -367,7 +380,7 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N that is added to the bandwidth plan.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>tag-value</p>

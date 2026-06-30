@@ -25,8 +25,10 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the automatic diagnostics feature is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -110,11 +112,16 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
     /**
      * <p>The status of the origin probing task. Valid values:</p>
      * <ul>
-     * <li><strong>init</strong></li>
-     * <li><strong>active</strong></li>
-     * <li><strong>updating</strong></li>
-     * <li><strong>inactive</strong></li>
-     * <li><strong>deleting</strong></li>
+     * <li><p><strong>init</strong></p>
+     * </li>
+     * <li><p><strong>active</strong></p>
+     * </li>
+     * <li><p><strong>updating</strong></p>
+     * </li>
+     * <li><p><strong>inactive</strong></p>
+     * </li>
+     * <li><p><strong>deleting</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -272,7 +279,7 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
          * <p>The name of the city in which the probe point of the ISP is deployed.</p>
          * 
          * <strong>example:</strong>
-         * <p>Singapore</p>
+         * <p>新加坡</p>
          */
         @NameInMap("CityName")
         public String cityName;
@@ -290,7 +297,7 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
          * <p>The probe point name of the ISP.</p>
          * 
          * <strong>example:</strong>
-         * <p>Alibaba</p>
+         * <p>阿里巴巴</p>
          */
         @NameInMap("IspName")
         public String ispName;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCustomRoutingEndpointGroupDestinationsRequest extends TeaModel {
     /**
-     * <p>The ID of the GA instance.</p>
+     * <p>The instance ID of the Alibaba Cloud Global Accelerator (GA) instance for which you want to query endpoint group destination configurations.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListCustomRoutingEndpointGroupDestinationsRequest extends TeaModel 
     public String acceleratorId;
 
     /**
-     * <p>The ID of the endpoint group.</p>
+     * <p>The ID of the endpoint group for which you want to query destination configurations.</p>
      * 
      * <strong>example:</strong>
      * <p>epg-bp16jdc00bhe97sr5****</p>
@@ -24,8 +24,8 @@ public class ListCustomRoutingEndpointGroupDestinationsRequest extends TeaModel 
     public String endpointGroupId;
 
     /**
-     * <p>The start port of the backend service port range of the endpoint group.</p>
-     * <p>Valid values: <strong>1</strong> to <strong>65499</strong>. The <strong>FromPort</strong> value must be smaller than or equal to the <strong>ToPort</strong> value.</p>
+     * <p>The start port of the backend service of the endpoint group.</p>
+     * <p>Valid values: <strong>1</strong> to <strong>65499</strong>. The value of <strong>FromPort</strong> must be less than or equal to the value of <strong>ToPort</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>80</p>
@@ -34,7 +34,7 @@ public class ListCustomRoutingEndpointGroupDestinationsRequest extends TeaModel 
     public Integer fromPort;
 
     /**
-     * <p>The ID of the listener.</p>
+     * <p>The ID of the listener for which you want to query endpoint group destination configurations.</p>
      * 
      * <strong>example:</strong>
      * <p>lsr-bp1bpn0kn908w4nbw****</p>
@@ -43,7 +43,7 @@ public class ListCustomRoutingEndpointGroupDestinationsRequest extends TeaModel 
     public String listenerId;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the list. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -52,7 +52,7 @@ public class ListCustomRoutingEndpointGroupDestinationsRequest extends TeaModel 
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page for a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -61,20 +61,23 @@ public class ListCustomRoutingEndpointGroupDestinationsRequest extends TeaModel 
     public Integer pageSize;
 
     /**
-     * <p>The backend service protocols of the endpoint group. Valid values:</p>
+     * <p>The protocol type of the backend service of the endpoint group. Valid values:</p>
      * <ul>
-     * <li><strong>TCP</strong>: TCP.</li>
-     * <li><strong>UDP</strong>: UDP.</li>
-     * <li><strong>TCP,UDP</strong>: TCP and UDP.</li>
+     * <li><p><strong>TCP</strong>: TCP protocol.</p>
+     * </li>
+     * <li><p><strong>UDP</strong>: UDP protocol.</p>
+     * </li>
+     * <li><p><strong>TCP,UDP</strong>: TCP and UDP protocols.</p>
+     * </li>
      * </ul>
-     * <p>If this parameter is empty, all types of protocols are queried.</p>
-     * <p>You can specify up to 10 protocols.</p>
+     * <p>If this parameter is left empty, all protocol types are queried.</p>
+     * <p>You can specify up to 10 protocol entries.</p>
      */
     @NameInMap("Protocols")
     public java.util.List<String> protocols;
 
     /**
-     * <p>The region ID of the GA instance. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>The region ID of the Alibaba Cloud Global Accelerator (GA) instance. Set the value to <strong>cn-hangzhou</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -84,8 +87,8 @@ public class ListCustomRoutingEndpointGroupDestinationsRequest extends TeaModel 
     public String regionId;
 
     /**
-     * <p>The end port of the backend service port range of the endpoint group.</p>
-     * <p>Valid values: <strong>1</strong> to <strong>65499</strong>. The <strong>FromPort</strong> value must be smaller than or equal to the <strong>ToPort</strong> value.</p>
+     * <p>The end port of the backend service of the endpoint group.</p>
+     * <p>Valid values: <strong>1</strong> to <strong>65499</strong>. The value of <strong>FromPort</strong> must be less than or equal to the value of <strong>ToPort</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>80</p>

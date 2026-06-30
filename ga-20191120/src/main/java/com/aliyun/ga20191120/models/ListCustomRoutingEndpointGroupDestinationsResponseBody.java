@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaModel {
     /**
-     * <p>The details about the endpoint group mappings.</p>
+     * <p>The destination configurations of the endpoint group.</p>
      */
     @NameInMap("Destinations")
     public java.util.List<ListCustomRoutingEndpointGroupDestinationsResponseBodyDestinations> destinations;
 
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The page number of the list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
@@ -93,18 +93,18 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
 
     public static class ListCustomRoutingEndpointGroupDestinationsResponseBodyDestinationsServiceManagedInfos extends TeaModel {
         /**
-         * <p>The name of the action that you can perform on the managed instance. Valid values:</p>
+         * <p>The name of the managed policy action. Valid values:</p>
          * <ul>
          * <li><strong>Create</strong>: Create an instance.</li>
          * <li><strong>Update</strong>: Update the current instance.</li>
          * <li><strong>Delete</strong>: Delete the current instance.</li>
-         * <li><strong>Associate</strong>: Reference the current instance.</li>
+         * <li><strong>Associate</strong>: Reference or be referenced by the current instance.</li>
          * <li><strong>UserUnmanaged</strong>: Unmanage the instance.</li>
-         * <li><strong>CreateChild</strong>: Create a child resource in the current instance.</li>
+         * <li><strong>CreateChild</strong>: Create a child resource under the current instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Update</p>
+         * <p>Create</p>
          */
         @NameInMap("Action")
         public String action;
@@ -112,17 +112,17 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
         /**
          * <p>The type of the child resource. Valid values:</p>
          * <ul>
-         * <li><strong>Listener</strong>: listener.</li>
-         * <li><strong>IpSet</strong>: acceleration region.</li>
-         * <li><strong>EndpointGroup</strong>: endpoint group.</li>
-         * <li><strong>ForwardingRule</strong>: forwarding rule.</li>
-         * <li><strong>Endpoint</strong>: endpoint.</li>
-         * <li><strong>EndpointGroupDestination</strong>: protocol mapping of an endpoint group associated with a custom routing listener.</li>
-         * <li><strong>EndpointPolicy</strong>: traffic policy of an endpoint associated with a custom routing listener.</li>
-         * </ul>
-         * <blockquote>
-         * <p> This parameter takes effect only if <strong>Action</strong> is set to <strong>CreateChild</strong>.</p>
+         * <li><strong>Listener</strong>: listener resource.</li>
+         * <li><strong>IpSet</strong>: acceleration region resource.</li>
+         * <li><strong>EndpointGroup</strong>: endpoint group resource.</li>
+         * <li><strong>ForwardingRule</strong>: forwarding rule resource.</li>
+         * <li><strong>Endpoint</strong>: endpoint resource.</li>
+         * <li><strong>EndpointGroupDestination</strong>: protocol mapping resource of the endpoint group under a custom routing listener.</li>
+         * <li><strong>EndpointPolicy</strong>: endpoint traffic policy resource under a custom routing listener.<blockquote>
+         * <p>This parameter is valid only when <strong>Action</strong> is set to <strong>CreateChild</strong>.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Listener</p>
@@ -131,10 +131,10 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
         public String childType;
 
         /**
-         * <p>Indicates whether the specified actions are managed. Valid values:</p>
+         * <p>Indicates whether the managed policy action is managed. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The specified actions are managed, and you cannot perform the specified actions on the managed instance.</li>
-         * <li><strong>false</strong>: The specified actions are not managed, and you can perform the specified actions on the managed instance.</li>
+         * <li><strong>true</strong>: The managed policy action is managed. The user cannot perform the action specified by Action on the managed instance.</li>
+         * <li><strong>false</strong>: The managed policy action is not managed. The user can perform the action specified by Action on the managed instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -176,7 +176,7 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
 
     public static class ListCustomRoutingEndpointGroupDestinationsResponseBodyDestinations extends TeaModel {
         /**
-         * <p>The GA instance ID.</p>
+         * <p>The instance ID of the Alibaba Cloud Global Accelerator (GA) instance to which the endpoint group destination configuration belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>ga-bp1odcab8tmno0hdq****</p>
@@ -185,7 +185,7 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
         public String acceleratorId;
 
         /**
-         * <p>The ID of the endpoint group mapping.</p>
+         * <p>The ID of the endpoint group destination configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>dst-123abc****</p>
@@ -194,7 +194,7 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
         public String destinationId;
 
         /**
-         * <p>The endpoint group ID.</p>
+         * <p>The ID of the endpoint group to which the destination configuration belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>epg-bp14sz7ftcwwjgrdm****</p>
@@ -203,7 +203,7 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
         public String endpointGroupId;
 
         /**
-         * <p>The first port of the backend service port range.</p>
+         * <p>The start port of the backend service of the endpoint group.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -212,7 +212,7 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
         public Integer fromPort;
 
         /**
-         * <p>The listener ID.</p>
+         * <p>The ID of the listener to which the endpoint group destination configuration belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>lsr-bp1bpn0kn908w4nbw****</p>
@@ -221,20 +221,23 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
         public String listenerId;
 
         /**
-         * <p>The backend service protocols of the endpoint group. Valid values:</p>
+         * <p>The Protocol Type of the backend service of the endpoint group.</p>
          * <ul>
-         * <li><strong>TCP</strong></li>
-         * <li><strong>UDP</strong></li>
-         * <li><strong>TCP,UDP</strong></li>
+         * <li><p><strong>TCP</strong>: TCP protocol.</p>
+         * </li>
+         * <li><p><strong>UDP</strong>: UDP protocol.</p>
+         * </li>
+         * <li><p><strong>TCP,UDP</strong>: TCP and UDP protocols.</p>
+         * </li>
          * </ul>
          */
         @NameInMap("Protocols")
         public java.util.List<String> protocols;
 
         /**
-         * <p>The ID of the service that manages the GA instance.</p>
+         * <p>The ID of the service to which the managed instance belongs.</p>
          * <blockquote>
-         * <p> This parameter takes effect only if <strong>ServiceManaged</strong> is set to <strong>True</strong>.</p>
+         * <p>This parameter is valid only when <strong>ServiceManaged</strong> is set to <strong>True</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -244,10 +247,12 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
         public String serviceId;
 
         /**
-         * <p>Indicates whether the GA instance is managed. Valid values:</p>
+         * <p>Indicates whether the instance is managed. Valid values:  </p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The instance is managed.  </p>
+         * </li>
+         * <li><p>false: The instance is not managed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -257,11 +262,11 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
         public Boolean serviceManaged;
 
         /**
-         * <p>The actions that you can perform on the managed instance.</p>
+         * <p>The list of action policies that the user can execute on the managed instance.</p>
          * <blockquote>
+         * <p>This parameter is valid only when <strong>ServiceManaged</strong> is set to <strong>True</strong>.</p>
          * <ul>
-         * <li>This parameter takes effect only if <strong>ServiceManaged</strong> is set to <strong>True</strong>.</li>
-         * <li>You can perform only specific actions on the managed instance.</li>
+         * <li>When the instance is in the managed state, user operations on the instance are restricted, and certain operations are prohibited.</li>
          * </ul>
          * </blockquote>
          */
@@ -269,7 +274,7 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
         public java.util.List<ListCustomRoutingEndpointGroupDestinationsResponseBodyDestinationsServiceManagedInfos> serviceManagedInfos;
 
         /**
-         * <p>The last port of the backend service port range.</p>
+         * <p>The end port of the backend service of the endpoint group.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateCustomRoutingEndpointTrafficPoliciesRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of a request.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request is different.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> value as the <strong>ClientToken</strong> value. The <strong>RequestId</strong> value is different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class CreateCustomRoutingEndpointTrafficPoliciesRequest extends TeaModel 
     public String clientToken;
 
     /**
-     * <p>The ID of the endpoint for which you want to create traffic destinations.</p>
+     * <p>The ID of the endpoint for which you want to create traffic policies.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,15 +28,15 @@ public class CreateCustomRoutingEndpointTrafficPoliciesRequest extends TeaModel 
     public String endpointId;
 
     /**
-     * <p>The configurations of the traffic destinations.</p>
-     * <p>You can specify up to 500 traffic destinations for each endpoint.</p>
+     * <p>The traffic policy configurations.</p>
+     * <p>You can specify up to 500 traffic policies for each endpoint.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("PolicyConfigurations")
     public java.util.List<CreateCustomRoutingEndpointTrafficPoliciesRequestPolicyConfigurations> policyConfigurations;
 
     /**
-     * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>The region ID of the Global Accelerator instance. Set the value to <strong>ap-southeast-1</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -84,10 +84,10 @@ public class CreateCustomRoutingEndpointTrafficPoliciesRequest extends TeaModel 
 
     public static class CreateCustomRoutingEndpointTrafficPoliciesRequestPolicyConfigurationsPortRanges extends TeaModel {
         /**
-         * <p>The first port of the destination port range. The value of this parameter must fall within the port range of the endpoint group.</p>
+         * <p>The start port of the traffic destination that is allowed to receive traffic. The port value must fall within the backend service port range of the endpoint group.</p>
          * <p>This parameter takes effect only when <strong>TrafficToEndpointPolicy</strong> is set to <strong>AllowCustom</strong>.</p>
-         * <p>If the first port and the last port are not specified, traffic on all ports of the destination is allowed.</p>
-         * <p>You can specify port ranges for up to 500 destinations in each endpoint and specify up to 10 first ports for each destination.</p>
+         * <p>If you leave both the start port and end port empty, all ports of the traffic destination are supported.</p>
+         * <p>You can specify up to 500 port ranges for each endpoint, and up to 10 start ports for each traffic destination.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -96,10 +96,10 @@ public class CreateCustomRoutingEndpointTrafficPoliciesRequest extends TeaModel 
         public Integer fromPort;
 
         /**
-         * <p>The last port of the destination port range. The value of this parameter must fall within the port range of the endpoint group.</p>
+         * <p>The end port of the traffic destination that is allowed to receive traffic. The port value must fall within the backend service port range of the endpoint group.</p>
          * <p>This parameter takes effect only when <strong>TrafficToEndpointPolicy</strong> is set to <strong>AllowCustom</strong>.</p>
-         * <p>If the first port and the last port are not specified, traffic on all ports of the destination is allowed.</p>
-         * <p>You can specify port ranges for up to 500 destinations in each endpoint and specify up to 10 last ports for each destination.</p>
+         * <p>If you leave both the start port and end port empty, all ports of the traffic destination are supported.</p>
+         * <p>You can specify up to 500 port ranges for each endpoint, and up to 10 end ports for each traffic destination.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -132,9 +132,9 @@ public class CreateCustomRoutingEndpointTrafficPoliciesRequest extends TeaModel 
 
     public static class CreateCustomRoutingEndpointTrafficPoliciesRequestPolicyConfigurations extends TeaModel {
         /**
-         * <p>The IP address of the destination to which traffic is forwarded.</p>
+         * <p>The IP address of the traffic destination that is allowed to receive traffic.</p>
          * <p>This parameter takes effect only when <strong>TrafficToEndpointPolicy</strong> is set to <strong>AllowCustom</strong>.</p>
-         * <p>You can specify up to 500 destination IP addresses for each endpoint.</p>
+         * <p>You can specify up to 500 traffic destination IP addresses for each endpoint.</p>
          * <blockquote>
          * <p>This parameter is required.</p>
          * </blockquote>
@@ -146,10 +146,10 @@ public class CreateCustomRoutingEndpointTrafficPoliciesRequest extends TeaModel 
         public String address;
 
         /**
-         * <p>The port range of the destination to which traffic is forwarded. The value of this parameter must fall within the port range of the endpoint group.</p>
-         * <p>If you leave this parameter empty, traffic is forwarded to all destination ports.</p>
+         * <p>The port range of the traffic destination that is allowed to receive traffic. The port range must fall within the backend service port range of the endpoint group.</p>
+         * <p>If you leave this parameter empty, all ports of the traffic destination are supported.</p>
          * <p>This parameter takes effect only when <strong>TrafficToEndpointPolicy</strong> is set to <strong>AllowCustom</strong>.</p>
-         * <p>You can specify port ranges for up to 500 traffic destinations in each endpoint and specify up to 10 port ranges for each traffic destination.</p>
+         * <p>You can specify up to 500 port ranges for each endpoint, and up to 10 port ranges for each traffic destination.</p>
          */
         @NameInMap("PortRanges")
         public java.util.List<CreateCustomRoutingEndpointTrafficPoliciesRequestPolicyConfigurationsPortRanges> portRanges;

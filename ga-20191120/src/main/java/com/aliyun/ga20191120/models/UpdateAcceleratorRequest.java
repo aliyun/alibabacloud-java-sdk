@@ -17,11 +17,13 @@ public class UpdateAcceleratorRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong>: disables automatic payment. This is the default value. After an order is generated, you must go to the <a href="https://usercenter2-intl.aliyun.com/order/list">Order Center</a> to complete the payment.</li>
-     * <li><strong>true</strong>: enables automatic payment. Payments are automatically completed.</li>
+     * <li><p><strong>false</strong> (default): Disables automatic payment. After an order is generated, you must go to the <a href="https://usercenter2-intl.aliyun.com/order/list">Order Hub</a> to complete the payment.</p>
+     * </li>
+     * <li><p><strong>true</strong>: Enables automatic payment. The system automatically pays the bill.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter takes effect only if you call the operation to upgrade a GA instance.</p>
+     * <p>This parameter is valid only for upgrade orders.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -31,13 +33,15 @@ public class UpdateAcceleratorRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>Specifies whether to automatically pay bills by using coupons. Default value: false. Valid values:</p>
+     * <p>Specifies whether to automatically use a coupon to pay for the bill. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: automatically pays bills by using coupons.</li>
-     * <li><strong>false</strong>: does not automatically pay bills by using coupons.</li>
+     * <li><p><strong>true</strong>: Use a coupon.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): Do not use a coupon.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter takes effect only if the <strong>AutoPay</strong> parameter is set to <strong>true</strong>.</p>
+     * <p>This parameter is valid only if <strong>AutoPay</strong> is set to <strong>true</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -46,14 +50,24 @@ public class UpdateAcceleratorRequest extends TeaModel {
     @NameInMap("AutoUseCoupon")
     public Boolean autoUseCoupon;
 
+    /**
+     * <p>The bandwidth of the standard GA instance. Unit: <strong>Mbps</strong>.</p>
+     * <p>Valid values: 200 to 5000.</p>
+     * <blockquote>
+     * <p>This parameter is valid only when the access mode of the acceleration area is Anycast.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>Generate a parameter value from your client to make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -73,7 +87,7 @@ public class UpdateAcceleratorRequest extends TeaModel {
 
     /**
      * <p>The name of the GA instance.</p>
-     * <p>The name must be 1 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name must be 1 to 128 characters in length, start with a letter or a Chinese character, and can contain digits, periods (.), underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>Accelerator</p>
@@ -82,7 +96,7 @@ public class UpdateAcceleratorRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>The region ID of the GA instance. Set the value to <strong>cn-hangzhou</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -94,27 +108,43 @@ public class UpdateAcceleratorRequest extends TeaModel {
     /**
      * <p>The specification of the GA instance. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: Small Ⅰ</li>
-     * <li><strong>2</strong>: Small Ⅱ</li>
-     * <li><strong>3</strong>: Small Ⅲ</li>
-     * <li><strong>5</strong>: Medium Ⅰ</li>
-     * <li><strong>8</strong>: Medium Ⅱ</li>
-     * <li><strong>10</strong>: Medium Ⅲ</li>
-     * <li><strong>20</strong>: Large Ⅰ</li>
-     * <li><strong>30</strong>: Large Ⅱ</li>
-     * <li><strong>40</strong>: Large Ⅲ</li>
-     * <li><strong>50</strong>: Large Ⅳ</li>
-     * <li><strong>60</strong>: Large Ⅴ</li>
-     * <li><strong>70</strong>: Large Ⅵ</li>
-     * <li><strong>80</strong>: Large VⅡ</li>
-     * <li><strong>90</strong>: Large VⅢ</li>
-     * <li><strong>100</strong>: Super Large Ⅰ</li>
-     * <li><strong>200</strong>: Super Large Ⅱ</li>
+     * <li><p><strong>1</strong>: Small I</p>
+     * </li>
+     * <li><p><strong>2</strong>: Small II</p>
+     * </li>
+     * <li><p><strong>3</strong>: Small III</p>
+     * </li>
+     * <li><p><strong>5</strong>: Medium I</p>
+     * </li>
+     * <li><p><strong>8</strong>: Medium II</p>
+     * </li>
+     * <li><p><strong>10</strong>: Medium III</p>
+     * </li>
+     * <li><p><strong>20</strong>: Large I</p>
+     * </li>
+     * <li><p><strong>30</strong>: Large II</p>
+     * </li>
+     * <li><p><strong>40</strong>: Large III</p>
+     * </li>
+     * <li><p><strong>50</strong>: Large IV</p>
+     * </li>
+     * <li><p><strong>60</strong>: Large V</p>
+     * </li>
+     * <li><p><strong>70</strong>: Large VI</p>
+     * </li>
+     * <li><p><strong>80</strong>: Large VII</p>
+     * </li>
+     * <li><p><strong>90</strong>: Large VIII</p>
+     * </li>
+     * <li><p><strong>100</strong>: Ultra-large I</p>
+     * </li>
+     * <li><p><strong>200</strong>: Ultra-large II</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> The Large Ⅲ specification and higher specifications are available only for accounts that are added to the whitelist. To use these specifications, contact your Alibaba Cloud account manager.</p>
+     * <p>Large III and higher specifications are available only to whitelisted users. To use these specifications, contact your account manager.</p>
      * </blockquote>
-     * <p>Different specifications provide different capabilities. For more information, see <a href="https://help.aliyun.com/document_detail/153127.html">Instance specifications</a>.</p>
+     * <p>The definitions of instance types vary. For more information, see <a href="https://help.aliyun.com/document_detail/153127.html">Instance types</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

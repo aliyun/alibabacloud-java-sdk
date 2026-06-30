@@ -138,7 +138,7 @@ public class ListCustomRoutingEndpointGroupsResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>false</p>
+         * <p>true</p>
          */
         @NameInMap("IsManaged")
         public Boolean isManaged;

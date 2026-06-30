@@ -25,10 +25,14 @@ public class UpdateDomainStateResponseBody extends TeaModel {
     /**
      * <p>The ICP filing status of the accelerated domain name. Valid values:</p>
      * <ul>
-     * <li><strong>illegal:</strong> The domain name is illegal.</li>
-     * <li><strong>inactive:</strong> The domain name has not completed ICP filing.</li>
-     * <li><strong>active:</strong> The domain name has a valid ICP number.</li>
-     * <li><strong>unknown:</strong> The ICP filing status is unknown.</li>
+     * <li><p><strong>illegal:</strong> The domain name is illegal.</p>
+     * </li>
+     * <li><p><strong>inactive:</strong> The domain name has not completed ICP filing.</p>
+     * </li>
+     * <li><p><strong>active:</strong> The domain name has a valid ICP number.</p>
+     * </li>
+     * <li><p><strong>unknown:</strong> The ICP filing status is unknown.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

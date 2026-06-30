@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class AssociateAclsWithListenerRequest extends TeaModel {
     /**
-     * <p>The ID of the ACL. You can associate up to two ACL IDs.</p>
+     * <p>The ID of the access control policy group. You can associate up to two access control policy groups.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AclIds")
     public java.util.List<String> aclIds;
 
     /**
-     * <p>The type of the ACL. Valid values:</p>
+     * <p>The type of access control. Valid values:</p>
      * <ul>
-     * <li><strong>white</strong>: Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists are suitable for scenarios in which you want to allow access from specific IP addresses to an application. If a whitelist is improperly configured, risks may arise. After a whitelist is configured for a listener, only requests from the IP addresses that are added to the whitelist are distributed by the listener. If a whitelist is enabled but no IP address is added to the whitelist, the listener forwards all requests.</li>
-     * <li><strong>black</strong>: All requests from the IP addresses or CIDR blocks in the ACL are rejected. Blacklists are suitable for scenarios in which you want to deny access from specific IP addresses to an application. If the blacklist is enabled but no IP addresses are added to the ACL, the listener forwards all requests.</li>
+     * <li><strong>white</strong>: Only requests from the IP addresses or CIDR blocks Settings in the specified access control policy group are forwarded. Whitelists are applicable to scenarios in which you want to allow only specific IP addresses to access your application. After you enable a whitelist, only the IP addresses in the whitelist can access the Global Accelerator listener. If you enable a whitelist but the access control policy group does not contain any IP addresses, the Global Accelerator listener forwards all requests.</li>
+     * <li><strong>black</strong>: All requests from the IP addresses or CIDR blocks Settings in the specified access control policy group are blocked. Blacklists are applicable to scenarios in which you want to block specific IP addresses from accessing your application. If you enable a blacklist but the access control policy group does not contain any IP addresses, the Global Accelerator listener forwards all requests.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>White</p>
+     * <p>white</p>
      */
     @NameInMap("AclType")
     public String aclType;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotency of the request.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> value as the <strong>ClientToken</strong> value. The <strong>RequestId</strong> value is different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -39,10 +39,10 @@ public class AssociateAclsWithListenerRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to only precheck the request. Default value: false. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: prechecks the request without performing the operation. The system checks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong>: sends the request. If the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><strong>true</strong>: performs a dry run without associating the resources. The system checks the required parameters, request syntax, and business limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, an HTTP 2xx status code is returned and the operation is performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class AssociateAclsWithListenerRequest extends TeaModel {
 
     /**
      * <p>The listener ID.</p>
-     * <p>Only intelligent routing listeners support ACLs.</p>
+     * <p>Only intelligent routing listeners support the access control feature.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class AssociateAclsWithListenerRequest extends TeaModel {
     public String listenerId;
 
     /**
-     * <p>The region ID of the Global Accelerator (GA) instance. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>The region ID of the Global Accelerator instance. Set the value to <strong>ap-southeast-1</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

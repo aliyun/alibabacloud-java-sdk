@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAvailableAccelerateAreasRequest extends TeaModel {
     /**
-     * <p>The ID of the GA instance.</p>
+     * <p>The ID of the Global Accelerator instance.</p>
      * 
      * <strong>example:</strong>
      * <p>ga-bp1yeeq8yfoyszmqy****</p>
@@ -13,11 +13,23 @@ public class ListAvailableAccelerateAreasRequest extends TeaModel {
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
+    /**
+     * <p>The access mode of the acceleration area. Valid values:</p>
+     * <ul>
+     * <li><p>anycast: queries the supported anycast acceleration areas.</p>
+     * </li>
+     * <li><p>Other values: queries the supported non-anycast acceleration areas.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>anycast</p>
+     */
     @NameInMap("AccessMode")
     public String accessMode;
 
     /**
-     * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>The ID of the region where the Global Accelerator instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

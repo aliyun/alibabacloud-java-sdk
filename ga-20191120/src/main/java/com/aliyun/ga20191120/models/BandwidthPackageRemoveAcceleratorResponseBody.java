@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class BandwidthPackageRemoveAcceleratorResponseBody extends TeaModel {
     /**
-     * <p>The ID of the GA instance.</p>
+     * <p>The ID of the Alibaba Cloud Global Accelerator (GA) instance disassociated from the bandwidth plan.</p>
      */
     @NameInMap("Accelerators")
     public java.util.List<String> accelerators;
 
     /**
-     * <p>The ID of the bandwidth plan.</p>
+     * <p>The ID of the bandwidth plan disassociated from the Alibaba Cloud Global Accelerator (GA) instance.</p>
      * 
      * <strong>example:</strong>
      * <p>gbwp-bp1sgzldyj6b4q7cx****</p>
@@ -20,7 +20,7 @@ public class BandwidthPackageRemoveAcceleratorResponseBody extends TeaModel {
     public String bandwidthPackageId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B7770CB9-9745-4FE5-9EDA-D14B01A12A50</p>

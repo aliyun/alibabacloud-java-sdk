@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEndpointGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the endpoint group that you want to query.</p>
+     * <p>The ID of the endpoint group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeEndpointGroupRequest extends TeaModel {
     public String endpointGroupId;
 
     /**
-     * <p>The ID of the region where your Global Accelerator (GA) instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>The region ID of the Global Accelerator instance. Set the value to <strong>cn-hangzhou</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

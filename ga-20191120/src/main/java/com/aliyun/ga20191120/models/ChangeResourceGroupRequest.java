@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ChangeResourceGroupRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>client token</strong> can contain only ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of a request.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the value of <strong>RequestId</strong> as the value of <strong>ClientToken</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String newResourceGroupId;
 
     /**
-     * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>The region ID of the Alibaba Cloud Global Accelerator (GA) instance. Set the value to <strong>ap-southeast-1</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,12 +38,12 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the GA resource.</p>
+     * <p>The instance ID of the Global Accelerator resource for which you want to modify the resource group.</p>
      * <ul>
-     * <li>If you set <strong>ResourceType</strong> to <strong>accelerator</strong>, set the value of ResourceId to the ID of a standard GA instance.</li>
-     * <li>If you set <strong>ResourceType</strong> to <strong>basicaccelerator</strong>, set the value of ResourceId to the ID of a basic GA instance.</li>
-     * <li>If you set <strong>ResourceType</strong> to <strong>bandwidthpackage</strong>, set the value of ResourceId to the ID of a bandwidth plan.</li>
-     * <li>If you set <strong>ResourceType</strong> to <strong>acl</strong>, set the value of ResourceId to the ID of an access control list (ACL).</li>
+     * <li>If <strong>ResourceType</strong> is set to <strong>accelerator</strong>, set this parameter to the instance ID of a standard Global Accelerator instance.</li>
+     * <li>If <strong>ResourceType</strong> is set to <strong>basicaccelerator</strong>, set this parameter to the instance ID of a basic Global Accelerator instance.</li>
+     * <li>If <strong>ResourceType</strong> is set to <strong>bandwidthpackage</strong>, set this parameter to the ID of a bandwidth plan.</li>
+     * <li>If <strong>ResourceType</strong> is set to <strong>acl</strong>, set this parameter to the ID of an access control policy group.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -54,12 +54,12 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The type of the GA resource. Valid values:</p>
+     * <p>The type of the Global Accelerator resource for which you want to modify the resource group. Valid values:</p>
      * <ul>
-     * <li><strong>accelerator:</strong> a standard GA instance.</li>
-     * <li><strong>basicaccelerator:</strong> a basic GA instance.</li>
-     * <li><strong>bandwidthpackage:</strong> a bandwidth plan.</li>
-     * <li><strong>acl:</strong> an ACL.</li>
+     * <li><strong>accelerator</strong>: a standard Alibaba Cloud Global Accelerator (GA) instance.</li>
+     * <li><strong>basicaccelerator</strong>: a basic Alibaba Cloud Global Accelerator (GA) instance.</li>
+     * <li><strong>bandwidthpackage</strong>: a bandwidth plan.</li>
+     * <li><strong>acl</strong>: an access control policy group.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -8,13 +8,17 @@ public class DescribeCommodityResponseBody extends TeaModel {
      * <p>The commodity code.</p>
      * <p>Examples for the China site (aliyun.com):</p>
      * <ul>
-     * <li><strong>ga_gapluspre_public_cn</strong>: GA instance.</li>
-     * <li><strong>ga_plusbwppre_public_cn</strong>: basic bandwidth plan.</li>
+     * <li><p><strong>ga_gapluspre_public_cn</strong>: GA instance.</p>
+     * </li>
+     * <li><p><strong>ga_plusbwppre_public_cn</strong>: basic bandwidth plan.</p>
+     * </li>
      * </ul>
      * <p>Examples for the international site (alibabacloud.com):</p>
      * <ul>
-     * <li><strong>ga_pluspre_public_intl</strong>: GA instance.</li>
-     * <li><strong>ga_bwppreintl_public_intl</strong>: basic bandwidth plan.</li>
+     * <li><p><strong>ga_pluspre_public_intl</strong>: GA instance.</p>
+     * </li>
+     * <li><p><strong>ga_bwppreintl_public_intl</strong>: basic bandwidth plan.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -101,7 +105,7 @@ public class DescribeCommodityResponseBody extends TeaModel {
          * <p>The returned information varies based on the commodity module.</p>
          * 
          * <strong>example:</strong>
-         * <p>1 Month</p>
+         * <p>1 month</p>
          */
         @NameInMap("Text")
         public String text;
@@ -111,7 +115,7 @@ public class DescribeCommodityResponseBody extends TeaModel {
          * <p>The returned information varies based on the commodity module.</p>
          * 
          * <strong>example:</strong>
-         * <p>1 Month</p>
+         * <p>1 month</p>
          */
         @NameInMap("Tips")
         public String tips;
@@ -181,7 +185,7 @@ public class DescribeCommodityResponseBody extends TeaModel {
          * <p>The returned information varies based on the commodity module.</p>
          * 
          * <strong>example:</strong>
-         * <p>Duration</p>
+         * <p>Subscription duration</p>
          */
         @NameInMap("Name")
         public String name;
@@ -230,7 +234,7 @@ public class DescribeCommodityResponseBody extends TeaModel {
          * <p>The returned information varies based on the commodity module.</p>
          * 
          * <strong>example:</strong>
-         * <p>Duration</p>
+         * <p>Subscription duration</p>
          */
         @NameInMap("ComponentCode")
         public String componentCode;
@@ -240,7 +244,7 @@ public class DescribeCommodityResponseBody extends TeaModel {
          * <p>The returned information varies based on the commodity module.</p>
          * 
          * <strong>example:</strong>
-         * <p>Duration</p>
+         * <p>Subscription duration</p>
          */
         @NameInMap("ComponentName")
         public String componentName;

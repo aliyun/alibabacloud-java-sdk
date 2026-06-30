@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateBasicEndpointRequest extends TeaModel {
     /**
-     * <p>The ID of the basic GA instance.</p>
+     * <p>The instance ID of the basic Alibaba Cloud Global Accelerator (GA).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,9 +16,9 @@ public class CreateBasicEndpointRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class CreateBasicEndpointRequest extends TeaModel {
     public String endpointAddress;
 
     /**
-     * <p>The ID of the endpoint group.</p>
+     * <p>The endpoint group ID of the basic Alibaba Cloud Global Accelerator (GA) instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,11 +49,11 @@ public class CreateBasicEndpointRequest extends TeaModel {
 
     /**
      * <p>The secondary address of the endpoint.</p>
-     * <p>This parameter is required if the endpoint type is <strong>ECS</strong>, <strong>ENI</strong>, or <strong>NLB</strong>.</p>
+     * <p>This parameter is required when the endpoint type is <strong>ECS</strong>, <strong>ENI</strong>, or <strong>NLB</strong>.</p>
      * <ul>
-     * <li>If the endpoint type is <strong>ECS</strong>, you can set <strong>EndpointSubAddress</strong> to the secondary private IP address of the primary ENI. If the parameter is left empty, the primary private IP address of the primary ENI is used.</li>
-     * <li>If the endpoint type is <strong>ENI</strong>, you can set <strong>EndpointSubAddress</strong> to the secondary private IP address of the secondary ENI. If the parameter is left empty, the primary private IP address of the secondary ENI is used.</li>
-     * <li>This parameter is required if the endpoint type is <strong>NLB</strong>. <strong>EndpointSubAddress</strong> is the primary private IP address of the NLB backend server.</li>
+     * <li>If the endpoint type is <strong>ECS</strong>, EndpointSubAddress can be set to a secondary private IP of the primary network interface controller (NIC). If you leave this parameter empty, the primary private IP of the primary network interface controller (NIC) is used.</li>
+     * <li>If the endpoint type is <strong>ENI</strong>, EndpointSubAddress can be set to a secondary private IP of the secondary network interface controller (NIC). If you leave this parameter empty, the primary private IP of the secondary network interface controller (NIC) is used.</li>
+     * <li>If the endpoint type is <strong>NLB</strong>, this parameter is required. Set EndpointSubAddress to the primary private IP of the NLB backend server.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,10 +65,10 @@ public class CreateBasicEndpointRequest extends TeaModel {
     /**
      * <p>The type of the secondary address of the endpoint. Valid values:</p>
      * <ul>
-     * <li><strong>primary</strong>: a primary private IP address.</li>
-     * <li><strong>secondary</strong>: a secondary private IP address.</li>
+     * <li><strong>primary</strong>: The secondary address type is the primary private IP address.</li>
+     * <li><strong>secondary</strong>: The secondary address type is a secondary private IP address.</li>
      * </ul>
-     * <p>This parameter is required if the endpoint type is <strong>ECS</strong>, <strong>ENI</strong>, or <strong>NLB</strong>. If the endpoint type is <strong>NLB</strong>, only <strong>primary</strong> is supported.</p>
+     * <p>This parameter is required when the endpoint type is <strong>ECS</strong>, <strong>ENI</strong>, or <strong>NLB</strong>. If the endpoint type is <strong>NLB</strong>, only <strong>primary</strong> is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>primary</p>
@@ -77,12 +77,12 @@ public class CreateBasicEndpointRequest extends TeaModel {
     public String endpointSubAddressType;
 
     /**
-     * <p>The type of endpoint. Valid values:</p>
+     * <p>The endpoint type. Valid values:</p>
      * <ul>
-     * <li><strong>ENI</strong>: elastic network interface (ENI)</li>
-     * <li><strong>SLB</strong>: Classic Load Balancer (CLB)</li>
-     * <li><strong>ECS</strong>: Elastic Compute Service (ECS)</li>
-     * <li><strong>NLB</strong>: Network Load Balancer (NLB)</li>
+     * <li><strong>ENI</strong>: Alibaba Cloud elastic network interface (ENI).</li>
+     * <li><strong>SLB</strong>: Alibaba Cloud Classic Load Balancer (CLB) instance.</li>
+     * <li><strong>ECS</strong>: Alibaba Cloud ECS instance.</li>
+     * <li><strong>NLB</strong>: Alibaba Cloud Network Load Balancer (NLB) instance.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -94,7 +94,7 @@ public class CreateBasicEndpointRequest extends TeaModel {
 
     /**
      * <p>The zone ID of the endpoint.</p>
-     * <p>This parameter is required only if the endpoint type is <strong>NLB</strong>.</p>
+     * <p>Currently, this parameter is required only when the endpoint type is <strong>NLB</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-g</p>
@@ -103,8 +103,8 @@ public class CreateBasicEndpointRequest extends TeaModel {
     public String endpointZoneId;
 
     /**
-     * <p>The name of the endpoint that is associated with the basic GA instance.</p>
-     * <p>The name must be 1 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</p>
+     * <p>The name of the endpoint for the basic Alibaba Cloud Global Accelerator (GA) instance.</p>
+     * <p>The name must be 1 to 128 characters in length and must start with a letter or a Chinese character. The name can contain digits, periods (.), underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>ep01</p>
@@ -113,7 +113,7 @@ public class CreateBasicEndpointRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>The region ID of the Global Accelerator instance. Set the value to <strong>ap-southeast-1</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

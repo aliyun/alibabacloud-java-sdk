@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AttachLogStoreToEndpointGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the GA instance.</p>
+     * <p>The instance ID of the Alibaba Cloud Global Accelerator (GA) instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,9 +22,9 @@ public class AttachLogStoreToEndpointGroupRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -34,14 +34,14 @@ public class AttachLogStoreToEndpointGroupRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The IDs of the endpoint groups.</p>
+     * <p>The list of endpoint group IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("EndpointGroupIds")
     public java.util.List<String> endpointGroupIds;
 
     /**
-     * <p>The ID of the listener.</p>
+     * <p>The instance ID of the listener.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class AttachLogStoreToEndpointGroupRequest extends TeaModel {
     public String listenerId;
 
     /**
-     * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>The region ID of the Alibaba Cloud Global Accelerator (GA) instance. Set the value to <strong>cn-hangzhou</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +61,7 @@ public class AttachLogStoreToEndpointGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the Logstore.</p>
+     * <p>The name of the SLS Logstore.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,7 +71,7 @@ public class AttachLogStoreToEndpointGroupRequest extends TeaModel {
     public String slsLogStoreName;
 
     /**
-     * <p>The name of the Log Service project.</p>
+     * <p>The name of the SLS project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -81,7 +81,7 @@ public class AttachLogStoreToEndpointGroupRequest extends TeaModel {
     public String slsProjectName;
 
     /**
-     * <p>The region ID of the Log Service project.</p>
+     * <p>The region ID of the SLS service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetBasicAccelerateIpIdleCountRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of a request.</p>
+     * <p>Generate a parameter value from your client to ensure that the value is unique among different requests. ClientToken supports only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,8 +18,8 @@ public class GetBasicAccelerateIpIdleCountRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the basic GA instance that you want to query.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2253380.html">GetBasicAccelerator</a> operation to query the region ID.</p>
+     * <p>The acceleration region instance ID of the basic Alibaba Cloud Global Accelerator (GA) instance that you want to query.</p>
+     * <p>You can invoke <a href="https://help.aliyun.com/document_detail/2253380.html">GetBasicAccelerator</a> to query the acceleration region instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class GetBasicAccelerateIpIdleCountRequest extends TeaModel {
     public String ipSetId;
 
     /**
-     * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>The region ID of Global Accelerator. Set the value to <strong>cn-hangzhou</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

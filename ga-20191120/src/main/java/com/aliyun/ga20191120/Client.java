@@ -9,6 +9,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("cn-hangzhou", "ga.cn-hangzhou.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("ga", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -28,15 +31,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>AddEntriesToAcl</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/258292.html">GetAcl</a> or <a href="https://help.aliyun.com/document_detail/258291.html">ListAcls</a> operation to query the status of the ACL to which you want to add IP entries.
-     *     *   If the ACL is in the <strong>configuring</strong> state, it indicates that IP entries are added to the ACL. In this case, you can perform only query operations.
-     *     *   If the ACL is in the <strong>active</strong> state, it indicates that IP entries are added to the ACL.</p>
      * <ul>
-     * <li>The <strong>AddEntriesToAcl</strong> operation holds an exclusive lock on the Global Accelerator (GA) instance. While the operation is in progress, you cannot call the same operation in the same Alibaba Cloud account.</li>
+     * <li><strong>AddEntriesToAcl</strong> is an asynchronous operation. After a request is sent, the system returns a request ID, but the IP entries are not yet added. The addition node continues in the background. You can call <a href="https://help.aliyun.com/document_detail/258292.html">GetAcl</a> or <a href="https://help.aliyun.com/document_detail/258291.html">ListAcls</a> to query the status of the access control policy group:<ul>
+     * <li>If the access control policy group is in the <strong>configuring</strong> state, the IP entries are being added. In this state, you can only perform query operations and cannot perform other operations.</li>
+     * <li>If the access control policy group is in the <strong>active</strong> state, the IP entries are added.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot concurrently call <strong>AddEntriesToAcl</strong> to add IP entries to an access control policy group within the same Global Accelerator (GA) instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds IP addresses or CIDR blocks to an access control list (ACL). You can add IP addresses or CIDR blocks to an ACL and configure a whitelist or blacklist to allow or deny requests from clients.</p>
+     * <p>Adds IP entries to an access control policy group and allows or restricts the forwarding of access requests to listeners for these IP entries by using Settings such as whitelists or blacklists, enabling precise control over client requests. You can call the AddEntriesToAcl operation to add IP entries to an access control policy group.</p>
      * 
      * @param request AddEntriesToAclRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -84,15 +89,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>AddEntriesToAcl</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/258292.html">GetAcl</a> or <a href="https://help.aliyun.com/document_detail/258291.html">ListAcls</a> operation to query the status of the ACL to which you want to add IP entries.
-     *     *   If the ACL is in the <strong>configuring</strong> state, it indicates that IP entries are added to the ACL. In this case, you can perform only query operations.
-     *     *   If the ACL is in the <strong>active</strong> state, it indicates that IP entries are added to the ACL.</p>
      * <ul>
-     * <li>The <strong>AddEntriesToAcl</strong> operation holds an exclusive lock on the Global Accelerator (GA) instance. While the operation is in progress, you cannot call the same operation in the same Alibaba Cloud account.</li>
+     * <li><strong>AddEntriesToAcl</strong> is an asynchronous operation. After a request is sent, the system returns a request ID, but the IP entries are not yet added. The addition node continues in the background. You can call <a href="https://help.aliyun.com/document_detail/258292.html">GetAcl</a> or <a href="https://help.aliyun.com/document_detail/258291.html">ListAcls</a> to query the status of the access control policy group:<ul>
+     * <li>If the access control policy group is in the <strong>configuring</strong> state, the IP entries are being added. In this state, you can only perform query operations and cannot perform other operations.</li>
+     * <li>If the access control policy group is in the <strong>active</strong> state, the IP entries are added.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot concurrently call <strong>AddEntriesToAcl</strong> to add IP entries to an access control policy group within the same Global Accelerator (GA) instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds IP addresses or CIDR blocks to an access control list (ACL). You can add IP addresses or CIDR blocks to an ACL and configure a whitelist or blacklist to allow or deny requests from clients.</p>
+     * <p>Adds IP entries to an access control policy group and allows or restricts the forwarding of access requests to listeners for these IP entries by using Settings such as whitelists or blacklists, enabling precise control over client requests. You can call the AddEntriesToAcl operation to add IP entries to an access control policy group.</p>
      * 
      * @param request AddEntriesToAclRequest
      * @return AddEntriesToAclResponse
@@ -104,18 +111,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
      * <ul>
-     * <li><strong>AssociateAclsWithListener</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/153254.html">DescribeListener</a> operation to query the state of the listener with which you attempt to associate an ACL.<ul>
-     * <li>If the listener is in the <strong>updating</strong> state, it indicates that the ACL is being associated. In this case, you can perform only query operations.</li>
-     * <li>If the listener is in the <strong>active</strong> state, it indicates that the ACL is associated.</li>
+     * <li><strong>AssociateAclsWithListener</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the access control policy group is not yet associated with the listener. The association node continues to run in the background. You can invoke <a href="https://help.aliyun.com/document_detail/153254.html">DescribeListener</a> to query the listener status:<ul>
+     * <li>If the listener is in the <strong>updating</strong> state, the access control policy group is being associated with the listener. In this state, you can only execute query operations and cannot execute other operations.</li>
+     * <li>If the listener is in the <strong>active</strong> state, the access control policy group is associated with the listener.</li>
      * </ul>
      * </li>
-     * <li>The <strong>AssociateAclsWithListener</strong> operation cannot be called repeatedly for the same Global Accelerator (GA) instance within a specific period of time.</li>
+     * <li>You cannot concurrently associate access control policy groups with listeners within the same Alibaba Cloud Global Accelerator (GA) instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Associates access control lists (ACLs) with a listener.</p>
+     * <p>Invokes the AssociateAclsWithListener operation to associate access control policy groups with a listener.</p>
      * 
      * @param request AssociateAclsWithListenerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -167,18 +173,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
      * <ul>
-     * <li><strong>AssociateAclsWithListener</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/153254.html">DescribeListener</a> operation to query the state of the listener with which you attempt to associate an ACL.<ul>
-     * <li>If the listener is in the <strong>updating</strong> state, it indicates that the ACL is being associated. In this case, you can perform only query operations.</li>
-     * <li>If the listener is in the <strong>active</strong> state, it indicates that the ACL is associated.</li>
+     * <li><strong>AssociateAclsWithListener</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the access control policy group is not yet associated with the listener. The association node continues to run in the background. You can invoke <a href="https://help.aliyun.com/document_detail/153254.html">DescribeListener</a> to query the listener status:<ul>
+     * <li>If the listener is in the <strong>updating</strong> state, the access control policy group is being associated with the listener. In this state, you can only execute query operations and cannot execute other operations.</li>
+     * <li>If the listener is in the <strong>active</strong> state, the access control policy group is associated with the listener.</li>
      * </ul>
      * </li>
-     * <li>The <strong>AssociateAclsWithListener</strong> operation cannot be called repeatedly for the same Global Accelerator (GA) instance within a specific period of time.</li>
+     * <li>You cannot concurrently associate access control policy groups with listeners within the same Alibaba Cloud Global Accelerator (GA) instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Associates access control lists (ACLs) with a listener.</p>
+     * <p>Invokes the AssociateAclsWithListener operation to associate access control policy groups with a listener.</p>
      * 
      * @param request AssociateAclsWithListenerRequest
      * @return AssociateAclsWithListenerResponse
@@ -190,18 +195,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Only HTTPS listeners can be associated with additional certificates.</p>
      * <ul>
-     * <li><strong>AssociateAdditionalCertificatesWithListener</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/153254.html">DescribeListener</a> operation to query the status of the listener with which you want to associate an additional certificate.<ul>
-     * <li>If the listener is in the <strong>updating</strong> state, it indicates that the additional certificate is being associated. In this case, you can perform only query operations.</li>
-     * <li>If the listener is in the <strong>active</strong> state, it indicates that the additional certificate is associated.</li>
+     * <li>Only HTTPS protocol listeners support attaching extension certificates.</li>
+     * <li>The <strong>AssociateAdditionalCertificatesWithListener</strong> operation is asynchronous. After you send a request, the system returns a request ID, but the attachment between the HTTPS listener and the extension certificates is not yet complete because the association node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/153254.html">DescribeListener</a> to query the listener status:<ul>
+     * <li>If the listener is in the <strong>updating</strong> state, the HTTPS listener and extension certificates are being attached. In this state, you can only execute query operations.</li>
+     * <li>If the listener is in the <strong>active</strong> state, the HTTPS listener and extension certificates are attached.</li>
      * </ul>
      * </li>
-     * <li>The <strong>AssociateAdditionalCertificatesWithListener</strong> operation holds an exclusive lock on the Global Accelerator (GA) instance. While the operation is in progress, you cannot call the same operation in the same Alibaba Cloud account.</li>
+     * <li>The <strong>AssociateAdditionalCertificatesWithListener</strong> operation does not support concurrent requests to attach extension certificates to HTTPS listeners within the same Alibaba Cloud Global Accelerator (GA) instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Associates additional certificates with an HTTPS listener. You can associate multiple certificates with an HTTPS listener and configure virtual endpoint groups and forwarding rules to accelerate access to multiple HTTPS-capable domain names.</p>
+     * <p>Binds multiple certificates to an HTTPS listener of a Global Accelerator instance. Combined with virtual endpoint groups and forwarding rules, this enables accelerated access to multiple HTTPS domain names. You can call the AssociateAdditionalCertificatesWithListener operation to bind additional certificates to an HTTPS listener.</p>
      * 
      * @param request AssociateAdditionalCertificatesWithListenerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -249,18 +254,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Only HTTPS listeners can be associated with additional certificates.</p>
      * <ul>
-     * <li><strong>AssociateAdditionalCertificatesWithListener</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/153254.html">DescribeListener</a> operation to query the status of the listener with which you want to associate an additional certificate.<ul>
-     * <li>If the listener is in the <strong>updating</strong> state, it indicates that the additional certificate is being associated. In this case, you can perform only query operations.</li>
-     * <li>If the listener is in the <strong>active</strong> state, it indicates that the additional certificate is associated.</li>
+     * <li>Only HTTPS protocol listeners support attaching extension certificates.</li>
+     * <li>The <strong>AssociateAdditionalCertificatesWithListener</strong> operation is asynchronous. After you send a request, the system returns a request ID, but the attachment between the HTTPS listener and the extension certificates is not yet complete because the association node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/153254.html">DescribeListener</a> to query the listener status:<ul>
+     * <li>If the listener is in the <strong>updating</strong> state, the HTTPS listener and extension certificates are being attached. In this state, you can only execute query operations.</li>
+     * <li>If the listener is in the <strong>active</strong> state, the HTTPS listener and extension certificates are attached.</li>
      * </ul>
      * </li>
-     * <li>The <strong>AssociateAdditionalCertificatesWithListener</strong> operation holds an exclusive lock on the Global Accelerator (GA) instance. While the operation is in progress, you cannot call the same operation in the same Alibaba Cloud account.</li>
+     * <li>The <strong>AssociateAdditionalCertificatesWithListener</strong> operation does not support concurrent requests to attach extension certificates to HTTPS listeners within the same Alibaba Cloud Global Accelerator (GA) instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Associates additional certificates with an HTTPS listener. You can associate multiple certificates with an HTTPS listener and configure virtual endpoint groups and forwarding rules to accelerate access to multiple HTTPS-capable domain names.</p>
+     * <p>Binds multiple certificates to an HTTPS listener of a Global Accelerator instance. Combined with virtual endpoint groups and forwarding rules, this enables accelerated access to multiple HTTPS domain names. You can call the AssociateAdditionalCertificatesWithListener operation to bind additional certificates to an HTTPS listener.</p>
      * 
      * @param request AssociateAdditionalCertificatesWithListenerRequest
      * @return AssociateAdditionalCertificatesWithListenerResponse
@@ -272,7 +277,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>GA集成云产品</p>
+     * <p>Alibaba Cloud Global Accelerator (GA) Integration with Cloud Products</p>
      * 
      * @param request AssociateResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -328,7 +333,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>GA集成云产品</p>
+     * <p>Alibaba Cloud Global Accelerator (GA) Integration with Cloud Products</p>
      * 
      * @param request AssociateResourcesRequest
      * @return AssociateResourcesResponse
@@ -340,18 +345,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, take note of the following items:</p>
+     * <p>Note the following when you call this operation:</p>
      * <ul>
-     * <li><strong>AttachDdosToAccelerator</strong> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/153235.html">DescribeAccelerator</a> or <a href="https://help.aliyun.com/document_detail/153236.html">ListAccelerators</a> operation to query the status of the GA instance.<ul>
-     * <li>If the GA instance is in the <strong>configuring</strong> state, the Anti-DDoS Pro or Anti-DDoS Premium instance is being associated with the GA instance. In this case, you can perform only query operations.</li>
+     * <li>AttachDdosToAccelerator is an asynchronous operation. After you send a request, the system returns a request ID, but the Anti-DDoS Pro or Anti-DDoS Premium instance is not yet associated with the Global Accelerator (GA) instance. The associate task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/153235.html">DescribeAccelerator</a> or <a href="https://help.aliyun.com/document_detail/153236.html">ListAccelerators</a> to query the status of the GA instance:<ul>
+     * <li>If the GA instance is in the <strong>configuring</strong> state, the Anti-DDoS Pro or Anti-DDoS Premium instance is being associated with the GA instance. In this state, you can only perform query operations.</li>
      * <li>If the GA instance is in the <strong>active</strong> state, the Anti-DDoS Pro or Anti-DDoS Premium instance is associated with the GA instance.</li>
      * </ul>
      * </li>
-     * <li>You cannot repeatedly call the <strong>AttachDdosToAccelerator</strong> operation for the same GA instance within a specific period of time.</li>
+     * <li>The AttachDdosToAccelerator operation does not support concurrent requests to associate Anti-DDoS Pro or Anti-DDoS Premium instances with the same GA instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Associates an Anti-DDoS Pro or Anti-DDoS Premium instance with a Global Accelerator (GA) instance.</p>
+     * <p>If you want to protect your Global Accelerator (GA) applications from large-scale DDoS attacks and ensure service stability and availability, you can call the AttachDdosToAccelerator operation to associate an Anti-DDoS Pro or Anti-DDoS Premium instance with a GA instance.</p>
      * 
      * @param request AttachDdosToAcceleratorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -403,18 +408,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, take note of the following items:</p>
+     * <p>Note the following when you call this operation:</p>
      * <ul>
-     * <li><strong>AttachDdosToAccelerator</strong> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/153235.html">DescribeAccelerator</a> or <a href="https://help.aliyun.com/document_detail/153236.html">ListAccelerators</a> operation to query the status of the GA instance.<ul>
-     * <li>If the GA instance is in the <strong>configuring</strong> state, the Anti-DDoS Pro or Anti-DDoS Premium instance is being associated with the GA instance. In this case, you can perform only query operations.</li>
+     * <li>AttachDdosToAccelerator is an asynchronous operation. After you send a request, the system returns a request ID, but the Anti-DDoS Pro or Anti-DDoS Premium instance is not yet associated with the Global Accelerator (GA) instance. The associate task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/153235.html">DescribeAccelerator</a> or <a href="https://help.aliyun.com/document_detail/153236.html">ListAccelerators</a> to query the status of the GA instance:<ul>
+     * <li>If the GA instance is in the <strong>configuring</strong> state, the Anti-DDoS Pro or Anti-DDoS Premium instance is being associated with the GA instance. In this state, you can only perform query operations.</li>
      * <li>If the GA instance is in the <strong>active</strong> state, the Anti-DDoS Pro or Anti-DDoS Premium instance is associated with the GA instance.</li>
      * </ul>
      * </li>
-     * <li>You cannot repeatedly call the <strong>AttachDdosToAccelerator</strong> operation for the same GA instance within a specific period of time.</li>
+     * <li>The AttachDdosToAccelerator operation does not support concurrent requests to associate Anti-DDoS Pro or Anti-DDoS Premium instances with the same GA instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Associates an Anti-DDoS Pro or Anti-DDoS Premium instance with a Global Accelerator (GA) instance.</p>
+     * <p>If you want to protect your Global Accelerator (GA) applications from large-scale DDoS attacks and ensure service stability and availability, you can call the AttachDdosToAccelerator operation to associate an Anti-DDoS Pro or Anti-DDoS Premium instance with a GA instance.</p>
      * 
      * @param request AttachDdosToAcceleratorRequest
      * @return AttachDdosToAcceleratorResponse
@@ -426,15 +431,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>AttachLogStoreToEndpointGroup</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but this operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/153260.html">DescribeEndpointGroup</a> operation to query the state of an endpoint group.
-     *     *   If the endpoint group is in the <strong>updating</strong> state, it indicates that a Logstore is being associated with the group. In this case, you can perform only query operations.
-     *     *   If the endpoint group is in the <strong>active</strong> state, it indicates that a Logstore is associated with the group.</p>
      * <ul>
-     * <li>The <strong>AttachLogStoreToEndpointGroup</strong> operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.</li>
+     * <li><strong>AttachLogStoreToEndpointGroup</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the association between the SLS Logstore and the endpoint group is not yet complete. The association node continues to run in the background. You can invoke <a href="https://help.aliyun.com/document_detail/153260.html">DescribeEndpointGroup</a> to query the status of the endpoint group:<ul>
+     * <li>If the endpoint group is in the <strong>updating</strong> state, the SLS Logstore is being associated with the endpoint group. In this state, you can only execute query operations.</li>
+     * <li>If the endpoint group is in the <strong>active</strong> state, the SLS Logstore is associated with the endpoint group.</li>
+     * </ul>
+     * </li>
+     * <li><strong>AttachLogStoreToEndpointGroup</strong> does not support concurrent association of SLS Logstores with endpoint groups within the same Alibaba Cloud Global Accelerator (GA) instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Associates a Log Service Logstore with an endpoint group.</p>
+     * <p>Associates a Simple Log Service (SLS) Logstore with an endpoint group.</p>
      * 
      * @param request AttachLogStoreToEndpointGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -502,15 +509,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>AttachLogStoreToEndpointGroup</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but this operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/153260.html">DescribeEndpointGroup</a> operation to query the state of an endpoint group.
-     *     *   If the endpoint group is in the <strong>updating</strong> state, it indicates that a Logstore is being associated with the group. In this case, you can perform only query operations.
-     *     *   If the endpoint group is in the <strong>active</strong> state, it indicates that a Logstore is associated with the group.</p>
      * <ul>
-     * <li>The <strong>AttachLogStoreToEndpointGroup</strong> operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.</li>
+     * <li><strong>AttachLogStoreToEndpointGroup</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the association between the SLS Logstore and the endpoint group is not yet complete. The association node continues to run in the background. You can invoke <a href="https://help.aliyun.com/document_detail/153260.html">DescribeEndpointGroup</a> to query the status of the endpoint group:<ul>
+     * <li>If the endpoint group is in the <strong>updating</strong> state, the SLS Logstore is being associated with the endpoint group. In this state, you can only execute query operations.</li>
+     * <li>If the endpoint group is in the <strong>active</strong> state, the SLS Logstore is associated with the endpoint group.</li>
+     * </ul>
+     * </li>
+     * <li><strong>AttachLogStoreToEndpointGroup</strong> does not support concurrent association of SLS Logstores with endpoint groups within the same Alibaba Cloud Global Accelerator (GA) instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Associates a Log Service Logstore with an endpoint group.</p>
+     * <p>Associates a Simple Log Service (SLS) Logstore with an endpoint group.</p>
      * 
      * @param request AttachLogStoreToEndpointGroupRequest
      * @return AttachLogStoreToEndpointGroupResponse
@@ -522,15 +531,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>BandwidthPackageAddAccelerator</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/153241.html">DescribeBandwidthPackage</a> operation to query the status of the bandwidth plan that you want to associate.
-     *     *   If the bandwidth plan is in the <strong>binding</strong> state, it indicates that the bandwidth plan is being associated. In this case, you can perform only query operations.
-     *     *   If the bandwidth plan is in the <strong>active</strong> state, it indicates that the bandwidth plan is associated.</p>
      * <ul>
-     * <li>The <strong>BandwidthPackageAddAccelerator</strong> operation holds an exclusive lock on the GA instance. While the operation is in progress, you cannot call the same operation in the same Alibaba Cloud account.</li>
+     * <li><strong>BandwidthPackageAddAccelerator</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the bandwidth plan is not yet attached to the Alibaba Cloud Global Accelerator (GA) instance. The attachment node continues to run in the background. You can invoke <a href="https://help.aliyun.com/document_detail/153241.html">DescribeBandwidthPackage</a> to query the status of the bandwidth plan:<ul>
+     * <li>If the bandwidth plan is in the <strong>binding</strong> state, the bandwidth plan is being attached to the Alibaba Cloud Global Accelerator (GA) instance. In this state, you can only execute query operations.</li>
+     * <li>If the bandwidth plan is in the <strong>active</strong> state, the bandwidth plan is attached to the Alibaba Cloud Global Accelerator (GA) instance.</li>
+     * </ul>
+     * </li>
+     * <li>The <strong>BandwidthPackageAddAccelerator</strong> operation does not support concurrent requests to attach bandwidth plans to the same Alibaba Cloud Global Accelerator (GA) instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Associates a bandwidth plan with a Global Accelerator (GA) instance.</p>
+     * <p>Invokes the BandwidthPackageAddAccelerator operation to attach a bandwidth plan to an Alibaba Cloud Global Accelerator (GA) instance.</p>
      * 
      * @param request BandwidthPackageAddAcceleratorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -570,15 +581,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>BandwidthPackageAddAccelerator</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/153241.html">DescribeBandwidthPackage</a> operation to query the status of the bandwidth plan that you want to associate.
-     *     *   If the bandwidth plan is in the <strong>binding</strong> state, it indicates that the bandwidth plan is being associated. In this case, you can perform only query operations.
-     *     *   If the bandwidth plan is in the <strong>active</strong> state, it indicates that the bandwidth plan is associated.</p>
      * <ul>
-     * <li>The <strong>BandwidthPackageAddAccelerator</strong> operation holds an exclusive lock on the GA instance. While the operation is in progress, you cannot call the same operation in the same Alibaba Cloud account.</li>
+     * <li><strong>BandwidthPackageAddAccelerator</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the bandwidth plan is not yet attached to the Alibaba Cloud Global Accelerator (GA) instance. The attachment node continues to run in the background. You can invoke <a href="https://help.aliyun.com/document_detail/153241.html">DescribeBandwidthPackage</a> to query the status of the bandwidth plan:<ul>
+     * <li>If the bandwidth plan is in the <strong>binding</strong> state, the bandwidth plan is being attached to the Alibaba Cloud Global Accelerator (GA) instance. In this state, you can only execute query operations.</li>
+     * <li>If the bandwidth plan is in the <strong>active</strong> state, the bandwidth plan is attached to the Alibaba Cloud Global Accelerator (GA) instance.</li>
+     * </ul>
+     * </li>
+     * <li>The <strong>BandwidthPackageAddAccelerator</strong> operation does not support concurrent requests to attach bandwidth plans to the same Alibaba Cloud Global Accelerator (GA) instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Associates a bandwidth plan with a Global Accelerator (GA) instance.</p>
+     * <p>Invokes the BandwidthPackageAddAccelerator operation to attach a bandwidth plan to an Alibaba Cloud Global Accelerator (GA) instance.</p>
      * 
      * @param request BandwidthPackageAddAcceleratorRequest
      * @return BandwidthPackageAddAcceleratorResponse
@@ -590,15 +603,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>BandwidthPackageRemoveAccelerator</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/153241.html">DescribeBandwidthPackage</a> operation to query the status of the bandwidth plan that you attempt to disassociate.
-     *     *   If the bandwidth plan is in the <strong>unbinding</strong> state, it indicates that the bandwidth plan is being disassociated. In this case, you can perform only query operations.
-     *     *   If the bandwidth plan is in the <strong>active</strong> state, it indicates that the bandwidth plan is disassociated.</p>
      * <ul>
-     * <li>The <strong>BandwidthPackageRemoveAccelerator</strong> cannot be called repeatedly for the same GA instance.</li>
+     * <li>Before you invoke the <strong>BandwidthPackageRemoveAccelerator</strong> operation, make sure that no acceleration regions or endpoint groups exist under the Alibaba Cloud Global Accelerator (GA) instance.<ul>
+     * <li>To delete an acceleration region, see <a href="https://help.aliyun.com/document_detail/2253276.html">DeleteIpSet</a> or <a href="https://help.aliyun.com/document_detail/2253278.html">DeleteIpSets</a>.</li>
+     * <li>To delete an endpoint group, see <a href="https://help.aliyun.com/document_detail/2253305.html">DeleteEndpointGroup</a>, <a href="https://help.aliyun.com/document_detail/2253311.html">DeleteEndpointGroups</a>, or <a href="https://help.aliyun.com/document_detail/2303183.html">DeleteCustomRoutingEndpointGroups</a>.</li>
+     * </ul>
+     * </li>
+     * <li>The <strong>BandwidthPackageRemoveAccelerator</strong> operation is asynchronous. After you send a request, the system returns a request ID, but the disassociation has not yet completed. The disassociation node continues to run in the background. You can invoke <a href="https://help.aliyun.com/document_detail/153241.html">DescribeBandwidthPackage</a> to query the status of the bandwidth plan:<ul>
+     * <li>If the bandwidth plan is in the <strong>unbinding</strong> state, the bandwidth plan is being disassociated from the GA instance. In this state, you can only execute query operations.</li>
+     * <li>If the bandwidth plan is in the <strong>active</strong> state, the bandwidth plan is disassociated from the GA instance.</li>
+     * </ul>
+     * </li>
+     * <li>The <strong>BandwidthPackageRemoveAccelerator</strong> operation does not support concurrent disassociation of bandwidth plans from the same GA instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Disassociates a bandwidth plan from a Global Accelerator (GA) instance.</p>
+     * <p>Invokes the BandwidthPackageRemoveAccelerator operation to disassociate a bandwidth plan from an Alibaba Cloud Global Accelerator (GA) instance.</p>
      * 
      * @param request BandwidthPackageRemoveAcceleratorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -638,15 +658,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>BandwidthPackageRemoveAccelerator</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/153241.html">DescribeBandwidthPackage</a> operation to query the status of the bandwidth plan that you attempt to disassociate.
-     *     *   If the bandwidth plan is in the <strong>unbinding</strong> state, it indicates that the bandwidth plan is being disassociated. In this case, you can perform only query operations.
-     *     *   If the bandwidth plan is in the <strong>active</strong> state, it indicates that the bandwidth plan is disassociated.</p>
      * <ul>
-     * <li>The <strong>BandwidthPackageRemoveAccelerator</strong> cannot be called repeatedly for the same GA instance.</li>
+     * <li>Before you invoke the <strong>BandwidthPackageRemoveAccelerator</strong> operation, make sure that no acceleration regions or endpoint groups exist under the Alibaba Cloud Global Accelerator (GA) instance.<ul>
+     * <li>To delete an acceleration region, see <a href="https://help.aliyun.com/document_detail/2253276.html">DeleteIpSet</a> or <a href="https://help.aliyun.com/document_detail/2253278.html">DeleteIpSets</a>.</li>
+     * <li>To delete an endpoint group, see <a href="https://help.aliyun.com/document_detail/2253305.html">DeleteEndpointGroup</a>, <a href="https://help.aliyun.com/document_detail/2253311.html">DeleteEndpointGroups</a>, or <a href="https://help.aliyun.com/document_detail/2303183.html">DeleteCustomRoutingEndpointGroups</a>.</li>
+     * </ul>
+     * </li>
+     * <li>The <strong>BandwidthPackageRemoveAccelerator</strong> operation is asynchronous. After you send a request, the system returns a request ID, but the disassociation has not yet completed. The disassociation node continues to run in the background. You can invoke <a href="https://help.aliyun.com/document_detail/153241.html">DescribeBandwidthPackage</a> to query the status of the bandwidth plan:<ul>
+     * <li>If the bandwidth plan is in the <strong>unbinding</strong> state, the bandwidth plan is being disassociated from the GA instance. In this state, you can only execute query operations.</li>
+     * <li>If the bandwidth plan is in the <strong>active</strong> state, the bandwidth plan is disassociated from the GA instance.</li>
+     * </ul>
+     * </li>
+     * <li>The <strong>BandwidthPackageRemoveAccelerator</strong> operation does not support concurrent disassociation of bandwidth plans from the same GA instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Disassociates a bandwidth plan from a Global Accelerator (GA) instance.</p>
+     * <p>Invokes the BandwidthPackageRemoveAccelerator operation to disassociate a bandwidth plan from an Alibaba Cloud Global Accelerator (GA) instance.</p>
      * 
      * @param request BandwidthPackageRemoveAcceleratorRequest
      * @return BandwidthPackageRemoveAcceleratorResponse
@@ -658,10 +685,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The <strong>ChangeResourceGroup</strong> operation cannot be repeatedly called for the same GA instance within a specific period of time.</p>
+     * <p>The <strong>ChangeResourceGroup</strong> operation does not support concurrent modifications to the resource group of Global Accelerator resources within the same Alibaba Cloud Global Accelerator (GA) instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Changes the resource group to which a Global Accelerator (GA) resource belongs.</p>
+     * <p>Modifies the resource group to which a Global Accelerator resource belongs by calling the ChangeResourceGroup operation.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -709,10 +736,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The <strong>ChangeResourceGroup</strong> operation cannot be repeatedly called for the same GA instance within a specific period of time.</p>
+     * <p>The <strong>ChangeResourceGroup</strong> operation does not support concurrent modifications to the resource group of Global Accelerator resources within the same Alibaba Cloud Global Accelerator (GA) instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Changes the resource group to which a Global Accelerator (GA) resource belongs.</p>
+     * <p>Modifies the resource group to which a Global Accelerator resource belongs by calling the ChangeResourceGroup operation.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
@@ -812,15 +839,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p><strong>CreateAccelerator</strong> is an asynchronous operation. After you send a request, the system returns the ID of a GA instance, but the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/153235.html">DescribeAccelerator</a> operation to query the state of a GA instance.</p>
+     * <p>The <strong>CreateAccelerator</strong> operation is asynchronous. After you send a request, the system returns a Global Accelerator instance ID, but the instance is still being created in the background. You can call the <a href="https://help.aliyun.com/document_detail/153235.html">DescribeAccelerator</a> operation to query the status of the Global Accelerator instance:</p>
      * <ul>
-     * <li>If the GA instance is in the <strong>init</strong> state, it indicates that the GA instance is being created. In this case, you can perform only query operations.</li>
-     * <li>If the GA instance is in the <strong>active</strong> state, it indicates that the GA instance is created.</li>
+     * <li>If a Global Accelerator instance is in the <strong>init</strong> state, the instance is being created. You can only perform query operations on the instance.</li>
+     * <li>If a Global Accelerator instance is in the <strong>active</strong> state, the instance is created.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Global Accelerator (GA) instance. GA is a high-availability and high-performance network acceleration service for global users. By leveraging the high-quality BGP bandwidth and global network of Alibaba Cloud, GA allows service providers to deploy applications across regions and users to connect to the nearest access points for content delivery acceleration. This reduces network issues, such as network latency, network jitters, and packet loss.</p>
+     * <p>Global Accelerator (GA) is a network acceleration service that provides coverage across the globe. It uses Alibaba Cloud\&quot;s high-quality Border Gateway Protocol (BGP) bandwidth and global transmission network to provide low-latency access from nearby locations. This reduces the impact of network issues, such as latency, jitter, and packet loss, on your service quality. GA provides a high-availability and high-performance network acceleration service for users worldwide. You can call the CreateAccelerator operation to create a Global Accelerator instance.</p>
      * 
      * @param request CreateAcceleratorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -920,15 +946,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p><strong>CreateAccelerator</strong> is an asynchronous operation. After you send a request, the system returns the ID of a GA instance, but the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/153235.html">DescribeAccelerator</a> operation to query the state of a GA instance.</p>
+     * <p>The <strong>CreateAccelerator</strong> operation is asynchronous. After you send a request, the system returns a Global Accelerator instance ID, but the instance is still being created in the background. You can call the <a href="https://help.aliyun.com/document_detail/153235.html">DescribeAccelerator</a> operation to query the status of the Global Accelerator instance:</p>
      * <ul>
-     * <li>If the GA instance is in the <strong>init</strong> state, it indicates that the GA instance is being created. In this case, you can perform only query operations.</li>
-     * <li>If the GA instance is in the <strong>active</strong> state, it indicates that the GA instance is created.</li>
+     * <li>If a Global Accelerator instance is in the <strong>init</strong> state, the instance is being created. You can only perform query operations on the instance.</li>
+     * <li>If a Global Accelerator instance is in the <strong>active</strong> state, the instance is created.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Global Accelerator (GA) instance. GA is a high-availability and high-performance network acceleration service for global users. By leveraging the high-quality BGP bandwidth and global network of Alibaba Cloud, GA allows service providers to deploy applications across regions and users to connect to the nearest access points for content delivery acceleration. This reduces network issues, such as network latency, network jitters, and packet loss.</p>
+     * <p>Global Accelerator (GA) is a network acceleration service that provides coverage across the globe. It uses Alibaba Cloud\&quot;s high-quality Border Gateway Protocol (BGP) bandwidth and global transmission network to provide low-latency access from nearby locations. This reduces the impact of network issues, such as latency, jitter, and packet loss, on your service quality. GA provides a high-availability and high-performance network acceleration service for users worldwide. You can call the CreateAccelerator operation to create a Global Accelerator instance.</p>
      * 
      * @param request CreateAcceleratorRequest
      * @return CreateAcceleratorResponse
@@ -940,14 +965,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>CreateAcl</em>* is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/258292.html">GetAcl</a> or <a href="https://help.aliyun.com/document_detail/258291.html">ListAcls</a> operation to query the state of an ACL.</p>
+     * <p><em>CreateAcl</em>* is an asynchronous operation. After you invoke the operation, the system returns an access control policy group ID but the access control policy group is not yet created. The creation node continues to run in the background. You can invoke <a href="https://help.aliyun.com/document_detail/258292.html">GetAcl</a> or <a href="https://help.aliyun.com/document_detail/258291.html">ListAcls</a> to query the status of the access control policy group:</p>
      * <ul>
-     * <li>If the ACL is in the <strong>init</strong> state, the ACL is being created. In this case, you can only perform only query operations.</li>
-     * <li>If the ACL is in the <strong>active</strong> state, the ACL is created.</li>
+     * <li>If the access control policy group is in the <strong>init</strong> state, the access control policy group is being created. In this state, you can only execute query operations and cannot execute other operations.</li>
+     * <li>If the access control policy group is in the <strong>active</strong> state, the access control policy group is created.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an access control list (ACL).</p>
+     * <p>Invokes the CreateAcl operation to create an access control policy group.</p>
      * 
      * @param request CreateAclRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1007,14 +1032,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>CreateAcl</em>* is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/258292.html">GetAcl</a> or <a href="https://help.aliyun.com/document_detail/258291.html">ListAcls</a> operation to query the state of an ACL.</p>
+     * <p><em>CreateAcl</em>* is an asynchronous operation. After you invoke the operation, the system returns an access control policy group ID but the access control policy group is not yet created. The creation node continues to run in the background. You can invoke <a href="https://help.aliyun.com/document_detail/258292.html">GetAcl</a> or <a href="https://help.aliyun.com/document_detail/258291.html">ListAcls</a> to query the status of the access control policy group:</p>
      * <ul>
-     * <li>If the ACL is in the <strong>init</strong> state, the ACL is being created. In this case, you can only perform only query operations.</li>
-     * <li>If the ACL is in the <strong>active</strong> state, the ACL is created.</li>
+     * <li>If the access control policy group is in the <strong>init</strong> state, the access control policy group is being created. In this state, you can only execute query operations and cannot execute other operations.</li>
+     * <li>If the access control policy group is in the <strong>active</strong> state, the access control policy group is created.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an access control list (ACL).</p>
+     * <p>Invokes the CreateAcl operation to create an access control policy group.</p>
      * 
      * @param request CreateAclRequest
      * @return CreateAclResponse
@@ -1026,22 +1051,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the <strong>CreateApplicationMonitor</strong> operation to create an origin probing task. An origin probing task monitors the network quality between a client and an origin server and checks the availability of the origin server.
-     * Before you call this operation, take note of the following items:</p>
+     * <p>You can call the <strong>CreateApplicationMonitor</strong> operation to create an origin probing task. This task monitors the end-to-end network quality from the probing point through Global Accelerator (GA) to the origin server in real time, helping you quickly locate network faults and perform targeted network optimization.
+     * Before you begin:</p>
      * <ul>
-     * <li>You can create origin detection tasks only for subscription Standard Global Accelerator (GA) instances whose specification is Medium Ⅰ.</li>
-     * <li>You cannot create an origin probe task for a UDP listener.</li>
-     * <li>The service port of the URL or IP address that is probed must be within the listening port range.</li>
-     * <li><strong>CreateApplicationMonitor</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/408463.html">DescribeApplicationMonitor</a> or <a href="https://help.aliyun.com/document_detail/408462.html">ListApplicationMonitor</a> operation to query the status of the origin probing task.<ul>
-     * <li>If the origin probing task is in the <strong>init</strong> state, it indicates that the task is being created. You can perform only query operations.</li>
-     * <li>If the origin probing task is in the <strong>active</strong> state, it indicates that the task is created.</li>
+     * <li>Only subscription Alibaba Cloud Global Accelerator (GA) instances of Medium Ⅰ or higher specifications support origin probing tasks.</li>
+     * <li>Origin probing tasks cannot be created for UDP protocol listeners.</li>
+     * <li>The service port of the monitoring address must be within the listener port range.</li>
+     * <li>The <strong>CreateApplicationMonitor</strong> operation is asynchronous. After you invoke this operation, the system returns a node ID for the origin probing task, but the node is not yet created. The node creation continues in the background. You can invoke <a href="https://help.aliyun.com/document_detail/408463.html">DescribeApplicationMonitor</a> or <a href="https://help.aliyun.com/document_detail/408462.html">ListApplicationMonitor</a> to query the status of the origin probing task:<ul>
+     * <li>If the origin probing task is in the <strong>init</strong> state, the task is being created. In this state, you can only perform query operations.</li>
+     * <li>If the origin probing task is in the <strong>active</strong> state, the task is created.</li>
      * </ul>
      * </li>
-     * <li>The <strong>CreateApplicationMonitor</strong> operation cannot be called repeatedly for the same GA instance within a specific period of time.</li>
+     * <li>The <strong>CreateApplicationMonitor</strong> operation does not support concurrent creation of origin probing nodes within the same Alibaba Cloud Global Accelerator (GA) instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an origin probing task.</p>
+     * <p>Creates an origin probing task by calling the CreateApplicationMonitor operation.</p>
      * 
      * @param request CreateApplicationMonitorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1113,22 +1138,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the <strong>CreateApplicationMonitor</strong> operation to create an origin probing task. An origin probing task monitors the network quality between a client and an origin server and checks the availability of the origin server.
-     * Before you call this operation, take note of the following items:</p>
+     * <p>You can call the <strong>CreateApplicationMonitor</strong> operation to create an origin probing task. This task monitors the end-to-end network quality from the probing point through Global Accelerator (GA) to the origin server in real time, helping you quickly locate network faults and perform targeted network optimization.
+     * Before you begin:</p>
      * <ul>
-     * <li>You can create origin detection tasks only for subscription Standard Global Accelerator (GA) instances whose specification is Medium Ⅰ.</li>
-     * <li>You cannot create an origin probe task for a UDP listener.</li>
-     * <li>The service port of the URL or IP address that is probed must be within the listening port range.</li>
-     * <li><strong>CreateApplicationMonitor</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/408463.html">DescribeApplicationMonitor</a> or <a href="https://help.aliyun.com/document_detail/408462.html">ListApplicationMonitor</a> operation to query the status of the origin probing task.<ul>
-     * <li>If the origin probing task is in the <strong>init</strong> state, it indicates that the task is being created. You can perform only query operations.</li>
-     * <li>If the origin probing task is in the <strong>active</strong> state, it indicates that the task is created.</li>
+     * <li>Only subscription Alibaba Cloud Global Accelerator (GA) instances of Medium Ⅰ or higher specifications support origin probing tasks.</li>
+     * <li>Origin probing tasks cannot be created for UDP protocol listeners.</li>
+     * <li>The service port of the monitoring address must be within the listener port range.</li>
+     * <li>The <strong>CreateApplicationMonitor</strong> operation is asynchronous. After you invoke this operation, the system returns a node ID for the origin probing task, but the node is not yet created. The node creation continues in the background. You can invoke <a href="https://help.aliyun.com/document_detail/408463.html">DescribeApplicationMonitor</a> or <a href="https://help.aliyun.com/document_detail/408462.html">ListApplicationMonitor</a> to query the status of the origin probing task:<ul>
+     * <li>If the origin probing task is in the <strong>init</strong> state, the task is being created. In this state, you can only perform query operations.</li>
+     * <li>If the origin probing task is in the <strong>active</strong> state, the task is created.</li>
      * </ul>
      * </li>
-     * <li>The <strong>CreateApplicationMonitor</strong> operation cannot be called repeatedly for the same GA instance within a specific period of time.</li>
+     * <li>The <strong>CreateApplicationMonitor</strong> operation does not support concurrent creation of origin probing nodes within the same Alibaba Cloud Global Accelerator (GA) instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an origin probing task.</p>
+     * <p>Creates an origin probing task by calling the CreateApplicationMonitor operation.</p>
      * 
      * @param request CreateApplicationMonitorRequest
      * @return CreateApplicationMonitorResponse
@@ -1140,18 +1165,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>To use Global Accelerator (GA) for acceleration, you must purchase a basic bandwidth plan. A basic bandwidth plan supports the following bandwidth types:</p>
+     * <p>You must create a basic bandwidth plan to use Global Accelerator (GA) for network acceleration. A basic bandwidth plan supports the following bandwidth types:</p>
      * <ul>
-     * <li><strong>Basic</strong>: Both the default acceleration region and the default service region are in the Chinese mainland. The accelerated service is deployed on Alibaba Cloud.</li>
-     * <li><strong>Enhanced</strong>: Both the default acceleration region and the default service region are in the Chinese mainland. The accelerated service can be deployed on and off Alibaba Cloud.</li>
-     * <li><strong>Premium</strong>: Both the default acceleration region and the default service region are outside the Chinese mainland. The accelerated service can be deployed on and off Alibaba Cloud. If you want to accelerate data transfer for clients in the Chinese mainland, you must select China (Hong Kong) as the acceleration region.
-     * When you call this operation, take note of the following items:</li>
-     * <li><strong>CreateBandwidthPackage</strong> is an asynchronous operation. After you send a request, the system returns the ID of a bandwidth plan, but the bandwidth plan is still being created in the system background. You can call the <a href="https://help.aliyun.com/document_detail/153241.html">DescribeBandwidthPackage</a> operation to query the status of the bandwidth plan.<ul>
-     * <li>If the bandwidth plan is in the <strong>init</strong> state, it indicates that the bandwidth plan is being created. In this case, you can perform only query operations.</li>
-     * <li>If the bandwidth plan is in the <strong>active</strong> state, it indicates that the bandwidth plan is created.</li>
+     * <li><strong>Basic bandwidth</strong>: The acceleration area and the area where the endpoint is deployed are in the Chinese mainland. The accelerated service is deployed on Alibaba Cloud.</li>
+     * <li><strong>Enhanced bandwidth</strong>: The acceleration area and the area where the endpoint is deployed are in the Chinese mainland. This bandwidth type can accelerate services on both Alibaba Cloud and public networks outside Alibaba Cloud.</li>
+     * <li><strong>Advanced bandwidth</strong>: The acceleration area and the area where the endpoint is deployed are outside the Chinese mainland. This bandwidth type can accelerate services on both Alibaba Cloud and public networks outside Alibaba Cloud. To accelerate access for users in the Chinese mainland, you can select China (Hong Kong) as the acceleration area.
+     * Note the following when you call this operation:</li>
+     * <li>The <strong>CreateBandwidthPackage</strong> operation is asynchronous. After you send a request, the system returns a bandwidth plan ID, but the bandwidth plan is not created immediately. The system creates the bandwidth plan in the background. You can call the <a href="https://help.aliyun.com/document_detail/153241.html">DescribeBandwidthPackage</a> operation to query the status of the bandwidth plan:<ul>
+     * <li>If a bandwidth plan is in the <strong>init</strong> state, the bandwidth plan is being created. In this state, you can only query the bandwidth plan and cannot perform other operations.</li>
+     * <li>If a bandwidth plan is in the <strong>active</strong> state, the bandwidth plan is created.</li>
      * </ul>
      * </li>
-     * <li>The <strong>CreateBandwidthPackage</strong> operation cannot be repeatedly called for the same GA instance within a specific period of time.</li>
+     * <li>The <strong>CreateBandwidthPackage</strong> operation does not support concurrent requests to create bandwidth plans for the same Global Accelerator instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1259,18 +1284,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>To use Global Accelerator (GA) for acceleration, you must purchase a basic bandwidth plan. A basic bandwidth plan supports the following bandwidth types:</p>
+     * <p>You must create a basic bandwidth plan to use Global Accelerator (GA) for network acceleration. A basic bandwidth plan supports the following bandwidth types:</p>
      * <ul>
-     * <li><strong>Basic</strong>: Both the default acceleration region and the default service region are in the Chinese mainland. The accelerated service is deployed on Alibaba Cloud.</li>
-     * <li><strong>Enhanced</strong>: Both the default acceleration region and the default service region are in the Chinese mainland. The accelerated service can be deployed on and off Alibaba Cloud.</li>
-     * <li><strong>Premium</strong>: Both the default acceleration region and the default service region are outside the Chinese mainland. The accelerated service can be deployed on and off Alibaba Cloud. If you want to accelerate data transfer for clients in the Chinese mainland, you must select China (Hong Kong) as the acceleration region.
-     * When you call this operation, take note of the following items:</li>
-     * <li><strong>CreateBandwidthPackage</strong> is an asynchronous operation. After you send a request, the system returns the ID of a bandwidth plan, but the bandwidth plan is still being created in the system background. You can call the <a href="https://help.aliyun.com/document_detail/153241.html">DescribeBandwidthPackage</a> operation to query the status of the bandwidth plan.<ul>
-     * <li>If the bandwidth plan is in the <strong>init</strong> state, it indicates that the bandwidth plan is being created. In this case, you can perform only query operations.</li>
-     * <li>If the bandwidth plan is in the <strong>active</strong> state, it indicates that the bandwidth plan is created.</li>
+     * <li><strong>Basic bandwidth</strong>: The acceleration area and the area where the endpoint is deployed are in the Chinese mainland. The accelerated service is deployed on Alibaba Cloud.</li>
+     * <li><strong>Enhanced bandwidth</strong>: The acceleration area and the area where the endpoint is deployed are in the Chinese mainland. This bandwidth type can accelerate services on both Alibaba Cloud and public networks outside Alibaba Cloud.</li>
+     * <li><strong>Advanced bandwidth</strong>: The acceleration area and the area where the endpoint is deployed are outside the Chinese mainland. This bandwidth type can accelerate services on both Alibaba Cloud and public networks outside Alibaba Cloud. To accelerate access for users in the Chinese mainland, you can select China (Hong Kong) as the acceleration area.
+     * Note the following when you call this operation:</li>
+     * <li>The <strong>CreateBandwidthPackage</strong> operation is asynchronous. After you send a request, the system returns a bandwidth plan ID, but the bandwidth plan is not created immediately. The system creates the bandwidth plan in the background. You can call the <a href="https://help.aliyun.com/document_detail/153241.html">DescribeBandwidthPackage</a> operation to query the status of the bandwidth plan:<ul>
+     * <li>If a bandwidth plan is in the <strong>init</strong> state, the bandwidth plan is being created. In this state, you can only query the bandwidth plan and cannot perform other operations.</li>
+     * <li>If a bandwidth plan is in the <strong>active</strong> state, the bandwidth plan is created.</li>
      * </ul>
      * </li>
-     * <li>The <strong>CreateBandwidthPackage</strong> operation cannot be repeatedly called for the same GA instance within a specific period of time.</li>
+     * <li>The <strong>CreateBandwidthPackage</strong> operation does not support concurrent requests to create bandwidth plans for the same Global Accelerator instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1434,15 +1459,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The <strong>CreateBasicAccelerateIpEndpointRelations</strong> is asynchronous. After you send a request, the system returns a request ID and runs the task in the system background. You can call the <a href="https://help.aliyun.com/document_detail/466794.html">GetBasicAccelerateIp</a> or <a href="https://help.aliyun.com/document_detail/466831.html">ListBasicEndpoints</a> API operation to query the status of an accelerated IP address or an endpoint to determine the association status.
-     *     *   If an accelerated IP address and the endpoint are in the <strong>binding</strong> state, the accelerated IP address is being associated with the endpoint. In this case, you can only query the accelerated IP address and endpoint, but cannot perform other operations.
-     *     *   If all the accelerated IP addresses and the endpoint are in the <strong>bound</strong> state, and the association status returned by the <a href="https://help.aliyun.com/document_detail/466803.html">ListBasicAccelerateIpEndpointRelations</a> API operation is <strong>active</strong>, the accelerated IP addresses are associated with the endpoints.</p>
      * <ul>
-     * <li>The <strong>CreateBasicAccelerateIpEndpointRelations</strong> API operation cannot be repeatedly called for the same basic GA instance within a period of time.</li>
+     * <li><strong>CreateBasicAccelerateIpEndpointRelations</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the task of batch attaching accelerated IP addresses to endpoints is still in progress. You can call <a href="https://help.aliyun.com/document_detail/466794.html">GetBasicAccelerateIp</a> or <a href="https://help.aliyun.com/document_detail/466831.html">ListBasicEndpoints</a> to query the status of accelerated IP addresses and endpoints respectively to confirm whether the attachments are created:  <ul>
+     * <li>If an accelerated IP address or endpoint is in the <strong>binding</strong> state, the attachment is being created. In this state, you can only perform query operations.</li>
+     * <li>If all accelerated IP addresses and endpoints are in the <strong>bound</strong> state, and the attachment status returned by <a href="https://help.aliyun.com/document_detail/466803.html">ListBasicAccelerateIpEndpointRelations</a> is <strong>active</strong>, the batch task of attaching accelerated IP addresses to endpoints is complete.</li>
+     * </ul>
+     * </li>
+     * <li><strong>CreateBasicAccelerateIpEndpointRelations</strong> does not support concurrent batch attaching of accelerated IP addresses to endpoints within the same basic Global Accelerator instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates mappings between accelerated IP addresses and endpoints for a basic Global Accelerator (GA) instance.</p>
+     * <p>Calls the CreateBasicAccelerateIpEndpointRelations operation to batch attach accelerated IP addresses to endpoints for a basic Global Accelerator instance.</p>
      * 
      * @param request CreateBasicAccelerateIpEndpointRelationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1486,15 +1513,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The <strong>CreateBasicAccelerateIpEndpointRelations</strong> is asynchronous. After you send a request, the system returns a request ID and runs the task in the system background. You can call the <a href="https://help.aliyun.com/document_detail/466794.html">GetBasicAccelerateIp</a> or <a href="https://help.aliyun.com/document_detail/466831.html">ListBasicEndpoints</a> API operation to query the status of an accelerated IP address or an endpoint to determine the association status.
-     *     *   If an accelerated IP address and the endpoint are in the <strong>binding</strong> state, the accelerated IP address is being associated with the endpoint. In this case, you can only query the accelerated IP address and endpoint, but cannot perform other operations.
-     *     *   If all the accelerated IP addresses and the endpoint are in the <strong>bound</strong> state, and the association status returned by the <a href="https://help.aliyun.com/document_detail/466803.html">ListBasicAccelerateIpEndpointRelations</a> API operation is <strong>active</strong>, the accelerated IP addresses are associated with the endpoints.</p>
      * <ul>
-     * <li>The <strong>CreateBasicAccelerateIpEndpointRelations</strong> API operation cannot be repeatedly called for the same basic GA instance within a period of time.</li>
+     * <li><strong>CreateBasicAccelerateIpEndpointRelations</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the task of batch attaching accelerated IP addresses to endpoints is still in progress. You can call <a href="https://help.aliyun.com/document_detail/466794.html">GetBasicAccelerateIp</a> or <a href="https://help.aliyun.com/document_detail/466831.html">ListBasicEndpoints</a> to query the status of accelerated IP addresses and endpoints respectively to confirm whether the attachments are created:  <ul>
+     * <li>If an accelerated IP address or endpoint is in the <strong>binding</strong> state, the attachment is being created. In this state, you can only perform query operations.</li>
+     * <li>If all accelerated IP addresses and endpoints are in the <strong>bound</strong> state, and the attachment status returned by <a href="https://help.aliyun.com/document_detail/466803.html">ListBasicAccelerateIpEndpointRelations</a> is <strong>active</strong>, the batch task of attaching accelerated IP addresses to endpoints is complete.</li>
+     * </ul>
+     * </li>
+     * <li><strong>CreateBasicAccelerateIpEndpointRelations</strong> does not support concurrent batch attaching of accelerated IP addresses to endpoints within the same basic Global Accelerator instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates mappings between accelerated IP addresses and endpoints for a basic Global Accelerator (GA) instance.</p>
+     * <p>Calls the CreateBasicAccelerateIpEndpointRelations operation to batch attach accelerated IP addresses to endpoints for a basic Global Accelerator instance.</p>
      * 
      * @param request CreateBasicAccelerateIpEndpointRelationsRequest
      * @return CreateBasicAccelerateIpEndpointRelationsResponse
@@ -1506,14 +1535,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>CreateBasicAccelerator</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/353188.html">GetBasicAccelerator</a> or <a href="https://help.aliyun.com/document_detail/353189.html">ListBasicAccelerators</a> operation to query the status of the task.</p>
+     * <p><em>CreateBasicAccelerator</em>* is an asynchronous operation. After you invoke this operation, the system returns a basic Alibaba Cloud Global Accelerator (GA) instance ID, but the instance is not yet created. The creation node continues to execute in the background. You can invoke <a href="https://help.aliyun.com/document_detail/353188.html">GetBasicAccelerator</a> or <a href="https://help.aliyun.com/document_detail/353189.html">ListBasicAccelerators</a> to query the status of the basic GA instance:</p>
      * <ul>
-     * <li>If the basic GA instance is in the <strong>init</strong> state, it indicates that the basic GA instance is being created. In this case, you can perform only query operations.</li>
-     * <li>If the basic GA instance is in the <strong>active</strong> state, it indicates that the basic GA instance is created.</li>
+     * <li>If the basic GA instance is in the <strong>init</strong> state, the instance is being created. In this state, you can only perform query operations.</li>
+     * <li>If the basic GA instance is in the <strong>active</strong> state, the instance is created.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Basic Global Accelerator (GA) instances leverage the immense bandwidth of the high-quality global network of Alibaba Cloud to provide end-to-end acceleration services. You can use basic GA instances to accelerate content delivery at Layer 3 (IP). You can call the CreateBasicAccelerator operation to create a basic GA instance.</p>
+     * <p>Basic Alibaba Cloud Global Accelerator (GA) instances leverage Alibaba Cloud\&quot;s premium global the Internet bandwidth and high-quality transmission network to provide users with point-to-point acceleration. Basic Alibaba Cloud Global Accelerator (GA) instances are primarily used for Layer 3 (IP protocol) network acceleration. You can invoke the CreateBasicAccelerator operation to create a basic Alibaba Cloud Global Accelerator (GA) instance.</p>
      * 
      * @param request CreateBasicAcceleratorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1597,14 +1626,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>CreateBasicAccelerator</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/353188.html">GetBasicAccelerator</a> or <a href="https://help.aliyun.com/document_detail/353189.html">ListBasicAccelerators</a> operation to query the status of the task.</p>
+     * <p><em>CreateBasicAccelerator</em>* is an asynchronous operation. After you invoke this operation, the system returns a basic Alibaba Cloud Global Accelerator (GA) instance ID, but the instance is not yet created. The creation node continues to execute in the background. You can invoke <a href="https://help.aliyun.com/document_detail/353188.html">GetBasicAccelerator</a> or <a href="https://help.aliyun.com/document_detail/353189.html">ListBasicAccelerators</a> to query the status of the basic GA instance:</p>
      * <ul>
-     * <li>If the basic GA instance is in the <strong>init</strong> state, it indicates that the basic GA instance is being created. In this case, you can perform only query operations.</li>
-     * <li>If the basic GA instance is in the <strong>active</strong> state, it indicates that the basic GA instance is created.</li>
+     * <li>If the basic GA instance is in the <strong>init</strong> state, the instance is being created. In this state, you can only perform query operations.</li>
+     * <li>If the basic GA instance is in the <strong>active</strong> state, the instance is created.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Basic Global Accelerator (GA) instances leverage the immense bandwidth of the high-quality global network of Alibaba Cloud to provide end-to-end acceleration services. You can use basic GA instances to accelerate content delivery at Layer 3 (IP). You can call the CreateBasicAccelerator operation to create a basic GA instance.</p>
+     * <p>Basic Alibaba Cloud Global Accelerator (GA) instances leverage Alibaba Cloud\&quot;s premium global the Internet bandwidth and high-quality transmission network to provide users with point-to-point acceleration. Basic Alibaba Cloud Global Accelerator (GA) instances are primarily used for Layer 3 (IP protocol) network acceleration. You can invoke the CreateBasicAccelerator operation to create a basic Alibaba Cloud Global Accelerator (GA) instance.</p>
      * 
      * @param request CreateBasicAcceleratorRequest
      * @return CreateBasicAcceleratorResponse
@@ -1616,15 +1645,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>CreateBasicEndpoint</strong> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/466831.html">ListBasicEndpoints</a> API operation to query the status of an endpoint.
-     *     *   If the endpoint is in the <strong>init</strong> state, the endpoint is being created. In this case, you can perform only query operations.
-     *     *   If the endpoint is in the <strong>active</strong> state, the endpoint is created.</p>
      * <ul>
-     * <li>The <strong>CreateBasicEndpoint</strong> API operation cannot be repeatedly called for the same basic GA instance within a specific period of time.</li>
+     * <li><strong>CreateBasicEndpoint</strong> is an asynchronous operation. After you invoke this operation, the system returns an endpoint ID for the basic Alibaba Cloud Global Accelerator (GA) instance, but the endpoint is not yet created. The creation task continues to execute in the background. You can invoke <a href="https://help.aliyun.com/document_detail/466831.html">ListBasicEndpoints</a> to query the endpoint status: <ul>
+     * <li>When the endpoint is in the <strong>init</strong> state, the endpoint is being created. In this state, you can only execute query operations.</li>
+     * <li>When the endpoint is in the <strong>active</strong> state, the endpoint is created.</li>
+     * </ul>
+     * </li>
+     * <li><strong>CreateBasicEndpoint</strong> does not support concurrent endpoint creation within the same basic Alibaba Cloud Global Accelerator (GA) instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an endpoint for a basic Global Accelerator (GA) instance.</p>
+     * <p>Invokes the CreateBasicEndpoint operation to create an endpoint for a basic Alibaba Cloud Global Accelerator (GA) instance.</p>
      * 
      * @param request CreateBasicEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1692,15 +1723,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>CreateBasicEndpoint</strong> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/466831.html">ListBasicEndpoints</a> API operation to query the status of an endpoint.
-     *     *   If the endpoint is in the <strong>init</strong> state, the endpoint is being created. In this case, you can perform only query operations.
-     *     *   If the endpoint is in the <strong>active</strong> state, the endpoint is created.</p>
      * <ul>
-     * <li>The <strong>CreateBasicEndpoint</strong> API operation cannot be repeatedly called for the same basic GA instance within a specific period of time.</li>
+     * <li><strong>CreateBasicEndpoint</strong> is an asynchronous operation. After you invoke this operation, the system returns an endpoint ID for the basic Alibaba Cloud Global Accelerator (GA) instance, but the endpoint is not yet created. The creation task continues to execute in the background. You can invoke <a href="https://help.aliyun.com/document_detail/466831.html">ListBasicEndpoints</a> to query the endpoint status: <ul>
+     * <li>When the endpoint is in the <strong>init</strong> state, the endpoint is being created. In this state, you can only execute query operations.</li>
+     * <li>When the endpoint is in the <strong>active</strong> state, the endpoint is created.</li>
+     * </ul>
+     * </li>
+     * <li><strong>CreateBasicEndpoint</strong> does not support concurrent endpoint creation within the same basic Alibaba Cloud Global Accelerator (GA) instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an endpoint for a basic Global Accelerator (GA) instance.</p>
+     * <p>Invokes the CreateBasicEndpoint operation to create an endpoint for a basic Alibaba Cloud Global Accelerator (GA) instance.</p>
      * 
      * @param request CreateBasicEndpointRequest
      * @return CreateBasicEndpointResponse
@@ -1712,15 +1745,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>CreateBasicEndpointGroup</strong> is an asynchronous operation. After a request is sent, the system returns an endpoint group ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/362984.html">GetBasicEndpointGroup</a> operation to query the status of the task.
-     *     *   If the endpoint group is in the <strong>init</strong> state, the endpoint is being created. In this case, you can perform only query operations.
-     *     *   If the endpoint group is in the <strong>active</strong> state, the endpoint group is created.</p>
      * <ul>
-     * <li>You cannot call the <strong>CreateBasicEndpointGroup</strong> operation again on the same GA instance before the previous request is completed.</li>
+     * <li><strong>CreateBasicEndpointGroup</strong> is an asynchronous operation. After you invoke this operation, the system returns an endpoint group ID before the endpoint group is created. The endpoint group is being created in the background. You can invoke <a href="https://help.aliyun.com/document_detail/362984.html">GetBasicEndpointGroup</a> to query the status of the endpoint group:<ul>
+     * <li>If the endpoint group is in the <strong>init</strong> state, the endpoint group is being created. In this state, you can only perform query operations.</li>
+     * <li>If the endpoint group is in the <strong>active</strong> state, the endpoint group is created.</li>
+     * </ul>
+     * </li>
+     * <li><strong>CreateBasicEndpointGroup</strong> does not support concurrent requests to create an endpoint group for the same basic Alibaba Cloud Global Accelerator (GA) instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an endpoint group for a basic Global Accelerator (GA) instance.</p>
+     * <p>Invokes the CreateBasicEndpointGroup operation to create an endpoint group for a basic Alibaba Cloud Global Accelerator (GA) instance.</p>
      * 
      * @param request CreateBasicEndpointGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1784,15 +1819,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>CreateBasicEndpointGroup</strong> is an asynchronous operation. After a request is sent, the system returns an endpoint group ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/362984.html">GetBasicEndpointGroup</a> operation to query the status of the task.
-     *     *   If the endpoint group is in the <strong>init</strong> state, the endpoint is being created. In this case, you can perform only query operations.
-     *     *   If the endpoint group is in the <strong>active</strong> state, the endpoint group is created.</p>
      * <ul>
-     * <li>You cannot call the <strong>CreateBasicEndpointGroup</strong> operation again on the same GA instance before the previous request is completed.</li>
+     * <li><strong>CreateBasicEndpointGroup</strong> is an asynchronous operation. After you invoke this operation, the system returns an endpoint group ID before the endpoint group is created. The endpoint group is being created in the background. You can invoke <a href="https://help.aliyun.com/document_detail/362984.html">GetBasicEndpointGroup</a> to query the status of the endpoint group:<ul>
+     * <li>If the endpoint group is in the <strong>init</strong> state, the endpoint group is being created. In this state, you can only perform query operations.</li>
+     * <li>If the endpoint group is in the <strong>active</strong> state, the endpoint group is created.</li>
+     * </ul>
+     * </li>
+     * <li><strong>CreateBasicEndpointGroup</strong> does not support concurrent requests to create an endpoint group for the same basic Alibaba Cloud Global Accelerator (GA) instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an endpoint group for a basic Global Accelerator (GA) instance.</p>
+     * <p>Invokes the CreateBasicEndpointGroup operation to create an endpoint group for a basic Alibaba Cloud Global Accelerator (GA) instance.</p>
      * 
      * @param request CreateBasicEndpointGroupRequest
      * @return CreateBasicEndpointGroupResponse
@@ -1876,19 +1913,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Take note of the following limits:</p>
+     * <p>When you invoke this operation, take note of the following items:</p>
      * <ul>
-     * <li>You can specify only one acceleration region for each basic GA instance, and only IPv4 clients can connect to basic GA instances.</li>
-     * <li><strong>CreateBasicIpSet</strong> is an asynchronous operation. After you send a request, the system returns an acceleration region ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/362987.html">GetBasicIpSet</a> operation to query the status of the task.<ul>
-     * <li>If the acceleration region is in the <strong>init</strong> state, the acceleration region is being created. In this case, you can perform only query operations.</li>
+     * <li>A basic Alibaba Cloud Global Accelerator (GA) instance supports only one acceleration region and supports only the IPv4 protocol.</li>
+     * <li><strong>CreateBasicIpSet</strong> is an asynchronous operation. After a request is sent, the system returns an acceleration region instance ID but the acceleration region is not yet created. The creation node continues to run in the background. You can invoke <a href="https://help.aliyun.com/document_detail/362987.html">GetBasicIpSet</a> to query the status of the acceleration region:<ul>
+     * <li>If the acceleration region is in the <strong>init</strong> state, the acceleration region is being created. In this state, you can only execute query operations.</li>
      * <li>If the acceleration region is in the <strong>active</strong> state, the acceleration region is created.</li>
      * </ul>
      * </li>
-     * <li>You cannot call the <strong>CreateBasicIpSet</strong> operation again on the same GA instance before the previous task is completed.</li>
+     * <li>The <strong>CreateBasicIpSet</strong> operation does not support concurrent creation of acceleration regions within the same basic Alibaba Cloud Global Accelerator (GA) instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an acceleration region for a basic Global Accelerator (GA) instance.</p>
+     * <p>Invokes the CreateBasicIpSet operation to create an acceleration region for a basic Alibaba Cloud Global Accelerator (GA) instance.</p>
      * 
      * @param request CreateBasicIpSetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1940,19 +1977,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Take note of the following limits:</p>
+     * <p>When you invoke this operation, take note of the following items:</p>
      * <ul>
-     * <li>You can specify only one acceleration region for each basic GA instance, and only IPv4 clients can connect to basic GA instances.</li>
-     * <li><strong>CreateBasicIpSet</strong> is an asynchronous operation. After you send a request, the system returns an acceleration region ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/362987.html">GetBasicIpSet</a> operation to query the status of the task.<ul>
-     * <li>If the acceleration region is in the <strong>init</strong> state, the acceleration region is being created. In this case, you can perform only query operations.</li>
+     * <li>A basic Alibaba Cloud Global Accelerator (GA) instance supports only one acceleration region and supports only the IPv4 protocol.</li>
+     * <li><strong>CreateBasicIpSet</strong> is an asynchronous operation. After a request is sent, the system returns an acceleration region instance ID but the acceleration region is not yet created. The creation node continues to run in the background. You can invoke <a href="https://help.aliyun.com/document_detail/362987.html">GetBasicIpSet</a> to query the status of the acceleration region:<ul>
+     * <li>If the acceleration region is in the <strong>init</strong> state, the acceleration region is being created. In this state, you can only execute query operations.</li>
      * <li>If the acceleration region is in the <strong>active</strong> state, the acceleration region is created.</li>
      * </ul>
      * </li>
-     * <li>You cannot call the <strong>CreateBasicIpSet</strong> operation again on the same GA instance before the previous task is completed.</li>
+     * <li>The <strong>CreateBasicIpSet</strong> operation does not support concurrent creation of acceleration regions within the same basic Alibaba Cloud Global Accelerator (GA) instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an acceleration region for a basic Global Accelerator (GA) instance.</p>
+     * <p>Invokes the CreateBasicIpSet operation to create an acceleration region for a basic Alibaba Cloud Global Accelerator (GA) instance.</p>
      * 
      * @param request CreateBasicIpSetRequest
      * @return CreateBasicIpSetResponse
@@ -1964,10 +2001,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>readAndWrite</p>
+     * <p>An Alibaba Cloud Global Accelerator (GA) instance can generate a port mapping table based on the configured listener port range, the mapping configurations (protocols and port ranges) of the destination endpoint group, and the IP address information of the endpoints (vSwitches). This enables deterministic routing of traffic to specific IP addresses and ports within the vSwitches.
+     * This operation creates mapping configurations for an endpoint group that is associated with a custom route listener. When you invoke this operation, take note of the following items:</p>
+     * <ul>
+     * <li><strong>CreateCustomRoutingEndpointGroupDestinations</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the mapping configurations for the endpoint group are not yet created. The creation node continues to run in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/449373.html">DescribeCustomRoutingEndpointGroup</a> operation to query the status of the endpoint group and confirm whether the mapping configurations are created: <ul>
+     * <li>If the endpoint group is in the <strong>updating</strong> state, the mapping configurations are being created. In this state, you can only execute query operations.</li>
+     * <li>If the endpoint group is in the <strong>active</strong> state, the mapping configurations are created.</li>
+     * </ul>
+     * </li>
+     * <li><strong>CreateCustomRoutingEndpointGroupDestinations</strong> does not support concurrent creation of mapping configurations for endpoint groups associated with custom route listeners within the same Alibaba Cloud Global Accelerator (GA) instance.</li>
+     * </ul>
+     * <h3>Before you begin</h3>
+     * <p>Before you create mapping configurations for an endpoint group associated with a custom route listener, make sure that you have completed the following operations:</p>
+     * <ul>
+     * <li>A standard Alibaba Cloud Global Accelerator (GA) instance is created. For more information, see <a href="https://help.aliyun.com/document_detail/206786.html">CreateAccelerator</a>.</li>
+     * <li>A bandwidth plan is attached to the standard Global Accelerator instance. For more information, see <a href="https://help.aliyun.com/document_detail/153239.html">BandwidthPackageAddAccelerator</a>.</li>
+     * <li>You have completed the deployment of the required applications as backend services to accept forwarded requests from Global Accelerator. Custom route listeners support only vSwitches as backend service types.</li>
+     * <li>You have obtained the permissions to use custom route listeners and created a custom route listener. The custom route listener type is in invitational preview. To use this feature, contact your account manager. To create a custom route listener, see <a href="https://help.aliyun.com/document_detail/153253.html">CreateListener</a>.</li>
+     * <li>You have created an endpoint group for the custom route listener. For more information, see <a href="https://help.aliyun.com/document_detail/449363.html">CreateCustomRoutingEndpointGroups</a>.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates mappings for an endpoint group that is associated with a custom routing listener.</p>
+     * <p>Invokes the CreateCustomRoutingEndpointGroupDestinations operation to create mapping configurations for an endpoint group that is associated with a custom route listener.</p>
      * 
      * @param request CreateCustomRoutingEndpointGroupDestinationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2015,10 +2070,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>readAndWrite</p>
+     * <p>An Alibaba Cloud Global Accelerator (GA) instance can generate a port mapping table based on the configured listener port range, the mapping configurations (protocols and port ranges) of the destination endpoint group, and the IP address information of the endpoints (vSwitches). This enables deterministic routing of traffic to specific IP addresses and ports within the vSwitches.
+     * This operation creates mapping configurations for an endpoint group that is associated with a custom route listener. When you invoke this operation, take note of the following items:</p>
+     * <ul>
+     * <li><strong>CreateCustomRoutingEndpointGroupDestinations</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the mapping configurations for the endpoint group are not yet created. The creation node continues to run in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/449373.html">DescribeCustomRoutingEndpointGroup</a> operation to query the status of the endpoint group and confirm whether the mapping configurations are created: <ul>
+     * <li>If the endpoint group is in the <strong>updating</strong> state, the mapping configurations are being created. In this state, you can only execute query operations.</li>
+     * <li>If the endpoint group is in the <strong>active</strong> state, the mapping configurations are created.</li>
+     * </ul>
+     * </li>
+     * <li><strong>CreateCustomRoutingEndpointGroupDestinations</strong> does not support concurrent creation of mapping configurations for endpoint groups associated with custom route listeners within the same Alibaba Cloud Global Accelerator (GA) instance.</li>
+     * </ul>
+     * <h3>Before you begin</h3>
+     * <p>Before you create mapping configurations for an endpoint group associated with a custom route listener, make sure that you have completed the following operations:</p>
+     * <ul>
+     * <li>A standard Alibaba Cloud Global Accelerator (GA) instance is created. For more information, see <a href="https://help.aliyun.com/document_detail/206786.html">CreateAccelerator</a>.</li>
+     * <li>A bandwidth plan is attached to the standard Global Accelerator instance. For more information, see <a href="https://help.aliyun.com/document_detail/153239.html">BandwidthPackageAddAccelerator</a>.</li>
+     * <li>You have completed the deployment of the required applications as backend services to accept forwarded requests from Global Accelerator. Custom route listeners support only vSwitches as backend service types.</li>
+     * <li>You have obtained the permissions to use custom route listeners and created a custom route listener. The custom route listener type is in invitational preview. To use this feature, contact your account manager. To create a custom route listener, see <a href="https://help.aliyun.com/document_detail/153253.html">CreateListener</a>.</li>
+     * <li>You have created an endpoint group for the custom route listener. For more information, see <a href="https://help.aliyun.com/document_detail/449363.html">CreateCustomRoutingEndpointGroups</a>.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates mappings for an endpoint group that is associated with a custom routing listener.</p>
+     * <p>Invokes the CreateCustomRoutingEndpointGroupDestinations operation to create mapping configurations for an endpoint group that is associated with a custom route listener.</p>
      * 
      * @param request CreateCustomRoutingEndpointGroupDestinationsRequest
      * @return CreateCustomRoutingEndpointGroupDestinationsResponse
@@ -2030,30 +2103,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Global Accelerator (GA) forwards client requests to endpoints in an endpoint group based on the routing type of the listener that is associated with the endpoint group.</p>
+     * <p>Global Accelerator allocates traffic to endpoints within endpoint groups based on the forwarding method defined by the listener routing type.</p>
      * <ul>
-     * <li>After you configure an intelligent routing listener for a GA instance, the GA instance selects a nearby and healthy endpoint group and forwards client requests to a healthy endpoint in the endpoint group.</li>
-     * <li>After you configure a custom routing listener for a GA instance, the instance generates a port mapping table based on the listener port range, protocols and port ranges of the associated endpoint groups, and IP addresses of endpoints (vSwitches), and forwards client requests to specified IP addresses and ports in the vSwitches.
-     * You can call this operation to create endpoint groups for custom routing listeners. For information about how to create endpoint groups for intelligent routing listeners, see <a href="https://help.aliyun.com/document_detail/153259.html">CreateEndpointGroup</a>.
-     * When you call this operation, take note of the following items:</li>
-     * <li><strong>CreateCustomRoutingEndpointGroups</strong> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/449373.html">DescribeCustomRoutingEndpointGroup</a> or <a href="https://help.aliyun.com/document_detail/449374.html">ListCustomRoutingEndpointGroups</a> operation to query the status of the endpoint groups that are associated with custom routing listeners.<ul>
-     * <li>If one or more endpoint groups are in the <strong>init</strong> state, it indicates that the endpoint groups are being created. In this case, you can perform only query operations.</li>
-     * <li>If all endpoint groups are in the <strong>active</strong> state, it indicates that the endpoint groups are created.</li>
+     * <li>After you configure an intelligent routing listener, the Alibaba Cloud Global Accelerator (GA) instance automatically selects the nearest healthy endpoint group for traffic forwarding based on latency factors (primarily depending on geographic location and network link conditions), and ultimately delivers client network access requests to healthy endpoints.</li>
+     * <li>After you configure a custom routing type listener, the Alibaba Cloud Global Accelerator (GA) instance generates a port mapping table based on the configured listener port range, destination endpoint group protocol and port range, and IP address information of the endpoints (vSwitches), to deterministically route traffic to specific IP addresses and ports within vSwitches.
+     * This operation creates endpoint groups for a custom routing type listener. To create endpoint groups for an intelligent routing listener, invoke <a href="https://help.aliyun.com/document_detail/153259.html">CreateEndpointGroup</a>.
+     * When you invoke this operation, take note of the following items:</li>
+     * <li><strong>CreateCustomRoutingEndpointGroups</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the endpoint groups for the custom routing type listener are not yet created. The creation task continues to execute in the background. You can invoke <a href="https://help.aliyun.com/document_detail/449373.html">DescribeCustomRoutingEndpointGroup</a> or <a href="https://help.aliyun.com/document_detail/449374.html">ListCustomRoutingEndpointGroups</a> to query the status of the endpoint groups: <ul>
+     * <li>If an endpoint group is in the <strong>init</strong> state, the endpoint groups are being created in batches. In this state, you can only execute query operations.</li>
+     * <li>When all endpoint groups are in the <strong>active</strong> state, the batch creation is complete.</li>
      * </ul>
      * </li>
-     * <li>The <strong>CreateCustomRoutingEndpointGroups</strong> operation cannot be called repeatedly for the same GA instance within a specific period of time.</li>
+     * <li><strong>CreateCustomRoutingEndpointGroups</strong> does not support concurrent creation of endpoint groups for custom routing type listeners within the same Alibaba Cloud Global Accelerator (GA) instance.</li>
      * </ul>
-     * <h3>Prerequisites</h3>
-     * <p>Make sure that the following requirements are met before you call this operation:</p>
+     * <h3>Before you begin</h3>
+     * <p>Before you create endpoint groups for a custom routing type listener, make sure that you have completed the following operations:</p>
      * <ul>
-     * <li>A standard GA instance is created. For more information, see <a href="https://help.aliyun.com/document_detail/206786.html">CreateAccelerator</a>.</li>
-     * <li>A bandwidth plan is associated with the standard GA instance. For more information, see <a href="https://help.aliyun.com/document_detail/153239.html">BandwidthPackageAddAccelerator</a>.</li>
-     * <li>An application is deployed to receive requests that are forwarded from GA. You can specify only vSwitches as endpoints for custom routing listeners.</li>
-     * <li>The permissions to use custom routing listeners are acquired and a custom routing listener is created for the GA instance. Custom routing listeners are in invitational preview. To use custom routing listeners, contact your account manager. For more information about how to create a custom routing listener, see <a href="https://help.aliyun.com/document_detail/153253.html">CreateListener</a>.</li>
+     * <li>A standard Global Accelerator instance is created. For more information, see <a href="https://help.aliyun.com/document_detail/206786.html">CreateAccelerator</a>.</li>
+     * <li>A bandwidth plan is attached to the standard Alibaba Cloud Global Accelerator (GA) instance. For more information, see <a href="https://help.aliyun.com/document_detail/153239.html">BandwidthPackageAddAccelerator</a>.</li>
+     * <li>You have deployed the relevant applications as backend services for Global Accelerator to accept forwarded requests. Custom routing type listeners support only vSwitches as the backend service type.</li>
+     * <li>You have applied for permissions to use custom routing type listeners and created a custom routing type listener. The custom routing type for listeners is in invitational preview. To use this feature, contact your account manager. To create a custom routing type listener, see <a href="https://help.aliyun.com/document_detail/153253.html">CreateListener</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates endpoint groups for a custom routing listener.</p>
+     * <p>Invokes the CreateCustomRoutingEndpointGroups operation to create endpoint groups for a custom routing type listener in batches.</p>
      * 
      * @param request CreateCustomRoutingEndpointGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2105,30 +2178,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Global Accelerator (GA) forwards client requests to endpoints in an endpoint group based on the routing type of the listener that is associated with the endpoint group.</p>
+     * <p>Global Accelerator allocates traffic to endpoints within endpoint groups based on the forwarding method defined by the listener routing type.</p>
      * <ul>
-     * <li>After you configure an intelligent routing listener for a GA instance, the GA instance selects a nearby and healthy endpoint group and forwards client requests to a healthy endpoint in the endpoint group.</li>
-     * <li>After you configure a custom routing listener for a GA instance, the instance generates a port mapping table based on the listener port range, protocols and port ranges of the associated endpoint groups, and IP addresses of endpoints (vSwitches), and forwards client requests to specified IP addresses and ports in the vSwitches.
-     * You can call this operation to create endpoint groups for custom routing listeners. For information about how to create endpoint groups for intelligent routing listeners, see <a href="https://help.aliyun.com/document_detail/153259.html">CreateEndpointGroup</a>.
-     * When you call this operation, take note of the following items:</li>
-     * <li><strong>CreateCustomRoutingEndpointGroups</strong> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/449373.html">DescribeCustomRoutingEndpointGroup</a> or <a href="https://help.aliyun.com/document_detail/449374.html">ListCustomRoutingEndpointGroups</a> operation to query the status of the endpoint groups that are associated with custom routing listeners.<ul>
-     * <li>If one or more endpoint groups are in the <strong>init</strong> state, it indicates that the endpoint groups are being created. In this case, you can perform only query operations.</li>
-     * <li>If all endpoint groups are in the <strong>active</strong> state, it indicates that the endpoint groups are created.</li>
+     * <li>After you configure an intelligent routing listener, the Alibaba Cloud Global Accelerator (GA) instance automatically selects the nearest healthy endpoint group for traffic forwarding based on latency factors (primarily depending on geographic location and network link conditions), and ultimately delivers client network access requests to healthy endpoints.</li>
+     * <li>After you configure a custom routing type listener, the Alibaba Cloud Global Accelerator (GA) instance generates a port mapping table based on the configured listener port range, destination endpoint group protocol and port range, and IP address information of the endpoints (vSwitches), to deterministically route traffic to specific IP addresses and ports within vSwitches.
+     * This operation creates endpoint groups for a custom routing type listener. To create endpoint groups for an intelligent routing listener, invoke <a href="https://help.aliyun.com/document_detail/153259.html">CreateEndpointGroup</a>.
+     * When you invoke this operation, take note of the following items:</li>
+     * <li><strong>CreateCustomRoutingEndpointGroups</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the endpoint groups for the custom routing type listener are not yet created. The creation task continues to execute in the background. You can invoke <a href="https://help.aliyun.com/document_detail/449373.html">DescribeCustomRoutingEndpointGroup</a> or <a href="https://help.aliyun.com/document_detail/449374.html">ListCustomRoutingEndpointGroups</a> to query the status of the endpoint groups: <ul>
+     * <li>If an endpoint group is in the <strong>init</strong> state, the endpoint groups are being created in batches. In this state, you can only execute query operations.</li>
+     * <li>When all endpoint groups are in the <strong>active</strong> state, the batch creation is complete.</li>
      * </ul>
      * </li>
-     * <li>The <strong>CreateCustomRoutingEndpointGroups</strong> operation cannot be called repeatedly for the same GA instance within a specific period of time.</li>
+     * <li><strong>CreateCustomRoutingEndpointGroups</strong> does not support concurrent creation of endpoint groups for custom routing type listeners within the same Alibaba Cloud Global Accelerator (GA) instance.</li>
      * </ul>
-     * <h3>Prerequisites</h3>
-     * <p>Make sure that the following requirements are met before you call this operation:</p>
+     * <h3>Before you begin</h3>
+     * <p>Before you create endpoint groups for a custom routing type listener, make sure that you have completed the following operations:</p>
      * <ul>
-     * <li>A standard GA instance is created. For more information, see <a href="https://help.aliyun.com/document_detail/206786.html">CreateAccelerator</a>.</li>
-     * <li>A bandwidth plan is associated with the standard GA instance. For more information, see <a href="https://help.aliyun.com/document_detail/153239.html">BandwidthPackageAddAccelerator</a>.</li>
-     * <li>An application is deployed to receive requests that are forwarded from GA. You can specify only vSwitches as endpoints for custom routing listeners.</li>
-     * <li>The permissions to use custom routing listeners are acquired and a custom routing listener is created for the GA instance. Custom routing listeners are in invitational preview. To use custom routing listeners, contact your account manager. For more information about how to create a custom routing listener, see <a href="https://help.aliyun.com/document_detail/153253.html">CreateListener</a>.</li>
+     * <li>A standard Global Accelerator instance is created. For more information, see <a href="https://help.aliyun.com/document_detail/206786.html">CreateAccelerator</a>.</li>
+     * <li>A bandwidth plan is attached to the standard Alibaba Cloud Global Accelerator (GA) instance. For more information, see <a href="https://help.aliyun.com/document_detail/153239.html">BandwidthPackageAddAccelerator</a>.</li>
+     * <li>You have deployed the relevant applications as backend services for Global Accelerator to accept forwarded requests. Custom routing type listeners support only vSwitches as the backend service type.</li>
+     * <li>You have applied for permissions to use custom routing type listeners and created a custom routing type listener. The custom routing type for listeners is in invitational preview. To use this feature, contact your account manager. To create a custom routing type listener, see <a href="https://help.aliyun.com/document_detail/153253.html">CreateListener</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates endpoint groups for a custom routing listener.</p>
+     * <p>Invokes the CreateCustomRoutingEndpointGroups operation to create endpoint groups for a custom routing type listener in batches.</p>
      * 
      * @param request CreateCustomRoutingEndpointGroupsRequest
      * @return CreateCustomRoutingEndpointGroupsResponse
@@ -2140,29 +2213,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation takes effect only when the traffic access policy of an endpoint allows traffic to specified destinations. You can call the <a href="https://help.aliyun.com/document_detail/449386.html">DescribeCustomRoutingEndpoint</a> operation to query the traffic access policy of an endpoint. This operation takes effect only if the value of <strong>TrafficToEndpointPolicy</strong> is set to <strong>AllowCustom</strong>, which allows traffic to specific destinations.
-     * When you call this operation, take note of the following items:</p>
+     * <p>This operation takes effect only when the traffic policy of the backend service for the endpoint is set to allow traffic to specified destinations that can accept access traffic. You can invoke <a href="https://help.aliyun.com/document_detail/449386.html">DescribeCustomRoutingEndpoint</a> to query the traffic policy of the backend service for a specified endpoint. This operation takes effect only when <strong>TrafficToEndpointPolicy</strong> is set to <strong>AllowCustom</strong> (specifying destinations that can accept access traffic).
+     * Before you invoke this operation, take note of the following items:</p>
      * <ul>
-     * <li><strong>CreateCustomRoutingEndpointTrafficPolicies</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/449373.html">DescribeCustomRoutingEndpointGroup</a> operation to query the status of the task.<ul>
-     * <li>If the endpoint group is in the <strong>updating</strong> state, the traffic destinations are being created. In this state, you can only query the traffic destinations.</li>
-     * <li>If the endpoint group is in the <strong>active</strong> state, the traffic destinations are created.</li>
+     * <li><strong>CreateCustomRoutingEndpointTrafficPolicies</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the endpoint traffic policies for the custom route type listener are not yet created. The creation task continues to run in the background. You can invoke <a href="https://help.aliyun.com/document_detail/449373.html">DescribeCustomRoutingEndpointGroup</a> to query the status of the endpoint group to confirm whether the traffic policies are created. <ul>
+     * <li>If the endpoint group is in the <strong>updating</strong> state, the traffic policies are being created. In this state, you can only execute query operations.</li>
+     * <li>If the endpoint group is in the <strong>active</strong> state, the traffic policies are created.</li>
      * </ul>
      * </li>
-     * <li>You cannot call the <strong>CreateCustomRoutingEndpointTrafficPolicies</strong> operation repeatedly for the same GA instance in a specific period of time.</li>
+     * <li>The <strong>CreateCustomRoutingEndpointTrafficPolicies</strong> operation does not support concurrent creation of endpoint traffic policies within the same Global Accelerator instance.</li>
      * </ul>
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>Before you call this operation, make sure that the following requirements are met:</p>
+     * <h3>Before you begin</h3>
+     * <p>Before you create an endpoint traffic policy, make sure that you have completed the following operations:</p>
      * <ul>
-     * <li>A standard GA instance is created. For more information, see <a href="https://help.aliyun.com/document_detail/206786.html">CreateAccelerator</a>.</li>
-     * <li>If the bandwidth metering method of the standard GA instance is <strong>pay-by-bandwidth</strong>, a bandwidth plan must be associated with the standard GA instance. For more information, see <a href="https://help.aliyun.com/document_detail/153239.html">BandwidthPackageAddAccelerator</a>.</li>
-     * <li>An application that serves as the endpoint of the standard GA instance is deployed to receive requests that are forwarded from GA. You can specify only vSwitches as endpoints for custom routing listeners.</li>
-     * <li>The permissions to use custom routing listeners are acquired, and a custom routing listener is created. Custom routing listeners are in invitational preview. To use custom routing listeners, contact your account manager. For more information about how to create a custom routing listener, see <a href="https://help.aliyun.com/document_detail/153253.html">CreateListener</a>.</li>
-     * <li>Endpoint groups are created for the custom routing listener. For more information, see <a href="https://help.aliyun.com/document_detail/449363.html">CreateCustomRoutingEndpointGroups</a>.</li>
-     * <li>Endpoints are created for the custom routing listener. For more information, see <a href="https://help.aliyun.com/document_detail/449382.html">CreateCustomRoutingEndpoints</a>.</li>
+     * <li>A standard Global Accelerator instance is created. For more information, see <a href="https://help.aliyun.com/document_detail/206786.html">CreateAccelerator</a>.</li>
+     * <li>If the billing method of the standard Global Accelerator instance is <strong>pay-by-bandwidth</strong>, a basic bandwidth plan is attached to the standard Global Accelerator instance. For more information, see <a href="https://help.aliyun.com/document_detail/153239.html">BandwidthPackageAddAccelerator</a>.</li>
+     * <li>You have deployed the required applications as backend services to accept forwarded requests from Global Accelerator. The backend service type for custom route type listeners supports only vSwitches.</li>
+     * <li>You have obtained the permissions to use custom route type listeners and created a custom route type listener. The custom route type for listeners is in invitational preview. To use this feature, contact your account manager. To create a custom route type listener, see <a href="https://help.aliyun.com/document_detail/153253.html">CreateListener</a>.</li>
+     * <li>An endpoint group is created for the custom route type listener. For more information, see <a href="https://help.aliyun.com/document_detail/449363.html">CreateCustomRoutingEndpointGroups</a>.</li>
+     * <li>An endpoint is created for the custom route type listener. For more information, see <a href="https://help.aliyun.com/document_detail/449382.html">CreateCustomRoutingEndpoints</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates traffic destinations for an endpoint that is associated with a custom routing listener.</p>
+     * <p>Invokes the CreateCustomRoutingEndpointTrafficPolicies operation to create an endpoint traffic policy (custom route type listener).</p>
      * 
      * @param request CreateCustomRoutingEndpointTrafficPoliciesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2206,29 +2279,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation takes effect only when the traffic access policy of an endpoint allows traffic to specified destinations. You can call the <a href="https://help.aliyun.com/document_detail/449386.html">DescribeCustomRoutingEndpoint</a> operation to query the traffic access policy of an endpoint. This operation takes effect only if the value of <strong>TrafficToEndpointPolicy</strong> is set to <strong>AllowCustom</strong>, which allows traffic to specific destinations.
-     * When you call this operation, take note of the following items:</p>
+     * <p>This operation takes effect only when the traffic policy of the backend service for the endpoint is set to allow traffic to specified destinations that can accept access traffic. You can invoke <a href="https://help.aliyun.com/document_detail/449386.html">DescribeCustomRoutingEndpoint</a> to query the traffic policy of the backend service for a specified endpoint. This operation takes effect only when <strong>TrafficToEndpointPolicy</strong> is set to <strong>AllowCustom</strong> (specifying destinations that can accept access traffic).
+     * Before you invoke this operation, take note of the following items:</p>
      * <ul>
-     * <li><strong>CreateCustomRoutingEndpointTrafficPolicies</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/449373.html">DescribeCustomRoutingEndpointGroup</a> operation to query the status of the task.<ul>
-     * <li>If the endpoint group is in the <strong>updating</strong> state, the traffic destinations are being created. In this state, you can only query the traffic destinations.</li>
-     * <li>If the endpoint group is in the <strong>active</strong> state, the traffic destinations are created.</li>
+     * <li><strong>CreateCustomRoutingEndpointTrafficPolicies</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the endpoint traffic policies for the custom route type listener are not yet created. The creation task continues to run in the background. You can invoke <a href="https://help.aliyun.com/document_detail/449373.html">DescribeCustomRoutingEndpointGroup</a> to query the status of the endpoint group to confirm whether the traffic policies are created. <ul>
+     * <li>If the endpoint group is in the <strong>updating</strong> state, the traffic policies are being created. In this state, you can only execute query operations.</li>
+     * <li>If the endpoint group is in the <strong>active</strong> state, the traffic policies are created.</li>
      * </ul>
      * </li>
-     * <li>You cannot call the <strong>CreateCustomRoutingEndpointTrafficPolicies</strong> operation repeatedly for the same GA instance in a specific period of time.</li>
+     * <li>The <strong>CreateCustomRoutingEndpointTrafficPolicies</strong> operation does not support concurrent creation of endpoint traffic policies within the same Global Accelerator instance.</li>
      * </ul>
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>Before you call this operation, make sure that the following requirements are met:</p>
+     * <h3>Before you begin</h3>
+     * <p>Before you create an endpoint traffic policy, make sure that you have completed the following operations:</p>
      * <ul>
-     * <li>A standard GA instance is created. For more information, see <a href="https://help.aliyun.com/document_detail/206786.html">CreateAccelerator</a>.</li>
-     * <li>If the bandwidth metering method of the standard GA instance is <strong>pay-by-bandwidth</strong>, a bandwidth plan must be associated with the standard GA instance. For more information, see <a href="https://help.aliyun.com/document_detail/153239.html">BandwidthPackageAddAccelerator</a>.</li>
-     * <li>An application that serves as the endpoint of the standard GA instance is deployed to receive requests that are forwarded from GA. You can specify only vSwitches as endpoints for custom routing listeners.</li>
-     * <li>The permissions to use custom routing listeners are acquired, and a custom routing listener is created. Custom routing listeners are in invitational preview. To use custom routing listeners, contact your account manager. For more information about how to create a custom routing listener, see <a href="https://help.aliyun.com/document_detail/153253.html">CreateListener</a>.</li>
-     * <li>Endpoint groups are created for the custom routing listener. For more information, see <a href="https://help.aliyun.com/document_detail/449363.html">CreateCustomRoutingEndpointGroups</a>.</li>
-     * <li>Endpoints are created for the custom routing listener. For more information, see <a href="https://help.aliyun.com/document_detail/449382.html">CreateCustomRoutingEndpoints</a>.</li>
+     * <li>A standard Global Accelerator instance is created. For more information, see <a href="https://help.aliyun.com/document_detail/206786.html">CreateAccelerator</a>.</li>
+     * <li>If the billing method of the standard Global Accelerator instance is <strong>pay-by-bandwidth</strong>, a basic bandwidth plan is attached to the standard Global Accelerator instance. For more information, see <a href="https://help.aliyun.com/document_detail/153239.html">BandwidthPackageAddAccelerator</a>.</li>
+     * <li>You have deployed the required applications as backend services to accept forwarded requests from Global Accelerator. The backend service type for custom route type listeners supports only vSwitches.</li>
+     * <li>You have obtained the permissions to use custom route type listeners and created a custom route type listener. The custom route type for listeners is in invitational preview. To use this feature, contact your account manager. To create a custom route type listener, see <a href="https://help.aliyun.com/document_detail/153253.html">CreateListener</a>.</li>
+     * <li>An endpoint group is created for the custom route type listener. For more information, see <a href="https://help.aliyun.com/document_detail/449363.html">CreateCustomRoutingEndpointGroups</a>.</li>
+     * <li>An endpoint is created for the custom route type listener. For more information, see <a href="https://help.aliyun.com/document_detail/449382.html">CreateCustomRoutingEndpoints</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates traffic destinations for an endpoint that is associated with a custom routing listener.</p>
+     * <p>Invokes the CreateCustomRoutingEndpointTrafficPolicies operation to create an endpoint traffic policy (custom route type listener).</p>
      * 
      * @param request CreateCustomRoutingEndpointTrafficPoliciesRequest
      * @return CreateCustomRoutingEndpointTrafficPoliciesResponse
@@ -2240,28 +2313,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you configure a custom routing listener for a Global Accelerator (GA) instance, the instance generates a port mapping table based on the listener port range, the protocols and port ranges of the associated endpoint groups, and the IP addresses of endpoints (vSwitches), and forwards client requests to specified IP addresses and ports in the vSwitches.
-     * This operation is used to create endpoints for custom routing listeners. When you call this operation, take note of the following items:</p>
+     * <p>After you configure a custom route type listener, the Alibaba Cloud Global Accelerator (GA) instance generates a port mapping table based on the configured listener port range, the protocol and port range of the destination endpoint group, and the IP address information of the endpoints (vSwitches). This way, traffic is deterministically routed to specific IP addresses and ports in the vSwitches.
+     * This operation creates endpoints for a custom route type listener. When you invoke this operation, take note of the following items:</p>
      * <ul>
-     * <li><strong>CreateCustomRoutingEndpoints</strong> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/449373.html">DescribeCustomRoutingEndpointGroup</a> operation to query the status of an endpoint group and determine whether endpoints are created in the endpoint group.<ul>
-     * <li>If the endpoint group is in the <strong>updating</strong> state, it indicates that endpoints are being created. In this case, you can perform only query operations.</li>
-     * <li>If the endpoint group is in the <strong>active</strong> state, it indicates that endpoints are created.</li>
+     * <li><strong>CreateCustomRoutingEndpoints</strong> is an asynchronous operation. After a request is sent, the system returns a request ID, but the endpoints are not yet created. The creation node continues to run in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/449373.html">DescribeCustomRoutingEndpointGroup</a> operation to query the status of the endpoint group to confirm whether the endpoints are created: <ul>
+     * <li>If the endpoint group is in the <strong>updating</strong> state, the endpoints are being created. In this state, you can only execute query operations.</li>
+     * <li>If the endpoint group is in the <strong>active</strong> state, the endpoints are created.</li>
      * </ul>
      * </li>
-     * <li>The <strong>CreateCustomRoutingEndpoints</strong> operation cannot be called repeatedly for the same GA instance within a specific period of time.</li>
+     * <li>The <strong>CreateCustomRoutingEndpoints</strong> operation does not support concurrent requests to create endpoints for custom route listeners within the same Alibaba Cloud Global Accelerator (GA) instance.</li>
      * </ul>
-     * <h3>Prerequisites</h3>
-     * <p>The following operations are complete before you call this operation:</p>
+     * <h3>Before you begin</h3>
+     * <p>Before you create endpoints for a custom route type listener, make sure that the following operations are complete:</p>
      * <ul>
-     * <li>Create a standard GA instance. For more information, see <a href="https://help.aliyun.com/document_detail/206786.html">CreateAccelerator</a>.</li>
-     * <li>Associate a bandwidth plan with the standard GA instance. For more information, see <a href="https://help.aliyun.com/document_detail/153239.html">BandwidthPackageAddAccelerator</a>.</li>
-     * <li>Deploy an application that serves as the endpoint of the GA instance. The application is used to receive requests that are forwarded from GA. You can specify only vSwitches as endpoints for custom routing listeners.</li>
-     * <li>Apply for permissions to use custom routing listeners and create a custom routing listener for the standard GA instance. Custom routing listeners are in invitational preview. To use custom routing listeners, contact your account manager. For more information about how to create a custom routing listener, see <a href="https://help.aliyun.com/document_detail/153253.html">CreateListener</a>.</li>
-     * <li>Create an endpoint group for the custom routing listener. For more information, see <a href="https://help.aliyun.com/document_detail/449363.html">CreateCustomRoutingEndpointGroups</a>.</li>
+     * <li>A standard Global Accelerator instance is created. For more information, see <a href="https://help.aliyun.com/document_detail/206786.html">CreateAccelerator</a>.</li>
+     * <li>A bandwidth plan is attached to the standard Alibaba Cloud Global Accelerator (GA) instance. For more information, see <a href="https://help.aliyun.com/document_detail/153239.html">BandwidthPackageAddAccelerator</a>.</li>
+     * <li>Applications are deployed as backend services of Global Accelerator to accept forwarded requests. Custom route type listeners support only vSwitches as the backend service type.</li>
+     * <li>You have obtained the permissions to use custom route type listeners and created a custom route type listener. The custom route type for listeners is in invitational preview. To use this feature, contact your account manager. To create a custom route type listener, see <a href="https://help.aliyun.com/document_detail/153253.html">CreateListener</a>.</li>
+     * <li>An endpoint group for the custom route type listener is created. For more information, see <a href="https://help.aliyun.com/document_detail/449363.html">CreateCustomRoutingEndpointGroups</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates endpoints for a custom routing listener.</p>
+     * <p>Invokes the CreateCustomRoutingEndpoints operation to create endpoints for a custom route type listener.</p>
      * 
      * @param request CreateCustomRoutingEndpointsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2305,28 +2378,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you configure a custom routing listener for a Global Accelerator (GA) instance, the instance generates a port mapping table based on the listener port range, the protocols and port ranges of the associated endpoint groups, and the IP addresses of endpoints (vSwitches), and forwards client requests to specified IP addresses and ports in the vSwitches.
-     * This operation is used to create endpoints for custom routing listeners. When you call this operation, take note of the following items:</p>
+     * <p>After you configure a custom route type listener, the Alibaba Cloud Global Accelerator (GA) instance generates a port mapping table based on the configured listener port range, the protocol and port range of the destination endpoint group, and the IP address information of the endpoints (vSwitches). This way, traffic is deterministically routed to specific IP addresses and ports in the vSwitches.
+     * This operation creates endpoints for a custom route type listener. When you invoke this operation, take note of the following items:</p>
      * <ul>
-     * <li><strong>CreateCustomRoutingEndpoints</strong> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/449373.html">DescribeCustomRoutingEndpointGroup</a> operation to query the status of an endpoint group and determine whether endpoints are created in the endpoint group.<ul>
-     * <li>If the endpoint group is in the <strong>updating</strong> state, it indicates that endpoints are being created. In this case, you can perform only query operations.</li>
-     * <li>If the endpoint group is in the <strong>active</strong> state, it indicates that endpoints are created.</li>
+     * <li><strong>CreateCustomRoutingEndpoints</strong> is an asynchronous operation. After a request is sent, the system returns a request ID, but the endpoints are not yet created. The creation node continues to run in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/449373.html">DescribeCustomRoutingEndpointGroup</a> operation to query the status of the endpoint group to confirm whether the endpoints are created: <ul>
+     * <li>If the endpoint group is in the <strong>updating</strong> state, the endpoints are being created. In this state, you can only execute query operations.</li>
+     * <li>If the endpoint group is in the <strong>active</strong> state, the endpoints are created.</li>
      * </ul>
      * </li>
-     * <li>The <strong>CreateCustomRoutingEndpoints</strong> operation cannot be called repeatedly for the same GA instance within a specific period of time.</li>
+     * <li>The <strong>CreateCustomRoutingEndpoints</strong> operation does not support concurrent requests to create endpoints for custom route listeners within the same Alibaba Cloud Global Accelerator (GA) instance.</li>
      * </ul>
-     * <h3>Prerequisites</h3>
-     * <p>The following operations are complete before you call this operation:</p>
+     * <h3>Before you begin</h3>
+     * <p>Before you create endpoints for a custom route type listener, make sure that the following operations are complete:</p>
      * <ul>
-     * <li>Create a standard GA instance. For more information, see <a href="https://help.aliyun.com/document_detail/206786.html">CreateAccelerator</a>.</li>
-     * <li>Associate a bandwidth plan with the standard GA instance. For more information, see <a href="https://help.aliyun.com/document_detail/153239.html">BandwidthPackageAddAccelerator</a>.</li>
-     * <li>Deploy an application that serves as the endpoint of the GA instance. The application is used to receive requests that are forwarded from GA. You can specify only vSwitches as endpoints for custom routing listeners.</li>
-     * <li>Apply for permissions to use custom routing listeners and create a custom routing listener for the standard GA instance. Custom routing listeners are in invitational preview. To use custom routing listeners, contact your account manager. For more information about how to create a custom routing listener, see <a href="https://help.aliyun.com/document_detail/153253.html">CreateListener</a>.</li>
-     * <li>Create an endpoint group for the custom routing listener. For more information, see <a href="https://help.aliyun.com/document_detail/449363.html">CreateCustomRoutingEndpointGroups</a>.</li>
+     * <li>A standard Global Accelerator instance is created. For more information, see <a href="https://help.aliyun.com/document_detail/206786.html">CreateAccelerator</a>.</li>
+     * <li>A bandwidth plan is attached to the standard Alibaba Cloud Global Accelerator (GA) instance. For more information, see <a href="https://help.aliyun.com/document_detail/153239.html">BandwidthPackageAddAccelerator</a>.</li>
+     * <li>Applications are deployed as backend services of Global Accelerator to accept forwarded requests. Custom route type listeners support only vSwitches as the backend service type.</li>
+     * <li>You have obtained the permissions to use custom route type listeners and created a custom route type listener. The custom route type for listeners is in invitational preview. To use this feature, contact your account manager. To create a custom route type listener, see <a href="https://help.aliyun.com/document_detail/153253.html">CreateListener</a>.</li>
+     * <li>An endpoint group for the custom route type listener is created. For more information, see <a href="https://help.aliyun.com/document_detail/449363.html">CreateCustomRoutingEndpointGroups</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates endpoints for a custom routing listener.</p>
+     * <p>Invokes the CreateCustomRoutingEndpoints operation to create endpoints for a custom route type listener.</p>
      * 
      * @param request CreateCustomRoutingEndpointsRequest
      * @return CreateCustomRoutingEndpointsResponse
@@ -2339,7 +2412,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>After you associate an accelerated domain name that has obtained an ICP number with a Global Accelerator (GA) instance, you do not need to complete filing for the accelerated domain name or its subdomains on Alibaba Cloud.
-     * You can call this operation to add an accelerated domain name and associate the accelerated domain name with GA instances. When you call this operation, take note of the following items:</p>
+     * This operation adds an accelerated domain name and associates it with GA instances. Take note of the following items when calling this operation:</p>
      * <ul>
      * <li>If your accelerated domain name is hosted in the Chinese mainland, you must obtain an ICP number for the domain name.</li>
      * <li>The same accelerated domain name cannot be repeatedly associated with the same GA instance.</li>
@@ -2347,7 +2420,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a domain name and associates the domain name with Global Accelerator (GA) instances.</p>
+     * <p>Creates an accelerated domain name and associates it with one or more GA instances.</p>
      * 
      * @param request CreateDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2392,7 +2465,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>After you associate an accelerated domain name that has obtained an ICP number with a Global Accelerator (GA) instance, you do not need to complete filing for the accelerated domain name or its subdomains on Alibaba Cloud.
-     * You can call this operation to add an accelerated domain name and associate the accelerated domain name with GA instances. When you call this operation, take note of the following items:</p>
+     * This operation adds an accelerated domain name and associates it with GA instances. Take note of the following items when calling this operation:</p>
      * <ul>
      * <li>If your accelerated domain name is hosted in the Chinese mainland, you must obtain an ICP number for the domain name.</li>
      * <li>The same accelerated domain name cannot be repeatedly associated with the same GA instance.</li>
@@ -2400,7 +2473,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a domain name and associates the domain name with Global Accelerator (GA) instances.</p>
+     * <p>Creates an accelerated domain name and associates it with one or more GA instances.</p>
      * 
      * @param request CreateDomainRequest
      * @return CreateDomainResponse
@@ -2412,14 +2485,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  When you call this operation to create a virtual endpoint group for a Layer 4 listener, make sure that a default endpoint group is created.</p>
      * <ul>
-     * <li><strong>CreateEndpointGroup</strong> is an asynchronous operation. After you send a request, the system returns the ID of an endpoint group, but the endpoint group is still being created in the system background. You can call the <a href="https://help.aliyun.com/document_detail/153260.html">DescribeEndpointGroup</a> operation to query the state of the endpoint group.<ul>
-     * <li>If the endpoint group is in the <strong>init</strong> state, it indicates that the endpoint group is being created. In this case, you can perform only query operations.</li>
-     * <li>If the endpoint group is in the <strong>active</strong> state, it indicates that the endpoint group is created.</li>
+     * <li>Before you create a virtual endpoint group for a Layer 4 listener, you must first create a default endpoint group.</li>
+     * <li><strong>CreateEndpointGroup</strong> is an asynchronous operation. After you send a request, the system returns an endpoint group ID and begins creating the endpoint group in the background. You can call <a href="https://help.aliyun.com/document_detail/153260.html">DescribeEndpointGroup</a> to query the status of the endpoint group:<ul>
+     * <li>If the endpoint group is in the <strong>init</strong> state, it is being created. In this state, you can only perform query operations.</li>
+     * <li>If the endpoint group is in the <strong>active</strong> state, it has been created.</li>
      * </ul>
      * </li>
-     * <li>The <strong>CreateEndpointGroup</strong> operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.</li>
+     * <li>You cannot make concurrent calls to the <strong>CreateEndpointGroup</strong> operation for the same Global Accelerator instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2543,14 +2616,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  When you call this operation to create a virtual endpoint group for a Layer 4 listener, make sure that a default endpoint group is created.</p>
      * <ul>
-     * <li><strong>CreateEndpointGroup</strong> is an asynchronous operation. After you send a request, the system returns the ID of an endpoint group, but the endpoint group is still being created in the system background. You can call the <a href="https://help.aliyun.com/document_detail/153260.html">DescribeEndpointGroup</a> operation to query the state of the endpoint group.<ul>
-     * <li>If the endpoint group is in the <strong>init</strong> state, it indicates that the endpoint group is being created. In this case, you can perform only query operations.</li>
-     * <li>If the endpoint group is in the <strong>active</strong> state, it indicates that the endpoint group is created.</li>
+     * <li>Before you create a virtual endpoint group for a Layer 4 listener, you must first create a default endpoint group.</li>
+     * <li><strong>CreateEndpointGroup</strong> is an asynchronous operation. After you send a request, the system returns an endpoint group ID and begins creating the endpoint group in the background. You can call <a href="https://help.aliyun.com/document_detail/153260.html">DescribeEndpointGroup</a> to query the status of the endpoint group:<ul>
+     * <li>If the endpoint group is in the <strong>init</strong> state, it is being created. In this state, you can only perform query operations.</li>
+     * <li>If the endpoint group is in the <strong>active</strong> state, it has been created.</li>
      * </ul>
      * </li>
-     * <li>The <strong>CreateEndpointGroup</strong> operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.</li>
+     * <li>You cannot make concurrent calls to the <strong>CreateEndpointGroup</strong> operation for the same Global Accelerator instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2566,19 +2639,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation to create multiple endpoint groups at a time. However, you cannot create a default endpoint group and a virtual endpoint group at the same time.</p>
      * <ul>
-     * <li>You cannot create a virtual endpoint group for a Layer 4 listener. To create a virtual endpoint group for a Layer 4 listener, call the <a href="https://help.aliyun.com/document_detail/2302394.html">CreateEndpointGroup</a> operation.</li>
-     * <li><strong>CreateEndpointGroups</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/153260.html">DescribeEndpointGroup</a> or <a href="https://help.aliyun.com/document_detail/153261.html">ListEndpointGroups</a> operation to query the status of endpoint groups.<ul>
-     * <li>If the endpoint groups are in the <strong>init</strong> state, the endpoint groups are being created. In this case, you can perform only query operations.</li>
-     * <li>If all endpoint groups are in the <strong>active</strong> state, the endpoint groups are created.</li>
+     * <li>Creates endpoint groups in batches. Default and virtual endpoint groups cannot be created in a single call.</li>
+     * <li>This API does not support creating virtual endpoint groups for Layer-4 listeners. To create a virtual endpoint group for a Layer-4 listener, call <a href="https://help.aliyun.com/document_detail/2302394.html">CreateEndpointGroup</a>.</li>
+     * <li><strong>CreateEndpointGroups</strong> is an asynchronous API. It returns a request ID and creates the endpoint groups in the background. You can call <a href="https://help.aliyun.com/document_detail/153260.html">DescribeEndpointGroup</a> or <a href="https://help.aliyun.com/document_detail/153261.html">ListEndpointGroups</a> to query the status of an endpoint group:<ul>
+     * <li>If an endpoint group is in the <strong>init</strong> state, it is initializing. You can only query the endpoint group in this state.</li>
+     * <li>The batch creation is complete when all endpoint groups are in the <strong>active</strong> state.</li>
      * </ul>
      * </li>
-     * <li>The <strong>CreateEndpointGroups</strong> operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.</li>
+     * <li>You cannot make concurrent calls to <strong>CreateEndpointGroups</strong> for the same Global Accelerator instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates multiple endpoint groups at a time.</p>
+     * <p>Creates endpoint groups in batches.</p>
      * 
      * @param request CreateEndpointGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2637,19 +2710,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation to create multiple endpoint groups at a time. However, you cannot create a default endpoint group and a virtual endpoint group at the same time.</p>
      * <ul>
-     * <li>You cannot create a virtual endpoint group for a Layer 4 listener. To create a virtual endpoint group for a Layer 4 listener, call the <a href="https://help.aliyun.com/document_detail/2302394.html">CreateEndpointGroup</a> operation.</li>
-     * <li><strong>CreateEndpointGroups</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/153260.html">DescribeEndpointGroup</a> or <a href="https://help.aliyun.com/document_detail/153261.html">ListEndpointGroups</a> operation to query the status of endpoint groups.<ul>
-     * <li>If the endpoint groups are in the <strong>init</strong> state, the endpoint groups are being created. In this case, you can perform only query operations.</li>
-     * <li>If all endpoint groups are in the <strong>active</strong> state, the endpoint groups are created.</li>
+     * <li>Creates endpoint groups in batches. Default and virtual endpoint groups cannot be created in a single call.</li>
+     * <li>This API does not support creating virtual endpoint groups for Layer-4 listeners. To create a virtual endpoint group for a Layer-4 listener, call <a href="https://help.aliyun.com/document_detail/2302394.html">CreateEndpointGroup</a>.</li>
+     * <li><strong>CreateEndpointGroups</strong> is an asynchronous API. It returns a request ID and creates the endpoint groups in the background. You can call <a href="https://help.aliyun.com/document_detail/153260.html">DescribeEndpointGroup</a> or <a href="https://help.aliyun.com/document_detail/153261.html">ListEndpointGroups</a> to query the status of an endpoint group:<ul>
+     * <li>If an endpoint group is in the <strong>init</strong> state, it is initializing. You can only query the endpoint group in this state.</li>
+     * <li>The batch creation is complete when all endpoint groups are in the <strong>active</strong> state.</li>
      * </ul>
      * </li>
-     * <li>The <strong>CreateEndpointGroups</strong> operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.</li>
+     * <li>You cannot make concurrent calls to <strong>CreateEndpointGroups</strong> for the same Global Accelerator instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates multiple endpoint groups at a time.</p>
+     * <p>Creates endpoint groups in batches.</p>
      * 
      * @param request CreateEndpointGroupsRequest
      * @return CreateEndpointGroupsResponse
@@ -2661,19 +2734,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation to create forwarding rules, we recommend that you learn how forwarding rules work and how requests are matched against forwarding rules. For more information, see <a href="https://help.aliyun.com/document_detail/204224.html">Configure forwarding rules</a>.
-     * When you call this operation, take note of the following items:</p>
+     * <p>Before you call this API, you should understand how forwarding rules work and their matching conditions. For more information, see <a href="https://help.aliyun.com/document_detail/204224.html">Forwarding rules</a>.
+     * When you call this API, note the following:</p>
      * <ul>
-     * <li><strong>CreateForwardingRules</strong> is an asynchronous operation. After you send a request, the system returns a forwarding rule ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/205817.html">ListForwardingRules</a> operation to query the status of a forwarding rule.<ul>
-     * <li>If the forwarding rule is in the <strong>configuring</strong> state, the rule is being created. In this case, you can only perform query operations.</li>
-     * <li>If the forwarding rule is in the <strong>active</strong> state, the rule is created.</li>
+     * <li>The <strong>CreateForwardingRules</strong> API is asynchronous. After the call is made, the system returns a forwarding rule ID, but the rule is still being created. You can call <a href="https://help.aliyun.com/document_detail/205817.html">ListForwardingRules</a> to query the status of the forwarding rule:<ul>
+     * <li>If a forwarding rule is in the <strong>configuring</strong> status, it is still being created, and you can only perform query operations.</li>
+     * <li>If a forwarding rule is in the <strong>active</strong> status, the rule has been created.</li>
      * </ul>
      * </li>
-     * <li>The <strong>CreateForwardingRules</strong> operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.</li>
+     * <li>You cannot use the <strong>CreateForwardingRules</strong> API to create forwarding rules concurrently for the same Global Accelerator instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>If you want to distribute and process traffic based on request attributes, such as domain names and paths, or information in requests, such as HTTP headers and cookies, you can create custom forwarding rules for a listener. The listener forwards requests based on the forwarding rules. You can call the CreateForwardingRules operation to create forwarding rules.</p>
+     * <p>If you need to distribute traffic based on request attributes such as the domain name, path, HTTP headers, and cookies, you can create custom forwarding rules for a listener. The listener evaluates incoming requests against these rules and performs different forwarding actions. To create forwarding rules, call the <code>CreateForwardingRules</code> API.</p>
      * 
      * @param request CreateForwardingRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2728,19 +2801,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation to create forwarding rules, we recommend that you learn how forwarding rules work and how requests are matched against forwarding rules. For more information, see <a href="https://help.aliyun.com/document_detail/204224.html">Configure forwarding rules</a>.
-     * When you call this operation, take note of the following items:</p>
+     * <p>Before you call this API, you should understand how forwarding rules work and their matching conditions. For more information, see <a href="https://help.aliyun.com/document_detail/204224.html">Forwarding rules</a>.
+     * When you call this API, note the following:</p>
      * <ul>
-     * <li><strong>CreateForwardingRules</strong> is an asynchronous operation. After you send a request, the system returns a forwarding rule ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/205817.html">ListForwardingRules</a> operation to query the status of a forwarding rule.<ul>
-     * <li>If the forwarding rule is in the <strong>configuring</strong> state, the rule is being created. In this case, you can only perform query operations.</li>
-     * <li>If the forwarding rule is in the <strong>active</strong> state, the rule is created.</li>
+     * <li>The <strong>CreateForwardingRules</strong> API is asynchronous. After the call is made, the system returns a forwarding rule ID, but the rule is still being created. You can call <a href="https://help.aliyun.com/document_detail/205817.html">ListForwardingRules</a> to query the status of the forwarding rule:<ul>
+     * <li>If a forwarding rule is in the <strong>configuring</strong> status, it is still being created, and you can only perform query operations.</li>
+     * <li>If a forwarding rule is in the <strong>active</strong> status, the rule has been created.</li>
      * </ul>
      * </li>
-     * <li>The <strong>CreateForwardingRules</strong> operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.</li>
+     * <li>You cannot use the <strong>CreateForwardingRules</strong> API to create forwarding rules concurrently for the same Global Accelerator instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>If you want to distribute and process traffic based on request attributes, such as domain names and paths, or information in requests, such as HTTP headers and cookies, you can create custom forwarding rules for a listener. The listener forwards requests based on the forwarding rules. You can call the CreateForwardingRules operation to create forwarding rules.</p>
+     * <p>If you need to distribute traffic based on request attributes such as the domain name, path, HTTP headers, and cookies, you can create custom forwarding rules for a listener. The listener evaluates incoming requests against these rules and performs different forwarding actions. To create forwarding rules, call the <code>CreateForwardingRules</code> API.</p>
      * 
      * @param request CreateForwardingRulesRequest
      * @return CreateForwardingRulesResponse
@@ -2824,18 +2897,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, take note of the following items:</p>
+     * <p>Note the following when you call this operation:</p>
      * <ul>
-     * <li><strong>CreateListener</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/153254.html">DescribeListener</a> operation to query the status of the task.<ul>
-     * <li>If the listener is in the <strong>init</strong> state, the listener is being created. In this state, you can perform only query operations.</li>
-     * <li>If the listener is in the <strong>active</strong> state, the listener is created.</li>
+     * <li><strong>CreateListener</strong> is an asynchronous operation. After you send a request, the system returns a listener ID but the listener is still being created in the background. You can call <a href="https://help.aliyun.com/document_detail/153254.html">DescribeListener</a> to check the listener\&quot;s status:<ul>
+     * <li>An <strong>init</strong> status indicates that the listener is being created. In this state, you can only perform query operations.</li>
+     * <li>An <strong>active</strong> status indicates that the listener is ready.</li>
      * </ul>
      * </li>
-     * <li>You cannot repeatedly call the <strong>CreateListener</strong> operation for the same GA instance within the specified period of time.</li>
+     * <li>You cannot concurrently create multiple listeners for the same Global Accelerator instance by using the <strong>CreateListener</strong> operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>A listener checks connection requests and distributes the requests to endpoints based on forwarding rules that are defined by the scheduling algorithm. You can call the CreateListener operation to create a listener for a GA instance.</p>
+     * <p>Create a listener for your GA instance.</p>
      * 
      * @param request CreateListenerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2931,18 +3004,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, take note of the following items:</p>
+     * <p>Note the following when you call this operation:</p>
      * <ul>
-     * <li><strong>CreateListener</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/153254.html">DescribeListener</a> operation to query the status of the task.<ul>
-     * <li>If the listener is in the <strong>init</strong> state, the listener is being created. In this state, you can perform only query operations.</li>
-     * <li>If the listener is in the <strong>active</strong> state, the listener is created.</li>
+     * <li><strong>CreateListener</strong> is an asynchronous operation. After you send a request, the system returns a listener ID but the listener is still being created in the background. You can call <a href="https://help.aliyun.com/document_detail/153254.html">DescribeListener</a> to check the listener\&quot;s status:<ul>
+     * <li>An <strong>init</strong> status indicates that the listener is being created. In this state, you can only perform query operations.</li>
+     * <li>An <strong>active</strong> status indicates that the listener is ready.</li>
      * </ul>
      * </li>
-     * <li>You cannot repeatedly call the <strong>CreateListener</strong> operation for the same GA instance within the specified period of time.</li>
+     * <li>You cannot concurrently create multiple listeners for the same Global Accelerator instance by using the <strong>CreateListener</strong> operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>A listener checks connection requests and distributes the requests to endpoints based on forwarding rules that are defined by the scheduling algorithm. You can call the CreateListener operation to create a listener for a GA instance.</p>
+     * <p>Create a listener for your GA instance.</p>
      * 
      * @param request CreateListenerRequest
      * @return CreateListenerResponse
@@ -3030,8 +3103,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You cannot delete subscription GA instances.</p>
      * <ul>
+     * <li>You cannot delete subscription GA instances.</li>
      * <li><strong>DeleteAccelerator</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/153235.html">DescribeAccelerator</a> operation to query the status of the task.<ul>
      * <li>If the GA instance is in the <strong>deleting</strong> state, the GA instance is being deleted. In this case, you can perform only query operations.</li>
      * <li>If the GA instance cannot be queried, the GA instance is deleted.</li>
@@ -3076,8 +3149,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You cannot delete subscription GA instances.</p>
      * <ul>
+     * <li>You cannot delete subscription GA instances.</li>
      * <li><strong>DeleteAccelerator</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/153235.html">DescribeAccelerator</a> operation to query the status of the task.<ul>
      * <li>If the GA instance is in the <strong>deleting</strong> state, the GA instance is being deleted. In this case, you can perform only query operations.</li>
      * <li>If the GA instance cannot be queried, the GA instance is deleted.</li>
@@ -3098,14 +3171,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>DeleteAcl</em>* is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/258292.html">GetAcl</a> operation to query the status of an ACL.</p>
+     * <p><em>DeleteAcl</em>* is an asynchronous operation. After a request is sent, the system returns a request ID, but the access control policy group is not immediately deleted. The deletion node continues to run in the background. You can invoke <a href="https://help.aliyun.com/document_detail/258292.html">GetAcl</a> to query the status of the access control policy group:</p>
      * <ul>
-     * <li>If the ACL is in the <strong>deleting</strong> state, it indicates that the ACL is being deleted. In this case, you can perform only query operations.</li>
-     * <li>If the ACL cannot be queried, it indicates that the ACL is deleted.</li>
+     * <li>If the access control policy group is in the <strong>deleting</strong> state, the access control policy group is being deleted. In this state, you can only execute query operations and cannot execute other operations.</li>
+     * <li>If the access control policy group cannot be found, the access control policy group is deleted.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a access control list (ACL) of a Global Accelerator (GA) instance.</p>
+     * <p>Invokes the DeleteAcl operation to delete an access control policy group.</p>
      * 
      * @param request DeleteAclRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3149,14 +3222,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>DeleteAcl</em>* is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/258292.html">GetAcl</a> operation to query the status of an ACL.</p>
+     * <p><em>DeleteAcl</em>* is an asynchronous operation. After a request is sent, the system returns a request ID, but the access control policy group is not immediately deleted. The deletion node continues to run in the background. You can invoke <a href="https://help.aliyun.com/document_detail/258292.html">GetAcl</a> to query the status of the access control policy group:</p>
      * <ul>
-     * <li>If the ACL is in the <strong>deleting</strong> state, it indicates that the ACL is being deleted. In this case, you can perform only query operations.</li>
-     * <li>If the ACL cannot be queried, it indicates that the ACL is deleted.</li>
+     * <li>If the access control policy group is in the <strong>deleting</strong> state, the access control policy group is being deleted. In this state, you can only execute query operations and cannot execute other operations.</li>
+     * <li>If the access control policy group cannot be found, the access control policy group is deleted.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a access control list (ACL) of a Global Accelerator (GA) instance.</p>
+     * <p>Invokes the DeleteAcl operation to delete an access control policy group.</p>
      * 
      * @param request DeleteAclRequest
      * @return DeleteAclResponse
@@ -3168,15 +3241,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>DeleteApplicationMonitor</strong> is an asynchronous operation. After you call this operation, the system returns a request ID, but the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/408462.html">ListApplicationMonitor</a> operation to query the state of an origin probing task.
-     *     *   If the origin probing task is in the <strong>deleting</strong> state, it indicates that the task is being deleted. In this case, you can perform only query operations.
-     *     *   If the origin probing task cannot be queried, it indicates that the task is deleted.</p>
      * <ul>
-     * <li>The <strong>DeleteApplicationMonitor</strong> operation cannot be called repeatedly for the same Global Accelerator (GA) instance within a specific period of time.</li>
+     * <li>The <strong>DeleteApplicationMonitor</strong> operation is asynchronous. After you send a request, the system returns a request ID, but the origin probing node is not yet deleted. The deletion node continues to run in the background. You can invoke <a href="https://help.aliyun.com/document_detail/408462.html">ListApplicationMonitor</a> to query the status of the origin probing node:<ul>
+     * <li>If the origin probing node is in the <strong>deleting</strong> state, the node is being deleted. In this state, you can only execute query operations.</li>
+     * <li>If the origin probing node cannot be found, the node is deleted.</li>
+     * </ul>
+     * </li>
+     * <li>The <strong>DeleteApplicationMonitor</strong> operation does not support concurrent deletion of origin probing nodes within the same Alibaba Cloud Global Accelerator (GA) instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an origin probing task.</p>
+     * <p>Calls the DeleteApplicationMonitor operation to delete an origin probing task.</p>
      * 
      * @param request DeleteApplicationMonitorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3216,15 +3291,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>DeleteApplicationMonitor</strong> is an asynchronous operation. After you call this operation, the system returns a request ID, but the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/408462.html">ListApplicationMonitor</a> operation to query the state of an origin probing task.
-     *     *   If the origin probing task is in the <strong>deleting</strong> state, it indicates that the task is being deleted. In this case, you can perform only query operations.
-     *     *   If the origin probing task cannot be queried, it indicates that the task is deleted.</p>
      * <ul>
-     * <li>The <strong>DeleteApplicationMonitor</strong> operation cannot be called repeatedly for the same Global Accelerator (GA) instance within a specific period of time.</li>
+     * <li>The <strong>DeleteApplicationMonitor</strong> operation is asynchronous. After you send a request, the system returns a request ID, but the origin probing node is not yet deleted. The deletion node continues to run in the background. You can invoke <a href="https://help.aliyun.com/document_detail/408462.html">ListApplicationMonitor</a> to query the status of the origin probing node:<ul>
+     * <li>If the origin probing node is in the <strong>deleting</strong> state, the node is being deleted. In this state, you can only execute query operations.</li>
+     * <li>If the origin probing node cannot be found, the node is deleted.</li>
+     * </ul>
+     * </li>
+     * <li>The <strong>DeleteApplicationMonitor</strong> operation does not support concurrent deletion of origin probing nodes within the same Alibaba Cloud Global Accelerator (GA) instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an origin probing task.</p>
+     * <p>Calls the DeleteApplicationMonitor operation to delete an origin probing task.</p>
      * 
      * @param request DeleteApplicationMonitorRequest
      * @return DeleteApplicationMonitorResponse
@@ -3380,15 +3457,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>DeleteBasicAccelerateIpEndpointRelation</strong> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the following operations to check whether an accelerated IP address is disassociated from an endpoint:
-     *     *   You can call the <a href="https://help.aliyun.com/document_detail/466794.html">GetBasicAccelerateIp</a> and <a href="https://help.aliyun.com/document_detail/466831.html">ListBasicEndpoints</a> operations to query the status of an accelerated IP address and an endpoint. If the accelerated IP address and the endpoint are in the <strong>unbinding</strong> state, the accelerated IP address is being disassociated from the endpoint. In this case, you can query the IP address and endpoint but cannot perform other operations.
-     *     *   If the association status between the accelerated IP address and the endpoint cannot be queried by calling the <a href="https://help.aliyun.com/document_detail/466803.html">ListBasicAccelerateIpEndpointRelations</a> operation, the accelerated IP address is disassociated from the endpoint.</p>
      * <ul>
-     * <li>The <strong>DeleteBasicAccelerateIpEndpointRelation</strong> API operation cannot be repeatedly called for the same basic GA instance within a period of time.</li>
+     * <li><strong>DeleteBasicAccelerateIpEndpointRelation</strong> is an asynchronous operation. After a request is sent, the system returns a request ID, but the attach relationship between the accelerated IP address and the endpoint of the basic Global Accelerator (GA) instance is not immediately removed. The deletion task continues to run in the background. You can call the following operations to check whether the attach relationship between the accelerated IP address and the endpoint is deleted:  <ul>
+     * <li>Call <a href="https://help.aliyun.com/document_detail/466794.html">GetBasicAccelerateIp</a> or <a href="https://help.aliyun.com/document_detail/466831.html">ListBasicEndpoints</a> to query the status of the accelerated IP address and the endpoint respectively. If the status of the accelerated IP address and the endpoint is <strong>unbinding</strong>, the attach relationship is being deleted. In this state, you can only perform query operations and cannot perform other operations.</li>
+     * <li>Call <a href="https://help.aliyun.com/document_detail/466803.html">ListBasicAccelerateIpEndpointRelations</a> to query the attach status between the accelerated IP address and the endpoint. If no attach information is returned, the attach relationship between the accelerated IP address and the endpoint is deleted.</li>
+     * </ul>
+     * </li>
+     * <li><strong>DeleteBasicAccelerateIpEndpointRelation</strong> does not support concurrent deletion of attach relationships between accelerated IP addresses and endpoints within the same basic GA instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a mapping between an accelerated IP address and an endpoint for a basic Global Accelerator (GA) instance.</p>
+     * <p>Deletes the attach relationship between an accelerated IP address and an endpoint of a basic Global Accelerator (GA) instance.</p>
      * 
      * @param request DeleteBasicAccelerateIpEndpointRelationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3436,15 +3515,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>DeleteBasicAccelerateIpEndpointRelation</strong> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the following operations to check whether an accelerated IP address is disassociated from an endpoint:
-     *     *   You can call the <a href="https://help.aliyun.com/document_detail/466794.html">GetBasicAccelerateIp</a> and <a href="https://help.aliyun.com/document_detail/466831.html">ListBasicEndpoints</a> operations to query the status of an accelerated IP address and an endpoint. If the accelerated IP address and the endpoint are in the <strong>unbinding</strong> state, the accelerated IP address is being disassociated from the endpoint. In this case, you can query the IP address and endpoint but cannot perform other operations.
-     *     *   If the association status between the accelerated IP address and the endpoint cannot be queried by calling the <a href="https://help.aliyun.com/document_detail/466803.html">ListBasicAccelerateIpEndpointRelations</a> operation, the accelerated IP address is disassociated from the endpoint.</p>
      * <ul>
-     * <li>The <strong>DeleteBasicAccelerateIpEndpointRelation</strong> API operation cannot be repeatedly called for the same basic GA instance within a period of time.</li>
+     * <li><strong>DeleteBasicAccelerateIpEndpointRelation</strong> is an asynchronous operation. After a request is sent, the system returns a request ID, but the attach relationship between the accelerated IP address and the endpoint of the basic Global Accelerator (GA) instance is not immediately removed. The deletion task continues to run in the background. You can call the following operations to check whether the attach relationship between the accelerated IP address and the endpoint is deleted:  <ul>
+     * <li>Call <a href="https://help.aliyun.com/document_detail/466794.html">GetBasicAccelerateIp</a> or <a href="https://help.aliyun.com/document_detail/466831.html">ListBasicEndpoints</a> to query the status of the accelerated IP address and the endpoint respectively. If the status of the accelerated IP address and the endpoint is <strong>unbinding</strong>, the attach relationship is being deleted. In this state, you can only perform query operations and cannot perform other operations.</li>
+     * <li>Call <a href="https://help.aliyun.com/document_detail/466803.html">ListBasicAccelerateIpEndpointRelations</a> to query the attach status between the accelerated IP address and the endpoint. If no attach information is returned, the attach relationship between the accelerated IP address and the endpoint is deleted.</li>
+     * </ul>
+     * </li>
+     * <li><strong>DeleteBasicAccelerateIpEndpointRelation</strong> does not support concurrent deletion of attach relationships between accelerated IP addresses and endpoints within the same basic GA instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a mapping between an accelerated IP address and an endpoint for a basic Global Accelerator (GA) instance.</p>
+     * <p>Deletes the attach relationship between an accelerated IP address and an endpoint of a basic Global Accelerator (GA) instance.</p>
      * 
      * @param request DeleteBasicAccelerateIpEndpointRelationRequest
      * @return DeleteBasicAccelerateIpEndpointRelationResponse
@@ -3456,25 +3537,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You cannot delete subscription basic GA instances. You can unsubscribe from a basic GA instance on the <a href="https://usercenter2-intl.aliyun.com/refund/refund">Unsubscribe</a> page. Before you unsubscribe from a basic GA instance, make sure that the acceleration areas and endpoint groups of the GA instance are deleted and no bandwidth plans are associated with the GA instance.
-     *     *   For information about how to delete an acceleration area, see <a href="https://help.aliyun.com/document_detail/2253388.html">DeleteBasicIpSet</a>.
-     *     *   For information about how to delete an endpoint group, see <a href="https://help.aliyun.com/document_detail/2253399.html">DeleteBasicEndpointGroup</a>.
-     *     *   For information about how to disassociate a bandwidth plan from a basic GA instance, see <a href="https://help.aliyun.com/document_detail/153240.html">BandwidthPackageRemoveAccelerator</a>.</p>
      * <ul>
-     * <li>Before you call this operation to delete a pay-as-you-go basic GA instance, make sure that all data is migrated and the acceleration areas and endpoint groups of the instance are deleted.<ul>
-     * <li>For information about how to delete an acceleration area, see <a href="https://help.aliyun.com/document_detail/2253388.html">DeleteBasicIpSet</a>.</li>
-     * <li>For information about how to delete an endpoint group, see <a href="https://help.aliyun.com/document_detail/2253399.html">DeleteBasicEndpointGroup</a>.</li>
+     * <li>Upfront (subscription) basic Alibaba Cloud Global Accelerator (GA) instances cannot be deleted. You can unsubscribe on the &lt;props=&quot;china&quot;&gt;<a href="https://usercenter2.aliyun.com/refund/refund">Unsubscribe</a>&lt;props=&quot;intl&quot;&gt;<a href="https://usercenter2-intl.aliyun.com/refund/refund">Unsubscribe</a> page. Before you unsubscribe, make sure that the basic Alibaba Cloud Global Accelerator (GA) instance has no acceleration area or endpoint group configurations and is not attached to a bandwidth plan.<ul>
+     * <li>To delete an acceleration area, refer to <a href="https://help.aliyun.com/document_detail/2253388.html">DeleteBasicIpSet</a>.</li>
+     * <li>To delete an endpoint group, refer to <a href="https://help.aliyun.com/document_detail/2253399.html">DeleteBasicEndpointGroup</a>.</li>
+     * <li>To disassociate a bandwidth plan from a basic Alibaba Cloud Global Accelerator (GA) instance, refer to <a href="https://help.aliyun.com/document_detail/153240.html">BandwidthPackageRemoveAccelerator</a>.</li>
      * </ul>
      * </li>
-     * <li><strong>DeleteBasicAccelerator</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/353188.html">GetBasicAccelerator</a> operation to query the status of the task.<ul>
-     * <li>If the basic GA instance is in the <strong>deleting</strong> state, it indicates that the instance is being deleted. In this case, you can perform only query operations.</li>
-     * <li>If the information about the basic GA instance is not displayed in the response, it indicates that the instance is deleted.</li>
+     * <li>Before you invoke this operation to delete a pay-as-you-go basic Alibaba Cloud Global Accelerator (GA) instance, make sure that data migration is complete and that the acceleration area and endpoint group configurations under the instance are deleted.<ul>
+     * <li>To delete an acceleration area, refer to <a href="https://help.aliyun.com/document_detail/2253388.html">DeleteBasicIpSet</a>.</li>
+     * <li>To delete an endpoint group, refer to <a href="https://help.aliyun.com/document_detail/2253399.html">DeleteBasicEndpointGroup</a>.</li>
+     * </ul>
+     * </li>
+     * <li><strong>DeleteBasicAccelerator</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the node in the background. You can invoke <a href="https://help.aliyun.com/document_detail/353188.html">GetBasicAccelerator</a> to query the status of the basic Alibaba Cloud Global Accelerator (GA) instance:<ul>
+     * <li>If the instance is in the <strong>deleting</strong> state, the instance is being deleted. In this state, you can only execute query operations.</li>
+     * <li>If the instance cannot be found, the instance is deleted.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a basic Global Accelerator (GA) instance.</p>
+     * <p>Invokes the DeleteBasicAccelerator operation to delete a specified basic Alibaba Cloud Global Accelerator (GA) instance.</p>
      * 
      * @param request DeleteBasicAcceleratorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3510,25 +3593,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You cannot delete subscription basic GA instances. You can unsubscribe from a basic GA instance on the <a href="https://usercenter2-intl.aliyun.com/refund/refund">Unsubscribe</a> page. Before you unsubscribe from a basic GA instance, make sure that the acceleration areas and endpoint groups of the GA instance are deleted and no bandwidth plans are associated with the GA instance.
-     *     *   For information about how to delete an acceleration area, see <a href="https://help.aliyun.com/document_detail/2253388.html">DeleteBasicIpSet</a>.
-     *     *   For information about how to delete an endpoint group, see <a href="https://help.aliyun.com/document_detail/2253399.html">DeleteBasicEndpointGroup</a>.
-     *     *   For information about how to disassociate a bandwidth plan from a basic GA instance, see <a href="https://help.aliyun.com/document_detail/153240.html">BandwidthPackageRemoveAccelerator</a>.</p>
      * <ul>
-     * <li>Before you call this operation to delete a pay-as-you-go basic GA instance, make sure that all data is migrated and the acceleration areas and endpoint groups of the instance are deleted.<ul>
-     * <li>For information about how to delete an acceleration area, see <a href="https://help.aliyun.com/document_detail/2253388.html">DeleteBasicIpSet</a>.</li>
-     * <li>For information about how to delete an endpoint group, see <a href="https://help.aliyun.com/document_detail/2253399.html">DeleteBasicEndpointGroup</a>.</li>
+     * <li>Upfront (subscription) basic Alibaba Cloud Global Accelerator (GA) instances cannot be deleted. You can unsubscribe on the &lt;props=&quot;china&quot;&gt;<a href="https://usercenter2.aliyun.com/refund/refund">Unsubscribe</a>&lt;props=&quot;intl&quot;&gt;<a href="https://usercenter2-intl.aliyun.com/refund/refund">Unsubscribe</a> page. Before you unsubscribe, make sure that the basic Alibaba Cloud Global Accelerator (GA) instance has no acceleration area or endpoint group configurations and is not attached to a bandwidth plan.<ul>
+     * <li>To delete an acceleration area, refer to <a href="https://help.aliyun.com/document_detail/2253388.html">DeleteBasicIpSet</a>.</li>
+     * <li>To delete an endpoint group, refer to <a href="https://help.aliyun.com/document_detail/2253399.html">DeleteBasicEndpointGroup</a>.</li>
+     * <li>To disassociate a bandwidth plan from a basic Alibaba Cloud Global Accelerator (GA) instance, refer to <a href="https://help.aliyun.com/document_detail/153240.html">BandwidthPackageRemoveAccelerator</a>.</li>
      * </ul>
      * </li>
-     * <li><strong>DeleteBasicAccelerator</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/353188.html">GetBasicAccelerator</a> operation to query the status of the task.<ul>
-     * <li>If the basic GA instance is in the <strong>deleting</strong> state, it indicates that the instance is being deleted. In this case, you can perform only query operations.</li>
-     * <li>If the information about the basic GA instance is not displayed in the response, it indicates that the instance is deleted.</li>
+     * <li>Before you invoke this operation to delete a pay-as-you-go basic Alibaba Cloud Global Accelerator (GA) instance, make sure that data migration is complete and that the acceleration area and endpoint group configurations under the instance are deleted.<ul>
+     * <li>To delete an acceleration area, refer to <a href="https://help.aliyun.com/document_detail/2253388.html">DeleteBasicIpSet</a>.</li>
+     * <li>To delete an endpoint group, refer to <a href="https://help.aliyun.com/document_detail/2253399.html">DeleteBasicEndpointGroup</a>.</li>
+     * </ul>
+     * </li>
+     * <li><strong>DeleteBasicAccelerator</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the node in the background. You can invoke <a href="https://help.aliyun.com/document_detail/353188.html">GetBasicAccelerator</a> to query the status of the basic Alibaba Cloud Global Accelerator (GA) instance:<ul>
+     * <li>If the instance is in the <strong>deleting</strong> state, the instance is being deleted. In this state, you can only execute query operations.</li>
+     * <li>If the instance cannot be found, the instance is deleted.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a basic Global Accelerator (GA) instance.</p>
+     * <p>Invokes the DeleteBasicAccelerator operation to delete a specified basic Alibaba Cloud Global Accelerator (GA) instance.</p>
      * 
      * @param request DeleteBasicAcceleratorRequest
      * @return DeleteBasicAcceleratorResponse
@@ -3540,15 +3625,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>DeleteBasicEndpoint</strong> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/466831.html">ListBasicEndpoints</a> operation to query the status of endpoints.
-     *     *   If the endpoint is in the <strong>deleting</strong> state, it indicates that the endpoint is being deleted. In this case, you can perform only query operations.
-     *     *   If the endpoint cannot be found, it indicates that the endpoint is deleted.</p>
      * <ul>
-     * <li>The <strong>DeleteBasicEndpoint</strong> API operation cannot be repeatedly called for the same basic GA instance within a period of time.</li>
+     * <li><strong>DeleteBasicEndpoint</strong> is an asynchronous operation. After a request is sent, the system returns a request ID, but the endpoint is not yet deleted and the deletion node continues in the background. You can invoke <a href="https://help.aliyun.com/document_detail/466831.html">ListBasicEndpoints</a> to query the status of the endpoint:<ul>
+     * <li>If the endpoint is in the <strong>deleting</strong> state, the endpoint is being deleted. In this state, you can only execute query operations.</li>
+     * <li>If the endpoint cannot be found, the endpoint is deleted.</li>
+     * </ul>
+     * </li>
+     * <li><strong>DeleteBasicEndpoint</strong> does not support concurrent deletion of endpoints within the same basic Alibaba Cloud Global Accelerator (GA) instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an endpoint that is associated with a basic Global Accelerator (GA) instance.</p>
+     * <p>Invokes the DeleteBasicEndpoint operation to delete an endpoint of a basic Alibaba Cloud Global Accelerator (GA) instance.</p>
      * 
      * @param request DeleteBasicEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3592,15 +3679,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>DeleteBasicEndpoint</strong> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/466831.html">ListBasicEndpoints</a> operation to query the status of endpoints.
-     *     *   If the endpoint is in the <strong>deleting</strong> state, it indicates that the endpoint is being deleted. In this case, you can perform only query operations.
-     *     *   If the endpoint cannot be found, it indicates that the endpoint is deleted.</p>
      * <ul>
-     * <li>The <strong>DeleteBasicEndpoint</strong> API operation cannot be repeatedly called for the same basic GA instance within a period of time.</li>
+     * <li><strong>DeleteBasicEndpoint</strong> is an asynchronous operation. After a request is sent, the system returns a request ID, but the endpoint is not yet deleted and the deletion node continues in the background. You can invoke <a href="https://help.aliyun.com/document_detail/466831.html">ListBasicEndpoints</a> to query the status of the endpoint:<ul>
+     * <li>If the endpoint is in the <strong>deleting</strong> state, the endpoint is being deleted. In this state, you can only execute query operations.</li>
+     * <li>If the endpoint cannot be found, the endpoint is deleted.</li>
+     * </ul>
+     * </li>
+     * <li><strong>DeleteBasicEndpoint</strong> does not support concurrent deletion of endpoints within the same basic Alibaba Cloud Global Accelerator (GA) instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an endpoint that is associated with a basic Global Accelerator (GA) instance.</p>
+     * <p>Invokes the DeleteBasicEndpoint operation to delete an endpoint of a basic Alibaba Cloud Global Accelerator (GA) instance.</p>
      * 
      * @param request DeleteBasicEndpointRequest
      * @return DeleteBasicEndpointResponse
@@ -4622,7 +4711,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about a Global Accelerator (GA) instance.</p>
+     * <p>You can call the DescribeAccelerator operation to query information about a specified Global Accelerator instance.</p>
      * 
      * @param request DescribeAcceleratorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4658,7 +4747,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about a Global Accelerator (GA) instance.</p>
+     * <p>You can call the DescribeAccelerator operation to query information about a specified Global Accelerator instance.</p>
      * 
      * @param request DescribeAcceleratorRequest
      * @return DescribeAcceleratorResponse
@@ -4814,7 +4903,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about a bandwidth plan.</p>
+     * <p>Queries the details of a bandwidth plan by calling the DescribeBandwidthPackage operation.</p>
      * 
      * @param request DescribeBandwidthPackageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4850,7 +4939,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about a bandwidth plan.</p>
+     * <p>Queries the details of a bandwidth plan by calling the DescribeBandwidthPackage operation.</p>
      * 
      * @param request DescribeBandwidthPackageRequest
      * @return DescribeBandwidthPackageResponse
@@ -4910,7 +4999,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about commodities.</p>
+     * <p>Queries the pricing and specification details of Global Accelerator commodity options available for purchase.</p>
      * 
      * @param request DescribeCommodityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4950,7 +5039,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about commodities.</p>
+     * <p>Queries the pricing and specification details of Global Accelerator commodity options available for purchase.</p>
      * 
      * @param request DescribeCommodityRequest
      * @return DescribeCommodityResponse
@@ -5224,7 +5313,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about an endpoint group.</p>
+     * <p>Queries a specified endpoint group.</p>
      * 
      * @param request DescribeEndpointGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5260,7 +5349,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about an endpoint group.</p>
+     * <p>Queries a specified endpoint group.</p>
      * 
      * @param request DescribeEndpointGroupRequest
      * @return DescribeEndpointGroupResponse
@@ -5272,7 +5361,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about an acceleration region.</p>
+     * <p>Returns the configuration of a specified acceleration region, including its accelerated IP addresses.</p>
      * 
      * @param request DescribeIpSetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5308,7 +5397,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about an acceleration region.</p>
+     * <p>Returns the configuration of a specified acceleration region, including its accelerated IP addresses.</p>
      * 
      * @param request DescribeIpSetRequest
      * @return DescribeIpSetResponse
@@ -5320,10 +5409,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to query configuration information about a listener of a GA instance. The information includes the routing type of the listener, the status of the listener, the timestamp that indicates when the listener was created, and the listener ports.</p>
+     * <p>This operation queries the configuration of a specified listener, such as its routing type, status, creation timestamp, and port information.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries configuration information about a listener of a Global Accelerator (GA) instance.</p>
+     * <p>Describes the configurations of a specific listener.</p>
      * 
      * @param request DescribeListenerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5359,10 +5448,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to query configuration information about a listener of a GA instance. The information includes the routing type of the listener, the status of the listener, the timestamp that indicates when the listener was created, and the listener ports.</p>
+     * <p>This operation queries the configuration of a specified listener, such as its routing type, status, creation timestamp, and port information.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries configuration information about a listener of a Global Accelerator (GA) instance.</p>
+     * <p>Describes the configurations of a specific listener.</p>
      * 
      * @param request DescribeListenerRequest
      * @return DescribeListenerResponse
@@ -5474,15 +5563,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The <strong>DetachDdosFromAccelerator</strong> operation is asynchronous. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/153235.html">DescribeAccelerator</a> or <a href="https://help.aliyun.com/document_detail/153236.html">ListAccelerators</a> operation to query the status of the GA instance.
-     *     *   If the GA instance is in the <strong>configuring</strong> state, the Anti-DDoS Pro/Premium instance is being disassociated from the GA instance. In this case, you can perform only query operations.
-     *     *   If the GA instance is in the <strong>active</strong> state, the Anti-DDoS Pro/Premium instance is disassociated from the GA instance.</p>
      * <ul>
-     * <li><strong>DetachDdosFromAccelerator</strong> cannot be repeatedly called for the same GA instance within a specific period of time.</li>
+     * <li><strong>DetachDdosFromAccelerator</strong> is an asynchronous operation. After you send a request, the system returns a request ID and performs the operation in the background. The Anti-DDoS Pro or Anti-DDoS Premium instance is not immediately detached. You can call <a href="https://help.aliyun.com/document_detail/153235.html">DescribeAccelerator</a> or <a href="https://help.aliyun.com/document_detail/153236.html">ListAccelerators</a> to query the state of the Global Accelerator instance:<ul>
+     * <li>If the Global Accelerator instance is in the <strong>configuring</strong> state, the Anti-DDoS Pro or Anti-DDoS Premium instance is being detached. In this state, you can only perform query operations.</li>
+     * <li>If the Global Accelerator instance is in the <strong>active</strong> state, the Anti-DDoS Pro or Anti-DDoS Premium instance is detached.</li>
+     * </ul>
+     * </li>
+     * <li>The <strong>DetachDdosFromAccelerator</strong> operation does not support concurrent requests to detach Anti-DDoS instances from the same Global Accelerator instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Disassociates a Global Accelerator (GA) instance from an Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
+     * <p>Call the DetachDdosFromAccelerator operation to detach an Anti-DDoS Pro or Anti-DDoS Premium instance from a Global Accelerator instance.</p>
      * 
      * @param request DetachDdosFromAcceleratorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5526,15 +5617,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The <strong>DetachDdosFromAccelerator</strong> operation is asynchronous. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/153235.html">DescribeAccelerator</a> or <a href="https://help.aliyun.com/document_detail/153236.html">ListAccelerators</a> operation to query the status of the GA instance.
-     *     *   If the GA instance is in the <strong>configuring</strong> state, the Anti-DDoS Pro/Premium instance is being disassociated from the GA instance. In this case, you can perform only query operations.
-     *     *   If the GA instance is in the <strong>active</strong> state, the Anti-DDoS Pro/Premium instance is disassociated from the GA instance.</p>
      * <ul>
-     * <li><strong>DetachDdosFromAccelerator</strong> cannot be repeatedly called for the same GA instance within a specific period of time.</li>
+     * <li><strong>DetachDdosFromAccelerator</strong> is an asynchronous operation. After you send a request, the system returns a request ID and performs the operation in the background. The Anti-DDoS Pro or Anti-DDoS Premium instance is not immediately detached. You can call <a href="https://help.aliyun.com/document_detail/153235.html">DescribeAccelerator</a> or <a href="https://help.aliyun.com/document_detail/153236.html">ListAccelerators</a> to query the state of the Global Accelerator instance:<ul>
+     * <li>If the Global Accelerator instance is in the <strong>configuring</strong> state, the Anti-DDoS Pro or Anti-DDoS Premium instance is being detached. In this state, you can only perform query operations.</li>
+     * <li>If the Global Accelerator instance is in the <strong>active</strong> state, the Anti-DDoS Pro or Anti-DDoS Premium instance is detached.</li>
+     * </ul>
+     * </li>
+     * <li>The <strong>DetachDdosFromAccelerator</strong> operation does not support concurrent requests to detach Anti-DDoS instances from the same Global Accelerator instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Disassociates a Global Accelerator (GA) instance from an Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
+     * <p>Call the DetachDdosFromAccelerator operation to detach an Anti-DDoS Pro or Anti-DDoS Premium instance from a Global Accelerator instance.</p>
      * 
      * @param request DetachDdosFromAcceleratorRequest
      * @return DetachDdosFromAcceleratorResponse
@@ -5732,7 +5825,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解绑GA集成云产品</p>
+     * <p>Detach integrated cloud product from GA</p>
      * 
      * @param request DisassociateResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5784,7 +5877,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解绑GA集成云产品</p>
+     * <p>Detach integrated cloud product from GA</p>
      * 
      * @param request DisassociateResourcesRequest
      * @return DisassociateResourcesResponse
@@ -6112,7 +6205,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries whether the accelerated IP address of a basic Global Accelerator (GA) instance is associated with an endpoint.</p>
+     * <p>Queries the attachment information of an accelerated IP address or endpoint of a basic Global Accelerator (GA) instance.</p>
      * 
      * @param request GetBasicAccelerateIpEndpointRelationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6160,7 +6253,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries whether the accelerated IP address of a basic Global Accelerator (GA) instance is associated with an endpoint.</p>
+     * <p>Queries the attachment information of an accelerated IP address or endpoint of a basic Global Accelerator (GA) instance.</p>
      * 
      * @param request GetBasicAccelerateIpEndpointRelationRequest
      * @return GetBasicAccelerateIpEndpointRelationResponse
@@ -6172,7 +6265,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the number of idle accelerated IP addresses of a Global Accelerator (GA) instance.</p>
+     * <p>Invokes the GetBasicAccelerateIpIdleCount operation to query the number of idle accelerated IP addresses of a basic Alibaba Cloud Global Accelerator (GA) instance.</p>
      * 
      * @param request GetBasicAccelerateIpIdleCountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6212,7 +6305,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the number of idle accelerated IP addresses of a Global Accelerator (GA) instance.</p>
+     * <p>Invokes the GetBasicAccelerateIpIdleCount operation to query the number of idle accelerated IP addresses of a basic Alibaba Cloud Global Accelerator (GA) instance.</p>
      * 
      * @param request GetBasicAccelerateIpIdleCountRequest
      * @return GetBasicAccelerateIpIdleCountResponse
@@ -6428,7 +6521,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取GA实例关联的云产品</p>
+     * <p>Obtain the cloud products associated with a Global Accelerator (GA) instance</p>
      * 
      * @param request GetGlobalAcceleratorResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6476,7 +6569,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取GA实例关联的云产品</p>
+     * <p>Obtain the cloud products associated with a Global Accelerator (GA) instance</p>
      * 
      * @param request GetGlobalAcceleratorResourcesRequest
      * @return GetGlobalAcceleratorResourcesResponse
@@ -6548,7 +6641,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the number of invalid domain names.</p>
+     * <p>Calls the GetInvalidDomainCount operation to retrieve the total number of invalid domain names.</p>
      * 
      * @param request GetInvalidDomainCountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6580,7 +6673,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the number of invalid domain names.</p>
+     * <p>Calls the GetInvalidDomainCount operation to retrieve the total number of invalid domain names.</p>
      * 
      * @param request GetInvalidDomainCountRequest
      * @return GetInvalidDomainCountResponse
@@ -6591,6 +6684,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>本接口用于查询带宽计费方式为<strong>按带宽</strong>的标准型全球加速实例各加速地域的带宽峰值限额，即全球加速实例所绑定基础带宽包的带宽值。</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the maximum bandwidth of an acceleration area.</p>
      * 
@@ -6627,6 +6723,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>本接口用于查询带宽计费方式为<strong>按带宽</strong>的标准型全球加速实例各加速地域的带宽峰值限额，即全球加速实例所绑定基础带宽包的带宽值。</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the maximum bandwidth of an acceleration area.</p>
      * 
@@ -6640,7 +6739,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of a secondary IP address that is associated with a CNAME.</p>
+     * <p>Queries the status of a CNAME spare IP address.</p>
      * 
      * @param request GetSpareIpRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6688,7 +6787,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of a secondary IP address that is associated with a CNAME.</p>
+     * <p>Queries the status of a CNAME spare IP address.</p>
      * 
      * @param request GetSpareIpRequest
      * @return GetSpareIpResponse
@@ -6744,7 +6843,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries Global Accelerator (GA) instances.</p>
+     * <p>Queries a list of Global Accelerator instances.</p>
      * 
      * @param request ListAcceleratorsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6800,7 +6899,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries Global Accelerator (GA) instances.</p>
+     * <p>Queries a list of Global Accelerator instances.</p>
      * 
      * @param request ListAcceleratorsRequest
      * @return ListAcceleratorsResponse
@@ -7004,7 +7103,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries available acceleration regions.</p>
+     * <p>You can call the ListAvailableAccelerateAreas operation to query available acceleration areas.</p>
      * 
      * @param request ListAvailableAccelerateAreasRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7044,7 +7143,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries available acceleration regions.</p>
+     * <p>You can call the ListAvailableAccelerateAreas operation to query available acceleration areas.</p>
      * 
      * @param request ListAvailableAccelerateAreasRequest
      * @return ListAvailableAccelerateAreasResponse
@@ -7176,10 +7275,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>To query the detailed information about a bandwidth plan, call the <strong>ListBandwidthPackages</strong> operation. For more information, see <a href="https://help.aliyun.com/document_detail/2253239.html">ListBandwidthPackages</a>.</p>
+     * <p>This operation is deprecated. Use <a href="https://help.aliyun.com/document_detail/2253239.html">ListBandwidthPackages</a> instead.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries bandwidth plans.</p>
+     * <p>Queries a list of bandwidth plans.</p>
      * 
      * @param request ListBandwidthackagesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7219,10 +7318,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>To query the detailed information about a bandwidth plan, call the <strong>ListBandwidthPackages</strong> operation. For more information, see <a href="https://help.aliyun.com/document_detail/2253239.html">ListBandwidthPackages</a>.</p>
+     * <p>This operation is deprecated. Use <a href="https://help.aliyun.com/document_detail/2253239.html">ListBandwidthPackages</a> instead.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries bandwidth plans.</p>
+     * <p>Queries a list of bandwidth plans.</p>
      * 
      * @param request ListBandwidthackagesRequest
      * @return ListBandwidthackagesResponse
@@ -7554,10 +7653,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the acceleration areas and regions that you can specify on the wizard page of Global Accelerator (GA) and for free-trial GA instances. You can filter acceleration areas and regions based on specified conditions.</p>
+     * <p>This operation is used to query the available acceleration areas and regions for the intelligent recommendation and free trial on the Global Accelerator wizard page. You can filter results based on specified conditions.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries available acceleration areas and regions.</p>
+     * <p>Queries the available acceleration areas and regions by calling the ListCommonAreas operation.</p>
      * 
      * @param request ListCommonAreasRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7597,10 +7696,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the acceleration areas and regions that you can specify on the wizard page of Global Accelerator (GA) and for free-trial GA instances. You can filter acceleration areas and regions based on specified conditions.</p>
+     * <p>This operation is used to query the available acceleration areas and regions for the intelligent recommendation and free trial on the Global Accelerator wizard page. You can filter results based on specified conditions.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries available acceleration areas and regions.</p>
+     * <p>Queries the available acceleration areas and regions by calling the ListCommonAreas operation.</p>
      * 
      * @param request ListCommonAreasRequest
      * @return ListCommonAreasResponse
@@ -7612,7 +7711,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries endpoint group mapping configurations of a custom routing listener of a Global Accelerator (GA) instance.</p>
+     * <p>Invokes the ListCustomRoutingEndpointGroupDestinations operation to query the destination configurations of an endpoint group for a custom route listener.</p>
      * 
      * @param request ListCustomRoutingEndpointGroupDestinationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7676,7 +7775,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries endpoint group mapping configurations of a custom routing listener of a Global Accelerator (GA) instance.</p>
+     * <p>Invokes the ListCustomRoutingEndpointGroupDestinations operation to query the destination configurations of an endpoint group for a custom route listener.</p>
      * 
      * @param request ListCustomRoutingEndpointGroupDestinationsRequest
      * @return ListCustomRoutingEndpointGroupDestinationsResponse
@@ -7764,7 +7863,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the traffic policies of an endpoint that belongs to a custom routing listener.</p>
+     * <p>Invokes the ListCustomRoutingEndpointTrafficPolicies operation to query the list of endpoint traffic policies for a custom routing type listener.</p>
      * 
      * @param request ListCustomRoutingEndpointTrafficPoliciesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7824,7 +7923,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the traffic policies of an endpoint that belongs to a custom routing listener.</p>
+     * <p>Invokes the ListCustomRoutingEndpointTrafficPolicies operation to query the list of endpoint traffic policies for a custom routing type listener.</p>
      * 
      * @param request ListCustomRoutingEndpointTrafficPoliciesRequest
      * @return ListCustomRoutingEndpointTrafficPoliciesResponse
@@ -7900,7 +7999,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you configure a custom routing listener for a Global Accelerator (GA) instance, the instance generates a port mapping table based on the listener port range, backend service protocols and port ranges of the associated endpoint groups, and IP addresses of endpoints (vSwitches). The custom routing listener forwards client requests to specified IP addresses and ports in the vSwitches based on the port mapping table. This operation is used to query the generated port mapping table.</p>
+     * <p>After you configure a custom routing listener and an endpoint group, the Global Accelerator (GA) instance generates a port mapping table. This table is based on the listener port range, the protocols and port ranges of the destination endpoint group, and the IP addresses of the endpoints (vSwitches). A custom routing listener uses this port mapping table to deterministically route traffic to specific IP addresses and ports in a vSwitch. This operation queries the generated port mapping table.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the port mapping table of a custom routing listener.</p>
@@ -7955,7 +8054,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you configure a custom routing listener for a Global Accelerator (GA) instance, the instance generates a port mapping table based on the listener port range, backend service protocols and port ranges of the associated endpoint groups, and IP addresses of endpoints (vSwitches). The custom routing listener forwards client requests to specified IP addresses and ports in the vSwitches based on the port mapping table. This operation is used to query the generated port mapping table.</p>
+     * <p>After you configure a custom routing listener and an endpoint group, the Global Accelerator (GA) instance generates a port mapping table. This table is based on the listener port range, the protocols and port ranges of the destination endpoint group, and the IP addresses of the endpoints (vSwitches). A custom routing listener uses this port mapping table to deterministically route traffic to specific IP addresses and ports in a vSwitch. This operation queries the generated port mapping table.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the port mapping table of a custom routing listener.</p>
@@ -7970,7 +8069,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the port mapping table of a specified backend instance that is associated with a custom routing listener.</p>
+     * <p>Call the ListCustomRoutingPortMappingsByDestination operation to query the port mappings of a specified backend instance for a custom route listener.</p>
      * 
      * @param request ListCustomRoutingPortMappingsByDestinationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8018,7 +8117,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the port mapping table of a specified backend instance that is associated with a custom routing listener.</p>
+     * <p>Call the ListCustomRoutingPortMappingsByDestination operation to query the port mappings of a specified backend instance for a custom route listener.</p>
      * 
      * @param request ListCustomRoutingPortMappingsByDestinationRequest
      * @return ListCustomRoutingPortMappingsByDestinationResponse
@@ -8146,7 +8245,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of endpoint groups.</p>
+     * <p>Lists endpoint groups.</p>
      * 
      * @param request ListEndpointGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8165,6 +8264,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.endpointGroupId)) {
             query.put("EndpointGroupId", request.endpointGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endpointGroupRegion)) {
+            query.put("EndpointGroupRegion", request.endpointGroupRegion);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.endpointGroupType)) {
@@ -8210,7 +8313,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of endpoint groups.</p>
+     * <p>Lists endpoint groups.</p>
      * 
      * @param request ListEndpointGroupsRequest
      * @return ListEndpointGroupsResponse
@@ -8223,7 +8326,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This operation is used to query only custom forwarding rules, not the default forwarding rule.</p>
+     * <p>Queries only custom forwarding rules. The default forwarding rule is not included in the results.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -8284,7 +8387,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This operation is used to query only custom forwarding rules, not the default forwarding rule.</p>
+     * <p>Queries only custom forwarding rules. The default forwarding rule is not included in the results.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -8472,10 +8575,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to query information about the listeners of a GA instance, including the status of each listener, the timestamp that indicates when each listener was created, and the listener ports.</p>
+     * <p>This operation retrieves the listeners of a Global Accelerator instance. The response includes the routing type, status, creation timestamp, and port details for each listener.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the listeners of a Global Accelerator (GA) instance.</p>
+     * <p>Retrieves a list of listeners.</p>
      * 
      * @param request ListListenersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8523,10 +8626,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to query information about the listeners of a GA instance, including the status of each listener, the timestamp that indicates when each listener was created, and the listener ports.</p>
+     * <p>This operation retrieves the listeners of a Global Accelerator instance. The response includes the routing type, status, creation timestamp, and port details for each listener.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the listeners of a Global Accelerator (GA) instance.</p>
+     * <p>Retrieves a list of listeners.</p>
      * 
      * @param request ListListenersRequest
      * @return ListListenersResponse
@@ -9110,15 +9213,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>UpdateAccelerator</strong> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/153235.html">DescribeAccelerator</a> operation to query the status of a GA instance.
-     *     *   If the GA instance is in the <strong>configuring</strong> state, the GA instance is being modified. In this case, you can perform only query operations.
-     *     *   If the GA instance is in the <strong>active</strong> state, the GA instance is modified.</p>
      * <ul>
-     * <li>The <strong>UpdateAccelerator</strong> operation cannot be repeatedly called for the same GA instance within a specific period of time.</li>
+     * <li><strong>UpdateAccelerator</strong> is an asynchronous operation. After you send a request, the system returns a request ID and performs the modification in the background. You can call the <a href="https://help.aliyun.com/document_detail/153235.html">DescribeAccelerator</a> operation to query the state of a Global Accelerator (GA) instance:<ul>
+     * <li>If the GA instance is in the <strong>configuring</strong> state, the instance is being modified. In this state, you can only perform query operations.</li>
+     * <li>If the GA instance is in the <strong>active</strong> state, the modification is complete.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot call the <strong>UpdateAccelerator</strong> operation concurrently on the same GA instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies a Global Accelerator (GA) instance.</p>
+     * <p>Use the UpdateAccelerator operation to modify a Global Accelerator instance.</p>
      * 
      * @param request UpdateAcceleratorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9182,15 +9287,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>UpdateAccelerator</strong> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/153235.html">DescribeAccelerator</a> operation to query the status of a GA instance.
-     *     *   If the GA instance is in the <strong>configuring</strong> state, the GA instance is being modified. In this case, you can perform only query operations.
-     *     *   If the GA instance is in the <strong>active</strong> state, the GA instance is modified.</p>
      * <ul>
-     * <li>The <strong>UpdateAccelerator</strong> operation cannot be repeatedly called for the same GA instance within a specific period of time.</li>
+     * <li><strong>UpdateAccelerator</strong> is an asynchronous operation. After you send a request, the system returns a request ID and performs the modification in the background. You can call the <a href="https://help.aliyun.com/document_detail/153235.html">DescribeAccelerator</a> operation to query the state of a Global Accelerator (GA) instance:<ul>
+     * <li>If the GA instance is in the <strong>configuring</strong> state, the instance is being modified. In this state, you can only perform query operations.</li>
+     * <li>If the GA instance is in the <strong>active</strong> state, the modification is complete.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot call the <strong>UpdateAccelerator</strong> operation concurrently on the same GA instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies a Global Accelerator (GA) instance.</p>
+     * <p>Use the UpdateAccelerator operation to modify a Global Accelerator instance.</p>
      * 
      * @param request UpdateAcceleratorRequest
      * @return UpdateAcceleratorResponse
@@ -9202,10 +9309,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You cannot repeatedly call the <strong>UpdateAcceleratorAutoRenewAttribute</strong> operation for the same GA instance within a specific period of time.</p>
+     * <p>The <strong>UpdateAcceleratorAutoRenewAttribute</strong> operation does not support concurrent modifications to the auto-renewal property of the same Global Accelerator instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the auto-renewal settings of a Global Accelerator (GA) instance.</p>
+     * <p>You can call the UpdateAcceleratorAutoRenewAttribute operation to modify the auto-renewal property of a Global Accelerator instance.</p>
      * 
      * @param request UpdateAcceleratorAutoRenewAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9261,10 +9368,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You cannot repeatedly call the <strong>UpdateAcceleratorAutoRenewAttribute</strong> operation for the same GA instance within a specific period of time.</p>
+     * <p>The <strong>UpdateAcceleratorAutoRenewAttribute</strong> operation does not support concurrent modifications to the auto-renewal property of the same Global Accelerator instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the auto-renewal settings of a Global Accelerator (GA) instance.</p>
+     * <p>You can call the UpdateAcceleratorAutoRenewAttribute operation to modify the auto-renewal property of a Global Accelerator instance.</p>
      * 
      * @param request UpdateAcceleratorAutoRenewAttributeRequest
      * @return UpdateAcceleratorAutoRenewAttributeResponse
@@ -9346,7 +9453,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to change the type of transmission network for a <strong>standard</strong> GA instance whose bandwidth metering method is <strong>pay-by-data-transfer</strong>. Before you call this operation, make sure that the following requirements are met:</p>
+     * <p>Changes the type of transmission network for a <strong>standard</strong> GA instance whose bandwidth metering method is <strong>pay-by-data-transfer</strong>. Before you call this operation, make sure that the following requirements are met:</p>
      * <ul>
      * <li>Cloud Data Transfer (CDT) is activated. When you call the <a href="https://help.aliyun.com/document_detail/206786.html">CreateAccelerator</a> operation and set <strong>BandwidthBillingType</strong> to <strong>CDT</strong> to create a <strong>standard</strong> GA instance whose bandwidth metering method is <strong>pay-by-data-transfer</strong>, CDT is automatically activated. The data transfer fees are managed by CDT.</li>
      * <li>If you want to set <strong>CrossBorderMode</strong> to <strong>private</strong>, which specifies cross-border Express Connect circuit as the type of transmission network, make sure that real-name verification is complete for your enterprise account. For more information, see <a href="https://help.aliyun.com/document_detail/52595.html">Real-name verification</a>.</li>
@@ -9397,7 +9504,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to change the type of transmission network for a <strong>standard</strong> GA instance whose bandwidth metering method is <strong>pay-by-data-transfer</strong>. Before you call this operation, make sure that the following requirements are met:</p>
+     * <p>Changes the type of transmission network for a <strong>standard</strong> GA instance whose bandwidth metering method is <strong>pay-by-data-transfer</strong>. Before you call this operation, make sure that the following requirements are met:</p>
      * <ul>
      * <li>Cloud Data Transfer (CDT) is activated. When you call the <a href="https://help.aliyun.com/document_detail/206786.html">CreateAccelerator</a> operation and set <strong>BandwidthBillingType</strong> to <strong>CDT</strong> to create a <strong>standard</strong> GA instance whose bandwidth metering method is <strong>pay-by-data-transfer</strong>, CDT is automatically activated. The data transfer fees are managed by CDT.</li>
      * <li>If you want to set <strong>CrossBorderMode</strong> to <strong>private</strong>, which specifies cross-border Express Connect circuit as the type of transmission network, make sure that real-name verification is complete for your enterprise account. For more information, see <a href="https://help.aliyun.com/document_detail/52595.html">Real-name verification</a>.</li>
@@ -9416,7 +9523,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to enable or disable cross-border data transmission for basic or standard GA instances that use Cloud Data Transfer (CDT) to bill data transfers.</p>
+     * <p>Enables or disables cross-border data transmission for basic or standard GA instances that use Cloud Data Transfer (CDT) to bill data transfers.</p>
      * 
      * <b>summary</b> : 
      * <p>Enables cross-border data transmission for a Global Accelerator (GA) instance.</p>
@@ -9463,7 +9570,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to enable or disable cross-border data transmission for basic or standard GA instances that use Cloud Data Transfer (CDT) to bill data transfers.</p>
+     * <p>Enables or disables cross-border data transmission for basic or standard GA instances that use Cloud Data Transfer (CDT) to bill data transfers.</p>
      * 
      * <b>summary</b> : 
      * <p>Enables cross-border data transmission for a Global Accelerator (GA) instance.</p>
@@ -9628,14 +9735,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>UpdateApplicationMonitor</em>* is an asynchronous operation. After you send a request, the system returns a request ID, but this operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/408463.html">DescribeApplicationMonitor</a> or <a href="https://help.aliyun.com/document_detail/408462.html">ListApplicationMonitor</a> operation to check whether the configurations of an origin probing task are modified.</p>
+     * <p><em>UpdateApplicationMonitor</em>* is an asynchronous operation. After you call this operation, the system returns a request ID, but the origin probing task is not yet modified. The modification task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/408463.html">DescribeApplicationMonitor</a> or <a href="https://help.aliyun.com/document_detail/408462.html">ListApplicationMonitor</a> to check whether the origin probing task configuration has been modified:</p>
      * <ul>
-     * <li>If the values of modified parameters remain unchanged, it indicates that the origin probing task is being modified. In this case, you can perform only query operations.</li>
-     * <li>If the values of modified parameters change, it indicates that the origin probing task is modified.</li>
+     * <li>If the modified parameter values have not changed, the origin probing task is still being modified. In this case, you can only perform query operations and cannot perform other operations.</li>
+     * <li>If the modified parameter values have changed, the origin probing task has been modified.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies an origin probing task.</p>
+     * <p>Modifies the configuration of an origin probing task by calling the UpdateApplicationMonitor operation.</p>
      * 
      * @param request UpdateApplicationMonitorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9707,14 +9814,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>UpdateApplicationMonitor</em>* is an asynchronous operation. After you send a request, the system returns a request ID, but this operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/408463.html">DescribeApplicationMonitor</a> or <a href="https://help.aliyun.com/document_detail/408462.html">ListApplicationMonitor</a> operation to check whether the configurations of an origin probing task are modified.</p>
+     * <p><em>UpdateApplicationMonitor</em>* is an asynchronous operation. After you call this operation, the system returns a request ID, but the origin probing task is not yet modified. The modification task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/408463.html">DescribeApplicationMonitor</a> or <a href="https://help.aliyun.com/document_detail/408462.html">ListApplicationMonitor</a> to check whether the origin probing task configuration has been modified:</p>
      * <ul>
-     * <li>If the values of modified parameters remain unchanged, it indicates that the origin probing task is being modified. In this case, you can perform only query operations.</li>
-     * <li>If the values of modified parameters change, it indicates that the origin probing task is modified.</li>
+     * <li>If the modified parameter values have not changed, the origin probing task is still being modified. In this case, you can only perform query operations and cannot perform other operations.</li>
+     * <li>If the modified parameter values have changed, the origin probing task has been modified.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies an origin probing task.</p>
+     * <p>Modifies the configuration of an origin probing task by calling the UpdateApplicationMonitor operation.</p>
      * 
      * @param request UpdateApplicationMonitorRequest
      * @return UpdateApplicationMonitorResponse
@@ -9800,24 +9907,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Take note of the following items:</p>
+     * <p>Before you call this operation, note the following:</p>
      * <ul>
-     * <li><strong>UpdateBandwidthPackage</strong> is a synchronous operation when you call the operation to modify the configuration excluding the bandwidth value of a bandwidth plan. The new configuration immediately takes effect after the operation is performed.</li>
-     * <li><strong>UpdateBandwidthPackage</strong> is an asynchronous operation when you call the operation to modify the configuration including the bandwidth value of a bandwidth plan that is not associated with a Global Accelerator (GA) instance. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/153241.html">DescribeBandwidthPackage</a> operation to query the status of the task.<ul>
-     * <li>If the parameter values of the bandwidth plan remain unchanged, the bandwidth plan is being modified. In this case, you can perform only query operations.</li>
-     * <li>If the parameter values of the bandwidth plan are changed, the bandwidth plan is modified.</li>
+     * <li>If you do not change the bandwidth value, <strong>UpdateBandwidthPackage</strong> is a synchronous operation. The modification takes effect immediately.</li>
+     * <li>If you change the bandwidth value of a bandwidth plan that is not associated with a Global Accelerator (GA) instance, <strong>UpdateBandwidthPackage</strong> is an asynchronous operation. The system returns a request ID, but the modification is not complete. The system performs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/153241.html">DescribeBandwidthPackage</a> operation to query whether the configuration of the bandwidth plan is modified:<ul>
+     * <li>If the values of the parameters that you want to modify remain unchanged, the bandwidth plan is being modified. In this case, you can only perform query operations.</li>
+     * <li>If the values of the parameters that you want to modify have changed, the modification is complete.</li>
      * </ul>
      * </li>
-     * <li><strong>UpdateBandwidthPackage</strong> is an asynchronous operation when you call the operation to modify the configuration including the bandwidth value of a bandwidth plan that is associated with a GA instance. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/153235.html">DescribeAccelerator</a> operation to query the status of the task.<ul>
-     * <li>If the GA instance is in the <strong>configuring</strong> state, the bandwidth plan is being modified. In this case, you can perform only query operations.</li>
-     * <li>If the GA instance is in the <strong>active</strong> state, the bandwidth plan is modified.</li>
+     * <li>If you change the bandwidth value of a bandwidth plan that is associated with a GA instance, <strong>UpdateBandwidthPackage</strong> is an asynchronous operation. The system returns a request ID, but the modification is not complete. The system performs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/153235.html">DescribeAccelerator</a> operation and query the status of the GA instance to check whether the bandwidth plan is modified:<ul>
+     * <li>If the GA instance is in the <strong>configuring</strong> state, the bandwidth plan that is associated with the GA instance is being modified. In this case, you can only perform query operations.</li>
+     * <li>If the GA instance is in the <strong>active</strong> state, the bandwidth plan that is associated with the GA instance has been modified.</li>
      * </ul>
      * </li>
-     * <li>You cannot repeatedly call the <strong>UpdateBandwidthPackage</strong> operation for the same bandwidth plan within a specific period of time.</li>
+     * <li>You cannot repeatedly call the <strong>UpdateBandwidthPackage</strong> operation to modify the configuration of the same bandwidth plan.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configurations of a bandwidth plan.</p>
+     * <p>You can call the UpdateBandwidthPackage operation to modify the configuration of a bandwidth plan.</p>
      * 
      * @param request UpdateBandwidthPackageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9877,24 +9984,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Take note of the following items:</p>
+     * <p>Before you call this operation, note the following:</p>
      * <ul>
-     * <li><strong>UpdateBandwidthPackage</strong> is a synchronous operation when you call the operation to modify the configuration excluding the bandwidth value of a bandwidth plan. The new configuration immediately takes effect after the operation is performed.</li>
-     * <li><strong>UpdateBandwidthPackage</strong> is an asynchronous operation when you call the operation to modify the configuration including the bandwidth value of a bandwidth plan that is not associated with a Global Accelerator (GA) instance. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/153241.html">DescribeBandwidthPackage</a> operation to query the status of the task.<ul>
-     * <li>If the parameter values of the bandwidth plan remain unchanged, the bandwidth plan is being modified. In this case, you can perform only query operations.</li>
-     * <li>If the parameter values of the bandwidth plan are changed, the bandwidth plan is modified.</li>
+     * <li>If you do not change the bandwidth value, <strong>UpdateBandwidthPackage</strong> is a synchronous operation. The modification takes effect immediately.</li>
+     * <li>If you change the bandwidth value of a bandwidth plan that is not associated with a Global Accelerator (GA) instance, <strong>UpdateBandwidthPackage</strong> is an asynchronous operation. The system returns a request ID, but the modification is not complete. The system performs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/153241.html">DescribeBandwidthPackage</a> operation to query whether the configuration of the bandwidth plan is modified:<ul>
+     * <li>If the values of the parameters that you want to modify remain unchanged, the bandwidth plan is being modified. In this case, you can only perform query operations.</li>
+     * <li>If the values of the parameters that you want to modify have changed, the modification is complete.</li>
      * </ul>
      * </li>
-     * <li><strong>UpdateBandwidthPackage</strong> is an asynchronous operation when you call the operation to modify the configuration including the bandwidth value of a bandwidth plan that is associated with a GA instance. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/153235.html">DescribeAccelerator</a> operation to query the status of the task.<ul>
-     * <li>If the GA instance is in the <strong>configuring</strong> state, the bandwidth plan is being modified. In this case, you can perform only query operations.</li>
-     * <li>If the GA instance is in the <strong>active</strong> state, the bandwidth plan is modified.</li>
+     * <li>If you change the bandwidth value of a bandwidth plan that is associated with a GA instance, <strong>UpdateBandwidthPackage</strong> is an asynchronous operation. The system returns a request ID, but the modification is not complete. The system performs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/153235.html">DescribeAccelerator</a> operation and query the status of the GA instance to check whether the bandwidth plan is modified:<ul>
+     * <li>If the GA instance is in the <strong>configuring</strong> state, the bandwidth plan that is associated with the GA instance is being modified. In this case, you can only perform query operations.</li>
+     * <li>If the GA instance is in the <strong>active</strong> state, the bandwidth plan that is associated with the GA instance has been modified.</li>
      * </ul>
      * </li>
-     * <li>You cannot repeatedly call the <strong>UpdateBandwidthPackage</strong> operation for the same bandwidth plan within a specific period of time.</li>
+     * <li>You cannot repeatedly call the <strong>UpdateBandwidthPackage</strong> operation to modify the configuration of the same bandwidth plan.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configurations of a bandwidth plan.</p>
+     * <p>You can call the UpdateBandwidthPackage operation to modify the configuration of a bandwidth plan.</p>
      * 
      * @param request UpdateBandwidthPackageRequest
      * @return UpdateBandwidthPackageResponse
@@ -10026,15 +10133,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>UpdateBasicEndpointGroup</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. The system modifies the configurations of an endpoint group that is associated with a basic GA instance by deleting the endpoint group and creating a new endpoint group. You can call the <a href="https://help.aliyun.com/document_detail/353188.html">GetBasicAccelerator</a> operation to query the status of the task.
-     *     *   If the basic GA instance is in the <strong>configuring</strong> state, the configurations of the endpoint group are being modified. In this case, you can perform only query operations.
-     *     *   If the basic GA instance is in the <strong>active</strong> state, the configurations of the endpoint group are modified.</p>
      * <ul>
+     * <li><strong>UpdateBasicEndpointGroup</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. The system modifies the configurations of an endpoint group that is associated with a basic GA instance by deleting the endpoint group and creating a new endpoint group. You can call the <a href="https://help.aliyun.com/document_detail/353188.html">GetBasicAccelerator</a> operation to query the status of the task.<ul>
+     * <li>If the basic GA instance is in the <strong>configuring</strong> state, the configurations of the endpoint group are being modified. In this case, you can perform only query operations.</li>
+     * <li>If the basic GA instance is in the <strong>active</strong> state, the configurations of the endpoint group are modified.</li>
+     * </ul>
+     * </li>
      * <li>The <strong>UpdateBasicEndpointGroup</strong> operation cannot be repeatedly called for the same basic GA instance within a specific period of time.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configurations of an endpoint group that is associated with a basic Global Accelerator (GA) instance.</p>
+     * <p>Updates the configurations of an endpoint group that is associated with a basic Global Accelerator (GA) instance.</p>
      * 
      * @param request UpdateBasicEndpointGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10094,15 +10203,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>UpdateBasicEndpointGroup</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. The system modifies the configurations of an endpoint group that is associated with a basic GA instance by deleting the endpoint group and creating a new endpoint group. You can call the <a href="https://help.aliyun.com/document_detail/353188.html">GetBasicAccelerator</a> operation to query the status of the task.
-     *     *   If the basic GA instance is in the <strong>configuring</strong> state, the configurations of the endpoint group are being modified. In this case, you can perform only query operations.
-     *     *   If the basic GA instance is in the <strong>active</strong> state, the configurations of the endpoint group are modified.</p>
      * <ul>
+     * <li><strong>UpdateBasicEndpointGroup</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. The system modifies the configurations of an endpoint group that is associated with a basic GA instance by deleting the endpoint group and creating a new endpoint group. You can call the <a href="https://help.aliyun.com/document_detail/353188.html">GetBasicAccelerator</a> operation to query the status of the task.<ul>
+     * <li>If the basic GA instance is in the <strong>configuring</strong> state, the configurations of the endpoint group are being modified. In this case, you can perform only query operations.</li>
+     * <li>If the basic GA instance is in the <strong>active</strong> state, the configurations of the endpoint group are modified.</li>
+     * </ul>
+     * </li>
      * <li>The <strong>UpdateBasicEndpointGroup</strong> operation cannot be repeatedly called for the same basic GA instance within a specific period of time.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configurations of an endpoint group that is associated with a basic Global Accelerator (GA) instance.</p>
+     * <p>Updates the configurations of an endpoint group that is associated with a basic Global Accelerator (GA) instance.</p>
      * 
      * @param request UpdateBasicEndpointGroupRequest
      * @return UpdateBasicEndpointGroupResponse
@@ -10194,7 +10305,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the name and description of an endpoint group that is associated with a custom routing listener.</p>
+     * <p>You can call the UpdateCustomRoutingEndpointGroupAttribute operation to modify the name and description of an endpoint group associated with a custom routing listener.</p>
      * 
      * @param request UpdateCustomRoutingEndpointGroupAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10242,7 +10353,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the name and description of an endpoint group that is associated with a custom routing listener.</p>
+     * <p>You can call the UpdateCustomRoutingEndpointGroupAttribute operation to modify the name and description of an endpoint group associated with a custom routing listener.</p>
      * 
      * @param request UpdateCustomRoutingEndpointGroupAttributeRequest
      * @return UpdateCustomRoutingEndpointGroupAttributeResponse
@@ -10480,11 +10591,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to modify an accelerated domain name. If the new accelerated domain name is hosted in the Chinese mainland, you must obtain an Internet content provider (ICP) number for the domain name.
-     * You cannot call the <strong>UpdateDomain</strong> operation again by using the same Alibaba Cloud account before the previous request is completed.</p>
+     * <p>This operation is used to update an accelerated domain name. If the new accelerated domain name is deployed in the Chinese mainland, the domain name must have obtained an ICP filing.
+     * The <strong>UpdateDomain</strong> operation does not support concurrent updates of accelerated domain names within the same account.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies an accelerated domain name.</p>
+     * <p>Calls the UpdateDomain operation to update a domain name.</p>
      * 
      * @param request UpdateDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10524,11 +10635,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to modify an accelerated domain name. If the new accelerated domain name is hosted in the Chinese mainland, you must obtain an Internet content provider (ICP) number for the domain name.
-     * You cannot call the <strong>UpdateDomain</strong> operation again by using the same Alibaba Cloud account before the previous request is completed.</p>
+     * <p>This operation is used to update an accelerated domain name. If the new accelerated domain name is deployed in the Chinese mainland, the domain name must have obtained an ICP filing.
+     * The <strong>UpdateDomain</strong> operation does not support concurrent updates of accelerated domain names within the same account.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies an accelerated domain name.</p>
+     * <p>Calls the UpdateDomain operation to update a domain name.</p>
      * 
      * @param request UpdateDomainRequest
      * @return UpdateDomainResponse
@@ -10540,11 +10651,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query and update the ICP filing status of an accelerated domain name.
+     * <p>This operation queries the latest ICP filing status of an accelerated domain name and updates the status accordingly.
      * The <strong>UpdateDomainState</strong> operation holds an exclusive lock on the GA instance. While the operation is in progress, you cannot call the same operation with the same Alibaba Cloud account.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the ICP filing status of an accelerated domain name.</p>
+     * <p>Queries and updates the ICP filing status of an accelerated domain name.</p>
      * 
      * @param request UpdateDomainStateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10580,11 +10691,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query and update the ICP filing status of an accelerated domain name.
+     * <p>This operation queries the latest ICP filing status of an accelerated domain name and updates the status accordingly.
      * The <strong>UpdateDomainState</strong> operation holds an exclusive lock on the GA instance. While the operation is in progress, you cannot call the same operation with the same Alibaba Cloud account.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the ICP filing status of an accelerated domain name.</p>
+     * <p>Queries and updates the ICP filing status of an accelerated domain name.</p>
      * 
      * @param request UpdateDomainStateRequest
      * @return UpdateDomainStateResponse
@@ -10596,15 +10707,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>UpdateEndpointGroup</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/153260.html">DescribeEndpointGroup</a> operation to query the state of an endpoint group.
-     *     *   If the endpoint group is in the <strong>updating</strong> state, it indicates that the configurations of the endpoint group are being modified. In this case, you can perform only query operations.
-     *     *   If the endpoint group is in the <strong>active</strong> state, it indicates that the configurations of the endpoint group are modified.</p>
      * <ul>
-     * <li>The <strong>UpdateEndpointGroup</strong> operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.</li>
+     * <li>The <strong>UpdateEndpointGroup</strong> API is an asynchronous API. After you call this API, the system returns a request ID and starts the update in the background; the configuration is not modified immediately. Call <a href="https://help.aliyun.com/document_detail/153260.html">DescribeEndpointGroup</a> to check the status of the endpoint group:<ul>
+     * <li>If an endpoint group is in the <strong>updating</strong> status, its configuration is being modified, and you can only perform queries.</li>
+     * <li>If an endpoint group is in the <strong>active</strong> status, the update is complete.</li>
+     * </ul>
+     * </li>
+     * <li>The <strong>UpdateEndpointGroup</strong> API does not support concurrent updates to endpoint groups in the same Global Accelerator (GA) instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configurations of an endpoint group.</p>
+     * <p>Updates the configuration of an endpoint group.</p>
      * 
      * @param request UpdateEndpointGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10708,15 +10821,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>UpdateEndpointGroup</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/153260.html">DescribeEndpointGroup</a> operation to query the state of an endpoint group.
-     *     *   If the endpoint group is in the <strong>updating</strong> state, it indicates that the configurations of the endpoint group are being modified. In this case, you can perform only query operations.
-     *     *   If the endpoint group is in the <strong>active</strong> state, it indicates that the configurations of the endpoint group are modified.</p>
      * <ul>
-     * <li>The <strong>UpdateEndpointGroup</strong> operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.</li>
+     * <li>The <strong>UpdateEndpointGroup</strong> API is an asynchronous API. After you call this API, the system returns a request ID and starts the update in the background; the configuration is not modified immediately. Call <a href="https://help.aliyun.com/document_detail/153260.html">DescribeEndpointGroup</a> to check the status of the endpoint group:<ul>
+     * <li>If an endpoint group is in the <strong>updating</strong> status, its configuration is being modified, and you can only perform queries.</li>
+     * <li>If an endpoint group is in the <strong>active</strong> status, the update is complete.</li>
+     * </ul>
+     * </li>
+     * <li>The <strong>UpdateEndpointGroup</strong> API does not support concurrent updates to endpoint groups in the same Global Accelerator (GA) instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configurations of an endpoint group.</p>
+     * <p>Updates the configuration of an endpoint group.</p>
      * 
      * @param request UpdateEndpointGroupRequest
      * @return UpdateEndpointGroupResponse
@@ -10788,18 +10903,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Description</h3>
+     * <h3>Usage notes</h3>
      * <ul>
-     * <li><strong>UpdateEndpointGroups</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/153260.html">DescribeEndpointGroup</a> or <a href="https://help.aliyun.com/document_detail/153261.html">ListEndpointGroups</a> operation to query the status of an endpoint group.<ul>
-     * <li>If the endpoint group is in the <strong>updating</strong> state, it indicates that the configuration of the endpoint group is being modified. In this case, you can perform only query operations.</li>
-     * <li>If the endpoint group is in the <strong>active</strong> state, it indicates that the configuration of the endpoint group is modified.</li>
+     * <li><strong>UpdateEndpointGroups</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the operation continues to run in the background. You can call the or <a href="t2323644.xdita#"></a>operation to query the state of an endpoint group.<ul>
+     * <li>If an endpoint group is in the <strong>updating</strong> state, its configuration is being modified. In this state, you can only perform query operations.</li>
+     * <li>If an endpoint group is in the <strong>active</strong> state, its configuration has been modified.</li>
      * </ul>
      * </li>
-     * <li>The <strong>UpdateEndpointGroups</strong> operation holds an exclusive lock on the Global Accelerator (GA) instance. While the operation is in progress, you cannot call the same operation in the same Alibaba Cloud account.</li>
+     * <li>You cannot concurrently call the <strong>UpdateEndpointGroups</strong> operation to modify the configurations of endpoint groups that belong to the same Global Accelerator (GA) instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the endpoint groups that are associated with a listener.</p>
+     * <p>Modifies endpoint groups for a listener in a batch.</p>
      * 
      * @param request UpdateEndpointGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10847,18 +10962,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Description</h3>
+     * <h3>Usage notes</h3>
      * <ul>
-     * <li><strong>UpdateEndpointGroups</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/153260.html">DescribeEndpointGroup</a> or <a href="https://help.aliyun.com/document_detail/153261.html">ListEndpointGroups</a> operation to query the status of an endpoint group.<ul>
-     * <li>If the endpoint group is in the <strong>updating</strong> state, it indicates that the configuration of the endpoint group is being modified. In this case, you can perform only query operations.</li>
-     * <li>If the endpoint group is in the <strong>active</strong> state, it indicates that the configuration of the endpoint group is modified.</li>
+     * <li><strong>UpdateEndpointGroups</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the operation continues to run in the background. You can call the or <a href="t2323644.xdita#"></a>operation to query the state of an endpoint group.<ul>
+     * <li>If an endpoint group is in the <strong>updating</strong> state, its configuration is being modified. In this state, you can only perform query operations.</li>
+     * <li>If an endpoint group is in the <strong>active</strong> state, its configuration has been modified.</li>
      * </ul>
      * </li>
-     * <li>The <strong>UpdateEndpointGroups</strong> operation holds an exclusive lock on the Global Accelerator (GA) instance. While the operation is in progress, you cannot call the same operation in the same Alibaba Cloud account.</li>
+     * <li>You cannot concurrently call the <strong>UpdateEndpointGroups</strong> operation to modify the configurations of endpoint groups that belong to the same Global Accelerator (GA) instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the endpoint groups that are associated with a listener.</p>
+     * <p>Modifies endpoint groups for a listener in a batch.</p>
      * 
      * @param request UpdateEndpointGroupsRequest
      * @return UpdateEndpointGroupsResponse
@@ -10870,15 +10985,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>UpdateForwardingRules</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/205817.html">ListForwardingRules</a> operation to query the status of a forwarding rule.
-     *     *   If the forwarding rule is in the <strong>configuring</strong> state, it indicates that the forwarding rule is being modified. In this case, you can perform only query operations.
-     *     *   If the forwarding rule is in the <strong>active</strong> state, it indicates that the forwarding rule is modified.</p>
      * <ul>
-     * <li>The <strong>UpdateForwardingRules</strong> operation holds an exclusive lock on the Global Accelerator (GA) instance. While the operation is in progress, you cannot call the same operation in the same Alibaba Cloud account.</li>
+     * <li><strong>UpdateForwardingRules</strong> is an asynchronous API. A call to this API returns a request ID and runs the update in the background. You can call <a href="https://help.aliyun.com/document_detail/205817.html">ListForwardingRules</a> to query the status of the forwarding rule:<ul>
+     * <li>A status of <strong>configuring</strong> indicates that the forwarding rule is being updated. During this process, you can only perform query operations.</li>
+     * <li>A status of <strong>active</strong> indicates that the update is complete.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot use <strong>UpdateForwardingRules</strong> to concurrently update forwarding rules within the same Global Accelerator instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Updates a forwarding rule.</p>
+     * <p>To update forwarding rules, call the UpdateForwardingRules API.</p>
      * 
      * @param request UpdateForwardingRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10926,15 +11043,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>UpdateForwardingRules</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/205817.html">ListForwardingRules</a> operation to query the status of a forwarding rule.
-     *     *   If the forwarding rule is in the <strong>configuring</strong> state, it indicates that the forwarding rule is being modified. In this case, you can perform only query operations.
-     *     *   If the forwarding rule is in the <strong>active</strong> state, it indicates that the forwarding rule is modified.</p>
      * <ul>
-     * <li>The <strong>UpdateForwardingRules</strong> operation holds an exclusive lock on the Global Accelerator (GA) instance. While the operation is in progress, you cannot call the same operation in the same Alibaba Cloud account.</li>
+     * <li><strong>UpdateForwardingRules</strong> is an asynchronous API. A call to this API returns a request ID and runs the update in the background. You can call <a href="https://help.aliyun.com/document_detail/205817.html">ListForwardingRules</a> to query the status of the forwarding rule:<ul>
+     * <li>A status of <strong>configuring</strong> indicates that the forwarding rule is being updated. During this process, you can only perform query operations.</li>
+     * <li>A status of <strong>active</strong> indicates that the update is complete.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot use <strong>UpdateForwardingRules</strong> to concurrently update forwarding rules within the same Global Accelerator instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Updates a forwarding rule.</p>
+     * <p>To update forwarding rules, call the UpdateForwardingRules API.</p>
      * 
      * @param request UpdateForwardingRulesRequest
      * @return UpdateForwardingRulesResponse
@@ -11082,7 +11201,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation can be called to modify the configurations such as the protocol and ports of a listener to meet your business requirements.
+     * <p>Modifies the protocol, ports, and other configurations of a listener to meet your business requirements.
      * When you call this operation, take note of the following items:</p>
      * <ul>
      * <li><strong>UpdateListener</strong> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/153254.html">DescribeListener</a> operation to query the status of a listener.<ul>
@@ -11094,7 +11213,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configurations of a listener for a Global Accelerator (GA) instance.</p>
+     * <p>Updates the configurations of a listener for a Global Accelerator (GA) instance.</p>
      * 
      * @param request UpdateListenerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11186,7 +11305,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation can be called to modify the configurations such as the protocol and ports of a listener to meet your business requirements.
+     * <p>Modifies the protocol, ports, and other configurations of a listener to meet your business requirements.
      * When you call this operation, take note of the following items:</p>
      * <ul>
      * <li><strong>UpdateListener</strong> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/153254.html">DescribeListener</a> operation to query the status of a listener.<ul>
@@ -11198,7 +11317,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configurations of a listener for a Global Accelerator (GA) instance.</p>
+     * <p>Updates the configurations of a listener for a Global Accelerator (GA) instance.</p>
      * 
      * @param request UpdateListenerRequest
      * @return UpdateListenerResponse
@@ -11210,7 +11329,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改SLS日志配置</p>
+     * <p>Modify Simple Log Service log configuration</p>
      * 
      * @param request UpdateLogStoreConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11274,7 +11393,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改SLS日志配置</p>
+     * <p>Modify Simple Log Service log configuration</p>
      * 
      * @param request UpdateLogStoreConfigRequest
      * @return UpdateLogStoreConfigResponse

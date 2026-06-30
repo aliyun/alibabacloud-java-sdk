@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
     /**
-     * <p>The information about acceleration areas.</p>
+     * <p>The list of areas.</p>
      */
     @NameInMap("Areas")
     public java.util.List<ListAvailableAccelerateAreasResponseBodyAreas> areas;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A9B4E54C-9CCD-4002-91A9-D38C6C209192</p>
@@ -44,28 +44,32 @@ public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the region is in the Chinese mainland. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: The region is in the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The region is not in the Chinese mainland.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>false</p>
+         * <p>true</p>
          */
         @NameInMap("ChinaMainland")
         public Boolean chinaMainland;
 
         /**
-         * <p>The line type of the elastic IP address (EIP) in the acceleration region. Valid values:</p>
+         * <p>The line type of the public IP address in the acceleration region.</p>
          * <ul>
-         * <li><strong>BGP</strong>: BGP (Multi-ISP) lines.</li>
-         * <li><strong>BGP_PRO</strong>: BGP (Multi-ISP) Pro lines.</li>
+         * <li><p><strong>BGP</strong> (default): BGP (Multi-ISP) line.</p>
+         * </li>
+         * <li><p><strong>BGP_PRO</strong>: BGP (Multi-ISP) Pro line.</p>
+         * </li>
          * </ul>
          */
         @NameInMap("IspTypeList")
         public java.util.List<String> ispTypeList;
 
         /**
-         * <p>The acceleration region name.</p>
+         * <p>The name of the region.</p>
          * 
          * <strong>example:</strong>
          * <p>China (Qingdao)</p>
@@ -74,10 +78,12 @@ public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
         public String localName;
 
         /**
-         * <p>Indicates whether multiple zones are supported. Valid values:</p>
+         * <p>Indicates whether multi-zone deployment is supported. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: Multi-zone deployment is supported.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Multi-zone deployment is not supported.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -87,7 +93,7 @@ public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
         public Boolean multiAz;
 
         /**
-         * <p>The ID of the acceleration region.</p>
+         * <p>The ID of the region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-qingdao</p>
@@ -98,8 +104,10 @@ public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
         /**
          * <p>Indicates whether IPv6 is supported. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: IPv6 is supported.</p>
+         * </li>
+         * <li><p><strong>false</strong>: IPv6 is not supported.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -165,7 +173,7 @@ public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
 
     public static class ListAvailableAccelerateAreasResponseBodyAreas extends TeaModel {
         /**
-         * <p>The ID of the acceleration area.</p>
+         * <p>The ID of the area.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-huabei</p>
@@ -174,16 +182,16 @@ public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
         public String areaId;
 
         /**
-         * <p>The acceleration area name.</p>
+         * <p>The name of the area.</p>
          * 
          * <strong>example:</strong>
-         * <p>North China</p>
+         * <p>China North</p>
          */
         @NameInMap("LocalName")
         public String localName;
 
         /**
-         * <p>The information about acceleration regions.</p>
+         * <p>The list of regions.</p>
          */
         @NameInMap("RegionList")
         public java.util.List<ListAvailableAccelerateAreasResponseBodyAreasRegionList> regionList;

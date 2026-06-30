@@ -49,9 +49,12 @@ public class DescribeIpSetResponseBody extends TeaModel {
     /**
      * <p>The IP version. Valid values:</p>
      * <ul>
-     * <li><strong>IPv4</strong></li>
-     * <li><strong>IPv6</strong></li>
-     * <li><strong>DUAL_STACK</strong></li>
+     * <li><p><strong>IPv4</strong></p>
+     * </li>
+     * <li><p><strong>IPv6</strong></p>
+     * </li>
+     * <li><p><strong>DUAL_STACK</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,8 +66,10 @@ public class DescribeIpSetResponseBody extends TeaModel {
     /**
      * <p>The line type of the elastic IP address (EIP) in the acceleration region. Valid values:</p>
      * <ul>
-     * <li><strong>BGP</strong>: BGP (Multi-ISP) lines. This is the default value.</li>
-     * <li><strong>BGP_PRO</strong>: BGP (Multi-ISP) Pro lines.</li>
+     * <li><p><strong>BGP</strong>: BGP (Multi-ISP) lines. This is the default value.</p>
+     * </li>
+     * <li><p><strong>BGP_PRO</strong>: BGP (Multi-ISP) Pro lines.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -85,7 +90,7 @@ public class DescribeIpSetResponseBody extends TeaModel {
     /**
      * <p>The ID of the service that manages the instance.</p>
      * <blockquote>
-     * <p> This parameter is returned only if the value of <strong>ServiceManaged</strong> is <strong>true</strong>.</p>
+     * <p>This parameter is returned only if the value of <strong>ServiceManaged</strong> is <strong>true</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -97,8 +102,10 @@ public class DescribeIpSetResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the GA instance is managed. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -111,8 +118,10 @@ public class DescribeIpSetResponseBody extends TeaModel {
      * <p>The actions that users can perform on the managed instance.</p>
      * <blockquote>
      * <ul>
-     * <li>This parameter is returned only if the value of <strong>ServiceManaged</strong> is <strong>true</strong>.</li>
-     * <li>Users can perform only specific actions on a managed instance.</li>
+     * <li><p>This parameter is returned only if the value of <strong>ServiceManaged</strong> is <strong>true</strong>.</p>
+     * </li>
+     * <li><p>Users can perform only specific actions on a managed instance.</p>
+     * </li>
      * </ul>
      * </blockquote>
      */
@@ -122,10 +131,14 @@ public class DescribeIpSetResponseBody extends TeaModel {
     /**
      * <p>The status of the acceleration region. Valid values:</p>
      * <ul>
-     * <li><strong>init</strong>: The acceleration region is being initialized.</li>
-     * <li><strong>active</strong>: The acceleration region is in the running state.</li>
-     * <li><strong>updating</strong>: The acceleration region is being configured.</li>
-     * <li><strong>deleting</strong>: The GA instance is being deleted.</li>
+     * <li><p><strong>init</strong>: The acceleration region is being initialized.</p>
+     * </li>
+     * <li><p><strong>active</strong>: The acceleration region is in the running state.</p>
+     * </li>
+     * <li><p><strong>updating</strong>: The acceleration region is being configured.</p>
+     * </li>
+     * <li><p><strong>deleting</strong>: The GA instance is being deleted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -239,12 +252,18 @@ public class DescribeIpSetResponseBody extends TeaModel {
         /**
          * <p>The name of the action on the managed instance. Valid values:</p>
          * <ul>
-         * <li><strong>Create</strong></li>
-         * <li><strong>Update</strong></li>
-         * <li><strong>Delete</strong></li>
-         * <li><strong>Associate</strong></li>
-         * <li><strong>UserUnmanaged</strong></li>
-         * <li><strong>CreateChild</strong></li>
+         * <li><p><strong>Create</strong></p>
+         * </li>
+         * <li><p><strong>Update</strong></p>
+         * </li>
+         * <li><p><strong>Delete</strong></p>
+         * </li>
+         * <li><p><strong>Associate</strong></p>
+         * </li>
+         * <li><p><strong>UserUnmanaged</strong></p>
+         * </li>
+         * <li><p><strong>CreateChild</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -256,16 +275,23 @@ public class DescribeIpSetResponseBody extends TeaModel {
         /**
          * <p>The type of the child resource. Valid values:</p>
          * <ul>
-         * <li><strong>Listener</strong>: listener.</li>
-         * <li><strong>IpSet</strong>: acceleration region.</li>
-         * <li><strong>EndpointGroup</strong>: endpoint group.</li>
-         * <li><strong>ForwardingRule</strong>: forwarding rule.</li>
-         * <li><strong>Endpoint</strong>: endpoint.</li>
-         * <li><strong>EndpointGroupDestination</strong>: protocol mapping of an endpoint group associated with a custom routing listener.</li>
-         * <li><strong>EndpointPolicy</strong>: traffic policy of an endpoint associated with a custom routing listener.</li>
+         * <li><p><strong>Listener</strong>: listener.</p>
+         * </li>
+         * <li><p><strong>IpSet</strong>: acceleration region.</p>
+         * </li>
+         * <li><p><strong>EndpointGroup</strong>: endpoint group.</p>
+         * </li>
+         * <li><p><strong>ForwardingRule</strong>: forwarding rule.</p>
+         * </li>
+         * <li><p><strong>Endpoint</strong>: endpoint.</p>
+         * </li>
+         * <li><p><strong>EndpointGroupDestination</strong>: protocol mapping of an endpoint group associated with a custom routing listener.</p>
+         * </li>
+         * <li><p><strong>EndpointPolicy</strong>: traffic policy of an endpoint associated with a custom routing listener.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> This parameter takes effect only if <strong>Action</strong> is set to <strong>CreateChild</strong>.</p>
+         * <p>This parameter takes effect only if <strong>Action</strong> is set to <strong>CreateChild</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -277,8 +303,10 @@ public class DescribeIpSetResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the specified actions are managed.</p>
          * <ul>
-         * <li><strong>true</strong>: The specified actions are managed, and users cannot perform the actions on the managed instance.</li>
-         * <li><strong>false</strong>: The specified actions are not managed, and users can perform the actions on the managed instance.</li>
+         * <li><p><strong>true</strong>: The specified actions are managed, and users cannot perform the actions on the managed instance.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The specified actions are not managed, and users can perform the actions on the managed instance.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

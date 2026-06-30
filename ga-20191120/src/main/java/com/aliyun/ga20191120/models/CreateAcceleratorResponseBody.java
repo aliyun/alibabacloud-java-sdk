@@ -14,8 +14,11 @@ public class CreateAcceleratorResponseBody extends TeaModel {
     public String acceleratorId;
 
     /**
-     * <p>The ID of the order.</p>
-     * <p>This parameter is returned only when the InstanceChargeType parameter is set to PREPAY. If AutoPay is set to false, you must manually complete the payment in the <a href="https://usercenter2-intl.aliyun.com/order/list">Order Center</a>.</p>
+     * <p>Order ID.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
+     * <p>The order ID. This parameter is returned when \<code>InstanceChargeType\\</code> is set to \<code>PREPAY\\</code> (subscription). If \<code>AutoPay\\</code> is set to \<code>false\\</code>, go to the <a href="https://usercenter2.aliyun.com/order/list">Order Hub</a> on the Alibaba Cloud China site to complete the payment.</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;</p>
+     * <p>If you are using the Alibaba Cloud International site and \<code>AutoPay\\</code> is set to \<code>false\\</code>, go to the <a href="https://usercenter2-intl.aliyun.com/order/list">Order Hub</a> to complete the payment.</p>
      * 
      * <strong>example:</strong>
      * <p>208257****</p>

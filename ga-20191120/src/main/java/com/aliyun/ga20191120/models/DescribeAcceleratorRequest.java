@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAcceleratorRequest extends TeaModel {
     /**
-     * <p>The ID of the GA instance that you want to query.</p>
+     * <p>The ID of the Global Accelerator instance that you want to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeAcceleratorRequest extends TeaModel {
     public String acceleratorId;
 
     /**
-     * <p>The region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>The region where the Global Accelerator instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

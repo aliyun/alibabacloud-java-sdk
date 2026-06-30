@@ -14,10 +14,10 @@ public class GetSpareIpResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the secondary IP address. Valid values:</p>
+     * <p>The status of the CNAME spare IP address. Valid values:</p>
      * <ul>
-     * <li><strong>active:</strong> The secondary IP address is available.</li>
-     * <li><strong>inuse:</strong> The secondary IP address is in use.</li>
+     * <li><strong>active</strong>: active.</li>
+     * <li><strong>inuse</strong>: in use.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSpareIpRequest extends TeaModel {
     /**
-     * <p>The GA instance ID.</p>
+     * <p>The instance ID of the Alibaba Cloud Global Accelerator (GA) instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,8 +15,8 @@ public class GetSpareIpRequest extends TeaModel {
     public String acceleratorId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of a request.</p>
+     * <p>Generate a unique value from your client to ensure that different requests have unique ClientToken values. ClientToken supports only ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>1F4B6A4A-C89E-489E-BAF1-52777EE148EF</p>
@@ -25,10 +25,10 @@ public class GetSpareIpRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request.</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><strong>true</strong>: performs a dry run without actually creating the resource. The system checks the required parameters, request syntax, and business limitations. If the check fails, the corresponding error is returned. If the check passes, the error code <code>DryRunOperation</code> is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the check passes, an HTTP 2xx status code is returned and the operation is performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class GetSpareIpRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The region ID of the GA instance. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>The region ID of the Alibaba Cloud Global Accelerator (GA) instance. Set the value to <strong>cn-hangzhou</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +48,7 @@ public class GetSpareIpRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The secondary IP address that is associated with the CNAME. If the acceleration area becomes unavailable, GA redirects traffic to the secondary IP address.</p>
+     * <p>The CNAME spare IP address. When an acceleration area is abnormal, traffic is switched to this IP address.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

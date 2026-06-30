@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AssociateAdditionalCertificatesWithListenerResponseBody extends TeaModel {
     /**
-     * <p>The listener ID.</p>
+     * <p>The listener instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>lsr-bp1bpn0kn908w4nbw****</p>

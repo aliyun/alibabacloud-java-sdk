@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCustomRoutingPortMappingsByDestinationResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListCustomRoutingPortMappingsByDestinationResponseBody extends TeaM
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,13 +23,13 @@ public class ListCustomRoutingPortMappingsByDestinationResponseBody extends TeaM
     public Integer pageSize;
 
     /**
-     * <p>Details about the port mapping table.</p>
+     * <p>The information about the port mappings.</p>
      */
     @NameInMap("PortMappings")
     public java.util.List<ListCustomRoutingPortMappingsByDestinationResponseBodyPortMappings> portMappings;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>String	04F0F334-1335-436C-A1D7-6C044FE73368</p>
@@ -38,7 +38,7 @@ public class ListCustomRoutingPortMappingsByDestinationResponseBody extends TeaM
     public String requestId;
 
     /**
-     * <p>The number of entries returned.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -135,7 +135,7 @@ public class ListCustomRoutingPortMappingsByDestinationResponseBody extends TeaM
 
     public static class ListCustomRoutingPortMappingsByDestinationResponseBodyPortMappings extends TeaModel {
         /**
-         * <p>The ID of the GA instance.</p>
+         * <p>The ID of the Global Accelerator instance to which the port mapping belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>ga-bp1odcab8tmno0hdq****</p>
@@ -159,10 +159,12 @@ public class ListCustomRoutingPortMappingsByDestinationResponseBody extends TeaM
         public ListCustomRoutingPortMappingsByDestinationResponseBodyPortMappingsDestinationSocketAddress destinationSocketAddress;
 
         /**
-         * <p>The access policy of traffic for the backend instance.</p>
+         * <p>The traffic policy for the backend instance.</p>
          * <ul>
-         * <li><strong>allow</strong>: allows traffic to the backend instance.</li>
-         * <li><strong>deny</strong>: denies all traffic to the backend instance.</li>
+         * <li><p><strong>allow</strong>: allows the backend instance to receive traffic.</p>
+         * </li>
+         * <li><p><strong>deny</strong>: denies the backend instance from receiving traffic.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -181,7 +183,7 @@ public class ListCustomRoutingPortMappingsByDestinationResponseBody extends TeaM
         public String endpointGroupId;
 
         /**
-         * <p>The ID of the region in which the endpoint group resides.</p>
+         * <p>The ID of the region where the endpoint group is deployed.</p>
          * 
          * <strong>example:</strong>
          * <p>us-west-1</p>
@@ -199,7 +201,7 @@ public class ListCustomRoutingPortMappingsByDestinationResponseBody extends TeaM
         public String endpointId;
 
         /**
-         * <p>The ID of the listener.</p>
+         * <p>The ID of the custom routing listener to which the port mapping belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>ga-bp1odcab8tmno0hdq****</p>
@@ -210,15 +212,17 @@ public class ListCustomRoutingPortMappingsByDestinationResponseBody extends TeaM
         /**
          * <p>The protocol of the backend service.</p>
          * <ul>
-         * <li><strong>tcp</strong>: TCP</li>
-         * <li><strong>udp</strong>: UDP</li>
+         * <li><p><strong>TCP</strong>: TCP.</p>
+         * </li>
+         * <li><p><strong>UDP</strong>: UDP.</p>
+         * </li>
          * </ul>
          */
         @NameInMap("Protocols")
         public java.util.List<String> protocols;
 
         /**
-         * <p>The name of the endpoint (vSwitch).</p>
+         * <p>The name of the vSwitch instance of the endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-test01</p>

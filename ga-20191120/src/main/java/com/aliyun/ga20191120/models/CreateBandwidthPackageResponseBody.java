@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateBandwidthPackageResponseBody extends TeaModel {
     /**
-     * <p>The ID of the bandwidth plan.</p>
+     * <p>The bandwidth plan ID.</p>
      * 
      * <strong>example:</strong>
      * <p>gbwp-bp1sgzldyj6b4q7cx****</p>
@@ -15,8 +15,9 @@ public class CreateBandwidthPackageResponseBody extends TeaModel {
 
     /**
      * <p>The order ID.</p>
-     * <p>If bills are not automatically paid, you must go to the Order Center to complete the payments.</p>
-     * <p>This parameter is returned only if ChargeType is set to PREPAY. If AutoPay is set to false, you must go to the <a href="https://usercenter2-intl.aliyun.com/order/list">Order Center</a> to complete the payment.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;This parameter is returned only when you set ChargeType to PREPAY. If you set AutoPay to false, go to the <a href="https://usercenter2.aliyun.com/order/list">Order Hub</a> to complete the payment.</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;</p>
+     * <p>This parameter is returned only when you set ChargeType to PREPAY. If you set AutoPay to false, go to the <a href="https://usercenter2-intl.aliyun.com/order/list">Order Hub</a> to complete the payment.</p>
      * 
      * <strong>example:</strong>
      * <p>208257****</p>
@@ -25,7 +26,7 @@ public class CreateBandwidthPackageResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4B6DBBB0-2D01-4C6A-A384-4129266E6B78</p>

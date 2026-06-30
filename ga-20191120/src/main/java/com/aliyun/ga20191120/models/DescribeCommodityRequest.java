@@ -8,13 +8,17 @@ public class DescribeCommodityRequest extends TeaModel {
      * <p>The commodity code.</p>
      * <p>Valid values on the China site (aliyun.com):</p>
      * <ul>
-     * <li><strong>ga_gapluspre_public_cn</strong>: GA instance.</li>
-     * <li><strong>ga_plusbwppre_public_cn</strong>: basic bandwidth plan.</li>
+     * <li><p><strong>ga_gapluspre_public_cn</strong>: GA instance.</p>
+     * </li>
+     * <li><p><strong>ga_plusbwppre_public_cn</strong>: basic bandwidth plan.</p>
+     * </li>
      * </ul>
      * <p>Valid values on the international site (alibabacloud.com):</p>
      * <ul>
-     * <li><strong>ga_pluspre_public_intl</strong>: GA instance.</li>
-     * <li><strong>ga_bwppreintl_public_intl:</strong> basic bandwidth plan.</li>
+     * <li><p><strong>ga_pluspre_public_intl</strong>: GA instance.</p>
+     * </li>
+     * <li><p><strong>ga_bwppreintl_public_intl:</strong> basic bandwidth plan.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -27,9 +31,12 @@ public class DescribeCommodityRequest extends TeaModel {
     /**
      * <p>The type of the order. Valid values:</p>
      * <ul>
-     * <li><strong>BUY</strong>: purchase order.</li>
-     * <li><strong>RENEW</strong>: renewal order.</li>
-     * <li><strong>UPGRADE</strong>: upgrade order.</li>
+     * <li><p><strong>BUY</strong>: purchase order.</p>
+     * </li>
+     * <li><p><strong>RENEW</strong>: renewal order.</p>
+     * </li>
+     * <li><p><strong>UPGRADE</strong>: upgrade order.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

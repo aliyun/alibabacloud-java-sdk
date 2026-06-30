@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AssociateAdditionalCertificatesWithListenerRequest extends TeaModel {
     /**
-     * <p>The GA instance ID.</p>
+     * <p>The instance ID of the Alibaba Cloud Global Accelerator (GA).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,8 +15,8 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends TeaModel
     public String acceleratorId;
 
     /**
-     * <p>The additional certificates.</p>
-     * <p>You can specify up to 10 certificates in each request.</p>
+     * <p>The list of additional certificates.</p>
+     * <p>You can specify up to 10 certificates at a time.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Certificates")
@@ -24,9 +24,9 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends TeaModel
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends TeaModel
     public String clientToken;
 
     /**
-     * <p>The listener ID. Only HTTPS listeners are supported.</p>
+     * <p>The instance ID of the listener. Only HTTPS listeners are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends TeaModel
     public String listenerId;
 
     /**
-     * <p>The region ID of the GA instance. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>The region ID of the Alibaba Cloud Global Accelerator (GA) instance. Set the value to <strong>cn-hangzhou</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -102,8 +102,8 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends TeaModel
 
     public static class AssociateAdditionalCertificatesWithListenerRequestCertificates extends TeaModel {
         /**
-         * <p>The domain name that is specified by the certificate. You can associate each domain name with only one additional certificate.</p>
-         * <p>You can specify up to 10 domain names in each request.</p>
+         * <p>The domain name for which the certificate takes effect. Each domain name can be bound to only one additional certificate.</p>
+         * <p>You can specify up to 10 domain names at a time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,8 +113,8 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends TeaModel
         public String domain;
 
         /**
-         * <p>The ID of the certificate. Only server certificates are supported.</p>
-         * <p>You can specify up to 10 certificate IDs in each request.</p>
+         * <p>The certificate ID. Only server certificates are supported.</p>
+         * <p>You can specify up to 10 certificate IDs at a time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

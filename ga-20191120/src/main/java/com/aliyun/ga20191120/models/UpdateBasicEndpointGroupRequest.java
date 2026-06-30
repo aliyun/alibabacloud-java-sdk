@@ -8,7 +8,7 @@ public class UpdateBasicEndpointGroupRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -50,8 +50,10 @@ public class UpdateBasicEndpointGroupRequest extends TeaModel {
      * <p>The secondary address of the endpoint.</p>
      * <p>This parameter is required only if the accelerated IP address is associated with the secondary private IP address of an ECS instance or an ENI.</p>
      * <ul>
-     * <li>If you set the endpoint type to <strong>ECS</strong>, you can set <strong>EndpointSubAddress</strong> to the secondary private IP address of the primary ENI. If you leave this parameter empty, the primary private IP address of the primary ENI is used.</li>
-     * <li>If you set the endpoint type to <strong>ENI</strong>, you can set <strong>EndpointSubAddress</strong> to the secondary private IP address of the secondary ENI. If you leave this parameter empty, the primary private IP address of the secondary ENI is used.</li>
+     * <li><p>If you set the endpoint type to <strong>ECS</strong>, you can set <strong>EndpointSubAddress</strong> to the secondary private IP address of the primary ENI. If you leave this parameter empty, the primary private IP address of the primary ENI is used.</p>
+     * </li>
+     * <li><p>If you set the endpoint type to <strong>ENI</strong>, you can set <strong>EndpointSubAddress</strong> to the secondary private IP address of the secondary ENI. If you leave this parameter empty, the primary private IP address of the secondary ENI is used.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,9 +65,12 @@ public class UpdateBasicEndpointGroupRequest extends TeaModel {
     /**
      * <p>The type of the endpoint. Valid values:</p>
      * <ul>
-     * <li><strong>ENI</strong>: elastic network interface (ENI).</li>
-     * <li><strong>SLB</strong>: Classic Load Balancer (CLB) instance.</li>
-     * <li><strong>ECS</strong>: Elastic Compute Service (ECS) instance.</li>
+     * <li><p><strong>ENI</strong>: elastic network interface (ENI).</p>
+     * </li>
+     * <li><p><strong>SLB</strong>: Classic Load Balancer (CLB) instance.</p>
+     * </li>
+     * <li><p><strong>ECS</strong>: Elastic Compute Service (ECS) instance.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BandwidthPackageAddAcceleratorRequest extends TeaModel {
     /**
-     * <p>The GA instance ID.</p>
+     * <p>The ID of the Alibaba Cloud Global Accelerator (GA) instance to which the bandwidth plan is attached.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class BandwidthPackageAddAcceleratorRequest extends TeaModel {
     public String acceleratorId;
 
     /**
-     * <p>The bandwidth plan ID.</p>
+     * <p>The ID of the bandwidth plan to attach to the Alibaba Cloud Global Accelerator (GA) instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class BandwidthPackageAddAcceleratorRequest extends TeaModel {
     public String bandwidthPackageId;
 
     /**
-     * <p>The region ID of the GA instance. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>The region ID of the Alibaba Cloud Global Accelerator (GA) instance. Set the value to <strong>cn-hangzhou</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

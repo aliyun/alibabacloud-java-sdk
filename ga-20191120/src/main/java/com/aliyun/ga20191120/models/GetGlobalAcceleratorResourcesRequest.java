@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetGlobalAcceleratorResourcesRequest extends TeaModel {
     /**
+     * <p>The instance ID of the Alibaba Cloud Global Accelerator (GA).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class GetGlobalAcceleratorResourcesRequest extends TeaModel {
     public String acceleratorId;
 
     /**
+     * <p>The ID of the linked peripheral resource.</p>
+     * 
      * <strong>example:</strong>
      * <p>waf_v2_public_cn-x0r****gr1i</p>
      */
@@ -21,6 +24,8 @@ public class GetGlobalAcceleratorResourcesRequest extends TeaModel {
     public String associatedResourceId;
 
     /**
+     * <p>The Region ID where the linked instance is located.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -28,6 +33,8 @@ public class GetGlobalAcceleratorResourcesRequest extends TeaModel {
     public String associatedResourceRegionId;
 
     /**
+     * <p>The resource type of the linked peripheral resource.</p>
+     * 
      * <strong>example:</strong>
      * <p>WAF</p>
      */
@@ -35,6 +42,7 @@ public class GetGlobalAcceleratorResourcesRequest extends TeaModel {
     public String associatedResourceType;
 
     /**
+     * <p>The Region ID where the Alibaba Cloud Global Accelerator (GA) instance is located. The only valid value is cn-hangzhou.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateAclRequest extends TeaModel {
     /**
-     * <p>The entries of IP addresses or CIDR blocks to add to the ACL.</p>
-     * <p>You can add a maximum of 50 entries at a time.</p>
+     * <p>The access control policy group entries, which are IP address entries or CIDR block entries.</p>
+     * <p>You can add up to 50 entries at a time.</p>
      */
     @NameInMap("AclEntries")
     public java.util.List<CreateAclRequestAclEntries> aclEntries;
 
     /**
-     * <p>The ACL name.</p>
-     * <p>The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name of the access control policy group.</p>
+     * <p>The name must be 1 to 128 characters in length and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>test-acl</p>
@@ -22,7 +22,7 @@ public class CreateAclRequest extends TeaModel {
     public String aclName;
 
     /**
-     * <p>The IP version of the ACL. Valid values:</p>
+     * <p>The IP version of the access control policy group. Valid values:</p>
      * <ul>
      * <li><strong>IPv4</strong></li>
      * <li><strong>IPv6</strong></li>
@@ -37,9 +37,9 @@ public class CreateAclRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> value as the <strong>ClientToken</strong> value. The <strong>RequestId</strong> value is different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -49,10 +49,10 @@ public class CreateAclRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to only precheck the request. Default value: false. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: prechecks the request without performing the operation. The system checks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong>: sends the request. If the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><strong>true</strong>: performs a dry run without creating the access control policy group. The system checks the required parameters, request format, and business limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): sends a Normal request, passes the dry run, and returns an HTTP 2xx status code and directly performs the operation.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,7 +62,7 @@ public class CreateAclRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>The region ID of the Alibaba Cloud Global Accelerator (GA) instance. Set the value to <strong>cn-hangzhou</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,7 +72,7 @@ public class CreateAclRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmwj7wvng3jbi</p>
@@ -81,7 +81,7 @@ public class CreateAclRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The tags of the ACL.</p>
+     * <p>The label information of the access control policy group.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateAclRequestTag> tag;
@@ -157,8 +157,8 @@ public class CreateAclRequest extends TeaModel {
 
     public static class CreateAclRequestAclEntries extends TeaModel {
         /**
-         * <p>The IP addresses (192.168.XX.XX) or CIDR blocks (10.0.XX.XX/24) that you want to add to the ACL.</p>
-         * <p>You can add a maximum of 50 entries at a time.</p>
+         * <p>The access control policy group entry, which is an IP address entry (192.168.XX.XX) or a CIDR block entry (10.0.XX.XX/24).</p>
+         * <p>You can add up to 50 entries at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.XX.XX/24</p>
@@ -167,9 +167,9 @@ public class CreateAclRequest extends TeaModel {
         public String entry;
 
         /**
-         * <p>The description of the entry that you want to add to the ACL.</p>
-         * <p>You can add a maximum of 50 entries at a time.</p>
-         * <p>The description must be 1 to 256 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (_).</p>
+         * <p>The description of the access control policy group entry.</p>
+         * <p>You can add descriptions for up to 50 entries at a time.</p>
+         * <p>The description must be 1 to 256 characters in length and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), underscores (_), and Chinese characters.</p>
          * 
          * <strong>example:</strong>
          * <p>test-entry</p>
@@ -202,9 +202,9 @@ public class CreateAclRequest extends TeaModel {
 
     public static class CreateAclRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the ACL. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
-         * <p>You can specify up to 20 tag keys.</p>
+         * <p>The label key of the access control policy group. Once specified, the label key cannot be an empty string.</p>
+         * <p>The label key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>You can specify up to 20 label keys.</p>
          * 
          * <strong>example:</strong>
          * <p>tag-key</p>
@@ -213,9 +213,9 @@ public class CreateAclRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the ACL. The tag value cannot be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
-         * <p>You can specify up to 20 tag values.</p>
+         * <p>The label value of the access control policy group. Once specified, the label value can be an empty string.</p>
+         * <p>The label value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>You can specify up to 20 label values.</p>
          * 
          * <strong>example:</strong>
          * <p>tag-value</p>

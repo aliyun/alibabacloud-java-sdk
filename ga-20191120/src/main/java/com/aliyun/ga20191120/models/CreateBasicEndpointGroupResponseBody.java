@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateBasicEndpointGroupResponseBody extends TeaModel {
     /**
-     * <p>The endpoint group ID.</p>
+     * <p>The ID of the endpoint group for the basic Alibaba Cloud Global Accelerator (GA) instance.</p>
      * 
      * <strong>example:</strong>
      * <p>epg-bp1dmlohjjz4kqaun****</p>

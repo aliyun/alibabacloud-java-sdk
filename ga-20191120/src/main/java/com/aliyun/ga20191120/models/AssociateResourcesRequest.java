@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AssociateResourcesRequest extends TeaModel {
     /**
+     * <p>Alibaba Cloud Global Accelerator (GA) instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,12 @@ public class AssociateResourcesRequest extends TeaModel {
     public String acceleratorId;
 
     /**
+     * <p>Association pattern:  </p>
+     * <ul>
+     * <li><strong>Managed</strong>: Managed mode. GA restricts user operations based on management policies. Currently, no resources use this type.  </li>
+     * <li><strong>Associated</strong> (default): Loose coupling association. GA does not restrict user operations. WAF uses loose coupling.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Associated</p>
      */
@@ -21,6 +28,8 @@ public class AssociateResourcesRequest extends TeaModel {
     public String associatedMode;
 
     /**
+     * <p>Resource ID of the linked instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>waf_xx</p>
      */
@@ -28,6 +37,7 @@ public class AssociateResourcesRequest extends TeaModel {
     public String associatedResourceId;
 
     /**
+     * <p>Region of the linked instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +47,7 @@ public class AssociateResourcesRequest extends TeaModel {
     public String associatedResourceRegionId;
 
     /**
+     * <p>Resource type of the linked instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +57,12 @@ public class AssociateResourcesRequest extends TeaModel {
     public String associatedResourceType;
 
     /**
+     * <p>Indicates whether to perform a dry run of the request. Valid values:  </p>
+     * <ul>
+     * <li><strong>true</strong>: Sends a dry run request without associating resources. Checks include required parameters, request format, and business restrictions. If the check fails, an error is returned. If the check passes, an HTTP 2xx status code is returned.  </li>
+     * <li><strong>false</strong> (Default Value): Sends a normal request. If the check passes, an HTTP 2xx status code is returned and the endpoint group is created immediately.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -53,6 +70,8 @@ public class AssociateResourcesRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
+     * <p>Region ID of the basic Alibaba Cloud Global Accelerator (GA) instance. Valid value: <strong>cn-hangzhou</strong> only.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

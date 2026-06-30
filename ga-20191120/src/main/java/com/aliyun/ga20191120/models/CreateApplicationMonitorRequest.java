@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateApplicationMonitorRequest extends TeaModel {
     /**
-     * <p>The ID of the GA instance on which you want to perform the origin probing task.</p>
+     * <p>The instance ID of the Alibaba Cloud Global Accelerator (GA) instance to be probed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateApplicationMonitorRequest extends TeaModel {
     public String acceleratorId;
 
     /**
-     * <p>The URL or IP address that you want to probe.</p>
+     * <p>The URL or IP address to be probed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,10 +25,10 @@ public class CreateApplicationMonitorRequest extends TeaModel {
     public String address;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of a request.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -40,8 +40,10 @@ public class CreateApplicationMonitorRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the automatic diagnostics feature. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong> (default)</li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong> (default)</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,9 +53,9 @@ public class CreateApplicationMonitorRequest extends TeaModel {
     public Boolean detectEnable;
 
     /**
-     * <p>The threshold that is used to trigger the automatic diagnostics feature. Unit: percentage.</p>
+     * <p>The threshold that triggers automatic diagnostics. Unit: %.</p>
      * <p>Valid values: <strong>0</strong> to <strong>100</strong>.</p>
-     * <p>The default value is <strong>0</strong>, which indicates that the automatic diagnostics feature is not triggered.</p>
+     * <p>Default value: <strong>0</strong>, which indicates that automatic diagnostics is not triggered.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -62,7 +64,7 @@ public class CreateApplicationMonitorRequest extends TeaModel {
     public Integer detectThreshold;
 
     /**
-     * <p>The number of times that the threshold must be reached before the automatic diagnostics feature is triggered.</p>
+     * <p>The number of times that the threshold must be reached to trigger automatic diagnostics.</p>
      * <p>Valid values: <strong>1</strong> to <strong>20</strong>. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -72,7 +74,7 @@ public class CreateApplicationMonitorRequest extends TeaModel {
     public Integer detectTimes;
 
     /**
-     * <p>The ID of the listener on which you want to perform the origin probing task.</p>
+     * <p>The instance ID of the listener to be probed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -82,7 +84,7 @@ public class CreateApplicationMonitorRequest extends TeaModel {
     public String listenerId;
 
     /**
-     * <p>The extended options of the listener protocol that is used by the origin probing task. The options vary based on the listener protocol.</p>
+     * <p>The advanced extension options for the listener protocol type of the origin probing task. Different listener protocol types correspond to different extension options.</p>
      * 
      * <strong>example:</strong>
      * <p>{ &quot;http_method&quot;: &quot;get&quot;,&quot;header&quot;: &quot;key:asd&quot;,&quot;acceptable_response_code&quot;: &quot;500&quot;,&quot;cert_verify&quot;: true }</p>
@@ -91,7 +93,7 @@ public class CreateApplicationMonitorRequest extends TeaModel {
     public String optionsJson;
 
     /**
-     * <p>The region ID of the GA instance. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>The region ID of the Alibaba Cloud Global Accelerator (GA) instance. Set the value to <strong>cn-hangzhou</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -101,8 +103,8 @@ public class CreateApplicationMonitorRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The silence period of the automatic diagnostics feature. This parameter specifies the interval at which the automatic diagnostics feature is triggered. If the availability rate does not return to normal after GA triggers an automatic diagnostic task, GA must wait until the silence period ends before GA can trigger another automatic diagnostic task.</p>
-     * <p>If the number of consecutive times that the availability rate drops below the threshold of automatic diagnostics reaches the value of <strong>DetectTimes</strong>, the automatic diagnostics feature is triggered. The automatic diagnostics feature is not triggered again within the silence period even if the availability rate remains below the threshold. If the availability rate does not return to normal after the silence period ends, the automatic diagnostics feature is triggered again.</p>
+     * <p>The silence period for automatic diagnostics. This parameter specifies the interval between two consecutive automatic diagnostics when the availability does not recover to normal after automatic diagnostics is triggered.</p>
+     * <p>When the availability is consecutively below the automatic diagnostics threshold for the specified number of times (the value of <strong>DetectTimes</strong>), automatic diagnostics is triggered. If the availability remains below the threshold during the silence period, automatic diagnostics is not triggered again within the silence period. If the availability has not recovered after the silence period, automatic diagnostics is triggered again.</p>
      * <p>Unit: seconds. Valid values: <strong>300</strong> to <strong>86400</strong>. Default value: <strong>300</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -113,7 +115,7 @@ public class CreateApplicationMonitorRequest extends TeaModel {
 
     /**
      * <p>The name of the origin probing task.</p>
-     * <p>The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name must be 1 to 128 characters in length and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

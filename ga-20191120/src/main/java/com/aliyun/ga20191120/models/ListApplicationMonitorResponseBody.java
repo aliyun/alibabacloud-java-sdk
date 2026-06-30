@@ -113,8 +113,10 @@ public class ListApplicationMonitorResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the automatic diagnostics feature is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -173,10 +175,14 @@ public class ListApplicationMonitorResponseBody extends TeaModel {
         /**
          * <p>The status of the origin probing task. Valid values:</p>
          * <ul>
-         * <li><strong>active:</strong> The origin probing task is running.</li>
-         * <li><strong>inactive:</strong> The origin probing task is stopped.</li>
-         * <li><strong>init:</strong> The origin probing task is being initialized.</li>
-         * <li><strong>deleting:</strong> The origin probing task is being deleted.</li>
+         * <li><p><strong>active:</strong> The origin probing task is running.</p>
+         * </li>
+         * <li><p><strong>inactive:</strong> The origin probing task is stopped.</p>
+         * </li>
+         * <li><p><strong>init:</strong> The origin probing task is being initialized.</p>
+         * </li>
+         * <li><p><strong>deleting:</strong> The origin probing task is being deleted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

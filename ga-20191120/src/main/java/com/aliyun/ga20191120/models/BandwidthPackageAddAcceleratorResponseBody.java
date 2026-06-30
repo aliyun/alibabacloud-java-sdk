@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class BandwidthPackageAddAcceleratorResponseBody extends TeaModel {
     /**
-     * <p>The GA instance IDs.</p>
+     * <p>The ID of the Alibaba Cloud Global Accelerator (GA) instance to which the bandwidth plan is attached.</p>
      */
     @NameInMap("Accelerators")
     public java.util.List<String> accelerators;
 
     /**
-     * <p>The bandwidth plan ID.</p>
+     * <p>The ID of the bandwidth plan attached to the Alibaba Cloud Global Accelerator (GA) instance.</p>
      * 
      * <strong>example:</strong>
      * <p>gbwp-bp1sgzldyj6b4q7cx****</p>

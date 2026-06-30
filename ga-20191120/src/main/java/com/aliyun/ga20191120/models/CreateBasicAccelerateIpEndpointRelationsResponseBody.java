@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateBasicAccelerateIpEndpointRelationsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the basic GA instance.</p>
+     * <p>The ID of the basic Global Accelerator instance.</p>
      * 
      * <strong>example:</strong>
      * <p>ga-bp17frjjh0udz4qz****</p>
@@ -14,7 +14,7 @@ public class CreateBasicAccelerateIpEndpointRelationsResponseBody extends TeaMod
     public String acceleratorId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>

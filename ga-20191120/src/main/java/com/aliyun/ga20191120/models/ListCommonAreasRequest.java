@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListCommonAreasRequest extends TeaModel {
     /**
-     * <p>The IP version used to connect to the GA instance. Valid values:</p>
+     * <p>The IP address protocol used to connect to Global Accelerator (GA). Valid values:</p>
      * <ul>
-     * <li><strong>IPv4</strong> (default)</li>
-     * <li><strong>IPv6</strong></li>
+     * <li><strong>IPv4</strong> (default): IPv4 address protocol. Queries regions that support IPv4.</li>
+     * <li><strong>IPv6</strong>: IPv6 address protocol. Queries regions that support IPv6.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class ListCommonAreasRequest extends TeaModel {
     public String ipVersion;
 
     /**
-     * <p>Specifies whether to query regions where endpoint groups of GA can be deployed. Valid values:</p>
+     * <p>Specifies whether the region is an endpoint group region supported by Global Accelerator.</p>
      * <ul>
-     * <li><strong>true</strong>: yes</li>
-     * <li><strong>false</strong> (default): no</li>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong> (default): No.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,10 +31,10 @@ public class ListCommonAreasRequest extends TeaModel {
     public Boolean isEpg;
 
     /**
-     * <p>Specifies whether to query regions supported by GA. Valid values:</p>
+     * <p>Specifies whether the region is an acceleration area supported by Global Accelerator.</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong> (default)</li>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong> (default): No.</li>
      * </ul>
      * 
      * <strong>example:</strong>

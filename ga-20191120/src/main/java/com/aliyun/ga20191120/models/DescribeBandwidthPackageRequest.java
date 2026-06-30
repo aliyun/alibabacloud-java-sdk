@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBandwidthPackageRequest extends TeaModel {
     /**
-     * <p>The ID of the bandwidth plan that you want to query.</p>
+     * <p>The ID of the bandwidth plan to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeBandwidthPackageRequest extends TeaModel {
     public String bandwidthPackageId;
 
     /**
-     * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>The region ID of the Alibaba Cloud Global Accelerator (GA) instance. Set the value to <strong>cn-hangzhou</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -217,7 +217,7 @@ public class GetAclResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>White</p>
+         * <p>white</p>
          */
         @NameInMap("AclType")
         public String aclType;

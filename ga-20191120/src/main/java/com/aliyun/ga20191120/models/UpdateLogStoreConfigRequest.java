@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateLogStoreConfigRequest extends TeaModel {
     /**
+     * <p>The instance ID of Alibaba Cloud Global Accelerator (GA).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,22 @@ public class UpdateLogStoreConfigRequest extends TeaModel {
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
+    /**
+     * <p>A list of custom header field names to be included in access logs.</p>
+     */
     @NameInMap("AccessLogRecordCustomizedHeaderList")
     public java.util.List<String> accessLogRecordCustomizedHeaderList;
 
     /**
+     * <p>Specifies whether to include custom headers in access logs. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong> (default): No.</li>
+     * </ul>
+     * <blockquote>
+     * <p>You can set this parameter to <strong>true</strong> only when the <strong>AccessLogEnabled</strong> toggle for the instance is turned on.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -24,6 +37,8 @@ public class UpdateLogStoreConfigRequest extends TeaModel {
     public Boolean accessLogRecordCustomizedHeadersEnabled;
 
     /**
+     * <p>An idempotent token.</p>
+     * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
@@ -31,6 +46,7 @@ public class UpdateLogStoreConfigRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The ID of the endpoint group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +56,7 @@ public class UpdateLogStoreConfigRequest extends TeaModel {
     public String endpointGroupId;
 
     /**
+     * <p>The listener ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +66,7 @@ public class UpdateLogStoreConfigRequest extends TeaModel {
     public String listenerId;
 
     /**
+     * <p>The region ID of the Alibaba Cloud Global Accelerator (GA) instance. The only valid value is cn-hangzhou.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,6 +76,7 @@ public class UpdateLogStoreConfigRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The name of the Logstore.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,6 +86,7 @@ public class UpdateLogStoreConfigRequest extends TeaModel {
     public String slsLogStoreName;
 
     /**
+     * <p>The name of the Data Service Project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

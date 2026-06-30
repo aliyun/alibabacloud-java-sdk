@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCustomRoutingPortMappingsRequest extends TeaModel {
     /**
-     * <p>The ID of the GA instance.</p>
+     * <p>The ID of the GA instance whose port mapping table you want to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListCustomRoutingPortMappingsRequest extends TeaModel {
     public String acceleratorId;
 
     /**
-     * <p>The ID of the endpoint group.</p>
+     * <p>The ID of the endpoint group whose port mapping table you want to query.</p>
      * 
      * <strong>example:</strong>
      * <p>epg-bp16jdc00bhe97sr5****</p>
@@ -24,7 +24,7 @@ public class ListCustomRoutingPortMappingsRequest extends TeaModel {
     public String endpointGroupId;
 
     /**
-     * <p>The ID of the listener.</p>
+     * <p>The ID of the listener whose port mapping table you want to query.</p>
      * 
      * <strong>example:</strong>
      * <p>lsr-bp1bpn0kn908w4nbw****</p>
@@ -33,7 +33,7 @@ public class ListCustomRoutingPortMappingsRequest extends TeaModel {
     public String listenerId;
 
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -42,7 +42,7 @@ public class ListCustomRoutingPortMappingsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

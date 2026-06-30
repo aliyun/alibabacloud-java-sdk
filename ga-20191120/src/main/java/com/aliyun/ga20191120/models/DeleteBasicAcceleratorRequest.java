@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteBasicAcceleratorRequest extends TeaModel {
     /**
-     * <p>The ID of the basic GA instance.</p>
+     * <p>The instance ID of the basic Alibaba Cloud Global Accelerator (GA) instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteBasicAcceleratorRequest extends TeaModel {
     public String acceleratorId;
 
     /**
-     * <p>The ID of the region to which the basic GA instance belongs. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>The region ID of the basic Alibaba Cloud Global Accelerator (GA) instance. Set the value to <strong>ap-southeast-1</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

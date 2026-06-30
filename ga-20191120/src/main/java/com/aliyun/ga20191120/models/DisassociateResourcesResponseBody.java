@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DisassociateResourcesResponseBody extends TeaModel {
     /**
+     * <p>Alibaba Cloud Global Accelerator (GA) instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ga-bp1odcab8tmno0hdq****</p>
      */
@@ -12,6 +14,8 @@ public class DisassociateResourcesResponseBody extends TeaModel {
     public String acceleratorId;
 
     /**
+     * <p>Linked instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c66d65f411b9143bab253bfef61c03c48</p>
      */
@@ -19,7 +23,7 @@ public class DisassociateResourcesResponseBody extends TeaModel {
     public String associatedResourceId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>DE77A7F3-3B74-41C0-A5BC-CAFD188C28B6</p>

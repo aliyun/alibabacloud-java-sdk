@@ -11,7 +11,7 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
     public java.util.List<ListBandwidthackagesResponseBodyBandwidthPackages> bandwidthPackages;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4B6DBBB0-2D01-4C6A-A384-4129266E6B78</p>
@@ -93,7 +93,7 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
 
     public static class ListBandwidthackagesResponseBodyBandwidthPackagesTags extends TeaModel {
         /**
-         * <p>The tag key of the bandwidth plan.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>tag-key</p>
@@ -102,7 +102,7 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the bandwidth plan.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>tag-value</p>
@@ -135,13 +135,13 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
 
     public static class ListBandwidthackagesResponseBodyBandwidthPackages extends TeaModel {
         /**
-         * <p>The IDs of the GA instances that are associated with the bandwidth plans.</p>
+         * <p>The IDs of the Global Accelerator instances that are associated with the bandwidth plan.</p>
          */
         @NameInMap("Accelerators")
         public java.util.List<String> accelerators;
 
         /**
-         * <p>The bandwidth of the bandwidth plan. Unit: Mbit/s.</p>
+         * <p>The bandwidth of the bandwidth plan. Unit: Mbps.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -159,10 +159,12 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
         public String bandwidthPackageId;
 
         /**
-         * <p>The billing method of the bandwidth plan. Valid values:</p>
+         * <p>The billing method.</p>
          * <ul>
-         * <li><strong>PREPAY</strong>: subscription. This is the default value.</li>
-         * <li><strong>POSTPAY</strong>: pay-as-you-go.</li>
+         * <li><p><strong>PREPAY</strong> (default): subscription.</p>
+         * </li>
+         * <li><p><strong>POSTPAY</strong>: pay-as-you-go.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -172,7 +174,7 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The time when the bandwidth plan was created.</p>
+         * <p>The timestamp that indicates when the bandwidth plan was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1578966918000</p>
@@ -190,7 +192,7 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The expiration time of the bandwidth plan.</p>
+         * <p>The timestamp that indicates when the bandwidth plan expires.</p>
          * 
          * <strong>example:</strong>
          * <p>1578966918000</p>
@@ -199,7 +201,7 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
         public String expiredTime;
 
         /**
-         * <p>The name of the GA instance.</p>
+         * <p>The name of the bandwidth plan.</p>
          * 
          * <strong>example:</strong>
          * <p>Accelerator</p>
@@ -208,7 +210,7 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the region.</p>
          * 
          * <strong>example:</strong>
          * <p>DE77A7F3-3B74-41C0-A5BC-CAFD188C28B6</p>
@@ -226,16 +228,24 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The status of the bandwidth plan. Valid values:</p>
+         * <p>The status of the bandwidth plan.</p>
          * <ul>
-         * <li><strong>init:</strong> The bandwidth plan is being initialized.</li>
-         * <li><strong>active:</strong> The bandwidth plan is available.</li>
-         * <li><strong>binded:</strong> The bandwidth plan is associated with a GA instance.</li>
-         * <li><strong>binding:</strong> The bandwidth plan is being associated with a GA instance.</li>
-         * <li><strong>unbinding:</strong> The bandwidth plan is being disassociated from a GA instance.</li>
-         * <li><strong>updating:</strong> The bandwidth plan is being updated.</li>
-         * <li><strong>finacialLocked:</strong> The bandwidth plan is locked due to overdue payments.</li>
-         * <li><strong>locked:</strong> The bandwidth plan is locked.</li>
+         * <li><p><strong>init</strong>: The bandwidth plan is being initialized.</p>
+         * </li>
+         * <li><p><strong>active</strong>: The bandwidth plan is available.</p>
+         * </li>
+         * <li><p><strong>binded</strong>: The bandwidth plan is bound.</p>
+         * </li>
+         * <li><p><strong>binding</strong>: The bandwidth plan is being bound.</p>
+         * </li>
+         * <li><p><strong>unbinding</strong>: The bandwidth plan is being unbound.</p>
+         * </li>
+         * <li><p><strong>updating</strong>: The bandwidth plan is being updated.</p>
+         * </li>
+         * <li><p><strong>finacialLocked</strong>: The bandwidth plan is financially locked.</p>
+         * </li>
+         * <li><p><strong>locked</strong>: The bandwidth plan is locked.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -245,7 +255,7 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The tag of the bandwidth plan.</p>
+         * <p>The tags of the resource.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListBandwidthackagesResponseBodyBandwidthPackagesTags> tags;

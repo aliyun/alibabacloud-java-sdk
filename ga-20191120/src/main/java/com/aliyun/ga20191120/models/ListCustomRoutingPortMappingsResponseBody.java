@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCustomRoutingPortMappingsResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListCustomRoutingPortMappingsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>The number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,13 +23,13 @@ public class ListCustomRoutingPortMappingsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Details about the port mapping table.</p>
+     * <p>The information about the port mappings.</p>
      */
     @NameInMap("PortMappings")
     public java.util.List<ListCustomRoutingPortMappingsResponseBodyPortMappings> portMappings;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
@@ -38,7 +38,7 @@ public class ListCustomRoutingPortMappingsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of entries returned.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,7 +93,7 @@ public class ListCustomRoutingPortMappingsResponseBody extends TeaModel {
 
     public static class ListCustomRoutingPortMappingsResponseBodyPortMappingsDestinationSocketAddress extends TeaModel {
         /**
-         * <p>The service IP address of the backend instance.</p>
+         * <p>The IP address of the backend service.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.XX.XX</p>
@@ -102,7 +102,7 @@ public class ListCustomRoutingPortMappingsResponseBody extends TeaModel {
         public String ipAddress;
 
         /**
-         * <p>The service port of the backend instance.</p>
+         * <p>The port of the backend service.</p>
          * 
          * <strong>example:</strong>
          * <p>443</p>
@@ -135,7 +135,7 @@ public class ListCustomRoutingPortMappingsResponseBody extends TeaModel {
 
     public static class ListCustomRoutingPortMappingsResponseBodyPortMappings extends TeaModel {
         /**
-         * <p>The ID of the GA instance.</p>
+         * <p>The ID of the GA instance to which the port mapping belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>ga-bp1odcab8tmno0hdq****</p>
@@ -153,16 +153,18 @@ public class ListCustomRoutingPortMappingsResponseBody extends TeaModel {
         public Integer acceleratorPort;
 
         /**
-         * <p>The service IP address and port of the backend instance.</p>
+         * <p>The IP address and port of the backend service.</p>
          */
         @NameInMap("DestinationSocketAddress")
         public ListCustomRoutingPortMappingsResponseBodyPortMappingsDestinationSocketAddress destinationSocketAddress;
 
         /**
-         * <p>The access policy of traffic for the backend instance. Valid values:</p>
+         * <p>The traffic policy for the backend instance.</p>
          * <ul>
-         * <li><strong>allow</strong>: allows traffic to the backend instance.</li>
-         * <li><strong>deny</strong>: denies traffic to the backend instance.</li>
+         * <li><p><strong>allow</strong>: allows the backend instance to receive traffic.</p>
+         * </li>
+         * <li><p><strong>deny</strong>: denies the backend instance from receiving traffic.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -181,7 +183,7 @@ public class ListCustomRoutingPortMappingsResponseBody extends TeaModel {
         public String endpointGroupId;
 
         /**
-         * <p>The ID of the region in which the endpoint group resides.</p>
+         * <p>The ID of the region to which the endpoint group belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>us-west-1</p>
@@ -199,7 +201,7 @@ public class ListCustomRoutingPortMappingsResponseBody extends TeaModel {
         public String endpointId;
 
         /**
-         * <p>The ID of the listener.</p>
+         * <p>The ID of the custom routing listener to which the port mapping belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>lsr-bp1bpn0kn908w4nbw****</p>
@@ -210,15 +212,17 @@ public class ListCustomRoutingPortMappingsResponseBody extends TeaModel {
         /**
          * <p>The protocol of the backend service.</p>
          * <ul>
-         * <li><strong>tcp</strong>: TCP</li>
-         * <li><strong>udp</strong>: UDP</li>
+         * <li><p><strong>TCP</strong>: the TCP protocol.</p>
+         * </li>
+         * <li><p><strong>UDP</strong>: the UDP protocol.</p>
+         * </li>
          * </ul>
          */
         @NameInMap("Protocols")
         public java.util.List<String> protocols;
 
         /**
-         * <p>The name of the endpoint (vSwitch).</p>
+         * <p>The name of the vSwitch of the endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-test01</p>

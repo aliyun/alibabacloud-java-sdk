@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateBandwidthPackageResponseBody extends TeaModel {
     /**
-     * <p>The bandwidth plan ID.</p>
+     * <p>The ID of the bandwidth plan.</p>
      * 
      * <strong>example:</strong>
      * <p>gbwp-bp1eo4f57z1kbbcmn****</p>

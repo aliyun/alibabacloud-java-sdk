@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateCustomRoutingEndpointGroupAttributeRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate a token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,8 +18,8 @@ public class UpdateCustomRoutingEndpointGroupAttributeRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The endpoint group description.</p>
-     * <p>The description can be up to 256 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description of the endpoint group.</p>
+     * <p>The description can be up to 256 characters in length and cannot contain <code>http://</code> or <code>https://</code> characters.</p>
      * 
      * <strong>example:</strong>
      * <p>EndpointGroup</p>
@@ -28,7 +28,7 @@ public class UpdateCustomRoutingEndpointGroupAttributeRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The endpoint group ID.</p>
+     * <p>The ID of the endpoint group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,8 +38,8 @@ public class UpdateCustomRoutingEndpointGroupAttributeRequest extends TeaModel {
     public String endpointGroupId;
 
     /**
-     * <p>The endpoint group name.</p>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name of the endpoint group.</p>
+     * <p>The name must be 1 to 128 characters in length, start with a letter or a Chinese character, and can contain digits, underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>group1</p>
@@ -48,7 +48,7 @@ public class UpdateCustomRoutingEndpointGroupAttributeRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The region ID of the Global Accelerator (GA) instance. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>The ID of the region where the Global Accelerator instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

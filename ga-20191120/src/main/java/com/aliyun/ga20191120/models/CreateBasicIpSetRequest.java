@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateBasicIpSetRequest extends TeaModel {
     /**
-     * <p>The ID of the acceleration region.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/261190.html">ListAvailableBusiRegions</a> operation to query the most recent acceleration region list.</p>
+     * <p>The ID of the region to be accelerated.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/261190.html">ListAvailableBusiRegions</a> operation to query the active acceleration regions for the specified Alibaba Cloud Global Accelerator (GA) instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,7 +16,7 @@ public class CreateBasicIpSetRequest extends TeaModel {
     public String accelerateRegionId;
 
     /**
-     * <p>The ID of the basic GA instance.</p>
+     * <p>The instance ID of the basic Alibaba Cloud Global Accelerator (GA) instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,8 +26,8 @@ public class CreateBasicIpSetRequest extends TeaModel {
     public String acceleratorId;
 
     /**
-     * <p>The bandwidth that you want to allocate to the acceleration region. Unit: <strong>Mbit/s</strong>.</p>
-     * <p>You must allocate at least 2 Mbit/s of bandwidth to the acceleration region.</p>
+     * <p>The bandwidth of the acceleration area. Unit: <strong>Mbps</strong>.</p>
+     * <p>The minimum bandwidth that can be allocated to an acceleration area is 2 Mbps.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -36,10 +36,10 @@ public class CreateBasicIpSetRequest extends TeaModel {
     public Long bandwidth;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of a request.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -49,28 +49,25 @@ public class CreateBasicIpSetRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The line type of the elastic IP address (EIP) in the acceleration region. Valid values:</p>
+     * <p>The ISP type of the public network in the acceleration region. Valid values:</p>
      * <ul>
-     * <li><strong>BGP</strong> (default): BGP (Multi-ISP) lines.</li>
-     * <li><strong>BGP_PRO</strong>: BGP (Multi-ISP) Pro lines.</li>
+     * <li><strong>BGP</strong> (default): BGP (Multi-ISP)</li>
+     * <li><strong>BGP_PRO</strong>: BGP (Multi-ISP) Pro</li>
      * </ul>
-     * <p>Valid values if you are allowed to use single-ISP bandwidth:</p>
+     * <p>If you are a whitelist user of single-ISP bandwidth, you can also select the following types:</p>
      * <ul>
-     * <li><strong>ChinaTelecom</strong></li>
-     * <li><strong>ChinaUnicom</strong></li>
-     * <li><strong>ChinaMobile</strong></li>
-     * <li><strong>ChinaTelecom_L2</strong></li>
-     * <li><strong>ChinaUnicom_L2</strong></li>
-     * <li><strong>ChinaMobile_L2</strong></li>
+     * <li><strong>ChinaTelecom</strong>: China Telecom (single ISP)</li>
+     * <li><strong>ChinaUnicom</strong>: China Unicom (single ISP)</li>
+     * <li><strong>ChinaMobile</strong>: China Shift (single ISP)</li>
+     * <li><strong>ChinaTelecom_L2</strong>: China Telecom (single ISP)_L2</li>
+     * <li><strong>ChinaUnicom_L2</strong>: China Unicom (single ISP)_L2</li>
+     * <li><strong>ChinaMobile_L2</strong>: China Shift (single ISP)_L2<blockquote>
+     * <ul>
+     * <li>This parameter is required for basic Alibaba Cloud Global Accelerator (GA) instances that use the <strong>pay-by-traffic</strong> billing method.</li>
+     * <li>If the acceleration region of the basic Alibaba Cloud Global Accelerator (GA) instance is Hong Kong (China) and the instance is attached with a basic bandwidth plan of the BGP (Multi-ISP) Pro type, the default value is BGP (Multi-ISP) Pro.</li>
+     * <li>The supported single-ISP line types vary by acceleration region.</li>
      * </ul>
-     * <blockquote>
      * </blockquote>
-     * <ul>
-     * <li><p>If the bandwidth metering method of the GA instance is <strong>pay-by-data-transfer</strong>, this parameter is required.</p>
-     * </li>
-     * <li><p>If the acceleration region is China (Hong Kong) and a basic bandwidth plan whose bandwidth type is Premium is associated with the GA instance, the default value of IspType is BGP_PRO.</p>
-     * </li>
-     * <li><p>The supported single-ISP type varies based on the acceleration region.</p>
      * </li>
      * </ul>
      * 
@@ -81,7 +78,7 @@ public class CreateBasicIpSetRequest extends TeaModel {
     public String ispType;
 
     /**
-     * <p>The region ID of the basic GA instance. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>The region ID of the basic Alibaba Cloud Global Accelerator (GA) instance. Set the value to <strong>ap-southeast-1</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

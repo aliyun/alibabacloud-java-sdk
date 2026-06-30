@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateBasicIpSetResponseBody extends TeaModel {
     /**
-     * <p>The region ID of the GA instance.</p>
+     * <p>The acceleration region instance ID of the basic Alibaba Cloud Global Accelerator (GA) instance.</p>
      * 
      * <strong>example:</strong>
      * <p>ips-bp11r5jb8ogp122xl****</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteBasicAccelerateIpEndpointRelationResponseBody extends TeaModel {
     /**
-     * <p>The ID of the accelerated IP address of the basic GA instance.</p>
+     * <p>The accelerated IP address instance ID of the basic GA instance.</p>
      * 
      * <strong>example:</strong>
      * <p>gaip-bp1****</p>
@@ -23,7 +23,7 @@ public class DeleteBasicAccelerateIpEndpointRelationResponseBody extends TeaMode
     public String acceleratorId;
 
     /**
-     * <p>The ID of the endpoint that is associated with the basic GA instance.</p>
+     * <p>The endpoint ID of the basic GA instance.</p>
      * 
      * <strong>example:</strong>
      * <p>ep-bp14sz7ftcwwjgrdm****</p>
@@ -32,7 +32,7 @@ public class DeleteBasicAccelerateIpEndpointRelationResponseBody extends TeaMode
     public String endpointId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
@@ -41,9 +41,9 @@ public class DeleteBasicAccelerateIpEndpointRelationResponseBody extends TeaMode
     public String requestId;
 
     /**
-     * <p>The status of the mapping between the accelerated IP address and endpoint.</p>
+     * <p>The attach status between the accelerated IP address and the endpoint of the basic GA instance.</p>
      * <blockquote>
-     * <p> This parameter is not in use and empty.</p>
+     * <p>This parameter is not currently in use.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

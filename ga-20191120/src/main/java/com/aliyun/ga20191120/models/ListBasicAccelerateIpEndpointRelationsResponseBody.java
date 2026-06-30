@@ -180,7 +180,7 @@ public class ListBasicAccelerateIpEndpointRelationsResponseBody extends TeaModel
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>NLB</p>
+         * <p>ENI</p>
          */
         @NameInMap("EndpointType")
         public String endpointType;

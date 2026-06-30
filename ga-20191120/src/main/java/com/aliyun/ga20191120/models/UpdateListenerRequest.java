@@ -19,8 +19,10 @@ public class UpdateListenerRequest extends TeaModel {
     /**
      * <p>Indicates whether client affinity is enabled for the listener. Valid values:</p>
      * <ul>
-     * <li><strong>NONE</strong>: Client affinity is disabled. Requests from the same client may be forwarded to different endpoints.</li>
-     * <li><strong>SOURCE_IP</strong>: Client affinity is enabled. When a client accesses stateful applications, requests from the same client are forwarded to the same endpoint regardless of the source port or protocol.</li>
+     * <li><p><strong>NONE</strong>: Client affinity is disabled. Requests from the same client may be forwarded to different endpoints.</p>
+     * </li>
+     * <li><p><strong>SOURCE_IP</strong>: Client affinity is enabled. When a client accesses stateful applications, requests from the same client are forwarded to the same endpoint regardless of the source port or protocol.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,7 +35,7 @@ public class UpdateListenerRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -55,12 +57,15 @@ public class UpdateListenerRequest extends TeaModel {
     /**
      * <p>The maximum version of the HTTP protocol. Valid values:</p>
      * <ul>
-     * <li><strong>http3</strong></li>
-     * <li><strong>http2</strong></li>
-     * <li><strong>http1.1</strong></li>
+     * <li><p><strong>http3</strong></p>
+     * </li>
+     * <li><p><strong>http2</strong></p>
+     * </li>
+     * <li><p><strong>http1.1</strong></p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> Only HTTPS listeners support this parameter.</p>
+     * <p>Only HTTPS listeners support this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -72,9 +77,12 @@ public class UpdateListenerRequest extends TeaModel {
     /**
      * <p>The timeout period for idle connections. Unit: seconds.</p>
      * <ul>
-     * <li>TCP: 10-900. Default value: 900. Unit: seconds.</li>
-     * <li>UDP: 10-20. Default value: 20. Unit: seconds.</li>
-     * <li>HTTP/HTTPS: 1-60. Default value: 15. Unit: seconds.</li>
+     * <li><p>TCP: 10-900. Default value: 900. Unit: seconds.</p>
+     * </li>
+     * <li><p>UDP: 10-20. Default value: 20. Unit: seconds.</p>
+     * </li>
+     * <li><p>HTTP/HTTPS: 1-60. Default value: 15. Unit: seconds.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,10 +122,14 @@ public class UpdateListenerRequest extends TeaModel {
     /**
      * <p>The network transmission protocol that is used by the listener. Valid values:</p>
      * <ul>
-     * <li><strong>tcp</strong>: TCP</li>
-     * <li><strong>udp</strong>: UDP</li>
-     * <li><strong>http</strong>: HTTP</li>
-     * <li><strong>https</strong>: HTTPS</li>
+     * <li><p><strong>tcp</strong>: TCP</p>
+     * </li>
+     * <li><p><strong>udp</strong>: UDP</p>
+     * </li>
+     * <li><p><strong>http</strong>: HTTP</p>
+     * </li>
+     * <li><p><strong>https</strong>: HTTPS</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -129,11 +141,13 @@ public class UpdateListenerRequest extends TeaModel {
     /**
      * <p>Specifies whether to preserve source IP addresses of clients.</p>
      * <ul>
-     * <li><strong>true</strong> This feature allows you to view client IP addresses on backend servers.</li>
-     * <li><strong>false</strong> (default)</li>
+     * <li><p><strong>true</strong> This feature allows you to view client IP addresses on backend servers.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default)</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter will be discontinued in the API operations that are used to configure listeners. We recommend that you set this parameter when you call API operations to configure endpoint groups. For more information about the <strong>ProxyProtocol</strong> parameter, see <a href="https://help.aliyun.com/document_detail/153259.html">CreateEndpointGroup</a> and <a href="https://help.aliyun.com/document_detail/153262.html">UpdateEndpointGroup</a>.</p>
+     * <p>This parameter will be discontinued in the API operations that are used to configure listeners. We recommend that you set this parameter when you call API operations to configure endpoint groups. For more information about the <strong>ProxyProtocol</strong> parameter, see <a href="https://help.aliyun.com/document_detail/153259.html">CreateEndpointGroup</a> and <a href="https://help.aliyun.com/document_detail/153262.html">UpdateEndpointGroup</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -156,7 +170,7 @@ public class UpdateListenerRequest extends TeaModel {
      * <p>The timeout period for HTTP or HTTPS requests.</p>
      * <p>Valid values: 1 to 180. Default value: 60. Unit: seconds.</p>
      * <blockquote>
-     * <p> This parameter takes effect only for HTTP or HTTPS listeners. If the backend server does not respond within the timeout period, GA returns an HTTP 504 error code to the client.</p>
+     * <p>This parameter takes effect only for HTTP or HTTPS listeners. If the backend server does not respond within the timeout period, GA returns an HTTP 504 error code to the client.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -170,32 +184,42 @@ public class UpdateListenerRequest extends TeaModel {
      * <ul>
      * <li><p><strong>tls_cipher_policy_1_0</strong></p>
      * <ul>
-     * <li>Supported Transport Layer Security (TLS) versions: TLS 1.0, TLS 1.1, and TLS 1.2</li>
-     * <li>Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA</li>
+     * <li><p>Supported Transport Layer Security (TLS) versions: TLS 1.0, TLS 1.1, and TLS 1.2</p>
+     * </li>
+     * <li><p>Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA</p>
+     * </li>
      * </ul>
      * </li>
      * <li><p><strong>tls_cipher_policy_1_1</strong></p>
      * <ul>
-     * <li>Supported TLS versions: TLS 1.1 and TLS 1.2</li>
-     * <li>Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA</li>
+     * <li><p>Supported TLS versions: TLS 1.1 and TLS 1.2</p>
+     * </li>
+     * <li><p>Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA</p>
+     * </li>
      * </ul>
      * </li>
      * <li><p><strong>tls_cipher_policy_1_2</strong></p>
      * <ul>
-     * <li>Supported TLS version: TLS 1.2</li>
-     * <li>Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA</li>
+     * <li><p>Supported TLS version: TLS 1.2</p>
+     * </li>
+     * <li><p>Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA</p>
+     * </li>
      * </ul>
      * </li>
      * <li><p><strong>tls_cipher_policy_1_2_strict</strong></p>
      * <ul>
-     * <li>Supported TLS version: TLS 1.2</li>
-     * <li>Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA</li>
+     * <li><p>Supported TLS version: TLS 1.2</p>
+     * </li>
+     * <li><p>Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA</p>
+     * </li>
      * </ul>
      * </li>
      * <li><p><strong>tls_cipher_policy_1_2_strict_with_1_3</strong></p>
      * <ul>
-     * <li>Supported TLS versions: TLS 1.2 and TLS 1.3</li>
-     * <li>Supported cipher suites: TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384, TLS_CHACHA20_POLY1305_SHA256, TLS_AES_128_CCM_SHA256, TLS_AES_128_CCM_8_SHA256, ECDHE-ECDSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384, ECDHE-ECDSA-AES128-SHA256, ECDHE-ECDSA-AES256-SHA384, ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA, ECDHE-ECDSA-AES256-SHA, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA</li>
+     * <li><p>Supported TLS versions: TLS 1.2 and TLS 1.3</p>
+     * </li>
+     * <li><p>Supported cipher suites: TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384, TLS_CHACHA20_POLY1305_SHA256, TLS_AES_128_CCM_SHA256, TLS_AES_128_CCM_8_SHA256, ECDHE-ECDSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384, ECDHE-ECDSA-AES128-SHA256, ECDHE-ECDSA-AES256-SHA384, ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA, ECDHE-ECDSA-AES256-SHA, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA</p>
+     * </li>
      * </ul>
      * </li>
      * </ul>
@@ -483,8 +507,10 @@ public class UpdateListenerRequest extends TeaModel {
         /**
          * <p>Specifies whether to use the <code>GA-AP</code> header to retrieve information about acceleration regions. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong> (default): no</li>
+         * <li><p><strong>true</strong>: yes</p>
+         * </li>
+         * <li><p><strong>false</strong> (default): no</p>
+         * </li>
          * </ul>
          * <blockquote>
          * <p>This parameter is available only when you create an HTTPS or HTTP listener.</p>
@@ -499,8 +525,10 @@ public class UpdateListenerRequest extends TeaModel {
         /**
          * <p>Specifies whether to use the <code>GA-ID</code> header to retrieve the ID of the GA instance. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong> (default): no</li>
+         * <li><p><strong>true</strong>: yes</p>
+         * </li>
+         * <li><p><strong>false</strong> (default): no</p>
+         * </li>
          * </ul>
          * <blockquote>
          * <p>This parameter is available only when you create an HTTPS or HTTP listener.</p>
@@ -515,8 +543,10 @@ public class UpdateListenerRequest extends TeaModel {
         /**
          * <p>Specifies whether to use the <code>GA-X-Forward-Port</code> header to retrieve the listener ports of the GA instance. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong> (default): no</li>
+         * <li><p><strong>true</strong>: yes</p>
+         * </li>
+         * <li><p><strong>false</strong> (default): no</p>
+         * </li>
          * </ul>
          * <blockquote>
          * <p>This parameter is available only when you create an HTTPS or HTTP listener.</p>
@@ -531,8 +561,10 @@ public class UpdateListenerRequest extends TeaModel {
         /**
          * <p>Specifies whether to use the <code>GA-X-Forward-Proto</code> header to retrieve the listener protocol of the GA instance. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong> (default): no</li>
+         * <li><p><strong>true</strong>: yes</p>
+         * </li>
+         * <li><p><strong>false</strong> (default): no</p>
+         * </li>
          * </ul>
          * <blockquote>
          * <p>This parameter is available only when you create an HTTPS or HTTP listener.</p>
@@ -547,8 +579,10 @@ public class UpdateListenerRequest extends TeaModel {
         /**
          * <p>Specifies whether to use the <code>X-Real-IP</code> header to retrieve client IP addresses. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong> (default): no</li>
+         * <li><p><strong>true</strong>: yes</p>
+         * </li>
+         * <li><p><strong>false</strong> (default): no</p>
+         * </li>
          * </ul>
          * <blockquote>
          * <p>This parameter is available only when you create an HTTPS or HTTP listener.</p>

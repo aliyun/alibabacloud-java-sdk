@@ -45,7 +45,7 @@ public class ListBusiRegionsResponseBody extends TeaModel {
          * <p>The name of the region.</p>
          * 
          * <strong>example:</strong>
-         * <p>China (Hangzhou)</p>
+         * <p>杭州</p>
          */
         @NameInMap("LocalName")
         public String localName;

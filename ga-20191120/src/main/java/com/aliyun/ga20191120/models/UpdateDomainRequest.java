@@ -16,7 +16,7 @@ public class UpdateDomainRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>The region ID of the Alibaba Cloud Global Accelerator (GA) instance. Set the value to <strong>cn-hangzhou</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -25,7 +25,7 @@ public class UpdateDomainRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The accelerated domain name to be modified.</p>
+     * <p>The accelerated domain name that you want to update.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

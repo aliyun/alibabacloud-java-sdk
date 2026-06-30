@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAcceleratorAutoRenewAttributeResponseBody extends TeaModel {
     /**
-     * <p>The ID of the GA instance.</p>
+     * <p>The ID of the Global Accelerator instance.</p>
      * 
      * <strong>example:</strong>
      * <p>ga-bp17frjjh0udz4qz****</p>
@@ -14,7 +14,7 @@ public class UpdateAcceleratorAutoRenewAttributeResponseBody extends TeaModel {
     public String acceleratorId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F591955F-5CB5-4CCE-A75D-17CF2085CE22</p>

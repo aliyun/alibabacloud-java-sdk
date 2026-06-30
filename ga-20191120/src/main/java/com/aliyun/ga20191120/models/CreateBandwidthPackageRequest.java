@@ -7,8 +7,10 @@ public class CreateBandwidthPackageRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default): disables automatic payment. If you select this option, you must go to the Order Center to complete the payment after an order is generated.</li>
-     * <li><strong>true</strong>: enables automatic payment. Payments are automatically completed.</li>
+     * <li><p><strong>false</strong> (default): Disables automatic payment. After an order is generated, go to the Order Hub to complete the payment.</p>
+     * </li>
+     * <li><p><strong>true</strong>: Enables automatic payment. Payments are automatically completed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +20,12 @@ public class CreateBandwidthPackageRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>Specifies whether to enable auto-renewal for the bandwidth plan. Valid values:</p>
+     * <p>Specifies whether to enable auto-renewal. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables auto-renewal.</li>
-     * <li><strong>false</strong> (default): does not enable auto-renewal.</li>
+     * <li><p><strong>true</strong>: Yes.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): No.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,7 +38,7 @@ public class CreateBandwidthPackageRequest extends TeaModel {
      * <p>The auto-renewal duration. Unit: months.</p>
      * <p>Valid values: <strong>1</strong> to <strong>12</strong>. Default value: <strong>1</strong>.</p>
      * <blockquote>
-     * <p> This parameter is required only if <strong>AutoRenew</strong> is set to <strong>true</strong>.</p>
+     * <p>This parameter takes effect only if <strong>AutoRenew</strong> is set to <strong>true</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,13 +48,15 @@ public class CreateBandwidthPackageRequest extends TeaModel {
     public Integer autoRenewDuration;
 
     /**
-     * <p>Specifies whether to automatically pay bills by using coupons. Valid values:</p>
+     * <p>Specifies whether to use a coupon to automatically pay for the bill. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: yes</li>
-     * <li><strong>false</strong> (default): no</li>
+     * <li><p><strong>true</strong>: Yes.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): No.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is required only if <strong>AutoPay</strong> is set to <strong>true</strong>.</p>
+     * <p>This parameter takes effect only if <strong>AutoPay</strong> is set to <strong>true</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -60,8 +66,8 @@ public class CreateBandwidthPackageRequest extends TeaModel {
     public String autoUseCoupon;
 
     /**
-     * <p>The bandwidth of the bandwidth plan. Unit: Mbit/s.</p>
-     * <p>Valid values: <strong>2</strong> to <strong>2000</strong>.</p>
+     * <p>The bandwidth of the bandwidth plan. Unit: Mbps.
+     * Valid values: <strong>2</strong> to <strong>2000</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,13 +77,16 @@ public class CreateBandwidthPackageRequest extends TeaModel {
     public Integer bandwidth;
 
     /**
-     * <p>The type of the bandwidth. Valid values:</p>
+     * <p>The type of bandwidth. Valid values:</p>
      * <ul>
-     * <li><strong>Basic</strong>: standard bandwidth</li>
-     * <li><strong>Enhanced</strong>: enhanced bandwidth</li>
-     * <li><strong>Advanced</strong>: premium bandwidth</li>
+     * <li><p><strong>Basic</strong>: Basic bandwidth.</p>
+     * </li>
+     * <li><p><strong>Enhanced</strong>: Enhanced bandwidth.</p>
+     * </li>
+     * <li><p><strong>Advanced</strong>: Advanced bandwidth.</p>
+     * </li>
      * </ul>
-     * <p>If <strong>Type</strong> is set to <strong>Basic</strong>, this parameter is required.</p>
+     * <p>This parameter is required if you set <strong>Type</strong> to <strong>Basic</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>Basic</p>
@@ -86,13 +95,15 @@ public class CreateBandwidthPackageRequest extends TeaModel {
     public String bandwidthType;
 
     /**
-     * <p>The metering method that is used when you use the pay-as-you-go billing method. Valid values:</p>
+     * <p>The billing method for a pay-as-you-go bandwidth plan. Valid values:</p>
      * <ul>
-     * <li><strong>PayByTraffic</strong> (default)</li>
-     * <li><strong>PayBY95</strong> By default, the pay-by-95th-percentile metering method is unavailable. If you want to use the metering method, contact your account manager.</li>
+     * <li><p><strong>PayByTraffic</strong> (default): pay-by-traffic.</p>
+     * </li>
+     * <li><p><strong>PayBY95</strong>: pay-by-95th-percentile. This billing method is not available by default. Contact your account manager to use this billing method.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter takes effect only if you set <strong>ChargeType</strong> to <strong>POSTPAY</strong>.</p>
+     * <p>This parameter takes effect only if <strong>ChargeType</strong> is set to <strong>POSTPAY</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -102,8 +113,8 @@ public class CreateBandwidthPackageRequest extends TeaModel {
     public String billingType;
 
     /**
-     * <p>Area A to be connected. Set the value to <strong>China-mainland</strong>.</p>
-     * <p>You can set this parameter only if you call this operation on the international site (alibabacloud.com).</p>
+     * <p>Connected area A of the cross-region acceleration bandwidth plan. Set the value to <strong>China-mainland</strong>.</p>
+     * <p>This parameter is available only on the Alibaba Cloud International Website (www\.alibabacloud.com).</p>
      * 
      * <strong>example:</strong>
      * <p>China-mainland</p>
@@ -112,8 +123,8 @@ public class CreateBandwidthPackageRequest extends TeaModel {
     public String cbnGeographicRegionIdA;
 
     /**
-     * <p>Area B to be connected. Set the value to <strong>Global</strong>.</p>
-     * <p>You can set this parameter only if you call this operation on the international site (alibabacloud.com).</p>
+     * <p>Connected area B of the cross-region acceleration bandwidth plan. Set the value to <strong>Global</strong>.</p>
+     * <p>This parameter is available only on the Alibaba Cloud International Website (www\.alibabacloud.com).</p>
      * 
      * <strong>example:</strong>
      * <p>Global</p>
@@ -122,10 +133,12 @@ public class CreateBandwidthPackageRequest extends TeaModel {
     public String cbnGeographicRegionIdB;
 
     /**
-     * <p>The billing method of the bandwidth plan. Valid values:</p>
+     * <p>The billing method. Valid values:</p>
      * <ul>
-     * <li><strong>PREPAY</strong> (default): subscription.</li>
-     * <li><strong>POSTPAY</strong>: pay-as-you-go. By default, the pay-as-you-go billing method is unavailable. If you want to use the billing method, contact your account manager.</li>
+     * <li><p><strong>PREPAY</strong> (default): subscription.</p>
+     * </li>
+     * <li><p><strong>POSTPAY</strong>: pay-as-you-go. The pay-as-you-go billing method is not available by default. Contact your account manager to use this billing method.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -136,9 +149,9 @@ public class CreateBandwidthPackageRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>Generate a client token from your client to make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -150,10 +163,12 @@ public class CreateBandwidthPackageRequest extends TeaModel {
     /**
      * <p>The subscription duration.</p>
      * <ul>
-     * <li>If the <strong>PricingCycle</strong> parameter is set to <strong>Month</strong>, the valid values for the <strong>Duration</strong> parameter are <strong>1</strong> to <strong>9</strong>.</li>
-     * <li>If the <strong>PricingCycle</strong> parameter is set to <strong>Year</strong>, the valid values for the <strong>Duration</strong> parameter are <strong>1</strong> to <strong>3</strong>.</li>
+     * <li><p>If you set <strong>PricingCycle</strong> to <strong>Month</strong>, valid values for <strong>Duration</strong> are <strong>1</strong> to <strong>9</strong>.</p>
+     * </li>
+     * <li><p>If you set <strong>PricingCycle</strong> to <strong>Year</strong>, valid values for <strong>Duration</strong> are <strong>1</strong> to <strong>3</strong>.</p>
+     * </li>
      * </ul>
-     * <p>If <strong>ChargeType</strong> is set to <strong>PREPAY</strong>, this parameter is required.</p>
+     * <p>This parameter is required if you set <strong>ChargeType</strong> to <strong>PREPAY</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -164,10 +179,12 @@ public class CreateBandwidthPackageRequest extends TeaModel {
     /**
      * <p>The billing cycle. Valid values:</p>
      * <ul>
-     * <li><strong>Month</strong>: billed on a monthly basis.</li>
-     * <li><strong>Year</strong>: billed on an annual basis.</li>
+     * <li><p><strong>Month</strong>: monthly billing.</p>
+     * </li>
+     * <li><p><strong>Year</strong>: yearly billing.</p>
+     * </li>
      * </ul>
-     * <p>If <strong>ChargeType</strong> is set to <strong>PREPAY</strong>, this parameter is required.</p>
+     * <p>This parameter is required if you set <strong>ChargeType</strong> to <strong>PREPAY</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -178,7 +195,7 @@ public class CreateBandwidthPackageRequest extends TeaModel {
     /**
      * <p>The coupon code.</p>
      * <blockquote>
-     * <p> This parameter is only available on the international site (alibabacloud.com).</p>
+     * <p>This parameter is available only on the Alibaba Cloud International Website (www\.alibabacloud.com).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -188,9 +205,9 @@ public class CreateBandwidthPackageRequest extends TeaModel {
     public String promotionOptionNo;
 
     /**
-     * <p>The percentage of the minimum bandwidth guaranteed if the pay-by-95th-percentile-bandwidth metering method is used. Valid values: <strong>30</strong> to <strong>100</strong>.</p>
+     * <p>The percentage of the guaranteed minimum bandwidth if you use the pay-by-95th-percentile metering method. Valid values: <strong>30</strong> to <strong>100</strong>.</p>
      * <blockquote>
-     * <p> This parameter is required only if <strong>BillingType</strong> is set to <strong>PayBY95</strong>.</p>
+     * <p>This parameter takes effect only if <strong>BillingType</strong> is set to <strong>PayBY95</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -200,7 +217,7 @@ public class CreateBandwidthPackageRequest extends TeaModel {
     public Integer ratio;
 
     /**
-     * <p>The ID of the region where the GA instance is deployed. <strong>cn-hangzhou</strong> is returned.</p>
+     * <p>The region ID of the GA instance. Set the value to <strong>cn-hangzhou</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -210,7 +227,7 @@ public class CreateBandwidthPackageRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aekzrnd67gq****</p>
@@ -219,7 +236,7 @@ public class CreateBandwidthPackageRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The tags to add to the bandwidth plan.</p>
+     * <p>The tags of the bandwidth plan.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateBandwidthPackageRequestTag> tag;
@@ -227,10 +244,12 @@ public class CreateBandwidthPackageRequest extends TeaModel {
     /**
      * <p>The type of the bandwidth plan. Valid values:</p>
      * <ul>
-     * <li><strong>Basic</strong>: a basic bandwidth plan</li>
-     * <li><strong>CrossDomain</strong>: a cross-region acceleration bandwidth plan</li>
+     * <li><p><strong>Basic</strong>: a basic bandwidth plan.</p>
+     * </li>
+     * <li><p><strong>CrossDomain</strong>: a cross-region acceleration bandwidth plan.</p>
+     * </li>
      * </ul>
-     * <p>If you call this operation on the Alibaba Cloud China site, only <strong>Basic</strong> is supported.</p>
+     * <p>Only <strong>Basic</strong> is supported on the Alibaba Cloud China Website (www\.aliyun.com).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -398,9 +417,9 @@ public class CreateBandwidthPackageRequest extends TeaModel {
 
     public static class CreateBandwidthPackageRequestTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
-         * <p>The tag keys cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>You can specify at most 20 tag keys.</p>
+         * <p>The tag key of the bandwidth plan. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>You can specify up to 20 tag keys.</p>
          * 
          * <strong>example:</strong>
          * <p>tag-key</p>
@@ -409,9 +428,9 @@ public class CreateBandwidthPackageRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
-         * <p>Each tag key corresponds to a tag value. Valid values of <strong>N</strong>: <strong>1</strong> to <strong>20</strong>.</p>
-         * <p>The value cannot exceed 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the bandwidth plan. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>You can specify up to 20 tag values.</p>
          * 
          * <strong>example:</strong>
          * <p>tag-value</p>

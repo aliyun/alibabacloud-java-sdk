@@ -7,8 +7,10 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
     /**
      * <p>The currency unit.</p>
      * <ul>
-     * <li>China site: <strong>CNY</strong>.</li>
-     * <li>International site: <strong>USD</strong>.</li>
+     * <li><p>China site: <strong>CNY</strong>.</p>
+     * </li>
+     * <li><p>International site: <strong>USD</strong>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,7 +46,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
     /**
      * <p>The details of the coupon.</p>
      * <blockquote>
-     * <p> This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+     * <p>This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
      * </blockquote>
      */
     @NameInMap("Promotions")
@@ -166,7 +168,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
          * <p>The name of the commodity module.</p>
          * 
          * <strong>example:</strong>
-         * <p>Specification</p>
+         * <p>规格</p>
          */
         @NameInMap("ModuleName")
         public String moduleName;
@@ -240,7 +242,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
         /**
          * <p>The discounted price.</p>
          * <blockquote>
-         * <p> This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+         * <p>This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -252,7 +254,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
         /**
          * <p>The code of the discount option.</p>
          * <blockquote>
-         * <p> This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+         * <p>This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -264,7 +266,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
         /**
          * <p>The sub-type of the discount.</p>
          * <blockquote>
-         * <p> This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+         * <p>This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -276,7 +278,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
         /**
          * <p>The ID of the discount item.</p>
          * <blockquote>
-         * <p> This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+         * <p>This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -288,7 +290,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
         /**
          * <p>The name of the discount item.</p>
          * <blockquote>
-         * <p> This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+         * <p>This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -358,7 +360,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
          * <p>The name of the commodity.</p>
          * 
          * <strong>example:</strong>
-         * <p>Global Accelerator_Instance Type (Subscription)</p>
+         * <p>全球加速_实例规格（包年包月）</p>
          */
         @NameInMap("CommodityName")
         public String commodityName;
@@ -390,7 +392,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
         /**
          * <p>The details of the discount.</p>
          * <blockquote>
-         * <p> This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+         * <p>This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
          * </blockquote>
          */
         @NameInMap("PromDetails")
@@ -503,7 +505,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
         /**
          * <p>The discounted amount.</p>
          * <blockquote>
-         * <p> This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+         * <p>This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -515,7 +517,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
         /**
          * <p>The code of the commodity to which the coupon can be applied.</p>
          * <blockquote>
-         * <p> This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+         * <p>This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -527,7 +529,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
         /**
          * <p>The name of the coupon.</p>
          * <blockquote>
-         * <p> This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+         * <p>This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -540,8 +542,10 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
          * <p>The code of the coupon.</p>
          * <blockquote>
          * <ul>
-         * <li><code>youhuiquan_promotion_option_id_for_blank</code> indicates coupons that cannot be applied to the commodity.</li>
-         * <li>This parameter does not take effect for accounts registered on the China site (aliyun.com).</li>
+         * <li><p><code>youhuiquan_promotion_option_id_for_blank</code> indicates coupons that cannot be applied to the commodity.</p>
+         * </li>
+         * <li><p>This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+         * </li>
          * </ul>
          * </blockquote>
          * 
@@ -554,11 +558,13 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the coupon was selected.</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+         * <p>This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -628,7 +634,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
          * <p>The name of the discount rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>GA New Customers Small II Specification Monthly Subscription - 20% Discount</p>
+         * <p>GA新客户小型II规格月付-8折优惠</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
