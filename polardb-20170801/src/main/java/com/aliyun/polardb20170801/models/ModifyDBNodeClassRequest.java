@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyDBNodeClassRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically use a coupon. Valid values:</p>
+     * <p>Specifies whether to automatically use coupons. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code> (default): A coupon is automatically applied.</p>
-     * </li>
-     * <li><p><code>false</code>: A coupon is not applied.</p>
-     * </li>
+     * <li>true (default): Uses coupons.</li>
+     * <li>false: Does not use coupons.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class ModifyDBNodeClassRequest extends TeaModel {
     public Boolean autoUseCoupon;
 
     /**
-     * <p>A client-generated token that ensures the idempotence of the request. The token must be unique across requests. It is case-sensitive and can be up to 64 ASCII characters long.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value. Make sure that the value is unique among different requests. The token is case-sensitive and can contain a maximum of 64 ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>6000170000591aed949d0f54a343f1a4233c1e7d1c5c******</p>
@@ -29,7 +27,7 @@ public class ModifyDBNodeClassRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The cloud provider of the instance.</p>
+     * <p>The cloud service provider of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>ENS</p>
@@ -48,7 +46,7 @@ public class ModifyDBNodeClassRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The target node specifications for all nodes in the cluster. For more information, see <a href="https://help.aliyun.com/document_detail/102542.html">compute node specifications</a>.</p>
+     * <p>The target specifications for all nodes. For more information, see <a href="https://help.aliyun.com/document_detail/102542.html">Compute node specifications</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,7 +56,7 @@ public class ModifyDBNodeClassRequest extends TeaModel {
     public String DBNodeTargetClass;
 
     /**
-     * <p>To modify the specifications of an AI node, you must set this parameter to <code>DLNode</code>.</p>
+     * <p>The node type. Set this parameter to DLNode only when you change the node specifications of an AI node.</p>
      * 
      * <strong>example:</strong>
      * <p>DLNode</p>
@@ -67,12 +65,10 @@ public class ModifyDBNodeClassRequest extends TeaModel {
     public String DBNodeType;
 
     /**
-     * <p>The modification type. Valid values:</p>
+     * <p>The type of the specification change. Valid values: </p>
      * <ul>
-     * <li><p><strong>Upgrade</strong>: Upgrades the node specifications.</p>
-     * </li>
-     * <li><p><strong>Downgrade</strong>: Downgrades the node specifications.</p>
-     * </li>
+     * <li><strong>Upgrade</strong>: upgrades the specifications.</li>
+     * <li><strong>Downgrade</strong>: downgrades the specifications.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -89,13 +85,11 @@ public class ModifyDBNodeClassRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The latest time to start the scheduled task. Specify the time in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
+     * <p>The latest start time of the scheduled specification change task. Specify the time in the <code>YYYY-MM-DDThh:mm:ssZ</code> format (UTC).</p>
      * <blockquote>
      * <ul>
-     * <li><p>The latest start time must be at least 30 minutes later than the earliest start time.</p>
-     * </li>
-     * <li><p>If you specify <code>PlannedStartTime</code> but omit this parameter, the latest start time defaults to <code>PlannedStartTime + 30 minutes</code>. For example, if you set <code>PlannedStartTime</code> to <code>2021-01-14T09:00:00Z</code> and leave this parameter empty, the task starts no later than <code>2021-01-14T09:30:00Z</code>.</p>
-     * </li>
+     * <li>The latest time must be at least 30 minutes later than the start time.</li>
+     * <li>If <code>PlannedStartTime</code> is set but this parameter is not specified, the latest time defaults to <code>start time + 30 minutes</code>. For example, if <code>PlannedStartTime</code> is set to <code>2021-01-14T09:00:00Z</code> and this parameter is left empty, the task starts no later than <code>2021-01-14T09:30:00Z</code>.</li>
      * </ul>
      * </blockquote>
      * 
@@ -106,7 +100,7 @@ public class ModifyDBNodeClassRequest extends TeaModel {
     public String plannedEndTime;
 
     /**
-     * <p>The planned time for a transient disconnection. Specify the time in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
+     * <p>The planned transient disconnection time.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-14T09:30:00Z</p>
@@ -115,15 +109,12 @@ public class ModifyDBNodeClassRequest extends TeaModel {
     public String plannedFlashingOffTime;
 
     /**
-     * <p>The earliest time to start the scheduled upgrade or downgrade task. Specify the time in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
+     * <p>The earliest start time of the scheduled specification change task. Specify the time in the <code>YYYY-MM-DDThh:mm:ssZ</code> format (UTC).</p>
      * <blockquote>
      * <ul>
-     * <li><p>This parameter is valid only when <code>ModifyType</code> is set to <code>Upgrade</code> or <code>Downgrade</code>.</p>
-     * </li>
-     * <li><p>The start time must be within the next 24 hours. For example, if the current time is <code>2021-01-14T09:00:00Z</code>, you can set the start time to a value in the range from <code>2021-01-14T09:00:00Z</code> to <code>2021-01-15T09:00:00Z</code>.</p>
-     * </li>
-     * <li><p>If you leave this parameter empty, the task is immediately executed.</p>
-     * </li>
+     * <li>This parameter takes effect when <code>ModifyType</code> is set to <code>Upgrade</code> or <code>Downgrade</code>.</li>
+     * <li>The start time must be within the next 24 hours. For example, if the current time is <code>2021-01-14T09:00:00Z</code>, the valid range for the start time is from <code>2021-01-14T09:00:00Z</code> to <code>2021-01-15T09:00:00Z</code>.</li>
+     * <li>If this parameter is left empty, the specification change task is immediately executed.</li>
      * </ul>
      * </blockquote>
      * 
@@ -134,7 +125,7 @@ public class ModifyDBNodeClassRequest extends TeaModel {
     public String plannedStartTime;
 
     /**
-     * <p>The coupon code. If you omit this parameter, the system applies the default coupon.</p>
+     * <p>The coupon code. If this parameter is not specified, the default coupon is used.</p>
      * 
      * <strong>example:</strong>
      * <p>727xxxxxx934</p>
@@ -149,14 +140,14 @@ public class ModifyDBNodeClassRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The subcategory of the cluster. Valid values:</p>
+     * <p>The cluster sub-series. Valid values:</p>
      * <ul>
-     * <li><p><strong>normal_exclusive</strong>: dedicated specifications</p>
+     * <li><p><strong>normal_exclusive</strong>: Dedicated</p>
      * </li>
-     * <li><p><strong>normal_general</strong>: general-purpose specifications</p>
+     * <li><p><strong>normal_general</strong>: General-purpose</p>
      * </li>
      * </ul>
-     * <p>This parameter is required when switching between dedicated and general-purpose specifications.</p>
+     * <p>This parameter is required when you change specifications between Dedicated and General-purpose.</p>
      * 
      * <strong>example:</strong>
      * <p>normal_general</p>

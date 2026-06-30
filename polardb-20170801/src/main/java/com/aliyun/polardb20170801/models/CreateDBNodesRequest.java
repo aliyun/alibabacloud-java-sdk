@@ -5,19 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateDBNodesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically use a coupon. Valid values:</p>
+     * <p>Specifies whether to automatically use coupons. Valid values:</p>
      * <ul>
-     * <li><p>true (Default): An available coupon is automatically used.</p>
-     * </li>
-     * <li><p>false: A coupon is not automatically used.</p>
-     * </li>
+     * <li>true (default): Use coupons.</li>
+     * <li>false: Do not use coupons.</li>
      * </ul>
      */
     @NameInMap("AutoUseCoupon")
     public Boolean autoUseCoupon;
 
     /**
-     * <p>A unique, client-generated token to ensure the idempotence of the request. This token is case-sensitive and cannot exceed 64 ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value. Make sure that the value is unique among different requests. The token is case-sensitive and can contain only ASCII characters. The token can be up to 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>6000170000591aed949d0f54a343f1a4233c1e7d1c5c******</p>
@@ -26,7 +24,7 @@ public class CreateDBNodesRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The cloud provider of the node.</p>
+     * <p>The cloud service provider to which the node belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>ENS</p>
@@ -35,7 +33,7 @@ public class CreateDBNodesRequest extends TeaModel {
     public String cloudProvider;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +43,7 @@ public class CreateDBNodesRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Details of the nodes to add.</p>
+     * <p>The information about the new node.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DBNode")
@@ -54,12 +52,9 @@ public class CreateDBNodesRequest extends TeaModel {
     /**
      * <p>The node type. Valid values:</p>
      * <ul>
-     * <li><p>RO</p>
-     * </li>
-     * <li><p>STANDBY</p>
-     * </li>
-     * <li><p>DLNode</p>
-     * </li>
+     * <li>RO</li>
+     * <li>STANDBY</li>
+     * <li>DLNode.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -69,15 +64,12 @@ public class CreateDBNodesRequest extends TeaModel {
     public String DBNodeType;
 
     /**
-     * <p>The ID of the cluster endpoint to which you want to add the new nodes. If you want to add the nodes to multiple cluster endpoints, separate the endpoint IDs with a comma (,).</p>
+     * <p>The ID of the cluster endpoint to which you want to add the new node. If you want to add the node to multiple endpoints, separate the endpoint IDs with commas (,).</p>
      * <blockquote>
      * <ul>
-     * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/98205.html">DescribeDBClusterEndpoints</a> operation to query the details of cluster endpoints, including their IDs.</p>
-     * </li>
-     * <li><p>You can specify the IDs of the default cluster endpoint and custom cluster endpoints.</p>
-     * </li>
-     * <li><p>If you leave this parameter empty, the new nodes are automatically added to all cluster endpoints where the <strong>Auto Add New Nodes</strong> feature is enabled (the <code>AutoAddNewNodes</code> parameter is set to <code>Enable</code>).</p>
-     * </li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/98205.html">DescribeDBClusterEndpoints</a> operation to query the details of cluster endpoints, including endpoint IDs.</li>
+     * <li>You can specify the IDs of the default cluster endpoint and custom cluster endpoints.</li>
+     * <li>If you leave this parameter empty, the new node is added to all cluster endpoints that have the <strong>Automatically Associate New Nodes</strong> feature enabled (the value of <code>AutoAddNewNodes</code> is <code>Enable</code>).</li>
      * </ul>
      * </blockquote>
      * 
@@ -90,13 +82,13 @@ public class CreateDBNodesRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable In-Memory Column Index (IMCI). Valid values:</p>
      * <ul>
-     * <li><p><strong>ON</strong>: The feature is enabled.</p>
+     * <li><p><strong>ON</strong>: enabled.</p>
      * </li>
-     * <li><p><strong>OFF</strong> (Default): The feature is disabled.</p>
+     * <li><p><strong>OFF</strong>: disabled. This is the default value.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is not supported for PolarDB for PostgreSQL (Oracle Compatible) and PolarDB for PostgreSQL clusters.</p>
+     * <p>PolarDB for PostgreSQL (Compatible with Oracle) and PolarDB for PostgreSQL do not support this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -112,13 +104,11 @@ public class CreateDBNodesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The latest time to start the scheduled task. The time is specified in the <code>YYYY-MM-DDThh:mm:ssZ</code> format and is in UTC.</p>
+     * <p>The latest time to start running the scheduled task. Specify the time in the <code>YYYY-MM-DDThh:mm:ssZ</code> format (UTC).</p>
      * <blockquote>
      * <ul>
-     * <li><p>This time must be at least 30 minutes later than the value of <code>PlannedStartTime</code>.</p>
-     * </li>
-     * <li><p>If you specify <code>PlannedStartTime</code> but not this parameter, the latest start time defaults to 30 minutes after the <code>PlannedStartTime</code>. For example, if you set <code>PlannedStartTime</code> to <code>2021-01-14T09:00:00Z</code> and leave this parameter empty, the task starts no later than <code>2021-01-14T09:30:00Z</code>.</p>
-     * </li>
+     * <li>The latest time must be at least 30 minutes later than the start time.</li>
+     * <li>If you specify <code>PlannedStartTime</code> but leave this parameter empty, the latest time defaults to <code>start time + 30 minutes</code>. For example, if you set <code>PlannedStartTime</code> to <code>2021-01-14T09:00:00Z</code> and leave this parameter empty, the task starts no later than <code>2021-01-14T09:30:00Z</code>.</li>
      * </ul>
      * </blockquote>
      * 
@@ -129,13 +119,11 @@ public class CreateDBNodesRequest extends TeaModel {
     public String plannedEndTime;
 
     /**
-     * <p>The earliest time to start the scheduled task to add the nodes. The time must be in UTC and in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+     * <p>The earliest time to start running the scheduled task for adding nodes. Specify the time in the <code>YYYY-MM-DDThh:mm:ssZ</code> format (UTC).</p>
      * <blockquote>
      * <ul>
-     * <li><p>The start time must be within the next 24 hours. For example, if the current time is <code>2021-01-14T09:00:00Z</code>, you can set this parameter to a value between <code>2021-01-14T09:00:00Z</code> and <code>2021-01-15T09:00:00Z</code>.</p>
-     * </li>
-     * <li><p>If you omit this parameter, the nodes are added immediately.</p>
-     * </li>
+     * <li>The start time must be within the next 24 hours. For example, if the current time is <code>2021-01-14T09:00:00Z</code>, you can specify a start time within the range of <code>2021-01-14T09:00:00Z</code> to <code>2021-01-15T09:00:00Z</code>.</li>
+     * <li>If you leave this parameter empty, the task for adding nodes is immediately run.</li>
      * </ul>
      * </blockquote>
      * 
@@ -146,7 +134,7 @@ public class CreateDBNodesRequest extends TeaModel {
     public String plannedStartTime;
 
     /**
-     * <p>The promotion code. If you omit this parameter, an applicable coupon is used by default.</p>
+     * <p>The coupon code. If you do not specify this parameter, the default coupon is used.</p>
      * 
      * <strong>example:</strong>
      * <p>727xxxxxx934</p>
@@ -155,7 +143,7 @@ public class CreateDBNodesRequest extends TeaModel {
     public String promotionCode;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-************</p>
@@ -304,25 +292,19 @@ public class CreateDBNodesRequest extends TeaModel {
 
     public static class CreateDBNodesRequestDBNode extends TeaModel {
         /**
-         * <p>The specifications of the new node. The specifications must be the same as those of the existing nodes in the cluster. For more information, see the following topics:</p>
+         * <p>The specification of the new node. The specification must be the same as that of the existing nodes. For more information, see the following topics:</p>
          * <ul>
-         * <li><p>PolarDB for MySQL: <a href="https://help.aliyun.com/document_detail/102542.html">compute node specifications</a>.</p>
-         * </li>
-         * <li><p>PolarDB for PostgreSQL (Oracle Compatible): <a href="https://help.aliyun.com/document_detail/207921.html">compute node specifications</a>.</p>
-         * </li>
-         * <li><p>PolarDB for PostgreSQL: <a href="https://help.aliyun.com/document_detail/209380.html">compute node specifications</a>.</p>
-         * </li>
-         * </ul>
-         * <blockquote>
+         * <li>PolarDB for MySQL: <a href="https://help.aliyun.com/document_detail/102542.html">Compute node specifications</a>. </li>
+         * <li>PolarDB for PostgreSQL (Compatible with Oracle): <a href="https://help.aliyun.com/document_detail/207921.html">Compute node specifications</a>.</li>
+         * <li>PolarDB for PostgreSQL: <a href="https://help.aliyun.com/document_detail/209380.html">Compute node specifications</a>.<blockquote>
          * <ul>
-         * <li><p>You must specify either <code>DBNode.N.ZoneId</code> or <code>DBNode.N.TargetClass</code>. <code>N</code> is an integer that starts from 1. The maximum value of <code>N</code> is 16 minus the number of existing nodes.</p>
-         * </li>
-         * <li><p>For PolarDB for MySQL clusters, you can add multiple read-only nodes in a single request, up to a total of 15 read-only nodes.</p>
-         * </li>
-         * <li><p>This parameter is required for PolarDB for PostgreSQL (Oracle Compatible) and PolarDB for PostgreSQL clusters, but optional for PolarDB for MySQL clusters.</p>
-         * </li>
+         * <li>You must specify at least one of DBNode.N.ZoneId and DBNode.N.TargetClass. N is an integer that starts from 1. Maximum value of N = 16 - current number of nodes.</li>
+         * <li>Only PolarDB for MySQL clusters support adding multiple read-only nodes at a time. You can add up to 15 read-only nodes.</li>
+         * <li>This parameter is required for PolarDB for PostgreSQL (Compatible with Oracle) or PolarDB for PostgreSQL clusters. This parameter is optional for PolarDB for MySQL clusters.</li>
          * </ul>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>polar.mysql.x4.medium</p>
@@ -331,15 +313,12 @@ public class CreateDBNodesRequest extends TeaModel {
         public String targetClass;
 
         /**
-         * <p>The ID of the zone for the new node. This zone must be the same as the zone of the existing nodes. You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query zone IDs.</p>
+         * <p>The zone of the new node. The zone must be the same as that of the existing nodes. You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query zone IDs.</p>
          * <blockquote>
          * <ul>
-         * <li><p>You must specify either <code>DBNode.N.ZoneId</code> or <code>DBNode.N.TargetClass</code>. <code>N</code> is an integer that starts from 1. The maximum value of <code>N</code> is 16 minus the number of existing nodes.</p>
-         * </li>
-         * <li><p>For PolarDB for MySQL clusters, you can add multiple read-only nodes in a single request, up to a total of 15 read-only nodes.</p>
-         * </li>
-         * <li><p>This parameter is required for PolarDB for PostgreSQL (Oracle Compatible) and PolarDB for PostgreSQL clusters, but optional for PolarDB for MySQL clusters.</p>
-         * </li>
+         * <li>You must specify at least one of DBNode.N.ZoneId and DBNode.N.TargetClass. N is an integer that starts from 1. Maximum value of N = 16 - current number of nodes. </li>
+         * <li>Only PolarDB for MySQL clusters support adding multiple read-only nodes at a time. You can add up to 15 read-only nodes.</li>
+         * <li>This parameter is required for PolarDB for PostgreSQL (Compatible with Oracle) or PolarDB for PostgreSQL clusters. This parameter is optional for PolarDB for MySQL clusters.</li>
          * </ul>
          * </blockquote>
          * 

@@ -4326,7 +4326,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add read-only nodes to a PolarDB cluster.</p>
+     * <p>Adds read-only nodes to a PolarDB cluster.</p>
      * 
      * @param request CreateDBNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4418,7 +4418,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add read-only nodes to a PolarDB cluster.</p>
+     * <p>Adds read-only nodes to a PolarDB cluster.</p>
      * 
      * @param request CreateDBNodesRequest
      * @return CreateDBNodesResponse
@@ -9820,7 +9820,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询该apikey的详细信息</p>
+     * <p>Queries the details of a specified API key.</p>
      * 
      * @param request DescribeApikeyAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9864,7 +9864,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询该apikey的详细信息</p>
+     * <p>Queries the details of a specified API key.</p>
      * 
      * @param request DescribeApikeyAttributeRequest
      * @return DescribeApikeyAttributeResponse
@@ -16750,6 +16750,110 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries a PolarClaw Agent file.</p>
+     * 
+     * @param request DescribePolarClawAgentFileRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePolarClawAgentFileResponse
+     */
+    public DescribePolarClawAgentFileResponse describePolarClawAgentFileWithOptions(DescribePolarClawAgentFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
+            query.put("AgentId", request.agentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileName)) {
+            query.put("FileName", request.fileName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribePolarClawAgentFile"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePolarClawAgentFileResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a PolarClaw Agent file.</p>
+     * 
+     * @param request DescribePolarClawAgentFileRequest
+     * @return DescribePolarClawAgentFileResponse
+     */
+    public DescribePolarClawAgentFileResponse describePolarClawAgentFile(DescribePolarClawAgentFileRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describePolarClawAgentFileWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the PolarClaw Agent tool catalog.</p>
+     * 
+     * @param request DescribePolarClawAgentToolsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePolarClawAgentToolsResponse
+     */
+    public DescribePolarClawAgentToolsResponse describePolarClawAgentToolsWithOptions(DescribePolarClawAgentToolsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
+            query.put("AgentId", request.agentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.includePlugins)) {
+            query.put("IncludePlugins", request.includePlugins);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribePolarClawAgentTools"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePolarClawAgentToolsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the PolarClaw Agent tool catalog.</p>
+     * 
+     * @param request DescribePolarClawAgentToolsRequest
+     * @return DescribePolarClawAgentToolsResponse
+     */
+    public DescribePolarClawAgentToolsResponse describePolarClawAgentTools(DescribePolarClawAgentToolsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describePolarClawAgentToolsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries all installed plug-ins and their status information under a specified application.</p>
      * 
      * @param tmpReq DescribePolarClawAgentsRequest
@@ -17044,6 +17148,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribePolarClawPluginsResponse describePolarClawPlugins(DescribePolarClawPluginsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describePolarClawPluginsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a PolarClaw Skill.</p>
+     * 
+     * @param request DescribePolarClawSkillDetailRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePolarClawSkillDetailResponse
+     */
+    public DescribePolarClawSkillDetailResponse describePolarClawSkillDetailWithOptions(DescribePolarClawSkillDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.slug)) {
+            query.put("Slug", request.slug);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribePolarClawSkillDetail"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePolarClawSkillDetailResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a PolarClaw Skill.</p>
+     * 
+     * @param request DescribePolarClawSkillDetailRequest
+     * @return DescribePolarClawSkillDetailResponse
+     */
+    public DescribePolarClawSkillDetailResponse describePolarClawSkillDetail(DescribePolarClawSkillDetailRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describePolarClawSkillDetailWithOptions(request, runtime);
     }
 
     /**
@@ -20327,6 +20479,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public InstallPolarClawPluginResponse installPolarClawPlugin(InstallPolarClawPluginRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.installPolarClawPluginWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Installs a PolarClaw Skill.</p>
+     * 
+     * @param request InstallPolarClawSkillRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return InstallPolarClawSkillResponse
+     */
+    public InstallPolarClawSkillResponse installPolarClawSkillWithOptions(InstallPolarClawSkillRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.force)) {
+            query.put("Force", request.force);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillVersion)) {
+            query.put("SkillVersion", request.skillVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.slug)) {
+            query.put("Slug", request.slug);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.url)) {
+            query.put("Url", request.url);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "InstallPolarClawSkill"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new InstallPolarClawSkillResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Installs a PolarClaw Skill.</p>
+     * 
+     * @param request InstallPolarClawSkillRequest
+     * @return InstallPolarClawSkillResponse
+     */
+    public InstallPolarClawSkillResponse installPolarClawSkill(InstallPolarClawSkillRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.installPolarClawSkillWithOptions(request, runtime);
     }
 
     /**
@@ -24411,7 +24627,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the node specifications of a PolarDB cluster.</p>
+     * <p>Changes the node specifications of a PolarDB cluster.</p>
      * 
      * @param request ModifyDBNodeClassRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -24503,7 +24719,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the node specifications of a PolarDB cluster.</p>
+     * <p>Changes the node specifications of a PolarDB cluster.</p>
      * 
      * @param request ModifyDBNodeClassRequest
      * @return ModifyDBNodeClassResponse
@@ -27666,6 +27882,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Searches for PolarClaw Skills.</p>
+     * 
+     * @param request SearchPolarClawSkillsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SearchPolarClawSkillsResponse
+     */
+    public SearchPolarClawSkillsResponse searchPolarClawSkillsWithOptions(SearchPolarClawSkillsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            query.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            query.put("Query", request.query);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SearchPolarClawSkills"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SearchPolarClawSkillsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Searches for PolarClaw Skills.</p>
+     * 
+     * @param request SearchPolarClawSkillsRequest
+     * @return SearchPolarClawSkillsResponse
+     */
+    public SearchPolarClawSkillsResponse searchPolarClawSkills(SearchPolarClawSkillsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.searchPolarClawSkillsWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <h2>Request</h2>
      * <p>This operation sets file quota rules for specific directories in a PolarFS instance. Use the <code>FilePathQuotas</code> parameter to define the target directories and their properties. The path for <code>FilePathId</code> must be an absolute path from the root directory, not from a mount target. The <code>Strategy</code> parameter controls how the rule applies to existing files. By default, the operation applies a rule only if one does not already exist.</p>
@@ -28423,7 +28691,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update PolarClaw Agent</p>
+     * <p>Updates a PolarClaw agent.</p>
      * 
      * @param tmpReq UpdatePolarClawAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -28497,7 +28765,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update PolarClaw Agent</p>
+     * <p>Updates a PolarClaw agent.</p>
      * 
      * @param request UpdatePolarClawAgentRequest
      * @return UpdatePolarClawAgentResponse
@@ -28505,6 +28773,142 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdatePolarClawAgentResponse updatePolarClawAgent(UpdatePolarClawAgentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updatePolarClawAgentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the skills of a PolarClaw Agent.</p>
+     * 
+     * @param tmpReq UpdatePolarClawAgentSkillsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdatePolarClawAgentSkillsResponse
+     */
+    public UpdatePolarClawAgentSkillsResponse updatePolarClawAgentSkillsWithOptions(UpdatePolarClawAgentSkillsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdatePolarClawAgentSkillsShrinkRequest request = new UpdatePolarClawAgentSkillsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.skills)) {
+            request.skillsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.skills, "Skills", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
+            query.put("AgentId", request.agentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillsShrink)) {
+            query.put("Skills", request.skillsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdatePolarClawAgentSkills"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdatePolarClawAgentSkillsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the skills of a PolarClaw Agent.</p>
+     * 
+     * @param request UpdatePolarClawAgentSkillsRequest
+     * @return UpdatePolarClawAgentSkillsResponse
+     */
+    public UpdatePolarClawAgentSkillsResponse updatePolarClawAgentSkills(UpdatePolarClawAgentSkillsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updatePolarClawAgentSkillsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the tool configuration of a PolarClaw Agent.</p>
+     * 
+     * @param tmpReq UpdatePolarClawAgentToolsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdatePolarClawAgentToolsResponse
+     */
+    public UpdatePolarClawAgentToolsResponse updatePolarClawAgentToolsWithOptions(UpdatePolarClawAgentToolsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdatePolarClawAgentToolsShrinkRequest request = new UpdatePolarClawAgentToolsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.allow)) {
+            request.allowShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.allow, "Allow", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.alsoAllow)) {
+            request.alsoAllowShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.alsoAllow, "AlsoAllow", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.deny)) {
+            request.denyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.deny, "Deny", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
+            query.put("AgentId", request.agentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.allowShrink)) {
+            query.put("Allow", request.allowShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.alsoAllowShrink)) {
+            query.put("AlsoAllow", request.alsoAllowShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.denyShrink)) {
+            query.put("Deny", request.denyShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.profile)) {
+            query.put("Profile", request.profile);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdatePolarClawAgentTools"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdatePolarClawAgentToolsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the tool configuration of a PolarClaw Agent.</p>
+     * 
+     * @param request UpdatePolarClawAgentToolsRequest
+     * @return UpdatePolarClawAgentToolsResponse
+     */
+    public UpdatePolarClawAgentToolsResponse updatePolarClawAgentTools(UpdatePolarClawAgentToolsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updatePolarClawAgentToolsWithOptions(request, runtime);
     }
 
     /**
@@ -28623,6 +29027,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdatePolarClawCronJobResponse updatePolarClawCronJob(UpdatePolarClawCronJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updatePolarClawCronJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the PolarClaw Skill configuration.</p>
+     * 
+     * @param tmpReq UpdatePolarClawSkillRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdatePolarClawSkillResponse
+     */
+    public UpdatePolarClawSkillResponse updatePolarClawSkillWithOptions(UpdatePolarClawSkillRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdatePolarClawSkillShrinkRequest request = new UpdatePolarClawSkillShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.env)) {
+            request.envShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.env, "Env", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiKey)) {
+            query.put("ApiKey", request.apiKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enabled)) {
+            query.put("Enabled", request.enabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.envShrink)) {
+            query.put("Env", request.envShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillKey)) {
+            query.put("SkillKey", request.skillKey);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdatePolarClawSkill"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdatePolarClawSkillResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the PolarClaw Skill configuration.</p>
+     * 
+     * @param request UpdatePolarClawSkillRequest
+     * @return UpdatePolarClawSkillResponse
+     */
+    public UpdatePolarClawSkillResponse updatePolarClawSkill(UpdatePolarClawSkillRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updatePolarClawSkillWithOptions(request, runtime);
     }
 
     /**

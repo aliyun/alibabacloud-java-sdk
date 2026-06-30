@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDBNodesResponseBody extends TeaModel {
     /**
-     * <p>The database cluster ID.</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-***************</p>

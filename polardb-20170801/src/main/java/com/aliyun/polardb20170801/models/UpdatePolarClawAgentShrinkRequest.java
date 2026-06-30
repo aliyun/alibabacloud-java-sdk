@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdatePolarClawAgentShrinkRequest extends TeaModel {
     /**
-     * <p>Agent ID to update</p>
+     * <p>The ID of the agent to update.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdatePolarClawAgentShrinkRequest extends TeaModel {
     public String agentId;
 
     /**
-     * <p>Application ID</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class UpdatePolarClawAgentShrinkRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>New avatar</p>
+     * <p>The new avatar.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -34,7 +34,7 @@ public class UpdatePolarClawAgentShrinkRequest extends TeaModel {
     public String avatar;
 
     /**
-     * <p>List of files to update</p>
+     * <p>The list of files to update.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;FileName&quot;:&quot;SOUL.md&quot;,&quot;FileContent&quot;:&quot;You are a helpful assistant.&quot;}]</p>
@@ -43,6 +43,8 @@ public class UpdatePolarClawAgentShrinkRequest extends TeaModel {
     public String filesShrink;
 
     /**
+     * <p>Specifies whether to set the agent as the default agent.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -50,6 +52,8 @@ public class UpdatePolarClawAgentShrinkRequest extends TeaModel {
     public Boolean isDefault;
 
     /**
+     * <p>Specifies whether to keep files when switching the workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -57,7 +61,7 @@ public class UpdatePolarClawAgentShrinkRequest extends TeaModel {
     public Boolean keepWorkspaceFiles;
 
     /**
-     * <p>Model override</p>
+     * <p>The model override.</p>
      * 
      * <strong>example:</strong>
      * <p>claude-sonnet-4-5</p>
@@ -66,7 +70,7 @@ public class UpdatePolarClawAgentShrinkRequest extends TeaModel {
     public String model;
 
     /**
-     * <p>New display name</p>
+     * <p>The new display name of the agent.</p>
      * 
      * <strong>example:</strong>
      * <p>Work Bot</p>
@@ -75,7 +79,7 @@ public class UpdatePolarClawAgentShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Whether to restart the gateway after creation, default is true</p>
+     * <p>Specifies whether to restart the gateway after creation. Default value: true.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -84,7 +88,7 @@ public class UpdatePolarClawAgentShrinkRequest extends TeaModel {
     public Boolean restart;
 
     /**
-     * <p>New workspace directory path</p>
+     * <p>The new working directory path.</p>
      * 
      * <strong>example:</strong>
      * <p>/home/node/.openclaw/workspace-work-v2</p>

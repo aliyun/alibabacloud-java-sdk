@@ -4,10 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeApikeyAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The list of consumer objects.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeApikeyAttributeResponseBodyItems> items;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>F3322AFE-083E-4D77-A074-421301******</p>
      */
@@ -37,6 +42,8 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
 
     public static class DescribeApikeyAttributeResponseBodyItemsConsumer extends TeaModel {
         /**
+         * <p>The API key.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -44,6 +51,8 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
         public String apiKey;
 
         /**
+         * <p>The user group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cg-bq6rcdjp02vt</p>
          */
@@ -51,6 +60,8 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
         public String consumerGroupId;
 
         /**
+         * <p>The consumer ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>c-71qh3pscbd3i</p>
          */
@@ -58,6 +69,8 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
         public String consumerId;
 
         /**
+         * <p>The consumer tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -65,6 +78,8 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
         public String consumerTag;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-07-18T07:32:30Z</p>
          */
@@ -72,6 +87,8 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The gateway instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pg-2ze5n62ef4s165***</p>
          */
@@ -79,6 +96,8 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
         public String gwClusterId;
 
         /**
+         * <p>The last modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-04-10T01:48:25Z</p>
          */
@@ -86,6 +105,8 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
+         * <p>The consumer name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -93,6 +114,8 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The consumer status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Enabled</p>
          */
@@ -180,6 +203,8 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
 
     public static class DescribeApikeyAttributeResponseBodyItemsUsageStatistics extends TeaModel {
         /**
+         * <p>The dimension reference ID, which is the ConsumerId.</p>
+         * 
          * <strong>example:</strong>
          * <p>c-xxxxxx</p>
          */
@@ -187,6 +212,8 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
         public String dimensionRefId;
 
         /**
+         * <p>The statistics dimension. The value is typically Consumer.</p>
+         * 
          * <strong>example:</strong>
          * <p>Consumer</p>
          */
@@ -194,6 +221,8 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
         public String dimensionType;
 
         /**
+         * <p>The gateway instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pg-bp1ln7w98yrhzz7i2</p>
          */
@@ -201,6 +230,8 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
         public String gwClusterId;
 
         /**
+         * <p>The number of cache tokens for the current month.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -208,6 +239,8 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
         public String monthlyCacheToken;
 
         /**
+         * <p>The cost points consumed for the current month.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -215,6 +248,8 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
         public String monthlyCostPoints;
 
         /**
+         * <p>The number of input tokens for the current month.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -222,6 +257,8 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
         public String monthlyInputToken;
 
         /**
+         * <p>The number of output tokens for the current month.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -229,6 +266,8 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
         public String monthlyOutputToken;
 
         /**
+         * <p>The number of tokens for the current month.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -236,6 +275,8 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
         public String monthlyToken;
 
         /**
+         * <p>The cumulative number of cache tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -243,6 +284,8 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
         public String totalCacheToken;
 
         /**
+         * <p>The cumulative cost points consumed.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -250,6 +293,8 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
         public String totalCostPoints;
 
         /**
+         * <p>The cumulative number of input tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -257,6 +302,8 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
         public String totalInputToken;
 
         /**
+         * <p>The cumulative number of output tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -264,6 +311,8 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
         public String totalOutputToken;
 
         /**
+         * <p>The cumulative number of tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -382,9 +431,15 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeApikeyAttributeResponseBodyItems extends TeaModel {
+        /**
+         * <p>The consumer information.</p>
+         */
         @NameInMap("Consumer")
         public DescribeApikeyAttributeResponseBodyItemsConsumer consumer;
 
+        /**
+         * <p>The usage statistics for the consumer.</p>
+         */
         @NameInMap("UsageStatistics")
         public java.util.List<DescribeApikeyAttributeResponseBodyItemsUsageStatistics> usageStatistics;
 

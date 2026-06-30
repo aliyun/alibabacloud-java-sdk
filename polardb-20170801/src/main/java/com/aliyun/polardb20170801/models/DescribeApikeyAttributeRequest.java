@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApikeyAttributeRequest extends TeaModel {
     /**
+     * <p>The plaintext API key.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeApikeyAttributeRequest extends TeaModel {
     public String apiKey;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +24,9 @@ public class DescribeApikeyAttributeRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
+     * <p>Default value: <strong>30</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -28,6 +34,7 @@ public class DescribeApikeyAttributeRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

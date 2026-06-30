@@ -144,6 +144,8 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
 
     public static class DescribePolarClawAgentsResponseBodyAgentsFiles extends TeaModel {
         /**
+         * <p>Indicates whether the file is missing.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -151,6 +153,8 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
         public Boolean missing;
 
         /**
+         * <p>The file name.</p>
+         * 
          * <strong>example:</strong>
          * <p>SOUL.md</p>
          */
@@ -158,6 +162,8 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The file path.</p>
+         * 
          * <strong>example:</strong>
          * <p>/home/node/.openclaw/workspace-work/SOUL.md</p>
          */
@@ -165,6 +171,8 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
         public String path;
 
         /**
+         * <p>The file size, in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>1024</p>
          */
@@ -172,6 +180,8 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
         public Long size;
 
         /**
+         * <p>The last updated timestamp, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1716000000000</p>
          */
@@ -245,7 +255,7 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
         public String avatarUrl;
 
         /**
-         * <p>The emoji identifier in Unicode encoding format such as U+1F99E, or a direct emoji character.</p>
+         * <p>The emoji identifier in Unicode format such as U+1F99E, or a direct emoji character.</p>
          * 
          * <strong>example:</strong>
          * <p>U+1F99E</p>
@@ -319,10 +329,15 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
     }
 
     public static class DescribePolarClawAgentsResponseBodyAgentsModel extends TeaModel {
+        /**
+         * <p>The fallback model list.</p>
+         */
         @NameInMap("Fallbacks")
         public java.util.List<String> fallbacks;
 
         /**
+         * <p>The primary model.</p>
+         * 
          * <strong>example:</strong>
          * <p>claude-sonnet-4-5</p>
          */
@@ -354,12 +369,17 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
 
     public static class DescribePolarClawAgentsResponseBodyAgents extends TeaModel {
         /**
+         * <p>Indicates whether this is the default agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("Default")
         public Boolean _default;
 
+        /**
+         * <p>The agent file list.</p>
+         */
         @NameInMap("Files")
         public java.util.List<DescribePolarClawAgentsResponseBodyAgentsFiles> files;
 
@@ -378,11 +398,14 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
         @NameInMap("Identity")
         public DescribePolarClawAgentsResponseBodyAgentsIdentity identity;
 
+        /**
+         * <p>The model configuration.</p>
+         */
         @NameInMap("Model")
         public DescribePolarClawAgentsResponseBodyAgentsModel model;
 
         /**
-         * <p>The display name of the agent.</p>
+         * <p>The agent display name.</p>
          * 
          * <strong>example:</strong>
          * <p>main</p>
@@ -390,10 +413,15 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The list of skills available to the agent.</p>
+         */
         @NameInMap("Skills")
         public java.util.List<String> skills;
 
         /**
+         * <p>The working directory path.</p>
+         * 
          * <strong>example:</strong>
          * <p>/home/node/.openclaw/workspace-work</p>
          */
