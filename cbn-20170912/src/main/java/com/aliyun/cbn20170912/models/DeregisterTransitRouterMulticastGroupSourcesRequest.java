@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class DeregisterTransitRouterMulticastGroupSourcesRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.</p>
+     * <p>Generate a token on your client. Make sure that the token is unique among different requests. The \<code>ClientToken\\</code> parameter can contain only ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-4266****</p>
@@ -15,10 +15,12 @@ public class DeregisterTransitRouterMulticastGroupSourcesRequest extends TeaMode
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run, without sending the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request.</li>
+     * <li><p><strong>true</strong>: Sends a check request without deleting the multicast source. The check includes required parameters, request format, and business limits. If the check fails, the corresponding error is returned. If the check passes, the <code>DryRunOperation</code> error code is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): Sends a normal request. After the request passes the check, the multicast source is deleted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +30,7 @@ public class DeregisterTransitRouterMulticastGroupSourcesRequest extends TeaMode
     public Boolean dryRun;
 
     /**
-     * <p>The IP address of the multicast group to which the multicast source belongs.</p>
+     * <p>The IP address of the multicast group that contains the multicast source.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +40,7 @@ public class DeregisterTransitRouterMulticastGroupSourcesRequest extends TeaMode
     public String groupIpAddress;
 
     /**
-     * <p>A list of multicast source IDs.</p>
+     * <p>The list of multicast source IDs.</p>
      */
     @NameInMap("NetworkInterfaceIds")
     public java.util.List<String> networkInterfaceIds;
@@ -56,7 +58,7 @@ public class DeregisterTransitRouterMulticastGroupSourcesRequest extends TeaMode
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the multicast domain to which the multicast source belongs.</p>
+     * <p>The ID of the multicast domain that contains the multicast source.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -7,8 +7,10 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends TeaModel 
     /**
      * <p>Specifies whether to enable the local Enterprise Edition transit router to automatically advertise the routes of the inter-region connection to the peer transit router. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default): no</li>
-     * <li><strong>true</strong>: yes</li>
+     * <li><p><strong>false</strong> (default): no</p>
+     * </li>
+     * <li><p><strong>true</strong>: yes</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,8 +22,10 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends TeaModel 
     /**
      * <p>The bandwidth value of the inter-region connection. Unit: Mbit/s.</p>
      * <ul>
-     * <li>This parameter specifies the maximum bandwidth value for the inter-region connection if you set <strong>BandwidthType</strong> to <strong>BandwidthPackage</strong>.</li>
-     * <li>This parameter specifies the bandwidth throttling threshold for the inter-region connection if you set <strong>BandwidthType</strong> to <strong>DataTransfer</strong>.</li>
+     * <li><p>This parameter specifies the maximum bandwidth value for the inter-region connection if you set <strong>BandwidthType</strong> to <strong>BandwidthPackage</strong>.</p>
+     * </li>
+     * <li><p>This parameter specifies the bandwidth throttling threshold for the inter-region connection if you set <strong>BandwidthType</strong> to <strong>DataTransfer</strong>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,8 +37,10 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends TeaModel 
     /**
      * <p>The bandwidth allocation method. Valid values:</p>
      * <ul>
-     * <li><strong>BandwidthPackage</strong>: allocates bandwidth from a bandwidth plan.</li>
-     * <li><strong>DataTransfer</strong>: bandwidth is billed based on the pay-by-data-transfer metering method.</li>
+     * <li><p><strong>BandwidthPackage</strong>: allocates bandwidth from a bandwidth plan.</p>
+     * </li>
+     * <li><p><strong>DataTransfer</strong>: bandwidth is billed based on the pay-by-data-transfer metering method.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,7 +52,7 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends TeaModel 
     /**
      * <p>The ID of the bandwidth plan that is used to allocate bandwidth to the inter-region connection.</p>
      * <blockquote>
-     * <p> If you set <strong>BandwidthType</strong> to <strong>DataTransfer</strong>, you do not need to set this parameter.</p>
+     * <p>If you set <strong>BandwidthType</strong> to <strong>DataTransfer</strong>, you do not need to set this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -59,7 +65,7 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends TeaModel 
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+     * <p>If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -82,8 +88,10 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends TeaModel 
     /**
      * <p>Specifies whether to perform a dry run to check information such as the permissions and the instance status. Default values:</p>
      * <ul>
-     * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
-     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.</li>
+     * <li><p><strong>false</strong> (default): performs a dry run and sends the request.</p>
+     * </li>
+     * <li><p><strong>true</strong>: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -106,7 +114,7 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends TeaModel 
 
     /**
      * <p>The new description of the inter-region connection.</p>
-     * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http:// or https://.</p>
+     * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http\:// or https\://.</p>
      * 
      * <strong>example:</strong>
      * <p>testdesc</p>
@@ -126,7 +134,7 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends TeaModel 
 
     /**
      * <p>The new name of the inter-region connection.</p>
-     * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
+     * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http\:// or https\://.</p>
      * 
      * <strong>example:</strong>
      * <p>testname</p>

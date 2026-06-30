@@ -9,8 +9,10 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
 
     /**
      * <ul>
-     * <li>If no value is specified for <strong>MaxResults</strong>, query results are returned in one batch. The value of <strong>MaxResults</strong> indicates the total number of entries.</li>
-     * <li>If a value is specified for <strong>MaxResults</strong>, it indicates that you need to query results in batches. The value of <strong>MaxResults</strong> in the response indicates the number of entries in the current batch.</li>
+     * <li><p>The maximum number of entries to return per page.</p>
+     * </li>
+     * <li><p>This value is the same as the <strong>MaxResults</strong> value that you specified in the request.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,10 +22,12 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
-     * <li>If a value of <strong>NextToken</strong> was returned in the previous query, specify the value to obtain the next set of results.</li>
+     * <li><p>If the <strong>NextToken</strong> parameter is empty, no more results are available.</p>
+     * </li>
+     * <li><p>To retrieve the next page, set the NextToken request parameter to this value.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,7 +46,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

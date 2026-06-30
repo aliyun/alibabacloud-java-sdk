@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,10 +14,12 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The token for the next query.</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
-     * <li>If a value is returned for <strong>NextToken</strong>, the value is the token that determines the start point of the next query.</li>
+     * <li><p>If the value of <strong>NextToken</strong> is empty, it indicates that no next query is to be sent.</p>
+     * </li>
+     * <li><p>If a value is returned for <strong>NextToken</strong>, the value is the token that is used for the next query.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +38,7 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -97,13 +99,20 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
 
     public static class ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsOptions extends TeaModel {
         /**
-         * <p>Indicates whether the IGMP feature is enabled for the multicast domain.</p>
+         * <p>Indicates whether IGMPv2 is enabled for the multicast domain.</p>
          * 
          * <strong>example:</strong>
          * <p>enable</p>
          */
         @NameInMap("Igmpv2Support")
         public String igmpv2Support;
+
+        /**
+         * <strong>example:</strong>
+         * <p>enable</p>
+         */
+        @NameInMap("StrictSourceControl")
+        public String strictSourceControl;
 
         public static ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsOptions build(java.util.Map<String, ?> map) throws Exception {
             ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsOptions self = new ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsOptions();
@@ -116,6 +125,14 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
         }
         public String getIgmpv2Support() {
             return this.igmpv2Support;
+        }
+
+        public ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsOptions setStrictSourceControl(String strictSourceControl) {
+            this.strictSourceControl = strictSourceControl;
+            return this;
+        }
+        public String getStrictSourceControl() {
+            return this.strictSourceControl;
         }
 
     }
@@ -164,23 +181,23 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
 
     public static class ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomains extends TeaModel {
         /**
-         * <p>The CEN instance ID.</p>
+         * <p>The ID of the CEN instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>cen-a7syd349kne38g****</p>
+         * <p>cen-h19xdb0qy2b3ir****</p>
          */
         @NameInMap("CenId")
         public String cenId;
 
         /**
-         * <p>Multicast domain feature.</p>
+         * <p>The options of the multicast domain.</p>
          */
         @NameInMap("Options")
         public ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsOptions options;
 
         /**
-         * <p>The region ID of the transit router.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+         * <p>The ID of the region where the transit router is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to obtain the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -190,7 +207,7 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
 
         /**
          * <p>The status of the multicast domain.</p>
-         * <p>The valid value is <strong>Active</strong>, which indicates that the multicast domain is available.</p>
+         * <p>The value is <strong>Active</strong>, which indicates that the multicast domain is available.</p>
          * 
          * <strong>example:</strong>
          * <p>Active</p>
@@ -199,13 +216,13 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsTags> tags;
 
         /**
-         * <p>The transit router ID.</p>
+         * <p>The ID of the transit router.</p>
          * 
          * <strong>example:</strong>
          * <p>tr-bp1c23ijrl6d6c226h***</p>

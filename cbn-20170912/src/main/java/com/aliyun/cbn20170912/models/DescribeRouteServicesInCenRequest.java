@@ -24,8 +24,8 @@ public class DescribeRouteServicesInCenRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The service address of the cloud service.</p>
-     * <p>You can enter a domain name, an IP address, or a CIDR block.</p>
+     * <p>The endpoint of the Alibaba Cloud service.</p>
+     * <p>The endpoint can be a domain name, an IP address, or a CIDR block.</p>
      * 
      * <strong>example:</strong>
      * <p>100.118.28.0/24</p>
@@ -34,8 +34,8 @@ public class DescribeRouteServicesInCenRequest extends TeaModel {
     public String host;
 
     /**
-     * <p>The region ID of the cloud service.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region where the Alibaba Cloud service is deployed.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to obtain the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -44,7 +44,7 @@ public class DescribeRouteServicesInCenRequest extends TeaModel {
     public String hostRegionId;
 
     /**
-     * <p>The ID of the VPC associated with the cloud service.</p>
+     * <p>The ID of the VPC that is associated with the Alibaba Cloud service.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp1h8vbrbcgohcju5****</p>
@@ -59,7 +59,7 @@ public class DescribeRouteServicesInCenRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The default value is <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -68,7 +68,7 @@ public class DescribeRouteServicesInCenRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
+     * <p>The number of entries to return on each page. The default value is <strong>10</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

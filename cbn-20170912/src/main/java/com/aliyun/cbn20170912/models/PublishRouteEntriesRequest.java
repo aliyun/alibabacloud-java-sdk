@@ -26,7 +26,7 @@ public class PublishRouteEntriesRequest extends TeaModel {
 
     /**
      * <p>The ID of the region where the network instance is deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class PublishRouteEntriesRequest extends TeaModel {
     public String childInstanceRegionId;
 
     /**
-     * <p>The ID of the route table configured on the network instance.</p>
+     * <p>The ID of the route table of the network instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,8 +48,10 @@ public class PublishRouteEntriesRequest extends TeaModel {
     /**
      * <p>The type of the network instance. Valid values:</p>
      * <ul>
-     * <li><strong>VPC</strong>: VPC</li>
-     * <li><strong>VBR</strong>: VBR</li>
+     * <li><p><strong>VPC</strong>: virtual private cloud.</p>
+     * </li>
+     * <li><p><strong>VBR</strong>: virtual border router.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

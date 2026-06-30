@@ -27,8 +27,10 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends TeaMode
     /**
      * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><p><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,7 +53,7 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends TeaMode
 
     /**
      * <p>The new description of the queue.</p>
-     * <p>The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
+     * <p>The description must be 1 to 256 characters in length, and cannot start with http\:// or https\://. You can also leave this parameter empty.</p>
      * 
      * <strong>example:</strong>
      * <p>desctest</p>
@@ -71,7 +73,7 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends TeaMode
 
     /**
      * <p>The new name of the queue.</p>
-     * <p>The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
+     * <p>The name must be 1 to 128 characters in length, and cannot start with http\:// or https\://. You can also leave this parameter empty.</p>
      * 
      * <strong>example:</strong>
      * <p>nametest</p>

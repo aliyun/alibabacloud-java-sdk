@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateTransitRouterVpcAttachmentShrinkRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the Enterprise Edition transit router to automatically advertise routes to VPCs. Valid values:</p>
+     * <p>Specifies whether to enable the Enterprise Edition transit router to automatically advertise routes to the VPC.</p>
      * <ul>
-     * <li><strong>false:</strong> (default)</li>
-     * <li><strong>true</strong></li>
+     * <li><p><strong>false</strong> (default): Do not automatically advertise routes.</p>
+     * </li>
+     * <li><p><strong>true</strong>: Automatically advertise routes.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class CreateTransitRouterVpcAttachmentShrinkRequest extends TeaModel {
     public Boolean autoPublishRouteEnabled;
 
     /**
-     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+     * <p>The ID of the CEN instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cen-j3jzhw1zpau2km****</p>
@@ -27,7 +29,7 @@ public class CreateTransitRouterVpcAttachmentShrinkRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The billing method. The default value is <strong>POSTPAY</strong>, which specifies the pay-as-you-go billing method.</p>
+     * <p>The billing method. The default value is <strong>POSTPAY</strong> (pay-as-you-go).</p>
      * 
      * <strong>example:</strong>
      * <p>POSTPAY</p>
@@ -36,10 +38,10 @@ public class CreateTransitRouterVpcAttachmentShrinkRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>The client token used to ensure request idempotency.</p>
+     * <p>You must generate a value on your client that is unique among different requests. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the request ID as the client token, which is unique for each request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -49,10 +51,12 @@ public class CreateTransitRouterVpcAttachmentShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to perform a dry run to check the validity of the request without creating the resource. The check includes permissions and instance status. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
-     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><p><strong>false</strong> (default): Sends a normal request. The system creates the VPC connection if the request is valid.</p>
+     * </li>
+     * <li><p><strong>true</strong>: Sends only a check request. The system checks required parameters, request format, and permissions. The VPC connection is not created. If the check fails, an error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,8 +75,8 @@ public class CreateTransitRouterVpcAttachmentShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the VPC is deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region where the VPC is located.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -87,15 +91,15 @@ public class CreateTransitRouterVpcAttachmentShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The information about the tags.</p>
-     * <p>You can specify at most 20 tags in each call.</p>
+     * <p>The tags to add to the VPC connection.</p>
+     * <p>You can add up to 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateTransitRouterVpcAttachmentShrinkRequestTag> tag;
 
     /**
      * <p>The description of the VPC connection.</p>
-     * <p>The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
+     * <p>The description can be empty or 1 to 256 characters long, and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>testname</p>
@@ -105,7 +109,7 @@ public class CreateTransitRouterVpcAttachmentShrinkRequest extends TeaModel {
 
     /**
      * <p>The name of the VPC connection.</p>
-     * <p>The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
+     * <p>The name can be empty or 1 to 128 characters long, and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>testname</p>
@@ -123,13 +127,13 @@ public class CreateTransitRouterVpcAttachmentShrinkRequest extends TeaModel {
     public String transitRouterId;
 
     /**
-     * <p>Feature configurations of the VPC connection.</p>
+     * <p>The properties of the VPC connection. This parameter is deprecated. We recommend that you use the <code>Options</code> parameter instead.</p>
      */
     @NameInMap("TransitRouterVPCAttachmentOptions")
     public String transitRouterVPCAttachmentOptionsShrink;
 
     /**
-     * <p>The VPC ID.</p>
+     * <p>The ID of the VPC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -139,9 +143,9 @@ public class CreateTransitRouterVpcAttachmentShrinkRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The ID of the Alibaba Cloud account to which the VPC belongs. The default value is the ID of the current Alibaba Cloud account.</p>
+     * <p>The ID of the Alibaba Cloud account that owns the VPC. By default, this is the ID of the current Alibaba Cloud account.</p>
      * <blockquote>
-     * <p>If the network instance and CEN instance belong to different Alibaba Cloud accounts, this parameter is required.</p>
+     * <p>This parameter is required if you want to attach a cross-account network instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -151,8 +155,8 @@ public class CreateTransitRouterVpcAttachmentShrinkRequest extends TeaModel {
     public Long vpcOwnerId;
 
     /**
-     * <p>A zone that supports Enterprise Edition transit routers.</p>
-     * <p>You can specify at most 10 zones.</p>
+     * <p>The zone mappings for the VPC connection. For each mapping, you must specify a vSwitch in a zone that is supported by the Enterprise Edition transit router.</p>
+     * <p>You can specify up to 10 zone mappings.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ZoneMappings")
@@ -317,9 +321,8 @@ public class CreateTransitRouterVpcAttachmentShrinkRequest extends TeaModel {
 
     public static class CreateTransitRouterVpcAttachmentShrinkRequestTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
-         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>You can specify at most 20 tag keys.</p>
+         * <p>The key of the tag.</p>
+         * <p>The tag key cannot be an empty string. The key can be up to 64 characters long and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>tagtest</p>
@@ -328,9 +331,8 @@ public class CreateTransitRouterVpcAttachmentShrinkRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
-         * <p>The tag value can be 0 to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
+         * <p>The value of the tag.</p>
+         * <p>The tag value can be an empty string or a string up to 128 characters long. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>tagtest</p>
@@ -363,8 +365,7 @@ public class CreateTransitRouterVpcAttachmentShrinkRequest extends TeaModel {
 
     public static class CreateTransitRouterVpcAttachmentShrinkRequestZoneMappings extends TeaModel {
         /**
-         * <p>A vSwitch that is deployed in the zone that supports Enterprise Edition transit routers.</p>
-         * <p>You can specify vSwitches for at most 10 zones in each call.</p>
+         * <p>The ID of the vSwitch.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -374,9 +375,8 @@ public class CreateTransitRouterVpcAttachmentShrinkRequest extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The ID of the zone that supports Enterprise Edition transit routers.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query the most recent zone list.</p>
-         * <p>You can specify at most 10 zones in each call.</p>
+         * <p>The ID of the zone. The zone must be supported by the Enterprise Edition transit router.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query available zones.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -14,10 +14,12 @@ public class ListTrafficMarkingPoliciesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <p>The token that is used for the next query. Valid values:</p>
      * <ul>
-     * <li>If this is your first query or no subsequent query is to be sent, ignore this parameter.</li>
-     * <li>If a next query is to be sent, set the value to the value of <strong>NextToken</strong> that is returned from the last call.</li>
+     * <li><p>You do not need to specify this parameter for the first query.</p>
+     * </li>
+     * <li><p>If a next query is to be sent, set the value to the <strong>NextToken</strong> value returned from the last API call.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,7 +42,7 @@ public class ListTrafficMarkingPoliciesRequest extends TeaModel {
 
     /**
      * <p>The description of the traffic marking policy.</p>
-     * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
+     * <p>The description can be empty or 1 to 256 characters in length. It cannot start with http\:// or https\://.</p>
      * 
      * <strong>example:</strong>
      * <p>desctest</p>
@@ -59,7 +61,7 @@ public class ListTrafficMarkingPoliciesRequest extends TeaModel {
 
     /**
      * <p>The name of the traffic marking policy.</p>
-     * <p>The name must be 1 to 128 characters in length, and cannot start with http:// or https://.</p>
+     * <p>The name can be empty or 1 to 128 characters in length. It cannot start with http\:// or https\://.</p>
      * 
      * <strong>example:</strong>
      * <p>nametest</p>
@@ -68,7 +70,7 @@ public class ListTrafficMarkingPoliciesRequest extends TeaModel {
     public String trafficMarkingPolicyName;
 
     /**
-     * <p>The ID of the transit router.</p>
+     * <p>The ID of the TransitRouter instance.</p>
      * 
      * <strong>example:</strong>
      * <p>tr-bp1rmwxnk221e3fas****</p>

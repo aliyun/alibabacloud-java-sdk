@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCenChildInstanceRouteEntryToCenRequest extends TeaModel {
     /**
-     * <p>The ID of the CEN instance.</p>
+     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DeleteCenChildInstanceRouteEntryToCenRequest extends TeaModel {
     /**
      * <p>The ID of the Alibaba Cloud account to which the network instance belongs.</p>
      * <blockquote>
-     * <p>If the network instance and the CEN instance belong to different Alibaba Cloud accounts, this parameter is required.</p>
+     * <p>This parameter is required if the network instance belongs to another Alibaba Cloud account.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -50,8 +50,10 @@ public class DeleteCenChildInstanceRouteEntryToCenRequest extends TeaModel {
     /**
      * <p>The type of the network instance. Valid values:</p>
      * <ul>
-     * <li><strong>VPC</strong>: a virtual private cloud (VPC)</li>
-     * <li><strong>VBR</strong>: a virtual border router (VBR)</li>
+     * <li><p><strong>VPC</strong>: a virtual private cloud (VPC).</p>
+     * </li>
+     * <li><p><strong>VBR</strong>: a virtual border router (VBR).</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -63,7 +65,7 @@ public class DeleteCenChildInstanceRouteEntryToCenRequest extends TeaModel {
 
     /**
      * <p>The destination CIDR block of the route.</p>
-     * <p>Specify the value of this parameter in CIDR notation. Example: 192.168.10.0/24.</p>
+     * <p>The destination CIDR block must be in CIDR format. Example: 192.168.10.0/24.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -85,7 +87,7 @@ public class DeleteCenChildInstanceRouteEntryToCenRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the route table configured on the network instance.</p>
+     * <p>The ID of the route table of the network instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

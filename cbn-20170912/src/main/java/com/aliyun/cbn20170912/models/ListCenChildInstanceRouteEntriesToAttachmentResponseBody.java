@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends TeaModel {
     /**
-     * <p>The token that determines the start point of the next query. Valid values:</p>
+     * <p>The token that is used for the next query.</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is not returned, it indicates that no additional results exist.</li>
-     * <li>If <strong>NextToken</strong> was returned in the previous query, specify the value to obtain the next set of results.</li>
+     * <li><p>If <strong>NextToken</strong> is empty, no subsequent query is sent.</p>
+     * </li>
+     * <li><p>If a value is returned for <strong>NextToken</strong>, the value is the token that is used for the next query.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
     public String nextToken;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>530BC816-F575-412A-AAB2-435125D26328</p>
@@ -27,7 +29,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
     public String requestId;
 
     /**
-     * <p>The detailed information about the route.</p>
+     * <p>The details of the route.</p>
      */
     @NameInMap("RouteEntry")
     public java.util.List<ListCenChildInstanceRouteEntriesToAttachmentResponseBodyRouteEntry> routeEntry;
@@ -72,7 +74,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
         public String cenId;
 
         /**
-         * <p>The ID of the route table configured on the network instance.</p>
+         * <p>The ID of the route table of the network instance.</p>
          * 
          * <strong>example:</strong>
          * <p>vtb-bp1tlaj1c4nxr2t3e****</p>
@@ -90,7 +92,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
         public String destinationCidrBlock;
 
         /**
-         * <p>Indicates whether the route is hosted. If the parameter is empty, the route is not hosted. A value of TR indicates that the route is hosted on a transit router.</p>
+         * <p>The type of the managed routing service. If this parameter is empty, the route is not managed. The value TR indicates that the route is managed by a transit router.</p>
          * 
          * <strong>example:</strong>
          * <p>TR</p>
@@ -101,9 +103,12 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
         /**
          * <p>The status of the route. Valid values:</p>
          * <ul>
-         * <li><strong>Available</strong>: The route is available.</li>
-         * <li><strong>Pending</strong>: The route is being configured.</li>
-         * <li><strong>Modifying</strong>: the route is being modified.</li>
+         * <li><p><strong>Available</strong>: The route is active.</p>
+         * </li>
+         * <li><p><strong>Pending</strong>: The route is being configured.</p>
+         * </li>
+         * <li><p><strong>Modifying</strong>: The route is being modified.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -14,7 +14,7 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
     public Integer maxResults;
 
     /**
-     * <p>The token that determines the start point of the query.</p>
+     * <p>The token that is used to retrieve the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>dd20****</p>
@@ -23,7 +23,7 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>04C81E0D-945E-4D61-A561-3DEA322F243B</p>
@@ -32,7 +32,7 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -41,7 +41,7 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
     public Integer totalCount;
 
     /**
-     * <p>A list of route learning correlations.</p>
+     * <p>A list of the route propagations.</p>
      */
     @NameInMap("TransitRouterPropagations")
     public java.util.List<ListTransitRouterRouteTablePropagationsResponseBodyTransitRouterPropagations> transitRouterPropagations;
@@ -102,12 +102,16 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
         public String resourceId;
 
         /**
-         * <p>The type of the network instance. Valid values:</p>
+         * <p>The type of the network instance.</p>
          * <ul>
-         * <li><strong>VPC</strong>: VPC</li>
-         * <li><strong>VBR</strong>: VBR</li>
-         * <li><strong>TR</strong>: transit router</li>
-         * <li><strong>VPN</strong>: VPN connection</li>
+         * <li><p><strong>VPC</strong>: a VPC.</p>
+         * </li>
+         * <li><p><strong>VBR</strong>: a VBR.</p>
+         * </li>
+         * <li><p><strong>TR</strong>: a transit router.</p>
+         * </li>
+         * <li><p><strong>VPN</strong>: a VPN connection.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -117,11 +121,14 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
         public String resourceType;
 
         /**
-         * <p>The status of the route learning correlation. Valid values:</p>
+         * <p>The status of the route propagation.</p>
          * <ul>
-         * <li><strong>Enabling</strong>: being enabled</li>
-         * <li><strong>Disabling</strong>: being disabled</li>
-         * <li><strong>Active</strong>: available</li>
+         * <li><p><strong>Enabling</strong>: The propagation is being enabled.</p>
+         * </li>
+         * <li><p><strong>Disabling</strong>: The propagation is being disabled.</p>
+         * </li>
+         * <li><p><strong>Active</strong>: The propagation is active.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

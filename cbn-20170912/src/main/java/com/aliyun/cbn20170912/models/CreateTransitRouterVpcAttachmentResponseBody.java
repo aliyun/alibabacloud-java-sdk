@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTransitRouterVpcAttachmentResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C087A369-82B9-43EF-91F4-4B63A9C6E6B6</p>

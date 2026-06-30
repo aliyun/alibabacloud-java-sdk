@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class TempUpgradeCenBandwidthPackageSpecResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DB0A026C-A8E5-40AB-977E-3A87DD78F694</p>
      */

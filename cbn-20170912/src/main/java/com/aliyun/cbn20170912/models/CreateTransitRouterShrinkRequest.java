@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTransitRouterShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+     * <p>The ID of the CEN instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,10 @@ public class CreateTransitRouterShrinkRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.
-     * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>Generate a client token to make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not set this parameter, the system automatically uses <strong>RequestId</strong> as <strong>ClientToken</strong>. The value of <strong>RequestId</strong> of each API request is different.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,10 +28,12 @@ public class CreateTransitRouterShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to check the request without performing the operation. Check items include permissions and the status of the specified cloud resources. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. The dry run checks permissions and whether the required parameters are specified. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default): sends the request. If the request passes the check, an Enterprise Edition transit router is created.</li>
-     * <li><strong>true</strong>: checks the request but does not create the Enterprise Edition transit router. If you use this value, the system checks whether the required parameters are set, and whether the request syntax is valid. If the request fails the check, an error message is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><p><strong>false</strong> (default): sends the request and creates the instance after the request passes the check.</p>
+     * </li>
+     * <li><p><strong>true</strong>: sends a dry run request to check the parameters without creating the instance. The system checks the required parameters, request format, and permissions. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,10 +68,12 @@ public class CreateTransitRouterShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the multicast feature for the Enterprise Edition transit router. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default): no</li>
-     * <li><strong>true</strong>: yes</li>
+     * <li><p><strong>false</strong> (default): disables the multicast feature.</p>
+     * </li>
+     * <li><p><strong>true</strong>: enables the multicast feature.</p>
+     * </li>
      * </ul>
-     * <p>The multicast feature is supported only in specific regions. You can call <a href="https://help.aliyun.com/document_detail/261356.html">ListTransitRouterAvailableResource</a> to query the regions that support multicast.</p>
+     * <p>The multicast feature is supported only in some regions. You can call the <a href="https://help.aliyun.com/document_detail/261356.html">ListTransitRouterAvailableResource</a> operation to query the regions that support multicast.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -78,20 +82,20 @@ public class CreateTransitRouterShrinkRequest extends TeaModel {
     public Boolean supportMulticast;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tag.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateTransitRouterShrinkRequestTag> tag;
 
     /**
-     * <p>The CIDR blocks to be added to the transit router.</p>
+     * <p>The CIDR blocks of the transit router.</p>
      */
     @NameInMap("TransitRouterCidrList")
     public String transitRouterCidrListShrink;
 
     /**
      * <p>The description of the Enterprise Edition transit router instance.</p>
-     * <p>The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
+     * <p>The description can be empty or 1 to 256 characters in length, and cannot start with http\:// or https\://.</p>
      * 
      * <strong>example:</strong>
      * <p>testdesc</p>
@@ -100,8 +104,8 @@ public class CreateTransitRouterShrinkRequest extends TeaModel {
     public String transitRouterDescription;
 
     /**
-     * <p>The name of the Enterprise Edition transit router.</p>
-     * <p>The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
+     * <p>The name of the Enterprise Edition transit router instance.</p>
+     * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http\:// or https\://.</p>
      * 
      * <strong>example:</strong>
      * <p>testname</p>
@@ -221,8 +225,8 @@ public class CreateTransitRouterShrinkRequest extends TeaModel {
     public static class CreateTransitRouterShrinkRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
-         * <p>The tag keys cannot be an empty string. The tag key can be up to 64 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>You can specify at most 20 tag keys in each call.</p>
+         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https:// </code>.</p>
+         * <p>You can specify at most 20 tag keys.</p>
          * 
          * <strong>example:</strong>
          * <p>tagtest</p>
@@ -232,8 +236,8 @@ public class CreateTransitRouterShrinkRequest extends TeaModel {
 
         /**
          * <p>The tag value.</p>
-         * <p>The tag value can be an empty string or up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>Each key-value must be unique. You can specify at most 20 tag values in each call.</p>
+         * <p>The tag value can be empty or a string of up to 128 characters. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https:// </code>.</p>
+         * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values.</p>
          * 
          * <strong>example:</strong>
          * <p>TagValue</p>

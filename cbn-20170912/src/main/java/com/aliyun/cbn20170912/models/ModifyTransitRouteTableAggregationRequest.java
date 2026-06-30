@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyTransitRouteTableAggregationRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>Use the client to generate the token, but make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>Generate a token from your client to make sure that the token is unique among different requests. The \<code>ClientToken\\</code> parameter can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,12 @@ public class ModifyTransitRouteTableAggregationRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run to check information such as the permissions and instance status. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default): sends the request. If the request passes the check, an Enterprise Edition transit router is created.</li>
-     * <li><strong>true</strong>: checks the request but does not create the Enterprise Edition transit router. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><p><strong>false</strong> (default): sends a normal request and modifies the aggregate route after the request passes the check.</p>
+     * </li>
+     * <li><p><strong>true</strong>: sends a check request to perform a dry run. The system checks the required parameters, request format, and permissions. If the check fails, the corresponding error is returned. If the check passes, the \<code>DryRunOperation\\</code> error code is returned. In this case, the aggregate route is not modified.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,7 +56,7 @@ public class ModifyTransitRouteTableAggregationRequest extends TeaModel {
 
     /**
      * <p>The description of the aggregate route.</p>
-     * <p>The description can be empty or 0 to 256 characters in length and cannot start with http:// or https://.</p>
+     * <p>The description can be empty or 0 to 256 characters in length. It cannot start with http\:// or https\://.</p>
      * 
      * <strong>example:</strong>
      * <p>desctest</p>
@@ -64,7 +66,7 @@ public class ModifyTransitRouteTableAggregationRequest extends TeaModel {
 
     /**
      * <p>The name of the aggregate route.</p>
-     * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
+     * <p>The name can be empty or 1 to 128 characters in length. It cannot start with http\:// or https\://.</p>
      * 
      * <strong>example:</strong>
      * <p>nametest</p>
@@ -73,8 +75,8 @@ public class ModifyTransitRouteTableAggregationRequest extends TeaModel {
     public String transitRouteTableAggregationName;
 
     /**
-     * <p>The scope of networks that you want to advertise the aggregate route.</p>
-     * <p>The valid value is <strong>VPC</strong>, which indicates that the aggregate route is advertised to all VPCs that have associated forwarding correlation with the Enterprise Edition transit router and have route synchronization enabled.</p>
+     * <p>The propagation scope of the aggregate route.</p>
+     * <p>The only valid value is <strong>VPC</strong>. This value specifies that the aggregate route is propagated to all VPC instances that are associated with the route table of the Enterprise Edition transit router and have route synchronization enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>VPC</p>
@@ -83,16 +85,16 @@ public class ModifyTransitRouteTableAggregationRequest extends TeaModel {
     public String transitRouteTableAggregationScope;
 
     /**
-     * <p>The scope of networks to which the aggregate route is advertised.</p>
+     * <p>The list of propagation scopes for the aggregate route.</p>
      * <blockquote>
-     * <p> You must select at least one attribute from either the Aggregate Route Propagation Range or the Aggregate Route Propagation Range List. We recommend using the latter. The elements of the two attributes cannot duplicate.</p>
+     * <p>You must specify this parameter or \<code>TransitRouteTableAggregationScope\\</code>. We recommend that you specify this parameter. The elements in this list cannot be the same as the value of \<code>TransitRouteTableAggregationScope\\</code>.</p>
      * </blockquote>
      */
     @NameInMap("TransitRouteTableAggregationScopeList")
     public java.util.List<String> transitRouteTableAggregationScopeList;
 
     /**
-     * <p>The list of route table IDs of the Enterprise Edition transit router.</p>
+     * <p>The ID of the route table of the Enterprise Edition transit router.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

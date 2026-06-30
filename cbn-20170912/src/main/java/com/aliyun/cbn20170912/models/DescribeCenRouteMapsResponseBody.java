@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCenRouteMapsResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

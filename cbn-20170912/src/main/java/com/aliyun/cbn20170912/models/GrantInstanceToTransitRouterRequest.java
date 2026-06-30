@@ -37,10 +37,14 @@ public class GrantInstanceToTransitRouterRequest extends TeaModel {
     /**
      * <p>The type of network instance. Valid values:</p>
      * <ul>
-     * <li><strong>VPC</strong>: VPC</li>
-     * <li><strong>ExpressConnect</strong>: VBR</li>
-     * <li><strong>VPN</strong>: IPsec-VPN connection</li>
-     * <li><strong>ECR</strong>: ECR</li>
+     * <li><p><strong>VPC</strong>: VPC</p>
+     * </li>
+     * <li><p><strong>ExpressConnect</strong>: VBR</p>
+     * </li>
+     * <li><p><strong>VPN</strong>: IPsec-VPN connection</p>
+     * </li>
+     * <li><p><strong>ECR</strong>: ECR</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -53,8 +57,10 @@ public class GrantInstanceToTransitRouterRequest extends TeaModel {
     /**
      * <p>The entity that pays the fees of the network instance. Valid values:</p>
      * <ul>
-     * <li><strong>PayByCenOwner</strong>: the Alibaba Cloud account that owns the CEN instance.</li>
-     * <li><strong>PayByResourceOwner</strong>: the Alibaba Cloud account that owns the network instance.</li>
+     * <li><p><strong>PayByCenOwner</strong>: the Alibaba Cloud account that owns the CEN instance.</p>
+     * </li>
+     * <li><p><strong>PayByResourceOwner</strong>: the Alibaba Cloud account that owns the network instance.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

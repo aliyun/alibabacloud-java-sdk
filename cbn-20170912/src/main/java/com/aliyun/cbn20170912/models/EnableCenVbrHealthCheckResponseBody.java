@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableCenVbrHealthCheckResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1F59F19C-EFD2-40B1-94D5-65B40CA8E34A</p>

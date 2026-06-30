@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTransitRouterVpcAttachmentsRequest extends TeaModel {
     /**
-     * <p>The IDs of the CEN instances.</p>
+     * <p>The ID of the CEN instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cen-j3jzhw1zpau2km****</p>
@@ -14,7 +14,7 @@ public class ListTransitRouterVpcAttachmentsRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries to return on each page. The default value is <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,10 +23,12 @@ public class ListTransitRouterVpcAttachmentsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
      * <ul>
-     * <li>If this is your first query and no subsequent queries are to be sent, ignore this parameter.</li>
-     * <li>If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</li>
+     * <li><p>If this is your first query or no more results are available, you do not need to specify this parameter.</p>
+     * </li>
+     * <li><p>For subsequent queries, set this parameter to the <code>NextToken</code> value from the previous response.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,10 +38,12 @@ public class ListTransitRouterVpcAttachmentsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The entity that pays the fees of the network instance. Valid values:</p>
+     * <p>The entity that pays for the network instance. Valid values:</p>
      * <ul>
-     * <li><strong>PayByCenOwner</strong>: the Alibaba Cloud account that owns the CEN instance.</li>
-     * <li><strong>PayByResourceOwner</strong>: the Alibaba Cloud account that owns the network instance.</li>
+     * <li><p><strong>PayByCenOwner</strong>: The fees are paid by the account that owns the CEN instance.</p>
+     * </li>
+     * <li><p><strong>PayByResourceOwner</strong>: The fees are paid by the account that owns the network instance.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,7 +59,7 @@ public class ListTransitRouterVpcAttachmentsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the Enterprise Edition transit router.</p>
+     * <p>The ID of the region where the Enterprise Edition transit router is deployed.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * 
      * <strong>example:</strong>
@@ -71,11 +75,14 @@ public class ListTransitRouterVpcAttachmentsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether the network instance is attached to the CEN instance. Valid values:</p>
+     * <p>The status of the VPC connection. Valid values:</p>
      * <ul>
-     * <li><strong>Attaching</strong>: being attached to the CEN instance.</li>
-     * <li><strong>Attached</strong>: attached to the CEN instance.</li>
-     * <li><strong>Detaching</strong>: being detached from the CEN instance.</li>
+     * <li><p><strong>Attaching</strong>: The VPC connection is being created.</p>
+     * </li>
+     * <li><p><strong>Attached</strong>: The VPC connection is created.</p>
+     * </li>
+     * <li><p><strong>Detaching</strong>: The VPC connection is being deleted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -85,8 +92,8 @@ public class ListTransitRouterVpcAttachmentsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The information about the tags.</p>
-     * <p>You can specify at most 20 tags in each call.</p>
+     * <p>The tags.</p>
+     * <p>You can specify up to 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTransitRouterVpcAttachmentsRequestTag> tag;
@@ -110,7 +117,7 @@ public class ListTransitRouterVpcAttachmentsRequest extends TeaModel {
     public String transitRouterId;
 
     /**
-     * <p>The ID of the VPC.</p>
+     * <p>The VPC ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp1kbjcre9vtsebo1****</p>
@@ -238,8 +245,7 @@ public class ListTransitRouterVpcAttachmentsRequest extends TeaModel {
     public static class ListTransitRouterVpcAttachmentsRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
-         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>You can specify at most 20 tag keys.</p>
+         * <p>The tag key must be 1 to 64 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>tagtest</p>
@@ -249,8 +255,7 @@ public class ListTransitRouterVpcAttachmentsRequest extends TeaModel {
 
         /**
          * <p>The tag value.</p>
-         * <p>The tag value can be 0 to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
+         * <p>The tag value can be 0 to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>tagtest</p>

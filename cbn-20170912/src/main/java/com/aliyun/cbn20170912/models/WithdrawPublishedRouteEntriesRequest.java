@@ -15,7 +15,7 @@ public class WithdrawPublishedRouteEntriesRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The ID of the attached network instance.</p>
+     * <p>The ID of the network instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,8 @@ public class WithdrawPublishedRouteEntriesRequest extends TeaModel {
     public String childInstanceId;
 
     /**
-     * <p>The ID of the region where the attached network instance is created.</p>
+     * <p>The region ID of the network instance.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +36,7 @@ public class WithdrawPublishedRouteEntriesRequest extends TeaModel {
     public String childInstanceRegionId;
 
     /**
-     * <p>The ID of the route table of the attached network instance.</p>
+     * <p>The route table ID of the network instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,8 +46,13 @@ public class WithdrawPublishedRouteEntriesRequest extends TeaModel {
     public String childInstanceRouteTableId;
 
     /**
-     * <p>The type of the attached network instance.</p>
-     * <p>Set the value to <strong>VPC</strong>, which indicates a virtual private cloud (VPC).</p>
+     * <p>The type of the network instance. Valid values:</p>
+     * <ul>
+     * <li><p><strong>VPC</strong>: virtual private cloud.</p>
+     * </li>
+     * <li><p><strong>VBR</strong>: virtual border router.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,11 +62,11 @@ public class WithdrawPublishedRouteEntriesRequest extends TeaModel {
     public String childInstanceType;
 
     /**
-     * <p>The destination CIDR block of the route that you want to withdraw.</p>
+     * <p>The destination CIDR block of the route entry that you want to withdraw.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>172.XX.XX.0/24</p>
+     * <p>172.16.1.0/24</p>
      */
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;

@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class MoveResourceGroupRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client generates this value. Make sure that the value is unique among different requests. The token can contain a maximum of 64 ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -20,8 +20,10 @@ public class MoveResourceGroupRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false:</strong> performs a dry run and sends the request.</li>
+     * <li><p><strong>true</strong>: performs a dry run. The system checks the required parameters, the request format, and business limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): sends a normal request. If the request passes the check, an HTTP 2xx status code is returned and the operation is performed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +33,7 @@ public class MoveResourceGroupRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the resource group to which you want to move the CEN instance or bandwidth plan.</p>
+     * <p>The ID of the new resource group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,8 +67,10 @@ public class MoveResourceGroupRequest extends TeaModel {
     /**
      * <p>The type of the resource. Valid values:</p>
      * <ul>
-     * <li><strong>CEN</strong>: CEN instance</li>
-     * <li><strong>bandwidthpackage</strong>: bandwidth plan</li>
+     * <li><p><strong>cen</strong>: a CEN instance.</p>
+     * </li>
+     * <li><p><strong>bandwidthpackage</strong>: a bandwidth plan.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

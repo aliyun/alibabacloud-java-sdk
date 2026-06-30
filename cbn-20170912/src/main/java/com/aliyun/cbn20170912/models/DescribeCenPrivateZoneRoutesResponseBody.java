@@ -14,7 +14,7 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The IP address of the DNS server used by PrivateZone.</p>
+     * <p>The IP addresses of the DNS servers for the PrivateZone service.</p>
      * 
      * <strong>example:</strong>
      * <p>100.100.XX.XX/32,100.100.XX.XX/32</p>
@@ -44,7 +44,7 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
     public DescribeCenPrivateZoneRoutesResponseBodyPrivateZoneInfos privateZoneInfos;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>461EC1B5-04A8-4706-8764-8F5BCEF48A6F</p>
@@ -53,7 +53,7 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

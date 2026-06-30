@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTransitRouterMulticastDomainResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>94E19C6F-206F-5223-9A63-64B85851BC04</p>

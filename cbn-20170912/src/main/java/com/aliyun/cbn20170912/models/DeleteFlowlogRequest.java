@@ -14,10 +14,9 @@ public class DeleteFlowlogRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>The unique, one-use client token that is used to ensure the idempotence of the request. It can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId may be different for each request.</p>
+     * <p>If you leave this parameter empty, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,7 +43,7 @@ public class DeleteFlowlogRequest extends TeaModel {
 
     /**
      * <p>The ID of the region where the flow log is deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

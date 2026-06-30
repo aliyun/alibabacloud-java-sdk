@@ -15,7 +15,7 @@ public class CreateTransitRouterMulticastDomainRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>Generate a token on your client to make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-4266****</p>
@@ -26,8 +26,10 @@ public class CreateTransitRouterMulticastDomainRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request format, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
+     * <li><p><strong>true</strong>: performs a dry run. The system checks the required parameters, request format, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): sends a normal request. After the request passes the check, the multicast domain is created.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,7 +39,7 @@ public class CreateTransitRouterMulticastDomainRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Multicast domain feature.</p>
+     * <p>The multicast domain options.</p>
      */
     @NameInMap("Options")
     public CreateTransitRouterMulticastDomainRequestOptions options;
@@ -49,8 +51,8 @@ public class CreateTransitRouterMulticastDomainRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the transit router.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region where the transit router is deployed.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to obtain region IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -65,8 +67,8 @@ public class CreateTransitRouterMulticastDomainRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The information about the tags.</p>
-     * <p>You can specify at most 20 tags in each call.</p>
+     * <p>The tag.</p>
+     * <p>You can specify up to 20 tags in each call.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateTransitRouterMulticastDomainRequestTag> tag;
@@ -82,7 +84,7 @@ public class CreateTransitRouterMulticastDomainRequest extends TeaModel {
 
     /**
      * <p>The description of the multicast domain.</p>
-     * <p>The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
+     * <p>The description can be empty or 1 to 256 characters in length, and cannot start with \<code>http\\://\\</code> or \<code>https\\://\\</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>desctest</p>
@@ -92,7 +94,7 @@ public class CreateTransitRouterMulticastDomainRequest extends TeaModel {
 
     /**
      * <p>The name of the multicast domain.</p>
-     * <p>The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
+     * <p>The name can be empty or 1 to 128 characters in length, and cannot start with \<code>http\\://\\</code> or \<code>https\\://\\</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>nametest</p>
@@ -211,15 +213,19 @@ public class CreateTransitRouterMulticastDomainRequest extends TeaModel {
 
     public static class CreateTransitRouterMulticastDomainRequestOptions extends TeaModel {
         /**
-         * <p>Indicates whether the IGMP feature is enabled for the multicast domain. Once enabled, hosts can dynamically join or leave multicast groups by using IGMP protocol. Valid values:</p>
+         * <p>Specifies whether to enable the Internet Group Management Protocol (IGMP) feature for the multicast domain. After you enable IGMP, hosts can dynamically join or leave multicast groups using IGMP. Valid values:</p>
          * <ul>
-         * <li><strong>enable</strong>: enables IGMP.</li>
-         * <li><strong>disable</strong>(default): disables IGMP.</li>
+         * <li><p><strong>enable</strong>: enables the IGMP feature.</p>
+         * </li>
+         * <li><p><strong>disable</strong> (default): disables the IGMP feature.</p>
+         * </li>
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>The IGMP feature is in beta testing. To use it, contact your account manager.</li>
-         * <li>If you select this option, you cannot disable IPv6 after the VBR is created.</li>
+         * <li><p>The IGMP feature is in public preview. To use this feature, contact your account manager to request permissions.</p>
+         * </li>
+         * <li><p>After the IGMP feature is enabled, you cannot disable it.</p>
+         * </li>
          * </ul>
          * </blockquote>
          * 
@@ -228,6 +234,13 @@ public class CreateTransitRouterMulticastDomainRequest extends TeaModel {
          */
         @NameInMap("Igmpv2Support")
         public String igmpv2Support;
+
+        /**
+         * <strong>example:</strong>
+         * <p>enable</p>
+         */
+        @NameInMap("StrictSourceControl")
+        public String strictSourceControl;
 
         public static CreateTransitRouterMulticastDomainRequestOptions build(java.util.Map<String, ?> map) throws Exception {
             CreateTransitRouterMulticastDomainRequestOptions self = new CreateTransitRouterMulticastDomainRequestOptions();
@@ -242,13 +255,21 @@ public class CreateTransitRouterMulticastDomainRequest extends TeaModel {
             return this.igmpv2Support;
         }
 
+        public CreateTransitRouterMulticastDomainRequestOptions setStrictSourceControl(String strictSourceControl) {
+            this.strictSourceControl = strictSourceControl;
+            return this;
+        }
+        public String getStrictSourceControl() {
+            return this.strictSourceControl;
+        }
+
     }
 
     public static class CreateTransitRouterMulticastDomainRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
-         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>You can specify at most 20 tag keys.</p>
+         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https:// </code>.</p>
+         * <p>You can specify up to 20 tag keys.</p>
          * 
          * <strong>example:</strong>
          * <p>TagKey</p>
@@ -258,8 +279,8 @@ public class CreateTransitRouterMulticastDomainRequest extends TeaModel {
 
         /**
          * <p>The tag value.</p>
-         * <p>The tag value can be 0 to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
+         * <p>The tag value can be an empty string or a string of up to 128 characters. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https:// </code>.</p>
+         * <p>Each tag key must have a unique tag value. You can specify up to 20 tag values.</p>
          * 
          * <strong>example:</strong>
          * <p>TagValue</p>

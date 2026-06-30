@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTransitRouterMulticastDomainAssociationsResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>The number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,10 +14,12 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
     public Integer maxResults;
 
     /**
-     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <p>The token for the next query. Valid values:</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is empty, it indicates that no subsequent query is to be sent.</li>
-     * <li>If <strong>NextToken</strong> was returned in the previous query, specify the value to obtain the next set of results.</li>
+     * <li><p>If <strong>NextToken</strong> is empty, it indicates that no next query is to be sent.</p>
+     * </li>
+     * <li><p>If a value is returned for <strong>NextToken</strong>, the value is the token that is used for the next query.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +29,7 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1CD0969B-A605-5D2D-BFF0-699FD182FB7F</p>
@@ -45,7 +47,7 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
     public Integer totalCount;
 
     /**
-     * <p>The information about the resource associated with the multicast domain.</p>
+     * <p>The list of associations.</p>
      */
     @NameInMap("TransitRouterMulticastAssociations")
     public java.util.List<ListTransitRouterMulticastDomainAssociationsResponseBodyTransitRouterMulticastAssociations> transitRouterMulticastAssociations;
@@ -116,7 +118,7 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
 
         /**
          * <p>The type of resource associated with the multicast domain.</p>
-         * <p>Valid value: <strong>VPC</strong>.</p>
+         * <p>The value is <strong>VPC</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>VPC</p>
@@ -125,11 +127,14 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
         public String resourceType;
 
         /**
-         * <p>The association status. Valid values:</p>
+         * <p>The association status.</p>
          * <ul>
-         * <li><strong>Associated</strong>: The resource is associated with the multicast domain.</li>
-         * <li><strong>Associating</strong>: The resource is being associated with the multicast domain.</li>
-         * <li><strong>Dissociating</strong>: The resource is being disassociated from the multicast domain.</li>
+         * <li><p><strong>Associated</strong>: The resource is associated with the multicast domain.</p>
+         * </li>
+         * <li><p><strong>Associating</strong>: The resource is being associated with the multicast domain.</p>
+         * </li>
+         * <li><p><strong>Dissociating</strong>: The resource is being dissociated from the multicast domain.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,10 +14,12 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that determines the start point of the next query. Valid values:</p>
+     * <p>The token to retrieve the next page of results.</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is returned, it indicates that no additional results exist.</li>
-     * <li>If <strong>NextToken</strong> was returned in the previous query, specify the value to obtain the next set of results.</li>
+     * <li><p>If this parameter is empty, all results have been returned.</p>
+     * </li>
+     * <li><p>If a value is returned for <strong>NextToken</strong>, it is the token to start the next query.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +29,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C97FF53F-3EF8-4883-B459-60E171924B23</p>
@@ -36,7 +38,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -45,7 +47,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The information about the VPC connection.</p>
+     * <p>A list of VPC connections.</p>
      */
     @NameInMap("TransitRouterAttachments")
     public java.util.List<ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachments> transitRouterAttachments;
@@ -96,9 +98,33 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
     }
 
     public static class ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachmentsOptions extends TeaModel {
+        /**
+         * <p>Specifies whether appliance mode is enabled.</p>
+         * <ul>
+         * <li><p><strong>disable</strong> (default): Appliance mode is disabled.</p>
+         * </li>
+         * <li><p><strong>enable</strong>: Appliance mode is enabled.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enable</p>
+         */
         @NameInMap("ApplianceModeSupport")
         public String applianceModeSupport;
 
+        /**
+         * <p>Specifies whether IPv6 is enabled.</p>
+         * <ul>
+         * <li><p><strong>disable</strong> (default): IPv6 is disabled.</p>
+         * </li>
+         * <li><p><strong>enable</strong>: IPv6 is enabled.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enable</p>
+         */
         @NameInMap("Ipv6Support")
         public String ipv6Support;
 
@@ -169,7 +195,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
 
     public static class ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachmentsZoneMappings extends TeaModel {
         /**
-         * <p>The ID of the ENI created by the Enterprise Edition transit router in the vSwitch.</p>
+         * <p>The ID of the ENI that the Enterprise Edition transit router creates in the vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>eni-bp149hmyaqegerml****</p>
@@ -178,7 +204,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         public String networkInterfaceId;
 
         /**
-         * <p>The vSwitch ID.</p>
+         * <p>The ID of the vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp1a214sbus8z3b54****</p>
@@ -187,7 +213,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The zone ID.</p>
+         * <p>The ID of the zone.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-h</p>
@@ -228,10 +254,12 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
 
     public static class ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachments extends TeaModel {
         /**
-         * <p>Indicates whether the Enterprise Edition transit router can automatically advertise routes to the VPC. Valid values:</p>
+         * <p>Specifies whether the Enterprise Edition transit router automatically advertises routes to the VPC.</p>
          * <ul>
-         * <li><strong>false</strong></li>
-         * <li><strong>true</strong></li>
+         * <li><p><strong>false</strong>: Routes are not automatically advertised.</p>
+         * </li>
+         * <li><p><strong>true</strong>: Routes are automatically advertised.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -251,7 +279,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
 
         /**
          * <p>The billing method of the VPC connection.</p>
-         * <p>Only <strong>POSTPAY</strong> may be returned, which indicates the default pay-as-you-go billing method.</p>
+         * <p>The value is always <strong>POSTPAY</strong>, which indicates the pay-as-you-go billing method.</p>
          * 
          * <strong>example:</strong>
          * <p>POSTPAY</p>
@@ -261,7 +289,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
 
         /**
          * <p>The time when the VPC connection was created.</p>
-         * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time is in the <code>YYYY-MM-DDThh:mmZ</code> format and in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-06-15T02:14Z</p>
@@ -269,17 +297,28 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The cloud service to which the resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SAS</p>
+         */
         @NameInMap("ManagedService")
         public String managedService;
 
+        /**
+         * <p>A collection of feature attributes.</p>
+         */
         @NameInMap("Options")
         public ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachmentsOptions options;
 
         /**
-         * <p>The entity that pays the fees of the network instance. Valid values:</p>
+         * <p>Specifies who pays for the network instance. Valid values:</p>
          * <ul>
-         * <li><strong>PayByCenOwner</strong>: the Alibaba Cloud account that owns the CEN instance.</li>
-         * <li><strong>PayByResourceOwner</strong>: the Alibaba Cloud account that owns the network instance.</li>
+         * <li><p><strong>PayByCenOwner</strong>: The account that owns the CEN instance pays the fees.</p>
+         * </li>
+         * <li><p><strong>PayByResourceOwner</strong>: The account that owns the network instance pays the fees.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -289,8 +328,8 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         public String orderType;
 
         /**
-         * <p>The type of resource to which the transit router is connected.</p>
-         * <p>Only <strong>VPC</strong> may be returned, which indicates VPCs.</p>
+         * <p>The type of resource to which the connection is attached.</p>
+         * <p>The value is always <strong>VPC</strong>, which indicates a VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>VPC</p>
@@ -299,11 +338,14 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The status of the VPC connection. Valid values:</p>
+         * <p>The status of the VPC connection.</p>
          * <ul>
-         * <li><strong>Attached</strong></li>
-         * <li><strong>Attaching</strong></li>
-         * <li><strong>Detaching</strong></li>
+         * <li><p><strong>Attached</strong>: The connection is established.</p>
+         * </li>
+         * <li><p><strong>Attaching</strong>: The connection is being created.</p>
+         * </li>
+         * <li><p><strong>Detaching</strong>: The connection is being deleted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -313,7 +355,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tags.</p>
+         * <p>A list of tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachmentsTags> tags;
@@ -328,7 +370,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         public String transitRouterAttachmentDescription;
 
         /**
-         * <p>The VPC connection ID.</p>
+         * <p>The ID of the VPC connection.</p>
          * 
          * <strong>example:</strong>
          * <p>tr-attach-nls9fzkfat8934****</p>
@@ -346,7 +388,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         public String transitRouterAttachmentName;
 
         /**
-         * <p>The description of the Enterprise Edition transit router.</p>
+         * <p>The ID of the Enterprise Edition transit router.</p>
          * 
          * <strong>example:</strong>
          * <p>tr-bp1su1ytdxtataupl****</p>
@@ -355,13 +397,13 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         public String transitRouterId;
 
         /**
-         * <p>The features of the VPC connection.</p>
+         * <p>The feature attributes of the VPC connection. This parameter is deprecated. We recommend that you use the Options parameter instead.</p>
          */
         @NameInMap("TransitRouterVPCAttachmentOptions")
         public java.util.Map<String, String> transitRouterVPCAttachmentOptions;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The ID of the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1h8vbrbcgohcju5****</p>
@@ -370,7 +412,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the VPC belongs.</p>
+         * <p>The ID of the account that owns the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>1250123456123456</p>
@@ -379,7 +421,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         public Long vpcOwnerId;
 
         /**
-         * <p>The region ID of the VPC.</p>
+         * <p>The ID of the region where the VPC is deployed.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -388,7 +430,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         public String vpcRegionId;
 
         /**
-         * <p>The primary and secondary zones, vSwitches, and ENIs of the VPC.</p>
+         * <p>The zone mappings of the VPC connection. This includes the vSwitches and elastic network interfaces (ENIs) in the associated VPC.</p>
          */
         @NameInMap("ZoneMappings")
         public java.util.List<ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachmentsZoneMappings> zoneMappings;

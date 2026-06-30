@@ -79,6 +79,12 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
     @NameInMap("ChildInstanceType")
     public String childInstanceType;
 
+    /**
+     * <p>The cloud service that the network instance belongs to. Its standard code is only returned when the VPC is connected to the transit router. For self-managed VPCs, no code is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>swas</p>
+     */
     @NameInMap("ManagedService")
     public String managedService;
 

@@ -8,7 +8,7 @@ public class UpdateTransitRouterRouteEntryRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> is different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> is different for each request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class UpdateTransitRouterRouteEntryRequest extends TeaModel {
 
     /**
      * <p>The new description of the route.</p>
-     * <p>The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
+     * <p>The description must be 1 to 256 characters in length, and cannot start with http\:// or https\://. You can also leave this parameter empty.</p>
      * 
      * <strong>example:</strong>
      * <p>testdesc</p>
@@ -64,7 +64,7 @@ public class UpdateTransitRouterRouteEntryRequest extends TeaModel {
 
     /**
      * <p>The new name of the route.</p>
-     * <p>The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
+     * <p>The name must be 1 to 128 characters in length, and cannot start with http\:// or https\://. You can also leave this parameter empty.</p>
      * 
      * <strong>example:</strong>
      * <p>testname</p>

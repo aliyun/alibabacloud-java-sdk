@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTransitRouterMulticastDomainVSwitchesResponseBody extends TeaModel {
     /**
+     * <p>The number of entries returned per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,6 +14,12 @@ public class ListTransitRouterMulticastDomainVSwitchesResponseBody extends TeaMo
     public Integer maxResults;
 
     /**
+     * <p>The token for the next query. Valid values:</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, there is no next query.</li>
+     * <li>If <strong>NextToken</strong> has a return value, the value is the token for the next query.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
@@ -19,6 +27,8 @@ public class ListTransitRouterMulticastDomainVSwitchesResponseBody extends TeaMo
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B0E7E43C-979A-5130-AA0D-B3ADA69E0827</p>
      */
@@ -26,12 +36,17 @@ public class ListTransitRouterMulticastDomainVSwitchesResponseBody extends TeaMo
     public String requestId;
 
     /**
+     * <p>The number of entries in the list.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The list of vSwitch IDs.</p>
+     */
     @NameInMap("VSwitchIds")
     public java.util.List<String> vSwitchIds;
 

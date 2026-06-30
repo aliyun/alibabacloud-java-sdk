@@ -16,7 +16,7 @@ public class ModifyCenAttributeRequest extends TeaModel {
 
     /**
      * <p>The description of the CEN instance.</p>
-     * <p>The description must be 2 to 256 characters in length. It must start with a letter or Chinese character and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description can be empty or must be 1 to 256 characters in length. The description cannot start with http\:// or https\://.</p>
      * 
      * <strong>example:</strong>
      * <p>cen</p>
@@ -26,7 +26,7 @@ public class ModifyCenAttributeRequest extends TeaModel {
 
     /**
      * <p>The name of the CEN instance.</p>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name can be empty or must be 1 to 128 characters in length. The name cannot start with http\:// or https\://.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -41,8 +41,8 @@ public class ModifyCenAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The level of CIDR block overlapping.</p>
-     * <p>Set the value to <strong>REDUCED</strong> (default). This value specifies that CIDR blocks can overlap but cannot be the same.</p>
+     * <p>The level of CIDR block overlap.</p>
+     * <p>Set the value to <strong>REDUCED</strong>. This is the default value. This value specifies that CIDR blocks can overlap but cannot be identical.</p>
      * 
      * <strong>example:</strong>
      * <p>REDUCED</p>

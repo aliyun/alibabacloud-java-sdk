@@ -14,10 +14,12 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
     public Integer maxResults;
 
     /**
-     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <p>The token for the next query.</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> was not returned, it indicates that no additional results exist.</li>
-     * <li>If <strong>NextToken</strong> was returned in the previous query, specify the value to obtain the next set of results.</li>
+     * <li><p>If this parameter is not returned, it indicates that no more results are to be returned.</p>
+     * </li>
+     * <li><p>If a value is returned for this parameter, the value is the token that is used for the next query.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +29,7 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F6B1D9AB-176D-4399-801D-8BC576F4EB0D</p>
@@ -36,7 +38,7 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -45,7 +47,7 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
     public Integer totalCount;
 
     /**
-     * <p>A list of associated forwarding correlations.</p>
+     * <p>A list of forwarding associations.</p>
      */
     @NameInMap("TransitRouterAssociations")
     public java.util.List<ListTransitRouterRouteTableAssociationsResponseBodyTransitRouterAssociations> transitRouterAssociations;
@@ -97,7 +99,7 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
 
     public static class ListTransitRouterRouteTableAssociationsResponseBodyTransitRouterAssociations extends TeaModel {
         /**
-         * <p>The ID of the next hop.</p>
+         * <p>The ID of the next hop resource.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1h8vbrbcgohcju5****</p>
@@ -106,12 +108,16 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
         public String resourceId;
 
         /**
-         * <p>The type of next hop. Valid values:</p>
+         * <p>The type of the next hop resource.</p>
          * <ul>
-         * <li><strong>VPC</strong>: VPC</li>
-         * <li><strong>VBR</strong>: VBR</li>
-         * <li><strong>TR</strong>: transit router</li>
-         * <li><strong>VPN</strong> :VPN attachment</li>
+         * <li><p><strong>VPC</strong>: virtual private cloud (VPC).</p>
+         * </li>
+         * <li><p><strong>VBR</strong>: virtual border router (VBR).</p>
+         * </li>
+         * <li><p><strong>TR</strong>: transit router.</p>
+         * </li>
+         * <li><p><strong>VPN</strong>: VPN connection.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -121,12 +127,16 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
         public String resourceType;
 
         /**
-         * <p>The status of the associated forwarding correlation. Valid values:</p>
+         * <p>The status of the association.</p>
          * <ul>
-         * <li><strong>Active</strong>: The associated forwarding correlation is available.</li>
-         * <li><strong>Associating</strong>: The associated forwarding correlation is being created.</li>
-         * <li><strong>Dissociating</strong>: The associated forwarding correlation is being deleted.</li>
-         * <li><strong>Deleted</strong>: The associated forwarding correlation is deleted.</li>
+         * <li><p><strong>Active</strong>: The association is active.</p>
+         * </li>
+         * <li><p><strong>Associating</strong>: The association is being created.</p>
+         * </li>
+         * <li><p><strong>Dissociating</strong>: The association is being deleted.</p>
+         * </li>
+         * <li><p><strong>Deleted</strong>: The association is deleted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

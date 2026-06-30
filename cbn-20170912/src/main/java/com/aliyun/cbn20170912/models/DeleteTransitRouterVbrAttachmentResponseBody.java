@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteTransitRouterVbrAttachmentResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3EDA94DE-0AE5-41FC-A91E-7170E408E0FD</p>

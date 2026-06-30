@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTransitRouteTableAggregationDetailResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries returned on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,13 +14,13 @@ public class DescribeTransitRouteTableAggregationDetailResponseBody extends TeaM
     public Integer count;
 
     /**
-     * <p>The configuration of the aggregate route.</p>
+     * <p>The configuration details of the aggregate route.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeTransitRouteTableAggregationDetailResponseBodyData> data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0C2EE7A8-74D4-4081-8236-CEBDE3BBCF50</p>
@@ -29,7 +29,7 @@ public class DescribeTransitRouteTableAggregationDetailResponseBody extends TeaM
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -76,7 +76,7 @@ public class DescribeTransitRouteTableAggregationDetailResponseBody extends TeaM
 
     public static class DescribeTransitRouteTableAggregationDetailResponseBodyData extends TeaModel {
         /**
-         * <p>The error message returned if the configuration of the aggregate route fails.</p>
+         * <p>The message returned if the configuration of the aggregate route fails.</p>
          * 
          * <strong>example:</strong>
          * <p>desctest</p>
@@ -85,7 +85,7 @@ public class DescribeTransitRouteTableAggregationDetailResponseBody extends TeaM
         public String description;
 
         /**
-         * <p>The ID of the virtual private cloud (VPC) for which the aggregate route is configured.</p>
+         * <p>The ID of the VPC instance for which the aggregate route is configured.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-6eh7fp9hdqa2wv85t****</p>
@@ -94,13 +94,18 @@ public class DescribeTransitRouteTableAggregationDetailResponseBody extends TeaM
         public String instanceId;
 
         /**
-         * <p>The status of the aggregate route. Valid values:</p>
+         * <p>The configuration status of the aggregate route.</p>
          * <ul>
-         * <li><strong>Configured</strong>: The aggregate route is advertised to the VPC.</li>
-         * <li><strong>Configuring</strong>: The aggregate route is being advertised.</li>
-         * <li><strong>ConfigFailed</strong>: The aggregate route failed to be advertised.</li>
-         * <li><strong>PartialConfigured</strong>: Failed to advertise the aggregate route to some VPCs.</li>
-         * <li><strong>Deleting</strong>: The aggregate route is being deleted.</li>
+         * <li><p><strong>Configured</strong>: The aggregate route is advertised to the VPC instance.</p>
+         * </li>
+         * <li><p><strong>Configuring</strong>: The aggregate route is being advertised.</p>
+         * </li>
+         * <li><p><strong>ConfigFailed</strong>: The aggregate route failed to be advertised.</p>
+         * </li>
+         * <li><p><strong>PartialConfigured</strong>: The aggregate route was partially advertised.</p>
+         * </li>
+         * <li><p><strong>Deleting</strong>: The aggregate route is being deleted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

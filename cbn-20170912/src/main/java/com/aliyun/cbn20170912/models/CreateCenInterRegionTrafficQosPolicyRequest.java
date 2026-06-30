@@ -7,8 +7,10 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends TeaModel {
     /**
      * <p>The allocation mode of the guaranteed bandwidth. You can specify an absolute bandwidth value or a bandwidth percentage. Valid values:</p>
      * <ul>
-     * <li><strong>byBandwidth</strong>: allocates an absolute bandwidth value for the QoS queue.</li>
-     * <li><strong>byBandwidthPercent</strong> (default): allocates a bandwidth percentage for the OoS queue.</li>
+     * <li><p><strong>byBandwidth</strong>: allocates an absolute bandwidth value for the QoS queue.</p>
+     * </li>
+     * <li><p><strong>byBandwidthPercent</strong> (default): allocates a bandwidth percentage for the OoS queue.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,8 +35,10 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends TeaModel {
     /**
      * <p>Specifies whether only to precheck the API request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: prechecks the request but does not create the QoS policy. The system checks the required parameters, the request format, and the service limits. If the request fails the check, an error message is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong>: sends the API request. If the request passes the precheck, the QoS policy is created. This is the default value.</li>
+     * <li><p><strong>true</strong>: prechecks the request but does not create the QoS policy. The system checks the required parameters, the request format, and the service limits. If the request fails the check, an error message is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong>: sends the API request. If the request passes the precheck, the QoS policy is created. This is the default value.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,7 +61,7 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends TeaModel {
 
     /**
      * <p>The description of the QoS policy.</p>
-     * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http:// or https://.</p>
+     * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http\:// or https\://.</p>
      * 
      * <strong>example:</strong>
      * <p>desctest</p>
@@ -67,7 +71,7 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends TeaModel {
 
     /**
      * <p>The name of the QoS policy.</p>
-     * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
+     * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http\:// or https\://.</p>
      * 
      * <strong>example:</strong>
      * <p>nametest</p>
@@ -217,7 +221,7 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends TeaModel {
          * <p>Each QoS policy supports at most 10 queues. You can specify a valid bandwidth value for each queue.</p>
          * <p>For example, a value of 1 specifies that the queue can consume 1 Mbit/s of the inter-region bandwidth.</p>
          * <blockquote>
-         * <p> The sum of the absolute bandwidth values of all the queues in a QoS policy cannot exceed the total bandwidth of the inter-region connection.</p>
+         * <p>The sum of the absolute bandwidth values of all the queues in a QoS policy cannot exceed the total bandwidth of the inter-region connection.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -236,7 +240,7 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends TeaModel {
         /**
          * <p>The description of the current queue.</p>
          * <p>Each QoS policy supports at most 10 queues. You can specify a description for each queue.</p>
-         * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
+         * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http\:// or https\://.</p>
          * 
          * <strong>example:</strong>
          * <p>desctest</p>
@@ -247,7 +251,7 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends TeaModel {
         /**
          * <p>The name of the current queue.</p>
          * <p>Each QoS policy supports at most three queues. You can specify a name for each queue.</p>
-         * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
+         * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http\:// or https\://.</p>
          * 
          * <strong>example:</strong>
          * <p>nametest</p>
@@ -260,7 +264,7 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends TeaModel {
          * <p>Each QoS policy supports at most 10 queues. You can specify a valid percentage for each queue.</p>
          * <p>For example, a value of <strong>1</strong> specifies that the queue can consume 1% of the inter-region bandwidth.</p>
          * <blockquote>
-         * <p> The sum of the percentage values of all the queues in a QoS policy cannot exceed 100%.</p>
+         * <p>The sum of the percentage values of all the queues in a QoS policy cannot exceed 100%.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

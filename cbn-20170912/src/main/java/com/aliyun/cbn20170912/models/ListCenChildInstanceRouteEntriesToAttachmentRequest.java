@@ -14,7 +14,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends TeaMode
     public String cenId;
 
     /**
-     * <p>The ID of the route table configured on the network instance.</p>
+     * <p>The ID of the route table of the network instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends TeaMode
     public String childInstanceRouteTableId;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries to return on each page. The default value is <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -33,10 +33,12 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends TeaMode
     public Integer maxResults;
 
     /**
-     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <p>The token for the next page of results.</p>
      * <ul>
-     * <li>If this is your first query and no subsequent queries are to be sent, ignore this parameter.</li>
-     * <li>If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</li>
+     * <li><p>If this is your first query, leave this parameter empty.</p>
+     * </li>
+     * <li><p>If a next query is required, set the value to the NextToken value returned from the last call.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,13 +60,13 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends TeaMode
     public Long resourceOwnerId;
 
     /**
-     * <p>The filter condition for the destination CIDR block.</p>
+     * <p>The filter for the destination CIDR block.</p>
      */
     @NameInMap("RouteFilter")
     public java.util.List<ListCenChildInstanceRouteEntriesToAttachmentRequestRouteFilter> routeFilter;
 
     /**
-     * <p>Specifies whether to host the route. If you leave the parameter empty, the route is not hosted. A value of TR specifies that the route is hosted on a transit router.</p>
+     * <p>The type of the managed routing service. If this parameter is empty, the route is not managed. Set the value to TR. This value indicates that the route is managed by a transit router.</p>
      * 
      * <strong>example:</strong>
      * <p>TR</p>
@@ -177,9 +179,9 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends TeaMode
 
     public static class ListCenChildInstanceRouteEntriesToAttachmentRequestRouteFilter extends TeaModel {
         /**
-         * <p>The match mode of the route.</p>
+         * <p>The route matching mode.</p>
          * <ul>
-         * <li><strong>prefix-exact-match</strong>: exact match.</li>
+         * <li><strong>prefix-exact-match</strong>: exact match</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -189,7 +191,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends TeaMode
         public String key;
 
         /**
-         * <p>The destination CIDR blocks.</p>
+         * <p>A list of destination CIDR blocks.</p>
          */
         @NameInMap("Value")
         public java.util.List<String> value;

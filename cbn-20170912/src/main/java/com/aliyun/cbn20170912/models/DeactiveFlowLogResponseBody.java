@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeactiveFlowLogResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F7DDDC17-FA06-4AC2-8F35-59D2470FCFC1</p>
@@ -16,8 +16,8 @@ public class DeactiveFlowLogResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the call is successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: yes</li>
-     * <li><strong>false</strong>: no</li>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>

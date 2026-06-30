@@ -5,15 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
     /**
-     * <p>The permissions that are granted to the CEN instance.</p>
+     * <p>A list of permission records.</p>
      */
     @NameInMap("GrantRules")
     public java.util.List<DescribeGrantRulesToResourceResponseBodyGrantRules> grantRules;
 
     /**
      * <ul>
-     * <li>If no value is specified for <strong>MaxResults</strong>, query results are returned in one batch. The value of <strong>MaxResults</strong> indicates the total number of entries.</li>
-     * <li>If a value is specified for <strong>MaxResults</strong>, query results are returned in batches. The value of <strong>MaxResults</strong> in the response indicates the number of entries in the current batch.</li>
+     * <li><p>If the <strong>MaxResults</strong> parameter was not included in the request, this field indicates the total number of entries.</p>
+     * </li>
+     * <li><p>If the <strong>MaxResults</strong> parameter was included in the request, this field indicates the number of entries on the current page.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -23,10 +25,12 @@ public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The token to use in your next request to retrieve a new page of results. Valid values:</p>
      * <ul>
-     * <li>If the <strong>NextToken</strong> parameter is empty, no next page exists.</li>
-     * <li>If a value is returned for <strong>NextToken</strong>, the value is the token that determines the start point of the next query.</li>
+     * <li><p>If the <strong>NextToken</strong> parameter is empty, no more results are available.</p>
+     * </li>
+     * <li><p>If a value is returned for <strong>NextToken</strong>, use it for the next request to get the next page of results.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,7 +104,7 @@ public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
 
     public static class DescribeGrantRulesToResourceResponseBodyGrantRules extends TeaModel {
         /**
-         * <p>The ID of the CEN instance.</p>
+         * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cen-44m0p68spvlrqq****</p>
@@ -109,7 +113,7 @@ public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
         public String cenId;
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the CEN instance belongs.</p>
+         * <p>The ID of the main account that owns the Cloud Enterprise Network (CEN) instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1250123456123456</p>
@@ -118,7 +122,7 @@ public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
         public Long cenOwnerId;
 
         /**
-         * <p>The timestamp when the permissions were granted. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The timestamp when the permission was granted. The value is in UTC and follows the ISO 8601 standard: <code>YYYY-MM-DDThh:mmZ</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-01-24T16:46Z</p>
@@ -134,10 +138,12 @@ public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
         public String effectiveOrderType;
 
         /**
-         * <p>The entity that pays the fees of the network instance. Valid values: Valid values:</p>
+         * <p>The payer for the network instance. Valid values:</p>
          * <ul>
-         * <li><strong>PayByCenOwner</strong>: The fees of the connections and data forwarding on the transit router are paid by the Alibaba Cloud account to which the CEN instance belongs.</li>
-         * <li><strong>PayByResourceOwner</strong>: The fees of the connections and data forwarding on the transit router are paid by the Alibaba Cloud account to which the network instance belongs.</li>
+         * <li><p><strong>PayByCenOwner</strong>: The CEN instance owner pays the Transit Router connection and data processing fees for the network instance.</p>
+         * </li>
+         * <li><p><strong>PayByResourceOwner</strong>: The network instance owner pays the Transit Router connection and data processing fees for the network instance.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

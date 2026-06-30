@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class TempUpgradeCenBandwidthPackageSpecRequest extends TeaModel {
     /**
+     * <p>The maximum temporary bandwidth. Unit: Mbps.</p>
+     * <p>Valid values: <strong>2 to 10,000</strong></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +16,7 @@ public class TempUpgradeCenBandwidthPackageSpecRequest extends TeaModel {
     public Integer bandwidth;
 
     /**
+     * <p>Bandwidth package ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +26,7 @@ public class TempUpgradeCenBandwidthPackageSpecRequest extends TeaModel {
     public String cenBandwidthPackageId;
 
     /**
+     * <p>The expiration time of the temporary upgrade. It follows the ISO8601 standard and is displayed in UTC time, <code>YYYY-MM-DDThh:mm:ssZ</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

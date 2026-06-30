@@ -8,7 +8,7 @@ public class DescribeCensResponseBody extends TeaModel {
     public DescribeCensResponseBodyCens cens;
 
     /**
-     * <p>The number of the page returned.</p>
+     * <p>The page number of the returned page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTransitRouterRouteTablePropagationsRequest extends TeaModel {
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>50</strong>.</p>
+     * <p>The number of entries to return on each page. The default value is <strong>50</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -14,7 +14,7 @@ public class ListTransitRouterRouteTablePropagationsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that determines the start point of the query.</p>
+     * <p>The token that is used to retrieve the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>dd20****</p>
@@ -35,11 +35,14 @@ public class ListTransitRouterRouteTablePropagationsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The status of the route learning correlation. Valid values:</p>
+     * <p>The status of the route propagation.</p>
      * <ul>
-     * <li><strong>Active</strong>: available</li>
-     * <li><strong>Enabling</strong>: being enabled</li>
-     * <li><strong>Disabling</strong>: being disabled</li>
+     * <li><p><strong>Active</strong>: The propagation is active.</p>
+     * </li>
+     * <li><p><strong>Enabling</strong>: The propagation is being enabled.</p>
+     * </li>
+     * <li><p><strong>Disabling</strong>: The propagation is being disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,12 +70,16 @@ public class ListTransitRouterRouteTablePropagationsRequest extends TeaModel {
     public String transitRouterAttachmentResourceId;
 
     /**
-     * <p>The type of the network instance. Valid values:</p>
+     * <p>The type of the network instance.</p>
      * <ul>
-     * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
-     * <li><strong>VBR</strong>: virtual border router (VBR)</li>
-     * <li><strong>TR</strong>: transit router</li>
-     * <li><strong>VPN</strong>: VPN connection</li>
+     * <li><p><strong>VPC</strong>: a virtual private cloud (VPC).</p>
+     * </li>
+     * <li><p><strong>VBR</strong>: a virtual border router (VBR).</p>
+     * </li>
+     * <li><p><strong>TR</strong>: a transit router.</p>
+     * </li>
+     * <li><p><strong>VPN</strong>: a VPN connection.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

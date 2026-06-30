@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeactiveFlowLogRequest extends TeaModel {
     /**
-     * <p>The ID of the CEN instance.</p>
+     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cen-7qthudw0ll6jmc****</p>
@@ -14,10 +14,9 @@ public class DeactiveFlowLogRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.</p>
+     * <p>The unique, one-use client token that is used to ensure the idempotence of the request. It can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request is different.</p>
+     * <p>If you leave this parameter empty, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,8 +42,8 @@ public class DeactiveFlowLogRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the flow log is deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the flow log.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

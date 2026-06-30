@@ -14,10 +14,12 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that determines the start point of the next query. Valid values:</p>
+     * <p>The token that is used for the next query. Valid values:</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> was returned in the previous query, specify the value to obtain the next set of results.</li>
-     * <li>If a value of <strong>NextToken</strong> is not returned, it indicates that no additional results exist.</li>
+     * <li><p>If <strong>NextToken</strong> is empty, it indicates that no next query is to be sent.</p>
+     * </li>
+     * <li><p>If a value is returned for <strong>NextToken</strong>, the value is the token that is used for the next query.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +29,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>82678F4A-C9F7-4CC1-8BF0-D619A63BFC57</p>
@@ -45,7 +47,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>A list of route tables.</p>
+     * <p>The list of route tables.</p>
      */
     @NameInMap("TransitRouterRouteTables")
     public java.util.List<ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTables> transitRouterRouteTables;
@@ -97,10 +99,12 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
 
     public static class ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTablesRouteTableOptions extends TeaModel {
         /**
-         * <p>Indicates whether ECMP routing is enabled. Valid values:</p>
+         * <p>The multi-region ECMP routing feature. Valid values:</p>
          * <ul>
-         * <li><strong>disable</strong> If ECMP routing is disabled, routes that are learned from different regions but have the same prefix and attributes select the transit router with the smallest region ID as the next hop. Region IDs are sorted in alphabetic order. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.</li>
-         * <li><strong>enable</strong> If ECMP routing is enabled, routes that are learned from different regions but have the same prefix and attributes form an ECMP route. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.</li>
+         * <li><p><strong>disable</strong>: Disables multi-region ECMP routing. After this feature is disabled, for routes that are learned from different regions and have the same prefix and other attributes, the system selects the transit router with the smallest region ID as the next hop. Region IDs are sorted in alphabetical order. This changes the latency and bandwidth consumption between different regions. Make sure that you fully evaluate the impact before you disable the feature.</p>
+         * </li>
+         * <li><p><strong>enable</strong>: Enables multi-region ECMP routing. After this feature is enabled, for routes that are learned from different regions and have the same prefix and other attributes, ECMP routing is formed. This changes the latency and bandwidth consumption between different regions. Make sure that you fully evaluate the impact before you enable the feature.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -169,7 +173,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
     public static class ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTables extends TeaModel {
         /**
          * <p>The time when the route table was created.</p>
-         * <p>The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.</p>
+         * <p>The time is displayed in the YYYY-MM-DDThh:mmZ format in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-03-15T09:39Z</p>
@@ -178,7 +182,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The region ID of the Enterprise Edition transit router.</p>
+         * <p>The ID of the region where the Enterprise Edition transit router is deployed.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -193,13 +197,13 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         public ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTablesRouteTableOptions routeTableOptions;
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTablesTags> tags;
 
         /**
-         * <p>The transit router ID.</p>
+         * <p>The ID of the transit router.</p>
          * 
          * <strong>example:</strong>
          * <p>tr-8vb8bie2koduo5awz****</p>
@@ -217,7 +221,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         public String transitRouterRouteTableDescription;
 
         /**
-         * <p>The ID of the route table.</p>
+         * <p>The route table ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vtb-bp1dudbh2d5na6b50****</p>
@@ -235,11 +239,14 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         public String transitRouterRouteTableName;
 
         /**
-         * <p>The status of the route table. Valid values:</p>
+         * <p>The status of the route table.</p>
          * <ul>
-         * <li><strong>Creating</strong></li>
-         * <li><strong>Deleting</strong></li>
-         * <li><strong>Active</strong></li>
+         * <li><p><strong>Creating</strong>: The route table is being created.</p>
+         * </li>
+         * <li><p><strong>Deleting</strong>: The route table is being deleted.</p>
+         * </li>
+         * <li><p><strong>Active</strong>: The route table is available.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -249,10 +256,12 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         public String transitRouterRouteTableStatus;
 
         /**
-         * <p>The type of the route table. Valid values:</p>
+         * <p>The type of the route table.</p>
          * <ul>
-         * <li><strong>Custom</strong></li>
-         * <li><strong>System</strong></li>
+         * <li><p><strong>Custom</strong>: a custom route table.</p>
+         * </li>
+         * <li><p><strong>System</strong>: the default route table.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

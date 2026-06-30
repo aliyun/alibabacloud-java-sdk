@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListGrantVSwitchEnisResponseBody extends TeaModel {
     /**
-     * <p>The information about the ENI.</p>
+     * <p>A list of ENI information.</p>
      */
     @NameInMap("GrantVSwitchEnis")
     public java.util.List<ListGrantVSwitchEnisResponseBodyGrantVSwitchEnis> grantVSwitchEnis;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The maximum number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
+     * <p>The token that is used for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****</p>
@@ -29,7 +29,7 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DBFE1736-2F33-5309-9954-875B11E9519D</p>
@@ -38,10 +38,11 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * <blockquote>
-     * <p>If MaxResults and NextToken are sued to query results by page, ignore this parameter.</p>
+     * <p>Notice: </p>
      * </blockquote>
+     * <p>This parameter is invalid if you use MaxResults and NextToken to perform a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -96,7 +97,7 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
 
     public static class ListGrantVSwitchEnisResponseBodyGrantVSwitchEnis extends TeaModel {
         /**
-         * <p>The ENI description.</p>
+         * <p>The description of the ENI.</p>
          * 
          * <strong>example:</strong>
          * <p>created by CBN</p>
@@ -105,7 +106,7 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ENI ID.</p>
+         * <p>The ID of the ENI.</p>
          * 
          * <strong>example:</strong>
          * <p>eni-p0w172vv82kxzb49****</p>
@@ -114,7 +115,7 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
         public String networkInterfaceId;
 
         /**
-         * <p>The ENI name.</p>
+         * <p>The name of the ENI.</p>
          * 
          * <strong>example:</strong>
          * <p>my-eni-name</p>
@@ -126,18 +127,20 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
          * <p>The primary private IPv4 address of the ENI.</p>
          * 
          * <strong>example:</strong>
-         * <p>192.168.XX.XX</p>
+         * <p><code>192.168.**.**</code></p>
          */
         @NameInMap("PrimaryIpAddress")
         public String primaryIpAddress;
 
         /**
-         * <p>Indicates whether the ENI is created by a transit router. Valid values:</p>
+         * <p>Indicates whether the ENI is created by a transit router.</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: The ENI is created by a transit router.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The ENI is not created by a transit router.</p>
+         * </li>
          * </ul>
-         * <p>ENIs that are created by transit routers cannot be used as multicast sources or members.</p>
+         * <p>ENIs created by transit routers cannot be used as multicast sources or members.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -146,7 +149,7 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
         public Boolean transitRouterFlag;
 
         /**
-         * <p>The vSwitch ID.</p>
+         * <p>The ID of the vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-p0w9s2ig1jnwgrbzl****</p>
@@ -155,7 +158,7 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The ID of the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-p0w9alkte4w2htrqe****</p>

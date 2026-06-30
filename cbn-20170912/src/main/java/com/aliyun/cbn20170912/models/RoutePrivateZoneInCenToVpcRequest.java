@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class RoutePrivateZoneInCenToVpcRequest extends TeaModel {
     /**
-     * <p>The ID of the region where PrivateZone is accessed.</p>
-     * <p>This region refers to the region in which PrivateZone is accessed by clients.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region from which the PrivateZone service is accessed.</p>
+     * <p>The access region is the region from which the PrivateZone service is accessed.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class RoutePrivateZoneInCenToVpcRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The ID of the region where PrivateZone is deployed.</p>
+     * <p>The ID of the region where the PrivateZone service is located.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class RoutePrivateZoneInCenToVpcRequest extends TeaModel {
     public String hostRegionId;
 
     /**
-     * <p>The ID of the VPC that is associated with PrivateZone.</p>
+     * <p>The ID of the VPC instance that is associated with the PrivateZone service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

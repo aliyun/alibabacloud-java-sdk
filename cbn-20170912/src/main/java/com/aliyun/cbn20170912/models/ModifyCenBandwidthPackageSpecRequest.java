@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCenBandwidthPackageSpecRequest extends TeaModel {
     /**
-     * <p>The new maximum bandwidth value of the bandwidth plan. Unit: Mbit/s.</p>
+     * <p>The new maximum bandwidth of the bandwidth plan. Unit: Mbps.</p>
      * <p>Valid values: <strong>2</strong> to <strong>10000</strong>.</p>
      * 
      * <strong>example:</strong>

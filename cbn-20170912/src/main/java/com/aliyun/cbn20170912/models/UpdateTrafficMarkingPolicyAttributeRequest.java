@@ -295,7 +295,7 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends TeaModel {
          * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
-         * <p>Guangzhou Testing</p>
+         * <p>Guangzhou test</p>
          */
         @NameInMap("TrafficMatchRuleName")
         public String trafficMatchRuleName;
@@ -443,7 +443,7 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends TeaModel {
          * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
-         * <p>Hangzhou-to-Qingdao CAT</p>
+         * <p>Hangzhou-Qingdao CAT</p>
          */
         @NameInMap("TrafficMatchRuleDescription")
         public String trafficMatchRuleDescription;

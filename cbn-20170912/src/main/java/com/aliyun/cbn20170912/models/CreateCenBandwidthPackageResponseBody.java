@@ -23,7 +23,7 @@ public class CreateCenBandwidthPackageResponseBody extends TeaModel {
     public String cenBandwidthPackageOrderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E4B345CD-2CBA-4881-AF6D-E5D9BAE1CA7B</p>

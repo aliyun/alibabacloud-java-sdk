@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGrantVSwitchEnisRequest extends TeaModel {
     /**
-     * <p>The ID of the CEN instance to which the VPC is attached.</p>
+     * <p>The ID of the CEN instance to which the VPC is connected.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,11 +15,13 @@ public class ListGrantVSwitchEnisRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 10 to 500.</p>
+     * <p>The maximum number of entries to return on each page. Valid values: 10 to 500.</p>
      * <p>Default value:</p>
      * <ul>
-     * <li>If you do not specify a value, the default value is 20.</li>
-     * <li>If this parameter is set to a value greater than 500, the default value is 500.</li>
+     * <li><p>If you do not specify this parameter, the default value is 20.</p>
+     * </li>
+     * <li><p>If you specify a value greater than 500, the default value is 500.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,7 +31,7 @@ public class ListGrantVSwitchEnisRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The ID of ENI N. Valid values of N: 1 to 100.</p>
+     * <p>The ID of the ENI.</p>
      */
     @NameInMap("NetworkInterfaceId")
     public java.util.List<String> networkInterfaceId;
@@ -44,7 +46,13 @@ public class ListGrantVSwitchEnisRequest extends TeaModel {
     public String networkInterfaceName;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <p>The token that is used for the next query. Valid values:</p>
+     * <ul>
+     * <li><p>If this is your first query, you do not need to specify this parameter.</p>
+     * </li>
+     * <li><p>If a next query is to be sent, set the value to the NextToken value that was returned from the last call.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****</p>
@@ -62,7 +70,7 @@ public class ListGrantVSwitchEnisRequest extends TeaModel {
      * <p>The primary private IPv4 address of the ENI.</p>
      * 
      * <strong>example:</strong>
-     * <p>192.168.XX.XX</p>
+     * <p><code>192.168.**.**</code></p>
      */
     @NameInMap("PrimaryIpAddress")
     public String primaryIpAddress;
@@ -74,7 +82,8 @@ public class ListGrantVSwitchEnisRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of a vSwitch in the VPC. You can specify only one vSwitch in each call.</p>
+     * <p>The ID of a vSwitch in the VPC.</p>
+     * <p>You can query information about the ENIs in only one vSwitch at a time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

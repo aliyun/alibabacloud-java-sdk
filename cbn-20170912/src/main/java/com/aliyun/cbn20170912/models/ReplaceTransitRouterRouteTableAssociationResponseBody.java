@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReplaceTransitRouterRouteTableAssociationResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>160BD7D3-3D1E-5702-9AF0-56E4B15FCB65</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries returned on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -22,8 +22,10 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
-     * <li>If a value is returned for <strong>NextToken</strong>, the value is the token that determines the start point of the next query.</li>
+     * <li><p>If <strong>NextToken</strong> is empty, no next page exists.</p>
+     * </li>
+     * <li><p>If a value is returned for <strong>NextToken</strong>, the value is the token that determines the start point of the next query.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,7 +35,7 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0C2EE7A8-74D4-4081-8236-CEBDE3BBCF50</p>
@@ -42,7 +44,7 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -116,7 +118,7 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
 
         /**
          * <p>The type of the aggregate route.</p>
-         * <p>The valid value is <strong>Static</strong>, which indicates a static route. By default, aggregate routes advertised to a VPC are considered custom routes.</p>
+         * <p>The value is set to <strong>Static</strong>. This indicates that the route is a static route. After the aggregate route is advertised to a VPC, it becomes a custom route entry by default.</p>
          * 
          * <strong>example:</strong>
          * <p>Static</p>
@@ -125,8 +127,8 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
         public String routeType;
 
         /**
-         * <p>The scope of networks that you want to advertise the aggregate route.</p>
-         * <p>The valid value is <strong>VPC</strong>, which indicates that the aggregate route is advertised to all virtual private clouds (VPCs) that are in associated forwarding correlation with the Enterprise Edition transit router and have route synchronization enabled.</p>
+         * <p>The scope of the aggregate route.</p>
+         * <p>The value is set to <strong>VPC</strong>. This indicates that the aggregate route is advertised to all VPCs that are associated with the route table of the Enterprise Edition transit router and have route synchronization enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>VPC</p>
@@ -135,22 +137,27 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
         public String scope;
 
         /**
-         * <p>The list of propagation ranges of the aggregation route.</p>
+         * <p>The list of scopes of the aggregate route.</p>
          * <blockquote>
-         * <p> You must specify at least one of the following attributes: Aggregation Scope and Aggregate Scope List. We recommend that you specify the latter. The elements in the two attributes cannot be duplicate.</p>
+         * <p>You must specify at least one of the Scope and ScopeList properties. We recommend that you specify ScopeList. The elements in ScopeList cannot be the same as the value of Scope.</p>
          * </blockquote>
          */
         @NameInMap("ScopeList")
         public java.util.List<String> scopeList;
 
         /**
-         * <p>The status of the advertisement of the aggregate route. Valid values:</p>
+         * <p>The advertising status of the aggregate route.</p>
          * <ul>
-         * <li><strong>AllConfigured</strong>: The aggregate route is advertised to all VPCs.</li>
-         * <li><strong>Configuring</strong>: The aggregate route is being advertised.</li>
-         * <li><strong>ConfigFailed</strong>: The aggregate route failed to be advertised.</li>
-         * <li><strong>PartialConfigured</strong>: Failed to advertise the aggregate route to some VPCs.</li>
-         * <li><strong>Deleting</strong>: The aggregate route is being deleted.</li>
+         * <li><p><strong>AllConfigured</strong>: The aggregate route is advertised to all VPCs.</p>
+         * </li>
+         * <li><p><strong>Configuring</strong>: The aggregate route is being advertised.</p>
+         * </li>
+         * <li><p><strong>ConfigFailed</strong>: The aggregate route failed to be advertised.</p>
+         * </li>
+         * <li><p><strong>PartialConfigured</strong>: The aggregate route is advertised to some VPCs.</p>
+         * </li>
+         * <li><p><strong>Deleting</strong>: The aggregate route is being deleted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

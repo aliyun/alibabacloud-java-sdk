@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,13 +23,13 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
     public Integer pageSize;
 
     /**
-     * <p>A list of prefix lists.</p>
+     * <p>The information about the prefix lists.</p>
      */
     @NameInMap("PrefixLists")
     public java.util.List<ListTransitRouterPrefixListAssociationResponseBodyPrefixLists> prefixLists;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6005CA94-676E-1FEE-985E-7602EFAADD6A</p>
@@ -93,9 +93,9 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
 
     public static class ListTransitRouterPrefixListAssociationResponseBodyPrefixLists extends TeaModel {
         /**
-         * <p>The ID of the next hop.</p>
+         * <p>The ID of the next hop connection.</p>
          * <blockquote>
-         * <p>A value of <strong>BlackHole</strong> indicates that all the CIDR blocks in the prefix list are blackhole routes. Packets destined for the CIDR blocks are dropped.</p>
+         * <p>If <strong>BlackHole</strong> is returned, it indicates that all CIDR blocks in the prefix list are blackhole routes. All traffic destined for the CIDR blocks in the prefix list is dropped.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -105,7 +105,7 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
         public String nextHop;
 
         /**
-         * <p>The ID of the network instance associated with the next hop connection.</p>
+         * <p>The ID of the network instance that is associated with the next hop connection.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-6eh7fp9hdqa2wv85t****</p>
@@ -114,12 +114,16 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
         public String nextHopInstanceId;
 
         /**
-         * <p>The type of the next hop. Valid values:</p>
+         * <p>The next hop type.</p>
          * <ul>
-         * <li><strong>BlackHole</strong>: All the CIDR blocks in the prefix list are blackhole routes. Packets destined for the CIDR blocks are dropped.</li>
-         * <li><strong>VPC</strong>: The next hop of the CIDR blocks in the prefix list is a VPC connection.</li>
-         * <li><strong>VBR</strong>: The next hop of the CIDR blocks in the prefix list is a VBR connection.</li>
-         * <li><strong>TR</strong>: The next hop of the CIDR blocks in the prefix list is an inter-region connection.</li>
+         * <li><p><strong>BlackHole</strong>: The routes are blackhole routes. All traffic destined for the CIDR blocks in the prefix list is dropped.</p>
+         * </li>
+         * <li><p><strong>VPC</strong>: The next hop is a Virtual Private Cloud (VPC) connection.</p>
+         * </li>
+         * <li><p><strong>VBR</strong>: The next hop is a virtual border router (VBR) connection.</p>
+         * </li>
+         * <li><p><strong>TR</strong>: The next hop is an inter-region connection.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -147,10 +151,12 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
         public String prefixListId;
 
         /**
-         * <p>The status of the prefix list. Valid values:</p>
+         * <p>The status of the prefix list.</p>
          * <ul>
-         * <li><strong>Active</strong>: The prefix list is effective.</li>
-         * <li><strong>Updating</strong>: The prefix list is being updated.</li>
+         * <li><p><strong>Active</strong>: The prefix list is active.</p>
+         * </li>
+         * <li><p><strong>Updating</strong>: The prefix list is being updated.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

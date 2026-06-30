@@ -8,7 +8,7 @@ public class CreateTrafficMarkingPolicyRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+     * <p>If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -20,8 +20,10 @@ public class CreateTrafficMarkingPolicyRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request format, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
+     * <li><p><strong>true</strong>: performs a dry run. The system checks the required parameters, request format, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): performs a dry run and sends the request.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,7 +68,7 @@ public class CreateTrafficMarkingPolicyRequest extends TeaModel {
 
     /**
      * <p>The description of the traffic marking policy.</p>
-     * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http:// or https://.</p>
+     * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http\:// or https\://.</p>
      * 
      * <strong>example:</strong>
      * <p>desctest</p>
@@ -76,7 +78,7 @@ public class CreateTrafficMarkingPolicyRequest extends TeaModel {
 
     /**
      * <p>The name of the traffic marking policy.</p>
-     * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
+     * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http\:// or https\://.</p>
      * 
      * <strong>example:</strong>
      * <p>nametest</p>
@@ -229,9 +231,12 @@ public class CreateTrafficMarkingPolicyRequest extends TeaModel {
          * <p>Packets whose destination ports fall within the destination port range meet the traffic classification rule. If you do not specify destination port range, all packets meet the traffic classification rule.</p>
          * <p>You can enter up to two port numbers. Take note of the following rules:</p>
          * <ul>
-         * <li>If you enter only one port number, such as 1, packets whose destination port is 1 meet the traffic classification rule. A value of -1 specifies all destination ports.</li>
-         * <li>If you enter two port numbers, such as 1 and 200, packets whose destination ports fall into 1 and 200 meet the traffic classification rule.</li>
-         * <li>If you enter two port numbers and one of them is -1, the other port number must also be -1. In this case, all packets meet the traffic classification rule.</li>
+         * <li><p>If you enter only one port number, such as 1, packets whose destination port is 1 meet the traffic classification rule. A value of -1 specifies all destination ports.</p>
+         * </li>
+         * <li><p>If you enter two port numbers, such as 1 and 200, packets whose destination ports fall into 1 and 200 meet the traffic classification rule.</p>
+         * </li>
+         * <li><p>If you enter two port numbers and one of them is -1, the other port number must also be -1. In this case, all packets meet the traffic classification rule.</p>
+         * </li>
          * </ul>
          * <p>You can create up to 50 traffic classification rules in each call. You can specify a destination port range for each traffic classification rule.</p>
          */
@@ -242,7 +247,7 @@ public class CreateTrafficMarkingPolicyRequest extends TeaModel {
          * <p>The Differentiated Service Code Point (DSCP) value that is used to match packets. Valid values: <strong>0</strong> to <strong>63</strong>.</p>
          * <p>Packets that carry the specified DSCP value meet the traffic classification rule. If you do not specify a DSCP value, all packets meet the traffic classification rule.</p>
          * <blockquote>
-         * <p> The DSCP value that you specify for this parameter is the DSCP value that packets carry before they are transmitted over the inter-region connection.</p>
+         * <p>The DSCP value that you specify for this parameter is the DSCP value that packets carry before they are transmitted over the inter-region connection.</p>
          * </blockquote>
          * <p>You can create up to 50 traffic classification rules in each call. You can specify a DSCP value for each traffic classification rule.</p>
          * 
@@ -257,18 +262,30 @@ public class CreateTrafficMarkingPolicyRequest extends TeaModel {
          * <p>Traffic classification rules support the following protocols: <strong>HTTP</strong>, <strong>HTTPS</strong>, <strong>TCP</strong>, <strong>UDP</strong>, <strong>SSH</strong>, and <strong>Telnet</strong>. For more information, log on to the <a href="https://cen.console.aliyun.com/cen/list">CEN console</a>.</p>
          * <p><strong>Some protocols use a fixed port. Click to view the protocols and ports.</strong></p>
          * <ul>
-         * <li>If the protocol is <strong>ICMP</strong>, the destination port must be <strong>-1</strong>.</li>
-         * <li>If the protocol is <strong>GRE</strong>, the destination port must be <strong>1</strong>.</li>
-         * <li>If the protocol is <strong>SSH</strong>, the destination port must be <strong>22</strong>.</li>
-         * <li>If the protocol is <strong>Telnet</strong>, the destination port must be <strong>23</strong>.</li>
-         * <li>If the protocol is <strong>HTTP</strong>, the destination port must be <strong>80</strong>.</li>
-         * <li>If the protocol is <strong>HTTPS</strong>, the destination port must be <strong>443</strong>.</li>
-         * <li>If the protocol is <strong>MS SQL</strong>, the destination port must be <strong>1443</strong>.</li>
-         * <li>If the protocol is <strong>Oracle</strong>, the destination port must be <strong>1521</strong>.</li>
-         * <li>If the protocol is <strong>Mysql</strong>, the destination port must be <strong>3306</strong>.</li>
-         * <li>If the protocol is <strong>RDP</strong>, the destination port must be <strong>3389</strong>.</li>
-         * <li>If the protocol is <strong>Postgre SQL</strong>, the destination port must be <strong>5432</strong>.</li>
-         * <li>If the protocol is <strong>Redis</strong>, the destination port must be <strong>6379</strong>.</li>
+         * <li><p>If the protocol is <strong>ICMP</strong>, the destination port must be <strong>-1</strong>.</p>
+         * </li>
+         * <li><p>If the protocol is <strong>GRE</strong>, the destination port must be <strong>1</strong>.</p>
+         * </li>
+         * <li><p>If the protocol is <strong>SSH</strong>, the destination port must be <strong>22</strong>.</p>
+         * </li>
+         * <li><p>If the protocol is <strong>Telnet</strong>, the destination port must be <strong>23</strong>.</p>
+         * </li>
+         * <li><p>If the protocol is <strong>HTTP</strong>, the destination port must be <strong>80</strong>.</p>
+         * </li>
+         * <li><p>If the protocol is <strong>HTTPS</strong>, the destination port must be <strong>443</strong>.</p>
+         * </li>
+         * <li><p>If the protocol is <strong>MS SQL</strong>, the destination port must be <strong>1443</strong>.</p>
+         * </li>
+         * <li><p>If the protocol is <strong>Oracle</strong>, the destination port must be <strong>1521</strong>.</p>
+         * </li>
+         * <li><p>If the protocol is <strong>Mysql</strong>, the destination port must be <strong>3306</strong>.</p>
+         * </li>
+         * <li><p>If the protocol is <strong>RDP</strong>, the destination port must be <strong>3389</strong>.</p>
+         * </li>
+         * <li><p>If the protocol is <strong>Postgre SQL</strong>, the destination port must be <strong>5432</strong>.</p>
+         * </li>
+         * <li><p>If the protocol is <strong>Redis</strong>, the destination port must be <strong>6379</strong>.</p>
+         * </li>
          * </ul>
          * <p>You can create up to 50 traffic classification rules in each call. You can specify a protocol for each traffic classification rule.</p>
          * 
@@ -294,9 +311,12 @@ public class CreateTrafficMarkingPolicyRequest extends TeaModel {
          * <p>Packets whose source ports fall within the source port range meet the traffic classification rule. If you do not specify a source port range, all packets meet the traffic classification rule.</p>
          * <p>You can enter up to two port numbers. Take note of the following rules:</p>
          * <ul>
-         * <li>If you enter only one port number, such as 1, packets whose source port is 1 meet the traffic classification rule. A value of -1 specifies all source ports.</li>
-         * <li>If you enter two port numbers, such as 1 and 200, packets whose source ports fall into 1 and 200 meet the traffic classification rule.</li>
-         * <li>If you enter two port numbers and one of them is -1, the other port number must also be -1. In this case, all packets meet the traffic classification rule.</li>
+         * <li><p>If you enter only one port number, such as 1, packets whose source port is 1 meet the traffic classification rule. A value of -1 specifies all source ports.</p>
+         * </li>
+         * <li><p>If you enter two port numbers, such as 1 and 200, packets whose source ports fall into 1 and 200 meet the traffic classification rule.</p>
+         * </li>
+         * <li><p>If you enter two port numbers and one of them is -1, the other port number must also be -1. In this case, all packets meet the traffic classification rule.</p>
+         * </li>
          * </ul>
          * <p>You can create up to 50 traffic classification rules in each call. You can specify a source port range for each traffic classification rule.</p>
          */
@@ -306,7 +326,7 @@ public class CreateTrafficMarkingPolicyRequest extends TeaModel {
         /**
          * <p>The description of the traffic classification rule.</p>
          * <p>You can create up to 50 traffic classification rules in each call. You can specify a description for each traffic classification rule.</p>
-         * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
+         * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http\:// or https\://.</p>
          * 
          * <strong>example:</strong>
          * <p>desctest</p>
@@ -317,7 +337,7 @@ public class CreateTrafficMarkingPolicyRequest extends TeaModel {
         /**
          * <p>The name of the traffic classification rule.</p>
          * <p>You can create up to 50 traffic classification rules in each call. You can specify a name for each traffic classification rule.</p>
-         * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
+         * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http\:// or https\://.</p>
          * 
          * <strong>example:</strong>
          * <p>nametest</p>

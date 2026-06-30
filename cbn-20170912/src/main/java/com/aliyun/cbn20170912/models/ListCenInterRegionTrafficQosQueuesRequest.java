@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListCenInterRegionTrafficQosQueuesRequest extends TeaModel {
     /**
-     * <p>The filter works based on the actual bandwidth. Enter a positive integer. Unit: Mbit/s.</p>
+     * <p>Filters the results by the actual bandwidth. Only positive integers are supported. Unit: Mbit/s.</p>
      */
     @NameInMap("EffectiveBandwidthFilter")
     public ListCenInterRegionTrafficQosQueuesRequestEffectiveBandwidthFilter effectiveBandwidthFilter;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries to return on each page. Valid values: 1 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,10 +20,12 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <p>A pagination token. It is used in the next request to retrieve a new page of results.</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
-     * <li>If a value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+     * <li><p>If <strong>NextToken</strong> is empty, no more results are returned.</p>
+     * </li>
+     * <li><p>If NextToken is not empty, the value of <strong>NextToken</strong> is used for the next query.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,8 +56,8 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends TeaModel {
     public String trafficQosPolicyId;
 
     /**
-     * <p>The description of the QoS queue.</p>
-     * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
+     * <p>The description of the queue in the QoS policy.</p>
+     * <p>The description can be empty or 1 to 256 characters in length. It cannot start with \<code>http\\://\\</code> or \<code>https\\://\\</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>qosQueueDescription</p>
@@ -64,7 +66,7 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends TeaModel {
     public String trafficQosQueueDescription;
 
     /**
-     * <p>The ID of the queue.</p>
+     * <p>The ID of the queue in the QoS policy.</p>
      * 
      * <strong>example:</strong>
      * <p>qos-queue-siakjb2nn9gz5z****</p>
@@ -73,8 +75,8 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends TeaModel {
     public String trafficQosQueueId;
 
     /**
-     * <p>The name of the QoS queue.</p>
-     * <p>The name must be 1 to 128 characters in length, and cannot start with http:// or https://.</p>
+     * <p>The name of the queue in the QoS policy.</p>
+     * <p>The name can be empty or 1 to 128 characters in length. It cannot start with \<code>http\\://\\</code> or \<code>https\\://\\</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>qosQueueName</p>
@@ -211,7 +213,7 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends TeaModel {
 
     public static class ListCenInterRegionTrafficQosQueuesRequestEffectiveBandwidthFilter extends TeaModel {
         /**
-         * <p>The actual bandwidth is equal to or larger than the specified value.</p>
+         * <p>The actual bandwidth is greater than or equal to the specified value.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -220,7 +222,7 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends TeaModel {
         public Long gte;
 
         /**
-         * <p>The actual bandwidth is equal to or smaller than the specified value.</p>
+         * <p>The actual bandwidth is less than or equal to the specified value.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

@@ -56,9 +56,12 @@ public class DetachCenChildInstanceRequest extends TeaModel {
     /**
      * <p>The type of the network instance. Valid values:</p>
      * <ul>
-     * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
-     * <li><strong>VBR</strong>: virtual border router (VBR)</li>
-     * <li><strong>CCN</strong>: Cloud Connect Network (CCN) instance</li>
+     * <li><p><strong>VPC</strong>: virtual private cloud (VPC)</p>
+     * </li>
+     * <li><p><strong>VBR</strong>: virtual border router (VBR)</p>
+     * </li>
+     * <li><p><strong>CCN</strong>: Cloud Connect Network (CCN) instance</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

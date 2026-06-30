@@ -15,9 +15,9 @@ public class CreateTransitRouterEcrAttachmentRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>Make sure that the client token is unique for each request. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID is different for each request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -27,10 +27,12 @@ public class CreateTransitRouterEcrAttachmentRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request.</li>
+     * <li><p><strong>true</strong>: performs a dry run. The system checks the required parameters, request format, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned. The system does not change the configuration of the ECR connection.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): sends a normal request. If the request passes the check, the system changes the configuration of the ECR connection.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,7 +42,7 @@ public class CreateTransitRouterEcrAttachmentRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the ECR.</p>
+     * <p>The ID of the ECR instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,9 +52,9 @@ public class CreateTransitRouterEcrAttachmentRequest extends TeaModel {
     public String ecrId;
 
     /**
-     * <p>The ID of the Alibaba Cloud account to which the ECR belongs. By default, the ID of the current Alibaba Cloud account is specified.</p>
+     * <p>The ID of the Alibaba Cloud account to which the ECR instance belongs. The default value is the ID of the current Alibaba Cloud account.</p>
      * <blockquote>
-     * <p> If you want to connect to a network instance that belongs to a different account, this parameter is required.</p>
+     * <p>If you want to connect to a network instance that belongs to another Alibaba Cloud account, this parameter is required.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -68,7 +70,7 @@ public class CreateTransitRouterEcrAttachmentRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the transit router.</p>
+     * <p>The ID of the region where the transit router is deployed.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
      * 
      * <strong>example:</strong>
@@ -85,14 +87,14 @@ public class CreateTransitRouterEcrAttachmentRequest extends TeaModel {
 
     /**
      * <p>The tags.</p>
-     * <p>You can specify at most 20 tags in each call.</p>
+     * <p>You can specify up to 20 tags in each call.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateTransitRouterEcrAttachmentRequestTag> tag;
 
     /**
      * <p>The description of the ECR connection.</p>
-     * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
+     * <p>The description can be empty or 1 to 256 characters in length, and cannot start with http\:// or https\://.</p>
      * 
      * <strong>example:</strong>
      * <p>testdesc</p>
@@ -102,7 +104,7 @@ public class CreateTransitRouterEcrAttachmentRequest extends TeaModel {
 
     /**
      * <p>The name of the ECR connection.</p>
-     * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
+     * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http\:// or https\://.</p>
      * 
      * <strong>example:</strong>
      * <p>nametest</p>
@@ -239,8 +241,8 @@ public class CreateTransitRouterEcrAttachmentRequest extends TeaModel {
     public static class CreateTransitRouterEcrAttachmentRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
-         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>You can specify at most 20 tag keys in each call.</p>
+         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https:// </code>.</p>
+         * <p>You can specify up to 20 tag keys.</p>
          * 
          * <strong>example:</strong>
          * <p>tagtest</p>
@@ -250,8 +252,8 @@ public class CreateTransitRouterEcrAttachmentRequest extends TeaModel {
 
         /**
          * <p>The tag value.</p>
-         * <p>The tag value can be an empty string or up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>Each key-value pair must be unique. You can specify values for at most 20 tag keys in each call.</p>
+         * <p>The tag value can be empty or up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https:// </code>.</p>
+         * <p>Each tag key must have a unique tag value. You can specify up to 20 tag values.</p>
          * 
          * <strong>example:</strong>
          * <p>tagtest</p>

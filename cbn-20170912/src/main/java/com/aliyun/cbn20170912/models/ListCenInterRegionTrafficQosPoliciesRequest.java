@@ -14,10 +14,12 @@ public class ListCenInterRegionTrafficQosPoliciesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <p>The token for the next page of results. Valid values:</p>
      * <ul>
-     * <li>If this is your first query or no subsequent query is to be sent, ignore this parameter.</li>
-     * <li>If a next query is to be sent, set the value to the value of <strong>NextToken</strong> that is returned from the last call.</li>
+     * <li><p>If this is your first query or no next page exists, do not specify this parameter.</p>
+     * </li>
+     * <li><p>If a next page exists, set the value to the <strong>NextToken</strong> value returned from the previous call.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,7 +42,7 @@ public class ListCenInterRegionTrafficQosPoliciesRequest extends TeaModel {
 
     /**
      * <p>The description of the QoS policy.</p>
-     * <p>The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
+     * <p>The description can be empty or 1 to 256 characters in length. It cannot start with http\:// or https\://.</p>
      * 
      * <strong>example:</strong>
      * <p>desctest</p>
@@ -59,7 +61,7 @@ public class ListCenInterRegionTrafficQosPoliciesRequest extends TeaModel {
 
     /**
      * <p>The name of the QoS policy.</p>
-     * <p>The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.</p>
+     * <p>The name can be empty or 1 to 128 characters in length. It cannot start with http\:// or https\://.</p>
      * 
      * <strong>example:</strong>
      * <p>nametest</p>
@@ -77,7 +79,7 @@ public class ListCenInterRegionTrafficQosPoliciesRequest extends TeaModel {
     public String transitRouterAttachmentId;
 
     /**
-     * <p>The ID of the transit router.</p>
+     * <p>The ID of the TransitRouter instance.</p>
      * 
      * <strong>example:</strong>
      * <p>tr-bp1rmwxnk221e3fas****</p>

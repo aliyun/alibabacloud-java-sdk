@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyGrantInstanceToTransitRouterRequest extends TeaModel {
     /**
+     * <p>The ID of the CEN instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,12 @@ public class ModifyGrantInstanceToTransitRouterRequest extends TeaModel {
     public String cenId;
 
     /**
+     * <p>A token used to ensure the idempotence of the request.</p>
+     * <p>You can generate this token from your client, but you must ensure it is unique for each request. The client token can contain only ASCII characters.</p>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the system uses the request\&quot;s <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> is unique for each API request.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-42665544****</p>
      */
@@ -24,6 +31,7 @@ public class ModifyGrantInstanceToTransitRouterRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The ID of the network instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,6 +44,7 @@ public class ModifyGrantInstanceToTransitRouterRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The payer for the network instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

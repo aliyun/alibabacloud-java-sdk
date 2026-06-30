@@ -17,7 +17,7 @@ public class ActiveFlowLogRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId may be different for each request.</p>
+     * <p>If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId may be different for each request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

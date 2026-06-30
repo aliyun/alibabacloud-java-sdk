@@ -8,7 +8,7 @@ public class DeleteTransitRouterVpnAttachmentRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each request is unique.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -20,8 +20,10 @@ public class DeleteTransitRouterVpnAttachmentRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
+     * <li><p><strong>true</strong>: performs a dry run. The system checks the required parameters, request format, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): sends a normal request. If the request passes the check, the VPN connection is deleted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,10 +33,12 @@ public class DeleteTransitRouterVpnAttachmentRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether to forcefully delete the VPN attachment. Valid values:</p>
+     * <p>Specifies whether to forcefully delete the VPN connection. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default): Check for resource dependencies, such as associated forwarding and route learning, before the VPN attachment is deleted. If such resources exist, the VPN attachment is not deleted and an error message is returned.</li>
-     * <li><strong>true</strong>: Delete the resource dependencies along with the VPN attachment.</li>
+     * <li><p><strong>false</strong> (default): checks for resource dependencies, such as associated forwarding and route learning, before the VPN connection is deleted. If a dependency is found, the deletion fails and an error message is returned.</p>
+     * </li>
+     * <li><p><strong>true</strong>: deletes the VPN connection and all its dependencies.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,7 +60,7 @@ public class DeleteTransitRouterVpnAttachmentRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the VPN attachment.</p>
+     * <p>The ID of the VPN connection.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

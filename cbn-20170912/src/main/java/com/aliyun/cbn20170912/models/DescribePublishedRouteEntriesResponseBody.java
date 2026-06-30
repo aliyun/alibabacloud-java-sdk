@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -26,7 +26,7 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
     public DescribePublishedRouteEntriesResponseBodyPublishedRouteEntries publishedRouteEntries;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>FF1A7B2A-677F-4F71-96EA-6002B329F437</p>

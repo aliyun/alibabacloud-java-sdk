@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCenRegionDomainRouteEntriesRequest extends TeaModel {
     /**
-     * <p>The CEN instance ID.</p>
+     * <p>The ID of the CEN instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,7 +16,7 @@ public class DescribeCenRegionDomainRouteEntriesRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+     * <p>Call <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class DescribeCenRegionDomainRouteEntriesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The default value is <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class DescribeCenRegionDomainRouteEntriesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>500</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries to return on each page. The default value is <strong>10</strong>. Valid values: <strong>1</strong> to <strong>500</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -56,13 +56,18 @@ public class DescribeCenRegionDomainRouteEntriesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The route status. Valid values:</p>
+     * <p>The status of the route entry. Valid values:</p>
      * <ul>
-     * <li><strong>Active</strong> (default): available</li>
-     * <li><strong>Candidate</strong>: standby</li>
-     * <li><strong>Rejected</strong>: rejected</li>
-     * <li><strong>Prohibited</strong>: prohibited</li>
-     * <li><strong>All</strong> (default value): all routes</li>
+     * <li><p><strong>Active</strong> (default): active.</p>
+     * </li>
+     * <li><p><strong>Candidate</strong>: backup.</p>
+     * </li>
+     * <li><p><strong>Rejected</strong>: rejected.</p>
+     * </li>
+     * <li><p><strong>Prohibited</strong>: disabled.</p>
+     * </li>
+     * <li><p><strong>All</strong>: all route entries in the current region, regardless of their status.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyTransitRouterMulticastDomainRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>A client token that ensures the idempotence of the request.</p>
+     * <p>Generate a unique token on your client for each request. The token can contain only ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-4266****</p>
@@ -15,10 +15,12 @@ public class ModifyTransitRouterMulticastDomainRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request.</li>
+     * <li><p><strong>true</strong>: Performs a dry run. The system checks the required parameters, request format, and service limits. If the check fails, an error message is returned. If the check passes, the <code>DryRunOperation</code> error code is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): Sends the request. If the request passes the check, the name and description of the multicast domain are modified.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +30,7 @@ public class ModifyTransitRouterMulticastDomainRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Multicast domain feature.</p>
+     * <p>The feature options of the multicast domain.</p>
      */
     @NameInMap("Options")
     public ModifyTransitRouterMulticastDomainRequestOptions options;
@@ -47,7 +49,7 @@ public class ModifyTransitRouterMulticastDomainRequest extends TeaModel {
 
     /**
      * <p>The new description of the multicast domain.</p>
-     * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
+     * <p>The description can be empty or 1 to 256 characters long. It cannot start with http\:// or https\://.</p>
      * 
      * <strong>example:</strong>
      * <p>desctest</p>
@@ -67,7 +69,7 @@ public class ModifyTransitRouterMulticastDomainRequest extends TeaModel {
 
     /**
      * <p>The new name of the multicast domain.</p>
-     * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
+     * <p>The name can be empty or 1 to 128 characters long. It cannot start with http\:// or https\://.</p>
      * 
      * <strong>example:</strong>
      * <p>nametest</p>
@@ -162,11 +164,13 @@ public class ModifyTransitRouterMulticastDomainRequest extends TeaModel {
 
     public static class ModifyTransitRouterMulticastDomainRequestOptions extends TeaModel {
         /**
-         * <p>Indicates whether the IGMP feature is enabled for the multicast domain. Once enabled, hosts can dynamically join or leave multicast groups by using the IGMP protocol. Default value: <strong>enable</strong>.</p>
+         * <p>Specifies whether to enable the Internet Group Management Protocol (IGMP) feature for the multicast domain. When this feature is enabled, hosts can use IGMP to dynamically join or leave multicast groups. Set the value to <strong>enable</strong>.</p>
          * <blockquote>
          * <ul>
-         * <li>The IGMP feature is in beta testing. To use it, contact your account manager.</li>
-         * <li>The IGMP feature cannot be disabled after it is enabled.</li>
+         * <li><p>The IGMP feature is in public preview. To use this feature, contact your account manager.</p>
+         * </li>
+         * <li><p>You cannot disable the IGMP feature after it is enabled.</p>
+         * </li>
          * </ul>
          * </blockquote>
          * 
@@ -175,6 +179,13 @@ public class ModifyTransitRouterMulticastDomainRequest extends TeaModel {
          */
         @NameInMap("Igmpv2Support")
         public String igmpv2Support;
+
+        /**
+         * <strong>example:</strong>
+         * <p>enable</p>
+         */
+        @NameInMap("StrictSourceControl")
+        public String strictSourceControl;
 
         public static ModifyTransitRouterMulticastDomainRequestOptions build(java.util.Map<String, ?> map) throws Exception {
             ModifyTransitRouterMulticastDomainRequestOptions self = new ModifyTransitRouterMulticastDomainRequestOptions();
@@ -187,6 +198,14 @@ public class ModifyTransitRouterMulticastDomainRequest extends TeaModel {
         }
         public String getIgmpv2Support() {
             return this.igmpv2Support;
+        }
+
+        public ModifyTransitRouterMulticastDomainRequestOptions setStrictSourceControl(String strictSourceControl) {
+            this.strictSourceControl = strictSourceControl;
+            return this;
+        }
+        public String getStrictSourceControl() {
+            return this.strictSourceControl;
         }
 
     }

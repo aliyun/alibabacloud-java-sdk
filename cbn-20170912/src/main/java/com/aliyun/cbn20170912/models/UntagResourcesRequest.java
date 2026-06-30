@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
+     * <p>Specifies whether to delete all tags. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Yes</li>
+     * <li><strong>false</strong> (default): No</li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter takes effect only when the <strong>TagKey.N</strong> parameter is empty.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -18,6 +27,9 @@ public class UntagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The ID of the region.</p>
+     * <p>This parameter is not required when the resource type is Cen or BandwidthPackage. For all other resource types, this parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -25,6 +37,7 @@ public class UntagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Resource ID. The value of <strong>N</strong> ranges from <strong>1</strong> to <strong>50</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +53,17 @@ public class UntagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>Resource type. Valid values:</p>
+     * <p><strong>Cen</strong>: Cloud Enterprise Network (CEN).</p>
+     * <p><strong>BandwidthPackage</strong>: Bandwidth package.</p>
+     * <p><strong>TransitRouter</strong>: Transit router.</p>
+     * <p><strong>TransitRouterVpcAttachment</strong>: VPC attachment.</p>
+     * <p><strong>TransitRouterVbrAttachment</strong>: VBR attachment.</p>
+     * <p><strong>TransitRouterPeerAttachment</strong>: Inter-region attachment.</p>
+     * <p><strong>TransitRouterVpnAttachment</strong>: VPN attachment.</p>
+     * <p><strong>TransitRouterRouteTable</strong>: Route table.</p>
+     * <p><strong>Flowlog</strong>: Flow log.</p>
+     * <p><strong>TransitRouterMulticastDomain</strong>: Multicast domain.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +73,10 @@ public class UntagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>Tag key.</p>
+     * <p>A tag key can contain up to 64 characters. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+     * <p>If you specify multiple tag keys, the logical relation among these tag keys is <strong>OR</strong>. Valid values of <strong>N</strong>: <strong>1</strong> to <strong>20</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>FinanceDept</p>
      */

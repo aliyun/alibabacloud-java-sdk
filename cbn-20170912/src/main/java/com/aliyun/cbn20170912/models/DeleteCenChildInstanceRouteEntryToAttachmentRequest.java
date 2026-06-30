@@ -16,9 +16,9 @@ public class DeleteCenChildInstanceRouteEntryToAttachmentRequest extends TeaMode
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.</p>
+     * <p>Generate a token from your client to make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class DeleteCenChildInstanceRouteEntryToAttachmentRequest extends TeaMode
     public String clientToken;
 
     /**
-     * <p>The destination CIDR block of the route.</p>
+     * <p>The destination CIDR block of the route entry.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,13 +38,15 @@ public class DeleteCenChildInstanceRouteEntryToAttachmentRequest extends TeaMode
     public String destinationCidrBlock;
 
     /**
-     * <p>Specifies whether to perform a dry run to check information such as the permissions and the instance status. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. A dry run checks for potential issues, including permissions and instance status. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong>: performs a dry run and sends the request.</li>
-     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.</li>
+     * <li><p><strong>false</strong> (default): Sends a normal request. The route entry of the network instance is deleted after the request passes the check.</p>
+     * </li>
+     * <li><p><strong>true</strong>: Sends a check request. The system checks the required parameters and the request format. If the check fails, an error message is returned. If the check succeeds, the corresponding request ID is returned. The route entry of the network instance is not deleted.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is not in use.</p>
+     * <p>This parameter is not in effect.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -66,7 +68,7 @@ public class DeleteCenChildInstanceRouteEntryToAttachmentRequest extends TeaMode
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the route table configured on the network instance.</p>
+     * <p>The ID of the route table that belongs to the network instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

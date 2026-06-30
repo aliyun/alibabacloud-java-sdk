@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeChildInstanceRegionsRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values: zh-CN (Chinese, which is the default language), en-US (English), and ja (Japanese).</p>
+     * <p>The language of the response. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
@@ -22,9 +22,12 @@ public class DescribeChildInstanceRegionsRequest extends TeaModel {
     /**
      * <p>The type of the network instance. Valid values:</p>
      * <ul>
-     * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
-     * <li><strong>VBR</strong>: virtual border router (VBR)</li>
-     * <li><strong>CCN</strong>: Cloud Connect Network (CCN) instance</li>
+     * <li><p><strong>VPC</strong>: a virtual private cloud (VPC).</p>
+     * </li>
+     * <li><p><strong>VBR</strong>: a virtual border router (VBR).</p>
+     * </li>
+     * <li><p><strong>CCN</strong>: a Cloud Connect Network (CCN) instance.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

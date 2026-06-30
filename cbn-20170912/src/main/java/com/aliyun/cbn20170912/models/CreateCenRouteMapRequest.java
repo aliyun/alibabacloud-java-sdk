@@ -7,8 +7,10 @@ public class CreateCenRouteMapRequest extends TeaModel {
     /**
      * <p>The match method that is used to match routes based on the AS path. Valid values:</p>
      * <ul>
-     * <li><strong>Include</strong>: fuzzy match. A route is a match if the AS path of the route overlaps with the AS path in the match conditions.</li>
-     * <li><strong>Complete</strong>: exact match. A route is a match only if the AS path of the route matches the AS path in the match conditions.</li>
+     * <li><p><strong>Include</strong>: fuzzy match. A route is a match if the AS path of the route overlaps with the AS path in the match conditions.</p>
+     * </li>
+     * <li><p><strong>Complete</strong>: exact match. A route is a match only if the AS path of the route matches the AS path in the match conditions.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,8 +60,10 @@ public class CreateCenRouteMapRequest extends TeaModel {
     /**
      * <p>The match method that is used to match routes based on the community. Valid values:</p>
      * <ul>
-     * <li><strong>Include</strong>: fuzzy match. A route is a match if the community of the route overlaps with the community in the match conditions.</li>
-     * <li><strong>Complete</strong>: exact match. A route is a match only if the community of the route matches the community in the match conditions.</li>
+     * <li><p><strong>Include</strong>: fuzzy match. A route is a match if the community of the route overlaps with the community in the match conditions.</p>
+     * </li>
+     * <li><p><strong>Complete</strong>: exact match. A route is a match only if the community of the route matches the community in the match conditions.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,8 +75,10 @@ public class CreateCenRouteMapRequest extends TeaModel {
     /**
      * <p>The action to be performed on the community. Valid values:</p>
      * <ul>
-     * <li><strong>Additive</strong>: adds the community to the route.</li>
-     * <li><strong>Replace</strong>: replaces the original community of the route.</li>
+     * <li><p><strong>Additive</strong>: adds the community to the route.</p>
+     * </li>
+     * <li><p><strong>Replace</strong>: replaces the original community of the route.</p>
+     * </li>
      * </ul>
      * <p>This parameter specifies the action to be performed when a route meets the match condition.</p>
      * 
@@ -84,7 +90,7 @@ public class CreateCenRouteMapRequest extends TeaModel {
 
     /**
      * <p>The description of the routing policy.</p>
-     * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
+     * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http\:// or https\://.</p>
      * 
      * <strong>example:</strong>
      * <p>desctest</p>
@@ -120,7 +126,7 @@ public class CreateCenRouteMapRequest extends TeaModel {
 
     /**
      * <p>The prefix list against which routes are matched.</p>
-     * <p>Specify IP addresses in CIDR notations. You can specify at most 32 CIDR blocks.</p>
+     * <p>Specify IP addresses in CIDR notations. You can specify at most 64 CIDR blocks.</p>
      * <p>IPv4 and IPv4 addresses are supported.</p>
      * 
      * <strong>example:</strong>
@@ -132,13 +138,18 @@ public class CreateCenRouteMapRequest extends TeaModel {
     /**
      * <p>The IDs of the destination network instances to which the routes belong. The following network instance types are supported:</p>
      * <ul>
-     * <li>VPC</li>
-     * <li>VBR</li>
-     * <li>CCN instance</li>
-     * <li>SAG instance</li>
-     * <li>The ID of the IPsec-VPN connection.</li>
+     * <li><p>VPC</p>
+     * </li>
+     * <li><p>VBR</p>
+     * </li>
+     * <li><p>CCN instance</p>
+     * </li>
+     * <li><p>SAG instance</p>
+     * </li>
+     * <li><p>The ID of the IPsec-VPN connection.</p>
+     * </li>
      * </ul>
-     * <p>You can enter at most 32 IDs.</p>
+     * <p>You can enter at most 64 IDs.</p>
      * <blockquote>
      * <p>The destination instance IDs take effect only when Direction is set to Export from Regional Gateway and the destination instances are deployed in the current region.</p>
      * </blockquote>
@@ -152,8 +163,10 @@ public class CreateCenRouteMapRequest extends TeaModel {
     /**
      * <p>Specifies whether to exclude destination instance IDs. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default): A route is a match if the destination instance ID is included in the list specified by <strong>SourceInstanceIds.N</strong>.</li>
-     * <li><strong>true</strong>: A route is a match if the destination network instance ID is not in the list specified by <strong>SourceInstanceIds.N</strong>.</li>
+     * <li><p><strong>false</strong> (default): A route is a match if the destination instance ID is included in the list specified by <strong>SourceInstanceIds.N</strong>.</p>
+     * </li>
+     * <li><p><strong>true</strong>: A route is a match if the destination network instance ID is not in the list specified by <strong>SourceInstanceIds.N</strong>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -163,13 +176,13 @@ public class CreateCenRouteMapRequest extends TeaModel {
     public Boolean destinationInstanceIdsReverseMatch;
 
     /**
-     * <p>The destination region IDs of the route. You can specify at most 32 region IDs.</p>
+     * <p>The destination region IDs of the route. You can specify at most 64 region IDs.</p>
      */
     @NameInMap("DestinationRegionIds")
     public java.util.List<String> destinationRegionIds;
 
     /**
-     * <p>The IDs of the destination route tables to which routes are evaluated. You can enter at most 32 route table IDs.</p>
+     * <p>The IDs of the destination route tables to which routes are evaluated. You can enter at most 64 route table IDs.</p>
      * <blockquote>
      * <p>The destination route table IDs take effect only when Direction is set to Export from Regional Gateway and the destination route tables belong to network instances deployed in the current region.</p>
      * </blockquote>
@@ -183,8 +196,10 @@ public class CreateCenRouteMapRequest extends TeaModel {
     /**
      * <p>The action to be performed on a route that meets all the match conditions. Valid values:</p>
      * <ul>
-     * <li><strong>Permit</strong>: the route is permitted.</li>
-     * <li><strong>Deny</strong>: the route is denied.</li>
+     * <li><p><strong>Permit</strong>: the route is permitted.</p>
+     * </li>
+     * <li><p><strong>Deny</strong>: the route is denied.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -197,8 +212,10 @@ public class CreateCenRouteMapRequest extends TeaModel {
     /**
      * <p>The type of IP address in the match condition. Valid values:</p>
      * <ul>
-     * <li><strong>IPv4</strong>: IPv4 address</li>
-     * <li><strong>IPv6</strong>: IPv6 address</li>
+     * <li><p><strong>IPv4</strong>: IPv4 address</p>
+     * </li>
+     * <li><p><strong>IPv6</strong>: IPv6 address</p>
+     * </li>
      * </ul>
      * <p>This parameter can be empty. If no value is specified, all types of IP address are a match.</p>
      * 
@@ -210,7 +227,7 @@ public class CreateCenRouteMapRequest extends TeaModel {
 
     /**
      * <p>The AS paths based on which routes are compared.</p>
-     * <p>You can specify at most 32 AS numbers.</p>
+     * <p>You can specify at most 64 AS numbers.</p>
      * <blockquote>
      * <p>Only the AS-SEQUENCE parameter is supported. The AS-SET, AS-CONFED-SEQUENCE, and AS-CONFED-SET parameters are not supported. In other words, only the AS number list is supported. Sets and sub-lists are not supported.</p>
      * </blockquote>
@@ -224,7 +241,7 @@ public class CreateCenRouteMapRequest extends TeaModel {
     /**
      * <p>The community set based on which routes are compared.</p>
      * <p>Specify the community in the format of n:m. Valid values of n and m: <strong>1</strong> to <strong>65535</strong>. Each community must comply with the RFC 1997 standard. The RFC 8092 standard that defines Border Gateway Protocol (BGP) large communities is not supported.</p>
-     * <p>You can specify at most 32 communities.</p>
+     * <p>You can specify at most 64 communities.</p>
      * <blockquote>
      * <p>If the configurations of the communities are incorrect, routes may fail to be advertised to your data center.</p>
      * </blockquote>
@@ -238,9 +255,12 @@ public class CreateCenRouteMapRequest extends TeaModel {
     /**
      * <p>The priority of the routing policy that you want to associate with the current one.</p>
      * <ul>
-     * <li>This parameter takes effect only when the <strong>MapResult</strong> parameter is set to <strong>Permit</strong>. This way, the permitted route is matched against the next routing policy.</li>
-     * <li>The region and direction of the routing policy to be associated must be the same as those of the current routing policy.</li>
-     * <li>The priority of the next routing policy must be lower than the priority of the current routing policy.</li>
+     * <li><p>This parameter takes effect only when the <strong>MapResult</strong> parameter is set to <strong>Permit</strong>. This way, the permitted route is matched against the next routing policy.</p>
+     * </li>
+     * <li><p>The region and direction of the routing policy to be associated must be the same as those of the current routing policy.</p>
+     * </li>
+     * <li><p>The priority of the next routing policy must be lower than the priority of the current routing policy.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -284,8 +304,10 @@ public class CreateCenRouteMapRequest extends TeaModel {
      * <p>The AS paths that are prepended by using an action statement when regional gateways receive or advertise routes.</p>
      * <p>The AS paths vary based on the direction in which the routing policy is applied:</p>
      * <ul>
-     * <li>If AS paths are prepended to a routing policy that is applied in the inbound direction, you must specify source network instance IDs and the source region in the match condition. In addition, the source region must be the same as the region where the routing policy is applied.</li>
-     * <li>If AS paths are prepended to a routing policy that is applied in the outbound direction, you must specify destination network instance IDs in the match condition.</li>
+     * <li><p>If AS paths are prepended to a routing policy that is applied in the inbound direction, you must specify source network instance IDs and the source region in the match condition. In addition, the source region must be the same as the region where the routing policy is applied.</p>
+     * </li>
+     * <li><p>If AS paths are prepended to a routing policy that is applied in the outbound direction, you must specify destination network instance IDs in the match condition.</p>
+     * </li>
      * </ul>
      * <p>This parameter specifies the action to be performed when a route meets the match condition. You can specify at most 32 AS numbers.</p>
      * 
@@ -317,9 +339,12 @@ public class CreateCenRouteMapRequest extends TeaModel {
     /**
      * <p>The type of route to be compared. Valid values: The following route types are supported:</p>
      * <ul>
-     * <li><strong>System</strong>: system routes that are automatically generated by the system.</li>
-     * <li><strong>Custom</strong>: custom routes that are manually added.</li>
-     * <li><strong>BGP</strong>: routes that are advertised over BGP.</li>
+     * <li><p><strong>System</strong>: system routes that are automatically generated by the system.</p>
+     * </li>
+     * <li><p><strong>Custom</strong>: custom routes that are manually added.</p>
+     * </li>
+     * <li><p><strong>BGP</strong>: routes that are advertised over BGP.</p>
+     * </li>
      * </ul>
      * <p>You can specify multiple route types.</p>
      * 
@@ -340,8 +365,10 @@ public class CreateCenRouteMapRequest extends TeaModel {
      * </li>
      * <li><p><strong>VPN</strong>: VPN gateway or IPsec connection</p>
      * <ul>
-     * <li>If the IPsec-VPN connection or SSL client is associated with a VPN gateway, the VPC associated with the VPN gateway must be connected to a transit router, and the VPN gateway must use BGP dynamic routing. Otherwise, this parameter cannot take effect.</li>
-     * <li>This parameter takes effect if the IPsec connection is directly connected to a transit router.</li>
+     * <li><p>If the IPsec-VPN connection or SSL client is associated with a VPN gateway, the VPC associated with the VPN gateway must be connected to a transit router, and the VPN gateway must use BGP dynamic routing. Otherwise, this parameter cannot take effect.</p>
+     * </li>
+     * <li><p>This parameter takes effect if the IPsec connection is directly connected to a transit router.</p>
+     * </li>
      * </ul>
      * </li>
      * </ul>
@@ -356,13 +383,18 @@ public class CreateCenRouteMapRequest extends TeaModel {
     /**
      * <p>The IDs of the source network instances to which the routes belong. The following network instance types are supported:</p>
      * <ul>
-     * <li>Virtual private cloud (VPC)</li>
-     * <li>Virtual border router (VBR)</li>
-     * <li>Cloud Connect Network (CCN) instance</li>
-     * <li>Smart Access Gateway (SAG) instance</li>
-     * <li>The ID of the IPsec-VPN connection.</li>
+     * <li><p>Virtual private cloud (VPC)</p>
+     * </li>
+     * <li><p>Virtual border router (VBR)</p>
+     * </li>
+     * <li><p>Cloud Connect Network (CCN) instance</p>
+     * </li>
+     * <li><p>Smart Access Gateway (SAG) instance</p>
+     * </li>
+     * <li><p>The ID of the IPsec-VPN connection.</p>
+     * </li>
      * </ul>
-     * <p>You can enter at most 32 IDs.</p>
+     * <p>You can enter at most 64 IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-adeg3544fdf34vf****</p>
@@ -373,8 +405,10 @@ public class CreateCenRouteMapRequest extends TeaModel {
     /**
      * <p>Specifies whether to exclude source instance IDs. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default): A route is a match if the source instance ID is included in the list specified by <strong>SourceInstanceIds.N</strong>.</li>
-     * <li><strong>true</strong>: A route is a match if the source network instance ID is not in the list specified by <strong>SourceInstanceIds.N</strong>.</li>
+     * <li><p><strong>false</strong> (default): A route is a match if the source instance ID is included in the list specified by <strong>SourceInstanceIds.N</strong>.</p>
+     * </li>
+     * <li><p><strong>true</strong>: A route is a match if the source network instance ID is not in the list specified by <strong>SourceInstanceIds.N</strong>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -384,7 +418,7 @@ public class CreateCenRouteMapRequest extends TeaModel {
     public Boolean sourceInstanceIdsReverseMatch;
 
     /**
-     * <p>The IDs of the source regions from which routes are evaluated. You can enter at most 32 region IDs.</p>
+     * <p>The IDs of the source regions from which routes are evaluated. You can enter at most 64 region IDs.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
      * 
      * <strong>example:</strong>
@@ -394,7 +428,7 @@ public class CreateCenRouteMapRequest extends TeaModel {
     public java.util.List<String> sourceRegionIds;
 
     /**
-     * <p>The IDs of the source route tables from which routes are evaluated. You can enter at most 32 route table IDs.</p>
+     * <p>The IDs of the source route tables from which routes are evaluated. You can enter at most 64 route table IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>vtb-adfr233vf34rvd4****</p>

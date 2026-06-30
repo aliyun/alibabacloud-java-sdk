@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCenChildInstanceRouteEntryToCenResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C05000A4-2FC5-5B2C-9527-954044DE2CF3</p>

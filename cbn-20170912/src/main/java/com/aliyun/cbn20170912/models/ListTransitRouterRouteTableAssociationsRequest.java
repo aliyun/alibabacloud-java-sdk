@@ -14,10 +14,12 @@ public class ListTransitRouterRouteTableAssociationsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <p>The token for the next query.</p>
      * <ul>
-     * <li>If this is your first query or no subsequent query is to be sent, ignore this parameter.</li>
-     * <li>If a next query is to be sent, set the value to the value of <strong>NextToken</strong> that is returned from the last call.</li>
+     * <li><p>You do not need to specify this parameter for the first query.</p>
+     * </li>
+     * <li><p>For a subsequent query, set this parameter to the <strong>NextToken</strong> value returned from the previous query.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,11 +41,14 @@ public class ListTransitRouterRouteTableAssociationsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The status of the associated forwarding correlation. Valid values:</p>
+     * <p>The status of the association.</p>
      * <ul>
-     * <li><strong>Active</strong>: The associated forwarding correlation is available.</li>
-     * <li><strong>Associating</strong>: The associated forwarding correlation is being created.</li>
-     * <li><strong>Dissociating</strong>: The associated forwarding correlation is being deleted.</li>
+     * <li><p><strong>Active</strong>: The association is active.</p>
+     * </li>
+     * <li><p><strong>Associating</strong>: The association is being created.</p>
+     * </li>
+     * <li><p><strong>Dissociating</strong>: The association is being deleted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,7 +67,7 @@ public class ListTransitRouterRouteTableAssociationsRequest extends TeaModel {
     public String transitRouterAttachmentId;
 
     /**
-     * <p>The ID of the next hop.</p>
+     * <p>The ID of the next hop resource.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp1h8vbrbcgohcju5****</p>
@@ -71,12 +76,16 @@ public class ListTransitRouterRouteTableAssociationsRequest extends TeaModel {
     public String transitRouterAttachmentResourceId;
 
     /**
-     * <p>The type of next hop. Valid values:</p>
+     * <p>The type of the next hop resource.</p>
      * <ul>
-     * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
-     * <li><strong>VBR</strong>: virtual border router (VBR)</li>
-     * <li><strong>TR</strong>: transit router</li>
-     * <li><strong>VPN</strong>: VPN attachment</li>
+     * <li><p><strong>VPC</strong>: virtual private cloud (VPC).</p>
+     * </li>
+     * <li><p><strong>VBR</strong>: virtual border router (VBR).</p>
+     * </li>
+     * <li><p><strong>TR</strong>: transit router.</p>
+     * </li>
+     * <li><p><strong>VPN</strong>: VPN connection.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

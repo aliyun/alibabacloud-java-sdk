@@ -15,8 +15,8 @@ public class DescribeCenRouteMapsRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The region ID of the routing policy.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region where the routing policy is applied.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -31,7 +31,7 @@ public class DescribeCenRouteMapsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -40,7 +40,7 @@ public class DescribeCenRouteMapsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -55,7 +55,7 @@ public class DescribeCenRouteMapsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The routing policy ID.</p>
+     * <p>The ID of the routing policy.</p>
      * 
      * <strong>example:</strong>
      * <p>cenrmap-y40mxdvf7joc12****</p>
@@ -64,7 +64,7 @@ public class DescribeCenRouteMapsRequest extends TeaModel {
     public String routeMapId;
 
     /**
-     * <p>The route table ID of the transit router with which the routing policy is associated.</p>
+     * <p>The ID of the route table of the transit router that is associated with the routing policy.</p>
      * 
      * <strong>example:</strong>
      * <p>vtb-gw8nx3515m1mbd1z1****</p>
@@ -75,13 +75,13 @@ public class DescribeCenRouteMapsRequest extends TeaModel {
     /**
      * <p>The direction in which the routing policy is applied. Valid values:</p>
      * <ul>
-     * <li><strong>RegionIn</strong>: Routes are advertised to the gateways in the regions that are connected by the CEN instance.</li>
+     * <li><strong>RegionIn</strong>: Inbound. The routing policy is applied to routes that are advertised to the gateway of a region.</li>
      * </ul>
-     * <p>For example, routes are advertised from network instances deployed in the current region or other regions to the gateway deployed in the current region.</p>
+     * <p>For example, routes are advertised from network instances in the current region to the gateway of the current region, or routes from other regions are advertised to the gateway of the current region.</p>
      * <ul>
-     * <li><strong>RegionOut</strong>: Routes are advertised from the gateways in the regions that are connected by the CEN instance.</li>
+     * <li><strong>RegionOut</strong>: Outbound. The routing policy is applied to routes that are advertised from the gateway of a region.</li>
      * </ul>
-     * <p>For example, routes are advertised from the gateway deployed in the current region to network instances deployed in the current region, or to gateways deployed in other regions.</p>
+     * <p>For example, routes are advertised from the gateway of the current region to network instances in the current region, or to gateways in other regions.</p>
      * 
      * <strong>example:</strong>
      * <p>RegionOut</p>

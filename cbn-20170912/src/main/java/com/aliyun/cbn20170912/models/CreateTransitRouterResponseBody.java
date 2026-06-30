@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTransitRouterResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>404DA7EC-F495-44B5-B543-6EDCDF90F3D1</p>
@@ -14,7 +14,7 @@ public class CreateTransitRouterResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the Enterprise Edition transit router.</p>
+     * <p>The ID of the Enterprise Edition transit router instance.</p>
      * 
      * <strong>example:</strong>
      * <p>tr-uf6llz2286805i44g****</p>

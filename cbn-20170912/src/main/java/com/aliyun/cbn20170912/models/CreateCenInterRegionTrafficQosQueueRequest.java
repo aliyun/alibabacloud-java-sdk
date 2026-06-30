@@ -7,8 +7,10 @@ public class CreateCenInterRegionTrafficQosQueueRequest extends TeaModel {
     /**
      * <p>The maximum absolute bandwidth value that can be allocated to the queue. Unit: Mbit/s.</p>
      * <ul>
-     * <li>The value specifies an absolute bandwidth. For example, a value of 20 specifies that the queue can consume at most 20 Mbit/s of bandwidth.</li>
-     * <li>The sum of the bandwidth values specified for all queues that belong to the same inter-region connection cannot exceed the maximum bandwidth of the inter-region connection.</li>
+     * <li><p>The value specifies an absolute bandwidth. For example, a value of 20 specifies that the queue can consume at most 20 Mbit/s of bandwidth.</p>
+     * </li>
+     * <li><p>The sum of the bandwidth values specified for all queues that belong to the same inter-region connection cannot exceed the maximum bandwidth of the inter-region connection.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,8 +35,10 @@ public class CreateCenInterRegionTrafficQosQueueRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, the request format, and the service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
+     * <li><p><strong>true</strong>: performs a dry run. The system checks the required parameters, the request format, and the service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): performs a dry run and sends the request.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -59,7 +63,7 @@ public class CreateCenInterRegionTrafficQosQueueRequest extends TeaModel {
 
     /**
      * <p>The description of the queue.</p>
-     * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
+     * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http\:// or https\://.</p>
      * 
      * <strong>example:</strong>
      * <p>desctest</p>
@@ -69,7 +73,7 @@ public class CreateCenInterRegionTrafficQosQueueRequest extends TeaModel {
 
     /**
      * <p>The name of the queue.</p>
-     * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
+     * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http\:// or https\://.</p>
      * 
      * <strong>example:</strong>
      * <p>nametest</p>
@@ -80,8 +84,10 @@ public class CreateCenInterRegionTrafficQosQueueRequest extends TeaModel {
     /**
      * <p>The maximum percentage of inter-region bandwidth that can be allocated to the queue.</p>
      * <ul>
-     * <li>Unit: percentage. For example, a value of 20 specifies that the queue can consume at most 20% of inter-region bandwidth.</li>
-     * <li>The sum of the percentage values specified for all queues that belong to the same inter-region connection cannot exceed 100%.</li>
+     * <li><p>Unit: percentage. For example, a value of 20 specifies that the queue can consume at most 20% of inter-region bandwidth.</p>
+     * </li>
+     * <li><p>The sum of the percentage values specified for all queues that belong to the same inter-region connection cannot exceed 100%.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

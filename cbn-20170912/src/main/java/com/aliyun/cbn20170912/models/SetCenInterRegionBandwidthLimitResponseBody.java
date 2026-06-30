@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetCenInterRegionBandwidthLimitResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>530BC816-F575-412A-AAB2-435125D26328</p>

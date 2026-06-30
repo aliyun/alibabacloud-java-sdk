@@ -15,8 +15,8 @@ public class DeleteCenRouteMapRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The ID of the region in which the routing policy is applied.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region where the routing policy is applied.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to obtain region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

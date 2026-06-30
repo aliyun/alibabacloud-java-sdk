@@ -20,7 +20,7 @@ public class DescribeCenVbrHealthCheckRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,7 +29,7 @@ public class DescribeCenVbrHealthCheckRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -53,7 +53,7 @@ public class DescribeCenVbrHealthCheckRequest extends TeaModel {
     public String vbrInstanceId;
 
     /**
-     * <p>The ID of the Alibaba Cloud account that owns the VBRs.</p>
+     * <p>The ID of the Alibaba Cloud account that owns the VBR.</p>
      * 
      * <strong>example:</strong>
      * <p>1250123456123456</p>
@@ -62,8 +62,8 @@ public class DescribeCenVbrHealthCheckRequest extends TeaModel {
     public Long vbrInstanceOwnerId;
 
     /**
-     * <p>The ID of the region where the VBRs are deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region where the Virtual Border Router (VBR) is deployed.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

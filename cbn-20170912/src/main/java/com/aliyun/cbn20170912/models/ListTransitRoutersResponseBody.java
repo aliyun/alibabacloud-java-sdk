@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTransitRoutersResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListTransitRoutersResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class ListTransitRoutersResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>68521297-5FA6-46CB-B4EB-658F1C68C8CC</p>
@@ -162,13 +162,14 @@ public class ListTransitRoutersResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Indicates whether the system is allowed to automatically add a route to the route table of the transit router. Valid values:</p>
+         * <p>Indicates whether the system automatically adds a route for the transit router CIDR block to the route table of the transit router.</p>
          * <ul>
-         * <li><p><strong>true</strong>: yes</p>
-         * <p>A value of <strong>true</strong> indicates that after you create a private VPN connection and create a route learning correlation for the private VPC connection, the system automatically adds the following route to the route table of the transit router that is in route learning correlation with the private VPN connection: A blackhole route whose destination CIDR block is the CIDR block of the transit router. The CIDR block of the transit router refers to the CIDR block from which gateway IP addresses are allocated to IPsec-VPN connections. </p>
-         * <p>The blackhole route is advertised only to the route tables of virtual border routers (VBRs) that are connected to the transit router. </p>
+         * <li><p><strong>true</strong>: Yes.</p>
+         * <p>If this parameter is set to <strong>true</strong>, after you create a VPN connection of the private gateway type and enable route learning for the VPN connection, the system automatically adds a blackhole route to the route table of the transit router that is in a route learning correlation with the VPN connection.</p>
+         * <p>The destination CIDR block of the blackhole route is the CIDR block of the transit router. The CIDR block of the transit router is the CIDR block from which an IP address is allocated to the IPsec-VPN connection.</p>
+         * <p>This blackhole route is advertised only to the route tables of the virtual border routers (VBRs) that are connected to the transit router.</p>
          * </li>
-         * <li><p><strong>false</strong>: no</p>
+         * <li><p><strong>false</strong>: No.</p>
          * </li>
          * </ul>
          * 
@@ -255,7 +256,7 @@ public class ListTransitRoutersResponseBody extends TeaModel {
 
         /**
          * <p>The time when the transit router was created.</p>
-         * <p>The time follows the ISO8601 standard in the <code>YYYY-MM-DDThh:mmZ</code> format. The time is displayed in UTC.</p>
+         * <p>The time is displayed in the <code>YYYY-MM-DDThh:mmZ</code> format in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-03-15T09:39Z</p>
@@ -273,13 +274,18 @@ public class ListTransitRoutersResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The status of the transit router. Valid values:</p>
+         * <p>The status of the transit router.</p>
          * <ul>
-         * <li><strong>Creating</strong>: The transit router is being created.</li>
-         * <li><strong>Active</strong>: The transit router is available.</li>
-         * <li><strong>Modifying</strong>: The transit router is being modified</li>
-         * <li><strong>Deleting</strong>: The transit router is being deleted.</li>
-         * <li><strong>Upgrading</strong>: The transit router is being upgraded.</li>
+         * <li><p><strong>Creating</strong>: The transit router is being created.</p>
+         * </li>
+         * <li><p><strong>Active</strong>: The transit router is available.</p>
+         * </li>
+         * <li><p><strong>Modifying</strong>: The transit router is being modified.</p>
+         * </li>
+         * <li><p><strong>Deleting</strong>: The transit router is being deleted.</p>
+         * </li>
+         * <li><p><strong>Upgrading</strong>: The transit router is being upgraded.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -289,10 +295,12 @@ public class ListTransitRoutersResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Indicates whether multicast is enabled for the transit router. Valid values:</p>
+         * <p>Indicates whether the multicast feature is enabled for the transit router.</p>
          * <ul>
-         * <li><strong>true</strong>: enabled</li>
-         * <li><strong>false</strong>: disabled</li>
+         * <li><p><strong>true</strong>: enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong>: disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -308,7 +316,7 @@ public class ListTransitRoutersResponseBody extends TeaModel {
         public java.util.List<ListTransitRoutersResponseBodyTransitRoutersTags> tags;
 
         /**
-         * <p>The CIDR blocks of the transit router.</p>
+         * <p>A list of CIDR blocks of the transit router.</p>
          */
         @NameInMap("TransitRouterCidrList")
         public java.util.List<ListTransitRoutersResponseBodyTransitRoutersTransitRouterCidrList> transitRouterCidrList;
@@ -341,10 +349,12 @@ public class ListTransitRoutersResponseBody extends TeaModel {
         public String transitRouterName;
 
         /**
-         * <p>The edition of the transit router. Valid values:</p>
+         * <p>The type of the transit router.</p>
          * <ul>
-         * <li><strong>Enterprise</strong>: Enhance Edition</li>
-         * <li><strong>Basic</strong>: Basic Edition</li>
+         * <li><p><strong>Enterprise</strong>: Enterprise Edition.</p>
+         * </li>
+         * <li><p><strong>Basic</strong>: Basic Edition.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTransitRouterVbrAttachmentsRequest extends TeaModel {
     /**
-     * <p>The IDs of the CEN instances.</p>
+     * <p>The ID of the CEN instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cen-j3jzhw1zpau2km****</p>
@@ -14,7 +14,7 @@ public class ListTransitRouterVbrAttachmentsRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+     * <p>The maximum number of entries to return for a single query. The default value is <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,7 +23,13 @@ public class ListTransitRouterVbrAttachmentsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <p>The token that is used for the next query. Valid values:</p>
+     * <ul>
+     * <li><p>If this is your first query, you do not need to specify this parameter.</p>
+     * </li>
+     * <li><p>If a subsequent query is to be sent, set the value to the NextToken value that is returned in the previous request.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>dd20****</p>
@@ -38,8 +44,8 @@ public class ListTransitRouterVbrAttachmentsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the Enterprise Edition transit router.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region where the Enterprise Edition transit router is deployed.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -54,8 +60,8 @@ public class ListTransitRouterVbrAttachmentsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The information about the tags.</p>
-     * <p>You can specify at most 20 tags in each call.</p>
+     * <p>The tag.</p>
+     * <p>You can specify up to 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTransitRouterVbrAttachmentsRequestTag> tag;
@@ -173,9 +179,9 @@ public class ListTransitRouterVbrAttachmentsRequest extends TeaModel {
 
     public static class ListTransitRouterVbrAttachmentsRequestTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
-         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>You can specify at most 20 tag keys.</p>
+         * <p>The tag key of the resource.</p>
+         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https:// </code>.</p>
+         * <p>You can specify up to 20 tag keys.</p>
          * 
          * <strong>example:</strong>
          * <p>tagtest</p>
@@ -184,9 +190,9 @@ public class ListTransitRouterVbrAttachmentsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
-         * <p>The tag value can be 0 to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
+         * <p>The tag value of the resource.</p>
+         * <p>The tag value can be an empty string or a string of up to 128 characters. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https:// </code>.</p>
+         * <p>Each tag key must have a unique tag value. You can specify up to 20 tag values.</p>
          * 
          * <strong>example:</strong>
          * <p>tagtest</p>

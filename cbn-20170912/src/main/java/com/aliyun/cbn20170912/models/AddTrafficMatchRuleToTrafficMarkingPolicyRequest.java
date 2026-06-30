@@ -8,7 +8,7 @@ public class AddTrafficMatchRuleToTrafficMarkingPolicyRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+     * <p>If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -165,7 +165,7 @@ public class AddTrafficMatchRuleToTrafficMarkingPolicyRequest extends TeaModel {
          * <p>The Differentiated Services Code Point (DSCP) value that is used to match packets. Valid values: <strong>0</strong> to <strong>63</strong>.</p>
          * <p>Packets that carry the specified DSCP value are considered a match. If you do not specify a DSCP value, packets are considered a match regardless of the DSCP value.</p>
          * <blockquote>
-         * <p> The DSCP value that you specify for this parameter is the DSCP value that packets carry before they are transmitted over the inter-region connection.</p>
+         * <p>The DSCP value that you specify for this parameter is the DSCP value that packets carry before they are transmitted over the inter-region connection.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -224,7 +224,7 @@ public class AddTrafficMatchRuleToTrafficMarkingPolicyRequest extends TeaModel {
 
         /**
          * <p>The description of the traffic classification rule.</p>
-         * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http:// or https://.</p>
+         * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http\:// or https\://.</p>
          * 
          * <strong>example:</strong>
          * <p>desctest</p>
@@ -234,7 +234,7 @@ public class AddTrafficMatchRuleToTrafficMarkingPolicyRequest extends TeaModel {
 
         /**
          * <p>The name of the traffic classification rule.</p>
-         * <p>The name is optional. If you enter a name, it must be 1 to 128 characters in length, and cannot start with http:// or https://.</p>
+         * <p>The name is optional. If you enter a name, it must be 1 to 128 characters in length, and cannot start with http\:// or https\://.</p>
          * 
          * <strong>example:</strong>
          * <p>nametest</p>

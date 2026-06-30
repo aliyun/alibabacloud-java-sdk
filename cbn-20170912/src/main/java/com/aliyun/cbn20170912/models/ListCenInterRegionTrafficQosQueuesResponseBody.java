@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>A pagination token. It is used in the next request to retrieve a new page of results. Valid values:</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
-     * <li>If a value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+     * <li><p>If <strong>NextToken</strong> is empty, no more results are returned.</p>
+     * </li>
+     * <li><p>If NextToken is not empty, the value of <strong>NextToken</strong> is used for the next query.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1D1E15D2-416D-54F3-BDD9-BC27DE4C6352</p>
@@ -27,7 +29,7 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the QoS queue.</p>
+     * <p>The information about the queues of the QoS policy.</p>
      */
     @NameInMap("TrafficQosQueues")
     public java.util.List<ListCenInterRegionTrafficQosQueuesResponseBodyTrafficQosQueues> trafficQosQueues;
@@ -63,8 +65,8 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
 
     public static class ListCenInterRegionTrafficQosQueuesResponseBodyTrafficQosQueues extends TeaModel {
         /**
-         * <p>The absolute bandwidth value that can be allocated to the current queue.</p>
-         * <p>A value of <strong>1</strong> indicates that the QoS queue can consume at most 1 Mbit/s of inter-region bandwidth.</p>
+         * <p>The bandwidth allocated to the queue. This parameter is returned only if you allocate bandwidth to the queue by absolute value.</p>
+         * <p>For example, a value of <strong>1</strong> indicates that traffic that matches the queue can use up to 1 Mbit/s of the inter-region connection bandwidth.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -73,13 +75,13 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
         public String bandwidth;
 
         /**
-         * <p>The Differentiated Services Code Point (DSCP) value that matches the current QoS queue.</p>
+         * <p>The Differentiated Services Code Point (DSCP) values that are matched by the queue.</p>
          */
         @NameInMap("Dscps")
         public java.util.List<Integer> dscps;
 
         /**
-         * <p>The actual bandwidth of the current queue.</p>
+         * <p>The actual bandwidth of the queue.</p>
          * 
          * <strong>example:</strong>
          * <p>1.35</p>
@@ -88,8 +90,8 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
         public String effectiveBandwidth;
 
         /**
-         * <p>The percentage of bandwidth that can be allocated to the current queue.</p>
-         * <p>A value of <strong>1</strong> indicates that the QoS queue can consume at most 1% of the inter-region bandwidth.</p>
+         * <p>The percentage of the inter-region connection bandwidth that can be used by the queue. This parameter is returned only if you allocate bandwidth to the queue by percentage.</p>
+         * <p>For example, a value of <strong>1</strong> indicates that traffic that matches the queue can use up to 1% of the inter-region connection bandwidth.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -98,11 +100,14 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
         public Integer remainBandwidthPercent;
 
         /**
-         * <p>The status of the QoS queue. Valid values:</p>
+         * <p>The status of the queue.</p>
          * <ul>
-         * <li><strong>Creating</strong></li>
-         * <li><strong>Active</strong></li>
-         * <li><strong>Deleting</strong></li>
+         * <li><p><strong>Creating</strong>: The queue is being created.</p>
+         * </li>
+         * <li><p><strong>Active</strong>: The queue is running.</p>
+         * </li>
+         * <li><p><strong>Deleting</strong>: The queue is being deleted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -121,7 +126,7 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
         public String trafficQosPolicyId;
 
         /**
-         * <p>The description of the QoS queue.</p>
+         * <p>The description of the queue in the QoS policy.</p>
          * 
          * <strong>example:</strong>
          * <p>qosQueueDescription</p>
@@ -130,7 +135,7 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
         public String trafficQosQueueDescription;
 
         /**
-         * <p>The ID of the QoS queue.</p>
+         * <p>The ID of the queue in the QoS policy.</p>
          * 
          * <strong>example:</strong>
          * <p>qos-queue-siakjb2nn9gz5z****</p>
@@ -139,7 +144,7 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
         public String trafficQosQueueId;
 
         /**
-         * <p>The name of the QoS queue.</p>
+         * <p>The name of the queue in the QoS policy.</p>
          * 
          * <strong>example:</strong>
          * <p>qosQueueName</p>

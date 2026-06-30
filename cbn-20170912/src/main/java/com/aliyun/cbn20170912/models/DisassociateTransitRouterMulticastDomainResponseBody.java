@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DisassociateTransitRouterMulticastDomainResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6F6B3FF0-45D1-5416-B189-C45A42A0222B</p>

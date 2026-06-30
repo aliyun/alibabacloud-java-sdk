@@ -8,7 +8,7 @@ public class DeleteCenInterRegionTrafficQosPolicyRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+     * <p>If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -20,8 +20,10 @@ public class DeleteCenInterRegionTrafficQosPolicyRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Default value: false. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
+     * <li><p><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): performs a dry run and sends the request.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -26,7 +26,7 @@ public class DescribePublishedRouteEntriesRequest extends TeaModel {
 
     /**
      * <p>The ID of the region where the network instance is deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+     * <p>For more information, see <a href="t2264556.xdita#"></a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,9 +47,12 @@ public class DescribePublishedRouteEntriesRequest extends TeaModel {
     /**
      * <p>The type of the network instance. Valid values:</p>
      * <ul>
-     * <li><strong>VPC</strong>: VPC</li>
-     * <li><strong>VBR</strong>: VBR</li>
-     * <li><strong>CCN</strong>: Cloud Connect Network (CCN) instance</li>
+     * <li><p><strong>VPC</strong>: virtual private cloud.</p>
+     * </li>
+     * <li><p><strong>VBR</strong>: virtual border router.</p>
+     * </li>
+     * <li><p><strong>CCN</strong>: Cloud Connect Network.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -69,7 +72,7 @@ public class DescribePublishedRouteEntriesRequest extends TeaModel {
     public String destinationCidrBlock;
 
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -78,7 +81,7 @@ public class DescribePublishedRouteEntriesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
+     * <p>The number of entries per page. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>500</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

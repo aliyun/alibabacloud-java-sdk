@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class DeregisterTransitRouterMulticastGroupMembersRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.</p>
+     * <p>Generate a unique value from your client for each request. The ClientToken parameter supports only ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -15,10 +15,12 @@ public class DeregisterTransitRouterMulticastGroupMembersRequest extends TeaMode
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request.</li>
+     * <li><p><strong>true</strong>: Sends a check request without deleting the multicast member. The system checks required parameters, the request format, and service limits. If the check fails, the corresponding error is returned. If the check passes, the <code>DryRunOperation</code> error code is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): Sends a normal request. After the request passes the check, the multicast member is deleted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +30,7 @@ public class DeregisterTransitRouterMulticastGroupMembersRequest extends TeaMode
     public Boolean dryRun;
 
     /**
-     * <p>The IP address of the multicast group to which the multicast members belong.</p>
+     * <p>The IP address of the multicast group to which the multicast member belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +40,7 @@ public class DeregisterTransitRouterMulticastGroupMembersRequest extends TeaMode
     public String groupIpAddress;
 
     /**
-     * <p>The IDs of elastic network interfaces (ENIs).</p>
+     * <p>A list of Elastic Network Interface (ENI) IDs.</p>
      */
     @NameInMap("NetworkInterfaceIds")
     public java.util.List<String> networkInterfaceIds;
@@ -50,7 +52,7 @@ public class DeregisterTransitRouterMulticastGroupMembersRequest extends TeaMode
     public Long ownerId;
 
     /**
-     * <p>The ID of the multicast domain that is in a different region.</p>
+     * <p>A list of inter-region multicast domain IDs.</p>
      */
     @NameInMap("PeerTransitRouterMulticastDomains")
     public java.util.List<String> peerTransitRouterMulticastDomains;
@@ -62,7 +64,7 @@ public class DeregisterTransitRouterMulticastGroupMembersRequest extends TeaMode
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the multicast domain to which the multicast members belong.</p>
+     * <p>The ID of the multicast domain to which the multicast member belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

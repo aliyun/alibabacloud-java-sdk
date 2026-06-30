@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class ListTransitRouterMulticastDomainAssociationsRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can only contain ASCII characters.</p>
+     * <p>Generate a token from your client to ensure that it is unique among different requests. The ClientToken parameter can contain only ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-4266****</p>
@@ -24,10 +24,12 @@ public class ListTransitRouterMulticastDomainAssociationsRequest extends TeaMode
     public Long maxResults;
 
     /**
-     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <p>The token that determines the start point of the next query. Valid values:</p>
      * <ul>
-     * <li>If this is your first query and no next queries are to be sent, ignore this parameter.</li>
-     * <li>If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</li>
+     * <li><p>If this is your first query and no next query is to be sent, ignore this parameter.</p>
+     * </li>
+     * <li><p>If a next query is to be sent, set the value to the NextToken value returned from the last API call.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -59,7 +61,7 @@ public class ListTransitRouterMulticastDomainAssociationsRequest extends TeaMode
 
     /**
      * <p>The type of resource associated with the multicast domain.</p>
-     * <p>Valid value: <strong>VPC</strong>.</p>
+     * <p>The value is <strong>VPC</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>VPC</p>
@@ -86,7 +88,7 @@ public class ListTransitRouterMulticastDomainAssociationsRequest extends TeaMode
     public String transitRouterMulticastDomainId;
 
     /**
-     * <p>The IDs of vSwitches.</p>
+     * <p>The list of vSwitch IDs.</p>
      */
     @NameInMap("VSwitchIds")
     public java.util.List<String> vSwitchIds;

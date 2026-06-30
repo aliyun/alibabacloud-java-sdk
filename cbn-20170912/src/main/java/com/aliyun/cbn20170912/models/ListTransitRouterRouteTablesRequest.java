@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTransitRouterRouteTablesRequest extends TeaModel {
     /**
-     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,10 +14,12 @@ public class ListTransitRouterRouteTablesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <p>The token that is used for the next query. Valid values:</p>
      * <ul>
-     * <li>If this is your first query or no subsequent query is to be sent, ignore this parameter.</li>
-     * <li>If a subsequent query is to be sent, set the value to the value of <strong>NextToken</strong> that is returned from the last call.</li>
+     * <li><p>If this is your first query or no next query is to be sent, do not specify this parameter.</p>
+     * </li>
+     * <li><p>If a next query is to be sent, set the value to the <strong>NextToken</strong> value returned from the last API call.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,8 +47,8 @@ public class ListTransitRouterRouteTablesRequest extends TeaModel {
     public ListTransitRouterRouteTablesRequestRouteTableOptions routeTableOptions;
 
     /**
-     * <p>The information about the tags.</p>
-     * <p>You can specify at most 20 tags in each call.</p>
+     * <p>The tag.</p>
+     * <p>You can specify up to 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTransitRouterRouteTablesRequestTag> tag;
@@ -62,7 +64,7 @@ public class ListTransitRouterRouteTablesRequest extends TeaModel {
 
     /**
      * <p>The ID of the route table.</p>
-     * <p>You can query multiple route tables in each call. Maximum value of <strong>N</strong>: <strong>20</strong>.</p>
+     * <p>You can query multiple route tables at a time. The maximum value of <strong>N</strong> is <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>vtb-bp1l8awdb4iuo9uwu****</p>
@@ -72,9 +74,9 @@ public class ListTransitRouterRouteTablesRequest extends TeaModel {
 
     /**
      * <p>The name of the route table.</p>
-     * <p>You can query multiple route tables in each call. Maximum value of <strong>N</strong>: <strong>20</strong>.</p>
+     * <p>You can query multiple route tables at a time. The maximum value of <strong>N</strong> is <strong>20</strong>.</p>
      * <blockquote>
-     * <p>If you set both <strong>TransitRouterRouteTableNames.N</strong> and <strong>TransitRouterRouteTableIds.N</strong>, make sure that the specified name and ID belong to the same route table.</p>
+     * <p>If you query route tables using both <strong>TransitRouterRouteTableNames.N</strong> and <strong>TransitRouterRouteTableIds.N</strong>, make sure that the names and IDs match.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -86,9 +88,12 @@ public class ListTransitRouterRouteTablesRequest extends TeaModel {
     /**
      * <p>The status of the route table. Valid values:</p>
      * <ul>
-     * <li><strong>Creating</strong>: The route table is being created.</li>
-     * <li><strong>Deleting</strong>: The route table is being deleted.</li>
-     * <li><strong>Active</strong>: The route table is available.</li>
+     * <li><p><strong>Creating</strong>: The route table is being created.</p>
+     * </li>
+     * <li><p><strong>Deleting</strong>: The route table is being deleted.</p>
+     * </li>
+     * <li><p><strong>Active</strong>: The route table is available.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,8 +105,10 @@ public class ListTransitRouterRouteTablesRequest extends TeaModel {
     /**
      * <p>The type of the route table. Valid values:</p>
      * <ul>
-     * <li><strong>Custom</strong>: a custom route table</li>
-     * <li><strong>System</strong>: the default route table</li>
+     * <li><p><strong>Custom</strong>: a custom route table.</p>
+     * </li>
+     * <li><p><strong>System</strong>: the default route table.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -221,10 +228,12 @@ public class ListTransitRouterRouteTablesRequest extends TeaModel {
 
     public static class ListTransitRouterRouteTablesRequestRouteTableOptions extends TeaModel {
         /**
-         * <p>Specifies whether to enable equal-cost multi-path (ECMP) routing. Valid values:</p>
+         * <p>The multi-region equal-cost multi-path (ECMP) routing feature. Valid values:</p>
          * <ul>
-         * <li><strong>disable</strong>: disables ECMP routing If you disable ECMP routing, routes that are learned from different regions but have the same prefix and attributes select the transit router with the smallest region ID as the next hop. Region IDs are sorted in alphabetic order. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.</li>
-         * <li><strong>enable</strong>: enables ECMP routing. If you enable ECMP routing, routes that are learned from different regions but have the same prefix and attributes form an ECMP route. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.</li>
+         * <li><p><strong>disable</strong>: Disables multi-region ECMP routing. After this feature is disabled, for routes that are learned from different regions and have the same prefix and other attributes, the system selects the transit router with the smallest region ID as the next hop. Region IDs are sorted in alphabetical order. This changes the latency and bandwidth consumption between different regions. Make sure that you fully evaluate the impact before you disable the feature.</p>
+         * </li>
+         * <li><p><strong>enable</strong>: Enables multi-region ECMP routing. After this feature is enabled, for routes that are learned from different regions and have the same prefix and other attributes, ECMP routing is formed. This changes the latency and bandwidth consumption between different regions. Make sure that you fully evaluate the impact before you enable the feature.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -251,8 +260,8 @@ public class ListTransitRouterRouteTablesRequest extends TeaModel {
     public static class ListTransitRouterRouteTablesRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
-         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>You can specify at most 20 tag keys.</p>
+         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https:// </code>.</p>
+         * <p>You can specify up to 20 tag keys.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -262,8 +271,8 @@ public class ListTransitRouterRouteTablesRequest extends TeaModel {
 
         /**
          * <p>The tag value.</p>
-         * <p>The tag value can be 0 to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
+         * <p>The tag value can be an empty string or a string of up to 128 characters. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https:// </code>.</p>
+         * <p>Each tag key must have a corresponding tag value. You can specify up to 20 tag values.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

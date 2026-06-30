@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateCenRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>The client token used to ensure the idempotence of the request.</p>
+     * <p>Generate a unique parameter value from your client for each request. \<code>ClientToken\\</code> supports only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> is different for each request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class CreateCenRequest extends TeaModel {
 
     /**
      * <p>The description of the CEN instance.</p>
-     * <p>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</p>
+     * <p>The description can be empty or 1 to 256 characters in length. It cannot start with \<code>http\\://\\</code> or \<code>https\\://\\</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>testdesc</p>
@@ -29,7 +29,7 @@ public class CreateCenRequest extends TeaModel {
 
     /**
      * <p>The name of the CEN instance.</p>
-     * <p>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</p>
+     * <p>The name can be empty or 1 to 128 characters in length. It cannot start with \<code>http\\://\\</code> or \<code>https\\://\\</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>testname</p>
@@ -44,8 +44,8 @@ public class CreateCenRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The level of CIDR block overlapping.</p>
-     * <p>Set the value to <strong>REDUCED</strong> (default). This value specifies that CIDR blocks can overlap but cannot be the same.</p>
+     * <p>The level of CIDR block overlap.</p>
+     * <p>Set the value to <strong>REDUCED</strong>. This is the default value. This value specifies that CIDR blocks can overlap but cannot be identical.</p>
      * 
      * <strong>example:</strong>
      * <p>REDUCED</p>
@@ -60,8 +60,8 @@ public class CreateCenRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags.</p>
-     * <p>You can specify up to 20 tags in each call.</p>
+     * <p>The tag information.</p>
+     * <p>You can specify up to 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateCenRequestTag> tag;
@@ -146,7 +146,7 @@ public class CreateCenRequest extends TeaModel {
     public static class CreateCenRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
-         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key cannot be an empty string. It can be up to 64 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>You can specify up to 20 tag keys.</p>
          * 
          * <strong>example:</strong>
@@ -157,8 +157,8 @@ public class CreateCenRequest extends TeaModel {
 
         /**
          * <p>The tag value.</p>
-         * <p>The tag value can be 0 to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>Each tag key must have a unique tag value. You can specify up to 20 tag values in each call.</p>
+         * <p>The tag value can be empty or a string of up to 128 characters. It cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>Each tag key must have a corresponding tag value. You can specify up to 20 tag values.</p>
          * 
          * <strong>example:</strong>
          * <p>tagtest</p>

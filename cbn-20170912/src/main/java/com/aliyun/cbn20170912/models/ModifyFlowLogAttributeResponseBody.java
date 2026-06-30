@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyFlowLogAttributeResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9A411874-2EC8-4633-9D30-9012DCE89DD1</p>
@@ -16,8 +16,8 @@ public class ModifyFlowLogAttributeResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the call is successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: yes</li>
-     * <li><strong>false</strong>: no</li>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>

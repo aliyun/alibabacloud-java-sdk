@@ -8,7 +8,7 @@ public class DescribeChildInstanceRegionsResponseBody extends TeaModel {
     public DescribeChildInstanceRegionsResponseBodyRegions regions;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D5CEED59-36AA-47CC-9D81-16F71C46BD80</p>

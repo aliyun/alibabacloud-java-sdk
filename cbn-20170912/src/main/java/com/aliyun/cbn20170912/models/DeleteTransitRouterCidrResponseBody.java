@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteTransitRouterCidrResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0876E54E-3E36-5C31-89F0-9EE8A9266F9A</p>

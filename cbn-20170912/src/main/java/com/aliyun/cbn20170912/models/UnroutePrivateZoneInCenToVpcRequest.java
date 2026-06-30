@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UnroutePrivateZoneInCenToVpcRequest extends TeaModel {
     /**
+     * <p>The ID of the region where the PrivateZone connection is accessed.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to get the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +16,7 @@ public class UnroutePrivateZoneInCenToVpcRequest extends TeaModel {
     public String accessRegionId;
 
     /**
+     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

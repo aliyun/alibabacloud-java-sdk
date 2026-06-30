@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyTrafficMatchRuleToTrafficMarkingPolicyRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>Generate a unique parameter value from your client for each request. The ClientToken parameter supports only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system uses the request ID as the client token. The request ID may be different for each request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,12 @@ public class ModifyTrafficMatchRuleToTrafficMarkingPolicyRequest extends TeaMode
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
+     * <li><p><strong>true</strong>: Performs a dry run. The system checks for required parameters, the request format, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): Sends a normal request. After the request passes the check, the stream classification rule is added to the traffic marking policy.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,8 +55,8 @@ public class ModifyTrafficMatchRuleToTrafficMarkingPolicyRequest extends TeaMode
     public String trafficMarkingPolicyId;
 
     /**
-     * <p>The description of the traffic classification rule.</p>
-     * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http:// or https://.</p>
+     * <p>The description of the stream classification rule.</p>
+     * <p>The description can be empty or 1 to 256 characters in length. The description cannot start with http\:// or https\://.</p>
      * 
      * <strong>example:</strong>
      * <p>descriptiontest</p>
@@ -63,7 +65,7 @@ public class ModifyTrafficMatchRuleToTrafficMarkingPolicyRequest extends TeaMode
     public String trafficMatchRuleDescription;
 
     /**
-     * <p>The ID of the traffic classification rule.</p>
+     * <p>The ID of the stream classification rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,8 +75,8 @@ public class ModifyTrafficMatchRuleToTrafficMarkingPolicyRequest extends TeaMode
     public String trafficMatchRuleId;
 
     /**
-     * <p>The name of the traffic classification rule.</p>
-     * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
+     * <p>The name of the stream classification rule.</p>
+     * <p>The name can be empty or 1 to 128 characters in length. The name cannot start with http\:// or https\://.</p>
      * 
      * <strong>example:</strong>
      * <p>nametest</p>

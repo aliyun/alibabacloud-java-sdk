@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeregisterTransitRouterMulticastGroupSourcesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>53E7E8BE-7F4E-5458-ACCA-9B5C1D6A642D</p>

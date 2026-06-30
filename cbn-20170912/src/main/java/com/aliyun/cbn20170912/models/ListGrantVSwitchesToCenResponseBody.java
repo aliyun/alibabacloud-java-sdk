@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGrantVSwitchesToCenResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListGrantVSwitchesToCenResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class ListGrantVSwitchesToCenResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A9288C78-881A-5D30-A8A9-68E05EE0A086</p>
@@ -32,7 +32,7 @@ public class ListGrantVSwitchesToCenResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -41,7 +41,7 @@ public class ListGrantVSwitchesToCenResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The list of vSwitches.</p>
+     * <p>A list of vSwitches.</p>
      */
     @NameInMap("VSwitches")
     public java.util.List<ListGrantVSwitchesToCenResponseBodyVSwitches> vSwitches;

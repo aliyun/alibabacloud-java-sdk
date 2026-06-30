@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTransitRouterVpnAttachmentAttributeResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1AB038F2-96E5-560B-9F6E-734311D466FA</p>
