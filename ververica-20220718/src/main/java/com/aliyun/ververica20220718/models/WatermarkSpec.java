@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class WatermarkSpec extends TeaModel {
     /**
+     * <p>The column of the event time attribute.</p>
+     * 
      * <strong>example:</strong>
      * <p>time</p>
      */
@@ -12,6 +14,8 @@ public class WatermarkSpec extends TeaModel {
     public String column;
 
     /**
+     * <p>The watermark expression.</p>
+     * 
      * <strong>example:</strong>
      * <p>INTERVAL \&quot;5\&quot; SECOND</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class JobStartParameters extends TeaModel {
     /**
-     * <p>The deployment ID.</p>
+     * <p>Job ID</p>
      * 
      * <strong>example:</strong>
      * <p>737d0921-c5ac-47fc-9ba9-07a1e0b4****</p>
@@ -13,17 +13,20 @@ public class JobStartParameters extends TeaModel {
     @NameInMap("deploymentId")
     public String deploymentId;
 
+    /**
+     * <p>Job instance ID</p>
+     */
     @NameInMap("jobId")
     public String jobId;
 
     /**
-     * <p>The variables.</p>
+     * <p>Job variables</p>
      */
     @NameInMap("localVariables")
     public java.util.List<LocalVariable> localVariables;
 
     /**
-     * <p>The queue in which the deployment is running.</p>
+     * <p>Resource queue for job execution</p>
      * 
      * <strong>example:</strong>
      * <p>default-queue</p>
@@ -32,7 +35,7 @@ public class JobStartParameters extends TeaModel {
     public String resourceQueueName;
 
     /**
-     * <p>The configuration of the start offset of the deployment.</p>
+     * <p>Job start offset settings</p>
      */
     @NameInMap("restoreStrategy")
     public DeploymentRestoreStrategy restoreStrategy;

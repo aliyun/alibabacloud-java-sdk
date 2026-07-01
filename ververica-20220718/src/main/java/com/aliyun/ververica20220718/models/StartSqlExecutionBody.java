@@ -4,12 +4,21 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class StartSqlExecutionBody extends TeaModel {
+    /**
+     * <p>The description of the SQL execution.</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The SQL file ID.</p>
+     */
     @NameInMap("sqlFileId")
     public String sqlFileId;
 
+    /**
+     * <p>The SQL script content.</p>
+     */
     @NameInMap("sqlScript")
     public String sqlScript;
 

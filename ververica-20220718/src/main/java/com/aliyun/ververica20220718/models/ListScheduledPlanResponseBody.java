@@ -4,10 +4,15 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class ListScheduledPlanResponseBody extends TeaModel {
+    /**
+     * <p>The list of scheduled plans that meet the filter criteria. This parameter is returned only if the request is successful. If the request fails, this parameter is empty.</p>
+     */
     @NameInMap("data")
     public java.util.List<ScheduledPlan> data;
 
     /**
+     * <p>The error code returned if the request fails. This parameter is empty if the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -15,6 +20,8 @@ public class ListScheduledPlanResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message returned if the request fails. This parameter is empty if the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -22,6 +29,8 @@ public class ListScheduledPlanResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code. The value is always 200. Use the \<code>success\\</code> parameter to determine if the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class ListScheduledPlanResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
+     * <p>A paging parameter that specifies the page index to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -36,6 +47,8 @@ public class ListScheduledPlanResponseBody extends TeaModel {
     public Integer pageIndex;
 
     /**
+     * <p>The number of entries on the returned page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -43,6 +56,8 @@ public class ListScheduledPlanResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</p>
      */
@@ -50,6 +65,8 @@ public class ListScheduledPlanResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -57,6 +74,8 @@ public class ListScheduledPlanResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of entries that match the query.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */

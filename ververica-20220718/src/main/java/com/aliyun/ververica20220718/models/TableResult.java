@@ -4,12 +4,18 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class TableResult extends TeaModel {
+    /**
+     * <p>The ID of the collect sink operator.</p>
+     */
     @NameInMap("collectSinkOperatorId")
     public String collectSinkOperatorId;
 
     @NameInMap("rowUpdates")
     public java.util.List<RowUpdate> rowUpdates;
 
+    /**
+     * <p>The name of the table.</p>
+     */
     @NameInMap("tableName")
     public String tableName;
 

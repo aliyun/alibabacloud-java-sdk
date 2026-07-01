@@ -8,13 +8,13 @@ public class StartJobWithParamsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The details of the job of the deployment returned.</p>
+     * <p>Details of the job instance created from the deployment.</p>
      */
     @NameInMap("data")
     public Job data;
 
     /**
-     * <p>If the value of success was false, an error code was returned. If the value of success was true, a null value was returned.</p>
+     * <p>The error code. This field is populated only when <code>success</code> is <code>false</code> and is empty otherwise.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -23,7 +23,7 @@ public class StartJobWithParamsResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>If the value of success was false, an error message was returned. If the value of success was true, a null value was returned.</p>
+     * <p>The error message. This field is populated only when <code>success</code> is <code>false</code> and is empty otherwise.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -32,7 +32,7 @@ public class StartJobWithParamsResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The status code returned. The value was fixed to 200. The status code 200 indicates that the request was successful.</p>
+     * <p>The HTTP status code. This value is always 200. Use the <code>success</code> field to determine whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -41,7 +41,7 @@ public class StartJobWithParamsResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</p>

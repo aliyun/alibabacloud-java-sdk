@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExecuteSqlStatementRequest extends TeaModel {
     /**
-     * <p>The SQL statement to query the metadata.</p>
+     * <p>The SQL statements for metadata.</p>
      */
     @NameInMap("body")
     public SqlStatementWithContext body;

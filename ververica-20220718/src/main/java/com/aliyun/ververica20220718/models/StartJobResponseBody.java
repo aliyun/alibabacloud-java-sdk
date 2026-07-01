@@ -4,13 +4,18 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class StartJobResponseBody extends TeaModel {
+    /**
+     * <p>The detailed information about the access denial.</p>
+     */
     @NameInMap("accessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
      * <ul>
-     * <li>If the value of success was true, the job that you created was returned.</li>
-     * <li>If the value of success was false, a null value was returned.</li>
+     * <li><p>When \<code>success\\</code> is \<code>true\\</code>, the created instance information is returned.</p>
+     * </li>
+     * <li><p>Returns an empty value if \<code>success\\</code> is false.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("data")
@@ -18,8 +23,10 @@ public class StartJobResponseBody extends TeaModel {
 
     /**
      * <ul>
-     * <li>If the value of success was false, an error code was returned.</li>
-     * <li>If the value of success was true, a null value was returned.</li>
+     * <li><p>If success is false, the call returns a business error code.If success is true, the call returns business data. The following table describes the data format.If success is true, the call returns business data. The following table describes the data format.</p>
+     * </li>
+     * <li><p>When success is true, an empty value is returned.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,8 +37,10 @@ public class StartJobResponseBody extends TeaModel {
 
     /**
      * <ul>
-     * <li>If the value of success was false, an error message was returned.</li>
-     * <li>If the value of success was true, a null value was returned.</li>
+     * <li><p>If success is false, a business error message is returned.</p>
+     * </li>
+     * <li><p>When \<code>success\\</code> is true, an empty value is returned.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,7 +50,7 @@ public class StartJobResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The value was fixed to 200.</p>
+     * <p>Fixed value: 200.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -50,7 +59,7 @@ public class StartJobResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</p>
@@ -59,7 +68,7 @@ public class StartJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the service request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

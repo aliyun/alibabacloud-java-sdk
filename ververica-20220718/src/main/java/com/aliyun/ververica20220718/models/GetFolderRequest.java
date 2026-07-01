@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetFolderRequest extends TeaModel {
     /**
+     * <p>Folder ID. If empty, the root folder is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>89097</p>
      */
@@ -12,6 +14,8 @@ public class GetFolderRequest extends TeaModel {
     public String folderId;
 
     /**
+     * <p>The type of the root folder.</p>
+     * 
      * <strong>example:</strong>
      * <p>DEVELOPMENT</p>
      */

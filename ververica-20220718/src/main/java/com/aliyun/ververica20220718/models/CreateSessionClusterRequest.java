@@ -4,6 +4,9 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class CreateSessionClusterRequest extends TeaModel {
+    /**
+     * <p>The data structure of the session cluster to create.</p>
+     */
     @NameInMap("body")
     public SessionCluster body;
 

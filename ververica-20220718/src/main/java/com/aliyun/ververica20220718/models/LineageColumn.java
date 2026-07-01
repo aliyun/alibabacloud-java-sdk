@@ -51,6 +51,9 @@ public class LineageColumn extends TeaModel {
 
     /**
      * <p>The description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>订单用户名称</p>
      */
     @NameInMap("description")
     public String description;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetDeploymentsByIpRequest extends TeaModel {
     /**
+     * <p>The destination IP address. This parameter is used to match the destination sink address of a job.</p>
+     * 
      * <strong>example:</strong>
      * <p>10.100.2.200</p>
      */
@@ -12,6 +14,8 @@ public class GetDeploymentsByIpRequest extends TeaModel {
     public String dstIp;
 
     /**
+     * <p>The destination port. Use this parameter with dstIp.</p>
+     * 
      * <strong>example:</strong>
      * <p>9092</p>
      */
@@ -19,6 +23,8 @@ public class GetDeploymentsByIpRequest extends TeaModel {
     public String dstPort;
 
     /**
+     * <p>Specifies whether to exclude the job summary from the response. If you exclude the summary, only deployment information is returned. This improves performance.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -26,6 +32,8 @@ public class GetDeploymentsByIpRequest extends TeaModel {
     public Boolean ignoreJobSummary;
 
     /**
+     * <p>Specifies whether to exclude resource configuration information. This reduces the size of the returned data.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -33,6 +41,8 @@ public class GetDeploymentsByIpRequest extends TeaModel {
     public Boolean ignoreResourceSetting;
 
     /**
+     * <p>The source IP address. This parameter is used to match the input source address of a job.</p>
+     * 
      * <strong>example:</strong>
      * <p>192.168.1.100</p>
      */
@@ -40,6 +50,8 @@ public class GetDeploymentsByIpRequest extends TeaModel {
     public String srcIp;
 
     /**
+     * <p>The source port. Use this parameter with srcIp for an exact match of the connection.</p>
+     * 
      * <strong>example:</strong>
      * <p>54321</p>
      */

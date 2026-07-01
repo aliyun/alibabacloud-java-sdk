@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListScheduledPlanExecutedHistoryRequest extends TeaModel {
     /**
+     * <p>The ID of the deployed job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListScheduledPlanExecutedHistoryRequest extends TeaModel {
     public String deploymentId;
 
     /**
+     * <p>The execution source.</p>
+     * 
      * <strong>example:</strong>
      * <p>SCHEDULED_PLAN</p>
      */

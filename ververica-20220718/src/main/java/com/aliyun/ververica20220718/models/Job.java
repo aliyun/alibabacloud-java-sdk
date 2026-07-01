@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class Job extends TeaModel {
     /**
-     * <p>The content template of the job.</p>
+     * <p>Job instance content template.</p>
      */
     @NameInMap("artifact")
     public Artifact artifact;
 
     /**
-     * <p>The resource configuration of the job in batch mode.</p>
+     * <p>Batch mode resource settings.</p>
      */
     @NameInMap("batchResourceSetting")
     public BatchResourceSetting batchResourceSetting;
 
     /**
-     * <p>The time when the job was created.</p>
+     * <p>Creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>1714058507</p>
@@ -26,7 +26,7 @@ public class Job extends TeaModel {
     public String createdAt;
 
     /**
-     * <p>The ID of the account that is used to create the job.</p>
+     * <p>Creator.</p>
      * 
      * <strong>example:</strong>
      * <p>27846363877456****</p>
@@ -35,7 +35,7 @@ public class Job extends TeaModel {
     public String creator;
 
     /**
-     * <p>The name of the account that is used to create the job.</p>
+     * <p>Creator name.</p>
      * 
      * <strong>example:</strong>
      * <p>****@streamcompute.onaliyun.com</p>
@@ -44,7 +44,7 @@ public class Job extends TeaModel {
     public String creatorName;
 
     /**
-     * <p>The deployment ID.</p>
+     * <p>Deployment ID.</p>
      * 
      * <strong>example:</strong>
      * <p>354dde66-a3ae-463e-967a-0b4107fd****</p>
@@ -53,7 +53,7 @@ public class Job extends TeaModel {
     public String deploymentId;
 
     /**
-     * <p>The name of the deployment.</p>
+     * <p>Deployment name.</p>
      * 
      * <strong>example:</strong>
      * <p>flinktest</p>
@@ -62,7 +62,7 @@ public class Job extends TeaModel {
     public String deploymentName;
 
     /**
-     * <p>The end time of the job.</p>
+     * <p>Job instance end time.</p>
      * 
      * <strong>example:</strong>
      * <p>1660277235</p>
@@ -71,7 +71,7 @@ public class Job extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The engine version of the deployment.</p>
+     * <p>Job engine version.</p>
      * 
      * <strong>example:</strong>
      * <p>vvr-4.0.14-flink-1.13</p>
@@ -80,10 +80,12 @@ public class Job extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>The execution mode of the job. Valid values:</p>
+     * <p>Job instance execution mode.</p>
      * <ul>
-     * <li>STREAM</li>
-     * <li>BATCH</li>
+     * <li><p>STREAM: Stream mode.</p>
+     * </li>
+     * <li><p>BATCH: Batch mode.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -93,7 +95,7 @@ public class Job extends TeaModel {
     public String executionMode;
 
     /**
-     * <p>The configuration of the job.</p>
+     * <p>Full parameter settings for the job instance.</p>
      * 
      * <strong>example:</strong>
      * <p>{execution.checkpointing.unaligned: false}</p>
@@ -102,7 +104,7 @@ public class Job extends TeaModel {
     public java.util.Map<String, ?> flinkConf;
 
     /**
-     * <p>The job ID.</p>
+     * <p>Job instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>354dde66-a3ae-463e-967a-0b4107fd****</p>
@@ -111,25 +113,25 @@ public class Job extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The variables.</p>
+     * <p>Job variables.</p>
      */
     @NameInMap("localVariables")
     public java.util.List<LocalVariable> localVariables;
 
     /**
-     * <p>The logging configuration of the job.</p>
+     * <p>Job instance log configuration.</p>
      */
     @NameInMap("logging")
     public Logging logging;
 
     /**
-     * <p>The resource information of the job.</p>
+     * <p>Job instance resource information.</p>
      */
     @NameInMap("metric")
     public JobMetric metric;
 
     /**
-     * <p>The time when the job was modified.</p>
+     * <p>Modification time.</p>
      * 
      * <strong>example:</strong>
      * <p>1714058800</p>
@@ -138,7 +140,7 @@ public class Job extends TeaModel {
     public String modifiedAt;
 
     /**
-     * <p>The ID of the account that is used to modify the job.</p>
+     * <p>Modifier.</p>
      * 
      * <strong>example:</strong>
      * <p>27846363877456****</p>
@@ -147,7 +149,7 @@ public class Job extends TeaModel {
     public String modifier;
 
     /**
-     * <p>The name of the account that is used to modify the job.</p>
+     * <p>Modifier name.</p>
      * 
      * <strong>example:</strong>
      * <p>****@streamcompute.onaliyun.com</p>
@@ -165,22 +167,22 @@ public class Job extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The startup strategy of the job.</p>
+     * <p>Job instance startup policy.</p>
      */
     @NameInMap("restoreStrategy")
     public DeploymentRestoreStrategy restoreStrategy;
 
     /**
-     * <p>If the job runs in a session cluster, the value of this parameter is the name of the session cluster. Otherwise, the value of this parameter is null.</p>
+     * <p>If the job instance runs on a Session cluster, this shows the Session cluster name; otherwise, it is null.</p>
      * 
      * <strong>example:</strong>
-     * <p>preview</p>
+     * <p>null</p>
      */
     @NameInMap("sessionClusterName")
     public String sessionClusterName;
 
     /**
-     * <p>The start time of the job.</p>
+     * <p>Job instance start time.</p>
      * 
      * <strong>example:</strong>
      * <p>1660190835</p>
@@ -189,25 +191,25 @@ public class Job extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The status of the job.</p>
+     * <p>Job instance status.</p>
      */
     @NameInMap("status")
     public JobStatus status;
 
     /**
-     * <p>The resource configuration of the job in streaming mode.</p>
+     * <p>Stream mode resource settings.</p>
      */
     @NameInMap("streamingResourceSetting")
     public StreamingResourceSetting streamingResourceSetting;
 
     /**
-     * <p>The Flink configuration.</p>
+     * <p>User job parameter settings.</p>
      */
     @NameInMap("userFlinkConf")
     public java.util.Map<String, ?> userFlinkConf;
 
     /**
-     * <p>The workspace.</p>
+     * <p>Workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>edcef******b4f</p>

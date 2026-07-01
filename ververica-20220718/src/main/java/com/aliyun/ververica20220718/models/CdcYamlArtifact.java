@@ -4,9 +4,15 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class CdcYamlArtifact extends TeaModel {
+    /**
+     * <p>Full URL paths to the additional dependencies.</p>
+     */
     @NameInMap("additionalDependencies")
     public java.util.List<String> additionalDependencies;
 
+    /**
+     * <p>Code for the data ingestion job.</p>
+     */
     @NameInMap("cdcYaml")
     public String cdcYaml;
 

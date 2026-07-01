@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetDeploymentsByNameRequest extends TeaModel {
     /**
+     * <p>Specifies whether to exclude job summary information, such as jobName and status, from the response. Set this to true to return only the JobId and improve performance.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class GetDeploymentsByNameRequest extends TeaModel {
     public Boolean ignoreJobSummary;
 
     /**
+     * <p>Specifies whether to exclude resource configuration information, such as parallelism and the number of CUs, to reduce the response size.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

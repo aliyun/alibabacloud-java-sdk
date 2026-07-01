@@ -9,8 +9,10 @@ public class StopJobResponseBody extends TeaModel {
 
     /**
      * <ul>
-     * <li>If the value of success was true, the job that you stopped was returned.</li>
-     * <li>If the value of success was false, a null value was returned.</li>
+     * <li><p>The details of the stopped job instance, returned if the request succeeds.</p>
+     * </li>
+     * <li><p>Empty if the request fails.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("data")
@@ -18,8 +20,10 @@ public class StopJobResponseBody extends TeaModel {
 
     /**
      * <ul>
-     * <li>If the value of success was false, an error code was returned.</li>
-     * <li>If the value of success was true, a null value was returned.</li>
+     * <li><p>The error code that is returned if the request fails.</p>
+     * </li>
+     * <li><p>Empty if the request succeeds.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,8 +34,10 @@ public class StopJobResponseBody extends TeaModel {
 
     /**
      * <ul>
-     * <li>If the value of success was false, an error message was returned.</li>
-     * <li>If the value of success was true, a null value was returned.</li>
+     * <li><p>The error message that is returned if the request fails.</p>
+     * </li>
+     * <li><p>Empty if the request succeeds.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,7 +47,7 @@ public class StopJobResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The value was fixed to 200.</p>
+     * <p>The value is fixed at 200.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -59,7 +65,7 @@ public class StopJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request succeeded.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

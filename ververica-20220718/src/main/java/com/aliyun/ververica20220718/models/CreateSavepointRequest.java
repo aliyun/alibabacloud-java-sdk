@@ -16,6 +16,9 @@ public class CreateSavepointRequest extends TeaModel {
 
     /**
      * <p>The description of the savepoint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Job snapshot description</p>
      */
     @NameInMap("description")
     public String description;
@@ -23,8 +26,10 @@ public class CreateSavepointRequest extends TeaModel {
     /**
      * <p>Specifies whether to use the native format mode. Valid values:</p>
      * <ul>
-     * <li>true: The native format mode is used.</li>
-     * <li>false: The native format mode is not used.</li>
+     * <li><p>true: The native format mode is used.</p>
+     * </li>
+     * <li><p>false: The native format mode is not used.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListJobsRequest extends TeaModel {
     /**
-     * <p>The deployment ID.</p>
+     * <p>The ID of the deployment.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListJobsRequest extends TeaModel {
     public String deploymentId;
 
     /**
-     * <p>The page number. Minimum value: 1. Default value: 1.</p>
+     * <p>The page number to return. Minimum value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -24,7 +24,7 @@ public class ListJobsRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+     * <p>The number of entries per page. Maximum value: 100. Minimum value: 1. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -33,13 +33,7 @@ public class ListJobsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The collation.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>gmt_create</li>
-     * <li>job_id</li>
-     * <li>status</li>
-     * </ul>
+     * <p>The field to sort the results by.</p>
      * 
      * <strong>example:</strong>
      * <p>gmt_create</p>

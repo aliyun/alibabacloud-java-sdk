@@ -4,10 +4,6 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class SubmitSqlPreviewResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;[main] INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - --------------------------------------------------------------------------------\n2024-05-22 11:46:39,871 [main] INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint&quot;</p>
-     */
     @NameInMap("data")
     public SubmitPreviewResult data;
 
@@ -39,10 +35,6 @@ public class SubmitSqlPreviewResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("success")
     public Boolean success;
 

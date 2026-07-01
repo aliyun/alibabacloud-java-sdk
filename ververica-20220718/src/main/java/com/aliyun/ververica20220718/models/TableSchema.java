@@ -4,12 +4,21 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class TableSchema extends TeaModel {
+    /**
+     * <p>The ID of the collect sink operator.</p>
+     */
     @NameInMap("collectSinkOperatorId")
     public String collectSinkOperatorId;
 
+    /**
+     * <p>The schema of the table.</p>
+     */
     @NameInMap("schema")
     public Schema schema;
 
+    /**
+     * <p>The name of the table.</p>
+     */
     @NameInMap("tableName")
     public String tableName;
 

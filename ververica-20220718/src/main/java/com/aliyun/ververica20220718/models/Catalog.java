@@ -8,6 +8,7 @@ public class Catalog extends TeaModel {
     public java.util.Map<String, String> extensionConf;
 
     /**
+     * <p>The catalog name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,7 @@ public class Catalog extends TeaModel {
     public String name;
 
     /**
+     * <p>The catalog configuration parameters.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("properties")

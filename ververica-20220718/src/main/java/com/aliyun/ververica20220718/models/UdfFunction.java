@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UdfFunction extends TeaModel {
     /**
+     * <p>The class name.</p>
+     * 
      * <strong>example:</strong>
      * <p>myFunctionTest</p>
      */
@@ -12,6 +14,8 @@ public class UdfFunction extends TeaModel {
     public String className;
 
     /**
+     * <p>The function name.</p>
+     * 
      * <strong>example:</strong>
      * <p>myFunction</p>
      */
@@ -19,6 +23,8 @@ public class UdfFunction extends TeaModel {
     public String functionName;
 
     /**
+     * <p>The UDF artifact name.</p>
+     * 
      * <strong>example:</strong>
      * <p>udfCollection.jar</p>
      */

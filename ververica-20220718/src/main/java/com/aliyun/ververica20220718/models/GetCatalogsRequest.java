@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetCatalogsRequest extends TeaModel {
     /**
+     * <p>The name of the catalog. If this parameter is left empty, all catalogs are listed.</p>
+     * 
      * <strong>example:</strong>
      * <p>paimon</p>
      */

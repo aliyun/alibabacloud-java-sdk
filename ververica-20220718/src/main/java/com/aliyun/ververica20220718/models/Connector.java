@@ -83,7 +83,7 @@ public class Connector extends TeaModel {
      * <p>Indicates whether the connector can be used as the source.</p>
      * 
      * <strong>example:</strong>
-     * <p>flase</p>
+     * <p>false</p>
      */
     @NameInMap("source")
     public Boolean source;

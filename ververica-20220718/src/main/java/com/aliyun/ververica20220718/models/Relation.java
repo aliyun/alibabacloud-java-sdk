@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Relation extends TeaModel {
     /**
+     * <p>The destination table information.</p>
+     * 
      * <strong>example:</strong>
      * <p>TableB</p>
      */
@@ -12,6 +14,8 @@ public class Relation extends TeaModel {
     public String destination;
 
     /**
+     * <p>The job instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>664cc64d-5dea-4ad3-9ee4-8432a874****</p>
      */
@@ -19,6 +23,8 @@ public class Relation extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The source table information.</p>
+     * 
      * <strong>example:</strong>
      * <p>TableA</p>
      */

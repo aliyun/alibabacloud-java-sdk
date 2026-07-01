@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RescaleJobParam extends TeaModel {
     /**
+     * <p>The parallelism.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

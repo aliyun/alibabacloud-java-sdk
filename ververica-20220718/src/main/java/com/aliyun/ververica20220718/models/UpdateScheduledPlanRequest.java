@@ -4,6 +4,9 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class UpdateScheduledPlanRequest extends TeaModel {
+    /**
+     * <p>The data structure of the scheduled plan to be updated.</p>
+     */
     @NameInMap("body")
     public ScheduledPlan body;
 

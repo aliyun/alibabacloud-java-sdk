@@ -7,9 +7,6 @@ public class FlinkApiProxyRequest extends TeaModel {
     /**
      * <p>The path of the Flink UI.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>/jobs/4df35f8e54554b23bf7dcd38a151****</p>
      */
     @NameInMap("flinkApiPath")
     public String flinkApiPath;
@@ -37,8 +34,10 @@ public class FlinkApiProxyRequest extends TeaModel {
     /**
      * <p>The type of the resource. Valid values:</p>
      * <ul>
-     * <li>jobs</li>
-     * <li>sessionclusters</li>
+     * <li><p>jobs</p>
+     * </li>
+     * <li><p>sessionclusters</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

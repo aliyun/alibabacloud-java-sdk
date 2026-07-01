@@ -4,9 +4,15 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class SqlExecutionFetchResult extends TeaModel {
+    /**
+     * <p>The result of the data query language (DQL) statement.</p>
+     */
     @NameInMap("dqlResult")
     public DqlResult dqlResult;
 
+    /**
+     * <p>The information about the SQL execution.</p>
+     */
     @NameInMap("sqlExecution")
     public SqlExecution sqlExecution;
 

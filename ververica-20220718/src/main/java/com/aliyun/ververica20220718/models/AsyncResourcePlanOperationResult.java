@@ -25,9 +25,12 @@ public class AsyncResourcePlanOperationResult extends TeaModel {
     /**
      * <p>The status of the ticket that applies for an asynchronous operation. Valid values:</p>
      * <ul>
-     * <li>EXECUTING</li>
-     * <li>FINISHED</li>
-     * <li>FAILED</li>
+     * <li><p>EXECUTING</p>
+     * </li>
+     * <li><p>FINISHED</p>
+     * </li>
+     * <li><p>FAILED</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

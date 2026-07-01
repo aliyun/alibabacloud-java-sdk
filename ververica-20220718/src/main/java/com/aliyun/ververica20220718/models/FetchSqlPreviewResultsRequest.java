@@ -8,7 +8,7 @@ public class FetchSqlPreviewResultsRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>19426537348647121698828223472</p>
+     * <p>00000000-0000-0000-0000-00000022****</p>
      */
     @NameInMap("queryId")
     public String queryId;
@@ -17,7 +17,7 @@ public class FetchSqlPreviewResultsRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>test-session</p>
+     * <p>session-test</p>
      */
     @NameInMap("sessionClusterName")
     public String sessionClusterName;
@@ -26,7 +26,7 @@ public class FetchSqlPreviewResultsRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>5f581795-4c5b-43f1-bdae-d7b0871080a1</p>
+     * <p>00000000-0000-0000-0000-00000033****</p>
      */
     @NameInMap("sessionId")
     public String sessionId;

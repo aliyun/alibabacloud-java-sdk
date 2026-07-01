@@ -4,18 +4,33 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class SqlStatement extends TeaModel {
+    /**
+     * <p>The index of the SQL statement.</p>
+     */
     @NameInMap("index")
     public Integer index;
 
+    /**
+     * <p>The message returned for the SQL statement.</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>The SQL script content.</p>
+     */
     @NameInMap("sqlScript")
     public String sqlScript;
 
+    /**
+     * <p>The status of the SQL statement.</p>
+     */
     @NameInMap("statusState")
     public String statusState;
 
+    /**
+     * <p>The type of the SQL statement.</p>
+     */
     @NameInMap("type")
     public String type;
 

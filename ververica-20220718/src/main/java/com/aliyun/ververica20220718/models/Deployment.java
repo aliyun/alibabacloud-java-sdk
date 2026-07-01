@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class Deployment extends TeaModel {
     /**
-     * <p>The parameters that are required for starting a deployment.</p>
+     * <p>The data structure required to start the deployed job.</p>
      */
     @NameInMap("artifact")
     public Artifact artifact;
 
     /**
-     * <p>The resource configuration of the batch deployment.</p>
+     * <p>Resource settings for a batch job.</p>
      */
     @NameInMap("batchResourceSetting")
     public BatchResourceSetting batchResourceSetting;
 
     /**
-     * <p>The time at which the deployment was created.</p>
+     * <p>Creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>1714058507</p>
@@ -26,7 +26,7 @@ public class Deployment extends TeaModel {
     public String createdAt;
 
     /**
-     * <p>The ID of the account that is used to create the deployment.</p>
+     * <p>Creator.</p>
      * 
      * <strong>example:</strong>
      * <p>27846363877456****</p>
@@ -35,7 +35,7 @@ public class Deployment extends TeaModel {
     public String creator;
 
     /**
-     * <p>The name of the account that is used to create the deployment.</p>
+     * <p>Name of the creator.</p>
      * 
      * <strong>example:</strong>
      * <p>****@streamcompute.onaliyun.com</p>
@@ -44,7 +44,7 @@ public class Deployment extends TeaModel {
     public String creatorName;
 
     /**
-     * <p>Specifies whether the deployment is modified after the deployment is started.</p>
+     * <p>Indicates whether the deployed job has been modified after it was started.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -53,7 +53,7 @@ public class Deployment extends TeaModel {
     public Boolean deploymentHasChanged;
 
     /**
-     * <p>The ID of the deployment.</p>
+     * <p>Deployed job ID.</p>
      * 
      * <strong>example:</strong>
      * <p>00000000-0000-0000-0000-0000012312****</p>
@@ -62,13 +62,13 @@ public class Deployment extends TeaModel {
     public String deploymentId;
 
     /**
-     * <p>The cluster on which the deployment is deployed.</p>
+     * <p>Deployment target.</p>
      */
     @NameInMap("deploymentTarget")
     public BriefDeploymentTarget deploymentTarget;
 
     /**
-     * <p>The description of the deployment.</p>
+     * <p>Description.</p>
      * 
      * <strong>example:</strong>
      * <p>this is a deployment description</p>
@@ -77,7 +77,7 @@ public class Deployment extends TeaModel {
     public String description;
 
     /**
-     * <p>The engine version of the deployment.</p>
+     * <p>Engine version.</p>
      * 
      * <strong>example:</strong>
      * <p>vvr-6.0.0-flink-1.15</p>
@@ -86,10 +86,12 @@ public class Deployment extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>The execution mode of the deployment. Valid values:</p>
+     * <p>Execution mode.</p>
      * <ul>
-     * <li>STREAMING</li>
-     * <li>BATCH</li>
+     * <li><p>STREAMING: stream mode.</p>
+     * </li>
+     * <li><p>BATCH: batch mode.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -99,7 +101,7 @@ public class Deployment extends TeaModel {
     public String executionMode;
 
     /**
-     * <p>The Realtime Compute for Apache Flink configuration.</p>
+     * <p>Flink configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;taskmanager.numberOfTaskSlots&quot;:&quot;1&quot;}</p>
@@ -108,28 +110,31 @@ public class Deployment extends TeaModel {
     public java.util.Map<String, ?> flinkConf;
 
     /**
-     * <p>The summary of jobs in the deployment.</p>
+     * <p>A summary of information about the job instances under the deployed job.</p>
      */
     @NameInMap("jobSummary")
     public JobSummary jobSummary;
 
+    /**
+     * <p>Job labels.</p>
+     */
     @NameInMap("labels")
     public java.util.Map<String, ?> labels;
 
     /**
-     * <p>The variables of the deployment.</p>
+     * <p>Job variables.</p>
      */
     @NameInMap("localVariables")
     public java.util.List<LocalVariable> localVariables;
 
     /**
-     * <p>The logging configuration.</p>
+     * <p>Log configuration.</p>
      */
     @NameInMap("logging")
     public Logging logging;
 
     /**
-     * <p>The time at which the deployment was modified.</p>
+     * <p>Modification time.</p>
      * 
      * <strong>example:</strong>
      * <p>1714058843</p>
@@ -138,7 +143,7 @@ public class Deployment extends TeaModel {
     public String modifiedAt;
 
     /**
-     * <p>The ID of the account that is used to modify the deployment.</p>
+     * <p>Modifier.</p>
      * 
      * <strong>example:</strong>
      * <p>27846363877456****</p>
@@ -147,7 +152,7 @@ public class Deployment extends TeaModel {
     public String modifier;
 
     /**
-     * <p>The name of the account that is used to modify the deployment.</p>
+     * <p>Name of the modifier.</p>
      * 
      * <strong>example:</strong>
      * <p>****@streamcompute.onaliyun.com</p>
@@ -156,7 +161,7 @@ public class Deployment extends TeaModel {
     public String modifierName;
 
     /**
-     * <p>The name of the deployment.</p>
+     * <p>Deployed job name.</p>
      * 
      * <strong>example:</strong>
      * <p>deploymentName</p>
@@ -174,6 +179,8 @@ public class Deployment extends TeaModel {
     public String namespace;
 
     /**
+     * <p>Associated job draft ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>00000000-0000-0000-0000-000000000003</p>
      */
@@ -181,13 +188,13 @@ public class Deployment extends TeaModel {
     public String referencedDeploymentDraftId;
 
     /**
-     * <p>The resource configuration of the streaming deployment.</p>
+     * <p>Resource settings for a stream job.</p>
      */
     @NameInMap("streamingResourceSetting")
     public StreamingResourceSetting streamingResourceSetting;
 
     /**
-     * <p>The workspace to which the deployment belongs.</p>
+     * <p>Workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>edcef******b4f</p>

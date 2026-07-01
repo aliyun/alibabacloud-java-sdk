@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDeploymentDraftLockRequest extends TeaModel {
     /**
+     * <p>The ID of the job draft. You can get this ID by calling the ListDeploymentDrafts operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

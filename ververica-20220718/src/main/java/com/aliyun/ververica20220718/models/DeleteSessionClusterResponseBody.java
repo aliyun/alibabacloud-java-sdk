@@ -4,10 +4,15 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class DeleteSessionClusterResponseBody extends TeaModel {
+    /**
+     * <p>The data structure of the deleted session cluster.</p>
+     */
     @NameInMap("data")
     public SessionCluster data;
 
     /**
+     * <p>This parameter is not empty and indicates the error code if \<code>success\\</code> is \<code>false\\</code>. This parameter is empty if \<code>success\\</code> is \<code>true\\</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -15,6 +20,8 @@ public class DeleteSessionClusterResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>This parameter is not empty and indicates the error message if \<code>success\\</code> is \<code>false\\</code>. This parameter is empty if \<code>success\\</code> is \<code>true\\</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -22,6 +29,8 @@ public class DeleteSessionClusterResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code. A value of 200 is returned. The \<code>success\\</code> parameter indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class DeleteSessionClusterResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CBC799F0-ABCD-1D30-8A4F-882ED4DD****</p>
      */
@@ -36,6 +47,8 @@ public class DeleteSessionClusterResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDeploymentTargetV2ResponseBody extends TeaModel {
     /**
+     * <p>The details of the deployment target.</p>
+     * 
      * <strong>example:</strong>
      * <p>{ &quot;jobs&quot;: [ { &quot;jid&quot;: &quot;4df35f8e54554b23bf7dcd38a151****&quot;, &quot;name&quot;: &quot;69d001d5-419a-4bfc-9c2e-849cacd3****&quot;, &quot;state&quot;: &quot;RUNNING&quot;, &quot;start-time&quot;: 1659154942068, &quot;end-time&quot;: -1, &quot;duration&quot;: 188161756, &quot;last-modification&quot;: 1659154968305, &quot;tasks&quot;: { &quot;total&quot;: 2, &quot;created&quot;: 0, &quot;scheduled&quot;: 0, &quot;deploying&quot;: 0, &quot;running&quot;: 2, &quot;finished&quot;: 0, &quot;canceling&quot;: 0, &quot;canceled&quot;: 0, &quot;failed&quot;: 0, &quot;reconciling&quot;: 0, &quot;initializing&quot;: 0 } } ] }</p>
      */
@@ -12,6 +14,8 @@ public class CreateDeploymentTargetV2ResponseBody extends TeaModel {
     public DeploymentTarget data;
 
     /**
+     * <p>If success is false, this parameter is not empty and indicates the error code. If success is true, this parameter is empty.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -19,6 +23,8 @@ public class CreateDeploymentTargetV2ResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>If success is false, this parameter is not empty and indicates the error message. If success is true, this parameter is empty.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -26,6 +32,8 @@ public class CreateDeploymentTargetV2ResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code. A value of 200 is returned. Use the success parameter to determine whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -33,6 +41,8 @@ public class CreateDeploymentTargetV2ResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</p>
      */
@@ -40,6 +50,8 @@ public class CreateDeploymentTargetV2ResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

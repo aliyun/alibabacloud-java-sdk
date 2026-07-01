@@ -4,10 +4,15 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class UpdateDeploymentTargetResponseBody extends TeaModel {
+    /**
+     * <p>The updated deployment target.</p>
+     */
     @NameInMap("data")
     public DeploymentTarget data;
 
     /**
+     * <p>The error code returned if the request fails. This parameter is empty if the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -15,6 +20,8 @@ public class UpdateDeploymentTargetResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message returned if the request fails. This parameter is empty if the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -22,6 +29,8 @@ public class UpdateDeploymentTargetResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code. A value of 200 is always returned. Use the \<code>success\\</code> parameter to determine whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class UpdateDeploymentTargetResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</p>
      */
@@ -36,6 +47,8 @@ public class UpdateDeploymentTargetResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

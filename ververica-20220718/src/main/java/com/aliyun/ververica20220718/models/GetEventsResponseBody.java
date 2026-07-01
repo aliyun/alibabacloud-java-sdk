@@ -4,10 +4,15 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class GetEventsResponseBody extends TeaModel {
+    /**
+     * <p>A list of runtime events matching the filter criteria. Returned only when the request is successful (<code>success</code> is <code>true</code>).</p>
+     */
     @NameInMap("data")
     public java.util.List<Event> data;
 
     /**
+     * <p>The business error code. Returned only when the request fails (that is, <code>success</code> is <code>false</code>).</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -15,6 +20,8 @@ public class GetEventsResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The business error message. Returned only when the request fails (that is, <code>success</code> is <code>false</code>).</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -22,6 +29,8 @@ public class GetEventsResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The business status code. This field always returns <code>200</code>. To confirm the request\&quot;s success, check the <code>success</code> parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class GetEventsResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
+     * <p>The page number of the returned page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -36,6 +47,8 @@ public class GetEventsResponseBody extends TeaModel {
     public Integer pageIndex;
 
     /**
+     * <p>The number of entries on this page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -43,6 +56,8 @@ public class GetEventsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</p>
      */
@@ -50,6 +65,8 @@ public class GetEventsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the business request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -57,6 +74,8 @@ public class GetEventsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of entries that match the query.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */

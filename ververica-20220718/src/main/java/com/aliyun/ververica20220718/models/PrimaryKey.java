@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class PrimaryKey extends TeaModel {
     /**
+     * <p>The primary key column group.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("columns")
     public java.util.List<String> columns;
 
     /**
+     * <p>The constraint name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

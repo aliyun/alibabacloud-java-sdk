@@ -4,10 +4,20 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class ListDeploymentDraftsResponseBody extends TeaModel {
+    /**
+     * <p>A list of job drafts that match the query. This parameter is returned if the request is successful. If the request fails, this parameter is empty.</p>
+     */
     @NameInMap("data")
     public java.util.List<DeploymentDraft> data;
 
     /**
+     * <ul>
+     * <li><p>If the request fails, the error code is returned.</p>
+     * </li>
+     * <li><p>If the request is successful, this parameter is empty.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -15,6 +25,13 @@ public class ListDeploymentDraftsResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <ul>
+     * <li><p>If the request fails, the error message is returned.</p>
+     * </li>
+     * <li><p>If the request is successful, this parameter is empty.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -22,6 +39,8 @@ public class ListDeploymentDraftsResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code. If this parameter is not empty and its value is not 200, the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +48,8 @@ public class ListDeploymentDraftsResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
+     * <p>The page number of the returned page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -36,6 +57,8 @@ public class ListDeploymentDraftsResponseBody extends TeaModel {
     public Integer pageIndex;
 
     /**
+     * <p>The number of entries on the returned page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -43,6 +66,8 @@ public class ListDeploymentDraftsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</p>
      */
@@ -50,6 +75,8 @@ public class ListDeploymentDraftsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -57,6 +84,8 @@ public class ListDeploymentDraftsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of entries that match the query.</p>
+     * 
      * <strong>example:</strong>
      * <p>69</p>
      */

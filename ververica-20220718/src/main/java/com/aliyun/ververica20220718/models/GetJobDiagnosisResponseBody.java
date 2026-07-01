@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class GetJobDiagnosisResponseBody extends TeaModel {
     /**
+     * <p>The details of the abnormal diagnostic items.</p>
+     * 
      * <strong>example:</strong>
      * <p>“”</p>
      */
     @NameInMap("accessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>The diagnostics result.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>As shown in the response example.</p>
+     */
     @NameInMap("data")
     public JobDiagnosis data;
 
     /**
+     * <p>The error code. This parameter is not empty when success is false, indicating a business error code. This parameter is empty when success is true.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -22,6 +32,8 @@ public class GetJobDiagnosisResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message. This parameter is not empty when success is false, indicating a business error message. This parameter is empty when success is true.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -29,6 +41,8 @@ public class GetJobDiagnosisResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code, which is always 200. Use the success parameter to determine whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -36,6 +50,8 @@ public class GetJobDiagnosisResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</p>
      */
@@ -43,6 +59,8 @@ public class GetJobDiagnosisResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

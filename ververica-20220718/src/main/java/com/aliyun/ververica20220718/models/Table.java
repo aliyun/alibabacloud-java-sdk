@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class Table extends TeaModel {
     /**
      * <p>The comment.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试订单表</p>
      */
     @NameInMap("comment")
     public String comment;
@@ -42,9 +45,6 @@ public class Table extends TeaModel {
     public Schema schema;
 
     /**
-     * <p>TABLE;
-     *   MATERIALIZED_TABLE;
-     *   VIEW;</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("tableType")

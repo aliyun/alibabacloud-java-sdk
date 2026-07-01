@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class HotUpdateJobFailureInfo extends TeaModel {
     /**
+     * <p>The error level.</p>
+     * 
      * <strong>example:</strong>
      * <p>LOW</p>
      */
@@ -12,6 +14,8 @@ public class HotUpdateJobFailureInfo extends TeaModel {
     public String failureSeverity;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>“”</p>
      */
@@ -19,6 +23,8 @@ public class HotUpdateJobFailureInfo extends TeaModel {
     public String message;
 
     /**
+     * <p>The error cause.</p>
+     * 
      * <strong>example:</strong>
      * <p>“”</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class ListScheduledPlanExecutedHistoryResponseBody extends TeaModel {
+    /**
+     * <p>The list of jobs that meet the filter criteria. This parameter is returned only when the request is successful.</p>
+     */
     @NameInMap("data")
     public java.util.List<ScheduledPlanExecutedInfo> data;
 
     /**
+     * <p>The error code that is returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -15,6 +20,8 @@ public class ListScheduledPlanExecutedHistoryResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message that is returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -22,6 +29,8 @@ public class ListScheduledPlanExecutedHistoryResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code. The value is always 200. Use the \<code>success\\</code> parameter to determine whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class ListScheduledPlanExecutedHistoryResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
+     * <p>The page number of the returned page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -36,6 +47,8 @@ public class ListScheduledPlanExecutedHistoryResponseBody extends TeaModel {
     public Integer pageIndex;
 
     /**
+     * <p>The number of entries on the returned page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -43,6 +56,8 @@ public class ListScheduledPlanExecutedHistoryResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</p>
      */
@@ -50,12 +65,20 @@ public class ListScheduledPlanExecutedHistoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <p>The total number of entries that meet the filter criteria.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("totalSize")
     public Integer totalSize;
 

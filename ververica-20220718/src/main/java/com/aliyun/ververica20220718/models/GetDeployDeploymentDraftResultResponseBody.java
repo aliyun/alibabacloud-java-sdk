@@ -4,10 +4,20 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class GetDeployDeploymentDraftResultResponseBody extends TeaModel {
+    /**
+     * <p>The deployment result of the job draft.</p>
+     */
     @NameInMap("data")
     public AsyncDraftDeployResult data;
 
     /**
+     * <ul>
+     * <li><p>The error code. This parameter is returned when the request fails.</p>
+     * </li>
+     * <li><p>If the request is successful, this parameter is empty.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -15,6 +25,13 @@ public class GetDeployDeploymentDraftResultResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <ul>
+     * <li><p>The error message. This parameter is returned when the request fails.</p>
+     * </li>
+     * <li><p>If the request is successful, this parameter is empty.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -22,6 +39,8 @@ public class GetDeployDeploymentDraftResultResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code. A value other than 200 indicates that the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +48,8 @@ public class GetDeployDeploymentDraftResultResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</p>
      */
@@ -36,6 +57,8 @@ public class GetDeployDeploymentDraftResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

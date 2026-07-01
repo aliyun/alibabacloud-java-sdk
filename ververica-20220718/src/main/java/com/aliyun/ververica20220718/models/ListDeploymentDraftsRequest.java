@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDeploymentDraftsRequest extends TeaModel {
     /**
+     * <p>The page number to return. The default value is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListDeploymentDraftsRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
+     * <p>The number of entries to return on each page. The default value is 10. The maximum value is 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StopSessionClusterResponseBody extends TeaModel {
     /**
+     * <p>The error code returned if the request fails. This parameter is empty if the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -12,6 +14,8 @@ public class StopSessionClusterResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message returned if the request fails. This parameter is empty if the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -19,6 +23,8 @@ public class StopSessionClusterResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code. A value of 200 is always returned. Use the success parameter to determine whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class StopSessionClusterResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</p>
      */
@@ -33,6 +41,8 @@ public class StopSessionClusterResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

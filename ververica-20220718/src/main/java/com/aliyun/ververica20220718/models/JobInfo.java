@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class JobInfo extends TeaModel {
     /**
+     * <p>The job instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>664cc64d-5dea-4ad3-9ee4-8432a874****</p>
      */
@@ -12,6 +14,8 @@ public class JobInfo extends TeaModel {
     public String id;
 
     /**
+     * <p>The job details.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;id:xxx&quot;,&quot;createTime:v&quot;}</p>
      */

@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class ListDeploymentsResponseBody extends TeaModel {
     /**
      * <ul>
-     * <li>If the value of success was true, the list of all deployments was returned.</li>
-     * <li>If the value of success was false, a null value was returned.</li>
+     * <li><p>When success is true, returns a list of jobs that meet the query conditions;</p>
+     * </li>
+     * <li><p>When success is false, returns an empty value.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("data")
@@ -15,8 +17,10 @@ public class ListDeploymentsResponseBody extends TeaModel {
 
     /**
      * <ul>
-     * <li>If the value of success was false, an error code was returned.</li>
-     * <li>If the value of success was true, a null value was returned.</li>
+     * <li><p>When success is false, returns a business error code;</p>
+     * </li>
+     * <li><p>When success is true, returns an empty value.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,8 +31,10 @@ public class ListDeploymentsResponseBody extends TeaModel {
 
     /**
      * <ul>
-     * <li>If the value of success was false, an error message was returned.</li>
-     * <li>If the value of success was true, a null value was returned.</li>
+     * <li><p>When success is false, returns a business error message;</p>
+     * </li>
+     * <li><p>When success is true, returns an empty value.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,7 +44,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The value was fixed to 200.</p>
+     * <p>Static field with a fixed value of 200.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -47,7 +53,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
-     * <p>The page number.</p>
+     * <p>Pagination parameter: page index, indicating the requested page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -56,7 +62,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
     public Integer pageIndex;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>Pagination parameter: the number of elements on the requested page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -65,7 +71,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</p>
@@ -74,7 +80,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the business request succeeded.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -83,7 +89,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of elements that meet the query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

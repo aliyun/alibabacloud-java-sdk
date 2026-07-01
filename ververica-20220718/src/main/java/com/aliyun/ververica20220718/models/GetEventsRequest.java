@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetEventsRequest extends TeaModel {
     /**
+     * <p>The ID of the deployed job. If you specify this parameter, the operation returns events only for this job.</p>
+     * 
      * <strong>example:</strong>
      * <p>58718c99-3b29-4c5e-93bb-c9fc4ec6****</p>
      */
@@ -15,6 +17,8 @@ public class GetEventsRequest extends TeaModel {
     public String deploymentName;
 
     /**
+     * <p>The page number to retrieve. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +26,8 @@ public class GetEventsRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

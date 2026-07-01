@@ -4,12 +4,21 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class DqlResult extends TeaModel {
+    /**
+     * <p>The statement index.</p>
+     */
     @NameInMap("statementIndex")
     public Integer statementIndex;
 
+    /**
+     * <p>The submit preview results.</p>
+     */
     @NameInMap("submitPreviewResult")
     public SubmitPreviewResult submitPreviewResult;
 
+    /**
+     * <p>The table results.</p>
+     */
     @NameInMap("tableResults")
     public java.util.List<TableResult> tableResults;
 

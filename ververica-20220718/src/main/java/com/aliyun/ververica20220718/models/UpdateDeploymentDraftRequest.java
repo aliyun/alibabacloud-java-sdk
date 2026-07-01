@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDeploymentDraftRequest extends TeaModel {
     /**
+     * <p>The information to update the job draft.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

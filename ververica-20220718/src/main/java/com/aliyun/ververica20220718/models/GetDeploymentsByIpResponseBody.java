@@ -4,10 +4,15 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class GetDeploymentsByIpResponseBody extends TeaModel {
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public java.util.List<Deployment> data;
 
     /**
+     * <p>The error code. This parameter is returned only when success is false. If success is true, this parameter is empty.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -15,6 +20,8 @@ public class GetDeploymentsByIpResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message. This parameter is returned only when success is false. If success is true, this parameter is empty.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -22,6 +29,8 @@ public class GetDeploymentsByIpResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code. A value of 200 indicates that the request was successful. Use the success parameter to determine whether the business request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class GetDeploymentsByIpResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</p>
      */
@@ -36,6 +47,8 @@ public class GetDeploymentsByIpResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

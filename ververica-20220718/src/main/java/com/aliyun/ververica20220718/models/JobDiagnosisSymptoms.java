@@ -4,21 +4,39 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class JobDiagnosisSymptoms extends TeaModel {
+    /**
+     * <p>Job resource diagnosis.</p>
+     */
     @NameInMap("autopilot")
     public JobDiagnosisSymptom autopilot;
 
+    /**
+     * <p>Other namespace diagnosis.</p>
+     */
     @NameInMap("others")
     public java.util.List<JobDiagnosisSymptom> others;
 
+    /**
+     * <p>Run diagnosis.</p>
+     */
     @NameInMap("runtime")
     public java.util.List<JobDiagnosisSymptom> runtime;
 
+    /**
+     * <p>Startup procedure diagnosis.</p>
+     */
     @NameInMap("startup")
     public java.util.List<JobDiagnosisSymptom> startup;
 
+    /**
+     * <p>Job status diagnosis.</p>
+     */
     @NameInMap("state")
     public java.util.List<JobDiagnosisSymptom> state;
 
+    /**
+     * <p>Underlying abnormal diagnosis.</p>
+     */
     @NameInMap("troubleshooting")
     public java.util.List<JobDiagnosisSymptom> troubleshooting;
 

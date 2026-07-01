@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeploymentDraft extends TeaModel {
     /**
-     * <p>The script of the SQL deployment.</p>
+     * <p>The artifact. Supported types include SQLSCRIPT and CDCYAML.</p>
      */
     @NameInMap("artifact")
     public Artifact artifact;
 
     /**
-     * <p>The time when the draft was created.</p>
+     * <p>Output only. The creation time, represented as a Unix timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1723537978</p>
@@ -20,7 +20,7 @@ public class DeploymentDraft extends TeaModel {
     public Long createdAt;
 
     /**
-     * <p>The ID of the account that is used to create the draft.</p>
+     * <p>Output only. The ID of the creator.</p>
      * 
      * <strong>example:</strong>
      * <p>27846363877456****</p>
@@ -29,7 +29,7 @@ public class DeploymentDraft extends TeaModel {
     public String creator;
 
     /**
-     * <p>The name of the account that is used to create the draft.</p>
+     * <p>Output only. The name of the creator.</p>
      * 
      * <strong>example:</strong>
      * <p>****@streamcompute.onaliyun.com</p>
@@ -38,7 +38,7 @@ public class DeploymentDraft extends TeaModel {
     public String creatorName;
 
     /**
-     * <p>The draft ID.</p>
+     * <p>The deployment draft ID.</p>
      * 
      * <strong>example:</strong>
      * <p>00000000-0000-0000-0000-00000012****</p>
@@ -47,7 +47,7 @@ public class DeploymentDraft extends TeaModel {
     public String deploymentDraftId;
 
     /**
-     * <p>The engine version of the deployment.</p>
+     * <p>The engine version.</p>
      * 
      * <strong>example:</strong>
      * <p>vvr-6.0.7-flink-1.15</p>
@@ -65,25 +65,25 @@ public class DeploymentDraft extends TeaModel {
     public String executionMode;
 
     /**
-     * <p>The labels of the deployment.</p>
+     * <p>Key-value pairs to apply as labels.</p>
      */
     @NameInMap("labels")
     public java.util.Map<String, ?> labels;
 
     /**
-     * <p>The variables.</p>
+     * <p>The local variables.</p>
      */
     @NameInMap("localVariables")
     public java.util.List<LocalVariable> localVariables;
 
     /**
-     * <p>The lock of the draft.</p>
+     * <p>The deployment draft lock.</p>
      */
     @NameInMap("lock")
     public Lock lock;
 
     /**
-     * <p>The time when the draft was modified.</p>
+     * <p>Output only. The modification time, represented as a Unix timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1723537978</p>
@@ -92,7 +92,7 @@ public class DeploymentDraft extends TeaModel {
     public Long modifiedAt;
 
     /**
-     * <p>The ID of the account that is used to modify the draft.</p>
+     * <p>Output only. The ID of the modifier.</p>
      * 
      * <strong>example:</strong>
      * <p>27846363877456****</p>
@@ -101,7 +101,7 @@ public class DeploymentDraft extends TeaModel {
     public String modifier;
 
     /**
-     * <p>The name of the account that is used to modify the draft.</p>
+     * <p>Output only. The name of the modifier.</p>
      * 
      * <strong>example:</strong>
      * <p>****@streamcompute.onaliyun.com</p>
@@ -110,7 +110,7 @@ public class DeploymentDraft extends TeaModel {
     public String modifierName;
 
     /**
-     * <p>The name of the draft.</p>
+     * <p>The deployment draft name.</p>
      * 
      * <strong>example:</strong>
      * <p>test-draft</p>
@@ -119,7 +119,7 @@ public class DeploymentDraft extends TeaModel {
     public String name;
 
     /**
-     * <p>The name of the namespace.</p>
+     * <p>The namespace.</p>
      * 
      * <strong>example:</strong>
      * <p>default-namespace</p>
@@ -128,7 +128,7 @@ public class DeploymentDraft extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The ID of the parent folder.</p>
+     * <p>The parent ID.</p>
      * 
      * <strong>example:</strong>
      * <p>00000000-0000-0000-0000-00000013****</p>
@@ -137,7 +137,7 @@ public class DeploymentDraft extends TeaModel {
     public String parentId;
 
     /**
-     * <p>The ID of the associated deployment.</p>
+     * <p>The referenced deployment ID.</p>
      * 
      * <strong>example:</strong>
      * <p>00000000-0000-0000-0000-0000012312****</p>

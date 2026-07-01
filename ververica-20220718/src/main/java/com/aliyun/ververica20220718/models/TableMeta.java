@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class TableMeta extends TeaModel {
     /**
+     * <p>The catalog name.</p>
+     * 
      * <strong>example:</strong>
      * <p>paimon</p>
      */
@@ -12,6 +14,8 @@ public class TableMeta extends TeaModel {
     public String catalogName;
 
     /**
+     * <p>The database name.</p>
+     * 
      * <strong>example:</strong>
      * <p>paimon-ods</p>
      */
@@ -19,6 +23,8 @@ public class TableMeta extends TeaModel {
     public String databaseName;
 
     /**
+     * <p>The table name.</p>
+     * 
      * <strong>example:</strong>
      * <p>order-table</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class ValidateDeploymentDraftAsyncResponseBody extends TeaModel {
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public ValidateDeploymentDraftAsyncResponseBodyData data;
 
     /**
+     * <p>The error code. This parameter is returned when the request fails. If the request is successful, this parameter is empty.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -15,6 +20,8 @@ public class ValidateDeploymentDraftAsyncResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message. This parameter is returned when the request fails. If the request is successful, this parameter is empty.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -22,6 +29,8 @@ public class ValidateDeploymentDraftAsyncResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The status code. This is always 200. Use the success parameter to determine if the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class ValidateDeploymentDraftAsyncResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</p>
      */
@@ -36,6 +47,8 @@ public class ValidateDeploymentDraftAsyncResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class ValidateDeploymentDraftAsyncResponseBody extends TeaModel {
 
     public static class ValidateDeploymentDraftAsyncResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the asynchronous ticket. Use this ID to query the result of the asynchronous operation.</p>
+         * 
          * <strong>example:</strong>
          * <p>b3dcdb25-bf36-457d-92ba-a36077e8****</p>
          */

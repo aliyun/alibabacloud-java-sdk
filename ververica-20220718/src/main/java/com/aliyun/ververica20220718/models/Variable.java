@@ -8,17 +8,17 @@ public class Variable extends TeaModel {
      * <p>The description of the variable.</p>
      * 
      * <strong>example:</strong>
-     * <p>This is a variable description</p>
+     * <p>test</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The type of the variable. Valid value: Plain.</p>
+     * <p>The type of the variable. <code>Clear</code> indicates plaintext and <code>Encrypted</code> indicates ciphertext.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Plain</p>
+     * <p>Encrypted</p>
      */
     @NameInMap("kind")
     public String kind;
@@ -28,7 +28,7 @@ public class Variable extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>variableName</p>
+     * <p>mysqlPassword</p>
      */
     @NameInMap("name")
     public String name;
@@ -38,7 +38,7 @@ public class Variable extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>variableValue</p>
+     * <p>myPassword</p>
      */
     @NameInMap("value")
     public String value;

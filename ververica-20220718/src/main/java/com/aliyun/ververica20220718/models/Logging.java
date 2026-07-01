@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class Logging extends TeaModel {
     /**
      * <p>Custom log templates.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xml格式文本</p>
      */
     @NameInMap("log4j2ConfigurationTemplate")
     public String log4j2ConfigurationTemplate;
@@ -25,12 +28,14 @@ public class Logging extends TeaModel {
     /**
      * <p>The type of the system log template.</p>
      * <ul>
-     * <li>default: The default template is used.</li>
-     * <li>oss: Logs are delivered to Object Storage Service (OSS).</li>
+     * <li><p>default: The default template is used.</p>
+     * </li>
+     * <li><p>oss: Logs are delivered to Object Storage Service (OSS).</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>oss</p>
+     * <p>default</p>
      */
     @NameInMap("loggingProfile")
     public String loggingProfile;

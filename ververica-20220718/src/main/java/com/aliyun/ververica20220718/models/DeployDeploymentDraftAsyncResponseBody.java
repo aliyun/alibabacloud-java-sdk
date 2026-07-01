@@ -4,10 +4,20 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class DeployDeploymentDraftAsyncResponseBody extends TeaModel {
+    /**
+     * <p>The result of the asynchronous operation. This parameter is returned when the request is successful.</p>
+     */
     @NameInMap("data")
     public DeployDeploymentDraftAsyncResponseBodyData data;
 
     /**
+     * <ul>
+     * <li><p>If success is false, an error code is returned.</p>
+     * </li>
+     * <li><p>If success is true, an empty value is returned.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -15,6 +25,13 @@ public class DeployDeploymentDraftAsyncResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <ul>
+     * <li><p>If success is false, an error message is returned.</p>
+     * </li>
+     * <li><p>If success is true, an empty value is returned.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -22,6 +39,8 @@ public class DeployDeploymentDraftAsyncResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The status code of the business operation. A value other than 200 indicates that the operation failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +48,8 @@ public class DeployDeploymentDraftAsyncResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</p>
      */
@@ -36,6 +57,8 @@ public class DeployDeploymentDraftAsyncResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +120,8 @@ public class DeployDeploymentDraftAsyncResponseBody extends TeaModel {
 
     public static class DeployDeploymentDraftAsyncResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the asynchronous ticket. Use this ID to query the result of the asynchronous operation.</p>
+         * 
          * <strong>example:</strong>
          * <p>b3dcdb25-bf36-457d-92ba-a36077e8****</p>
          */

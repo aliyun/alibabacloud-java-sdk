@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetDeploymentsByLabelRequest extends TeaModel {
     /**
+     * <p>Specifies whether to exclude job summary information, such as jobName and status, from the response. If set to true, the response includes only the JobId. This improves performance.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class GetDeploymentsByLabelRequest extends TeaModel {
     public Boolean ignoreJobSummary;
 
     /**
+     * <p>Specifies whether to exclude resource configuration information, such as parallelism and the number of CUs, from the response. This reduces the size of the returned data.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,7 @@ public class GetDeploymentsByLabelRequest extends TeaModel {
     public Boolean ignoreResourceSetting;
 
     /**
+     * <p>The label key used for filtering.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,7 @@ public class GetDeploymentsByLabelRequest extends TeaModel {
     public String labelKey;
 
     /**
+     * <p>The label value. You can specify multiple values separated by commas (,) to create an OR condition.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

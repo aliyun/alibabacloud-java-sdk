@@ -4,37 +4,66 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class SqlExecution extends TeaModel {
+    /**
+     * <p>Specifies whether to enable batch mode.</p>
+     */
     @NameInMap("batchMode")
     public Boolean batchMode;
 
+    /**
+     * <p>The description of the SQL execution.</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The message returned for the SQL execution.</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>The name of the SQL execution.</p>
+     */
     @NameInMap("name")
     public String name;
 
     /**
+     * <p>The namespace.</p>
+     * 
      * <strong>example:</strong>
      * <p>default-namespace</p>
      */
     @NameInMap("namespace")
     public String namespace;
 
+    /**
+     * <p>The name of the session cluster.</p>
+     */
     @NameInMap("sessionClusterName")
     public String sessionClusterName;
 
+    /**
+     * <p>The SQL execution ID.</p>
+     */
     @NameInMap("sqlExecutionId")
     public String sqlExecutionId;
 
+    /**
+     * <p>The SQL file ID.</p>
+     */
     @NameInMap("sqlFileId")
     public String sqlFileId;
 
+    /**
+     * <p>The SQL script content.</p>
+     */
     @NameInMap("sqlScript")
     public String sqlScript;
 
+    /**
+     * <p>The state of the SQL execution.</p>
+     */
     @NameInMap("state")
     public String state;
 
@@ -42,6 +71,8 @@ public class SqlExecution extends TeaModel {
     public java.util.List<SqlStatement> statements;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>edcef******b4f</p>
      */

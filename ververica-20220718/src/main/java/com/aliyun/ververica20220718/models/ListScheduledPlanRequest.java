@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListScheduledPlanRequest extends TeaModel {
     /**
+     * <p>The ID of the job.</p>
+     * 
      * <strong>example:</strong>
      * <p>737d0921-c5ac-47fc-9ba9-07a1e0b4****</p>
      */
@@ -12,6 +14,8 @@ public class ListScheduledPlanRequest extends TeaModel {
     public String deploymentId;
 
     /**
+     * <p>The page number to return. The default value is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ListScheduledPlanRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
+     * <p>The number of entries to return on each page. The default value is 10. The maximum value is 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

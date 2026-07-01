@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class Database extends TeaModel {
     /**
      * <p>The comment.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试数据库。</p>
      */
     @NameInMap("comment")
     public String comment;

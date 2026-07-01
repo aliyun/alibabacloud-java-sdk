@@ -9,8 +9,10 @@ public class GetJobResponseBody extends TeaModel {
 
     /**
      * <ul>
-     * <li>If the value of success was true, the details of the job was returned.</li>
-     * <li>If the value of success was false, a null value was returned.</li>
+     * <li><p>The job instance information if <code>success</code> is <code>true</code>.</p>
+     * </li>
+     * <li><p>An empty object if <code>success</code> is <code>false</code>.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("data")
@@ -18,8 +20,10 @@ public class GetJobResponseBody extends TeaModel {
 
     /**
      * <ul>
-     * <li>If the value of success was false, an error code was returned.</li>
-     * <li>If the value of success was true, a null value was returned.</li>
+     * <li><p>An error code if <code>success</code> is <code>false</code>.</p>
+     * </li>
+     * <li><p>An empty string if <code>success</code> is <code>true</code>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,8 +34,10 @@ public class GetJobResponseBody extends TeaModel {
 
     /**
      * <ul>
-     * <li>If the value of success was false, an error message was returned.</li>
-     * <li>If the value of success was true, a null value was returned.</li>
+     * <li><p>An error message if <code>success</code> is <code>false</code>.</p>
+     * </li>
+     * <li><p>An empty string if <code>success</code> is <code>true</code>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,7 +47,7 @@ public class GetJobResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The value was fixed to 200.</p>
+     * <p>A fixed value of 200.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>

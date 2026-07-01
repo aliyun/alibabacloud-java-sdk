@@ -5,12 +5,19 @@ import com.aliyun.tea.*;
 
 public class GetDatabasesResponseBody extends TeaModel {
     /**
-     * <p>If the value of success was true, the list of databases that meet the specified condition was returned. If the value of success was false, a null value was returned.</p>
+     * <p>The list of databases. This parameter is returned only if the request is successful. If the request fails, this parameter is empty.</p>
      */
     @NameInMap("data")
     public java.util.List<Database> data;
 
     /**
+     * <ul>
+     * <li><p>If \<code>success\\</code> is \<code>false\\</code>, an error code is returned.</p>
+     * </li>
+     * <li><p>If \<code>success\\</code> is \<code>true\\</code>, this parameter is empty.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -18,6 +25,13 @@ public class GetDatabasesResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <ul>
+     * <li><p>If \<code>success\\</code> is \<code>false\\</code>, an error message is returned.</p>
+     * </li>
+     * <li><p>If \<code>success\\</code> is \<code>true\\</code>, this parameter is empty.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -25,6 +39,8 @@ public class GetDatabasesResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code. A value of 200 is always returned. To determine whether the request was successful, check the value of the \<code>success\\</code> parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -32,6 +48,8 @@ public class GetDatabasesResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</p>
      */
@@ -39,6 +57,8 @@ public class GetDatabasesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

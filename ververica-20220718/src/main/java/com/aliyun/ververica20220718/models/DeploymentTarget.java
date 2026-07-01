@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeploymentTarget extends TeaModel {
     /**
+     * <p>The name of the perjob deployment target.</p>
+     * 
      * <strong>example:</strong>
      * <p>deployment target</p>
      */
@@ -12,12 +14,17 @@ public class DeploymentTarget extends TeaModel {
     public String name;
 
     /**
+     * <p>The namespace name.</p>
+     * 
      * <strong>example:</strong>
      * <p>namespace</p>
      */
     @NameInMap("namespace")
     public String namespace;
 
+    /**
+     * <p>The resource quota.</p>
+     */
     @NameInMap("quota")
     public ResourceQuota quota;
 

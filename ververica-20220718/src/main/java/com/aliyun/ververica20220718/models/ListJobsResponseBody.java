@@ -9,8 +9,10 @@ public class ListJobsResponseBody extends TeaModel {
 
     /**
      * <ul>
-     * <li>If the value of success was true, all jobs that meet the condition were returned.</li>
-     * <li>If the value of success was false, a null value was returned.</li>
+     * <li><p>An array of job instances for a successful request (when <code>success</code> is <code>true</code>).</p>
+     * </li>
+     * <li><p>An empty array for a failed request (when <code>success</code> is <code>false</code>).</p>
+     * </li>
      * </ul>
      */
     @NameInMap("data")
@@ -18,8 +20,10 @@ public class ListJobsResponseBody extends TeaModel {
 
     /**
      * <ul>
-     * <li>If the value of success was false, an error code was returned.</li>
-     * <li>If the value of success was true, a null value was returned.</li>
+     * <li><p>The error code for a failed request (when <code>success</code> is <code>false</code>).</p>
+     * </li>
+     * <li><p>An empty string if the request is successful (when <code>success</code> is <code>true</code>).</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,8 +34,10 @@ public class ListJobsResponseBody extends TeaModel {
 
     /**
      * <ul>
-     * <li>If the value of success was false, an error message was returned.</li>
-     * <li>If the value of success was true, a null value was returned.</li>
+     * <li><p>The error message for a failed request (when <code>success</code> is <code>false</code>).</p>
+     * </li>
+     * <li><p>An empty string if the request is successful (when <code>success</code> is <code>true</code>).</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,7 +47,7 @@ public class ListJobsResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The value was fixed to 200.</p>
+     * <p>A fixed value of 200.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -50,7 +56,7 @@ public class ListJobsResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the returned results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,7 +65,7 @@ public class ListJobsResponseBody extends TeaModel {
     public Integer pageIndex;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries returned on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -68,7 +74,7 @@ public class ListJobsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</p>
@@ -86,7 +92,7 @@ public class ListJobsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries that match the query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

@@ -4,6 +4,9 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class UpdateSessionClusterRequest extends TeaModel {
+    /**
+     * <p>The data structure of the session cluster to be updated.</p>
+     */
     @NameInMap("body")
     public SessionCluster body;
 

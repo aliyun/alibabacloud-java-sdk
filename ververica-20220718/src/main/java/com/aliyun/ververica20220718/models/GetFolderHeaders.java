@@ -8,6 +8,7 @@ public class GetFolderHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
+     * <p>Workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

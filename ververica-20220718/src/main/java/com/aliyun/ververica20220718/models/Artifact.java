@@ -4,21 +4,29 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class Artifact extends TeaModel {
+    /**
+     * <p>Required for a data ingestion job.</p>
+     */
     @NameInMap("cdcYamlArtifact")
     public CdcYamlArtifact cdcYamlArtifact;
 
     /**
-     * <p>The information required for the SQL deployment.</p>
+     * <p>Required for a JAR job.</p>
      */
     @NameInMap("jarArtifact")
     public JarArtifact jarArtifact;
 
     /**
-     * <p>The type of the deployment. This parameter is required and cannot be modified after the deployment is created.</p>
+     * <p>Specifies the kind of job. This field is required and cannot be changed after creation.</p>
      * <ul>
-     * <li>SQLSCRIPT</li>
-     * <li>JAR</li>
-     * <li>PYTHON</li>
+     * <li><p>SQLSCRIPT: An SQL job.</p>
+     * </li>
+     * <li><p>JAR: A JAR job.</p>
+     * </li>
+     * <li><p>PYTHON: A Python job.</p>
+     * </li>
+     * <li><p>CDCYAML: A CDC data ingestion job.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,13 +36,13 @@ public class Artifact extends TeaModel {
     public String kind;
 
     /**
-     * <p>The information required for the Python deployment.</p>
+     * <p>Required for a Python job.</p>
      */
     @NameInMap("pythonArtifact")
     public PythonArtifact pythonArtifact;
 
     /**
-     * <p>The information required for the JAR deployment.</p>
+     * <p>Required for an SQL job.</p>
      */
     @NameInMap("sqlArtifact")
     public SqlArtifact sqlArtifact;

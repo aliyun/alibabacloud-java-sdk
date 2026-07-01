@@ -24,6 +24,9 @@ public class Savepoint extends TeaModel {
 
     /**
      * <p>The description of the savepoint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>作业快照1</p>
      */
     @NameInMap("description")
     public String description;
@@ -85,9 +88,12 @@ public class Savepoint extends TeaModel {
     /**
      * <p>The method that is used to create a savepoint.</p>
      * <ul>
-     * <li><code>USER_REQUEST</code>: The savepoint is manually created.</li>
-     * <li><code>STOP_WITH_SAVEPOINT</code>: The savepoint is created when you cancel the deployment.</li>
-     * <li><code>RETAINED_CHECKPOINT</code>: The savepoint is created based on the returned checkpoint.</li>
+     * <li><p><code>USER_REQUEST</code>: The savepoint is manually created.</p>
+     * </li>
+     * <li><p><code>STOP_WITH_SAVEPOINT</code>: The savepoint is created when you cancel the deployment.</p>
+     * </li>
+     * <li><p><code>RETAINED_CHECKPOINT</code>: The savepoint is created based on the returned checkpoint.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

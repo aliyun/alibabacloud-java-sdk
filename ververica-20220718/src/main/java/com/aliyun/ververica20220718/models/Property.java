@@ -24,6 +24,9 @@ public class Property extends TeaModel {
 
     /**
      * <p>The description of the parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>用户名</p>
      */
     @NameInMap("description")
     public String description;

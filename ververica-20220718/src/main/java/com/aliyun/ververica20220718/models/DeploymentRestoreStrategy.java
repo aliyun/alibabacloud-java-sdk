@@ -25,10 +25,14 @@ public class DeploymentRestoreStrategy extends TeaModel {
     /**
      * <p>The type of the start offset. Valid values:</p>
      * <ul>
-     * <li>NONE: The deployment is started without states.</li>
-     * <li>LATEST_SAVEPOINT: The deployment is started from the latest savepoint.</li>
-     * <li>FROM_SAVEPOINT: The deployment is started from the specified savepoint.</li>
-     * <li>LATEST_STATE: The deployment is started from the latest state of the deployment.</li>
+     * <li><p>NONE: The deployment is started without states.</p>
+     * </li>
+     * <li><p>LATEST_SAVEPOINT: The deployment is started from the latest savepoint.</p>
+     * </li>
+     * <li><p>FROM_SAVEPOINT: The deployment is started from the specified savepoint.</p>
+     * </li>
+     * <li><p>LATEST_STATE: The deployment is started from the latest state of the deployment.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

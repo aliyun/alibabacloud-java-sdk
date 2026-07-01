@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetTablesRequest extends TeaModel {
     /**
+     * <p>The name of the table. If this parameter is left empty, information about all tables is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>item</p>
      */

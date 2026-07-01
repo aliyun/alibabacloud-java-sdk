@@ -4,30 +4,57 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class SqlFile extends TeaModel {
+    /**
+     * <p>The batch mode.</p>
+     */
     @NameInMap("batchMode")
     public String batchMode;
 
+    /**
+     * <p>The description of the SQL file.</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The name of the SQL file.</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The namespace.</p>
+     */
     @NameInMap("namespace")
     public String namespace;
 
+    /**
+     * <p>The ID of the parent SQL file.</p>
+     */
     @NameInMap("parentId")
     public String parentId;
 
+    /**
+     * <p>The name of the session cluster.</p>
+     */
     @NameInMap("sessionClusterName")
     public String sessionClusterName;
 
+    /**
+     * <p>The SQL file ID.</p>
+     */
     @NameInMap("sqlFileId")
     public String sqlFileId;
 
+    /**
+     * <p>The SQL script content.</p>
+     */
     @NameInMap("sqlScript")
     public String sqlScript;
 
+    /**
+     * <p>The workspace ID.</p>
+     */
     @NameInMap("workspace")
     public String workspace;
 

@@ -4,10 +4,14 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class CreateDeploymentTargetV2Request extends TeaModel {
+    /**
+     * <p>The resources for the deployment target.</p>
+     */
     @NameInMap("body")
     public Resource body;
 
     /**
+     * <p>The name of the deployment target.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

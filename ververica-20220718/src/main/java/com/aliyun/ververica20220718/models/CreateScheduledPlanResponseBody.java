@@ -4,10 +4,15 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class CreateScheduledPlanResponseBody extends TeaModel {
+    /**
+     * <p>This data structure represents the created scheduled plan.</p>
+     */
     @NameInMap("data")
     public ScheduledPlan data;
 
     /**
+     * <p>If success is false, this parameter is not empty and indicates the business error code. If success is true, this parameter is empty.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -15,6 +20,8 @@ public class CreateScheduledPlanResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>If success is false, this parameter is not empty and indicates the business error message. If success is true, this parameter is empty.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -22,6 +29,8 @@ public class CreateScheduledPlanResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The business status code. This is always 200. Use the success parameter to determine if the business request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class CreateScheduledPlanResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CBC799F0-ABCD-1D30-8A4F-882ED4DD****</p>
      */
@@ -36,6 +47,8 @@ public class CreateScheduledPlanResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the business request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

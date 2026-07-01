@@ -4,10 +4,15 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class GetSessionClusterResponseBody extends TeaModel {
+    /**
+     * <p>This data structure represents the retrieved session cluster.</p>
+     */
     @NameInMap("data")
     public SessionCluster data;
 
     /**
+     * <p>The error code. This parameter is returned when \<code>success\\</code> is \<code>false\\</code>. If \<code>success\\</code> is \<code>true\\</code>, this parameter is empty.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -15,6 +20,8 @@ public class GetSessionClusterResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message. This parameter is returned when \<code>success\\</code> is \<code>false\\</code>. If \<code>success\\</code> is \<code>true\\</code>, this parameter is empty.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -22,6 +29,8 @@ public class GetSessionClusterResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code. This parameter is always 200. Use the success parameter to determine whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class GetSessionClusterResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</p>
      */
@@ -36,6 +47,8 @@ public class GetSessionClusterResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

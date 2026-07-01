@@ -5,12 +5,19 @@ import com.aliyun.tea.*;
 
 public class GetTablesResponseBody extends TeaModel {
     /**
-     * <p>If the value of success was true, the list and details of tables that meet the condition were returned. If the value of success was false, a null value was returned.</p>
+     * <p>If success is true, a list of tables that meet the criteria and their details are returned. If success is false, this parameter is empty.</p>
      */
     @NameInMap("data")
     public java.util.List<Table> data;
 
     /**
+     * <ul>
+     * <li><p>If success is false, an error code is returned.</p>
+     * </li>
+     * <li><p>If success is true, this parameter is empty.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -18,6 +25,13 @@ public class GetTablesResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <ul>
+     * <li><p>If success is false, an error message is returned.</p>
+     * </li>
+     * <li><p>If success is true, this parameter is empty.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -25,6 +39,8 @@ public class GetTablesResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The business status code. This is always 200. Use the success parameter to determine whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -32,6 +48,8 @@ public class GetTablesResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ECE641B2-AB0B-4174-9C3B-885881558637</p>
      */
@@ -39,6 +57,8 @@ public class GetTablesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

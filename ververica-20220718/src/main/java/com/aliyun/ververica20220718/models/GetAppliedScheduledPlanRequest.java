@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppliedScheduledPlanRequest extends TeaModel {
     /**
+     * <p>The ID of the deployed job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

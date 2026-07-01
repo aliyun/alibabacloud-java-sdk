@@ -5,12 +5,19 @@ import com.aliyun.tea.*;
 
 public class GetCatalogsResponseBody extends TeaModel {
     /**
-     * <p>If the value of success was true, the list of catalogs that meet the specified condition was returned. If the value of success was false, a null value was returned.</p>
+     * <p>If \<code>success\\</code> is \<code>true\\</code>, a list of catalogs that meet the criteria is returned. If \<code>success\\</code> is \<code>false\\</code>, this parameter is empty.</p>
      */
     @NameInMap("data")
     public java.util.List<Catalog> data;
 
     /**
+     * <ul>
+     * <li><p>If \<code>success\\</code> is \<code>false\\</code>, an error code is returned.</p>
+     * </li>
+     * <li><p>If \<code>success\\</code> is \<code>true\\</code>, this parameter is empty.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -18,6 +25,13 @@ public class GetCatalogsResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <ul>
+     * <li><p>If \<code>success\\</code> is \<code>false\\</code>, an error message is returned.</p>
+     * </li>
+     * <li><p>If \<code>success\\</code> is \<code>true\\</code>, this parameter is empty.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -25,6 +39,8 @@ public class GetCatalogsResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The business status code. This is always 200. Use the \<code>success\\</code> parameter to determine whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -32,6 +48,8 @@ public class GetCatalogsResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CBC799F0-ABCD-1D30-8A4F-882ED4DD****</p>
      */
@@ -39,6 +57,8 @@ public class GetCatalogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

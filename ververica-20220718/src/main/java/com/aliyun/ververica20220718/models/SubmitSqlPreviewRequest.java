@@ -11,7 +11,7 @@ public class SubmitSqlPreviewRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>test-session</p>
+     * <p>sessioncluster-test</p>
      */
     @NameInMap("sessionClusterName")
     public String sessionClusterName;

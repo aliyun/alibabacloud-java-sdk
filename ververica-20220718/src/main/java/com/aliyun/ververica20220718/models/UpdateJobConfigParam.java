@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateJobConfigParam extends TeaModel {
     /**
+     * <p>The job parameter configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;table.exec.parallelism：4&quot;}</p>
      */

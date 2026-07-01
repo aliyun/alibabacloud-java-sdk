@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class JobDiagnosis extends TeaModel {
     /**
-     * <p>The diagnostic task ID.</p>
+     * <p>The diagnostic ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ba30cd99-37a5-4a20-8cd9-ed4b*****</p>
@@ -14,13 +14,16 @@ public class JobDiagnosis extends TeaModel {
     public String diagnoseId;
 
     /**
-     * <p>The time when the deployment is diagnosed.</p>
+     * <p>The diagnostic time.</p>
      * 
      * <strong>example:</strong>
      * <p>1740389560871</p>
      */
     @NameInMap("diagnoseTime")
     public Long diagnoseTime;
+
+    @NameInMap("healthScore")
+    public Integer healthScore;
 
     /**
      * <p>The namespace.</p>
@@ -32,13 +35,7 @@ public class JobDiagnosis extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The severity level of the risk.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>RISK_LEVEL_HIGH</li>
-     * <li>RISK_LEVEL_MID</li>
-     * <li>RISK_LEVEL_LOW</li>
-     * </ul>
+     * <p>The risk level.</p>
      * 
      * <strong>example:</strong>
      * <p>RISK_LEVEL_LOW</p>
@@ -53,7 +50,7 @@ public class JobDiagnosis extends TeaModel {
     public JobDiagnosisSymptoms symptoms;
 
     /**
-     * <p>The workspace to which the deployment belongs.</p>
+     * <p>The workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>a14bd5d90a****</p>
@@ -80,6 +77,14 @@ public class JobDiagnosis extends TeaModel {
     }
     public Long getDiagnoseTime() {
         return this.diagnoseTime;
+    }
+
+    public JobDiagnosis setHealthScore(Integer healthScore) {
+        this.healthScore = healthScore;
+        return this;
+    }
+    public Integer getHealthScore() {
+        return this.healthScore;
     }
 
     public JobDiagnosis setNamespace(String namespace) {

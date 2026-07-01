@@ -4,6 +4,9 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class ValidateDeploymentDraftAsyncRequest extends TeaModel {
+    /**
+     * <p>The parameter object for the job draft.</p>
+     */
     @NameInMap("body")
     public DraftValidateParams body;
 

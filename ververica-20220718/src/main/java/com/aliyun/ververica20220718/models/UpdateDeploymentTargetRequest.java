@@ -4,6 +4,9 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class UpdateDeploymentTargetRequest extends TeaModel {
+    /**
+     * <p>The resource specifications for the updated deployment target.</p>
+     */
     @NameInMap("body")
     public ResourceSpec body;
 
