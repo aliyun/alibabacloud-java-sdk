@@ -1540,6 +1540,90 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This API creates a new dataset in a specified project.</li>
+     * <li><code>ProjectId</code> is a required parameter that specifies the ID of the project in which to create the dataset.</li>
+     * <li><code>CreateCommand</code> is a complex object that contains the configuration information required to create the dataset.</li>
+     * <li><code>Name</code>, <code>Type</code>, <code>ContentType</code>, and <code>Scenario</code> are required fields that specify the dataset name, type, content type, and scenarios respectively.</li>
+     * <li><code>FileStorageConfig</code> and <code>MetadataStorageConfig</code> in <code>VersionConfig</code> can be configured as needed.</li>
+     * <li>If you need a real-time meta table configuration, provide the <code>RealtimeMetaTableConfig</code> information.</li>
+     * <li>Ensure that all required fields are correctly specified. Otherwise, the request failed.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a new dataset under a specified project. Available since v6.2.0.</p>
+     * 
+     * @param tmpReq CreateDatasetRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDatasetResponse
+     */
+    public CreateDatasetResponse createDatasetWithOptions(CreateDatasetRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateDatasetShrinkRequest request = new CreateDatasetShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.createCommand)) {
+            request.createCommandShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.createCommand, "CreateCommand", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.createCommandShrink)) {
+            body.put("CreateCommand", request.createCommandShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDataset"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDatasetResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This API creates a new dataset in a specified project.</li>
+     * <li><code>ProjectId</code> is a required parameter that specifies the ID of the project in which to create the dataset.</li>
+     * <li><code>CreateCommand</code> is a complex object that contains the configuration information required to create the dataset.</li>
+     * <li><code>Name</code>, <code>Type</code>, <code>ContentType</code>, and <code>Scenario</code> are required fields that specify the dataset name, type, content type, and scenarios respectively.</li>
+     * <li><code>FileStorageConfig</code> and <code>MetadataStorageConfig</code> in <code>VersionConfig</code> can be configured as needed.</li>
+     * <li>If you need a real-time meta table configuration, provide the <code>RealtimeMetaTableConfig</code> information.</li>
+     * <li>Ensure that all required fields are correctly specified. Otherwise, the request failed.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a new dataset under a specified project. Available since v6.2.0.</p>
+     * 
+     * @param request CreateDatasetRequest
+     * @return CreateDatasetResponse
+     */
+    public CreateDatasetResponse createDataset(CreateDatasetRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createDatasetWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Creates a menu tree directory. This operation supports features such as compute nodes, data integration, and synchronization tasks.</p>
      * 
@@ -3287,6 +3371,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteDataSourceResponse deleteDataSource(DeleteDataSourceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDataSourceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a dataset. Release version: v6.2.0.</p>
+     * 
+     * @param request DeleteDatasetRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDatasetResponse
+     */
+    public DeleteDatasetResponse deleteDatasetWithOptions(DeleteDatasetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDataset"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDatasetResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a dataset. Release version: v6.2.0.</p>
+     * 
+     * @param request DeleteDatasetRequest
+     * @return DeleteDatasetResponse
+     */
+    public DeleteDatasetResponse deleteDataset(DeleteDatasetRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteDatasetWithOptions(request, runtime);
     }
 
     /**
@@ -5241,6 +5377,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取指定离线模板ID版本列表。</p>
+     * 
+     * @param request GetBatchTemplateVersionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetBatchTemplateVersionsResponse
+     */
+    public GetBatchTemplateVersionsResponse getBatchTemplateVersionsWithOptions(GetBatchTemplateVersionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.env)) {
+            query.put("Env", request.env);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("TemplateId", request.templateId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetBatchTemplateVersions"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetBatchTemplateVersionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取指定离线模板ID版本列表。</p>
+     * 
+     * @param request GetBatchTemplateVersionsRequest
+     * @return GetBatchTemplateVersionsResponse
+     */
+    public GetBatchTemplateVersionsResponse getBatchTemplateVersions(GetBatchTemplateVersionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getBatchTemplateVersionsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Query mapping relationships by belonging asset GUID.
      * Release version: v5.4.2.</p>
      * 
@@ -6532,6 +6724,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of a tested connectivity task based on the data source ID.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves a dataset. Release version: v6.2.0.</p>
+     * 
+     * @param request GetDatasetRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDatasetResponse
+     */
+    public GetDatasetResponse getDatasetWithOptions(GetDatasetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDataset"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDatasetResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the details of a tested connectivity task based on the data source ID.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves a dataset. Release version: v6.2.0.</p>
+     * 
+     * @param request GetDatasetRequest
+     * @return GetDatasetResponse
+     */
+    public GetDatasetResponse getDataset(GetDatasetRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDatasetWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Query upstream dependencies of development objects.</p>
      * 
@@ -7065,6 +7315,174 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetNodeUpDownStreamResponse getNodeUpDownStream(GetNodeUpDownStreamRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getNodeUpDownStreamWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>根据Id查询运行记录</p>
+     * 
+     * @param tmpReq GetOperationRecordByIdRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetOperationRecordByIdResponse
+     */
+    public GetOperationRecordByIdResponse getOperationRecordByIdWithOptions(GetOperationRecordByIdRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetOperationRecordByIdShrinkRequest request = new GetOperationRecordByIdShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.detailCommand)) {
+            request.detailCommandShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.detailCommand, "DetailCommand", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.detailCommandShrink)) {
+            body.put("DetailCommand", request.detailCommandShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetOperationRecordById"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetOperationRecordByIdResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>根据Id查询运行记录</p>
+     * 
+     * @param request GetOperationRecordByIdRequest
+     * @return GetOperationRecordByIdResponse
+     */
+    public GetOperationRecordByIdResponse getOperationRecordById(GetOperationRecordByIdRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getOperationRecordByIdWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of an execution record. Released in version v6.2.0.</p>
+     * 
+     * @param tmpReq GetOperationRecordDetailRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetOperationRecordDetailResponse
+     */
+    public GetOperationRecordDetailResponse getOperationRecordDetailWithOptions(GetOperationRecordDetailRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetOperationRecordDetailShrinkRequest request = new GetOperationRecordDetailShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.recordDetailCommand)) {
+            request.recordDetailCommandShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.recordDetailCommand, "RecordDetailCommand", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.recordDetailCommandShrink)) {
+            body.put("RecordDetailCommand", request.recordDetailCommandShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetOperationRecordDetail"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetOperationRecordDetailResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of an execution record. Released in version v6.2.0.</p>
+     * 
+     * @param request GetOperationRecordDetailRequest
+     * @return GetOperationRecordDetailResponse
+     */
+    public GetOperationRecordDetailResponse getOperationRecordDetail(GetOperationRecordDetailRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getOperationRecordDetailWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the execution code of an operation log. Online version: v6.2.0.</p>
+     * 
+     * @param tmpReq GetOperationRecordRunCodeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetOperationRecordRunCodeResponse
+     */
+    public GetOperationRecordRunCodeResponse getOperationRecordRunCodeWithOptions(GetOperationRecordRunCodeRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetOperationRecordRunCodeShrinkRequest request = new GetOperationRecordRunCodeShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.codeCommand)) {
+            request.codeCommandShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.codeCommand, "CodeCommand", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.codeCommandShrink)) {
+            body.put("CodeCommand", request.codeCommandShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetOperationRecordRunCode"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetOperationRecordRunCodeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the execution code of an operation log. Online version: v6.2.0.</p>
+     * 
+     * @param request GetOperationRecordRunCodeRequest
+     * @return GetOperationRecordRunCodeResponse
+     */
+    public GetOperationRecordRunCodeResponse getOperationRecordRunCode(GetOperationRecordRunCodeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getOperationRecordRunCodeWithOptions(request, runtime);
     }
 
     /**
@@ -10329,6 +10747,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries offline computing templates by paging. Online version: v6.2.0.</p>
+     * 
+     * @param tmpReq ListBatchTemplatesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListBatchTemplatesResponse
+     */
+    public ListBatchTemplatesResponse listBatchTemplatesWithOptions(ListBatchTemplatesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListBatchTemplatesShrinkRequest request = new ListBatchTemplatesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.listQuery)) {
+            request.listQueryShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.listQuery, "ListQuery", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.env)) {
+            query.put("Env", request.env);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.listQueryShrink)) {
+            body.put("ListQuery", request.listQueryShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListBatchTemplates"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListBatchTemplatesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries offline computing templates by paging. Online version: v6.2.0.</p>
+     * 
+     * @param request ListBatchTemplatesRequest
+     * @return ListBatchTemplatesResponse
+     */
+    public ListBatchTemplatesResponse listBatchTemplates(ListBatchTemplatesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listBatchTemplatesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries a list of business entities.</p>
      * 
      * @param tmpReq ListBizEntitiesRequest
@@ -11130,6 +11612,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This API allows you to retrieve dataset information for a specific project by providing a tenant ID, project ID, and other optional parameters such as keywords and type lists. Paging is supported. The returned data includes basic dataset information and version details. ProjectId is required. Other parameters are optional and can be configured as needed to filter results.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists datasets in a project based on specified conditional query criteria. Online version: v6.2.0.</p>
+     * 
+     * @param tmpReq ListDatasetsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDatasetsResponse
+     */
+    public ListDatasetsResponse listDatasetsWithOptions(ListDatasetsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListDatasetsShrinkRequest request = new ListDatasetsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.datasetQuery)) {
+            request.datasetQueryShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.datasetQuery, "DatasetQuery", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.datasetQueryShrink)) {
+            body.put("DatasetQuery", request.datasetQueryShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDatasets"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDatasetsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This API allows you to retrieve dataset information for a specific project by providing a tenant ID, project ID, and other optional parameters such as keywords and type lists. Paging is supported. The returned data includes basic dataset information and version details. ProjectId is required. Other parameters are optional and can be configured as needed to filter results.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists datasets in a project based on specified conditional query criteria. Online version: v6.2.0.</p>
+     * 
+     * @param request ListDatasetsRequest
+     * @return ListDatasetsResponse
+     */
+    public ListDatasetsResponse listDatasets(ListDatasetsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listDatasetsWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Query the directory tree file list.</p>
      * 
@@ -11363,6 +11909,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListNodesResponse listNodes(ListNodesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listNodesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Performs a paged query on the list of operation records. Online version: v6.2.0.</p>
+     * 
+     * @param tmpReq ListOperationRecordRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListOperationRecordResponse
+     */
+    public ListOperationRecordResponse listOperationRecordWithOptions(ListOperationRecordRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListOperationRecordShrinkRequest request = new ListOperationRecordShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.listCommand)) {
+            request.listCommandShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.listCommand, "ListCommand", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.listCommandShrink)) {
+            body.put("ListCommand", request.listCommandShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListOperationRecord"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListOperationRecordResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Performs a paged query on the list of operation records. Online version: v6.2.0.</p>
+     * 
+     * @param request ListOperationRecordRequest
+     * @return ListOperationRecordResponse
+     */
+    public ListOperationRecordResponse listOperationRecord(ListOperationRecordRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listOperationRecordWithOptions(request, runtime);
     }
 
     /**
@@ -14977,6 +15579,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateDataSourceConfigResponse updateDataSourceConfig(UpdateDataSourceConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateDataSourceConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该 API 用于更新特定项目下已存在的数据集的详细信息。</li>
+     * <li>必须提供 <code>ProjectId</code> 和 <code>UpdateCommand</code> 参数，其中 <code>UpdateCommand</code> 包含了需要更新的数据集的具体字段。</li>
+     * <li><code>UpdateCommand</code> 中的 <code>Id</code> 字段是必需的，用来标识要更新的数据集。</li>
+     * <li>其他字段如 <code>Name</code>, <code>Type</code>, <code>DataCellId</code> 等为可选项，根据实际需求选择性填写。</li>
+     * <li>版本配置（<code>VersionConfig</code>）和实时元表配置（<code>RealtimeMetaTableConfig</code>）提供了更详细的设置选项，包括存储路径、表结构等，这些也是可选的。</li>
+     * <li>注意确保所有提供的 ID 值（如 <code>ProjectId</code>, <code>Id</code>, <code>DataSourceId</code> 等）在系统中有效且正确关联。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Dataphin OpenAPI 模板。</p>
+     * 
+     * @param tmpReq UpdateDatasetRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateDatasetResponse
+     */
+    public UpdateDatasetResponse updateDatasetWithOptions(UpdateDatasetRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateDatasetShrinkRequest request = new UpdateDatasetShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.updateCommand)) {
+            request.updateCommandShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.updateCommand, "UpdateCommand", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.updateCommandShrink)) {
+            body.put("UpdateCommand", request.updateCommandShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateDataset"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDatasetResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该 API 用于更新特定项目下已存在的数据集的详细信息。</li>
+     * <li>必须提供 <code>ProjectId</code> 和 <code>UpdateCommand</code> 参数，其中 <code>UpdateCommand</code> 包含了需要更新的数据集的具体字段。</li>
+     * <li><code>UpdateCommand</code> 中的 <code>Id</code> 字段是必需的，用来标识要更新的数据集。</li>
+     * <li>其他字段如 <code>Name</code>, <code>Type</code>, <code>DataCellId</code> 等为可选项，根据实际需求选择性填写。</li>
+     * <li>版本配置（<code>VersionConfig</code>）和实时元表配置（<code>RealtimeMetaTableConfig</code>）提供了更详细的设置选项，包括存储路径、表结构等，这些也是可选的。</li>
+     * <li>注意确保所有提供的 ID 值（如 <code>ProjectId</code>, <code>Id</code>, <code>DataSourceId</code> 等）在系统中有效且正确关联。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Dataphin OpenAPI 模板。</p>
+     * 
+     * @param request UpdateDatasetRequest
+     * @return UpdateDatasetResponse
+     */
+    public UpdateDatasetResponse updateDataset(UpdateDatasetRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateDatasetWithOptions(request, runtime);
     }
 
     /**
