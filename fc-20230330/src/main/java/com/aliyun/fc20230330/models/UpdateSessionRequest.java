@@ -11,7 +11,7 @@ public class UpdateSessionRequest extends TeaModel {
     public UpdateSessionInput body;
 
     /**
-     * <p>The function alias or version associated with the session to be updated.</p>
+     * <p>The function alias or version associated with the session ID to update.</p>
      * 
      * <strong>example:</strong>
      * <p>aliasName1</p>

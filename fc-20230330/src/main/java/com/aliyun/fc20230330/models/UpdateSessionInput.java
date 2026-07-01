@@ -5,7 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpdateSessionInput extends TeaModel {
     /**
-     * <p>Defaults to <code>false</code>. If set to <code>false</code>, you can reuse a <code>SessionID</code> to start a new session on a new instance after the original session expires. If set to <code>true</code>, you cannot reuse a <code>SessionID</code> after its session expires.</p>
+     * <p>Specifies whether to disable session ID reuse after the session expires. Valid values:</p>
+     * <ul>
+     * <li>False: After the session associated with a SessionID expires, you can use the same SessionID to initiate requests. The system treats this as a new session and binds it to a new instance.</li>
+     * <li>True: After the session associated with a SessionID expires, the SessionID cannot be reused.
+     * Default value: False.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -13,32 +18,26 @@ public class UpdateSessionInput extends TeaModel {
     @NameInMap("disableSessionIdReuse")
     public Boolean disableSessionIdReuse;
 
-    /**
-     * <p>The JuiceFS configuration.</p>
-     */
+    @NameInMap("enableAutoPause")
+    public Boolean enableAutoPause;
+
+    @NameInMap("enableAutoResume")
+    public Boolean enableAutoResume;
+
     @NameInMap("juiceFsConfig")
     public JuiceFsConfig juiceFsConfig;
 
-    /**
-     * <p>The NAS configuration.</p>
-     */
     @NameInMap("nasConfig")
     public NASConfig nasConfig;
 
-    /**
-     * <p>The OSS mount configuration.</p>
-     */
     @NameInMap("ossMountConfig")
     public OSSMountConfig ossMountConfig;
 
-    /**
-     * <p>The PolarFS configuration.</p>
-     */
     @NameInMap("polarFsConfig")
     public PolarFsConfig polarFsConfig;
 
     /**
-     * <p>The session idle timeout, in seconds.</p>
+     * <p>The session idle timeout period.</p>
      * 
      * <strong>example:</strong>
      * <p>1800</p>
@@ -47,7 +46,7 @@ public class UpdateSessionInput extends TeaModel {
     public Long sessionIdleTimeoutInSeconds;
 
     /**
-     * <p>The session duration, in seconds.</p>
+     * <p>The session lifetime.</p>
      * 
      * <strong>example:</strong>
      * <p>21600</p>
@@ -66,6 +65,22 @@ public class UpdateSessionInput extends TeaModel {
     }
     public Boolean getDisableSessionIdReuse() {
         return this.disableSessionIdReuse;
+    }
+
+    public UpdateSessionInput setEnableAutoPause(Boolean enableAutoPause) {
+        this.enableAutoPause = enableAutoPause;
+        return this;
+    }
+    public Boolean getEnableAutoPause() {
+        return this.enableAutoPause;
+    }
+
+    public UpdateSessionInput setEnableAutoResume(Boolean enableAutoResume) {
+        this.enableAutoResume = enableAutoResume;
+        return this;
+    }
+    public Boolean getEnableAutoResume() {
+        return this.enableAutoResume;
     }
 
     public UpdateSessionInput setJuiceFsConfig(JuiceFsConfig juiceFsConfig) {

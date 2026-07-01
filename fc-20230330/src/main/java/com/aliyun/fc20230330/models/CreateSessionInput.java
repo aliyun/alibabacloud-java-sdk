@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSessionInput extends TeaModel {
     /**
-     * <p>A value of false (the default) allows an expired session ID to be reused for a new session, which the system then binds to a new instance. If set to true, an expired session ID cannot be reused.</p>
+     * <p>Specifies whether to disable session ID reuse. Default value: False, which indicates that after a session with a specific SessionID expires, you can send requests with the same SessionID, and the system treats it as a new session bound to a new instance. If this parameter is set to True, the SessionID cannot be reused after the session expires.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -13,29 +13,35 @@ public class CreateSessionInput extends TeaModel {
     @NameInMap("disableSessionIdReuse")
     public Boolean disableSessionIdReuse;
 
+    @NameInMap("enableAutoPause")
+    public Boolean enableAutoPause;
+
+    @NameInMap("enableAutoResume")
+    public Boolean enableAutoResume;
+
     @NameInMap("juiceFsConfig")
     public JuiceFsConfig juiceFsConfig;
 
     /**
-     * <p>Allows instances in the session to access specified NAS resources.</p>
+     * <p>The NAS configuration. After this parameter is configured, instances associated with the session can access the specified NAS resources.</p>
      */
     @NameInMap("nasConfig")
     public NASConfig nasConfig;
 
     /**
-     * <p>Allows instances in the session to access specified OSS resources.</p>
+     * <p>The OSS configuration. After this parameter is configured, instances associated with the session can access the specified OSS resources.</p>
      */
     @NameInMap("ossMountConfig")
     public OSSMountConfig ossMountConfig;
 
     /**
-     * <p>Allows instances in the session to access specified PolarFS resources.</p>
+     * <p>The PolarFs configuration. After this parameter is configured, instances associated with the session can access the specified PolarFs resources.</p>
      */
     @NameInMap("polarFsConfig")
     public PolarFsConfig polarFsConfig;
 
     /**
-     * <p>A customizable session ID. If you do not specify a value, the server generates one. This parameter applies only to the HEADER_FIELD affinity mode. The value must be 0 to 64 characters long. The first character must be a character in <strong>a-zA-Z0-9_</strong>. Subsequent characters can be any character in <strong>a-zA-Z0-9_-</strong>.</p>
+     * <p>The custom session ID. If this parameter is not specified, the server generates a session ID. If specified, the value is used as the session ID. This parameter applies only to the HEADER_FIELD affinity mode. Format: the length is limited to [0,64]. The first character must be from <strong>a-zA-Z0-9_</strong>, and subsequent characters can be from <strong>a-zA-Z0-9_-</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>custom-test-session-id</p>
@@ -44,7 +50,7 @@ public class CreateSessionInput extends TeaModel {
     public String sessionId;
 
     /**
-     * <p>The session idle timeout in seconds.</p>
+     * <p>The session idle timeout period.</p>
      * 
      * <strong>example:</strong>
      * <p>1800</p>
@@ -53,7 +59,7 @@ public class CreateSessionInput extends TeaModel {
     public Long sessionIdleTimeoutInSeconds;
 
     /**
-     * <p>The session lifetime in seconds.</p>
+     * <p>The session lifetime.</p>
      * 
      * <strong>example:</strong>
      * <p>21600</p>
@@ -72,6 +78,22 @@ public class CreateSessionInput extends TeaModel {
     }
     public Boolean getDisableSessionIdReuse() {
         return this.disableSessionIdReuse;
+    }
+
+    public CreateSessionInput setEnableAutoPause(Boolean enableAutoPause) {
+        this.enableAutoPause = enableAutoPause;
+        return this;
+    }
+    public Boolean getEnableAutoPause() {
+        return this.enableAutoPause;
+    }
+
+    public CreateSessionInput setEnableAutoResume(Boolean enableAutoResume) {
+        this.enableAutoResume = enableAutoResume;
+        return this;
+    }
+    public Boolean getEnableAutoResume() {
+        return this.enableAutoResume;
     }
 
     public CreateSessionInput setJuiceFsConfig(JuiceFsConfig juiceFsConfig) {

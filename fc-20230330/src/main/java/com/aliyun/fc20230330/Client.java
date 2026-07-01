@@ -284,7 +284,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an explicit session resource by automatically generating a unique session ID, pre-allocating a function instance, and attaching the session. This operation supports custom Time to Live (TTL) and idle timeout values, applies to HEADER_FIELD or GENERATED_COOKIE affinity types, and is used for session prefetching and configuration initialization. After the session is created, include the session ID in InvokeFunction requests for request routing.</p>
+     * <p>Creates an explicit session resource. The system automatically generates a unique SessionID, pre-allocates a function instance, and binds it to the session. You can specify TTL and IdleTimeout. This operation applies to the HEADER_FIELD or GENERATED_COOKIE affinity types, enabling session warm-up and configuration initialization. After the call, you can include the session in InvokeFunction requests for request routing.</p>
      * 
      * @param request CreateSessionRequest
      * @param headers map
@@ -319,7 +319,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an explicit session resource by automatically generating a unique session ID, pre-allocating a function instance, and attaching the session. This operation supports custom Time to Live (TTL) and idle timeout values, applies to HEADER_FIELD or GENERATED_COOKIE affinity types, and is used for session prefetching and configuration initialization. After the session is created, include the session ID in InvokeFunction requests for request routing.</p>
+     * <p>Creates an explicit session resource. The system automatically generates a unique SessionID, pre-allocates a function instance, and binds it to the session. You can specify TTL and IdleTimeout. This operation applies to the HEADER_FIELD or GENERATED_COOKIE affinity types, enabling session warm-up and configuration initialization. After the call, you can include the session in InvokeFunction requests for request routing.</p>
      * 
      * @param request CreateSessionRequest
      * @return CreateSessionResponse
@@ -1508,7 +1508,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can use this operation to retrieve detailed information about a specific session, including its session ID, associated function, affinity type, lifecycle configuration, status, and instance details. This operation retrieves the current metadata for a session. You can identify the metadata precisely using either the function name or qualifier. This capability enables you to monitor and debug external systems with ease. Only sessions that are in the Active state can be queried.</p>
+     * <p>Retrieves the details of a specified session, including the session ID, associated function, affinity type, lifecycle configuration, status, and instance information. This operation queries the current metadata of a single session and supports exact matching by functionName and qualifier for external system monitoring and debugging. Only sessions in the Active state can be queried.</p>
      * 
      * @param request GetSessionRequest
      * @param headers map
@@ -1542,7 +1542,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can use this operation to retrieve detailed information about a specific session, including its session ID, associated function, affinity type, lifecycle configuration, status, and instance details. This operation retrieves the current metadata for a session. You can identify the metadata precisely using either the function name or qualifier. This capability enables you to monitor and debug external systems with ease. Only sessions that are in the Active state can be queried.</p>
+     * <p>Retrieves the details of a specified session, including the session ID, associated function, affinity type, lifecycle configuration, status, and instance information. This operation queries the current metadata of a single session and supports exact matching by functionName and qualifier for external system monitoring and debugging. Only sessions in the Active state can be queried.</p>
      * 
      * @param request GetSessionRequest
      * @return GetSessionResponse
@@ -2433,7 +2433,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists sessions in the Active and/or Expired state(s) under the specified function. Supports filtering by qualifier, status, and session ID, as well as paginated queries. Returns basic session attributes for batch viewing of session distribution and status, helping with operations monitoring and integration with external systems, and enhancing session visibility and management.</p>
+     * <p>Lists sessions in Active or Expired status under a specified function. Supports filtering by qualifier, status, and session ID, and supports paged query. Returns basic session properties for batch viewing of session distribution and status, facilitating operations management and external system integration, and improving session visibility and management capability.</p>
      * 
      * @param request ListSessionsRequest
      * @param headers map
@@ -2483,7 +2483,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists sessions in the Active and/or Expired state(s) under the specified function. Supports filtering by qualifier, status, and session ID, as well as paginated queries. Returns basic session attributes for batch viewing of session distribution and status, helping with operations monitoring and integration with external systems, and enhancing session visibility and management.</p>
+     * <p>Lists sessions in Active or Expired status under a specified function. Supports filtering by qualifier, status, and session ID, and supports paged query. Returns basic session properties for batch viewing of session distribution and status, facilitating operations management and external system integration, and improving session visibility and management capability.</p>
      * 
      * @param request ListSessionsRequest
      * @return ListSessionsResponse
@@ -2661,7 +2661,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Pauses an active session. This operation saves the state of the associated execution environment and then releases the compute resources. After you call this operation, the session state changes to Paused. A paused session does not accept function invocation requests. The operation retains the session configuration, such as the SessionTTL and SessionID. Use this operation to interrupt long-running tasks or save snapshots of a development environment. This helps optimize costs and manage state. This operation applies to custom image functions that use HEADER_FIELD or GENERATED_COOKIE affinity types and session isolation.</p>
+     * <p>Pauses an active session by persisting the state of its associated runtime environment and then releasing compute resources. After the call, the session status changes to Paused, and the session no longer accepts function invocation requests. This operation retains the session configuration (such as SessionTTL) and SessionID. You can use this operation to interrupt long-running tasks or save snapshots of development environments for cost optimization and state management. This operation applies to custom image functions that are configured with the HEADER_FIELD or GENERATED_COOKIE affinity type and session isolation.</p>
      * 
      * <b>summary</b> : 
      * <p>Pauses and saves a session.</p>
@@ -2698,7 +2698,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Pauses an active session. This operation saves the state of the associated execution environment and then releases the compute resources. After you call this operation, the session state changes to Paused. A paused session does not accept function invocation requests. The operation retains the session configuration, such as the SessionTTL and SessionID. Use this operation to interrupt long-running tasks or save snapshots of a development environment. This helps optimize costs and manage state. This operation applies to custom image functions that use HEADER_FIELD or GENERATED_COOKIE affinity types and session isolation.</p>
+     * <p>Pauses an active session by persisting the state of its associated runtime environment and then releasing compute resources. After the call, the session status changes to Paused, and the session no longer accepts function invocation requests. This operation retains the session configuration (such as SessionTTL) and SessionID. You can use this operation to interrupt long-running tasks or save snapshots of development environments for cost optimization and state management. This operation applies to custom image functions that are configured with the HEADER_FIELD or GENERATED_COOKIE affinity type and session isolation.</p>
      * 
      * <b>summary</b> : 
      * <p>Pauses and saves a session.</p>
@@ -2993,10 +2993,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Resumes a session that is in the Paused state. The system quickly resumes the session in a new execution environment using its previously persisted state. After a successful resume, the session status changes to Active, and the session begins accepting function invocation requests and routing them to the resumed instance. Use this operation with custom image functions that use HEADER_FIELD or GENERATED_COOKIE session affinity and session isolation.</p>
+     * <p>Resumes a session that is in the Paused state. The system quickly restores the session in a new execution environment based on the previously persisted state, returning it to the state before it was paused. After the session is successfully resumed, its status changes back to Active, and it can continue to accept function calling requests and route them to the restored instance. This operation applies to custom image functions that have HEADER_FIELD or GENERATED_COOKIE affinity types configured and session isolation enabled.</p>
      * 
      * <b>summary</b> : 
-     * <p>Resume a session</p>
+     * <p>Resumes a session.</p>
      * 
      * @param request ResumeSessionRequest
      * @param headers map
@@ -3034,10 +3034,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Resumes a session that is in the Paused state. The system quickly resumes the session in a new execution environment using its previously persisted state. After a successful resume, the session status changes to Active, and the session begins accepting function invocation requests and routing them to the resumed instance. Use this operation with custom image functions that use HEADER_FIELD or GENERATED_COOKIE session affinity and session isolation.</p>
+     * <p>Resumes a session that is in the Paused state. The system quickly restores the session in a new execution environment based on the previously persisted state, returning it to the state before it was paused. After the session is successfully resumed, its status changes back to Active, and it can continue to accept function calling requests and route them to the restored instance. This operation applies to custom image functions that have HEADER_FIELD or GENERATED_COOKIE affinity types configured and session isolation enabled.</p>
      * 
      * <b>summary</b> : 
-     * <p>Resume a session</p>
+     * <p>Resumes a session.</p>
      * 
      * @param request ResumeSessionRequest
      * @return ResumeSessionResponse
@@ -3334,7 +3334,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates session configurations while the session is in the Active state, such as lifecycle parameters (e.g., SessionTTLInSeconds and SessionIdleTimeoutInSeconds). After the update takes effect, LastModifiedTime is automatically refreshed. These updates can be used to extend or shorten the validity period of a session and enable dynamic management without changing the execution environment bound to the session.</p>
+     * <p>Updates the configuration of a session in Active status, such as lifecycle settings including SessionTTLInSeconds and SessionIdleTimeoutInSeconds. The changes take effect immediately, and LastModifiedTime is automatically refreshed. You can use this operation to extend or shorten the session validity period for dynamic management without changing the execution environment bound to the session.</p>
      * 
      * @param request UpdateSessionRequest
      * @param headers map
@@ -3369,7 +3369,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates session configurations while the session is in the Active state, such as lifecycle parameters (e.g., SessionTTLInSeconds and SessionIdleTimeoutInSeconds). After the update takes effect, LastModifiedTime is automatically refreshed. These updates can be used to extend or shorten the validity period of a session and enable dynamic management without changing the execution environment bound to the session.</p>
+     * <p>Updates the configuration of a session in Active status, such as lifecycle settings including SessionTTLInSeconds and SessionIdleTimeoutInSeconds. The changes take effect immediately, and LastModifiedTime is automatically refreshed. You can use this operation to extend or shorten the session validity period for dynamic management without changing the execution environment bound to the session.</p>
      * 
      * @param request UpdateSessionRequest
      * @return UpdateSessionResponse
