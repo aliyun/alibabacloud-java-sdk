@@ -4,58 +4,21 @@ package com.aliyun.vpcipam20230228.models;
 import com.aliyun.tea.*;
 
 public class ListIpamPoolsResponseBody extends TeaModel {
-    /**
-     * <p>The number of entries returned.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
     @NameInMap("Count")
     public Long count;
 
-    /**
-     * <p>The IPAM pools.</p>
-     */
     @NameInMap("IpamPools")
     public java.util.List<ListIpamPoolsResponseBodyIpamPools> ipamPools;
 
-    /**
-     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
     @NameInMap("MaxResults")
     public Long maxResults;
 
-    /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
-     * <ul>
-     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
-     * <li>If a value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>B54867DE-83DC-56B4-A57E-69A03119D0B1</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of entries returned.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1000</p>
-     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -113,21 +76,9 @@ public class ListIpamPoolsResponseBody extends TeaModel {
     }
 
     public static class ListIpamPoolsResponseBodyIpamPoolsTags extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>FinanceDept</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>FinanceJoshua</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -155,231 +106,78 @@ public class ListIpamPoolsResponseBody extends TeaModel {
     }
 
     public static class ListIpamPoolsResponseBodyIpamPools extends TeaModel {
-        /**
-         * <p>The default network mask assigned to the IPAM pool.</p>
-         * <p>An IPv4 mask must be <strong>0 to 32</strong> bits in length.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>28</p>
-         */
         @NameInMap("AllocationDefaultCidrMask")
         public Integer allocationDefaultCidrMask;
 
-        /**
-         * <p>The maximum network mask assigned to the IPAM pool.</p>
-         * <p>An IPv4 mask must be <strong>0 to 32</strong> bits in length.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>32</p>
-         */
         @NameInMap("AllocationMaxCidrMask")
         public Integer allocationMaxCidrMask;
 
-        /**
-         * <p>The minimum network mask assigned to the IPAM pool.</p>
-         * <p>An IPv4 mask must be <strong>0 to 32</strong> bits in length.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>8</p>
-         */
         @NameInMap("AllocationMinCidrMask")
         public Integer allocationMinCidrMask;
 
-        /**
-         * <p>Whether the pool has the auto-import feature enabled.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("AutoImport")
         public Boolean autoImport;
 
         @NameInMap("Cidrs")
         public java.util.List<String> cidrs;
 
-        /**
-         * <p>The time when the IPAM pool was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2023-04-19T16:49:01Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>Indicates whether the pool is a subpool. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("HasSubPool")
         public Boolean hasSubPool;
 
-        /**
-         * <p>The IP version. Only <strong>IPv4</strong> may be returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>IPv4</p>
-         */
         @NameInMap("IpVersion")
         public String ipVersion;
 
-        /**
-         * <p>The ID of the IPAM.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ipam-b5mtlx3q7xcnyr****</p>
-         */
         @NameInMap("IpamId")
         public String ipamId;
 
-        /**
-         * <p>The description of the IPAM pool.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test description</p>
-         */
         @NameInMap("IpamPoolDescription")
         public String ipamPoolDescription;
 
-        /**
-         * <p>The ID of the IPAM pool.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ipam-pool-6rcq3tobayc20t****</p>
-         */
         @NameInMap("IpamPoolId")
         public String ipamPoolId;
 
-        /**
-         * <p>The name of the IPAM pool.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("IpamPoolName")
         public String ipamPoolName;
 
-        /**
-         * <p>The ID of the region where the IPAM to which the IPAM pool belongs is hosted.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("IpamRegionId")
         public String ipamRegionId;
 
-        /**
-         * <p>The ID of the IPAM scope.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ipam-scope-glfmcyldpm8lsy****</p>
-         */
         @NameInMap("IpamScopeId")
         public String ipamScopeId;
 
-        /**
-         * <p>The type of the IPAM scope. Valid values:</p>
-         * <ul>
-         * <li><strong>public</strong></li>
-         * <li><strong>private</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>private</p>
-         */
         @NameInMap("IpamScopeType")
         public String ipamScopeType;
 
         @NameInMap("Ipv6Isp")
         public String ipv6Isp;
 
-        /**
-         * <p>Whether it is a shared pool.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("IsShared")
         public Boolean isShared;
 
-        /**
-         * <p>The Alibaba Cloud account of the owner for the IPAM pool.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1210123456******</p>
-         */
         @NameInMap("OwnerId")
         public Long ownerId;
 
-        /**
-         * <p>The depth of the IPAM pool. Valid values: <strong>0 to 10</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("PoolDepth")
         public Integer poolDepth;
 
-        /**
-         * <p>The effective region of the IPAM pool. The ID of the effective region for the IPAM pool.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("PoolRegionId")
         public String poolRegionId;
 
-        /**
-         * <p>The ID of the region where the operation is called.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The resource group ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rg-acfmxazb4ph6aiy****</p>
-         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        /**
-         * <p>The ID of the source IPAM pool.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ipam-pool-lfnwi4jok1ss0g****</p>
-         */
         @NameInMap("SourceIpamPoolId")
         public String sourceIpamPoolId;
 
-        /**
-         * <p>The status of the IPAM pool. Valid values:</p>
-         * <ul>
-         * <li><strong>Creating</strong></li>
-         * <li><strong>Created</strong>: indicates that the creation is complete.</li>
-         * <li><strong>Modifying</strong></li>
-         * <li><strong>Deleting</strong></li>
-         * <li><strong>Deleted</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Created</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The tag list.</p>
-         */
         @NameInMap("Tags")
         public java.util.List<ListIpamPoolsResponseBodyIpamPoolsTags> tags;
 

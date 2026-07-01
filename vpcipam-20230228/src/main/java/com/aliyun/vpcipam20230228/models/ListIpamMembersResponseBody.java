@@ -4,41 +4,21 @@ package com.aliyun.vpcipam20230228.models;
 import com.aliyun.tea.*;
 
 public class ListIpamMembersResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>6</p>
-     */
     @NameInMap("Count")
     public Long count;
 
-    /**
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     @NameInMap("MemberInfos")
     public java.util.List<ListIpamMembersResponseBodyMemberInfos> memberInfos;
 
-    /**
-     * <strong>example:</strong>
-     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    /**
-     * <strong>example:</strong>
-     * <p>B90776C8-F703-51D5-893A-AD1CA699D535</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>20</p>
-     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -96,31 +76,15 @@ public class ListIpamMembersResponseBody extends TeaModel {
     }
 
     public static class ListIpamMembersResponseBodyMemberInfos extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2025-07-11T07:18:07Z</p>
-         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>fd-ccccncASqa</p>
-         */
         @NameInMap("MemberId")
         public String memberId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Folder</p>
-         */
         @NameInMap("MemberType")
         public String memberType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Created</p>
-         */
         @NameInMap("Status")
         public String status;
 

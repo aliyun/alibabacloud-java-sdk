@@ -4,41 +4,21 @@ package com.aliyun.vpcipam20230228.models;
 import com.aliyun.tea.*;
 
 public class ListIpamDiscoveredIpAddressesResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
     @NameInMap("Count")
     public Integer count;
 
     @NameInMap("IpamDiscoveredIpAddresses")
     public java.util.List<ListIpamDiscoveredIpAddressesResponseBodyIpamDiscoveredIpAddresses> ipamDiscoveredIpAddresses;
 
-    /**
-     * <strong>example:</strong>
-     * <p>100</p>
-     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    /**
-     * <strong>example:</strong>
-     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    /**
-     * <strong>example:</strong>
-     * <p>9F8315CB-560E-5F1E-B069-6E44B440CAF8</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1000</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -96,52 +76,24 @@ public class ListIpamDiscoveredIpAddressesResponseBody extends TeaModel {
     }
 
     public static class ListIpamDiscoveredIpAddressesResponseBodyIpamDiscoveredIpAddresses extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>192.168.10.40/32</p>
-         */
         @NameInMap("IpAddress")
         public String ipAddress;
 
-        /**
-         * <strong>example:</strong>
-         * <p>IPv4</p>
-         */
         @NameInMap("IpVersion")
         public String ipVersion;
 
-        /**
-         * <strong>example:</strong>
-         * <p>eni-bp1001jpjhzmgc5m****</p>
-         */
         @NameInMap("ResourceId")
         public String resourceId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cn-shenzhen</p>
-         */
         @NameInMap("ResourceRegionId")
         public String resourceRegionId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ENI</p>
-         */
         @NameInMap("ResourceServiceType")
         public String resourceServiceType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>vsw-bp1bmwg5u07e1l3q0is4w</p>
-         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>vpc-bp1fjfnrg3av6zb9e****</p>
-         */
         @NameInMap("VpcId")
         public String vpcId;
 

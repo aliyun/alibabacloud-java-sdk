@@ -4,31 +4,12 @@ package com.aliyun.vpcipam20230228.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
-    /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
-     * <ul>
-     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
-     * <li>If a value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>672053AB-90C9-5693-AB96-458F137A5ED6</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The resources to which the tags are added.</p>
-     */
     @NameInMap("TagResources")
     public java.util.List<ListTagResourcesResponseBodyTagResources> tagResources;
 
@@ -62,44 +43,15 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
-        /**
-         * <p>The resource ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ipam-uq5dcfc2eqhpf4****</p>
-         */
         @NameInMap("ResourceId")
         public String resourceId;
 
-        /**
-         * <p>The resource type. Valid values:</p>
-         * <ul>
-         * <li><strong>IPAM</strong></li>
-         * <li><strong>IPAMSCOPE</strong></li>
-         * <li><strong>IPAMPOOL</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>IPAM</p>
-         */
         @NameInMap("ResourceType")
         public String resourceType;
 
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>FinanceDept</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>FinanceJoshua</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 

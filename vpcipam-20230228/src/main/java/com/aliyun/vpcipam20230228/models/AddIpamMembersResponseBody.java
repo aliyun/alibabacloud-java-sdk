@@ -4,10 +4,6 @@ package com.aliyun.vpcipam20230228.models;
 import com.aliyun.tea.*;
 
 public class AddIpamMembersResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>BB2C39DE-CEB8-595A-981A-F2EFCBE7324E</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

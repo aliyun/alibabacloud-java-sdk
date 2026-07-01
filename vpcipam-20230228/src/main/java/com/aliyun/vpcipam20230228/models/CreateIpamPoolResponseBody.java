@@ -4,21 +4,9 @@ package com.aliyun.vpcipam20230228.models;
 import com.aliyun.tea.*;
 
 public class CreateIpamPoolResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the IPAM pool.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ipam-pool-6rcq3tobayc20t****</p>
-     */
     @NameInMap("IpamPoolId")
     public String ipamPoolId;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>BB2C39DE-CEB8-595A-981A-F2EFCBE7324E</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

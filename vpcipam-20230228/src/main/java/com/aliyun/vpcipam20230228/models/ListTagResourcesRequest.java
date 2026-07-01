@@ -4,25 +4,9 @@ package com.aliyun.vpcipam20230228.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
-    /**
-     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>20</p>
-     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
-     * <ul>
-     * <li>You do not need to specify this parameter for the first request.</li>
-     * <li>If a value is returned for NextToken, you must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -33,18 +17,11 @@ public class ListTagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the resource.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The resource IDs.</p>
-     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
@@ -55,23 +32,11 @@ public class ListTagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The resource type. Valid values:</p>
-     * <ul>
-     * <li><strong>IPAM</strong></li>
-     * <li><strong>IPAMSCOPE</strong></li>
-     * <li><strong>IPAMPOOL</strong></li>
-     * </ul>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>IPAM</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
-    /**
-     * <p>The tag list.</p>
-     */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
 
@@ -161,29 +126,9 @@ public class ListTagResourcesRequest extends TeaModel {
     }
 
     public static class ListTagResourcesRequestTag extends TeaModel {
-        /**
-         * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with a <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <blockquote>
-         * <p> You must specify <strong>ResourceId.N</strong> or <strong>Tag.N</strong> that consists of <strong>Tag.N.Key</strong> and <strong>Tag.N.Value</strong>.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>FinanceDept</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with a <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <blockquote>
-         * <p> You must specify <strong>ResourceId.N</strong> or <strong>Tag.N</strong> that consists of <strong>Tag.N.Key</strong> and <strong>Tag.N.Value</strong>.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>FinanceJoshua</p>
-         */
         @NameInMap("Value")
         public String value;
 

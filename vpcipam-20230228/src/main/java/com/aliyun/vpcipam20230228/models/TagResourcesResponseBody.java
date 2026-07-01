@@ -4,12 +4,6 @@ package com.aliyun.vpcipam20230228.models;
 import com.aliyun.tea.*;
 
 public class TagResourcesResponseBody extends TeaModel {
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>BF872550-9700-52FD-839C-4D3F05543FA8</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

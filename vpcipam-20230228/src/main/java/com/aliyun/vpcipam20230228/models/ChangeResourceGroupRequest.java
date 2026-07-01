@@ -5,11 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChangeResourceGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the new resource group.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rg-aek3ctkufaw****</p>
      */
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
@@ -21,21 +17,13 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the IPAM instance is hosted. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the IPAM resource.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ipam-uq5dcfc2eqhpf4****</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
@@ -47,21 +35,7 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Resource type, with values:</p>
-     * <ul>
-     * <li><p>Ipam:IPAM instance</p>
-     * </li>
-     * <li><p>IpamScope:IPAM scope</p>
-     * </li>
-     * <li><p>IpamPool:IPAM address pool</p>
-     * </li>
-     * <li><p>IpamResourceDiscovery:IPAM resource discovery</p>
-     * </li>
-     * </ul>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ipam</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

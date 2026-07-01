@@ -4,12 +4,6 @@ package com.aliyun.vpcipam20230228.models;
 import com.aliyun.tea.*;
 
 public class DeleteIpamPoolResponseBody extends TeaModel {
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>57B7DCCA-F192-5528-8AF3-2FE1413228C9</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,41 +4,15 @@ package com.aliyun.vpcipam20230228.models;
 import com.aliyun.tea.*;
 
 public class ListIpamsRequest extends TeaModel {
-    /**
-     * <p>The IDs of IPAMs. Valid values of N: 1 to 100. A maximum of 100 IPAMs can be queried at a time.</p>
-     */
     @NameInMap("IpamIds")
     public java.util.List<String> ipamIds;
 
-    /**
-     * <p>The name of the IPAM.</p>
-     * <p>It must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>test</p>
-     */
     @NameInMap("IpamName")
     public String ipamName;
 
-    /**
-     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
     @NameInMap("MaxResults")
     public Long maxResults;
 
-    /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
-     * <ul>
-     * <li>You do not need to specify this parameter for the first request.</li>
-     * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -49,21 +23,11 @@ public class ListIpamsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the IPAM instance is hosted. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The resource group ID of the IPAM.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rg-aek2sermdd6****</p>
-     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -73,9 +37,6 @@ public class ListIpamsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The tag information.</p>
-     */
     @NameInMap("Tags")
     public java.util.List<ListIpamsRequestTags> tags;
 
@@ -173,23 +134,9 @@ public class ListIpamsRequest extends TeaModel {
     }
 
     public static class ListIpamsRequestTags extends TeaModel {
-        /**
-         * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The tag key must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>FinanceDept</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length. It must start with a letter and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>FinanceJoshua</p>
-         */
         @NameInMap("Value")
         public String value;
 

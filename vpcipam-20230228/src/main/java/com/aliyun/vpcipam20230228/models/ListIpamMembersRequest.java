@@ -4,20 +4,12 @@ package com.aliyun.vpcipam20230228.models;
 import com.aliyun.tea.*;
 
 public class ListIpamMembersRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>20</p>
-     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     @NameInMap("MemberIds")
     public java.util.List<String> memberIds;
 
-    /**
-     * <strong>example:</strong>
-     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -29,9 +21,6 @@ public class ListIpamMembersRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -4,17 +4,9 @@ package com.aliyun.vpcipam20230228.models;
 import com.aliyun.tea.*;
 
 public class RemoveIpamMembersRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>123e4567-e89b-12d3-a456-426655440000</p>
-     */
     @NameInMap("ClientToken")
     public String clientToken;
 
-    /**
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
@@ -32,9 +24,6 @@ public class RemoveIpamMembersRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -115,17 +104,9 @@ public class RemoveIpamMembersRequest extends TeaModel {
     }
 
     public static class RemoveIpamMembersRequestMembers extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>Folder</p>
-         */
         @NameInMap("MemberId")
         public String memberId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>fd-ccccncASqa</p>
-         */
         @NameInMap("MemberType")
         public String memberType;
 

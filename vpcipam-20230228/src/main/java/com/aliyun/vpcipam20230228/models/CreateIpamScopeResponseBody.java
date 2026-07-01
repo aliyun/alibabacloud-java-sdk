@@ -4,21 +4,9 @@ package com.aliyun.vpcipam20230228.models;
 import com.aliyun.tea.*;
 
 public class CreateIpamScopeResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the IPAM scope.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ipam-scope-glfmcyldpm8lsy****</p>
-     */
     @NameInMap("IpamScopeId")
     public String ipamScopeId;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>E897D16A-50EB-543F-B002-C5A26AB818FF</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

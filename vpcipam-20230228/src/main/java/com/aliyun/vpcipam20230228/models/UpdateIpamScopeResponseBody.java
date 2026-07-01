@@ -4,12 +4,6 @@ package com.aliyun.vpcipam20230228.models;
 import com.aliyun.tea.*;
 
 public class UpdateIpamScopeResponseBody extends TeaModel {
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>BA8054F5-852A-570A-ACFF-BCA63E0B02D5</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

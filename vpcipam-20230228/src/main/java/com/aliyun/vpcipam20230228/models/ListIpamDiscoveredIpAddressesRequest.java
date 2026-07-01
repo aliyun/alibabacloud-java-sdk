@@ -4,63 +4,33 @@ package com.aliyun.vpcipam20230228.models;
 import com.aliyun.tea.*;
 
 public class ListIpamDiscoveredIpAddressesRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>192.168.1.0/24</p>
-     */
     @NameInMap("Cidr")
     public String cidr;
 
-    /**
-     * <strong>example:</strong>
-     * <p>IPv4</p>
-     */
     @NameInMap("IpVersion")
     public String ipVersion;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ipam-res-disco-jt5f2af2u6nk2z321****</p>
      */
     @NameInMap("IpamResourceDiscoveryId")
     public String ipamResourceDiscoveryId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>100</p>
-     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    /**
-     * <strong>example:</strong>
-     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>vsw-bp1bmwg5u07e1l3q0is4w</p>
-     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>vpc-bp1fjfnrg3av6zb9e****</p>
-     */
     @NameInMap("VpcId")
     public String vpcId;
 

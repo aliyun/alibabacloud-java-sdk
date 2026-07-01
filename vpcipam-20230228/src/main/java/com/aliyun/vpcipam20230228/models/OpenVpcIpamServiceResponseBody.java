@@ -4,30 +4,12 @@ package com.aliyun.vpcipam20230228.models;
 import com.aliyun.tea.*;
 
 public class OpenVpcIpamServiceResponseBody extends TeaModel {
-    /**
-     * <p>Status code.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>Information returned upon successful IPAM activation.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>successful</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>Request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>3F814C37-B032-5477-AF5A-2925D0593CD4</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,21 +4,9 @@ package com.aliyun.vpcipam20230228.models;
 import com.aliyun.tea.*;
 
 public class GetIpamPoolNextAvailableCidrResponseBody extends TeaModel {
-    /**
-     * <p>Available CIDR.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>172.68.0.0/26</p>
-     */
     @NameInMap("CidrBlock")
     public String cidrBlock;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>29FC6758-9B7C-5CC7-8CBF-4DD846FE7D82</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
