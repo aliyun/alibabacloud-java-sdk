@@ -568,6 +568,13 @@ public class GetFeatureViewResponseBody extends TeaModel {
         public java.util.List<String> attributes;
 
         /**
+         * <strong>example:</strong>
+         * <p>512</p>
+         */
+        @NameInMap("Dimension")
+        public Integer dimension;
+
+        /**
          * <p>The field name.</p>
          * 
          * <strong>example:</strong>
@@ -605,6 +612,14 @@ public class GetFeatureViewResponseBody extends TeaModel {
         }
         public java.util.List<String> getAttributes() {
             return this.attributes;
+        }
+
+        public GetFeatureViewResponseBodyFields setDimension(Integer dimension) {
+            this.dimension = dimension;
+            return this;
+        }
+        public Integer getDimension() {
+            return this.dimension;
         }
 
         public GetFeatureViewResponseBodyFields setName(String name) {

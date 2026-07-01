@@ -8,7 +8,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("us-west-1", "paifeaturestore.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "paifeaturestore.us-east-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "paifeaturestore.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "paifeaturestore.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "paifeaturestore.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "paifeaturestore.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "paifeaturestore.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-beijing", "paifeaturestore.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "paifeaturestore.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "paifeaturestore.ap-southeast-1.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("paifeaturestore", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -530,7 +542,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a model feature. A model feature associates a label table with a set of feature view fields. It is used to generate the training dataset table required for model training and to specify the feature set used for model inference.</p>
+     * <p>Creates a model feature. A model feature associates a label table with a set of feature view fields to generate the training dataset table required for model training and to specify the feature set used for model inference.</p>
      * 
      * @param request CreateModelFeatureRequest
      * @param headers map
@@ -584,7 +596,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a model feature. A model feature associates a label table with a set of feature view fields. It is used to generate the training dataset table required for model training and to specify the feature set used for model inference.</p>
+     * <p>Creates a model feature. A model feature associates a label table with a set of feature view fields to generate the training dataset table required for model training and to specify the feature set used for model inference.</p>
      * 
      * @param request CreateModelFeatureRequest
      * @return CreateModelFeatureResponse
@@ -1292,7 +1304,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves detailed information about a model feature, including the selected feature list, lineage relationships, and training set export script.</p>
+     * <p>Gets detailed information about a model feature, including the selected feature list, lineage relations, and training set export script.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1318,7 +1330,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves detailed information about a model feature, including the selected feature list, lineage relationships, and training set export script.</p>
+     * <p>Gets detailed information about a model feature, including the selected feature list, lineage relations, and training set export script.</p>
      * @return GetModelFeatureResponse
      */
     public GetModelFeatureResponse getModelFeature(String InstanceId, String ModelFeatureId) throws Exception {
@@ -3085,7 +3097,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the information of a model feature, including the associated label table, selected feature fields, and conflict priority policy. The update is a full replacement. The specified Features value overwrites the existing value.</p>
+     * <p>Updates the information of a model feature, including the associated label table, selected feature fields, and conflict priority policy. The update performs a full replacement. The specified Features overwrite the existing values.</p>
      * 
      * @param request UpdateModelFeatureRequest
      * @param headers map
@@ -3131,7 +3143,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the information of a model feature, including the associated label table, selected feature fields, and conflict priority policy. The update is a full replacement. The specified Features value overwrites the existing value.</p>
+     * <p>Updates the information of a model feature, including the associated label table, selected feature fields, and conflict priority policy. The update performs a full replacement. The specified Features overwrite the existing values.</p>
      * 
      * @param request UpdateModelFeatureRequest
      * @return UpdateModelFeatureResponse

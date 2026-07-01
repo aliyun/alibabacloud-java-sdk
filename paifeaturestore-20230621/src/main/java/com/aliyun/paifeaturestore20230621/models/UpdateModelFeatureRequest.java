@@ -18,7 +18,7 @@ public class UpdateModelFeatureRequest extends TeaModel {
     public Long labelPriorityLevel;
 
     /**
-     * <p>The label table ID. You can call the ListLabelTables operation to query the label table ID.</p>
+     * <p>The label table ID. You can call the ListLabelTables operation to obtain the label table ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -77,7 +77,7 @@ public class UpdateModelFeatureRequest extends TeaModel {
         public String aliasName;
 
         /**
-         * <p>The feature view ID. You can call the ListFeatureViews operation to query the feature view ID.</p>
+         * <p>The feature view ID. You can call the ListFeatureViews operation to obtain the feature view ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

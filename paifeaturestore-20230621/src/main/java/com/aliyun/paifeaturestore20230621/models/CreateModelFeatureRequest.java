@@ -111,7 +111,7 @@ public class CreateModelFeatureRequest extends TeaModel {
 
     public static class CreateModelFeatureRequestFeatures extends TeaModel {
         /**
-         * <p>The alias of the feature.</p>
+         * <p>The feature alias.</p>
          * 
          * <strong>example:</strong>
          * <p>userid</p>
@@ -148,15 +148,13 @@ public class CreateModelFeatureRequest extends TeaModel {
 
         /**
          * <p>The feature type. Valid values:</p>
-         * <ul>
-         * <li>INT32</li>
-         * <li>INT64</li>
-         * <li>FLOAT</li>
-         * <li>DOUBLE</li>
-         * <li>STRING</li>
-         * <li>BOOLEAN</li>
-         * <li>TIMESTAMP.</li>
-         * </ul>
+         * <p>● INT32</p>
+         * <p>● INT64</p>
+         * <p>● FLOAT</p>
+         * <p>● DOUBLE</p>
+         * <p>● STRING</p>
+         * <p>● BOOLEAN</p>
+         * <p>● TIMESTAMP.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

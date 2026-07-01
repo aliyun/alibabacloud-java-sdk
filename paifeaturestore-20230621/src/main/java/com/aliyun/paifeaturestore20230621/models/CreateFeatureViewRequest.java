@@ -380,6 +380,9 @@ public class CreateFeatureViewRequest extends TeaModel {
         @NameInMap("Attributes")
         public java.util.List<String> attributes;
 
+        @NameInMap("Dimension")
+        public Integer dimension;
+
         /**
          * <p>The name of the field.</p>
          * 
@@ -431,6 +434,14 @@ public class CreateFeatureViewRequest extends TeaModel {
         }
         public java.util.List<String> getAttributes() {
             return this.attributes;
+        }
+
+        public CreateFeatureViewRequestFields setDimension(Integer dimension) {
+            this.dimension = dimension;
+            return this;
+        }
+        public Integer getDimension() {
+            return this.dimension;
         }
 
         public CreateFeatureViewRequestFields setName(String name) {
