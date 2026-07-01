@@ -5,41 +5,45 @@ import com.aliyun.tea.*;
 
 public class SendBatchCardSmsRequest extends TeaModel {
     /**
-     * <p>The code of the message template. You can view the template code in the <strong>Template Code</strong> column on the <strong>Templates</strong> tab of the <strong>Go China</strong> page in the Alibaba Cloud SMS console.</p>
-     * <blockquote>
-     * <p>Make sure that the message template has been approved.</p>
-     * </blockquote>
+     * <p>The code of the card SMS template. On the <strong>Card SMS</strong> <a href="https://dysms.console.aliyun.com/domestic/card">Template Management</a> page in the console, select the code of a card SMS template that has been <strong>approved</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>CARD_SMS_3245</p>
+     * <p>CARD_SMS_3**5</p>
      */
     @NameInMap("CardTemplateCode")
     public String cardTemplateCode;
 
     /**
-     * <p>The variables of the card message template.</p>
+     * <p>The actual values of the variables in the card SMS template. This parameter is required when the card SMS template specified by <strong>CardTemplateCode</strong> contains variables.</p>
+     * <blockquote>
+     * <p>If the JSON contains line breaks, handle them based on the standard JSON protocol.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>[{\&quot;customurl\&quot;:\&quot;<a href="http://www.alibaba.com%5C%5C%22,%5C%5C%22dyncParams%5C%5C%22:%5C%5C%22%7B%5C%5C%5C%5C%5C%5C%22a%5C%5C%5C%5C%5C%5C%22:%5C%5C%5C%5C%5C%5C%22hello%5C%5C%5C%5C%5C%5C%22,%5C%5C%5C%5C%5C%5C%22b%5C%5C%5C%5C%5C%5C%22:%5C%5C%5C%5C%5C%5C%22world%5C%5C%5C%5C%5C%5C%22%7D%5C%5C%22%7D%5D">http://www.alibaba.com\\&quot;,\\&quot;dyncParams\\&quot;:\\&quot;{\\\\\\&quot;a\\\\\\&quot;:\\\\\\&quot;hello\\\\\\&quot;,\\\\\\&quot;b\\\\\\&quot;:\\\\\\&quot;world\\\\\\&quot;}\\&quot;}]</a></p>
+     * <p>[{&quot;customurl&quot;:&quot;<a href="http://www.alibaba.com%22,%22dyncParams%22:%22%7B%22a%22:%22hello%22,%22b%22:%22world%22%7D%22%7D%5D">http://www.alibaba.com&quot;,&quot;dyncParams&quot;:&quot;{&quot;a&quot;:&quot;hello&quot;,&quot;b&quot;:&quot;world&quot;}&quot;}]</a></p>
      */
     @NameInMap("CardTemplateParamJson")
     public String cardTemplateParamJson;
 
     /**
-     * <p>The code of the digital message template that applies when the card message is rolled back. You can view the template code in the <strong>Template Code</strong> column on the <strong>Templates</strong> tab of the <strong>Go China</strong> page in the Alibaba Cloud SMS console.</p>
+     * <p>The code of the digital SMS template used for fallback. This parameter is required when <strong>FallbackType</strong> is set to <strong>DIGITALSMS</strong> (fallback to digital SMS).</p>
+     * <p>You can view the list of digital SMS templates on the <strong>Domestic Digital SMS</strong> <a href="https://dysms.console.aliyun.com/domestic/digit">Template Management</a> page in the console.</p>
      * <blockquote>
-     * <p>Make sure that the message template has been approved.</p>
+     * <p>The template must be added and approved.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>DIGITAL_SMS_234080176</p>
+     * <p>DIGITAL_SMS_23408****</p>
      */
     @NameInMap("DigitalTemplateCode")
     public String digitalTemplateCode;
 
     /**
-     * <p>The variables of the digital message template.</p>
+     * <p>The actual values of the variables in the digital SMS template. This parameter is required when the fallback digital SMS template specified by <strong>DigitalTemplateCode</strong> contains variables.</p>
+     * <blockquote>
+     * <p>If the JSON contains line breaks, handle them based on the standard JSON protocol.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;a&quot;:1,&quot;b&quot;:2},{&quot;a&quot;:9,&quot;b&quot;:8}]</p>
@@ -48,11 +52,11 @@ public class SendBatchCardSmsRequest extends TeaModel {
     public String digitalTemplateParamJson;
 
     /**
-     * <p>The rollback type. Valid values:</p>
+     * <p>The fallback type. Valid values:</p>
      * <ul>
-     * <li><strong>SMS</strong>: text message</li>
-     * <li><strong>DIGITALSMS</strong>: digital message</li>
-     * <li><strong>NONE</strong>: none</li>
+     * <li><strong>SMS</strong>: Phone numbers that do not support card SMS messages fall back to text SMS messages.</li>
+     * <li><strong>DIGITALSMS</strong>: Phone numbers that do not support card SMS messages fall back to digital SMS messages.</li>
+     * <li><strong>NONE</strong>: No fallback is required.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -63,7 +67,7 @@ public class SendBatchCardSmsRequest extends TeaModel {
     public String fallbackType;
 
     /**
-     * <p>The ID that is reserved for the caller of the operation.</p>
+     * <p>The ID reserved for the caller.</p>
      * 
      * <strong>example:</strong>
      * <p>16545681783595370</p>
@@ -72,42 +76,47 @@ public class SendBatchCardSmsRequest extends TeaModel {
     public String outId;
 
     /**
-     * <p>The mobile numbers of the recipients.</p>
+     * <p>The mobile phone numbers that receive the SMS messages.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>[\&quot;1390000****\&quot;,\&quot;1370000****\&quot;]&quot;</p>
+     * <p>[&quot;1390000****&quot;,&quot;1370000****&quot;]</p>
      */
     @NameInMap("PhoneNumberJson")
     public String phoneNumberJson;
 
     /**
-     * <p>The signature. You can view the template code in the <strong>Signature</strong> column on the <strong>Signaturess</strong> tab of the <strong>Go China</strong> page in the Alibaba Cloud SMS console.</p>
+     * <p>The name of the SMS signature.
+     * You can call the <a href="https://help.aliyun.com/document_detail/419282.html">QuerySmsSignList</a> operation to query the signatures that have been submitted under the current account, or you can view the list of signatures in the <a href="https://dysms.console.aliyun.com/domestic/text/sign">Short Message Service console</a>.</p>
      * <blockquote>
-     * <p>The signatures must be approved and correspond to the mobile numbers in sequence.</p>
+     * <p>The signature must be added and approved. The number of SMS signatures must be the same as the number of phone numbers, and the signatures must be in one-to-one correspondence with the phone numbers.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>[\&quot;aliyun\&quot;,\&quot;aliyuncode\&quot;]</p>
+     * <p>[&quot;阿里云&quot;,&quot;阿里巴巴&quot;]</p>
      */
     @NameInMap("SignNameJson")
     public String signNameJson;
 
     /**
-     * <p>The code of the text message template that applies when the card message is rolled back. You can view the template code in the <strong>Template Code</strong> column on the <strong>Templates</strong> tab of the <strong>Go China</strong> page in the Alibaba Cloud SMS console.</p>
+     * <p>The code of the text SMS template used for fallback. This parameter is required when <strong>FallbackType</strong> is set to <strong>SMS</strong> (fallback to text SMS).</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/419288.html">QuerySmsTemplateList</a> operation to query the templates that have been submitted under the current account, or you can view the list of templates in the <a href="https://dysms.console.aliyun.com/domestic/text/template">Short Message Service console</a>.</p>
      * <blockquote>
-     * <p>Make sure that the message template has been approved.</p>
+     * <p>The template must be added and approved.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>SMS_234251075</p>
+     * <p>SMS_23425****</p>
      */
     @NameInMap("SmsTemplateCode")
     public String smsTemplateCode;
 
     /**
-     * <p>The variables of the text message template.</p>
+     * <p>The actual values of the variables in the text SMS template. This parameter is required when the fallback text SMS template specified by <strong>SmsTemplateCode</strong> contains variables.</p>
+     * <blockquote>
+     * <p>If the JSON contains line breaks, handle them based on the standard JSON protocol.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;a&quot;:1,&quot;b&quot;:2},{&quot;a&quot;:9,&quot;b&quot;:8}]</p>
@@ -116,7 +125,7 @@ public class SendBatchCardSmsRequest extends TeaModel {
     public String smsTemplateParamJson;
 
     /**
-     * <p>The extension code of the upstream message.</p>
+     * <p>The extension code of the MO (mobile-originated) SMS message.</p>
      * 
      * <strong>example:</strong>
      * <p>[\&quot;6\&quot;,\&quot;6\&quot;]</p>
@@ -125,10 +134,13 @@ public class SendBatchCardSmsRequest extends TeaModel {
     public String smsUpExtendCodeJson;
 
     /**
-     * <p>The code of the message template.</p>
-     * <p>You can log on to the <a href="https://dysms.console.aliyun.com/dysms.htm?spm=5176.12818093.categories-n-products.ddysms.3b2816d0xml2NA#/overview">Alibaba Cloud console</a>, click <strong>Go China</strong> or <strong>Go Globe</strong> in the left-side navigation pane, and then view the <strong>template code</strong> on the <strong>Templates</strong> tab.</p>
+     * <p>The code of the custom send content template.</p>
+     * <p>The custom content is sent to the terminal in the form of the selected text SMS template plus the card parsing link. You can log on to the <a href="https://dysms.console.aliyun.com/overview">Short Message Service console</a>, choose <strong>Domestic Messages</strong> or <strong>International/Hong Kong, Macao, and Taiwan Messages</strong>, and then view the <strong>Template Code</strong> on the <strong>Template Management</strong> page.</p>
      * <blockquote>
-     * <p>You must specify a message template that is created in the SMS console and approved by Alibaba Cloud. If you send messages to countries or regions outside the Chinese mainland, use the corresponding message templates.</p>
+     * <ul>
+     * <li>The template must be added and approved. To send international or Hong Kong, Macao, and Taiwan messages, use an international or Hong Kong, Macao, and Taiwan SMS template.</li>
+     * <li>For example, the selected text SMS template content is: You have a message to check; the card parsing link is: <code>1*.cn/2**d</code>. The final delivered content is: <code>You have a message to check 1*.cn/2**d</code>. Perform testing and control the number of characters before sending.</li>
+     * </ul>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -138,9 +150,12 @@ public class SendBatchCardSmsRequest extends TeaModel {
     public String templateCode;
 
     /**
-     * <p>The value of the variable in the message template.</p>
+     * <p>The actual values of the variables in the custom send content template. This parameter is required when the SMS template specified by <strong>TemplateCode</strong> contains variables.</p>
      * <blockquote>
-     * <p>If you need to add line breaks to the JSON template, make sure that the format is valid. In addition, the sequence of variable values must be the same as that of the mobile numbers and signatures.</p>
+     * <ul>
+     * <li>If the JSON contains line breaks, handle them based on the standard JSON protocol.</li>
+     * <li>The number of template variable values must be the same as the number of phone numbers and signatures, and they must be in one-to-one correspondence. This indicates that an SMS message with the corresponding signature is sent to the specified phone number, and the variable parameters in the SMS template are replaced with the corresponding values.</li>
+     * </ul>
      * </blockquote>
      * 
      * <strong>example:</strong>

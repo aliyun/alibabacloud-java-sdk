@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteSmsTemplateResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>请求状态码。</p>
      * <ul>
-     * <li>The value OK indicates that the request was successful.</li>
-     * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/101346.html">API error codes</a>.</li>
+     * <li>返回OK代表请求成功。</li>
+     * <li>其他错误码，请参见<a href="https://help.aliyun.com/document_detail/101346.html">API错误码</a>。</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DeleteSmsTemplateResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned message.</p>
+     * <p>状态码的描述。</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -27,7 +27,7 @@ public class DeleteSmsTemplateResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>请求ID。</p>
      * 
      * <strong>example:</strong>
      * <p>CCA2BCFF-2BA7-427C-90EE-AC6994748607</p>
@@ -36,10 +36,10 @@ public class DeleteSmsTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The code of the message template.</p>
+     * <p>已删除的模板Code。</p>
      * 
      * <strong>example:</strong>
-     * <p>SMS_20375****</p>
+     * <p>SMS_152550****</p>
      */
     @NameInMap("TemplateCode")
     public String templateCode;

@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class SubmitSmsQualificationRequest extends TeaModel {
     /**
-     * <p>经办人身份证有效期，格式示例2023-01-01~2033-01-01</p>
+     * <p>The administrator\&quot;s ID card validity period. Format: YYYY-MM-DD~YYYY-MM-DD.</p>
+     * <blockquote>
+     * <p>If the ID card has a long-term validity period, set the end date to 2099-12-31.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +18,12 @@ public class SubmitSmsQualificationRequest extends TeaModel {
     public String adminIDCardExpDate;
 
     /**
-     * <p>经办人身份证照片国徽面</p>
+     * <p>The front photo of the administrator\&quot;s ID card (national emblem side). Only jpg, png, gif, and jpeg formats are supported. The image must not exceed 5 MB. Specify the file path uploaded to OSS. The file name must not contain Chinese characters or special characters. For upload instructions, see <a href="https://help.aliyun.com/document_detail/2833114.html">Upload files through OSS</a>.</p>
+     * <blockquote>
+     * <p>Notice: 
+     * Color originals do not require a stamp. If you upload a photocopy or black-and-white photo, stamp the photocopy with the company seal and take a photo to upload.</p>
+     * </blockquote>
+     * <p>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +33,7 @@ public class SubmitSmsQualificationRequest extends TeaModel {
     public String adminIDCardFrontFace;
 
     /**
-     * <p>经办人身份证号码</p>
+     * <p>The administrator\&quot;s ID card number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +43,12 @@ public class SubmitSmsQualificationRequest extends TeaModel {
     public String adminIDCardNo;
 
     /**
-     * <p>经办人身份证照片人像面</p>
+     * <p>The back photo of the administrator\&quot;s ID card (portrait side). Only jpg, png, gif, and jpeg formats are supported. The image must not exceed 5 MB. Specify the file path uploaded to OSS. The file name must not contain Chinese characters or special characters. For upload instructions, see <a href="https://help.aliyun.com/document_detail/2833114.html">Upload files through OSS</a>.</p>
+     * <blockquote>
+     * <p>Notice: 
+     * Color originals do not require a stamp. If you upload a photocopy or black-and-white photo, stamp the photocopy with the company seal and take a photo to upload.</p>
+     * </blockquote>
+     * <p>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +58,15 @@ public class SubmitSmsQualificationRequest extends TeaModel {
     public String adminIDCardPic;
 
     /**
-     * <p>管理员身份证类型。identityCard:中国居民身份证;passport:护照;homeReturnPermit:港澳居民来往内地通行证;TaiwanCompatriotPermit:台湾居民来往大陆通行证;residencePermit:港澳台居民居住证&quot;;other:其他</p>
+     * <p>The administrator\&quot;s ID card type. Valid values:</p>
+     * <ul>
+     * <li>identityCard: ID card.</li>
+     * <li>passport: passport.</li>
+     * <li>homeReturnPermit: Hong Kong/Macao resident travel permit to mainland.</li>
+     * <li>TaiwanCompatriotPermit: Taiwan resident travel permit to mainland.</li>
+     * <li>residencePermit: Hong Kong/Macao/Taiwan resident residence permit.</li>
+     * <li>other: other.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,17 +76,20 @@ public class SubmitSmsQualificationRequest extends TeaModel {
     public String adminIDCardType;
 
     /**
-     * <p>经办人姓名</p>
+     * <p>The administrator\&quot;s name. Maximum length: 50 characters. <strong>Under the current <a href="https://help.aliyun.com/document_detail/2873145.html">SMS signature real-name requirements</a>, if the same administrator applies for qualifications for multiple different enterprises, carrier registration will fail. Ensure one administrator per enterprise to improve the registration success rate.</strong></p>
+     * <blockquote>
+     * <p>The administrator (also called the handler) is the person who logs on to the Alibaba Cloud account and manages SMS services. This person typically manages qualifications, signatures, and templates under this Alibaba Cloud account and performs SMS sending operations. This person\&quot;s phone number must be able to receive verification codes. The administrator does not have to be the Alibaba Cloud account administrator and can be the same person as the legal representative.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>李华</p>
      */
     @NameInMap("AdminName")
     public String adminName;
 
     /**
-     * <p>经办人手机号码</p>
+     * <p>The administrator\&quot;s phone number. Format: +/+86/0086/86 or a phone number without any prefix, such as 1390000****.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -75,13 +99,21 @@ public class SubmitSmsQualificationRequest extends TeaModel {
     public String adminPhoneNo;
 
     /**
-     * <p>企业营业证件信息，非大客户必填</p>
+     * <p>The business license information. This parameter is required when the qualification purpose <code>UseBySelf</code> is set to <code>false</code> (third-party use).</p>
+     * <blockquote>
+     * <ul>
+     * <li>Based on carrier real-name registration regulatory requirements, we strongly recommend that you provide the relevant field information. Otherwise, the probability of &quot;review rejection or carrier registration failure&quot; increases significantly.</li>
+     * </ul>
+     * </blockquote>
      */
     @NameInMap("BusinessLicensePics")
     public java.util.List<SubmitSmsQualificationRequestBusinessLicensePics> businessLicensePics;
 
     /**
-     * <p>企业营业时间开始和结束字符串，格式示例2023-01-01~2033-01-01</p>
+     * <p>The business license validity period. Format: YYYY-MM-DD~YYYY-MM-DD.</p>
+     * <blockquote>
+     * <p>If the certificate has a long-term validity period, set the end date to 2099-12-31.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -91,7 +123,10 @@ public class SubmitSmsQualificationRequest extends TeaModel {
     public String bussinessLicenseExpDate;
 
     /**
-     * <p>手机号验证码</p>
+     * <p>The phone verification code. Call the <a href="~~RequiredPhoneCode~~">RequiredPhoneCode</a> operation with the <strong>administrator\&quot;s phone number</strong>, and then enter the SMS verification code received.</p>
+     * <blockquote>
+     * <p>You can use <a href="~~ValidPhoneCode~~">ValidPhoneCode</a> to verify whether the SMS verification code is correct before passing it in.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -101,17 +136,23 @@ public class SubmitSmsQualificationRequest extends TeaModel {
     public String certifyCode;
 
     /**
-     * <p>公司名称</p>
+     * <p>The enterprise name. Only the middle dot <code>·</code>, Chinese brackets <code>【】（）</code>, English parentheses <code>()</code>, and <code>spaces</code> are supported as symbols. Other symbols or pure digits are not allowed. Maximum length: 150 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>阿里云云通信有限公司</p>
      */
     @NameInMap("CompanyName")
     public String companyName;
 
     /**
-     * <p>企业类型, COMPANY:公司;NON_PROFIT_ORGANIZATION:政府或者事业单位</p>
+     * <p>The enterprise type. Valid values:</p>
+     * <ul>
+     * <li><p>COMPANY: enterprise.</p>
+     * </li>
+     * <li><p>NON_PROFIT_ORGANIZATION: government agency or public institution.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -121,7 +162,7 @@ public class SubmitSmsQualificationRequest extends TeaModel {
     public String companyType;
 
     /**
-     * <p>法人身份证号码</p>
+     * <p>The legal representative\&quot;s ID card number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -131,7 +172,15 @@ public class SubmitSmsQualificationRequest extends TeaModel {
     public String legalPersonIDCardNo;
 
     /**
-     * <p>法人身份证类型。identityCard:中国居民身份证;passport:护照;homeReturnPermit:港澳居民来往内地通行证;TaiwanCompatriotPermit:台湾居民来往大陆通行证;residencePermit:港澳台居民居住证&quot;;other:其他</p>
+     * <p>The legal representative\&quot;s ID card type. Valid values:</p>
+     * <ul>
+     * <li>identityCard: ID card.</li>
+     * <li>passport: passport.</li>
+     * <li>homeReturnPermit: Hong Kong/Macao resident travel permit to mainland.</li>
+     * <li>TaiwanCompatriotPermit: Taiwan resident travel permit to mainland.</li>
+     * <li>residencePermit: Hong Kong/Macao/Taiwan resident residence permit.</li>
+     * <li>other: other.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -141,7 +190,10 @@ public class SubmitSmsQualificationRequest extends TeaModel {
     public String legalPersonIDCardType;
 
     /**
-     * <p>法人身份证照片人像面</p>
+     * <p>The back photo of the legal representative\&quot;s ID card (portrait side). Only jpg, png, gif, and jpeg formats are supported. The image must not exceed 5 MB. Specify the file path uploaded to OSS. The file name must not contain Chinese characters or special characters. For upload instructions, see <a href="https://help.aliyun.com/document_detail/2833114.html">Upload files through OSS</a>.</p>
+     * <blockquote>
+     * <p>The system verifies the legal representative\&quot;s name and ID number you provide. If verification fails, you must upload photos of the legal representative\&quot;s ID card.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>123456/111.png</p>
@@ -150,7 +202,10 @@ public class SubmitSmsQualificationRequest extends TeaModel {
     public String legalPersonIdCardBackSide;
 
     /**
-     * <p>法人身份证有效期</p>
+     * <p>The legal representative\&quot;s ID card validity period. Format: YYYY-MM-DD~YYYY-MM-DD.</p>
+     * <blockquote>
+     * <p>If the ID card has a long-term validity period, set the end date to 2099-12-31.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -160,7 +215,10 @@ public class SubmitSmsQualificationRequest extends TeaModel {
     public String legalPersonIdCardEffTime;
 
     /**
-     * <p>法人身份证照片国徽面</p>
+     * <p>The front photo of the legal representative\&quot;s ID card (national emblem side). Only jpg, png, gif, and jpeg formats are supported. The image must not exceed 5 MB. Specify the file path uploaded to OSS. The file name must not contain Chinese characters or special characters. For upload instructions, see <a href="https://help.aliyun.com/document_detail/2833114.html">Upload files through OSS</a>.</p>
+     * <blockquote>
+     * <p>The system verifies the legal representative\&quot;s name and ID number you provide. If verification fails, you must upload photos of the legal representative\&quot;s ID card.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>123456/111.png</p>
@@ -169,17 +227,23 @@ public class SubmitSmsQualificationRequest extends TeaModel {
     public String legalPersonIdCardFrontSide;
 
     /**
-     * <p>法人姓名</p>
+     * <p>The legal representative\&quot;s name. Maximum length: 50 characters.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If the organization certificate does not contain legal representative information but includes a person in charge or chief representative, prepare the ID card photos of the corresponding person in charge or chief representative listed on the certificate.</li>
+     * <li>If the organization certificate contains neither legal representative information nor any person in charge, prepare the name and ID card photos of the primary business contact.</li>
+     * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>李华</p>
      */
     @NameInMap("LegalPersonName")
     public String legalPersonName;
 
     /**
-     * <p>社会统一信用代码</p>
+     * <p>The unified social credit code. Maximum length: 150 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -189,7 +253,7 @@ public class SubmitSmsQualificationRequest extends TeaModel {
     public String organizationCode;
 
     /**
-     * <p>更多资料</p>
+     * <p>Additional materials. If you have other supporting documents, notes, or photos, upload them here.</p>
      */
     @NameInMap("OtherFiles")
     public java.util.List<SubmitSmsQualificationRequestOtherFiles> otherFiles;
@@ -198,20 +262,20 @@ public class SubmitSmsQualificationRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>资质名称,名称不能重复</p>
+     * <p>The qualification name, used to manage and distinguish multiple qualifications you apply for. It does not appear in SMS content. The name must be unique among your existing qualifications. Only Chinese characters, English letters, or combinations with digits are supported. Symbols or pure digits are not supported. Maximum length: 100 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>阿里云云通信有限公司资质李华</p>
      */
     @NameInMap("QualificationName")
     public String qualificationName;
 
     /**
-     * <p>备注</p>
+     * <p>Remarks. If you have additional information to provide or notes for the qualification verification reviewer, add a description here.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>无</p>
      */
     @NameInMap("Remark")
     public String remark;
@@ -223,7 +287,11 @@ public class SubmitSmsQualificationRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>资质是自用还是他用，true：自用，false：他用</p>
+     * <p>The purpose of the qualification application. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: <strong>Self-use</strong>. The entity that owns the signature is the same as the entity verified for this account.</li>
+     * <li><strong>false</strong>: <strong>Third-party use</strong>. The entity that owns the signature is different from the entity verified for this account.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -233,7 +301,11 @@ public class SubmitSmsQualificationRequest extends TeaModel {
     public Boolean useBySelf;
 
     /**
-     * <p>是否同意与其他业务线共享</p>
+     * <p>Qualification authorization. Specifies whether to share the qualification with other cloud communication products (such as domestic voice services and domestic number privacy protection). Sharing is available only when you apply for a <strong>self-use qualification</strong> and the qualification information <strong>matches the enterprise information verified for the current Alibaba Cloud account</strong>. Otherwise, this setting has no effect. Valid values:</p>
+     * <ul>
+     * <li>true: Agree. Your qualification information can be referenced during the qualification verification process of other cloud communication products, eliminating redundant verification.</li>
+     * <li>false: Disagree.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -465,7 +537,12 @@ public class SubmitSmsQualificationRequest extends TeaModel {
 
     public static class SubmitSmsQualificationRequestBusinessLicensePics extends TeaModel {
         /**
-         * <p>营业证件图片标识的osskey</p>
+         * <p>The business license image. Only jpg, png, gif, and jpeg formats are supported. The image must not exceed 5 MB. Specify the file path uploaded to OSS. The file name must not contain Chinese characters or special characters. For upload instructions, see <a href="https://help.aliyun.com/document_detail/2833114.html">Upload files through OSS</a>.</p>
+         * <blockquote>
+         * <p>Notice: </p>
+         * </blockquote>
+         * <p>Color originals do not require a stamp. If you upload a photocopy or black-and-white photo, stamp the photocopy with the company seal and take a photo to upload.
+         * .</p>
          * 
          * <strong>example:</strong>
          * <p>123456/111.png</p>
@@ -474,7 +551,14 @@ public class SubmitSmsQualificationRequest extends TeaModel {
         public String licensePic;
 
         /**
-         * <p>营业证件类型，businessLicense:营业执照;organizationCodeLicense:组织机构代码证;taxRegistrationLicense:税务登记证;socialCreditLicense:社会信用代码证书;newStyleBusinessLicense:三证合一;signLegalLicense:签名归属方的事业单位法人证书;otherLicense:其他类型执照证书</p>
+         * <p>The business license type. Valid values:</p>
+         * <ul>
+         * <li>socialCreditLicense: unified social credit code certificate.</li>
+         * <li>businessLicense: business license.</li>
+         * <li>signLegalLicense: public institution legal person certificate.</li>
+         * <li>otherLicense: other.</li>
+         * </ul>
+         * <p>Upload one type. The certificate must contain the enterprise name, unified social credit code, and certificate validity period.</p>
          * 
          * <strong>example:</strong>
          * <p>businessLicense</p>
@@ -507,6 +591,8 @@ public class SubmitSmsQualificationRequest extends TeaModel {
 
     public static class SubmitSmsQualificationRequestOtherFiles extends TeaModel {
         /**
+         * <p>The additional material file. Only png, jpg, jpeg, doc, docx, and pdf formats are supported. The file must not exceed 5 MB. Specify the file path uploaded to OSS. The file name must not contain Chinese characters or special characters. For upload instructions, see <a href="https://help.aliyun.com/document_detail/2833114.html">Upload files through OSS</a>.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456/111.png</p>
          */

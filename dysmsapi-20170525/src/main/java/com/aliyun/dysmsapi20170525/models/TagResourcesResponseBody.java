@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class TagResourcesResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The request status code. Valid values:</p>
      * <ul>
-     * <li>If OK is returned, the request is successful.</li>
-     * <li>Other values indicate that the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</li>
+     * <li>OK: The request was successful.</li>
+     * <li>For other error codes, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class TagResourcesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether tags were attached. Valid values:</p>
+     * <p>The result of adding the tags. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: success.</li>
+     * <li><strong>false</strong>: failure.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class TagResourcesResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>A90E4451-FED7-49D2-87C8-00700A8C****</p>
+     * <p>819BE656-D2E0-4858-8B21-B2E477085AAF</p>
      */
     @NameInMap("RequestId")
     public String requestId;

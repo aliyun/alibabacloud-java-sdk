@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class QuerySendStatisticsResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The response code. Valid values:</p>
      * <ul>
-     * <li>If OK is returned, the request is successful.</li>
-     * <li>Other values indicate that the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</li>
+     * <li><p>OK: The request was successful.</p>
+     * </li>
+     * <li><p>For other values, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,7 +26,7 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
     public QuerySendStatisticsResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -36,7 +38,7 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>819BE656-D2E0-4858-8B21-B2E47708****</p>
+     * <p>F655A8D5-B967-440B-8683-DAD6FF8DE990</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -80,7 +82,7 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
 
     public static class QuerySendStatisticsResponseBodyDataTargetList extends TeaModel {
         /**
-         * <p>The number of messages without a delivery receipt.</p>
+         * <p>The number of messages with no delivery receipts.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -89,7 +91,7 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
         public Long noRespondedCount;
 
         /**
-         * <p>The number of messages with a delivery receipt that indicates a failure.</p>
+         * <p>The number of messages with failed delivery receipts.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -98,7 +100,7 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
         public Long respondedFailCount;
 
         /**
-         * <p>The number of messages with a delivery receipt that indicates a success.</p>
+         * <p>The number of messages with successful delivery receipts.</p>
          * 
          * <strong>example:</strong>
          * <p>17</p>
@@ -107,7 +109,7 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
         public Long respondedSuccessCount;
 
         /**
-         * <p>The date when the message is sent. Format: yyyyMMdd. Example: 20181225.</p>
+         * <p>The date the messages were sent. Format: yyyyMMdd.</p>
          * 
          * <strong>example:</strong>
          * <p>20201010</p>
@@ -116,7 +118,7 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
         public String sendDate;
 
         /**
-         * <p>The number of delivered messages.</p>
+         * <p>The number of successfully sent messages (billable message count).</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -173,7 +175,7 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
 
     public static class QuerySendStatisticsResponseBodyData extends TeaModel {
         /**
-         * <p>The details of the data returned.</p>
+         * <p>A list of delivery statistics.</p>
          */
         @NameInMap("TargetList")
         public java.util.List<QuerySendStatisticsResponseBodyDataTargetList> targetList;

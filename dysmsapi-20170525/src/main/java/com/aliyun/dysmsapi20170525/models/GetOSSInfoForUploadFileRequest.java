@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetOSSInfoForUploadFileRequest extends TeaModel {
     /**
-     * <p>Business type, default value is <strong>fcMediaSms</strong>.</p>
-     * <p>When creating signatures and templates, and uploading <strong>additional materials</strong>, this value is <strong>fcMediaSms</strong>.</p>
+     * <p>The business type. Default value: <strong>fcMediaSms</strong>.</p>
+     * <p>When you create a signature or template and upload <strong>More Materials</strong>, the value is <strong>fcMediaSms</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>fcMediaSms</p>

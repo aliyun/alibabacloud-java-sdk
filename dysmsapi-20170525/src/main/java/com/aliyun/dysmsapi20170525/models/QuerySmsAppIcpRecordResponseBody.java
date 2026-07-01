@@ -4,20 +4,39 @@ package com.aliyun.dysmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QuerySmsAppIcpRecordResponseBody extends TeaModel {
+    /**
+     * <p>The access denial details.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
+     * <p>The status code of the request.</p>
+     * <ul>
+     * <li><p>OK indicates a successful request.</p>
+     * </li>
+     * <li><p>For other error codes, see the <a href="https://help.aliyun.com/document_detail/101346.htm">error code list</a>.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>A list of APP-ICP record entity details.</p>
+     */
     @NameInMap("Data")
     public java.util.List<QuerySmsAppIcpRecordResponseBodyData> data;
 
     /**
+     * <p>The description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -25,6 +44,8 @@ public class QuerySmsAppIcpRecordResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C9955E63-8BFF-101D-80A1-E6998DFEFF1A</p>
      */
@@ -32,6 +53,14 @@ public class QuerySmsAppIcpRecordResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Specifies whether the API call was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The call was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The call failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -93,7 +122,7 @@ public class QuerySmsAppIcpRecordResponseBody extends TeaModel {
 
     public static class QuerySmsAppIcpRecordResponseBodyData extends TeaModel {
         /**
-         * <p>审核通过日期，示例2025-09-01</p>
+         * <p>The approval date.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-01-01</p>
@@ -102,7 +131,7 @@ public class QuerySmsAppIcpRecordResponseBody extends TeaModel {
         public String appApprovalDate;
 
         /**
-         * <p>ICP备案/许可证号</p>
+         * <p>The icp filing/license number.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -111,7 +140,7 @@ public class QuerySmsAppIcpRecordResponseBody extends TeaModel {
         public String appIcpLicenseNumber;
 
         /**
-         * <p>app-icp备案材料id</p>
+         * <p>The ID of the APP-ICP record material.</p>
          * 
          * <strong>example:</strong>
          * <p>51</p>
@@ -120,7 +149,7 @@ public class QuerySmsAppIcpRecordResponseBody extends TeaModel {
         public Long appIcpRecordId;
 
         /**
-         * <p>app-icp备案截图图片Osskey（给签名传工单用）</p>
+         * <p>The OSS fileKey for the APP-ICP record screenshot.</p>
          * 
          * <strong>example:</strong>
          * <p>10000025<em><strong><strong>02/ac181696-</strong></strong>-49c6-90dc-50689267aa00_mhsjd8b8_17****</em>662348.jpeg</p>
@@ -129,7 +158,7 @@ public class QuerySmsAppIcpRecordResponseBody extends TeaModel {
         public String appIcpRecordPic;
 
         /**
-         * <p>app-icp备案截图url地址</p>
+         * <p>The URL of the APP-ICP record screenshot.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://alicom-fc-media.oss-cn-zhangjiakou.aliyuncs.com/100000****50802/afde****-496d-46e4-899d-b43758****8_mhk9oz0p_176224****542.png?Expires=1762****6&OSSAccessKeyId=bypFN****73PsLI&Signature=BygI9X****h7%2FXmFIo****FB2c%3D">https://alicom-fc-media.oss-cn-zhangjiakou.aliyuncs.com/100000****50802/afde****-496d-46e4-899d-b43758****8_mhk9oz0p_176224****542.png?Expires=1762****6&amp;OSSAccessKeyId=bypFN****73PsLI&amp;Signature=BygI9X****h7%2FXmFIo****FB2c%3D</a></p>
@@ -138,28 +167,64 @@ public class QuerySmsAppIcpRecordResponseBody extends TeaModel {
         public String appIcpRecordPicUrl;
 
         /**
-         * <p>主办单位名称</p>
+         * <p>The hosting unit name.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>阿里云</p>
          */
         @NameInMap("AppPrincipalUnitName")
         public String appPrincipalUnitName;
 
         /**
-         * <p>app服务名称</p>
+         * <p>APP实际运行截图Osskey</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>示例值示例值</p>
+         */
+        @NameInMap("AppRuntimePic")
+        public String appRuntimePic;
+
+        /**
+         * <p>APP实际运行截图url地址</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值示例值</p>
+         */
+        @NameInMap("AppRuntimePicUrl")
+        public String appRuntimePicUrl;
+
+        /**
+         * <p>The app service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试</p>
          */
         @NameInMap("AppServiceName")
         public String appServiceName;
 
         /**
-         * <p>APP应用商店链接</p>
+         * <p>APP应用商店下载截图Osskey</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="https://test">https://test</a></p>
+         * <p>示例值示例值</p>
+         */
+        @NameInMap("AppStoreDownloadPic")
+        public String appStoreDownloadPic;
+
+        /**
+         * <p>APP应用商店下载截图url地址</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值示例值</p>
+         */
+        @NameInMap("AppStoreDownloadPicUrl")
+        public String appStoreDownloadPicUrl;
+
+        /**
+         * <p>The app store link.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://apps.apple.com/cn/app/%E9%98%BF%E9%87%8C%E4%BA%91/id981011420">https://apps.apple.com/cn/app/阿里云/id981011420</a></p>
          */
         @NameInMap("Domain")
         public String domain;
@@ -217,12 +282,44 @@ public class QuerySmsAppIcpRecordResponseBody extends TeaModel {
             return this.appPrincipalUnitName;
         }
 
+        public QuerySmsAppIcpRecordResponseBodyData setAppRuntimePic(String appRuntimePic) {
+            this.appRuntimePic = appRuntimePic;
+            return this;
+        }
+        public String getAppRuntimePic() {
+            return this.appRuntimePic;
+        }
+
+        public QuerySmsAppIcpRecordResponseBodyData setAppRuntimePicUrl(String appRuntimePicUrl) {
+            this.appRuntimePicUrl = appRuntimePicUrl;
+            return this;
+        }
+        public String getAppRuntimePicUrl() {
+            return this.appRuntimePicUrl;
+        }
+
         public QuerySmsAppIcpRecordResponseBodyData setAppServiceName(String appServiceName) {
             this.appServiceName = appServiceName;
             return this;
         }
         public String getAppServiceName() {
             return this.appServiceName;
+        }
+
+        public QuerySmsAppIcpRecordResponseBodyData setAppStoreDownloadPic(String appStoreDownloadPic) {
+            this.appStoreDownloadPic = appStoreDownloadPic;
+            return this;
+        }
+        public String getAppStoreDownloadPic() {
+            return this.appStoreDownloadPic;
+        }
+
+        public QuerySmsAppIcpRecordResponseBodyData setAppStoreDownloadPicUrl(String appStoreDownloadPicUrl) {
+            this.appStoreDownloadPicUrl = appStoreDownloadPicUrl;
+            return this;
+        }
+        public String getAppStoreDownloadPicUrl() {
+            return this.appStoreDownloadPicUrl;
         }
 
         public QuerySmsAppIcpRecordResponseBodyData setDomain(String domain) {

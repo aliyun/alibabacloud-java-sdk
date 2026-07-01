@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to delete all tags from the message template. Valid values:</p>
+     * <p>Specifies whether to delete all tags under the template. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: yes.</li>
+     * <li><strong>false</strong>: no.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class UntagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The name of the cloud service. Set the value to <strong>dysms</strong>.</p>
+     * <p>The product name. Default value: <strong>dysms</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>dysms</p>
@@ -30,7 +30,8 @@ public class UntagResourcesRequest extends TeaModel {
     public String prodCode;
 
     /**
-     * <p>The region. Set the value to cn-hangzhou.</p>
+     * <p>The region ID. Set the value to cn-hangzhou by default.
+     * For more region IDs, see <a href="https://help.aliyun.com/document_detail/419270.html">Service endpoints</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,7 +41,7 @@ public class UntagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The array of message template codes. You can specify 1 to 20 message templates.</p>
+     * <p>The SMS template code. The number of codes cannot exceed 20.</p>
      * 
      * <strong>example:</strong>
      * <p>SMS_23423423</p>
@@ -55,7 +56,7 @@ public class UntagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the resource. Set the value to TEMPLATE.</p>
+     * <p>The resource type. Set the value to TEMPLATE by default.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,7 +66,7 @@ public class UntagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The array of tag keys. You can specify 1 to 20 tag keys.</p>
+     * <p>The tag key. You can add no more than 20 tags at a time.</p>
      * 
      * <strong>example:</strong>
      * <p>TestKey</p>

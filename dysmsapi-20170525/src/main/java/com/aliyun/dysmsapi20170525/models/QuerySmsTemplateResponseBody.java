@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class QuerySmsTemplateResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code of the request.</p>
      * <ul>
-     * <li>The value OK indicates that the request was successful.</li>
-     * <li>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</li>
+     * <li><p>OK indicates that the request was successful.</p>
+     * </li>
+     * <li><p>For a list of other error codes, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,16 +20,16 @@ public class QuerySmsTemplateResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The time when the message template was created.</p>
+     * <p>The time when the template was created.</p>
      * 
      * <strong>example:</strong>
-     * <p>2019-06-04 11:42:17</p>
+     * <p>2024-06-03 10:02:34</p>
      */
     @NameInMap("CreateDate")
     public String createDate;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -36,14 +38,16 @@ public class QuerySmsTemplateResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The approval remarks.</p>
+     * <p>The review notes for the template.</p>
      * <ul>
-     * <li>If the value of AuditStatus is <strong>AUDIT_STATE_PASS</strong> or <strong>AUDIT_STATE_INIT</strong>, the value of Reason is No Approval Remarks.</li>
-     * <li>If the value of AuditStatus is <strong>AUDIT_STATE_NOT_PASS</strong>, the reason why the message template is rejected is returned.</li>
+     * <li><p>If the review status is <strong>Approved</strong> or <strong>Reviewing</strong>, the message &quot;No review remarks&quot; is returned.</p>
+     * </li>
+     * <li><p>If the review status is <strong>Rejected</strong>, the reason for the rejection is returned.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>The document cannot verify the authenticity of the information. Please upload it again.</p>
+     * <p>无审批备注</p>
      */
     @NameInMap("Reason")
     public String reason;
@@ -58,54 +62,62 @@ public class QuerySmsTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The code of the message template.</p>
+     * <p>The template code.</p>
      * 
      * <strong>example:</strong>
-     * <p>SMS_16703****</p>
+     * <p>SMS_1525****</p>
      */
     @NameInMap("TemplateCode")
     public String templateCode;
 
     /**
-     * <p>The content of the message template.</p>
+     * <p>The template content.</p>
      * 
      * <strong>example:</strong>
-     * <p>You are applying for mobile registration. The verification code is: ${code}, valid for 5 minutes!</p>
+     * <p>亲爱的会员！阿里云短信服务祝您新年快乐！</p>
      */
     @NameInMap("TemplateContent")
     public String templateContent;
 
     /**
-     * <p>The name of the message template.</p>
+     * <p>The template name.</p>
      * 
      * <strong>example:</strong>
-     * <p>aliyun verification code</p>
+     * <p>通知短信</p>
      */
     @NameInMap("TemplateName")
     public String templateName;
 
     /**
-     * <p>The approval status of the message template. Valid values:</p>
+     * <p>The review status of the template. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: The message template is pending approval.</li>
-     * <li><strong>1</strong>: The message template is approved.</li>
-     * <li><strong>AUDIT_STATE_NOT_PASS</strong>: The message template is rejected. You can view the reason in the Reason response parameter.</li>
-     * <li><strong>10</strong>: The approval is canceled.</li>
+     * <li><p><strong>0</strong>: Reviewing.</p>
+     * </li>
+     * <li><p><strong>1</strong>: Approved.</p>
+     * </li>
+     * <li><p><strong>2</strong>: Rejected. The reason for the rejection is returned in the response. For more information, see <a href="https://help.aliyun.com/document_detail/65990.html">Suggestions for handling a failed review</a>. You can then call the <a href="https://help.aliyun.com/document_detail/419287.html">ModifySmsTemplate</a> API or modify the template on the <a href="https://dysms.console.aliyun.com/domestic/text/template">Template Management</a> page.</p>
+     * </li>
+     * <li><p><strong>10</strong>: Canceled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>0</p>
      */
     @NameInMap("TemplateStatus")
     public Integer templateStatus;
 
     /**
-     * <p>The type of the message. Valid values:</p>
+     * <p>The message type. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: verification code</li>
-     * <li><strong>1</strong>: notification message</li>
-     * <li><strong>2</strong>: promotional message</li>
-     * <li><strong>3</strong>: message sent to countries or regions outside the Chinese mainland</li>
+     * <li><p><strong>0</strong>: Verification code.</p>
+     * </li>
+     * <li><p><strong>1</strong>: Message notification.</p>
+     * </li>
+     * <li><p><strong>2</strong>: Promotional message.</p>
+     * </li>
+     * <li><p><strong>3</strong>: International message.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

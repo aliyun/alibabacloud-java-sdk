@@ -8,7 +8,7 @@ public class GetSmsTemplateListRequest extends TeaModel {
      * <p>模板审核状态</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>53</p>
      */
     @NameInMap("AuditStatus")
     public Long auditStatus;
@@ -20,7 +20,7 @@ public class GetSmsTemplateListRequest extends TeaModel {
      * <p>页码, 默认1</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>75</p>
      */
     @NameInMap("PageIndex")
     public Long pageIndex;
@@ -29,7 +29,7 @@ public class GetSmsTemplateListRequest extends TeaModel {
      * <p>每页数量，默认10</p>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>72</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
@@ -53,7 +53,7 @@ public class GetSmsTemplateListRequest extends TeaModel {
      * <p>模板code</p>
      * 
      * <strong>example:</strong>
-     * <p>SMS_1688168</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("TemplateCode")
     public String templateCode;
@@ -80,7 +80,7 @@ public class GetSmsTemplateListRequest extends TeaModel {
      * <p>模板类型</p>
      * 
      * <strong>example:</strong>
-     * <p>0</p>
+     * <p>52</p>
      */
     @NameInMap("TemplateType")
     public Long templateType;

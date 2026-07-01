@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class SendCardSmsResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>请求状态码。</p>
      * <ul>
-     * <li>If OK is returned, the request is successful.</li>
-     * <li>Other values indicate that the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</li>
+     * <li>返回OK代表请求成功。</li>
+     * <li>其他错误码，请参见<a href="https://help.aliyun.com/document_detail/101346.html">错误码列表</a>。</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,13 +18,13 @@ public class SendCardSmsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>返回数据。</p>
      */
     @NameInMap("Data")
     public SendCardSmsResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>请求ID。</p>
      * 
      * <strong>example:</strong>
      * <p>F655A8D5-B967-440B-8683-DAD6FF8D28D0</p>
@@ -33,10 +33,12 @@ public class SendCardSmsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>调用接口是否成功。取值：</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>：调用成功。</p>
+     * </li>
+     * <li><p><strong>false</strong>：调用失败。</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,7 +86,7 @@ public class SendCardSmsResponseBody extends TeaModel {
 
     public static class SendCardSmsResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the card message.</p>
+         * <p>卡片短信发送ID。</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -93,7 +95,7 @@ public class SendCardSmsResponseBody extends TeaModel {
         public String bizCardId;
 
         /**
-         * <p>The ID of the digital message.</p>
+         * <p>数字短信发送ID。</p>
          * 
          * <strong>example:</strong>
          * <p>232</p>
@@ -102,7 +104,7 @@ public class SendCardSmsResponseBody extends TeaModel {
         public String bizDigitalId;
 
         /**
-         * <p>The ID of the text message.</p>
+         * <p>文本短信发送ID。</p>
          * 
          * <strong>example:</strong>
          * <p>524</p>
@@ -111,15 +113,15 @@ public class SendCardSmsResponseBody extends TeaModel {
         public String bizSmsId;
 
         /**
-         * <p>The review status of the card message template.</p>
+         * <p>卡片短信模板审核状态。取值：</p>
          * <ul>
-         * <li><strong>0</strong>: pending approval</li>
-         * <li><strong>1</strong>: approved</li>
-         * <li><strong>2</strong>: rejected</li>
-         * </ul>
-         * <blockquote>
-         * <p>Unapproved card messages are rolled back.</p>
+         * <li><strong>0</strong>：审核中。</li>
+         * <li><strong>1</strong>：审核通过。</li>
+         * <li><strong>2</strong>：审核不通过。<blockquote>
+         * <p> 审核不通过的短信可通过<strong>FallbackType</strong>字段设置回落流程。</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -128,7 +130,7 @@ public class SendCardSmsResponseBody extends TeaModel {
         public Integer cardTmpState;
 
         /**
-         * <p>The mobile phone number from which the card message is sent.</p>
+         * <p>接收卡片短信的手机号。</p>
          * 
          * <strong>example:</strong>
          * <p>1390000****</p>
@@ -137,7 +139,7 @@ public class SendCardSmsResponseBody extends TeaModel {
         public String mediaMobiles;
 
         /**
-         * <p>The mobile phone number whose card message is rolled back.</p>
+         * <p>回落的手机号。</p>
          * 
          * <strong>example:</strong>
          * <p>1390000****</p>

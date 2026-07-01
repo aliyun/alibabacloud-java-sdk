@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class AddSmsSignResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The HTTP status code.</p>
      * <ul>
-     * <li>The value OK indicates that the request was successful.</li>
-     * <li>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</li>
+     * <li>OK is returned if the request is successful.</li>
+     * <li>For other error codes, see <a href="https://help.aliyun.com/document_detail/101346.html">API error codes</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class AddSmsSignResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -36,10 +36,10 @@ public class AddSmsSignResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The name of the signature.</p>
+     * <p>The signature name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Aliyun</p>
+     * <p>阿里云</p>
      */
     @NameInMap("SignName")
     public String signName;

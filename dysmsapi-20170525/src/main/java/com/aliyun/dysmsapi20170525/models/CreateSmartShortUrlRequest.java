@@ -18,7 +18,7 @@ public class CreateSmartShortUrlRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>15900195***</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("PhoneNumbers")
     public String phoneNumbers;

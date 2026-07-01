@@ -5,15 +5,17 @@ import com.aliyun.tea.*;
 
 public class QueryCardSmsTemplateRequest extends TeaModel {
     /**
-     * <p>The code of the message template.</p>
-     * <p>You can view the template code in the <strong>Template Code</strong> column on the <strong>Templates</strong> tab of the <strong>Go China</strong> page in the Alibaba Cloud SMS console.</p>
-     * <blockquote>
-     * <p>Make sure that the message template has been approved.</p>
-     * </blockquote>
+     * <p>The code of the card SMS template. Valid values:</p>
+     * <ul>
+     * <li><p>After you call the <a href="~~CreateCardSmsTemplate~~">CreateCardSmsTemplate</a> operation, the value of the <strong>TemplateCode</strong> response parameter is the code of the newly created card SMS template.</p>
+     * </li>
+     * <li><p>You can also log on to the <a href="https://dysms.console.aliyun.com/domestic/card">Domestic Card SMS</a> page in the console and view the card SMS template code on the <strong>Template Management</strong> tab.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>CARD_SMS_4139</p>
+     * <p>CARD_SMS_2****</p>
      */
     @NameInMap("TemplateCode")
     public String templateCode;

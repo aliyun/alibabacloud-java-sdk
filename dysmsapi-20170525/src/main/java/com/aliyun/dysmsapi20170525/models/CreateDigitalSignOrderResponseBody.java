@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDigitalSignOrderResponseBody extends TeaModel {
     /**
+     * <p>The details about the access denial. This parameter is returned only if the RAM user is not authorized.</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
@@ -12,6 +14,14 @@ public class CreateDigitalSignOrderResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The status code.</p>
+     * <ul>
+     * <li><p>If the request is successful, <code>OK</code> is returned.</p>
+     * </li>
+     * <li><p>For more information about other error codes, see <a href="https://help.aliyun.com/document_detail/101346.html">API error codes</a>.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -19,20 +29,36 @@ public class CreateDigitalSignOrderResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The returned data.</p>
+     * <ul>
+     * <li><p><code>signName</code>: The name of the signature.</p>
+     * </li>
+     * <li><p><code>signOrderId</code>: The ID of the signature order.</p>
+     * </li>
+     * <li><p><code>signCode</code>: The code of the signature.</p>
+     * </li>
+     * <li><p><code>signId</code>: The ID of the signature.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>{\&quot;signId\&quot;: \&quot;20067468291\&quot;, \&quot;signCode\&quot;: \&quot;SIGN_100000184736042_1744164758835_hpMd1\&quot;, \&quot;signOrderId\&quot;: 22469795330, \&quot;signName\&quot;: u\&quot;\u8d5b\u745e\u5a05\u808c\u80a4\u7ba1\u7406\&quot;}</p>
+     * <p>{\&quot;signId\&quot;: \&quot;2006746****\&quot;, \&quot;signCode\&quot;: \&quot;SIGN_100000184736042_174416475****_hpMd1\&quot;, \&quot;signOrderId\&quot;: 2246979****, \&quot;signName\&quot;: u\&quot;\u8d5b\u745e\u5a05\u808c\u80a4\u7ba1\u7406\&quot;}</p>
      */
     @NameInMap("Data")
     public java.util.Map<String, ?> data;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>example</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>2D0133B9-6C0D-0BAE-8161-1EEF9E2D4069</p>
      */
@@ -40,6 +66,14 @@ public class CreateDigitalSignOrderResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

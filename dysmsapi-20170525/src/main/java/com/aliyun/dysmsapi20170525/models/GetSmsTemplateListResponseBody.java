@@ -4,10 +4,6 @@ package com.aliyun.dysmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class GetSmsTemplateListResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>None</p>
-     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 

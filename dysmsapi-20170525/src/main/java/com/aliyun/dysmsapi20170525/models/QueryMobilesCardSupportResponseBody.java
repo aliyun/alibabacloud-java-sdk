@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class QueryMobilesCardSupportResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>请求状态码。</p>
      * <ul>
-     * <li>The value OK indicates that the request was successful.</li>
-     * <li>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</li>
+     * <li>返回OK代表请求成功。</li>
+     * <li>其他错误码，请参见<a href="https://help.aliyun.com/document_detail/101346.html">错误码列表</a>。</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,13 +18,13 @@ public class QueryMobilesCardSupportResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>返回数据。</p>
      */
     @NameInMap("Data")
     public QueryMobilesCardSupportResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>阿里云为该请求生成的唯一标识符。</p>
      * 
      * <strong>example:</strong>
      * <p>08C17DFE-2E10-54F4-BAFB-7180039CC217</p>
@@ -33,10 +33,12 @@ public class QueryMobilesCardSupportResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>调用接口是否成功。取值：</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>：调用成功。</p>
+     * </li>
+     * <li><p><strong>false</strong>：调用失败。</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,7 +86,7 @@ public class QueryMobilesCardSupportResponseBody extends TeaModel {
 
     public static class QueryMobilesCardSupportResponseBodyDataQueryResult extends TeaModel {
         /**
-         * <p>The mobile phone number.</p>
+         * <p>查询的手机号码。</p>
          * 
          * <strong>example:</strong>
          * <p>1380000****</p>
@@ -93,10 +95,10 @@ public class QueryMobilesCardSupportResponseBody extends TeaModel {
         public String mobile;
 
         /**
-         * <p>Indicates whether the mobile phone number supports card messages. Valid values:</p>
+         * <p>是否支持卡片短信。取值：</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>：支持。</li>
+         * <li><strong>false</strong>：不支持。</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -130,7 +132,7 @@ public class QueryMobilesCardSupportResponseBody extends TeaModel {
 
     public static class QueryMobilesCardSupportResponseBodyData extends TeaModel {
         /**
-         * <p>The list of returned results.</p>
+         * <p>查询值。</p>
          */
         @NameInMap("QueryResult")
         public java.util.List<QueryMobilesCardSupportResponseBodyDataQueryResult> queryResult;

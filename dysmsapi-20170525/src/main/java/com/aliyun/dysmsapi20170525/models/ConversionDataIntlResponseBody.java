@@ -5,7 +5,13 @@ import com.aliyun.tea.*;
 
 public class ConversionDataIntlResponseBody extends TeaModel {
     /**
-     * <p>The status code. If OK is returned, the request is successful. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html?spm=a2c4g.101345.0.0.74326ff2J5EZyt">Error codes</a>.</p>
+     * <p>状态码。取值：</p>
+     * <ul>
+     * <li><p>OK：代表请求成功。</p>
+     * </li>
+     * <li><p>其他错误码，请参见<a href="https://help.aliyun.com/document_detail/101346.html">错误码列表</a>。</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,7 +20,7 @@ public class ConversionDataIntlResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned message.</p>
+     * <p>状态码的描述。</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -23,10 +29,10 @@ public class ConversionDataIntlResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>请求ID。</p>
      * 
      * <strong>example:</strong>
-     * <p>F655A8D5-B967-440B-8683-DAD6FF8D****</p>
+     * <p>819BE656-D2E0-4858-8B21-B2E477085AAF</p>
      */
     @NameInMap("RequestId")
     public String requestId;

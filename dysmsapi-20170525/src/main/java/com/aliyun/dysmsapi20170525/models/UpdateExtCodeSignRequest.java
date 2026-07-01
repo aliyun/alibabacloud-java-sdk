@@ -9,7 +9,7 @@ public class UpdateExtCodeSignRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>01</p>
+     * <p>示例值</p>
      */
     @NameInMap("ExistExtCode")
     public String existExtCode;
@@ -19,7 +19,7 @@ public class UpdateExtCodeSignRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>02</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("NewExtCode")
     public String newExtCode;

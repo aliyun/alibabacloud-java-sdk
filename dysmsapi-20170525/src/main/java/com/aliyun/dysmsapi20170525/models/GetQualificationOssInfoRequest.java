@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetQualificationOssInfoRequest extends TeaModel {
     /**
-     * <p>业务，非空</p>
+     * <p>The business type. When applying for a qualification or creating an authorization letter file, enter <strong>dysms</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

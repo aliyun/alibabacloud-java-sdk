@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetMediaResourceIdRequest extends TeaModel {
     /**
-     * <p>The extended fields.</p>
+     * <p>The extended field.</p>
      * <blockquote>
-     * <p>If you set the ResourceType parameter to <strong>2</strong>, this parameter is required.</p>
+     * <p>Required when the resource type is <strong>image</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class GetMediaResourceIdRequest extends TeaModel {
     public String extendInfo;
 
     /**
-     * <p>The size of the resource. Unit: bytes.</p>
+     * <p>The file size. Unit: bytes.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,16 +27,16 @@ public class GetMediaResourceIdRequest extends TeaModel {
     public Long fileSize;
 
     /**
-     * <p>The description of the resource.</p>
+     * <p>The description of the uploaded resource.</p>
      * 
      * <strong>example:</strong>
-     * <p>remark</p>
+     * <p>图片信息</p>
      */
     @NameInMap("Memo")
     public String memo;
 
     /**
-     * <p>The address of the resource.</p>
+     * <p>The address of the resource to retrieve.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,25 +46,20 @@ public class GetMediaResourceIdRequest extends TeaModel {
     public String ossKey;
 
     /**
-     * <p>The type of the resource.</p>
+     * <p>The resource type.</p>
      * <ul>
-     * <li><strong>1</strong>: text.</li>
-     * <li><strong>2</strong>: image. A small image cannot exceed 100 KB in size, and a large image cannot exceed 2 MB in size. The image must be clear. Supported format: JPG, JPEG, and PNG.</li>
-     * <li><strong>3</strong>: audio.</li>
-     * <li><strong>4</strong>: video. Supported format: MP4.</li>
+     * <li><strong>1</strong>: Text</li>
+     * <li><strong>2</strong>: Image. Small images must not exceed 100 KB. Large images must not exceed 2 MB. Images must be clear. Supported formats: JPG, JPEG, PNG.</li>
+     * <li><strong>3</strong>: Audio</li>
+     * <li><strong>4</strong>: Video. Supported format: MP4.<blockquote>
+     * <ul>
+     * <li>If the resource type is image, <strong>img_rate</strong> is required.</li>
+     * <li>1:1 ratio: oneToOne</li>
+     * <li>16:9 ratio: sixteenToNine</li>
+     * <li>3:1 ratio: threeToOne</li>
+     * <li>48:65 ratio: fortyEightToSixtyFiv.</li>
      * </ul>
-     * <blockquote>
      * </blockquote>
-     * <ul>
-     * <li><p>If you set the ResourceType parameter to 2, the <strong>img_rate</strong> required is required. Valid values:</p>
-     * </li>
-     * <li><p>1:1</p>
-     * </li>
-     * <li><p>16:9</p>
-     * </li>
-     * <li><p>3:1</p>
-     * </li>
-     * <li><p>48:65</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>

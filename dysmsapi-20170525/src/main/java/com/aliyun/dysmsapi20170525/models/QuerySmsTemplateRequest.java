@@ -14,12 +14,17 @@ public class QuerySmsTemplateRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The code of the message template.</p>
-     * <p>You can log on to the <a href="https://dysms.console.aliyun.com/dysms.htm">Short Message Service (SMS) console</a>, click <strong>Go China</strong> or <strong>Go Globe</strong> in the left-side navigation pane, and then view the template code on the <strong>Templates</strong> tab. You can also call the <a href="https://help.aliyun.com/document_detail/121208.html">AddSmsTemplate</a> operation to obtain the template code.</p>
+     * <p>The template code.</p>
+     * <ul>
+     * <li><p>The template code is returned in the response of the <a href="https://help.aliyun.com/document_detail/121208.html">AddSmsTemplate</a> API.</p>
+     * </li>
+     * <li><p>The template code is available on the <a href="https://dysms.console.aliyun.com/domestic/text/template">Template Management</a> page.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>SMS_1525***</p>
+     * <p>SMS_1525****</p>
      */
     @NameInMap("TemplateCode")
     public String templateCode;

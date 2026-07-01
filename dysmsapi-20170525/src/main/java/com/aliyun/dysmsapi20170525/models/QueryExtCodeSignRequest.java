@@ -8,7 +8,7 @@ public class QueryExtCodeSignRequest extends TeaModel {
      * <p>扩展码A3</p>
      * 
      * <strong>example:</strong>
-     * <p>01</p>
+     * <p>示例值</p>
      */
     @NameInMap("ExtCode")
     public String extCode;
@@ -18,14 +18,14 @@ public class QueryExtCodeSignRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>29</p>
      */
     @NameInMap("PageNo")
     public Long pageNo;
 
     /**
      * <strong>example:</strong>
-     * <p>20</p>
+     * <p>11</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;

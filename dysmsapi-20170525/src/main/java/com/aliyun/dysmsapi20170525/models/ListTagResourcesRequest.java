@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>The token used to query the next page.</p>
+     * <p>The token used to query the next page of tags.</p>
      * 
      * <strong>example:</strong>
      * <p>23432453245</p>
@@ -26,7 +26,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The name of the cloud service. Set the value to <strong>dysms</strong>.</p>
+     * <p>The product name. Default value: <strong>dysms</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>dysms</p>
@@ -35,7 +35,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String prodCode;
 
     /**
-     * <p>The region ID. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>The region ID. Default value: <strong>cn-hangzhou</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The code of the message template. Specify either the Tag or the ResourceId parameter.</p>
+     * <p>The SMS template code. The SMS template code and the tag list <strong>Tag</strong> cannot be empty at the same time.</p>
      * 
      * <strong>example:</strong>
      * <p>SMS_23423423</p>
@@ -60,7 +60,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the resource. Set the value to TEMPLATE.</p>
+     * <p>The resource type. Default value: TEMPLATE.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,7 +70,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tag list. Specify either the Tag or the ResourceId parameter. You can specify a maximum of 20 tags.</p>
+     * <p>The tag list. The tag list and <strong>ResourceId</strong> (SMS template code) cannot be empty at the same time. You can specify up to 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
@@ -162,7 +162,7 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -171,7 +171,7 @@ public class ListTagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

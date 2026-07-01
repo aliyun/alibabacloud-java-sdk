@@ -14,8 +14,16 @@ public class DeleteSmsTemplateRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The code of the message template.</p>
-     * <p>You can log on to the <a href="https://dysms.console.aliyun.com/dysms.htm">Alibaba Cloud SMS console</a> and obtain the message template code on the <strong>Message Templates</strong> tab. You can also obtain the message template code by calling the <a href="https://help.aliyun.com/document_detail/121208.html">AddSmsTemplate</a> operation.</p>
+     * <p>The SMS template code. You can delete SMS templates that are recalled, rejected, or approved. You cannot delete SMS templates that are being reviewed.</p>
+     * <ul>
+     * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/419288.html">QuerySmsTemplateList</a> operation to obtain the SMS template code.</p>
+     * </li>
+     * <li><p>You can also obtain the SMS template code on the <a href="https://dysms.console.aliyun.com/domestic/text/template">Template Management</a> page of the Short Message Service (SMS) console.</p>
+     * <blockquote>
+     * <p>Notice: Deleted SMS templates cannot be recovered and cannot be used to send messages. Proceed with caution..</p>
+     * </blockquote>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

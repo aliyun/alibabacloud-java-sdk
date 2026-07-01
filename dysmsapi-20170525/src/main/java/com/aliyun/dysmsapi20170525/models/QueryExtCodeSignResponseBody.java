@@ -9,7 +9,7 @@ public class QueryExtCodeSignResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>OK</p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("Code")
     public String code;
@@ -19,14 +19,14 @@ public class QueryExtCodeSignResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>OK</p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <strong>example:</strong>
-     * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -96,7 +96,7 @@ public class QueryExtCodeSignResponseBody extends TeaModel {
          * <p>是否可回收</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>9</p>
          */
         @NameInMap("Active")
         public Long active;
@@ -105,7 +105,7 @@ public class QueryExtCodeSignResponseBody extends TeaModel {
          * <p>扩展码A3</p>
          * 
          * <strong>example:</strong>
-         * <p>01</p>
+         * <p>示例值示例值示例值</p>
          */
         @NameInMap("ExtCode")
         public String extCode;
@@ -190,21 +190,21 @@ public class QueryExtCodeSignResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>33</p>
          */
         @NameInMap("PageNo")
         public Long pageNo;
 
         /**
          * <strong>example:</strong>
-         * <p>20</p>
+         * <p>41</p>
          */
         @NameInMap("PageSize")
         public Long pageSize;
 
         /**
          * <strong>example:</strong>
-         * <p>5</p>
+         * <p>90</p>
          */
         @NameInMap("Total")
         public Long total;

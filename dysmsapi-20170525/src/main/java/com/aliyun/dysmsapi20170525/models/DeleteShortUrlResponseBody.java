@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DeleteShortUrlResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The status code of the request.</p>
      * <ul>
-     * <li>If OK is returned, the request is successful.</li>
-     * <li>Other values indicate that the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</li>
+     * <li><p><code>OK</code> indicates the request was successful.</p>
+     * </li>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class DeleteShortUrlResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>

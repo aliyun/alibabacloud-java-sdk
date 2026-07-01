@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class SendBatchSmsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the delivery receipt. You can use one of the following methods to query the delivery status of a message based on the ID.</p>
+     * <p>The delivery receipt ID.</p>
      * <ul>
-     * <li>Call the <a href="https://help.aliyun.com/document_detail/102352.html">QuerySendDetails</a> operation.</li>
-     * <li>Log on to the <a href="https://dysms.console.aliyun.com/dysms.htm#/overview">Alibaba Cloud SMS console</a>. In the left-side navigation pane, choose <strong>Analytics</strong> &gt; <strong>Delivery Report</strong>.</li>
+     * <li><p>You can use this ID to query the delivery status by calling the <a href="https://help.aliyun.com/document_detail/102352.html">QuerySendDetails</a> operation.</p>
+     * </li>
+     * <li><p>Log on to the <a href="https://dysms.console.aliyun.com/dysms.htm#/overview">Short Message Service console</a> and go to <strong>Statistics</strong> &gt; <strong>Delivery Logs</strong> to view delivery details.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +20,12 @@ public class SendBatchSmsResponseBody extends TeaModel {
     public String bizId;
 
     /**
-     * <p>The response code.</p>
+     * <p>The request status code.</p>
      * <ul>
-     * <li>If OK is returned, the request is successful.</li>
-     * <li>Other values indicate that the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</li>
+     * <li><p>A value of <code>OK</code> indicates a successful request.</p>
+     * </li>
+     * <li><p>For a list of other error codes, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +35,7 @@ public class SendBatchSmsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The description of the request status.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>

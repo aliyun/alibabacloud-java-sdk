@@ -5,49 +5,56 @@ import com.aliyun.tea.*;
 
 public class CreateCardSmsTemplateShrinkRequest extends TeaModel {
     /**
-     * <p>The mobile phone manufacturer. Valid values:</p>
+     * <p>The vendors to which the template will be submitted. Valid values:</p>
      * <ul>
-     * <li><strong>HuaWei</strong>: HUAWEI</li>
-     * <li><strong>XiaoMi</strong>: Xiaomi</li>
-     * <li><strong>OPPO</strong>: OPPO</li>
-     * <li><strong>VIVO</strong>: vivo</li>
-     * <li><strong>MEIZU</strong>: MEIZU</li>
+     * <li><p><strong>HuaWei</strong>: Huawei</p>
+     * </li>
+     * <li><p><strong>XiaoMi</strong>: Xiaomi</p>
+     * </li>
+     * <li><p><strong>OPPO</strong>: OPPO</p>
+     * </li>
+     * <li><p><strong>VIVO</strong>: VIVO</p>
+     * </li>
+     * <li><p><strong>MEIZU</strong>: MEIZU</p>
+     * </li>
+     * <li><p><strong>HONOR</strong>: HONOR</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>If this parameter is not specified, the system automatically specifies a supported mobile phone manufacturer.</p>
+     * <p>If you do not specify this parameter, the system automatically submits the template to all supported mobile phone vendors.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>XiaoMi</p>
+     * <p>[&quot;HuaWei&quot;,&quot;XiaoMi&quot;]</p>
      */
     @NameInMap("Factorys")
     public String factorys;
 
     /**
-     * <p>The description of the message template.</p>
+     * <p>A description of the template.</p>
      * 
      * <strong>example:</strong>
-     * <p>Image and Text Template</p>
+     * <p>图文类模板</p>
      */
     @NameInMap("Memo")
     public String memo;
 
     /**
-     * <p>The content of the card message template.</p>
+     * <p>The content of the card SMS template.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>For information about fields such as Template, ExtendInfo, TemplateContent, TmpCard, and Action, see <a href="https://help.aliyun.com/document_detail/434929.html">Parameters of card message templates</a>.</p>
+     * <li><p>For more information about the <code>Template</code>, <code>ExtendInfo</code>, <code>TemplateContent</code>, <code>TmpCard</code>, and <code>Action</code> fields, see <a href="https://help.aliyun.com/document_detail/434929.html">Card SMS template parameters</a>.</p>
      * </li>
-     * <li><p>Message template content varies based on the template type. For more information, see <a href="https://help.aliyun.com/document_detail/435361.html">Sample message templates</a>.</p>
+     * <li><p>The content structure varies based on the type of card SMS template. For more information, see <a href="https://help.aliyun.com/document_detail/435361.html">Card SMS template examples</a>.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>{
      *        &quot;extendInfo&quot;:{
-     *               &quot;scene&quot;:&quot;HMOVM&quot;,
+     *               &quot;scene&quot;:&quot;HMOVM图文&quot;,
      *               &quot;purpose&quot;:&quot;2&quot;,
      *               &quot;userExt&quot;:{
      *                      &quot;outId&quot;:&quot;1234554321&quot;
@@ -64,7 +71,7 @@ public class CreateCardSmsTemplateShrinkRequest extends TeaModel {
      *                                           &quot;actionType&quot;:&quot;OPEN_APP&quot;,
      *                                           &quot;action&quot;:{
      *                                                  &quot;target&quot;:&quot;<a href="https://s.tb.cn/c.KxzZ">https://s.tb.cn/c.KxzZ</a>&quot;,
-     *                                                  &quot;merchantName&quot;:&quot;test-template&quot;,
+     *                                                  &quot;merchantName&quot;:&quot;测试-图文模板&quot;,
      *                                                  &quot;packageName&quot;:[
      *                                                         &quot;com.taobao.taobao&quot;],
      *                                                  &quot;floorUrl&quot;:&quot;<a href="https://s.tb.cn/c.KxzZ">https://s.tb.cn/c.KxzZ</a>&quot;
@@ -73,41 +80,42 @@ public class CreateCardSmsTemplateShrinkRequest extends TeaModel {
      *                                    },
      *                                    {
      *                                           &quot;type&quot;:&quot;TEXT&quot;,
-     *                                           &quot;content&quot;:&quot;this is a test msg.&quot;,
+     *                                           &quot;content&quot;:&quot;测试- BENZ AMG 2020 试驾邀请&quot;,
      *                                           &quot;isTextTitle&quot;:true,
      *                                           &quot;positionNumber&quot;:2
      *                                    },
      *                                    {
      *                                           &quot;type&quot;:&quot;TEXT&quot;,
-     *                                           &quot;content&quot;:&quot;Promotional information&quot;,
+     *                                           &quot;content&quot;:&quot;测试-梅赛德斯-奔驰，创新激情永不灭。作为汽车 XXXX&quot;,
      *                                           &quot;isTextTitle&quot;:false,
      *                                           &quot;positionNumber&quot;:3
      *                                    },
      *                                    {
      *                                           &quot;type&quot;:&quot;BUTTON&quot;,
-     *                                           &quot;content&quot;:&quot;Promotional information,&quot;,
+     *                                           &quot;content&quot;:&quot;预约试驾&quot;,
      *                                           &quot;actionType&quot;:&quot;OPEN_BROWSER&quot;,
      *                                           &quot;action&quot;:{
-     *                                                  &quot;target&quot;:&quot;<a href="https://www.aliyun.com">https://www.aliyun.com</a>&quot;,
-     *                                                  &quot;merchantName&quot;:&quot;Currently on the Alibaba Cloud official website.&quot;
+     *                                                  &quot;target&quot;:&quot;<a href="https://www.mercedes-benz.com.cn">https://www.mercedes-benz.com.cn</a>&quot;,
+     *                                                  &quot;merchantName&quot;:&quot;测试-正在跳转梅赛德斯-奔驰&quot;
      * },
      *                                           &quot;positionNumber&quot;:4
      *                                    }]
      *                      }]
      *        },
-     *        &quot;cardSignName&quot;:&quot;aliyun&quot;,
-     *        &quot;cardType&quot;:5
+     *        &quot;cardSignName&quot;:&quot;阿里云&quot;,
+     *        &quot;cardType&quot;:5,
+     *        &quot;companyName&quot;: &quot;投放企业名称&quot;
      * }</p>
      */
     @NameInMap("Template")
     public String templateShrink;
 
     /**
-     * <p>The name of the card message template.</p>
+     * <p>The name of the card SMS template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Aliyun Image and Text Template</p>
+     * <p>阿里云图文类模板</p>
      */
     @NameInMap("TemplateName")
     public String templateName;

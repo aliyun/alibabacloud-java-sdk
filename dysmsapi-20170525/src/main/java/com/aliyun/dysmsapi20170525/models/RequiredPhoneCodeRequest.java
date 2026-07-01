@@ -8,6 +8,11 @@ public class RequiredPhoneCodeRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The administrator\&quot;s phone number that receives the verification code.</p>
+     * <ul>
+     * <li>The account that <strong>calls this operation to send the verification code must be the same account that submits the qualification</strong>. Otherwise, the call fails.</li>
+     * <li>Phone number format: +/+86/0086/86 or a mobile phone number without any prefix, for example 1390000****.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

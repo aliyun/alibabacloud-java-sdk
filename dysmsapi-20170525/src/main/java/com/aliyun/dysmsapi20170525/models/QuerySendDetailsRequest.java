@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class QuerySendDetailsRequest extends TeaModel {
     /**
-     * <p>The ID of the delivery receipt. The delivery receipt ID is the value of the BizId parameter that is returned when you call the SendSms or SendBatchSms operation.</p>
+     * <p>The delivery receipt ID. This is the <code>BizId</code> returned in the response when you call the <a href="https://help.aliyun.com/document_detail/419273.html">SendSms</a> or <a href="https://help.aliyun.com/document_detail/419274.html">SendBatchSms</a> operation.</p>
+     * <blockquote>
+     * <p>You can specify only one <code>BizId</code>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>134523^435****</p>
@@ -14,7 +17,7 @@ public class QuerySendDetailsRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>The page number of the first page.</p>
+     * <p>The current page number for paginated results.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,22 +30,27 @@ public class QuerySendDetailsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of items displayed per page.</p>
+     * <p>The number of delivery records to return on each page.</p>
      * <p>Valid values: 1 to 50.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The mobile numbers of the recipients. Format:</p>
+     * <p>The phone number to query. The format is as follows:</p>
      * <ul>
-     * <li>If you send messages in the Chinese mainland, specify an 11-digit mobile number, for example, 1390000\<em>\</em>\<em>\</em>.</li>
-     * <li>If you send messages to countries or regions outside the Chinese mainland, specify this parameter in the \<Area code>\<Mobile number> format. Example: 8520000\<em>\</em>\<em>\</em>.</li>
+     * <li><p>For messages to the Chinese mainland, use an 11-digit phone number, such as 1390000\<em>\</em>\<em>\</em>.</p>
+     * </li>
+     * <li><p>For international SMS, use the format: country/region code + phone number, such as 8520000\<em>\</em>\<em>\</em>.</p>
+     * </li>
      * </ul>
+     * <blockquote>
+     * <p>You can specify only one phone number.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,12 +66,12 @@ public class QuerySendDetailsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The date when the message was sent. You can query messages that were sent within the last 30 days.</p>
-     * <p>Format: yyyyMMdd. Example: 20181225.</p>
+     * <p>The date when the SMS message was sent. You can query records from the past 30 days.</p>
+     * <p>Format: <strong>yyyyMMdd</strong>, for example, 20250601.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>20181228</p>
+     * <p>20250601</p>
      */
     @NameInMap("SendDate")
     public String sendDate;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QuerySendStatisticsRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. Format: yyyyMMdd. Example: 20181225.</p>
+     * <p>The end date. The format is yyyyMMdd.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,12 @@ public class QuerySendStatisticsRequest extends TeaModel {
     public String endDate;
 
     /**
-     * <p>The site from where the message is sent. Valid values:</p>
+     * <p>The destination scope of the messages. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: China site</li>
-     * <li><strong>2</strong>: international site</li>
+     * <li><p><strong>1</strong>: domestic messages.</p>
+     * </li>
+     * <li><p><strong>2</strong>: international messages.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -32,7 +34,7 @@ public class QuerySendStatisticsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The current page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +44,7 @@ public class QuerySendStatisticsRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: <strong>1 to 50</strong>.</p>
+     * <p>The page size. Valid values: <strong>1 to 50</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,13 +63,13 @@ public class QuerySendStatisticsRequest extends TeaModel {
      * <p>The signature.</p>
      * 
      * <strong>example:</strong>
-     * <p>Aliyun</p>
+     * <p>阿里云平台</p>
      */
     @NameInMap("SignName")
     public String signName;
 
     /**
-     * <p>The beginning of the time range to query. Format: yyyyMMdd. Example: 20181225.</p>
+     * <p>The start date. The format is yyyyMMdd.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -77,13 +79,18 @@ public class QuerySendStatisticsRequest extends TeaModel {
     public String startDate;
 
     /**
-     * <p>The type of the message template. Valid values: Valid values:</p>
+     * <p>The template type. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: verification code</li>
-     * <li><strong>1</strong>: notification</li>
-     * <li><strong>2</strong>: promotional message (Enterprise users only)</li>
-     * <li><strong>3</strong>: international purpose (Enterprise users only)</li>
-     * <li><strong>7</strong>: digital message</li>
+     * <li><p><strong>0</strong>: verification code.</p>
+     * </li>
+     * <li><p><strong>1</strong>: notification message.</p>
+     * </li>
+     * <li><p><strong>2</strong>: promotional message. (Enterprise customers only)</p>
+     * </li>
+     * <li><p><strong>3</strong>: international message. (Enterprise customers only)</p>
+     * </li>
+     * <li><p><strong>7</strong>: digital message.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

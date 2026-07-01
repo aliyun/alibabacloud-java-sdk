@@ -8,7 +8,11 @@ public class CreateDigitalSmsTemplateRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The application description. Describe your business use case for the template.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>***业务需要</p>
      */
     @NameInMap("Remark")
     public String remark;
@@ -19,17 +23,28 @@ public class CreateDigitalSmsTemplateRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The signature.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>签名</p>
+     */
     @NameInMap("SignName")
     public String signName;
 
     /**
+     * <p>An array of objects that define the template content.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TemplateContents")
     public java.util.List<CreateDigitalSmsTemplateRequestTemplateContents> templateContents;
 
     /**
+     * <p>The template name. The name can contain up to 20 characters.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>****模板</p>
      */
     @NameInMap("TemplateName")
     public String templateName;
@@ -96,10 +111,18 @@ public class CreateDigitalSmsTemplateRequest extends TeaModel {
     }
 
     public static class CreateDigitalSmsTemplateRequestTemplateContents extends TeaModel {
+        /**
+         * <p>The file content, converted to a Base64 string. The file must be UTF-8 encoded before the Base64 conversion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>字符</p>
+         */
         @NameInMap("FileContents")
         public String fileContents;
 
         /**
+         * <p>The file name without the extension.</p>
+         * 
          * <strong>example:</strong>
          * <p>file-1</p>
          */
@@ -107,6 +130,8 @@ public class CreateDigitalSmsTemplateRequest extends TeaModel {
         public String fileName;
 
         /**
+         * <p>The file size, in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>1840901</p>
          */
@@ -114,6 +139,8 @@ public class CreateDigitalSmsTemplateRequest extends TeaModel {
         public Integer fileSize;
 
         /**
+         * <p>The file suffix. Supported formats are <code>txt</code> for text; <code>gif</code>, <code>jpg</code>, and <code>png</code> for images; <code>mp3</code> for audio; and <code>mp4</code> for video. You can upload only one video file per template.</p>
+         * 
          * <strong>example:</strong>
          * <p>txt</p>
          */

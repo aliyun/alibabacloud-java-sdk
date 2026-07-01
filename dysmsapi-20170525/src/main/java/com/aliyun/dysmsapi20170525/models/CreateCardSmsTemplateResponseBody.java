@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateCardSmsTemplateResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The request status code. Valid values:</p>
      * <ul>
-     * <li>If OK is returned, the request is successful.</li>
-     * <li>Other values indicate that the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</li>
+     * <li><p>OK: The request was successful.</p>
+     * </li>
+     * <li><p>For a list of other error codes, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class CreateCardSmsTemplateResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The data returned by the operation.</p>
      */
     @NameInMap("Data")
     public CreateCardSmsTemplateResponseBodyData data;
@@ -35,8 +37,10 @@ public class CreateCardSmsTemplateResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: The call was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The call failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,14 +88,13 @@ public class CreateCardSmsTemplateResponseBody extends TeaModel {
 
     public static class CreateCardSmsTemplateResponseBodyData extends TeaModel {
         /**
-         * <p>The code of the message template.</p>
-         * <p>You can view the template code in the <strong>Template Code</strong> column on the <strong>Templates</strong> tab of the <strong>Go China</strong> page in the <a href="https://dysms.console.aliyun.com/dysms.htm?spm=5176.12818093.categories-n-products.ddysms.3b2816d0xml2NA#/overview">Alibaba Cloud SMS console</a>.</p>
+         * <p>The code for the card SMS template. You can view the <strong>Template Code</strong> on the <strong>Card SMS</strong> &gt; <a href="https://dysms.console.aliyun.com/domestic/card">template management</a> page in the console.</p>
          * <blockquote>
-         * <p>Make sure that the message template has been approved.</p>
+         * <p>The card SMS template must be approved before it can be used.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>CARD_SMS_60000****</p>
+         * <p>CARD_SMS_2****</p>
          */
         @NameInMap("TemplateCode")
         public String templateCode;

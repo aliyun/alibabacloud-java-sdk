@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class QuerySmsQualificationRecordRequest extends TeaModel {
     /**
-     * <p>公司名</p>
+     * <p>The company name.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>阿里云云通信有限公司</p>
      */
     @NameInMap("CompanyName")
     public String companyName;
 
     /**
-     * <p>法人姓名</p>
+     * <p>The name of the legal representative.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>李华</p>
      */
     @NameInMap("LegalPersonName")
     public String legalPersonName;
@@ -26,6 +26,8 @@ public class QuerySmsQualificationRecordRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,6 +35,8 @@ public class QuerySmsQualificationRecordRequest extends TeaModel {
     public Long pageNo;
 
     /**
+     * <p>The number of entries per page. Valid values: <strong>1 to 50</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -40,10 +44,10 @@ public class QuerySmsQualificationRecordRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>资质组名称</p>
+     * <p>The qualification name.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>阿里云云通信有限公司李华</p>
      */
     @NameInMap("QualificationGroupName")
     public String qualificationGroupName;
@@ -55,16 +59,27 @@ public class QuerySmsQualificationRecordRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>审核状态。INT:审核中FAILED:审核失败,PASSED:审核通过,NOT_FINISH:资料待补充,CANCELED:已撤回</p>
+     * <p>The review status. Valid values:</p>
+     * <ul>
+     * <li>INIT: Under review.</li>
+     * <li>NOT_PASS: Review rejected. </li>
+     * <li>PASS: Review approved.</li>
+     * <li>NOT_FINISH: Additional information required.</li>
+     * <li>CANCEL: Withdrawn.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>PASSED</p>
+     * <p>PASS</p>
      */
     @NameInMap("State")
     public String state;
 
     /**
-     * <p>是否自用</p>
+     * <p>The purpose of the qualification application. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: For self-use.</li>
+     * <li><strong>false</strong>: For use by others.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -73,7 +88,7 @@ public class QuerySmsQualificationRecordRequest extends TeaModel {
     public Boolean useBySelf;
 
     /**
-     * <p>工单ID</p>
+     * <p>The review ticket ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2001****</p>

@@ -1,3 +1,24 @@
+2026-07-01 Version: 4.6.0
+- Support API AddRcsSignMenu.
+- Support API CreateRCSMobileCapableTask.
+- Support API CreateRCSTemplate.
+- Support API GetRCSSignature.
+- Support API QueryRCSMobileCapable.
+- Support API QueryRCSMobileCapableTaskResult.
+- Support API QueryRCSTemplate.
+- Support API QueryRcsSignMenuByVersion.
+- Support API SendRCS.
+- Support API SendRCSReply.
+- Support API UpdateRCSSignature.
+- Support API UpgradeToRCSSignature.
+- Update API CreateSmsAppIcpRecord: add request parameters AppRuntimePic.
+- Update API CreateSmsAppIcpRecord: add request parameters AppStoreDownloadPic.
+- Update API QuerySmsAppIcpRecord: add response parameters Body.Data.$.AppRuntimePic.
+- Update API QuerySmsAppIcpRecord: add response parameters Body.Data.$.AppRuntimePicUrl.
+- Update API QuerySmsAppIcpRecord: add response parameters Body.Data.$.AppStoreDownloadPic.
+- Update API QuerySmsAppIcpRecord: add response parameters Body.Data.$.AppStoreDownloadPicUrl.
+
+
 2026-04-07 Version: 4.5.1
 - Update API GetSmsTemplate: add response parameters Body.SignList.
 - Update API GetSmsTemplateList: add response parameters Body.Data.List.$.TemplateContent.

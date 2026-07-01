@@ -4,20 +4,37 @@ package com.aliyun.dysmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QuerySmsQualificationRecordResponseBody extends TeaModel {
+    /**
+     * <p>访问被拒绝详细信息。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
+     * <p>请求状态码。</p>
+     * <ul>
+     * <li>返回OK代表请求成功。</li>
+     * <li>其他错误码，请参见本章节的错误码列表或产品<a href="https://help.aliyun.com/document_detail/101346.html">API错误码</a>。</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>资质审核列表</p>
+     */
     @NameInMap("Data")
     public QuerySmsQualificationRecordResponseBodyData data;
 
     /**
+     * <p>状态码的描述。</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -25,6 +42,8 @@ public class QuerySmsQualificationRecordResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>请求ID。</p>
+     * 
      * <strong>example:</strong>
      * <p>25D5AFDE-8EBC-132E-8909-1FDC071DA</p>
      */
@@ -32,6 +51,12 @@ public class QuerySmsQualificationRecordResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>调用接口是否成功。取值：</p>
+     * <ul>
+     * <li><strong>true</strong>：调用成功。</li>
+     * <li><strong>false</strong>：调用失败。</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -93,16 +118,16 @@ public class QuerySmsQualificationRecordResponseBody extends TeaModel {
 
     public static class QuerySmsQualificationRecordResponseBodyDataList extends TeaModel {
         /**
-         * <p>审核备注</p>
+         * <p>审核备注。</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>无</p>
          */
         @NameInMap("AuditRemark")
         public String auditRemark;
 
         /**
-         * <p>审核时间</p>
+         * <p>审核时间。</p>
          * 
          * <strong>example:</strong>
          * <p>2024-12-26 17:29:04</p>
@@ -111,16 +136,16 @@ public class QuerySmsQualificationRecordResponseBody extends TeaModel {
         public String auditTime;
 
         /**
-         * <p>公司名称或实人认证姓名</p>
+         * <p>企业名称。</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>阿里云云通信有限公司</p>
          */
         @NameInMap("CompanyName")
         public String companyName;
 
         /**
-         * <p>创建时间</p>
+         * <p>资质创建时间。</p>
          * 
          * <strong>example:</strong>
          * <p>2025-02-20 11:59:30</p>
@@ -129,7 +154,7 @@ public class QuerySmsQualificationRecordResponseBody extends TeaModel {
         public String createDate;
 
         /**
-         * <p>资质组ID</p>
+         * <p>资质ID。</p>
          * 
          * <strong>example:</strong>
          * <p>10000****</p>
@@ -138,34 +163,45 @@ public class QuerySmsQualificationRecordResponseBody extends TeaModel {
         public Long groupId;
 
         /**
-         * <p>法人名称</p>
+         * <p>法人姓名。</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>李华</p>
          */
         @NameInMap("LegalPersonName")
         public String legalPersonName;
 
         /**
-         * <p>资质组名称</p>
+         * <p>资质名称。</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>阿里云云通信有限公司李华</p>
          */
         @NameInMap("QualificationGroupName")
         public String qualificationGroupName;
 
         /**
-         * <p>审核状态名</p>
+         * <p>审核状态。取值：</p>
+         * <ul>
+         * <li>INIT：审核中。</li>
+         * <li>NOT_PASS：审核不通过。 </li>
+         * <li>PASS：审核通过。</li>
+         * <li>NOT_FINISH：资料待补充。</li>
+         * <li>CANCEL：已撤回。</li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>INT</p>
+         * <p>INIT</p>
          */
         @NameInMap("StateName")
         public String stateName;
 
         /**
-         * <p>是否自用</p>
+         * <p>资质申请用途，取值：</p>
+         * <ul>
+         * <li><strong>true</strong>：自用。</li>
+         * <li><strong>false</strong>：他用。</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -174,7 +210,7 @@ public class QuerySmsQualificationRecordResponseBody extends TeaModel {
         public String useBySelf;
 
         /**
-         * <p>工单ID</p>
+         * <p>审核工单ID。</p>
          * 
          * <strong>example:</strong>
          * <p>2001****</p>
@@ -270,10 +306,15 @@ public class QuerySmsQualificationRecordResponseBody extends TeaModel {
     }
 
     public static class QuerySmsQualificationRecordResponseBodyData extends TeaModel {
+        /**
+         * <p>满足过滤条件的数据列表。</p>
+         */
         @NameInMap("List")
         public java.util.List<QuerySmsQualificationRecordResponseBodyDataList> list;
 
         /**
+         * <p>当前页码。</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -281,6 +322,8 @@ public class QuerySmsQualificationRecordResponseBody extends TeaModel {
         public Long pageNo;
 
         /**
+         * <p>每页数据条数。</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -288,6 +331,8 @@ public class QuerySmsQualificationRecordResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
+         * <p>总条数。</p>
+         * 
          * <strong>example:</strong>
          * <p>25</p>
          */

@@ -9,7 +9,7 @@ public class DeleteExtCodeSignRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>01</p>
+     * <p>示例值</p>
      */
     @NameInMap("ExtCode")
     public String extCode;

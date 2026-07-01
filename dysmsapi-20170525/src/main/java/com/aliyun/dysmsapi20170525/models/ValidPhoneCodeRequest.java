@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ValidPhoneCodeRequest extends TeaModel {
     /**
-     * <p>验证码</p>
+     * <p>The verification code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ValidPhoneCodeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>手机号</p>
+     * <p>The phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

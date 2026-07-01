@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCardSmsDetailsRequest extends TeaModel {
     /**
-     * <p>Card SMS sending ID, which is the BizCardId field in the response when calling SendCardSms or SendBatchCardSms.</p>
+     * <p>The card SMS sending ID. When you send a card SMS by calling the <a href="https://help.aliyun.com/document_detail/434120.html">SendCardSms</a> or <a href="https://help.aliyun.com/document_detail/434119.html">SendBatchCardSms</a> operation, obtain the BizCardId field from the response.</p>
      * 
      * <strong>example:</strong>
      * <p>123456^0</p>
@@ -14,7 +14,7 @@ public class GetCardSmsDetailsRequest extends TeaModel {
     public String bizCardId;
 
     /**
-     * <p>Digital SMS sending ID, which is the BizDigitalId field in the response when calling SendCardSms or SendBatchCardSms.</p>
+     * <p>The digital SMS sending ID. When you send a card SMS by calling the <a href="https://help.aliyun.com/document_detail/434120.html">SendCardSms</a> or <a href="https://help.aliyun.com/document_detail/434119.html">SendBatchCardSms</a> operation, obtain the BizDigitalId field from the response.</p>
      * 
      * <strong>example:</strong>
      * <p>12346^0</p>
@@ -23,7 +23,7 @@ public class GetCardSmsDetailsRequest extends TeaModel {
     public String bizDigitId;
 
     /**
-     * <p>Text SMS sending ID, which is the BizSmsId field in the response when calling SendCardSms or SendBatchCardSms.</p>
+     * <p>The text SMS sending ID. When you send a card SMS by calling the <a href="https://help.aliyun.com/document_detail/434120.html">SendCardSms</a> or <a href="https://help.aliyun.com/document_detail/434119.html">SendBatchCardSms</a> operation, obtain the BizSmsId field from the response.</p>
      * 
      * <strong>example:</strong>
      * <p>1234576^0</p>
@@ -32,7 +32,7 @@ public class GetCardSmsDetailsRequest extends TeaModel {
     public String bizSmsId;
 
     /**
-     * <p>For paginated viewing of sending records, specify the current page number of the sending records.</p>
+     * <p>The current page number when you paginate sending records.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -44,8 +44,8 @@ public class GetCardSmsDetailsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>For paginated viewing of sending records, specify the number of card SMS records to display per page.</p>
-     * <p>The value range is 1~50.</p>
+     * <p>The number of card SMS records to display on each page when you paginate sending records.</p>
+     * <p>Valid values: 1 to 50.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -54,7 +54,7 @@ public class GetCardSmsDetailsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>Domestic phone number that received the SMS. Format: 11-digit phone number, for example, 1390000****.</p>
+     * <p>The domestic mobile phone number that received the SMS. Format: an 11-digit mobile phone number. For example, 1390000****.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,8 +70,8 @@ public class GetCardSmsDetailsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Card SMS sending date, supports querying records from the last 30 days.</p>
-     * <p>Format: yyyyMMdd, for example, 20240112.</p>
+     * <p>The card SMS sending date. Records from the last 30 days can be queried.</p>
+     * <p>Format: yyyyMMdd. For example, 20240112.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChangeSignatureQualificationRequest extends TeaModel {
     /**
-     * <p>授权委托书id</p>
+     * <p>The ID of the authorization letter.</p>
      * 
      * <strong>example:</strong>
      * <p>1000********1234</p>
@@ -17,7 +17,7 @@ public class ChangeSignatureQualificationRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>资质id</p>
+     * <p>The ID of the qualification, which is returned when you apply for it. You can also find this ID on the <a href="https://dysms.console.aliyun.com/domestic/text/qualification">Qualification Management</a> page in the console for messages to the Chinese mainland.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,11 +33,11 @@ public class ChangeSignatureQualificationRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>签名</p>
+     * <p>The signature.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>阿里云</p>
      */
     @NameInMap("SignatureName")
     public String signatureName;

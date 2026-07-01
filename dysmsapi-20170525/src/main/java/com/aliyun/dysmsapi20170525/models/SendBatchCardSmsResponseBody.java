@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class SendBatchCardSmsResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The request status code.</p>
      * <ul>
-     * <li>The value OK indicates that the request was successful.</li>
-     * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/101346.html">API error codes</a>.</li>
+     * <li>If <strong>OK</strong> is returned, the request is successful.</li>
+     * <li>For information about other error codes, see <a href="https://help.aliyun.com/document_detail/101346.html">API error codes</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class SendBatchCardSmsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public SendBatchCardSmsResponseBodyData data;
@@ -33,10 +33,12 @@ public class SendBatchCardSmsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the call is successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: The call is successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The call fails.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,7 +86,7 @@ public class SendBatchCardSmsResponseBody extends TeaModel {
 
     public static class SendBatchCardSmsResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the card message.</p>
+         * <p>The ID of the card SMS sending task.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -93,7 +95,7 @@ public class SendBatchCardSmsResponseBody extends TeaModel {
         public String bizCardId;
 
         /**
-         * <p>The ID of the digital message.</p>
+         * <p>The ID of the digital SMS sending task.</p>
          * 
          * <strong>example:</strong>
          * <p>3214</p>
@@ -102,7 +104,7 @@ public class SendBatchCardSmsResponseBody extends TeaModel {
         public String bizDigitalId;
 
         /**
-         * <p>The ID of the text message.</p>
+         * <p>The ID of the text SMS sending task.</p>
          * 
          * <strong>example:</strong>
          * <p>3256</p>
@@ -111,15 +113,15 @@ public class SendBatchCardSmsResponseBody extends TeaModel {
         public String bizSmsId;
 
         /**
-         * <p>The review status of the card message template.</p>
+         * <p>The review status of the card SMS template. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: pending approval</li>
-         * <li><strong>1</strong>: approved</li>
-         * <li><strong>2</strong>: rejected</li>
-         * </ul>
-         * <blockquote>
-         * <p>Unapproved card messages are rolled back.</p>
+         * <li><strong>0</strong>: Under review.</li>
+         * <li><strong>1</strong>: Approved.</li>
+         * <li><strong>2</strong>: Rejected.<blockquote>
+         * <p>For SMS messages that are rejected, you can configure the fallback process by using the <strong>FallbackType</strong> parameter.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -128,7 +130,7 @@ public class SendBatchCardSmsResponseBody extends TeaModel {
         public Integer cardTmpState;
 
         /**
-         * <p>The mobile phone number from which the card message is sent.</p>
+         * <p>The mobile phone numbers that receive the card SMS messages.</p>
          * 
          * <strong>example:</strong>
          * <p>1390000****</p>
@@ -137,7 +139,7 @@ public class SendBatchCardSmsResponseBody extends TeaModel {
         public String mediaMobiles;
 
         /**
-         * <p>The mobile phone number whose card message is rolled back.</p>
+         * <p>The fallback phone numbers.</p>
          * 
          * <strong>example:</strong>
          * <p>1390000****</p>

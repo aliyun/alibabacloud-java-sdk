@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSmsQualificationRequest extends TeaModel {
     /**
-     * <p>工单ID</p>
+     * <p>The review ticket ID. You can obtain the qualification and its corresponding review ticket ID under the current account by calling the <a href="~~QuerySmsQualificationRecord~~">QuerySmsQualificationRecord</a> operation, or on the <a href="https://dysms.console.aliyun.com/domestic/text/qualification">Qualification Management</a> page of Domestic Messages in the console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DeleteSmsQualificationRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>资质组ID</p>
+     * <p>The qualification ID, which is the ID returned when you <a href="~~SubmitSmsQualification~~">apply for a qualification</a>. You can obtain the qualification ID under the current account by calling the <a href="~~QuerySmsQualificationRecord~~">QuerySmsQualificationRecord</a> operation, or on the <a href="https://dysms.console.aliyun.com/domestic/text/qualification">Qualification Management</a> page of Domestic Messages in the console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class SendCardSmsRequest extends TeaModel {
     /**
-     * <p>The objects of the message template.</p>
+     * <p>The card message objects.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SendCardSms</p>
      */
     @NameInMap("CardObjects")
     public java.util.List<SendCardSmsRequestCardObjects> cardObjects;
 
     /**
-     * <p>The code of the message template. You can view the template code in the <strong>Template Code</strong> column on the <strong>Templates</strong> tab of the <strong>Go China</strong> page in the Alibaba Cloud SMS console.</p>
-     * <blockquote>
-     * <p>Make sure that the message template has been approved.</p>
-     * </blockquote>
+     * <p>The code of the card message template. On the <a href="https://dysms.console.aliyun.com/domestic/card">Template Management</a> page of the <strong>Card Messages</strong> module in the console, select the code of an approved card message template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,35 +25,36 @@ public class SendCardSmsRequest extends TeaModel {
     public String cardTemplateCode;
 
     /**
-     * <p>The code of the digital message template that applies when the card message is rolled back. You can view the template code in the <strong>Template Code</strong> column on the <strong>Templates</strong> tab of the <strong>Go China</strong> page in the Alibaba Cloud SMS console.</p>
+     * <p>The code of the fallback digital message template. This parameter is required if you set <strong>FallbackType</strong> to <strong>DIGITALSMS</strong>.</p>
+     * <p>You can view the digital message template list on the <a href="https://dysms.console.aliyun.com/domestic/digit">Template Management</a> page of the <strong>Digital Messages</strong> module in the console.</p>
      * <blockquote>
-     * <p>Make sure that the message template has been approved.</p>
+     * <p>The template must be added and approved.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>SMS_003</p>
+     * <p>DIGITAL_SMS_31359****</p>
      */
     @NameInMap("DigitalTemplateCode")
     public String digitalTemplateCode;
 
     /**
-     * <p>The variables of the digital message template.</p>
+     * <p>The actual values of the variables in the fallback digital message template. This parameter is required if the digital message template specified by <strong>DigitalTemplateCode</strong> contains variables.</p>
      * <blockquote>
-     * <p>If you need to add line breaks to the JSON template, make sure that the format is valid.</p>
+     * <p>If the JSON value contains line breaks, follow the standard JSON protocol.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;msg\&quot;,\&quot;xxxd\&quot;}</p>
+     * <p>{&quot;msg&quot;,&quot;xxxd&quot;}</p>
      */
     @NameInMap("DigitalTemplateParam")
     public String digitalTemplateParam;
 
     /**
-     * <p>The rollback type. Valid values:</p>
+     * <p>The fallback type. Valid values:</p>
      * <ul>
-     * <li><strong>SMS</strong>: text message</li>
-     * <li><strong>DIGITALSMS</strong>: digital message</li>
-     * <li><strong>NONE</strong>: none</li>
+     * <li><strong>SMS</strong>: Falls back to a text message for phone numbers that do not support card messages.</li>
+     * <li><strong>DIGITALSMS</strong>: Falls back to a digital message for phone numbers that do not support card messages.</li>
+     * <li><strong>NONE</strong>: No fallback is required.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -64,7 +65,7 @@ public class SendCardSmsRequest extends TeaModel {
     public String fallbackType;
 
     /**
-     * <p>The ID that is reserved for the caller of the operation.</p>
+     * <p>The ID reserved for the caller.</p>
      * 
      * <strong>example:</strong>
      * <p>38d76c9b-4a9a-4c89-afae-61fd8e0e****</p>
@@ -73,46 +74,47 @@ public class SendCardSmsRequest extends TeaModel {
     public String outId;
 
     /**
-     * <p>The signature. You can view the template code in the <strong>Signature</strong> column on the <strong>Signaturess</strong> tab of the <strong>Go China</strong> page in the Alibaba Cloud SMS console.</p>
+     * <p>The signature name. You can call the <a href="https://help.aliyun.com/document_detail/419282.html">QuerySmsSignList</a> operation to query the signatures applied for under the current account or view the signature list in the <a href="https://dysms.console.aliyun.com/domestic/text/sign">Short Message Service (SMS) console</a>.</p>
      * <blockquote>
      * <p>The signature must be approved.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>aliyun</p>
+     * <p>阿里云</p>
      */
     @NameInMap("SignName")
     public String signName;
 
     /**
-     * <p>The code of the text message template that applies when the card message is rolled back. You can view the template code in the <strong>Template Code</strong> column on the <strong>Templates</strong> tab of the <strong>Go China</strong> page in the Alibaba Cloud SMS console.</p>
+     * <p>The code of the fallback text message template. This parameter is required if you set <strong>FallbackType</strong> to <strong>SMS</strong>.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/419288.html">QuerySmsTemplateList</a> operation to query the templates applied for under the current account or view the template list in the <a href="https://dysms.console.aliyun.com/domestic/text/template">SMS console</a>.</p>
      * <blockquote>
-     * <p>Make sure that the message template has been approved. If you set the <strong>FallbackType</strong> parameter to <strong>SMS</strong>, this parameter is required.</p>
+     * <p>The template must be added and approved.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>SIER_TEST_01</p>
+     * <p>SMS_48068****</p>
      */
     @NameInMap("SmsTemplateCode")
     public String smsTemplateCode;
 
     /**
-     * <p>The variables of the text message template.</p>
+     * <p>The actual values of the variables in the fallback text message template. This parameter is required if the text message template specified by <strong>SmsTemplateCode</strong> contains variables.</p>
      * <blockquote>
-     * <p>If you need to add line breaks to the JSON template, make sure that the format is valid.</p>
+     * <p>If the JSON value contains line breaks, follow the standard JSON protocol.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;uri\&quot;:\&quot;Zg11tZ\&quot;}</p>
+     * <p>{&quot;jifen&quot;:&quot;积分&quot;}</p>
      */
     @NameInMap("SmsTemplateParam")
     public String smsTemplateParam;
 
     /**
-     * <p>The extension code of the upstream message. Upstream messages are messages sent to the communication service provider. Upstream messages are used to customize a service, complete an inquiry, or send a request. You are charged for sending upstream messages based on the billing standards of the service provider.</p>
+     * <p>The extension code of the MO message. An MO message is a message sent to the communications service provider to customize a service, perform a query, or handle other business. The message is charged at the standard rate of the carrier.</p>
      * <blockquote>
-     * <p>If you do not need upstream messages, ignore this parameter.</p>
+     * <p>If you do not have such requirements, ignore this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -122,10 +124,13 @@ public class SendCardSmsRequest extends TeaModel {
     public String smsUpExtendCode;
 
     /**
-     * <p>The code of the text message template.</p>
-     * <p>Log on to the Alibaba Cloud SMS console. In the left-side navigation pane, click <strong>Go Globe</strong> or <strong>Go China</strong>. You can view the message template in the <strong>Template Code</strong> column on the <strong>Message Templates</strong> tab.</p>
+     * <p>The code of the custom content template.</p>
+     * <p>The custom content is sent to the recipient as a text message template combined with a card parsing link. Log on to the <a href="https://dysms.console.aliyun.com/overview">SMS console</a>, choose <strong>Domestic Messages</strong> or <strong>International/HK/MO/TW Messages</strong>, and view the <strong>Template Code</strong> on the <strong>Template Management</strong> tab.</p>
      * <blockquote>
-     * <p>The message templates must be created on the Go Globe page and approved.</p>
+     * <ul>
+     * <li>The template code must be added and approved. To send international or Hong Kong, Macao, or Taiwan messages, use an international or Hong Kong, Macao, or Taiwan message template.</li>
+     * <li>For example, if the selected text message template is &quot;You have a new message&quot; and the card parsing link is <code>1*.cn/2**d</code>, the final content is <code>You have a new message 1*.cn/2**d</code>. Test the message and control the word count before sending.</li>
+     * </ul>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -135,14 +140,14 @@ public class SendCardSmsRequest extends TeaModel {
     public String templateCode;
 
     /**
-     * <p>The variables of the message template. Format: JSON.</p>
+     * <p>The actual values of the variables in the custom content template. This parameter is required if the message template specified by <strong>TemplateCode</strong> contains variables.</p>
      * <blockquote>
-     * <p>If you need to add line breaks to the JSON template, make sure that the format is valid.</p>
+     * <p>If the JSON value contains line breaks, follow the standard JSON protocol.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>{
-     *       \&quot;code\&quot;: \&quot;1111\&quot;
+     *       &quot;code&quot;: &quot;1111&quot;
      * }</p>
      */
     @NameInMap("TemplateParam")
@@ -251,7 +256,7 @@ public class SendCardSmsRequest extends TeaModel {
 
     public static class SendCardSmsRequestCardObjects extends TeaModel {
         /**
-         * <p>The URL to which the message is redirected if the message fails to be rendered.</p>
+         * <p>渲染失败后跳转链接。</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://alibaba.com">https://alibaba.com</a></p>
@@ -260,16 +265,16 @@ public class SendCardSmsRequest extends TeaModel {
         public String customUrl;
 
         /**
-         * <p>The variables. Special characters, such as $ and {}, do not need to be entered.</p>
+         * <p>动态参数。动参变量不需要${}</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;param3\&quot;:\&quot;three\&quot;,\&quot;param1\&quot;:\&quot;one\&quot;,\&quot;param2\&quot;:\&quot;two\&quot;}</p>
+         * <p>{&quot;param3&quot;:&quot;李四3&quot;,&quot;param1&quot;:&quot;李四&quot;,&quot;param2&quot;:&quot;李四2&quot;}</p>
          */
         @NameInMap("dyncParams")
         public String dyncParams;
 
         /**
-         * <p>The mobile phone number.</p>
+         * <p>接收卡片短信的手机号码。</p>
          * 
          * <strong>example:</strong>
          * <p>1390000****</p>

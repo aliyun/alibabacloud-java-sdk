@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ConversionDataIntlRequest extends TeaModel {
     /**
-     * <p>The conversion rate.</p>
+     * <p>The conversion rate monitoring value.</p>
      * <blockquote>
-     * <p>The value of this parameter is a double, and ranges from 0 to 1.</p>
+     * <p>This parameter is of the double type. Valid values: [0,1].</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -21,7 +21,7 @@ public class ConversionDataIntlRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The time point at which the conversion rate is monitored. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <p>The point in time when the conversion rate is observed. The value must be a Unix timestamp in milliseconds, represented as a long integer.</p>
      * <blockquote>
      * <p>If you do not specify this parameter, the current timestamp is used by default.</p>
      * </blockquote>

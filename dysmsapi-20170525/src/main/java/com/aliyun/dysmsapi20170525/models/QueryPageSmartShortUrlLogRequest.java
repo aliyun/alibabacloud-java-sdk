@@ -8,7 +8,7 @@ public class QueryPageSmartShortUrlLogRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>20181225</p>
+     * <p>14</p>
      */
     @NameInMap("CreateDateEnd")
     public Long createDateEnd;
@@ -17,7 +17,7 @@ public class QueryPageSmartShortUrlLogRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>20181225</p>
+     * <p>31</p>
      */
     @NameInMap("CreateDateStart")
     public Long createDateStart;
@@ -29,7 +29,7 @@ public class QueryPageSmartShortUrlLogRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>99</p>
      */
     @NameInMap("PageNo")
     public Long pageNo;
@@ -38,14 +38,14 @@ public class QueryPageSmartShortUrlLogRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>84</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <strong>example:</strong>
-     * <p>1390000****</p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
@@ -58,7 +58,7 @@ public class QueryPageSmartShortUrlLogRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p><a href="http://ays.cn/">http://ays.cn/</a>****</p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("ShortUrl")
     public String shortUrl;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QuerySingleSmsQualificationRequest extends TeaModel {
     /**
-     * <p>工单id</p>
+     * <p>The review ticket ID. You can call the <a href="~~QuerySmsQualificationRecord~~">QuerySmsQualificationRecord</a> operation to obtain the qualifications and corresponding review ticket IDs under your current account.</p>
      * 
      * <strong>example:</strong>
      * <p>2001****</p>
@@ -17,7 +17,7 @@ public class QuerySingleSmsQualificationRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>资质id</p>
+     * <p>The qualification ID, which is the ID returned when you <a href="~~SubmitSmsQualification~~">apply for a qualification</a>. You can call the <a href="~~QuerySmsQualificationRecord~~">QuerySmsQualificationRecord</a> operation to obtain the qualification IDs under your current account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

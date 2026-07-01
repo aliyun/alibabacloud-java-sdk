@@ -17,7 +17,7 @@ public class QuerySmsSignListRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
-     * <p>The number of signatures per page. Valid values: <strong>1 to 50</strong>.</p>
+     * <p>The number of signatures to return on each page. Default value: <strong>10</strong>. Valid values: <strong>1 to 50</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

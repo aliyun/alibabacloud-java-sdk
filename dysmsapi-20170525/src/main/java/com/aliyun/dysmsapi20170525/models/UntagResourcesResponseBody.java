@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The request status code. Valid values:</p>
      * <ul>
-     * <li>The value OK indicates that the request was successful.</li>
-     * <li>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</li>
+     * <li>OK: The request was successful.</li>
+     * <li>For other error codes, see <a href="https://help.aliyun.com/document_detail/101346.html">Error code list</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,12 @@ public class UntagResourcesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>The execution result of deleting the tag. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: success.</p>
+     * </li>
+     * <li><p><strong>false</strong>: failure.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,7 +36,7 @@ public class UntagResourcesResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>A90E4451-FED7-49D2-87C8-00700A8C****</p>
+     * <p>819BE656-D2E0-4858-8B21-B2E477085AAF</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class QuerySmsAuthorizationLetterShrinkRequest extends TeaModel {
     /**
-     * <p>委托授权书id列表</p>
+     * <p>The list of letter of authorization IDs.</p>
      */
     @NameInMap("AuthorizationLetterIdList")
     public String authorizationLetterIdListShrink;
 
     /**
-     * <p>授权方社会统一信用代码</p>
+     * <p>The unified social credit code of the authorizing party. The length cannot exceed 150 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>9****************A</p>
@@ -29,16 +29,20 @@ public class QuerySmsAuthorizationLetterShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>签名名称（支持命中签名范围查询）</p>
+     * <p>The signature name. If the authorization scope includes multiple signatures when you create the letter of authorization, the letters of authorization that contain the signature are returned.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>菜鸟网络</p>
      */
     @NameInMap("SignName")
     public String signName;
 
     /**
-     * <p>授权书审核状态，INT:审核中，PASSED:审核通过</p>
+     * <p>The review status of the letter of authorization, which is related to the review status of the signature. Valid values:</p>
+     * <ul>
+     * <li><strong>INT</strong>: Pending review. The letter of authorization has been created. After you submit a signature application, it enters the review process.</li>
+     * <li><strong>PASSED</strong>: Review passed. When a signature in the authorized signature scope of the letter of authorization passes the review, the status of the letter of authorization changes to PASSED.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>PASSED</p>
@@ -47,7 +51,11 @@ public class QuerySmsAuthorizationLetterShrinkRequest extends TeaModel {
     public String state;
 
     /**
-     * <p>授权书可用状态，VALID可用，INVALID不可用</p>
+     * <p>The availability status of the letter of authorization, which is related to the validity period of the letter of authorization. Valid values:</p>
+     * <ul>
+     * <li><strong>VALID</strong>: Available. The letter of authorization is within the validity period.</li>
+     * <li><strong>INVALID</strong>: Unavailable. The letter of authorization has expired.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>VALID</p>

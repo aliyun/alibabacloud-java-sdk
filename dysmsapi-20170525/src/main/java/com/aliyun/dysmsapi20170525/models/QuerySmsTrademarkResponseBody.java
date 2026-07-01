@@ -4,20 +4,39 @@ package com.aliyun.dysmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QuerySmsTrademarkResponseBody extends TeaModel {
+    /**
+     * <p>The details of the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
+     * <p>The status code of the request.</p>
+     * <ul>
+     * <li><p><code>OK</code> indicates that the request was successful.</p>
+     * </li>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>A list of trademark details.</p>
+     */
     @NameInMap("Data")
     public java.util.List<QuerySmsTrademarkResponseBodyData> data;
 
     /**
+     * <p>The description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -25,6 +44,8 @@ public class QuerySmsTrademarkResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>569E9DBD-23FF-1785-99AD-E4B23608C104</p>
      */
@@ -32,6 +53,14 @@ public class QuerySmsTrademarkResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request is successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request fails.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -93,16 +122,16 @@ public class QuerySmsTrademarkResponseBody extends TeaModel {
 
     public static class QuerySmsTrademarkResponseBodyData extends TeaModel {
         /**
-         * <p>申请人名称</p>
+         * <p>The applicant name.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>阿里云</p>
          */
         @NameInMap("TrademarkApplicantName")
         public String trademarkApplicantName;
 
         /**
-         * <p>专用权生失效日期</p>
+         * <p>The validity period of the trademark.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-11-01~2025-12-19</p>
@@ -111,7 +140,7 @@ public class QuerySmsTrademarkResponseBody extends TeaModel {
         public String trademarkEffExpDate;
 
         /**
-         * <p>商标材料id</p>
+         * <p>The trademark ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10000*******</p>
@@ -120,16 +149,16 @@ public class QuerySmsTrademarkResponseBody extends TeaModel {
         public Long trademarkId;
 
         /**
-         * <p>商标名称</p>
+         * <p>The name of the trademark.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>示例商标</p>
          */
         @NameInMap("TrademarkName")
         public String trademarkName;
 
         /**
-         * <p>商标截图Osskey（给签名传工单用）</p>
+         * <p>The Object Storage Service (OSS) file key for the trademark image.</p>
          * 
          * <strong>example:</strong>
          * <p>100000*<strong><strong>802/afdebd46-</strong></strong>-46e4-899d-b4375826c898_mhk9oz0p_1762****31542.png</p>
@@ -138,7 +167,7 @@ public class QuerySmsTrademarkResponseBody extends TeaModel {
         public String trademarkPic;
 
         /**
-         * <p>商标截图url地址</p>
+         * <p>The URL of the trademark screenshot.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://alicom-fc-media.oss-cn-zhangjiakou.aliyuncs.com/100000****50802/afde****-496d-46e4-899d-b43758****8_mhk9oz0p_176224****542.png?Expires=1762****6&OSSAccessKeyId=bypFN****73PsLI&Signature=BygI9X****h7%2FXmFIo****FB2c%3D">https://alicom-fc-media.oss-cn-zhangjiakou.aliyuncs.com/100000****50802/afde****-496d-46e4-899d-b43758****8_mhk9oz0p_176224****542.png?Expires=1762****6&amp;OSSAccessKeyId=bypFN****73PsLI&amp;Signature=BygI9X****h7%2FXmFIo****FB2c%3D</a></p>
@@ -147,7 +176,7 @@ public class QuerySmsTrademarkResponseBody extends TeaModel {
         public String trademarkPicUrl;
 
         /**
-         * <p>商标注册号</p>
+         * <p>The trademark registration number.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>

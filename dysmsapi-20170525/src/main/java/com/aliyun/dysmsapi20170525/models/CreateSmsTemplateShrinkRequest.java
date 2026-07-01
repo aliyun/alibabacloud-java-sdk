@@ -5,7 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateSmsTemplateShrinkRequest extends TeaModel {
     /**
-     * <p>If there is an applicable scenario, you can fill it in.</p>
+     * <p>The business scenario.</p>
+     * <ul>
+     * <li><p>If the associated signature\&quot;s use case is &quot;Live App&quot;, <code>ApplySceneContent</code> must be an app URL that starts with <code>http://</code> or <code>https://</code>.</p>
+     * </li>
+     * <li><p>This parameter is required if the associated signature\&quot;s use case is &quot;Registered Trademark Name&quot; or &quot;organization name&quot;.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p><a href="http://www.aliyun.com/">http://www.aliyun.com/</a></p>
@@ -14,11 +20,14 @@ public class CreateSmsTemplateShrinkRequest extends TeaModel {
     public String applySceneContent;
 
     /**
-     * <p>International/Hong Kong, Macao, and Taiwan template type. When the <strong>TemplateType</strong> parameter is <strong>3</strong>, this parameter is required for international/Hong Kong, Macao, and Taiwan templates, with values:</p>
+     * <p>The type of the template for international/Hong Kong, Macao, and Taiwan messages. This parameter is required when <strong>TemplateType</strong> is set to <strong>3</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: Verification code.</li>
-     * <li><strong>1</strong>: SMS notification.</li>
-     * <li><strong>2</strong>: Promotional message.</li>
+     * <li><p><strong>0</strong>: notification message.</p>
+     * </li>
+     * <li><p><strong>1</strong>: promotional message.</p>
+     * </li>
+     * <li><p><strong>2</strong>: verification code.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,8 +37,7 @@ public class CreateSmsTemplateShrinkRequest extends TeaModel {
     public Integer intlType;
 
     /**
-     * <p>Additional materials you can upload, such as business proof documents or screenshots, to help reviewers understand your business details.</p>
-     * <p>This parameter is optional; please fill it in according to actual needs.</p>
+     * <p>Additional information. You can upload supporting documents or business screenshots to help reviewers better understand your business scenario. If you are applying for a promotional message template (where <code>TemplateType</code> is <code>2</code>), you must upload user authorization materials. For more information, see <a href="https://help.aliyun.com/document_detail/312341.html">Specifications for Uploading User Authorization Materials</a>.</p>
      */
     @NameInMap("MoreData")
     public String moreDataShrink;
@@ -38,21 +46,28 @@ public class CreateSmsTemplateShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The signature name that the template needs to be associated with. The associated SMS signature must have passed the review.</p>
-     * <p>This parameter is mandatory when the TemplateType parameter is <strong>0</strong>, <strong>1</strong>, or <strong>2</strong>.</p>
-     * <p><notice>Associating a signature can expedite the review process. Note that this associated signature is unrelated to the signature selected when sending SMS messages.</notice></p>
+     * <p>The name of the signature to associate with the template. The signature must be an approved signature.</p>
+     * <blockquote>
+     * <p>Notice: </p>
+     * </blockquote>
+     * <ul>
+     * <li><p>This parameter is required if <strong>TemplateType</strong> is set to <strong>0</strong>, <strong>1</strong>, or <strong>2</strong>.</p>
+     * </li>
+     * <li><p>Associating a signature can expedite the review process. The signature associated here is unrelated to the one you select when sending SMS messages.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>Aliyun</p>
+     * <p>验证码签名</p>
      */
     @NameInMap("RelatedSignName")
     public String relatedSignName;
 
     /**
-     * <p>Please describe the business scenario where you use SMS or provide an online link to the scenario, along with a complete example of the SMS (with variable contents filled), as complete information helps increase the template approval rate. Failure to follow guidelines or leaving this field blank may affect the approval of your template.</p>
+     * <p>Describe the business scenario for the SMS messages, or provide a URL for online scenarios. You must also provide a complete SMS example with actual values for any variables. Complete information increases the chance of template approval. Templates that do not provide this information as specified may be rejected.</p>
      * 
      * <strong>example:</strong>
-     * <p>Request verification code SMS.</p>
+     * <p>申请验证码短信</p>
      */
     @NameInMap("Remark")
     public String remark;
@@ -64,46 +79,54 @@ public class CreateSmsTemplateShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Template content, up to 500 characters in length.</p>
-     * <p>Both the template content and variable content must comply with SMS specifications; otherwise, the template will fail the review. You can also view common template examples on the template application page. Using sample templates can enhance review efficiency and success rates. For variable specifications, see <a href="https://help.aliyun.com/zh/sms/templaterule-template-variable-parameter-filling-example">TemplateContent Variable Parameter Filling Specifications</a>.</p>
+     * <p>The template content. The content must be 500 characters or less.</p>
+     * <p>The template content and variables must comply with the <a href="https://help.aliyun.com/document_detail/463161.html">SMS Template Specifications</a>. Templates that do not comply may be rejected. You can find common template examples on the <a href="https://dysms.console.aliyun.com/domestic/text/template/add">Apply for Template</a> page. Using these examples can speed up the review process and increase the approval rate. For variable specifications, see <a href="https://help.aliyun.com/document_detail/2806243.html">Variable Specifications for the TemplateContent Parameter</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>You are applying for mobile registration. The verification code is: ${code}. It is valid for 5 minutes!</p>
+     * <p>您正在申请手机注册，验证码为：${code}，5分钟内有效！</p>
      */
     @NameInMap("TemplateContent")
     public String templateContent;
 
     /**
-     * <p>Template name, up to 30 characters in length.</p>
+     * <p>The template name. The name must be 30 characters or less.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>aliyunCode</p>
+     * <p>验证码</p>
      */
     @NameInMap("TemplateName")
     public String templateName;
 
     /**
-     * <p>Template variable rules.</p>
-     * <p>For filling in variable rules, refer to the <a href="https://help.aliyun.com/zh/sms/templaterule-template-variable-parameter-filling-example">Sample Documentation</a>.</p>
+     * <p>The rules for variables in the template. For instructions on how to define these rules, see <a href="https://help.aliyun.com/document_detail/2806243.html">Sample Document</a>.</p>
+     * <blockquote>
+     * <ul>
+     * <li>This parameter is required if the message template contains variables.</li>
+     * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;code&quot;:&quot;characterWithNumber&quot;}</p>
+     * <p>{&quot;code&quot;:&quot;characterWithNumber2&quot;}</p>
      */
     @NameInMap("TemplateRule")
     public String templateRule;
 
     /**
-     * <p>SMS type. Values:</p>
+     * <p>The SMS type. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: Verification code.</li>
-     * <li><strong>1</strong>: SMS notification.</li>
-     * <li><strong>2</strong>: Promotional message.</li>
-     * <li><strong>3</strong>: International/Hong Kong, Macao, and Taiwan messages.</li>
+     * <li><p><strong>0</strong>: verification code.</p>
+     * </li>
+     * <li><p><strong>1</strong>: notification message.</p>
+     * </li>
+     * <li><p><strong>2</strong>: promotional message.</p>
+     * </li>
+     * <li><p><strong>3</strong>: international/Hong Kong, Macao, and Taiwan messages.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>Only enterprise-verified users can apply for promotional messages and international/Hong Kong, Macao, and Taiwan messages. For details on the differences between personal and enterprise user rights, please refer to <a href="https://help.aliyun.com/zh/sms/user-guide/usage-notes?spm=a2c4g.11186623.0.0.67447f576NJnE8">Usage Instructions</a>.</p>
+     * <p>Only enterprise-verified users can apply for promotional messages or international/Hong Kong, Macao, and Taiwan messages. For more information about the differences in privileges between individual and enterprise users, see <a href="https://help.aliyun.com/zh/sms/user-guide/usage-notes?spm=a2c4g.11186623.0.0.67447f576NJnE8">Usage Notes</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -113,6 +136,64 @@ public class CreateSmsTemplateShrinkRequest extends TeaModel {
     @NameInMap("TemplateType")
     public Integer templateType;
 
+    /**
+     * <blockquote>
+     * <p>Warning: </p>
+     * </blockquote>
+     * <p>To control the security of SMS content, messages that contain traffic-driving information, such as phone numbers and links, may be blocked by carriers, which can lead to delivery failures. To reduce this risk, we recommend that you avoid including such information in message templates.</p>
+     * <p>A JSON string that contains a list of traffic-driving information.</p>
+     * <blockquote>
+     * <p>Notice: The value must be a JSON array serialized into a string.</p>
+     * </blockquote>
+     * <h3>1. Fields</h3>
+     * <p>{
+     * &quot;trafficDrivingType&quot;:&quot;traffic driving type&quot;,
+     * &quot;trafficDrivingContent&quot;:&quot;traffic driving content&quot;,
+     * &quot;variableName&quot;:&quot;variable name&quot;,
+     * &quot;companyName&quot;:&quot;organization name&quot;,
+     * &quot;organizationCode&quot;:&quot;unified social credit code&quot;,
+     * &quot;icpNo&quot;:&quot;ICP filing or license number&quot;,
+     * &quot;icpPicOssKey&quot;:&quot;OSS key of the ICP filing screenshot&quot;,
+     * &quot;companyDifferentFromSignQuaReason&quot;:&quot;Reason for the discrepancy between the organization name and the signature qualification&quot;
+     * }</p>
+     * <h3>2. Notes</h3>
+     * <ul>
+     * <li><p>If the content is not a variable, do not pass the <code>variableName</code> parameter.</p>
+     * </li>
+     * <li><p>If the organization name is different from the one in the signature qualification, pass the <code>companyDifferentFromSignQuaReason</code> parameter.</p>
+     * </li>
+     * <li><p>If <code>trafficDrivingType</code> is set to <code>DOMAIN</code>, all parameters in this object are required.</p>
+     * </li>
+     * <li><p>If <code>trafficDrivingType</code> is set to another value, pass the <code>trafficDrivingType</code>, <code>trafficDrivingContent</code>, <code>variableName</code> (if applicable), <code>companyName</code>, <code>organizationCode</code>, and <code>companyDifferentFromSignQuaReason</code> (if applicable) parameters.</p>
+     * </li>
+     * </ul>
+     * <h3>3. trafficDrivingType enum values</h3>
+     * <blockquote>
+     * <p>Warning: </p>
+     * </blockquote>
+     * <p>Due to regulatory requirements, mobile phone numbers are not supported.</p>
+     * <ul>
+     * <li><p>DOMAIN: A domain link.</p>
+     * </li>
+     * <li><p>FIXED_PHONE: Fixed-line phone.</p>
+     * </li>
+     * <li><p>400_PHONE: Phone number prefixed with 400.</p>
+     * </li>
+     * <li><p>800_PHONE: Phone number prefixed with 800.</p>
+     * </li>
+     * <li><p>95_PHONE: Phone number prefixed with 95.</p>
+     * </li>
+     * <li><p>96_PHONE: Phone number prefixed with 96.</p>
+     * </li>
+     * <li><p>1_PHONE: A 3- to 8-digit phone number that starts with 1.</p>
+     * </li>
+     * <li><p>OTHER_PHONE: Other phone number.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;trafficDrivingType&quot;:&quot;DOMAIN&quot;,&quot;trafficDrivingContent&quot;:&quot;aliyun.com&quot;,&quot;companyName&quot;:&quot;阿里云计算有限公司&quot;,&quot;organizationCode&quot;:&quot;91330<strong><strong>73959654P&quot;,&quot;icpNo&quot;:&quot;浙B2-20</strong></strong>01-4&quot;,&quot;icpPicOssKey&quot;:&quot;db7784d8-cb0c-498f-<strong><strong>-295f1ad6d665_mf29l7nf.png&quot;, &quot;companyDifferentFromSignQuaReason&quot;:&quot;这是一段说明文字&quot;},{&quot;trafficDrivingType&quot;:&quot;1_PHONE&quot;,&quot;trafficDrivingContent&quot;:&quot;1</strong>86&quot;,&quot;variableName&quot;:&quot;my1Phone&quot;,&quot;companyName&quot;:&quot;阿里云计算有限公司&quot;,&quot;organizationCode&quot;:&quot;91330**</strong>73959654P&quot;,&quot;companyDifferentFromSignQuaReason&quot;:&quot;这是一段说明文字&quot;}]</p>
+     */
     @NameInMap("TrafficDriving")
     public String trafficDriving;
 

@@ -8,7 +8,7 @@ public class QuerySmsTemplateListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The current page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class QuerySmsTemplateListRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
-     * <p>The number of templates per page. Valid values: <strong>1 to 50</strong>.</p>
+     * <p>The number of templates displayed per page. Valid values: <strong>1 to 50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

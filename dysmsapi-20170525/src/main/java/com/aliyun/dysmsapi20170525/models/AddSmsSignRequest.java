@@ -8,11 +8,24 @@ public class AddSmsSignRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The description of the signature application. The description cannot exceed 200 characters in length. The description is one of the reference information for signature review. We recommend that you describe the use scenarios of your services in detail, and provide information that can verify the services, such as a website URL, a domain name with an ICP filing, an app download URL, an official account name, or a mini program name. For sign-in scenarios, you must also provide an account and password for tests. A detailed description can improve the review efficiency of signatures and templates.</p>
+     * <p>The description of the SMS signature scenario. The description cannot exceed 200 characters in length.</p>
+     * <p>This is reference information for signature review. Providing a complete application description helps reviewers understand your business scenario and improves review efficiency. Guidelines for filling in:</p>
+     * <ul>
+     * <li><p>You can provide the use cases of a business that has been launched.</p>
+     * </li>
+     * <li><p>You can provide real-world SMS message examples to reflect your business scenarios.</p>
+     * </li>
+     * <li><p>You can provide the parameter values passed to variables and describe the business use cases and the reasons for choosing these variable attributes in detail.</p>
+     * </li>
+     * <li><p>You can provide the website links, registered domain names, or app store download links of your actual business.</p>
+     * </li>
+     * <li><p>For login scenarios, you can provide a test account and password.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>This is the abbreviation of our company.</p>
+     * <p>当前的短信签名应用于双11大促推广营销</p>
      */
     @NameInMap("Remark")
     public String remark;
@@ -24,26 +37,24 @@ public class AddSmsSignRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The signature files.</p>
+     * <p>The list of signature files.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SignFileList")
     public java.util.List<AddSmsSignRequestSignFileList> signFileList;
 
     /**
-     * <p>The name of the signature.</p>
+     * <p>The signature name. The signature name must comply with the <a href="~~108076#section-0p8-qn8-mmy~~">Signature specifications</a>.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>The signature name is not case-sensitive. For example, [Alibaba Cloud Communication] and [alibaba cloud communication] are considered as the same name.</p>
-     * </li>
-     * <li><p>If your verification code signature and general-purpose signature have the same name, the system uses the general-purpose signature to send messages by default.</p>
-     * </li>
+     * <li>Signature names are case-insensitive. For example, [Aliyun Communication] and [aliyun communication] are considered the same name.</li>
+     * <li>When your verification code signature and general-purpose signature have the same name, the system uses the general-purpose signature to send SMS messages by default.</li>
      * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Aliyun</p>
+     * <p>阿里云</p>
      */
     @NameInMap("SignName")
     public String signName;
@@ -51,13 +62,17 @@ public class AddSmsSignRequest extends TeaModel {
     /**
      * <p>The source of the signature. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: the full name or abbreviation of an enterprise or institution</li>
-     * <li><strong>1</strong>: the full name or abbreviation of a website that has obtained an ICP filing from the Ministry of Industry and Information Technology (MIIT) of China</li>
-     * <li><strong>2</strong>: the full name or abbreviation of an app</li>
-     * <li><strong>3</strong>: the full name or abbreviation of an official account or mini-program</li>
-     * <li><strong>4</strong>: the full name or abbreviation of an e-commerce store</li>
-     * <li><strong>5</strong>: the full name or abbreviation of a trademark</li>
+     * <li><strong>0</strong>: Full name or abbreviation of an enterprise or public institution.</li>
+     * <li><strong>1</strong>: Full name or abbreviation of a website registered with the Ministry of Industry and Information Technology (MIIT).</li>
+     * <li><strong>2</strong>: Full name or abbreviation of an app.</li>
+     * <li><strong>3</strong>: Full name or abbreviation of an official account or mini program.</li>
+     * <li><strong>4</strong>: Full name or abbreviation of an e-commerce platform store name.</li>
+     * <li><strong>5</strong>: Full name or abbreviation of a trademark name.</li>
      * </ul>
+     * <p>For detailed descriptions of signature sources, see <a href="https://help.aliyun.com/en/sms/user-guide/signature-specifications-1?spm=a2c4g.11186623.0.0.4f9710fder2gR7#section-xup-k46-yi4">Signature source</a>.</p>
+     * <blockquote>
+     * <p>This API does not support applying for signatures whose signature source is <strong>Test or learning</strong> or <strong>Online trial</strong>. If you need to apply for signatures with these two sources, go to the <a href="https://dysms.console.aliyun.com/domestic/text/sign/add/qualification">Short Message Service (SMS) console</a> to submit your application.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,10 +82,10 @@ public class AddSmsSignRequest extends TeaModel {
     public Integer signSource;
 
     /**
-     * <p>The type of the signature. Valid values:</p>
+     * <p>The type of the signature.</p>
      * <ul>
-     * <li><strong>0</strong>: verification code</li>
-     * <li><strong>1</strong>: general-purpose</li>
+     * <li><strong>0</strong>: Verification code</li>
+     * <li><strong>1</strong>: General-purpose</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -150,7 +165,8 @@ public class AddSmsSignRequest extends TeaModel {
 
     public static class AddSmsSignRequestSignFileList extends TeaModel {
         /**
-         * <p>The Base64-encoded string of the qualification document. An image cannot exceed 2 MB in size. In some scenarios, you must upload supporting documents to apply for signatures. For more information, see <a href="https://help.aliyun.com/document_detail/108076.html">SMS signature specifications</a>.</p>
+         * <p>The Base64-encoded string of the qualification certificate file for the signature. The image size cannot exceed 2 MB. In some scenarios, you need to upload a certificate file when you apply for a signature.</p>
+         * <p>For detailed specifications, see <a href="https://help.aliyun.com/document_detail/463316.html">File upload specifications</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,10 +176,9 @@ public class AddSmsSignRequest extends TeaModel {
         public String fileContents;
 
         /**
-         * <p>The format of the qualification document. You can upload multiple images. Images in JPG, PNG, GIF, or JPEG format are supported.</p>
-         * <p>In some scenarios, you must upload supporting documents to apply for signatures. For more information, see <a href="https://help.aliyun.com/document_detail/108076.html">SMS signature specifications</a>.</p>
+         * <p>The format of the signature certificate file. Multiple images can be uploaded. Currently, JPG, PNG, GIF, and JPEG formats are supported. In some scenarios, you need to upload a certificate file when you apply for a signature.</p>
          * <blockquote>
-         * <p>If you apply for a signature for other users or if the signature source is the name of an enterprise or public institution, you must upload a certificate and a letter of authorization. For more information, see <a href="https://help.aliyun.com/document_detail/108076.html">Certificate</a> and <a href="https://help.aliyun.com/document_detail/56741.html">Letter of authorization</a>.</p>
+         * <p>If the signature is for third-party use or if you are an individual-certified user whose self-use signature source is an enterprise or public institution name, you also need to upload a certificate file and a power of attorney. For more information, see <a href="https://help.aliyun.com/document_detail/108076.html">Certificate file</a> and <a href="https://help.aliyun.com/document_detail/56741.html">Power of attorney</a>.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

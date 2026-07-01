@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class SmsConversionIntlRequest extends TeaModel {
     /**
-     * <p>The time when the OTP message was delivered. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <p>The timestamp at which the message reached the recipient. Must be a Unix timestamp, expressed as a long integer in milliseconds.</p>
      * <ul>
-     * <li>If you leave the parameter empty, the current timestamp is specified by default.</li>
-     * <li>If you specify the parameter, the timestamp must be greater than the message sending time and less than the current timestamp.</li>
+     * <li><p>If this field is not specified: defaults to the current timestamp.</p>
+     * </li>
+     * <li><p>If this field is specified: the timestamp must be greater than the send time and less than the current timestamp.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class SmsConversionIntlRequest extends TeaModel {
     public Long conversionTime;
 
     /**
-     * <p>Specifies whether customers replied to the OTP message. Valid values: true and false.</p>
+     * <p>Set to true if your user replied to the message you sent. Otherwise, set to false.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +30,7 @@ public class SmsConversionIntlRequest extends TeaModel {
     public Boolean delivered;
 
     /**
-     * <p>The ID of the message.</p>
+     * <p>Message ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

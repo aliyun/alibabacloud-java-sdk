@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class QuerySmsSignResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The status code of the request.</p>
      * <ul>
-     * <li>If OK is returned, the request is successful.</li>
-     * <li>Other values indicate that the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</li>
+     * <li><p><code>OK</code> indicates that the request was successful.</p>
+     * </li>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class QuerySmsSignResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The date and time when the signature was created.</p>
+     * <p>The date and time when the SMS signature was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-01-08 16:44:13</p>
@@ -27,7 +29,7 @@ public class QuerySmsSignResponseBody extends TeaModel {
     public String createDate;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -36,14 +38,16 @@ public class QuerySmsSignResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The remarks of the review. Valid values:</p>
+     * <p>The review reason.</p>
      * <ul>
-     * <li>If the signature is in the <strong>Approved</strong> or <strong>Pending Approval</strong> state, No Remarks is returned.</li>
-     * <li>If the signature is in the <strong>Not Approved</strong> state, the reason why the signature is rejected is returned.</li>
+     * <li><p>If the review status is <strong>Approved</strong> or <strong>Pending Review</strong>, this parameter is empty.</p>
+     * </li>
+     * <li><p>If the review status is <strong>Rejected</strong>, this parameter provides the reason for the rejection.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>The document cannot verify the authenticity of the information. Please upload it again.</p>
+     * <p>文件不能证明信息真实性，请重新上传</p>
      */
     @NameInMap("Reason")
     public String reason;
@@ -58,21 +62,25 @@ public class QuerySmsSignResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The signature.</p>
+     * <p>The SMS signature.</p>
      * 
      * <strong>example:</strong>
-     * <p>Aliyun</p>
+     * <p>阿里云</p>
      */
     @NameInMap("SignName")
     public String signName;
 
     /**
-     * <p>The status of the signature. Valid values:</p>
+     * <p>The review status of the SMS signature. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: The signature is pending approval.</li>
-     * <li><strong>1</strong>: The signature is approved.</li>
-     * <li><strong>2</strong>: The signature is rejected. The Reason parameter indicates the reason why the signature is rejected.</li>
-     * <li><strong>10</strong>: The signature is cancelled.</li>
+     * <li><p><strong>0</strong>: Pending Review.</p>
+     * </li>
+     * <li><p><strong>1</strong>: Approved.</p>
+     * </li>
+     * <li><p><strong>2</strong>: Rejected. For details, see the <code>Reason</code> parameter.</p>
+     * </li>
+     * <li><p><strong>10</strong>: Canceled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

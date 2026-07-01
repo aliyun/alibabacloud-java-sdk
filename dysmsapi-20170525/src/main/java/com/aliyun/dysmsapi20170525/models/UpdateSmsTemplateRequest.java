@@ -5,12 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpdateSmsTemplateRequest extends TeaModel {
     /**
-     * <p>Application scenarios, instructions as follows:</p>
+     * <p>The business scenario.</p>
      * <ul>
-     * <li>For registered websites, please enter the MIIT-registered domain with HTTP or HTTPS.</li>
-     * <li>For launched apps, provide the app store display link with HTTP or HTTPS, ensuring the app is online.</li>
-     * <li>For public accounts or mini-programs, enter the full name of the public account or mini-program, ensuring they are online.</li>
-     * <li>For e-commerce platform stores, applicable only to enterprise users, enter the display link of the e-commerce store with HTTP or HTTPS.</li>
+     * <li><p>If the associated SMS signature\&quot;s business scenario is &quot;Live App&quot;, the <code>ApplySceneContent</code> parameter must be an app URL starting with <code>http://</code> or <code>https://</code>.</p>
+     * </li>
+     * <li><p>The <code>ApplySceneContent</code> parameter is required if the associated SMS signature\&quot;s business scenario is &quot;Registered Trademark&quot; or &quot;Name of Enterprise or Public Institution&quot;.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,11 +20,14 @@ public class UpdateSmsTemplateRequest extends TeaModel {
     public String applySceneContent;
 
     /**
-     * <p>International/Hong Kong, Macao, and Taiwan template type. When the <strong>TemplateType</strong> parameter is <strong>3</strong>, this parameter is required for international/Hong Kong, Macao, and Taiwan templates, with values:</p>
+     * <p>The type of the international/regional template. This parameter is required when the <strong>TemplateType</strong> parameter is set to <strong>3</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: Verification code.</li>
-     * <li><strong>1</strong>: SMS notification.</li>
-     * <li><strong>2</strong>: Promotional SMS.</li>
+     * <li><p><strong>0</strong>: SMS notification.</p>
+     * </li>
+     * <li><p><strong>1</strong>: promotional SMS.</p>
+     * </li>
+     * <li><p><strong>2</strong>: verification code.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,7 +37,7 @@ public class UpdateSmsTemplateRequest extends TeaModel {
     public Integer intlType;
 
     /**
-     * <p>Additional information, such as uploading business proof documents or screenshots, to help reviewers understand your business details. Optional and can be left unset.</p>
+     * <p>Additional materials, such as supporting documents or business screenshots, to help reviewers understand your business. If <code>TemplateType</code> is set to <code>2</code> (promotional SMS), you must upload proof of user authorization. For more information, see <a href="https://help.aliyun.com/document_detail/312341.html">Upload specifications for user authorization materials</a>.</p>
      */
     @NameInMap("MoreData")
     public java.util.List<String> moreData;
@@ -43,7 +46,7 @@ public class UpdateSmsTemplateRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>SMS signature associated with the template during the application.</p>
+     * <p>The SMS signature associated with the template.</p>
      * 
      * <strong>example:</strong>
      * <p>阿里云</p>
@@ -52,7 +55,7 @@ public class UpdateSmsTemplateRequest extends TeaModel {
     public String relatedSignName;
 
     /**
-     * <p>Explanation for the SMS template application, which serves as a reference for template review.</p>
+     * <p>Describe your business scenario, including a URL if applicable. You must also provide a complete SMS message example with populated variables. Providing this information as required is critical for template approval.</p>
      * 
      * <strong>example:</strong>
      * <p>登录场景使用验证码</p>
@@ -67,7 +70,7 @@ public class UpdateSmsTemplateRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Template Code of an unapproved template.</p>
+     * <p>The code of the rejected SMS template. You can find the template code on the <a href="https://dysms.console.aliyun.com/domestic/text/template">Messages in Chinese Mainland &gt; Template Management</a> tab in the console or by calling the <a href="~~QuerySmsTemplateList~~">QuerySmsTemplateList</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -77,8 +80,8 @@ public class UpdateSmsTemplateRequest extends TeaModel {
     public String templateCode;
 
     /**
-     * <p>Template content, up to 500 characters in length.</p>
-     * <p>Both the template content and variable content must comply with SMS regulations; otherwise, the template will fail the review. You can also view common template examples on the template application page. Using sample templates can enhance review efficiency and success rates. Variable specifications can be found in <a href="https://help.aliyun.com/zh/sms/templaterule-template-variable-parameter-filling-example?spm">TemplateContent Parameter Variable Specifications</a>.</p>
+     * <p>The new template content, up to 500 characters long.</p>
+     * <p>The template content and its variables must comply with <a href="https://help.aliyun.com/document_detail/463161.html">SMS template specifications</a> to be approved. To increase the approval rate and efficiency, refer to the common examples on the <a href="https://dysms.console.aliyun.com/domestic/text/template/add">Apply for Template</a> page. For more information about variable specifications, see <a href="https://help.aliyun.com/document_detail/2806243.html">TemplateContent parameter variable specifications</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -88,18 +91,17 @@ public class UpdateSmsTemplateRequest extends TeaModel {
     public String templateContent;
 
     /**
-     * <p>Template name, up to 30 characters in length.</p>
+     * <p>The name of the SMS template, up to 30 characters long. You can find the names of rejected templates on the <a href="https://dysms.console.aliyun.com/domestic/text/template">Messages in Chinese Mainland &gt; Template Management</a> tab in the console or by calling the <a href="~~QuerySmsTemplateList~~">QuerySmsTemplateList</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>验证码</p>
+     * <p>验证码模板</p>
      */
     @NameInMap("TemplateName")
     public String templateName;
 
     /**
-     * <p>Template variable rules.</p>
-     * <p>For guidance on filling variable rules, refer to the <a href="https://help.aliyun.com/zh/sms/templaterule-template-variable-parameter-filling-example?spm">Sample Documentation</a>.</p>
+     * <p>The rules for the variables in the template. For details on how to define these rules, see the <a href="https://help.aliyun.com/document_detail/2806243.html">example document</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;code&quot;:&quot;characterWithNumber&quot;}</p>
@@ -108,15 +110,19 @@ public class UpdateSmsTemplateRequest extends TeaModel {
     public String templateRule;
 
     /**
-     * <p>SMS type. Values:</p>
+     * <p>The SMS type. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: Verification code.</li>
-     * <li><strong>1</strong>: SMS notification.</li>
-     * <li><strong>2</strong>: Promotional SMS.</li>
-     * <li><strong>3</strong>: International/Hong Kong, Macao, and Taiwan messages.</li>
+     * <li><p><strong>0</strong>: verification code.</p>
+     * </li>
+     * <li><p><strong>1</strong>: SMS notification.</p>
+     * </li>
+     * <li><p><strong>2</strong>: promotional SMS.</p>
+     * </li>
+     * <li><p><strong>3</strong>: international/regional message.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>Only enterprise-certified users can apply for promotional SMS and international/Hong Kong, Macao, and Taiwan messages. Details on differences between personal and enterprise user rights are available in <a href="https://help.aliyun.com/zh/sms/user-guide/usage-notes?spm=a2c4g.11186623.0.0.67447f576NJnE8">Usage Guidelines</a>.</p>
+     * <p>Only enterprise-verified users can apply for promotional SMS and international/regional messages. For more information about the differences between personal and enterprise accounts, see <a href="https://help.aliyun.com/zh/sms/user-guide/usage-notes?spm=a2c4g.11186623.0.0.67447f576NJnE8">Usage notes</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -126,6 +132,64 @@ public class UpdateSmsTemplateRequest extends TeaModel {
     @NameInMap("TemplateType")
     public Integer templateType;
 
+    /**
+     * <blockquote>
+     * <p>Warning: </p>
+     * </blockquote>
+     * <p>To manage SMS content security, messages that contain traffic-driving information such as phone numbers and URLs may be blocked by carriers, which can cause delivery failures. We recommend that you avoid including such information in your SMS templates to prevent delivery failures.</p>
+     * <p>A JSON string that contains a list of traffic-driving information.</p>
+     * <blockquote>
+     * <p>Notice: The value must be in the JSON format. Convert the value to a string before you pass it in.</p>
+     * </blockquote>
+     * <h3>1. Fields</h3>
+     * <p>{
+     * &quot;trafficDrivingType&quot;:&quot;Traffic-driving type&quot;,
+     * &quot;trafficDrivingContent&quot;:&quot;Traffic-driving content&quot;,
+     * &quot;variableName&quot;:&quot;variable name&quot;,
+     * &quot;companyName&quot;:&quot;Name of the enterprise or public institution&quot;,
+     * &quot;organizationCode&quot;:&quot;Unified Social Credit Code&quot;,
+     * &quot;icpNo&quot;:&quot;ICP filing/permit number&quot;,
+     * &quot;icpPicOssKey&quot;:&quot;OSS key of the ICP filing screenshot&quot;,
+     * &quot;companyDifferentFromSignQuaReason&quot;:&quot;The reason why the name of the enterprise or public institution is different from that in the SMS signature qualification&quot;
+     * }</p>
+     * <h3>2. Notes</h3>
+     * <ul>
+     * <li><p>If the content is not a variable, do not pass the <code>variableName</code> field.</p>
+     * </li>
+     * <li><p>If the name of the enterprise or public institution is different from that in the SMS signature qualification, provide the <code>companyDifferentFromSignQuaReason</code> field.</p>
+     * </li>
+     * <li><p>If <code>trafficDrivingType</code> is set to <code>DOMAIN</code>, you must provide all the fields.</p>
+     * </li>
+     * <li><p>For <code>trafficDrivingType</code> values other than <code>DOMAIN</code>, the <code>trafficDrivingType</code>, <code>trafficDrivingContent</code>, <code>companyName</code>, and <code>organizationCode</code> fields are required. The <code>variableName</code> and <code>companyDifferentFromSignQuaReason</code> fields are optional.</p>
+     * </li>
+     * </ul>
+     * <h3>3. TrafficDrivingType enumeration</h3>
+     * <blockquote>
+     * <p>Warning: </p>
+     * </blockquote>
+     * <p>Due to regulatory requirements, mobile numbers are not supported.</p>
+     * <ul>
+     * <li><p><code>DOMAIN</code>: A domain name.</p>
+     * </li>
+     * <li><p><code>FIXED_PHONE</code>: A fixed-line phone number.</p>
+     * </li>
+     * <li><p><code>400_PHONE</code>: A phone number that starts with 400.</p>
+     * </li>
+     * <li><p><code>800_PHONE</code>: A phone number that starts with 800.</p>
+     * </li>
+     * <li><p><code>95_PHONE</code>: A phone number that starts with 95.</p>
+     * </li>
+     * <li><p><code>96_PHONE</code>: A phone number that starts with 96.</p>
+     * </li>
+     * <li><p><code>1_PHONE</code>: A 3-digit to 8-digit phone number that starts with 1.</p>
+     * </li>
+     * <li><p><code>OTHER_PHONE</code>: Another type of phone number.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;trafficDrivingType&quot;:&quot;DOMAIN&quot;,&quot;trafficDrivingContent&quot;:&quot;aliyun.com&quot;,&quot;companyName&quot;:&quot;阿里云计算有限公司&quot;,&quot;organizationCode&quot;:&quot;91330<strong><strong>73959654P&quot;,&quot;icpNo&quot;:&quot;浙B2-20</strong></strong>01-4&quot;,&quot;icpPicOssKey&quot;:&quot;db7784d8-cb0c-498f-<strong><strong>-295f1ad6d665_mf29l7nf.png&quot;,&quot;companyDifferentFromSignQuaReason&quot;:&quot;这是一段说明文字&quot;},{&quot;trafficDrivingType&quot;:&quot;1_PHONE&quot;,&quot;trafficDrivingContent&quot;:&quot;1</strong>86&quot;,&quot;variableName&quot;:&quot;my1Phone&quot;,&quot;companyName&quot;:&quot;阿里云计算有限公司&quot;,&quot;organizationCode&quot;:&quot;91330**</strong>73959654P&quot;,&quot;companyDifferentFromSignQuaReason&quot;:&quot;这是一段说明文字&quot;}]</p>
+     */
     @NameInMap("TrafficDriving")
     public String trafficDriving;
 

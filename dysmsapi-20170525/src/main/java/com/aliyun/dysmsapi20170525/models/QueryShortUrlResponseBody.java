@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class QueryShortUrlResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The request status code.</p>
      * <ul>
-     * <li>If OK is returned, the request is successful.</li>
-     * <li>Other values indicate that the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</li>
+     * <li><p>A successful request returns <code>OK</code>.</p>
+     * </li>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,13 +20,13 @@ public class QueryShortUrlResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The details of the short URL.</p>
+     * <p>The details of the short link.</p>
      */
     @NameInMap("Data")
     public QueryShortUrlResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -80,7 +82,7 @@ public class QueryShortUrlResponseBody extends TeaModel {
 
     public static class QueryShortUrlResponseBodyData extends TeaModel {
         /**
-         * <p>The time when the short URL was created.</p>
+         * <p>The creation date and time of the short link.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-01-08 16:44:13</p>
@@ -89,7 +91,7 @@ public class QueryShortUrlResponseBody extends TeaModel {
         public String createDate;
 
         /**
-         * <p>The time when the short URL expires.</p>
+         * <p>The expiration date and time of the short link.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-01-22 11:21:11</p>
@@ -98,7 +100,7 @@ public class QueryShortUrlResponseBody extends TeaModel {
         public String expireDate;
 
         /**
-         * <p>The PV.</p>
+         * <p>The page view (PV) count for the short link.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -107,7 +109,7 @@ public class QueryShortUrlResponseBody extends TeaModel {
         public String pageViewCount;
 
         /**
-         * <p>The short URL.</p>
+         * <p>The generated short link.</p>
          * 
          * <strong>example:</strong>
          * <p>http://****.cn/6y8uy7</p>
@@ -116,21 +118,25 @@ public class QueryShortUrlResponseBody extends TeaModel {
         public String shortUrl;
 
         /**
-         * <p>The service name of the short URL.</p>
+         * <p>The name of the service that generated the short link.</p>
          * 
          * <strong>example:</strong>
-         * <p>The Alibaba Cloud Short Link service.</p>
+         * <p>阿里短链测试</p>
          */
         @NameInMap("ShortUrlName")
         public String shortUrlName;
 
         /**
-         * <p>The status of the short URL. Valid values:</p>
+         * <p>The short link status. Valid values:</p>
          * <ul>
-         * <li><strong>expired</strong></li>
-         * <li><strong>effective</strong></li>
-         * <li><strong>audit</strong></li>
-         * <li><strong>reject</strong></li>
+         * <li><p><strong>expired</strong>: The short link has expired.</p>
+         * </li>
+         * <li><p><strong>effective</strong>: The short link is active.</p>
+         * </li>
+         * <li><p><strong>audit</strong>: The short link is under review.</p>
+         * </li>
+         * <li><p><strong>reject</strong>: The short link was rejected.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -140,7 +146,7 @@ public class QueryShortUrlResponseBody extends TeaModel {
         public String shortUrlStatus;
 
         /**
-         * <p>The source address.</p>
+         * <p>The source URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://www.****.com/product/sms">https://www.****.com/product/sms</a></p>
@@ -149,7 +155,7 @@ public class QueryShortUrlResponseBody extends TeaModel {
         public String sourceUrl;
 
         /**
-         * <p>The UV.</p>
+         * <p>The unique visitor (UV) count for the short link.</p>
          * 
          * <strong>example:</strong>
          * <p>23</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCardSmsDetailsResponseBody extends TeaModel {
     /**
-     * <p>Access denied detail; this field is returned only if the RAM check fails.</p>
+     * <p>The access denied details. This parameter is returned only when the RAM check fails.</p>
      * 
      * <strong>example:</strong>
      * <p>无</p>
@@ -14,16 +14,16 @@ public class GetCardSmsDetailsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Card SMS sending result</p>
+     * <p>The card SMS sending result.</p>
      */
     @NameInMap("CardSendDetailDTO")
     public GetCardSmsDetailsResponseBodyCardSendDetailDTO cardSendDetailDTO;
 
     /**
-     * <p>Request status code.</p>
+     * <p>The request status code.</p>
      * <ul>
-     * <li>OK indicates a successful request.</li>
-     * <li>For other error codes, see <a href="https://help.aliyun.com/document_detail/101346.html">API Error Codes</a>.</li>
+     * <li>OK indicates that the request was successful.</li>
+     * <li>For other error codes, see <a href="https://help.aliyun.com/document_detail/101346.html">API error codes</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class GetCardSmsDetailsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Description of the status code.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -42,9 +42,12 @@ public class GetCardSmsDetailsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Indicates whether the API call was successful. Values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong> - <strong>false</strong></li>
+     * <li><p><strong>true</strong>: The call was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The call failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,7 +103,7 @@ public class GetCardSmsDetailsResponseBody extends TeaModel {
 
     public static class GetCardSmsDetailsResponseBodyCardSendDetailDTORecords extends TeaModel {
         /**
-         * <p>Error code for sending</p>
+         * <p>The sending error code.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -109,7 +112,7 @@ public class GetCardSmsDetailsResponseBody extends TeaModel {
         public String errCode;
 
         /**
-         * <p>Customer-transmitted outId</p>
+         * <p>The outId passed by the customer.</p>
          * 
          * <strong>example:</strong>
          * <p>12345678</p>
@@ -118,7 +121,7 @@ public class GetCardSmsDetailsResponseBody extends TeaModel {
         public String outId;
 
         /**
-         * <p>Phone number that received the SMS</p>
+         * <p>The phone number that received the SMS.</p>
          * 
          * <strong>example:</strong>
          * <p>156****9080</p>
@@ -127,7 +130,7 @@ public class GetCardSmsDetailsResponseBody extends TeaModel {
         public String phoneNumber;
 
         /**
-         * <p>Receive date</p>
+         * <p>The receive time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-09-27 11:26:35</p>
@@ -136,7 +139,7 @@ public class GetCardSmsDetailsResponseBody extends TeaModel {
         public String receiveDate;
 
         /**
-         * <p>Receive SMS type</p>
+         * <p>The SMS receive type.</p>
          * 
          * <strong>example:</strong>
          * <p>CARD_SMS</p>
@@ -145,7 +148,7 @@ public class GetCardSmsDetailsResponseBody extends TeaModel {
         public String receiveType;
 
         /**
-         * <p>Render date</p>
+         * <p>The render time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-09-27 12:13:39</p>
@@ -154,7 +157,12 @@ public class GetCardSmsDetailsResponseBody extends TeaModel {
         public String renderDate;
 
         /**
-         * <p>Render status. 0: Not rendered; 1: Rendered successfully; 3: Not rendered</p>
+         * <p>The parsing status. Valid values:</p>
+         * <ul>
+         * <li>0: not parsed.</li>
+         * <li>1: parsed successfully.</li>
+         * <li>3: not parsed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -163,7 +171,7 @@ public class GetCardSmsDetailsResponseBody extends TeaModel {
         public Long renderStatus;
 
         /**
-         * <p>Time when the SMS was sent</p>
+         * <p>The SMS sending time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-09-27 11:26:32</p>
@@ -172,7 +180,13 @@ public class GetCardSmsDetailsResponseBody extends TeaModel {
         public String sendDate;
 
         /**
-         * <p>Sending status. 1: Sending; 2: Send failed; 3: Sent successfully; 4: Addressing failed</p>
+         * <p>The sending status. Valid values:</p>
+         * <ul>
+         * <li>1: sending.</li>
+         * <li>2: sending failed.</li>
+         * <li>3: sending succeeded.</li>
+         * <li>4: addressing failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -181,7 +195,7 @@ public class GetCardSmsDetailsResponseBody extends TeaModel {
         public Long sendStatus;
 
         /**
-         * <p>SMS content. Only applicable for text messages.</p>
+         * <p>The SMS content. Only text SMS has a value.</p>
          * 
          * <strong>example:</strong>
          * <p>您收到一条短信消息</p>
@@ -190,7 +204,7 @@ public class GetCardSmsDetailsResponseBody extends TeaModel {
         public String smsContent;
 
         /**
-         * <p>Template code</p>
+         * <p>The template code.</p>
          * 
          * <strong>example:</strong>
          * <p>CARD_SMS_6***</p>
@@ -295,7 +309,7 @@ public class GetCardSmsDetailsResponseBody extends TeaModel {
 
     public static class GetCardSmsDetailsResponseBodyCardSendDetailDTO extends TeaModel {
         /**
-         * <p>Current page number</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -304,7 +318,7 @@ public class GetCardSmsDetailsResponseBody extends TeaModel {
         public Long currentPage;
 
         /**
-         * <p>Page size</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -313,13 +327,13 @@ public class GetCardSmsDetailsResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
-         * <p>List of card SMS sending records</p>
+         * <p>The list of card SMS sending records.</p>
          */
         @NameInMap("Records")
         public java.util.List<GetCardSmsDetailsResponseBodyCardSendDetailDTORecords> records;
 
         /**
-         * <p>Total count</p>
+         * <p>The total count.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

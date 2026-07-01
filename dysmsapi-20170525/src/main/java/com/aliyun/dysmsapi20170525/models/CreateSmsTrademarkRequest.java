@@ -14,17 +14,17 @@ public class CreateSmsTrademarkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>申请人名称</p>
+     * <p>The name of the applicant. The value can be up to 50 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>阿里巴巴（中国）有限公司</p>
      */
     @NameInMap("TrademarkApplicantName")
     public String trademarkApplicantName;
 
     /**
-     * <p>专用权生失效日期</p>
+     * <p>The effective and expiration dates of the exclusive right.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,17 +34,39 @@ public class CreateSmsTrademarkRequest extends TeaModel {
     public String trademarkEffExpDate;
 
     /**
-     * <p>商标名称</p>
+     * <p>The trademark name. The value can be up to 15 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>阿里云</p>
      */
     @NameInMap("TrademarkName")
     public String trademarkName;
 
     /**
-     * <p>商标详情截图osskey</p>
+     * <p>The fileKey of the trademark details screenshot.</p>
+     * <ol>
+     * <li>How to query a trademark:</li>
+     * </ol>
+     * <ul>
+     * <li>Log on to the China Trademark Network, click <strong>Trademark Online Query</strong>, and take a screenshot of the trademark details.</li>
+     * <li>Accept the terms of use and enter the <strong>Application/Registration Number</strong> to query.</li>
+     * <li>Click the <strong>Application/Registration Number</strong> to view the details.</li>
+     * </ul>
+     * <ol start="2">
+     * <li>Information about the trademark file uploaded to OSS. File upload requirements:</li>
+     * </ol>
+     * <ul>
+     * <li>The name of the file to be uploaded cannot contain Chinese characters or special characters.</li>
+     * <li>Only images in JPG, PNG, GIF, and JPEG formats are supported, and the image size cannot exceed 5 MB.</li>
+     * <li>The screenshot must contain the complete URL.</li>
+     * <li>The trademark image must be clear and identical to the <strong>signature name</strong>.</li>
+     * <li>The <strong>applicant name</strong> must be identical to the name of the enterprise or institution associated with the signature.</li>
+     * <li>The trademark status must be registered trademark.</li>
+     * </ul>
+     * <ol start="3">
+     * <li>To obtain the fileKey, see <a href="https://help.aliyun.com/document_detail/2833114.html">Upload files to OSS</a>.</li>
+     * </ol>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,7 +76,7 @@ public class CreateSmsTrademarkRequest extends TeaModel {
     public String trademarkPic;
 
     /**
-     * <p>商标注册号</p>
+     * <p>The trademark registration number. The value can be up to 15 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

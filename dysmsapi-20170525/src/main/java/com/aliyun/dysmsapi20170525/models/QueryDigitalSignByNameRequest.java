@@ -14,8 +14,10 @@ public class QueryDigitalSignByNameRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The name of the digital SMS signature. The signature must belong to your Alibaba Cloud account.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>阿里云数字商城</p>
      */
     @NameInMap("SignName")
     public String signName;

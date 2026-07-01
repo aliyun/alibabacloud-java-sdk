@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetMediaResourceIdResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>请求状态码。</p>
      * <ul>
-     * <li>If OK is returned, the request is successful.</li>
-     * <li>Other values indicate that the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</li>
+     * <li>返回OK代表请求成功。</li>
+     * <li>其他错误码，请参见<a href="https://help.aliyun.com/document_detail/101346.html">错误码列表</a>。</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,13 +18,13 @@ public class GetMediaResourceIdResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>返回数据。</p>
      */
     @NameInMap("Data")
     public GetMediaResourceIdResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>请求ID。</p>
      * 
      * <strong>example:</strong>
      * <p>F07CF237-F6E3-5F77-B91B-F9B7C5DE84AB</p>
@@ -33,10 +33,12 @@ public class GetMediaResourceIdResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>调用接口是否成功。取值：</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>：调用成功。</p>
+     * </li>
+     * <li><p><strong>false</strong>：调用失败。</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,7 +86,7 @@ public class GetMediaResourceIdResponseBody extends TeaModel {
 
     public static class GetMediaResourceIdResponseBodyData extends TeaModel {
         /**
-         * <p>The download URL of the resource.</p>
+         * <p>资源下载地址。</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://test-example.com/download.jpg">http://test-example.com/download.jpg</a></p>
@@ -93,10 +95,10 @@ public class GetMediaResourceIdResponseBody extends TeaModel {
         public String resUrlDownload;
 
         /**
-         * <p>The resource ID.</p>
+         * <p>资源ID。</p>
          * 
          * <strong>example:</strong>
-         * <p>SMS_14571****</p>
+         * <p>0</p>
          */
         @NameInMap("ResourceId")
         public Long resourceId;

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class AddSmsTemplateResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The request status code.</p>
      * <ul>
      * <li>The value OK indicates that the request was successful.</li>
-     * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/101346.html">API error codes</a>.</li>
+     * <li>For other error codes, see <a href="https://help.aliyun.com/document_detail/101346.html">API error codes</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class AddSmsTemplateResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -36,10 +36,11 @@ public class AddSmsTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The code of the message template.</p>
+     * <p>The SMS template code.</p>
+     * <p>After submitting the template application, you can use the SMS template code to query the template review details through the <a href="https://help.aliyun.com/document_detail/419289.html">QuerySmsTemplate</a> operation. You can also <a href="https://help.aliyun.com/document_detail/101508.html">configure receipt messages</a> and obtain the template review status messages through <a href="https://help.aliyun.com/document_detail/120999.html">TemplateSmsReport</a>.</p>
      * 
      * <strong>example:</strong>
-     * <p>SMS_15255****</p>
+     * <p>SMS_46817****</p>
      */
     @NameInMap("TemplateCode")
     public String templateCode;

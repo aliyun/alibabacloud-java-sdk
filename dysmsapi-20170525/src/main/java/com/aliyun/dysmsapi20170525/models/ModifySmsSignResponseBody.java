@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifySmsSignResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>请求状态码。</p>
      * <ul>
-     * <li>The value OK indicates that the request was successful.</li>
-     * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/101346.html">API error codes</a>.</li>
+     * <li>返回OK代表请求成功。</li>
+     * <li>其他错误码，请参见<a href="https://help.aliyun.com/document_detail/101346.html">API错误码</a>。</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ModifySmsSignResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned message.</p>
+     * <p>状态码的描述。</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -27,7 +27,7 @@ public class ModifySmsSignResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>请求ID。</p>
      * 
      * <strong>example:</strong>
      * <p>F655A8D5-B967-440B-8683-DAD6FF8DE990</p>
@@ -36,10 +36,10 @@ public class ModifySmsSignResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The signature.</p>
+     * <p>签名名称。</p>
      * 
      * <strong>example:</strong>
-     * <p>Aliyun</p>
+     * <p>阿里云</p>
      */
     @NameInMap("SignName")
     public String signName;

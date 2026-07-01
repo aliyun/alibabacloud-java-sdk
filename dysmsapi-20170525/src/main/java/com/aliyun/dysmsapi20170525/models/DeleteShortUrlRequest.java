@@ -14,7 +14,11 @@ public class DeleteShortUrlRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The source address. The address can be up to 1,000 characters in length.</p>
+     * <p>The source URL. The URL must not exceed 1,000 characters.</p>
+     * <blockquote>
+     * <p>Notice: </p>
+     * </blockquote>
+     * <p>Short Message Service does not currently support this API operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

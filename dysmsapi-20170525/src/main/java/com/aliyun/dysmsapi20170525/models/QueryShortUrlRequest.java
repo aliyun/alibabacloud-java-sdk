@@ -14,7 +14,11 @@ public class QueryShortUrlRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The short URL. You can query the short URL by calling the <a href="https://help.aliyun.com/document_detail/186774.html">AddShortUrl</a> operation.</p>
+     * <p>The short link to query. Obtain this URL by calling the <a href="https://help.aliyun.com/document_detail/186774.html">AddShortUrl</a> API.</p>
+     * <blockquote>
+     * <p>Notice: </p>
+     * </blockquote>
+     * <p>This API is not currently supported by Short Message Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

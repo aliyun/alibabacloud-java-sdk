@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class SendBatchSmsRequest extends TeaModel {
     /**
-     * <p>The extension field of the external record. The value is a string that contains no more than 256 characters.</p>
+     * <p>An external business ID. It must be a string of fewer than 256 characters.</p>
      * <blockquote>
-     * <p>The parameter is optional.</p>
+     * <p>You can leave this parameter empty if you have no special requirements.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -20,13 +20,15 @@ public class SendBatchSmsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The mobile number of the recipient. Format:</p>
+     * <p>The recipient phone numbers. Format:</p>
      * <ul>
-     * <li>Message delivery to the Chinese mainland: +/+86/0086/86 or an 11-digit mobile number without a prefix. Example: 1590000\<em>\</em>\<em>\</em>.</li>
-     * <li>Message delivery to countries or regions outside the Chinese mainland: Dialing code + Mobile number. Example: 852000012\<em>\</em>\<em>\</em>.</li>
+     * <li><p>For domestic SMS: Phone numbers with or without a country code such as <code>+</code>, <code>+86</code>, <code>0086</code>, or <code>86</code>. Example: <code>1590000****</code>.</p>
+     * </li>
+     * <li><p>For international SMS: The country code followed by the phone number. Example: <code>852000012****</code>.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>We recommend that you call the SendSms operation to send verification codes.</p>
+     * <p>For time-sensitive messages like verification codes, use the <a href="https://help.aliyun.com/document_detail/419273.html">SendSms</a> operation to send messages individually.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -43,23 +45,25 @@ public class SendBatchSmsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The signature.</p>
-     * <p>Log on to the Alibaba Cloud SMS console. In the left-side navigation pane, click <strong>Go Globe</strong> or <strong>Go China</strong>. You can view the signature in the <strong>Signature</strong> column on the <strong>Signatures</strong> tab.</p>
+     * <p>The signature names. The number of signatures must match the number of phone numbers.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/419282.html">QuerySmsSignList</a> operation or check the <a href="https://dysms.console.aliyun.com/domestic/text/sign">Short Message Service console</a> to find approved signatures. You must use an approved signature.</p>
      * <blockquote>
-     * <p>The signatures must be approved and correspond to the mobile numbers in sequence.</p>
+     * <ul>
+     * <li>The system uses the selected signature to send SMS messages.</li>
+     * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>[&quot;Aliyun&quot;,&quot;Alibaba&quot;]</p>
+     * <p>[&quot;阿里云&quot;,&quot;阿里巴巴&quot;]</p>
      */
     @NameInMap("SignNameJson")
     public String signNameJson;
 
     /**
-     * <p>The extension code of the MO message. Format: JSON array.</p>
+     * <p>A JSON array of MO SMS extension codes.</p>
      * <blockquote>
-     * <p>The parameter is optional.</p>
+     * <p>You can leave this parameter empty if you have no special requirements.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -69,11 +73,8 @@ public class SendBatchSmsRequest extends TeaModel {
     public String smsUpExtendCodeJson;
 
     /**
-     * <p>The code of the message template.</p>
-     * <p>Log on to the Alibaba Cloud SMS console. In the left-side navigation pane, click <strong>Go Globe</strong> or <strong>Go China</strong>. You can view the message template in the <strong>Template Code</strong> column on the <strong>Message Templates</strong> tab.</p>
-     * <blockquote>
-     * <p>The message templates must be created on the Go Globe page and approved.</p>
-     * </blockquote>
+     * <p>The message template code. You cannot use templates for domestic SMS and international SMS interchangeably.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/419288.html">QuerySmsTemplateList</a> operation or check the <a href="https://dysms.console.aliyun.com/domestic/text/template">Short Message Service console</a> to find approved template codes. You must use an approved template code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -83,9 +84,14 @@ public class SendBatchSmsRequest extends TeaModel {
     public String templateCode;
 
     /**
-     * <p>The value of the variable in the message template.</p>
+     * <p>The actual values for the template variables. This parameter is required if the template contains variables.</p>
      * <blockquote>
-     * <p>If you need to add line breaks to the JSON template, make sure that the format is valid. In addition, the sequence of variable values must be the same as that of the mobile numbers and signatures.</p>
+     * <ul>
+     * <li><p>The number of template variable sets must match the number of phone numbers and signatures. The elements in the PhoneNumberJson, SignNameJson, and TemplateParamJson arrays must correspond by index to ensure each message is sent with the correct signature and variable values.</p>
+     * </li>
+     * <li><p>If you need to include a line break in the JSON string, follow the standard JSON format.</p>
+     * </li>
+     * </ul>
      * </blockquote>
      * 
      * <strong>example:</strong>

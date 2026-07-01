@@ -4,10 +4,22 @@ package com.aliyun.dysmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class CreateSmsTrademarkResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
+     * <p>The status code of the request.</p>
+     * <ul>
+     * <li>If OK is returned, the request was successful.</li>
+     * <li>For other error codes, see the error code list in this topic or <a href="https://help.aliyun.com/document_detail/101346.html">API error codes</a>.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -15,6 +27,8 @@ public class CreateSmsTrademarkResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The trademark ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>10000*******</p>
      */
@@ -22,6 +36,8 @@ public class CreateSmsTrademarkResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -29,6 +45,8 @@ public class CreateSmsTrademarkResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F655A8D5-B967-440B-8683-DAD6FF8DE990</p>
      */
@@ -36,6 +54,14 @@ public class CreateSmsTrademarkResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The call was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The call failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -8,7 +8,7 @@ public class TagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The name of the cloud service. Set the value to <strong>dysms</strong>.</p>
+     * <p>The product name. Default value: <strong>dysms</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>dysms</p>
@@ -17,7 +17,7 @@ public class TagResourcesRequest extends TeaModel {
     public String prodCode;
 
     /**
-     * <p>The region ID. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>The region ID. Default value: <strong>cn-hangzhou</strong>. For more region IDs, see <a href="https://help.aliyun.com/document_detail/419270.html">Endpoints</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class TagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The code of the message template.</p>
+     * <p>The SMS template codes. The number of codes cannot exceed 20.</p>
      * 
      * <strong>example:</strong>
      * <p>SMS_23423423</p>
@@ -42,7 +42,7 @@ public class TagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the resource. Set the value to <strong>TEMPLATE</strong>.</p>
+     * <p>The resource type. Default value: <strong>TEMPLATE</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tag.</p>
+     * <p>The tags. You can add up to 20 tags at a time.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
@@ -129,7 +129,7 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The array of tag keys. Valid values of N: 1 to 20.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -138,7 +138,7 @@ public class TagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The array of tag values. Valid values of N: 1 to 20.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

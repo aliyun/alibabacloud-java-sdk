@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetSmsOcrOssInfoResponseBody extends TeaModel {
     /**
+     * <p>访问被拒绝详细信息，只有 RAM 校验失败才会返回此字段。</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
@@ -12,6 +14,14 @@ public class GetSmsOcrOssInfoResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>请求状态码。</p>
+     * <ul>
+     * <li><p>返回 OK 代表请求成功。</p>
+     * </li>
+     * <li><p>其他错误码，请参见 <a href="https://www.alibabacloud.com/help/en/sms/developer-reference/api-error-codes">API 错误码</a>。</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -19,16 +29,23 @@ public class GetSmsOcrOssInfoResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>状态码的描述。</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>OSS配置信息。</p>
+     */
     @NameInMap("Model")
     public GetSmsOcrOssInfoResponseBodyModel model;
 
     /**
+     * <p>本次调用请求的 ID，是由阿里云为该请求生成的唯一标识符，可用于排查和定位问题。</p>
+     * 
      * <strong>example:</strong>
      * <p>25D5AFDE-xxxx-132E-8909-1FDC071DA</p>
      */
@@ -36,6 +53,14 @@ public class GetSmsOcrOssInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>调用接口是否成功。取值：</p>
+     * <ul>
+     * <li><p>true：调用成功。</p>
+     * </li>
+     * <li><p>false：调用失败。</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +122,8 @@ public class GetSmsOcrOssInfoResponseBody extends TeaModel {
 
     public static class GetSmsOcrOssInfoResponseBodyModel extends TeaModel {
         /**
+         * <p>签名使用的 AccessKey ID。</p>
+         * 
          * <strong>example:</strong>
          * <p>bypFNbG******</p>
          */
@@ -104,13 +131,17 @@ public class GetSmsOcrOssInfoResponseBody extends TeaModel {
         public String accessKeyId;
 
         /**
+         * <p>bucket名称。</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>示例值</p>
          */
         @NameInMap("Bucket")
         public String bucket;
 
         /**
+         * <p>过期时间戳，单位：秒。</p>
+         * 
          * <strong>example:</strong>
          * <p>1741521339</p>
          */
@@ -118,6 +149,8 @@ public class GetSmsOcrOssInfoResponseBody extends TeaModel {
         public String expireTime;
 
         /**
+         * <p>Host 地址。</p>
+         * 
          * <strong>example:</strong>
          * <p>http://***.oss-cn-zhangjiakou.aliyuncs.com</p>
          */
@@ -125,6 +158,8 @@ public class GetSmsOcrOssInfoResponseBody extends TeaModel {
         public String host;
 
         /**
+         * <p>签名策略。</p>
+         * 
          * <strong>example:</strong>
          * <p>eyJleHBpcmF0aW9uIjoiMjAyNS0wMy0wOVQxMTo1NTozOS4wMDFaIiwiY29uZGl0aW9ucyI6W1siY29udGVudC1sZW5ndGgtcmFuZ2UiLDAsMTA0ODU3NjAwMF0seyJidWNrZXQiOiJhbGljb20tZmMtbWVkaWEifSxbImVxIiwiJGtleSIsIjEwMDAwMDM1ODA4MjA2M1wv********</p>
          */
@@ -132,6 +167,8 @@ public class GetSmsOcrOssInfoResponseBody extends TeaModel {
         public String policy;
 
         /**
+         * <p>根据 AccessKey Secret 和 Policy 计算出的签名信息。调用 OSS API 时，OSS 验证该签名信息，从而确认请求的合法性。</p>
+         * 
          * <strong>example:</strong>
          * <p>QvNTGC9DSLTeByP+ZWW******</p>
          */
@@ -139,6 +176,8 @@ public class GetSmsOcrOssInfoResponseBody extends TeaModel {
         public String signature;
 
         /**
+         * <p>策略路径。</p>
+         * 
          * <strong>example:</strong>
          * <p>1000********001</p>
          */

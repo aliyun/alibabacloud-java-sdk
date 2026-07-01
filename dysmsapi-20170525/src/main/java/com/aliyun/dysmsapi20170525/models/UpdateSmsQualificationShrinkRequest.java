@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateSmsQualificationShrinkRequest extends TeaModel {
     /**
-     * <p>经办人身份证有效期，格式示例2023-01-01~2033-01-01</p>
+     * <p>Validity period of the administrator ID card. Format: YYYY-MM-DD~YYYY-MM-DD.</p>
+     * <blockquote>
+     * <p>When the certificate validity period is long-term, the end date can be set to 2099-12-31.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>2023-01-01~2033-01-01</p>
@@ -14,7 +17,11 @@ public class UpdateSmsQualificationShrinkRequest extends TeaModel {
     public String adminIDCardExpDate;
 
     /**
-     * <p>经办人身份证照片国徽面</p>
+     * <p>Photo of the front of the administrator\&quot;s ID card (national emblem side). Only jpg, png, gif, and jpeg image formats are supported, and the image must not exceed 5 MB. Please provide the path of the file uploaded to OSS. The file name to be uploaded must not contain Chinese characters or special characters. For upload operations, see <a href="https://help.aliyun.com/document_detail/2833114.html">Upload Files via OSS</a>.</p>
+     * <blockquote>
+     * <p>Notice: 
+     * No stamp is required for color originals of the certificate. If you upload a photocopy or black-and-white photo, you must affix the enterprise red seal to the photocopy and take a photo to upload.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>123456/111.png</p>
@@ -23,7 +30,7 @@ public class UpdateSmsQualificationShrinkRequest extends TeaModel {
     public String adminIDCardFrontFace;
 
     /**
-     * <p>经办人身份证号码</p>
+     * <p>Administrator\&quot;s ID number.</p>
      * 
      * <strong>example:</strong>
      * <p>511391********5123</p>
@@ -32,7 +39,11 @@ public class UpdateSmsQualificationShrinkRequest extends TeaModel {
     public String adminIDCardNo;
 
     /**
-     * <p>经办人身份证照片人像面</p>
+     * <p>Photo of the back of the administrator\&quot;s ID card (portrait side). Only jpg, png, gif, and jpeg image formats are supported, and the image must not exceed 5 MB. Please provide the path of the file uploaded to OSS. The file name to be uploaded must not contain Chinese characters or special characters. For upload operations, see <a href="https://help.aliyun.com/document_detail/2833114.html">Upload Files via OSS</a>.</p>
+     * <blockquote>
+     * <p>Notice: 
+     *  No stamp is required for color originals of the certificate. If you upload a photocopy or black-and-white photo, you must affix the enterprise red seal to the photocopy and take a photo to upload.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>123456/111.png</p>
@@ -41,7 +52,15 @@ public class UpdateSmsQualificationShrinkRequest extends TeaModel {
     public String adminIDCardPic;
 
     /**
-     * <p>管理员身份证类型。identityCard:中国居民身份证;passport:护照;homeReturnPermit:港澳居民来往内地通行证;TaiwanCompatriotPermit:台湾居民来往大陆通行证;residencePermit:港澳台居民居住证&quot;;other:其他</p>
+     * <p>Administrator ID card type. Valid values:</p>
+     * <ul>
+     * <li>identityCard: ID card.</li>
+     * <li>passport: Passport.</li>
+     * <li>homeReturnPermit: Mainland Travel Permit for Hong Kong and Macao Residents.</li>
+     * <li>TaiwanCompatriotPermit: Mainland Travel Permit for Taiwan Residents.</li>
+     * <li>residencePermit: Residence Permit for Hong Kong, Macao, and Taiwan Residents.</li>
+     * <li>other: Other.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>identityCard</p>
@@ -50,16 +69,19 @@ public class UpdateSmsQualificationShrinkRequest extends TeaModel {
     public String adminIDCardType;
 
     /**
-     * <p>经办人姓名</p>
+     * <p>Administrator name.</p>
+     * <blockquote>
+     * <p>The administrator (also known as the operator) refers to the person who logs in to the Alibaba Cloud account and manages the SMS service. Generally, this is the operations personnel who manages qualifications, signatures, and templates and sends SMS messages under this Alibaba Cloud account, and whose phone number can receive verification codes. The administrator is not necessarily the administrator of this Alibaba Cloud account. The administrator can be the same person as the enterprise\&quot;s legal representative.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>李华</p>
      */
     @NameInMap("AdminName")
     public String adminName;
 
     /**
-     * <p>经办人手机号码</p>
+     * <p>Administrator\&quot;s mobile phone number. Format: +/+86/0086/86 prefix or a phone number without any prefix, for example, 1390000****.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,13 +91,16 @@ public class UpdateSmsQualificationShrinkRequest extends TeaModel {
     public String adminPhoneNo;
 
     /**
-     * <p>企业证件信息</p>
+     * <p>Enterprise business license information. This parameter is required when the purpose of the qualification to be modified is for use by others.</p>
      */
     @NameInMap("BusinessLicensePics")
     public String businessLicensePicsShrink;
 
     /**
-     * <p>企业营业时间开始和结束字符串，格式示例2023-01-01~2033-01-01</p>
+     * <p>Validity period of the business license. Format: YYYY-MM-DD~YYYY-MM-DD.</p>
+     * <blockquote>
+     * <p>When the certificate validity period is long-term, the end date can be set to 2099-12-31.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>2023-01-01~2033-01-01</p>
@@ -84,7 +109,10 @@ public class UpdateSmsQualificationShrinkRequest extends TeaModel {
     public String bussinessLicenseExpDate;
 
     /**
-     * <p>手机号验证码</p>
+     * <p>Phone verification code. Please call the <a href="~~RequiredPhoneCode~~">RequiredPhoneCode</a> API and pass in the <strong>administrator\&quot;s phone number</strong>, then enter the SMS verification code you receive here.</p>
+     * <blockquote>
+     * <p>You can use <a href="~~ValidPhoneCode~~">ValidPhoneCode</a> to verify whether the SMS verification code is correct before passing it in.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -94,16 +122,16 @@ public class UpdateSmsQualificationShrinkRequest extends TeaModel {
     public String certifyCode;
 
     /**
-     * <p>公司名称</p>
+     * <p>Enterprise name. Supported symbols are only the middle dot <code>·</code>, the Chinese symbols <code>【】（）</code>, the English symbols <code>()</code>, and the <code>space</code>. Other symbols or pure numbers are not allowed. The length must not exceed 150 characters.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>阿里云云通信有限公司</p>
      */
     @NameInMap("CompanyName")
     public String companyName;
 
     /**
-     * <p>法人身份证号码</p>
+     * <p>Legal person\&quot;s ID number.</p>
      * 
      * <strong>example:</strong>
      * <p>511391********5123</p>
@@ -112,7 +140,15 @@ public class UpdateSmsQualificationShrinkRequest extends TeaModel {
     public String legalPersonIDCardNo;
 
     /**
-     * <p>法人身份证类型。identityCard:中国居民身份证;passport:护照;homeReturnPermit:港澳居民来往内地通行证;TaiwanCompatriotPermit:台湾居民来往大陆通行证;residencePermit:港澳台居民居住证&quot;;other:其他</p>
+     * <p>Legal person ID card type. Valid values:</p>
+     * <ul>
+     * <li>identityCard: ID card.</li>
+     * <li>passport: Passport.</li>
+     * <li>homeReturnPermit: Mainland Travel Permit for Hong Kong and Macao Residents.</li>
+     * <li>TaiwanCompatriotPermit: Mainland Travel Permit for Taiwan Residents.</li>
+     * <li>residencePermit: Residence Permit for Hong Kong, Macao, and Taiwan Residents.</li>
+     * <li>other: Other.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>identityCard</p>
@@ -121,7 +157,10 @@ public class UpdateSmsQualificationShrinkRequest extends TeaModel {
     public String legalPersonIDCardType;
 
     /**
-     * <p>法人身份证照片人像面</p>
+     * <p>Photo of the back of the legal representative\&quot;s ID card (portrait side). Only jpg, png, gif, and jpeg image formats are supported, and the image must not exceed 5 MB. Please provide the path of the file uploaded to OSS. The file name to be uploaded must not contain Chinese characters or special characters. For upload operations, see <a href="https://help.aliyun.com/document_detail/2833114.html">Upload Files via OSS</a>.</p>
+     * <blockquote>
+     * <p>The system will use the legal person name and ID number you provide for verification. If the verification fails, you need to upload a photo of the legal representative\&quot;s ID card.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>123456/111.png</p>
@@ -130,7 +169,10 @@ public class UpdateSmsQualificationShrinkRequest extends TeaModel {
     public String legalPersonIdCardBackSide;
 
     /**
-     * <p>法人身份证有效期，格式示例2023-01-01~2033-01-01</p>
+     * <p>Validity period of the legal person ID card. Format: YYYY-MM-DD~YYYY-MM-DD.</p>
+     * <blockquote>
+     * <p>When the certificate validity period is long-term, the end date can be set to 2099-12-31.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>2023-01-01~2033-01-01</p>
@@ -139,7 +181,10 @@ public class UpdateSmsQualificationShrinkRequest extends TeaModel {
     public String legalPersonIdCardEffTime;
 
     /**
-     * <p>法人身份照片证国徽面</p>
+     * <p>Photo of the front of the legal representative\&quot;s ID card (national emblem side). Only jpg, png, gif, and jpeg image formats are supported, and the image must not exceed 5 MB. Please provide the path of the file uploaded to OSS. The file name to be uploaded must not contain Chinese characters or special characters. For upload operations, see <a href="https://help.aliyun.com/document_detail/2833114.html">Upload Files via OSS</a>.</p>
+     * <blockquote>
+     * <p>The system will use the legal person name and ID number you provide for verification. If the verification fails, you need to upload a photo of the legal representative\&quot;s ID card.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>123456/111.png</p>
@@ -148,16 +193,22 @@ public class UpdateSmsQualificationShrinkRequest extends TeaModel {
     public String legalPersonIdCardFrontSide;
 
     /**
-     * <p>法人姓名</p>
+     * <p>Name of the legal representative.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If there is no legal representative information on the organization\&quot;s certificate, but there is information about a person in charge / chief representative or similar, please prepare the ID card photo of the corresponding person in charge or chief representative listed on the certificate.</li>
+     * <li>If there is no legal representative information on the organization\&quot;s certificate, and there is no information about any person in charge, please prepare the name and ID card photo of the main business contact person.</li>
+     * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>李华</p>
      */
     @NameInMap("LegalPersonName")
     public String legalPersonName;
 
     /**
-     * <p>工单ID</p>
+     * <p>The review order ID. You can obtain the qualifications and their corresponding review order IDs under the current account by calling <a href="~~QuerySmsQualificationRecord~~">Query Qualification List</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -167,7 +218,7 @@ public class UpdateSmsQualificationShrinkRequest extends TeaModel {
     public Long orderId;
 
     /**
-     * <p>更多资料</p>
+     * <p>Additional materials. If you have other supporting or supplementary materials, photos, etc., you can upload them here.</p>
      */
     @NameInMap("OtherFiles")
     public String otherFilesShrink;
@@ -176,7 +227,7 @@ public class UpdateSmsQualificationShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>资质组ID</p>
+     * <p>The qualification ID, that is, the ID returned when you <a href="~~SubmitSmsQualification~~">apply for SMS qualification</a>. You can obtain the qualification IDs under the current account by calling <a href="~~QuerySmsQualificationRecord~~">Query Qualification List</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

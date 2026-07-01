@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QuerySmsAppIcpRecordRequest extends TeaModel {
     /**
-     * <p>app-icp备案实体id列表</p>
+     * <p>A list of icp record entity IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AppIcpRecordIdList")

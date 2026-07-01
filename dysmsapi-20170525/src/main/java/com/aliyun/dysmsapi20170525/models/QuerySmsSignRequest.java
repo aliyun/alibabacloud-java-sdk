@@ -14,11 +14,11 @@ public class QuerySmsSignRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The signature.</p>
+     * <p>The name of an existing SMS signature in your account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Aliyun</p>
+     * <p>阿里云</p>
      */
     @NameInMap("SignName")
     public String signName;

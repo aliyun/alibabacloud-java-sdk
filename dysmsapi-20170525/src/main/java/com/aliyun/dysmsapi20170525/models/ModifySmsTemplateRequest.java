@@ -8,11 +8,19 @@ public class ModifySmsTemplateRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The description of the message template. It is one of the reference information for template review. The description cannot exceed 100 characters in length.</p>
+     * <p>The description of the SMS template application. The description cannot exceed 100 characters in length.</p>
+     * <p>This information helps reviewers understand your business scenarios and improves review efficiency. Guidelines:</p>
+     * <ul>
+     * <li>Provide the use case of your live business.</li>
+     * <li>Provide SMS examples for real scenarios to reflect your business scenarios.</li>
+     * <li>Provide variable values and describe in detail the business use case and the reason for choosing the variable attributes.</li>
+     * <li>Provide the website URL, registered domain name, or application marketplace download link of the actual business.</li>
+     * <li>For logon scenarios, provide the test account and password.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Modify the parameters of the template.</p>
+     * <p>手机注册登录</p>
      */
     @NameInMap("Remark")
     public String remark;
@@ -24,8 +32,11 @@ public class ModifySmsTemplateRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The code of the message template.</p>
-     * <p>You can log on to the <a href="https://dysms.console.aliyun.com/dysms.htm">Short Message Service (SMS) console</a>, click <strong>Go China</strong> or <strong>Go Globe</strong> in the left-side navigation pane, and then view the template code on the <strong>Templates</strong> tab. You can also call the <a href="https://help.aliyun.com/document_detail/121208.html">AddSmsTemplate</a> operation to obtain the template code.</p>
+     * <p>The code of the SMS template that failed the review.</p>
+     * <ul>
+     * <li>Call the <a href="https://help.aliyun.com/document_detail/419288.html">QuerySmsTemplateList</a> operation to obtain the code of the SMS template that failed the review.</li>
+     * <li>View the code of the SMS template that failed the review on the <a href="https://dysms.console.aliyun.com/domestic/text/template">Templates</a> page.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,40 +46,38 @@ public class ModifySmsTemplateRequest extends TeaModel {
     public String templateCode;
 
     /**
-     * <p>The content of the template. The content must be 1 to 500 characters in length.</p>
-     * <blockquote>
-     * <p>When you modify a template, design the template content based on the review comments.</p>
-     * </blockquote>
+     * <p>The template content. The content cannot exceed 500 characters in length.</p>
+     * <p>The template content and variable content must comply with the <a href="https://help.aliyun.com/document_detail/463161.html">SMS template specifications</a>. Otherwise, the template fails the review. You can view common template examples on the <a href="https://dysms.console.aliyun.com/domestic/text/template/add">Apply for Template</a> page. Using sample templates can improve review efficiency and success rate. For variable specifications, see <a href="https://help.aliyun.com/document_detail/2806243.html">TemplateContent variable specifications</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>You are applying for mobile registration. The verification code is: ${code}, valid for 5 minutes!</p>
+     * <p>您正在申请手机注册，验证码为：${code}，5分钟内有效！</p>
      */
     @NameInMap("TemplateContent")
     public String templateContent;
 
     /**
-     * <p>The name of the template. The name must be 1 to 30 characters in length.</p>
+     * <p>The template name. The name must be 1 to 30 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>aliyun verification code</p>
+     * <p>验证码模板</p>
      */
     @NameInMap("TemplateName")
     public String templateName;
 
     /**
-     * <p>The type of the message. Valid values:</p>
+     * <p>The SMS type. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: verification code</li>
-     * <li><strong>1</strong>: text message</li>
-     * <li><strong>2</strong>: promotional message</li>
-     * <li><strong>3</strong>: message sent to countries or regions outside the Chinese mainland</li>
+     * <li><strong>0</strong>: verification code.</li>
+     * <li><strong>1</strong>: SMS notification.</li>
+     * <li><strong>2</strong>: promotional message.</li>
+     * <li><strong>3</strong>: international or Hong Kong, Macao, and Taiwan message.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>0</p>
      */
     @NameInMap("TemplateType")
     public Integer templateType;

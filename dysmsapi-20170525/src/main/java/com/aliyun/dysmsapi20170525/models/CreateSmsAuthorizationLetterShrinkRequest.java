@@ -5,17 +5,20 @@ import com.aliyun.tea.*;
 
 public class CreateSmsAuthorizationLetterShrinkRequest extends TeaModel {
     /**
-     * <p>授权方，授权方命名长度不超过1000个字符，暂不支持包含除中点（·）、空格、中文括号【】、英文括号()外的任何符号或纯数字输入</p>
+     * <p>The authorizing party, that is, the owner of the signature. Only the middle dot <code>·</code>, Chinese <code>【】（）</code>, English <code>()</code>, and spaces are supported. Other symbols or purely numeric input are not allowed. The length cannot exceed 150 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>阿里云有限公司</p>
+     * <p>菜鸟网络科技有限公司</p>
      */
     @NameInMap("Authorization")
     public String authorization;
 
     /**
-     * <p>委托授权书有效期</p>
+     * <p>The validity period of the authorization letter. Format: <code>YYYY-MM-DD~YYYY-MM-DD</code>.</p>
+     * <blockquote>
+     * <p>The recommended validity period is 1 to 3 years. Set a reasonable time period and avoid making the validity period too long or too short.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,24 +28,37 @@ public class CreateSmsAuthorizationLetterShrinkRequest extends TeaModel {
     public String authorizationLetterExpDate;
 
     /**
-     * <p>委托授权书命名非空，不超过100个字符，支持中文、英文或与数字组合进行命名，暂不支持任何符号或纯数字输入</p>
+     * <p>The name of the authorization letter. The name cannot be the same as any of your other authorization letters. Only Chinese characters, English characters, or a combination with numbers are supported. Symbols or purely numeric input are not allowed. The length cannot exceed 100 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxx公司授权书</p>
+     * <p>菜鸟公司授权书</p>
      */
     @NameInMap("AuthorizationLetterName")
     public String authorizationLetterName;
 
     /**
-     * <p>上传oss的委托授权书图片标识</p>
+     * <p>The fileKey of the authorization letter.</p>
+     * <ol>
+     * <li>The authorization letter file uploaded to OSS. Download the <a href="https://help-static-aliyun-doc.aliyuncs.com/file-manage-files/zh-CN/20250414/bvpcmo/%E6%8E%88%E6%9D%83%E5%A7%94%E6%89%98%E4%B9%A6%E6%A8%A1%E7%89%88.doc">Authorization Letter Template</a>, then fill it out and stamp it according to the <a href="https://help.aliyun.com/document_detail/56741.html">specifications</a> before uploading. File upload requirements:</li>
+     * </ol>
+     * <ul>
+     * <li>The name of the file to be uploaded cannot contain Chinese characters or special characters.</li>
+     * <li>Only images in JPG, PNG, GIF, or JPEG format are supported, and the image must not exceed 5 MB.</li>
+     * </ul>
+     * <ol start="2">
+     * <li>To obtain the fileKey, see <a href="https://help.aliyun.com/document_detail/2833114.html">Upload files through OSS</a>.</li>
+     * </ol>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456/test1719383196031.jpg</p>
      */
     @NameInMap("AuthorizationLetterPic")
     public String authorizationLetterPic;
 
     /**
-     * <p>授权方社会统一信用代码，长度不超过150个字符</p>
+     * <p>The unified social credit code of the authorizing party. The length cannot exceed 150 characters. The credit code must be consistent with the unified social credit code field in the qualification information bound to the signature. Otherwise, the signature creation will fail.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,11 +71,11 @@ public class CreateSmsAuthorizationLetterShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>被授权方，被授权方命名长度不超过1000个字符，暂不支持包含除中点（·）、空格、中文括号【】、英文括号()外的任何符号或纯数字输入</p>
+     * <p>The authorized party, that is, the signature applicant. Only the middle dot <code>·</code>, Chinese <code>【】（）</code>, English <code>()</code>, and spaces are supported. Other symbols or purely numeric input are not allowed. The length cannot exceed 150 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxx公司</p>
+     * <p>支付宝（中国）网络技术有限公司</p>
      */
     @NameInMap("ProxyAuthorization")
     public String proxyAuthorization;
@@ -71,7 +87,10 @@ public class CreateSmsAuthorizationLetterShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>委托授权签名列表，签名数量限制100个以内</p>
+     * <p>The list of authorized signatures. The number of signatures cannot exceed 100.</p>
+     * <blockquote>
+     * <p>We recommend that you authorize all signatures that may be used at once in the authorization letter. This prevents subsequent signature applications from falling outside the scope of the authorization letter, which would cause review failure and require you to supplement the authorization letter.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SignList")

@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class QueryCardSmsTemplateReportResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The request status code.</p>
      * <ul>
-     * <li>The value OK indicates that the request was successful.</li>
-     * <li>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</li>
+     * <li><p>The value OK indicates that the request was successful.</p>
+     * </li>
+     * <li><p>For information about other error codes, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class QueryCardSmsTemplateReportResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public QueryCardSmsTemplateReportResponseBodyData data;
@@ -27,16 +29,18 @@ public class QueryCardSmsTemplateReportResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>CC89A90C-978F-46AC-B80D-54738371E7CA</p>
+     * <p>B71F06CA-7735-183A-B52E-234EF8AFE14B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the API call was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: The call was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The call failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,7 +88,7 @@ public class QueryCardSmsTemplateReportResponseBody extends TeaModel {
 
     public static class QueryCardSmsTemplateReportResponseBodyData extends TeaModel {
         /**
-         * <p>The details of the data returned.</p>
+         * <p>The list of returned data.</p>
          */
         @NameInMap("model")
         public java.util.List<java.util.Map<String, ?>> model;

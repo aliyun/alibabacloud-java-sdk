@@ -5,16 +5,17 @@ import com.aliyun.tea.*;
 
 public class CheckMobilesCardSupportRequest extends TeaModel {
     /**
-     * <p>The list of mobile phone numbers that receive messages.</p>
+     * <p>The list of phone numbers to be queried.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Mobiles")
     public java.util.List<java.util.Map<String, ?>> mobiles;
 
     /**
-     * <p>The code of the message template. You can view the template code in the <strong>Template Code</strong> column on the <strong>Templates</strong> tab of the <strong>Go China</strong> page in the Alibaba Cloud SMS console.</p>
+     * <p>The code of the card SMS template.
+     * Log on to the SMS Service console and go to the <a href="https://dysms.console.aliyun.com/domestic/card">Domestic Card SMS</a> page. On the <strong>Template Management</strong> tab, you can view the list of card SMS templates.</p>
      * <blockquote>
-     * <p>Make sure that the message template has been approved.</p>
+     * <p>The template must be added and approved.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

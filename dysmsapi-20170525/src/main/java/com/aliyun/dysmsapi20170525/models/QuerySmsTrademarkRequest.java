@@ -14,7 +14,7 @@ public class QuerySmsTrademarkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>商标实体id列表</p>
+     * <p>A list of trademark IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TrademarkIdList")

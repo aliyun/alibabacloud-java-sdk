@@ -14,14 +14,15 @@ public class DeleteSmsSignRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The signature.</p>
+     * <p>The SMS signature. You can delete signatures that are in the Withdrawn, Failed, or Approved state. You cannot delete signatures that are in the Pending Approval state.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/419282.html">QuerySmsSignList</a> operation to query the signatures that have been applied for under the current account, or view the signature list on the <a href="https://dysms.console.aliyun.com/domestic/text/sign">Signature Management</a> page in the SMS console.</p>
      * <blockquote>
-     * <p>The signature must be submitted by the current Alibaba Cloud account, and has been approved.</p>
+     * <p>Notice: Deleted SMS signatures cannot be recovered, and the signature can no longer be used to send SMS messages. Proceed with caution.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Aliyun</p>
+     * <p>阿里云</p>
      */
     @NameInMap("SignName")
     public String signName;

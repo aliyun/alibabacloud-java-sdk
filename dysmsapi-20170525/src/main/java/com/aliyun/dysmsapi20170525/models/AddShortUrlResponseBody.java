@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class AddShortUrlResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The status code of the request.</p>
      * <ul>
-     * <li>The value OK indicates that the request was successful.</li>
-     * <li>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</li>
+     * <li><p>A value of <code>OK</code> indicates that the request was successful.</p>
+     * </li>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/101346.html">Error Code List</a>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,7 +26,7 @@ public class AddShortUrlResponseBody extends TeaModel {
     public AddShortUrlResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message that describes the status.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -80,9 +82,9 @@ public class AddShortUrlResponseBody extends TeaModel {
 
     public static class AddShortUrlResponseBodyData extends TeaModel {
         /**
-         * <p>The time when the short URL expires.</p>
+         * <p>The expiration time of the short URL.</p>
          * <blockquote>
-         * <p>The value of <strong>ExpireDate</strong> is on the hour.</p>
+         * <p>The value of <strong>ExpireDate</strong> is always on the hour.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -92,7 +94,7 @@ public class AddShortUrlResponseBody extends TeaModel {
         public String expireDate;
 
         /**
-         * <p>The short URL.</p>
+         * <p>The generated short URL.</p>
          * 
          * <strong>example:</strong>
          * <p>http://****.cn/6y8uy7</p>
@@ -101,7 +103,7 @@ public class AddShortUrlResponseBody extends TeaModel {
         public String shortUrl;
 
         /**
-         * <p>The source URL.</p>
+         * <p>The source URL that was shortened.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://www.****.com/product/sms">https://www.****.com/product/sms</a></p>

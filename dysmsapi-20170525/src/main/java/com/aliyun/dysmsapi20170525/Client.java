@@ -15,7 +15,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-beijing", "dysmsapi-proxy.cn-beijing.aliyuncs.com"),
             new TeaPair("cn-hongkong", "dysmsapi-xman.cn-hongkong.aliyuncs.com"),
             new TeaPair("eu-central-1", "dysmsapi.eu-central-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "dysmsapi.us-east-1.aliyuncs.com")
+            new TeaPair("us-east-1", "dysmsapi.us-east-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "dysmsapi.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "dysmsapi.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "dysmsapi.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "dysmsapi.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "dysmsapi.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "dysmsapi.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "dysmsapi.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "dysmsapi.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "dysmsapi.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "dysmsapi.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "dysmsapi.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("dysmsapi", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -95,11 +106,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建/编辑5G消息固定菜单</p>
+     * 
+     * @param request AddRcsSignMenuRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddRcsSignMenuResponse
+     */
+    public AddRcsSignMenuResponse addRcsSignMenuWithOptions(AddRcsSignMenuRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.menuContent)) {
+            query.put("MenuContent", request.menuContent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.signName)) {
+            query.put("SignName", request.signName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddRcsSignMenu"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddRcsSignMenuResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建/编辑5G消息固定菜单</p>
+     * 
+     * @param request AddRcsSignMenuRequest
+     * @return AddRcsSignMenuResponse
+     */
+    public AddRcsSignMenuResponse addRcsSignMenu(AddRcsSignMenuRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addRcsSignMenuWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
-     * <p>  Before you call this operation, you must register the primary domain name of the source URL in the Short Message Service (SMS) console. After the domain name is registered, you can call this operation to create a short URL. For more information, see <a href="https://help.aliyun.com/document_detail/302325.html#title-mau-zdh-hd0">Domain name registration</a>.</p>
+     * <blockquote>
+     * <p>Notice: 
+     * Short Message Service does not currently support this API operation.</p>
+     * </blockquote>
      * <ul>
-     * <li>You can create up to 3,000 short URLs within a natural day.</li>
-     * <li>After a short URL is generated, a security review is required. Generally, the review takes 10 minutes to 2 hours to complete. Before the security review is passed, the short URL cannot be directly accessed.</li>
+     * <li>You can create up to 3,000 short URLs per calendar day.</li>
+     * <li>After a short URL is generated, it must pass a security review, which typically takes 10 minutes to 2 hours. You cannot access the short URL until it passes this review.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -157,10 +219,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, you must register the primary domain name of the source URL in the Short Message Service (SMS) console. After the domain name is registered, you can call this operation to create a short URL. For more information, see <a href="https://help.aliyun.com/document_detail/302325.html#title-mau-zdh-hd0">Domain name registration</a>.</p>
+     * <blockquote>
+     * <p>Notice: 
+     * Short Message Service does not currently support this API operation.</p>
+     * </blockquote>
      * <ul>
-     * <li>You can create up to 3,000 short URLs within a natural day.</li>
-     * <li>After a short URL is generated, a security review is required. Generally, the review takes 10 minutes to 2 hours to complete. Before the security review is passed, the short URL cannot be directly accessed.</li>
+     * <li>You can create up to 3,000 short URLs per calendar day.</li>
+     * <li>After a short URL is generated, it must pass a security review, which typically takes 10 minutes to 2 hours. You cannot access the short URL until it passes this review.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -176,22 +241,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the AddSmsSign operation or use the <a href="https://dysms.console.aliyun.com/dysms.htm#/overview">Short Message Service (SMS) console</a> to create an SMS signature. The signature must comply with the <a href="https://help.aliyun.com/document_detail/108076.html">SMS signature specifications</a>. You can call the QuerySmsSign operation or use the SMS console to query the review status of the signature.
-     * For more information, see <a href="https://help.aliyun.com/document_detail/55324.html">Usage notes</a>.</p>
-     * <h3>QPS limit</h3>
-     * <p>You can call this operation only once per second. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
-     * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li>You cannot cancel the review of a signature.</li>
-     * <li>Individual users can create only one verification code signature, and can create only one general-purpose signature within a natural day. If you need to apply for multiple signatures, we recommend that you upgrade your account to an enterprise user.</li>
-     * <li>If you need to use the same signature for messages sent to recipients both in and outside the Chinese mainland, the signature must be a general-purpose signature.</li>
-     * <li>If you apply for a signature or message template, you must specify the signature scenario or template type. You must also provide the information of your services, such as a website URL, a domain name with an ICP filing, an application download URL, or the name of your WeChat official account or mini program. For sign-in scenarios, you must also provide an account and password for tests. A detailed description can improve the review efficiency of signatures and templates.</li>
-     * <li>An SMS signature must undergo a thorough review process before it can be approved for use.</li>
+     * <li>In accordance with the regulations of the Ministry of Industry and Information Technology (MIIT) and the <a href="https://help.aliyun.com/document_detail/2806975.html">relevant requirements</a> of carriers, Alibaba Cloud has made functional modifications to signature-related APIs. To improve the review efficiency and approval rate of your signatures, use the new API <a href="https://help.aliyun.com/document_detail/2807427.html">CreateSmsSign - Apply for an SMS signature</a>.</li>
+     * <li>An individual user can apply for one signature per natural day under the same Alibaba Cloud account. Enterprise users have no limit on the number of applications. For details about the differences in rights and interests between individual users and enterprise users, see <a href="https://help.aliyun.com/document_detail/55324.html">Usage notes</a>.</li>
+     * <li>The signature information applied for through the API is synchronized to the SMS console. For operations on signatures in the console, see <a href="https://help.aliyun.com/document_detail/108073.html">SMS signatures</a>.</li>
+     * <li>After you submit a signature application, you can call the <a href="https://help.aliyun.com/document_detail/419283.html">QuerySmsSign</a> API to query the review status and details of the signature. You can also <a href="https://help.aliyun.com/document_detail/101508.html">configure receipt messages</a> and use <a href="https://help.aliyun.com/document_detail/120998.html">SignSmsReport</a> to obtain signature review status messages.</li>
      * </ul>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this API is 1 call per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Call this API at a reasonable rate.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a signature.</p>
+     * <p>This API has been discontinued.</p>
      * 
      * @param request AddSmsSignRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -253,22 +313,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the AddSmsSign operation or use the <a href="https://dysms.console.aliyun.com/dysms.htm#/overview">Short Message Service (SMS) console</a> to create an SMS signature. The signature must comply with the <a href="https://help.aliyun.com/document_detail/108076.html">SMS signature specifications</a>. You can call the QuerySmsSign operation or use the SMS console to query the review status of the signature.
-     * For more information, see <a href="https://help.aliyun.com/document_detail/55324.html">Usage notes</a>.</p>
-     * <h3>QPS limit</h3>
-     * <p>You can call this operation only once per second. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
-     * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li>You cannot cancel the review of a signature.</li>
-     * <li>Individual users can create only one verification code signature, and can create only one general-purpose signature within a natural day. If you need to apply for multiple signatures, we recommend that you upgrade your account to an enterprise user.</li>
-     * <li>If you need to use the same signature for messages sent to recipients both in and outside the Chinese mainland, the signature must be a general-purpose signature.</li>
-     * <li>If you apply for a signature or message template, you must specify the signature scenario or template type. You must also provide the information of your services, such as a website URL, a domain name with an ICP filing, an application download URL, or the name of your WeChat official account or mini program. For sign-in scenarios, you must also provide an account and password for tests. A detailed description can improve the review efficiency of signatures and templates.</li>
-     * <li>An SMS signature must undergo a thorough review process before it can be approved for use.</li>
+     * <li>In accordance with the regulations of the Ministry of Industry and Information Technology (MIIT) and the <a href="https://help.aliyun.com/document_detail/2806975.html">relevant requirements</a> of carriers, Alibaba Cloud has made functional modifications to signature-related APIs. To improve the review efficiency and approval rate of your signatures, use the new API <a href="https://help.aliyun.com/document_detail/2807427.html">CreateSmsSign - Apply for an SMS signature</a>.</li>
+     * <li>An individual user can apply for one signature per natural day under the same Alibaba Cloud account. Enterprise users have no limit on the number of applications. For details about the differences in rights and interests between individual users and enterprise users, see <a href="https://help.aliyun.com/document_detail/55324.html">Usage notes</a>.</li>
+     * <li>The signature information applied for through the API is synchronized to the SMS console. For operations on signatures in the console, see <a href="https://help.aliyun.com/document_detail/108073.html">SMS signatures</a>.</li>
+     * <li>After you submit a signature application, you can call the <a href="https://help.aliyun.com/document_detail/419283.html">QuerySmsSign</a> API to query the review status and details of the signature. You can also <a href="https://help.aliyun.com/document_detail/101508.html">configure receipt messages</a> and use <a href="https://help.aliyun.com/document_detail/120998.html">SignSmsReport</a> to obtain signature review status messages.</li>
      * </ul>
+     * <h3>QPS limit</h3>
+     * <p>The single-user QPS limit for this API is 1 call per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Call this API at a reasonable rate.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a signature.</p>
+     * <p>This API has been discontinued.</p>
      * 
      * @param request AddSmsSignRequest
      * @return AddSmsSignResponse
@@ -280,22 +335,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the operation or use the <a href="https://dysms.console.aliyun.com/dysms.htm#/overview">Alibaba Cloud SMS console</a> to apply for a message template. The template must comply with the <a href="https://help.aliyun.com/document_detail/108253.html">message template specifications</a>. You can call the <a href="https://help.aliyun.com/document_detail/419289.html">QuerySmsTemplate</a> operation or use the Alibaba Cloud SMS console to check whether the message template is approved.</p>
-     * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li>Message templates pending approval can be withdrawn. You can withdraw a message template pending approval on the Message Templates tab in the <a href="https://dysms.console.aliyun.com/dysms.htm#/overview">Alibaba Cloud SMS console</a>.</li>
-     * <li>Message templates that have been approved can be deleted, and cannot be modified. You can delete a message template pending approval on the Message Templates tab in the <a href="https://dysms.console.aliyun.com/dysms.htm#/overview">Alibaba Cloud SMS console</a>.</li>
-     * <li>If you call the AddSmsTemplate operation, you can apply for a maximum of 100 message templates in a calendar day. After you apply for a message template, we recommend that you wait for at least 30 seconds before you apply for another one. If you use the Alibaba Cloud SMS console, you can apply for an unlimited number of message templates.</li>
-     * <li>Messages sent to the Chinese mainland and messages sent to countries or regions outside the Chinese mainland use separate message templates. Create message templates based on your needs.</li>
-     * <li>If you apply for a signature or message template, you must specify the signature scenario or template type. You must also provide the information of your services, such as a website URL, a domain name with an ICP filing, an application download URL, or the name of your WeChat official account or mini program. For sign-in scenarios, you must also provide an account and password for tests. A detailed description can improve the review efficiency of signatures and templates.</li>
-     * <li>A signature must undergo a thorough review process before it can be approved for use. For more information, see <a href="https://help.aliyun.com/document_detail/55324.html">Usage notes</a>.</li>
+     * <li>In accordance with the regulations of the Ministry of Industry and Information Technology and the <a href="https://help.aliyun.com/document_detail/2806975.html">related requirements</a> of carriers, Alibaba Cloud has revamped the functionality of template-related APIs. To improve the review efficiency and approval rate of your templates, please use the new operation <a href="https://help.aliyun.com/document_detail/2807431.html">CreateSmsTemplate - Apply for SMS template</a>.</li>
+     * <li>You can submit a maximum of 100 SMS template applications per natural day via the API. It is recommended that each application be submitted at intervals of at least 30 seconds. There is no limit on the number of submissions when applying for SMS templates through the <a href="https://dysms.console.aliyun.com/domestic/text/template">console</a>.</li>
+     * <li>Template information applied for through the API is synchronized to the SMS service console. For related template operations in the console, see <a href="https://help.aliyun.com/document_detail/108085.html">SMS templates</a>.</li>
+     * <li>After submitting the template application, you can query the template review status and details through the <a href="https://help.aliyun.com/document_detail/419289.html">QuerySmsTemplate</a> operation. You can also <a href="https://help.aliyun.com/document_detail/101508.html">configure receipt messages</a> and obtain the template review status messages through <a href="https://help.aliyun.com/document_detail/120999.html">TemplateSmsReport</a>.</li>
+     * <li>Domestic SMS templates and international/Hong Kong, Macao, and Taiwan SMS templates are not interchangeable (cannot be mixed). Please apply for templates based on your business usage scenarios.</li>
+     * <li>Only enterprise-verified users can apply for promotional SMS and international/Hong Kong, Macao, and Taiwan messages. For details about the differences between individual and enterprise user privileges, see <a href="https://help.aliyun.com/document_detail/55324.html">Usage notes</a>.</li>
      * </ul>
      * <h3>QPS limits</h3>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>The per-user QPS limit for this operation is 1,000 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please call the operation reasonably.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a message template.</p>
+     * <p>An SMS template is the detailed content received by the recipient, including variables and template content. You can apply for verification code, notification, or promotional SMS templates based on your business needs. SMS can only be sent after the template is approved.</p>
      * 
      * @deprecated OpenAPI AddSmsTemplate is deprecated, please use Dysmsapi::2017-05-25::CreateSmsTemplate instead.
      * 
@@ -355,22 +407,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the operation or use the <a href="https://dysms.console.aliyun.com/dysms.htm#/overview">Alibaba Cloud SMS console</a> to apply for a message template. The template must comply with the <a href="https://help.aliyun.com/document_detail/108253.html">message template specifications</a>. You can call the <a href="https://help.aliyun.com/document_detail/419289.html">QuerySmsTemplate</a> operation or use the Alibaba Cloud SMS console to check whether the message template is approved.</p>
-     * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li>Message templates pending approval can be withdrawn. You can withdraw a message template pending approval on the Message Templates tab in the <a href="https://dysms.console.aliyun.com/dysms.htm#/overview">Alibaba Cloud SMS console</a>.</li>
-     * <li>Message templates that have been approved can be deleted, and cannot be modified. You can delete a message template pending approval on the Message Templates tab in the <a href="https://dysms.console.aliyun.com/dysms.htm#/overview">Alibaba Cloud SMS console</a>.</li>
-     * <li>If you call the AddSmsTemplate operation, you can apply for a maximum of 100 message templates in a calendar day. After you apply for a message template, we recommend that you wait for at least 30 seconds before you apply for another one. If you use the Alibaba Cloud SMS console, you can apply for an unlimited number of message templates.</li>
-     * <li>Messages sent to the Chinese mainland and messages sent to countries or regions outside the Chinese mainland use separate message templates. Create message templates based on your needs.</li>
-     * <li>If you apply for a signature or message template, you must specify the signature scenario or template type. You must also provide the information of your services, such as a website URL, a domain name with an ICP filing, an application download URL, or the name of your WeChat official account or mini program. For sign-in scenarios, you must also provide an account and password for tests. A detailed description can improve the review efficiency of signatures and templates.</li>
-     * <li>A signature must undergo a thorough review process before it can be approved for use. For more information, see <a href="https://help.aliyun.com/document_detail/55324.html">Usage notes</a>.</li>
+     * <li>In accordance with the regulations of the Ministry of Industry and Information Technology and the <a href="https://help.aliyun.com/document_detail/2806975.html">related requirements</a> of carriers, Alibaba Cloud has revamped the functionality of template-related APIs. To improve the review efficiency and approval rate of your templates, please use the new operation <a href="https://help.aliyun.com/document_detail/2807431.html">CreateSmsTemplate - Apply for SMS template</a>.</li>
+     * <li>You can submit a maximum of 100 SMS template applications per natural day via the API. It is recommended that each application be submitted at intervals of at least 30 seconds. There is no limit on the number of submissions when applying for SMS templates through the <a href="https://dysms.console.aliyun.com/domestic/text/template">console</a>.</li>
+     * <li>Template information applied for through the API is synchronized to the SMS service console. For related template operations in the console, see <a href="https://help.aliyun.com/document_detail/108085.html">SMS templates</a>.</li>
+     * <li>After submitting the template application, you can query the template review status and details through the <a href="https://help.aliyun.com/document_detail/419289.html">QuerySmsTemplate</a> operation. You can also <a href="https://help.aliyun.com/document_detail/101508.html">configure receipt messages</a> and obtain the template review status messages through <a href="https://help.aliyun.com/document_detail/120999.html">TemplateSmsReport</a>.</li>
+     * <li>Domestic SMS templates and international/Hong Kong, Macao, and Taiwan SMS templates are not interchangeable (cannot be mixed). Please apply for templates based on your business usage scenarios.</li>
+     * <li>Only enterprise-verified users can apply for promotional SMS and international/Hong Kong, Macao, and Taiwan messages. For details about the differences between individual and enterprise user privileges, see <a href="https://help.aliyun.com/document_detail/55324.html">Usage notes</a>.</li>
      * </ul>
      * <h3>QPS limits</h3>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>The per-user QPS limit for this operation is 1,000 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please call the operation reasonably.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a message template.</p>
+     * <p>An SMS template is the detailed content received by the recipient, including variables and template content. You can apply for verification code, notification, or promotional SMS templates based on your business needs. SMS can only be sent after the template is approved.</p>
      * 
      * @deprecated OpenAPI AddSmsTemplate is deprecated, please use Dysmsapi::2017-05-25::CreateSmsTemplate instead.
      * 
@@ -386,7 +435,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更换签名的资质和授权书</p>
+     * <p>Updates the qualification and authorization letter for a signature.</p>
      * 
      * @param request ChangeSignatureQualificationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -438,7 +487,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更换签名的资质和授权书</p>
+     * <p>Updates the qualification and authorization letter for a signature.</p>
      * 
      * @param request ChangeSignatureQualificationRequest
      * @return ChangeSignatureQualificationResponse
@@ -450,11 +499,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <ul>
+     * <li>Alibaba Cloud accounts that have not activated card SMS cannot call this API.</li>
+     * <li>Card SMS is currently in the internal invitation phase. Contact your Alibaba Cloud account manager to apply for activation or <a href="https://help.aliyun.com/document_detail/464625.html">contact Alibaba Cloud pre-sales</a>.</li>
+     * <li>We recommend that you use the new API <a href="~~QueryMobilesCardSupport~~">QueryMobilesCardSupport</a> to query whether phone numbers support card SMS.</li>
+     * </ul>
      * <h3>QPS limit</h3>
-     * <p>You can call this operation up to 2,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>The per-user QPS limit for this API is 2,000 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make calls reasonably.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries whether some mobile phone numbers support card messages.</p>
+     * <p>Checks whether phone numbers support card SMS.</p>
      * 
      * @param request CheckMobilesCardSupportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -490,11 +544,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <ul>
+     * <li>Alibaba Cloud accounts that have not activated card SMS cannot call this API.</li>
+     * <li>Card SMS is currently in the internal invitation phase. Contact your Alibaba Cloud account manager to apply for activation or <a href="https://help.aliyun.com/document_detail/464625.html">contact Alibaba Cloud pre-sales</a>.</li>
+     * <li>We recommend that you use the new API <a href="~~QueryMobilesCardSupport~~">QueryMobilesCardSupport</a> to query whether phone numbers support card SMS.</li>
+     * </ul>
      * <h3>QPS limit</h3>
-     * <p>You can call this operation up to 2,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>The per-user QPS limit for this API is 2,000 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make calls reasonably.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries whether some mobile phone numbers support card messages.</p>
+     * <p>Checks whether phone numbers support card SMS.</p>
      * 
      * @param request CheckMobilesCardSupportRequest
      * @return CheckMobilesCardSupportResponse
@@ -505,8 +564,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>指标说明：转化率=OTP 转化量/OTP 发送量。</p>
+     * <ul>
+     * <li>OTP发送量：验证码发送量。</li>
+     * <li>OTP转化量：验证码转换量。（用户成功获取验证码，并进行回传）<blockquote>
+     * <p>转化率反馈功能会对业务系统有一定的侵入性，为了防止调用转化率 API 的抖动影响业务逻辑，请考虑： </p>
+     * <ul>
+     * <li>使用异步模式（例如：队列或事件驱动）调用 API。 </li>
+     * <li>添加可降级的方案保护业务逻辑（例如：手动降级开工或者使用断路器自动降级）。</li>
+     * </ul>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Sends conversion rate information to Alibaba Cloud SMS.</p>
+     * <p>Reports SMS conversion rate statistics to the Alibaba Cloud SMS platform.</p>
      * 
      * @param request ConversionDataIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -553,8 +626,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>指标说明：转化率=OTP 转化量/OTP 发送量。</p>
+     * <ul>
+     * <li>OTP发送量：验证码发送量。</li>
+     * <li>OTP转化量：验证码转换量。（用户成功获取验证码，并进行回传）<blockquote>
+     * <p>转化率反馈功能会对业务系统有一定的侵入性，为了防止调用转化率 API 的抖动影响业务逻辑，请考虑： </p>
+     * <ul>
+     * <li>使用异步模式（例如：队列或事件驱动）调用 API。 </li>
+     * <li>添加可降级的方案保护业务逻辑（例如：手动降级开工或者使用断路器自动降级）。</li>
+     * </ul>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Sends conversion rate information to Alibaba Cloud SMS.</p>
+     * <p>Reports SMS conversion rate statistics to the Alibaba Cloud SMS platform.</p>
      * 
      * @param request ConversionDataIntlRequest
      * @return ConversionDataIntlResponse
@@ -566,16 +653,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The CreateCardSmsTemplate operation saves the card message template information, submits it to the mobile phone manufacturer for approval, and returns the message template ID.</p>
      * <ul>
-     * <li>If the type of the message template is not supported or events that are not supported by the mobile phone manufacturer are specified, the template is not submitted. For more information, see <a href="https://help.aliyun.com/document_detail/434611.html">Supported message templates</a>.</li>
-     * <li>For information about sample card message templates, see <a href="https://help.aliyun.com/document_detail/435361.html">Sample card message templates</a>.</li>
+     * <li>The card SMS feature is currently available by invitation only. To enable this feature, contact your Alibaba Cloud business manager or our <a href="https://help.aliyun.com/document_detail/464625.html?spm=a2c4g.11186623.0.0.213273d4Xe6UEu#section-81n-72q-ybm">pre-sales consultation</a> team.</li>
+     * <li>This operation saves a card SMS template, submits it to mobile phone vendors for review, and returns a template code.</li>
+     * <li>If a card SMS template contains a type or event that a vendor does not support, the system does not submit the template to that vendor for review. For more information, see <a href="https://help.aliyun.com/document_detail/434611.html">Supported template types by vendor</a>.</li>
+     * <li>For more examples of card SMS templates, see <a href="https://help.aliyun.com/document_detail/435361.html">Card SMS template examples</a>.</li>
      * </ul>
      * <h3>QPS limit</h3>
-     * <p>You can call this operation up to 300 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>The QPS limit for a single user is 300. API calls that exceed this limit are throttled, which may impact your business. Plan your calls accordingly.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a card message template.</p>
+     * <p>Creates a card SMS template.</p>
      * 
      * @param tmpReq CreateCardSmsTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -625,16 +713,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The CreateCardSmsTemplate operation saves the card message template information, submits it to the mobile phone manufacturer for approval, and returns the message template ID.</p>
      * <ul>
-     * <li>If the type of the message template is not supported or events that are not supported by the mobile phone manufacturer are specified, the template is not submitted. For more information, see <a href="https://help.aliyun.com/document_detail/434611.html">Supported message templates</a>.</li>
-     * <li>For information about sample card message templates, see <a href="https://help.aliyun.com/document_detail/435361.html">Sample card message templates</a>.</li>
+     * <li>The card SMS feature is currently available by invitation only. To enable this feature, contact your Alibaba Cloud business manager or our <a href="https://help.aliyun.com/document_detail/464625.html?spm=a2c4g.11186623.0.0.213273d4Xe6UEu#section-81n-72q-ybm">pre-sales consultation</a> team.</li>
+     * <li>This operation saves a card SMS template, submits it to mobile phone vendors for review, and returns a template code.</li>
+     * <li>If a card SMS template contains a type or event that a vendor does not support, the system does not submit the template to that vendor for review. For more information, see <a href="https://help.aliyun.com/document_detail/434611.html">Supported template types by vendor</a>.</li>
+     * <li>For more examples of card SMS templates, see <a href="https://help.aliyun.com/document_detail/435361.html">Card SMS template examples</a>.</li>
      * </ul>
      * <h3>QPS limit</h3>
-     * <p>You can call this operation up to 300 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>The QPS limit for a single user is 300. API calls that exceed this limit are throttled, which may impact your business. Plan your calls accordingly.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a card message template.</p>
+     * <p>Creates a card SMS template.</p>
      * 
      * @param request CreateCardSmsTemplateRequest
      * @return CreateCardSmsTemplateResponse
@@ -645,8 +734,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates, updates, or deletes a signature.</p>
+     * 
      * <b>summary</b> : 
-     * <p>数字短信签名操作订单</p>
+     * <p>Creates an order to add, update, or delete a digital message signature.</p>
      * 
      * @param tmpReq CreateDigitalSignOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -731,8 +823,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates, updates, or deletes a signature.</p>
+     * 
      * <b>summary</b> : 
-     * <p>数字短信签名操作订单</p>
+     * <p>Creates an order to add, update, or delete a digital message signature.</p>
      * 
      * @param request CreateDigitalSignOrderRequest
      * @return CreateDigitalSignOrderResponse
@@ -743,8 +838,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Use this operation to create a reusable template for your digital SMS messages.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建数字短信模板</p>
+     * <p>Creates a digital SMS template.</p>
      * 
      * @param request CreateDigitalSmsTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -799,8 +897,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Use this operation to create a reusable template for your digital SMS messages.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建数字短信模板</p>
+     * <p>Creates a digital SMS template.</p>
      * 
      * @param request CreateDigitalSmsTemplateRequest
      * @return CreateDigitalSmsTemplateResponse
@@ -812,7 +913,127 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates personalized short URLs. You can specify multiple mobile numbers and source URLs in the request. The operation returns the short URLs corresponding to the specified mobile numbers. You can obtain the click information of end users based on different short URLs. The click information helps you realize secondary marketing. QPS limit You can call this operation up to 500 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>创建终端5G适配情况查询任务</p>
+     * 
+     * @param request CreateRCSMobileCapableTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateRCSMobileCapableTaskResponse
+     */
+    public CreateRCSMobileCapableTaskResponse createRCSMobileCapableTaskWithOptions(CreateRCSMobileCapableTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.phoneNumbersFile)) {
+            query.put("PhoneNumbersFile", request.phoneNumbersFile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.signName)) {
+            query.put("SignName", request.signName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateCode)) {
+            query.put("TemplateCode", request.templateCode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateRCSMobileCapableTask"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRCSMobileCapableTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建终端5G适配情况查询任务</p>
+     * 
+     * @param request CreateRCSMobileCapableTaskRequest
+     * @return CreateRCSMobileCapableTaskResponse
+     */
+    public CreateRCSMobileCapableTaskResponse createRCSMobileCapableTask(CreateRCSMobileCapableTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createRCSMobileCapableTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建5G消息模板</p>
+     * 
+     * @param request CreateRCSTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateRCSTemplateResponse
+     */
+    public CreateRCSTemplateResponse createRCSTemplateWithOptions(CreateRCSTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.relatedSignNames)) {
+            query.put("RelatedSignNames", request.relatedSignNames);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateContent)) {
+            query.put("TemplateContent", request.templateContent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateFormat)) {
+            query.put("TemplateFormat", request.templateFormat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateMenu)) {
+            query.put("TemplateMenu", request.templateMenu);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateName)) {
+            query.put("TemplateName", request.templateName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateRule)) {
+            query.put("TemplateRule", request.templateRule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateType)) {
+            query.put("TemplateType", request.templateType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateRCSTemplate"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRCSTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建5G消息模板</p>
+     * 
+     * @param request CreateRCSTemplateRequest
+     * @return CreateRCSTemplateResponse
+     */
+    public CreateRCSTemplateResponse createRCSTemplate(CreateRCSTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createRCSTemplateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建短链</p>
      * 
      * @param request CreateSmartShortUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -864,7 +1085,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates personalized short URLs. You can specify multiple mobile numbers and source URLs in the request. The operation returns the short URLs corresponding to the specified mobile numbers. You can obtain the click information of end users based on different short URLs. The click information helps you realize secondary marketing. QPS limit You can call this operation up to 500 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>创建短链</p>
      * 
      * @param request CreateSmartShortUrlRequest
      * @return CreateSmartShortUrlResponse
@@ -875,8 +1096,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Notice: To use a <strong>live app</strong> as a signature source, you must now provide its ICP filing information. This requires you to upload a screenshot of the app\&quot;s ICP filing.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>创建APP-ICP备案对客openAPI</p>
+     * <p>The process for using a live app as a signature source has changed. If you use an app as the signature source, you must call this operation to create an ICP filing record for it.</p>
      * 
      * @param request CreateSmsAppIcpRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -901,8 +1127,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AppPrincipalUnitName", request.appPrincipalUnitName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.appRuntimePic)) {
+            query.put("AppRuntimePic", request.appRuntimePic);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.appServiceName)) {
             query.put("AppServiceName", request.appServiceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appStoreDownloadPic)) {
+            query.put("AppStoreDownloadPic", request.appStoreDownloadPic);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
@@ -939,8 +1173,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Notice: To use a <strong>live app</strong> as a signature source, you must now provide its ICP filing information. This requires you to upload a screenshot of the app\&quot;s ICP filing.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>创建APP-ICP备案对客openAPI</p>
+     * <p>The process for using a live app as a signature source has changed. If you use an app as the signature source, you must call this operation to create an ICP filing record for it.</p>
      * 
      * @param request CreateSmsAppIcpRecordRequest
      * @return CreateSmsAppIcpRecordResponse
@@ -951,8 +1190,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Before use, please read the <a href="https://help.aliyun.com/document_detail/56741.html">Authorization Letter Specifications</a>. Download the <a href="https://help-static-aliyun-doc.aliyuncs.com/file-manage-files/zh-CN/20250414/bvpcmo/%E6%8E%88%E6%9D%83%E5%A7%94%E6%89%98%E4%B9%A6%E6%A8%A1%E7%89%88.doc">Authorization Letter Template</a>, fill it out and stamp it according to the specifications, and then upload it.</li>
+     * <li>The authorization letter you create can be used when applying for SMS qualifications or SMS signatures. If your qualification or signature is intended for use by a third party, you must create and submit an authorization letter.</li>
+     * <li>After creating an authorization letter, you can call <a href="~~QuerySmsAuthorizationLetter~~">QuerySmsAuthorizationLetter</a> to query the details of the created authorization letter. Authorization letter information created through the API is synchronized to the Short Message Service console.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建委托授权书</p>
+     * <p>If the qualification is intended for use by a third party or the requested signature involves third-party rights, you must obtain third-party authorization and create an authorization letter before submitting the application.</p>
      * 
      * @param tmpReq CreateSmsAuthorizationLetterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1025,8 +1271,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Before use, please read the <a href="https://help.aliyun.com/document_detail/56741.html">Authorization Letter Specifications</a>. Download the <a href="https://help-static-aliyun-doc.aliyuncs.com/file-manage-files/zh-CN/20250414/bvpcmo/%E6%8E%88%E6%9D%83%E5%A7%94%E6%89%98%E4%B9%A6%E6%A8%A1%E7%89%88.doc">Authorization Letter Template</a>, fill it out and stamp it according to the specifications, and then upload it.</li>
+     * <li>The authorization letter you create can be used when applying for SMS qualifications or SMS signatures. If your qualification or signature is intended for use by a third party, you must create and submit an authorization letter.</li>
+     * <li>After creating an authorization letter, you can call <a href="~~QuerySmsAuthorizationLetter~~">QuerySmsAuthorizationLetter</a> to query the details of the created authorization letter. Authorization letter information created through the API is synchronized to the Short Message Service console.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建委托授权书</p>
+     * <p>If the qualification is intended for use by a third party or the requested signature involves third-party rights, you must obtain third-party authorization and create an authorization letter before submitting the application.</p>
      * 
      * @param request CreateSmsAuthorizationLetterRequest
      * @return CreateSmsAuthorizationLetterResponse
@@ -1039,14 +1292,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>For details about the announcement of changes to the new and original interfaces, see <a href="https://help.aliyun.com/zh/sms/product-overview/announcement-on-sms-service-update-signature-template-interface">Announcement on Updates to SMS Service Signature &amp; Template Interfaces</a>.</li>
-     * <li>Individual authenticated users can apply for one formal signature per natural day under the same Alibaba Cloud account, while enterprise authenticated users have no current restrictions. For details on the differences in rights between individual and enterprise users, please refer to <a href="https://help.aliyun.com/zh/sms/user-guide/usage-notes?spm">User Guide</a>.</li>
-     * <li>Signature information applied through the interface will be synchronized in the SMS service console. For operations related to signatures in the console, see <a href="https://help.aliyun.com/zh/sms/user-guide/create-signatures?spm">SMS Signatures</a>.</li>
-     * <li>After submitting the signature application, you can query the signature review status and details via the <a href="https://help.aliyun.com/zh/sms/developer-reference/api-dysmsapi-2017-05-25-getsmssign?spm">GetSmsSign</a> interface. You can also <a href="https://help.aliyun.com/zh/sms/developer-reference/configure-delivery-receipts-1?spm">Configure Receipt Messages</a> and obtain signature review status messages through SignSmsReport.</li>
+     * <li>For details about the changes between the new and original operations, see <a href="https://help.aliyun.com/document_detail/2806975.html">Announcement on updating signature and template operations for Short Message Service</a>.</li>
+     * <li>Users who verify your identity - Individual account can apply for one formal signature per calendar day per Alibaba Cloud account. Users who verify your identity - Enterprise account currently have no such limit. For details about the differences between individual and enterprise user privileges, see <a href="https://help.aliyun.com/document_detail/55324.html">Before you begin</a>.</li>
+     * <li>Read the <a href="https://help.aliyun.com/document_detail/108076.html">Signature specifications</a> to learn about the SMS signature review standards.</li>
+     * <li>Signatures applied for through the API are synchronized to the Short Message Service console. For console-related operations, see <a href="https://help.aliyun.com/document_detail/108073.html">SMS signatures</a>.</li>
+     * <li>After you submit a signature application, you can call the <a href="https://help.aliyun.com/document_detail/2807429.html">GetSmsSign</a> operation to query the signature review status and details. You can also <a href="https://help.aliyun.com/document_detail/101508.html">configure receipt messages</a> and use <a href="https://help.aliyun.com/document_detail/120998.html">SignSmsReport</a> to obtain the signature review status messages.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Create SMS Signature</p>
+     * <p>An SMS signature identifies the sender of an SMS message. Before sending SMS messages, you must apply for a signature and a template. The system prepends the approved SMS signature to the message content and sends them together to the recipient.</p>
      * 
      * @param tmpReq CreateSmsSignRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1137,14 +1391,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>For details about the announcement of changes to the new and original interfaces, see <a href="https://help.aliyun.com/zh/sms/product-overview/announcement-on-sms-service-update-signature-template-interface">Announcement on Updates to SMS Service Signature &amp; Template Interfaces</a>.</li>
-     * <li>Individual authenticated users can apply for one formal signature per natural day under the same Alibaba Cloud account, while enterprise authenticated users have no current restrictions. For details on the differences in rights between individual and enterprise users, please refer to <a href="https://help.aliyun.com/zh/sms/user-guide/usage-notes?spm">User Guide</a>.</li>
-     * <li>Signature information applied through the interface will be synchronized in the SMS service console. For operations related to signatures in the console, see <a href="https://help.aliyun.com/zh/sms/user-guide/create-signatures?spm">SMS Signatures</a>.</li>
-     * <li>After submitting the signature application, you can query the signature review status and details via the <a href="https://help.aliyun.com/zh/sms/developer-reference/api-dysmsapi-2017-05-25-getsmssign?spm">GetSmsSign</a> interface. You can also <a href="https://help.aliyun.com/zh/sms/developer-reference/configure-delivery-receipts-1?spm">Configure Receipt Messages</a> and obtain signature review status messages through SignSmsReport.</li>
+     * <li>For details about the changes between the new and original operations, see <a href="https://help.aliyun.com/document_detail/2806975.html">Announcement on updating signature and template operations for Short Message Service</a>.</li>
+     * <li>Users who verify your identity - Individual account can apply for one formal signature per calendar day per Alibaba Cloud account. Users who verify your identity - Enterprise account currently have no such limit. For details about the differences between individual and enterprise user privileges, see <a href="https://help.aliyun.com/document_detail/55324.html">Before you begin</a>.</li>
+     * <li>Read the <a href="https://help.aliyun.com/document_detail/108076.html">Signature specifications</a> to learn about the SMS signature review standards.</li>
+     * <li>Signatures applied for through the API are synchronized to the Short Message Service console. For console-related operations, see <a href="https://help.aliyun.com/document_detail/108073.html">SMS signatures</a>.</li>
+     * <li>After you submit a signature application, you can call the <a href="https://help.aliyun.com/document_detail/2807429.html">GetSmsSign</a> operation to query the signature review status and details. You can also <a href="https://help.aliyun.com/document_detail/101508.html">configure receipt messages</a> and use <a href="https://help.aliyun.com/document_detail/120998.html">SignSmsReport</a> to obtain the signature review status messages.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Create SMS Signature</p>
+     * <p>An SMS signature identifies the sender of an SMS message. Before sending SMS messages, you must apply for a signature and a template. The system prepends the approved SMS signature to the message content and sends them together to the recipient.</p>
      * 
      * @param request CreateSmsSignRequest
      * @return CreateSmsSignResponse
@@ -1157,16 +1412,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>For details about the changes of this new interface compared to the original one, please refer to <a href="https://help.aliyun.com/zh/sms/product-overview/announcement-on-sms-service-update-signature-template-interface">Announcement on the Update of SMS Service Signature &amp; Template Interfaces</a>.</li>
-     * <li>It is recommended to apply for SMS templates via the API with at least a 30-second interval between each request.</li>
-     * <li>The template information applied through the API will be synchronized in the SMS service console. For operations related to templates in the console, please refer to SMS Templates.</li>
-     * <li>After submitting the template application, you can query the audit status and details using the GetSmsTemplate interface. You can also configure delivery receipts to obtain the audit status messages via TemplateSmsReport.</li>
-     * <li>Domestic SMS templates are not interchangeable with international/Hong Kong, Macao, and Taiwan SMS templates. Please apply for templates based on your business scenario.</li>
-     * <li>Only enterprise-verified users can apply for promotional messages and international/Hong Kong, Macao, and Taiwan messages. For differences in rights between personal and enterprise users, please refer to Usage Instructions.</li>
+     * <li>For details on the API changes for signatures and templates, see the <a href="https://help.aliyun.com/document_detail/2806975.html">Announcement on Signature and Template API Updates for Short Message Service</a>.</li>
+     * <li>Wait at least 30 seconds between API calls when applying for a message template.</li>
+     * <li>Message templates you apply for via the API are synchronized to the Short Message Service console. For details on how to manage message templates in the console, see <a href="https://help.aliyun.com/document_detail/108085.html">Message templates</a>.</li>
+     * <li>After you submit a template for review, you can call the <a href="https://help.aliyun.com/document_detail/2807433.html">GetSmsTemplate</a> API to query the template\&quot;s review status and details. You can also <a href="https://help.aliyun.com/document_detail/101508.html">configure status reports</a> to receive the template\&quot;s review status through <a href="https://help.aliyun.com/document_detail/120999.html">TemplateSmsReport</a>.</li>
+     * <li>Message templates for Chinese mainland messages and international messages are not interchangeable. Apply for message templates based on your use case.</li>
+     * <li>Only enterprise-verified users can apply for message templates for promotional messages and international messages. For details on the permission differences between individual and enterprise users, see <a href="https://help.aliyun.com/document_detail/55324.html">Usage notes</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Create SMS Template</p>
+     * <p>A message template defines the content of an SMS message. This content includes the message text and any variables. You can create templates for various business needs, such as sending verification codes, notifications, or promotional messages. A template must be approved before you can use it to send messages.</p>
      * 
      * @param tmpReq CreateSmsTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1253,16 +1508,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>For details about the changes of this new interface compared to the original one, please refer to <a href="https://help.aliyun.com/zh/sms/product-overview/announcement-on-sms-service-update-signature-template-interface">Announcement on the Update of SMS Service Signature &amp; Template Interfaces</a>.</li>
-     * <li>It is recommended to apply for SMS templates via the API with at least a 30-second interval between each request.</li>
-     * <li>The template information applied through the API will be synchronized in the SMS service console. For operations related to templates in the console, please refer to SMS Templates.</li>
-     * <li>After submitting the template application, you can query the audit status and details using the GetSmsTemplate interface. You can also configure delivery receipts to obtain the audit status messages via TemplateSmsReport.</li>
-     * <li>Domestic SMS templates are not interchangeable with international/Hong Kong, Macao, and Taiwan SMS templates. Please apply for templates based on your business scenario.</li>
-     * <li>Only enterprise-verified users can apply for promotional messages and international/Hong Kong, Macao, and Taiwan messages. For differences in rights between personal and enterprise users, please refer to Usage Instructions.</li>
+     * <li>For details on the API changes for signatures and templates, see the <a href="https://help.aliyun.com/document_detail/2806975.html">Announcement on Signature and Template API Updates for Short Message Service</a>.</li>
+     * <li>Wait at least 30 seconds between API calls when applying for a message template.</li>
+     * <li>Message templates you apply for via the API are synchronized to the Short Message Service console. For details on how to manage message templates in the console, see <a href="https://help.aliyun.com/document_detail/108085.html">Message templates</a>.</li>
+     * <li>After you submit a template for review, you can call the <a href="https://help.aliyun.com/document_detail/2807433.html">GetSmsTemplate</a> API to query the template\&quot;s review status and details. You can also <a href="https://help.aliyun.com/document_detail/101508.html">configure status reports</a> to receive the template\&quot;s review status through <a href="https://help.aliyun.com/document_detail/120999.html">TemplateSmsReport</a>.</li>
+     * <li>Message templates for Chinese mainland messages and international messages are not interchangeable. Apply for message templates based on your use case.</li>
+     * <li>Only enterprise-verified users can apply for message templates for promotional messages and international messages. For details on the permission differences between individual and enterprise users, see <a href="https://help.aliyun.com/document_detail/55324.html">Usage notes</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Create SMS Template</p>
+     * <p>A message template defines the content of an SMS message. This content includes the message text and any variables. You can create templates for various business needs, such as sending verification codes, notifications, or promotional messages. A template must be approved before you can use it to send messages.</p>
      * 
      * @param request CreateSmsTemplateRequest
      * @return CreateSmsTemplateResponse
@@ -1273,8 +1528,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The trademark must be searchable on the China Trademark Network of the Trademark Office of the China National Intellectual Property Administration, and the trademark owner must match the enterprise name.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建商标对客openAPI</p>
+     * <p>Creates a trademark entity. This operation is used when you need to upload trademark information when the signature source is set to trademark.</p>
      * 
      * @param request CreateSmsTrademarkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1333,8 +1591,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The trademark must be searchable on the China Trademark Network of the Trademark Office of the China National Intellectual Property Administration, and the trademark owner must match the enterprise name.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建商标对客openAPI</p>
+     * <p>Creates a trademark entity. This operation is used when you need to upload trademark information when the signature source is set to trademark.</p>
      * 
      * @param request CreateSmsTrademarkRequest
      * @return CreateSmsTrademarkResponse
@@ -1406,11 +1667,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>QPS limits</h3>
-     * <p>You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <blockquote>
+     * <p>Notice: 
+     * Short Message Service does not currently support this API operation.</p>
+     * </blockquote>
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for a single user is 100. Calls that exceed this limit are subject to rate limiting, which may affect your business. To prevent disruptions, call this operation at a reasonable frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a short URL. After you delete a short URL, it cannot be changed to its original state.</p>
+     * <p>Deletes a short URL. After deletion, the short URL is no longer usable and cannot be resolved to the source URL.</p>
      * 
      * @param request DeleteShortUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1456,11 +1721,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>QPS limits</h3>
-     * <p>You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <blockquote>
+     * <p>Notice: 
+     * Short Message Service does not currently support this API operation.</p>
+     * </blockquote>
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for a single user is 100. Calls that exceed this limit are subject to rate limiting, which may affect your business. To prevent disruptions, call this operation at a reasonable frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a short URL. After you delete a short URL, it cannot be changed to its original state.</p>
+     * <p>Deletes a short URL. After deletion, the short URL is no longer usable and cannot be resolved to the source URL.</p>
      * 
      * @param request DeleteShortUrlRequest
      * @return DeleteShortUrlResponse
@@ -1471,8 +1740,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Warning: Once a qualification is deleted, it cannot be restored or selected when you apply for signatures later. Proceed with caution.</p>
+     * </blockquote>
+     * <ul>
+     * <li>Qualifications under review cannot be modified or deleted. You can withdraw the application in the Short Message Service <a href="https://dysms.console.aliyun.com/domestic/text/qualification">console</a> before performing the operation.</li>
+     * <li>Approved qualifications that have been bound to signatures cannot be deleted.</li>
+     * <li>Rejected qualifications can be directly resubmitted for review after you <a href="~~UpdateSmsQualification~~">modify the qualification information</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除资质对客openAPI</p>
+     * <p>If you no longer use an SMS qualification or need to delete it for other reasons, call this API or delete the SMS qualification in the Short Message Service console.</p>
      * 
      * @param request DeleteSmsQualificationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1519,8 +1798,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Warning: Once a qualification is deleted, it cannot be restored or selected when you apply for signatures later. Proceed with caution.</p>
+     * </blockquote>
+     * <ul>
+     * <li>Qualifications under review cannot be modified or deleted. You can withdraw the application in the Short Message Service <a href="https://dysms.console.aliyun.com/domestic/text/qualification">console</a> before performing the operation.</li>
+     * <li>Approved qualifications that have been bound to signatures cannot be deleted.</li>
+     * <li>Rejected qualifications can be directly resubmitted for review after you <a href="~~UpdateSmsQualification~~">modify the qualification information</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除资质对客openAPI</p>
+     * <p>If you no longer use an SMS qualification or need to delete it for other reasons, call this API or delete the SMS qualification in the Short Message Service console.</p>
      * 
      * @param request DeleteSmsQualificationRequest
      * @return DeleteSmsQualificationResponse
@@ -1532,15 +1821,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You cannot delete a signature that has not been approved.</p>
      * <ul>
-     * <li>After you delete a signature, you cannot recover it. Proceed with caution.</li>
+     * <li>You can delete signatures that are in the Withdrawn, Failed, or Approved state. You cannot delete signatures that are in the Pending Approval state.</li>
+     * <li>Deleted SMS signatures cannot be recovered, and the signature can no longer be used to send SMS messages. Proceed with caution.</li>
+     * <li>Signature deletion operations performed via the API are synchronized to the SMS Service console. For information about how to manage templates in the console, see <a href="https://help.aliyun.com/document_detail/108073.html">SMS signatures</a>.</li>
      * </ul>
-     * <h3>QPS limits</h3>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a signature.</p>
+     * <p>If you no longer use an SMS signature and need to delete it, call this operation or delete the SMS signature in the SMS Service console.</p>
      * 
      * @param request DeleteSmsSignRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1584,15 +1872,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You cannot delete a signature that has not been approved.</p>
      * <ul>
-     * <li>After you delete a signature, you cannot recover it. Proceed with caution.</li>
+     * <li>You can delete signatures that are in the Withdrawn, Failed, or Approved state. You cannot delete signatures that are in the Pending Approval state.</li>
+     * <li>Deleted SMS signatures cannot be recovered, and the signature can no longer be used to send SMS messages. Proceed with caution.</li>
+     * <li>Signature deletion operations performed via the API are synchronized to the SMS Service console. For information about how to manage templates in the console, see <a href="https://help.aliyun.com/document_detail/108073.html">SMS signatures</a>.</li>
      * </ul>
-     * <h3>QPS limits</h3>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a signature.</p>
+     * <p>If you no longer use an SMS signature and need to delete it, call this operation or delete the SMS signature in the SMS Service console.</p>
      * 
      * @param request DeleteSmsSignRequest
      * @return DeleteSmsSignResponse
@@ -1604,16 +1891,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Message templates pending approval can be withdrawn. You can delete a message template pending approval on the Message Templates tab in the <a href="https://dysms.console.aliyun.com/dysms.htm#/overview">Alibaba Cloud SMS console</a>.</p>
      * <ul>
-     * <li>Message templates that have been approved can be deleted, and cannot be modified. You can delete a message template pending approval on the Message Templates tab in the <a href="https://dysms.console.aliyun.com/dysms.htm#/overview">Alibaba Cloud SMS console</a>.</li>
-     * <li>You cannot recover deleted message templates. Proceed with caution.</li>
+     * <li>支持删除已撤回、审核失败或审核通过的模板，审核中的短信模板不支持删除。</li>
+     * <li>删除短信模板后不可恢复，且后续不可再使用该模板发送短信，请谨慎操作。</li>
+     * <li>通过接口删除模板的操作会在短信服务控制台同步，在控制台对模板的相关操作，请参见<a href="https://help.aliyun.com/document_detail/108085.html">短信模板</a>。</li>
      * </ul>
-     * <h3>QPS limits</h3>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <h3>QPS限制</h3>
+     * <p>本接口的单用户QPS限制为1000次/秒。超过限制，API调用会被限流，这可能会影响您的业务，请合理调用。</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a message template.</p>
+     * <p>Deletes an SMS template that you no longer need.</p>
      * 
      * @param request DeleteSmsTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1657,16 +1944,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Message templates pending approval can be withdrawn. You can delete a message template pending approval on the Message Templates tab in the <a href="https://dysms.console.aliyun.com/dysms.htm#/overview">Alibaba Cloud SMS console</a>.</p>
      * <ul>
-     * <li>Message templates that have been approved can be deleted, and cannot be modified. You can delete a message template pending approval on the Message Templates tab in the <a href="https://dysms.console.aliyun.com/dysms.htm#/overview">Alibaba Cloud SMS console</a>.</li>
-     * <li>You cannot recover deleted message templates. Proceed with caution.</li>
+     * <li>支持删除已撤回、审核失败或审核通过的模板，审核中的短信模板不支持删除。</li>
+     * <li>删除短信模板后不可恢复，且后续不可再使用该模板发送短信，请谨慎操作。</li>
+     * <li>通过接口删除模板的操作会在短信服务控制台同步，在控制台对模板的相关操作，请参见<a href="https://help.aliyun.com/document_detail/108085.html">短信模板</a>。</li>
      * </ul>
-     * <h3>QPS limits</h3>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <h3>QPS限制</h3>
+     * <p>本接口的单用户QPS限制为1000次/秒。超过限制，API调用会被限流，这可能会影响您的业务，请合理调用。</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a message template.</p>
+     * <p>Deletes an SMS template that you no longer need.</p>
      * 
      * @param request DeleteSmsTemplateRequest
      * @return DeleteSmsTemplateResponse
@@ -1678,7 +1965,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query card sending details</p>
+     * <p>Queries the card SMS sending records and sending status of a single phone number.</p>
      * 
      * @param request GetCardSmsDetailsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1746,7 +2033,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query card sending details</p>
+     * <p>Queries the card SMS sending records and sending status of a single phone number.</p>
      * 
      * @param request GetCardSmsDetailsRequest
      * @return GetCardSmsDetailsResponse
@@ -1758,11 +2045,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>QPS limit</h3>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <ul>
+     * <li>目前卡片短信在内部邀约阶段，请联系您的阿里云商务经理申请开通或联系<a href="https://help.aliyun.com/document_detail/464625.html?spm=a2c4g.11186623.0.0.213273d4Xe6UEu#section-81n-72q-ybm">阿里云售前咨询</a>。</li>
+     * </ul>
+     * <h3>QPS限制</h3>
+     * <ul>
+     * <li>本接口的单用户QPS限制为1000次/秒。超过限制，API调用会被限流，这可能会影响您的业务，请合理调用。</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the short URLs of a card messages template.</p>
+     * <p>Retrieves the short URL for a card message.</p>
      * 
      * @param request GetCardSmsLinkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1826,11 +2118,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>QPS limit</h3>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <ul>
+     * <li>目前卡片短信在内部邀约阶段，请联系您的阿里云商务经理申请开通或联系<a href="https://help.aliyun.com/document_detail/464625.html?spm=a2c4g.11186623.0.0.213273d4Xe6UEu#section-81n-72q-ybm">阿里云售前咨询</a>。</li>
+     * </ul>
+     * <h3>QPS限制</h3>
+     * <ul>
+     * <li>本接口的单用户QPS限制为1000次/秒。超过限制，API调用会被限流，这可能会影响您的业务，请合理调用。</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the short URLs of a card messages template.</p>
+     * <p>Retrieves the short URL for a card message.</p>
      * 
      * @param request GetCardSmsLinkRequest
      * @return GetCardSmsLinkResponse
@@ -1842,11 +2139,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>QPS limit</h3>
-     * <p>You can call this operation up to 300 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <h3>QPS限制</h3>
+     * <p>本接口的单用户QPS限制为300次/秒。超过限制，API调用会被限流，这可能会影响您的业务，请合理调用。</p>
      * 
      * <b>summary</b> : 
-     * <p>Converts a resource uploaded to the specified Object Storage Service (OSS) bucket for unified management. Then, a resource ID is returned. You can manage the resource based on the ID.</p>
+     * <p>Converts images and videos uploaded to OSS storage for card SMS into resource data for unified management, and returns a resource ID. You can manage the returned resource ID as needed.</p>
      * 
      * @param request GetMediaResourceIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1894,11 +2191,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>QPS limit</h3>
-     * <p>You can call this operation up to 300 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <h3>QPS限制</h3>
+     * <p>本接口的单用户QPS限制为300次/秒。超过限制，API调用会被限流，这可能会影响您的业务，请合理调用。</p>
      * 
      * <b>summary</b> : 
-     * <p>Converts a resource uploaded to the specified Object Storage Service (OSS) bucket for unified management. Then, a resource ID is returned. You can manage the resource based on the ID.</p>
+     * <p>Converts images and videos uploaded to OSS storage for card SMS into resource data for unified management, and returns a resource ID. You can manage the returned resource ID as needed.</p>
      * 
      * @param request GetMediaResourceIdRequest
      * @return GetMediaResourceIdResponse
@@ -1910,14 +2207,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Resources such as images and videos used for card message templates can be uploaded to Object Storage Service (OSS) buckets for storage. For more information, see <a href="https://help.aliyun.com/document_detail/437303.html">Upload files to OSS</a>.</p>
-     * <h3>QPS limit</h3>
-     * <p>You can call this operation up to 300 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <ul>
+     * <li>您在调用卡片短信相关API接口前，首先需要开通卡片短信功能，目前卡片短信在内部邀约阶段，请联系您的阿里云商务经理申请开通或联系<a href="https://help.aliyun.com/document_detail/464625.html">阿里云售前咨询</a>。</li>
+     * <li>卡片短信模板中使用的图片、视频等素材资源可上传到OSS文件系统保存。文件上传操作，请参见<a href="https://help.aliyun.com/document_detail/437303.html">OSS文件上传</a>。</li>
+     * </ul>
+     * <h3>QPS限制</h3>
+     * <p>本接口的单用户QPS限制为300次/秒。超过限制，API调用会被限流，这可能会影响您的业务，请合理调用。</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the OSS configuration information about card messages.</p>
+     * <p>Retrieves the OSS resource configuration information for card messages. This information is used for subsequent OSS file upload operations.</p>
      * 
-     * @param request GetOSSInfoForCardTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetOSSInfoForCardTemplateResponse
      */
@@ -1939,12 +2238,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Resources such as images and videos used for card message templates can be uploaded to Object Storage Service (OSS) buckets for storage. For more information, see <a href="https://help.aliyun.com/document_detail/437303.html">Upload files to OSS</a>.</p>
-     * <h3>QPS limit</h3>
-     * <p>You can call this operation up to 300 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <ul>
+     * <li>您在调用卡片短信相关API接口前，首先需要开通卡片短信功能，目前卡片短信在内部邀约阶段，请联系您的阿里云商务经理申请开通或联系<a href="https://help.aliyun.com/document_detail/464625.html">阿里云售前咨询</a>。</li>
+     * <li>卡片短信模板中使用的图片、视频等素材资源可上传到OSS文件系统保存。文件上传操作，请参见<a href="https://help.aliyun.com/document_detail/437303.html">OSS文件上传</a>。</li>
+     * </ul>
+     * <h3>QPS限制</h3>
+     * <p>本接口的单用户QPS限制为300次/秒。超过限制，API调用会被限流，这可能会影响您的业务，请合理调用。</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the OSS configuration information about card messages.</p>
+     * <p>Retrieves the OSS resource configuration information for card messages. This information is used for subsequent OSS file upload operations.</p>
      * @return GetOSSInfoForCardTemplateResponse
      */
     public GetOSSInfoForCardTemplateResponse getOSSInfoForCardTemplate() throws Exception {
@@ -1955,12 +2257,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>When creating signatures or templates, you can upload materials such as login pages with links, backend page screenshots, software copyrights, supplementary agreements, etc. This helps the review personnel understand your business details. If there are multiple materials, they can be combined into one file, supporting png, jpg, jpeg, doc, docx, pdf formats.</li>
-     * <li>For additional materials needed when creating signatures or templates, you can upload them to the OSS file system for storage. For file upload operations, refer to <a href="https://help.aliyun.com/zh/sms/upload-files-through-oss">OSS File Upload</a>.</li>
+     * <li>When you create a signature or template, you can upload materials such as login pages with links, backend page screenshots, software copyrights, and supplementary agreements. These materials help reviewers understand the details of your business. If you have multiple materials, you can combine them into one file. The supported formats are png, jpg, jpeg, doc, docx, and pdf.</li>
+     * <li>Additional materials required for creating a signature or template can be uploaded to the OSS file system for storage. For information about file upload operations, see <a href="https://help.aliyun.com/document_detail/2833114.html">Upload files to OSS</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>SMS File Upload, Get Authorization Info</p>
+     * <p>Obtains OSS resource configuration information, which will be used for subsequent OSS file upload operations.</p>
      * 
      * @param request GetOSSInfoForUploadFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2005,12 +2307,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>When creating signatures or templates, you can upload materials such as login pages with links, backend page screenshots, software copyrights, supplementary agreements, etc. This helps the review personnel understand your business details. If there are multiple materials, they can be combined into one file, supporting png, jpg, jpeg, doc, docx, pdf formats.</li>
-     * <li>For additional materials needed when creating signatures or templates, you can upload them to the OSS file system for storage. For file upload operations, refer to <a href="https://help.aliyun.com/zh/sms/upload-files-through-oss">OSS File Upload</a>.</li>
+     * <li>When you create a signature or template, you can upload materials such as login pages with links, backend page screenshots, software copyrights, and supplementary agreements. These materials help reviewers understand the details of your business. If you have multiple materials, you can combine them into one file. The supported formats are png, jpg, jpeg, doc, docx, and pdf.</li>
+     * <li>Additional materials required for creating a signature or template can be uploaded to the OSS file system for storage. For information about file upload operations, see <a href="https://help.aliyun.com/document_detail/2833114.html">Upload files to OSS</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>SMS File Upload, Get Authorization Info</p>
+     * <p>Obtains OSS resource configuration information, which will be used for subsequent OSS file upload operations.</p>
      * 
      * @param request GetOSSInfoForUploadFileRequest
      * @return GetOSSInfoForUploadFileResponse
@@ -2021,8 +2323,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>When you apply for a qualification or signature, if the purpose is for other use or involves a third party, you must provide an <a href="https://help.aliyun.com/document_detail/56741.html">authorization letter</a>.</li>
+     * <li>After you use this API to obtain the OSS resource configuration information, upload the related qualification materials through OSS. For more information, see <a href="https://help.aliyun.com/document_detail/2833114.html">Upload files through OSS</a>.</li>
+     * <li>The names of files to be uploaded cannot contain Chinese characters or special symbols.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>上传文件获取oss配置</p>
+     * <p>Obtains the OSS resource configuration information for qualification materials. This configuration information will be used for subsequent uploads of qualification files such as authorization letters and enterprise certificates.</p>
      * 
      * @param request GetQualificationOssInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2065,8 +2374,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>When you apply for a qualification or signature, if the purpose is for other use or involves a third party, you must provide an <a href="https://help.aliyun.com/document_detail/56741.html">authorization letter</a>.</li>
+     * <li>After you use this API to obtain the OSS resource configuration information, upload the related qualification materials through OSS. For more information, see <a href="https://help.aliyun.com/document_detail/2833114.html">Upload files through OSS</a>.</li>
+     * <li>The names of files to be uploaded cannot contain Chinese characters or special symbols.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>上传文件获取oss配置</p>
+     * <p>Obtains the OSS resource configuration information for qualification materials. This configuration information will be used for subsequent uploads of qualification files such as authorization letters and enterprise certificates.</p>
      * 
      * @param request GetQualificationOssInfoRequest
      * @return GetQualificationOssInfoResponse
@@ -2078,7 +2394,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取OCR的OSS信息</p>
+     * <p>查询5g短信详情</p>
+     * 
+     * @param request GetRCSSignatureRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRCSSignatureResponse
+     */
+    public GetRCSSignatureResponse getRCSSignatureWithOptions(GetRCSSignatureRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.signName)) {
+            query.put("SignName", request.signName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetRCSSignature"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRCSSignatureResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询5g短信详情</p>
+     * 
+     * @param request GetRCSSignatureRequest
+     * @return GetRCSSignatureResponse
+     */
+    public GetRCSSignatureResponse getRCSSignature(GetRCSSignatureRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getRCSSignatureWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the OSS information for OCR.</p>
      * 
      * @param request GetSmsOcrOssInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2122,7 +2482,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取OCR的OSS信息</p>
+     * <p>Retrieves the OSS information for OCR.</p>
      * 
      * @param request GetSmsOcrOssInfoRequest
      * @return GetSmsOcrOssInfoResponse
@@ -2135,13 +2495,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>For details about the changes of this new interface and the original one, please refer to <a href="https://help.aliyun.com/zh/sms/product-overview/announcement-on-sms-service-update-signature-template-interface">Announcement on the Update of SMS Signature &amp; Template Interfaces</a>.</li>
-     * <li>Review Time: Generally, after submitting the signature, Alibaba Cloud expects to complete the review within 2 hours (Review Business Hours: Monday to Sunday 9:00~21:00, with legal holidays postponed). It is recommended to submit your application before 18:00.</li>
-     * <li>If the signature fails the review, the reason for the failure will be returned. Please refer to <a href="https://help.aliyun.com/zh/sms/user-guide/causes-of-application-failures-and-suggestions?spm">Handling Suggestions for Failed SMS Reviews</a>, invoke the <a href="https://help.aliyun.com/zh/sms/developer-reference/api-dysmsapi-2017-05-25-updatesmssign?spm">UpdateSmsSign</a> API, or modify the unapproved SMS signature on the <a href="https://dysms.console.aliyun.com/domestic/text/sign">Signature Management</a> page.</li>
+     * <li>仅可查询<strong>首次创建</strong>的签名资料或者<strong>最新审核通过</strong>的资料。</li>
+     * <li>新接口和原接口变更的公告详情请参见<a href="https://help.aliyun.com/document_detail/2806975.html">关于短信服务更新签名&amp;模板接口的公告</a>。</li>
+     * <li>审核时间：一般情况下，签名提交后，阿里云预计在 2 个小时内审核完成（审核工作时间：周一至周日 9:00~21:00，法定节假日顺延）。</li>
+     * <li>如果签名未通过审核，会返回审核失败的原因，请参考<a href="https://help.aliyun.com/document_detail/65990.html">短信审核失败的处理建议</a>，调用<a href="https://help.aliyun.com/document_detail/2807428.html">UpdateSmsSign</a>接口或在<a href="https://dysms.console.aliyun.com/domestic/text/sign">签名管理</a>页面修改未审核通过的短信签名。</li>
+     * <li><a href="~~QuerySmsSignList~~">QuerySmsSignList</a>接口可以查询您账号下的所有签名，包括签名审核状态、签名类型、签名名称等。</li>
+     * <li>本接口的单用户QPS限制为150次/秒。超过限制，API调用将会被限流，这可能会影响您的业务，请合理调用。</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Query SMS Signature Details</p>
+     * <p>Queries the review details of a signature after you apply for it.</p>
      * 
      * @param request GetSmsSignRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2186,13 +2549,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>For details about the changes of this new interface and the original one, please refer to <a href="https://help.aliyun.com/zh/sms/product-overview/announcement-on-sms-service-update-signature-template-interface">Announcement on the Update of SMS Signature &amp; Template Interfaces</a>.</li>
-     * <li>Review Time: Generally, after submitting the signature, Alibaba Cloud expects to complete the review within 2 hours (Review Business Hours: Monday to Sunday 9:00~21:00, with legal holidays postponed). It is recommended to submit your application before 18:00.</li>
-     * <li>If the signature fails the review, the reason for the failure will be returned. Please refer to <a href="https://help.aliyun.com/zh/sms/user-guide/causes-of-application-failures-and-suggestions?spm">Handling Suggestions for Failed SMS Reviews</a>, invoke the <a href="https://help.aliyun.com/zh/sms/developer-reference/api-dysmsapi-2017-05-25-updatesmssign?spm">UpdateSmsSign</a> API, or modify the unapproved SMS signature on the <a href="https://dysms.console.aliyun.com/domestic/text/sign">Signature Management</a> page.</li>
+     * <li>仅可查询<strong>首次创建</strong>的签名资料或者<strong>最新审核通过</strong>的资料。</li>
+     * <li>新接口和原接口变更的公告详情请参见<a href="https://help.aliyun.com/document_detail/2806975.html">关于短信服务更新签名&amp;模板接口的公告</a>。</li>
+     * <li>审核时间：一般情况下，签名提交后，阿里云预计在 2 个小时内审核完成（审核工作时间：周一至周日 9:00~21:00，法定节假日顺延）。</li>
+     * <li>如果签名未通过审核，会返回审核失败的原因，请参考<a href="https://help.aliyun.com/document_detail/65990.html">短信审核失败的处理建议</a>，调用<a href="https://help.aliyun.com/document_detail/2807428.html">UpdateSmsSign</a>接口或在<a href="https://dysms.console.aliyun.com/domestic/text/sign">签名管理</a>页面修改未审核通过的短信签名。</li>
+     * <li><a href="~~QuerySmsSignList~~">QuerySmsSignList</a>接口可以查询您账号下的所有签名，包括签名审核状态、签名类型、签名名称等。</li>
+     * <li>本接口的单用户QPS限制为150次/秒。超过限制，API调用将会被限流，这可能会影响您的业务，请合理调用。</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Query SMS Signature Details</p>
+     * <p>Queries the review details of a signature after you apply for it.</p>
      * 
      * @param request GetSmsSignRequest
      * @return GetSmsSignResponse
@@ -2205,14 +2571,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>For details about the announcement of changes to the new and original interfaces, see <a href="https://help.aliyun.com/zh/sms/product-overview/announcement-on-sms-service-update-signature-template-interface">Announcement on Updates to SMS Service Signature &amp; Template Interfaces</a>.</li>
-     * <li>Review Time: Under normal circumstances, Alibaba Cloud expects to complete the review within 2 hours after template submission (review working hours: Monday to Sunday 9:00~21:00, with statutory holidays postponed). It is recommended to submit your application before 18:00.</li>
-     * <li>If the template fails the review, the reason for the failure will be returned. Please refer to <a href="https://help.aliyun.com/zh/sms/user-guide/causes-of-application-failures-and-suggestions?spm=a2c4g.11186623.0.0.41fd339f3bPSCQ">Handling Suggestions for Failed SMS Reviews</a>, invoke the <a href="https://help.aliyun.com/zh/sms/developer-reference/api-dysmsapi-2017-05-25-modifysmstemplate?spm=a2c4g.11186623.0.0.5b1f6e8bQloFit">ModifySmsTemplate</a> API or modify the SMS template on the <a href="https://dysms.console.aliyun.com/domestic/text/template">Template Management</a> page.</li>
-     * <li>The current QuerySmsTemplate interface queries the audit details of a single template by template code. The <a href="https://help.aliyun.com/zh/sms/developer-reference/api-dysmsapi-2017-05-25-querysmstemplatelist?spm=a2c4g.11186623.0.0.24086e8bO8cFn4">QuerySmsTemplateList</a> interface can query the template details of all templates under your current account.</li>
+     * <li>新接口和原接口变更的公告详情请参见<a href="https://help.aliyun.com/document_detail/2806975.html">关于短信服务更新签名&amp;模板接口的公告</a>。</li>
+     * <li>审核时间：一般情况下，模板提交后，阿里云预计在2个小时内审核完成（审核工作时间：周一至周日9:00~21:00，法定节假日顺延）。</li>
+     * <li>如果模板未通过审核，会返回审核失败的原因，请参考<a href="https://help.aliyun.com/document_detail/65990.html">短信审核失败的处理建议</a>，调用<a href="~~UpdateSmsTemplate~~">UpdateSmsTemplate</a>接口或在<a href="https://dysms.console.aliyun.com/domestic/text/template">模板管理</a>页面修改短信模板。</li>
+     * <li>当前接口是通过模板Code查询单个模板的审核详情。<a href="https://help.aliyun.com/document_detail/419288.html">QuerySmsTemplateList</a>接口可以查询您当前账号下所有模板的模板详情。</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Query Text SMS Template Details</p>
+     * <p>Queries the approval details of a template after you submit a template application. You can view the approval status of the template.</p>
      * 
      * @param request GetSmsTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2257,14 +2623,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>For details about the announcement of changes to the new and original interfaces, see <a href="https://help.aliyun.com/zh/sms/product-overview/announcement-on-sms-service-update-signature-template-interface">Announcement on Updates to SMS Service Signature &amp; Template Interfaces</a>.</li>
-     * <li>Review Time: Under normal circumstances, Alibaba Cloud expects to complete the review within 2 hours after template submission (review working hours: Monday to Sunday 9:00~21:00, with statutory holidays postponed). It is recommended to submit your application before 18:00.</li>
-     * <li>If the template fails the review, the reason for the failure will be returned. Please refer to <a href="https://help.aliyun.com/zh/sms/user-guide/causes-of-application-failures-and-suggestions?spm=a2c4g.11186623.0.0.41fd339f3bPSCQ">Handling Suggestions for Failed SMS Reviews</a>, invoke the <a href="https://help.aliyun.com/zh/sms/developer-reference/api-dysmsapi-2017-05-25-modifysmstemplate?spm=a2c4g.11186623.0.0.5b1f6e8bQloFit">ModifySmsTemplate</a> API or modify the SMS template on the <a href="https://dysms.console.aliyun.com/domestic/text/template">Template Management</a> page.</li>
-     * <li>The current QuerySmsTemplate interface queries the audit details of a single template by template code. The <a href="https://help.aliyun.com/zh/sms/developer-reference/api-dysmsapi-2017-05-25-querysmstemplatelist?spm=a2c4g.11186623.0.0.24086e8bO8cFn4">QuerySmsTemplateList</a> interface can query the template details of all templates under your current account.</li>
+     * <li>新接口和原接口变更的公告详情请参见<a href="https://help.aliyun.com/document_detail/2806975.html">关于短信服务更新签名&amp;模板接口的公告</a>。</li>
+     * <li>审核时间：一般情况下，模板提交后，阿里云预计在2个小时内审核完成（审核工作时间：周一至周日9:00~21:00，法定节假日顺延）。</li>
+     * <li>如果模板未通过审核，会返回审核失败的原因，请参考<a href="https://help.aliyun.com/document_detail/65990.html">短信审核失败的处理建议</a>，调用<a href="~~UpdateSmsTemplate~~">UpdateSmsTemplate</a>接口或在<a href="https://dysms.console.aliyun.com/domestic/text/template">模板管理</a>页面修改短信模板。</li>
+     * <li>当前接口是通过模板Code查询单个模板的审核详情。<a href="https://help.aliyun.com/document_detail/419288.html">QuerySmsTemplateList</a>接口可以查询您当前账号下所有模板的模板详情。</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Query Text SMS Template Details</p>
+     * <p>Queries the approval details of a template after you submit a template application. You can view the approval status of the template.</p>
      * 
      * @param request GetSmsTemplateRequest
      * @return GetSmsTemplateResponse
@@ -2370,11 +2736,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>You can log on to the Short Message Service (SMS) console and go to the <a href="https://dysms.console.aliyun.com/domestic/text/template">Template Management</a> page to filter SMS templates that are bound to tag key-value pairs, or click <strong>Details</strong> in the Actions column to view the tags that are bound to the current template.</p>
      * <h3>QPS limit</h3>
-     * <p>You can call this operation up to 50 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>The per-user QPS limit of this operation is 50 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Call this operation properly.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the tags of a message template.</p>
+     * <p>Tags are markers that you add to templates. Each tag consists of a key-value pair (Key-Value). You can query the template codes bound to a tag key-value pair, or query all tags bound to a specific template.</p>
      * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2442,11 +2809,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>You can log on to the Short Message Service (SMS) console and go to the <a href="https://dysms.console.aliyun.com/domestic/text/template">Template Management</a> page to filter SMS templates that are bound to tag key-value pairs, or click <strong>Details</strong> in the Actions column to view the tags that are bound to the current template.</p>
      * <h3>QPS limit</h3>
-     * <p>You can call this operation up to 50 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>The per-user QPS limit of this operation is 50 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Call this operation properly.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the tags of a message template.</p>
+     * <p>Tags are markers that you add to templates. Each tag consists of a key-value pair (Key-Value). You can query the template codes bound to a tag key-value pair, or query all tags bound to a specific template.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -2458,20 +2826,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the operation or use the <a href="https://dysms.console.aliyun.com/dysms.htm#/overview">Alibaba Cloud SMS console</a> to modify an existing signature and submit the signature for approval. The signature must comply with the <a href="https://help.aliyun.com/document_detail/108076.html">signature specifications</a>.
-     * For more information, see <a href="https://help.aliyun.com/document_detail/55324.html">Usage notes</a>.</p>
-     * <h3>QPS limits</h3>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
-     * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li>Signatures pending approval cannot be modified.</li>
-     * <li>You cannot modify a signature after it is approved. If you no longer need the signature, you can delete it.</li>
-     * <li>If you are an individual user, you cannot apply for a new signature on the same day that your signature is rejected or deleted. We recommend that you modify the rejected signature and submit it again.</li>
+     * <li>根据工信部规定与运营商<a href="https://help.aliyun.com/document_detail/2806975.html">相关要求</a>，阿里云进行了签名相关API的功能改造。为提升您签名的审核效率和审核通过率，请您使用新接口<a href="https://help.aliyun.com/document_detail/2807428.html">UpdateSmsSign-修改短信签名</a>。</li>
+     * <li>仅支持修改未通过审核的签名，请参考<a href="https://help.aliyun.com/document_detail/65990.html">短信审核失败的处理建议</a>，调用此接口修改后自动提交审核，签名进入待审核状态。</li>
+     * <li>通过接口修改签名的操作会在短信服务控制台同步，在控制台对签名的相关操作，请参见<a href="https://help.aliyun.com/document_detail/108073.html">短信签名</a>。</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies a rejected signature and submit it for approval. Signatures that are pending approval or have been approved cannot be modified.</p>
+     * <p>This operation is discontinued.</p>
      * 
      * @param request ModifySmsSignRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2533,20 +2895,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the operation or use the <a href="https://dysms.console.aliyun.com/dysms.htm#/overview">Alibaba Cloud SMS console</a> to modify an existing signature and submit the signature for approval. The signature must comply with the <a href="https://help.aliyun.com/document_detail/108076.html">signature specifications</a>.
-     * For more information, see <a href="https://help.aliyun.com/document_detail/55324.html">Usage notes</a>.</p>
-     * <h3>QPS limits</h3>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
-     * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li>Signatures pending approval cannot be modified.</li>
-     * <li>You cannot modify a signature after it is approved. If you no longer need the signature, you can delete it.</li>
-     * <li>If you are an individual user, you cannot apply for a new signature on the same day that your signature is rejected or deleted. We recommend that you modify the rejected signature and submit it again.</li>
+     * <li>根据工信部规定与运营商<a href="https://help.aliyun.com/document_detail/2806975.html">相关要求</a>，阿里云进行了签名相关API的功能改造。为提升您签名的审核效率和审核通过率，请您使用新接口<a href="https://help.aliyun.com/document_detail/2807428.html">UpdateSmsSign-修改短信签名</a>。</li>
+     * <li>仅支持修改未通过审核的签名，请参考<a href="https://help.aliyun.com/document_detail/65990.html">短信审核失败的处理建议</a>，调用此接口修改后自动提交审核，签名进入待审核状态。</li>
+     * <li>通过接口修改签名的操作会在短信服务控制台同步，在控制台对签名的相关操作，请参见<a href="https://help.aliyun.com/document_detail/108073.html">短信签名</a>。</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies a rejected signature and submit it for approval. Signatures that are pending approval or have been approved cannot be modified.</p>
+     * <p>This operation is discontinued.</p>
      * 
      * @param request ModifySmsSignRequest
      * @return ModifySmsSignResponse
@@ -2558,14 +2914,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you apply for a message template, if the template fails to pass the review, you can call this operation to modify the template and submit the template again. You can call this operation to modify only a template for a specific message type.
-     * The template content must comply with the <a href="https://help.aliyun.com/document_detail/108253.html">SMS template specifications</a>.
-     * For more information, see <a href="https://help.aliyun.com/document_detail/55324.html">Usage notes</a>.</p>
-     * <h3>QPS limit</h3>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <ul>
+     * <li>根据工信部规定与运营商<a href="https://help.aliyun.com/document_detail/2806975.html">相关要求</a>，阿里云进行了模板相关API的功能改造。为提升您模板的审核效率和审核通过率，请您使用新接口<a href="https://help.aliyun.com/document_detail/2807432.html">UpdateSmsTemplate-修改短信模板</a>。</li>
+     * <li>仅支持修改未通过审核的模板，请参考<a href="https://help.aliyun.com/document_detail/65990.html">短信审核失败的处理建议</a>，调用此接口修改后重新提交审核。</li>
+     * <li>通过接口修改模板的操作会在短信服务控制台同步，在控制台对模板的相关操作，请参见<a href="https://help.aliyun.com/document_detail/108085.html">短信模板</a>。</li>
+     * </ul>
+     * <h3>QPS限制</h3>
+     * <p>本接口的单用户QPS限制为1000次/秒。超过限制，API调用会被限流，这可能会影响您的业务，请合理调用。</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the information of an unapproved message template and submits it for review again.</p>
+     * <p>This operation is discontinued.</p>
      * 
      * @deprecated OpenAPI ModifySmsTemplate is deprecated, please use Dysmsapi::2017-05-25::UpdateSmsTemplate instead.
      * 
@@ -2629,14 +2987,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you apply for a message template, if the template fails to pass the review, you can call this operation to modify the template and submit the template again. You can call this operation to modify only a template for a specific message type.
-     * The template content must comply with the <a href="https://help.aliyun.com/document_detail/108253.html">SMS template specifications</a>.
-     * For more information, see <a href="https://help.aliyun.com/document_detail/55324.html">Usage notes</a>.</p>
-     * <h3>QPS limit</h3>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <ul>
+     * <li>根据工信部规定与运营商<a href="https://help.aliyun.com/document_detail/2806975.html">相关要求</a>，阿里云进行了模板相关API的功能改造。为提升您模板的审核效率和审核通过率，请您使用新接口<a href="https://help.aliyun.com/document_detail/2807432.html">UpdateSmsTemplate-修改短信模板</a>。</li>
+     * <li>仅支持修改未通过审核的模板，请参考<a href="https://help.aliyun.com/document_detail/65990.html">短信审核失败的处理建议</a>，调用此接口修改后重新提交审核。</li>
+     * <li>通过接口修改模板的操作会在短信服务控制台同步，在控制台对模板的相关操作，请参见<a href="https://help.aliyun.com/document_detail/108085.html">短信模板</a>。</li>
+     * </ul>
+     * <h3>QPS限制</h3>
+     * <p>本接口的单用户QPS限制为1000次/秒。超过限制，API调用会被限流，这可能会影响您的业务，请合理调用。</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the information of an unapproved message template and submits it for review again.</p>
+     * <p>This operation is discontinued.</p>
      * 
      * @deprecated OpenAPI ModifySmsTemplate is deprecated, please use Dysmsapi::2017-05-25::UpdateSmsTemplate instead.
      * 
@@ -2652,11 +3012,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <ul>
+     * <li>Alibaba Cloud accounts that have not activated the card SMS service cannot call this API.</li>
+     * <li>The card SMS service is currently in the internal invitation phase. Contact your Alibaba Cloud business manager to apply for activation or <a href="https://help.aliyun.com/document_detail/464625.html">contact Alibaba Cloud pre-sales consultation</a>.</li>
+     * <li>You can also log on to the <a href="https://dysms.console.aliyun.com/domestic/card">Domestic Card SMS</a> page in the console and query the review status of card SMS templates on the Template Management tab.</li>
+     * </ul>
      * <h3>QPS limit</h3>
-     * <p>You can call this operation up to 300 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>The per-user QPS limit for this operation is 300 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation responsibly.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the review status of a message template.</p>
+     * <p>Queries the review status of a card SMS template and returns information about the review by mobile phone vendors.</p>
      * 
      * @param request QueryCardSmsTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2688,11 +3053,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <ul>
+     * <li>Alibaba Cloud accounts that have not activated the card SMS service cannot call this API.</li>
+     * <li>The card SMS service is currently in the internal invitation phase. Contact your Alibaba Cloud business manager to apply for activation or <a href="https://help.aliyun.com/document_detail/464625.html">contact Alibaba Cloud pre-sales consultation</a>.</li>
+     * <li>You can also log on to the <a href="https://dysms.console.aliyun.com/domestic/card">Domestic Card SMS</a> page in the console and query the review status of card SMS templates on the Template Management tab.</li>
+     * </ul>
      * <h3>QPS limit</h3>
-     * <p>You can call this operation up to 300 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>The per-user QPS limit for this operation is 300 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation responsibly.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the review status of a message template.</p>
+     * <p>Queries the review status of a card SMS template and returns information about the review by mobile phone vendors.</p>
      * 
      * @param request QueryCardSmsTemplateRequest
      * @return QueryCardSmsTemplateResponse
@@ -2705,10 +3075,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>QPS limit</h3>
-     * <p>You can call this operation up to 300 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>The QPS limit on this operation is 300 calls per second per user. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Call this operation at a reasonable pace.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries sent card messages.</p>
+     * <p>Queries the parsing data of a specified card SMS template. The parsing data includes the number of successful SMS parsing receipts, the number of message exposures, and the number of message clicks.</p>
      * 
      * @param request QueryCardSmsTemplateReportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2749,10 +3119,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>QPS limit</h3>
-     * <p>You can call this operation up to 300 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>The QPS limit on this operation is 300 calls per second per user. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Call this operation at a reasonable pace.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries sent card messages.</p>
+     * <p>Queries the parsing data of a specified card SMS template. The parsing data includes the number of successful SMS parsing receipts, the number of message exposures, and the number of message clicks.</p>
      * 
      * @param request QueryCardSmsTemplateReportRequest
      * @return QueryCardSmsTemplateReportResponse
@@ -2763,8 +3133,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query only the digital SMS signatures that belong to your Alibaba Cloud account.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取数字短信签名通过签名name</p>
+     * <p>Retrieves the details of a digital SMS signature by its name.</p>
      * 
      * @param request QueryDigitalSignByNameRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2807,8 +3180,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query only the digital SMS signatures that belong to your Alibaba Cloud account.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取数字短信签名通过签名name</p>
+     * <p>Retrieves the details of a digital SMS signature by its name.</p>
      * 
      * @param request QueryDigitalSignByNameRequest
      * @return QueryDigitalSignByNameResponse
@@ -2887,8 +3263,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>未开通卡片短信业务的阿里云账号无法调用此API。</li>
+     * <li>目前卡片短信在内部邀约阶段，请联系您的阿里云商务经理申请开通或<a href="https://help.aliyun.com/document_detail/464625.html">联系阿里云售前咨询</a>。</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Queries whether some mobile phone numbers support card messages.</p>
+     * <p>Queries whether a phone number supports card SMS messages.</p>
      * 
      * @param tmpReq QueryMobilesCardSupportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2933,8 +3315,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>未开通卡片短信业务的阿里云账号无法调用此API。</li>
+     * <li>目前卡片短信在内部邀约阶段，请联系您的阿里云商务经理申请开通或<a href="https://help.aliyun.com/document_detail/464625.html">联系阿里云售前咨询</a>。</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Queries whether some mobile phone numbers support card messages.</p>
+     * <p>Queries whether a phone number supports card SMS messages.</p>
      * 
      * @param request QueryMobilesCardSupportRequest
      * @return QueryMobilesCardSupportResponse
@@ -2946,7 +3334,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about clicks within a specific time range or related to a mobile number. QPS limit You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>点击明细查询</p>
      * 
      * @param request QueryPageSmartShortUrlLogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3010,7 +3398,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about clicks within a specific time range or related to a mobile number. QPS limit You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>点击明细查询</p>
      * 
      * @param request QueryPageSmartShortUrlLogRequest
      * @return QueryPageSmartShortUrlLogResponse
@@ -3022,7 +3410,203 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a message.</p>
+     * <p>批量查询终端5G适配情况</p>
+     * 
+     * @param request QueryRCSMobileCapableRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryRCSMobileCapableResponse
+     */
+    public QueryRCSMobileCapableResponse queryRCSMobileCapableWithOptions(QueryRCSMobileCapableRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.phoneNumbers)) {
+            query.put("PhoneNumbers", request.phoneNumbers);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.signName)) {
+            query.put("SignName", request.signName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateCode)) {
+            query.put("TemplateCode", request.templateCode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryRCSMobileCapable"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryRCSMobileCapableResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量查询终端5G适配情况</p>
+     * 
+     * @param request QueryRCSMobileCapableRequest
+     * @return QueryRCSMobileCapableResponse
+     */
+    public QueryRCSMobileCapableResponse queryRCSMobileCapable(QueryRCSMobileCapableRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryRCSMobileCapableWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询终端5G适配情况任务结果</p>
+     * 
+     * @param request QueryRCSMobileCapableTaskResultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryRCSMobileCapableTaskResultResponse
+     */
+    public QueryRCSMobileCapableTaskResultResponse queryRCSMobileCapableTaskResultWithOptions(QueryRCSMobileCapableTaskResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryRCSMobileCapableTaskResult"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryRCSMobileCapableTaskResultResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询终端5G适配情况任务结果</p>
+     * 
+     * @param request QueryRCSMobileCapableTaskResultRequest
+     * @return QueryRCSMobileCapableTaskResultResponse
+     */
+    public QueryRCSMobileCapableTaskResultResponse queryRCSMobileCapableTaskResult(QueryRCSMobileCapableTaskResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryRCSMobileCapableTaskResultWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询5G模板详情</p>
+     * 
+     * @param request QueryRCSTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryRCSTemplateResponse
+     */
+    public QueryRCSTemplateResponse queryRCSTemplateWithOptions(QueryRCSTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.templateCode)) {
+            query.put("TemplateCode", request.templateCode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryRCSTemplate"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryRCSTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询5G模板详情</p>
+     * 
+     * @param request QueryRCSTemplateRequest
+     * @return QueryRCSTemplateResponse
+     */
+    public QueryRCSTemplateResponse queryRCSTemplate(QueryRCSTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryRCSTemplateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>指定版本查看5G消息固定菜单详情</p>
+     * 
+     * @param request QueryRcsSignMenuByVersionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryRcsSignMenuByVersionResponse
+     */
+    public QueryRcsSignMenuByVersionResponse queryRcsSignMenuByVersionWithOptions(QueryRcsSignMenuByVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.rcsMenuVersion)) {
+            query.put("RcsMenuVersion", request.rcsMenuVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.signName)) {
+            query.put("SignName", request.signName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryRcsSignMenuByVersion"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryRcsSignMenuByVersionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>指定版本查看5G消息固定菜单详情</p>
+     * 
+     * @param request QueryRcsSignMenuByVersionRequest
+     * @return QueryRcsSignMenuByVersionResponse
+     */
+    public QueryRcsSignMenuByVersionResponse queryRcsSignMenuByVersion(QueryRcsSignMenuByVersionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryRcsSignMenuByVersionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>This operation queries the details of SMS messages sent to a specific phone number on a given date. You can also provide the <code>BizId</code> to query a specific delivery record.</li>
+     * <li>This operation queries delivery details for a single phone number at a time. To view delivery details in bulk, use the <a href="https://help.aliyun.com/document_detail/419276.html">QuerySendStatistics</a> operation to query delivery statistics, or log in to the <a href="https://dysms.console.aliyun.com/record">Delivery Receipts</a> page in the console.</li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for this operation is 5,000 requests per second per user. Calls that exceed this limit are throttled.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the delivery records and status of SMS messages sent to a single phone number.</p>
      * 
      * @param request QuerySendDetailsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3081,8 +3665,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>This operation queries the details of SMS messages sent to a specific phone number on a given date. You can also provide the <code>BizId</code> to query a specific delivery record.</li>
+     * <li>This operation queries delivery details for a single phone number at a time. To view delivery details in bulk, use the <a href="https://help.aliyun.com/document_detail/419276.html">QuerySendStatistics</a> operation to query delivery statistics, or log in to the <a href="https://dysms.console.aliyun.com/record">Delivery Receipts</a> page in the console.</li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for this operation is 5,000 requests per second per user. Calls that exceed this limit are throttled.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the information about a message.</p>
+     * <p>Queries the delivery records and status of SMS messages sent to a single phone number.</p>
      * 
      * @param request QuerySendDetailsRequest
      * @return QuerySendDetailsResponse
@@ -3094,12 +3686,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the operation to query message delivery details, including the number of delivered messages, the number of messages with delivery receipts, and the time that a message is sent. If a large number of messages are sent on the specified date, you can specify the number of items displayed on each page and the number of pages to view the details by page.</p>
-     * <h3>QPS limits</h3>
-     * <p>You can call this operation up to 20 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <ul>
+     * <li>If you query data over a long time range, the results are paginated. You can specify the page size and page number to navigate through the Delivery Logs.</li>
+     * <li>You can also view delivery details by logging in to the <a href="https://dysms.console.aliyun.com/dysms.htm#/overview">Short Message Service console</a> and navigating to the <strong>Business Statistics</strong> &gt; <strong>Delivery Logs</strong> page.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries message delivery details.</p>
+     * <p>Queries message delivery statistics, including send dates, the number of successfully sent messages, and the number of received delivery receipts.</p>
      * 
      * @param request QuerySendStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3167,12 +3760,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the operation to query message delivery details, including the number of delivered messages, the number of messages with delivery receipts, and the time that a message is sent. If a large number of messages are sent on the specified date, you can specify the number of items displayed on each page and the number of pages to view the details by page.</p>
-     * <h3>QPS limits</h3>
-     * <p>You can call this operation up to 20 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <ul>
+     * <li>If you query data over a long time range, the results are paginated. You can specify the page size and page number to navigate through the Delivery Logs.</li>
+     * <li>You can also view delivery details by logging in to the <a href="https://dysms.console.aliyun.com/dysms.htm#/overview">Short Message Service console</a> and navigating to the <strong>Business Statistics</strong> &gt; <strong>Delivery Logs</strong> page.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries message delivery details.</p>
+     * <p>Queries message delivery statistics, including send dates, the number of successfully sent messages, and the number of received delivery receipts.</p>
      * 
      * @param request QuerySendStatisticsRequest
      * @return QuerySendStatisticsResponse
@@ -3184,11 +3778,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>QPS limits</h3>
-     * <p>You can call this operation up to 20 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <blockquote>
+     * <p>Notice: 
+     * This API is not currently supported by Short Message Service.</p>
+     * </blockquote>
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for this API is 20 queries per second per user. API calls that exceed this limit are rate-limited, which can impact your business. Plan your calls accordingly.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the status of a short URL.</p>
+     * <p>Checks the status and availability of a short link.</p>
      * 
      * @param request QueryShortUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3234,11 +3832,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>QPS limits</h3>
-     * <p>You can call this operation up to 20 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <blockquote>
+     * <p>Notice: 
+     * This API is not currently supported by Short Message Service.</p>
+     * </blockquote>
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for this API is 20 queries per second per user. API calls that exceed this limit are rate-limited, which can impact your business. Plan your calls accordingly.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the status of a short URL.</p>
+     * <p>Checks the status and availability of a short link.</p>
      * 
      * @param request QueryShortUrlRequest
      * @return QueryShortUrlResponse
@@ -3249,8 +3851,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>This API queries the details of a single qualification (enterprise information, legal representative information, and administrator information).</li>
+     * <li>To query all qualification information under your current account, or to query review details, call the <a href="~~QuerySmsQualificationRecord~~">QuerySmsQualificationRecord</a> operation.</li>
+     * <li>Affected by the SMS signature real-name registration requirements, the volume of qualification review tickets is growing rapidly, and the review time may be extended. Please be patient. The review is expected to be completed within 2 business days (review hours: Monday to Sunday 9:00-21:00, postponed for legal holidays). In special cases, the review time may be extended. Please be patient.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询单个资质详情</p>
+     * <p>After you apply for SMS qualifications, you can call this operation to query the details of a single qualification.</p>
      * 
      * @param request QuerySingleSmsQualificationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3297,8 +3906,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>This API queries the details of a single qualification (enterprise information, legal representative information, and administrator information).</li>
+     * <li>To query all qualification information under your current account, or to query review details, call the <a href="~~QuerySmsQualificationRecord~~">QuerySmsQualificationRecord</a> operation.</li>
+     * <li>Affected by the SMS signature real-name registration requirements, the volume of qualification review tickets is growing rapidly, and the review time may be extended. Please be patient. The review is expected to be completed within 2 business days (review hours: Monday to Sunday 9:00-21:00, postponed for legal holidays). In special cases, the review time may be extended. Please be patient.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询单个资质详情</p>
+     * <p>After you apply for SMS qualifications, you can call this operation to query the details of a single qualification.</p>
      * 
      * @param request QuerySingleSmsQualificationRequest
      * @return QuerySingleSmsQualificationResponse
@@ -3309,8 +3925,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Pass a list of icp record IDs to retrieve their details.
+     * For example, call the QuerySmsSignList or GetSmsSign API to obtain the required icp record IDs.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询APP-ICP备案对客openAPI</p>
+     * <p>Queries icp record details.</p>
      * 
      * @param tmpReq QuerySmsAppIcpRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3359,8 +3979,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Pass a list of icp record IDs to retrieve their details.
+     * For example, call the QuerySmsSignList or GetSmsSign API to obtain the required icp record IDs.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询APP-ICP备案对客openAPI</p>
+     * <p>Queries icp record details.</p>
      * 
      * @param request QuerySmsAppIcpRecordRequest
      * @return QuerySmsAppIcpRecordResponse
@@ -3371,8 +3995,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Supports full query or conditional query:<ul>
+     * <li><strong>Full query</strong>: Queries the information of all letters of authorization under your current account. No parameters need to be passed. Full query is performed by default.</li>
+     * <li><strong>Conditional query</strong>: Supports queries by letter of authorization ID, signature name, and review status of the letter of authorization. Pass the parameters by which you want to filter.</li>
+     * </ul>
+     * </li>
+     * <li>Review duration: Affected by the real-name registration requirements for SMS signatures, the volume of qualification review tickets is currently increasing rapidly, and the review duration may be extended. Please wait patiently. The review is expected to be completed within 2 working days. SMS signatures and templates are expected to be reviewed within 2 hours after submission. Reviews involving governments and enterprises are generally completed within 2 working days. If verification upgrades, a large number of review tasks, or non-working hours are encountered, the review duration may be extended. Please wait patiently. (Review working hours: Monday to Sunday, 9:00–21:00, postponed for statutory holidays.)</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询委托授权书</p>
+     * <p>Queries created letters of authorization. You can view the review status and authorized signature scope of the letters.</p>
      * 
      * @param tmpReq QuerySmsAuthorizationLetterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3437,8 +4071,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Supports full query or conditional query:<ul>
+     * <li><strong>Full query</strong>: Queries the information of all letters of authorization under your current account. No parameters need to be passed. Full query is performed by default.</li>
+     * <li><strong>Conditional query</strong>: Supports queries by letter of authorization ID, signature name, and review status of the letter of authorization. Pass the parameters by which you want to filter.</li>
+     * </ul>
+     * </li>
+     * <li>Review duration: Affected by the real-name registration requirements for SMS signatures, the volume of qualification review tickets is currently increasing rapidly, and the review duration may be extended. Please wait patiently. The review is expected to be completed within 2 working days. SMS signatures and templates are expected to be reviewed within 2 hours after submission. Reviews involving governments and enterprises are generally completed within 2 working days. If verification upgrades, a large number of review tasks, or non-working hours are encountered, the review duration may be extended. Please wait patiently. (Review working hours: Monday to Sunday, 9:00–21:00, postponed for statutory holidays.)</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询委托授权书</p>
+     * <p>Queries created letters of authorization. You can view the review status and authorized signature scope of the letters.</p>
      * 
      * @param request QuerySmsAuthorizationLetterRequest
      * @return QuerySmsAuthorizationLetterResponse
@@ -3449,8 +4093,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>支持全量查询或条件查询：<ul>
+     * <li><strong>全量查询</strong>：查询您当前帐户下所有短信资质，无需传参。默认全量查询。</li>
+     * <li><strong>条件查询</strong>：支持根据资质名称、企业名称、法人姓名、审核状态、审核工单ID、资质用途进行查询，传入您希望筛选的参数即可。</li>
+     * </ul>
+     * </li>
+     * <li>本接口用于查询资质及其审核信息，如果需要查询单个资质的具体信息（企业信息、法人信息、管理员信息），请调用<a href="~~QuerySingleSmsQualification~~">查询单个资质详情</a>接口。</li>
+     * <li>受短信签名实名制报备要求影响，当前资质审核工单量增长快速，审核时间可能会延长，请耐心等待，预计2个工作日内完成（审核工作时间：周一至周日 9:00~21:00，法定节假日顺延）。特殊情况可能延长审核时间，请耐心等待。</li>
+     * <li>如果资质未通过审核，审核备注<code>AuditRemark</code>会返回审核失败的原因，请参考<a href="~~2384377#a96cc318b94x1~~">审核失败的处理建议</a>，调用<a href="~~UpdateSmsQualification~~">修改短信资质</a>接口或在控制台<a href="https://dysms.console.aliyun.com/domestic/text/qualification">资质管理</a>页面修改资质信息后，重新发起审核。</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询资质审核列表页</p>
+     * <p>Queries a list of SMS qualifications and their review details after you submit qualification applications. This operation supports filtered query.</p>
      * 
      * @param request QuerySmsQualificationRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3521,8 +4177,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>支持全量查询或条件查询：<ul>
+     * <li><strong>全量查询</strong>：查询您当前帐户下所有短信资质，无需传参。默认全量查询。</li>
+     * <li><strong>条件查询</strong>：支持根据资质名称、企业名称、法人姓名、审核状态、审核工单ID、资质用途进行查询，传入您希望筛选的参数即可。</li>
+     * </ul>
+     * </li>
+     * <li>本接口用于查询资质及其审核信息，如果需要查询单个资质的具体信息（企业信息、法人信息、管理员信息），请调用<a href="~~QuerySingleSmsQualification~~">查询单个资质详情</a>接口。</li>
+     * <li>受短信签名实名制报备要求影响，当前资质审核工单量增长快速，审核时间可能会延长，请耐心等待，预计2个工作日内完成（审核工作时间：周一至周日 9:00~21:00，法定节假日顺延）。特殊情况可能延长审核时间，请耐心等待。</li>
+     * <li>如果资质未通过审核，审核备注<code>AuditRemark</code>会返回审核失败的原因，请参考<a href="~~2384377#a96cc318b94x1~~">审核失败的处理建议</a>，调用<a href="~~UpdateSmsQualification~~">修改短信资质</a>接口或在控制台<a href="https://dysms.console.aliyun.com/domestic/text/qualification">资质管理</a>页面修改资质信息后，重新发起审核。</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询资质审核列表页</p>
+     * <p>Queries a list of SMS qualifications and their review details after you submit qualification applications. This operation supports filtered query.</p>
      * 
      * @param request QuerySmsQualificationRecordRequest
      * @return QuerySmsQualificationRecordResponse
@@ -3534,12 +4202,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you apply for an SMS signature, you can query its status by using the <a href="https://dysms.console.aliyun.com/dysms.htm">Alibaba Cloud SMS console</a> or calling the operation. If the signature is rejected, you can modify the signature based on the reason why it is rejected.</p>
-     * <h3>QPS limits</h3>
-     * <p>You can call this API operation up to 500 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <ul>
+     * <li>To comply with regulations from the Ministry of Industry and Information Technology (MIIT) and <a href="https://help.aliyun.com/document_detail/2806975.html">related requirements</a> from carriers, Alibaba Cloud has upgraded its SMS signature management APIs. We recommend using the new <a href="https://help.aliyun.com/document_detail/2807429.html">GetSmsSign - Query Signature Details</a> API, which returns more detailed information about signatures than this API.</li>
+     * <li>We typically review signatures within two hours of submission. The review service is available from 9:00 to 21:00, Monday to Sunday. Reviews may be delayed during public holidays. We recommend submitting your application before 18:00 for a timely review.</li>
+     * <li>If a signature is rejected, the response includes the review reason. For troubleshooting information, see <a href="https://help.aliyun.com/document_detail/65990.html">Troubleshooting Signature Review Failures</a>. You can then call the <a href="https://help.aliyun.com/document_detail/419287.html">ModifySmsTemplate</a> API or modify the SMS signature on the <a href="https://dysms.console.aliyun.com/domestic/text">Signature Management</a> page.</li>
+     * <li>This API queries the review details for a single signature by name. To query all signatures in your account, call the <a href="https://help.aliyun.com/document_detail/419288.html">QuerySmsSignList</a> API.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the status of a signature.</p>
+     * <p>Queries the review status of an SMS signature.</p>
      * 
      * @param request QuerySmsSignRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3583,12 +4254,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you apply for an SMS signature, you can query its status by using the <a href="https://dysms.console.aliyun.com/dysms.htm">Alibaba Cloud SMS console</a> or calling the operation. If the signature is rejected, you can modify the signature based on the reason why it is rejected.</p>
-     * <h3>QPS limits</h3>
-     * <p>You can call this API operation up to 500 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <ul>
+     * <li>To comply with regulations from the Ministry of Industry and Information Technology (MIIT) and <a href="https://help.aliyun.com/document_detail/2806975.html">related requirements</a> from carriers, Alibaba Cloud has upgraded its SMS signature management APIs. We recommend using the new <a href="https://help.aliyun.com/document_detail/2807429.html">GetSmsSign - Query Signature Details</a> API, which returns more detailed information about signatures than this API.</li>
+     * <li>We typically review signatures within two hours of submission. The review service is available from 9:00 to 21:00, Monday to Sunday. Reviews may be delayed during public holidays. We recommend submitting your application before 18:00 for a timely review.</li>
+     * <li>If a signature is rejected, the response includes the review reason. For troubleshooting information, see <a href="https://help.aliyun.com/document_detail/65990.html">Troubleshooting Signature Review Failures</a>. You can then call the <a href="https://help.aliyun.com/document_detail/419287.html">ModifySmsTemplate</a> API or modify the SMS signature on the <a href="https://dysms.console.aliyun.com/domestic/text">Signature Management</a> page.</li>
+     * <li>This API queries the review details for a single signature by name. To query all signatures in your account, call the <a href="https://help.aliyun.com/document_detail/419288.html">QuerySmsSignList</a> API.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the status of a signature.</p>
+     * <p>Queries the review status of an SMS signature.</p>
      * 
      * @param request QuerySmsSignRequest
      * @return QuerySmsSignResponse
@@ -3600,12 +4274,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the details of message signatures, including the name, creation time, and approval status of each signature. If a message template is rejected, the reason is returned. Modify the message signature based on the reason.</p>
-     * <h3>QPS limit</h3>
-     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>This operation queries the signature information that was <strong>first created</strong> or the <strong>most recently approved</strong> signature details under your current account. If you need to query more information such as application scenario content or files uploaded during application, you can call the <a href="~~GetSmsSign~~">GetSmsSign</a> operation to query the audit details of a single signature by signature name.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries message signatures by page.</p>
+     * <p>You can call this operation to query all signatures under your account, including signature audit status, signature type, and signature name.</p>
      * 
      * @param request QuerySmsSignListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3653,12 +4325,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the details of message signatures, including the name, creation time, and approval status of each signature. If a message template is rejected, the reason is returned. Modify the message signature based on the reason.</p>
-     * <h3>QPS limit</h3>
-     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>This operation queries the signature information that was <strong>first created</strong> or the <strong>most recently approved</strong> signature details under your current account. If you need to query more information such as application scenario content or files uploaded during application, you can call the <a href="~~GetSmsSign~~">GetSmsSign</a> operation to query the audit details of a single signature by signature name.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries message signatures by page.</p>
+     * <p>You can call this operation to query all signatures under your account, including signature audit status, signature type, and signature name.</p>
      * 
      * @param request QuerySmsSignListRequest
      * @return QuerySmsSignListResponse
@@ -3670,12 +4340,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you create a message template, you can call this operation to query the approval status of the template. If a message template is rejected, the reason is returned. Modify the message template based on the reason.</p>
-     * <h3>QPS limit</h3>
-     * <p>You can call this operation up to 5,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <ul>
+     * <li>Alibaba Cloud has updated its template-related APIs to comply with regulatory and <a href="https://help.aliyun.com/document_detail/2806975.html">carrier requirements</a>. We recommend that you use the new <a href="https://help.aliyun.com/document_detail/2807433.html">GetSmsTemplate - Query template review details</a> API. The new API returns more detailed template information in its response.</li>
+     * <li>Review timeline: After you submit a template, Alibaba Cloud typically completes the review within two hours. Review hours are 9:00 to 21:00 (UTC+8) from Monday to Sunday. Reviews are postponed during public holidays. We recommend that you submit your templates before 18:00 (UTC+8).</li>
+     * <li>If a template fails review, the response includes the reason for the rejection. For more information, see <a href="https://help.aliyun.com/document_detail/65990.html">Suggestions for handling a failed review</a>. You can then call the <a href="https://help.aliyun.com/document_detail/419287.html">ModifySmsTemplate</a> API or modify the template on the <a href="https://dysms.console.aliyun.com/domestic/text/template">Template Management</a> page.</li>
+     * <li>QuerySmsTemplate queries the review details of a single template by its template code. To query the details of all templates in your account, call the <a href="https://help.aliyun.com/document_detail/419288.html">QuerySmsTemplateList</a> API.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the approval status of a message template.</p>
+     * <p>This API has been deprecated.</p>
      * 
      * @deprecated OpenAPI QuerySmsTemplate is deprecated, please use Dysmsapi::2017-05-25::GetSmsTemplate instead.
      * 
@@ -3723,12 +4396,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you create a message template, you can call this operation to query the approval status of the template. If a message template is rejected, the reason is returned. Modify the message template based on the reason.</p>
-     * <h3>QPS limit</h3>
-     * <p>You can call this operation up to 5,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <ul>
+     * <li>Alibaba Cloud has updated its template-related APIs to comply with regulatory and <a href="https://help.aliyun.com/document_detail/2806975.html">carrier requirements</a>. We recommend that you use the new <a href="https://help.aliyun.com/document_detail/2807433.html">GetSmsTemplate - Query template review details</a> API. The new API returns more detailed template information in its response.</li>
+     * <li>Review timeline: After you submit a template, Alibaba Cloud typically completes the review within two hours. Review hours are 9:00 to 21:00 (UTC+8) from Monday to Sunday. Reviews are postponed during public holidays. We recommend that you submit your templates before 18:00 (UTC+8).</li>
+     * <li>If a template fails review, the response includes the reason for the rejection. For more information, see <a href="https://help.aliyun.com/document_detail/65990.html">Suggestions for handling a failed review</a>. You can then call the <a href="https://help.aliyun.com/document_detail/419287.html">ModifySmsTemplate</a> API or modify the template on the <a href="https://dysms.console.aliyun.com/domestic/text/template">Template Management</a> page.</li>
+     * <li>QuerySmsTemplate queries the review details of a single template by its template code. To query the details of all templates in your account, call the <a href="https://help.aliyun.com/document_detail/419288.html">QuerySmsTemplateList</a> API.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the approval status of a message template.</p>
+     * <p>This API has been deprecated.</p>
      * 
      * @deprecated OpenAPI QuerySmsTemplate is deprecated, please use Dysmsapi::2017-05-25::GetSmsTemplate instead.
      * 
@@ -3744,12 +4420,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the details of message templates, including the name, creation time, and approval status of each template. If a message template is rejected, the reason is returned. Modify the message template based on the reason.</p>
-     * <h3>QPS limit</h3>
-     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <ul>
+     * <li>This operation queries the template details of all templates under your current account. To query more details such as the template variable content and the file information uploaded during application, you can call the <a href="~~GetSmsTemplate~~">GetSmsTemplate</a> operation to query the approval details of a single template by template code.</li>
+     * <li>You can also log on to the Short Message Service (SMS) console and view the template details of all templates under your current account on the <a href="https://dysms.console.aliyun.com/domestic/text/template">Template Management</a> page.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries message templates.</p>
+     * <p>You can call this operation to query all templates under your account. This way, you can view template details, including the template approval status, template type, and template content.</p>
      * 
      * @param request QuerySmsTemplateListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3797,12 +4474,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the details of message templates, including the name, creation time, and approval status of each template. If a message template is rejected, the reason is returned. Modify the message template based on the reason.</p>
-     * <h3>QPS limit</h3>
-     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <ul>
+     * <li>This operation queries the template details of all templates under your current account. To query more details such as the template variable content and the file information uploaded during application, you can call the <a href="~~GetSmsTemplate~~">GetSmsTemplate</a> operation to query the approval details of a single template by template code.</li>
+     * <li>You can also log on to the Short Message Service (SMS) console and view the template details of all templates under your current account on the <a href="https://dysms.console.aliyun.com/domestic/text/template">Template Management</a> page.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries message templates.</p>
+     * <p>You can call this operation to query all templates under your account. This way, you can view template details, including the template approval status, template type, and template content.</p>
      * 
      * @param request QuerySmsTemplateListRequest
      * @return QuerySmsTemplateListResponse
@@ -3813,8 +4491,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation retrieves the details of trademarks by using a list of trademark IDs.
+     * For example, you can obtain trademark IDs by calling signature query operations such as <code>QuerySmsSignList</code> or <code>GetSmsSign</code>. You can then use this operation to retrieve the details of each trademark.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询商标对客openAPI</p>
+     * <p>Queries the details of one or more trademarks.</p>
      * 
      * @param tmpReq QuerySmsTrademarkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3863,8 +4545,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation retrieves the details of trademarks by using a list of trademark IDs.
+     * For example, you can obtain trademark IDs by calling signature query operations such as <code>QuerySmsSignList</code> or <code>GetSmsSign</code>. You can then use this operation to retrieve the details of each trademark.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询商标对客openAPI</p>
+     * <p>Queries the details of one or more trademarks.</p>
      * 
      * @param request QuerySmsTrademarkRequest
      * @return QuerySmsTrademarkResponse
@@ -3875,8 +4561,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>After you receive the phone verification code, pass it to the <code>CertifyCode</code> parameter of the <a href="~~SubmitSmsQualification~~">SubmitSmsQualification</a> or <a href="~~UpdateSmsQualification~~">UpdateSmsQualification</a> operation.</li>
+     * <li>You can call the <a href="~~ValidPhoneCode~~">ValidPhoneCode</a> operation to verify whether the SMS verification code is correct.</li>
+     * <li>This operation is subject to <a href="~~44335#section-0wh-xn6-0t7~~">throttling</a>. Do not call it too frequently. For the same phone number, a maximum of 1 message per minute, 5 messages per hour, and 10 messages per day are supported.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>验证手机验证码</p>
+     * <p>When applying for SMS qualification, the administrator\&quot;s phone number must be verified. Use this operation to obtain an SMS verification code.</p>
      * 
      * @param request RequiredPhoneCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3919,8 +4612,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>After you receive the phone verification code, pass it to the <code>CertifyCode</code> parameter of the <a href="~~SubmitSmsQualification~~">SubmitSmsQualification</a> or <a href="~~UpdateSmsQualification~~">UpdateSmsQualification</a> operation.</li>
+     * <li>You can call the <a href="~~ValidPhoneCode~~">ValidPhoneCode</a> operation to verify whether the SMS verification code is correct.</li>
+     * <li>This operation is subject to <a href="~~44335#section-0wh-xn6-0t7~~">throttling</a>. Do not call it too frequently. For the same phone number, a maximum of 1 message per minute, 5 messages per hour, and 10 messages per day are supported.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>验证手机验证码</p>
+     * <p>When applying for SMS qualification, the administrator\&quot;s phone number must be verified. Use this operation to obtain an SMS verification code.</p>
      * 
      * @param request RequiredPhoneCodeRequest
      * @return RequiredPhoneCodeResponse
@@ -3932,12 +4632,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the operation to send multiple card messages to a maximum of mobile phone numbers at a time. Different signatures and rollback settings can be specified for the mobile phone numbers.</p>
+     * <ul>
+     * <li>Sending card SMS messages is a billable operation. You are not charged if a card SMS message fails to be sent or rendered. For more information, see <a href="https://help.aliyun.com/document_detail/437951.html">Multimedia SMS pricing</a>.</li>
+     * <li>The card SMS feature is currently in the internal invitation phase. Contact your Alibaba Cloud business manager to apply for activation, or contact <a href="https://help.aliyun.com/document_detail/464625.html?spm=a2c4g.11186623.0.0.213219fcSn2Ykj#section-81n-72q-ybm">Alibaba Cloud pre-sales consulting</a>.</li>
+     * <li>We recommend that you set the timeout period for card SMS messages to a value greater than or equal to 3 seconds. If a timeout failure occurs, we recommend that you check the delivery status before deciding whether to retry. We also recommend that you do not enable SDK retry logic when calling this operation; otherwise, multiple sending attempts may occur. For more information about timeout and retry settings, see <a href="https://help.aliyun.com/document_detail/262079.html">Timeout mechanism</a> and <a href="https://help.aliyun.com/document_detail/262080.html">Retry mechanism</a>.</li>
+     * <li>Domestic SMS, international SMS, and multimedia SMS do not currently support idempotency. Implement idempotency control to prevent duplicate operations caused by multiple retries.</li>
+     * <li>Before you send a card SMS message, you must add and obtain approval for a card SMS template. When this operation is called to send an SMS message, the system checks whether the phone number supports card SMS messages. If the phone number does not support card SMS messages, you can configure whether to accept fallback to digital SMS or text SMS in the operation to improve the delivery rate.</li>
+     * <li>When you send card SMS messages in batches, each phone number can use a different signature and a different fallback. In a single request, you can send card SMS messages to a maximum of 100 phone numbers.</li>
+     * </ul>
      * <h3>QPS limit</h3>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>The QPS limit per user for this operation is 1,000 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation in a reasonable manner.</p>
      * 
      * <b>summary</b> : 
-     * <p>Sends multiple card messages at a time.</p>
+     * <p>Sends card SMS messages in batches.</p>
      * 
      * @param request SendBatchCardSmsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4017,12 +4724,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the operation to send multiple card messages to a maximum of mobile phone numbers at a time. Different signatures and rollback settings can be specified for the mobile phone numbers.</p>
+     * <ul>
+     * <li>Sending card SMS messages is a billable operation. You are not charged if a card SMS message fails to be sent or rendered. For more information, see <a href="https://help.aliyun.com/document_detail/437951.html">Multimedia SMS pricing</a>.</li>
+     * <li>The card SMS feature is currently in the internal invitation phase. Contact your Alibaba Cloud business manager to apply for activation, or contact <a href="https://help.aliyun.com/document_detail/464625.html?spm=a2c4g.11186623.0.0.213219fcSn2Ykj#section-81n-72q-ybm">Alibaba Cloud pre-sales consulting</a>.</li>
+     * <li>We recommend that you set the timeout period for card SMS messages to a value greater than or equal to 3 seconds. If a timeout failure occurs, we recommend that you check the delivery status before deciding whether to retry. We also recommend that you do not enable SDK retry logic when calling this operation; otherwise, multiple sending attempts may occur. For more information about timeout and retry settings, see <a href="https://help.aliyun.com/document_detail/262079.html">Timeout mechanism</a> and <a href="https://help.aliyun.com/document_detail/262080.html">Retry mechanism</a>.</li>
+     * <li>Domestic SMS, international SMS, and multimedia SMS do not currently support idempotency. Implement idempotency control to prevent duplicate operations caused by multiple retries.</li>
+     * <li>Before you send a card SMS message, you must add and obtain approval for a card SMS template. When this operation is called to send an SMS message, the system checks whether the phone number supports card SMS messages. If the phone number does not support card SMS messages, you can configure whether to accept fallback to digital SMS or text SMS in the operation to improve the delivery rate.</li>
+     * <li>When you send card SMS messages in batches, each phone number can use a different signature and a different fallback. In a single request, you can send card SMS messages to a maximum of 100 phone numbers.</li>
+     * </ul>
      * <h3>QPS limit</h3>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>The QPS limit per user for this operation is 1,000 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation in a reasonable manner.</p>
      * 
      * <b>summary</b> : 
-     * <p>Sends multiple card messages at a time.</p>
+     * <p>Sends card SMS messages in batches.</p>
      * 
      * @param request SendBatchCardSmsRequest
      * @return SendBatchCardSmsResponse
@@ -4034,10 +4748,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the operation to send messages to a maximum of 100 recipients at a time.</p>
+     * <h3>Basic information</h3>
+     * <ul>
+     * <li>You can send messages to a maximum of 100 phone numbers in a single call.</li>
+     * <li>The global <a href="https://help.aliyun.com/document_detail/419270.html">endpoint</a> is <code>dysmsapi.aliyuncs.com</code>. For a list of region-specific endpoints, see <a href="https://help.aliyun.com/document_detail/419270.html">Endpoints</a>.</li>
+     * </ul>
+     * <h3>API calls</h3>
+     * <ul>
+     * <li>We recommend calling this operation using an SDK. For more information, see <a href="https://help.aliyun.com/document_detail/2841024.html">Make your first API call</a>.</li>
+     * <li>To send messages from the console, see <a href="https://help.aliyun.com/document_detail/108266.html">Send group messages</a>.</li>
+     * <li>To build your own API requests, see <a href="https://help.aliyun.com/document_detail/2593177.html">V3 request body and signature mechanism</a>.</li>
+     * </ul>
+     * <h3>Usage notes</h3>
+     * <ul>
+     * <li>For domestic SMS, we recommend setting the timeout period to 1 second or longer. If a timeout occurs, check the delivery receipt status before you retry the request. For more information about timeout and retry settings, see <a href="https://help.aliyun.com/document_detail/262079.html">timeout mechanism</a> and <a href="https://help.aliyun.com/document_detail/262080.html">retry mechanism</a>.</li>
+     * <li>This operation does not support idempotence for domestic SMS, international SMS, or Multimedia Messaging Service (MMS) messages. You must implement your own idempotence controls to prevent duplicate operations caused by multiple retries.</li>
+     * <li>This is a billable operation. For domestic SMS, you are charged based on the delivery receipt status from the carrier. You are not charged for messages that are successfully submitted but fail carrier delivery. For more information, see <a href="https://help.aliyun.com/document_detail/44340.html">Billing overview</a>.<blockquote>
+     * <p>Warning: 
+     * Batch message delivery may be delayed due to system capacity limits. For time-sensitive messages, such as verification codes or alert notifications, use the SendSms operation to send messages individually.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>The Queries Per Second (QPS) limit for a single user is 5,000. Calls that exceed this limit are throttled. Plan your usage accordingly.</p>
      * 
      * <b>summary</b> : 
-     * <p>Uses a single message template and multiple signatures to send messages to multiple recipients.</p>
+     * <p>This operation sends messages to different phone numbers using a single template, with different signatures and template variables for each recipient.</p>
      * 
      * @param request SendBatchSmsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4103,10 +4839,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the operation to send messages to a maximum of 100 recipients at a time.</p>
+     * <h3>Basic information</h3>
+     * <ul>
+     * <li>You can send messages to a maximum of 100 phone numbers in a single call.</li>
+     * <li>The global <a href="https://help.aliyun.com/document_detail/419270.html">endpoint</a> is <code>dysmsapi.aliyuncs.com</code>. For a list of region-specific endpoints, see <a href="https://help.aliyun.com/document_detail/419270.html">Endpoints</a>.</li>
+     * </ul>
+     * <h3>API calls</h3>
+     * <ul>
+     * <li>We recommend calling this operation using an SDK. For more information, see <a href="https://help.aliyun.com/document_detail/2841024.html">Make your first API call</a>.</li>
+     * <li>To send messages from the console, see <a href="https://help.aliyun.com/document_detail/108266.html">Send group messages</a>.</li>
+     * <li>To build your own API requests, see <a href="https://help.aliyun.com/document_detail/2593177.html">V3 request body and signature mechanism</a>.</li>
+     * </ul>
+     * <h3>Usage notes</h3>
+     * <ul>
+     * <li>For domestic SMS, we recommend setting the timeout period to 1 second or longer. If a timeout occurs, check the delivery receipt status before you retry the request. For more information about timeout and retry settings, see <a href="https://help.aliyun.com/document_detail/262079.html">timeout mechanism</a> and <a href="https://help.aliyun.com/document_detail/262080.html">retry mechanism</a>.</li>
+     * <li>This operation does not support idempotence for domestic SMS, international SMS, or Multimedia Messaging Service (MMS) messages. You must implement your own idempotence controls to prevent duplicate operations caused by multiple retries.</li>
+     * <li>This is a billable operation. For domestic SMS, you are charged based on the delivery receipt status from the carrier. You are not charged for messages that are successfully submitted but fail carrier delivery. For more information, see <a href="https://help.aliyun.com/document_detail/44340.html">Billing overview</a>.<blockquote>
+     * <p>Warning: 
+     * Batch message delivery may be delayed due to system capacity limits. For time-sensitive messages, such as verification codes or alert notifications, use the SendSms operation to send messages individually.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>The Queries Per Second (QPS) limit for a single user is 5,000. Calls that exceed this limit are throttled. Plan your usage accordingly.</p>
      * 
      * <b>summary</b> : 
-     * <p>Uses a single message template and multiple signatures to send messages to multiple recipients.</p>
+     * <p>This operation sends messages to different phone numbers using a single template, with different signatures and template variables for each recipient.</p>
      * 
      * @param request SendBatchSmsRequest
      * @return SendBatchSmsResponse
@@ -4118,12 +4876,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Make sure that the message template that you want to use has been approved. If the mobile phone number of a recipient does not support card messages, the SendCardSms operation allows the rollback feature to ensure successful delivery.</p>
      * <ul>
-     * <li>When you call the SendCardSms operation to send card messages, the operation checks whether the mobile phone numbers of the recipients support card messages. If the mobile phone numbers do not support card messages, you can specify whether to enable rollback. Otherwise, the card message cannot be delivered.</li>
+     * <li>发送卡片短信为计费接口，卡片短信发送失败或渲染失败时不计费，详情请参见<a href="https://help.aliyun.com/document_detail/437951.html">多媒体短信定价</a>。</li>
+     * <li>目前卡片短信在内部邀约阶段，请联系您的阿里云商务经理申请开通或联系<a href="https://help.aliyun.com/document_detail/464625.html?spm=a2c4g.11186623.0.0.213219fcSn2Ykj#section-81n-72q-ybm">阿里云售前咨询</a>。</li>
+     * <li>卡片短信超时时间建议设置为≥3S；发生超时失败的情况时，建议查看回执状态后再判断是否重试。同时建议您在调用此接口时，不要开启SDK重试逻辑，否则可能会造成多次发送的情况。超时和重试的相关设置，请参见<a href="https://help.aliyun.com/document_detail/262079.html">超时机制</a>、<a href="https://help.aliyun.com/document_detail/262080.html">重试机制</a>。</li>
+     * <li>国内短信、国际短信及多媒体短信目前均不支持幂等的能力，请您做好幂等控制，防止因多次重试而导致的重复操作问题。</li>
+     * <li>发送卡片短信前需添加卡片短信模板且模板审核通过。本接口在发送短信时，会校验号码是否支持卡片短信。如果该手机号不支持发送卡片短信，可在接口中设置是否接受数字短信和文本短信的回落，提升发送的触达率。</li>
      * </ul>
-     * <h3>QPS limit</h3>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <h3>QPS限制</h3>
+     * <p>本接口的单用户QPS限制为1000次/秒。超过限制，API调用会被限流，这可能会影响您的业务，请合理调用。</p>
      * 
      * <b>summary</b> : 
      * <p>Sends a card message.</p>
@@ -4202,12 +4963,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Make sure that the message template that you want to use has been approved. If the mobile phone number of a recipient does not support card messages, the SendCardSms operation allows the rollback feature to ensure successful delivery.</p>
      * <ul>
-     * <li>When you call the SendCardSms operation to send card messages, the operation checks whether the mobile phone numbers of the recipients support card messages. If the mobile phone numbers do not support card messages, you can specify whether to enable rollback. Otherwise, the card message cannot be delivered.</li>
+     * <li>发送卡片短信为计费接口，卡片短信发送失败或渲染失败时不计费，详情请参见<a href="https://help.aliyun.com/document_detail/437951.html">多媒体短信定价</a>。</li>
+     * <li>目前卡片短信在内部邀约阶段，请联系您的阿里云商务经理申请开通或联系<a href="https://help.aliyun.com/document_detail/464625.html?spm=a2c4g.11186623.0.0.213219fcSn2Ykj#section-81n-72q-ybm">阿里云售前咨询</a>。</li>
+     * <li>卡片短信超时时间建议设置为≥3S；发生超时失败的情况时，建议查看回执状态后再判断是否重试。同时建议您在调用此接口时，不要开启SDK重试逻辑，否则可能会造成多次发送的情况。超时和重试的相关设置，请参见<a href="https://help.aliyun.com/document_detail/262079.html">超时机制</a>、<a href="https://help.aliyun.com/document_detail/262080.html">重试机制</a>。</li>
+     * <li>国内短信、国际短信及多媒体短信目前均不支持幂等的能力，请您做好幂等控制，防止因多次重试而导致的重复操作问题。</li>
+     * <li>发送卡片短信前需添加卡片短信模板且模板审核通过。本接口在发送短信时，会校验号码是否支持卡片短信。如果该手机号不支持发送卡片短信，可在接口中设置是否接受数字短信和文本短信的回落，提升发送的触达率。</li>
      * </ul>
-     * <h3>QPS limit</h3>
-     * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <h3>QPS限制</h3>
+     * <p>本接口的单用户QPS限制为1000次/秒。超过限制，API调用会被限流，这可能会影响您的业务，请合理调用。</p>
      * 
      * <b>summary</b> : 
      * <p>Sends a card message.</p>
@@ -4301,16 +5065,143 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>5G消息首次下行</p>
+     * 
+     * @param request SendRCSRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SendRCSResponse
+     */
+    public SendRCSResponse sendRCSWithOptions(SendRCSRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.outId)) {
+            query.put("OutId", request.outId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phoneNumbers)) {
+            query.put("PhoneNumbers", request.phoneNumbers);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.signName)) {
+            query.put("SignName", request.signName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateCode)) {
+            query.put("TemplateCode", request.templateCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateParam)) {
+            query.put("TemplateParam", request.templateParam);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SendRCS"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SendRCSResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>5G消息首次下行</p>
+     * 
+     * @param request SendRCSRequest
+     * @return SendRCSResponse
+     */
+    public SendRCSResponse sendRCS(SendRCSRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.sendRCSWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>5G消息交互下行</p>
+     * 
+     * @param request SendRCSReplyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SendRCSReplyResponse
+     */
+    public SendRCSReplyResponse sendRCSReplyWithOptions(SendRCSReplyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.inReplyToRcsID)) {
+            query.put("InReplyToRcsID", request.inReplyToRcsID);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outId)) {
+            query.put("OutId", request.outId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phoneNumbers)) {
+            query.put("PhoneNumbers", request.phoneNumbers);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.signName)) {
+            query.put("SignName", request.signName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateCode)) {
+            query.put("TemplateCode", request.templateCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateParam)) {
+            query.put("TemplateParam", request.templateParam);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SendRCSReply"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SendRCSReplyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>5G消息交互下行</p>
+     * 
+     * @param request SendRCSReplyRequest
+     * @return SendRCSReplyResponse
+     */
+    public SendRCSReplyResponse sendRCSReply(SendRCSReplyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.sendRCSReplyWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
-     * <p>  This operation is mainly used to send a single message. In special scenarios, you can send multiple messages with the same content to a maximum of 1,000 mobile numbers. Note that group sending may be delayed.</p>
+     * <p>Use this API to send an SMS message to a single mobile number. This API also supports sending messages with the same signature and template variables to multiple mobile numbers, up to 1,000 per request. Note that bulk sending may experience some latency. If you need to send messages with different signatures or template variables to multiple recipients, use the <a href="https://help.aliyun.com/document_detail/419274.html">SendBatchSms</a> API, which supports up to 100 mobile numbers per request.</p>
+     * <h3>Usage notes</h3>
      * <ul>
-     * <li>To send messages with different signatures and template content to multiple mobile numbers in a single request, call the <a href="https://help.aliyun.com/document_detail/102364.html">SendBatchSms</a> operation.</li>
-     * <li>You are charged for using Alibaba Cloud Short Message Service (SMS) based on the amount of messages sent. For more information, see <a href="https://www.aliyun.com/price/product#/sms/detail">Pricing</a>.</li>
-     * <li>If your verification code signature and general-purpose signature have the same name, the system uses the general-purpose signature to send messages by default.</li>
+     * <li>For SMS messages sent to the Chinese mainland, we recommend setting the timeout period to 1 second or longer. If a timeout occurs, check the delivery receipt status before retrying the request. For more information about timeout and retry settings, see <a href="https://help.aliyun.com/document_detail/262079.html">Timeout mechanism</a> and <a href="https://help.aliyun.com/document_detail/262080.html">Retry mechanism</a>.</li>
+     * <li>This API does not support idempotence for domestic, international, or multimedia SMS messages. You must implement your own idempotence controls to prevent sending duplicate messages during retries.</li>
+     * <li>This is a billable API. For messages sent to the Chinese mainland, billing is based on the delivery receipt status from the carrier. You are not charged if the API call is successful but the carrier fails to deliver the message. For more information, see <a href="https://help.aliyun.com/document_detail/44340.html">Billing</a>.</li>
      * </ul>
+     * <h3>QPS limit</h3>
+     * <p>This API has a queries per second (QPS) limit of 5,000 for each user. The system throttles calls that exceed this limit. To avoid throttling, use this API within the specified limit.</p>
      * 
      * <b>summary</b> : 
-     * <p>Sends a message. Before you call this operation, submit a message signature and message template, and make sure that the signature and template are approved.</p>
+     * <p>Sends an SMS message to one or more specified mobile numbers.</p>
      * 
      * @param request SendSmsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4374,15 +5265,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is mainly used to send a single message. In special scenarios, you can send multiple messages with the same content to a maximum of 1,000 mobile numbers. Note that group sending may be delayed.</p>
+     * <p>Use this API to send an SMS message to a single mobile number. This API also supports sending messages with the same signature and template variables to multiple mobile numbers, up to 1,000 per request. Note that bulk sending may experience some latency. If you need to send messages with different signatures or template variables to multiple recipients, use the <a href="https://help.aliyun.com/document_detail/419274.html">SendBatchSms</a> API, which supports up to 100 mobile numbers per request.</p>
+     * <h3>Usage notes</h3>
      * <ul>
-     * <li>To send messages with different signatures and template content to multiple mobile numbers in a single request, call the <a href="https://help.aliyun.com/document_detail/102364.html">SendBatchSms</a> operation.</li>
-     * <li>You are charged for using Alibaba Cloud Short Message Service (SMS) based on the amount of messages sent. For more information, see <a href="https://www.aliyun.com/price/product#/sms/detail">Pricing</a>.</li>
-     * <li>If your verification code signature and general-purpose signature have the same name, the system uses the general-purpose signature to send messages by default.</li>
+     * <li>For SMS messages sent to the Chinese mainland, we recommend setting the timeout period to 1 second or longer. If a timeout occurs, check the delivery receipt status before retrying the request. For more information about timeout and retry settings, see <a href="https://help.aliyun.com/document_detail/262079.html">Timeout mechanism</a> and <a href="https://help.aliyun.com/document_detail/262080.html">Retry mechanism</a>.</li>
+     * <li>This API does not support idempotence for domestic, international, or multimedia SMS messages. You must implement your own idempotence controls to prevent sending duplicate messages during retries.</li>
+     * <li>This is a billable API. For messages sent to the Chinese mainland, billing is based on the delivery receipt status from the carrier. You are not charged if the API call is successful but the carrier fails to deliver the message. For more information, see <a href="https://help.aliyun.com/document_detail/44340.html">Billing</a>.</li>
      * </ul>
+     * <h3>QPS limit</h3>
+     * <p>This API has a queries per second (QPS) limit of 5,000 for each user. The system throttles calls that exceed this limit. To avoid throttling, use this API within the specified limit.</p>
      * 
      * <b>summary</b> : 
-     * <p>Sends a message. Before you call this operation, submit a message signature and message template, and make sure that the signature and template are approved.</p>
+     * <p>Sends an SMS message to one or more specified mobile numbers.</p>
      * 
      * @param request SendSmsRequest
      * @return SendSmsResponse
@@ -4394,18 +5288,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Metrics:</p>
+     * <p>Metric definitions:</p>
      * <ul>
-     * <li>Requested OTP messages</li>
-     * <li>Verified OTP messages
-     * An OTP conversion rate is calculated based on the following formula: OTP conversion rate = Number of verified OTP messages/Number of requested OTP messages.<blockquote>
-     * <p>If you call the SmsConversion operation to query OTP conversion rates, your business may be affected. We recommend that you perform the following operations: 1. Call the SmsConversion operation in an asynchronous manner by configuring queues or events. 2. Manually degrade your services or use a circuit breaker to automatically degrade services.</p>
+     * <li>OTP send volume: the number of verification codes sent.</li>
+     * <li>OTP conversion volume: the number of verification codes converted (the number of times a user successfully obtained a verification code and reported it back).
+     * Conversion rate = OTP conversion volume / OTP send volume.<blockquote>
+     * <p>The conversion rate feedback feature has a certain level of intrusiveness on the business system. To prevent jitter in conversion rate API calls from affecting business logic, please consider the following:  - Call the API in asynchronous mode (for example, using a queue or event-driven approach).  - Add a degradable solution to protect business logic (for example, manual degradation, or automatic degradation using a circuit breaker).</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Reports the status of an OTP message to Alibaba Cloud SMS.</p>
+     * <p>Feeds back the SMS delivery status corresponding to each message ID (MessageId) to the Alibaba Cloud International SMS platform.</p>
      * 
      * @param request SmsConversionIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4457,18 +5351,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Metrics:</p>
+     * <p>Metric definitions:</p>
      * <ul>
-     * <li>Requested OTP messages</li>
-     * <li>Verified OTP messages
-     * An OTP conversion rate is calculated based on the following formula: OTP conversion rate = Number of verified OTP messages/Number of requested OTP messages.<blockquote>
-     * <p>If you call the SmsConversion operation to query OTP conversion rates, your business may be affected. We recommend that you perform the following operations: 1. Call the SmsConversion operation in an asynchronous manner by configuring queues or events. 2. Manually degrade your services or use a circuit breaker to automatically degrade services.</p>
+     * <li>OTP send volume: the number of verification codes sent.</li>
+     * <li>OTP conversion volume: the number of verification codes converted (the number of times a user successfully obtained a verification code and reported it back).
+     * Conversion rate = OTP conversion volume / OTP send volume.<blockquote>
+     * <p>The conversion rate feedback feature has a certain level of intrusiveness on the business system. To prevent jitter in conversion rate API calls from affecting business logic, please consider the following:  - Call the API in asynchronous mode (for example, using a queue or event-driven approach).  - Add a degradable solution to protect business logic (for example, manual degradation, or automatic degradation using a circuit breaker).</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Reports the status of an OTP message to Alibaba Cloud SMS.</p>
+     * <p>Feeds back the SMS delivery status corresponding to each message ID (MessageId) to the Alibaba Cloud International SMS platform.</p>
      * 
      * @param request SmsConversionIntlRequest
      * @return SmsConversionIntlResponse
@@ -4479,8 +5373,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Before submitting an application, read <a href="https://help.aliyun.com/document_detail/2384377.html">Qualification material description</a> and prepare the required qualification materials.</li>
+     * <li>Currently, only users who have completed <strong>verify your identity - Enterprise account</strong> can use the API to apply for SMS qualifications. If your Alibaba Cloud account has completed verify your identity - Individual account, apply for qualifications through the Short Message Service <a href="https://dysms.console.aliyun.com/domestic/text/qualification/add">console</a>, or <a href="https://help.aliyun.com/document_detail/37178.html">upgrade to verify your identity - Enterprise account</a>. <a href="https://myaccount.console.aliyun.com/cert-info">View my account verification type</a></li>
+     * <li>Batch qualification applications are not supported. Wait at least 5 seconds between applications.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建资质对客openAPI</p>
+     * <p>Submits an SMS qualification application. As required by the Ministry of Industry and Information Technology (MIIT) and carriers for real-name SMS sending, domestic SMS services require qualification credential information of the signature owner. Apply for an SMS qualification first, and then apply for signatures and templates.</p>
      * 
      * @param tmpReq SubmitSmsQualificationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4625,8 +5526,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Before submitting an application, read <a href="https://help.aliyun.com/document_detail/2384377.html">Qualification material description</a> and prepare the required qualification materials.</li>
+     * <li>Currently, only users who have completed <strong>verify your identity - Enterprise account</strong> can use the API to apply for SMS qualifications. If your Alibaba Cloud account has completed verify your identity - Individual account, apply for qualifications through the Short Message Service <a href="https://dysms.console.aliyun.com/domestic/text/qualification/add">console</a>, or <a href="https://help.aliyun.com/document_detail/37178.html">upgrade to verify your identity - Enterprise account</a>. <a href="https://myaccount.console.aliyun.com/cert-info">View my account verification type</a></li>
+     * <li>Batch qualification applications are not supported. Wait at least 5 seconds between applications.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建资质对客openAPI</p>
+     * <p>Submits an SMS qualification application. As required by the Ministry of Industry and Information Technology (MIIT) and carriers for real-name SMS sending, domestic SMS services require qualification credential information of the signature owner. Apply for an SMS qualification first, and then apply for signatures and templates.</p>
      * 
      * @param request SubmitSmsQualificationRequest
      * @return SubmitSmsQualificationResponse
@@ -4638,11 +5546,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <ul>
+     * <li>Each template can be bound to up to 20 tags.</li>
+     * <li>The tag key (Key) must be unique within the same template. If a template has two tags with the same Key but different Values, the new value overwrites the old value.</li>
+     * <li>This feature is only available for domestic text messages of Short Message Service on the China site.</li>
+     * </ul>
      * <h3>QPS limit</h3>
-     * <p>You can call this operation up to 50 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>The per-user QPS limit of this operation is 50 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Attaches tags to a message template.</p>
+     * <p>Tags can mark resources, allowing enterprises or individuals to classify templates of the same type for easier search and resource aggregation. Call this operation to bind tags to SMS templates.</p>
      * 
      * @param request TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4702,11 +5615,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <ul>
+     * <li>Each template can be bound to up to 20 tags.</li>
+     * <li>The tag key (Key) must be unique within the same template. If a template has two tags with the same Key but different Values, the new value overwrites the old value.</li>
+     * <li>This feature is only available for domestic text messages of Short Message Service on the China site.</li>
+     * </ul>
      * <h3>QPS limit</h3>
-     * <p>You can call this operation up to 50 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>The per-user QPS limit of this operation is 50 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Attaches tags to a message template.</p>
+     * <p>Tags can mark resources, allowing enterprises or individuals to classify templates of the same type for easier search and resource aggregation. Call this operation to bind tags to SMS templates.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -4719,10 +5637,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>QPS limit</h3>
-     * <p>You can call this operation up to 50 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>The QPS limit per user for this operation is 50 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please call the operation reasonably.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes tags from a message template.</p>
+     * <p>Tags can mark resources, allowing enterprises or individuals to categorize templates of the same type for easier search and resource aggregation. If a template is no longer applicable to its currently bound tags, you can unbind the tags from the template. You can delete a single tag or delete tags in batches.</p>
      * 
      * @param request UntagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4787,10 +5705,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>QPS limit</h3>
-     * <p>You can call this operation up to 50 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>The QPS limit per user for this operation is 50 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please call the operation reasonably.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes tags from a message template.</p>
+     * <p>Tags can mark resources, allowing enterprises or individuals to categorize templates of the same type for easier search and resource aggregation. If a template is no longer applicable to its currently bound tags, you can unbind the tags from the template. You can delete a single tag or delete tags in batches.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
@@ -4866,7 +5784,107 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改资质对客openAPI</p>
+     * <p>编辑5g签名</p>
+     * 
+     * @param request UpdateRCSSignatureRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateRCSSignatureResponse
+     */
+    public UpdateRCSSignatureResponse updateRCSSignatureWithOptions(UpdateRCSSignatureRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.backgroundImage)) {
+            query.put("BackgroundImage", request.backgroundImage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bubbleColor)) {
+            query.put("BubbleColor", request.bubbleColor);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.category)) {
+            query.put("Category", request.category);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.latitude)) {
+            query.put("Latitude", request.latitude);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logo)) {
+            query.put("Logo", request.logo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.longitude)) {
+            query.put("Longitude", request.longitude);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.officeAddress)) {
+            query.put("OfficeAddress", request.officeAddress);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceEmail)) {
+            query.put("ServiceEmail", request.serviceEmail);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.servicePhone)) {
+            query.put("ServicePhone", request.servicePhone);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceTerms)) {
+            query.put("ServiceTerms", request.serviceTerms);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceWebsite)) {
+            query.put("ServiceWebsite", request.serviceWebsite);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.signName)) {
+            query.put("SignName", request.signName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateRCSSignature"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateRCSSignatureResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>编辑5g签名</p>
+     * 
+     * @param request UpdateRCSSignatureRequest
+     * @return UpdateRCSSignatureResponse
+     */
+    public UpdateRCSSignatureResponse updateRCSSignature(UpdateRCSSignatureRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateRCSSignatureWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Qualifications under review do not support modification. Please wait for the review process to finish, or <a href="https://dysms.console.aliyun.com/domestic/text/qualification">withdraw the application</a> in the SMS Service console before making modifications.</li>
+     * <li>The modified SMS qualification <strong>must be re-reviewed</strong> (including qualifications that have already passed review). Please upload materials that meet the specifications according to the <a href="https://help.aliyun.com/document_detail/2384377.html">Qualification Material Description</a>.</li>
+     * <li><strong>Modification is not supported</strong> for the qualification name, application purpose, or unified social credit code.</li>
+     * <li>Batch modification of SMS qualifications is not supported. It is recommended to leave at least 5 seconds between modifications.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>If you need to update SMS qualification information, you can submit a modification request through this API. After submission, it will re-enter the review process.</p>
      * 
      * @param tmpReq UpdateSmsQualificationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4995,8 +6013,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Qualifications under review do not support modification. Please wait for the review process to finish, or <a href="https://dysms.console.aliyun.com/domestic/text/qualification">withdraw the application</a> in the SMS Service console before making modifications.</li>
+     * <li>The modified SMS qualification <strong>must be re-reviewed</strong> (including qualifications that have already passed review). Please upload materials that meet the specifications according to the <a href="https://help.aliyun.com/document_detail/2384377.html">Qualification Material Description</a>.</li>
+     * <li><strong>Modification is not supported</strong> for the qualification name, application purpose, or unified social credit code.</li>
+     * <li>Batch modification of SMS qualifications is not supported. It is recommended to leave at least 5 seconds between modifications.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改资质对客openAPI</p>
+     * <p>If you need to update SMS qualification information, you can submit a modification request through this API. After submission, it will re-enter the review process.</p>
      * 
      * @param request UpdateSmsQualificationRequest
      * @return UpdateSmsQualificationResponse
@@ -5009,13 +6035,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>For details about the changes of this new interface and the original one, please refer to <a href="https://help.aliyun.com/zh/sms/product-overview/announcement-on-sms-service-update-signature-template-interface">Announcement on the Update of SMS Signature &amp; Template Interfaces</a>.</li>
-     * <li>Only signatures that have not passed the review can be modified. Please refer to <a href="https://help.aliyun.com/zh/sms/user-guide/causes-of-application-failures-and-suggestions?spm">Handling Suggestions for Failed SMS Reviews</a> and call this interface to modify and resubmit for review after modification.</li>
-     * <li>Signature information applied through the interface will be synchronized in the SMS service console. For operations related to signatures in the console, please see <a href="https://help.aliyun.com/zh/sms/user-guide/create-signatures?spm">SMS Signatures</a>.</li>
+     * <li>For details about the updates to the signature and template APIs, see <a href="https://help.aliyun.com/document_detail/2806975.html">Announcement on Updating Signature &amp; Template APIs for Short Message Service</a>.</li>
+     * <li>You can modify signatures that are either <strong>rejected</strong> or <strong>approved</strong>. For guidance on handling review failures, see <a href="https://help.aliyun.com/document_detail/65990.html">Handling signature review failures</a>. Call this API to modify and resubmit the signature for review.</li>
+     * <li>You cannot use this API to edit the name of a <strong>rejected</strong> signature. To edit the name, go to the <a href="https://dysms.console.aliyun.com/domestic/text/sign">Short Message Service console</a>.</li>
+     * <li>Signatures you request using this API are synchronized with the Short Message Service console. For information on managing signatures in the console, see <a href="https://help.aliyun.com/document_detail/108073.html">Signatures</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Update Text SMS Signature</p>
+     * <p>You can modify rejected or approved signatures. A modified signature is automatically submitted for review, and its status changes to pending review.</p>
      * 
      * @param tmpReq UpdateSmsSignRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5106,13 +6133,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>For details about the changes of this new interface and the original one, please refer to <a href="https://help.aliyun.com/zh/sms/product-overview/announcement-on-sms-service-update-signature-template-interface">Announcement on the Update of SMS Signature &amp; Template Interfaces</a>.</li>
-     * <li>Only signatures that have not passed the review can be modified. Please refer to <a href="https://help.aliyun.com/zh/sms/user-guide/causes-of-application-failures-and-suggestions?spm">Handling Suggestions for Failed SMS Reviews</a> and call this interface to modify and resubmit for review after modification.</li>
-     * <li>Signature information applied through the interface will be synchronized in the SMS service console. For operations related to signatures in the console, please see <a href="https://help.aliyun.com/zh/sms/user-guide/create-signatures?spm">SMS Signatures</a>.</li>
+     * <li>For details about the updates to the signature and template APIs, see <a href="https://help.aliyun.com/document_detail/2806975.html">Announcement on Updating Signature &amp; Template APIs for Short Message Service</a>.</li>
+     * <li>You can modify signatures that are either <strong>rejected</strong> or <strong>approved</strong>. For guidance on handling review failures, see <a href="https://help.aliyun.com/document_detail/65990.html">Handling signature review failures</a>. Call this API to modify and resubmit the signature for review.</li>
+     * <li>You cannot use this API to edit the name of a <strong>rejected</strong> signature. To edit the name, go to the <a href="https://dysms.console.aliyun.com/domestic/text/sign">Short Message Service console</a>.</li>
+     * <li>Signatures you request using this API are synchronized with the Short Message Service console. For information on managing signatures in the console, see <a href="https://help.aliyun.com/document_detail/108073.html">Signatures</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Update Text SMS Signature</p>
+     * <p>You can modify rejected or approved signatures. A modified signature is automatically submitted for review, and its status changes to pending review.</p>
      * 
      * @param request UpdateSmsSignRequest
      * @return UpdateSmsSignResponse
@@ -5125,15 +6153,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>For details about the changes of this new interface compared to the original one, please refer to <a href="https://help.aliyun.com/zh/sms/product-overview/announcement-on-sms-service-update-signature-template-interface">Announcement on SMS Service Update: Signature &amp; Template Interfaces</a>.</li>
-     * <li>Only templates that have not passed the review can be modified. Please refer to <a href="https://help.aliyun.com/zh/sms/user-guide/causes-of-application-failures-and-suggestions?spm=a2c4g.11186623.0.0.4bf5561ajcFtMQ">Handling Suggestions for Failed SMS Template Reviews</a> and call this interface to modify and resubmit for review.</li>
-     * <li>Modifications made through the interface will be synchronized in the SMS service console. For related operations on templates in the console, see <a href="https://help.aliyun.com/zh/sms/user-guide/message-templates/?spm=a2c4g.11186623.0.0.35a947464Itaxp">SMS Templates</a>.</li>
+     * <li>For details about the changes to the signature and template APIs, see <a href="https://help.aliyun.com/document_detail/2806975.html">Announcement on Updating Signature &amp; Template APIs for Short Message Service</a>.</li>
+     * <li>You can only modify templates that have failed review. For troubleshooting, see <a href="https://help.aliyun.com/document_detail/65990.html">Suggestions for handling failed SMS template reviews</a>. After modifying a template with this API, you must resubmit it for review.</li>
+     * <li>Template changes made using this API are synchronized with the Short Message Service console. To learn more about managing templates in the console, see <a href="https://help.aliyun.com/document_detail/108085.html">SMS templates</a>.</li>
      * </ul>
-     * <h3>QPS Limit</h3>
-     * <p>The single-user QPS limit for this interface is 1000 times/second. Exceeding this limit will result in API throttling, which may impact your business. Please make calls reasonably.</p>
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for this API is 1,000 queries per second per user. If you exceed this limit, your API calls will be throttled. This can affect your business, so please use the API responsibly.</p>
      * 
      * <b>summary</b> : 
-     * <p>Update Text SMS Template</p>
+     * <p>This API modifies a template that failed review and automatically resubmits it.</p>
      * 
      * @param tmpReq UpdateSmsTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5224,15 +6252,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>For details about the changes of this new interface compared to the original one, please refer to <a href="https://help.aliyun.com/zh/sms/product-overview/announcement-on-sms-service-update-signature-template-interface">Announcement on SMS Service Update: Signature &amp; Template Interfaces</a>.</li>
-     * <li>Only templates that have not passed the review can be modified. Please refer to <a href="https://help.aliyun.com/zh/sms/user-guide/causes-of-application-failures-and-suggestions?spm=a2c4g.11186623.0.0.4bf5561ajcFtMQ">Handling Suggestions for Failed SMS Template Reviews</a> and call this interface to modify and resubmit for review.</li>
-     * <li>Modifications made through the interface will be synchronized in the SMS service console. For related operations on templates in the console, see <a href="https://help.aliyun.com/zh/sms/user-guide/message-templates/?spm=a2c4g.11186623.0.0.35a947464Itaxp">SMS Templates</a>.</li>
+     * <li>For details about the changes to the signature and template APIs, see <a href="https://help.aliyun.com/document_detail/2806975.html">Announcement on Updating Signature &amp; Template APIs for Short Message Service</a>.</li>
+     * <li>You can only modify templates that have failed review. For troubleshooting, see <a href="https://help.aliyun.com/document_detail/65990.html">Suggestions for handling failed SMS template reviews</a>. After modifying a template with this API, you must resubmit it for review.</li>
+     * <li>Template changes made using this API are synchronized with the Short Message Service console. To learn more about managing templates in the console, see <a href="https://help.aliyun.com/document_detail/108085.html">SMS templates</a>.</li>
      * </ul>
-     * <h3>QPS Limit</h3>
-     * <p>The single-user QPS limit for this interface is 1000 times/second. Exceeding this limit will result in API throttling, which may impact your business. Please make calls reasonably.</p>
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for this API is 1,000 queries per second per user. If you exceed this limit, your API calls will be throttled. This can affect your business, so please use the API responsibly.</p>
      * 
      * <b>summary</b> : 
-     * <p>Update Text SMS Template</p>
+     * <p>This API modifies a template that failed review and automatically resubmits it.</p>
      * 
      * @param request UpdateSmsTemplateRequest
      * @return UpdateSmsTemplateResponse
@@ -5244,7 +6272,105 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>发送手机验证码</p>
+     * <p>升级文本短信为5g签名</p>
+     * 
+     * @param request UpgradeToRCSSignatureRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpgradeToRCSSignatureResponse
+     */
+    public UpgradeToRCSSignatureResponse upgradeToRCSSignatureWithOptions(UpgradeToRCSSignatureRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.backgroundImage)) {
+            query.put("BackgroundImage", request.backgroundImage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bubbleColor)) {
+            query.put("BubbleColor", request.bubbleColor);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.category)) {
+            query.put("Category", request.category);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.latitude)) {
+            query.put("Latitude", request.latitude);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logo)) {
+            query.put("Logo", request.logo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.longitude)) {
+            query.put("Longitude", request.longitude);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.officeAddress)) {
+            query.put("OfficeAddress", request.officeAddress);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceEmail)) {
+            query.put("ServiceEmail", request.serviceEmail);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.servicePhone)) {
+            query.put("ServicePhone", request.servicePhone);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceTerms)) {
+            query.put("ServiceTerms", request.serviceTerms);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceWebsite)) {
+            query.put("ServiceWebsite", request.serviceWebsite);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.signName)) {
+            query.put("SignName", request.signName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpgradeToRCSSignature"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpgradeToRCSSignatureResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>升级文本短信为5g签名</p>
+     * 
+     * @param request UpgradeToRCSSignatureRequest
+     * @return UpgradeToRCSSignatureResponse
+     */
+    public UpgradeToRCSSignatureResponse upgradeToRCSSignature(UpgradeToRCSSignatureRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.upgradeToRCSSignatureWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Call the <a href="~~RequiredPhoneCode~~">RequiredPhoneCode</a> operation first. Alibaba Cloud sends an SMS verification code to the phone number that you provided.</li>
+     * <li>This operation does not affect the SMS qualification application process and is used only to verify the SMS verification code. When you submit the actual application, pass the verification code into the <code>CertifyCode</code> parameter of the <a href="~~SubmitSmsQualification~~">SubmitSmsQualification</a> operation.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>When applying for SMS qualification, the administrator\&quot;s phone number must be verified. This operation verifies the phone number and the received verification code.</p>
      * 
      * @param request ValidPhoneCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5291,8 +6417,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Call the <a href="~~RequiredPhoneCode~~">RequiredPhoneCode</a> operation first. Alibaba Cloud sends an SMS verification code to the phone number that you provided.</li>
+     * <li>This operation does not affect the SMS qualification application process and is used only to verify the SMS verification code. When you submit the actual application, pass the verification code into the <code>CertifyCode</code> parameter of the <a href="~~SubmitSmsQualification~~">SubmitSmsQualification</a> operation.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>发送手机验证码</p>
+     * <p>When applying for SMS qualification, the administrator\&quot;s phone number must be verified. This operation verifies the phone number and the received verification code.</p>
      * 
      * @param request ValidPhoneCodeRequest
      * @return ValidPhoneCodeResponse

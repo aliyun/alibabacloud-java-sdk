@@ -14,10 +14,13 @@ public class GetSmsOcrOssInfoRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>OCR任务类型</p>
+     * <p>The OCR task type. Valid values:</p>
+     * <ul>
+     * <li>ICP_DOMAIN: ICP filing screenshot for domain-type links.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>ICP_DOMAIN</p>
      */
     @NameInMap("TaskType")
     public String taskType;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddShortUrlRequest extends TeaModel {
     /**
-     * <p>The validity period of the short URL. Unit: days. The maximum validity period is 90 days.</p>
+     * <p>The validity period of the short URL, in days. The maximum value is 90.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,17 +24,21 @@ public class AddShortUrlRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The service name of the short URL. The name cannot exceed 13 characters in length.</p>
+     * <p>The name of the short URL. Maximum length: 13 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>The Alibaba Cloud Short Link service.</p>
+     * <p>阿里短链测试</p>
      */
     @NameInMap("ShortUrlName")
     public String shortUrlName;
 
     /**
-     * <p>The source URL. The URL cannot exceed 1,000 characters in length.</p>
+     * <p>The URL that you want to shorten. Maximum length: 1,000 characters.</p>
+     * <blockquote>
+     * <p>Notice: </p>
+     * </blockquote>
+     * <p>Short Message Service does not currently support this API operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

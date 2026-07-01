@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SmsConversionIntlResponseBody extends TeaModel {
     /**
-     * <p>The response code. If OK is returned, the request is successful. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html?spm=a2c4g.101345.0.0.74326ff2J5EZyt">Error codes</a>.</p>
+     * <p>The status code. A return value of OK indicates that the request was successful. For other error codes, see <a href="https://help.aliyun.com/document_detail/101346.html?spm=a2c4g.101345.0.0.74326ff2J5EZyt">Error Code List</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,7 +14,7 @@ public class SmsConversionIntlResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>

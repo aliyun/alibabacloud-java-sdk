@@ -9,28 +9,28 @@ public class AddExtCodeSignResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>OK</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>false</p>
      */
     @NameInMap("Data")
     public Boolean data;
 
     /**
      * <strong>example:</strong>
-     * <p>OK</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <strong>example:</strong>
-     * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
+     * <p>示例值</p>
      */
     @NameInMap("RequestId")
     public String requestId;

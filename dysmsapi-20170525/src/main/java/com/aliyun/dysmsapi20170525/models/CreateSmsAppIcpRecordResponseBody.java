@@ -4,10 +4,24 @@ package com.aliyun.dysmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class CreateSmsAppIcpRecordResponseBody extends TeaModel {
+    /**
+     * <p>Details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
+     * <p>The request status code.</p>
+     * <ul>
+     * <li><p>A value of <code>OK</code> indicates that the request was successful.</p>
+     * </li>
+     * <li><p>For other error codes, see the <a href="https://help.aliyun.com/document_detail/101346.html">error code list</a>.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -15,6 +29,8 @@ public class CreateSmsAppIcpRecordResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The ID of the app\&quot;s ICP filing record.</p>
+     * 
      * <strong>example:</strong>
      * <p>10000*******</p>
      */
@@ -22,6 +38,8 @@ public class CreateSmsAppIcpRecordResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The message returned with the request status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -29,6 +47,8 @@ public class CreateSmsAppIcpRecordResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID. Alibaba Cloud generates this unique identifier for each request. Use this ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>F655A8D5-B967-440B-8683-DAD6FF8DE990</p>
      */
@@ -36,6 +56,14 @@ public class CreateSmsAppIcpRecordResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong><code>true</code></strong></p>
+     * </li>
+     * <li><p><strong><code>false</code></strong></p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

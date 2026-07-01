@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetCardSmsLinkResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>请求状态码。取值：</p>
      * <ul>
-     * <li>The value OK indicates that the request was successful.</li>
-     * <li>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</li>
+     * <li>OK：代表请求成功。</li>
+     * <li>其他错误码，请参见<a href="https://help.aliyun.com/document_detail/101346.html">错误码列表</a>。</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,13 +18,13 @@ public class GetCardSmsLinkResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>返回数据。</p>
      */
     @NameInMap("Data")
     public GetCardSmsLinkResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>请求ID。</p>
      * 
      * <strong>example:</strong>
      * <p>CC89A90C-978F-46AC-B80D-54738371E7CA</p>
@@ -33,10 +33,10 @@ public class GetCardSmsLinkResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>接口调用是否成功。取值：</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>：调用成功。</li>
+     * <li><strong>false</strong>：调用失败。</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,7 +84,7 @@ public class GetCardSmsLinkResponseBody extends TeaModel {
 
     public static class GetCardSmsLinkResponseBodyData extends TeaModel {
         /**
-         * <p>The mobile phone numbers that support card messages.</p>
+         * <p>支持卡片短信的手机号码。</p>
          * 
          * <strong>example:</strong>
          * <p>[\&quot;1390000****\&quot;,\&quot;1370000****\&quot;]</p>
@@ -93,16 +93,16 @@ public class GetCardSmsLinkResponseBody extends TeaModel {
         public String cardPhoneNumbers;
 
         /**
-         * <p>The signatures must correspond to the mobile numbers and short URLs in sequence.</p>
+         * <p>用于申请卡片短信短链的短信签名，在发送时签名、接收号码、卡片短信短链要一一对应。</p>
          * 
          * <strong>example:</strong>
-         * <p>[&quot;aliyun&quot;,&quot;aliyun2&quot;]</p>
+         * <p>[&quot;阿里云&quot;,&quot;阿里云2&quot;]</p>
          */
         @NameInMap("CardSignNames")
         public String cardSignNames;
 
         /**
-         * <p>The short URLs.</p>
+         * <p>卡片短信短链。</p>
          * 
          * <strong>example:</strong>
          * <p>[\&quot;mw2m.cn/LAaGGa\&quot;,\&quot;mw2m.cn/LAAaes\&quot;]</p>
@@ -111,14 +111,14 @@ public class GetCardSmsLinkResponseBody extends TeaModel {
         public String cardSmsLinks;
 
         /**
-         * <p>The review status of the card message template.</p>
+         * <p>卡片短信模板审核状态。取值：</p>
          * <ul>
-         * <li><strong>0</strong>: pending approval</li>
-         * <li><strong>1</strong>: approved</li>
-         * <li><strong>2</strong>: rejected</li>
+         * <li><strong>0</strong>：审核中。</li>
+         * <li><strong>1</strong>：审核通过。</li>
+         * <li><strong>2</strong>：审核不通过。</li>
          * </ul>
          * <blockquote>
-         * <p>Unapproved card messages are rolled back.</p>
+         * <p>未审核通过的短信走回落流程。</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -128,7 +128,7 @@ public class GetCardSmsLinkResponseBody extends TeaModel {
         public Integer cardTmpState;
 
         /**
-         * <p>The mobile phone numbers that do not support card messages.</p>
+         * <p>不支持卡片短信的手机号。</p>
          * 
          * <strong>example:</strong>
          * <p>1390000****</p>

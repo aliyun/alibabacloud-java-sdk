@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class QuerySmsSignListResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The HTTP status code. Valid values:</p>
      * <ul>
-     * <li>The value OK indicates that the request was successful.</li>
-     * <li>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</li>
+     * <li><p>OK: The request was successful.</p>
+     * </li>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +29,7 @@ public class QuerySmsSignListResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -36,7 +38,7 @@ public class QuerySmsSignListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The number of signatures per page. Valid values: <strong>1 to 50</strong>.</p>
+     * <p>The number of signatures to return on each page. Default value: <strong>10</strong>. Valid values: <strong>1 to 50</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -48,13 +50,13 @@ public class QuerySmsSignListResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>819BE656-D2E0-4858-8B21-B2E47708****</p>
+     * <p>F655A8D5-B967-440B-8683-DAD6FF8DE990</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The queried message signatures.</p>
+     * <p>The list of returned results.</p>
      */
     @NameInMap("SmsSignList")
     public java.util.List<QuerySmsSignListResponseBodySmsSignList> smsSignList;
@@ -131,28 +133,28 @@ public class QuerySmsSignListResponseBody extends TeaModel {
 
     public static class QuerySmsSignListResponseBodySmsSignListReason extends TeaModel {
         /**
-         * <p>The time when the signature was rejected. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The time when the signature was rejected. The format is yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
-         * <p>2020-01-08 19:02:13</p>
+         * <p>2020-06-04 13:35:10</p>
          */
         @NameInMap("RejectDate")
         public String rejectDate;
 
         /**
-         * <p>The reason why the signature was rejected.</p>
+         * <p>The reason for the rejection.</p>
          * 
          * <strong>example:</strong>
-         * <p>The document cannot verify the authenticity of the information. Please upload it again.</p>
+         * <p>文件不能证明信息真实性，请重新上传。</p>
          */
         @NameInMap("RejectInfo")
         public String rejectInfo;
 
         /**
-         * <p>The remarks about the rejection.</p>
+         * <p>The remarks for the rejection.</p>
          * 
          * <strong>example:</strong>
-         * <p>The document cannot verify the authenticity of the information. Please upload it again.</p>
+         * <p>文件不能证明信息真实性，请重新上传。</p>
          */
         @NameInMap("RejectSubInfo")
         public String rejectSubInfo;
@@ -189,16 +191,26 @@ public class QuerySmsSignListResponseBody extends TeaModel {
     }
 
     public static class QuerySmsSignListResponseBodySmsSignList extends TeaModel {
+        /**
+         * <p>The APP-ICP filing entity ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000001***123</p>
+         */
         @NameInMap("AppIcpRecordId")
         public Long appIcpRecordId;
 
         /**
-         * <p>The approval status of the signature. Valid values:</p>
+         * <p>The audit status of the signature. Valid values:</p>
          * <ul>
-         * <li><strong>AUDIT_STATE_INIT</strong>: The signature is pending approval.</li>
-         * <li><strong>AUDIT_STATE_PASS</strong>: The signature is approved.</li>
-         * <li><strong>AUDIT_STATE_NOT_PASS</strong>: The signature is rejected. You can view the reason in the Reason response parameter.</li>
-         * <li><strong>AUDIT_STATE_CANCEL</strong>: The approval is canceled.</li>
+         * <li><p><strong>AUDIT_STATE_INIT</strong>: under review.</p>
+         * </li>
+         * <li><p><strong>AUDIT_STATE_PASS</strong>: approved.</p>
+         * </li>
+         * <li><p><strong>AUDIT_STATE_NOT_PASS</strong>: rejected. You can view the rejection reason in the Reason response parameter.</p>
+         * </li>
+         * <li><p><strong>AUDIT_STATE_CANCEL</strong>: review canceled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -207,62 +219,89 @@ public class QuerySmsSignListResponseBody extends TeaModel {
         @NameInMap("AuditStatus")
         public String auditStatus;
 
+        /**
+         * <p>The ID of the letter of authorization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000********1234</p>
+         */
         @NameInMap("AuthorizationLetterId")
         public Long authorizationLetterId;
 
         /**
-         * <p>The type of the signature scenario. The return value ends with &quot;type&quot;. Valid values:</p>
+         * <p>The scenario type of the signature. Valid values:</p>
          * <ul>
-         * <li>Verification code type</li>
-         * <li>General-purpose type</li>
+         * <li><p>Verification code.</p>
+         * </li>
+         * <li><p>General-purpose.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Verification code type</p>
+         * <p>验证码类型</p>
          */
         @NameInMap("BusinessType")
         public String businessType;
 
         /**
-         * <p>The time when the signature was created. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The time when the SMS signature was created. The format is yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
-         * <p>2020-01-08 16:44:13</p>
+         * <p>2020-06-04 11:42:17</p>
          */
         @NameInMap("CreateDate")
         public String createDate;
 
         /**
-         * <p>The ticket ID.</p>
+         * <p>The order ID.</p>
+         * <p>This parameter is used by auditors when querying the audit. You must provide this order ID if you need to expedite the audit.</p>
          * 
          * <strong>example:</strong>
-         * <p>236****5</p>
+         * <p>2005098****</p>
          */
         @NameInMap("OrderId")
         public String orderId;
 
         /**
-         * <p>The approval remarks.</p>
+         * <p>The audit remarks.</p>
          * <ul>
-         * <li>If the value of AuditStatus is <strong>AUDIT_STATE_PASS</strong> or <strong>AUDIT_STATE_INIT</strong>, the value of Reason is No Approval Remarks.</li>
-         * <li>If the value of AuditStatus is <strong>AUDIT_STATE_NOT_PASS</strong>, the reason why the signature is rejected is returned.</li>
+         * <li><p>If the audit status is <strong>approved</strong> or <strong>under review</strong>, the Reason parameter is displayed as &quot;No audit remarks&quot;.</p>
+         * </li>
+         * <li><p>If the audit status is <strong>rejected</strong>, the Reason parameter displays the specific reason for the rejection.</p>
+         * </li>
          * </ul>
          */
         @NameInMap("Reason")
         public QuerySmsSignListResponseBodySmsSignListReason reason;
 
         /**
-         * <p>The name of the signature.</p>
+         * <p>The signature name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Aliyun</p>
+         * <p>阿里云</p>
          */
         @NameInMap("SignName")
         public String signName;
 
+        /**
+         * <p>The trademark entity ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000009081***</p>
+         */
         @NameInMap("TrademarkId")
         public Long trademarkId;
 
+        /**
+         * <p>The audit status of the letter of authorization. Valid values:</p>
+         * <ul>
+         * <li>true: approved.</li>
+         * <li>false: not approved (includes all statuses other than approved).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("authorizationLetterAuditPass")
         public Boolean authorizationLetterAuditPass;
 
