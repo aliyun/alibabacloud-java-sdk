@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartRtcRobotInstanceShrinkRequest extends TeaModel {
     /**
+     * <p>The authentication token required to join the RTC call. You must generate this token using your RTC AppKey.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class StartRtcRobotInstanceShrinkRequest extends TeaModel {
     public String authToken;
 
     /**
+     * <p>The RTC channel\&quot;s unique identifier.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,10 +24,14 @@ public class StartRtcRobotInstanceShrinkRequest extends TeaModel {
     @NameInMap("ChannelId")
     public String channelId;
 
+    /**
+     * <p>Specifies advanced call configurations that override the agent\&quot;s default configurations. If you omit this parameter, the agent uses its default configurations.</p>
+     */
     @NameInMap("Config")
     public String configShrink;
 
     /**
+     * <p>The AI agent\&quot;s unique identifier.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +41,8 @@ public class StartRtcRobotInstanceShrinkRequest extends TeaModel {
     public String robotId;
 
     /**
+     * <p>User-defined information.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -42,6 +50,7 @@ public class StartRtcRobotInstanceShrinkRequest extends TeaModel {
     public String userData;
 
     /**
+     * <p>The AI agent\&quot;s unique identifier within the channel.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

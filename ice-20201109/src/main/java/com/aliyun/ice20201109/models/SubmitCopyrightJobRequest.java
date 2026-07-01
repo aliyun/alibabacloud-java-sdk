@@ -5,18 +5,20 @@ import com.aliyun.tea.*;
 
 public class SubmitCopyrightJobRequest extends TeaModel {
     /**
-     * <p>The description of the watermark.</p>
+     * <p>A description of the watermark job.</p>
      * 
      * <strong>example:</strong>
-     * <p>Description</p>
+     * <p>Task description</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The source video file that you want to add a watermark to.</p>
+     * <p>The input video file to be watermarked.</p>
      * <blockquote>
-     * <p>The OSS object or media asset must reside in the same region as the IMS service region.</p>
+     * <ul>
+     * <li>The OSS object or media asset must be in the same region as the service call.</li>
+     * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -27,7 +29,7 @@ public class SubmitCopyrightJobRequest extends TeaModel {
     public SubmitCopyrightJobRequestInput input;
 
     /**
-     * <p>The watermark level, which specifies the channel to embed watermarks. Valid values: 0 specifies the 0u channel, 1 specifies the 1uv channel, and 2 specifies the 2yuv channel.</p>
+     * <p>The watermark level, which specifies the embedding channel. Valid values are 0, 1, and 2, which correspond to the U, UV, and YUV channels, respectively.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -36,19 +38,21 @@ public class SubmitCopyrightJobRequest extends TeaModel {
     public Long level;
 
     /**
-     * <p>The information about the watermark to be added.</p>
+     * <p>The watermark content to embed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Test</p>
+     * <p>Copyright watermark test</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The URL of the output file.</p>
+     * <p>The location of the output file.</p>
      * <blockquote>
-     * <p>The OSS bucket must reside in the same region as the IMS service region.</p>
+     * <ul>
+     * <li>The OSS bucket must be in the same region as the service call.</li>
+     * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -59,12 +63,14 @@ public class SubmitCopyrightJobRequest extends TeaModel {
     public SubmitCopyrightJobRequestOutput output;
 
     /**
-     * <p>The parameters related to watermark jobs. The value is a JSON string. Supported parameter:</p>
+     * <p>The parameters for the watermark job, specified as a JSON string. The following parameter is supported:</p>
      * <ul>
-     * <li><p>algoType: the algorithm type. Default value: v1.</p>
+     * <li><p><code>algoType</code>: The algorithm type. Defaults to <code>v1</code>.</p>
      * <ul>
-     * <li>v1: watermarking for long videos that last at least 3 minutes.</li>
-     * <li>v2: watermarking for videos shorter than 3 minutes.</li>
+     * <li><p><code>v1</code>: For videos 3 minutes or longer.</p>
+     * </li>
+     * <li><p><code>v2</code>: For short videos.</p>
+     * </li>
      * </ul>
      * </li>
      * </ul>
@@ -76,7 +82,7 @@ public class SubmitCopyrightJobRequest extends TeaModel {
     public String params;
 
     /**
-     * <p>The start time of the watermark. Unit: seconds. If you do not specify this parameter, the default value 0 is used.</p>
+     * <p>The start time of the watermark in seconds. Defaults to 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -85,7 +91,7 @@ public class SubmitCopyrightJobRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The end time of the watermark. Unit: seconds. If you do not specify this parameter, the default value is the video duration.</p>
+     * <p>The end time of the watermark in seconds. If unspecified, the watermark is applied until the video ends.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -94,7 +100,7 @@ public class SubmitCopyrightJobRequest extends TeaModel {
     public Long totalTime;
 
     /**
-     * <p>The custom data, which can be up to 1,024 bytes in size.</p>
+     * <p>The user data. The value can be up to 1,024 bytes in length.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -181,10 +187,10 @@ public class SubmitCopyrightJobRequest extends TeaModel {
 
     public static class SubmitCopyrightJobRequestInput extends TeaModel {
         /**
-         * <p>The URL of the source file. You can specify the path of an OSS object in one of the following formats:</p>
-         * <p>1\. oss://bucket/object</p>
-         * <p>2\. http(s)://bucket.oss-[regionId].aliyuncs.com/object</p>
-         * <p>where bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object path in OSS.</p>
+         * <p>The input file, specified as either an OSS URL or a media asset ID. The following formats are supported for OSS URLs:</p>
+         * <p>1\. <code>oss://bucket/object</code></p>
+         * <p>2\. <code>http(s)://bucket.oss-[regionId].aliyuncs.com/object</code></p>
+         * <p>In these formats, <code>bucket</code> specifies the name of an OSS bucket in the same region as the service, and <code>object</code> specifies the file path.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,10 +200,12 @@ public class SubmitCopyrightJobRequest extends TeaModel {
         public String media;
 
         /**
-         * <p>The type of the source file. Valid values:</p>
+         * <p>The type of the input file. Valid values:</p>
          * <ol>
-         * <li>OSS: an OSS object.</li>
-         * <li>Media: a media asset.</li>
+         * <li><p><code>OSS</code>: The URL of an OSS object.</p>
+         * </li>
+         * <li><p><code>Media</code>: The media asset ID.</p>
+         * </li>
          * </ol>
          * <p>This parameter is required.</p>
          * 
@@ -232,9 +240,9 @@ public class SubmitCopyrightJobRequest extends TeaModel {
 
     public static class SubmitCopyrightJobRequestOutput extends TeaModel {
         /**
-         * <p>The OSS path where the output file is saved. You can specify the path in one of the following formats:</p>
-         * <p>1\. oss://bucket/object</p>
-         * <p>2\. http(s)://bucket.oss-[regionId].aliyuncs.com/object where bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object path in OSS.</p>
+         * <p>The OSS URL for the output file. The following formats are supported:</p>
+         * <p>1\. <code>oss://bucket/object</code></p>
+         * <p>2\. <code>http(s)://bucket.oss-[regionId].aliyuncs.com/object</code><br>In these formats, <code>bucket</code> specifies the name of an OSS bucket in the same region as the service, and <code>object</code> specifies the file path.<br></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -246,7 +254,7 @@ public class SubmitCopyrightJobRequest extends TeaModel {
         /**
          * <p>The type of the output file. Valid value:</p>
          * <ol>
-         * <li>OSS: an OSS object.</li>
+         * <li><code>OSS</code>: The URL of an OSS object.</li>
          * </ol>
          * <p>This parameter is required.</p>
          * 

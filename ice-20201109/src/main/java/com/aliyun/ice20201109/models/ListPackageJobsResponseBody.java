@@ -44,8 +44,10 @@ public class ListPackageJobsResponseBody extends TeaModel {
         /**
          * <p>The media object.</p>
          * <ul>
-         * <li>If Type is set to OSS, the URL of an OSS object is returned. Both the OSS and HTTP protocols are supported.</li>
-         * <li>If Type is set to Media, set this parameter to the ID of a media asset.</li>
+         * <li><p>If Type is set to OSS, the URL of an OSS object is returned. Both the OSS and HTTP protocols are supported.</p>
+         * </li>
+         * <li><p>If Type is set to Media, set this parameter to the ID of a media asset.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -57,8 +59,10 @@ public class ListPackageJobsResponseBody extends TeaModel {
         /**
          * <p>The type of the media object. Valid values:</p>
          * <ul>
-         * <li>OSS: an Object Storage Service (OSS) object.</li>
-         * <li>Media: a media asset.</li>
+         * <li><p>OSS: an Object Storage Service (OSS) object.</p>
+         * </li>
+         * <li><p>Media: a media asset.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -116,8 +120,10 @@ public class ListPackageJobsResponseBody extends TeaModel {
         /**
          * <p>The media object.</p>
          * <ul>
-         * <li>If Type is set to OSS, the URL of an OSS object is returned. Both the OSS and HTTP protocols are supported.</li>
-         * <li>If Type is set to Media, set this parameter to the ID of a media asset.</li>
+         * <li><p>If Type is set to OSS, the URL of an OSS object is returned. Both the OSS and HTTP protocols are supported.</p>
+         * </li>
+         * <li><p>If Type is set to Media, set this parameter to the ID of a media asset.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -129,8 +135,10 @@ public class ListPackageJobsResponseBody extends TeaModel {
         /**
          * <p>The type of the media object. Valid values:</p>
          * <ul>
-         * <li>OSS: an OSS object.</li>
-         * <li>Media: a media asset.</li>
+         * <li><p>OSS: an OSS object.</p>
+         * </li>
+         * <li><p>Media: a media asset.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -200,7 +208,7 @@ public class ListPackageJobsResponseBody extends TeaModel {
          * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>7b38a5d86f1e47838927b6e7ccb11cbe</p>
+         * <p>7b38a5d86f1e47838927b6e7ccb1****</p>
          */
         @NameInMap("JobId")
         public String jobId;
@@ -242,7 +250,7 @@ public class ListPackageJobsResponseBody extends TeaModel {
          * <p>The ID of the ApsaraVideo Media Processing (MPS) queue that is used to run the job.</p>
          * 
          * <strong>example:</strong>
-         * <p>5b40833e4c3e4d4e95a866abb9a42510</p>
+         * <p>5b40833e4c3e4d4e95a866abb9a4****</p>
          */
         @NameInMap("PipelineId")
         public String pipelineId;
@@ -277,9 +285,12 @@ public class ListPackageJobsResponseBody extends TeaModel {
         /**
          * <p>The source of the job. Valid values:</p>
          * <ul>
-         * <li>API</li>
-         * <li>WorkFlow</li>
-         * <li>Console</li>
+         * <li><p>API</p>
+         * </li>
+         * <li><p>WorkFlow</p>
+         * </li>
+         * <li><p>Console</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -429,7 +440,7 @@ public class ListPackageJobsResponseBody extends TeaModel {
          * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. The token of the next page is returned after you call this operation for the first time.</p>
          * 
          * <strong>example:</strong>
-         * <p>019daf5780f74831b0e1a767c9f1c178</p>
+         * <p>019daf5780f74831b0e1a767c9f1****</p>
          */
         @NameInMap("NextPageToken")
         public String nextPageToken;

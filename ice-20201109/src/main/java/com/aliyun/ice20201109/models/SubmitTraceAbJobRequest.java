@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitTraceAbJobRequest extends TeaModel {
     /**
-     * <p>The key that is encoded by using the Base64 algorithm.</p>
+     * <p>The Base64-encoded encryption key.</p>
      * 
      * <strong>example:</strong>
      * <p>Qh6OdgIMcliQSI1fReOw****</p>
@@ -14,9 +14,14 @@ public class SubmitTraceAbJobRequest extends TeaModel {
     public String cipherBase64ed;
 
     /**
-     * <p>The source video file for A/B watermarking.</p>
+     * <p>The input video for the A/B stream forensic watermarking job.</p>
      * <blockquote>
-     * <p>OSS object or media asset must reside in the same region as the IMS service region. This API supports only videos that last at least 3 minutes. If the video is too short, the call may fail, or no output may be returned.</p>
+     * <ul>
+     * <li><p>The Object Storage Service (OSS) file or media asset must be in the same region where Intelligent Media Services (IMS) is deployed.</p>
+     * </li>
+     * <li><p>This operation supports only videos that are three minutes or longer. Using a shorter video may cause the API call to fail or produce no output.</p>
+     * </li>
+     * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>
      */
@@ -24,7 +29,7 @@ public class SubmitTraceAbJobRequest extends TeaModel {
     public SubmitTraceAbJobRequestInput input;
 
     /**
-     * <p>The watermark level, which specifies the channel to embed watermarks. Valid values: 0 specifies the 0u channel, 1 specifies the 1uv channel, and 2 specifies the 2yuv channel.</p>
+     * <p>The watermark level, which specifies the embedding channel. Valid values: <code>0</code> (U channel), <code>1</code> (UV channels), and <code>2</code> (YUV channels).</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -33,14 +38,14 @@ public class SubmitTraceAbJobRequest extends TeaModel {
     public Long level;
 
     /**
-     * <p>The output directory path.</p>
+     * <p>The output location for the A/B stream job. This must be an OSS directory.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Output")
     public SubmitTraceAbJobRequestOutput output;
 
     /**
-     * <p>The start point of watermark embedding. Unit: seconds.</p>
+     * <p>The start time for watermark embedding, in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -49,7 +54,7 @@ public class SubmitTraceAbJobRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The duration of the watermark embedding. Unit: seconds.</p>
+     * <p>The total duration for watermark embedding, in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>360</p>
@@ -58,7 +63,7 @@ public class SubmitTraceAbJobRequest extends TeaModel {
     public Long totalTime;
 
     /**
-     * <p>The custom data, which can be up to 1,024 bytes in size.</p>
+     * <p>User data to include in the request. The maximum length is 1,024 bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -129,10 +134,11 @@ public class SubmitTraceAbJobRequest extends TeaModel {
 
     public static class SubmitTraceAbJobRequestInput extends TeaModel {
         /**
-         * <p>The source file. The file can be an OSS object or a media asset. You can specify the path of an OSS object in one of the following formats:</p>
-         * <p>1\. oss://bucket/object</p>
-         * <p>2\. http(s)://bucket.oss-[regionId].aliyuncs.com/object</p>
-         * <p>where bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object path in OSS.</p>
+         * <p>The location of the input file. This can be an OSS URL or a media asset ID.
+         * The supported OSS URL formats are:</p>
+         * <p>1\. <code>oss://&lt;bucket&gt;/&lt;object&gt;</code></p>
+         * <p>2\. <code>http(s)://&lt;bucket&gt;.oss-[regionId].aliyuncs.com/&lt;object&gt;</code></p>
+         * <p>In these formats, <code>&lt;bucket&gt;</code> is the name of the OSS bucket, which must be in the same region as your project, and <code>&lt;object&gt;</code> is the path to the file.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,10 +148,12 @@ public class SubmitTraceAbJobRequest extends TeaModel {
         public String media;
 
         /**
-         * <p>The type of the source file. Valid values:</p>
+         * <p>The type of the input file. Valid values:</p>
          * <ol>
-         * <li>OSS: an OSS object.</li>
-         * <li>Media: a media asset.</li>
+         * <li><p><code>OSS</code>: The file is specified by an OSS URL.</p>
+         * </li>
+         * <li><p><code>Media</code>: The file is specified by a media asset ID.</p>
+         * </li>
          * </ol>
          * <p>This parameter is required.</p>
          * 
@@ -180,10 +188,10 @@ public class SubmitTraceAbJobRequest extends TeaModel {
 
     public static class SubmitTraceAbJobRequestOutput extends TeaModel {
         /**
-         * <p>The output file. The file can be an OSS object or a media asset. OSS URL formats:</p>
-         * <p>1\. oss://bucket/dir/</p>
-         * <p>2\. http(s)://bucket.oss-[regionId].aliyuncs.com/dir/</p>
-         * <p>In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and dir specifies the object path in OSS.</p>
+         * <p>The output path. Specify an OSS directory URL or a media asset ID. If you specify an OSS URL, use one of the following formats for the output directory:</p>
+         * <p>1\. <code>oss://&lt;bucket&gt;/&lt;dir&gt;/</code></p>
+         * <p>2\. <code>http(s)://&lt;bucket&gt;.oss-[regionId].aliyuncs.com/&lt;dir&gt;/</code></p>
+         * <p>In these formats, <code>&lt;bucket&gt;</code> is the name of the OSS bucket, which must be in the same region as your project, and <code>&lt;dir&gt;</code> is the output directory path.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,10 +201,13 @@ public class SubmitTraceAbJobRequest extends TeaModel {
         public String media;
 
         /**
-         * <p>The type of the output file. Valid values:</p>
+         * <p>The type of the output object.
+         * Valid values:</p>
          * <ul>
-         * <li>OSS: an OSS object.</li>
-         * <li>Media: a media asset.</li>
+         * <li><p><code>OSS</code>: An OSS object.</p>
+         * </li>
+         * <li><p><code>Media</code>: A media asset ID.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

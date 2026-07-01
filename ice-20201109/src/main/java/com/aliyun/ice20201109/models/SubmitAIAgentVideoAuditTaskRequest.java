@@ -48,6 +48,9 @@ public class SubmitAIAgentVideoAuditTaskRequest extends TeaModel {
 
     /**
      * <p>The user-defined data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;Custom&quot;:&quot;hello&quot;}</p>
      */
     @NameInMap("UserData")
     public String userData;
@@ -168,6 +171,9 @@ public class SubmitAIAgentVideoAuditTaskRequest extends TeaModel {
 
         /**
          * <p>The text prompt to send to the MLLM along with the captured frames.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>请分析视频中的场景</p>
          */
         @NameInMap("Prompt")
         public String prompt;
@@ -226,7 +232,7 @@ public class SubmitAIAgentVideoAuditTaskRequest extends TeaModel {
          * <p>http(s)://{BucketName}.{Endpoint}/{ObjectName}</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="http://my-bucket.cn-shanghai.aliyuncs.com/object-id.mp4">http://my-bucket.cn-shanghai.aliyuncs.com/object-id.mp4</a></p>
+         * <p><a href="http://my-bucket.oss-cn-shanghai.aliyuncs.com/object-id.mp4">http://my-bucket.oss-cn-shanghai.aliyuncs.com/object-id.mp4</a></p>
          */
         @NameInMap("Media")
         public String media;

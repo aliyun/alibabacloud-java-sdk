@@ -14,7 +14,7 @@ public class UpdateLivePackageChannelGroupResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>request-1234567890</p>
+     * <p>5D87B753-0250-5D9D-B248-D40C3271F864</p>
      */
     @NameInMap("RequestId")
     public String requestId;

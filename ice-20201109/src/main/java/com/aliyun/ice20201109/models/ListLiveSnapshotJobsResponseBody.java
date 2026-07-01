@@ -20,7 +20,7 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of jobs to return per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +38,7 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The sorting order of the jobs by creation time.</p>
+     * <p>The sort order for the job list. For example, &quot;desc&quot; indicates descending order.</p>
      * 
      * <strong>example:</strong>
      * <p>desc</p>
@@ -47,7 +47,7 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of jobs found.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -110,7 +110,7 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
 
     public static class ListLiveSnapshotJobsResponseBodyJobListSnapshotOutput extends TeaModel {
         /**
-         * <p>The bucket of the output endpoint. If the storage type is set to oss, the OSS bucket is returned.</p>
+         * <p>The name of the OSS Bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>testbucket</p>
@@ -119,7 +119,7 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
         public String bucket;
 
         /**
-         * <p>The output endpoint. If the storage type is set to oss, the Object Storage Service (OSS) domain name is returned.</p>
+         * <p>The domain name of the OSS endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>oss-cn-shanghai.aliyuncs.com</p>
@@ -128,7 +128,7 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
         public String endpoint;
 
         /**
-         * <p>The storage type. The value can only be oss.</p>
+         * <p>The storage type. Only Object Storage Service (OSS) is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>oss</p>
@@ -169,7 +169,7 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
 
     public static class ListLiveSnapshotJobsResponseBodyJobList extends TeaModel {
         /**
-         * <p>The time when the template was created.</p>
+         * <p>The creation time of the job.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-20T02:48:58Z</p>
@@ -187,25 +187,22 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The name of the job.</p>
+         * <p>The job name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Screenshot task1</p>
          */
         @NameInMap("JobName")
         public String jobName;
 
         /**
-         * <p>The output information.</p>
+         * <p>Details of the snapshot output.</p>
          */
         @NameInMap("SnapshotOutput")
         public ListLiveSnapshotJobsResponseBodyJobListSnapshotOutput snapshotOutput;
 
         /**
-         * <p>The state of the job.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>init: The job is not started.</li>
-         * <li>paused: The job is paused.</li>
-         * <li>started: The job is in progress.</li>
-         * </ul>
+         * <p>The job status.</p>
          * 
          * <strong>example:</strong>
          * <p>started</p>
@@ -224,12 +221,15 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
 
         /**
          * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Template 1</p>
          */
         @NameInMap("TemplateName")
         public String templateName;
 
         /**
-         * <p>The interval between two adjacent snapshots. Unit: seconds.</p>
+         * <p>The interval between snapshots, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>

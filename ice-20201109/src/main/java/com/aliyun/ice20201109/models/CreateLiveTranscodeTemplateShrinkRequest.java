@@ -23,10 +23,14 @@ public class CreateLiveTranscodeTemplateShrinkRequest extends TeaModel {
     /**
      * <p>The type of the template. Valid values:</p>
      * <ul>
-     * <li>normal</li>
-     * <li>narrow-band</li>
-     * <li>audio-only</li>
-     * <li>origin</li>
+     * <li><p>normal</p>
+     * </li>
+     * <li><p>narrow-band</p>
+     * </li>
+     * <li><p>audio-only</p>
+     * </li>
+     * <li><p>origin</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

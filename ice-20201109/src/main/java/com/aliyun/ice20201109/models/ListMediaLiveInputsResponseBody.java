@@ -137,15 +137,39 @@ public class ListMediaLiveInputsResponseBody extends TeaModel {
         @NameInMap("SourceUrl")
         public String sourceUrl;
 
+        /**
+         * <p>Latency of the SRT stream, in milliseconds (ms).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("SrtLatency")
         public Integer srtLatency;
 
+        /**
+         * <p>The maximum bitrate of the SRT stream, in bps.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3000000</p>
+         */
         @NameInMap("SrtMaxBitrate")
         public Integer srtMaxBitrate;
 
+        /**
+         * <p>SRT encryption configuration—the password for the SRT stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>srtencryption</p>
+         */
         @NameInMap("SrtPassphrase")
         public String srtPassphrase;
 
+        /**
+         * <p>Encryption configuration for SRT. Specifies the key length for the SRT stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
+         */
         @NameInMap("SrtPbKeyLen")
         public Integer srtPbKeyLen;
 

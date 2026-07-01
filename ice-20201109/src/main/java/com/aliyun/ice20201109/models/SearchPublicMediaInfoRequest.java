@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SearchPublicMediaInfoRequest extends TeaModel {
     /**
+     * <p>Indicates whether the User has purchased a resource plan that includes this media asset.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class SearchPublicMediaInfoRequest extends TeaModel {
     public Boolean authorized;
 
     /**
+     * <p>Dynamic metadata search matching conditions.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;ApprovalStatus=\&quot;Available\&quot;&amp;MaterialBags=\&quot;boutiquemusic\&quot;&amp;Mood=\&quot;Nervous\&quot;&quot;</p>
      */
@@ -19,6 +23,11 @@ public class SearchPublicMediaInfoRequest extends TeaModel {
     public String dynamicMetaDataMatchFields;
 
     /**
+     * <p>Entity ID, used to identify different types of public copyright media assets. Valid values:</p>
+     * <ul>
+     * <li>Copyright_Music: Public copyright music</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Copyright_Music</p>
      */
@@ -26,6 +35,8 @@ public class SearchPublicMediaInfoRequest extends TeaModel {
     public String entityId;
 
     /**
+     * <p>Indicates whether the User has collected this media asset.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -33,6 +44,11 @@ public class SearchPublicMediaInfoRequest extends TeaModel {
     public Boolean favorite;
 
     /**
+     * <p>IMS media asset IDs.</p>
+     * <ul>
+     * <li>Separate multiple IDs with commas.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong>,<strong><strong>15d4a4b0448391508f2cb486</strong></strong></p>
      */
@@ -40,6 +56,8 @@ public class SearchPublicMediaInfoRequest extends TeaModel {
     public String mediaIds;
 
     /**
+     * <p>Page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -47,6 +65,8 @@ public class SearchPublicMediaInfoRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>Number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -54,6 +74,22 @@ public class SearchPublicMediaInfoRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Result sorting method: :. Valid values:</p>
+     * <p>field:</p>
+     * <ul>
+     * <li><p>&quot;UsageCount&quot;: usage</p>
+     * </li>
+     * <li><p>&quot;UnitPrice&quot;: unit price</p>
+     * </li>
+     * </ul>
+     * <p>order:</p>
+     * <ul>
+     * <li><p>&quot;Desc&quot;: descending</p>
+     * </li>
+     * <li><p>&quot;Asc&quot;: ascending</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>UsageCount:Desc,UnitPrice:Asc</p>
      */

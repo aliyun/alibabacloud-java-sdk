@@ -8,9 +8,12 @@ public class ListPipelinesRequest extends TeaModel {
      * <p>The type of the MPS queue.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>Boost: MPS queue with transcoding speed boosted.</li>
-     * <li>Standard: standard MPS queue.</li>
-     * <li>NarrowBandHDV2: MPS queue that supports Narrowband HD 2.0.</li>
+     * <li><p>Boost: MPS queue with transcoding speed boosted.</p>
+     * </li>
+     * <li><p>Standard: standard MPS queue.</p>
+     * </li>
+     * <li><p>NarrowBandHDV2: MPS queue that supports Narrowband HD 2.0.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

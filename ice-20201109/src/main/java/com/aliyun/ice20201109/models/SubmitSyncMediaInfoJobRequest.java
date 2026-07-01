@@ -79,7 +79,7 @@ public class SubmitSyncMediaInfoJobRequest extends TeaModel {
          * <li>If Type is set to OSS, set this parameter to the URL of an OSS object. Both the OSS and HTTP protocols are supported.</li>
          * </ul>
          * <blockquote>
-         * <p> Before you use the OSS bucket in the URL, you must add the bucket on the <a href="https://help.aliyun.com/document_detail/609918.html">Storage Management</a> page of the Intelligent Media Services (IMS) console.</p>
+         * <p>Before you use the OSS bucket in the URL, you must add the bucket on the <a href="https://help.aliyun.com/document_detail/609918.html">Storage Management</a> page of the Intelligent Media Services (IMS) console.</p>
          * </blockquote>
          * <ul>
          * <li>If Type is set to Media, set this parameter to the ID of a media asset.</li>
@@ -95,8 +95,10 @@ public class SubmitSyncMediaInfoJobRequest extends TeaModel {
         /**
          * <p>The type of the media object.</p>
          * <ul>
-         * <li>OSS: an Object Storage Service (OSS) object.</li>
-         * <li>Media: a media asset.</li>
+         * <li><p>OSS: an Object Storage Service (OSS) object.</p>
+         * </li>
+         * <li><p>Media: a media asset.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

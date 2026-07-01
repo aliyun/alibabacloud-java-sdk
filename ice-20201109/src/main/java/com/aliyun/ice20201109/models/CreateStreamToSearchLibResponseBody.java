@@ -34,8 +34,10 @@ public class CreateStreamToSearchLibResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true: succeeded.</li>
-     * <li>false: failed.</li>
+     * <li><p>true: succeeded.</p>
+     * </li>
+     * <li><p>false: failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

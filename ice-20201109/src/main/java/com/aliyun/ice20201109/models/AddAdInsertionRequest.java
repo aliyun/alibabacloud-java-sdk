@@ -8,8 +8,10 @@ public class AddAdInsertionRequest extends TeaModel {
      * <p>Specifies whether to enable ad marker passthrough. Default value: OFF.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>OFF: Disable.</li>
-     * <li>ON: Enable.</li>
+     * <li><p>OFF: Disable.</p>
+     * </li>
+     * <li><p>ON: Enable.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

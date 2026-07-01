@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateSearchIndexRequest extends TeaModel {
     /**
+     * <p>Index configuration</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,14 @@ public class CreateSearchIndexRequest extends TeaModel {
     public String indexConfig;
 
     /**
+     * <p>Index status. Default value is Active. Valid values:</p>
+     * <ul>
+     * <li><p>Active: Activated.</p>
+     * </li>
+     * <li><p>Deactive: Deactivated.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Active</p>
      */
@@ -24,11 +34,13 @@ public class CreateSearchIndexRequest extends TeaModel {
      * <li>mm: large visual model. You can use this model to describe complex visual features and identify and search for specific actions, movements, and events in videos, such as when athletes score a goal or get injured.</li>
      * </ul>
      * <blockquote>
-     * <p> This feature is in the public preview phase. You can use this feature for free for 1,000 hours of videos.</p>
+     * <p>This feature is in the public preview phase. You can use this feature for free for 1,000 hours of videos.</p>
      * </blockquote>
      * <ul>
-     * <li>face: face recognition. You can use the face recognition technology to describe face characteristics and automatically mark or search for faces in videos.</li>
-     * <li>aiLabel: smart tagging. The smart tagging category is used to describe content such as subtitles and audio in videos. You can use the speech recognition technology to automatically extract, mark, and search for subtitles and dialog content from videos. This helps you quickly locate the video content that is related to specific topics or keywords.</li>
+     * <li><p>face: face recognition. You can use the face recognition technology to describe face characteristics and automatically mark or search for faces in videos.</p>
+     * </li>
+     * <li><p>aiLabel: smart tagging. The smart tagging category is used to describe content such as subtitles and audio in videos. You can use the speech recognition technology to automatically extract, mark, and search for subtitles and dialog content from videos. This helps you quickly locate the video content that is related to specific topics or keywords.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -39,6 +51,14 @@ public class CreateSearchIndexRequest extends TeaModel {
     public String indexType;
 
     /**
+     * <p>Search library name.</p>
+     * <ul>
+     * <li><p>If no search library name is specified, the search index is created under the default IMS search library by default. The default value is ims-default-search-lib.</p>
+     * </li>
+     * <li><p>You can also use the <a href="https://help.aliyun.com/document_detail/2584455.html">QuerySearchLib</a> API to retrieve information about existing search libraries.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>test1</p>
      */

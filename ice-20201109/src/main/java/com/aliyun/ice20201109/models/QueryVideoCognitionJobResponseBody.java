@@ -4,16 +4,23 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class QueryVideoCognitionJobResponseBody extends TeaModel {
+    /**
+     * <p>The input file.</p>
+     */
     @NameInMap("Input")
     public QueryVideoCognitionJobResponseBodyInput input;
 
     /**
-     * <p>The status of the task. Valid values:</p>
+     * <p>The job status. Valid values:</p>
      * <ul>
-     * <li><strong>Success</strong></li>
-     * <li><strong>Fail</strong></li>
-     * <li><strong>Processing</strong></li>
-     * <li><strong>Submitted</strong></li>
+     * <li><p><strong>Success</strong>: The job succeeded.</p>
+     * </li>
+     * <li><p><strong>Fail</strong>: The job failed.</p>
+     * </li>
+     * <li><p><strong>Processing</strong>: The job is in progress.</p>
+     * </li>
+     * <li><p><strong>Submitted</strong>: The job has been submitted and is awaiting processing.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,6 +29,9 @@ public class QueryVideoCognitionJobResponseBody extends TeaModel {
     @NameInMap("JobStatus")
     public String jobStatus;
 
+    /**
+     * <p>The request parameters.</p>
+     */
     @NameInMap("Params")
     public String params;
 
@@ -37,11 +47,14 @@ public class QueryVideoCognitionJobResponseBody extends TeaModel {
     @NameInMap("Results")
     public QueryVideoCognitionJobResponseBodyResults results;
 
+    /**
+     * <p>The template ID.</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 
     /**
-     * <p>The user-defined data.</p>
+     * <p>The user data.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;userId&quot;:&quot;123432412831&quot;}</p>
@@ -111,9 +124,15 @@ public class QueryVideoCognitionJobResponseBody extends TeaModel {
     }
 
     public static class QueryVideoCognitionJobResponseBodyInput extends TeaModel {
+        /**
+         * <p>The URL of the input file.</p>
+         */
         @NameInMap("Media")
         public String media;
 
+        /**
+         * <p>The type of the input file. Valid value: OSS.</p>
+         */
         @NameInMap("Type")
         public String type;
 

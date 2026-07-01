@@ -61,6 +61,9 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
 
         /**
          * <p>The workflow name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Super-resolution transcoding workflow</p>
          */
         @NameInMap("Name")
         public String name;
@@ -69,8 +72,10 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
          * <p>The workflow state.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Active</li>
-         * <li>Inactive</li>
+         * <li><p>Active</p>
+         * </li>
+         * <li><p>Inactive</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -83,9 +88,12 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
          * <p>The workflow type.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Customize: custom workflow.</li>
-         * <li>System: system workflow.</li>
-         * <li>Common: user-created workflow.</li>
+         * <li><p>Customize: custom workflow.</p>
+         * </li>
+         * <li><p>System: system workflow.</p>
+         * </li>
+         * <li><p>Common: user-created workflow.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -161,6 +169,9 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
     public static class GetWorkflowTaskResponseBodyWorkflowTask extends TeaModel {
         /**
          * <p>The results for all nodes of the workflow task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Json格式，内容根据工作流配置有变化。</p>
          */
         @NameInMap("ActivityResults")
         public String activityResults;
@@ -187,11 +198,16 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
          * <p>The task state.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Init: The task is being initialized.</li>
-         * <li>Failed: The task failed.</li>
-         * <li>Canceled: The task is canceled.</li>
-         * <li>Processing: The task is in progress.</li>
-         * <li>Succeed: The task is successful.</li>
+         * <li><p>Init: The task is being initialized.</p>
+         * </li>
+         * <li><p>Failed: The task failed.</p>
+         * </li>
+         * <li><p>Canceled: The task is canceled.</p>
+         * </li>
+         * <li><p>Processing: The task is in progress.</p>
+         * </li>
+         * <li><p>Succeed: The task is successful.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

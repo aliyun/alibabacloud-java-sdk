@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class AddTemplateRequest extends TeaModel {
     /**
      * <ul>
-     * <li>The template configurations. The Config object of a regular template is encapsulated based on the Timeline object of an online editing project. The Config object of a custom template provides more flexible features. If you have special requirements, we recommend that you understand the structure of a Config object and configure a custom template. For more information, see <a href="https://help.aliyun.com/document_detail/456193.html">Config object of a regular template</a>.</li>
-     * <li>For more information about Config object examples, see <a href="https://help.aliyun.com/document_detail/451634.html">Basic template configurations</a>.</li>
+     * <li><p>The template configurations. The Config object of a regular template is encapsulated based on the Timeline object of an online editing project. The Config object of a custom template provides more flexible features. If you have special requirements, we recommend that you understand the structure of a Config object and configure a custom template. For more information, see <a href="https://help.aliyun.com/document_detail/456193.html">Config object of a regular template</a>.</p>
+     * </li>
+     * <li><p>For more information about Config object examples, see <a href="https://help.aliyun.com/document_detail/451634.html">Basic template configurations</a>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,7 +31,7 @@ public class AddTemplateRequest extends TeaModel {
      * <p>The name of the custom template.</p>
      * 
      * <strong>example:</strong>
-     * <p>视频添加水印模板</p>
+     * <p>Template name</p>
      */
     @NameInMap("Name")
     public String name;
@@ -55,9 +57,12 @@ public class AddTemplateRequest extends TeaModel {
     /**
      * <p>The source from which the template is created. Valid values:</p>
      * <ul>
-     * <li>OpenAPI</li>
-     * <li>AliyunConsole</li>
-     * <li>WebSDK</li>
+     * <li><p>OpenAPI</p>
+     * </li>
+     * <li><p>AliyunConsole</p>
+     * </li>
+     * <li><p>WebSDK</p>
+     * </li>
      * </ul>
      * <!---->
      * 
@@ -70,12 +75,18 @@ public class AddTemplateRequest extends TeaModel {
     /**
      * <p>The template state. Valid values:</p>
      * <ul>
-     * <li>Available: The template is available.</li>
-     * <li>Created: The template is created but not ready for use.</li>
-     * <li>Uploading: The video is being uploaded.</li>
-     * <li>Processing: The advanced template is being processed.</li>
-     * <li>UploadFailed: Failed to upload the video.</li>
-     * <li>ProcessFailed: Failed to process the advanced template.</li>
+     * <li><p>Available: The template is available.</p>
+     * </li>
+     * <li><p>Created: The template is created but not ready for use.</p>
+     * </li>
+     * <li><p>Uploading: The video is being uploaded.</p>
+     * </li>
+     * <li><p>Processing: The advanced template is being processed.</p>
+     * </li>
+     * <li><p>UploadFailed: Failed to upload the video.</p>
+     * </li>
+     * <li><p>ProcessFailed: Failed to process the advanced template.</p>
+     * </li>
      * </ul>
      * <!---->
      * 
@@ -88,8 +99,10 @@ public class AddTemplateRequest extends TeaModel {
     /**
      * <p>The template type. Valid values:</p>
      * <ul>
-     * <li>Timeline: a regular template created based on the timeline of a video editing project, in which multiple materials are arranged in sequence across multiple layers. It can be used to convert text and images into videos, create photo albums, add opening and closing parts, and apply the default watermark.</li>
-     * <li>VETemplate: an advanced template created using effects of Adobe After Effects (AE). It can be used to produce complex animations and advanced media effects.</li>
+     * <li><p>Timeline: a regular template created based on the timeline of a video editing project, in which multiple materials are arranged in sequence across multiple layers. It can be used to convert text and images into videos, create photo albums, add opening and closing parts, and apply the default watermark.</p>
+     * </li>
+     * <li><p>VETemplate: an advanced template created using effects of Adobe After Effects (AE). It can be used to produce complex animations and advanced media effects.</p>
+     * </li>
      * </ul>
      * <!---->
      * 

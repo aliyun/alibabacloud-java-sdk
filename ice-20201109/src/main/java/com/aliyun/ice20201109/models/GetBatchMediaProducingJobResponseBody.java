@@ -41,6 +41,12 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
     }
 
     public static class GetBatchMediaProducingJobResponseBodyEditingBatchJobSubJobList extends TeaModel {
+        /**
+         * <p>The duration of the output video, in seconds (s).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24.5</p>
+         */
         @NameInMap("Duration")
         public Float duration;
 
@@ -235,14 +241,84 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         @NameInMap("Extend")
         public String extend;
 
+        /**
+         * <p>Additional input.</p>
+         * <ul>
+         * <li><p>When JobType is Smart_Mix_Timeline_Organize or Screen_Media_Highlights_Timeline_Organize, the additional input is the material selection result.</p>
+         * </li>
+         * <li><p>When JobType is Scene_Batch_Editing, the additional input is a list of video editing project IDs.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;<strong><strong>7cc47fe04eaa81bd853acb6a</strong></strong>&quot;, &quot;<strong><strong>04eaa7cc47fe81bd853acb6a</strong></strong>&quot;]</p>
+         */
         @NameInMap("ExtendInput")
         public String extendInput;
 
+        /**
+         * <p>Additional outputs.</p>
+         * <ul>
+         * <li>When JobType is Smart_Mix_Media_Select or Screen_Media_Highlights_Media_Select, material selection results are additionally returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         * &quot;textMatchMediaOutputList&quot;: [{
+         * &quot;textMatchMediaSentenceOutputList&quot;: [{
+         * &quot;duration&quot;: 3.366667,
+         * &quot;matchClipList&quot;: [{
+         * &quot;clipId&quot;: &quot;null-2&quot;,
+         * &quot;endTime&quot;: 11.16,
+         * &quot;mediaId&quot;: &quot;<strong><strong>a0900f5071efbf1ce7e6c66a</strong></strong>&quot;,
+         * &quot;score&quot;: -0.253,
+         * &quot;startTime&quot;: 8.04
+         * }],
+         * &quot;text&quot;: &quot;A new Freshippo store just opened at the nearby mall.&quot;,
+         * &quot;textId&quot;: &quot;0&quot;
+         * },
+         * {
+         * &quot;duration&quot;: 1.566667,
+         * &quot;matchClipList&quot;: [{
+         * &quot;clipId&quot;: &quot;null-1&quot;,
+         * &quot;endTime&quot;: 1.54,
+         * &quot;mediaId&quot;: &quot;<strong><strong>a0900f5071efbf1ce7e6c66a</strong></strong>&quot;,
+         * &quot;score&quot;: -0.2326,
+         * &quot;startTime&quot;: 0
+         * }],
+         * &quot;text&quot;: &quot;today Yesfirst day of opening&quot;,
+         * &quot;textId&quot;: &quot;0&quot;
+         * }
+         * ]
+         * }]
+         * }</p>
+         */
         @NameInMap("ExtendOutput")
         public String extendOutput;
 
         /**
          * <p>The input configurations. For more information, see <a href="~~2692547#2faed1559549n~~">InputConfig</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;MediaGroupArray&quot;: [{
+         *       &quot;GroupName&quot;: &quot;MediaGroup1&quot;,
+         *       &quot;MediaArray&quot;: [
+         *         &quot;<strong><strong>9d46c886b45481030f6e</strong></strong>&quot;,
+         *         &quot;<strong><strong>6c886b4549d481030f6e</strong></strong>&quot; ]
+         *     }, {
+         *       &quot;GroupName&quot;: &quot;MediaGroup2&quot;,
+         *       &quot;MediaArray&quot;: [
+         *         &quot;<strong><strong>d46c886810b454930f6e</strong></strong>&quot;,
+         *         &quot;<strong><strong>4549d886810b46c30f6e</strong></strong>&quot; ]
+         *   }],
+         *   &quot;TitleArray&quot;: [
+         *       &quot;回龙观盒马鲜生开业啦&quot;,
+         *       &quot;盒马鲜生开业啦&quot; ],
+         *   &quot;SpeechTextArray&quot;: [
+         *       &quot;附近的商场新开了一家盒马鲜生，今天是第一天开业&quot;
+         *       &quot;商场里的人不少，零食、酒水都比较便宜大家也快来看看呀&quot; ]
+         * }</p>
          */
         @NameInMap("InputConfig")
         public String inputConfig;
@@ -256,6 +332,32 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>Task Type:</p>
+         * <ul>
+         * <li><p>Script (Script-based automated video editing)</p>
+         * </li>
+         * <li><p>Smart_Mix (Intelligent text-to-media matching for video editing)</p>
+         * </li>
+         * <li><p>Sports_Highlights (Sporting event highlights compilation)</p>
+         * </li>
+         * <li><p>Screen_Media_Highlights (High-energy multi-media mashup editing)</p>
+         * </li>
+         * <li><p>Smart_Mix_Media_Select (Intelligent matching – Material selection)</p>
+         * </li>
+         * <li><p>Smart_Mix_Timeline_Organize (Intelligent matching – Timeline orchestration)</p>
+         * </li>
+         * <li><p>Screen_Media_Highlights_Media_Select (High-energy mashup – Material selection)</p>
+         * </li>
+         * <li><p>Screen_Media_Highlights_Timeline_Organize (High-energy mashup – Timeline orchestration)</p>
+         * </li>
+         * <li><p>Scene_Batch_Editing (Batch synthesis across multiple timelines)</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Script</p>
+         */
         @NameInMap("JobType")
         public String jobType;
 

@@ -77,6 +77,9 @@ public class QueryTraceExtractJobResponseBody extends TeaModel {
     public static class QueryTraceExtractJobResponseBodyData extends TeaModel {
         /**
          * <p>The trace watermark information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试溯源水印</p>
          */
         @NameInMap("Trace")
         public String trace;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BatchGetYikeAIAppJobRequest extends TeaModel {
     /**
+     * <p>A list of job IDs, separated by commas.</p>
+     * 
      * <strong>example:</strong>
      * <p>cec2c13da767c090,ca3d3c9737f04586</p>
      */

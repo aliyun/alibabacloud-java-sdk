@@ -40,9 +40,12 @@ public class CreateVodPackagingConfigurationRequest extends TeaModel {
     /**
      * <p>The package type.</p>
      * <ul>
-     * <li>HLS: packages content into TS segments for delivery over the HLS protocol.</li>
-     * <li>HLS_CMAF: packages content into CMAF segments for delivery over the HLS protocol.</li>
-     * <li>DASH: packages content for delivery over the DASH protocol.</li>
+     * <li><p>HLS: packages content into TS segments for delivery over the HLS protocol.</p>
+     * </li>
+     * <li><p>HLS_CMAF: packages content into CMAF segments for delivery over the HLS protocol.</p>
+     * </li>
+     * <li><p>DASH: packages content for delivery over the DASH protocol.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,8 +103,10 @@ public class CreateVodPackagingConfigurationRequest extends TeaModel {
         /**
          * <p>The encryption method. Valid values:</p>
          * <ul>
-         * <li>AES_128: Advanced Encryption Standard (AES) with 128-bit key length.</li>
-         * <li>SAMPLE_AES: an encryption method that encrypts individual media samples.</li>
+         * <li><p>AES_128: Advanced Encryption Standard (AES) with 128-bit key length.</p>
+         * </li>
+         * <li><p>SAMPLE_AES: an encryption method that encrypts individual media samples.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -122,15 +127,21 @@ public class CreateVodPackagingConfigurationRequest extends TeaModel {
         /**
          * <p>The ID of the DRM system. The maximum number of system IDs allowed is determined by the protocol type. Limits:</p>
          * <ul>
-         * <li>DASH: 2</li>
-         * <li>HLS: 1</li>
-         * <li>HLS_CMAF: 2</li>
+         * <li><p>DASH: 2</p>
+         * </li>
+         * <li><p>HLS: 1</p>
+         * </li>
+         * <li><p>HLS_CMAF: 2</p>
+         * </li>
          * </ul>
          * <p>Apple FairPlay, Google Widevine, and Microsoft PlayReady are supported. Their system IDs are as follows:</p>
          * <ul>
-         * <li>Apple FairPlay: 94ce86fb-07ff-4f43-adb8-93d2fa968ca2</li>
-         * <li>Google Widevine: edef8ba9-79d6-4ace-a3c8-27dcd51d21e</li>
-         * <li>Microsoft PlayReady: 9a04f079-9840-4286-ab92-e65be0885f95</li>
+         * <li><p>Apple FairPlay: 94ce86fb-07ff-4f43-adb8-93d2fa968ca2</p>
+         * </li>
+         * <li><p>Google Widevine: edef8ba9-79d6-4ace-a3c8-27dcd51d21e</p>
+         * </li>
+         * <li><p>Microsoft PlayReady: 9a04f079-9840-4286-ab92-e65be0885f95</p>
+         * </li>
          * </ul>
          */
         @NameInMap("SystemIds")
@@ -203,9 +214,12 @@ public class CreateVodPackagingConfigurationRequest extends TeaModel {
         /**
          * <p>The order of manifest files in the master playlist. Valid values:</p>
          * <ul>
-         * <li>ORIGINAL: sorts the manifest files in the same order as the source.</li>
-         * <li>VIDEO_BITRATE_ASCENDING: sorts the manifest files in ascending order of bitrates, from lowest to highest.</li>
-         * <li>VIDEO_BITRATE_DESCENDING: sorts the manifest files in descending order of bitrates, from highest to lowest.</li>
+         * <li><p>ORIGINAL: sorts the manifest files in the same order as the source.</p>
+         * </li>
+         * <li><p>VIDEO_BITRATE_ASCENDING: sorts the manifest files in ascending order of bitrates, from lowest to highest.</p>
+         * </li>
+         * <li><p>VIDEO_BITRATE_DESCENDING: sorts the manifest files in descending order of bitrates, from highest to lowest.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

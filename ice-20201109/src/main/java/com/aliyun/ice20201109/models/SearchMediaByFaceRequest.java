@@ -5,8 +5,18 @@ import com.aliyun.tea.*;
 
 public class SearchMediaByFaceRequest extends TeaModel {
     /**
+     * <p>Custom filters. A JSON string. The following backing fields are supported: intField1 (integer type), strField1 and strField2 (string type). For the same field, only one matching mode can be specified. Filters across different fields are combined with a logical AND relationship.</p>
+     * <ul>
+     * <li><p>Exact match, for example: {&quot;intField1&quot;:12,&quot;strField1&quot;:&quot;abc&quot;}</p>
+     * </li>
+     * <li><p>Multi-value match, for example: {&quot;intField1&quot;:[12,13],&quot;strField1&quot;:[&quot;abc&quot;,&quot;cd&quot;]}</p>
+     * </li>
+     * <li><p>Range match, for example: {&quot;intField1&quot;:{&quot;gte&quot;:12,&quot;lte&quot;:13}}</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>{}</p>
+     * <p>{&quot;intField1&quot;:{&quot;gte&quot;:12,&quot;lte&quot;:13},&quot;strField2&quot;:[&quot;cd&quot;,&quot;de&quot;],&quot;strField1&quot;:&quot;abc&quot;}</p>
      */
     @NameInMap("CustomFilters")
     public String customFilters;
@@ -33,8 +43,10 @@ public class SearchMediaByFaceRequest extends TeaModel {
     /**
      * <p>The type of the media asset. Valid values:</p>
      * <ul>
-     * <li>image</li>
-     * <li>video</li>
+     * <li><p>image</p>
+     * </li>
+     * <li><p>video</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,6 +55,12 @@ public class SearchMediaByFaceRequest extends TeaModel {
     @NameInMap("MediaType")
     public String mediaType;
 
+    /**
+     * <p>Namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name-1</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
@@ -84,8 +102,13 @@ public class SearchMediaByFaceRequest extends TeaModel {
     public String searchLibName;
 
     /**
+     * <p>Creation time, in milliseconds UNIX timestamp. Use gte for greater than or equal to, and lte for less than or equal to.</p>
+     * <ul>
+     * <li>Example range: {&quot;gte&quot;:1761205662998,&quot;lte&quot;:1771205662998}</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>{}</p>
+     * <p>{&quot;gte&quot;:1761205662998,&quot;lte&quot;:1771205662998}</p>
      */
     @NameInMap("UtcCreate")
     public String utcCreate;

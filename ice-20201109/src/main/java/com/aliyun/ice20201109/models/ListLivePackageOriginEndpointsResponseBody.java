@@ -138,6 +138,9 @@ public class ListLivePackageOriginEndpointsResponseBody extends TeaModel {
 
         /**
          * <p>The endpoint description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is an origin endpoint.</p>
          */
         @NameInMap("Description")
         public String description;

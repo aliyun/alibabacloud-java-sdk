@@ -9,7 +9,7 @@ public class DeleteLiveRecordTemplateRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>69e1f9fe-1e97-11ed-ba64-0c42a1b73d66</p>
+     * <p>69e1f9fe-1e97-11ed-ba64-0c42a1b7****</p>
      */
     @NameInMap("TemplateId")
     public String templateId;

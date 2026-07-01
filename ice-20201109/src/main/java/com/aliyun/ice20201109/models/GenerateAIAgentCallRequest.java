@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GenerateAIAgentCallRequest extends TeaModel {
     /**
-     * <p>The ID of the AI agent.</p>
+     * <p>The AI agent ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,14 +14,23 @@ public class GenerateAIAgentCallRequest extends TeaModel {
     @NameInMap("AIAgentId")
     public String AIAgentId;
 
+    /**
+     * <p>The agent template configuration. The configuration you provide merges with the agent template configuration in the console. If you omit this parameter, the agent uses the default configuration from the console.</p>
+     * <blockquote>
+     * <p>Compatibility with <code>TemplateConfig</code>: Fields in <code>AgentConfig</code> take precedence. If a field is specified in <code>TemplateConfig</code> but not in <code>AgentConfig</code>, the system uses the value from <code>TemplateConfig</code>. We recommend using <code>AgentConfig</code> instead of <code>TemplateConfig</code>.</p>
+     * </blockquote>
+     */
     @NameInMap("AgentConfig")
     public AIAgentConfig agentConfig;
 
+    /**
+     * <p>The chat synchronization configuration.</p>
+     */
     @NameInMap("ChatSyncConfig")
     public GenerateAIAgentCallRequestChatSyncConfig chatSyncConfig;
 
     /**
-     * <p>The time when the token expires. Unit: seconds. Default value: 3600. Valid values: 0 to 604800.</p>
+     * <p>Optional. The expiration time of the token in seconds. Default value: 3600. Value range: 0 to 604800.</p>
      * 
      * <strong>example:</strong>
      * <p>3600</p>
@@ -30,6 +39,8 @@ public class GenerateAIAgentCallRequest extends TeaModel {
     public Long expire;
 
     /**
+     * <p>A unique identifier for the session. If not provided, a new session is created.</p>
+     * 
      * <strong>example:</strong>
      * <p>fw1gr0bc005e4f309379701645f4****</p>
      */
@@ -37,13 +48,23 @@ public class GenerateAIAgentCallRequest extends TeaModel {
     public String sessionId;
 
     /**
-     * <p>The template configurations of the AI agent. The specified configurations are merged with the template configurations that are specified in the console. If you do not specify this parameter, the system uses the default configurations for an AI agent created in the console.</p>
+     * <ul>
+     * <li><p>This configuration merges with the agent template configuration in the console.</p>
+     * </li>
+     * <li><p>If you omit this parameter, the agent uses the default configuration from the console.</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>The agent template configuration. This parameter is deprecated. Use the AgentConfig parameter instead.</p>
+     * </blockquote>
      */
     @NameInMap("TemplateConfig")
     @Deprecated
     public AIAgentTemplateConfig templateConfig;
 
     /**
+     * <p>User data.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;Email&quot;:&quot;<a href="mailto:johndoe@example.com">johndoe@example.com</a>&quot;,&quot;Preferences&quot;:{&quot;Language&quot;:&quot;en&quot;}}</p>
      */
@@ -51,7 +72,7 @@ public class GenerateAIAgentCallRequest extends TeaModel {
     public String userData;
 
     /**
-     * <p>The username of the AI agent in the channel. If you do not specify this parameter, the system automatically generates a username. The value can be up to 64 characters in length.</p>
+     * <p>The username in the channel. If you do not specify a username, one is automatically generated. The username can be up to 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>877ae632caae49b1afc81c2e8194ffb4</p>
@@ -131,6 +152,8 @@ public class GenerateAIAgentCallRequest extends TeaModel {
 
     public static class GenerateAIAgentCallRequestChatSyncConfig extends TeaModel {
         /**
+         * <p>The ID of the Instant Messaging (IM) agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>**<strong><strong>005e4f309379701645f4</strong></strong></p>
          */
@@ -138,6 +161,8 @@ public class GenerateAIAgentCallRequest extends TeaModel {
         public String IMAIAgentId;
 
         /**
+         * <p>The user ID of the recipient.</p>
+         * 
          * <strong>example:</strong>
          * <p>4167626d312034b2b1c3b7f2f3e41884</p>
          */

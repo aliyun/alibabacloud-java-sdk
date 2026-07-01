@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetDefaultStorageLocationResponseBody extends TeaModel {
     /**
+     * <p>OSS bucket name</p>
+     * 
      * <strong>example:</strong>
      * <p>oss-test-bucket</p>
      */
@@ -12,6 +14,8 @@ public class GetDefaultStorageLocationResponseBody extends TeaModel {
     public String bucket;
 
     /**
+     * <p>Path</p>
+     * 
      * <strong>example:</strong>
      * <p>ice/dir</p>
      */
@@ -19,6 +23,8 @@ public class GetDefaultStorageLocationResponseBody extends TeaModel {
     public String path;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */
@@ -26,6 +32,14 @@ public class GetDefaultStorageLocationResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Bucket status:</p>
+     * <ul>
+     * <li><p>Normal: The bucket is in normal status.</p>
+     * </li>
+     * <li><p>notExist: The bucket does not exist.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>normal</p>
      */
@@ -33,6 +47,8 @@ public class GetDefaultStorageLocationResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>Storage class</p>
+     * 
      * <strong>example:</strong>
      * <p>user_oss_bucket</p>
      */

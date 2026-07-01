@@ -41,7 +41,7 @@ public class GetHotwordLibraryResponseBody extends TeaModel {
      * <p>The name of the hotword library.</p>
      * 
      * <strong>example:</strong>
-     * <p>热词库名称</p>
+     * <p>Hotword library name</p>
      */
     @NameInMap("Name")
     public String name;

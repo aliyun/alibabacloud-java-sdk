@@ -126,6 +126,9 @@ public class ListEditingProjectsResponseBody extends TeaModel {
 
         /**
          * <p>The description of the online editing project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>工程描述</p>
          */
         @NameInMap("Description")
         public String description;
@@ -178,8 +181,10 @@ public class ListEditingProjectsResponseBody extends TeaModel {
         /**
          * <p>The type of the editing project. Valid values:</p>
          * <ul>
-         * <li>EditingProject: a regular editing project.</li>
-         * <li>LiveEditingProject: a live stream editing project.</li>
+         * <li><p>EditingProject: a regular editing project.</p>
+         * </li>
+         * <li><p>LiveEditingProject: a live stream editing project.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -205,8 +210,10 @@ public class ListEditingProjectsResponseBody extends TeaModel {
         /**
          * <p>The template type. Valid values:</p>
          * <ul>
-         * <li>Timeline: a regular template.</li>
-         * <li>VETemplate: an advanced template.</li>
+         * <li><p>Timeline: a regular template.</p>
+         * </li>
+         * <li><p>VETemplate: an advanced template.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -217,6 +224,9 @@ public class ListEditingProjectsResponseBody extends TeaModel {
 
         /**
          * <p>The title of the online editing project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Project title</p>
          */
         @NameInMap("Title")
         public String title;

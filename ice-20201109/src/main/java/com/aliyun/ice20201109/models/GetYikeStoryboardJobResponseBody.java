@@ -5,19 +5,37 @@ import com.aliyun.tea.*;
 
 public class GetYikeStoryboardJobResponseBody extends TeaModel {
     /**
+     * <p>The storyboard job ID. You can obtain this ID from the response parameters of the <a href="https://help.aliyun.com/document_detail/461964.html">SubmitStoryboardJob</a> operation.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>a046-263c-3560-978a-fb287782</strong></strong></p>
      */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <p>A JSON object that contains the parameters for the job. The structure of this object varies based on the AI algorithm.</p>
+     */
     @NameInMap("JobParams")
     public GetYikeStoryboardJobResponseBodyJobParams jobParams;
 
+    /**
+     * <p>The job result.</p>
+     */
     @NameInMap("JobResult")
     public GetYikeStoryboardJobResponseBodyJobResult jobResult;
 
     /**
+     * <p>The job status. Valid values:</p>
+     * <ul>
+     * <li><p><strong>Succeeded</strong>: The job completed successfully.</p>
+     * </li>
+     * <li><p><strong>Failed</strong>: The job failed to complete.</p>
+     * </li>
+     * <li><p><strong>Running</strong>: The job is in progress.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Succeeded</p>
      */
@@ -25,6 +43,8 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
     public String jobStatus;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
      */
@@ -78,6 +98,8 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
 
     public static class GetYikeStoryboardJobResponseBodyJobParams extends TeaModel {
         /**
+         * <p>The aspect ratio of the video.</p>
+         * 
          * <strong>example:</strong>
          * <p>16:9</p>
          */
@@ -85,6 +107,8 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
         public String aspectRatio;
 
         /**
+         * <p>The OSS URL of the file.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://test.oss-cn-shanghai.aliyuncs.com/test.mp4">https://test.oss-cn-shanghai.aliyuncs.com/test.mp4</a></p>
          */
@@ -92,6 +116,8 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
         public String fileURL;
 
         /**
+         * <p>The model parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *   &quot;AudioEnable&quot;: false
@@ -101,6 +127,8 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
         public String modelParams;
 
         /**
+         * <p>The narration voice.</p>
+         * 
          * <strong>example:</strong>
          * <p>sys_YoungGracefulWoman</p>
          */
@@ -108,6 +136,8 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
         public String narrationVoiceId;
 
         /**
+         * <p>The resolution of the generated video.</p>
+         * 
          * <strong>example:</strong>
          * <p>1K</p>
          */
@@ -115,6 +145,8 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
         public String resolution;
 
         /**
+         * <p>The shot generation mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>multi</p>
          */
@@ -122,6 +154,8 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
         public String shotPromptMode;
 
         /**
+         * <p>The shot splitting mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>firstPersonNarration</p>
          */
@@ -129,6 +163,8 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
         public String shotSplitMode;
 
         /**
+         * <p>The source type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Novel</p>
          */
@@ -136,6 +172,8 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
         public String sourceType;
 
         /**
+         * <p>The style ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>RealisticPhotography</p>
          */
@@ -143,6 +181,10 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
         public String styleId;
 
         /**
+         * <p>The job title.</p>
+         * <p>\- Maximum length: 128 bytes.</p>
+         * <p>\- UTF-8 encoding.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-title</p>
          */
@@ -150,6 +192,8 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>The video model.</p>
+         * 
          * <strong>example:</strong>
          * <p>wan2.6-r2v-flash</p>
          */
@@ -253,6 +297,8 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
 
     public static class GetYikeStoryboardJobResponseBodyJobResult extends TeaModel {
         /**
+         * <p>A list of IDs for storyboards that encountered an exception.</p>
+         * 
          * <strong>example:</strong>
          * <p>[\&quot;st_2053348871\&quot;]</p>
          */
@@ -260,6 +306,8 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
         public String exceptionStoryboardIds;
 
         /**
+         * <p>A list of shots that failed to generate.</p>
+         * 
          * <strong>example:</strong>
          * <p>[{\&quot;errorCode\&quot;:\&quot;NoMediaData\&quot;,\&quot;storyboardId\&quot;:\&quot;st_2118280473\&quot;,\&quot;shotId\&quot;:\&quot;54\&quot;}]</p>
          */
@@ -267,19 +315,35 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
         public String failureShotList;
 
         /**
+         * <p>The downloadable OSS URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://test.oss-cn-shanghai.aliyuncs.com/test.mp4">https://test.oss-cn-shanghai.aliyuncs.com/test.mp4</a></p>
          */
         @NameInMap("OutputUrl")
         public String outputUrl;
 
+        /**
+         * <p>Detailed information about each storyboard in the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;storyboardId\&quot;:\&quot;st_1541525214\&quot;,\&quot;title\&quot;:\&quot;test_1\&quot;,\&quot;status\&quot;:\&quot;Produced\&quot;,\&quot;subStatus\&quot;:\&quot;ProduceSucc\&quot;},{\&quot;storyboardId\&quot;:\&quot;st_1633435355\&quot;,\&quot;title\&quot;:\&quot;test_2\&quot;,\&quot;status\&quot;:\&quot;Produced\&quot;,\&quot;subStatus\&quot;:\&quot;ProduceSucc\&quot;}]</p>
+         */
         @NameInMap("StoryboardInfoList")
         public String storyboardInfoList;
 
+        /**
+         * <p>A comma-separated list of successful storyboard IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>st_2118280473, st_2118280471</p>
+         */
         @NameInMap("SuccessStoryboardIds")
         public String successStoryboardIds;
 
         /**
+         * <p>A list of IDs for successful storyboards.</p>
+         * 
          * <strong>example:</strong>
          * <p>[\&quot;st_2118280473\&quot;]</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartAIAgentInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the AI agent created in the <a href="https://ims.console.aliyun.com/ai/robot/list">IMS</a> console.</p>
+     * <p>The agent ID configured in the <a href="https://ims.console.aliyun.com/ai/robot/list">IMS console</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,33 +14,50 @@ public class StartAIAgentInstanceRequest extends TeaModel {
     @NameInMap("AIAgentId")
     public String AIAgentId;
 
+    /**
+     * <p>The agent template configuration. Values you provide merge with the template configuration set in the console. If you omit this parameter, the agent uses its default configuration from the console.</p>
+     * <blockquote>
+     * <p>This field is compatible with TemplateConfig. Fields in AgentConfig take precedence. If TemplateConfig contains fields not defined in AgentConfig, those fields are used. Use AgentConfig instead of TemplateConfig.</p>
+     * </blockquote>
+     */
     @NameInMap("AgentConfig")
     public AIAgentConfig agentConfig;
 
     /**
-     * <p>同步聊天记录配置。</p>
+     * <p>The chat history synchronization configuration.</p>
      */
     @NameInMap("ChatSyncConfig")
     public StartAIAgentInstanceRequestChatSyncConfig chatSyncConfig;
 
     /**
+     * <p>The configuration required for the agent at runtime.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RuntimeConfig")
     public AIAgentRuntimeConfig runtimeConfig;
 
     /**
+     * <p>A unique identifier for the chat session. This parameter is optional.</p>
+     * 
      * <strong>example:</strong>
      * <p>f213fbc005e4f309379701645f4****</p>
      */
     @NameInMap("SessionId")
     public String sessionId;
 
+    /**
+     * <p>The agent template configuration. Values you provide merge with the template configuration set in the console. If you omit this parameter, the agent uses its default configuration from the console.</p>
+     * <blockquote>
+     * <p>The agent template configuration. This field is deprecated. See the AgentConfig field.</p>
+     * </blockquote>
+     */
     @NameInMap("TemplateConfig")
     @Deprecated
     public AIAgentTemplateConfig templateConfig;
 
     /**
+     * <p>User-defined data.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;Email&quot;:&quot;<a href="mailto:johndoe@example.com">johndoe@example.com</a>&quot;,&quot;Preferences&quot;:{&quot;Language&quot;:&quot;en&quot;}}</p>
      */
@@ -111,7 +128,7 @@ public class StartAIAgentInstanceRequest extends TeaModel {
 
     public static class StartAIAgentInstanceRequestChatSyncConfig extends TeaModel {
         /**
-         * <p>IM的智能体Id。</p>
+         * <p>The IM agent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>**<strong><strong>005e4f309379701645f4</strong></strong></p>
@@ -120,7 +137,7 @@ public class StartAIAgentInstanceRequest extends TeaModel {
         public String IMAIAgentId;
 
         /**
-         * <p>接收用户Id。</p>
+         * <p>The receiver user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4167626d312034b2b1c3b7f2f3e41884</p>

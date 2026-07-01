@@ -8,9 +8,12 @@ public class GetDemonstrationForCustomizedVoiceJobRequest extends TeaModel {
      * <p>The demonstration scenario.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><strong>story</strong></li>
-     * <li><strong>interaction</strong></li>
-     * <li><strong>navigation</strong></li>
+     * <li><p><strong>story</strong></p>
+     * </li>
+     * <li><p><strong>interaction</strong></p>
+     * </li>
+     * <li><p><strong>navigation</strong></p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

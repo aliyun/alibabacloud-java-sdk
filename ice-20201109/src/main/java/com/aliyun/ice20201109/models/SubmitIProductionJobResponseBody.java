@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitIProductionJobResponseBody extends TeaModel {
     /**
-     * <p>The ID of the intelligent production job.</p>
+     * <p>The ID of the job.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
@@ -14,7 +14,7 @@ public class SubmitIProductionJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>C1849434-FC47-5DC1-92B6-F7EAAFE3851E</p>

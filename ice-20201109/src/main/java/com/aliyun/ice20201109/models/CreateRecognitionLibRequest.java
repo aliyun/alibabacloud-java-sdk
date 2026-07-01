@@ -7,11 +7,16 @@ public class CreateRecognitionLibRequest extends TeaModel {
     /**
      * <p>The type of recognition algorithm. Valid values:</p>
      * <ul>
-     * <li>landmark</li>
-     * <li>object</li>
-     * <li>logo</li>
-     * <li>face</li>
-     * <li>label</li>
+     * <li><p>landmark</p>
+     * </li>
+     * <li><p>object</p>
+     * </li>
+     * <li><p>logo</p>
+     * </li>
+     * <li><p>face</p>
+     * </li>
+     * <li><p>label</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -23,6 +28,9 @@ public class CreateRecognitionLibRequest extends TeaModel {
 
     /**
      * <p>The description of the recognition library. Max length: 128 bytes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>For storing product recognition samples</p>
      */
     @NameInMap("LibDescription")
     public String libDescription;
@@ -30,6 +38,9 @@ public class CreateRecognitionLibRequest extends TeaModel {
     /**
      * <p>The name of the recognition library. Max length: 64 bytes.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Landmark test library</p>
      */
     @NameInMap("LibName")
     public String libName;

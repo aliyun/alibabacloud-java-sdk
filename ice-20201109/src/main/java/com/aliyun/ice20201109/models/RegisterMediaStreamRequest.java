@@ -8,7 +8,7 @@ public class RegisterMediaStreamRequest extends TeaModel {
      * <p>The URL of the media asset in another service. The URL is associated with the ID of the media asset in IMS. The URL cannot be modified once registered.</p>
      * <p>Set this parameter to the OSS URL of the media asset. The following formats are supported:</p>
      * <p>http(s)://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</p>
-     * <p>oss://example-bucket/example.mp4: In this format, it is considered by default that the region of the OSS bucket in which the media asset resides is the same as the region in which IMS is activated.</p>
+     * <p>oss\://example-bucket/example.mp4: In this format, it is considered by default that the region of the OSS bucket in which the media asset resides is the same as the region in which IMS is activated.</p>
      */
     @NameInMap("InputURL")
     public String inputURL;
@@ -22,6 +22,13 @@ public class RegisterMediaStreamRequest extends TeaModel {
     @NameInMap("MediaId")
     public String mediaId;
 
+    /**
+     * <p>Custom stream tags used to identify transcoding streams.</p>
+     * <p>After the media stream is registered, you can invoke <a href="https://help.aliyun.com/zh/ims/developer-reference/api-ice-2020-11-09-getplayinfo?spm=a2c4g.11186623.help-menu-193643.d_5_0_3_1_4.56dc5a11JzNEVj">GetPlayInfo</a> to retrieve this tag value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;key1&quot;: &quot;value1&quot;}</p>
+     */
     @NameInMap("StreamTags")
     public String streamTags;
 

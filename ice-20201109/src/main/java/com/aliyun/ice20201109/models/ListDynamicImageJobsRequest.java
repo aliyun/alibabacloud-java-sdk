@@ -34,8 +34,10 @@ public class ListDynamicImageJobsRequest extends TeaModel {
     /**
      * <p>The order that you use to sort the query results. Valid values:</p>
      * <ol>
-     * <li>CreateTimeAsc: sorts the jobs by creation time in ascending order.</li>
-     * <li>CreateTimeDesc: sorts the jobs by creation time in descending order.</li>
+     * <li><p>CreateTimeAsc: sorts the jobs by creation time in ascending order.</p>
+     * </li>
+     * <li><p>CreateTimeDesc: sorts the jobs by creation time in descending order.</p>
+     * </li>
      * </ol>
      * 
      * <strong>example:</strong>
@@ -66,9 +68,12 @@ public class ListDynamicImageJobsRequest extends TeaModel {
      * <p>The state of the job.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>Init: The job is submitted.</li>
-     * <li>Success: The job is successful.</li>
-     * <li>Fail: The job failed.</li>
+     * <li><p>Init: The job is submitted.</p>
+     * </li>
+     * <li><p>Success: The job is successful.</p>
+     * </li>
+     * <li><p>Fail: The job failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

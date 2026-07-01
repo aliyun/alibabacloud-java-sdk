@@ -40,8 +40,10 @@ public class ListVodPackagingAssetsResponseBody extends TeaModel {
     /**
      * <p>The sorting order of the assets based on the time when they were ingested. Valid values:</p>
      * <ul>
-     * <li>desc: descending order.</li>
-     * <li>asc: ascending order.</li>
+     * <li><p>desc: descending order.</p>
+     * </li>
+     * <li><p>asc: ascending order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

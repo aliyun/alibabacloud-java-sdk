@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitTraceM3u8JobResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public SubmitTraceM3u8JobResponseBodyData data;
@@ -20,7 +20,7 @@ public class SubmitTraceM3u8JobResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>

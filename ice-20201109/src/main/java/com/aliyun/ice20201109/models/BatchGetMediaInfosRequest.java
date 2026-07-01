@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class BatchGetMediaInfosRequest extends TeaModel {
     /**
-     * <p>The additional information that you want to query about the media assets. By default, only BasicInfo is returned. The following additional information can be queried:</p>
-     * <p>\- FileInfo</p>
-     * <p>\- DynamicMetaData</p>
+     * <p>The types of additional media asset information to return. If this parameter is not specified, only basic information is returned. Valid values are:</p>
+     * <p>-FileInfo</p>
+     * <p>-DynamicMetaData</p>
      * 
      * <strong>example:</strong>
      * <p>FileInfo,DynamicMetaData</p>
@@ -15,11 +15,25 @@ public class BatchGetMediaInfosRequest extends TeaModel {
     @NameInMap("AdditionType")
     public String additionType;
 
+    /**
+     * <p>The authentication timeout, in seconds.</p>
+     * <ul>
+     * <li><p>Minimum value: <strong>1</strong>.</p>
+     * </li>
+     * <li><p>Maximum value: 86400.</p>
+     * </li>
+     * <li><p>Default value: 3600.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("AuthTimeout")
     public Long authTimeout;
 
     /**
-     * <p>The IDs of the media assets that you want to query. Separate the IDs with commas (,).</p>
+     * <p>A comma-separated list of media asset IDs to query.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>b48fb04483915d4f2cd8</strong></strong></strong>,<strong><strong><strong>c48fb37407365d4f2cd8</strong></strong></strong></p>

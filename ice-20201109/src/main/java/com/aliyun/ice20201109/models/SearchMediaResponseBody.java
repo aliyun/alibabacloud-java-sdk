@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SearchMediaResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,22 +14,22 @@ public class SearchMediaResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The media assets that meet the requirements.</p>
+     * <p>A collection of media assets that match the criteria.</p>
      */
     @NameInMap("MediaInfoList")
     public java.util.List<SearchMediaResponseBodyMediaInfoList> mediaInfoList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>6F61C357-ACC0-57FB-876E-D58795335E59</p>
+     * <p>6F61C357-ACC0-57FB-876E-D5879533****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The pagination identifier.</p>
+     * <p>The token used to retrieve the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>F8C4F642184DBDA5D93907A70AAE****</p>
@@ -47,7 +47,7 @@ public class SearchMediaResponseBody extends TeaModel {
     public String success;
 
     /**
-     * <p>The total number of media assets that meet the conditions.</p>
+     * <p>The total number of media assets matching the search criteria.</p>
      * 
      * <strong>example:</strong>
      * <p>163</p>
@@ -128,7 +128,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public Double size;
 
         /**
-         * <p>The timestamp of the track.</p>
+         * <p>The timestamp of the track data point.</p>
          * 
          * <strong>example:</strong>
          * <p>1.4</p>
@@ -170,6 +170,9 @@ public class SearchMediaResponseBody extends TeaModel {
     public static class SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfoOccurrences extends TeaModel {
         /**
          * <p>The text content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pipi</p>
          */
         @NameInMap("Content")
         public String content;
@@ -185,6 +188,9 @@ public class SearchMediaResponseBody extends TeaModel {
 
         /**
          * <p>The fine-grained name of the entity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Car</p>
          */
         @NameInMap("FinegrainName")
         public String finegrainName;
@@ -199,7 +205,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public Double from;
 
         /**
-         * <p>The optimal face image encoded in Base64.</p>
+         * <p>The optimal image of the recognized face, encoded in Base64.</p>
          * 
          * <strong>example:</strong>
          * <p>99C64F6287</p>
@@ -208,7 +214,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public String image;
 
         /**
-         * <p>The score.</p>
+         * <p>The confidence score for the recognition result.</p>
          * 
          * <strong>example:</strong>
          * <p>0.75287705</p>
@@ -235,16 +241,16 @@ public class SearchMediaResponseBody extends TeaModel {
         public Double to;
 
         /**
-         * <p>The track sequence.</p>
+         * <p>A sequence of tracks that represent the entity within the clip.</p>
          */
         @NameInMap("Tracks")
         public java.util.List<SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfoOccurrencesTracks> tracks;
 
         /**
-         * <p>The ID of the clip.</p>
+         * <p>The clip ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>5FE19530C7A422197535FE74F5DB2B9F</p>
+         * <p>5FE19530C7A422197535FE74F5DB****</p>
          */
         @NameInMap("clipId")
         public String clipId;
@@ -338,16 +344,19 @@ public class SearchMediaResponseBody extends TeaModel {
 
     public static class SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfo extends TeaModel {
         /**
-         * <p>The category.</p>
+         * <p>The category of the label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Vehicle</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
-         * <p>The face ID.</p>
+         * <p>The ID of the recognized face.</p>
          * 
          * <strong>example:</strong>
-         * <p>5FE19530C7A422197535FE74F5DB2B9F</p>
+         * <p>5FE19530C7A422197535FE74F5DB****</p>
          */
         @NameInMap("FaceId")
         public String faceId;
@@ -363,24 +372,30 @@ public class SearchMediaResponseBody extends TeaModel {
 
         /**
          * <p>The name of the entity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Car</p>
          */
         @NameInMap("LabelName")
         public String labelName;
 
         /**
-         * <p>The type of the tag.</p>
+         * <p>The type of the label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Object</p>
          */
         @NameInMap("LabelType")
         public String labelType;
 
         /**
-         * <p>The clips.</p>
+         * <p>A list of clips where the entity appears.</p>
          */
         @NameInMap("Occurrences")
         public java.util.List<SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfoOccurrences> occurrences;
 
         /**
-         * <p>The source.</p>
+         * <p>The source of the AI data.</p>
          * 
          * <strong>example:</strong>
          * <p>vision</p>
@@ -453,16 +468,19 @@ public class SearchMediaResponseBody extends TeaModel {
 
     public static class SearchMediaResponseBodyMediaInfoListAiDataAsrInfo extends TeaModel {
         /**
-         * <p>The ID of the clip.</p>
+         * <p>The clip ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>5FE19530C7A422197535FE74F5DB2B9F</p>
+         * <p>5FE19530C7A422197535FE74F5DB****</p>
          */
         @NameInMap("ClipId")
         public String clipId;
 
         /**
-         * <p>The text content.</p>
+         * <p>The transcribed text content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>I am Pipi.</p>
          */
         @NameInMap("Content")
         public String content;
@@ -543,16 +561,19 @@ public class SearchMediaResponseBody extends TeaModel {
 
     public static class SearchMediaResponseBodyMediaInfoListAiDataOcrInfo extends TeaModel {
         /**
-         * <p>The ID of the clip.</p>
+         * <p>The clip ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>5FE19530C7A422197535FE74F5DB2B9F</p>
+         * <p>5FE19530C7A422197535FE74F5DB****</p>
          */
         @NameInMap("ClipId")
         public String clipId;
 
         /**
-         * <p>The text content.</p>
+         * <p>The recognized text content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>我是皮皮</p>
          */
         @NameInMap("Content")
         public String content;
@@ -633,19 +654,19 @@ public class SearchMediaResponseBody extends TeaModel {
 
     public static class SearchMediaResponseBodyMediaInfoListAiData extends TeaModel {
         /**
-         * <p>The tags of the intelligent AI job.</p>
+         * <p>A list of AI label information.</p>
          */
         @NameInMap("AiLabelInfo")
         public java.util.List<SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfo> aiLabelInfo;
 
         /**
-         * <p>The information about audio files.</p>
+         * <p>A list of Automatic Speech Recognition (ASR) results.</p>
          */
         @NameInMap("AsrInfo")
         public java.util.List<SearchMediaResponseBodyMediaInfoListAiDataAsrInfo> asrInfo;
 
         /**
-         * <p>The subtitles.</p>
+         * <p>A list of Optical Character Recognition (OCR) results.</p>
          */
         @NameInMap("OcrInfo")
         public java.util.List<SearchMediaResponseBodyMediaInfoListAiDataOcrInfo> ocrInfo;
@@ -683,10 +704,10 @@ public class SearchMediaResponseBody extends TeaModel {
 
     public static class SearchMediaResponseBodyMediaInfoListAiRoughData extends TeaModel {
         /**
-         * <p>TV Series</p>
+         * <p>The AI category applied to the media asset.</p>
          * 
          * <strong>example:</strong>
-         * <p>TV series</p>
+         * <p>视频AI分类</p>
          */
         @NameInMap("AiCategory")
         public String aiCategory;
@@ -695,13 +716,13 @@ public class SearchMediaResponseBody extends TeaModel {
          * <p>The ID of the AI job.</p>
          * 
          * <strong>example:</strong>
-         * <p>cd35b0b0025f71edbfcb472190a9xxxx</p>
+         * <p>cd35b0b0025f71edbfcb472190a9****</p>
          */
         @NameInMap("AiJobId")
         public String aiJobId;
 
         /**
-         * <p>The results of the AI job.</p>
+         * <p>The URL of the raw AI result file.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://xxxx.json">http://xxxx.json</a></p>
@@ -710,7 +731,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public String result;
 
         /**
-         * <p>The save type.</p>
+         * <p>The save type of the AI data.</p>
          * 
          * <strong>example:</strong>
          * <p>TEXT</p>
@@ -719,7 +740,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public String saveType;
 
         /**
-         * <p>The data status.</p>
+         * <p>The save status of the AI data.</p>
          * 
          * <strong>example:</strong>
          * <p>SaveSuccess</p>
@@ -812,7 +833,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public String fileName;
 
         /**
-         * <p>The size of the file in bytes.</p>
+         * <p>The file size in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>324784</p>
@@ -842,13 +863,13 @@ public class SearchMediaResponseBody extends TeaModel {
          * <p>The Object Storage Service (OSS) URL of the file.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="https://outin-d3f4681ddfd911ec99a600163e1403e7.oss-cn-shanghai.aliyuncs.com/sv/23d5cdd1-18180984899/23d5cdd1-18180984899.mp4">https://outin-d3f4681ddfd911ec99a600163e1403e7.oss-cn-shanghai.aliyuncs.com/sv/23d5cdd1-18180984899/23d5cdd1-18180984899.mp4</a></p>
+         * <p><a href="https://outin-d3f4681ddfd911ec99a600163e1403e7.oss-cn-shanghai.aliyuncs.com/sv/23d5cdd1-18180984899/23d5cdd1-1818098****.mp4">https://outin-d3f4681ddfd911ec99a600163e1403e7.oss-cn-shanghai.aliyuncs.com/sv/23d5cdd1-18180984899/23d5cdd1-1818098****.mp4</a></p>
          */
         @NameInMap("FileUrl")
         public String fileUrl;
 
         /**
-         * <p>The encapsulation format of the file.</p>
+         * <p>The container format of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>mov,mp4,m4a,3gp,3g2,mj2</p>
@@ -857,7 +878,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public String formatName;
 
         /**
-         * <p>The height of the file.</p>
+         * <p>The height of the video in pixels.</p>
          * 
          * <strong>example:</strong>
          * <p>480</p>
@@ -865,6 +886,12 @@ public class SearchMediaResponseBody extends TeaModel {
         @NameInMap("Height")
         public String height;
 
+        /**
+         * <p>Information about the image set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("ImagesInput")
         public String imagesInput;
 
@@ -878,7 +905,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
-         * <p>The region in which the file is stored.</p>
+         * <p>The region where the file is stored.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -887,7 +914,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The width of the file.</p>
+         * <p>The width of the video in pixels.</p>
          * 
          * <strong>example:</strong>
          * <p>1920</p>
@@ -1016,7 +1043,7 @@ public class SearchMediaResponseBody extends TeaModel {
 
     public static class SearchMediaResponseBodyMediaInfoListFileInfoList extends TeaModel {
         /**
-         * <p>The basic information about the file, such as the duration and size.</p>
+         * <p>Basic information about the file, such as its duration and size.</p>
          */
         @NameInMap("FileBasicInfo")
         public SearchMediaResponseBodyMediaInfoListFileInfoListFileBasicInfo fileBasicInfo;
@@ -1038,6 +1065,16 @@ public class SearchMediaResponseBody extends TeaModel {
 
     public static class SearchMediaResponseBodyMediaInfoListIndexStatusList extends TeaModel {
         /**
+         * <p>The status of the index. Valid values:</p>
+         * <ul>
+         * <li><p><code>Running</code>: The index is being created.</p>
+         * </li>
+         * <li><p><code>Fail</code>: The index creation failed.</p>
+         * </li>
+         * <li><p><code>Success</code>: The index was created.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */
@@ -1045,6 +1082,16 @@ public class SearchMediaResponseBody extends TeaModel {
         public String indexStatus;
 
         /**
+         * <p>The type of the index. Valid values:</p>
+         * <ul>
+         * <li><p><code>mm</code>: Large Language Model (LLM).</p>
+         * </li>
+         * <li><p><code>face</code>: Face.</p>
+         * </li>
+         * <li><p><code>aiLabel</code>: Smart tagging.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>mm</p>
          */
@@ -1094,7 +1141,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public String businessType;
 
         /**
-         * <p>The ID of the category.</p>
+         * <p>The category ID.</p>
          * 
          * <strong>example:</strong>
          * <p>44</p>
@@ -1103,7 +1150,10 @@ public class SearchMediaResponseBody extends TeaModel {
         public Long cateId;
 
         /**
-         * <p>The name of the category.</p>
+         * <p>The category name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Subcategory 1</p>
          */
         @NameInMap("CateName")
         public String cateName;
@@ -1118,10 +1168,10 @@ public class SearchMediaResponseBody extends TeaModel {
         public String category;
 
         /**
-         * <p>The thumbnail URL of the media asset.</p>
+         * <p>The URL of the cover image.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="https://dtlive-bj.oss-cn-beijing.aliyuncs.com/cover/e694372e-4f5b-4821-ae09-efd064f27b63_large_cover_url.jpg">https://dtlive-bj.oss-cn-beijing.aliyuncs.com/cover/e694372e-4f5b-4821-ae09-efd064f27b63_large_cover_url.jpg</a></p>
+         * <p><a href="https://dtlive-bj.oss-cn-beijing.aliyuncs.com/cover/e694372e-4f5b-4821-ae09-efd064f2****_large_cover_url.jpg">https://dtlive-bj.oss-cn-beijing.aliyuncs.com/cover/e694372e-4f5b-4821-ae09-efd064f2****_large_cover_url.jpg</a></p>
          */
         @NameInMap("CoverURL")
         public String coverURL;
@@ -1146,30 +1196,33 @@ public class SearchMediaResponseBody extends TeaModel {
 
         /**
          * <p>The description of the media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>对这个视频进行转码处理了</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The address of the media asset that is waiting to be registered.</p>
+         * <p>The source URL of the media asset.</p>
          * 
          * <strong>example:</strong>
-         * <p>oss://clipres/longvideo/material/voice/prod/20220418/07d7c799f6054dc3bbef250854cf84981650248140427</p>
+         * <p>oss://clipres/longvideo/material/voice/prod/20220418/07d7c799f6054dc3bbef250854cf8498165024814****</p>
          */
         @NameInMap("InputURL")
         public String inputURL;
 
         /**
-         * <p>The ID of the media asset.</p>
+         * <p>The media asset ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>132bd600fc3c71ec99476732a78f6402</p>
+         * <p>132bd600fc3c71ec99476732a78f****</p>
          */
         @NameInMap("MediaId")
         public String mediaId;
 
         /**
-         * <p>The tags of the media asset.</p>
+         * <p>The tags assigned to the media asset. Multiple tags are separated by commas.</p>
          * 
          * <strong>example:</strong>
          * <p>tags,tags2</p>
@@ -1187,7 +1240,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public String mediaType;
 
         /**
-         * <p>The time when the media asset was modified.</p>
+         * <p>The time when the media asset was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-01T19:48Z</p>
@@ -1195,11 +1248,17 @@ public class SearchMediaResponseBody extends TeaModel {
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name-1</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
-         * <p>The custom ID of the media asset. The ID is a string that contains 6 to 64 characters. Only letters, digits, hyphens (-), and underscores (_) are supported. Each custom ID is unique.</p>
+         * <p>A unique, custom ID for the user. It must be 6 to 64 characters long and can contain letters, digits, hyphens (-), and underscores (_).</p>
          * 
          * <strong>example:</strong>
          * <p>123-123</p>
@@ -1208,7 +1267,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public String referenceId;
 
         /**
-         * <p>The snapshots of the media asset.</p>
+         * <p>Snapshot information in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;bucket&quot;:&quot;example-bucket&quot;,&quot;count&quot;:&quot;3&quot;,&quot;iceJobId&quot;:&quot;<strong><strong><strong>f48f0e4154976b2b8c45</strong></strong></strong>&quot;,&quot;location&quot;:&quot;oss-cn-beijing&quot;,&quot;snapshotRegular&quot;:&quot;example.jpg&quot;,&quot;templateId&quot;:&quot;<strong><strong><strong>e6a6440b29eb60bd7c</strong></strong></strong>&quot;}]</p>
@@ -1226,7 +1285,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The image sprite of the media asset</p>
+         * <p>Sprite Image information in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;bucket&quot;:&quot;example-bucket&quot;,&quot;count&quot;:&quot;32&quot;,&quot;iceJobId&quot;:&quot;<strong><strong><strong>83ec44d58b2069def2e</strong></strong></strong>&quot;,&quot;location&quot;:&quot;oss-cn-shanghai&quot;,&quot;snapshotRegular&quot;:&quot;example/example-{Count}.jpg&quot;,&quot;spriteRegular&quot;:&quot;example/example-{TileCount}.jpg&quot;,&quot;templateId&quot;:&quot;<strong><strong><strong>e438b14ff39293eaec25</strong></strong></strong>&quot;,&quot;tileCount&quot;:&quot;1&quot;}]</p>
@@ -1235,7 +1294,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public String spriteImages;
 
         /**
-         * <p>The state of the media asset.</p>
+         * <p>The status of the media asset.</p>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -1244,6 +1303,8 @@ public class SearchMediaResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The stream status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Active</p>
          */
@@ -1252,6 +1313,9 @@ public class SearchMediaResponseBody extends TeaModel {
 
         /**
          * <p>The title of the media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Smart landscape-to-portrait conversion</p>
          */
         @NameInMap("Title")
         public String title;
@@ -1266,7 +1330,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public String transcodeStatus;
 
         /**
-         * <p>The upload source of the media asset.</p>
+         * <p>The upload source.</p>
          * 
          * <strong>example:</strong>
          * <p>general</p>
@@ -1275,7 +1339,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public String uploadSource;
 
         /**
-         * <p>The user data.</p>
+         * <p>The custom user data.</p>
          * 
          * <strong>example:</strong>
          * <p>userData</p>
@@ -1283,6 +1347,12 @@ public class SearchMediaResponseBody extends TeaModel {
         @NameInMap("UserData")
         public String userData;
 
+        /**
+         * <p>A computer-vision-generated description of the media content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>足球进球</p>
+         */
         @NameInMap("VisionDescription")
         public String visionDescription;
 
@@ -1503,44 +1573,49 @@ public class SearchMediaResponseBody extends TeaModel {
 
     public static class SearchMediaResponseBodyMediaInfoList extends TeaModel {
         /**
-         * <p>The details of the intelligent AI job.</p>
+         * <p>The detailed AI data.</p>
          */
         @NameInMap("AiData")
         public SearchMediaResponseBodyMediaInfoListAiData aiData;
 
         /**
-         * <p>The description of the AI job.</p>
+         * <p>A summary of the AI processing data.</p>
          */
         @NameInMap("AiRoughData")
         public SearchMediaResponseBodyMediaInfoListAiRoughData aiRoughData;
 
         /**
+         * <p>Custom fields for filtering, provided as a JSON string.</p>
+         * 
          * <strong>example:</strong>
-         * <p>{}</p>
+         * <p>{\&quot;intField1\&quot;:12,\&quot;strField1\&quot;:\&quot;abc\&quot;}</p>
          */
         @NameInMap("CustomFields")
         public String customFields;
 
         /**
-         * <p>The information about the files.</p>
+         * <p>A list of file information.</p>
          */
         @NameInMap("FileInfoList")
         public java.util.List<SearchMediaResponseBodyMediaInfoListFileInfoList> fileInfoList;
 
+        /**
+         * <p>A list of indexing statuses for different index types.</p>
+         */
         @NameInMap("IndexStatusList")
         public java.util.List<SearchMediaResponseBodyMediaInfoListIndexStatusList> indexStatusList;
 
         /**
-         * <p>The basic information about the media asset.</p>
+         * <p>Basic information about the media asset.</p>
          */
         @NameInMap("MediaBasicInfo")
         public SearchMediaResponseBodyMediaInfoListMediaBasicInfo mediaBasicInfo;
 
         /**
-         * <p>The ID of the media asset.</p>
+         * <p>The media asset ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>3b187b3620c8490886cfc2a9578c3ce6</p>
+         * <p>3b187b3620c8490886cfc2a9578c****</p>
          */
         @NameInMap("MediaId")
         public String mediaId;

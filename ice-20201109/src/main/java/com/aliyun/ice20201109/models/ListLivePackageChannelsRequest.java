@@ -45,8 +45,10 @@ public class ListLivePackageChannelsRequest extends TeaModel {
      * <p>The sort order by creation time. Default value: desc.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>asc</li>
-     * <li>desc</li>
+     * <li><p>asc</p>
+     * </li>
+     * <li><p>desc</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

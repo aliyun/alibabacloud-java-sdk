@@ -7,8 +7,10 @@ public class UpdateMediaInfoRequest extends TeaModel {
     /**
      * <p>Specifies whether to append tags. Default value: false. Valid values:</p>
      * <ul>
-     * <li>true: updates the MediaTags parameter by appending new tags.</li>
-     * <li>false: updates the MediaTags parameter by overwriting existing tags with new tags.</li>
+     * <li><p>true: updates the MediaTags parameter by appending new tags.</p>
+     * </li>
+     * <li><p>false: updates the MediaTags parameter by overwriting existing tags with new tags.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,11 +22,16 @@ public class UpdateMediaInfoRequest extends TeaModel {
     /**
      * <p>The business type. Valid values:</p>
      * <ul>
-     * <li>subtitles</li>
-     * <li>watermark</li>
-     * <li>opening</li>
-     * <li>ending</li>
-     * <li>general</li>
+     * <li><p>subtitles</p>
+     * </li>
+     * <li><p>watermark</p>
+     * </li>
+     * <li><p>opening</p>
+     * </li>
+     * <li><p>ending</p>
+     * </li>
+     * <li><p>general</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,8 +52,10 @@ public class UpdateMediaInfoRequest extends TeaModel {
     /**
      * <p>The category.</p>
      * <ul>
-     * <li>The value can be up to 64 bytes in length.</li>
-     * <li>The value must be encoded in UTF-8.</li>
+     * <li><p>The value can be up to 64 bytes in length.</p>
+     * </li>
+     * <li><p>The value must be encoded in UTF-8.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,8 +67,10 @@ public class UpdateMediaInfoRequest extends TeaModel {
     /**
      * <p>The URL of the thumbnail.</p>
      * <ul>
-     * <li>The value can be up to 128 bytes in length.</li>
-     * <li>The value must be encoded in UTF-8.</li>
+     * <li><p>The value can be up to 128 bytes in length.</p>
+     * </li>
+     * <li><p>The value must be encoded in UTF-8.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,8 +82,10 @@ public class UpdateMediaInfoRequest extends TeaModel {
     /**
      * <p>The content description.</p>
      * <ul>
-     * <li>The value can be up to 1,024 bytes in length.</li>
-     * <li>The value must be encoded in UTF-8.</li>
+     * <li><p>The value can be up to 1,024 bytes in length.</p>
+     * </li>
+     * <li><p>The value must be encoded in UTF-8.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -85,7 +98,7 @@ public class UpdateMediaInfoRequest extends TeaModel {
      * <p>The input URL of the media asset in another service. The URL must be bound to the ID of the media asset in IMS. The URL cannot be modified once registered.</p>
      * <p>For a media asset from Object Storage Service (OSS), the URL may have one of the following formats:</p>
      * <p>1\. http(s)://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</p>
-     * <p>2\. oss://example-bucket/example.mp4. This format indicates that the region in which the OSS bucket of the media asset resides is the same as the region in which OSS is activated.</p>
+     * <p>2\. oss\://example-bucket/example.mp4. This format indicates that the region in which the OSS bucket of the media asset resides is the same as the region in which OSS is activated.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</a></p>
@@ -105,10 +118,14 @@ public class UpdateMediaInfoRequest extends TeaModel {
     /**
      * <p>The tags.</p>
      * <ul>
-     * <li>Up to 16 tags are supported.</li>
-     * <li>Separate multiple tags with commas (,).</li>
-     * <li>Each tag can be up to 32 bytes in length.</li>
-     * <li>The value must be encoded in UTF-8.</li>
+     * <li><p>Up to 16 tags are supported.</p>
+     * </li>
+     * <li><p>Separate multiple tags with commas (,).</p>
+     * </li>
+     * <li><p>Each tag can be up to 32 bytes in length.</p>
+     * </li>
+     * <li><p>The value must be encoded in UTF-8.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -129,8 +146,10 @@ public class UpdateMediaInfoRequest extends TeaModel {
     /**
      * <p>The title.</p>
      * <ul>
-     * <li>The value can be up to 128 bytes in length.</li>
-     * <li>The value must be encoded in UTF-8.</li>
+     * <li><p>The value can be up to 128 bytes in length.</p>
+     * </li>
+     * <li><p>The value must be encoded in UTF-8.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

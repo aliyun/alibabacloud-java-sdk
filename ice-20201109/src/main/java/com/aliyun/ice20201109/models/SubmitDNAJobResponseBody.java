@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitDNAJobResponseBody extends TeaModel {
     /**
-     * <p>The ID of the media fingerprint analysis job. We recommend that you save this ID for subsequent calls of other operations.</p>
+     * <p>The ID of the DNA job. Save this ID for subsequent API calls.</p>
      * 
      * <strong>example:</strong>
      * <p>88c6ca184c0e47098a5b665e2****</p>

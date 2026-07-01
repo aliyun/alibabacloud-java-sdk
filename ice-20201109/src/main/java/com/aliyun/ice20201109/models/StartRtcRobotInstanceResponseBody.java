@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StartRtcRobotInstanceResponseBody extends TeaModel {
     /**
+     * <p>The instance\&quot;s unique identifier.</p>
+     * 
      * <strong>example:</strong>
      * <p>727dc0e296014bb58670940a3da95592</p>
      */
@@ -12,7 +14,7 @@ public class StartRtcRobotInstanceResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>11DE0AB3-603B-5055-8A72-9C424854F983</p>

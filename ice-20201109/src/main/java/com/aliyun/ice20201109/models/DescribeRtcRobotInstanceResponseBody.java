@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeRtcRobotInstanceResponseBody extends TeaModel {
     /**
+     * <p>The authentication token for the RTC Channel.</p>
+     * 
      * <strong>example:</strong>
      * <hr>
      */
@@ -12,17 +14,22 @@ public class DescribeRtcRobotInstanceResponseBody extends TeaModel {
     public String authToken;
 
     /**
+     * <p>The channel ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>testId</p>
      */
     @NameInMap("ChannelId")
     public String channelId;
 
+    /**
+     * <p>The advanced configurations of the AI agent.</p>
+     */
     @NameInMap("Config")
     public DescribeRtcRobotInstanceResponseBodyConfig config;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>20B3A1B6-4BD2-5DE6-BCBC-098C9B4F4E91</p>
@@ -31,6 +38,14 @@ public class DescribeRtcRobotInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status of the instance. Valid values:</p>
+     * <ul>
+     * <li><p><code>Executing</code>: The instance is running.</p>
+     * </li>
+     * <li><p><code>Finished</code>: The instance has stopped.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Executing</p>
      */
@@ -38,6 +53,8 @@ public class DescribeRtcRobotInstanceResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The custom user data.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -45,6 +62,8 @@ public class DescribeRtcRobotInstanceResponseBody extends TeaModel {
     public String userData;
 
     /**
+     * <p>The ID of the AI agent in the channel.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-robot</p>
      */
@@ -114,16 +133,26 @@ public class DescribeRtcRobotInstanceResponseBody extends TeaModel {
 
     public static class DescribeRtcRobotInstanceResponseBodyConfig extends TeaModel {
         /**
+         * <p>Specifies whether to allow voice interruption.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("EnableVoiceInterrupt")
         public Boolean enableVoiceInterrupt;
 
+        /**
+         * <p>The welcome message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hello</p>
+         */
         @NameInMap("Greeting")
         public String greeting;
 
         /**
+         * <p>The voice ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>zhixiaoxia</p>
          */

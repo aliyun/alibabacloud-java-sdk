@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StartAIAgentOutboundCallResponseBody extends TeaModel {
     /**
+     * <p>The call instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><em><strong><strong><strong><strong>296014bb58670940</strong></strong></strong></strong></em></p>
      */
@@ -12,6 +14,8 @@ public class StartAIAgentOutboundCallResponseBody extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><em><strong><strong><strong><strong><strong>-4417-BDB2</strong></strong></strong></strong></strong></em>*</p>
      */

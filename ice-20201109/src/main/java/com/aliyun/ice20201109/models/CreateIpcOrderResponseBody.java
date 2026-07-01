@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateIpcOrderResponseBody extends TeaModel {
     /**
+     * <p>The purchase status.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,6 +14,8 @@ public class CreateIpcOrderResponseBody extends TeaModel {
     public String purchaseStatus;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>36-3C1E-4417-BDB2-1E034F</strong></strong></p>
      */

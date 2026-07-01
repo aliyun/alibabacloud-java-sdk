@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubYikeUserCreditRequest extends TeaModel {
     /**
+     * <p>The amount of credit to deduct. The value must be greater than 0 and cannot exceed the credit balance of the sub-account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class SubYikeUserCreditRequest extends TeaModel {
     public Integer credit;
 
     /**
+     * <p>The user ID of the sub-account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

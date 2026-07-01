@@ -25,8 +25,10 @@ public class ListCustomizedVoiceJobsRequest extends TeaModel {
     /**
      * <p>The type of the human voice cloning job. Valid values:</p>
      * <ul>
-     * <li>Basic</li>
-     * <li>Standard</li>
+     * <li><p>Basic</p>
+     * </li>
+     * <li><p>Standard</p>
+     * </li>
      * </ul>
      * <blockquote>
      * <p>: If you do not specify this parameter, the default value Basic is used.</p>

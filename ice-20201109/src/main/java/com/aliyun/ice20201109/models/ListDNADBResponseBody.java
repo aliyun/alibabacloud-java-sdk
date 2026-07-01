@@ -52,6 +52,9 @@ public class ListDNADBResponseBody extends TeaModel {
 
         /**
          * <p>The description of the media fingerprint library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a video DNA library.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -59,10 +62,14 @@ public class ListDNADBResponseBody extends TeaModel {
         /**
          * <p>The model of the media fingerprint library. Valid values:</p>
          * <ul>
-         * <li><strong>Video</strong></li>
-         * <li><strong>Audio</strong></li>
-         * <li><strong>Image</strong></li>
-         * <li><strong>Text</strong> (supported only in the China (Shanghai) region)</li>
+         * <li><p><strong>Video</strong></p>
+         * </li>
+         * <li><p><strong>Audio</strong></p>
+         * </li>
+         * <li><p><strong>Image</strong></p>
+         * </li>
+         * <li><p><strong>Text</strong> (supported only in the China (Shanghai) region)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -81,11 +88,14 @@ public class ListDNADBResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The state of the media fingerprint library. Default value: <strong>offline</strong>. ****Valid values:</p>
+         * <p>The state of the media fingerprint library. Default value: <strong>offline</strong>. \<em>\</em>\*\*Valid values:</p>
          * <ul>
-         * <li><strong>offline</strong>: The media fingerprint library is offline.</li>
-         * <li><strong>active</strong>: The media fingerprint library is online.</li>
-         * <li><strong>deleted</strong>: The media fingerprint library is deleted.</li>
+         * <li><p><strong>offline</strong>: The media fingerprint library is offline.</p>
+         * </li>
+         * <li><p><strong>active</strong>: The media fingerprint library is online.</p>
+         * </li>
+         * <li><p><strong>deleted</strong>: The media fingerprint library is deleted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

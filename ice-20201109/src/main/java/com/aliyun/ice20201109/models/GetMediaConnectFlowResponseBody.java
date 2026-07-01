@@ -11,7 +11,7 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
     public GetMediaConnectFlowResponseBodyContent content;
 
     /**
-     * <p>The call description.</p>
+     * <p>The description of the API call.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -20,7 +20,7 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Request ID</p>
      * 
      * <strong>example:</strong>
      * <p>FB503AEF-118E-1516-89E2-7B227EA1AC20</p>
@@ -29,7 +29,7 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned code. A value of 0 indicates the call is successful.</p>
+     * <p>The return code. A value of 0 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -76,7 +76,7 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
 
     public static class GetMediaConnectFlowResponseBodyContent extends TeaModel {
         /**
-         * <p>The time when the flow was created.</p>
+         * <p>The creation time of the MediaConnect Flow instance.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-07-18T01:29:24Z</p>
@@ -84,11 +84,17 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>Indicates whether Input Failover is enabled for the flow. Valid values: <code>yes</code> and <code>no</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yes</p>
+         */
         @NameInMap("FlowFailover")
         public String flowFailover;
 
         /**
-         * <p>The flow ID.</p>
+         * <p>The ID of the MediaConnect Flow instance.</p>
          * 
          * <strong>example:</strong>
          * <p>34900dc6-90ec-4968-af3c-fcd87f231a5f</p>
@@ -97,7 +103,7 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
         public String flowId;
 
         /**
-         * <p>The flow name.</p>
+         * <p>The name of the MediaConnect Flow instance.</p>
          * 
          * <strong>example:</strong>
          * <p>AliTestFlow</p>
@@ -109,7 +115,7 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
         public String flowRegion;
 
         /**
-         * <p>The state of the flow.</p>
+         * <p>The status of the MediaConnect Flow instance.</p>
          * 
          * <strong>example:</strong>
          * <p>online</p>
@@ -118,7 +124,7 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
         public String flowStatus;
 
         /**
-         * <p>The time when the flow is started.</p>
+         * <p>The start time of the MediaConnect Flow instance.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-07-18T01:39:24Z</p>

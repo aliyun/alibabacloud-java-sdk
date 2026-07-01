@@ -7,11 +7,16 @@ public class RegisterMediaInfoRequest extends TeaModel {
     /**
      * <p>The business type of the media asset. Valid values:</p>
      * <ul>
-     * <li>subtitles</li>
-     * <li>watermark</li>
-     * <li>opening</li>
-     * <li>ending</li>
-     * <li>general</li>
+     * <li><p>subtitles</p>
+     * </li>
+     * <li><p>watermark</p>
+     * </li>
+     * <li><p>opening</p>
+     * </li>
+     * <li><p>ending</p>
+     * </li>
+     * <li><p>general</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,8 +46,10 @@ public class RegisterMediaInfoRequest extends TeaModel {
     /**
      * <p>The thumbnail URL of the media asset.</p>
      * <ul>
-     * <li>The value can be up to 128 bytes in length.</li>
-     * <li>The value must be encoded in UTF-8.</li>
+     * <li><p>The value can be up to 128 bytes in length.</p>
+     * </li>
+     * <li><p>The value must be encoded in UTF-8.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,8 +61,10 @@ public class RegisterMediaInfoRequest extends TeaModel {
     /**
      * <p>The description of the media asset.</p>
      * <ul>
-     * <li>The value can be up to 1,024 bytes in length.</li>
-     * <li>The value must be encoded in UTF-8.</li>
+     * <li><p>The value can be up to 1,024 bytes in length.</p>
+     * </li>
+     * <li><p>The value must be encoded in UTF-8.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,15 +76,22 @@ public class RegisterMediaInfoRequest extends TeaModel {
     /**
      * <p>The URL of the media asset in another service. The URL is associated with the ID of the media asset in IMS. The URL cannot be modified once registered. The following types of URLs are supported:</p>
      * <ul>
-     * <li>OSS URL in one of the following formats:</li>
-     * </ul>
-     * <p>http(s)://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</p>
-     * <p>oss://example-bucket/example.mp4: In this format, it is considered by default that the region of the OSS bucket in which the media asset resides is the same as the region in which IMS is activated.</p>
+     * <li><p>OSS URL in one of the following formats:</p>
      * <ul>
-     * <li>URL of an ApsaraVideo VOD media asset</li>
+     * <li><p><code>http(s)://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</code></p>
+     * </li>
+     * <li><p><code>oss://example-bucket/example.mp4</code>: In this format, it is considered by default that the region of the OSS bucket in which the media asset resides is the same as the region in which IMS is activated.</p>
+     * </li>
      * </ul>
-     * <p>vod://\<em>\</em>\<em>20b48fb04483915d4f2cd8ac\</em>\<em>\</em>\*</p>
+     * </li>
+     * <li><p>URL of an ApsaraVideo VOD media asset</p>
+     * <p><code>vod://***20b48fb04483915d4f2cd8ac****</code></p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</a>  or  vod://<strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
      */
     @NameInMap("InputURL")
     public String inputURL;
@@ -83,10 +99,14 @@ public class RegisterMediaInfoRequest extends TeaModel {
     /**
      * <p>The tags of the media asset.</p>
      * <ul>
-     * <li>Up to 16 tags are supported.</li>
-     * <li>Separate multiple tags with commas (,).</li>
-     * <li>Each tag can be up to 32 bytes in length.</li>
-     * <li>The value must be encoded in UTF-8.</li>
+     * <li><p>Up to 16 tags are supported.</p>
+     * </li>
+     * <li><p>Separate multiple tags with commas (,).</p>
+     * </li>
+     * <li><p>Each tag can be up to 32 bytes in length.</p>
+     * </li>
+     * <li><p>The value must be encoded in UTF-8.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -98,13 +118,16 @@ public class RegisterMediaInfoRequest extends TeaModel {
     /**
      * <p>The type of the media asset. Valid values:</p>
      * <ul>
-     * <li>image</li>
-     * <li>video</li>
-     * <li>audio</li>
-     * <li>text</li>
+     * <li><p>image</p>
+     * </li>
+     * <li><p>video</p>
+     * </li>
+     * <li><p>audio</p>
+     * </li>
+     * <li><p>text</p>
+     * </li>
      * </ul>
-     * <p>We recommend that you specify this parameter based on your business requirements. If you set InputURL to an OSS URL, the media asset type can be automatically determined based on the file name extension. For more information
-     * &lt;props=&quot;china&quot;&gt;, see <a href="https://help.aliyun.com/document_detail/466207.html">File formats</a>.</p>
+     * <p>We recommend that you specify this parameter based on your business requirements. If you set InputURL to an OSS URL, the media asset type can be automatically determined based on the file name extension. Refer to <a href="t2240981.xdita#"></a>for details.</p>
      * 
      * <strong>example:</strong>
      * <p>video</p>
@@ -114,8 +137,12 @@ public class RegisterMediaInfoRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to overwrite the media asset that has been registered by using the same URL. Default value: false. Valid values:</p>
-     * <p>\- true: If a media asset has been registered by using the same URL, the original media asset is deleted and the new media asset is registered.</p>
-     * <p>\- false: If a media asset has been registered by using the same URL, the new media asset is not registered. A URL cannot be used to register multiple media assets.</p>
+     * <ul>
+     * <li><p>true: If a media asset has been registered by using the same URL, the original media asset is deleted and the new media asset is registered.</p>
+     * </li>
+     * <li><p>false: If a media asset has been registered by using the same URL, the new media asset is not registered. A URL cannot be used to register multiple media assets.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -139,7 +166,11 @@ public class RegisterMediaInfoRequest extends TeaModel {
      * 
      * <strong>example:</strong>
      * <p>{
-     *       &quot;NeedSprite&quot;: &quot;false&quot;
+     *     &quot;NeedSprite&quot;: &quot;false&quot;,
+     *     &quot;CoverConfig&quot;: {
+     *         &quot;StartTime&quot;: 1.0
+     *     },
+     *        &quot;SearchLibName&quot;: &quot;test&quot;
      * }</p>
      */
     @NameInMap("RegisterConfig")
@@ -148,11 +179,14 @@ public class RegisterMediaInfoRequest extends TeaModel {
     /**
      * <p>The ID of the smart tagging template. Valid values:</p>
      * <ul>
-     * <li>S00000101-300080: the system template that supports natural language processing (NLP) for content recognition.</li>
-     * <li>S00000103-000001: the system template that supports NLP for content recognition and all tagging capabilities.</li>
-     * <li>S00000103-000002: the system template that supports all tagging capabilities but does not support NLP for content recognition.</li>
+     * <li><p>S00000101-300080: the system template that supports natural language processing (NLP) for content recognition.</p>
+     * </li>
+     * <li><p>S00000103-000001: the system template that supports NLP for content recognition and all <a href="t2729541.xdita#93b27f536airj">tagging capabilities</a>.</p>
+     * </li>
+     * <li><p>S00000103-000002: the system template that supports all <a href="t2729541.xdita#93b27f536airj">tagging capabilities</a> but does not support NLP for content recognition.</p>
+     * </li>
      * </ul>
-     * <p>After you configure this parameter, a smart tag analysis task is automatically initiated after the media asset is registered. For more information about the billable items&lt;props=&quot;china&quot;&gt;, see <a href="https://help.aliyun.com/zh/ims/media-ai-billing?spm=a2c4g.11186623.0.0.3147392dWwlSjL#p-k38-3rb-dug">Smart tagging</a>.</p>
+     * <p>After you configure this parameter, a smart tag analysis task is automatically initiated after the media asset is registered.</p>
      * 
      * <strong>example:</strong>
      * <p>S00000101-300080</p>
@@ -163,8 +197,10 @@ public class RegisterMediaInfoRequest extends TeaModel {
     /**
      * <p>The title. If you do not specify this parameter, a default title is automatically generated based on the date.</p>
      * <ul>
-     * <li>The value can be up to 128 bytes in length.</li>
-     * <li>The value must be encoded in UTF-8.</li>
+     * <li><p>The value can be up to 128 bytes in length.</p>
+     * </li>
+     * <li><p>The value must be encoded in UTF-8.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -174,12 +210,18 @@ public class RegisterMediaInfoRequest extends TeaModel {
     public String title;
 
     /**
-     * <p>The user data. You can specify a custom callback URL. For more information&lt;props=&quot;china&quot;&gt; ,see <a href="https://help.aliyun.com/document_detail/451631.html">Configure a callback upon editing completion</a>.</p>
+     * <p>The user data. You can specify a custom callback URL. For more information, see <a href="t2243473.xdita#"></a>.</p>
      * <ul>
-     * <li>The value can be up to 1,024 bytes in length.</li>
-     * <li>The value must be encoded in UTF-8.</li>
-     * <li>The value must be in the JSON format.</li>
+     * <li><p>The value can be up to 1,024 bytes in length.</p>
+     * </li>
+     * <li><p>The value must be encoded in UTF-8.</p>
+     * </li>
+     * <li><p>The value must be in the JSON format.</p>
+     * </li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;NotifyAddress&quot;:&quot;<a href="http://xx.xx.xxx%22%7D">http://xx.xx.xxx&quot;}</a> or{&quot;NotifyAddress&quot;:&quot;<a href="https://xx.xx.xxx%22%7D">https://xx.xx.xxx&quot;}</a> or{&quot;NotifyAddress&quot;:&quot;ice-callback-demo&quot;}</p>
      */
     @NameInMap("UserData")
     public String userData;

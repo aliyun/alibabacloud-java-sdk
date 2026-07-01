@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListCustomTemplatesResponseBody extends TeaModel {
     /**
-     * <p>The queried templates.</p>
+     * <p>An array of custom template objects.</p>
      */
     @NameInMap("CustomTemplateList")
     public java.util.List<ListCustomTemplatesResponseBodyCustomTemplateList> customTemplateList;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique identifier for the request.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
@@ -97,7 +97,7 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
 
     public static class ListCustomTemplatesResponseBodyCustomTemplateList extends TeaModel {
         /**
-         * <p>The time when the template was created.</p>
+         * <p>The time when the template was created, in UTC and formatted as YYYY-MM-DDTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-12T16:17:54Z</p>
@@ -109,12 +109,7 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
         public ListCustomTemplatesResponseBodyCustomTemplateListFrontendHint frontendHint;
 
         /**
-         * <p>Indicates whether the template is the default template.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
+         * <p>Whether the template is a default template.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -123,7 +118,7 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
-         * <p>The time when the template was last modified.</p>
+         * <p>The time when the template was last modified, in UTC and formatted as YYYY-MM-DDTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-12T16:17:54Z</p>
@@ -132,11 +127,7 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
-         * <p>The template state.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Normal</li>
-         * </ul>
+         * <p>The template status.</p>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -145,7 +136,7 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The subtype ID of the template.</p>
+         * <p>The template subtype ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -154,7 +145,7 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
         public Integer subtype;
 
         /**
-         * <p>The subtype name of the template.</p>
+         * <p>The template subtype name.</p>
          * 
          * <strong>example:</strong>
          * <p>AudioTranscode</p>
@@ -163,7 +154,7 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
         public String subtypeName;
 
         /**
-         * <p>The template parameters.</p>
+         * <p>The template configuration, as a JSON string.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;Container&quot;:{&quot;Format&quot;:&quot;mp3&quot;},&quot;Audio&quot;:{&quot;Codec&quot;:&quot;mp3&quot;,&quot;Bitrate&quot;:&quot;64&quot;,&quot;Samplerate&quot;:&quot;22050&quot;,&quot;Channels&quot;:&quot;2&quot;}}</p>
@@ -190,7 +181,7 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
         public String templateName;
 
         /**
-         * <p>The type ID of the template.</p>
+         * <p>The template type ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -199,7 +190,7 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
         public Integer type;
 
         /**
-         * <p>The type name of the template.</p>
+         * <p>The template type name.</p>
          * 
          * <strong>example:</strong>
          * <p>TranscodeTemplate</p>

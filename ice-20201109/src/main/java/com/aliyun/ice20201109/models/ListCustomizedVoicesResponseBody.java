@@ -22,8 +22,10 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -74,8 +76,10 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
         /**
          * <p>The gender. Valid values:</p>
          * <ul>
-         * <li>female</li>
-         * <li>male</li>
+         * <li><p>female</p>
+         * </li>
+         * <li><p>male</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -87,9 +91,12 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
         /**
          * <p>The scenario. Valid values:</p>
          * <ul>
-         * <li>story</li>
-         * <li>interaction</li>
-         * <li>navigation</li>
+         * <li><p>story</p>
+         * </li>
+         * <li><p>interaction</p>
+         * </li>
+         * <li><p>navigation</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -102,8 +109,10 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
          * <ul>
          * <li><p>The voice type. Valid values:</p>
          * <ul>
-         * <li>Basic</li>
-         * <li>Standard</li>
+         * <li><p>Basic</p>
+         * </li>
+         * <li><p>Standard</p>
+         * </li>
          * </ul>
          * </li>
          * </ul>
@@ -116,6 +125,9 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
 
         /**
          * <p>The voice description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是一个个性化人声小专</p>
          */
         @NameInMap("VoiceDesc")
         public String voiceDesc;
@@ -131,6 +143,9 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
 
         /**
          * <p>The voice name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>小专</p>
          */
         @NameInMap("VoiceName")
         public String voiceName;

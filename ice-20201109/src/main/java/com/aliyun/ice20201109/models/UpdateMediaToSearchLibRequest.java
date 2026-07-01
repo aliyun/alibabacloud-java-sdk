@@ -24,6 +24,12 @@ public class UpdateMediaToSearchLibRequest extends TeaModel {
     @NameInMap("MsgBody")
     public String msgBody;
 
+    /**
+     * <p>The namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name-1</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 

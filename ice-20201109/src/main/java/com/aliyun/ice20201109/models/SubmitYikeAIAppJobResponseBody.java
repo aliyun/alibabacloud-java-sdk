@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitYikeAIAppJobResponseBody extends TeaModel {
     /**
+     * <p>The unique identifier for the submitted job.</p>
+     * 
      * <strong>example:</strong>
      * <p>ab4802364a2e49208c99efab82df****</p>
      */
@@ -12,6 +14,8 @@ public class SubmitYikeAIAppJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
+     * <p>A unique identifier for the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>4E84BE44-58A7-<strong><strong>-</strong></strong>-FBEBEA16EF94</p>
      */

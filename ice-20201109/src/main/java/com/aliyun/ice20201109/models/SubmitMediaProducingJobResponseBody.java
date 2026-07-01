@@ -14,7 +14,7 @@ public class SubmitMediaProducingJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The media asset ID of the output file.</p>
+     * <p>The media ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>c469e944b5a856828dc2</strong></strong></p>
@@ -23,7 +23,7 @@ public class SubmitMediaProducingJobResponseBody extends TeaModel {
     public String mediaId;
 
     /**
-     * <p>The ID of the editing project.</p>
+     * <p>The project ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>b4549d46c88681030f6e</strong></strong></p>
@@ -41,7 +41,7 @@ public class SubmitMediaProducingJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The media asset ID of the output file in ApsaraVideo VOD if the output file is stored in ApsaraVideo VOD.</p>
+     * <p>The VOD media ID. Returned if the output destination is VOD.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>d8s4h75ci975745c14b</strong></strong></p>

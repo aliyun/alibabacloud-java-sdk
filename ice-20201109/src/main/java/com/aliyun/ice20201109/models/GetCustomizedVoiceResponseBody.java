@@ -22,8 +22,10 @@ public class GetCustomizedVoiceResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -74,8 +76,10 @@ public class GetCustomizedVoiceResponseBody extends TeaModel {
         /**
          * <p>The gender. Valid values:</p>
          * <ul>
-         * <li>female</li>
-         * <li>male</li>
+         * <li><p>female</p>
+         * </li>
+         * <li><p>male</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -88,9 +92,12 @@ public class GetCustomizedVoiceResponseBody extends TeaModel {
          * <p>The demonstration scenario.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><strong>story</strong></li>
-         * <li><strong>interaction</strong></li>
-         * <li><strong>navigation</strong></li>
+         * <li><p><strong>story</strong></p>
+         * </li>
+         * <li><p><strong>interaction</strong></p>
+         * </li>
+         * <li><p><strong>navigation</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -101,6 +108,9 @@ public class GetCustomizedVoiceResponseBody extends TeaModel {
 
         /**
          * <p>The voice description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是一个个性化人声</p>
          */
         @NameInMap("VoiceDesc")
         public String voiceDesc;
@@ -116,6 +126,9 @@ public class GetCustomizedVoiceResponseBody extends TeaModel {
 
         /**
          * <p>The voice name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Basic</p>
          */
         @NameInMap("VoiceName")
         public String voiceName;

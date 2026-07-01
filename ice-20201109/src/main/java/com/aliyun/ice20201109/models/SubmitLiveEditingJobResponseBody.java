@@ -14,7 +14,7 @@ public class SubmitLiveEditingJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The media asset ID of the output file.</p>
+     * <p>The ID of the output media asset.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>c469e944b5a856828dc2</strong></strong></p>
@@ -41,7 +41,7 @@ public class SubmitLiveEditingJobResponseBody extends TeaModel {
     public String projectId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>36-3C1E-4417-BDB2-1E034F</strong></strong></p>
@@ -50,7 +50,7 @@ public class SubmitLiveEditingJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The media asset ID of the output file in ApsaraVideo VOD if the output file is stored in ApsaraVideo VOD.</p>
+     * <p>The ID of the VOD media asset. This parameter is returned only if the output destination is VOD.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>d7578s4h75ci945c14b</strong></strong></p>

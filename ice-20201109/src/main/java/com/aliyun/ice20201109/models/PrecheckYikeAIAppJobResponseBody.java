@@ -5,16 +5,29 @@ import com.aliyun.tea.*;
 
 public class PrecheckYikeAIAppJobResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Returned if the precheck fails. This parameter contains only the parameters that failed the check.</p>
+     */
     @NameInMap("Result")
     public java.util.List<PrecheckYikeAIAppJobResponseBodyResult> result;
 
     /**
+     * <p>The precheck result. Valid values are:</p>
+     * <ul>
+     * <li><p>Success: The precheck was successful.</p>
+     * </li>
+     * <li><p>Failed: The precheck failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -52,6 +65,8 @@ public class PrecheckYikeAIAppJobResponseBody extends TeaModel {
 
     public static class PrecheckYikeAIAppJobResponseBodyResult extends TeaModel {
         /**
+         * <p>The cause of the parameter validation error.</p>
+         * 
          * <strong>example:</strong>
          * <p>ImageCheckFailed</p>
          */
@@ -59,6 +74,8 @@ public class PrecheckYikeAIAppJobResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>The application parameter name.</p>
+         * 
          * <strong>example:</strong>
          * <p>LoadImage.1.TargetImage</p>
          */

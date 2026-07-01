@@ -44,8 +44,10 @@ public class ListProgramsRequest extends TeaModel {
     /**
      * <p>The sorting order. By default, the query results are sorted by creation time in descending order. Valid values:</p>
      * <ul>
-     * <li>asc: ascending order.</li>
-     * <li>desc: descending order.</li>
+     * <li><p>asc: ascending order.</p>
+     * </li>
+     * <li><p>desc: descending order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

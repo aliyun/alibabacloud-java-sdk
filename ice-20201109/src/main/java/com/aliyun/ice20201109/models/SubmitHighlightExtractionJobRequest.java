@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitHighlightExtractionJobRequest extends TeaModel {
     /**
-     * <p>The client token used to ensure the idempotency of the request.</p>
+     * <p>A client token provided by the caller to ensure the idempotence of the request.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>12e8864746a0a398</strong></strong></p>
@@ -14,7 +14,7 @@ public class SubmitHighlightExtractionJobRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The input configuration.</p>
+     * <p>The input configuration. For more information, see <a href="~~2869391#e72301e3a74mk~~">InputConfig Parameter Description</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -39,7 +39,7 @@ public class SubmitHighlightExtractionJobRequest extends TeaModel {
     public String inputConfig;
 
     /**
-     * <p>The output configuration.</p>
+     * <p>The output configuration. For more information, see <a href="~~2869391#cd08cbc516voq~~">OutputConfig Parameter Description</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -56,7 +56,10 @@ public class SubmitHighlightExtractionJobRequest extends TeaModel {
     public String outputConfig;
 
     /**
-     * <p>The user-defined data, including the business and callback configurations. For more information, see <a href="~~357745#section-urj-v3f-0s1~~">UserData</a>.</p>
+     * <p>The user data and callback configuration. For details on the structure, see <a href="~~357745#section-urj-v3f-0s1~~">UserData Configuration</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;NotifyAddress&quot;:&quot;<a href="http://xx.xx.xxx%22%7D">http://xx.xx.xxx&quot;}</a> or {&quot;NotifyAddress&quot;:&quot;<a href="https://xx.xx.xxx%22%7D">https://xx.xx.xxx&quot;}</a> or {&quot;NotifyAddress&quot;:&quot;ice-callback-demo&quot;}</p>
      */
     @NameInMap("UserData")
     public String userData;

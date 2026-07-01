@@ -91,8 +91,10 @@ public class SubmitPackageJobRequest extends TeaModel {
         /**
          * <p>The media object.</p>
          * <ul>
-         * <li>If Type is set to OSS, set this parameter to the URL of an OSS object. Both the OSS and HTTP protocols are supported.</li>
-         * <li>If Type is set to Media, set this parameter to the ID of a media asset.</li>
+         * <li><p>If Type is set to OSS, set this parameter to the URL of an OSS object. Both the OSS and HTTP protocols are supported.</p>
+         * </li>
+         * <li><p>If Type is set to Media, set this parameter to the ID of a media asset.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -105,8 +107,10 @@ public class SubmitPackageJobRequest extends TeaModel {
         /**
          * <p>The type of the media object. Valid values:</p>
          * <ul>
-         * <li>OSS: an Object Storage Service (OSS) object.</li>
-         * <li>Media: a media asset.</li>
+         * <li><p>OSS: an Object Storage Service (OSS) object.</p>
+         * </li>
+         * <li><p>Media: a media asset.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -176,8 +180,10 @@ public class SubmitPackageJobRequest extends TeaModel {
         /**
          * <p>The type of the media object. Valid values:</p>
          * <ul>
-         * <li>OSS: an OSS object.</li>
-         * <li>Media: a media asset.</li>
+         * <li><p>OSS: an OSS object.</p>
+         * </li>
+         * <li><p>Media: a media asset.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

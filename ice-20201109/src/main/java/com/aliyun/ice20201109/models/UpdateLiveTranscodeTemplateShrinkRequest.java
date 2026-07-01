@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateLiveTranscodeTemplateShrinkRequest extends TeaModel {
     /**
      * <p>The template name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Template1130-2</p>
      */
     @NameInMap("Name")
     public String name;

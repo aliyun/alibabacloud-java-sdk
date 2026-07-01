@@ -87,8 +87,10 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
         /**
          * <p>The type of the output file. Valid values:</p>
          * <ul>
-         * <li>OSS: an OSS object.</li>
-         * <li>Media: a media asset.</li>
+         * <li><p>OSS: an OSS object.</p>
+         * </li>
+         * <li><p>Media: a media asset.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

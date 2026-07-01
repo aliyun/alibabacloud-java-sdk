@@ -15,8 +15,10 @@ public class ListSourceLocationsRequest extends TeaModel {
 
     /**
      * <ul>
-     * <li>The page number.</li>
-     * <li>Default value: 1.</li>
+     * <li><p>The page number.</p>
+     * </li>
+     * <li><p>Default value: 1.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

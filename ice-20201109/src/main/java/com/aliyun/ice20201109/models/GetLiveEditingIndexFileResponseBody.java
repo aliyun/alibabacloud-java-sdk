@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetLiveEditingIndexFileResponseBody extends TeaModel {
     /**
      * <p>The URL of the index file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://bucket.oss-cn-shanghai.aliyuncs.com/test/live1.m3u8">https://bucket.oss-cn-shanghai.aliyuncs.com/test/live1.m3u8</a>?&lt;鉴权&gt;&amp;x-oss-process=hls/sign</p>
      */
     @NameInMap("IndexFile")
     public String indexFile;

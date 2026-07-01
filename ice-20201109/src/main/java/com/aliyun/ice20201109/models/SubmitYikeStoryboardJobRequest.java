@@ -5,16 +5,32 @@ import com.aliyun.tea.*;
 
 public class SubmitYikeStoryboardJobRequest extends TeaModel {
     /**
+     * <p>The aspect ratio of the output video.</p>
+     * 
      * <strong>example:</strong>
      * <p>4:3</p>
      */
     @NameInMap("AspectRatio")
     public String aspectRatio;
 
+    /**
+     * <p>The storyboard generation execution mode.</p>
+     * <ul>
+     * <li><p><code>FullPipeline</code>: Executes the full generation pipeline, including both storyboard creation and shot video generation.</p>
+     * </li>
+     * <li><p><code>StoryboardOnly</code>: Generates only the storyboard.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FullPipeline</p>
+     */
     @NameInMap("ExecMode")
     public String execMode;
 
     /**
+     * <p>The OSS address of the file.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://test.oss-cn-shanghai.aliyuncs.com/test.mp4">http://test.oss-cn-shanghai.aliyuncs.com/test.mp4</a></p>
      */
@@ -22,6 +38,8 @@ public class SubmitYikeStoryboardJobRequest extends TeaModel {
     public String fileURL;
 
     /**
+     * <p>Parameters for the model, in JSON format.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *   &quot;AudioEnable&quot;: false
@@ -31,6 +49,8 @@ public class SubmitYikeStoryboardJobRequest extends TeaModel {
     public String modelParams;
 
     /**
+     * <p>The narration voice ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>sys_YoungGracefulWoman</p>
      */
@@ -38,6 +58,8 @@ public class SubmitYikeStoryboardJobRequest extends TeaModel {
     public String narrationVoiceId;
 
     /**
+     * <p>The resolution of the output video.</p>
+     * 
      * <strong>example:</strong>
      * <p>720P</p>
      */
@@ -45,6 +67,8 @@ public class SubmitYikeStoryboardJobRequest extends TeaModel {
     public String resolution;
 
     /**
+     * <p>The storyboard shot generation mode.</p>
+     * 
      * <strong>example:</strong>
      * <p>multi</p>
      */
@@ -52,16 +76,26 @@ public class SubmitYikeStoryboardJobRequest extends TeaModel {
     public String shotPromptMode;
 
     /**
+     * <p>The shot split mode.</p>
+     * 
      * <strong>example:</strong>
      * <p>firstPersonNarration</p>
      */
     @NameInMap("ShotSplitMode")
     public String shotSplitMode;
 
+    /**
+     * <p>Specifies whether to skip a failed shot. The default value is <code>true</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("SkipFailureShot")
     public Boolean skipFailureShot;
 
     /**
+     * <p>The source type.</p>
+     * 
      * <strong>example:</strong>
      * <p>Novel</p>
      */
@@ -69,6 +103,8 @@ public class SubmitYikeStoryboardJobRequest extends TeaModel {
     public String sourceType;
 
     /**
+     * <p>The storyboard style ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>RealisticPhotography</p>
      */
@@ -76,6 +112,8 @@ public class SubmitYikeStoryboardJobRequest extends TeaModel {
     public String styleId;
 
     /**
+     * <p>The job title. It must be a UTF-8 encoded string of up to 128 bytes. If you do not specify a title, the system generates a default one based on the date.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-title</p>
      */
@@ -83,6 +121,11 @@ public class SubmitYikeStoryboardJobRequest extends TeaModel {
     public String title;
 
     /**
+     * <p>Custom settings in JSON format. This parameter can contain the following field:</p>
+     * <ul>
+     * <li>The <code>NotifyAddress</code> field specifies the callback URL that is invoked when the job is complete. Both MNS and HTTP callbacks are supported.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>{
      *   &quot;NotifyAddress&quot;: &quot;<a href="https://www.callback.com">https://www.callback.com</a>&quot;
@@ -92,6 +135,8 @@ public class SubmitYikeStoryboardJobRequest extends TeaModel {
     public String userData;
 
     /**
+     * <p>The video model.</p>
+     * 
      * <strong>example:</strong>
      * <p>wan2.6-r2v-flash</p>
      */

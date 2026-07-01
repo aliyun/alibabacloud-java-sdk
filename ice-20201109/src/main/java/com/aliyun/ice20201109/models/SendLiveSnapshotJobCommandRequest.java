@@ -8,9 +8,12 @@ public class SendLiveSnapshotJobCommandRequest extends TeaModel {
      * <p>The operation command.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>stop</li>
-     * <li>restart</li>
-     * <li>start</li>
+     * <li><p>stop</p>
+     * </li>
+     * <li><p>restart</p>
+     * </li>
+     * <li><p>start</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

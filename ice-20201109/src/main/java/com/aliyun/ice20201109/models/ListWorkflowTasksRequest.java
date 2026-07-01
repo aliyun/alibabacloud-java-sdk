@@ -15,6 +15,11 @@ public class ListWorkflowTasksRequest extends TeaModel {
 
     /**
      * <p>A keyword for fuzzy matching against the TaskInput, such as a file name or Media ID. Max length: 32 characters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>7aa4cc4459ada8ef35f7</strong></strong></strong>
+     * or
+     * <strong>TestVideo</strong>*.flv</p>
      */
     @NameInMap("KeyText")
     public String keyText;

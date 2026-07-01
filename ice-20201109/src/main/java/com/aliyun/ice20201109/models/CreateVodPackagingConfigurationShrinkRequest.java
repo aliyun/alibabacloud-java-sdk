@@ -40,9 +40,12 @@ public class CreateVodPackagingConfigurationShrinkRequest extends TeaModel {
     /**
      * <p>The package type.</p>
      * <ul>
-     * <li>HLS: packages content into TS segments for delivery over the HLS protocol.</li>
-     * <li>HLS_CMAF: packages content into CMAF segments for delivery over the HLS protocol.</li>
-     * <li>DASH: packages content for delivery over the DASH protocol.</li>
+     * <li><p>HLS: packages content into TS segments for delivery over the HLS protocol.</p>
+     * </li>
+     * <li><p>HLS_CMAF: packages content into CMAF segments for delivery over the HLS protocol.</p>
+     * </li>
+     * <li><p>DASH: packages content for delivery over the DASH protocol.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

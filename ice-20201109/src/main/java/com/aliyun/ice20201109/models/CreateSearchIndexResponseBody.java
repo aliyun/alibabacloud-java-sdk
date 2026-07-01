@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateSearchIndexResponseBody extends TeaModel {
     /**
+     * <p>Return code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class CreateSearchIndexResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><em><strong><strong>ACB-44F2-5F2D-88D7-1283E70</strong></strong></em></p>
      */
@@ -19,6 +23,14 @@ public class CreateSearchIndexResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the invocation succeeded. Valid values:</p>
+     * <ul>
+     * <li><p>true: Invocation succeeded</p>
+     * </li>
+     * <li><p>false: Failed to invoke</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

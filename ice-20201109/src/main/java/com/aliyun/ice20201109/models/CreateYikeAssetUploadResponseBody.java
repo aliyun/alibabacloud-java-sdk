@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateYikeAssetUploadResponseBody extends TeaModel {
     /**
+     * <p>OSS URL of the file without authentication.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://outin-***.oss-cn-shanghai.aliyuncs.com/stream/48555e8b-181dd5a8c07/48555e8b-181dd5a8c07.mp4">http://outin-***.oss-cn-shanghai.aliyuncs.com/stream/48555e8b-181dd5a8c07/48555e8b-181dd5a8c07.mp4</a></p>
      */
@@ -12,6 +14,8 @@ public class CreateYikeAssetUploadResponseBody extends TeaModel {
     public String fileURL;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
      */
@@ -19,6 +23,8 @@ public class CreateYikeAssetUploadResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Upload URL.</p>
+     * 
      * <strong>example:</strong>
      * <p>eyJTZWN1cml0a2VuIjoiQ0FJU3p3TjF****</p>
      */
@@ -26,6 +32,8 @@ public class CreateYikeAssetUploadResponseBody extends TeaModel {
     public String uploadAddress;
 
     /**
+     * <p>Upload credential.</p>
+     * 
      * <strong>example:</strong>
      * <p>eyJFbmRwb2ludCI6Imm****</p>
      */

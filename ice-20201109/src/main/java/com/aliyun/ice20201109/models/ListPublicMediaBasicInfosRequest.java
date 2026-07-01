@@ -7,9 +7,12 @@ public class ListPublicMediaBasicInfosRequest extends TeaModel {
     /**
      * <p>The business type of the media asset. Valid values:</p>
      * <ul>
-     * <li>sticker</li>
-     * <li>bgm</li>
-     * <li>bgi</li>
+     * <li><p>sticker</p>
+     * </li>
+     * <li><p>bgm</p>
+     * </li>
+     * <li><p>bgi</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,37 +45,54 @@ public class ListPublicMediaBasicInfosRequest extends TeaModel {
      * <ul>
      * <li><p>Sticker tags:</p>
      * <ul>
-     * <li>sticker-atmosphere</li>
-     * <li>sticker-bubble</li>
-     * <li>sticker-cute</li>
-     * <li>sticker-daily</li>
-     * <li>sticker-expression</li>
-     * <li>sticker-gif</li>
+     * <li><p>sticker-atmosphere</p>
+     * </li>
+     * <li><p>sticker-bubble</p>
+     * </li>
+     * <li><p>sticker-cute</p>
+     * </li>
+     * <li><p>sticker-daily</p>
+     * </li>
+     * <li><p>sticker-expression</p>
+     * </li>
+     * <li><p>sticker-gif</p>
+     * </li>
      * </ul>
      * </li>
      * <li><p>Background music (BGM) tags:</p>
      * <ul>
-     * <li>bgm-romantic</li>
-     * <li>bgm-cuisine</li>
-     * <li>bgm-chinese-style</li>
-     * <li>bgm-upbeat</li>
-     * <li>bgm-dynamic</li>
-     * <li>bgm-relaxing</li>
-     * <li>bgm-quirky</li>
-     * <li>bgm-beauty</li>
+     * <li><p>bgm-romantic</p>
+     * </li>
+     * <li><p>bgm-cuisine</p>
+     * </li>
+     * <li><p>bgm-chinese-style</p>
+     * </li>
+     * <li><p>bgm-upbeat</p>
+     * </li>
+     * <li><p>bgm-dynamic</p>
+     * </li>
+     * <li><p>bgm-relaxing</p>
+     * </li>
+     * <li><p>bgm-quirky</p>
+     * </li>
+     * <li><p>bgm-beauty</p>
+     * </li>
      * </ul>
      * </li>
      * <li><p>Background image (BGI) tags:</p>
      * <ul>
-     * <li>bgi-grad</li>
-     * <li>bgi-solid</li>
-     * <li>bgi-pic</li>
+     * <li><p>bgi-grad</p>
+     * </li>
+     * <li><p>bgi-solid</p>
+     * </li>
+     * <li><p>bgi-pic</p>
+     * </li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>ticker-atmosphere</p>
+     * <p>sticker-atmosphere</p>
      */
     @NameInMap("MediaTagId")
     public String mediaTagId;

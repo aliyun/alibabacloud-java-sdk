@@ -5,26 +5,28 @@ import com.aliyun.tea.*;
 
 public class MediaConvertJobFeature extends TeaModel {
     /**
-     * <p>Configuration for clipping from the source video.</p>
+     * <p>Clip settings.</p>
      */
     @NameInMap("Clip")
     public MediaConvertJobFeatureClip clip;
 
     /**
-     * <p>A map of key-value pairs to be embedded as container-level metadata in the output file. Provided as a JSON string. Example: {&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;}.</p>
+     * <p>Specifies the metadata for the output video container format, provided as JSON key-value pairs. Example: <code>{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;}</code>.</p>
      * <ul>
-     * <li>Max key length: 64 characters.</li>
-     * <li>Max value length: 512 characters.</li>
+     * <li><p>Maximum key length: 64 characters.</p>
+     * </li>
+     * <li><p>Maximum value length: 512 characters.</p>
+     * </li>
      * </ul>
-     * <p>Max 4 key-value pairs.</p>
+     * <p>You can add a maximum of four metadata key-value pairs.</p>
      */
     @NameInMap("Metadata")
     public java.util.Map<String, String> metadata;
 
     /**
-     * <p>Image or text watermarks to add to the video. These parameters override the corresponding settings from a specified watermark template.</p>
+     * <p>A list of watermark settings to overlay on the video. If specified, these settings override the corresponding parameters in the specified watermark template.</p>
      * <ul>
-     * <li>You can add up to four watermarks to a transcoding task.</li>
+     * <li>You can add a maximum of four watermarks per transcoding job.</li>
      * </ul>
      */
     @NameInMap("Watermarks")
@@ -61,11 +63,14 @@ public class MediaConvertJobFeature extends TeaModel {
 
     public static class MediaConvertJobFeatureClipTimeSpan extends TeaModel {
         /**
-         * <p>The duration of the clip, starting from the Seek time. The default duration is from the Seek time to the end of the video. Duration and End are mutually exclusive. If End is set, Duration is ignored.</p>
+         * <p>Specifies the duration of the clip, relative to the <code>Seek</code> time. By default, the clip extends to the end of the video. You can specify either <code>Duration</code> or <code>End</code>, but not both. If <code>End</code> is specified, <code>Duration</code> is ignored.</p>
          * <ul>
-         * <li>Format: hh:mm:ss[.SSS] or sssss[.SSS].</li>
-         * <li>Valid values: [00:00:00.000,23:59:59.999] or [0.000,86399.999].</li>
-         * <li>Example: 00:01:59.99 or 180.30.</li>
+         * <li><p>Format: <code>hh:mm:ss[.SSS]</code> or <code>sssss[.SSS]</code>.</p>
+         * </li>
+         * <li><p>Value range: <code>[00:00:00.000, 23:59:59.999]</code> or <code>[0.000, 86399.999]</code>.</p>
+         * </li>
+         * <li><p>Example: <code>00:01:59.999</code> or <code>180.30</code>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -75,11 +80,14 @@ public class MediaConvertJobFeature extends TeaModel {
         public String duration;
 
         /**
-         * <p>Specifies a duration to trim from the end of the video. Duration and End are mutually exclusive. If End is set, Duration is ignored.</p>
+         * <p>Specifies the end time of the clip. You can specify either <code>End</code> or <code>Duration</code>, but not both. If <code>End</code> is specified, <code>Duration</code> is ignored.</p>
          * <ul>
-         * <li>Format: hh:mm:ss[.SSS] or sssss[.SSS].</li>
-         * <li>Valid values: [00:00:00.000,23:59:59.999] or [0.000,86399.999].</li>
-         * <li>Example: 00:01:59.99 or 180.30.</li>
+         * <li><p>Format: <code>hh:mm:ss[.SSS]</code> or <code>sssss[.SSS]</code>.</p>
+         * </li>
+         * <li><p>Value range: <code>[00:00:00.000, 23:59:59.999]</code> or <code>[0.000, 86399.999]</code>.</p>
+         * </li>
+         * <li><p>Example: <code>00:01:59.999</code> or <code>180.30</code>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -89,11 +97,14 @@ public class MediaConvertJobFeature extends TeaModel {
         public String end;
 
         /**
-         * <p>The start time of the clip. It defaults to the beginning of the video.</p>
+         * <p>Specifies the start time of the clip. If this parameter is not set, the clip starts from the beginning of the video.</p>
          * <ul>
-         * <li>Format: hh:mm:ss[.SSS] or sssss[.SSS].</li>
-         * <li>Valid values: [00:00:00.000,23:59:59.999] or [0.000,86399.999].</li>
-         * <li>Example: 00:01:59.99 or 180.30.</li>
+         * <li><p>Format: <code>hh:mm:ss[.SSS]</code> or <code>sssss[.SSS]</code>.</p>
+         * </li>
+         * <li><p>Value range: <code>[00:00:00.000, 23:59:59.999]</code> or <code>[0.000, 86399.999]</code>.</p>
+         * </li>
+         * <li><p>Example: <code>00:01:59.999</code> or <code>180.30</code>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -135,11 +146,14 @@ public class MediaConvertJobFeature extends TeaModel {
 
     public static class MediaConvertJobFeatureClip extends TeaModel {
         /**
-         * <p>Specifies the order of operations when concatenating multiple files and clipping.</p>
+         * <p>Specifies whether to clip the first segment before concatenation.</p>
          * <ul>
-         * <li>true: Clips the first input file before it is concatenated.</li>
-         * <li>false: Concatenates all input files first, then applies clipping.</li>
-         * <li>Default value: false.</li>
+         * <li><p><code>true</code>: The system clips the first segment before concatenation and transcoding.</p>
+         * </li>
+         * <li><p><code>false</code>: The system first concatenates and transcodes the segments, and then clips the resulting video.</p>
+         * </li>
+         * <li><p>Default value: <code>false</code>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,7 +163,7 @@ public class MediaConvertJobFeature extends TeaModel {
         public String configToClipFirstPart;
 
         /**
-         * <p>The time range for the clip.</p>
+         * <p>The time span for the clip.</p>
          */
         @NameInMap("TimeSpan")
         public MediaConvertJobFeatureClipTimeSpan timeSpan;
@@ -179,11 +193,14 @@ public class MediaConvertJobFeature extends TeaModel {
 
     public static class MediaConvertJobFeatureWatermarks extends TeaModel {
         /**
-         * <p>Specifies if the font size adapts to the output resolution. Valid values:</p>
+         * <p>Specifies whether the font size of the text watermark adapts to the output video resolution.</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * <li>Default value: false.</li>
+         * <li><p><code>true</code>: The font size is adaptive.</p>
+         * </li>
+         * <li><p><code>false</code>: The font size is fixed.</p>
+         * </li>
+         * <li><p>Default value: <code>false</code>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -193,9 +210,9 @@ public class MediaConvertJobFeature extends TeaModel {
         public String adaptive;
 
         /**
-         * <p>The color of the font border.</p>
+         * <p>The border color of the text watermark.</p>
          * <ul>
-         * <li>Default value: Black.</li>
+         * <li>Default value: <code>black</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -205,11 +222,14 @@ public class MediaConvertJobFeature extends TeaModel {
         public String borderColor;
 
         /**
-         * <p>The width of the font border.</p>
+         * <p>The border width of the text watermark.</p>
          * <ul>
-         * <li>Unit: pixels.</li>
-         * <li>Valid values: [0,4096].</li>
-         * <li>Default value: 0.</li>
+         * <li><p>Unit: pixels.</p>
+         * </li>
+         * <li><p>Value range: [0, 4096].</p>
+         * </li>
+         * <li><p>Default value: <code>0</code>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -219,7 +239,7 @@ public class MediaConvertJobFeature extends TeaModel {
         public String borderWidth;
 
         /**
-         * <p>The text to be displayed as the watermark.</p>
+         * <p>The content of the text watermark.</p>
          * 
          * <strong>example:</strong>
          * <p>TextWatarmark</p>
@@ -228,10 +248,12 @@ public class MediaConvertJobFeature extends TeaModel {
         public String content;
 
         /**
-         * <p>The font opacity.</p>
+         * <p>The opacity of the font.</p>
          * <ul>
-         * <li>Valid values: (0,1].</li>
-         * <li>Default value: 1.0.</li>
+         * <li><p>Value range: (0, 1].</p>
+         * </li>
+         * <li><p>Default value: <code>1.0</code>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -243,7 +265,7 @@ public class MediaConvertJobFeature extends TeaModel {
         /**
          * <p>The font color of the text watermark.</p>
          * <ul>
-         * <li>Default value: black.</li>
+         * <li>Default value: <code>black</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -253,9 +275,9 @@ public class MediaConvertJobFeature extends TeaModel {
         public String fontColor;
 
         /**
-         * <p>The font of the text watermark.</p>
+         * <p>The font name for the text watermark.</p>
          * <ul>
-         * <li>Default value: SimSum.</li>
+         * <li>Default value: <code>SimSun</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -267,26 +289,32 @@ public class MediaConvertJobFeature extends TeaModel {
         /**
          * <p>The font size of the text watermark.</p>
          * <ul>
-         * <li>Valid values: (4,120).</li>
-         * <li>Default value: 16.</li>
+         * <li><p>Value range: (4, 120).</p>
+         * </li>
+         * <li><p>Default value: <code>16</code>.</p>
+         * </li>
          * </ul>
          */
         @NameInMap("FontSize")
         public String fontSize;
 
         /**
-         * <p>The height of the image watermark. This parameter overrides the corresponding setting from a specified watermark template. The following value types are supported:</p>
+         * <p>The height of the watermark. If specified, this value overrides the corresponding parameter in the watermark template. You can specify the value in two ways:</p>
          * <ul>
-         * <li><p>Integer: the pixel value of the watermark height.</p>
+         * <li><p>As an integer, representing the height in pixels.</p>
          * <ul>
-         * <li></li>
-         * <li>Valid values: [8,4096].</li>
+         * <li><p>Unit: pixels.</p>
+         * </li>
+         * <li><p>Value range: [8, 4096].</p>
+         * </li>
          * </ul>
          * </li>
-         * <li><p>Decimal: A decimal of the output video\&quot;s height.</p>
+         * <li><p>As a decimal, representing the ratio of the height to the height of the output video.</p>
          * <ul>
-         * <li>Valid values: (0,1).</li>
-         * <li>The decimal number can be accurate to four decimal places, such as 0.9999. Excessive digits are automatically discarded.</li>
+         * <li><p>Value range: (0, 1).</p>
+         * </li>
+         * <li><p>Supports up to four decimal places, such as <code>0.9999</code>. The system truncates additional digits.</p>
+         * </li>
          * </ul>
          * </li>
          * </ul>
@@ -307,12 +335,14 @@ public class MediaConvertJobFeature extends TeaModel {
         public String templateId;
 
         /**
-         * <p>The watermark type.</p>
+         * <p>The type of the watermark.</p>
          * <ul>
-         * <li>Text: a text watermark. In this case, you must specify the parameters related to the text watermark.</li>
-         * <li>Image: an image watermark. In this case, you must specify the parameters related to the image watermark.</li>
+         * <li><p><code>Text</code>: A text watermark. You must also set the text watermark parameters.</p>
+         * </li>
+         * <li><p><code>Image</code>: An image watermark. You must also set the image watermark parameters.</p>
+         * </li>
          * </ul>
-         * <p>If not specified, the type is inferred from the TemplateId.</p>
+         * <p>Default value: The system automatically determines the type based on the watermark template.</p>
          * 
          * <strong>example:</strong>
          * <p>Image</p>
@@ -321,18 +351,22 @@ public class MediaConvertJobFeature extends TeaModel {
         public String type;
 
         /**
-         * <p>The width of the image watermark. This parameter overrides the corresponding setting from a specified watermark template. The following value types are supported:</p>
+         * <p>The width of the watermark. If specified, this value overrides the corresponding parameter in the watermark template. You can specify the value in two ways:</p>
          * <ul>
-         * <li><p>Integer: the pixel value of the watermark width.</p>
+         * <li><p>As an integer, representing the width in pixels.</p>
          * <ul>
-         * <li></li>
-         * <li>Valid values: [8,4096].</li>
+         * <li><p>Unit: pixels.</p>
+         * </li>
+         * <li><p>Value range: [8, 4096].</p>
+         * </li>
          * </ul>
          * </li>
-         * <li><p>Decimal: A decimal of the output video\&quot;s width.</p>
+         * <li><p>As a decimal, representing the ratio of the width to the width of the output video.</p>
          * <ul>
-         * <li>Valid values: (0,1).</li>
-         * <li>The decimal number can be accurate to four decimal places, such as 0.9999. Excessive digits are automatically discarded.</li>
+         * <li><p>Value range: (0, 1).</p>
+         * </li>
+         * <li><p>Supports up to four decimal places, such as <code>0.9999</code>. The system truncates additional digits.</p>
+         * </li>
          * </ul>
          * </li>
          * </ul>
@@ -344,18 +378,22 @@ public class MediaConvertJobFeature extends TeaModel {
         public String width;
 
         /**
-         * <p>The horizontal offset of the image watermark relative to the output video. This parameter overrides the corresponding setting from a specified watermark template. The following value types are supported:</p>
+         * <p>The horizontal offset of the watermark relative to the output video. If specified, this value overrides the corresponding parameter in the watermark template. You can specify the value in two ways:</p>
          * <ul>
-         * <li><p>Integer: the pixel value of the horizontal offset.</p>
+         * <li><p>As an integer, representing the offset in pixels.</p>
          * <ul>
-         * <li>Unit: pixels.</li>
-         * <li>Valid values: [8,4096].</li>
+         * <li><p>Unit: pixels.</p>
+         * </li>
+         * <li><p>Value range: [8, 4096].</p>
+         * </li>
          * </ul>
          * </li>
-         * <li><p>Decimal: the ratio of the horizontal offset to the width of the output video.</p>
+         * <li><p>As a decimal, representing the ratio of the offset to the width of the output video.</p>
          * <ul>
-         * <li>Valid values: (0,1).</li>
-         * <li>The decimal number can be accurate to four decimal places, such as 0.9999. Excessive digits are automatically discarded.</li>
+         * <li><p>Value range: (0, 1).</p>
+         * </li>
+         * <li><p>Supports up to four decimal places, such as <code>0.9999</code>. The system truncates additional digits.</p>
+         * </li>
          * </ul>
          * </li>
          * </ul>
@@ -367,18 +405,22 @@ public class MediaConvertJobFeature extends TeaModel {
         public String x;
 
         /**
-         * <p>The vertical offset of the image watermark relative to the output video. This parameter overrides the corresponding setting from a specified watermark template. The following value types are supported:</p>
+         * <p>The vertical offset of the watermark relative to the output video. If specified, this value overrides the corresponding parameter in the watermark template. You can specify the value in two ways:</p>
          * <ul>
-         * <li><p>Integer: the pixel value of the vertical offset.</p>
+         * <li><p>As an integer, representing the offset in pixels.</p>
          * <ul>
-         * <li>Unit: pixels.</li>
-         * <li>Valid values: [8,4096].</li>
+         * <li><p>Unit: pixels.</p>
+         * </li>
+         * <li><p>Value range: [8, 4096].</p>
+         * </li>
          * </ul>
          * </li>
-         * <li><p>Decimal: the ratio of the vertical offset to the height of the output video.</p>
+         * <li><p>As a decimal, representing the ratio of the offset to the height of the output video.</p>
          * <ul>
-         * <li>Valid values: (0,1).</li>
-         * <li>The decimal number can be accurate to four decimal places, such as 0.9999. Excessive digits are automatically discarded.</li>
+         * <li><p>Value range: (0, 1).</p>
+         * </li>
+         * <li><p>Supports up to four decimal places, such as <code>0.9999</code>. The system truncates additional digits.</p>
+         * </li>
          * </ul>
          * </li>
          * </ul>

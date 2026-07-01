@@ -43,6 +43,9 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
     public static class ListAllPublicMediaTagsResponseBodyMediaTagListOptions extends TeaModel {
         /**
          * <p>The option name in Chinese.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>愤怒</p>
          */
         @NameInMap("OptionChineseName")
         public String optionChineseName;
@@ -117,6 +120,9 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
 
         /**
          * <p>The name of the material tag in English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Animated image</p>
          */
         @NameInMap("MediaTagNameEnglish")
         public String mediaTagNameEnglish;

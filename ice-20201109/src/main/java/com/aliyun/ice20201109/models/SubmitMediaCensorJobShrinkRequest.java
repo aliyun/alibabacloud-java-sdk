@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class SubmitMediaCensorJobShrinkRequest extends TeaModel {
     /**
-     * <p>The live comments of the video.</p>
+     * <p>The video barrages (on-screen comments).</p>
      * <blockquote>
-     * <p> If this parameter is specified, the system checks the live comments specified by this parameter instead of the live comments of the input file specified by Media.</p>
+     * <p>If specified, it overrides the barrages specified in the Media object.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,9 +17,9 @@ public class SubmitMediaCensorJobShrinkRequest extends TeaModel {
     public String barrages;
 
     /**
-     * <p>The Object Storage Service (OSS) objects that are used as the thumbnails. Specify the thumbnails in a JSON array. A maximum of five thumbnails are supported.</p>
+     * <p>The Object Storage Service (OSS) files for the cover images, specified as a JSON array. You can specify up to five cover images.</p>
      * <blockquote>
-     * <p> If this parameter is specified, the system checks the thumbnails specified by this parameter instead of the thumbnails of the input file specified by <strong>Media</strong>.</p>
+     * <p>If specified, this parameter overrides the cover image information in the <strong>Media</strong> object.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,9 +29,9 @@ public class SubmitMediaCensorJobShrinkRequest extends TeaModel {
     public String coverImages;
 
     /**
-     * <p>The video description, which can be up to 128 bytes in length.</p>
+     * <p>The video description. The maximum length is 128 bytes.</p>
      * <blockquote>
-     * <p> If this parameter is specified, the system checks the description specified by this parameter instead of the description of the input file specified by Media.</p>
+     * <p>If specified, this parameter overrides the description specified in the Media object.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,13 +41,13 @@ public class SubmitMediaCensorJobShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The information about the file to be moderated.</p>
+     * <p>The input file to censor.</p>
      */
     @NameInMap("Input")
     public String inputShrink;
 
     /**
-     * <p>The callback URL. Simple Message Queue (SMQ, formerly MNS) and HTTP callbacks are supported.</p>
+     * <p>The callback path. Both Message Service (MNS) and HTTP callbacks are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>mns://125340688170****.oss-cn-shanghai.aliyuncs.com/queues/example-pipeline</p>
@@ -56,10 +56,12 @@ public class SubmitMediaCensorJobShrinkRequest extends TeaModel {
     public String notifyUrl;
 
     /**
-     * <p>The output snapshots. The moderation job generates output snapshots and the result JSON file in the path corresponding to the input file.</p>
+     * <p>The output location for screenshots. The censor job generates screenshots and a result JSON file in the OSS location specified by this parameter.</p>
      * <ul>
-     * <li>File name format of output snapshots: oss://bucket/snapshot-{Count}.jpg. In the path, bucket indicates an OSS bucket that resides in the same region as the current project, and {Count} is the sequence number of the snapshot.</li>
-     * <li>The detailed moderation results are stored in the {jobId}.output file in the same OSS folder as the output snapshots. For more information about the parameters in the output file, see <a href="https://help.aliyun.com/document_detail/609211.html">Output parameters of media moderation jobs</a>.</li>
+     * <li><p>Example format: <code>oss://bucket/snapshot-{Count}.jpg</code>, where <code>bucket</code> is the name of an OSS bucket in the same region as the project, and <code>{Count}</code> is a placeholder for the screenshot sequence number.</p>
+     * </li>
+     * <li><p>The detailed censor results are saved to a file named <code>{jobId}.output</code> in the same OSS folder as the value of <code>Output</code>. For information about the fields in the output file, see <a href="https://help.aliyun.com/document_detail/609211.html">Media censor result file fields</a>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -69,13 +71,13 @@ public class SubmitMediaCensorJobShrinkRequest extends TeaModel {
     public String output;
 
     /**
-     * <p>The scheduling configurations.</p>
+     * <p>The scheduling configuration.</p>
      */
     @NameInMap("ScheduleConfig")
     public String scheduleConfigShrink;
 
     /**
-     * <p>The template ID. If this parameter is not specified, the default template is used for moderation.</p>
+     * <p>The template ID. If this parameter is left empty, the service uses the default template for the censor job.</p>
      * 
      * <strong>example:</strong>
      * <p>S00000001-100060</p>
@@ -84,9 +86,9 @@ public class SubmitMediaCensorJobShrinkRequest extends TeaModel {
     public String templateId;
 
     /**
-     * <p>The video title, which can be up to 64 bytes in length.</p>
+     * <p>The video title. The maximum length is 64 bytes.</p>
      * <blockquote>
-     * <p> If this parameter is specified, the system checks the title specified by this parameter instead of the title of the input file specified by Media.</p>
+     * <p>If specified, this parameter overrides the title specified in the Media object.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -96,7 +98,7 @@ public class SubmitMediaCensorJobShrinkRequest extends TeaModel {
     public String title;
 
     /**
-     * <p>The user-defined data, which can be up to 128 bytes in length.</p>
+     * <p>The user-defined data. The maximum length is 128 bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>UserDatatestid-001-****</p>

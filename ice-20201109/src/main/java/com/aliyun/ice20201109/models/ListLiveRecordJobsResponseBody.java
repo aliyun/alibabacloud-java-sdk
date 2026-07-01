@@ -131,8 +131,10 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
          * <p>The type of the storage address.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>vod</li>
-         * <li>oss</li>
+         * <li><p>vod</p>
+         * </li>
+         * <li><p>oss</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -236,6 +238,9 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
 
         /**
          * <p>The name of the recording job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Live event recording task 1</p>
          */
         @NameInMap("Name")
         public String name;

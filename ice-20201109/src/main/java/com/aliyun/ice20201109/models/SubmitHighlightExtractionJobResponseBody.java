@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitHighlightExtractionJobResponseBody extends TeaModel {
     /**
-     * <p>The ID of the highlight extraction task.</p>
+     * <p>The ID of the highlight extraction job.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>cdb3e74639973036bc84</strong></strong></p>

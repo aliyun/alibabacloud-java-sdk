@@ -81,7 +81,7 @@ public class UpdateLiveRecordTemplateRequest extends TeaModel {
         /**
          * <p>The format of recording files.</p>
          * <blockquote>
-         * <p> If you set this parameter to m3u8, you must also specify the SliceOssObjectPrefix and SliceDuration parameters.</p>
+         * <p>If you set this parameter to m3u8, you must also specify the SliceOssObjectPrefix and SliceDuration parameters.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -94,8 +94,10 @@ public class UpdateLiveRecordTemplateRequest extends TeaModel {
         /**
          * <p>The name of the recording that is stored in Object Storage Service (OSS).</p>
          * <ul>
-         * <li>The name must be less than 256 bytes in length and can contain the {JobId}, {Sequence}, {StartTime}, {EndTime}, {EscapedStartTime}, and {EscapedEndTime} variables.</li>
-         * <li>The name must contain the {StartTime} and {EndTime} variables or the {EscapedStartTime} and {EscapedEndTime} variables.</li>
+         * <li><p>The name must be less than 256 bytes in length and can contain the {JobId}, {Sequence}, {StartTime}, {EndTime}, {EscapedStartTime}, and {EscapedEndTime} variables.</p>
+         * </li>
+         * <li><p>The name must contain the {StartTime} and {EndTime} variables or the {EscapedStartTime} and {EscapedEndTime} variables.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -107,7 +109,7 @@ public class UpdateLiveRecordTemplateRequest extends TeaModel {
         /**
          * <p>The duration of a single segment. Unit: seconds</p>
          * <blockquote>
-         * <p> This parameter takes effect only if you set Format to m3u8.</p>
+         * <p>This parameter takes effect only if you set Format to m3u8.</p>
          * </blockquote>
          * <p>If you do not specify this parameter, the default value 30 seconds is used. Valid values: 5 to 30.</p>
          * 
@@ -120,7 +122,7 @@ public class UpdateLiveRecordTemplateRequest extends TeaModel {
         /**
          * <p>The name of the TS segment.</p>
          * <blockquote>
-         * <p> This parameter is required only if you set Format to m3u8. By default, the duration of a segment is 30 seconds. The segment name must be less than 256 bytes in length and can contain the {JobId}, {UnixTimestamp}, and {Sequence} variables.</p>
+         * <p>This parameter is required only if you set Format to m3u8. By default, the duration of a segment is 30 seconds. The segment name must be less than 256 bytes in length and can contain the {JobId}, {UnixTimestamp}, and {Sequence} variables.</p>
          * </blockquote>
          * <p>The segment name must contain the {UnixTimestamp} and {Sequence} variables.</p>
          * 

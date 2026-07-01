@@ -7,11 +7,13 @@ public class GetUrlUploadInfosRequest extends TeaModel {
     /**
      * <p>The IDs of the upload jobs. You can specify one or more job IDs. You can obtain the job IDs from the response parameter JobId of the <a href="https://help.aliyun.com/document_detail/86311.html">UploadMediaByURL</a> operation.</p>
      * <ul>
-     * <li>You can specify a maximum of 10 job IDs.</li>
-     * <li>Separate the job IDs with commas (,).</li>
+     * <li><p>You can specify a maximum of 10 job IDs.</p>
+     * </li>
+     * <li><p>Separate the job IDs with commas (,).</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You must specify either JobIds or UploadURLs. If you specify both parameters, only the value of JobIds takes effect.</p>
+     * <p>You must specify either JobIds or UploadURLs. If you specify both parameters, only the value of JobIds takes effect.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

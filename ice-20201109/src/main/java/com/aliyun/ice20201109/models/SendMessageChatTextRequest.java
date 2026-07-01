@@ -17,8 +17,10 @@ public class SendMessageChatTextRequest extends TeaModel {
     /**
      * <p>The mode of message sending. Valid values:</p>
      * <ul>
-     * <li>online</li>
-     * <li>offline</li>
+     * <li><p>online</p>
+     * </li>
+     * <li><p>offline</p>
+     * </li>
      * </ul>
      * <p>Default value: offline.</p>
      * 
@@ -62,7 +64,7 @@ public class SendMessageChatTextRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Hello</p>
+     * <p>Hello.</p>
      */
     @NameInMap("Text")
     public String text;
@@ -70,8 +72,10 @@ public class SendMessageChatTextRequest extends TeaModel {
     /**
      * <p>The type of the message. Valid values:</p>
      * <ul>
-     * <li>announcement: notification.</li>
-     * <li>custom: custom message.</li>
+     * <li><p>announcement: notification.</p>
+     * </li>
+     * <li><p>custom: custom message.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

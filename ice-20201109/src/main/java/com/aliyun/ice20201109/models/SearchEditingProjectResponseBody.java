@@ -107,11 +107,16 @@ public class SearchEditingProjectResponseBody extends TeaModel {
          * <p>The business status of the project. This parameter can be ignored for general editing projects. Valid values:</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>BroadCasting:</li>
-         * <li>ReservationCanceled</li>
-         * <li>LiveFinished</li>
-         * <li>LoadingFailed</li>
-         * <li>Reserving</li>
+         * <li><p>BroadCasting:</p>
+         * </li>
+         * <li><p>ReservationCanceled</p>
+         * </li>
+         * <li><p>LiveFinished</p>
+         * </li>
+         * <li><p>LoadingFailed</p>
+         * </li>
+         * <li><p>Reserving</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -131,14 +136,17 @@ public class SearchEditingProjectResponseBody extends TeaModel {
 
         /**
          * <p>The method for editing the online editing project.</p>
-         * <p>\-OpenAPI</p>
-         * <p>\-AliyunConsole</p>
-         * <p>\-WebSDK</p>
+         * <p>-OpenAPI</p>
+         * <p>-AliyunConsole</p>
+         * <p>-WebSDK</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>AliyunConsole: The project is created in the Alibaba Cloud console.</li>
-         * <li>WebSDK: The project is created by using the SDK for Web.</li>
-         * <li>OpenAPI: The project is created by calling API operations.</li>
+         * <li><p>AliyunConsole: The project is created in the Alibaba Cloud console.</p>
+         * </li>
+         * <li><p>WebSDK: The project is created by using the SDK for Web.</p>
+         * </li>
+         * <li><p>OpenAPI: The project is created by calling API operations.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -223,8 +231,10 @@ public class SearchEditingProjectResponseBody extends TeaModel {
          * <p>The type of the editing project.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>LiveEditingProject: a live stream editing project.</li>
-         * <li>EditingProject: a regular editing project.</li>
+         * <li><p>LiveEditingProject: a live stream editing project.</p>
+         * </li>
+         * <li><p>EditingProject: a regular editing project.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -235,18 +245,23 @@ public class SearchEditingProjectResponseBody extends TeaModel {
 
         /**
          * <p>The status of the online editing project. Valid values:</p>
-         * <p>\-Draft</p>
-         * <p>\-Editing</p>
-         * <p>\-Producing</p>
-         * <p>\-Produced</p>
-         * <p>\-ProduceFailed</p>
+         * <p>-Draft</p>
+         * <p>-Editing</p>
+         * <p>-Producing</p>
+         * <p>-Produced</p>
+         * <p>-ProduceFailed</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Draft</li>
-         * <li>Produced</li>
-         * <li>Editing</li>
-         * <li>Producing</li>
-         * <li>ProduceFailed</li>
+         * <li><p>Draft</p>
+         * </li>
+         * <li><p>Produced</p>
+         * </li>
+         * <li><p>Editing</p>
+         * </li>
+         * <li><p>Producing</p>
+         * </li>
+         * <li><p>ProduceFailed</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -21,6 +21,9 @@ public class TranspositionResult extends TeaModel {
      * <li>The translated text corresponding to the matched hotwords. Maximum length: 100 characters.</li>
      * <li>This field is only used in translation-related scenarios.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>你好</p>
      */
     @NameInMap("TranslatedText")
     public String translatedText;

@@ -83,9 +83,12 @@ public class GetAIWorkflowTaskResponseBody extends TeaModel {
         /**
          * <p>Workflow template status. Valid values:</p>
          * <ul>
-         * <li>Draft</li>
-         * <li>Published</li>
-         * <li>Editing</li>
+         * <li><p>Draft</p>
+         * </li>
+         * <li><p>Published</p>
+         * </li>
+         * <li><p>Editing</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -244,11 +247,16 @@ public class GetAIWorkflowTaskResponseBody extends TeaModel {
          * <p>The task state.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>running</li>
-         * <li>stopped</li>
-         * <li>failed</li>
-         * <li>partial-succeeded</li>
-         * <li>succeeded</li>
+         * <li><p>running</p>
+         * </li>
+         * <li><p>stopped</p>
+         * </li>
+         * <li><p>failed</p>
+         * </li>
+         * <li><p>partial-succeeded</p>
+         * </li>
+         * <li><p>succeeded</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

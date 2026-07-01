@@ -105,15 +105,40 @@ public class UpdateMediaLiveInputRequest extends TeaModel {
         @NameInMap("SourceUrl")
         public String sourceUrl;
 
+        /**
+         * <p>Latency of the SRT stream, in ms. Valid range: [100, 10000]. Optional when Type is SRT_PUSH or SRT_PULL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("SrtLatency")
         public Integer srtLatency;
 
+        /**
+         * <p>Maximum bitrate of the SRT stream, in bps. Valid range: [100, 100000000]. Optional when Type is SRT_PUSH or SRT_PULL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3000000</p>
+         */
         @NameInMap("SrtMaxBitrate")
         public Integer srtMaxBitrate;
 
+        /**
+         * <p>The SRT encryption configuration. The password for the SRT stream must consist of 10 to 79 visible ASCII characters. Optional when Type is SRT_PUSH or SRT_PULL.</p>
+         * <p>If the encryption configuration is not empty, all SRT clients must use the correct password to publish or playback streams. Otherwise, the SRT connection will be denied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>srtencryption</p>
+         */
         @NameInMap("SrtPassphrase")
         public String srtPassphrase;
 
+        /**
+         * <p>Encryption configuration for SRT—the key length of the SRT stream. Valid values: 0, 16, 24, 32. Optional when Type is SRT_PUSH or SRT_PULL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
+         */
         @NameInMap("SrtPbKeyLen")
         public Integer srtPbKeyLen;
 

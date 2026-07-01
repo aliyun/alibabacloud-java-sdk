@@ -5,8 +5,18 @@ import com.aliyun.tea.*;
 
 public class SearchMediaByMultimodalRequest extends TeaModel {
     /**
+     * <p>Custom filters. A JSON string. Supported backing fields include integer field intField1 and string fields strField1 and strField2. Only one matching condition can be applied per field, and filters across different fields are combined with a logical AND relationship.</p>
+     * <ul>
+     * <li><p>Exact match example: {&quot;intField1&quot;:12,&quot;strField1&quot;:&quot;abc&quot;}</p>
+     * </li>
+     * <li><p>Multi-value match example: {&quot;intField1&quot;:[12,13],&quot;strField1&quot;:[&quot;abc&quot;,&quot;cd&quot;]}</p>
+     * </li>
+     * <li><p>Range match example: {&quot;intField1&quot;:{&quot;gte&quot;:12,&quot;lte&quot;:13}}</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>{}</p>
+     * <p>{&quot;intField1&quot;:{&quot;gte&quot;:12,&quot;lte&quot;:13},&quot;strField2&quot;:[&quot;cd&quot;,&quot;de&quot;],&quot;strField1&quot;:&quot;abc&quot;}</p>
      */
     @NameInMap("CustomFilters")
     public String customFilters;
@@ -15,8 +25,10 @@ public class SearchMediaByMultimodalRequest extends TeaModel {
      * <p>The type of the media assets.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>image</li>
-     * <li>video (default)</li>
+     * <li><p>image</p>
+     * </li>
+     * <li><p>video (default)</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -25,6 +37,12 @@ public class SearchMediaByMultimodalRequest extends TeaModel {
     @NameInMap("MediaType")
     public String mediaType;
 
+    /**
+     * <p>Namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name-1</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
@@ -57,13 +75,21 @@ public class SearchMediaByMultimodalRequest extends TeaModel {
 
     /**
      * <p>The content that you want to query. You can describe the content in natural language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Two pandas are fighting.</p>
      */
     @NameInMap("Text")
     public String text;
 
     /**
+     * <p>Creation time, in milliseconds UNIX timestamp. gte indicates greater than or equal to, and lte indicates less than or equal to.</p>
+     * <ul>
+     * <li>Range example: {&quot;gte&quot;:1761205662998,&quot;lte&quot;:1771205662998}</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>{}</p>
+     * <p>{&quot;gte&quot;:1761205662998,&quot;lte&quot;:1771205662998}</p>
      */
     @NameInMap("UtcCreate")
     public String utcCreate;

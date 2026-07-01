@@ -17,10 +17,15 @@ public class DeleteMediaInfosRequest extends TeaModel {
     /**
      * <p>The URL of the media asset that you want to delete. The file corresponding to the URL must be registered with IMS. Separate multiple URLs with commas (,). The following two formats are supported:</p>
      * <ol>
-     * <li>http(s)://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4?</li>
-     * <li>OSS://example-bucket/example.mp4?\
-     * In this format, it is considered by default that the region of the OSS bucket in which the media asset resides is the same as the region in which IMS is activated.</li>
+     * <li><p>http(s)://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4?</p>
+     * </li>
+     * <li><p>OSS://example-bucket/example.mp4?<br>
+     * In this format, it is considered by default that the region of the OSS bucket in which the media asset resides is the same as the region in which IMS is activated.</p>
+     * </li>
      * </ol>
+     * 
+     * <strong>example:</strong>
+     * <p>Http(s)://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4? or oss://example-bucket/example.mp4?</p>
      */
     @NameInMap("InputURLs")
     public String inputURLs;

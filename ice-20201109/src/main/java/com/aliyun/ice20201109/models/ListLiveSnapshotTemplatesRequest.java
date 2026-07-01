@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLiveSnapshotTemplatesRequest extends TeaModel {
     /**
-     * <p>The page number. Valid values: [1,n). Default value: 1.</p>
+     * <p>The page number. The value must be greater than or equal to 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,9 +23,9 @@ public class ListLiveSnapshotTemplatesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The search keyword. You can use the template ID or name as the keyword to search for templates. If you search for templates by name, fuzzy match is supported.</p>
+     * <p>The search keyword. You can perform a fuzzy search by template ID or template name.</p>
      * <ul>
-     * <li>It cannot exceed 128 characters in length.</li>
+     * <li>Maximum length: 128 characters.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,12 +35,7 @@ public class ListLiveSnapshotTemplatesRequest extends TeaModel {
     public String searchKeyWord;
 
     /**
-     * <p>The sorting order. By default, the query results are sorted by creation time in descending order.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>asc: sorts the query results by creation time in ascending order.</li>
-     * <li>desc: sorts the query results by creation time in descending order.</li>
-     * </ul>
+     * <p>The sorting method. By default, results are sorted by creation time in descending order.</p>
      * 
      * <strong>example:</strong>
      * <p>desc</p>
@@ -51,20 +46,17 @@ public class ListLiveSnapshotTemplatesRequest extends TeaModel {
     /**
      * <p>The template IDs.</p>
      * <ul>
-     * <li>If you specify the SearchKeyWord parameter, this condition does not take effect.</li>
-     * <li>The maximum length of the array is 200.</li>
+     * <li><p>This parameter does not take effect if <code>SearchKeyWord</code> is specified.</p>
+     * </li>
+     * <li><p>You can specify a maximum of 200 template IDs.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("TemplateIds")
     public java.util.List<String> templateIds;
 
     /**
-     * <p>The type of the template. By default, all types are queried.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>system</li>
-     * <li>custom</li>
-     * </ul>
+     * <p>The type of the template. By default, templates of all types are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>custom</p>

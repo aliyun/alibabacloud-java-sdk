@@ -7,10 +7,15 @@ public class AddCategoryRequest extends TeaModel {
     /**
      * <p>The category name.</p>
      * <ul>
-     * <li>The value can be up to 64 bytes in length.</li>
-     * <li>The value must be encoded in UTF-8.</li>
+     * <li><p>The value can be up to 64 bytes in length.</p>
+     * </li>
+     * <li><p>The value must be encoded in UTF-8.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Third-level subcategory</p>
      */
     @NameInMap("CateName")
     public String cateName;
@@ -27,8 +32,10 @@ public class AddCategoryRequest extends TeaModel {
     /**
      * <p>The type of the category. Valid values:</p>
      * <ul>
-     * <li>default: audio, video, and image files. This is the default value.</li>
-     * <li>material: short video materials.</li>
+     * <li><p>default: audio, video, and image files. This is the default value.</p>
+     * </li>
+     * <li><p>material: short video materials.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

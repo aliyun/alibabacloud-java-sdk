@@ -7,15 +7,24 @@ public class CreateUploadStreamRequest extends TeaModel {
     /**
      * <p>The quality of the media stream. Valid values:</p>
      * <ul>
-     * <li>FD: low definition.</li>
-     * <li>LD: standard definition.</li>
-     * <li>SD: high definition.</li>
-     * <li>HD: ultra-high definition.</li>
-     * <li>OD: original quality.</li>
-     * <li>2K: 2K resolution.</li>
-     * <li>4K: 4K resolution.</li>
-     * <li>SQ: standard sound quality.</li>
-     * <li>HQ: high sound quality.</li>
+     * <li><p>FD: low definition.</p>
+     * </li>
+     * <li><p>LD: standard definition.</p>
+     * </li>
+     * <li><p>SD: high definition.</p>
+     * </li>
+     * <li><p>HD: ultra-high definition.</p>
+     * </li>
+     * <li><p>OD: original quality.</p>
+     * </li>
+     * <li><p>2K: 2K resolution.</p>
+     * </li>
+     * <li><p>4K: 4K resolution.</p>
+     * </li>
+     * <li><p>SQ: standard sound quality.</p>
+     * </li>
+     * <li><p>HQ: high sound quality.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,12 +45,18 @@ public class CreateUploadStreamRequest extends TeaModel {
     /**
      * <p>The high dynamic range (HDR) format of the transcoded stream. Valid values:</p>
      * <ul>
-     * <li>HDR</li>
-     * <li>HDR10</li>
-     * <li>HLG</li>
-     * <li>DolbyVision</li>
-     * <li>HDRVivid</li>
-     * <li>SDR+</li>
+     * <li><p>HDR</p>
+     * </li>
+     * <li><p>HDR10</p>
+     * </li>
+     * <li><p>HLG</p>
+     * </li>
+     * <li><p>DolbyVision</p>
+     * </li>
+     * <li><p>HDRVivid</p>
+     * </li>
+     * <li><p>SDR+</p>
+     * </li>
      * </ul>
      * <blockquote>
      * </blockquote>

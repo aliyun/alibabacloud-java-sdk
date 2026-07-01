@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SetYikeUserRoleResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
      */
@@ -12,6 +14,14 @@ public class SetYikeUserRoleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation succeeded.</p>
+     * <ul>
+     * <li><p>true: Success</p>
+     * </li>
+     * <li><p>false: Failure</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

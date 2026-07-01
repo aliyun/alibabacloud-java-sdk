@@ -70,9 +70,12 @@ public class CancelIProductionJobResponseBody extends TeaModel {
         /**
          * <p>The identity. Values:</p>
          * <ul>
-         * <li>RAM user: a UID</li>
-         * <li>RAM role: RoleName:RoleSessionName</li>
-         * <li>Federated user: ProviderType/ProviderName</li>
+         * <li><p>RAM user: a UID</p>
+         * </li>
+         * <li><p>RAM role: RoleName:RoleSessionName</p>
+         * </li>
+         * <li><p>Federated user: ProviderType/ProviderName</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -93,9 +96,12 @@ public class CancelIProductionJobResponseBody extends TeaModel {
         /**
          * <p>The type of identity that made the request. Valid values:</p>
          * <ul>
-         * <li>SubUser: RAM user</li>
-         * <li>AssumedRoleUser: RAM role</li>
-         * <li>Federated: SSO federated user</li>
+         * <li><p>SubUser: RAM user</p>
+         * </li>
+         * <li><p>AssumedRoleUser: RAM role</p>
+         * </li>
+         * <li><p>Federated: SSO federated user</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -116,8 +122,10 @@ public class CancelIProductionJobResponseBody extends TeaModel {
         /**
          * <p>The type of policy that resulted in the denial. Valid values:</p>
          * <ul>
-         * <li><strong>ImplicitDeny</strong>: The resource holder has not configured a policy for the current user. By default, unauthorized operations are denied.</li>
-         * <li><strong>ExplicitDeny</strong>: The RAM policy configured by the resource holder explicitly denies the current user access to the corresponding resources.</li>
+         * <li><p><strong>ImplicitDeny</strong>: The resource holder has not configured a policy for the current user. By default, unauthorized operations are denied.</p>
+         * </li>
+         * <li><p><strong>ExplicitDeny</strong>: The RAM policy configured by the resource holder explicitly denies the current user access to the corresponding resources.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -129,11 +137,16 @@ public class CancelIProductionJobResponseBody extends TeaModel {
         /**
          * <p>The type of policy that triggered the permission failure.</p>
          * <ul>
-         * <li><strong>ControlPolicy</strong>: control policy</li>
-         * <li><strong>SessionPolicy</strong>: an additional policy attached to a temporary token.</li>
-         * <li><strong>AssumeRolePolicy</strong>: the trust policy of a RAM role.</li>
-         * <li><strong>AccountLevelIdentityBasedPolicy</strong>: an identity-based policy at the account level (custom or system).</li>
-         * <li><strong>ResourceGroupLevelIdentityBasedPolicy</strong>: an identity-based policy scoped to a resource group.</li>
+         * <li><p><strong>ControlPolicy</strong>: control policy</p>
+         * </li>
+         * <li><p><strong>SessionPolicy</strong>: an additional policy attached to a temporary token.</p>
+         * </li>
+         * <li><p><strong>AssumeRolePolicy</strong>: the trust policy of a RAM role.</p>
+         * </li>
+         * <li><p><strong>AccountLevelIdentityBasedPolicy</strong>: an identity-based policy at the account level (custom or system).</p>
+         * </li>
+         * <li><p><strong>ResourceGroupLevelIdentityBasedPolicy</strong>: an identity-based policy scoped to a resource group.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

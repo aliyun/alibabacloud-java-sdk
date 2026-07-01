@@ -45,8 +45,10 @@ public class ListLiveRecordJobsRequest extends TeaModel {
      * <p>The sorting order. By default, the query results are sorted by creation time in descending order.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>asc: sorts the query results in ascending order.</li>
-     * <li>desc: sorts the query results in descending order.</li>
+     * <li><p>asc: sorts the query results in ascending order.</p>
+     * </li>
+     * <li><p>desc: sorts the query results in descending order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -69,9 +71,12 @@ public class ListLiveRecordJobsRequest extends TeaModel {
      * <p>The state of the job. By default, the state is not filtered.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>paused: The job is paused.</li>
-     * <li>initial: The job is not started.</li>
-     * <li>started: The job is in progress.</li>
+     * <li><p>paused: The job is paused.</p>
+     * </li>
+     * <li><p>initial: The job is not started.</p>
+     * </li>
+     * <li><p>started: The job is in progress.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

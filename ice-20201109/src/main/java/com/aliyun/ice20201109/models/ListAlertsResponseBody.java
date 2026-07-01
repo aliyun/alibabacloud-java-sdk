@@ -94,6 +94,11 @@ public class ListAlertsResponseBody extends TeaModel {
     public static class ListAlertsResponseBodyAlerts extends TeaModel {
         /**
          * <p>The alert type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Scheduling Error: An error occurred when building the schedule.
+         * PlayBack Warning: Address pull exception when adding source.
+         * info: Information.</p>
          */
         @NameInMap("Category")
         public String category;

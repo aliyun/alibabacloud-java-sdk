@@ -52,6 +52,9 @@ public class CreateLivePackageChannelGroupResponseBody extends TeaModel {
 
         /**
          * <p>The channel group description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is an example description.</p>
          */
         @NameInMap("Description")
         public String description;

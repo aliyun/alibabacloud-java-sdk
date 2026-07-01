@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartAIAgentOutboundCallShrinkRequest extends TeaModel {
     /**
+     * <p>The AI agent ID configured in the <a href="https://ims.console.aliyun.com/ai/robot/list">IMS console</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class StartAIAgentOutboundCallShrinkRequest extends TeaModel {
     public String AIAgentId;
 
     /**
+     * <p>The called number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class StartAIAgentOutboundCallShrinkRequest extends TeaModel {
     public String calledNumber;
 
     /**
+     * <p>The caller number. Only numbers from mainland China are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,19 +34,36 @@ public class StartAIAgentOutboundCallShrinkRequest extends TeaModel {
     @NameInMap("CallerNumber")
     public String callerNumber;
 
+    /**
+     * <p>The AI agent outbound call configuration.</p>
+     */
     @NameInMap("Config")
     public String configShrink;
 
+    /**
+     * <p>A reserved parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xx</p>
+     */
     @NameInMap("ImsAIAgentFreeObCall")
     public String imsAIAgentFreeObCall;
 
     /**
+     * <p>A unique identifier for the session. You can use this ID to store, query, and synchronize chat history across multiple calls. This parameter is optional.</p>
+     * 
      * <strong>example:</strong>
      * <p>f213fbc005e4f309379701645f4****</p>
      */
     @NameInMap("SessionId")
     public String sessionId;
 
+    /**
+     * <p>The user-defined data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;city&quot;:&quot;Hangzhou&quot;}</p>
+     */
     @NameInMap("UserData")
     public String userData;
 

@@ -7,11 +7,16 @@ public class DeleteRecognitionSampleRequest extends TeaModel {
     /**
      * <p>The type of recognition algorithm. Valid values:</p>
      * <ul>
-     * <li>landmark</li>
-     * <li>object</li>
-     * <li>logo</li>
-     * <li>face</li>
-     * <li>label</li>
+     * <li><p>landmark</p>
+     * </li>
+     * <li><p>object</p>
+     * </li>
+     * <li><p>logo</p>
+     * </li>
+     * <li><p>face</p>
+     * </li>
+     * <li><p>label</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

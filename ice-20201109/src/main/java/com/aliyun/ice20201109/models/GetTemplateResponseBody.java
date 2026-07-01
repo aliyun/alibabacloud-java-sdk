@@ -44,8 +44,10 @@ public class GetTemplateResponseBody extends TeaModel {
         /**
          * <p>The clip parameters for submitting a video production job. You can replace mediaId and text with real values to submit a job. References:</p>
          * <ul>
-         * <li><a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a></li>
-         * <li><a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a></li>
+         * <li><p><a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a></p>
+         * </li>
+         * <li><p><a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -57,12 +59,14 @@ public class GetTemplateResponseBody extends TeaModel {
         /**
          * <p>The template configurations.</p>
          * <ul>
-         * <li>For more information about the configurations of a regular template, see <a href="https://help.aliyun.com/document_detail/456193.html">Config object of a regular template</a>.</li>
-         * <li>For more information about the configurations of an advanced template, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</li>
+         * <li><p>For more information about the configurations of a regular template, see <a href="https://help.aliyun.com/document_detail/456193.html">Config object of a regular template</a>.</p>
+         * </li>
+         * <li><p>For more information about the configurations of an advanced template, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>参考Timeline模板配置详解</p>
+         * <p>See Timeline template configuration details.</p>
          */
         @NameInMap("Config")
         public String config;
@@ -79,9 +83,12 @@ public class GetTemplateResponseBody extends TeaModel {
         /**
          * <p>The source from which the template was created. Valid values:</p>
          * <ul>
-         * <li>AliyunConsole</li>
-         * <li>OpenAPI</li>
-         * <li>WebSDK</li>
+         * <li><p>AliyunConsole</p>
+         * </li>
+         * <li><p>OpenAPI</p>
+         * </li>
+         * <li><p>WebSDK</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -102,9 +109,12 @@ public class GetTemplateResponseBody extends TeaModel {
         /**
          * <p>The source from which the template was modified. Valid values:</p>
          * <ul>
-         * <li>AliyunConsole</li>
-         * <li>OpenAPI</li>
-         * <li>WebSDK</li>
+         * <li><p>AliyunConsole</p>
+         * </li>
+         * <li><p>OpenAPI</p>
+         * </li>
+         * <li><p>WebSDK</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -126,7 +136,7 @@ public class GetTemplateResponseBody extends TeaModel {
          * <p>The template name.</p>
          * 
          * <strong>example:</strong>
-         * <p>视频添加水印模板</p>
+         * <p>Video watermark template</p>
          */
         @NameInMap("Name")
         public String name;
@@ -143,10 +153,14 @@ public class GetTemplateResponseBody extends TeaModel {
         /**
          * <p>The state of the preview media asset. Valid values:</p>
          * <ul>
-         * <li>Init: the initial state, which indicates that the source file is not ready.</li>
-         * <li>Preparing: The source file is being prepared. For example, the file is being uploaded or edited.</li>
-         * <li>PrepareFail: The source file failed to be prepared. For example, the information about the source file failed to be obtained.</li>
-         * <li>Normal: The source file is ready.</li>
+         * <li><p>Init: the initial state, which indicates that the source file is not ready.</p>
+         * </li>
+         * <li><p>Preparing: The source file is being prepared. For example, the file is being uploaded or edited.</p>
+         * </li>
+         * <li><p>PrepareFail: The source file failed to be prepared. For example, the information about the source file failed to be obtained.</p>
+         * </li>
+         * <li><p>Normal: The source file is ready.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -167,12 +181,18 @@ public class GetTemplateResponseBody extends TeaModel {
         /**
          * <p>The template state. Valid values:</p>
          * <ul>
-         * <li>Available</li>
-         * <li>Created</li>
-         * <li>Uploading</li>
-         * <li>Processing</li>
-         * <li>UploadFailed</li>
-         * <li>ProcessFailed</li>
+         * <li><p>Available</p>
+         * </li>
+         * <li><p>Created</p>
+         * </li>
+         * <li><p>Uploading</p>
+         * </li>
+         * <li><p>Processing</p>
+         * </li>
+         * <li><p>UploadFailed</p>
+         * </li>
+         * <li><p>ProcessFailed</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -193,8 +213,10 @@ public class GetTemplateResponseBody extends TeaModel {
         /**
          * <p>The template type. Valid values:</p>
          * <ul>
-         * <li>Timeline</li>
-         * <li>VETemplate</li>
+         * <li><p>Timeline</p>
+         * </li>
+         * <li><p>VETemplate</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

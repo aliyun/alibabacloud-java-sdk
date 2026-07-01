@@ -4,10 +4,14 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class UpdateRtcRobotInstanceRequest extends TeaModel {
+    /**
+     * <p>The configuration for the AI Agent instance.</p>
+     */
     @NameInMap("Config")
     public UpdateRtcRobotInstanceRequestConfig config;
 
     /**
+     * <p>The ID of the AI Agent instance to update.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,16 +43,26 @@ public class UpdateRtcRobotInstanceRequest extends TeaModel {
 
     public static class UpdateRtcRobotInstanceRequestConfig extends TeaModel {
         /**
+         * <p>Controls whether voice interrupt is enabled. This change takes effect immediately.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("EnableVoiceInterrupt")
         public Boolean enableVoiceInterrupt;
 
+        /**
+         * <p>The greeting message. The greeting is not updated if it has already been played.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hello</p>
+         */
         @NameInMap("Greeting")
         public String greeting;
 
         /**
+         * <p>The ID of the voice. The new voice takes effect on the AI Agent\&quot;s next utterance.</p>
+         * 
          * <strong>example:</strong>
          * <p>zhixiaoxia</p>
          */

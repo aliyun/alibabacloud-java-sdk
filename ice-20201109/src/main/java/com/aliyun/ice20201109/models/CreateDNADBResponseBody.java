@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDNADBResponseBody extends TeaModel {
     /**
-     * <p>The details of the media fingerprint library.</p>
+     * <p>The details of the DNA database.</p>
      */
     @NameInMap("DBInfo")
     public CreateDNADBResponseBodyDBInfo DBInfo;
@@ -42,7 +42,7 @@ public class CreateDNADBResponseBody extends TeaModel {
 
     public static class CreateDNADBResponseBodyDBInfo extends TeaModel {
         /**
-         * <p>The ID of the media fingerprint library. We recommend that you save this ID for subsequent calls of other operations.</p>
+         * <p>The DNA database ID. Save this ID for use in subsequent API calls.</p>
          * 
          * <strong>example:</strong>
          * <p>88c6ca184c0e47098a5b665e2a12****</p>
@@ -51,13 +51,16 @@ public class CreateDNADBResponseBody extends TeaModel {
         public String DBId;
 
         /**
-         * <p>The description of the media fingerprint library.</p>
+         * <p>The description of the DNA database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是一个视频DNA库。</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The model of the media fingerprint library.</p>
+         * <p>The DNA database model.</p>
          * 
          * <strong>example:</strong>
          * <p>Video</p>
@@ -66,7 +69,7 @@ public class CreateDNADBResponseBody extends TeaModel {
         public String model;
 
         /**
-         * <p>The name of the media fingerprint library.</p>
+         * <p>The name of the DNA database.</p>
          * 
          * <strong>example:</strong>
          * <p>example name</p>
@@ -75,7 +78,7 @@ public class CreateDNADBResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The state of the media fingerprint library. After a media fingerprint library is created, it enters the offline state. After the media fingerprint library is processed at the backend, it enters the active state.</p>
+         * <p>After you create the database, its status is <code>offline</code> by default. The status automatically changes to <code>active</code> after the backend completes processing.</p>
          * 
          * <strong>example:</strong>
          * <p>offline</p>

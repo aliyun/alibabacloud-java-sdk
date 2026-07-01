@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListYikeAssetFoldersResponseBody extends TeaModel {
+    /**
+     * <p>The folder list.</p>
+     */
     @NameInMap("FolderList")
     public java.util.List<ListYikeAssetFoldersResponseBodyFolderList> folderList;
 
     /**
+     * <p>The maximum number of results per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -15,6 +20,8 @@ public class ListYikeAssetFoldersResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token used to retrieve the next page of results. If this parameter is not returned, all results have been retrieved.</p>
+     * 
      * <strong>example:</strong>
      * <p>Token</p>
      */
@@ -22,6 +29,8 @@ public class ListYikeAssetFoldersResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */
@@ -29,6 +38,8 @@ public class ListYikeAssetFoldersResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total count of folders.</p>
+     * 
      * <strong>example:</strong>
      * <p>78</p>
      */
@@ -82,6 +93,8 @@ public class ListYikeAssetFoldersResponseBody extends TeaModel {
 
     public static class ListYikeAssetFoldersResponseBodyFolderList extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-01-22T02:07:06Z</p>
          */
@@ -89,6 +102,8 @@ public class ListYikeAssetFoldersResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The folder ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>fd-EXRyxc5SHY</p>
          */
@@ -96,6 +111,8 @@ public class ListYikeAssetFoldersResponseBody extends TeaModel {
         public String folderId;
 
         /**
+         * <p>The folder name.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -103,6 +120,8 @@ public class ListYikeAssetFoldersResponseBody extends TeaModel {
         public String folderName;
 
         /**
+         * <p>Indicates whether the folder is the default folder.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -110,6 +129,8 @@ public class ListYikeAssetFoldersResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
+         * <p>The project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pd_183320223010****</p>
          */
@@ -117,6 +138,8 @@ public class ListYikeAssetFoldersResponseBody extends TeaModel {
         public String productionId;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>llm-odl2p61i4vfbph4g</p>
          */

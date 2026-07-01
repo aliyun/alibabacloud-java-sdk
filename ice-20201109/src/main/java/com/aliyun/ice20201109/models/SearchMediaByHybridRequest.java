@@ -5,8 +5,18 @@ import com.aliyun.tea.*;
 
 public class SearchMediaByHybridRequest extends TeaModel {
     /**
+     * <p>Custom filters. A JSON string. Supported backing fields include integer field intField1 and string fields strField1 and strField2. Only one matching condition can be applied per field, and filters across different fields are combined with a logical AND relationship.</p>
+     * <ul>
+     * <li><p>Exact match example: {&quot;intField1&quot;:12,&quot;strField1&quot;:&quot;abc&quot;}</p>
+     * </li>
+     * <li><p>Multi-value example: {&quot;intField1&quot;:[12,13],&quot;strField1&quot;:[&quot;abc&quot;,&quot;cd&quot;]}</p>
+     * </li>
+     * <li><p>Range example: {&quot;intField1&quot;:{&quot;gte&quot;:12,&quot;lte&quot;:13}}</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>{}</p>
+     * <p>{&quot;intField1&quot;:{&quot;gte&quot;:12,&quot;lte&quot;:13},&quot;strField2&quot;:[&quot;cd&quot;,&quot;de&quot;],&quot;strField1&quot;:&quot;abc&quot;}</p>
      */
     @NameInMap("CustomFilters")
     public String customFilters;
@@ -23,8 +33,10 @@ public class SearchMediaByHybridRequest extends TeaModel {
     /**
      * <p>The type of media assets. Valid values:</p>
      * <ul>
-     * <li>image</li>
-     * <li>video</li>
+     * <li><p>image</p>
+     * </li>
+     * <li><p>video</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -73,14 +85,19 @@ public class SearchMediaByHybridRequest extends TeaModel {
      * <p>The natural language search query.</p>
      * 
      * <strong>example:</strong>
-     * <p>Two pandas are fighting</p>
+     * <p>Two pandas are fighting.</p>
      */
     @NameInMap("Text")
     public String text;
 
     /**
+     * <p>Creation time, in milliseconds UNIX timestamp. gte means greater than or equal to, and lte means less than or equal to.</p>
+     * <ul>
+     * <li>Range example: {&quot;gte&quot;:1761205662998,&quot;lte&quot;:1771205662998}</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>{}</p>
+     * <p>{&quot;gte&quot;:1761205662998,&quot;lte&quot;:1771205662998}</p>
      */
     @NameInMap("UtcCreate")
     public String utcCreate;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCustomTemplatesRequest extends TeaModel {
     /**
-     * <p>The template name.</p>
+     * <p>The name of the template.</p>
      * 
      * <strong>example:</strong>
      * <p>test-template</p>
@@ -14,10 +14,12 @@ public class ListCustomTemplatesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The order in which the entries are sorted. Valid values:</p>
+     * <p>The sort order of the results. Valid values:</p>
      * <ul>
-     * <li>CreateTimeDesc: sorted by creation time in descending order.</li>
-     * <li>CreateTimeAsc: sorted by creation time in ascending order.</li>
+     * <li><p><code>CreationTime:Desc</code>: Sorts the results by Creation Time in descending order.</p>
+     * </li>
+     * <li><p><code>CreationTime:Asc</code>: Sorts the results by Creation Time in ascending order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +29,7 @@ public class ListCustomTemplatesRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the results to return.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -45,35 +47,48 @@ public class ListCustomTemplatesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The subtype ID of the template.</p>
+     * <p>The subtype of the template. This parameter applies only when <code>Type</code> is set to 1, 2, 7, or 9.</p>
      * <ul>
-     * <li><p>Valid values for transcoding templates:</p>
+     * <li><p>Transcoding Template subtypes:</p>
      * <ul>
-     * <li>1 (Normal): regular template.</li>
-     * <li>2 (AudioTranscode): audio transcoding template.</li>
-     * <li>3 (Remux): container format conversion template.</li>
-     * <li>4 (NarrowBandV1): Narrowband HD 1.0 template.</li>
-     * <li>5 (NarrowBandV2): Narrowband HD 2.0 template.</li>
+     * <li><p>1: Normal (<code>Normal</code>)</p>
+     * </li>
+     * <li><p>2: Audio-only (<code>AudioTranscode</code>)</p>
+     * </li>
+     * <li><p>3: Remuxing (<code>Remux</code>)</p>
+     * </li>
+     * <li><p>4: Narrowband HD 1.0 (<code>NarrowBandV1</code>)</p>
+     * </li>
+     * <li><p>5: Narrowband HD 2.0 (<code>NarrowBandV2</code>)</p>
+     * </li>
      * </ul>
      * </li>
-     * <li><p>Valid values for snapshot templates:</p>
+     * <li><p>Screenshot Template subtypes:</p>
      * <ul>
-     * <li>1 (Normal): regular template.</li>
-     * <li>2 (Sprite): sprite template.</li>
-     * <li>3 (WebVtt): WebVTT template.</li>
+     * <li><p>1: Normal (<code>Normal</code>)</p>
+     * </li>
+     * <li><p>2: Sprite Image (<code>Sprite</code>)</p>
+     * </li>
+     * <li><p>3: WebVTT (<code>WebVtt</code>)</p>
+     * </li>
      * </ul>
      * </li>
-     * <li><p>Valid values for AI-assisted content moderation templates:</p>
+     * <li><p>AI Content Moderation subtypes:</p>
      * <ul>
-     * <li>1 (Video): video moderation template.</li>
-     * <li>2 (Audio): audio moderation template.</li>
-     * <li>3 (Image): image moderation template.</li>
+     * <li><p>1: Video moderation (<code>Video</code>)</p>
+     * </li>
+     * <li><p>2: Audio moderation (<code>Audio</code>)</p>
+     * </li>
+     * <li><p>3: Image moderation (<code>Image</code>)</p>
+     * </li>
      * </ul>
      * </li>
-     * <li><p>Valid values for AI-assisted intelligent erasure templates:</p>
+     * <li><p>AI-powered Object Removal subtypes:</p>
      * <ul>
-     * <li>1 (VideoDelogo): logo erasure template.</li>
-     * <li>2 (VideoDetext): subtitle erasure template.</li>
+     * <li><p>1: Logo Removal (<code>VideoDelogo</code>)</p>
+     * </li>
+     * <li><p>2: Text Removal (<code>VideoDetext</code>)</p>
+     * </li>
      * </ul>
      * </li>
      * </ul>
@@ -85,7 +100,7 @@ public class ListCustomTemplatesRequest extends TeaModel {
     public String subtype;
 
     /**
-     * <p>The template ID.</p>
+     * <p>The ID of the template.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
@@ -94,17 +109,26 @@ public class ListCustomTemplatesRequest extends TeaModel {
     public String templateId;
 
     /**
-     * <p>The template type. Valid values:</p>
+     * <p>The type of the template. Valid values:</p>
      * <ul>
-     * <li>1: transcoding template.</li>
-     * <li>2: snapshot template.</li>
-     * <li>3: animated image template.</li>
-     * <li>4\. image watermark template.</li>
-     * <li>5: text watermark template.</li>
-     * <li>6: subtitle template.</li>
-     * <li>7: AI-assisted content moderation template.</li>
-     * <li>8: AI-assisted intelligent thumbnail template.</li>
-     * <li>9: AI-assisted intelligent erasure template.</li>
+     * <li><p>1: Transcoding Template</p>
+     * </li>
+     * <li><p>2: Screenshot Template</p>
+     * </li>
+     * <li><p>3: Animated GIF Template</p>
+     * </li>
+     * <li><p>4: Image Watermark Template</p>
+     * </li>
+     * <li><p>5: Text Watermark Template</p>
+     * </li>
+     * <li><p>6: Subtitle Template</p>
+     * </li>
+     * <li><p>7: AI Content Moderation</p>
+     * </li>
+     * <li><p>8: AI-powered Smart Cover</p>
+     * </li>
+     * <li><p>9: AI-powered Object Removal</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

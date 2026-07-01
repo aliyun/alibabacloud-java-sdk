@@ -32,6 +32,12 @@ public class UpdateMediaConnectFlowInputRequest extends TeaModel {
     @NameInMap("InputFromUrl")
     public String inputFromUrl;
 
+    /**
+     * <p>Input name. This parameter is required only when primary/standby input is enabled for the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>input1</p>
+     */
     @NameInMap("InputName")
     public String inputName;
 

@@ -7,8 +7,10 @@ public class SubmitSceneTimelineOrganizationJobRequest extends TeaModel {
     /**
      * <p>The editing configuration. Its structure depends on the value of JobType.</p>
      * <ul>
-     * <li>When JobType is set to Smart_Mix_Timeline_Organize, see <a href="https://help.aliyun.com/zh/ims/use-cases/intelligent-graphic-matching-into-a-piece/?spm=a2c4g.11186623.help-menu-193643.d_3_2_0_1.7c3d6997qndkZj">Image-text matching</a>.</li>
-     * <li>When JobType is set to Screen_Media_Highlights_Timeline_Organize, see <a href="https://help.aliyun.com/zh/ims/use-cases/create-highlight-videos?spm=a2c4g.11186623.help-menu-193643.d_3_2_0_3.84b5661bIcQULE">Highlight mashup</a>.</li>
+     * <li><p>When JobType is set to Smart_Mix_Timeline_Organize, see <a href="https://help.aliyun.com/zh/ims/use-cases/intelligent-graphic-matching-into-a-piece/?spm=a2c4g.11186623.help-menu-193643.d_3_2_0_1.7c3d6997qndkZj">Image-text matching</a>.</p>
+     * </li>
+     * <li><p>When JobType is set to Screen_Media_Highlights_Timeline_Organize, see <a href="https://help.aliyun.com/zh/ims/use-cases/create-highlight-videos?spm=a2c4g.11186623.help-menu-193643.d_3_2_0_3.84b5661bIcQULE">Highlight mashup</a>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,20 +32,22 @@ public class SubmitSceneTimelineOrganizationJobRequest extends TeaModel {
     /**
      * <p>The input configuration. Its structure and required fields depend on the value of JobType.</p>
      * <ul>
-     * <li>When JobType is set to Smart_Mix_Timeline_Organize, see <a href="https://help.aliyun.com/zh/ims/use-cases/intelligent-graphic-matching-into-a-piece/?spm=a2c4g.11186623.help-menu-193643.d_3_2_0_1.7c3d6997qndkZj">Image-text matching</a>.</li>
-     * <li>When JobType is set to Screen_Media_Highlights_Timeline_Organize, see <a href="https://help.aliyun.com/zh/ims/use-cases/create-highlight-videos?spm=a2c4g.11186623.help-menu-193643.d_3_2_0_3.84b5661bIcQULE">Highlight mashup</a>.</li>
+     * <li><p>When JobType is set to Smart_Mix_Timeline_Organize, see <a href="https://help.aliyun.com/zh/ims/use-cases/intelligent-graphic-matching-into-a-piece/?spm=a2c4g.11186623.help-menu-193643.d_3_2_0_1.7c3d6997qndkZj">Image-text matching</a>.</p>
+     * </li>
+     * <li><p>When JobType is set to Screen_Media_Highlights_Timeline_Organize, see <a href="https://help.aliyun.com/zh/ims/use-cases/create-highlight-videos?spm=a2c4g.11186623.help-menu-193643.d_3_2_0_3.84b5661bIcQULE">Highlight mashup</a>.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>{
-     *     &quot;BackgroundMusic&quot;: &quot;<strong><strong>75c3936f3a8743850f2da942</strong></strong>&quot;,
-     *     &quot;MediaArray&quot;: [
-     *         &quot;<a href="https://test-bucket.oss-cn-shanghai.aliyuncs.com/test.mp4">https://test-bucket.oss-cn-shanghai.aliyuncs.com/test.mp4</a>&quot;
-     *     ],
-     *     &quot;SpeechTextArray&quot;: [
-     *         &quot;A new Freshippo store just opened in the nearby mall. Today is the grand opening.&quot;
-     *     ]
+     * &quot;BackgroundMusic&quot;: &quot;<strong><strong>75c3936f3a8743850f2da942</strong></strong>&quot;,
+     * &quot;MediaArray&quot;: [
+     * &quot;<a href="https://test-bucket.oss-cn-shanghai.aliyuncs.com/test.mp4">https://test-bucket.oss-cn-shanghai.aliyuncs.com/test.mp4</a>&quot;
+     * ],
+     * &quot;SpeechTextArray&quot;: [
+     * &quot;A new Freshippo store just opened at the nearby mall., today Yesfirst day of opening&quot;
+     * ]
      * }</p>
      */
     @NameInMap("InputConfig")
@@ -52,13 +56,17 @@ public class SubmitSceneTimelineOrganizationJobRequest extends TeaModel {
     /**
      * <p>The job type. Valid values:</p>
      * <ul>
-     * <li>Smart_Mix_Timeline_Organize: Image-text matching.</li>
-     * <li>Screen_Media_Highlights_Timeline_Organize: Highlight mashup.</li>
+     * <li><p>Smart_Mix_Timeline_Organize: Image-text matching.</p>
+     * </li>
+     * <li><p>Screen_Media_Highlights_Timeline_Organize: Highlight mashup.</p>
+     * </li>
      * </ul>
      * <p>Differences:</p>
      * <ul>
-     * <li>Image-text matching: Arranges a timeline based on the results of matching a voiceover script to media assets. Ideal for bulk marketing videos and general-purpose montages.</li>
-     * <li>Highlight mashup: Arranges a timeline based on the results of highlight clip selection. Ideal for creating action-packed highlight reels from short-form dramas.</li>
+     * <li><p>Image-text matching: Arranges a timeline based on the results of matching a voiceover script to media assets. Ideal for bulk marketing videos and general-purpose montages.</p>
+     * </li>
+     * <li><p>Highlight mashup: Arranges a timeline based on the results of highlight clip selection. Ideal for creating action-packed highlight reels from short-form dramas.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -74,27 +82,27 @@ public class SubmitSceneTimelineOrganizationJobRequest extends TeaModel {
      * 
      * <strong>example:</strong>
      * <p>{
-     *     &quot;textMatchMediaOutputList&quot;: [{
-     *         &quot;textMatchMediaSentenceOutputList&quot;: [{
-     *                 &quot;duration&quot;: 3.366667,
-     *                 &quot;matchClipList&quot;: [{
-     *                     &quot;endTime&quot;: 11.16,
-     *                     &quot;mediaId&quot;: &quot;<strong><strong>a0900f5071efbf1ce7e6c66a</strong></strong>&quot;,
-     *                     &quot;startTime&quot;: 8.04
-     *                 }],
-     *                 &quot;text&quot;: &quot;A new Freshippo store just opened in the nearby mall&quot;
-     *             },
-     *             {
-     *                 &quot;duration&quot;: 1.566667,
-     *                 &quot;matchClipList&quot;: [{
-     *                     &quot;endTime&quot;: 1.54,
-     *                     &quot;mediaId&quot;: &quot;<strong><strong>a0900f5071efbf1ce7e6c66a</strong></strong>&quot;,
-     *                     &quot;startTime&quot;: 0
-     *                 }],
-     *                 &quot;text&quot;: &quot;Today is the grand opening&quot;
-     *             }
-     *         ]
-     *     }]
+     * &quot;textMatchMediaOutputList&quot;: [{
+     * &quot;textMatchMediaSentenceOutputList&quot;: [{
+     * &quot;duration&quot;: 3.366667,
+     * &quot;matchClipList&quot;: [{
+     * &quot;endTime&quot;: 11.16,
+     * &quot;mediaId&quot;: &quot;<strong><strong>a0900f5071efbf1ce7e6c66a</strong></strong>&quot;,
+     * &quot;startTime&quot;: 8.04
+     * }],
+     * &quot;text&quot;: &quot;A new Hema Fresh store just opened at the nearby mall&quot;
+     * },
+     * {
+     * &quot;duration&quot;: 1.566667,
+     * &quot;matchClipList&quot;: [{
+     * &quot;endTime&quot;: 1.54,
+     * &quot;mediaId&quot;: &quot;<strong><strong>a0900f5071efbf1ce7e6c66a</strong></strong>&quot;,
+     * &quot;startTime&quot;: 0
+     * }],
+     * &quot;text&quot;: &quot;Today is the first day of business&quot;
+     * }
+     * ]
+     * }]
      * }</p>
      */
     @NameInMap("MediaSelectResult")
@@ -103,8 +111,10 @@ public class SubmitSceneTimelineOrganizationJobRequest extends TeaModel {
     /**
      * <p>The output configuration. Its structure and required fields depend on the value of JobType.</p>
      * <ul>
-     * <li>When JobType is set to Smart_Mix_Timeline_Organize, see <a href="https://help.aliyun.com/zh/ims/use-cases/intelligent-graphic-matching-into-a-piece/?spm=a2c4g.11186623.help-menu-193643.d_3_2_0_1.7c3d6997qndkZj">Image-text matching</a>.</li>
-     * <li>When JobType is set to Screen_Media_Highlights_Timeline_Organize, see <a href="https://help.aliyun.com/zh/ims/use-cases/create-highlight-videos?spm=a2c4g.11186623.help-menu-193643.d_3_2_0_3.84b5661bIcQULE">Highlight mashup</a>.</li>
+     * <li><p>When JobType is set to Smart_Mix_Timeline_Organize, see <a href="https://help.aliyun.com/zh/ims/use-cases/intelligent-graphic-matching-into-a-piece/?spm=a2c4g.11186623.help-menu-193643.d_3_2_0_1.7c3d6997qndkZj">Image-text matching</a>.</p>
+     * </li>
+     * <li><p>When JobType is set to Screen_Media_Highlights_Timeline_Organize, see <a href="https://help.aliyun.com/zh/ims/use-cases/create-highlight-videos?spm=a2c4g.11186623.help-menu-193643.d_3_2_0_3.84b5661bIcQULE">Highlight mashup</a>.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

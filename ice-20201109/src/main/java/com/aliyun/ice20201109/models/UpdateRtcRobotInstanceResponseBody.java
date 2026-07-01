@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateRtcRobotInstanceResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>7707F0A2-C6FD-5959-87EB-7C4D02384FD4</p>

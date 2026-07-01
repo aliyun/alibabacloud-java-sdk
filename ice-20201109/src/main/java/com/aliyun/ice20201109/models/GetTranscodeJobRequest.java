@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTranscodeJobRequest extends TeaModel {
     /**
-     * <p>The job ID.</p>
+     * <p>Job ID</p>
      * 
      * <strong>example:</strong>
      * <p>ab4802364a2e49208c99efab82dfa8e8</p>

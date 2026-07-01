@@ -216,6 +216,12 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public Float endTime;
 
+        /**
+         * <p>Expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>平静</p>
+         */
         @NameInMap("Expression")
         public String expression;
 
@@ -294,6 +300,9 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
 
         /**
          * <p>The name of the entity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>John Doe</p>
          */
         @NameInMap("LabelName")
         public String labelName;

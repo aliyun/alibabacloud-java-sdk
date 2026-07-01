@@ -27,7 +27,7 @@ public class ListHotwordLibrariesRequest extends TeaModel {
      * <p>The name of the hotword library.</p>
      * 
      * <strong>example:</strong>
-     * <p>热词库使用名称</p>
+     * <p>Hotword library name</p>
      */
     @NameInMap("Name")
     public String name;
@@ -80,9 +80,12 @@ public class ListHotwordLibrariesRequest extends TeaModel {
     /**
      * <p>The usage scenario of the hotword library. Valid values:</p>
      * <ul>
-     * <li>ASR: Automatic Speech Recognition</li>
-     * <li>StructuredMediaAssets: structured media analysis</li>
-     * <li>VideoTranslation: Video translation. This field cannot be modified after the hotword library is created.</li>
+     * <li><p>ASR: Automatic Speech Recognition</p>
+     * </li>
+     * <li><p>StructuredMediaAssets: structured media analysis</p>
+     * </li>
+     * <li><p>VideoTranslation: Video translation. This field cannot be modified after the hotword library is created.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

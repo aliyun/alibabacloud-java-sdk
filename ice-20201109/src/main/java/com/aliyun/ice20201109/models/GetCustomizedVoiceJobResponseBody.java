@@ -22,8 +22,10 @@ public class GetCustomizedVoiceJobResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -74,8 +76,10 @@ public class GetCustomizedVoiceJobResponseBody extends TeaModel {
         /**
          * <p>The gender. Valid values:</p>
          * <ul>
-         * <li>female</li>
-         * <li>male</li>
+         * <li><p>female</p>
+         * </li>
+         * <li><p>male</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -95,6 +99,9 @@ public class GetCustomizedVoiceJobResponseBody extends TeaModel {
 
         /**
          * <p>The status description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Training failed</p>
          */
         @NameInMap("Message")
         public String message;
@@ -102,9 +109,12 @@ public class GetCustomizedVoiceJobResponseBody extends TeaModel {
         /**
          * <p>The scenario. Valid values:</p>
          * <ul>
-         * <li>story</li>
-         * <li>interaction</li>
-         * <li>navigation</li>
+         * <li><p>story</p>
+         * </li>
+         * <li><p>interaction</p>
+         * </li>
+         * <li><p>navigation</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -116,12 +126,18 @@ public class GetCustomizedVoiceJobResponseBody extends TeaModel {
         /**
          * <p>The job state. Valid values:</p>
          * <ul>
-         * <li>Initialization</li>
-         * <li>AudioDetecting</li>
-         * <li>PreTraining</li>
-         * <li>Training</li>
-         * <li>Success</li>
-         * <li>Fail</li>
+         * <li><p>Initialization</p>
+         * </li>
+         * <li><p>AudioDetecting</p>
+         * </li>
+         * <li><p>PreTraining</p>
+         * </li>
+         * <li><p>Training</p>
+         * </li>
+         * <li><p>Success</p>
+         * </li>
+         * <li><p>Fail</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -133,8 +149,10 @@ public class GetCustomizedVoiceJobResponseBody extends TeaModel {
         /**
          * <p>The type of the human voice cloning job. Valid values:</p>
          * <ul>
-         * <li>Basic</li>
-         * <li>Standard</li>
+         * <li><p>Basic</p>
+         * </li>
+         * <li><p>Standard</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -147,7 +165,7 @@ public class GetCustomizedVoiceJobResponseBody extends TeaModel {
          * <p>The voice description.</p>
          * 
          * <strong>example:</strong>
-         * <p>This is an exclusive voice</p>
+         * <p>这是一个专属人声</p>
          */
         @NameInMap("VoiceDesc")
         public String voiceDesc;
@@ -165,7 +183,7 @@ public class GetCustomizedVoiceJobResponseBody extends TeaModel {
          * <p>The voice name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Xiaozhuan</p>
+         * <p>Basic</p>
          */
         @NameInMap("VoiceName")
         public String voiceName;

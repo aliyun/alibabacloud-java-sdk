@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetPublicMediaInfoRequest extends TeaModel {
     /**
+     * <p>IMS media asset ID</p>
+     * 
      * <strong>example:</strong>
      * <p>icepublic-<strong><strong>14e501538aeef0a3140176f6</strong></strong></p>
      */

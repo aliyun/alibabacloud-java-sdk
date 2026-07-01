@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
+    /**
+     * <p>The media asset information.</p>
+     */
     @NameInMap("MediaInfo")
     public GetYikeAssetMediaInfoResponseBodyMediaInfo mediaInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */
@@ -37,6 +42,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
 
     public static class GetYikeAssetMediaInfoResponseBodyMediaInfoBizData extends TeaModel {
         /**
+         * <p>The audit label.</p>
+         * 
          * <strong>example:</strong>
          * <p>Label</p>
          */
@@ -44,6 +51,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String auditBlockedLabel;
 
         /**
+         * <p>审核状态。</p>
+         * 
          * <strong>example:</strong>
          * <p>Status</p>
          */
@@ -51,6 +60,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String auditStatus;
 
         /**
+         * <p>创建任务 ID。</p>
+         * 
          * <strong>example:</strong>
          * <p>ID</p>
          */
@@ -58,6 +69,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String creationJobId;
 
         /**
+         * <p>The folder ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>fd-CBMEJaa2fA</p>
          */
@@ -65,6 +78,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String folderId;
 
         /**
+         * <p>是否最喜爱的。</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -72,6 +87,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String isFavorite;
 
         /**
+         * <p>是否被删除。</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -79,6 +96,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String isLogicalDeleted;
 
         /**
+         * <p>媒资子类型。</p>
+         * 
          * <strong>example:</strong>
          * <p>SubType</p>
          */
@@ -86,6 +105,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String mediaAssetSubType;
 
         /**
+         * <p>媒资类型。</p>
+         * 
          * <strong>example:</strong>
          * <p>Type</p>
          */
@@ -93,16 +114,26 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String mediaAssetType;
 
         /**
+         * <p>The project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ID</p>
          */
         @NameInMap("ProductionId")
         public String productionId;
 
+        /**
+         * <p>提示词。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>请为上述内容生成一段摘要，字数必须限制在70字以内包含标点符号</p>
+         */
         @NameInMap("Prompt")
         public String prompt;
 
         /**
+         * <p>源 ID。</p>
+         * 
          * <strong>example:</strong>
          * <p>f4a26390f02371f0a1f4e6e7c758****</p>
          */
@@ -110,6 +141,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String sourceId;
 
         /**
+         * <p>源名称。</p>
+         * 
          * <strong>example:</strong>
          * <p>SourceName</p>
          */
@@ -117,6 +150,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String sourceName;
 
         /**
+         * <p>源类型。</p>
+         * 
          * <strong>example:</strong>
          * <p>MainBody</p>
          */
@@ -236,6 +271,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
 
     public static class GetYikeAssetMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList extends TeaModel {
         /**
+         * <p>The bitrate.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.0</p>
          */
@@ -243,6 +280,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String bitrate;
 
         /**
+         * <p>The channel layout.</p>
+         * 
          * <strong>example:</strong>
          * <p>stereo</p>
          */
@@ -250,6 +289,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String channelLayout;
 
         /**
+         * <p>The number of channels.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -257,6 +298,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String channels;
 
         /**
+         * <p>The codec\&quot;s long name.</p>
+         * 
          * <strong>example:</strong>
          * <p>AAC (Advanced Audio Coding)</p>
          */
@@ -264,6 +307,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String codecLongName;
 
         /**
+         * <p>The codec\&quot;s short name.</p>
+         * 
          * <strong>example:</strong>
          * <p>aac</p>
          */
@@ -271,6 +316,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String codecName;
 
         /**
+         * <p>The codec tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>0x6134706d</p>
          */
@@ -278,6 +325,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String codecTag;
 
         /**
+         * <p>The codec tag string.</p>
+         * 
          * <strong>example:</strong>
          * <p>mp4a</p>
          */
@@ -285,6 +334,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String codecTagString;
 
         /**
+         * <p>The codec\&quot;s time base.</p>
+         * 
          * <strong>example:</strong>
          * <p>1/44100</p>
          */
@@ -292,6 +343,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String codecTimeBase;
 
         /**
+         * <p>The duration.</p>
+         * 
          * <strong>example:</strong>
          * <p>16.2</p>
          */
@@ -299,6 +352,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String duration;
 
         /**
+         * <p>The audio frame rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -306,6 +361,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String fps;
 
         /**
+         * <p>The audio stream\&quot;s index.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -313,6 +370,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String index;
 
         /**
+         * <p>The language.</p>
+         * 
          * <strong>example:</strong>
          * <p>zh</p>
          */
@@ -320,6 +379,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String lang;
 
         /**
+         * <p>The total number of frames.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -327,6 +388,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String numFrames;
 
         /**
+         * <p>The profile.</p>
+         * 
          * <strong>example:</strong>
          * <p>High</p>
          */
@@ -334,6 +397,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String profile;
 
         /**
+         * <p>The sample format.</p>
+         * 
          * <strong>example:</strong>
          * <p>fltp</p>
          */
@@ -341,6 +406,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String sampleFmt;
 
         /**
+         * <p>The sample rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>44100</p>
          */
@@ -348,6 +415,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String sampleRate;
 
         /**
+         * <p>The start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-02-04T02:13:00Z</p>
          */
@@ -355,6 +424,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The time base.</p>
+         * 
          * <strong>example:</strong>
          * <p>1/44100</p>
          */
@@ -514,6 +585,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
 
     public static class GetYikeAssetMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo extends TeaModel {
         /**
+         * <p>The bitrate.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -521,6 +594,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String bitrate;
 
         /**
+         * <p>The file\&quot;s creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-12-26T04:11:08Z</p>
          */
@@ -528,6 +603,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The duration.</p>
+         * 
          * <strong>example:</strong>
          * <p>16.2</p>
          */
@@ -535,6 +612,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String duration;
 
         /**
+         * <p>The file name.</p>
+         * 
          * <strong>example:</strong>
          * <p>example.mp4</p>
          */
@@ -542,6 +621,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String fileName;
 
         /**
+         * <p>The file size, in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>27007</p>
          */
@@ -549,6 +630,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String fileSize;
 
         /**
+         * <p>The file status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
@@ -556,6 +639,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String fileStatus;
 
         /**
+         * <p>The file type.</p>
+         * 
          * <strong>example:</strong>
          * <p>source_file</p>
          */
@@ -563,6 +648,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String fileType;
 
         /**
+         * <p>The OSS URL of the file.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4?Expires=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4?Expires=</a><ExpireTime>&amp;OSSAccessKeyId=<OSSAccessKeyId>&amp;Signature=<Signature>&amp;security-token=<SecurityToken></p>
          */
@@ -570,6 +657,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String fileUrl;
 
         /**
+         * <p>The container format.</p>
+         * 
          * <strong>example:</strong>
          * <p>mp4</p>
          */
@@ -577,6 +666,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String formatName;
 
         /**
+         * <p>The height.</p>
+         * 
          * <strong>example:</strong>
          * <p>540</p>
          */
@@ -584,6 +675,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String height;
 
         /**
+         * <p>The file\&quot;s last modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-12-26T04:11:10Z</p>
          */
@@ -591,6 +684,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
+         * <p>The file\&quot;s storage region.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
          */
@@ -598,6 +693,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String region;
 
         /**
+         * <p>The width.</p>
+         * 
          * <strong>example:</strong>
          * <p>960</p>
          */
@@ -717,6 +814,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
 
     public static class GetYikeAssetMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList extends TeaModel {
         /**
+         * <p>The codec\&quot;s long name.</p>
+         * 
          * <strong>example:</strong>
          * <p>SubRip Text</p>
          */
@@ -724,6 +823,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String codecLongName;
 
         /**
+         * <p>The codec\&quot;s short name.</p>
+         * 
          * <strong>example:</strong>
          * <p>srt</p>
          */
@@ -731,6 +832,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String codecName;
 
         /**
+         * <p>The codec tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>unicode</p>
          */
@@ -738,6 +841,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String codecTag;
 
         /**
+         * <p>The codec tag string.</p>
+         * 
          * <strong>example:</strong>
          * <p>unicode</p>
          */
@@ -745,6 +850,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String codecTagString;
 
         /**
+         * <p>The codec\&quot;s time base.</p>
+         * 
          * <strong>example:</strong>
          * <p>29.97</p>
          */
@@ -752,6 +859,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String codecTimeBase;
 
         /**
+         * <p>The duration.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -759,6 +868,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String duration;
 
         /**
+         * <p>The subtitle stream\&quot;s index.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -766,6 +877,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String index;
 
         /**
+         * <p>The language.</p>
+         * 
          * <strong>example:</strong>
          * <p>zh</p>
          */
@@ -773,6 +886,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String lang;
 
         /**
+         * <p>The start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-03-07T01:30Z</p>
          */
@@ -780,6 +895,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The time base.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -875,6 +992,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
 
     public static class GetYikeAssetMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList extends TeaModel {
         /**
+         * <p>The average frame rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>24.0</p>
          */
@@ -882,6 +1001,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String avgFPS;
 
         /**
+         * <p>The bitrate.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -889,6 +1010,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String bitrate;
 
         /**
+         * <p>The codec\&quot;s long name.</p>
+         * 
          * <strong>example:</strong>
          * <p>H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</p>
          */
@@ -896,6 +1019,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String codecLongName;
 
         /**
+         * <p>The codec\&quot;s short name.</p>
+         * 
          * <strong>example:</strong>
          * <p>h264</p>
          */
@@ -903,6 +1028,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String codecName;
 
         /**
+         * <p>The codec tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>0x0000</p>
          */
@@ -910,6 +1037,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String codecTag;
 
         /**
+         * <p>The codec tag string.</p>
+         * 
          * <strong>example:</strong>
          * <p>[0][0][0][0]</p>
          */
@@ -917,6 +1046,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String codecTagString;
 
         /**
+         * <p>The codec\&quot;s time base.</p>
+         * 
          * <strong>example:</strong>
          * <p>1/48</p>
          */
@@ -924,6 +1055,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String codecTimeBase;
 
         /**
+         * <p>The display aspect ratio (DAR).</p>
+         * 
          * <strong>example:</strong>
          * <p>0:1</p>
          */
@@ -931,6 +1064,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String dar;
 
         /**
+         * <p>The duration.</p>
+         * 
          * <strong>example:</strong>
          * <p>216.206706</p>
          */
@@ -938,6 +1073,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String duration;
 
         /**
+         * <p>The video frame rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>24.0</p>
          */
@@ -945,6 +1082,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String fps;
 
         /**
+         * <p>Indicates whether the video stream contains B-frames.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -952,6 +1091,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String hasBFrames;
 
         /**
+         * <p>The height.</p>
+         * 
          * <strong>example:</strong>
          * <p>540</p>
          */
@@ -959,6 +1100,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String height;
 
         /**
+         * <p>The video stream\&quot;s index.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -966,6 +1109,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String index;
 
         /**
+         * <p>The language.</p>
+         * 
          * <strong>example:</strong>
          * <p>zh</p>
          */
@@ -973,6 +1118,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String lang;
 
         /**
+         * <p>The encoding level.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -980,6 +1127,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String level;
 
         /**
+         * <p>The total number of frames.</p>
+         * 
          * <strong>example:</strong>
          * <p>5184</p>
          */
@@ -987,6 +1136,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String numFrames;
 
         /**
+         * <p>The pixel format.</p>
+         * 
          * <strong>example:</strong>
          * <p>yuv420p</p>
          */
@@ -994,6 +1145,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String pixFmt;
 
         /**
+         * <p>The profile.</p>
+         * 
          * <strong>example:</strong>
          * <p>High</p>
          */
@@ -1001,6 +1154,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String profile;
 
         /**
+         * <p>The rotation angle.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1008,6 +1163,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String rotate;
 
         /**
+         * <p>The sample aspect ratio (SAR).</p>
+         * 
          * <strong>example:</strong>
          * <p>0:1</p>
          */
@@ -1015,6 +1172,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String sar;
 
         /**
+         * <p>The start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.081706</p>
          */
@@ -1022,6 +1181,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The time base.</p>
+         * 
          * <strong>example:</strong>
          * <p>1/12288</p>
          */
@@ -1029,6 +1190,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String timebase;
 
         /**
+         * <p>The width.</p>
+         * 
          * <strong>example:</strong>
          * <p>960</p>
          */
@@ -1227,15 +1390,27 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
     }
 
     public static class GetYikeAssetMediaInfoResponseBodyMediaInfoFileInfoList extends TeaModel {
+        /**
+         * <p>An array of audio stream objects. A media asset can contain multiple audio streams.</p>
+         */
         @NameInMap("AudioStreamInfoList")
         public java.util.List<GetYikeAssetMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList> audioStreamInfoList;
 
+        /**
+         * <p>Basic file information, such as duration and size.</p>
+         */
         @NameInMap("FileBasicInfo")
         public GetYikeAssetMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo fileBasicInfo;
 
+        /**
+         * <p>An array of subtitle stream objects. A media asset can contain multiple subtitle streams.</p>
+         */
         @NameInMap("SubtitleStreamInfoList")
         public java.util.List<GetYikeAssetMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList> subtitleStreamInfoList;
 
+        /**
+         * <p>An array of video stream objects. A media asset can contain multiple video streams.</p>
+         */
         @NameInMap("VideoStreamInfoList")
         public java.util.List<GetYikeAssetMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList> videoStreamInfoList;
 
@@ -1280,6 +1455,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
 
     public static class GetYikeAssetMediaInfoResponseBodyMediaInfoMediaBasicInfo extends TeaModel {
         /**
+         * <p>The associated business.</p>
+         * 
          * <strong>example:</strong>
          * <p>AiSaas</p>
          */
@@ -1287,6 +1464,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String biz;
 
         /**
+         * <p>The business type.</p>
+         * 
          * <strong>example:</strong>
          * <p>general</p>
          */
@@ -1294,6 +1473,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String businessType;
 
         /**
+         * <p>The category ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3048</p>
          */
@@ -1301,6 +1482,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public Long cateId;
 
         /**
+         * <p>The category name.</p>
+         * 
          * <strong>example:</strong>
          * <p>cateName</p>
          */
@@ -1308,6 +1491,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String cateName;
 
         /**
+         * <p>The category.</p>
+         * 
          * <strong>example:</strong>
          * <p>category</p>
          */
@@ -1315,6 +1500,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String category;
 
         /**
+         * <p>The cover URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://dtlive-bj.oss-cn-beijing.aliyuncs.com/cover/01e1271d-ff4f-4689-9c20-e1df81486859_open_live_cover.jpg">https://dtlive-bj.oss-cn-beijing.aliyuncs.com/cover/01e1271d-ff4f-4689-9c20-e1df81486859_open_live_cover.jpg</a></p>
          */
@@ -1322,6 +1509,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String coverURL;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-12-26T04:11:08Z</p>
          */
@@ -1329,6 +1518,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The deletion time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-12-26T04:11:15Z</p>
          */
@@ -1336,6 +1527,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String deletedTime;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>description</p>
          */
@@ -1343,6 +1536,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The source URL of the media asset.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4">https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</a></p>
          */
@@ -1350,6 +1545,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String inputURL;
 
         /**
+         * <p>The media asset ID.</p>
+         * 
          * <strong>example:</strong>
          * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
          */
@@ -1357,6 +1554,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String mediaId;
 
         /**
+         * <p>The media tags.</p>
+         * 
          * <strong>example:</strong>
          * <p>tag1</p>
          */
@@ -1364,6 +1563,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String mediaTags;
 
         /**
+         * <p>The media type.</p>
+         * 
          * <strong>example:</strong>
          * <p>video</p>
          */
@@ -1371,6 +1572,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String mediaType;
 
         /**
+         * <p>The last modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-12-26T04:11:10Z</p>
          */
@@ -1378,6 +1581,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
+         * <p>A custom ID. It must be 6 to 64 characters long and can contain only lowercase letters, uppercase letters, digits, hyphens (-), and underscores (_). This ID must be unique per user.</p>
+         * 
          * <strong>example:</strong>
          * <p>123-1234</p>
          */
@@ -1385,6 +1590,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String referenceId;
 
         /**
+         * <p>The snapshot information.</p>
+         * 
          * <strong>example:</strong>
          * <p>[]</p>
          */
@@ -1392,6 +1599,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String snapshots;
 
         /**
+         * <p>The source.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss</p>
          */
@@ -1399,6 +1608,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String source;
 
         /**
+         * <p>The sprite images.</p>
+         * 
          * <strong>example:</strong>
          * <p>[{&quot;bucket&quot;:&quot;example-bucket&quot;,&quot;count&quot;:&quot;32&quot;,&quot;iceJobId&quot;:&quot;<strong><strong><strong>83ec44d58b2069def2e</strong></strong></strong>&quot;,&quot;location&quot;:&quot;oss-cn-shanghai&quot;,&quot;snapshotRegular&quot;:&quot;example/example-{Count}.jpg&quot;,&quot;spriteRegular&quot;:&quot;example/example-{TileCount}.jpg&quot;,&quot;templateId&quot;:&quot;<strong><strong><strong>e438b14ff39293eaec25</strong></strong></strong>&quot;,&quot;tileCount&quot;:&quot;1&quot;}]</p>
          */
@@ -1406,6 +1617,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String spriteImages;
 
         /**
+         * <p>The asset\&quot;s status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
@@ -1413,6 +1626,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The thumbnail with a height of 240 pixels.</p>
+         * 
          * <strong>example:</strong>
          * <p>ThumbURL240P</p>
          */
@@ -1420,6 +1635,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String thumbURL240P;
 
         /**
+         * <p>The WebP-encoded thumbnail.</p>
+         * 
          * <strong>example:</strong>
          * <p>ThumbURLWebp</p>
          */
@@ -1427,6 +1644,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String thumbURLWebp;
 
         /**
+         * <p>The title.</p>
+         * 
          * <strong>example:</strong>
          * <p>v6l82k_176822379****.jpeg</p>
          */
@@ -1434,6 +1653,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>The upload source.</p>
+         * 
          * <strong>example:</strong>
          * <p>general</p>
          */
@@ -1441,6 +1662,8 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
         public String uploadSource;
 
         /**
+         * <p>The user data.</p>
+         * 
          * <strong>example:</strong>
          * <p>UserData</p>
          */
@@ -1647,16 +1870,27 @@ public class GetYikeAssetMediaInfoResponseBody extends TeaModel {
     }
 
     public static class GetYikeAssetMediaInfoResponseBodyMediaInfo extends TeaModel {
+        /**
+         * <p>Custom business data.</p>
+         */
         @NameInMap("BizData")
         public GetYikeAssetMediaInfoResponseBodyMediaInfoBizData bizData;
 
+        /**
+         * <p>The file information.</p>
+         */
         @NameInMap("FileInfoList")
         public java.util.List<GetYikeAssetMediaInfoResponseBodyMediaInfoFileInfoList> fileInfoList;
 
+        /**
+         * <p>The basic information about the media asset.</p>
+         */
         @NameInMap("MediaBasicInfo")
         public GetYikeAssetMediaInfoResponseBodyMediaInfoMediaBasicInfo mediaBasicInfo;
 
         /**
+         * <p>The media asset ID.</p>
+         * 
          * <strong>example:</strong>
          * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
          */

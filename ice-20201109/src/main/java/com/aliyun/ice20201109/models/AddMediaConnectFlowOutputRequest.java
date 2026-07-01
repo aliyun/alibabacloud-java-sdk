@@ -37,11 +37,16 @@ public class AddMediaConnectFlowOutputRequest extends TeaModel {
      * <p>The output type.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>RTMP-PUSH</li>
-     * <li>SRT-Caller</li>
-     * <li>RTMP-PULL</li>
-     * <li>SRT-Listener</li>
-     * <li>Flow</li>
+     * <li><p>RTMP-PUSH</p>
+     * </li>
+     * <li><p>SRT-Caller</p>
+     * </li>
+     * <li><p>RTMP-PULL</p>
+     * </li>
+     * <li><p>SRT-Listener</p>
+     * </li>
+     * <li><p>Flow</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

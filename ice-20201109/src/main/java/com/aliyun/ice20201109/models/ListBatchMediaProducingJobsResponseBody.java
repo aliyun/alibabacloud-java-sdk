@@ -124,6 +124,23 @@ public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
 
         /**
          * <p>The input configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;MediaGroupArray&quot;: [{
+         *       &quot;MediaArray&quot;: [
+         *         &quot;<strong><strong>9d46c886b45481030f6e</strong></strong>&quot;,
+         *         &quot;<strong><strong>6c886b4549d481030f6e</strong></strong>&quot; ]
+         *     }, {
+         *       &quot;MediaArray&quot;: [
+         *         &quot;<strong><strong>d46c886810b454930f6e</strong></strong>&quot;,
+         *         &quot;<strong><strong>4549d886810b46c30f6e</strong></strong>&quot; ]
+         *   }],
+         *   &quot;TitleArray&quot;: [
+         *       &quot;Hema Fresh grand opening at Huilongguan&quot;],
+         *   &quot;SpeechTextArray&quot;: [
+         *       &quot;A new Hema Fresh store just opened at the nearby mall, today is the first day of business&quot;]
+         * }</p>
          */
         @NameInMap("InputConfig")
         public String inputConfig;
@@ -141,8 +158,10 @@ public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
          * <p>The job type.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Script: script-based editing job that mixes media assets.</li>
-         * <li>Smart_Mix: intelligent editing job that mixes media assets.</li>
+         * <li><p>Script: script-based editing job that mixes media assets.</p>
+         * </li>
+         * <li><p>Smart_Mix: intelligent editing job that mixes media assets.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -180,10 +199,14 @@ public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
          * <p>The job state.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Finished</li>
-         * <li>Init</li>
-         * <li>Failed</li>
-         * <li>Processing</li>
+         * <li><p>Finished</p>
+         * </li>
+         * <li><p>Init</p>
+         * </li>
+         * <li><p>Failed</p>
+         * </li>
+         * <li><p>Processing</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -194,6 +217,9 @@ public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
 
         /**
          * <p>The user-defined data in the JSON format, which can be up to 512 bytes in length. You can specify a custom callback URL. For more information, see <a href="https://help.aliyun.com/document_detail/451631.html">Configure a callback upon editing completion</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;NotifyAddress&quot;:&quot;<a href="http://xx.xx.xxx%22%7D">http://xx.xx.xxx&quot;}</a> or {&quot;NotifyAddress&quot;:&quot;<a href="https://xx.xx.xxx%22%7D">https://xx.xx.xxx&quot;}</a> or {&quot;NotifyAddress&quot;:&quot;ice-callback-demo&quot;}</p>
          */
         @NameInMap("UserData")
         public String userData;

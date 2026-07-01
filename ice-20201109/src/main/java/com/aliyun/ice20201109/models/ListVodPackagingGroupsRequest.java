@@ -34,8 +34,10 @@ public class ListVodPackagingGroupsRequest extends TeaModel {
     /**
      * <p>The sorting order of the packaging groups based on the time when they were created. Valid values:</p>
      * <ul>
-     * <li>desc (default): descending order.</li>
-     * <li>asc: ascending order.</li>
+     * <li><p>desc (default): descending order.</p>
+     * </li>
+     * <li><p>asc: ascending order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -182,8 +182,10 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
          * <p>The type of the template.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>system</li>
-         * <li>custom</li>
+         * <li><p>system</p>
+         * </li>
+         * <li><p>custom</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

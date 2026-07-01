@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class SubmitMediaConvertJobResponseBody extends TeaModel {
     /**
-     * <p>The transcoding task.</p>
+     * <p>The media transcoding job.</p>
      */
     @NameInMap("Job")
     public SubmitMediaConvertJobResponseBodyJob job;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
@@ -42,16 +42,16 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
 
     public static class SubmitMediaConvertJobResponseBodyJobConfig extends TeaModel {
         /**
-         * <p>The inputs of the transcoding task.</p>
+         * <p>The job inputs.</p>
          */
         @NameInMap("Inputs")
         public java.util.List<MediaConvertInput> inputs;
 
         /**
-         * <p>The name of the job.</p>
+         * <p>The job name.</p>
          * 
          * <strong>example:</strong>
-         * <p>insx6-1310</p>
+         * <p>Name</p>
          */
         @NameInMap("JobName")
         public String jobName;
@@ -109,7 +109,7 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
 
     public static class SubmitMediaConvertJobResponseBodyJob extends TeaModel {
         /**
-         * <p>The idempotency key of the request for creating the transcoding task.</p>
+         * <p>The idempotency token for the request.</p>
          * 
          * <strong>example:</strong>
          * <p>FB7F25E9-AD9B-1603-8AF6-F1E42DF2E706</p>
@@ -118,22 +118,22 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
         public String clientToken;
 
         /**
-         * <p>The error code returned when the transcoding task failed.</p>
+         * <p>The error code returned if the job fails.</p>
          * 
          * <strong>example:</strong>
-         * <p>200</p>
+         * <p>InvalidParameter.ResourceContentBad</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
-         * <p>The configurations of the transcoding task.</p>
+         * <p>The job configuration.</p>
          */
         @NameInMap("Config")
         public SubmitMediaConvertJobResponseBodyJobConfig config;
 
         /**
-         * <p>The ID of the transcoding task.</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
@@ -142,37 +142,37 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The error message returned when the transcoding task failed.</p>
+         * <p>The error message returned if the job fails.</p>
          * 
          * <strong>example:</strong>
-         * <p>ok</p>
+         * <p>The resource operated InputFile is bad</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>The details of the transcoded outputs.</p>
+         * <p>The output details.</p>
          */
         @NameInMap("OutputDetails")
         public java.util.List<MediaConvertOutputDetail> outputDetails;
 
         /**
-         * <p>The details of the output groups.</p>
+         * <p>The output group details.</p>
          */
         @NameInMap("OutputGroupDetails")
         public java.util.List<MediaConvertOutputGroupDetail> outputGroupDetails;
 
         /**
-         * <p>The ID of the queue.</p>
+         * <p>The pipeline ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>3780049</p>
+         * <p><em><strong>48a4edf410b908aecd91fc3b</strong></em></p>
          */
         @NameInMap("PipelineId")
         public String pipelineId;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>A2129C9F-CE95-58B5-B8C1-07758FF6C86F</p>
@@ -181,17 +181,22 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
         public String requestId;
 
         /**
-         * <p>The status of the transcoding task. Valid values:</p>
+         * <p>The job status. Valid values:</p>
          * <ul>
-         * <li>Inited: The task is initialized.</li>
-         * <li>Running</li>
-         * <li>Complete</li>
-         * <li>Error</li>
-         * <li>Cancelled</li>
+         * <li><p>Inited: The job has been initialized.</p>
+         * </li>
+         * <li><p>Running: The job is running.</p>
+         * </li>
+         * <li><p>Success: The job has completed successfully.</p>
+         * </li>
+         * <li><p>Failed: The job has failed.</p>
+         * </li>
+         * <li><p>Canceled: The job has been canceled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Inited</p>
+         * <p>Success</p>
          */
         @NameInMap("State")
         public String state;

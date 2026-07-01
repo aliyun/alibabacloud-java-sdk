@@ -22,8 +22,10 @@ public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,7 +77,7 @@ public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel 
          * <p>The URL of the sample audio.</p>
          * <ul>
          * <li><p>The value is an Object Storage Service (OSS) URL.</p>
-         * <p>**</p>
+         * <p>\<em>\</em></p>
          * <p><strong>Note</strong>: The URL expires in 12 hours.</p>
          * </li>
          * </ul>
@@ -88,6 +90,9 @@ public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel 
 
         /**
          * <p>The text content to be read.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>No, he thought for a moment, I cannot say this to the king, that would be lying.</p>
          */
         @NameInMap("Text")
         public String text;

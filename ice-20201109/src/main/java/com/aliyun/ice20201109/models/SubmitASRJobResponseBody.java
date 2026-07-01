@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitASRJobResponseBody extends TeaModel {
     /**
-     * <p>The job ID.</p>
+     * <p>The ID of the intelligent job.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
@@ -23,12 +23,16 @@ public class SubmitASRJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The job state. Valid values:</p>
+     * <p>The job status. Valid values:</p>
      * <ul>
-     * <li>Created</li>
-     * <li>Executing</li>
-     * <li>Finished</li>
-     * <li>Failed</li>
+     * <li><p>Created</p>
+     * </li>
+     * <li><p>Executing</p>
+     * </li>
+     * <li><p>Finished</p>
+     * </li>
+     * <li><p>Failed</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

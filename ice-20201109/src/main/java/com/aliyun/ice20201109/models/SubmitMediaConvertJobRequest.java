@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitMediaConvertJobRequest extends TeaModel {
     /**
-     * <p>The idempotency key that is used to ensure repeated requests have the same effect as a single request.</p>
+     * <p>A unique client token that ensures request idempotency.</p>
      * 
      * <strong>example:</strong>
      * <p>86f8e525-9d73-4dac-88aa-7aa4e950c00a</p>
@@ -14,14 +14,14 @@ public class SubmitMediaConvertJobRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The configurations of the transcoding task.</p>
+     * <p>The transcoding job configuration. For more information, see <a href="https://help.aliyun.com/document_detail/2999539.html">MediaConvertJobConfig</a>.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Config")
     public String config;
 
     /**
-     * <p>The ID of the queue.</p>
+     * <p>The ID of the pipeline for the transcoding job.</p>
      * 
      * <strong>example:</strong>
      * <p>e197ecfb103e4849922b054d3032f954</p>
@@ -30,7 +30,7 @@ public class SubmitMediaConvertJobRequest extends TeaModel {
     public String pipelineId;
 
     /**
-     * <p>The user data.</p>
+     * <p>Custom data to pass with the job.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;videoId&quot;:&quot;abcd&quot;}</p>

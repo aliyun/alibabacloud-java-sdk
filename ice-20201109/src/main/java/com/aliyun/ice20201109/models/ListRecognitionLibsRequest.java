@@ -7,11 +7,16 @@ public class ListRecognitionLibsRequest extends TeaModel {
     /**
      * <p>The type of recognition algorithm. Valid values:</p>
      * <ul>
-     * <li>landmark</li>
-     * <li>object</li>
-     * <li>logo</li>
-     * <li>face</li>
-     * <li>label</li>
+     * <li><p>landmark</p>
+     * </li>
+     * <li><p>object</p>
+     * </li>
+     * <li><p>logo</p>
+     * </li>
+     * <li><p>face</p>
+     * </li>
+     * <li><p>label</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -21,6 +26,12 @@ public class ListRecognitionLibsRequest extends TeaModel {
     @NameInMap("Algorithm")
     public String algorithm;
 
+    /**
+     * <p>Library ID. If provided, the query returns only this specific library. A list of IDs separated by commas (&quot;,&quot;) is also supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lib1,lib2,lib3</p>
+     */
     @NameInMap("LibId")
     public String libId;
 

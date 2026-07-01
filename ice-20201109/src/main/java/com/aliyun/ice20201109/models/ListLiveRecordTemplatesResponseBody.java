@@ -14,7 +14,7 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
     public Long pageNo;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of templates per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,12 +38,7 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The sorting order. By default, the query results are sorted by creation time in descending order.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>asc: sorts the query results in ascending order.</li>
-     * <li>desc: sorts the query results in descending order.</li>
-     * </ul>
+     * <p>The sort order. By default, templates are sorted by creation time in descending order.</p>
      * 
      * <strong>example:</strong>
      * <p>desc</p>
@@ -52,7 +47,7 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of templates.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -115,7 +110,7 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
 
     public static class ListLiveRecordTemplatesResponseBodyRecordTemplateListRecordFormatList extends TeaModel {
         /**
-         * <p>The duration of the recording cycle. Unit: seconds.</p>
+         * <p>The duration of the recording cycle, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>21600</p>
@@ -124,7 +119,7 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
         public Integer cycleDuration;
 
         /**
-         * <p>The output file format.</p>
+         * <p>The recording file format.</p>
          * 
          * <strong>example:</strong>
          * <p>m3u8</p>
@@ -133,7 +128,7 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
         public String format;
 
         /**
-         * <p>The name of the recording file that is stored in Object Storage Service (OSS).</p>
+         * <p>The object prefix for the recording file stored in Object Storage Service (OSS).</p>
          * 
          * <strong>example:</strong>
          * <p>record/{JobId}/{Sequence}<em>{EscapedStartTime}</em>{EscapedEndTime}</p>
@@ -142,7 +137,7 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
         public String ossObjectPrefix;
 
         /**
-         * <p>The duration of a single segment. Unit: seconds.</p>
+         * <p>The duration of each slice, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -151,7 +146,7 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
         public Integer sliceDuration;
 
         /**
-         * <p>The name of the TS segment.</p>
+         * <p>The object prefix for the Transport Stream (TS) slice.</p>
          * 
          * <strong>example:</strong>
          * <p>record/{JobId}/{UnixTimestamp}_{Sequence}</p>
@@ -208,7 +203,7 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
 
     public static class ListLiveRecordTemplatesResponseBodyRecordTemplateList extends TeaModel {
         /**
-         * <p>The time when the job was created.</p>
+         * <p>The time the template was created.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -218,7 +213,7 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The time when the template was last modified.</p>
+         * <p>The time the template was last modified.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -252,7 +247,7 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
         public String templateId;
 
         /**
-         * <p>The type of the template.</p>
+         * <p>The template type.</p>
          * 
          * <strong>example:</strong>
          * <p>custom</p>

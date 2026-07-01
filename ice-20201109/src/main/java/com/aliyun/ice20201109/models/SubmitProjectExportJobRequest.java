@@ -7,8 +7,10 @@ public class SubmitProjectExportJobRequest extends TeaModel {
     /**
      * <p>The export type. Valid values:</p>
      * <ul>
-     * <li><strong>BaseTimeline</strong>: exports the timeline.</li>
-     * <li><strong>AdobePremierePro</strong>: exports an Adobe Premiere Pro project.</li>
+     * <li><p><strong>BaseTimeline</strong>: exports the timeline.</p>
+     * </li>
+     * <li><p><strong>AdobePremierePro</strong>: exports an Adobe Premiere Pro project.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,10 +22,14 @@ public class SubmitProjectExportJobRequest extends TeaModel {
     /**
      * <p>The output path for the exported project and generated intermediate files, in JSON format. The export destination only supports OSS. Path fields:</p>
      * <ul>
-     * <li><strong>Bucket</strong>: Required. The OSS bucket name.</li>
-     * <li><strong>Prefix</strong>: Optional. The path prefix. If not specified, it defaults to the root directory.</li>
-     * <li><strong>Width</strong>: Optional. The width of the output. The value must be a positive integer. If not provided, the system automatically calculates the value based on the input project or timeline.</li>
-     * <li><strong>Height</strong>: Optional. The height of the output. The value must be a positive integer. If not provided, the system automatically calculates the value based on the input project or timeline.</li>
+     * <li><p><strong>Bucket</strong>: Required. The OSS bucket name.</p>
+     * </li>
+     * <li><p><strong>Prefix</strong>: Optional. The path prefix. If not specified, it defaults to the root directory.</p>
+     * </li>
+     * <li><p><strong>Width</strong>: Optional. The width of the output. The value must be a positive integer. If not provided, the system automatically calculates the value based on the input project or timeline.</p>
+     * </li>
+     * <li><p><strong>Height</strong>: Optional. The height of the output. The value must be a positive integer. If not provided, the system automatically calculates the value based on the input project or timeline.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

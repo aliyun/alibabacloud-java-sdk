@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitLiveEditingJobRequest extends TeaModel {
     /**
-     * <p>The clips in the JSON array format. The output video is created by merging these clips sequentially.</p>
-     * <p>Each clip has a start time and an end time. If no live stream parameters are specified, the outer live stream configurations apply. The start and end timestamps are in UTC. For more information about the parameters, see the &quot;Clip&quot; section of this topic.</p>
+     * <p>A JSON array that specifies the clips to edit. The job creates the output file by concatenating these clips in the specified order.</p>
+     * <p>Each clip includes a start and end time. If live stream parameters are not specified for a clip, the system uses the global <code>LiveStreamConfig</code> settings. The start and end timestamps must be in UTC. For more details, see the Clip data structure below.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,11 +16,14 @@ public class SubmitLiveEditingJobRequest extends TeaModel {
     public String clips;
 
     /**
-     * <p>The live stream configurations, in the JSON format. The configurations must include the following parameters:</p>
+     * <p>The configuration of the source live stream, specified as a JSON object. It includes the following parameters:</p>
      * <ul>
-     * <li>AppName: the name of the application to which the live stream belongs.</li>
-     * <li>DomainName: the domain name of the application.</li>
-     * <li>StreamName: the name of the live stream.</li>
+     * <li><p><code>AppName</code>: The name of the application to which the stream belongs.</p>
+     * </li>
+     * <li><p><code>DomainName</code>: The domain name of the stream.</p>
+     * </li>
+     * <li><p><code>StreamName</code>: The name of the live stream.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,12 +33,16 @@ public class SubmitLiveEditingJobRequest extends TeaModel {
     public String liveStreamConfig;
 
     /**
-     * <p>The production configurations, in the JSON format. Mode specifies the editing mode. Valid values:</p>
+     * <p>The production configuration for the output file, specified as a JSON object. The <code>Mode</code> parameter specifies the editing mode. Valid values are:</p>
      * <ul>
-     * <li><strong>AccurateFast</strong> (default): fast editing. It is faster than the Accurate mode. The resolution of the output file is the same as that of the source stream. You cannot specify the width and height of the output file.</li>
-     * <li><strong>Accurate</strong>: accurate editing. In this mode, you can specify the width and height of the output file.</li>
-     * <li><strong>Rough</strong>: rough editing. The minimum precision is one TS segment. The output file comprises all segments within the specified time range. You can specify the width and height of the output file.</li>
-     * <li><strong>RoughFast</strong>: fast rough editing. It is faster than the Accurate mode. The minimum precision is one TS segment. The output file comprises all segments within the specified time range. The resolution of the output file is the same as that of the source stream. You cannot specify the width and height of the output file.</li>
+     * <li><p><strong>AccurateFast</strong> (Default): Fast and precise editing. It offers faster processing compared to the <code>Accurate</code> mode. The output file has the same resolution as the source stream. You cannot specify a custom width and height for the output file.</p>
+     * </li>
+     * <li><p><strong>Accurate</strong>: Precise editing. This mode lets you specify a custom width and height for the output file.</p>
+     * </li>
+     * <li><p><strong>Rough</strong>: Rough editing with a precision of a single TS segment. The output file includes all segments between the specified start and end times. You can specify a custom width and height for the output file.</p>
+     * </li>
+     * <li><p><strong>RoughFast</strong>: Fast rough-cut editing, which is faster than the <code>Accurate</code> mode. It has a precision of a single TS segment, and the output file includes all segments between the specified start and end times. The output file has the same resolution as the source stream. You cannot specify a custom width and height for the output file.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,20 +52,27 @@ public class SubmitLiveEditingJobRequest extends TeaModel {
     public String mediaProduceConfig;
 
     /**
-     * <p>The configurations of the output file, in the JSON format. You can specify an OSS URL or a storage location in a storage bucket of ApsaraVideo VOD.</p>
+     * <p>The destination configuration for the output file, specified as a JSON object. You can specify either a URL on OSS or a storage location in a VOD bucket.</p>
      * <ul>
-     * <li>To store the output file in OSS, you must specify MediaURL.</li>
-     * <li>To store the output file in ApsaraVideo VOD, you must specify StorageLocation and FileName.</li>
+     * <li><p>To output to OSS, the <code>MediaURL</code> parameter is required.</p>
+     * </li>
+     * <li><p>To output to VOD, the <code>StorageLocation</code> and <code>FileName</code> parameters are required.</p>
+     * </li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{ &quot;MediaURL&quot;: &quot;<a href="https://ice-auto-test.oss-cn-shanghai.aliyuncs.com/testfile.mp4">https://ice-auto-test.oss-cn-shanghai.aliyuncs.com/testfile.mp4</a>&quot; }, or { &quot;StorageLocation&quot;: &quot;bucket.oss-cn-shanghai.aliyuncs.com&quot;, &quot;FileName&quot;: &quot;output.mp4&quot; }</p>
      */
     @NameInMap("OutputMediaConfig")
     public String outputMediaConfig;
 
     /**
-     * <p>The type of the output file. Valid values:</p>
+     * <p>The destination type for the output file. Valid values:</p>
      * <ul>
-     * <li>oss-object: OSS object in an OSS bucket.</li>
-     * <li>vod-media: media asset in Alibaba Cloud VOD.</li>
+     * <li><p><code>oss-object</code>: An object in an Alibaba Cloud OSS bucket.</p>
+     * </li>
+     * <li><p><code>vod-media</code>: A media asset in Alibaba Cloud VOD.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,7 +82,7 @@ public class SubmitLiveEditingJobRequest extends TeaModel {
     public String outputMediaTarget;
 
     /**
-     * <p>The ID of the live editing project. If this parameter is specified, the system reads the storage configurations of the project. If this parameter is not specified, the specified storage configurations take precedence.</p>
+     * <p>The ID of the live editing project. If you specify this parameter, the system uses the storage settings from the project. If left empty, the system uses the storage settings provided in the request instead.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>fddd7748b58bf1d47e95</strong></strong></p>
@@ -77,7 +91,7 @@ public class SubmitLiveEditingJobRequest extends TeaModel {
     public String projectId;
 
     /**
-     * <p>The user-defined data in the JSON format, which can be up to 512 bytes in length.</p>
+     * <p>Custom user data, provided as a JSON object. The maximum length is 512 bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;key&quot;: &quot;value&quot;}</p>

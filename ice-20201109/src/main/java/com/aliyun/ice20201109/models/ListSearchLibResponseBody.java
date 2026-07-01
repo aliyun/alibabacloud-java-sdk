@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSearchLibResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class ListSearchLibResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Information about search libraries.</p>
+     * <p>Search library information.</p>
      */
     @NameInMap("SearchLibInfoList")
     public java.util.List<ListSearchLibResponseBodySearchLibInfoList> searchLibInfoList;
@@ -38,7 +38,7 @@ public class ListSearchLibResponseBody extends TeaModel {
     public String success;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -93,6 +93,16 @@ public class ListSearchLibResponseBody extends TeaModel {
 
     public static class ListSearchLibResponseBodySearchLibInfoListIndexInfo extends TeaModel {
         /**
+         * <p>The readiness status of the index. Valid values:</p>
+         * <ul>
+         * <li><p>Initializing: The index is being initialized.</p>
+         * </li>
+         * <li><p>Normal: The index is ready.</p>
+         * </li>
+         * <li><p>Fail: The index failed to be created.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
@@ -100,6 +110,15 @@ public class ListSearchLibResponseBody extends TeaModel {
         public String indexReadiness;
 
         /**
+         * <p>The index status.</p>
+         * <p>Default value: Active. Valid values:</p>
+         * <ul>
+         * <li><p>Active: The index is active.</p>
+         * </li>
+         * <li><p>Deactive: The index is inactive.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Active</p>
          */
@@ -107,6 +126,16 @@ public class ListSearchLibResponseBody extends TeaModel {
         public String indexStatus;
 
         /**
+         * <p>The index type. Valid values:</p>
+         * <ul>
+         * <li><p>mm: Large language model (LLM).</p>
+         * </li>
+         * <li><p>face: Face recognition.</p>
+         * </li>
+         * <li><p>aiLabel: Smart tagging.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>face</p>
          */
@@ -145,9 +174,18 @@ public class ListSearchLibResponseBody extends TeaModel {
     }
 
     public static class ListSearchLibResponseBodySearchLibInfoList extends TeaModel {
+        /**
+         * <p>The index information.</p>
+         */
         @NameInMap("IndexInfo")
         public java.util.List<ListSearchLibResponseBodySearchLibInfoListIndexInfo> indexInfo;
 
+        /**
+         * <p>The search library configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;faceGroupIds&quot;:&quot;xxx1,xxx2,xx3&quot;}</p>
+         */
         @NameInMap("SearchLibConfig")
         public String searchLibConfig;
 
@@ -162,11 +200,6 @@ public class ListSearchLibResponseBody extends TeaModel {
 
         /**
          * <p>The status of the search library.</p>
-         * <ul>
-         * <li>normal</li>
-         * <li>deleting</li>
-         * <li>deleteFail</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>normal</p>

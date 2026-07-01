@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetIpcDeviceInfoResponseBody extends TeaModel {
+    /**
+     * <p>List of device identity information.</p>
+     */
     @NameInMap("DeviceInfos")
     public java.util.List<GetIpcDeviceInfoResponseBodyDeviceInfos> deviceInfos;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */
@@ -15,6 +20,8 @@ public class GetIpcDeviceInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>78</p>
      */
@@ -52,6 +59,16 @@ public class GetIpcDeviceInfoResponseBody extends TeaModel {
 
     public static class GetIpcDeviceInfoResponseBodyDeviceInfos extends TeaModel {
         /**
+         * <p>Capability. Valid values:</p>
+         * <ul>
+         * <li><p>understand: understanding</p>
+         * </li>
+         * <li><p>understand-reid: understanding with reid</p>
+         * </li>
+         * <li><p>search: search</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>understand</p>
          */
@@ -59,6 +76,8 @@ public class GetIpcDeviceInfoResponseBody extends TeaModel {
         public String capability;
 
         /**
+         * <p>Device ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>d123</p>
          */
@@ -66,6 +85,8 @@ public class GetIpcDeviceInfoResponseBody extends TeaModel {
         public String deviceId;
 
         /**
+         * <p>Expiration Time. UTC time in the format yyyy-MM-ddTHH:mm:ssZ.</p>
+         * 
          * <strong>example:</strong>
          * <p>2017-02-11T12:00:00Z</p>
          */

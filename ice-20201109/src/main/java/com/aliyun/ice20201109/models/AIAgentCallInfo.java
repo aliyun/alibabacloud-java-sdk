@@ -4,24 +4,69 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class AIAgentCallInfo extends TeaModel {
+    /**
+     * <p>The duration of the call, in seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("CallDuration")
     public Integer callDuration;
 
+    /**
+     * <p>The time the call ended, in ISO 8601 format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2026-04-01T16:53:58.875932+00:00</p>
+     */
     @NameInMap("CallEndTime")
     public String callEndTime;
 
+    /**
+     * <p>The time the call started, in ISO 8601 format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2026-04-01T16:53:53.184797+00:00</p>
+     */
     @NameInMap("CallStartTime")
     public String callStartTime;
 
+    /**
+     * <p>The number of the called party.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>136******794</p>
+     */
     @NameInMap("CalleeNumber")
     public String calleeNumber;
 
+    /**
+     * <p>The number of the calling party.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>183*****333</p>
+     */
     @NameInMap("CallerNumber")
     public String callerNumber;
 
+    /**
+     * <p>Indicates which party ended the call.
+     * 0: The agent ended the call.
+     * 1: The user ended the call.
+     * 2: The system ended the call for a transfer.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("HangupRole")
     public Integer hangupRole;
 
+    /**
+     * <p>The status of the call.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("Status")
     public String status;
 

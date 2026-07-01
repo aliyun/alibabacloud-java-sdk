@@ -33,6 +33,9 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
 
     /**
      * <p>The name of the job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Screenshot task 1</p>
      */
     @NameInMap("JobName")
     public String jobName;
@@ -83,9 +86,12 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
      * <p>The state of the job.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>init: The job is not started.</li>
-     * <li>paused: The job is paused.</li>
-     * <li>started: The job is in progress.</li>
+     * <li><p>init: The job is not started.</p>
+     * </li>
+     * <li><p>paused: The job is paused.</p>
+     * </li>
+     * <li><p>started: The job is in progress.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -111,6 +117,9 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
 
     /**
      * <p>The name of the template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Template 1</p>
      */
     @NameInMap("TemplateName")
     public String templateName;

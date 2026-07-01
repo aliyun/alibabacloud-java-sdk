@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitTraceAbJobShrinkRequest extends TeaModel {
     /**
-     * <p>The key that is encoded by using the Base64 algorithm.</p>
+     * <p>The Base64-encoded encryption key.</p>
      * 
      * <strong>example:</strong>
      * <p>Qh6OdgIMcliQSI1fReOw****</p>
@@ -14,9 +14,14 @@ public class SubmitTraceAbJobShrinkRequest extends TeaModel {
     public String cipherBase64ed;
 
     /**
-     * <p>The source video file for A/B watermarking.</p>
+     * <p>The input video for the A/B stream forensic watermarking job.</p>
      * <blockquote>
-     * <p>OSS object or media asset must reside in the same region as the IMS service region. This API supports only videos that last at least 3 minutes. If the video is too short, the call may fail, or no output may be returned.</p>
+     * <ul>
+     * <li><p>The Object Storage Service (OSS) file or media asset must be in the same region where Intelligent Media Services (IMS) is deployed.</p>
+     * </li>
+     * <li><p>This operation supports only videos that are three minutes or longer. Using a shorter video may cause the API call to fail or produce no output.</p>
+     * </li>
+     * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>
      */
@@ -24,7 +29,7 @@ public class SubmitTraceAbJobShrinkRequest extends TeaModel {
     public String inputShrink;
 
     /**
-     * <p>The watermark level, which specifies the channel to embed watermarks. Valid values: 0 specifies the 0u channel, 1 specifies the 1uv channel, and 2 specifies the 2yuv channel.</p>
+     * <p>The watermark level, which specifies the embedding channel. Valid values: <code>0</code> (U channel), <code>1</code> (UV channels), and <code>2</code> (YUV channels).</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -33,14 +38,14 @@ public class SubmitTraceAbJobShrinkRequest extends TeaModel {
     public Long level;
 
     /**
-     * <p>The output directory path.</p>
+     * <p>The output location for the A/B stream job. This must be an OSS directory.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Output")
     public String outputShrink;
 
     /**
-     * <p>The start point of watermark embedding. Unit: seconds.</p>
+     * <p>The start time for watermark embedding, in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -49,7 +54,7 @@ public class SubmitTraceAbJobShrinkRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The duration of the watermark embedding. Unit: seconds.</p>
+     * <p>The total duration for watermark embedding, in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>360</p>
@@ -58,7 +63,7 @@ public class SubmitTraceAbJobShrinkRequest extends TeaModel {
     public Long totalTime;
 
     /**
-     * <p>The custom data, which can be up to 1,024 bytes in size.</p>
+     * <p>User data to include in the request. The maximum length is 1,024 bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>

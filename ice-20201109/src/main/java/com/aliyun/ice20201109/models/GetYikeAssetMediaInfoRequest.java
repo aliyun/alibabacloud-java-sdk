@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetYikeAssetMediaInfoRequest extends TeaModel {
     /**
+     * <p>The media asset ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

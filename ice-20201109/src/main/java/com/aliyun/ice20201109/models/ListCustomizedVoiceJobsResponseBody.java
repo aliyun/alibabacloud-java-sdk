@@ -60,8 +60,10 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
     public static class ListCustomizedVoiceJobsResponseBodyDataCustomizedVoiceJobList extends TeaModel {
         /**
          * <ul>
-         * <li>The time when the job was created.</li>
-         * <li>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</li>
+         * <li><p>The time when the job was created.</p>
+         * </li>
+         * <li><p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -73,8 +75,10 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
         /**
          * <p>The gender. Valid values:</p>
          * <ul>
-         * <li>female</li>
-         * <li>male</li>
+         * <li><p>female</p>
+         * </li>
+         * <li><p>male</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -103,6 +107,9 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
 
         /**
          * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Training succeeded</p>
          */
         @NameInMap("Message")
         public String message;
@@ -110,9 +117,12 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
         /**
          * <p>The scenario. Valid values:</p>
          * <ul>
-         * <li>story</li>
-         * <li>interaction</li>
-         * <li>navigation</li>
+         * <li><p>story</p>
+         * </li>
+         * <li><p>interaction</p>
+         * </li>
+         * <li><p>navigation</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -124,12 +134,18 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
         /**
          * <p>The job state. Valid values:</p>
          * <ul>
-         * <li>Initialization</li>
-         * <li>AudioDetecting</li>
-         * <li>PreTraining</li>
-         * <li>Training</li>
-         * <li>Success</li>
-         * <li>Fail</li>
+         * <li><p>Initialization</p>
+         * </li>
+         * <li><p>AudioDetecting</p>
+         * </li>
+         * <li><p>PreTraining</p>
+         * </li>
+         * <li><p>Training</p>
+         * </li>
+         * <li><p>Success</p>
+         * </li>
+         * <li><p>Fail</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -142,8 +158,10 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
          * <ul>
          * <li><p>The voice type. Valid values:</p>
          * <ul>
-         * <li>Basic</li>
-         * <li>Standard</li>
+         * <li><p>Basic</p>
+         * </li>
+         * <li><p>Standard</p>
+         * </li>
          * </ul>
          * </li>
          * </ul>
@@ -159,6 +177,9 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
          * <ul>
          * <li>The description can be up to 256 characters in length.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>这是这个声音的描述</p>
          */
         @NameInMap("VoiceDesc")
         public String voiceDesc;
@@ -177,6 +198,9 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
          * <ul>
          * <li>The name can be up to 32 characters in length.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>小专</p>
          */
         @NameInMap("VoiceName")
         public String voiceName;

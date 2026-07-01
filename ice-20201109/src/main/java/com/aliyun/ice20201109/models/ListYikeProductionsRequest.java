@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListYikeProductionsRequest extends TeaModel {
     /**
+     * <p>The maximum number of results to return on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -12,6 +14,8 @@ public class ListYikeProductionsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token from a previous response. Use this to retrieve the next page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>Token</p>
      */
@@ -19,6 +23,8 @@ public class ListYikeProductionsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,12 +32,20 @@ public class ListYikeProductionsRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of results to return on each page. Default value: 10. Maximum value: 50.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>llm-zna577pdximvztk5</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

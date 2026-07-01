@@ -16,8 +16,10 @@ public class DeleteSourceLocationResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid value:</p>
      * <ul>
-     * <li>true: The request succeeded.</li>
-     * <li>false: The request failed.</li>
+     * <li><p>true: The request succeeded.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

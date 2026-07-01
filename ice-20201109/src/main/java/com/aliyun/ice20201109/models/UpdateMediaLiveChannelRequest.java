@@ -199,11 +199,16 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
         /**
          * <p>The tag that identifies the language of the RTMP input. It can be referenced by the output. The maximum length is 32 characters. Supported characters:</p>
          * <ul>
-         * <li>Unicode letters</li>
-         * <li>Digits (0-9)</li>
-         * <li>Underscore (_)</li>
-         * <li>Hyphen (-)</li>
-         * <li>Space (a space cannot be at the beginning or end)</li>
+         * <li><p>Unicode letters</p>
+         * </li>
+         * <li><p>Digits (0-9)</p>
+         * </li>
+         * <li><p>Underscore (_)</p>
+         * </li>
+         * <li><p>Hyphen (-)</p>
+         * </li>
+         * <li><p>Space (a space cannot be at the beginning or end)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -443,11 +448,16 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
         /**
          * <p>The tag that identifies the language of the RTMP input. It can be referenced by the output. The maximum length is 32 characters. Supported characters:</p>
          * <ul>
-         * <li>Unicode letters</li>
-         * <li>Digits (0-9)</li>
-         * <li>Underscore (_)</li>
-         * <li>Hyphen (-)</li>
-         * <li>Space (a space cannot be at the beginning or end)</li>
+         * <li><p>Unicode letters</p>
+         * </li>
+         * <li><p>Digits (0-9)</p>
+         * </li>
+         * <li><p>Underscore (_)</p>
+         * </li>
+         * <li><p>Hyphen (-)</p>
+         * </li>
+         * <li><p>Space (a space cannot be at the beginning or end)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -589,9 +599,12 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
         /**
          * <p>The media type of the output. Valid values:</p>
          * <ul>
-         * <li>0: Audio and Video</li>
-         * <li>1: Audio If you set the value to 1, you cannot reference VideoSettings.</li>
-         * <li>2: Video. If you set the value to 2, you cannot reference AudioSettings.</li>
+         * <li><p>0: Audio and Video</p>
+         * </li>
+         * <li><p>1: Audio If you set the value to 1, you cannot reference VideoSettings.</p>
+         * </li>
+         * <li><p>2: Video. If you set the value to 2, you cannot reference AudioSettings.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1044,8 +1057,10 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
          * <p>The height of the output. If you set it to 0 or leave it empty, the height automatically adapts to the specified width to maintain the original aspect ratio.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>For regular transcoding, the larger dimension cannot exceed 3840 px, and the smaller one cannot exceed 2160 px.</li>
-         * <li>For Narrowband HD™ transcoding, the larger dimension cannot exceed 1920 px, and the smaller one cannot exceed 1080 px.</li>
+         * <li><p>For regular transcoding, the larger dimension cannot exceed 3840 px, and the smaller one cannot exceed 2160 px.</p>
+         * </li>
+         * <li><p>For Narrowband HD™ transcoding, the larger dimension cannot exceed 1920 px, and the smaller one cannot exceed 1080 px.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1082,8 +1097,10 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
         /**
          * <p>The video transcoding method. Valid values:</p>
          * <ul>
-         * <li>NORMAL: regular transcoding</li>
-         * <li>NBHD: Narrowband HD™ transcoding</li>
+         * <li><p>NORMAL: regular transcoding</p>
+         * </li>
+         * <li><p>NBHD: Narrowband HD™ transcoding</p>
+         * </li>
          * </ul>
          * <p>If not specified, regular transcoding is used by default.</p>
          * 
@@ -1097,8 +1114,10 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
          * <p>The width of the output. If you set it to 0 or leave it empty, the width automatically adapts to the specified height to maintain the original aspect ratio.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>For regular transcoding, the larger dimension cannot exceed 3840 px, and the smaller one cannot exceed 2160 px.</li>
-         * <li>For Narrowband HD™ transcoding, the larger dimension cannot exceed 1920 px, and the smaller one cannot exceed 1080 px.</li>
+         * <li><p>For regular transcoding, the larger dimension cannot exceed 3840 px, and the smaller one cannot exceed 2160 px.</p>
+         * </li>
+         * <li><p>For Narrowband HD™ transcoding, the larger dimension cannot exceed 1920 px, and the smaller one cannot exceed 1080 px.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

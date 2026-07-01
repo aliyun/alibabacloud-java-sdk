@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QuerySmarttagJobRequest extends TeaModel {
     /**
-     * <p>The ID of the smart tagging job that you want to query. You can obtain the job ID from the response parameters of the SubmitSmarttagJob operation.</p>
+     * <p>The ID of the smart tagging job. You can obtain this ID from the response to the <a href="https://help.aliyun.com/document_detail/478786.html">SubmitSmarttagJob</a> call.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,12 @@ public class QuerySmarttagJobRequest extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The extra parameters that you want to query in the request. The value is a JSON string. Example: {&quot;labelResultType&quot;:&quot;auto&quot;}. The value of labelResultType is of the STRING type. Valid values:</p>
+     * <p>Additional request parameters, formatted as a JSON string. For example: <code>{&quot;labelResultType&quot;:&quot;auto&quot;}</code>. The <code>labelResultType</code> parameter supports the following values:</p>
      * <ul>
-     * <li>auto: machine tagging</li>
-     * <li>hmi: tagging by human and machine</li>
+     * <li><p><code>auto</code>: machine-generated tagging results</p>
+     * </li>
+     * <li><p><code>hmi</code>: human-in-the-loop tagging results</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

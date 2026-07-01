@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNotifyConfigRequest extends TeaModel {
     /**
+     * <p>The ID of the AIAgent.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

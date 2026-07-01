@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class DeleteYikeAssetMediaInfosResponseBody extends TeaModel {
+    /**
+     * <p>A list of the IDs or InputUrl values of media assets that could not be deleted.</p>
+     */
     @NameInMap("IgnoredList")
     public java.util.List<String> ignoredList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */

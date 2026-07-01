@@ -31,8 +31,10 @@ public class GetVideoListResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -116,6 +118,9 @@ public class GetVideoListResponseBody extends TeaModel {
 
         /**
          * <p>The name of the category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Category1</p>
          */
         @NameInMap("CateName")
         public String cateName;
@@ -140,6 +145,9 @@ public class GetVideoListResponseBody extends TeaModel {
 
         /**
          * <p>The description of the audio or video file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alibaba Cloud VOD video description</p>
          */
         @NameInMap("Description")
         public String description;
@@ -190,17 +198,28 @@ public class GetVideoListResponseBody extends TeaModel {
          * <p>The status of the video.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>PrepareFail: The file is abnormal.</li>
-         * <li>UploadFail: The video failed to be uploaded.</li>
-         * <li>UploadSucc: The video is uploaded.</li>
-         * <li>Transcoding: The video is being transcoded.</li>
-         * <li>TranscodeFail: The video failed to be transcoded.</li>
-         * <li>ProduceFail: The video failed to be produced.</li>
-         * <li>Normal: The video is normal.</li>
-         * <li>Uploading: The video is being uploaded.</li>
-         * <li>Preparing: The file is being generated.</li>
-         * <li>Blocked: The video is blocked.</li>
-         * <li>checking: The video is being reviewed.</li>
+         * <li><p>PrepareFail: The file is abnormal.</p>
+         * </li>
+         * <li><p>UploadFail: The video failed to be uploaded.</p>
+         * </li>
+         * <li><p>UploadSucc: The video is uploaded.</p>
+         * </li>
+         * <li><p>Transcoding: The video is being transcoded.</p>
+         * </li>
+         * <li><p>TranscodeFail: The video failed to be transcoded.</p>
+         * </li>
+         * <li><p>ProduceFail: The video failed to be produced.</p>
+         * </li>
+         * <li><p>Normal: The video is normal.</p>
+         * </li>
+         * <li><p>Uploading: The video is being uploaded.</p>
+         * </li>
+         * <li><p>Preparing: The file is being generated.</p>
+         * </li>
+         * <li><p>Blocked: The video is blocked.</p>
+         * </li>
+         * <li><p>checking: The video is being reviewed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -220,12 +239,18 @@ public class GetVideoListResponseBody extends TeaModel {
 
         /**
          * <p>The tags of the audio or video file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tag 1, Tag 2</p>
          */
         @NameInMap("Tags")
         public String tags;
 
         /**
          * <p>The title of the audio or video file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The best music player ever</p>
          */
         @NameInMap("Title")
         public String title;

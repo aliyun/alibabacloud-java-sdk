@@ -5,8 +5,11 @@ import com.aliyun.tea.*;
 
 public class SubmitMediaInfoJobRequest extends TeaModel {
     /**
-     * <p>The input of the job.</p>
+     * <p>The input for the job.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>job-name</p>
      */
     @NameInMap("Input")
     public SubmitMediaInfoJobRequestInput input;
@@ -21,13 +24,16 @@ public class SubmitMediaInfoJobRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The scheduling parameters.</p>
+     * <p>The scheduling settings.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user-data</p>
      */
     @NameInMap("ScheduleConfig")
     public SubmitMediaInfoJobRequestScheduleConfig scheduleConfig;
 
     /**
-     * <p>The user data.</p>
+     * <p>The custom user data.</p>
      * 
      * <strong>example:</strong>
      * <p>user-data</p>
@@ -74,15 +80,15 @@ public class SubmitMediaInfoJobRequest extends TeaModel {
 
     public static class SubmitMediaInfoJobRequestInput extends TeaModel {
         /**
-         * <p>The media object.</p>
+         * <p>The source of the input media:</p>
          * <ul>
-         * <li>If Type is set to OSS, set this parameter to the URL of an OSS object. Both the OSS and HTTP protocols are supported.</li>
+         * <li>If <code>Type</code> is <code>OSS</code>, set this parameter to the URL of the input file. You can use OSS (<code>oss://</code>), HTTP, or HTTPS URLs.</li>
          * </ul>
          * <blockquote>
-         * <p> Before you use the OSS bucket in the URL, you must add the bucket on the <a href="https://help.aliyun.com/document_detail/609918.html">Storage Management</a> page of the Intelligent Media Services (IMS) console.</p>
+         * <p>You must first add the OSS bucket specified in the URL to Intelligent Media Management Service (IMS) by using <a href="https://help.aliyun.com/document_detail/609918.html">Storage Management</a>.</p>
          * </blockquote>
          * <ul>
-         * <li>If Type is set to Media, set this parameter to the ID of a media asset.</li>
+         * <li>If <code>Type</code> is <code>Media</code>, set this parameter to the media asset ID.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -93,7 +99,13 @@ public class SubmitMediaInfoJobRequest extends TeaModel {
         public String media;
 
         /**
-         * <p>The type of the media object. Valid values: OSS and Media. A value of OSS indicates an Object Storage Service (OSS) object. A value of Media indicates a media asset.</p>
+         * <p>The type of the input media.</p>
+         * <ul>
+         * <li><p><code>OSS</code>: The input is an OSS file.</p>
+         * </li>
+         * <li><p><code>Media</code>: The input is a media asset ID.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +139,7 @@ public class SubmitMediaInfoJobRequest extends TeaModel {
 
     public static class SubmitMediaInfoJobRequestScheduleConfig extends TeaModel {
         /**
-         * <p>The ID of the ApsaraVideo Media Processing (MPS) queue that is used to run the job.</p>
+         * <p>The pipeline ID.</p>
          * 
          * <strong>example:</strong>
          * <p>e37ebee5d98b4781897f6086e89f9c56</p>
@@ -136,7 +148,7 @@ public class SubmitMediaInfoJobRequest extends TeaModel {
         public String pipelineId;
 
         /**
-         * <p>The priority of the job. Valid values: 1 to 10. The greater the value, the higher the priority.</p>
+         * <p>The job priority. A higher value means a higher priority. Valid values range from 1 to 10.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>

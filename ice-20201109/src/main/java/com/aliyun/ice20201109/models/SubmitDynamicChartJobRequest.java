@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitDynamicChartJobRequest extends TeaModel {
     /**
-     * <p>The axis configurations. If XAxisFontInterval is set to 0 or left empty, the system automatically determines an optimal interval.</p>
+     * <p>The axis style settings. If <code>XAxisFontInterval</code> is not specified or is set to 0, the system automatically calculates the interval.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;FontFile&quot;:&quot;Microsoft YaHei&quot;,&quot;XAxisFontSize&quot;:&quot;30&quot;,&quot;YAxisFontSize&quot;:&quot;30&quot;,&quot;XAxisFontInterval&quot;:&quot;30&quot;,&quot;AxisColor&quot;:&quot;30&quot;}</p>
@@ -14,7 +14,7 @@ public class SubmitDynamicChartJobRequest extends TeaModel {
     public String axisParams;
 
     /**
-     * <p>The chart background.</p>
+     * <p>The settings for the chart background. You can specify a Background Color or a Background Image.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;Color&quot;:&quot;#000000&quot;,&quot;ImageUrl&quot;:&quot;<a href="http://your-bucket.oss-cn-shanghai.aliyuncs.com/obj.jpg%22%7D">http://your-bucket.oss-cn-shanghai.aliyuncs.com/obj.jpg&quot;}</a></p>
@@ -23,7 +23,7 @@ public class SubmitDynamicChartJobRequest extends TeaModel {
     public String background;
 
     /**
-     * <p>The chart configurations.</p>
+     * <p>The overall configuration for the chart\&quot;s appearance and timing.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;Style&quot;:&quot;Normal&quot;,&quot;TitleStartTime&quot;:&quot;3000&quot;,&quot;ChartStartTime&quot;:&quot;3000&quot;,&quot;VideoDuration&quot;:&quot;15000&quot;}</p>
@@ -32,19 +32,16 @@ public class SubmitDynamicChartJobRequest extends TeaModel {
     public String chartConfig;
 
     /**
-     * <p>The chart title.</p>
+     * <p>The chart title settings.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;Text&quot;:&quot; primary title&quot;,&quot;FontSize&quot;:&quot;30&quot;,&quot;FontColor&quot;:&quot;#000000&quot;,&quot;FontFile&quot;:&quot;Microsoft YaHei&quot;}</p>
      */
     @NameInMap("ChartTitle")
     public String chartTitle;
 
     /**
-     * <p>The chart type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>Line: line chart</li>
-     * <li>Histogram: bar chart</li>
-     * <li>Pie: pie chart</li>
-     * </ul>
+     * <p>The chart type to generate.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,19 +51,25 @@ public class SubmitDynamicChartJobRequest extends TeaModel {
     public String chartType;
 
     /**
-     * <p>The data source.</p>
+     * <p>The data source label settings.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;Text&quot;:&quot;Data source&quot;,&quot;FontSize&quot;:&quot;30&quot;,&quot;FontColor&quot;:&quot;#000000&quot;,&quot;FontFile&quot;:&quot;Microsoft YaHei&quot;}</p>
      */
     @NameInMap("DataSource")
     public String dataSource;
 
     /**
      * <p>The job description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Task description</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The input data for the chart.</p>
+     * <p>The input data configuration, which specifies the Excel file location.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -76,7 +79,7 @@ public class SubmitDynamicChartJobRequest extends TeaModel {
     public String input;
 
     /**
-     * <p>The output configurations.</p>
+     * <p>The output video configuration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -86,25 +89,34 @@ public class SubmitDynamicChartJobRequest extends TeaModel {
     public String outputConfig;
 
     /**
-     * <p>The subtitle.</p>
+     * <p>The subtitle settings.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;Text&quot;:&quot;Subtitle&quot;,&quot;FontSize&quot;:&quot;30&quot;,&quot;FontColor&quot;:&quot;#000000&quot;,&quot;FontFile&quot;:&quot;Microsoft YaHei&quot;}</p>
      */
     @NameInMap("Subtitle")
     public String subtitle;
 
     /**
      * <p>The job title.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Task title</p>
      */
     @NameInMap("Title")
     public String title;
 
     /**
-     * <p>Unit</p>
+     * <p>The data unit label settings.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;Text&quot;:&quot;Unit&quot;,&quot;FontSize&quot;:&quot;30&quot;,&quot;FontColor&quot;:&quot;#000000&quot;,&quot;FontFile&quot;:&quot;Microsoft YaHei&quot;}</p>
      */
     @NameInMap("Unit")
     public String unit;
 
     /**
-     * <p>The custom data in JSON format.</p>
+     * <p>The custom user data in JSON format.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;user&quot;:&quot;data&quot;}</p>

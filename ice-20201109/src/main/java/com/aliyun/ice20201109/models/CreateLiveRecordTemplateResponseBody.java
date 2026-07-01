@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLiveRecordTemplateResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>0622C702-41BE-467E-AF2E-883D4517962E</p>
@@ -14,7 +14,7 @@ public class CreateLiveRecordTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The template ID.</p>
+     * <p>The ID of the Live Record Template.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>

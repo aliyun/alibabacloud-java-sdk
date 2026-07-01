@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitSnapshotJobResponseBody extends TeaModel {
     /**
-     * <p>The job ID.</p>
+     * <p>The ID of the submitted job.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
@@ -14,7 +14,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>A unique identifier for the request.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>

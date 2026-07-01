@@ -14,7 +14,7 @@ public class ListSearchLibRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries per page. Default value: 10. Maximum value: 50.</p>
+     * <p>The number of entries to return on each page. Default value: 10. Max value: 50.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

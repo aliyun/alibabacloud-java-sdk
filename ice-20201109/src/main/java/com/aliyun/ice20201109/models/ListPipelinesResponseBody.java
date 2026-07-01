@@ -99,8 +99,10 @@ public class ListPipelinesResponseBody extends TeaModel {
          * <p>The state of the MPS queue.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Active</li>
-         * <li>Paused</li>
+         * <li><p>Active</p>
+         * </li>
+         * <li><p>Paused</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

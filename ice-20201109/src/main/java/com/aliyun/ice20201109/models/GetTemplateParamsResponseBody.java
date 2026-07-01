@@ -60,6 +60,9 @@ public class GetTemplateParamsResponseBody extends TeaModel {
     public static class GetTemplateParamsResponseBodyParamList extends TeaModel {
         /**
          * <p>The original subtitle content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Subtitle test</p>
          */
         @NameInMap("Content")
         public String content;
@@ -70,6 +73,12 @@ public class GetTemplateParamsResponseBody extends TeaModel {
         @NameInMap("CoverUrl")
         public String coverUrl;
 
+        /**
+         * <p>The height of the original material in the output video, in absolute pixel values. This value is returned only for standard templates created in the console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
+         */
         @NameInMap("Height")
         public Integer height;
 
@@ -88,9 +97,21 @@ public class GetTemplateParamsResponseBody extends TeaModel {
         @NameInMap("MediaUrl")
         public String mediaUrl;
 
+        /**
+         * <p>In-point of the original material segment relative to the timeline, in seconds. This value is returned only for standard templates created in the console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.5</p>
+         */
         @NameInMap("TimelineIn")
         public Float timelineIn;
 
+        /**
+         * <p>Out-point of the original material segment relative to the timeline, in seconds. This value is returned only for standard templates created in the console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.5</p>
+         */
         @NameInMap("TimelineOut")
         public Float timelineOut;
 
@@ -98,9 +119,12 @@ public class GetTemplateParamsResponseBody extends TeaModel {
          * <p>The material type.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Video</li>
-         * <li>Text</li>
-         * <li>Image</li>
+         * <li><p>Video</p>
+         * </li>
+         * <li><p>Text</p>
+         * </li>
+         * <li><p>Image</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -109,12 +133,30 @@ public class GetTemplateParamsResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The width of the original material in the output video, in absolute pixel values. This value is returned only for standard templates created in the console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
+         */
         @NameInMap("Width")
         public Integer width;
 
+        /**
+         * <p>The horizontal distance of the original material relative to the top-left corner of the video, in absolute pixel values. This value is returned only for standard templates created in the console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("X")
         public Integer x;
 
+        /**
+         * <p>The vertical distance of the original material relative to the top-left corner of the video, in absolute pixel values. This value is returned only for standard templates created in the console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Y")
         public Integer y;
 

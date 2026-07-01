@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateYikeProductionResponseBody extends TeaModel {
     /**
+     * <p>The production ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ProductionId</p>
      */
@@ -12,6 +14,8 @@ public class CreateYikeProductionResponseBody extends TeaModel {
     public String productionId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
      */

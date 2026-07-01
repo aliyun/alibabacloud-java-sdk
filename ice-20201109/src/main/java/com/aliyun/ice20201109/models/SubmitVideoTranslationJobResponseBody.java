@@ -23,8 +23,10 @@ public class SubmitVideoTranslationJobResponseBody extends TeaModel {
      * <p>Indicates whether the request was successful.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -64,7 +66,7 @@ public class SubmitVideoTranslationJobResponseBody extends TeaModel {
 
     public static class SubmitVideoTranslationJobResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the video translation job.</p>
+         * <p>The video translation job ID.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>d718e2ff4f018ccf419a7b71</strong></strong></p>

@@ -4,10 +4,14 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class UpdateRtcRobotInstanceShrinkRequest extends TeaModel {
+    /**
+     * <p>The configuration for the AI Agent instance.</p>
+     */
     @NameInMap("Config")
     public String configShrink;
 
     /**
+     * <p>The ID of the AI Agent instance to update.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

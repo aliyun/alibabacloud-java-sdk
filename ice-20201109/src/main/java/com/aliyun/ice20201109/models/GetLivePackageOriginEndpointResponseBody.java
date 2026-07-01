@@ -14,7 +14,7 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>requestIdExample123</p>
+     * <p>5D87B753-0250-5D9D-B248-D40C3271F864</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -70,6 +70,9 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
 
         /**
          * <p>The endpoint description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is an origin endpoint.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -128,6 +131,9 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
         @NameInMap("LastModified")
         public String lastModified;
 
+        /**
+         * <p>Live packaging configuration</p>
+         */
         @NameInMap("LivePackagingConfig")
         public LivePackagingConfig livePackagingConfig;
 

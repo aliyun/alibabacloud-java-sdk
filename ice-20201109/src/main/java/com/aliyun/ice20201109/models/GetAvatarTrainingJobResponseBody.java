@@ -60,6 +60,9 @@ public class GetAvatarTrainingJobResponseBody extends TeaModel {
     public static class GetAvatarTrainingJobResponseBodyDataAvatarTrainingJob extends TeaModel {
         /**
          * <p>The description of the digital human.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a digital human used for a specific scenario.</p>
          */
         @NameInMap("AvatarDescription")
         public String avatarDescription;
@@ -75,6 +78,9 @@ public class GetAvatarTrainingJobResponseBody extends TeaModel {
 
         /**
          * <p>The name of the digital human.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Decimal</p>
          */
         @NameInMap("AvatarName")
         public String avatarName;
@@ -90,8 +96,10 @@ public class GetAvatarTrainingJobResponseBody extends TeaModel {
 
         /**
          * <ul>
-         * <li>The time when the first training was initiated.</li>
-         * <li>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</li>
+         * <li><p>The time when the first training was initiated.</p>
+         * </li>
+         * <li><p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -111,8 +119,10 @@ public class GetAvatarTrainingJobResponseBody extends TeaModel {
 
         /**
          * <ul>
-         * <li>The time when the last training was initiated.</li>
-         * <li>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</li>
+         * <li><p>The time when the last training was initiated.</p>
+         * </li>
+         * <li><p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -123,6 +133,9 @@ public class GetAvatarTrainingJobResponseBody extends TeaModel {
 
         /**
          * <p>The status description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Training succeeded</p>
          */
         @NameInMap("Message")
         public String message;
@@ -138,8 +151,10 @@ public class GetAvatarTrainingJobResponseBody extends TeaModel {
 
         /**
          * <ul>
-         * <li>The state of the digital human training job.</li>
-         * <li>Valid values: Init, Queuing, Training, Success, and Fail.</li>
+         * <li><p>The state of the digital human training job.</p>
+         * </li>
+         * <li><p>Valid values: Init, Queuing, Training, Success, and Fail.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

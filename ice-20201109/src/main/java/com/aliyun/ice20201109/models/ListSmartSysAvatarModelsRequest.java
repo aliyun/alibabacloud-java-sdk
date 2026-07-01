@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSmartSysAvatarModelsRequest extends TeaModel {
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The page number. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListSmartSysAvatarModelsRequest extends TeaModel {
     public Long pageNo;
 
     /**
-     * <p>The number of entries per page. Default value: 10. Valid values: 1 to 100.</p>
+     * <p>The number of items to return on each page. The default value is 10. The maximum value is 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -22,6 +22,9 @@ public class ListSmartSysAvatarModelsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The SDK version.</p>
+     */
     @NameInMap("SdkVersion")
     public String sdkVersion;
 

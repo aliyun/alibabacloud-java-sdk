@@ -7,8 +7,10 @@ public class ListLiveTranscodeTemplatesRequest extends TeaModel {
     /**
      * <p>The category of the template. Valid values:</p>
      * <ul>
-     * <li>system</li>
-     * <li>customized</li>
+     * <li><p>system</p>
+     * </li>
+     * <li><p>customized</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,8 +49,10 @@ public class ListLiveTranscodeTemplatesRequest extends TeaModel {
     /**
      * <p>The sorting order. By default, the query results are sorted by creation time in descending order. Valid values:</p>
      * <ul>
-     * <li>asc</li>
-     * <li>desc</li>
+     * <li><p>asc</p>
+     * </li>
+     * <li><p>desc</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,10 +64,14 @@ public class ListLiveTranscodeTemplatesRequest extends TeaModel {
     /**
      * <p>The type of the template. Valid values:</p>
      * <ul>
-     * <li>normal</li>
-     * <li>narrow-band</li>
-     * <li>audio-only</li>
-     * <li>origin</li>
+     * <li><p>normal</p>
+     * </li>
+     * <li><p>narrow-band</p>
+     * </li>
+     * <li><p>audio-only</p>
+     * </li>
+     * <li><p>origin</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,8 +83,10 @@ public class ListLiveTranscodeTemplatesRequest extends TeaModel {
     /**
      * <p>The video codec. Valid values:</p>
      * <ul>
-     * <li>H.264</li>
-     * <li>H.265</li>
+     * <li><p>H.264</p>
+     * </li>
+     * <li><p>H.265</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

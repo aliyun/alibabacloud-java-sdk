@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMediaConvertJobRequest extends TeaModel {
     /**
-     * <p>The ID of the transcoding task.</p>
+     * <p>The ID of the media transcoding job.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>

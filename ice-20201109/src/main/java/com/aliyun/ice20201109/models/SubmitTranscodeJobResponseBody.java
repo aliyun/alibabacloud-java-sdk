@@ -42,10 +42,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobInputGroup extends TeaModel {
         /**
-         * <p>The media object.</p>
+         * <p>The value of the media asset:</p>
          * <ul>
-         * <li>If Type is set to OSS, set this parameter to the URL of an OSS object. Both the OSS and HTTP protocols are supported.</li>
-         * <li>If Type is set to Media, set this parameter to the ID of a media asset.</li>
+         * <li><p>If type is OSS, this is a URL. Both the OSS and HTTP protocols are supported.</p>
+         * </li>
+         * <li><p>If type is Media, this is the media asset ID.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -55,10 +57,13 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String media;
 
         /**
-         * <p>The type of the media object. Valid values:</p>
+         * <p>The type of the media object.
+         * Valid values:</p>
          * <ul>
-         * <li>OSS: an OSS object.</li>
-         * <li>Media: a media asset.</li>
+         * <li><p>OSS: an OSS file.</p>
+         * </li>
+         * <li><p>Media: a media asset ID.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -92,10 +97,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupOutput extends TeaModel {
         /**
-         * <p>The media object.</p>
+         * <p>The value of the media asset:</p>
          * <ul>
-         * <li>If Type is set to OSS, set this parameter to the URL of an OSS object. Both the OSS and HTTP protocols are supported.</li>
-         * <li>If Type is set to Media, set this parameter to the ID of a media asset.</li>
+         * <li><p>If type is set to OSS, the value is a URL. The OSS and HTTP protocols are supported.</p>
+         * </li>
+         * <li><p>If type is set to Media, the value is the media asset ID.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -105,10 +112,13 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String media;
 
         /**
-         * <p>The type of the media object. Valid values:</p>
+         * <p>The media object type.
+         * Valid values:</p>
          * <ul>
-         * <li>OSS: an OSS object.</li>
-         * <li>Media: a media asset.</li>
+         * <li><p>OSS: An OSS file.</p>
+         * </li>
+         * <li><p>Media: A media asset ID.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -142,7 +152,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigCombineConfigs extends TeaModel {
         /**
-         * <p>The audio stream index.</p>
+         * <p>The index of the audio stream.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,7 +162,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String audioIndex;
 
         /**
-         * <p>The duration of the input stream. The default value is the duration of the video.</p>
+         * <p>The duration of the input stream. By default, this is the duration of the video.</p>
          * 
          * <strong>example:</strong>
          * <p>20.0</p>
@@ -161,7 +171,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public Double duration;
 
         /**
-         * <p>The start time of the input stream. Default value: 0.</p>
+         * <p>The start time of the input stream. The default value is 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0</p>
@@ -170,7 +180,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public Double start;
 
         /**
-         * <p>The video stream index.</p>
+         * <p>The index of the video stream.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -220,7 +230,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigEncryption extends TeaModel {
         /**
-         * <p>The ciphertext of HLS encryption.</p>
+         * <p>The ciphertext of the key for standard encryption.</p>
          * 
          * <strong>example:</strong>
          * <p>MTYi00NDU0LTg5O****</p>
@@ -229,7 +239,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String cipherText;
 
         /**
-         * <p>The address of the decryption service for HLS encryption.</p>
+         * <p>The decryption endpoint for standard encryption.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://sample.com/path?CipherText=MTYi00NDU0LTg5O">https://sample.com/path?CipherText=MTYi00NDU0LTg5O</a>****</p>
@@ -238,7 +248,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String decryptKeyUri;
 
         /**
-         * <p>Specifies the encryption type.</p>
+         * <p>The encryption type.</p>
          * 
          * <strong>example:</strong>
          * <p>PrivateEncryption</p>
@@ -247,7 +257,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String encryptType;
 
         /**
-         * <p>The type of the key service. Valid values: KMS and Base64.</p>
+         * <p>The type of the key service. Only KMS and Base64 are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>KMS</p>
@@ -296,10 +306,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigImageWatermarksOverwriteParamsFile extends TeaModel {
         /**
-         * <p>The media object.</p>
+         * <p>The value of the media asset:</p>
          * <ul>
-         * <li>If Type is set to OSS, set this parameter to the URL of an OSS object. Both the OSS and HTTP protocols are supported.</li>
-         * <li>If Type is set to Media, set this parameter to the ID of a media asset.</li>
+         * <li><p>If type is OSS, the value is a URL that supports the OSS and HTTP protocols.</p>
+         * </li>
+         * <li><p>If type is Media, the value is the media asset ID.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -309,10 +321,13 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String media;
 
         /**
-         * <p>The type of the media object. Valid values:</p>
+         * <p>The object type of the media asset.
+         * Valid values:</p>
          * <ul>
-         * <li>OSS: an OSS object.</li>
-         * <li>Media: a media asset.</li>
+         * <li><p>OSS: An OSS file.</p>
+         * </li>
+         * <li><p>Media: A media asset ID.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -346,10 +361,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigImageWatermarksOverwriteParamsTimeline extends TeaModel {
         /**
-         * <p>The time range in which the watermark is displayed.</p>
+         * <p>The duration of the watermark.</p>
          * <ul>
-         * <li>Valid values: integers and ToEND.</li>
-         * <li>Default value: ToEND.</li>
+         * <li><p>Valid values: [Number, ToEND]</p>
+         * </li>
+         * <li><p>Default value: ToEND</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -359,11 +376,14 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String duration;
 
         /**
-         * <p>The beginning of the time range in which the watermark is displayed.</p>
+         * <p>The time when the watermark appears.</p>
          * <ul>
-         * <li>Unit: seconds.</li>
-         * <li>Value values: integers.</li>
-         * <li>Default value: 0.</li>
+         * <li><p>Unit: seconds</p>
+         * </li>
+         * <li><p>The value must be numeric.</p>
+         * </li>
+         * <li><p>Default value: 0</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -397,19 +417,24 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigImageWatermarksOverwriteParams extends TeaModel {
         /**
-         * <p>The horizontal offset of the watermark relative to the output video. Default value: 0.</p>
-         * <p>The following value types are supported:</p>
+         * <p>The horizontal offset of the watermark image relative to the output video.
+         * Default: 0</p>
+         * <p>The value can be specified in two formats:</p>
          * <ul>
-         * <li><p>Integer: the pixel value of the horizontal offset.</p>
+         * <li><p>An integer that specifies the offset in pixels.</p>
          * <ul>
-         * <li>Valid values: [8,4096].</li>
-         * <li>Unit: pixels.</li>
+         * <li><p>Range: [8, 4096]</p>
+         * </li>
+         * <li><p>Unit: px</p>
+         * </li>
          * </ul>
          * </li>
-         * <li><p>Decimal: the ratio of the horizontal offset to the width of the output video.</p>
+         * <li><p>A decimal that specifies the ratio of the horizontal offset to the width of the output video.</p>
          * <ul>
-         * <li>Valid values: (0,1).</li>
-         * <li>The decimal number can be accurate to four decimal places, such as 0.9999. Excessive digits are automatically discarded.</li>
+         * <li><p>Range: (0, 1)</p>
+         * </li>
+         * <li><p>The value can have up to four decimal places, such as 0.9999. The system automatically discards any digits beyond the fourth decimal place.</p>
+         * </li>
          * </ul>
          * </li>
          * </ul>
@@ -421,19 +446,24 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String dx;
 
         /**
-         * <p>The vertical offset of the watermark relative to the output video. Default value: 0.</p>
-         * <p>The following value types are supported:</p>
+         * <p>The vertical offset of the watermark image relative to the output video.
+         * Default value: 0.</p>
+         * <p>The value can be in one of the following two formats:</p>
          * <ul>
-         * <li><p>Integer: the pixel value of the horizontal offset.</p>
+         * <li><p>An integer that specifies the offset in pixels.</p>
          * <ul>
-         * <li>Valid values: [8,4096].</li>
-         * <li>Unit: pixels.</li>
+         * <li><p>Range: [8, 4096].</p>
+         * </li>
+         * <li><p>Unit: px.</p>
+         * </li>
          * </ul>
          * </li>
-         * <li><p>Decimal: the ratio of the vertical offset to the height of the output video.</p>
+         * <li><p>A decimal that specifies the ratio of the vertical offset to the output video height.</p>
          * <ul>
-         * <li>Valid values: (0,1).</li>
-         * <li>The decimal number can be accurate to four decimal places, such as 0.9999. Excessive digits are automatically discarded.</li>
+         * <li><p>Range: (0, 1).</p>
+         * </li>
+         * <li><p>The value supports up to four decimal places, such as 0.9999. Any additional digits are automatically discarded.</p>
+         * </li>
          * </ul>
          * </li>
          * </ul>
@@ -445,24 +475,29 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String dy;
 
         /**
-         * <p>The watermark image file.</p>
+         * <p>The image file for the watermark.</p>
          */
         @NameInMap("File")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigImageWatermarksOverwriteParamsFile file;
 
         /**
-         * <p>The height of the watermark image in the output video. The following value types are supported:</p>
+         * <p>The height of the image watermark on the output video.
+         * The value can be specified in two ways:</p>
          * <ul>
-         * <li><p>Integer: the pixel value of the watermark height.</p>
+         * <li><p>An integer that represents the watermark height in pixels.</p>
          * <ul>
-         * <li>Valid values: [8,4096].</li>
-         * <li>Unit: pixels.</li>
+         * <li><p>Range: [8, 4096].</p>
+         * </li>
+         * <li><p>Unit: px.</p>
+         * </li>
          * </ul>
          * </li>
-         * <li><p>Decimal: the ratio of the watermark height to the height of the output video.</p>
+         * <li><p>A decimal that represents the watermark height as a ratio of the output video\&quot;s height.</p>
          * <ul>
-         * <li>Valid values: (0,1).</li>
-         * <li>The decimal number can be accurate to four decimal places, such as 0.9999. Excessive digits are automatically discarded.</li>
+         * <li><p>Range: (0, 1).</p>
+         * </li>
+         * <li><p>The value supports up to four decimal places, such as 0.9999. Digits beyond the fourth decimal place are automatically discarded.</p>
+         * </li>
          * </ul>
          * </li>
          * </ul>
@@ -476,8 +511,10 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         /**
          * <p>The position of the watermark.</p>
          * <ul>
-         * <li>Valid values: TopRight, TopLeft, BottomRight, and BottomLeft.</li>
-         * <li>Default value: TopRight.</li>
+         * <li><p>Valid values: TopRight, TopLeft, BottomRight, and BottomLeft.</p>
+         * </li>
+         * <li><p>Default value: TopRight.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -487,24 +524,29 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String referPos;
 
         /**
-         * <p>The time settings of the dynamic watermark.</p>
+         * <p>The display time settings for the dynamic watermark.</p>
          */
         @NameInMap("Timeline")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigImageWatermarksOverwriteParamsTimeline timeline;
 
         /**
-         * <p>The width of the watermark in the output video. The following value types are supported:</p>
+         * <p>The width of the watermark image on the output video.
+         * The value can be specified in two formats:</p>
          * <ul>
-         * <li><p>Integer: the pixel value of the watermark width.</p>
+         * <li><p>An integer that specifies the width of the watermark image in pixels.</p>
          * <ul>
-         * <li>Valid values: [8,4096].</li>
-         * <li>Unit: pixels.</li>
+         * <li><p>Range: [8, 4096].</p>
+         * </li>
+         * <li><p>Unit: px.</p>
+         * </li>
          * </ul>
          * </li>
-         * <li><p>Decimal: the ratio of the watermark width to the width of the output video.</p>
+         * <li><p>A decimal that represents the width of the watermark relative to the width of the output video.</p>
          * <ul>
-         * <li>Valid values: (0,1).</li>
-         * <li>The decimal number can be accurate to four decimal places, such as 0.9999. Excessive digits are automatically discarded.</li>
+         * <li><p>Range: (0, 1).</p>
+         * </li>
+         * <li><p>The value supports up to four decimal places, such as 0.9999. Digits beyond the fourth decimal place are automatically discarded.</p>
+         * </li>
          * </ul>
          * </li>
          * </ul>
@@ -580,7 +622,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigImageWatermarks extends TeaModel {
         /**
-         * <p>The parameters that are used to overwrite the corresponding parameters of the template.</p>
+         * <p>The parameters that, when specified, overwrite the corresponding parameters in the template.</p>
          */
         @NameInMap("OverwriteParams")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigImageWatermarksOverwriteParams overwriteParams;
@@ -619,7 +661,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigSubtitlesOverwriteParamsFile extends TeaModel {
         /**
-         * <p>The media object. If Type is set to OSS, set this parameter to the URL of an OSS object. Both the OSS and HTTP protocols are supported. If Type is set to Media, set this parameter to the ID of a media asset.</p>
+         * <p>The value of the media asset. If the type is OSS, the value is a URL that supports the OSS and HTTP protocols. If the type is Media, the value is the media asset ID.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://bucket/path/to/video.mp4</p>
@@ -628,10 +670,13 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String media;
 
         /**
-         * <p>The type of the media object. Valid values:</p>
+         * <p>The type of the media object.
+         * Valid values:</p>
          * <ul>
-         * <li>OSS: an OSS object.</li>
-         * <li>Media: a media asset.</li>
+         * <li><p>OSS: an OSS file.</p>
+         * </li>
+         * <li><p>Media: a media asset ID.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -680,7 +725,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigSubtitlesOverwriteParamsFile file;
 
         /**
-         * <p>The format of the subtitle file.</p>
+         * <p>The caption file format.</p>
          * 
          * <strong>example:</strong>
          * <p>vtt</p>
@@ -721,7 +766,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigSubtitles extends TeaModel {
         /**
-         * <p>The parameters that are used to overwrite the corresponding parameters of the template.</p>
+         * <p>The overwrite parameters. If specified, these parameters overwrite the corresponding parameters in the template.</p>
          */
         @NameInMap("OverwriteParams")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigSubtitlesOverwriteParams overwriteParams;
@@ -760,10 +805,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTextWatermarksOverwriteParams extends TeaModel {
         /**
-         * <p>Specifies whether to the font size based on the output video dimensions.</p>
+         * <p>Adjusts the font size based on the size of the output video.</p>
          * <ul>
-         * <li>true: false</li>
-         * <li>default: false</li>
+         * <li><p>Valid values: true, false</p>
+         * </li>
+         * <li><p>default: false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -773,7 +820,9 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String adaptive;
 
         /**
-         * <p>The outline color of the text watermark. Default value: black. For more information, see BorderColor.</p>
+         * <p>The outline color.
+         * Default: Black
+         * For more values, see BorderColor.</p>
          * 
          * <strong>example:</strong>
          * <p>#006400</p>
@@ -782,10 +831,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String borderColor;
 
         /**
-         * <p>The outline width of the text watermark.</p>
+         * <p>The width of the border.</p>
          * <ul>
-         * <li>Default value: 0.</li>
-         * <li>Valid values: (0,4096].</li>
+         * <li><p>Default: 0</p>
+         * </li>
+         * <li><p>Range: (0, 4096]</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -795,7 +846,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public Integer borderWidth;
 
         /**
-         * <p>The watermark text. Base64 encoding is not required. The string must be encoded in UTF-8.</p>
+         * <p>The watermark text. The string must be UTF-8 encoded. Base64 encoding is not required.</p>
          * 
          * <strong>example:</strong>
          * <p>测试水印</p>
@@ -804,10 +855,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>The transparency of the text.</p>
+         * <p>The transparency of the font.</p>
          * <ul>
-         * <li>Valid values: (0,1].</li>
-         * <li>Default value: 1.</li>
+         * <li><p>Range: (0, 1].</p>
+         * </li>
+         * <li><p>Default: 1.0.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -817,7 +870,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String fontAlpha;
 
         /**
-         * <p>The color of the text.</p>
+         * <p>The font color.</p>
          * 
          * <strong>example:</strong>
          * <p>#006400</p>
@@ -826,7 +879,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String fontColor;
 
         /**
-         * <p>The font of the text. Default value: SimSun.</p>
+         * <p>The font. Default: SimSun.</p>
          * 
          * <strong>example:</strong>
          * <p>SimSun</p>
@@ -835,10 +888,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String fontName;
 
         /**
-         * <p>The size of the text.</p>
+         * <p>The font size.</p>
          * <ul>
-         * <li>Default value: 16.</li>
-         * <li>Valid values: (4,120).</li>
+         * <li><p>Default value: 16</p>
+         * </li>
+         * <li><p>Range: (4, 120)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -848,10 +903,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public Integer fontSize;
 
         /**
-         * <p>The left margin of the text watermark.</p>
+         * <p>The left margin of the text.</p>
          * <ul>
-         * <li>Default value: 0.</li>
-         * <li>Valid values: [0,4096].</li>
+         * <li><p>Default: 0</p>
+         * </li>
+         * <li><p>Range: [0,4096]</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -863,8 +920,10 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         /**
          * <p>The top margin of the text.</p>
          * <ul>
-         * <li>Default value: 0.</li>
-         * <li>Valid values: [0,4096].</li>
+         * <li><p>Default: 0.</p>
+         * </li>
+         * <li><p>Range: [0,4096].</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -962,7 +1021,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTextWatermarks extends TeaModel {
         /**
-         * <p>The parameters that are used to overwrite the corresponding parameters of the template.</p>
+         * <p>The overwrite parameters. If specified, these parameters overwrite the corresponding parameters in the template.</p>
          */
         @NameInMap("OverwriteParams")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTextWatermarksOverwriteParams overwriteParams;
@@ -1001,7 +1060,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsAudioVolume extends TeaModel {
         /**
-         * <p>The output volume.</p>
+         * <p>The target volume.</p>
          * 
          * <strong>example:</strong>
          * <p>-6</p>
@@ -1010,7 +1069,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String integratedLoudnessTarget;
 
         /**
-         * <p>The volume range.</p>
+         * <p>The loudness range.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -1019,7 +1078,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String loudnessRangeTarget;
 
         /**
-         * <p>The volume adjustment method. Valid values:</p>
+         * <p>The volume adjustment method.</p>
          * 
          * <strong>example:</strong>
          * <p>auto</p>
@@ -1028,7 +1087,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String method;
 
         /**
-         * <p>The peak volume.</p>
+         * <p>The true peak.</p>
          * 
          * <strong>example:</strong>
          * <p>-1</p>
@@ -1079,9 +1138,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         /**
          * <p>The audio bitrate of the output file.</p>
          * <ul>
-         * <li>Valid values: [8,1000].</li>
-         * <li>Unit: Kbit/s.</li>
-         * <li>Default value: 128.</li>
+         * <li><p>Value range: [8, 1000]</p>
+         * </li>
+         * <li><p>Unit: Kbps</p>
+         * </li>
+         * <li><p>Default value: 128</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1091,7 +1153,8 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String bitrate;
 
         /**
-         * <p>The number of sound channels. Default value: 2.</p>
+         * <p>The number of sound channels.
+         * Default value: 2.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -1100,7 +1163,8 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String channels;
 
         /**
-         * <p>The audio codec. Valid values: AAC, MP3, VORBIS, and FLAC. Default value: AAC.</p>
+         * <p>The audio codec format. Valid values are AAC, MP3, VORBIS, and FLAC.
+         * Default value: AAC</p>
          * 
          * <strong>example:</strong>
          * <p>AAC</p>
@@ -1109,7 +1173,8 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String codec;
 
         /**
-         * <p>The audio codec profile. If the Codec parameter is set to AAC, the valid values are aac_low, aac_he, aac_he_v2, aac_ld, and aac_eld.</p>
+         * <p>The audio encoding preset.
+         * When Codec is set to AAC, valid values are aac_low, aac_he, aac_he_v2, aac_ld, and aac_eld.</p>
          * 
          * <strong>example:</strong>
          * <p>aac_low</p>
@@ -1118,7 +1183,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String profile;
 
         /**
-         * <p>Specifies whether to delete the audio stream.</p>
+         * <p>Specifies whether to remove the audio stream.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1127,10 +1192,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String remove;
 
         /**
-         * <p>The sampling rate.</p>
+         * <p>The sample rate.</p>
          * <ul>
-         * <li>Valid values: 22050, 32000, 44100, 48000, and 96000. Default value: 44100.</li>
-         * <li>Unit: Hz.</li>
+         * <li><p>Default value: 44100. Valid values: 22050, 32000, 44100, 48000, and 96000.</p>
+         * </li>
+         * <li><p>Unit: Hz</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1140,7 +1207,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String samplerate;
 
         /**
-         * <p>The volume configurations.</p>
+         * <p>The volume control settings.</p>
          */
         @NameInMap("Volume")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsAudioVolume volume;
@@ -1244,7 +1311,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String duration;
 
         /**
-         * <p>The forced segmentation point in time.</p>
+         * <p>The time points for forced segmentation.</p>
          * 
          * <strong>example:</strong>
          * <p>2,3</p>
@@ -1277,7 +1344,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsMuxConfig extends TeaModel {
         /**
-         * <p>The segment settings.</p>
+         * <p>Segment settings.</p>
          */
         @NameInMap("Segment")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsMuxConfigSegment segment;
@@ -1299,7 +1366,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsTransConfig extends TeaModel {
         /**
-         * <p>The method that is used to adjust the resolution. This parameter takes effect only if both the Width and Height parameters are specified. You can use this parameter together with the LongShortMode parameter.</p>
+         * <p>The method to adjust the resolution. This setting takes effect only when both Width and Height are specified. It can be used with LongShortMode.</p>
          * <p>Valid values: rescale, crop, pad, and none.</p>
          * <p>Default value: none.</p>
          * 
@@ -1310,15 +1377,19 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String adjDarMethod;
 
         /**
-         * <p>Specifies whether to check the audio bitrate. You can specify only one of the IsCheckAudioBitrate and IsCheckAudioBitrateFail parameters. The priority of the IsCheckAudioBitrateFail parameter is higher. Valid values:</p>
+         * <p>Specifies whether to check the audio bitrate. You can set either this parameter or IsCheckAudioBitrateFail. IsCheckAudioBitrateFail takes precedence.</p>
          * <ul>
-         * <li>true: checks the video resolution. If the bitrate of the input audio is less than that of the output audio, the bitrate of the input audio is used for transcoding.</li>
-         * <li>false: does not check the video resolution.</li>
+         * <li><p>true: Checks the audio bitrate. If the input audio bitrate is lower than the configured output bitrate, the service uses the input audio bitrate for transcoding.</p>
+         * </li>
+         * <li><p>false: Does not check the audio bitrate.</p>
+         * </li>
          * </ul>
          * <p>Default value:</p>
          * <ul>
-         * <li>If this parameter is not specified and the codec of the output audio is different from that of the input audio, the default value is false.</li>
-         * <li>If this parameter is not specified and the codec of the output audio is the same as that of the input audio, the default value is true.</li>
+         * <li><p>false: If this parameter is empty and the output codec is different from the input codec.</p>
+         * </li>
+         * <li><p>true: If this parameter is empty and the output codec is the same as the input codec.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1328,10 +1399,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String isCheckAudioBitrate;
 
         /**
-         * <p>Specifies whether to check the audio bitrate. You can specify only one of the IsCheckAudioBitrate and IsCheckAudioBitrateFail parameters. The priority of the IsCheckAudioBitrateFail parameter is higher. Valid values:</p>
+         * <p>Specifies whether to check the audio bitrate. You can set either IsCheckAudioBitrate or IsCheckAudioBitrateFail. This parameter has a higher priority.</p>
          * <ul>
-         * <li>true: checks the video resolution. If the bitrate of the input audio is less than that of the output audio, the transcoding job fails.</li>
-         * <li>false: does not check the video resolution.</li>
+         * <li><p>true: The transcoding job fails if the input audio bitrate is lower than the output bitrate setting.</p>
+         * </li>
+         * <li><p>false: The audio bitrate is not checked.</p>
+         * </li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -1342,10 +1415,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String isCheckAudioBitrateFail;
 
         /**
-         * <p>Specifies whether to check the video resolution. You can specify only one of the IsCheckReso and IsCheckResoFail parameters. The priority of the IsCheckResoFail parameter is higher. Valid values:</p>
+         * <p>Specifies whether to check the video resolution. The IsCheckReso and IsCheckResoFail parameters are mutually exclusive. IsCheckResoFail takes precedence.</p>
          * <ul>
-         * <li>true: checks the video resolution. If the width or height of the input video is less than that of the output video, the resolution of the input video is used for transcoding.</li>
-         * <li>false: does not check the video resolution.</li>
+         * <li><p>true: Enables the resolution check. If the resolution (width or height) of the input video is lower than the output resolution, the transcoding job uses the input resolution.</p>
+         * </li>
+         * <li><p>false: Disables the resolution check.</p>
+         * </li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -1356,10 +1431,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String isCheckReso;
 
         /**
-         * <p>Specifies whether to check the video resolution. You can specify only one of the IsCheckReso and IsCheckResoFail parameters. The priority of the IsCheckResoFail parameter is higher. Valid values:</p>
+         * <p>Specifies whether to check the video resolution. You can use either IsCheckReso or IsCheckResoFail, but not both. This parameter has a higher priority.</p>
          * <ul>
-         * <li>true: checks the video resolution. If the width or height of the input video is less than that of the output video, the transcoding job fails.</li>
-         * <li>false: does not check the video resolution.</li>
+         * <li><p>true: Checks the resolution. The transcoding job fails if the width or height of the input video is smaller than the output resolution.</p>
+         * </li>
+         * <li><p>false: Does not check the resolution.</p>
+         * </li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -1370,10 +1447,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String isCheckResoFail;
 
         /**
-         * <p>Specifies whether to check the video bitrate. You can specify only one of the IsCheckVideoBitrate and IsCheckVideoBitrateFail parameters. The priority of the IsCheckVideoBitrateFail parameter is higher. Valid values:</p>
+         * <p>Specifies whether to check the video bitrate. You can set either IsCheckVideoBitrate or IsCheckVideoBitrateFail. IsCheckVideoBitrateFail has a higher priority.</p>
          * <ul>
-         * <li>true: checks the video resolution. If the bitrate of the input video is less than that of the output video, the bitrate of the input video is used for transcoding.</li>
-         * <li>false: does not check the video resolution.</li>
+         * <li><p>true: Checks the bitrate. If the input video bitrate is lower than the output bitrate, the video is transcoded at the input bitrate.</p>
+         * </li>
+         * <li><p>false: Does not check the bitrate.</p>
+         * </li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -1384,10 +1463,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String isCheckVideoBitrate;
 
         /**
-         * <p>Specifies whether to check the video bitrate. You can specify only one of the IsCheckVideoBitrate and IsCheckVideoBitrateFail parameters. The priority of the IsCheckVideoBitrateFail parameter is higher. Valid values:</p>
+         * <p>Specifies whether to check the video bitrate. This parameter and IsCheckVideoBitrate are mutually exclusive. IsCheckVideoBitrateFail has a higher priority.</p>
          * <ul>
-         * <li>true: checks the video resolution. If the bitrate of the input video is less than that of the output video, the transcoding job fails.</li>
-         * <li>false: does not check the video resolution.</li>
+         * <li><p>true: Enables the check. The transcoding job fails if the input video bitrate is lower than the output bitrate setting.</p>
+         * </li>
+         * <li><p>false: Disables the check.</p>
+         * </li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -1400,9 +1481,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         /**
          * <p>The video transcoding mode. Valid values:</p>
          * <ul>
-         * <li>onepass: You can set this parameter to onepass if the Bitrate parameter is set to ABR. The encoding speed of this mode is faster than that of the twopass mode.</li>
-         * <li>twopass: You can set this parameter to twopass if the Bitrate parameter is set to VBR. The encoding speed of this mode is slower than that of the onepass mode.</li>
-         * <li>CBR: the constant bitrate mode.</li>
+         * <li><p>onepass: Typically used for ABR. The encoding speed is faster than twopass.</p>
+         * </li>
+         * <li><p>twopass: Typically used for VBR. The encoding speed is slower than onepass.</p>
+         * </li>
+         * <li><p>CBR: Constant Bitrate mode.</p>
+         * </li>
          * </ul>
          * <p>Default value: onepass.</p>
          * 
@@ -1485,10 +1569,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsVideo extends TeaModel {
         /**
-         * <p>The maximum ABR. This parameter takes effect only for Narrowband HD 1.0.</p>
+         * <p>The maximum bitrate for adaptive bitrate (ABR) streaming. This parameter is valid only for Narrowband HD 1.0.</p>
          * <ul>
-         * <li>Valid values: [10,50000].</li>
-         * <li>Unit: Kbit/s.</li>
+         * <li><p>Value range: [10, 50000]</p>
+         * </li>
+         * <li><p>Unit: Kbps</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1498,10 +1584,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String abrMax;
 
         /**
-         * <p>The average bitrate of the video.</p>
+         * <p>The average video bitrate.</p>
          * <ul>
-         * <li>Valid values: [10,50000].</li>
-         * <li>Unit: Kbit/s.</li>
+         * <li><p>Value range: [10, 50000].</p>
+         * </li>
+         * <li><p>Unit: Kbps.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1513,9 +1601,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         /**
          * <p>The buffer size.</p>
          * <ul>
-         * <li>Valid values: [1000,128000].</li>
-         * <li>Default value: 6000.</li>
-         * <li>Unit: KB.</li>
+         * <li><p>Value range: [1000, 128000]</p>
+         * </li>
+         * <li><p>Default value: 6000</p>
+         * </li>
+         * <li><p>Unit: Kb</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1534,12 +1625,14 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String codec;
 
         /**
-         * <p>The constant rate factor.</p>
+         * <p>The Constant Rate Factor (CRF).</p>
          * <ul>
-         * <li>Valid values: [0,51].</li>
-         * <li>Default value: 23 if the encoding format is H.264, or Default value when the Codec parameter is set to H.265: 26.</li>
+         * <li><p>The value can be from 0 to 51.</p>
+         * </li>
+         * <li><p>The default value is 23 for H264 encoding and 26 for H265 encoding.</p>
+         * </li>
          * </ul>
-         * <p>If this parameter is specified, the value of Bitrate becomes invalid.</p>
+         * <p>If Crf is set, the Bitrate setting is ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>23</p>
@@ -1548,10 +1641,14 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String crf;
 
         /**
-         * <p>The method of video cropping. Valid values:</p>
+         * <p>Crops the video frame.
+         * Two methods are available.</p>
          * <ul>
-         * <li>border: automatically detects and removes black bars.</li>
-         * <li>A value in the width:height:left:top format: crops the videos based on the custom settings. Example: 1280:800:0:140.</li>
+         * <li><p>To automatically detect and crop black bars, set the parameter to &quot;border&quot;.</p>
+         * </li>
+         * <li><p>To specify a custom crop area, use the width:height:left:top format.
+         * Example: 1280:800:0:140</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1563,9 +1660,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         /**
          * <p>The frame rate.</p>
          * <ul>
-         * <li>Valid values: (0,60].</li>
-         * <li>The value is 60 if the frame rate of the input video exceeds 60.</li>
-         * <li>Default value: the frame rate of the input video.</li>
+         * <li><p>Valid values: (0, 60].</p>
+         * </li>
+         * <li><p>If the input file has a frame rate greater than 60, the frame rate is capped at 60.</p>
+         * </li>
+         * <li><p>Default: The frame rate of the input file.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1577,8 +1677,10 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         /**
          * <p>The maximum number of frames between two keyframes.</p>
          * <ul>
-         * <li>Valid values: [1,1080000].</li>
-         * <li>Default value: 250.</li>
+         * <li><p>The value must be in the range of [1, 1080000].</p>
+         * </li>
+         * <li><p>The default value is 250.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1588,11 +1690,14 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String gop;
 
         /**
-         * <p>The height of the output video.</p>
+         * <p>The height of the video.</p>
          * <ul>
-         * <li>Valid values: [128,4096].</li>
-         * <li>Unit: pixels.</li>
-         * <li>Default value: the height of the input video.</li>
+         * <li><p>Valid values: [128, 4096].</p>
+         * </li>
+         * <li><p>Unit: px.</p>
+         * </li>
+         * <li><p>Default value: The original height of the video.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1602,7 +1707,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String height;
 
         /**
-         * <p>Specifies whether to enable the auto-rotate screen feature.</p>
+         * <p>Specifies whether to enable automatic rotation for landscape and portrait orientations (long and short edge pattern).</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1611,10 +1716,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String longShortMode;
 
         /**
-         * <p>The maximum bitrate of the output video.</p>
+         * <p>The peak video bitrate.</p>
          * <ul>
-         * <li>Valid values: [10,50000].</li>
-         * <li>Unit: Kbit/s.</li>
+         * <li><p>Value range: [10, 50000]</p>
+         * </li>
+         * <li><p>Unit: Kbps</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1624,10 +1731,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String maxrate;
 
         /**
-         * <p>The black bars added to the video.</p>
+         * <p>Adds black bars to the video.</p>
          * <ul>
-         * <li>Format: width:height:left:top.</li>
-         * <li>Example: 1280:800:0:140.</li>
+         * <li><p>Format: width:height:left:top</p>
+         * </li>
+         * <li><p>Example: 1280:800:0:140</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1637,7 +1746,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String pad;
 
         /**
-         * <p>The pixel format of the video. Valid values: standard pixel formats such as yuv420p and yuvj420p.</p>
+         * <p>The pixel format of the video. Valid values include standard formats such as yuv420p and yuvj420p.</p>
          * 
          * <strong>example:</strong>
          * <p>yuv420p</p>
@@ -1646,7 +1755,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String pixFmt;
 
         /**
-         * <p>The preset video algorithm. This parameter takes effect only if the encoding format is H.264. Valid values: veryfast, fast, medium, slow, and slower. Default value: medium.</p>
+         * <p>The video algorithm preset. This parameter is supported only for H.264. Supported values are veryfast, fast, medium, slow, and slower. The default value is medium.</p>
          * 
          * <strong>example:</strong>
          * <p>medium</p>
@@ -1655,11 +1764,15 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String preset;
 
         /**
-         * <p>The encoding profile. Valid values: baseline, main, and high.</p>
+         * <p>The encoding profile.
+         * Supported values are baseline, main, and high.</p>
          * <ul>
-         * <li>baseline: applicable to mobile devices.</li>
-         * <li>main: applicable to standard-definition devices.</li>
-         * <li>high: applicable to high-definition devices.</li>
+         * <li><p>baseline: For mobile devices.</p>
+         * </li>
+         * <li><p>main: For standard-resolution devices.</p>
+         * </li>
+         * <li><p>high: For high-resolution devices.</p>
+         * </li>
          * </ul>
          * <p>Default value: high.</p>
          * 
@@ -1679,7 +1792,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String remove;
 
         /**
-         * <p>The scan mode. Valid values: interlaced and progressive.</p>
+         * <p>The scan mode. Valid values are interlaced and progressive.</p>
          * 
          * <strong>example:</strong>
          * <p>progressive</p>
@@ -1690,9 +1803,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         /**
          * <p>The width of the output video.</p>
          * <ul>
-         * <li>Valid values: [128,4096].</li>
-         * <li>Unit: pixels.</li>
-         * <li>Default value: the width of the input video.</li>
+         * <li><p>Valid values: 128 to 4096.</p>
+         * </li>
+         * <li><p>Unit: px.</p>
+         * </li>
+         * <li><p>Default value: The original width of the video.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1854,13 +1970,13 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParams extends TeaModel {
         /**
-         * <p>The audio settings.</p>
+         * <p>Audio settings.</p>
          */
         @NameInMap("Audio")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsAudio audio;
 
         /**
-         * <p>The encapsulation format settings.</p>
+         * <p>The container format settings.</p>
          */
         @NameInMap("Container")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsContainer container;
@@ -1872,13 +1988,13 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsMuxConfig muxConfig;
 
         /**
-         * <p>The conditional transcoding configurations.</p>
+         * <p>The conditional transcoding parameters.</p>
          */
         @NameInMap("TransConfig")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsTransConfig transConfig;
 
         /**
-         * <p>The video settings.</p>
+         * <p>Video settings</p>
          */
         @NameInMap("Video")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsVideo video;
@@ -1932,7 +2048,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscode extends TeaModel {
         /**
-         * <p>The parameters that are used to overwrite the corresponding parameters of the template.</p>
+         * <p>The overwrite parameters. If specified, these parameters overwrite the corresponding parameters in the template.</p>
          */
         @NameInMap("OverwriteParams")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParams overwriteParams;
@@ -1971,31 +2087,31 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfig extends TeaModel {
         /**
-         * <p>The multi-input stream merge configuration.</p>
+         * <p>The settings for combining multiple input streams.</p>
          */
         @NameInMap("CombineConfigs")
         public java.util.List<SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigCombineConfigs> combineConfigs;
 
         /**
-         * <p>The encryption settings.</p>
+         * <p>The encryption configuration.</p>
          */
         @NameInMap("Encryption")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigEncryption encryption;
 
         /**
-         * <p>The watermark configuration of an image.</p>
+         * <p>The image watermark settings.</p>
          */
         @NameInMap("ImageWatermarks")
         public java.util.List<SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigImageWatermarks> imageWatermarks;
 
         /**
-         * <p>The subtitle configuration.</p>
+         * <p>The caption burn-in configuration.</p>
          */
         @NameInMap("Subtitles")
         public java.util.List<SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigSubtitles> subtitles;
 
         /**
-         * <p>The configurations of the text watermark.</p>
+         * <p>The text watermark configurations.</p>
          */
         @NameInMap("TextWatermarks")
         public java.util.List<SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTextWatermarks> textWatermarks;
@@ -2063,7 +2179,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroup extends TeaModel {
         /**
-         * <p>The output file configuration.</p>
+         * <p>The output media configuration.</p>
          */
         @NameInMap("Output")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupOutput output;
@@ -2099,7 +2215,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobScheduleConfig extends TeaModel {
         /**
-         * <p>The ID of the MPS queue to which the job was submitted.</p>
+         * <p>The pipeline ID.</p>
          * 
          * <strong>example:</strong>
          * <p>e37ebee5d98b4781897f6086e89f9c56</p>
@@ -2108,7 +2224,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String pipelineId;
 
         /**
-         * <p>The priority of the job. Valid values: 1 to 10. The greater the value, the higher the priority.</p>
+         * <p>The priority of the job. A larger value indicates a higher priority. The value can be an integer from 1 to 10.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -2141,10 +2257,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListInputGroup extends TeaModel {
         /**
-         * <p>The URL of the input stream:</p>
+         * <p>The input stream path:</p>
          * <ul>
-         * <li>This parameter takes effect only when Type is set to Media. You can select a specific file within the media asset as an input.</li>
-         * <li>The system checks whether the input URL exists within the media asset.</li>
+         * <li><p>This parameter takes effect only when Type is Media. It lets you select a specific file from the media asset as the input.</p>
+         * </li>
+         * <li><p>The system checks whether the input URL exists in the media asset.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2154,10 +2272,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String inputUrl;
 
         /**
-         * <p>The media object.</p>
+         * <p>The media value:</p>
          * <ul>
-         * <li>If Type is set to OSS, set this parameter to the URL of an OSS object. Both the OSS and HTTP protocols are supported.</li>
-         * <li>If Type is set to Media, set this parameter to the ID of a media asset.</li>
+         * <li><p>If Type is OSS, this is a URL that supports the OSS or HTTP protocol.</p>
+         * </li>
+         * <li><p>If Type is Media, this is a media asset ID.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2167,10 +2287,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String media;
 
         /**
-         * <p>The type of the media object. Valid values:</p>
+         * <p>The media object type. Valid values:</p>
          * <ul>
-         * <li>OSS: an OSS object.</li>
-         * <li>Media: a media asset.</li>
+         * <li><p>OSS: An OSS file.</p>
+         * </li>
+         * <li><p>Media: A media asset ID.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2221,7 +2343,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String bitrate;
 
         /**
-         * <p>The sound channel layout.</p>
+         * <p>The channel layout.</p>
          * 
          * <strong>example:</strong>
          * <p>stereo</p>
@@ -2266,7 +2388,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String codecTag;
 
         /**
-         * <p>The name of the encoder tag.</p>
+         * <p>The encoder tag name.</p>
          * 
          * <strong>example:</strong>
          * <p>[15][0][0][0]</p>
@@ -2284,7 +2406,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String codecTimeBase;
 
         /**
-         * <p>The duration of the stream. Unit: seconds.</p>
+         * <p>The duration in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>403.039989</p>
@@ -2293,7 +2415,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String duration;
 
         /**
-         * <p>The sequence number of the stream.</p>
+         * <p>The index of the stream.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -2302,7 +2424,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String index;
 
         /**
-         * <p>The language of the stream.</p>
+         * <p>The language.</p>
          * 
          * <strong>example:</strong>
          * <p>cn</p>
@@ -2311,7 +2433,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String lang;
 
         /**
-         * <p>The sample format.</p>
+         * <p>The sampling format.</p>
          * 
          * <strong>example:</strong>
          * <p>fltp</p>
@@ -2320,7 +2442,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String sampleFmt;
 
         /**
-         * <p>The sampling rate. Unit: Hz.</p>
+         * <p>The sample rate in Hz.</p>
          * 
          * <strong>example:</strong>
          * <p>44100</p>
@@ -2329,7 +2451,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String sampleRate;
 
         /**
-         * <p>The start time of the stream.</p>
+         * <p>The start time.</p>
          * 
          * <strong>example:</strong>
          * <p>1.473556</p>
@@ -2484,7 +2606,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String bitrate;
 
         /**
-         * <p>The duration of the video. Unit: seconds.</p>
+         * <p>The duration of the video in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>403.039999</p>
@@ -2493,7 +2615,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String duration;
 
         /**
-         * <p>The file name.</p>
+         * <p>The name of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>file.m3u8</p>
@@ -2502,7 +2624,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String fileName;
 
         /**
-         * <p>The file size. Unit: bytes.</p>
+         * <p>The size of the file in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>31737</p>
@@ -2511,7 +2633,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String fileSize;
 
         /**
-         * <p>The state of the file.</p>
+         * <p>The status of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -2547,7 +2669,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String formatName;
 
         /**
-         * <p>The height of the output video.</p>
+         * <p>The height.</p>
          * 
          * <strong>example:</strong>
          * <p>478</p>
@@ -2556,7 +2678,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String height;
 
         /**
-         * <p>The ID of the media asset.</p>
+         * <p>The media asset ID.</p>
          * 
          * <strong>example:</strong>
          * <p>73e07de0f77171eca3fc7035d0b26402</p>
@@ -2565,7 +2687,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String mediaId;
 
         /**
-         * <p>The region in which the file resides.</p>
+         * <p>The region where the file is located.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -2574,7 +2696,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The width of the output video.</p>
+         * <p>The width of the output file.</p>
          * 
          * <strong>example:</strong>
          * <p>848</p>
@@ -2723,7 +2845,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String codecName;
 
         /**
-         * <p>The tag of the encoding format.</p>
+         * <p>The encoding format tag.</p>
          * 
          * <strong>example:</strong>
          * <p>0x001b</p>
@@ -2732,7 +2854,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String codecTag;
 
         /**
-         * <p>The tag string of the encoding format.</p>
+         * <p>The text of the encoding format tag.</p>
          * 
          * <strong>example:</strong>
          * <p>[27][0][0][0]</p>
@@ -2741,7 +2863,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String codecTagString;
 
         /**
-         * <p>The time base of the encoder.</p>
+         * <p>The codec time base.</p>
          * 
          * <strong>example:</strong>
          * <p>1/50</p>
@@ -2759,7 +2881,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String dar;
 
         /**
-         * <p>The duration of the stream. Unit: seconds.</p>
+         * <p>The duration in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>403.039989</p>
@@ -2777,11 +2899,15 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String fps;
 
         /**
-         * <p>Indicates whether the video stream contains bidirectional frames (B-frames). Valid values:</p>
+         * <p>Indicates whether B-frames exist.
+         * Valid values:</p>
          * <ul>
-         * <li>0: The stream contains no B-frames.</li>
-         * <li>1: The stream contains one B-frame.</li>
-         * <li>2: The stream contains multiple consecutive B-frames.</li>
+         * <li><p>0: No B-frames.</p>
+         * </li>
+         * <li><p>1: One B-frame.</p>
+         * </li>
+         * <li><p>2: Multiple consecutive B-frames.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2791,7 +2917,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String hasBFrames;
 
         /**
-         * <p>The height of the output video.</p>
+         * <p>The height of the output video stream.</p>
          * 
          * <strong>example:</strong>
          * <p>478</p>
@@ -2800,7 +2926,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String height;
 
         /**
-         * <p>The sequence number of the stream.</p>
+         * <p>The index of the stream.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -2809,7 +2935,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String index;
 
         /**
-         * <p>The language of the stream.</p>
+         * <p>The language.</p>
          * 
          * <strong>example:</strong>
          * <p>cn</p>
@@ -2818,7 +2944,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String lang;
 
         /**
-         * <p>The codec level.</p>
+         * <p>The encoding level.</p>
          * 
          * <strong>example:</strong>
          * <p>31</p>
@@ -2836,7 +2962,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String numFrames;
 
         /**
-         * <p>The pixel format.</p>
+         * <p>The color storage format.</p>
          * 
          * <strong>example:</strong>
          * <p>yuv420p</p>
@@ -2845,7 +2971,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String pixFmt;
 
         /**
-         * <p>The encoder profile.</p>
+         * <p>The encoder preset.</p>
          * 
          * <strong>example:</strong>
          * <p>High</p>
@@ -2854,7 +2980,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String profile;
 
         /**
-         * <p>The rotation angle of the video image. Valid values: 0, 90, 180, and 270. Default value: 0.</p>
+         * <p>The rotation angle of the video. Valid values: 0, 90, 180, and 270. The default value is 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -2863,7 +2989,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String rotate;
 
         /**
-         * <p>The aspect ratio of the area from which the sampling points are collected.</p>
+         * <p>The sample aspect ratio.</p>
          * 
          * <strong>example:</strong>
          * <p>478:477</p>
@@ -2872,7 +2998,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String sar;
 
         /**
-         * <p>The start time of the stream.</p>
+         * <p>The start time.</p>
          * 
          * <strong>example:</strong>
          * <p>1.473556</p>
@@ -2890,7 +3016,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String timeBase;
 
         /**
-         * <p>The width of the output video.</p>
+         * <p>The video width.</p>
          * 
          * <strong>example:</strong>
          * <p>848</p>
@@ -3091,19 +3217,19 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListOutFileMeta extends TeaModel {
         /**
-         * <p>The information about the audio stream.</p>
+         * <p>The audio stream information.</p>
          */
         @NameInMap("AudioStreamInfoList")
         public java.util.List<SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListOutFileMetaAudioStreamInfoList> audioStreamInfoList;
 
         /**
-         * <p>The basic file information.</p>
+         * <p>Basic file information.</p>
          */
         @NameInMap("FileBasicInfo")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListOutFileMetaFileBasicInfo fileBasicInfo;
 
         /**
-         * <p>The information about the video stream.</p>
+         * <p>The video stream information.</p>
          */
         @NameInMap("VideoStreamInfoList")
         public java.util.List<SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListOutFileMetaVideoStreamInfoList> videoStreamInfoList;
@@ -3141,10 +3267,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListOutput extends TeaModel {
         /**
-         * <p>The media object.</p>
+         * <p>The value of the media asset:</p>
          * <ul>
-         * <li>If Type is set to OSS, set this parameter to the URL of an OSS object. Both the OSS and HTTP protocols are supported.</li>
-         * <li>If Type is set to Media, set this parameter to the ID of a media asset.</li>
+         * <li><p>If type is OSS, the value is a URL. The OSS and HTTP protocols are supported.</p>
+         * </li>
+         * <li><p>If type is Media, the value is the media asset ID.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -3154,20 +3282,27 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String media;
 
         /**
-         * <p>The URL of the output stream.\
-         * This parameter takes effect only when Type is set to Media. You can select a specific file within the media asset as an output.\
-         * Supported placeholders:</p>
+         * <p>The path of the output stream.<br>
+         * This parameter is valid only when \<code>Type\\</code> is set to \<code>Media\\</code>. It lets you select a specific file from the media asset for output.<br>
+         * The following placeholders are supported:<br><br></p>
          * <ul>
-         * <li>{MediaId}: the ID of the media asset.</li>
-         * <li>{JobId}: the ID of the transcoding subjob.</li>
-         * <li>{MediaBucket}: the bucket to which the media asset belongs.</li>
-         * <li>{ExtName}: the file suffix, which uses the output format of the transcoding template.</li>
-         * <li>{DestMd5}: the MD5 value of the transcoded output file.\
-         * Notes:</li>
+         * <li><p>{MediaId}: The ID of the media asset.</p>
+         * </li>
+         * <li><p>{JobId}: The ID of the transcoding subtask.</p>
+         * </li>
+         * <li><p>{MediaBucket}: The bucket where the media asset is stored.</p>
+         * </li>
+         * <li><p>{ExtName}: The file extension. The value is the output format specified in the transcoding template.</p>
+         * </li>
+         * <li><p>{DestMd5}: The MD5 hash of the output file.<br>
+         * Note:<br></p>
+         * </li>
          * </ul>
          * <ol>
-         * <li>This parameter must contain the {MediaId} and {JobId} placeholders.</li>
-         * <li>The output bucket is the same as the bucket to which the media asset belongs.</li>
+         * <li><p>This parameter must contain the {MediaId} and {JobId} placeholders.</p>
+         * </li>
+         * <li><p>The output bucket is the same as the bucket where the media asset is stored.</p>
+         * </li>
          * </ol>
          * 
          * <strong>example:</strong>
@@ -3177,10 +3312,13 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String outputUrl;
 
         /**
-         * <p>The type of the media object. Valid values:</p>
+         * <p>The media object type.
+         * Valid values:</p>
          * <ul>
-         * <li>OSS: an OSS object.</li>
-         * <li>Media: a media asset.</li>
+         * <li><p>OSS: An OSS file.</p>
+         * </li>
+         * <li><p>Media: A media asset ID.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -3222,7 +3360,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigCombineConfigs extends TeaModel {
         /**
-         * <p>The audio stream index.</p>
+         * <p>The index of the audio stream.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -3241,7 +3379,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public Double duration;
 
         /**
-         * <p>The start time of the input stream. Default value: 0.</p>
+         * <p>The start time of the input stream. The default value is 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0</p>
@@ -3250,7 +3388,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public Double start;
 
         /**
-         * <p>The video stream index.</p>
+         * <p>The index of the video stream.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -3300,7 +3438,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigEncryption extends TeaModel {
         /**
-         * <p>The ciphertext of HLS encryption.</p>
+         * <p>The ciphertext of the key for standard encryption.</p>
          * 
          * <strong>example:</strong>
          * <p>MTYi00NDU0LTg5O****</p>
@@ -3309,7 +3447,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String cipherText;
 
         /**
-         * <p>The address of the decryption service for HLS encryption.</p>
+         * <p>The decryption service endpoint for standard encryption.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://sample.com/path?CipherText=MTYi00NDU0LTg5O">https://sample.com/path?CipherText=MTYi00NDU0LTg5O</a>****</p>
@@ -3318,7 +3456,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String decryptKeyUri;
 
         /**
-         * <p>Specifies the encryption type.</p>
+         * <p>The encryption type.</p>
          * 
          * <strong>example:</strong>
          * <p>PrivateEncryption</p>
@@ -3327,7 +3465,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String encryptType;
 
         /**
-         * <p>The type of the key service. Valid values: KMS and Base64.</p>
+         * <p>The type of the key service. Only KMS and Base64 are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>KMS</p>
@@ -3376,10 +3514,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigImageWatermarksOverwriteParamsFile extends TeaModel {
         /**
-         * <p>The media object.</p>
+         * <p>The media value:</p>
          * <ul>
-         * <li>If Type is set to OSS, set this parameter to the URL of an OSS object. Both the OSS and HTTP protocols are supported.</li>
-         * <li>If Type is set to Media, set this parameter to the ID of a media asset.</li>
+         * <li><p>If Type is OSS, this is a URL that supports the OSS or HTTP protocol.</p>
+         * </li>
+         * <li><p>If Type is Media, this is a media asset ID.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -3389,10 +3529,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String media;
 
         /**
-         * <p>The type of the media object. Valid values:</p>
+         * <p>The media object type. Valid values:</p>
          * <ul>
-         * <li>OSS: an OSS object.</li>
-         * <li>Media: a media asset.</li>
+         * <li><p>OSS: An OSS file.</p>
+         * </li>
+         * <li><p>Media: A media asset ID.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -3426,10 +3568,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigImageWatermarksOverwriteParamsTimeline extends TeaModel {
         /**
-         * <p>The time range in which the watermark is displayed.</p>
+         * <p>The duration of the watermark.</p>
          * <ul>
-         * <li>Valid values: integers and ToEND.</li>
-         * <li>Default value: ToEND.</li>
+         * <li><p>Valid values: [number, ToEND]</p>
+         * </li>
+         * <li><p>Default value: ToEND</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -3439,11 +3583,14 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String duration;
 
         /**
-         * <p>The beginning of the time range in which the watermark is displayed.</p>
+         * <p>The start time of the watermark.</p>
          * <ul>
-         * <li>Unit: seconds.</li>
-         * <li>Value values: integers.</li>
-         * <li>Default value: 0.</li>
+         * <li><p>Unit: seconds</p>
+         * </li>
+         * <li><p>Valid values: numbers</p>
+         * </li>
+         * <li><p>Default value: 0</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -3477,19 +3624,23 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigImageWatermarksOverwriteParams extends TeaModel {
         /**
-         * <p>The horizontal offset of the watermark relative to the output video. Default value: 0.</p>
-         * <p>The following value types are supported:</p>
+         * <p>The horizontal offset of the image watermark relative to the output video. Default value: 0.</p>
+         * <p>Values can be one of the following:</p>
          * <ul>
-         * <li><p>Integer: the pixel value of the horizontal offset.</p>
+         * <li><p>Integer: The offset in pixels.</p>
          * <ul>
-         * <li>Valid values: [8,4096].</li>
-         * <li>Unit: pixels.</li>
+         * <li><p>Valid values: [8, 4096]</p>
+         * </li>
+         * <li><p>Unit: px</p>
+         * </li>
          * </ul>
          * </li>
-         * <li><p>Decimal: the ratio of the horizontal offset to the width of the output video.</p>
+         * <li><p>Decimal: The ratio of the horizontal offset to the output video width.</p>
          * <ul>
-         * <li>Valid values: (0,1).</li>
-         * <li>The decimal number can be accurate to four decimal places, such as 0.9999. Excessive digits are automatically discarded.</li>
+         * <li><p>Valid values: (0, 1)</p>
+         * </li>
+         * <li><p>Up to four decimal places are supported, such as 0.9999. Extra digits are automatically discarded.</p>
+         * </li>
          * </ul>
          * </li>
          * </ul>
@@ -3501,19 +3652,23 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String dx;
 
         /**
-         * <p>The vertical offset of the watermark relative to the output video. Default value: 0.</p>
-         * <p>The following value types are supported:</p>
+         * <p>The vertical offset of the image watermark relative to the output video. Default value: 0.</p>
+         * <p>Values can be one of the following:</p>
          * <ul>
-         * <li><p>Integer: the pixel value of the horizontal offset.</p>
+         * <li><p>Integer: The offset in pixels.</p>
          * <ul>
-         * <li>Valid values: [8,4096].</li>
-         * <li>Unit: pixels.</li>
+         * <li><p>Valid values: [8, 4096]</p>
+         * </li>
+         * <li><p>Unit: px</p>
+         * </li>
          * </ul>
          * </li>
-         * <li><p>Decimal: the ratio of the vertical offset to the height of the output video.</p>
+         * <li><p>Decimal: The ratio of the vertical offset to the output video height.</p>
          * <ul>
-         * <li>Valid values: (0,1).</li>
-         * <li>The decimal number can be accurate to four decimal places, such as 0.9999. Excessive digits are automatically discarded.</li>
+         * <li><p>Valid values: (0, 1)</p>
+         * </li>
+         * <li><p>Up to four decimal places are supported, such as 0.9999. Extra digits are automatically discarded.</p>
+         * </li>
          * </ul>
          * </li>
          * </ul>
@@ -3531,18 +3686,22 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigImageWatermarksOverwriteParamsFile file;
 
         /**
-         * <p>The height of the watermark image in the output video. The following value types are supported:</p>
+         * <p>The height of the image watermark on the output video. Values can be one of the following:</p>
          * <ul>
-         * <li><p>Integer: the pixel value of the watermark height.</p>
+         * <li><p>Integer: The pixel height of the watermark image.</p>
          * <ul>
-         * <li>Valid values: [8,4096].</li>
-         * <li>Unit: pixels.</li>
+         * <li><p>Valid values: [8, 4096]</p>
+         * </li>
+         * <li><p>Unit: px</p>
+         * </li>
          * </ul>
          * </li>
-         * <li><p>Decimal: the ratio of the watermark height to the height of the output video.</p>
+         * <li><p>Decimal: The ratio of the watermark height to the output video height.</p>
          * <ul>
-         * <li>Valid values: (0,1).</li>
-         * <li>The decimal number can be accurate to four decimal places, such as 0.9999. Excessive digits are automatically discarded.</li>
+         * <li><p>Valid values: (0, 1)</p>
+         * </li>
+         * <li><p>Up to four decimal places are supported, such as 0.9999. Extra digits are automatically discarded.</p>
+         * </li>
          * </ul>
          * </li>
          * </ul>
@@ -3556,8 +3715,10 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         /**
          * <p>The position of the watermark.</p>
          * <ul>
-         * <li>Valid values: TopRight, TopLeft, BottomRight, and BottomLeft.</li>
-         * <li>Default value: TopRight.</li>
+         * <li><p>Valid values: TopRight (top-right), TopLeft (top-left), BottomRight (bottom-right), and BottomLeft (bottom-left).</p>
+         * </li>
+         * <li><p>Default value: TopRight.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -3567,24 +3728,28 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String referPos;
 
         /**
-         * <p>The time settings of the dynamic watermark.</p>
+         * <p>The display time settings for a dynamic watermark.</p>
          */
         @NameInMap("Timeline")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigImageWatermarksOverwriteParamsTimeline timeline;
 
         /**
-         * <p>The width of the watermark in the output video. The following value types are supported:</p>
+         * <p>The width of the image watermark on the output video. Values can be one of the following:</p>
          * <ul>
-         * <li><p>Integer: the pixel value of the watermark width.</p>
+         * <li><p>Integer: The pixel width of the watermark image.</p>
          * <ul>
-         * <li>Valid values: [8,4096].</li>
-         * <li>Unit: pixels.</li>
+         * <li><p>Valid values: [8, 4096]</p>
+         * </li>
+         * <li><p>Unit: px</p>
+         * </li>
          * </ul>
          * </li>
-         * <li><p>Decimal: the ratio of the watermark width to the width of the output video.</p>
+         * <li><p>Decimal: The ratio of the watermark width to the output video width.</p>
          * <ul>
-         * <li>Valid values: (0,1).</li>
-         * <li>The decimal number can be accurate to four decimal places, such as 0.9999. Excessive digits are automatically discarded.</li>
+         * <li><p>Valid values: (0, 1)</p>
+         * </li>
+         * <li><p>Up to four decimal places are supported, such as 0.9999. Extra digits are automatically discarded.</p>
+         * </li>
          * </ul>
          * </li>
          * </ul>
@@ -3660,7 +3825,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigImageWatermarks extends TeaModel {
         /**
-         * <p>The parameters that are used to overwrite the corresponding parameters of the template.</p>
+         * <p>Parameters to overwrite. If you specify these, they replace the corresponding parameters in the template.</p>
          */
         @NameInMap("OverwriteParams")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigImageWatermarksOverwriteParams overwriteParams;
@@ -3699,10 +3864,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigSubtitlesOverwriteParamsFile extends TeaModel {
         /**
-         * <p>The media object.</p>
+         * <p>The value of Media:</p>
          * <ul>
-         * <li>If Type is set to OSS, set this parameter to the URL of an OSS object. Both the OSS and HTTP protocols are supported.</li>
-         * <li>If Type is set to Media, set this parameter to the ID of a media asset.</li>
+         * <li><p>If type is OSS, the value is a URL. The URL supports the OSS and HTTP protocols.</p>
+         * </li>
+         * <li><p>If type is Media, the value is the media asset ID.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -3712,10 +3879,13 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String media;
 
         /**
-         * <p>The type of the media object. Valid values:</p>
+         * <p>The type of the media object.
+         * Valid values:</p>
          * <ul>
-         * <li>OSS: an OSS object.</li>
-         * <li>Media: a media asset.</li>
+         * <li><p>OSS: An OSS file.</p>
+         * </li>
+         * <li><p>Media: The ID of a media asset.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -3749,7 +3919,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigSubtitlesOverwriteParams extends TeaModel {
         /**
-         * <p>The file encoding format.</p>
+         * <p>The encoding format of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>UTF-8</p>
@@ -3764,7 +3934,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigSubtitlesOverwriteParamsFile file;
 
         /**
-         * <p>The format of the subtitle file.</p>
+         * <p>The file format of the caption.</p>
          * 
          * <strong>example:</strong>
          * <p>vtt</p>
@@ -3805,7 +3975,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigSubtitles extends TeaModel {
         /**
-         * <p>The parameters that are used to overwrite the corresponding parameters of the template.</p>
+         * <p>Parameters to overwrite. If you specify these, they replace the corresponding parameters in the template.</p>
          */
         @NameInMap("OverwriteParams")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigSubtitlesOverwriteParams overwriteParams;
@@ -3844,7 +4014,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTextWatermarksOverwriteParams extends TeaModel {
         /**
-         * <p>Specifies whether to the font size based on the output video dimensions. true / false, default: false</p>
+         * <p>Adjusts the font size based on the output video size. The default is false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -3853,7 +4023,9 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String adaptive;
 
         /**
-         * <p>The outline color of the text watermark. Default value: black. For more information, see BorderColor.</p>
+         * <p>The outline color.
+         * Default: Black.
+         * For more values, see BorderColor.</p>
          * 
          * <strong>example:</strong>
          * <p>#006400</p>
@@ -3862,10 +4034,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String borderColor;
 
         /**
-         * <p>The outline width of the text watermark.</p>
+         * <p>The outline width.</p>
          * <ul>
-         * <li>Default value: 0.</li>
-         * <li>Valid values: (0,4096].</li>
+         * <li><p>Default: 0</p>
+         * </li>
+         * <li><p>Range: (0,4096]</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -3875,7 +4049,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public Integer borderWidth;
 
         /**
-         * <p>The watermark text. Base64 encoding is not required. The string must be encoded in UTF-8.</p>
+         * <p>The watermark text. It does not need to be Base64 encoded. The string must be UTF-8 encoded.</p>
          * 
          * <strong>example:</strong>
          * <p>测试水印</p>
@@ -3884,10 +4058,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>The transparency of the text.</p>
+         * <p>The font transparency.</p>
          * <ul>
-         * <li>Valid values: (0,1].</li>
-         * <li>Default value: 1.</li>
+         * <li><p>Valid values: (0, 1]</p>
+         * </li>
+         * <li><p>Default: 1.0</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -3897,7 +4073,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String fontAlpha;
 
         /**
-         * <p>The color of the text.</p>
+         * <p>The color.</p>
          * 
          * <strong>example:</strong>
          * <p>#006400</p>
@@ -3906,7 +4082,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String fontColor;
 
         /**
-         * <p>The font of the text. Default value: SimSun.</p>
+         * <p>The font. Default: SimSun.</p>
          * 
          * <strong>example:</strong>
          * <p>SimSun</p>
@@ -3915,10 +4091,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String fontName;
 
         /**
-         * <p>The size of the text.</p>
+         * <p>The font size.</p>
          * <ul>
-         * <li>Default value: 16.</li>
-         * <li>Valid values: (4,120).</li>
+         * <li><p>Default value: 16</p>
+         * </li>
+         * <li><p>Valid values: (4, 120)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -3928,10 +4106,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public Integer fontSize;
 
         /**
-         * <p>The left margin of the text watermark.</p>
+         * <p>The left margin of the text.</p>
          * <ul>
-         * <li>Default value: 0.</li>
-         * <li>Valid values: [0,4096].</li>
+         * <li><p>Default: 0</p>
+         * </li>
+         * <li><p>Valid values: [0, 4096]</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -3943,8 +4123,10 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         /**
          * <p>The top margin of the text.</p>
          * <ul>
-         * <li>Default value: 0.</li>
-         * <li>Valid values: [0,4096].</li>
+         * <li><p>Default: 0</p>
+         * </li>
+         * <li><p>Valid values: [0, 4096]</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -4042,7 +4224,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTextWatermarks extends TeaModel {
         /**
-         * <p>The parameters that are used to overwrite the corresponding parameters of the template.</p>
+         * <p>Parameters to overwrite. If you specify these, they replace the corresponding parameters in the template.</p>
          */
         @NameInMap("OverwriteParams")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTextWatermarksOverwriteParams overwriteParams;
@@ -4081,7 +4263,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsAudioVolume extends TeaModel {
         /**
-         * <p>The output volume.</p>
+         * <p>The target loudness level.</p>
          * 
          * <strong>example:</strong>
          * <p>-6</p>
@@ -4090,7 +4272,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String integratedLoudnessTarget;
 
         /**
-         * <p>The volume range.</p>
+         * <p>The loudness range.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -4099,7 +4281,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String loudnessRangeTarget;
 
         /**
-         * <p>The volume adjustment method. Valid values:</p>
+         * <p>The volume adjustment method.</p>
          * 
          * <strong>example:</strong>
          * <p>auto</p>
@@ -4108,7 +4290,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String method;
 
         /**
-         * <p>The peak volume.</p>
+         * <p>The true peak level.</p>
          * 
          * <strong>example:</strong>
          * <p>-1</p>
@@ -4159,9 +4341,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         /**
          * <p>The audio bitrate of the output file.</p>
          * <ul>
-         * <li>Valid values: [8,1000].</li>
-         * <li>Unit: Kbit/s.</li>
-         * <li>Default value: 128.</li>
+         * <li><p>Valid values: [8, 1000]</p>
+         * </li>
+         * <li><p>Unit: Kbps</p>
+         * </li>
+         * <li><p>Default value: 128</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -4189,7 +4374,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String codec;
 
         /**
-         * <p>The audio codec profile. If the Codec parameter is set to AAC, the valid values are aac_low, aac_he, aac_he_v2, aac_ld, and aac_eld.</p>
+         * <p>The audio encoding profile. When Codec is AAC, valid values are aac_low, aac_he, aac_he_v2, aac_ld, and aac_eld.</p>
          * 
          * <strong>example:</strong>
          * <p>aac_low</p>
@@ -4207,11 +4392,14 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String remove;
 
         /**
-         * <p>The sampling rate.</p>
+         * <p>The sample rate.</p>
          * <ul>
-         * <li>Default value: 44100.</li>
-         * <li>Valid values: 22050, 32000, 44100, 48000, and 96000.</li>
-         * <li>Unit: Hz.</li>
+         * <li><p>Default value: 44100</p>
+         * </li>
+         * <li><p>Valid values: 22050, 32000, 44100, 48000, and 96000.</p>
+         * </li>
+         * <li><p>Unit: Hz</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -4221,7 +4409,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String samplerate;
 
         /**
-         * <p>The volume configurations.</p>
+         * <p>The volume control.</p>
          */
         @NameInMap("Volume")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsAudioVolume volume;
@@ -4316,7 +4504,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsMuxConfigSegment extends TeaModel {
         /**
-         * <p>The segment length.</p>
+         * <p>The segment duration.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -4325,7 +4513,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String duration;
 
         /**
-         * <p>The forced segmentation point in time.</p>
+         * <p>The forced segment time points.</p>
          * 
          * <strong>example:</strong>
          * <p>2,3</p>
@@ -4380,7 +4568,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsTransConfig extends TeaModel {
         /**
-         * <p>The method that is used to adjust the resolution. This parameter takes effect only if both the Width and Height parameters are specified. You can use this parameter together with the LongShortMode parameter.</p>
+         * <p>The method used to adjust the display aspect ratio. This parameter takes effect only when both Width and Height are specified. You can use it with LongShortMode.</p>
          * <p>Valid values: rescale, crop, pad, and none.</p>
          * <p>Default value: none.</p>
          * 
@@ -4391,15 +4579,19 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String adjDarMethod;
 
         /**
-         * <p>Specifies whether to check the audio bitrate. You can specify only one of the IsCheckAudioBitrate and IsCheckAudioBitrateFail parameters. The priority of the IsCheckAudioBitrateFail parameter is higher. Valid values:</p>
+         * <p>Specifies whether to check the audio bitrate. IsCheckAudioBitrate and IsCheckAudioBitrateFail are mutually exclusive. IsCheckAudioBitrateFail has higher priority.</p>
          * <ul>
-         * <li>true: checks the video resolution. If the bitrate of the input audio is less than that of the output audio, the bitrate of the input audio is used for transcoding.</li>
-         * <li>false: does not check the video resolution.</li>
+         * <li><p>true: Check the bitrate. If the input audio bitrate is lower than the output setting, transcode at the input bitrate.</p>
+         * </li>
+         * <li><p>false: Do not check the bitrate.</p>
+         * </li>
          * </ul>
-         * <p>Default values:</p>
+         * <p>Default value rules:</p>
          * <ul>
-         * <li>If this parameter is not specified and the codec of the output audio is different from that of the input audio, the default value is false.</li>
-         * <li>If this parameter is not specified and the codec of the output audio is the same as that of the input audio, the default value is true.</li>
+         * <li><p>Empty and the codec differs from the input source: false.</p>
+         * </li>
+         * <li><p>Empty and the codec matches the input source: true.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -4409,10 +4601,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String isCheckAudioBitrate;
 
         /**
-         * <p>Specifies whether to check the audio bitrate. You can specify only one of the IsCheckAudioBitrate and IsCheckAudioBitrateFail parameters. The priority of the IsCheckAudioBitrateFail parameter is higher. Valid values:</p>
+         * <p>Specifies whether to check the audio bitrate. IsCheckAudioBitrate and IsCheckAudioBitrateFail are mutually exclusive. This parameter has higher priority.</p>
          * <ul>
-         * <li>true: checks the video resolution. If the bitrate of the input audio is less than that of the output audio, the transcoding job fails.</li>
-         * <li>false: does not check the video resolution. This is the default value.</li>
+         * <li><p>true: Check the bitrate. If the input audio bitrate is lower than the output setting, return a failure.</p>
+         * </li>
+         * <li><p>false (default): Do not check the bitrate.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -4422,10 +4616,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String isCheckAudioBitrateFail;
 
         /**
-         * <p>Specifies whether to check the video resolution. You can specify only one of the IsCheckReso and IsCheckResoFail parameters. The priority of the IsCheckResoFail parameter is higher. Valid values:</p>
+         * <p>Specifies whether to check the video resolution. IsCheckReso and IsCheckResoFail are mutually exclusive. IsCheckResoFail has higher priority.</p>
          * <ul>
-         * <li>true: checks the video resolution. If the width or height of the input video is less than that of the output video, the resolution of the input video is used for transcoding.</li>
-         * <li>false: does not check the video resolution. This is the default value.</li>
+         * <li><p>true: Check the resolution. If the input video resolution (width or height) is smaller than the output setting, transcode at the input resolution.</p>
+         * </li>
+         * <li><p>false (default): Do not check the resolution.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -4435,10 +4631,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String isCheckReso;
 
         /**
-         * <p>Specifies whether to check the video resolution. You can specify only one of the IsCheckReso and IsCheckResoFail parameters. The priority of the IsCheckResoFail parameter is higher. Valid values:</p>
+         * <p>Specifies whether to check the video resolution. IsCheckReso and IsCheckResoFail are mutually exclusive. This parameter has higher priority.</p>
          * <ul>
-         * <li>true: checks the video resolution. If the width or height of the input video is less than that of the output video, the transcoding job fails.</li>
-         * <li>false: does not check the video resolution. This is the default value.</li>
+         * <li><p>true: Check the resolution. If the input video resolution (width or height) is smaller than the output setting, return a failure.</p>
+         * </li>
+         * <li><p>false (default): Do not check the resolution.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -4448,10 +4646,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String isCheckResoFail;
 
         /**
-         * <p>Specifies whether to check the video bitrate. You can specify only one of the IsCheckVideoBitrate and IsCheckVideoBitrateFail parameters. The priority of the IsCheckVideoBitrateFail parameter is higher. Valid values:</p>
+         * <p>Specifies whether to check the video bitrate. IsCheckVideoBitrate and IsCheckVideoBitrateFail are mutually exclusive. IsCheckVideoBitrateFail has higher priority.</p>
          * <ul>
-         * <li>true: checks the video resolution. If the bitrate of the input video is less than that of the output video, the bitrate of the input video is used for transcoding.</li>
-         * <li>false: does not check the video resolution. This is the default value.</li>
+         * <li><p>true: Check the bitrate. If the input video bitrate is lower than the output setting, transcode at the input bitrate.</p>
+         * </li>
+         * <li><p>false (default): Do not check the bitrate.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -4461,10 +4661,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String isCheckVideoBitrate;
 
         /**
-         * <p>Specifies whether to check the video bitrate. You can specify only one of the IsCheckVideoBitrate and IsCheckVideoBitrateFail parameters. The priority of the IsCheckVideoBitrateFail parameter is higher. Valid values:</p>
+         * <p>Specifies whether to check the video bitrate. IsCheckVideoBitrate and IsCheckVideoBitrateFail are mutually exclusive. This parameter has higher priority.</p>
          * <ul>
-         * <li>true: checks the video resolution. If the bitrate of the input video is less than that of the output video, the transcoding job fails.</li>
-         * <li>false: does not check the video resolution. This is the default value.</li>
+         * <li><p>true: Check the bitrate. If the input video bitrate is lower than the output setting, return a failure.</p>
+         * </li>
+         * <li><p>false (default): Do not check the bitrate.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -4476,9 +4678,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         /**
          * <p>The video transcoding mode. Valid values:</p>
          * <ul>
-         * <li>onepass: You can set this parameter to onepass if the Bitrate parameter is set to ABR. This is the default value. The encoding speed of this mode is faster than that of the twopass mode.</li>
-         * <li>twopass: You can set this parameter to twopass if the Bitrate parameter is set to VBR. The encoding speed of this mode is slower than that of the onepass mode.</li>
-         * <li>CBR: the constant bitrate mode.</li>
+         * <li><p>onepass (default): Used for ABR. Encoding is faster than twopass.</p>
+         * </li>
+         * <li><p>twopass: Used for VBR. Encoding is slower than onepass.</p>
+         * </li>
+         * <li><p>CBR: Constant bitrate mode.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -4560,7 +4765,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsVideo extends TeaModel {
         /**
-         * <p>The maximum ABR. This parameter takes effect only for Narrowband HD 1.0. Valid values: [10,50000]. Unit: Kbit/s.</p>
+         * <p>The maximum bitrate for adaptive bitrate streaming (ABR). This applies only to narrow-high 1. Valid values: [10, 50000]. Unit: Kbps.</p>
          * 
          * <strong>example:</strong>
          * <p>6000</p>
@@ -4569,10 +4774,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String abrMax;
 
         /**
-         * <p>The average bitrate of the video.</p>
+         * <p>The average video bitrate.</p>
          * <ul>
-         * <li>Valid values: [10,50000].</li>
-         * <li>Unit: Kbit/s.</li>
+         * <li><p>Valid values: [10, 50000].</p>
+         * </li>
+         * <li><p>Unit: Kbps.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -4584,9 +4791,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         /**
          * <p>The buffer size.</p>
          * <ul>
-         * <li>Valid values: [1000,128000].</li>
-         * <li>Default value: 6000.</li>
-         * <li>Unit: KB.</li>
+         * <li><p>Valid values: [1000, 128000]</p>
+         * </li>
+         * <li><p>Default value: 6000</p>
+         * </li>
+         * <li><p>Unit: Kb</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -4605,12 +4815,14 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String codec;
 
         /**
-         * <p>The constant rate factor.</p>
+         * <p>The constant rate factor (CRF), which controls the trade-off between quality and bitrate.</p>
          * <ul>
-         * <li>Valid values: [0,51].</li>
-         * <li>Default value: 23 if the encoding format is H.264, or Default value when the Codec parameter is set to H.265: 26.</li>
+         * <li><p>Valid values: [0, 51].</p>
+         * </li>
+         * <li><p>Default values: 23 for H.264 and 26 for H.265.</p>
+         * </li>
          * </ul>
-         * <p>If this parameter is specified, the value of Bitrate becomes invalid.</p>
+         * <p>If you set Crf, the Bitrate setting is ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>23</p>
@@ -4619,10 +4831,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String crf;
 
         /**
-         * <p>The method of video cropping. Valid values:</p>
+         * <p>The video cropping method. Two options are available.</p>
          * <ul>
-         * <li>border: automatically detects and removes black bars.</li>
-         * <li>A value in the width:height:left:top format: crops the videos based on the custom settings. Example: 1280:800:0:140.</li>
+         * <li><p>Automatically detect and crop black bars. Set this to border.</p>
+         * </li>
+         * <li><p>Custom cropping. Format: width:height:left:top. Example: 1280:800:0:140</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -4634,9 +4848,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         /**
          * <p>The frame rate.</p>
          * <ul>
-         * <li>Valid values: (0,60].</li>
-         * <li>The value is 60 if the frame rate of the input video exceeds 60.</li>
-         * <li>Default value: the frame rate of the input video.</li>
+         * <li><p>Valid values: (0, 60].</p>
+         * </li>
+         * <li><p>If the frame rate of the input file exceeds 60, the system uses 60.</p>
+         * </li>
+         * <li><p>Default value: The frame rate of the input file.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -4646,10 +4863,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String fps;
 
         /**
-         * <p>The maximum number of frames between two keyframes.</p>
+         * <p>The maximum number of frames between keyframes.</p>
          * <ul>
-         * <li>Valid values: [1,1080000].</li>
-         * <li>Default value: 250.</li>
+         * <li><p>Valid values: [1, 1080000].</p>
+         * </li>
+         * <li><p>Default value: 250.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -4659,11 +4878,14 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String gop;
 
         /**
-         * <p>The height of the output video.</p>
+         * <p>The height.</p>
          * <ul>
-         * <li>Valid values: [128,4096].</li>
-         * <li>Unit: pixels.</li>
-         * <li>Default value: the height of the input video.</li>
+         * <li><p>Valid values: [128, 4096].</p>
+         * </li>
+         * <li><p>Unit: px.</p>
+         * </li>
+         * <li><p>Default value: The original video height.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -4673,7 +4895,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String height;
 
         /**
-         * <p>Specifies whether to enable the auto-rotate screen feature.</p>
+         * <p>Specifies whether to enable automatic rotation for portrait or landscape videos (also known as long-side/short-side mode).</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -4682,7 +4904,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String longShortMode;
 
         /**
-         * <p>The maximum bitrate of the output video. Valid values: [10,50000]. Unit: Kbit/s.</p>
+         * <p>The peak video bitrate. Valid values: [10, 50000]. Unit: Kbps.</p>
          * 
          * <strong>example:</strong>
          * <p>9000</p>
@@ -4691,10 +4913,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String maxrate;
 
         /**
-         * <p>The black bars added to the video.</p>
+         * <p>The padding configuration for black bars.</p>
          * <ul>
-         * <li>Format: width:height:left:top.</li>
-         * <li>Example: 1280:800:0:140.</li>
+         * <li><p>Format: width:height:left:top.</p>
+         * </li>
+         * <li><p>Example: 1280:800:0:140</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -4704,7 +4928,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String pad;
 
         /**
-         * <p>The pixel format of the video. Valid values: standard pixel formats such as yuv420p and yuvj420p.</p>
+         * <p>The video color format. Valid values include yuv420p and yuvj420p.</p>
          * 
          * <strong>example:</strong>
          * <p>yuv420p</p>
@@ -4713,7 +4937,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String pixFmt;
 
         /**
-         * <p>The preset video algorithm. This parameter takes effect only if the encoding format is H.264. Valid values: veryfast, fast, medium, slow, and slower. Default value: medium.</p>
+         * <p>The video encoder preset. Only H.264 supports this parameter. Valid values: veryfast, fast, medium, slow, and slower. Default value: medium.</p>
          * 
          * <strong>example:</strong>
          * <p>medium</p>
@@ -4724,9 +4948,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         /**
          * <p>The encoding profile. Valid values: baseline, main, and high.</p>
          * <ul>
-         * <li>baseline: applicable to mobile devices.</li>
-         * <li>main: applicable to standard-definition devices.</li>
-         * <li>high: applicable to high-definition devices.</li>
+         * <li><p>baseline: For mobile devices.</p>
+         * </li>
+         * <li><p>main: For standard-resolution devices.</p>
+         * </li>
+         * <li><p>high: For high-resolution devices.</p>
+         * </li>
          * </ul>
          * <p>Default value: high.</p>
          * 
@@ -4755,11 +4982,14 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String scanMode;
 
         /**
-         * <p>The width of the output video.</p>
+         * <p>The width.</p>
          * <ul>
-         * <li>Valid values: [128,4096].</li>
-         * <li>Unit: pixels.</li>
-         * <li>Default value: the width of the input video.</li>
+         * <li><p>Valid values: [128, 4096].</p>
+         * </li>
+         * <li><p>Unit: px.</p>
+         * </li>
+         * <li><p>Default value: The original video width.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -4927,19 +5157,19 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsAudio audio;
 
         /**
-         * <p>The encapsulation format settings.</p>
+         * <p>The container format settings.</p>
          */
         @NameInMap("Container")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsContainer container;
 
         /**
-         * <p>The encapsulation settings.</p>
+         * <p>The multiplexing settings.</p>
          */
         @NameInMap("MuxConfig")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsMuxConfig muxConfig;
 
         /**
-         * <p>The conditional transcoding configurations.</p>
+         * <p>The conditional transcoding parameters.</p>
          */
         @NameInMap("TransConfig")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsTransConfig transConfig;
@@ -4999,7 +5229,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscode extends TeaModel {
         /**
-         * <p>The parameters that are used to overwrite the corresponding parameters of the template.</p>
+         * <p>Parameters to overwrite. If you specify these, they replace the corresponding parameters in the template.</p>
          */
         @NameInMap("OverwriteParams")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParams overwriteParams;
@@ -5038,31 +5268,31 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfig extends TeaModel {
         /**
-         * <p>The multi-input stream merge configuration.</p>
+         * <p>The configuration for mixing multiple input streams.</p>
          */
         @NameInMap("CombineConfigs")
         public java.util.List<SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigCombineConfigs> combineConfigs;
 
         /**
-         * <p>The encryption settings.</p>
+         * <p>The encryption configuration.</p>
          */
         @NameInMap("Encryption")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigEncryption encryption;
 
         /**
-         * <p>The watermark configuration of an image.</p>
+         * <p>The image watermark configuration.</p>
          */
         @NameInMap("ImageWatermarks")
         public java.util.List<SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigImageWatermarks> imageWatermarks;
 
         /**
-         * <p>The subtitle configuration.</p>
+         * <p>The configuration for burning in captions.</p>
          */
         @NameInMap("Subtitles")
         public java.util.List<SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigSubtitles> subtitles;
 
         /**
-         * <p>The configurations of the text watermark.</p>
+         * <p>The text watermark configuration.</p>
          */
         @NameInMap("TextWatermarks")
         public java.util.List<SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTextWatermarks> textWatermarks;
@@ -5130,7 +5360,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListScheduleConfig extends TeaModel {
         /**
-         * <p>The ID of the MPS queue to which the job was submitted.</p>
+         * <p>The ID of the pipeline.</p>
          * 
          * <strong>example:</strong>
          * <p>e37ebee5d98b4781897f6086e89f9c56</p>
@@ -5139,7 +5369,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String pipelineId;
 
         /**
-         * <p>The priority of the job. Valid values: 1 to 10. The greater the value, the higher the priority.</p>
+         * <p>The priority of the task. A larger value indicates a higher priority. The value can be an integer from 1 to 10.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -5172,7 +5402,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobList extends TeaModel {
         /**
-         * <p>The time when the job was created.</p>
+         * <p>The time the job was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-01-12T08:49:41Z</p>
@@ -5181,7 +5411,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The time when the job was complete.</p>
+         * <p>The time when the job finished.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-01-12T08:49:41Z</p>
@@ -5190,13 +5420,13 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String finishTime;
 
         /**
-         * <p>The input group of the job. An input of a single file indicates a transcoding job. An input of multiple files indicates an audio and video stream merge job.</p>
+         * <p>The input group for the job. A single input creates a transcoding job. Multiple inputs create a media merging job.</p>
          */
         @NameInMap("InputGroup")
         public java.util.List<SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListInputGroup> inputGroup;
 
         /**
-         * <p>The subjob ID.</p>
+         * <p>The sub-job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7d6a7e0d4db2457a8d45ff5d43e1bf0a</p>
@@ -5205,7 +5435,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The index number of the subjob in the entire job.</p>
+         * <p>The index of the sub-job within the entire job.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -5223,19 +5453,19 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The media information about the video generated by the job.</p>
+         * <p>The media information of the video generated by the job.</p>
          */
         @NameInMap("OutFileMeta")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListOutFileMeta outFileMeta;
 
         /**
-         * <p>The output file configuration.</p>
+         * <p>The output media configuration.</p>
          */
         @NameInMap("Output")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListOutput output;
 
         /**
-         * <p>The main job ID.</p>
+         * <p>The parent job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8b2198504dd340b7b3c9842a74fc9baa</p>
@@ -5244,13 +5474,13 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String parentJobId;
 
         /**
-         * <p>The transcoding configuration.</p>
+         * <p>The transcoding processing configuration.</p>
          */
         @NameInMap("ProcessConfig")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfig processConfig;
 
         /**
-         * <p>The ID of the request that submitted the job.</p>
+         * <p>The ID of the request to submit the job.</p>
          * 
          * <strong>example:</strong>
          * <p>31E30781-9495-5E2D-A84D-759B0A01E262</p>
@@ -5259,19 +5489,24 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String requestId;
 
         /**
-         * <p>The scheduling information about the job.</p>
+         * <p>The scheduling information for the job.</p>
          */
         @NameInMap("ScheduleConfig")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListScheduleConfig scheduleConfig;
 
         /**
-         * <p>The state of the transcoding job. Valid values:</p>
+         * <p>The status of the transcoding job.</p>
          * <ul>
-         * <li>Init: The job is submitted.</li>
-         * <li>Processing: The job is in progress.</li>
-         * <li>Success: The job is successful.</li>
-         * <li>Fail: The job failed.</li>
-         * <li>Deleted: The job is deleted.</li>
+         * <li><p>Init: The job is submitted.</p>
+         * </li>
+         * <li><p>Processing: The job is being transcoded.</p>
+         * </li>
+         * <li><p>Success: The transcoding is successful.</p>
+         * </li>
+         * <li><p>Fail: The transcoding failed.</p>
+         * </li>
+         * <li><p>Deleted: The job is deleted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -5281,7 +5516,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The job submission result.</p>
+         * <p>The result of the job submission.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -5299,7 +5534,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String submitTime;
 
         /**
-         * <p>The user data.</p>
+         * <p>User data.</p>
          * 
          * <strong>example:</strong>
          * <p>user-data</p>
@@ -5444,7 +5679,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJob extends TeaModel {
         /**
-         * <p>The time when the job was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the job was created. The format is yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-01-12T08:49:41Z</p>
@@ -5453,7 +5688,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The time when the job was complete. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the job finished. The format is yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-01-12T08:49:41Z</p>
@@ -5462,13 +5697,13 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String finishTime;
 
         /**
-         * <p>The input group of the job. An input of a single file indicates a transcoding job. An input of multiple files indicates an audio and video stream merge job.</p>
+         * <p>The input group for the job. A single input creates a transcoding job. Multiple inputs create a job to merge audio and video streams.</p>
          */
         @NameInMap("InputGroup")
         public java.util.List<SubmitTranscodeJobResponseBodyTranscodeParentJobInputGroup> inputGroup;
 
         /**
-         * <p>The number of subjobs.</p>
+         * <p>The number of sub-jobs.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -5477,7 +5712,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public Integer jobCount;
 
         /**
-         * <p>The job name.</p>
+         * <p>The name of the job.</p>
          * 
          * <strong>example:</strong>
          * <p>transcode-job</p>
@@ -5492,7 +5727,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public java.util.List<SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroup> outputGroup;
 
         /**
-         * <p>The main job ID.</p>
+         * <p>The ID of the parent job.</p>
          * 
          * <strong>example:</strong>
          * <p>8b2198504dd340b7b3c9842a74fc9baa</p>
@@ -5510,7 +5745,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public Integer percent;
 
         /**
-         * <p>The ID of the request that submitted the job.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>31E30781-9495-5E2D-A84D-759B0A01E262</p>
@@ -5519,13 +5754,13 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String requestId;
 
         /**
-         * <p>The scheduling configuration of the job.</p>
+         * <p>The job scheduling configuration.</p>
          */
         @NameInMap("ScheduleConfig")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobScheduleConfig scheduleConfig;
 
         /**
-         * <p>The state of the job. Success: At least one of the subjobs is successful. Fail: All subjobs failed.</p>
+         * <p>The status of the job. Success: At least one sub-job succeeded after all sub-jobs are complete. Fail: All sub-jobs failed.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -5534,7 +5769,7 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the job was submitted. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the job was submitted. The format is yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-01-12T08:49:41Z</p>
@@ -5543,13 +5778,13 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         public String submitTime;
 
         /**
-         * <p>The list of subjobs.</p>
+         * <p>The list of sub-jobs.</p>
          */
         @NameInMap("TranscodeJobList")
         public java.util.List<SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobList> transcodeJobList;
 
         /**
-         * <p>The source of the job. Valid values: API, WorkFlow, and Console.</p>
+         * <p>The source of the job. Valid values: \<code>API\\</code>, \<code>WorkFlow\\</code>, and \<code>Console\\</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>API</p>

@@ -192,9 +192,12 @@ public class GetLiveTranscodeJobResponseBody extends TeaModel {
         /**
          * <p>The state of the job.</p>
          * <ul>
-         * <li>0: The job is not started.</li>
-         * <li>1: The job is in progress.</li>
-         * <li>2: The job is stopped.</li>
+         * <li><p>0: The job is not started.</p>
+         * </li>
+         * <li><p>1: The job is in progress.</p>
+         * </li>
+         * <li><p>2: The job is stopped.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -8,10 +8,14 @@ public class ListSmartJobsRequest extends TeaModel {
      * <p>The job state.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>Finished: The job is complete.</li>
-     * <li>Failed: The job failed.</li>
-     * <li>Executing: The job is in progress.</li>
-     * <li>Created: The job is created.</li>
+     * <li><p>Finished: The job is complete.</p>
+     * </li>
+     * <li><p>Failed: The job failed.</p>
+     * </li>
+     * <li><p>Executing: The job is in progress.</p>
+     * </li>
+     * <li><p>Created: The job is created.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,10 +28,14 @@ public class ListSmartJobsRequest extends TeaModel {
      * <p>The job type.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>ASR: automatic speech recognition(job) job.</li>
-     * <li>DynamicChart: dynamic chart job.</li>
-     * <li>VideoTranslation: video translation job.</li>
-     * <li>TextToSpeech: intelligent audio production job.</li>
+     * <li><p>ASR: automatic speech recognition(job) job.</p>
+     * </li>
+     * <li><p>DynamicChart: dynamic chart job.</p>
+     * </li>
+     * <li><p>VideoTranslation: video translation job.</p>
+     * </li>
+     * <li><p>TextToSpeech: intelligent audio production job.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -77,8 +85,10 @@ public class ListSmartJobsRequest extends TeaModel {
      * <p>The sorting parameter. By default, the query results are sorted by creation time in descending order.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>CreationTime:Asc: sorted by creation time in ascending order.</li>
-     * <li>CreationTime:Desc: sorted by creation time in descending order.</li>
+     * <li><p>CreationTime:Asc: sorted by creation time in ascending order.</p>
+     * </li>
+     * <li><p>CreationTime:Desc: sorted by creation time in descending order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

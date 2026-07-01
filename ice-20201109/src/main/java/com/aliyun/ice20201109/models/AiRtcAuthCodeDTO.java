@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AiRtcAuthCodeDTO extends TeaModel {
     /**
+     * <p>Activation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-01 06:57:43</p>
      */
@@ -12,6 +14,8 @@ public class AiRtcAuthCodeDTO extends TeaModel {
     public String activatedTime;
 
     /**
+     * <p>Authorization code.</p>
+     * 
      * <strong>example:</strong>
      * <p>iU1IeJech7***</p>
      */
@@ -19,6 +23,8 @@ public class AiRtcAuthCodeDTO extends TeaModel {
     public String authCode;
 
     /**
+     * <p>Creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-12-23T13:33:49Z</p>
      */
@@ -26,6 +32,8 @@ public class AiRtcAuthCodeDTO extends TeaModel {
     public String creationTime;
 
     /**
+     * <p>Device ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>device-***</p>
      */
@@ -42,6 +50,8 @@ public class AiRtcAuthCodeDTO extends TeaModel {
     public String license;
 
     /**
+     * <p>Batch ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>11096067***</p>
      */
@@ -49,6 +59,8 @@ public class AiRtcAuthCodeDTO extends TeaModel {
     public String licenseItemId;
 
     /**
+     * <p>Update time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-12-23T13:33:49Z</p>
      */
@@ -56,6 +68,12 @@ public class AiRtcAuthCodeDTO extends TeaModel {
     public String modificationTime;
 
     /**
+     * <p>Status:</p>
+     * <ul>
+     * <li>1 - Activated</li>
+     * <li>2 - Not activated</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -63,6 +81,12 @@ public class AiRtcAuthCodeDTO extends TeaModel {
     public Integer status;
 
     /**
+     * <p>Type:</p>
+     * <ul>
+     * <li>1 - Voice call</li>
+     * <li>2 - Visual understanding</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

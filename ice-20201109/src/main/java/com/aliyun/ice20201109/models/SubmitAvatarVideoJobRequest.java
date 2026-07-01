@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class SubmitAvatarVideoJobRequest extends TeaModel {
     /**
-     * <p>The task description. Max length: 128 bytes.</p>
+     * <p>The description of the job. The description can be up to 128 bytes in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>Test description</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The avatar configurations, including the avatar ID, voice, and speech rate.</p>
+     * <p>The configurations for the avatar job, such as the avatar ID, voice, and speech rate.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;AvatarId&quot;:&quot;yunqiao&quot;}</p>
@@ -23,19 +23,16 @@ public class SubmitAvatarVideoJobRequest extends TeaModel {
     public String editingConfig;
 
     /**
-     * <p>The input configurations of the video rendering task for an avatar. You can specify text, the Object Storage Service (OSS) URL of an audio file, or the ID of a media asset. The audio file must be in the MP3 or WAV format.</p>
-     * <blockquote>
-     * <p>Notice: The text must be at least five characters in length.</p>
-     * </blockquote>
+     * <p>Input can be text, an audio file from Object Storage Service (OSS), or a <a href="">media asset</a>. Only MP3 and WAV audio formats are supported.&gt;Notice:  The value of the <code>Text</code> parameter must contain at least five characters.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;Text&quot;: &quot;To be, or not to be, that is the question.&quot;}</p>
+     * <p>{&quot;Text&quot;: &quot;To be or not to be, that is the question.&quot;}</p>
      */
     @NameInMap("InputConfig")
     public String inputConfig;
 
     /**
-     * <p>The output configurations, including the destination URL for the rendered video.</p>
+     * <p>Specifies the output configuration, including the destination URL for the rendered video.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;MediaURL&quot;:&quot;<a href="https://your-bucket.oss-cn-shanghai.aliyuncs.com/xxx.mp4%22%7D">https://your-bucket.oss-cn-shanghai.aliyuncs.com/xxx.mp4&quot;}</a></p>
@@ -44,16 +41,16 @@ public class SubmitAvatarVideoJobRequest extends TeaModel {
     public String outputConfig;
 
     /**
-     * <p>The task name. Max length: 128 bytes.</p>
+     * <p>The title of the job. The title can be up to 128 bytes in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>Test title</p>
      */
     @NameInMap("Title")
     public String title;
 
     /**
-     * <p>A user-defined JSON string for passing custom business information, such as environment details or task metadata.</p>
+     * <p>A user-defined JSON string for passing custom business information, such as environment details or job metadata.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;user&quot;:&quot;data&quot;,&quot;env&quot;:&quot;prod&quot;}</p>

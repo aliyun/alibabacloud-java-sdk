@@ -44,13 +44,20 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
         /**
          * <p>The label of the moderation result. Valid values:</p>
          * <ul>
-         * <li><strong>normal</strong>: normal content.</li>
-         * <li><strong>spam</strong>: spam.</li>
-         * <li><strong>ad</strong>: ads.</li>
-         * <li><strong>abuse</strong>: abuse content.</li>
-         * <li><strong>flood</strong>: excessive junk content.</li>
-         * <li><strong>contraband</strong>: prohibited content.</li>
-         * <li><strong>meaningless</strong>: meaningless content.</li>
+         * <li><p><strong>normal</strong>: normal content.</p>
+         * </li>
+         * <li><p><strong>spam</strong>: spam.</p>
+         * </li>
+         * <li><p><strong>ad</strong>: ads.</p>
+         * </li>
+         * <li><p><strong>abuse</strong>: abuse content.</p>
+         * </li>
+         * <li><p><strong>flood</strong>: excessive junk content.</p>
+         * </li>
+         * <li><p><strong>contraband</strong>: prohibited content.</p>
+         * </li>
+         * <li><p><strong>meaningless</strong>: meaningless content.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -80,9 +87,12 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
         /**
          * <p>The recommended subsequent operation. Valid values:</p>
          * <ul>
-         * <li><strong>pass</strong>: The content passes the moderation.</li>
-         * <li><strong>review</strong>: The content needs to be manually reviewed.</li>
-         * <li><strong>block</strong>: The content needs to be blocked.</li>
+         * <li><p><strong>pass</strong>: The content passes the moderation.</p>
+         * </li>
+         * <li><p><strong>review</strong>: The content needs to be manually reviewed.</p>
+         * </li>
+         * <li><p><strong>block</strong>: The content needs to be blocked.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -276,13 +286,20 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
         /**
          * <p>The label of the moderation result. Valid values:</p>
          * <ul>
-         * <li><strong>normal</strong>: normal content.</li>
-         * <li><strong>spam</strong>: spam.</li>
-         * <li><strong>ad</strong>: ads.</li>
-         * <li><strong>abuse</strong>: abuse content.</li>
-         * <li><strong>flood</strong>: excessive junk content.</li>
-         * <li><strong>contraband</strong>: prohibited content.</li>
-         * <li><strong>meaningless</strong>: meaningless content.</li>
+         * <li><p><strong>normal</strong>: normal content.</p>
+         * </li>
+         * <li><p><strong>spam</strong>: spam.</p>
+         * </li>
+         * <li><p><strong>ad</strong>: ads.</p>
+         * </li>
+         * <li><p><strong>abuse</strong>: abuse content.</p>
+         * </li>
+         * <li><p><strong>flood</strong>: excessive junk content.</p>
+         * </li>
+         * <li><p><strong>contraband</strong>: prohibited content.</p>
+         * </li>
+         * <li><p><strong>meaningless</strong>: meaningless content.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -312,9 +329,12 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
         /**
          * <p>The recommended subsequent operation. Valid values:</p>
          * <ul>
-         * <li><strong>pass</strong>: The content passes the moderation.</li>
-         * <li><strong>review</strong>: The content needs to be manually reviewed.</li>
-         * <li><strong>block</strong>: The content needs to be blocked.</li>
+         * <li><p><strong>pass</strong>: The content passes the moderation.</p>
+         * </li>
+         * <li><p><strong>review</strong>: The content needs to be manually reviewed.</p>
+         * </li>
+         * <li><p><strong>block</strong>: The content needs to be blocked.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -425,13 +445,20 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
         /**
          * <p>The label of the moderation result. Valid values:</p>
          * <ul>
-         * <li><strong>normal</strong>: normal content.</li>
-         * <li><strong>spam</strong>: spam.</li>
-         * <li><strong>ad</strong>: ads.</li>
-         * <li><strong>abuse</strong>: abuse content.</li>
-         * <li><strong>flood</strong>: excessive junk content.</li>
-         * <li><strong>contraband</strong>: prohibited content.</li>
-         * <li><strong>meaningless</strong>: meaningless content.</li>
+         * <li><p><strong>normal</strong>: normal content.</p>
+         * </li>
+         * <li><p><strong>spam</strong>: spam.</p>
+         * </li>
+         * <li><p><strong>ad</strong>: ads.</p>
+         * </li>
+         * <li><p><strong>abuse</strong>: abuse content.</p>
+         * </li>
+         * <li><p><strong>flood</strong>: excessive junk content.</p>
+         * </li>
+         * <li><p><strong>contraband</strong>: prohibited content.</p>
+         * </li>
+         * <li><p><strong>meaningless</strong>: meaningless content.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -461,9 +488,12 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
         /**
          * <p>The recommended subsequent operation. Valid values:</p>
          * <ul>
-         * <li><strong>pass</strong>: The content passes the moderation.</li>
-         * <li><strong>review</strong>: The content needs to be manually reviewed.</li>
-         * <li><strong>block</strong>: The content needs to be blocked.</li>
+         * <li><p><strong>pass</strong>: The content passes the moderation.</p>
+         * </li>
+         * <li><p><strong>review</strong>: The content needs to be manually reviewed.</p>
+         * </li>
+         * <li><p><strong>block</strong>: The content needs to be blocked.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -782,7 +812,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
         /**
          * <p>The OSS object that is generated as the output snapshot.</p>
          * <blockquote>
-         * <p> In the example, {Count} is a placeholder. The OSS objects that are generated as output snapshots are named <code>output00001-****.jpg</code>, <code>output00002-****.jpg</code>, and so on.</p>
+         * <p>In the example, {Count} is a placeholder. The OSS objects that are generated as output snapshots are named <code>output00001-****.jpg</code>, <code>output00002-****.jpg</code>, and so on.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -841,8 +871,10 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the video content needs to be moderated. Default value: <strong>true</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The video content needs to be moderated.</li>
-         * <li><strong>false</strong>: The video content does not need to be moderated.</li>
+         * <li><p><strong>true</strong>: The video content needs to be moderated.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The video content does not need to be moderated.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -970,12 +1002,15 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
         /**
          * <p>The overall result of the content moderation job. Valid values:</p>
          * <ul>
-         * <li><strong>pass</strong>: The content passes the moderation.</li>
-         * <li><strong>review</strong>: The content needs to be manually reviewed.</li>
-         * <li><strong>block</strong>: The content needs to be blocked.</li>
+         * <li><p><strong>pass</strong>: The content passes the moderation.</p>
+         * </li>
+         * <li><p><strong>review</strong>: The content needs to be manually reviewed.</p>
+         * </li>
+         * <li><p><strong>block</strong>: The content needs to be blocked.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> If the moderation result of any type of content is review, the overall result is review. If the moderation result of any type of content is block, the overall result is block.</p>
+         * <p>If the moderation result of any type of content is review, the overall result is review. If the moderation result of any type of content is block, the overall result is block.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

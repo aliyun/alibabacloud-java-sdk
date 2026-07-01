@@ -120,6 +120,9 @@ public class ListLivePackageChannelGroupsResponseBody extends TeaModel {
 
         /**
          * <p>The channel group description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是频道组的描述信息。</p>
          */
         @NameInMap("Description")
         public String description;

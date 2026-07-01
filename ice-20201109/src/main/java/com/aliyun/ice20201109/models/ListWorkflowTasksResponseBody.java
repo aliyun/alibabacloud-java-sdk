@@ -105,8 +105,10 @@ public class ListWorkflowTasksResponseBody extends TeaModel {
         /**
          * <p>The source of the media file. Valid values:</p>
          * <ul>
-         * <li>OSS: an OSS object.</li>
-         * <li>Media: a media asset.</li>
+         * <li><p>OSS: an OSS object.</p>
+         * </li>
+         * <li><p>Media: a media asset.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -246,11 +248,16 @@ public class ListWorkflowTasksResponseBody extends TeaModel {
          * <p>The task state.</p>
          * <p><strong>Valid values</strong>:</p>
          * <ul>
-         * <li>Init: Initializing</li>
-         * <li>Failed</li>
-         * <li>Canceled</li>
-         * <li>Processing</li>
-         * <li>Succeed</li>
+         * <li><p>Init: Initializing</p>
+         * </li>
+         * <li><p>Failed</p>
+         * </li>
+         * <li><p>Canceled</p>
+         * </li>
+         * <li><p>Processing</p>
+         * </li>
+         * <li><p>Succeed</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

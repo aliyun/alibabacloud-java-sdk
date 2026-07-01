@@ -61,8 +61,10 @@ public class ListDynamicImageJobsResponseBody extends TeaModel {
         /**
          * <p>The input file. The file can be an OSS object or a media asset. The URL of an OSS object can be in one of the following formats:</p>
          * <ol>
-         * <li>OSS://bucket/object</li>
-         * <li>http(s)://bucket.oss-[regionId].aliyuncs.com/object In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object URL in OSS.</li>
+         * <li><p>OSS://bucket/object</p>
+         * </li>
+         * <li><p>http(s)://bucket.oss-[regionId].aliyuncs.com/object In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object URL in OSS.</p>
+         * </li>
          * </ol>
          * 
          * <strong>example:</strong>
@@ -74,8 +76,10 @@ public class ListDynamicImageJobsResponseBody extends TeaModel {
         /**
          * <p>The type of the input file. Valid values:</p>
          * <ol>
-         * <li>OSS: an Object Storage Service (OSS) object.</li>
-         * <li>Media: a media asset.</li>
+         * <li><p>OSS: an Object Storage Service (OSS) object.</p>
+         * </li>
+         * <li><p>Media: a media asset.</p>
+         * </li>
          * </ol>
          * <ul>
          * <li></li>
@@ -115,8 +119,10 @@ public class ListDynamicImageJobsResponseBody extends TeaModel {
         /**
          * <p>The input file. If Type is set to OSS, the URL of an OSS object is returned. If Type is set to Media, the ID of a media asset is returned. The URL of an OSS object can be in one of the following formats:</p>
          * <ol>
-         * <li>OSS://bucket/object</li>
-         * <li>http(s)://bucket.oss-[RegionId].aliyuncs.com/object In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object URL in OSS.</li>
+         * <li><p>OSS://bucket/object</p>
+         * </li>
+         * <li><p>http(s)://bucket.oss-[RegionId].aliyuncs.com/object In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object URL in OSS.</p>
+         * </li>
          * </ol>
          * 
          * <strong>example:</strong>
@@ -128,8 +134,10 @@ public class ListDynamicImageJobsResponseBody extends TeaModel {
         /**
          * <p>The type of the output file. Valid values:</p>
          * <ol>
-         * <li>OSS: an OSS object.</li>
-         * <li>Media: a media asset.</li>
+         * <li><p>OSS: an OSS object.</p>
+         * </li>
+         * <li><p>Media: a media asset.</p>
+         * </li>
          * </ol>
          * <ul>
          * <li></li>
@@ -235,9 +243,12 @@ public class ListDynamicImageJobsResponseBody extends TeaModel {
         /**
          * <p>The state of the job.</p>
          * <ul>
-         * <li><strong>Success</strong>: The job is successful.</li>
-         * <li><strong>Fail</strong>: The job failed.</li>
-         * <li><strong>Init</strong>: The job is submitted.</li>
+         * <li><p><strong>Success</strong>: The job is successful.</p>
+         * </li>
+         * <li><p><strong>Fail</strong>: The job failed.</p>
+         * </li>
+         * <li><p><strong>Init</strong>: The job is submitted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -268,9 +279,12 @@ public class ListDynamicImageJobsResponseBody extends TeaModel {
          * <p>The request trigger source.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Console</li>
-         * <li>Workflow</li>
-         * <li>API</li>
+         * <li><p>Console</p>
+         * </li>
+         * <li><p>Workflow</p>
+         * </li>
+         * <li><p>API</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

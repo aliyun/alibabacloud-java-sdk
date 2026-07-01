@@ -105,7 +105,7 @@ public class SearchMediaByMultimodalResponseBody extends TeaModel {
          * <p>The score.</p>
          * 
          * <strong>example:</strong>
-         * <p>1.2</p>
+         * <p>0.99</p>
          */
         @NameInMap("Score")
         public Double score;

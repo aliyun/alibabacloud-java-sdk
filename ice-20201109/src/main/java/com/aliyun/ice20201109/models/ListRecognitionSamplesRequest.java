@@ -7,10 +7,14 @@ public class ListRecognitionSamplesRequest extends TeaModel {
     /**
      * <p>The type of recognition algorithm. Valid values:</p>
      * <ul>
-     * <li>landmark</li>
-     * <li>object</li>
-     * <li>logo</li>
-     * <li>face</li>
+     * <li><p>landmark</p>
+     * </li>
+     * <li><p>object</p>
+     * </li>
+     * <li><p>logo</p>
+     * </li>
+     * <li><p>face</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -21,24 +25,30 @@ public class ListRecognitionSamplesRequest extends TeaModel {
     public String algorithm;
 
     /**
-     * <p>The ID of the entity.</p>
+     * <p>The entity ID. If you set this parameter to ANY, the system queries by EntityName.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>e6b985c05174412dbc77c92496b7373b</p>
+     * <p>**<strong><strong><strong><strong><strong><strong>544cb84754</strong></strong></strong></strong></strong></strong></p>
      */
     @NameInMap("EntityId")
     public String entityId;
 
+    /**
+     * <p>The entity name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>custom_person</p>
+     */
     @NameInMap("EntityName")
     public String entityName;
 
     /**
-     * <p>The ID of the recognition library.</p>
+     * <p>The library ID. If you specify this parameter, the system performs an exact match. You can specify multiple library IDs. Separate them with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxxxxxxxxx</p>
+     * <p>lib1,lib2,lib3</p>
      */
     @NameInMap("LibId")
     public String libId;

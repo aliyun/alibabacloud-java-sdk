@@ -5,6 +5,16 @@ import com.aliyun.tea.*;
 
 public class QueryIpcQuotaRequest extends TeaModel {
     /**
+     * <p>Capability. Default value is understand. Valid values:</p>
+     * <ul>
+     * <li><p>understand: understanding</p>
+     * </li>
+     * <li><p>understand-reid: understanding with reid</p>
+     * </li>
+     * <li><p>search: search</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>understand</p>
      */
@@ -12,6 +22,8 @@ public class QueryIpcQuotaRequest extends TeaModel {
     public String capability;
 
     /**
+     * <p>End time. UTC time in the format: yyyy-MM-ddTHH:mm:ssZ. The difference between EndTime and StartTime must not exceed 180 days.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-05-09T08:52:00Z</p>
      */
@@ -19,6 +31,8 @@ public class QueryIpcQuotaRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>Page number for paging. Default Value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +40,8 @@ public class QueryIpcQuotaRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>Page size, which specifies the number of entries displayed per page. Default value is 10, and the maximum value is 50.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -33,6 +49,8 @@ public class QueryIpcQuotaRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Start Time. UTC time in the format: yyyy-MM-ddTHH:mm:ssZ.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-05-08T08:52:00Z</p>
      */

@@ -130,7 +130,7 @@ public class GetUrlUploadInfosResponseBody extends TeaModel {
         /**
          * <p>The upload URL of the source file.</p>
          * <blockquote>
-         * <p> A maximum of 100 URLs can be returned.</p>
+         * <p>A maximum of 100 URLs can be returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -16,8 +16,10 @@ public class QuerySearchIndexResponseBody extends TeaModel {
     /**
      * <p>The state of the index. Valid values:</p>
      * <ul>
-     * <li>active: the index is enabled.</li>
-     * <li>Deactive: the index is not enabled.</li>
+     * <li><p>active: the index is enabled.</p>
+     * </li>
+     * <li><p>Deactive: the index is not enabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,9 +31,12 @@ public class QuerySearchIndexResponseBody extends TeaModel {
     /**
      * <p>The category of the index. Valid values:</p>
      * <ul>
-     * <li>mm: large visual model.</li>
-     * <li>face: face recognition.</li>
-     * <li>aiLabel: smart tagging.</li>
+     * <li><p>mm: large visual model.</p>
+     * </li>
+     * <li><p>face: face recognition.</p>
+     * </li>
+     * <li><p>aiLabel: smart tagging.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -70,8 +75,10 @@ public class QuerySearchIndexResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

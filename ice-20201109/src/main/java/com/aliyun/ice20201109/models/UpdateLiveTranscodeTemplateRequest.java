@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateLiveTranscodeTemplateRequest extends TeaModel {
     /**
      * <p>The template name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Template1130-2</p>
      */
     @NameInMap("Name")
     public String name;
@@ -86,10 +89,14 @@ public class UpdateLiveTranscodeTemplateRequest extends TeaModel {
         /**
          * <p>The audio codec profile. Valid values when the Codec parameter is set to AAC:</p>
          * <ul>
-         * <li>aac_low</li>
-         * <li>aac_he</li>
-         * <li>aac_he_v2</li>
-         * <li>aac_ld</li>
+         * <li><p>aac_low</p>
+         * </li>
+         * <li><p>aac_he</p>
+         * </li>
+         * <li><p>aac_he_v2</p>
+         * </li>
+         * <li><p>aac_ld</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -168,8 +175,10 @@ public class UpdateLiveTranscodeTemplateRequest extends TeaModel {
         /**
          * <p>The encoding type. Valid values:</p>
          * <ul>
-         * <li>H.264</li>
-         * <li>H.265</li>
+         * <li><p>H.264</p>
+         * </li>
+         * <li><p>H.265</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -199,12 +208,15 @@ public class UpdateLiveTranscodeTemplateRequest extends TeaModel {
         /**
          * <p>The height of the output video. Valid values:</p>
          * <ul>
-         * <li>Height ≥ 128</li>
-         * <li>max (Height,Width) ≤ 2560</li>
-         * <li>min（Height,Width）≤ 1440</li>
+         * <li><p>Height ≥ 128</p>
+         * </li>
+         * <li><p>max (Height,Width) ≤ 2560</p>
+         * </li>
+         * <li><p>min(Height,Width)≤ 1440</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> The resolution of a video transcoded by using the H.265 Narrowband HD template cannot exceed 1,280 × 720 pixels.</p>
+         * <p>The resolution of a video transcoded by using the H.265 Narrowband HD template cannot exceed 1,280 × 720 pixels.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -216,9 +228,12 @@ public class UpdateLiveTranscodeTemplateRequest extends TeaModel {
         /**
          * <p>The video encoding profile. The profile determines how a video is encoded. In most cases, a greater value indicates better image quality and higher resource consumption. Valid values:</p>
          * <ul>
-         * <li>1: baseline. This value is suitable for mobile devices.</li>
-         * <li>2: main. This value is suitable for standard-definition devices.</li>
-         * <li>3: high. This value is suitable for high-definition devices.</li>
+         * <li><p>1: baseline. This value is suitable for mobile devices.</p>
+         * </li>
+         * <li><p>2: main. This value is suitable for standard-definition devices.</p>
+         * </li>
+         * <li><p>3: high. This value is suitable for high-definition devices.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -230,12 +245,15 @@ public class UpdateLiveTranscodeTemplateRequest extends TeaModel {
         /**
          * <p>The width of the output video. Valid values:</p>
          * <ul>
-         * <li>Width ≥ 128</li>
-         * <li>max (Height,Width) ≤ 2560</li>
-         * <li>min（Height,Width）≤ 1440</li>
+         * <li><p>Width ≥ 128</p>
+         * </li>
+         * <li><p>max (Height,Width) ≤ 2560</p>
+         * </li>
+         * <li><p>min(Height,Width)≤ 1440</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> The resolution of a video transcoded by using the H.265 Narrowband HD template cannot exceed 1,280 × 720 pixels.</p>
+         * <p>The resolution of a video transcoded by using the H.265 Narrowband HD template cannot exceed 1,280 × 720 pixels.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

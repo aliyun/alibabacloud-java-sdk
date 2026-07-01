@@ -18,28 +18,41 @@ public class CreateCustomTemplateRequest extends TeaModel {
      * <p>The template subtype.</p>
      * <p>Valid values for transcoding templates:</p>
      * <ul>
-     * <li>1 (Normal): regular template.</li>
-     * <li>2 (AudioTranscode): audio transcoding template.</li>
-     * <li>3 (Remux): container format conversion template.</li>
-     * <li>4 (NarrowBandV1): Narrowband HD 1.0 template.</li>
-     * <li>5 (NarrowBandV2): Narrowband HD 2.0 template.</li>
+     * <li><p>1 (Normal): regular template.</p>
+     * </li>
+     * <li><p>2 (AudioTranscode): audio transcoding template.</p>
+     * </li>
+     * <li><p>3 (Remux): container format conversion template.</p>
+     * </li>
+     * <li><p>4 (NarrowBandV1): Narrowband HD 1.0 template.</p>
+     * </li>
+     * <li><p>5 (NarrowBandV2): Narrowband HD 2.0 template.</p>
+     * </li>
      * </ul>
      * <p>Valid values for snapshot templates:</p>
      * <ul>
-     * <li>1 (Normal): regular template.</li>
-     * <li>2 (Sprite): sprite template.</li>
-     * <li>3 (WebVtt): WebVTT template.</li>
+     * <li><p>1 (Normal): regular template.</p>
+     * </li>
+     * <li><p>2 (Sprite): sprite template.</p>
+     * </li>
+     * <li><p>3 (WebVtt): WebVTT template.</p>
+     * </li>
      * </ul>
      * <p>Valid values for AI-assisted content moderation templates:</p>
      * <ul>
-     * <li>1 (Video): video moderation template.</li>
-     * <li>2 (Audio): audio moderation template.</li>
-     * <li>3 (Image): image moderation template.</li>
+     * <li><p>1 (Video): video moderation template.</p>
+     * </li>
+     * <li><p>2 (Audio): audio moderation template.</p>
+     * </li>
+     * <li><p>3 (Image): image moderation template.</p>
+     * </li>
      * </ul>
      * <p>Valid values for AI-assisted intelligent erasure templates.</p>
      * <ul>
-     * <li>1 (VideoDelogo): logo erasure template.</li>
-     * <li>2 (VideoDetext): subtitle erasure template.</li>
+     * <li><p>1 (VideoDelogo): logo erasure template.</p>
+     * </li>
+     * <li><p>2 (VideoDetext): subtitle erasure template.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -61,17 +74,28 @@ public class CreateCustomTemplateRequest extends TeaModel {
     /**
      * <p>The template type. Valid values:</p>
      * <ul>
-     * <li>1: transcoding template.</li>
-     * <li>2: snapshot template.</li>
-     * <li>3: animated image template.</li>
-     * <li>4\. image watermark template.</li>
-     * <li>5: text watermark template.</li>
-     * <li>6: subtitle template.</li>
-     * <li>7: AI-assisted content moderation template.</li>
-     * <li>8: AI-assisted intelligent thumbnail template.</li>
-     * <li>9: AI-assisted intelligent erasure template.</li>
-     * <li>10: AI-assisted media fingerprint analysis template.</li>
-     * <li>11: AI-assisted smart tagging template.</li>
+     * <li><p>1: transcoding template.</p>
+     * </li>
+     * <li><p>2: snapshot template.</p>
+     * </li>
+     * <li><p>3: animated image template.</p>
+     * </li>
+     * <li><p>4\. image watermark template.</p>
+     * </li>
+     * <li><p>5: text watermark template.</p>
+     * </li>
+     * <li><p>6: subtitle template.</p>
+     * </li>
+     * <li><p>7: AI-assisted content moderation template.</p>
+     * </li>
+     * <li><p>8: AI-assisted intelligent thumbnail template.</p>
+     * </li>
+     * <li><p>9: AI-assisted intelligent erasure template.</p>
+     * </li>
+     * <li><p>10: AI-assisted media fingerprint analysis template.</p>
+     * </li>
+     * <li><p>11: AI-assisted smart tagging template.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class AddFavoritePublicMediaResponseBody extends TeaModel {
+    /**
+     * <p>A list of Media Asset IDs that were not added to your Favorites. This happens if a Media Asset does not exist or is already in your Favorites.</p>
+     */
     @NameInMap("IgnoredList")
     public java.util.List<String> ignoredList;
 
     /**
+     * <p>The Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */

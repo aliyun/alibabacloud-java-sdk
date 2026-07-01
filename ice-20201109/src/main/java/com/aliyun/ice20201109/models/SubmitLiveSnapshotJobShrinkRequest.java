@@ -7,8 +7,10 @@ public class SubmitLiveSnapshotJobShrinkRequest extends TeaModel {
     /**
      * <p>The snapshot callback URL.</p>
      * <ul>
-     * <li>It cannot exceed 255 characters in length.</li>
-     * <li>Both HTTP and HTTPS URLs are supported.</li>
+     * <li><p>It cannot exceed 255 characters in length.</p>
+     * </li>
+     * <li><p>Both HTTP and HTTPS URLs are supported.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,9 @@ public class SubmitLiveSnapshotJobShrinkRequest extends TeaModel {
      * <li>It cannot exceed 128 characters in length.</li>
      * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Screenshot task1</p>
      */
     @NameInMap("JobName")
     public String jobName;

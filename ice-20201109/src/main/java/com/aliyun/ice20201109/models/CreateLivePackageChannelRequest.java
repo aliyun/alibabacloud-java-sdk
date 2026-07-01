@@ -25,6 +25,9 @@ public class CreateLivePackageChannelRequest extends TeaModel {
 
     /**
      * <p>The channel description. It can be up to 1,000 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is a test channel.</p>
      */
     @NameInMap("Description")
     public String description;

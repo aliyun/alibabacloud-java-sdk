@@ -48,6 +48,9 @@ public class SubmitAIAgentVideoAuditTaskShrinkRequest extends TeaModel {
 
     /**
      * <p>The user-defined data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;Custom&quot;:&quot;hello&quot;}</p>
      */
     @NameInMap("UserData")
     public String userData;

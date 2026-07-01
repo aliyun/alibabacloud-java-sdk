@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateYikeWorkspaceRequest extends TeaModel {
     /**
+     * <p>The workspace title.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateYikeWorkspaceRequest extends TeaModel {
     public String title;
 
     /**
+     * <p>The maximum number of users in the workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -66,6 +66,9 @@ public class GetEditingProjectResponseBody extends TeaModel {
 
         /**
          * <p>The material parameter corresponding to the template, in the JSON format. If TemplateId is specified, ClipsParam must also be specified. For more information&lt;props=&quot;china&quot;&gt;, see <a href="https://help.aliyun.com/document_detail/328557.html">Create and use a regular template</a> and <a href="https://help.aliyun.com/document_detail/291418.html">Create and use an advanced template</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>See the template user guide.</p>
          */
         @NameInMap("ClipsParam")
         public String clipsParam;
@@ -74,7 +77,7 @@ public class GetEditingProjectResponseBody extends TeaModel {
          * <p>The thumbnail URL of the online editing project.</p>
          * 
          * <strong>example:</strong>
-         * <p>oss://example-bucket/example.jpg</p>
+         * <p><a href="http://aaa.bbb/your-cover.jpg">http://aaa.bbb/your-cover.jpg</a></p>
          */
         @NameInMap("CoverURL")
         public String coverURL;
@@ -104,6 +107,9 @@ public class GetEditingProjectResponseBody extends TeaModel {
 
         /**
          * <p>The description of the online editing project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Example description</p>
          */
         @NameInMap("Description")
         public String description;
@@ -228,6 +234,9 @@ public class GetEditingProjectResponseBody extends TeaModel {
 
         /**
          * <p>The title of the online editing project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample title</p>
          */
         @NameInMap("Title")
         public String title;

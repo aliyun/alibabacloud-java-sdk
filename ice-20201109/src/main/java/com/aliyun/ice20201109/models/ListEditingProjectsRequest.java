@@ -56,8 +56,10 @@ public class ListEditingProjectsRequest extends TeaModel {
     /**
      * <p>The type of the editing project. Valid values:</p>
      * <ul>
-     * <li>EditingProject: a regular editing project.</li>
-     * <li>LiveEditingProject: a live stream editing project.</li>
+     * <li><p>EditingProject: a regular editing project.</p>
+     * </li>
+     * <li><p>LiveEditingProject: a live stream editing project.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -69,8 +71,10 @@ public class ListEditingProjectsRequest extends TeaModel {
     /**
      * <p>The order of sorting of the results. Valid values:</p>
      * <ul>
-     * <li>CreationTime:Desc (default): sorts the results in reverse chronological order.</li>
-     * <li>CreationTime:Asc: sorts the results in chronological order.</li>
+     * <li><p>CreationTime:Desc (default): sorts the results in reverse chronological order.</p>
+     * </li>
+     * <li><p>CreationTime:Asc: sorts the results in chronological order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -105,9 +109,12 @@ public class ListEditingProjectsRequest extends TeaModel {
      * </ul>
      * <p>Valid values:</p>
      * <ul>
-     * <li>Timeline: a regular template.</li>
-     * <li>VETemplate: an advanced template.</li>
-     * <li>None: general editing.</li>
+     * <li><p>Timeline: a regular template.</p>
+     * </li>
+     * <li><p>VETemplate: an advanced template.</p>
+     * </li>
+     * <li><p>None: general editing.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

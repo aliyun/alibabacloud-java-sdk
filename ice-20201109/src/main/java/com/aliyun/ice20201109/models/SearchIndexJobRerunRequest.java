@@ -14,6 +14,12 @@ public class SearchIndexJobRerunRequest extends TeaModel {
     @NameInMap("MediaIds")
     public String mediaIds;
 
+    /**
+     * <p>Namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name-1</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
@@ -29,13 +35,16 @@ public class SearchIndexJobRerunRequest extends TeaModel {
     /**
      * <p>The type of the job. Separate multiple types with commas (,).</p>
      * <ul>
-     * <li>aiLabel: smart tagging.</li>
-     * <li>face: face recognition.</li>
-     * <li>mm: large visual model.</li>
+     * <li><p>aiLabel: smart tagging.</p>
+     * </li>
+     * <li><p>face: face recognition.</p>
+     * </li>
+     * <li><p>mm: large visual model.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>AiLabel,Face,Mm</p>
+     * <p>aiLabel,face,mm</p>
      */
     @NameInMap("Task")
     public String task;

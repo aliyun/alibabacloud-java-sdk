@@ -14,7 +14,7 @@ public class QueryCopyrightExtractJobResponseBody extends TeaModel {
      * <p>The message returned.</p>
      * 
      * <strong>example:</strong>
-     * <p>ok</p>
+     * <p>Copyright watermark test</p>
      */
     @NameInMap("Message")
     public String message;
@@ -77,6 +77,9 @@ public class QueryCopyrightExtractJobResponseBody extends TeaModel {
     public static class QueryCopyrightExtractJobResponseBodyData extends TeaModel {
         /**
          * <p>The copyright watermark information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>版权水印测试</p>
          */
         @NameInMap("Message")
         public String message;

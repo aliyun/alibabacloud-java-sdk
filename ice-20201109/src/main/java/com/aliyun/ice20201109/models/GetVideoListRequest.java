@@ -43,8 +43,10 @@ public class GetVideoListRequest extends TeaModel {
     /**
      * <p>The sorting method of the results. Valid values:</p>
      * <ul>
-     * <li>CreationTime:Desc (default): sorts results in reverse chronological order.</li>
-     * <li>CreationTime:Asc: sorts results in chronological order.</li>
+     * <li><p>CreationTime:Desc (default): sorts results in reverse chronological order.</p>
+     * </li>
+     * <li><p>CreationTime:Asc: sorts results in chronological order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,17 +68,28 @@ public class GetVideoListRequest extends TeaModel {
      * <p>The status of the video. You can specify multiple video statuses and separate them with commas (,).</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>PrepareFail: The file is abnormal.</li>
-     * <li>UploadFail: The video failed to be uploaded.</li>
-     * <li>UploadSucc: The video is uploaded.</li>
-     * <li>Transcoding: The video is being transcoded.</li>
-     * <li>TranscodeFail: The video failed to be transcoded.</li>
-     * <li>ProduceFail: The video failed to be produced.</li>
-     * <li>Normal: The video is normal.</li>
-     * <li>Uploading: The video is being uploaded.</li>
-     * <li>Preparing: The file is being generated.</li>
-     * <li>Blocked: The video is blocked.</li>
-     * <li>checking: The video is being reviewed.</li>
+     * <li><p>PrepareFail: The file is abnormal.</p>
+     * </li>
+     * <li><p>UploadFail: The video failed to be uploaded.</p>
+     * </li>
+     * <li><p>UploadSucc: The video is uploaded.</p>
+     * </li>
+     * <li><p>Transcoding: The video is being transcoded.</p>
+     * </li>
+     * <li><p>TranscodeFail: The video failed to be transcoded.</p>
+     * </li>
+     * <li><p>ProduceFail: The video failed to be produced.</p>
+     * </li>
+     * <li><p>Normal: The video is normal.</p>
+     * </li>
+     * <li><p>Uploading: The video is being uploaded.</p>
+     * </li>
+     * <li><p>Preparing: The file is being generated.</p>
+     * </li>
+     * <li><p>Blocked: The video is blocked.</p>
+     * </li>
+     * <li><p>checking: The video is being reviewed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

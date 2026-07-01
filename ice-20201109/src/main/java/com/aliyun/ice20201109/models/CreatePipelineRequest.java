@@ -26,9 +26,12 @@ public class CreatePipelineRequest extends TeaModel {
     /**
      * <p>The type of the MPS queue. Valid values:</p>
      * <ol>
-     * <li>Standard: standard MPS queue.</li>
-     * <li>Boost: MPS queue with transcoding speed boosted.</li>
-     * <li>NarrowBandHDV2: MPS queue that supports Narrowband HD 2.0.</li>
+     * <li><p>Standard: standard MPS queue.</p>
+     * </li>
+     * <li><p>Boost: MPS queue with transcoding speed boosted.</p>
+     * </li>
+     * <li><p>NarrowBandHDV2: MPS queue that supports Narrowband HD 2.0.</p>
+     * </li>
      * </ol>
      * <p>This parameter is required.</p>
      * 

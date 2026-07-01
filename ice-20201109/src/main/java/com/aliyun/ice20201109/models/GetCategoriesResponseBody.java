@@ -80,6 +80,9 @@ public class GetCategoriesResponseBody extends TeaModel {
 
         /**
          * <p>The category name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>First-level category</p>
          */
         @NameInMap("CateName")
         public String cateName;
@@ -105,8 +108,10 @@ public class GetCategoriesResponseBody extends TeaModel {
         /**
          * <p>The type of the category. Valid values:</p>
          * <ul>
-         * <li><strong>default</strong>: audio, video, and image files. This is the default value.</li>
-         * <li><strong>material</strong>: short video materials.</li>
+         * <li><p><strong>default</strong>: audio, video, and image files. This is the default value.</p>
+         * </li>
+         * <li><p><strong>material</strong>: short video materials.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -93,6 +93,12 @@ public class GetMediaConnectFlowOutputResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>Indicates whether the output is disabled. Valid values: yes or no.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>no</p>
+         */
         @NameInMap("Forbid")
         public String forbid;
 
@@ -109,11 +115,16 @@ public class GetMediaConnectFlowOutputResponseBody extends TeaModel {
          * <p>The output type.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>RTMP-PUSH</li>
-         * <li>SRT-Caller</li>
-         * <li>RTMP-PULL</li>
-         * <li>SRT-Listener</li>
-         * <li>Flow</li>
+         * <li><p>RTMP-PUSH</p>
+         * </li>
+         * <li><p>SRT-Caller</p>
+         * </li>
+         * <li><p>RTMP-PULL</p>
+         * </li>
+         * <li><p>SRT-Listener</p>
+         * </li>
+         * <li><p>Flow</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -180,10 +191,14 @@ public class GetMediaConnectFlowOutputResponseBody extends TeaModel {
          * <p>The encryption key length. This parameter is returned when the source type is SRT-Listener or SRT-Caller.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>0</li>
-         * <li>16</li>
-         * <li>24</li>
-         * <li>32</li>
+         * <li><p>0</p>
+         * </li>
+         * <li><p>16</p>
+         * </li>
+         * <li><p>24</p>
+         * </li>
+         * <li><p>32</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

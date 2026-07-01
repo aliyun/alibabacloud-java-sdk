@@ -44,8 +44,10 @@ public class GetPackageJobResponseBody extends TeaModel {
         /**
          * <p>The media object.</p>
          * <ul>
-         * <li>If Type is set to OSS, the URL of an OSS object is returned. Both the OSS and HTTP protocols are supported.</li>
-         * <li>If Type is set to Media, the ID of a media asset is returned.</li>
+         * <li><p>If Type is set to OSS, the URL of an OSS object is returned. Both the OSS and HTTP protocols are supported.</p>
+         * </li>
+         * <li><p>If Type is set to Media, the ID of a media asset is returned.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -57,8 +59,10 @@ public class GetPackageJobResponseBody extends TeaModel {
         /**
          * <p>The type of the media object. Valid values:</p>
          * <ul>
-         * <li>OSS: an Object Storage Service (OSS) object.</li>
-         * <li>Media: a media asset.</li>
+         * <li><p>OSS: an Object Storage Service (OSS) object.</p>
+         * </li>
+         * <li><p>Media: a media asset.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -116,8 +120,10 @@ public class GetPackageJobResponseBody extends TeaModel {
         /**
          * <p>The media object.</p>
          * <ul>
-         * <li>If Type is set to OSS, the URL of an OSS object is returned. Both the OSS and HTTP protocols are supported.</li>
-         * <li>If Type is set to Media, the ID of a media asset is returned.</li>
+         * <li><p>If Type is set to OSS, the URL of an OSS object is returned. Both the OSS and HTTP protocols are supported.</p>
+         * </li>
+         * <li><p>If Type is set to Media, the ID of a media asset is returned.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -129,8 +135,10 @@ public class GetPackageJobResponseBody extends TeaModel {
         /**
          * <p>The type of the media object. Valid values:</p>
          * <ul>
-         * <li>OSS: an OSS object.</li>
-         * <li>Media: a media asset.</li>
+         * <li><p>OSS: an OSS object.</p>
+         * </li>
+         * <li><p>Media: a media asset.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -200,7 +208,7 @@ public class GetPackageJobResponseBody extends TeaModel {
          * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>ab4802364a2e49208c99efab82dfa8e8</p>
+         * <p>ab4802364a2e49208c99efab82df****</p>
          */
         @NameInMap("JobId")
         public String jobId;
@@ -251,7 +259,7 @@ public class GetPackageJobResponseBody extends TeaModel {
          * <p>The ID of the MPS queue to which the job was submitted.</p>
          * 
          * <strong>example:</strong>
-         * <p>36f3fee40aa047c0b067d0fb85edc12b</p>
+         * <p>36f3fee40aa047c0b067d0fb85ed****</p>
          */
         @NameInMap("PipelineId")
         public String pipelineId;
@@ -286,9 +294,12 @@ public class GetPackageJobResponseBody extends TeaModel {
         /**
          * <p>The source of the job. Valid values:</p>
          * <ul>
-         * <li>API</li>
-         * <li>WorkFlow</li>
-         * <li>Console</li>
+         * <li><p>API</p>
+         * </li>
+         * <li><p>WorkFlow</p>
+         * </li>
+         * <li><p>Console</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

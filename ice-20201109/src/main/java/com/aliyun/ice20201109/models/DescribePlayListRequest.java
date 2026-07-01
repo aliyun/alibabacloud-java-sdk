@@ -27,10 +27,14 @@ public class DescribePlayListRequest extends TeaModel {
     /**
      * <p>The criteria by which the sorting is performed. Valid values:</p>
      * <ul>
-     * <li>FirstFrameDuration</li>
-     * <li>PlayDuration</li>
-     * <li>VideoDuration</li>
-     * <li>StuckDuration</li>
+     * <li><p>FirstFrameDuration</p>
+     * </li>
+     * <li><p>PlayDuration</p>
+     * </li>
+     * <li><p>VideoDuration</p>
+     * </li>
+     * <li><p>StuckDuration</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,8 +46,10 @@ public class DescribePlayListRequest extends TeaModel {
     /**
      * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li>DESC: descending order.</li>
-     * <li>ASC: ascending order.</li>
+     * <li><p>DESC: descending order.</p>
+     * </li>
+     * <li><p>ASC: ascending order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -73,7 +79,7 @@ public class DescribePlayListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The playback type. Valid value: </p>
+     * <p>The playback type. Valid value:</p>
      * <ul>
      * <li>vod</li>
      * </ul>
@@ -87,9 +93,12 @@ public class DescribePlayListRequest extends TeaModel {
     /**
      * <p>The playback status. Valid values:</p>
      * <ul>
-     * <li>complete</li>
-     * <li>playing</li>
-     * <li>unusual: A playback error occurs.</li>
+     * <li><p>complete</p>
+     * </li>
+     * <li><p>playing</p>
+     * </li>
+     * <li><p>unusual: A playback error occurs.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

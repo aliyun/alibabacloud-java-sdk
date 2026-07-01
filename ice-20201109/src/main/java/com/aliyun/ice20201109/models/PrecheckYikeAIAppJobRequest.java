@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PrecheckYikeAIAppJobRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>app-1000000</p>
      */
@@ -12,6 +14,8 @@ public class PrecheckYikeAIAppJobRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The application\&quot;s runtime parameters, serialized as a JSON string.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;LoadImage.1.TargetImage\&quot;:\&quot;794da8a01b8c71f1b973e6e7c7586301\&quot;}</p>
      */

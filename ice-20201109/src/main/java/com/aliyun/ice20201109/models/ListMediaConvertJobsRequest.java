@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMediaConvertJobsRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The end of the time range to filter jobs by creation time. The time must be in the <code>yyyy-MM-ddTHH:mm:ssZ</code> ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-07-15T00:00:00Z</p>
@@ -14,7 +14,7 @@ public class ListMediaConvertJobsRequest extends TeaModel {
     public String endOfCreateTime;
 
     /**
-     * <p>The task ID.</p>
+     * <p>Filters the results by job ID.</p>
      * 
      * <strong>example:</strong>
      * <p>88c6ca184c0e47098a5b665e2****</p>
@@ -23,7 +23,7 @@ public class ListMediaConvertJobsRequest extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</p>
+     * <p>The token for the next page of results. Leave this empty for the first request. To retrieve the next page, pass the <code>NextPageToken</code> value from the previous response.</p>
      * 
      * <strong>example:</strong>
      * <p>ab4802364a2e49208c99efab82dfa8e8</p>
@@ -32,7 +32,7 @@ public class ListMediaConvertJobsRequest extends TeaModel {
     public String nextPageToken;
 
     /**
-     * <p>The sorting order. Valid values: CreateTimeDesc: sorts by create time in descending order. CreateTimeAsc: sorts by create time in ascending order.</p>
+     * <p>The sort order for the results. Valid values: <code>CreateTimeDesc</code> (descending by creation time) and <code>CreateTimeAsc</code> (ascending by creation time).</p>
      * 
      * <strong>example:</strong>
      * <p>CreateTimeDesc</p>
@@ -41,7 +41,7 @@ public class ListMediaConvertJobsRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The number of entries per page. Valid values: 0 to 100. Default value: 20.</p>
+     * <p>The page size. Valid values: 1 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -50,7 +50,7 @@ public class ListMediaConvertJobsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The start of the time range to filter jobs by creation time. The time must be in the <code>yyyy-MM-ddTHH:mm:ssZ</code> ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-07-01T00:00:00Z</p>
@@ -59,12 +59,16 @@ public class ListMediaConvertJobsRequest extends TeaModel {
     public String startOfCreateTime;
 
     /**
-     * <p>The task status.</p>
+     * <p>The status of the job. Valid values:</p>
      * <ul>
-     * <li>Inited: submitted</li>
-     * <li>Running</li>
-     * <li>Complete</li>
-     * <li>Error</li>
+     * <li><p><code>Inited</code>: The job has been submitted.</p>
+     * </li>
+     * <li><p><code>Running</code>: The job is running.</p>
+     * </li>
+     * <li><p><code>Complete</code>: The job is complete.</p>
+     * </li>
+     * <li><p><code>Error</code>: The job failed due to an error.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

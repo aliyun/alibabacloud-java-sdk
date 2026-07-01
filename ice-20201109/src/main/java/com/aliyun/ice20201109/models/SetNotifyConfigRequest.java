@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetNotifyConfigRequest extends TeaModel {
     /**
-     * <p>The ID of the AI agent.</p>
+     * <p>The ID of the AI Agent.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class SetNotifyConfigRequest extends TeaModel {
     public String audioOssPath;
 
     /**
-     * <p>The URL for receiving callback notifications. By default, this parameter is left empty.</p>
+     * <p>The callback URL for receiving event notifications. This is not set by default.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://customer.com/callback">http://customer.com/callback</a></p>
@@ -30,7 +30,7 @@ public class SetNotifyConfigRequest extends TeaModel {
     public Boolean enableAudioRecording;
 
     /**
-     * <p>Specifies whether to enable event notifications.</p>
+     * <p>Specifies whether to enable or disable event notifications.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,11 +40,14 @@ public class SetNotifyConfigRequest extends TeaModel {
     public Boolean enableNotify;
 
     /**
-     * <p>The event types. If you do not specify this parameter, all event types are selected.</p>
+     * <p>The event types. If you do not specify this parameter, all event types are subscribed to by default. Valid values:</p>
      * <ul>
-     * <li>agent_start</li>
-     * <li>agent_stop</li>
-     * <li>error</li>
+     * <li><p>agent_start</p>
+     * </li>
+     * <li><p>agent_stop</p>
+     * </li>
+     * <li><p>error</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,7 +57,7 @@ public class SetNotifyConfigRequest extends TeaModel {
     public String eventTypes;
 
     /**
-     * <p>The authentication token for callback. The token is carried in the Authorization header of a callback request. By default, this parameter is left empty.</p>
+     * <p>An authentication token for event callbacks. The service includes this token in the <code>Authorization</code> header of each callback request.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJhcHBpZCI6ICIxMjM0MTIzNxxxxx</p>

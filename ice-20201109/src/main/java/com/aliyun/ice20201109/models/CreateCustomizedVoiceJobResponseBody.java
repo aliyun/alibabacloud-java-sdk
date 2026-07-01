@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCustomizedVoiceJobResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public CreateCustomizedVoiceJobResponseBodyData data;
@@ -20,7 +20,13 @@ public class CreateCustomizedVoiceJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values: true false</p>
+     * <p>Indicates whether the request was successful.</p>
+     * <ul>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -59,7 +65,7 @@ public class CreateCustomizedVoiceJobResponseBody extends TeaModel {
 
     public static class CreateCustomizedVoiceJobResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the human voice cloning job.</p>
+         * <p>The voice cloning job ID.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>29faef8144638ba42eb8e037</strong></strong></p>

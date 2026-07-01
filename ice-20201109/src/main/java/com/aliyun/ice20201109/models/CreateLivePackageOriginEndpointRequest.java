@@ -34,6 +34,9 @@ public class CreateLivePackageOriginEndpointRequest extends TeaModel {
 
     /**
      * <p>The endpoint description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is an origin endpoint.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -76,6 +79,9 @@ public class CreateLivePackageOriginEndpointRequest extends TeaModel {
     @NameInMap("IpWhitelist")
     public String ipWhitelist;
 
+    /**
+     * <p>Live stream encapsulation configuration</p>
+     */
     @NameInMap("LivePackagingConfig")
     public LivePackagingConfig livePackagingConfig;
 

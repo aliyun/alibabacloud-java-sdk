@@ -300,8 +300,10 @@ public class GetLiveTranscodeTemplateResponseBody extends TeaModel {
         /**
          * <p>The category of the template. Valid values:</p>
          * <ul>
-         * <li>system</li>
-         * <li>customized</li>
+         * <li><p>system</p>
+         * </li>
+         * <li><p>customized</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

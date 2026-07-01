@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SendAIAgentSpeechResponseBody extends TeaModel {
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>7B117AF5-2A16-412C-B127-FA6175ED1AD0</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAIAgentDialogueRequest extends TeaModel {
     /**
-     * <p>The ID of the dialog that you want to delete.</p>
+     * <p>The ID of the dialogue to delete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +14,12 @@ public class DeleteAIAgentDialogueRequest extends TeaModel {
     @NameInMap("DialogueId")
     public String dialogueId;
 
+    /**
+     * <p>The ID of the node to delete.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c22f9b9be2864g46fse73*******</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 

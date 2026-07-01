@@ -14,13 +14,13 @@ public class ListSmartSysAvatarModelsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The queried digital humans.</p>
+     * <p>A list of system digital avatars.</p>
      */
     @NameInMap("SmartSysAvatarModelList")
     public java.util.List<ListSmartSysAvatarModelsResponseBodySmartSysAvatarModelList> smartSysAvatarModelList;
 
     /**
-     * <p>The total number of system digital human images returned.</p>
+     * <p>The total number of system digital avatars.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -59,7 +59,7 @@ public class ListSmartSysAvatarModelsResponseBody extends TeaModel {
 
     public static class ListSmartSysAvatarModelsResponseBodySmartSysAvatarModelList extends TeaModel {
         /**
-         * <p>The ID of the digital human. The ID is required to submit a separate digital human rendering job or use the digital human image in an intelligent timeline.</p>
+         * <p>The digital avatar ID. Use this ID when you submit a rendering job or use the digital avatar in an intelligent timeline.</p>
          * 
          * <strong>example:</strong>
          * <p>yunqiao</p>
@@ -68,7 +68,10 @@ public class ListSmartSysAvatarModelsResponseBody extends TeaModel {
         public String avatarId;
 
         /**
-         * <p>The name of the digital human.</p>
+         * <p>The digital avatar name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Yun Qiao</p>
          */
         @NameInMap("AvatarName")
         public String avatarName;
@@ -83,7 +86,7 @@ public class ListSmartSysAvatarModelsResponseBody extends TeaModel {
         public Integer bitrate;
 
         /**
-         * <p>The sample thumbnail URL of the digital human.</p>
+         * <p>The URL of the sample cover for the digital avatar.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://ice-pub-media.myalicdn.com/smart/avatarModel/coverDemo/yunqiao.mp4">http://ice-pub-media.myalicdn.com/smart/avatarModel/coverDemo/yunqiao.mp4</a></p>
@@ -110,7 +113,7 @@ public class ListSmartSysAvatarModelsResponseBody extends TeaModel {
         public Boolean outputMask;
 
         /**
-         * <p>The sample video URL of the digital human.</p>
+         * <p>The URL of the sample video for the digital avatar.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://ice-pub-media.myalicdn.com/smart/avatarModel/videoDemo/yunqiao.mp4">http://ice-pub-media.myalicdn.com/smart/avatarModel/videoDemo/yunqiao.mp4</a></p>

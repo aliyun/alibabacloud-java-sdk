@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetYikeUserResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The user information.</p>
+     */
     @NameInMap("UserInfo")
     public GetYikeUserResponseBodyUserInfo userInfo;
 
@@ -37,6 +42,8 @@ public class GetYikeUserResponseBody extends TeaModel {
 
     public static class GetYikeUserResponseBodyUserInfo extends TeaModel {
         /**
+         * <p>The user\&quot;s nickname.</p>
+         * 
          * <strong>example:</strong>
          * <p>nick</p>
          */
@@ -44,6 +51,8 @@ public class GetYikeUserResponseBody extends TeaModel {
         public String nickname;
 
         /**
+         * <p>The user name.</p>
+         * 
          * <strong>example:</strong>
          * <p>name</p>
          */
@@ -51,6 +60,8 @@ public class GetYikeUserResponseBody extends TeaModel {
         public String userName;
 
         /**
+         * <p>The ID of the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>spaceId</p>
          */
@@ -58,6 +69,8 @@ public class GetYikeUserResponseBody extends TeaModel {
         public String workspaceId;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>id</p>
          */

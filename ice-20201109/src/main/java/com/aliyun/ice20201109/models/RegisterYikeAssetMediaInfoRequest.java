@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RegisterYikeAssetMediaInfoRequest extends TeaModel {
     /**
+     * <p>The ID of the folder.</p>
+     * 
      * <strong>example:</strong>
      * <p>fd-ABMFfAB2bA</p>
      */
@@ -12,6 +14,7 @@ public class RegisterYikeAssetMediaInfoRequest extends TeaModel {
     public String folderId;
 
     /**
+     * <p>The URL of the media asset. You can use the FileURL value that is returned by the CreateYikeAssetUpload operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class RegisterYikeAssetMediaInfoRequest extends TeaModel {
     public String inputURL;
 
     /**
+     * <p>The type of the media asset.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class RegisterYikeAssetMediaInfoRequest extends TeaModel {
     public String mediaType;
 
     /**
+     * <p>The ID of the production. If this parameter is omitted, the media asset is uploaded to the default production.</p>
+     * 
      * <strong>example:</strong>
      * <p>ProductionId</p>
      */

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class SubmitTraceAbJobResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>Contains the IDs for the submitted job and the output media asset.</p>
      */
     @NameInMap("Data")
     public SubmitTraceAbJobResponseBodyData data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The response message. A value of <code>ok</code> indicates a successful request.</p>
      * 
      * <strong>example:</strong>
      * <p>ok</p>
@@ -20,7 +20,7 @@ public class SubmitTraceAbJobResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The unique identifier for the request. If you encounter an issue, provide this ID for technical support.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>36-3C1E-4417-BDB2-1E034F</strong></strong></strong></p>
@@ -29,7 +29,7 @@ public class SubmitTraceAbJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status code.</p>
+     * <p>The HTTP status code. A value of <code>200</code> indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -85,7 +85,7 @@ public class SubmitTraceAbJobResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The media ID.</p>
+         * <p>The ID of the media asset created for tracing.</p>
          * 
          * <strong>example:</strong>
          * <p>bf53333264f4d80648792021e****</p>

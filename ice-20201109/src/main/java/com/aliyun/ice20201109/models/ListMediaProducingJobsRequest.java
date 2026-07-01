@@ -17,9 +17,12 @@ public class ListMediaProducingJobsRequest extends TeaModel {
      * <p>The job type.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>LiveEditingJob: live editing job.</li>
-     * <li>EditingJob: regular template-based editing job</li>
-     * <li>VETemplateJob: advanced template-based editing job.</li>
+     * <li><p>LiveEditingJob: live editing job.</p>
+     * </li>
+     * <li><p>EditingJob: regular template-based editing job</p>
+     * </li>
+     * <li><p>VETemplateJob: advanced template-based editing job.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -78,8 +81,10 @@ public class ListMediaProducingJobsRequest extends TeaModel {
      * <p>The sorting parameter. By default, the query results are sorted by creation time in descending order.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>CreationTime:Asc: sorted by creation time in ascending order.</li>
-     * <li>CreationTime:Desc: sorted by creation time in descending order.</li>
+     * <li><p>CreationTime:Asc: sorted by creation time in ascending order.</p>
+     * </li>
+     * <li><p>CreationTime:Desc: sorted by creation time in descending order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -101,10 +106,14 @@ public class ListMediaProducingJobsRequest extends TeaModel {
      * <p>The job state.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>Init: The job is initialized.</li>
-     * <li>Failed: The job failed.</li>
-     * <li>Success: The job is successful.</li>
-     * <li>Processing: The job is in progress.</li>
+     * <li><p>Init: The job is initialized.</p>
+     * </li>
+     * <li><p>Failed: The job failed.</p>
+     * </li>
+     * <li><p>Success: The job is successful.</p>
+     * </li>
+     * <li><p>Processing: The job is in progress.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

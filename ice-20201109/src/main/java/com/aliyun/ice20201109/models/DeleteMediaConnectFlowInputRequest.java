@@ -14,6 +14,12 @@ public class DeleteMediaConnectFlowInputRequest extends TeaModel {
     @NameInMap("FlowId")
     public String flowId;
 
+    /**
+     * <p>Input name. Required when primary/standby input is enabled for the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>input</p>
+     */
     @NameInMap("InputName")
     public String inputName;
 

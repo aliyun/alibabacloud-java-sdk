@@ -17,8 +17,10 @@ public class UpdateMediaConnectFlowStatusRequest extends TeaModel {
     /**
      * <p>The flow state. Valid values:</p>
      * <ul>
-     * <li>online: starts the flow.</li>
-     * <li>offline: stops the flow.</li>
+     * <li><p>online: starts the flow.</p>
+     * </li>
+     * <li><p>offline: stops the flow.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

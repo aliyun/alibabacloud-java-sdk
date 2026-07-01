@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeAIAgentInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the AI agent that you want to query.</p>
+     * <p>The ID of the AI agent instance.</p>
+     * <blockquote>
+     * <p>The <code>InstanceId</code> is the unique ID returned when an AI agent instance starts successfully. For APIs that start an AI agent, see <a href="https://help.aliyun.com/document_detail/2846201.html">StartAIAgentInstance</a> and <a href="https://help.aliyun.com/document_detail/2846209.html">GenerateAIAgentCall</a>.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

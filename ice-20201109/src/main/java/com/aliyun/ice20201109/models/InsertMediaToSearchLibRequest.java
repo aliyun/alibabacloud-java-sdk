@@ -4,18 +4,31 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class InsertMediaToSearchLibRequest extends TeaModel {
+    /**
+     * <p>Image set information. Supports only the IPCamera scenario, and MediaType must be video.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *     &quot;images&quot;: [
+     *         &quot;oss://[example-bucket-]/[object_path-]xxx1.jpg&quot;,
+     *         &quot;oss://[example-bucket-]/[object_path-]xxx2.jpg&quot;,
+     *         &quot;oss://[example-bucket-]/[object_path-]xxx3.jpg&quot;,
+     *         &quot;oss://[example-bucket-]/[object_path-]xxx4.jpg&quot;
+     *     ]
+     * }</p>
+     */
     @NameInMap("ImagesInput")
     public String imagesInput;
 
     /**
      * <p>The URL of the video, audio, or image file that you want to import to the search library.</p>
      * <p>Note: Make sure that you specify a correct file name and the bucket in which the file resides is in the same region where this operation is called. Otherwise, the file cannot be found or the operation may fail.</p>
-     * <p>Specify an Object Storage Service (OSS) URL in the following format: oss://[Bucket name]/[File path]. For example, you can specify oss://[example-bucket-<strong><strong>]/[object_path-</strong></strong>].</p>
-     * <p>Specify an HTTP URL in the following format: public endpoint. For example, you can specify <a href="http://example-test-%5C%5C*%5C%5C*%5C%5C*%5C%5C*.mp4">http://example-test-\\*\\*\\*\\*.mp4</a>.</p>
+     * <p>Specify an Object Storage Service (OSS) URL in the following format: oss\://[Bucket name]/[File path]. For example, you can specify oss\://[example-bucket-<strong><strong>]/[object_path-</strong></strong>].</p>
+     * <p>Specify an HTTP URL in the following format: public endpoint. For example, you can specify http\://example-test-\<em>\</em>\<em>\</em>.mp4.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p><a href="http://example-test-****.mp4">http://example-test-****.mp4</a></p>
+     * <p>oss://[example-bucket-]/[object_path-]</p>
      */
     @NameInMap("Input")
     public String input;
@@ -32,9 +45,12 @@ public class InsertMediaToSearchLibRequest extends TeaModel {
     /**
      * <p>The type of the media asset. Valid values:</p>
      * <ul>
-     * <li>video (default)</li>
-     * <li>image</li>
-     * <li>audio</li>
+     * <li><p>video (default)</p>
+     * </li>
+     * <li><p>image</p>
+     * </li>
+     * <li><p>audio</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,11 +63,17 @@ public class InsertMediaToSearchLibRequest extends TeaModel {
      * <p>The message body.</p>
      * 
      * <strong>example:</strong>
-     * <p>{}</p>
+     * <p>{&quot;title&quot;:&quot;test&quot;,&quot;customFields&quot;:{&quot;intField1&quot;:12,&quot;strField1&quot;:&quot;abc&quot;}}</p>
      */
     @NameInMap("MsgBody")
     public String msgBody;
 
+    /**
+     * <p>Namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name-1</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 

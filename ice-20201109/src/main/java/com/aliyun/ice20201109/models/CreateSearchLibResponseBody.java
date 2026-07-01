@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSearchLibResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class CreateSearchLibResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
@@ -32,10 +32,12 @@ public class CreateSearchLibResponseBody extends TeaModel {
     public String searchLibName;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful.</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: The call was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The call failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

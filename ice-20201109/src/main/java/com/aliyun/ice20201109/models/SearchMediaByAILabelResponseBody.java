@@ -162,6 +162,9 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
 
         /**
          * <p>The content of the text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test content</p>
          */
         @NameInMap("Content")
         public String content;
@@ -177,6 +180,9 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
 
         /**
          * <p>The fine-grained name of the entity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Car</p>
          */
         @NameInMap("FinegrainName")
         public String finegrainName;
@@ -322,6 +328,9 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
     public static class SearchMediaByAILabelResponseBodyMediaListAiDataAiLabelInfo extends TeaModel {
         /**
          * <p>The category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Vehicle</p>
          */
         @NameInMap("Category")
         public String category;
@@ -346,12 +355,18 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
 
         /**
          * <p>The name of the entity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Car</p>
          */
         @NameInMap("LabelName")
         public String labelName;
 
         /**
          * <p>The type of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Object</p>
          */
         @NameInMap("LabelType")
         public String labelType;
@@ -446,6 +461,9 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
 
         /**
          * <p>The content of the audio.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>智能标签测试</p>
          */
         @NameInMap("Content")
         public String content;
@@ -536,6 +554,9 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
 
         /**
          * <p>The content of the text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pipi</p>
          */
         @NameInMap("Content")
         public String content;
@@ -700,6 +721,9 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
 
         /**
          * <p>The description of the media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alibaba Cloud VOD video description</p>
          */
         @NameInMap("Description")
         public String description;
@@ -750,18 +774,30 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
          * <p>The status of the video.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>PrepareFail</li>
-         * <li>UploadFail</li>
-         * <li>Init</li>
-         * <li>UploadSucc</li>
-         * <li>Transcoding</li>
-         * <li>TranscodeFail</li>
-         * <li>Deleted</li>
-         * <li>Normal</li>
-         * <li>Uploading</li>
-         * <li>Preparing</li>
-         * <li>Blocked</li>
-         * <li>Checking</li>
+         * <li><p>PrepareFail</p>
+         * </li>
+         * <li><p>UploadFail</p>
+         * </li>
+         * <li><p>Init</p>
+         * </li>
+         * <li><p>UploadSucc</p>
+         * </li>
+         * <li><p>Transcoding</p>
+         * </li>
+         * <li><p>TranscodeFail</p>
+         * </li>
+         * <li><p>Deleted</p>
+         * </li>
+         * <li><p>Normal</p>
+         * </li>
+         * <li><p>Uploading</p>
+         * </li>
+         * <li><p>Preparing</p>
+         * </li>
+         * <li><p>Blocked</p>
+         * </li>
+         * <li><p>Checking</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -781,12 +817,18 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
 
         /**
          * <p>The tags of the media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tag 1, Tag 2</p>
          */
         @NameInMap("Tags")
         public String tags;
 
         /**
          * <p>The title of the media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The best music player ever</p>
          */
         @NameInMap("Title")
         public String title;

@@ -8,6 +8,8 @@ public class DescribeNotifyConfigResponseBody extends TeaModel {
     public String audioOssPath;
 
     /**
+     * <p>The URL where event callbacks are sent.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://customer.com/callback">http://customer.com/callback</a></p>
      */
@@ -18,6 +20,8 @@ public class DescribeNotifyConfigResponseBody extends TeaModel {
     public Boolean enableAudioRecording;
 
     /**
+     * <p>Indicates whether notifications are enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -25,11 +29,14 @@ public class DescribeNotifyConfigResponseBody extends TeaModel {
     public Boolean enableNotify;
 
     /**
-     * <p>The event types. If this parameter is empty, all event types are selected.</p>
+     * <p>The event types. If you do not specify this parameter, all event types are selected by default.</p>
      * <ul>
-     * <li>agent_start: The agent is started.</li>
-     * <li>agent_stop: The agent is stopped.</li>
-     * <li>error: An error occurred.</li>
+     * <li><p><code>agent_start</code>: The agent is ready.</p>
+     * </li>
+     * <li><p><code>agent_stop</code>: The agent is stopped.</p>
+     * </li>
+     * <li><p><code>error</code>: The task encountered an error.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,6 +46,8 @@ public class DescribeNotifyConfigResponseBody extends TeaModel {
     public String eventTypes;
 
     /**
+     * <p>The unique identifier for the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>7B117AF5-2A16-412C-B127-FA6175ED1AD0</p>
      */
@@ -46,6 +55,8 @@ public class DescribeNotifyConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The authentication token used to verify the callback. This token is included in the <code>Authorization</code> field of the request header for each event callback.</p>
+     * 
      * <strong>example:</strong>
      * <p>eyJhcHBpZCI6ICIxMjM0MTIzNxxxxx</p>
      */

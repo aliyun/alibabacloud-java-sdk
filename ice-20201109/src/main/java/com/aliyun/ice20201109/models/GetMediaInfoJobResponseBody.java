@@ -53,8 +53,10 @@ public class GetMediaInfoJobResponseBody extends TeaModel {
         /**
          * <p>The type of the media object. Valid values:</p>
          * <ul>
-         * <li>OSS: an Object Storage Service (OSS) object.</li>
-         * <li>Media: a media asset.</li>
+         * <li><p>OSS: an Object Storage Service (OSS) object.</p>
+         * </li>
+         * <li><p>Media: a media asset.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -655,9 +657,12 @@ public class GetMediaInfoJobResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the video stream contains bidirectional frames (B-frames). Valid values:</p>
          * <ul>
-         * <li>0: The stream contains no B-frames.</li>
-         * <li>1: The stream contains one B-frame.</li>
-         * <li>2: The stream contains multiple consecutive B-frames.</li>
+         * <li><p>0: The stream contains no B-frames.</p>
+         * </li>
+         * <li><p>1: The stream contains one B-frame.</p>
+         * </li>
+         * <li><p>2: The stream contains multiple consecutive B-frames.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

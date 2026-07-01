@@ -203,11 +203,11 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
 
         /**
          * <p>The file status.</p>
-         * <p>\-Uploading</p>
-         * <p>\-Normal</p>
-         * <p>\-UploadFail</p>
-         * <p>\-Disable</p>
-         * <p>\-Deleted</p>
+         * <p>-Uploading</p>
+         * <p>-Normal</p>
+         * <p>-UploadFail</p>
+         * <p>-Disable</p>
+         * <p>-Deleted</p>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>

@@ -137,6 +137,9 @@ public class GetLivePackageChannelResponseBody extends TeaModel {
 
         /**
          * <p>The channel description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test channel</p>
          */
         @NameInMap("Description")
         public String description;

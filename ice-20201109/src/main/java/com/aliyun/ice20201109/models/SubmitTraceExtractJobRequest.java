@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class SubmitTraceExtractJobRequest extends TeaModel {
     /**
-     * <p>The source video file from which to extract the watermark.</p>
+     * <p>The input video from which to extract the watermark.</p>
      * <blockquote>
-     * <p>The OSS object or media asset must reside in the same region as the IMS service region.</p>
+     * <ul>
+     * <li>The OSS object or media asset must be in the same region as your IMS service.</li>
+     * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>
      */
@@ -15,12 +17,14 @@ public class SubmitTraceExtractJobRequest extends TeaModel {
     public SubmitTraceExtractJobRequestInput input;
 
     /**
-     * <p>Additional parameters for the watermark job, provided as a JSON string. Supported parameter:</p>
+     * <p>Extraction job parameters, specified as a JSON string. The following parameters are supported:</p>
      * <ul>
-     * <li><p>m3u8Type: The extraction algorithm type. Defaults to v1.</p>
+     * <li><p><code>m3u8Type</code>: The algorithm type. The default value is <code>v1</code>.</p>
      * <ul>
-     * <li>v1: Extracts from an M3U8 with absolute paths.</li>
-     * <li>v2: Extracts from an M3U8 with relative paths.</li>
+     * <li><p><code>v1</code>: Extracts an m3u8 playlist with absolute paths.</p>
+     * </li>
+     * <li><p><code>v2</code>: Extracts an m3u8 playlist with relative paths.</p>
+     * </li>
      * </ul>
      * </li>
      * </ul>
@@ -32,7 +36,7 @@ public class SubmitTraceExtractJobRequest extends TeaModel {
     public String params;
 
     /**
-     * <p>The custom data, which can be up to 1,024 bytes in size.</p>
+     * <p>The user-defined data. Maximum length: 1,024 bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -71,10 +75,10 @@ public class SubmitTraceExtractJobRequest extends TeaModel {
 
     public static class SubmitTraceExtractJobRequestInput extends TeaModel {
         /**
-         * <p>The specific information for the source file, which can be an OSS URL or a media asset ID. OSS URL formats:</p>
-         * <p>1\. oss://bucket/object</p>
-         * <p>2\. http(s)://bucket.oss-[regionId].aliyuncs.com/object</p>
-         * <p>where bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object path in OSS.</p>
+         * <p>The input source. Specify an OSS object URL or a media asset ID.</p>
+         * <p>An OSS object URL can be in one of the following formats:</p>
+         * <p>1\. oss\://bucket/object</p>
+         * <p>In these formats, <code>bucket</code> is the name of an OSS bucket in the same region as your IMS service, and <code>object</code> is the path of the OSS object.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -84,10 +88,12 @@ public class SubmitTraceExtractJobRequest extends TeaModel {
         public String media;
 
         /**
-         * <p>The type of the source file. Valid values:</p>
+         * <p>The input type. Valid values:</p>
          * <ul>
-         * <li>OSS: an OSS object.</li>
-         * <li>Media: a media asset.</li>
+         * <li><p>OSS: An OSS object URL.</p>
+         * </li>
+         * <li><p>Media: A media asset ID.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

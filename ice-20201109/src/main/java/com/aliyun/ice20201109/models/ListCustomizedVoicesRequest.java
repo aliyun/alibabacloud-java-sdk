@@ -26,8 +26,10 @@ public class ListCustomizedVoicesRequest extends TeaModel {
      * <ul>
      * <li><p>The voice type. Valid values:</p>
      * <ul>
-     * <li>Basic</li>
-     * <li>Standard</li>
+     * <li><p>Basic</p>
+     * </li>
+     * <li><p>Standard</p>
+     * </li>
      * </ul>
      * </li>
      * <li><p>If you do not specify this parameter, the default value Basic is used.</p>

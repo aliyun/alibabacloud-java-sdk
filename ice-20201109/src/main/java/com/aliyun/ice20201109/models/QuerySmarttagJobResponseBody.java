@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class QuerySmarttagJobResponseBody extends TeaModel {
     /**
-     * <p>The status of the job. Valid values:</p>
+     * <p>The job status. Valid values:</p>
      * <ul>
-     * <li><strong>Success</strong>: The job was successful.</li>
-     * <li><strong>Fail</strong>: The job failed.</li>
-     * <li><strong>Processing</strong>: The job is in progress.</li>
-     * <li><strong>Submitted</strong>: The job is submitted and waiting to be processed.</li>
+     * <li><p><strong>Success</strong>: The job was successful.</p>
+     * </li>
+     * <li><p><strong>Fail</strong>: The job failed.</p>
+     * </li>
+     * <li><p><strong>Processing</strong>: The job is in progress.</p>
+     * </li>
+     * <li><p><strong>Submitted</strong>: The job is queued for processing.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,7 +39,7 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
     public QuerySmarttagJobResponseBodyUsages usages;
 
     /**
-     * <p>The content of callback messages that are sent to Simple Message Queue (SMQ) when the information of the smart tagging job changes. For more information about the parameters contained in the callback message, see the &quot;Callback parameters&quot; section of this topic.</p>
+     * <p>The custom data passed through the MNS callback. For details on the message format, see the callback message format definitions below.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;userId&quot;:&quot;123432412831&quot;}</p>

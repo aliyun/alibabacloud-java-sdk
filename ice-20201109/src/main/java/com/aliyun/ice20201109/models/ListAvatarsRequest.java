@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class ListAvatarsRequest extends TeaModel {
     /**
      * <ul>
-     * <li>The type of the digital human.</li>
-     * <li>2DAvatar</li>
+     * <li><p>The type of the digital human.</p>
+     * </li>
+     * <li><p>2DAvatar</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,8 +20,10 @@ public class ListAvatarsRequest extends TeaModel {
 
     /**
      * <ul>
-     * <li>The page number.</li>
-     * <li>Default value: 1.</li>
+     * <li><p>The page number.</p>
+     * </li>
+     * <li><p>Default value: 1.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,8 +34,10 @@ public class ListAvatarsRequest extends TeaModel {
 
     /**
      * <ul>
-     * <li>The number of entries per page.</li>
-     * <li>Default value: 10.</li>
+     * <li><p>The number of entries per page.</p>
+     * </li>
+     * <li><p>Default value: 10.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

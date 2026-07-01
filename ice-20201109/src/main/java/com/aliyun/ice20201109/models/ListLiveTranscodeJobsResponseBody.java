@@ -232,6 +232,9 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
 
         /**
          * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Template 1</p>
          */
         @NameInMap("TemplateName")
         public String templateName;

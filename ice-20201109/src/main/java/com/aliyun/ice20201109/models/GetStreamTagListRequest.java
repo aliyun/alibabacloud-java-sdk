@@ -70,8 +70,10 @@ public class GetStreamTagListRequest extends TeaModel {
     /**
      * <p>The sorting order for the results. Valid values:</p>
      * <ul>
-     * <li>StartTime:Desc (default): Sort by creation time in descending order.</li>
-     * <li>StartTime:Asc: Sort by creation time in ascending order.</li>
+     * <li><p>StartTime:Desc (default): Sort by creation time in descending order.</p>
+     * </li>
+     * <li><p>StartTime:Asc: Sort by creation time in ascending order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -7,8 +7,10 @@ public class CreateCustomizedVoiceJobRequest extends TeaModel {
     /**
      * <p>The gender. Valid values:</p>
      * <ul>
-     * <li>female</li>
-     * <li>male</li>
+     * <li><p>female</p>
+     * </li>
+     * <li><p>male</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -21,9 +23,12 @@ public class CreateCustomizedVoiceJobRequest extends TeaModel {
     /**
      * <p>The scenario. Valid values:</p>
      * <ul>
-     * <li>story</li>
-     * <li>interaction</li>
-     * <li>navigation</li>
+     * <li><p>story</p>
+     * </li>
+     * <li><p>interaction</p>
+     * </li>
+     * <li><p>navigation</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -36,18 +41,24 @@ public class CreateCustomizedVoiceJobRequest extends TeaModel {
     /**
      * <p>The voice description.</p>
      * <ul>
-     * <li>The description can be up to 256 characters in length.</li>
+     * <li>Must be 256 characters or fewer.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>这是一个个性化声音</p>
      */
     @NameInMap("VoiceDesc")
     public String voiceDesc;
 
     /**
-     * <p>The voice ID. It can be the English name or Chinese Pinyin of the voice.</p>
+     * <p>The custom voice ID. This is typically an English name or Pinyin.</p>
      * <ul>
-     * <li>The value must be a unique ID that is not used by other custom voices.</li>
-     * <li>The ID can be up to 32 characters in length.</li>
-     * <li>Only letters and digits are supported.</li>
+     * <li><p>Must be unique among your other custom voices.</p>
+     * </li>
+     * <li><p>Must be 32 characters or fewer.</p>
+     * </li>
+     * <li><p>Can contain only letters and numbers.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -58,10 +69,13 @@ public class CreateCustomizedVoiceJobRequest extends TeaModel {
     public String voiceId;
 
     /**
-     * <p>The voice name.</p>
+     * <p>The voice name, typically in Chinese.</p>
      * <ul>
-     * <li>The name can be up to 32 characters in length.</li>
+     * <li>Must be 32 characters or fewer.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>小专</p>
      */
     @NameInMap("VoiceName")
     public String voiceName;

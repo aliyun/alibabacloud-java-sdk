@@ -7,11 +7,16 @@ public class AddEditingProjectMaterialsRequest extends TeaModel {
     /**
      * <p>The material ID. Separate multiple material IDs with commas (,). Each type supports up to 10 material IDs. The following material types are supported:</p>
      * <ul>
-     * <li>video</li>
-     * <li>audio</li>
-     * <li>image</li>
-     * <li>liveStream</li>
-     * <li>editingProject</li>
+     * <li><p>video</p>
+     * </li>
+     * <li><p>audio</p>
+     * </li>
+     * <li><p>image</p>
+     * </li>
+     * <li><p>liveStream</p>
+     * </li>
+     * <li><p>editingProject</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

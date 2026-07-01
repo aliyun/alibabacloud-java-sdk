@@ -7,9 +7,12 @@ public class GetCategoriesRequest extends TeaModel {
     /**
      * <p>The category ID. You can use one of the following methods to obtain the ID:</p>
      * <ul>
-     * <li>Log on to the <a href="https://ims.console.aliyun.com">Intelligent Media Services (IMS) console</a> and choose <strong>Media Asset Management</strong> &gt; <strong>Category Management</strong> to view the category ID.</li>
-     * <li>View the value of CateId returned by the AddCategory operation that you called to create a category.</li>
-     * <li>View the value of CateId returned by the GetCategories operation that you called to query a category.</li>
+     * <li><p>Log on to the <a href="https://ims.console.aliyun.com">Intelligent Media Services (IMS) console</a> and choose <strong>Media Asset Management</strong> &gt; <strong>Category Management</strong> to view the category ID.</p>
+     * </li>
+     * <li><p>View the value of CateId returned by the AddCategory operation that you called to create a category.</p>
+     * </li>
+     * <li><p>View the value of CateId returned by the GetCategories operation that you called to query a category.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

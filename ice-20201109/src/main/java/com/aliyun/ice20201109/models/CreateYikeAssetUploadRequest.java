@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateYikeAssetUploadRequest extends TeaModel {
     /**
+     * <p>File extension.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

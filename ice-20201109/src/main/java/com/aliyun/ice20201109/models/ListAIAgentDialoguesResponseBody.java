@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAIAgentDialoguesResponseBody extends TeaModel {
     /**
-     * <p>The dialog records.</p>
+     * <p>A list of dialogues.</p>
      */
     @NameInMap("Dialogues")
     public java.util.List<ListAIAgentDialoguesResponseBodyDialogues> dialogues;
@@ -41,18 +41,48 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
     }
 
     public static class ListAIAgentDialoguesResponseBodyDialoguesAttachedFileList extends TeaModel {
+        /**
+         * <p>The format of the attachment, such as mp3, wav, or pdf.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mp3</p>
+         */
         @NameInMap("Format")
         public String format;
 
+        /**
+         * <p>The unique identifier of the attachment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7B117AF5-***************</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The file name of the attachment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MusicDemix</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The attachment type, represented by a numeric value. The meaning of this value is defined by your business logic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Type")
         public Integer type;
 
+        /**
+         * <p>The URL of the attachment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://media.w3.org/2010/05/sintel/trailer.mp3">https://media.w3.org/2010/05/sintel/trailer.mp3</a></p>
+         */
         @NameInMap("Url")
         public String url;
 
@@ -104,11 +134,14 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
     }
 
     public static class ListAIAgentDialoguesResponseBodyDialogues extends TeaModel {
+        /**
+         * <p>A list of file attachments referenced in the dialogue.</p>
+         */
         @NameInMap("AttachedFileList")
         public java.util.List<ListAIAgentDialoguesResponseBodyDialoguesAttachedFileList> attachedFileList;
 
         /**
-         * <p>The unique ID of the dialog.</p>
+         * <p>The unique ID of the dialogue.</p>
          * 
          * <strong>example:</strong>
          * <p>19de81b3b3d94abda22****</p>
@@ -116,17 +149,31 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
         @NameInMap("DialogueId")
         public String dialogueId;
 
+        /**
+         * <p>A JSON-formatted string for extended information. Use this field to store custom data, such as sentiment labels or intent recognition results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;addTransferLock\&quot;:true}</p>
+         */
         @NameInMap("Extend")
         public String extend;
 
+        /**
+         * <p>The ID of the workflow node that generated the dialogue entry, which you can use for tracing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e01-cn-to345ikn62o</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
-         * <p>The speaker. Valid values: </p>
+         * <p>The producer of this message.</p>
          * <ul>
-         * <li>user</li>
-         * <li>agent</li>
+         * <li><p>user: A message from the user.</p>
+         * </li>
+         * <li><p>agent: A message from the agent.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -136,16 +183,16 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
         public String producer;
 
         /**
-         * <p>The reasoning trace.</p>
+         * <p>The agent\&quot;s reasoning text, which can reveal its thought process.</p>
          * 
          * <strong>example:</strong>
-         * <p>I\&quot;m thinking</p>
+         * <p>我在思考</p>
          */
         @NameInMap("ReasoningText")
         public String reasoningText;
 
         /**
-         * <p>The ID of the conversational turn.</p>
+         * <p>The ID of the dialogue round.</p>
          * 
          * <strong>example:</strong>
          * <p>f27f9b9be28642a88e18****</p>
@@ -154,9 +201,9 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
         public String roundId;
 
         /**
-         * <p>The source of the message. Valid values:</p>
-         * <p>chat: messaging conversations.</p>
-         * <p>call: voice calls.</p>
+         * <p>The source channel of the message. Valid values:</p>
+         * <p>chat: The message is from a text chat.</p>
+         * <p>call: The message is from a voice call.</p>
          * 
          * <strong>example:</strong>
          * <p>chat</p>
@@ -165,7 +212,7 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The specific content.</p>
+         * <p>The text content of the dialogue entry.</p>
          * 
          * <strong>example:</strong>
          * <p>Hello</p>
@@ -174,7 +221,7 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
         public String text;
 
         /**
-         * <p>The UNIX timestamp, measured in milliseconds, which indicates the time when the message was generated.</p>
+         * <p>The Unix timestamp (in milliseconds) when the dialogue entry was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1734511087000</p>
@@ -183,18 +230,24 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
         public Long time;
 
         /**
-         * <p>The message type. Valid values:</p>
-         * <p>Voice calls:</p>
+         * <p>The type of the message. Valid values include:</p>
+         * <p>For a call:</p>
          * <ol>
-         * <li>greeting: the welcome message.</li>
-         * <li>normal: the voice response.</li>
-         * <li>speech: the proactive message.</li>
+         * <li><p>greeting: A welcome message.</p>
+         * </li>
+         * <li><p>normal: A standard voice response.</p>
+         * </li>
+         * <li><p>speech: A proactive voice broadcast.</p>
+         * </li>
          * </ol>
-         * <p>Messaging conversations:</p>
+         * <p>For a chat:</p>
          * <ol>
-         * <li>normal: the text reply.</li>
-         * <li>announcement: the proactive text message.</li>
-         * <li>custom: the custom message.</li>
+         * <li><p>normal: A standard text response.</p>
+         * </li>
+         * <li><p>announcement: A proactive text push.</p>
+         * </li>
+         * <li><p>custom: A custom message.</p>
+         * </li>
          * </ol>
          * 
          * <strong>example:</strong>

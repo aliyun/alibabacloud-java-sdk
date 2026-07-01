@@ -9,7 +9,7 @@ public class GetPackageJobRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ab4802364a2e49208c99efab82dfa8e8</p>
+     * <p>ab4802364a2e49208c99efab82df****</p>
      */
     @NameInMap("JobId")
     public String jobId;

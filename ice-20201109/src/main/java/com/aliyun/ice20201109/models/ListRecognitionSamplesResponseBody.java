@@ -23,10 +23,10 @@ public class ListRecognitionSamplesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxx-xxxx-xxxxx-xxxx</p>
+     * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */
     @NameInMap("RequestId")
     public String requestId;

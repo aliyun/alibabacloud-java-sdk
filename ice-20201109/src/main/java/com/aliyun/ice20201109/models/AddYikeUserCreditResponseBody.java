@@ -4,16 +4,39 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class AddYikeUserCreditResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the operation fails. The following value is supported:</p>
+     * <ul>
+     * <li>NOT_ENOUGH_ALLOCATE_CREDIT_QUOTA: The credit balance of the main account is insufficient.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>NOT_ENOUGH_ALLOCATE_CREDIT_QUOTA</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the operation was successful.</p>
+     * <ul>
+     * <li><p>true: The operation was successful.</p>
+     * </li>
+     * <li><p>false: The operation failed.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Result")
     public Boolean result;
 

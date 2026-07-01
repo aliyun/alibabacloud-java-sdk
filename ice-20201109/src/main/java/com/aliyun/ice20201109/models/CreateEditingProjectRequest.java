@@ -18,6 +18,9 @@ public class CreateEditingProjectRequest extends TeaModel {
 
     /**
      * <p>The material parameter corresponding to the template, in the JSON format. If TemplateId is specified, ClipsParam must also be specified. For more information&lt;props=&quot;china&quot;&gt;, see <a href="https://help.aliyun.com/document_detail/328557.html">Create and use a regular template</a> and <a href="https://help.aliyun.com/document_detail/291418.html">Create and use an advanced template</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>See the template user guide.</p>
      */
     @NameInMap("ClipsParam")
     public String clipsParam;
@@ -35,7 +38,7 @@ public class CreateEditingProjectRequest extends TeaModel {
      * <p>The description of the online editing project.</p>
      * 
      * <strong>example:</strong>
-     * <p>描述</p>
+     * <p>Description</p>
      */
     @NameInMap("Description")
     public String description;
@@ -70,8 +73,10 @@ public class CreateEditingProjectRequest extends TeaModel {
     /**
      * <p>The template type. This parameter is required if you create a template-based online editing project. Default value: Timeline. Valid values:</p>
      * <ul>
-     * <li>Timeline: a regular template.</li>
-     * <li>VETemplate: an advanced template.</li>
+     * <li><p>Timeline: a regular template.</p>
+     * </li>
+     * <li><p>VETemplate: an advanced template.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

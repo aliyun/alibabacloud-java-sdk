@@ -66,17 +66,17 @@ public class SetAIAgentVoiceprintRequest extends TeaModel {
          * </li>
          * <li><p>oss: An OSS object. Supports the following formats:</p>
          * <ol>
-         * <li><p>OSS URI: oss://bucket-name/object-key</p>
-         * <p>Example: oss://my-bucket/audio/sample.wav</p>
+         * <li><p>OSS URI: oss\://bucket-name/object-key</p>
+         * <p>Example: oss\://my-bucket/audio/sample.wav</p>
          * </li>
          * <li><p>OSS public URL: http(s)://${bucket}.oss-${region}.aliyuncs.com/${object}</p>
-         * <p>Example: <a href="https://my-bucket.oss-cn-hangzhou.aliyuncs.com/audio/sample.wav">https://my-bucket.oss-cn-hangzhou.aliyuncs.com/audio/sample.wav</a></p>
+         * <p>Example: https\://my-bucket.oss-cn-hangzhou.aliyuncs.com/audio/sample.wav</p>
          * </li>
          * </ol>
          * </li>
          * </ul>
          * <blockquote>
-         * <p> The OSS bucket must be in the same region as the service. Otherwise, the access fails.</p>
+         * <p>The OSS bucket must be in the same region as the service. Otherwise, the access fails.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

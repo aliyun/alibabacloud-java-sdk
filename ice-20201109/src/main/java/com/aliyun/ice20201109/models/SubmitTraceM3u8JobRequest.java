@@ -14,9 +14,9 @@ public class SubmitTraceM3u8JobRequest extends TeaModel {
     public String keyUri;
 
     /**
-     * <p>The OSS URL of the output M3U8 file.</p>
+     * <p>The OSS destination for the output M3U8 file.</p>
      * <blockquote>
-     * <p>The OSS bucket must reside in the same region as the service region.</p>
+     * <p>The OSS bucket must be in the same region as your MPS service.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      */
@@ -24,12 +24,14 @@ public class SubmitTraceM3u8JobRequest extends TeaModel {
     public SubmitTraceM3u8JobRequestOutput output;
 
     /**
-     * <p>Additional parameters for the watermark job, provided as a JSON string. Supported parameter:</p>
+     * <p>A JSON string that contains parameters for the watermarking job. The following parameter is supported:</p>
      * <ul>
-     * <li><p>m3u8Type: The type of M3U8 to generate. Defaults to v1.</p>
+     * <li><p><code>m3u8Type</code>: The algorithm type. The default value is <code>v1</code>.</p>
      * <ul>
-     * <li>v1: Generates an M3U8 with absolute paths, playable directly. The signed URL for access is valid for 24 hours. If you need to use it after expiration, you must call this API again.</li>
-     * <li>v2: Generates an M3U8 with relative paths. It must be placed in the same directory as the TS segment files to be playable.</li>
+     * <li><p><code>v1</code>: Generates an M3U8 file that uses an absolute path. The file can be played directly. The signature is valid for 24 hours. After expiration, you must submit a new job to get a new M3U8 file.</p>
+     * </li>
+     * <li><p><code>v2</code>: Generates an M3U8 file that uses a relative path. This file must be stored in the same directory as the TS files.</p>
+     * </li>
      * </ul>
      * </li>
      * </ul>
@@ -41,13 +43,16 @@ public class SubmitTraceM3u8JobRequest extends TeaModel {
     public String params;
 
     /**
-     * <p>The specific trace watermark information.</p>
+     * <p>The watermark content to embed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Trace watermark test</p>
      */
     @NameInMap("Trace")
     public String trace;
 
     /**
-     * <p>The media ID for the trace watermark. You can obtain this from the response of the SubmitTraceAbJob operation.</p>
+     * <p>The media ID of the processed A/B stream for video watermarking for tracing. This ID is returned in the response when you submit the A/B stream job.</p>
      * 
      * <strong>example:</strong>
      * <p>437bd2b516ffda105d07b12a9a82****</p>
@@ -102,9 +107,9 @@ public class SubmitTraceM3u8JobRequest extends TeaModel {
 
     public static class SubmitTraceM3u8JobRequestOutput extends TeaModel {
         /**
-         * <p>The OSS path where the output file is saved. You can specify the path in one of the following formats:</p>
-         * <p>1\. oss://bucket/object</p>
-         * <p>2\. http(s)://bucket.oss-[regionId].aliyuncs.com/object where bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object path in OSS.</p>
+         * <p>The output file path. Only OSS paths are supported. You can use one of the following formats:</p>
+         * <p>1\. <code>oss://bucket/object</code></p>
+         * <p>2\. <code>http(s)://bucket.oss-[regionId].aliyuncs.com/object</code>. In these formats, <code>bucket</code> specifies the name of an OSS bucket in the same region as your project, and <code>object</code> specifies the file path.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,9 +119,9 @@ public class SubmitTraceM3u8JobRequest extends TeaModel {
         public String media;
 
         /**
-         * <p>The type of the output file. Valid value:</p>
+         * <p>The type of the output destination. Valid values:</p>
          * <ol>
-         * <li>OSS: an OSS object.</li>
+         * <li><code>OSS</code>: an OSS file location.</li>
          * </ol>
          * <p>This parameter is required.</p>
          * 

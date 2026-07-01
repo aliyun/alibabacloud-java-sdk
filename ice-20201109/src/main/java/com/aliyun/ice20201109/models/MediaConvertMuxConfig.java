@@ -4,6 +4,10 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class MediaConvertMuxConfig extends TeaModel {
+    /**
+     * <p>Shard configuration field. For more information, see Segment details.</p>
+     * <p>This field takes effect only when Container is set to m3u8, hls-fmp4, mpd, or cmaf.</p>
+     */
     @NameInMap("Segment")
     public MediaConvertSegment segment;
 

@@ -4,16 +4,37 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListMediaBasicInfosRequest extends TeaModel {
+    /**
+     * <p>The authentication expiration time, in seconds.</p>
+     * <ul>
+     * <li><p>Minimum value: 1.</p>
+     * </li>
+     * <li><p>Maximum value: 86400.</p>
+     * </li>
+     * <li><p>Default value: 3600.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("AuthTimeout")
     public Long authTimeout;
 
     /**
-     * <p>The business type of the media asset. Valid values:</p>
-     * <p>\- subtitles</p>
-     * <p>\- watermark</p>
-     * <p>\- opening</p>
-     * <p>\- ending</p>
-     * <p>\- general</p>
+     * <p>The business type. Valid values:</p>
+     * <ul>
+     * <li><p><code>subtitles</code>: subtitles</p>
+     * </li>
+     * <li><p><code>watermark</code>: watermark</p>
+     * </li>
+     * <li><p><code>opening</code>: opening</p>
+     * </li>
+     * <li><p><code>ending</code>: ending</p>
+     * </li>
+     * <li><p><code>general</code>: General</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>opening</p>
@@ -22,9 +43,13 @@ public class ListMediaBasicInfosRequest extends TeaModel {
     public String businessType;
 
     /**
-     * <p>The end time of utcCreated.</p>
-     * <p>\- The value is the end of the left-open right-closed interval.</p>
-     * <p>\- Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. For example, 2017-01-11T12:00:00Z indicates 20:00:00 on January 11, 2017 (UTC +8).</p>
+     * <p>The end time of the query range, based on the creation time (<code>utcCreated</code>).</p>
+     * <ul>
+     * <li><p>The query returns results created at or before this time (inclusive).</p>
+     * </li>
+     * <li><p>The time must be in UTC and comply with the ISO 8601 standard. The format is <code>YYYY-MM-DD\\&quot;T\\&quot;HH:mm:ss\\&quot;Z\\&quot;</code>. For example, <code>2017-01-11T12:00:00Z</code> corresponds to 20:00:00 on January 11, 2017 (UTC+8).</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>2020-12-20T13:00:00Z</p>
@@ -33,7 +58,7 @@ public class ListMediaBasicInfosRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>Specifies whether to return the basic information of the source file.</p>
+     * <p>Set to <code>true</code> to include basic file information in the response.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -42,7 +67,7 @@ public class ListMediaBasicInfosRequest extends TeaModel {
     public Boolean includeFileBasicInfo;
 
     /**
-     * <p>The maximum number of entries to return.</p>
+     * <p>The maximum number of results to return per page.</p>
      * <p>Maximum value: 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +77,7 @@ public class ListMediaBasicInfosRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The ID of the media asset.</p>
+     * <p>The media ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>019b82e24b37a1c2958dec38</strong></strong></p>
@@ -61,11 +86,17 @@ public class ListMediaBasicInfosRequest extends TeaModel {
     public String mediaId;
 
     /**
-     * <p>The type of the media asset. Valid values:</p>
-     * <p>\- image</p>
-     * <p>\- video</p>
-     * <p>\- audio</p>
-     * <p>\- text</p>
+     * <p>The media type. Valid values:</p>
+     * <ul>
+     * <li><p><code>image</code>: image</p>
+     * </li>
+     * <li><p><code>video</code>: video</p>
+     * </li>
+     * <li><p><code>audio</code>: audio</p>
+     * </li>
+     * <li><p><code>text</code>: text</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>video</p>
@@ -74,7 +105,7 @@ public class ListMediaBasicInfosRequest extends TeaModel {
     public String mediaType;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <p>The pagination token used to retrieve the next page of results. An empty value indicates that all results have been returned.</p>
      * 
      * <strong>example:</strong>
      * <p>pSa1SQ0wCe5pzVrQ6mWZEw==</p>
@@ -83,9 +114,13 @@ public class ListMediaBasicInfosRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The order of sorting by utcCreated. Default value: desc. Valid values:</p>
-     * <p>\- desc</p>
-     * <p>\- asc</p>
+     * <p>The sort order for results based on the creation time (<code>utcCreated</code>). The default is descending. Valid values:</p>
+     * <ul>
+     * <li><p><code>desc</code>: Descending order</p>
+     * </li>
+     * <li><p><code>asc</code>: Ascending order</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>desc</p>
@@ -94,11 +129,17 @@ public class ListMediaBasicInfosRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The source of the media asset. Valid values:</p>
-     * <p>\- oss: Object Storage Service (OSS).</p>
-     * <p>\- vod: ApsaraVideo VOD.</p>
-     * <p>\- live: ApsaraVideo Live.</p>
-     * <p>\- general: other sources. This is the default value.</p>
+     * <p>The source. Valid values:</p>
+     * <ul>
+     * <li><p><code>oss</code>: OSS</p>
+     * </li>
+     * <li><p><code>vod</code>: video on demand</p>
+     * </li>
+     * <li><p><code>live</code>: live streaming</p>
+     * </li>
+     * <li><p><code>general</code>: Other sources (default).</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>oss</p>
@@ -107,9 +148,13 @@ public class ListMediaBasicInfosRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>The start time of utcCreated.</p>
-     * <p>\- The value is the beginning of a left-open right-closed interval.</p>
-     * <p>\- Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. For example, 2017-01-11T12:00:00Z indicates 20:00:00 on January 11, 2017 (UTC +8).</p>
+     * <p>The start time of the query range, based on the creation time (<code>utcCreated</code>).</p>
+     * <ul>
+     * <li><p>The query returns results created after this time (exclusive).</p>
+     * </li>
+     * <li><p>The time must be in UTC and comply with the ISO 8601 standard. The format is <code>YYYY-MM-DD\\&quot;T\\&quot;HH:mm:ss\\&quot;Z\\&quot;</code>. For example, <code>2017-01-11T12:00:00Z</code> corresponds to 20:00:00 on January 11, 2017 (UTC+8).</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>2020-12-20T12:00:00Z</p>
@@ -118,11 +163,17 @@ public class ListMediaBasicInfosRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The status of the media asset. Valid values:</p>
-     * <p>\- Init: the initial state, which indicates that the source file is not ready.</p>
-     * <p>\- Preparing: The source file is being prepared. For example, the file is being uploaded or edited.</p>
-     * <p>\- PrepareFail: The source file failed to be prepared. For example, the information of the source file failed to be obtained.</p>
-     * <p>\- Normal: The source file is ready.</p>
+     * <p>The media status. Valid values:</p>
+     * <ul>
+     * <li><p><code>Init</code>: The source file is not ready.</p>
+     * </li>
+     * <li><p><code>Preparing</code>: The source file is being prepared. For example, it is being uploaded or composited.</p>
+     * </li>
+     * <li><p><code>PrepareFail</code>: The source file failed to prepare. This may occur, for example, if the system fails to retrieve information about the source file.</p>
+     * </li>
+     * <li><p><code>Normal</code>: The source file is ready.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Normal</p>

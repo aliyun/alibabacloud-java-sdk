@@ -7,11 +7,16 @@ public class CreateRecognitionEntityRequest extends TeaModel {
     /**
      * <p>The type of recognition algorithm. Valid values:</p>
      * <ul>
-     * <li>landmark</li>
-     * <li>object</li>
-     * <li>logo</li>
-     * <li>face</li>
-     * <li>label</li>
+     * <li><p>landmark</p>
+     * </li>
+     * <li><p>object</p>
+     * </li>
+     * <li><p>logo</p>
+     * </li>
+     * <li><p>face</p>
+     * </li>
+     * <li><p>label</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -23,6 +28,9 @@ public class CreateRecognitionEntityRequest extends TeaModel {
 
     /**
      * <p>The extra information about the custom entity, provided as a JSON string. Max length: 256 bytes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;description&quot;: &quot;Book classification&quot;}</p>
      */
     @NameInMap("EntityInfo")
     public String entityInfo;
@@ -30,6 +38,9 @@ public class CreateRecognitionEntityRequest extends TeaModel {
     /**
      * <p>The name of the custom entity. Max length: 64 bytes.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Custom library entity name</p>
      */
     @NameInMap("EntityName")
     public String entityName;

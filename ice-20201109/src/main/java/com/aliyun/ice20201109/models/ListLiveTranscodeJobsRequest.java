@@ -34,8 +34,10 @@ public class ListLiveTranscodeJobsRequest extends TeaModel {
     /**
      * <p>The sorting order. By default, the query results are sorted by creation time in descending order. Valid values:</p>
      * <ul>
-     * <li>asc</li>
-     * <li>desc</li>
+     * <li><p>asc</p>
+     * </li>
+     * <li><p>desc</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,8 +49,10 @@ public class ListLiveTranscodeJobsRequest extends TeaModel {
     /**
      * <p>The start mode of the transcoding job.</p>
      * <ul>
-     * <li>0: The transcoding job immediately starts.</li>
-     * <li>1: The transcoding job starts at the scheduled time.</li>
+     * <li><p>0: The transcoding job immediately starts.</p>
+     * </li>
+     * <li><p>1: The transcoding job starts at the scheduled time.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -70,10 +74,14 @@ public class ListLiveTranscodeJobsRequest extends TeaModel {
     /**
      * <p>The type of the template used by the transcoding job.</p>
      * <ul>
-     * <li>normal</li>
-     * <li>narrow-band</li>
-     * <li>audio-only</li>
-     * <li>origin</li>
+     * <li><p>normal</p>
+     * </li>
+     * <li><p>narrow-band</p>
+     * </li>
+     * <li><p>audio-only</p>
+     * </li>
+     * <li><p>origin</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

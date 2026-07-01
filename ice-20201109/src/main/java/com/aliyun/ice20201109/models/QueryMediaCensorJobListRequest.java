@@ -7,8 +7,10 @@ public class QueryMediaCensorJobListRequest extends TeaModel {
     /**
      * <p>The end of the time range to query.</p>
      * <ul>
-     * <li>Specify the time in the ISO 8601 standard. The time must be in UTC.</li>
-     * <li>Format: yyyy-MM-ddTHH:mm:ssZ.</li>
+     * <li><p>Specify the time in the ISO 8601 standard. The time must be in UTC.</p>
+     * </li>
+     * <li><p>Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,8 +31,10 @@ public class QueryMediaCensorJobListRequest extends TeaModel {
     /**
      * <p>The number of entries per page.</p>
      * <ul>
-     * <li>Default value: <strong>30</strong>.</li>
-     * <li>Valid values: <strong>1 to 300</strong>.</li>
+     * <li><p>Default value: <strong>30</strong>.</p>
+     * </li>
+     * <li><p>Valid values: <strong>1 to 300</strong>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +47,7 @@ public class QueryMediaCensorJobListRequest extends TeaModel {
      * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
      * 
      * <strong>example:</strong>
-     * <p>79aff3eee82242e092899db5f669</p>
+     * <p>79aff3eee82242e092899db5****</p>
      */
     @NameInMap("NextPageToken")
     public String nextPageToken;
@@ -72,8 +76,10 @@ public class QueryMediaCensorJobListRequest extends TeaModel {
     /**
      * <p>The beginning of the time range to query.</p>
      * <ul>
-     * <li>Specify the time in the ISO 8601 standard. The time must be in UTC.</li>
-     * <li>Format: yyyy-MM-ddTHH:mm:ssZ.</li>
+     * <li><p>Specify the time in the ISO 8601 standard. The time must be in UTC.</p>
+     * </li>
+     * <li><p>Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -85,11 +91,16 @@ public class QueryMediaCensorJobListRequest extends TeaModel {
     /**
      * <p>The state of the jobs that you want to query. Valid values:</p>
      * <ul>
-     * <li><strong>All</strong>: all jobs.</li>
-     * <li><strong>Queuing</strong>: the jobs that are waiting in the queue.</li>
-     * <li><strong>Analysing</strong>: the jobs that are in progress.</li>
-     * <li><strong>Fail</strong>: failed jobs.</li>
-     * <li><strong>Success</strong>: successful jobs.</li>
+     * <li><p><strong>All</strong>: all jobs.</p>
+     * </li>
+     * <li><p><strong>Queuing</strong>: the jobs that are waiting in the queue.</p>
+     * </li>
+     * <li><p><strong>Analysing</strong>: the jobs that are in progress.</p>
+     * </li>
+     * <li><p><strong>Fail</strong>: failed jobs.</p>
+     * </li>
+     * <li><p><strong>Success</strong>: successful jobs.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

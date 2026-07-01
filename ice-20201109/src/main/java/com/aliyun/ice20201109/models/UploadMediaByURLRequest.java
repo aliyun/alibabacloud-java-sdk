@@ -14,7 +14,7 @@ public class UploadMediaByURLRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The entity ID. You can call the CreateEntity operation to create an entity and specify a dynamic metadata structure.</p>
+     * <p>The entity ID. You can call the CreateEntity API to create an entity and define a custom dynamic metadata schema.</p>
      * 
      * <strong>example:</strong>
      * <p>d67281da3c8743b8823ad12976187***</p>
@@ -23,11 +23,14 @@ public class UploadMediaByURLRequest extends TeaModel {
     public String entityId;
 
     /**
-     * <p>The metadata of the media file that you want to upload. The value must be a JSON string.</p>
+     * <p>The metadata of the media file, provided as a JSON string.</p>
      * <ul>
-     * <li>This parameter takes effect only if its value matches a URL that is specified in UploadURLs.</li>
-     * <li>You must convert the JSON-formatted data, such as [UploadMetadata, UploadMetadata,…], into a JSON string.</li>
-     * <li>For more information, see the &quot;UploadMetadata&quot; section of this topic.</li>
+     * <li><p>This metadata takes effect only when it matches a URL in <code>UploadURLs</code>.</p>
+     * </li>
+     * <li><p>The value must be a JSON array in the <code>[UploadMetadata, UploadMetadata, ...]</code> format, passed as a JSON string.</p>
+     * </li>
+     * <li><p>For more information, see the UploadMetadata table below.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,8 +40,8 @@ public class UploadMediaByURLRequest extends TeaModel {
     public String mediaMetaData;
 
     /**
-     * <p>The postprocessing configurations. You can specify this parameter if Type is set to video or audio.</p>
-     * <p>Set ProcessType to Workflow.</p>
+     * <p>Specifies post-upload processing actions for media files of type <code>video</code> or <code>audio</code>.</p>
+     * <p>The only supported value for <code>ProcessType</code> is <code>Workflow</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;ProcessType&quot;: &quot;Workflow&quot;,&quot;ProcessID&quot;:&quot;b72a06c6beeb4dcdb898feef067b1***&quot;}</p>
@@ -47,9 +50,13 @@ public class UploadMediaByURLRequest extends TeaModel {
     public String postProcessConfig;
 
     /**
-     * <p>The destination storage address.</p>
-     * <p>Set StorageType to oss.</p>
-     * <p>Set StorageLocation to an address in ApsaraVideo VOD. You cannot set this field to an OSS URL.</p>
+     * <p>The destination storage location.</p>
+     * <ul>
+     * <li><p>The only valid value for <code>StorageType</code> is <code>oss</code>.</p>
+     * </li>
+     * <li><p><code>StorageLocation</code> supports VOD storage only and does not support your own OSS buckets.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>{&quot;StorageType&quot;:&quot;oss&quot;,&quot;StorageLocation&quot;:&quot;outin-***.oss-cn-shanghai.aliyuncs.com&quot;}</p>
@@ -58,17 +65,19 @@ public class UploadMediaByURLRequest extends TeaModel {
     public String uploadTargetConfig;
 
     /**
-     * <p>The URL of the source file.</p>
+     * <p>The source URL of the media file.</p>
      * <ul>
-     * <li><p>The URL must contain a file name extension, such as mp4 in <code>https://****.mp4</code>.</p>
+     * <li><p>The URL must include a file extension. For example, in <code>https://****.mp4</code>, mp4 is the file extension.</p>
      * <ul>
-     * <li>If the URL does not contain a file name extension, you can specify one by setting <code>FileExtension</code> in <code>UploadMetadata</code>.</li>
-     * <li>If the URL contains a file name extension and <code>FileExtension</code> is also specified, the value of <code>FileExtension</code> prevails.</li>
+     * <li><p>If the URL does not include a file extension, you can specify it by using the <code>FileExtension</code> parameter in <code>MediaMetaData</code>.</p>
+     * </li>
+     * <li><p>If a file extension is present in both the URL and the <code>FileExtension</code> parameter, the value of <code>FileExtension</code> takes precedence.</p>
+     * </li>
      * </ul>
      * </li>
-     * <li><p>URL encoding is required. Separate multiple URLs with commas (,). You can specify a maximum of 20 URLs.</p>
+     * <li><p>The URLs must be URL-encoded. Separate multiple URLs with commas (,). You can specify up to 20 URLs.</p>
      * </li>
-     * <li><p>Special characters may cause upload failures. Therefore, you must encode URLs before you separate them with commas (,).</p>
+     * <li><p>To prevent upload failures due to special characters, URL-encode each URL before concatenating them with commas.</p>
      * </li>
      * </ul>
      * 
@@ -79,7 +88,7 @@ public class UploadMediaByURLRequest extends TeaModel {
     public String uploadURLs;
 
     /**
-     * <p>The user data. The value must be a JSON string. You can configure settings such as message callbacks.</p>
+     * <p>Custom settings, provided as a JSON string. This parameter supports configurations such as message callbacks.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;MessageCallback&quot;:{&quot;CallbackURL&quot;:&quot;<a href="http://example.aliyundoc.com%22%7D,%22Extend%22:%7B%22localId%22:%22xxx%22,%22test%22:%22www%22%7D%7D">http://example.aliyundoc.com&quot;},&quot;Extend&quot;:{&quot;localId&quot;:&quot;xxx&quot;,&quot;test&quot;:&quot;www&quot;}}</a></p>

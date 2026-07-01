@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class QueryVideoCognitionJobRequest extends TeaModel {
     /**
-     * <p>Specifies whether to include the full algorithm results in the response.</p>
+     * <p>A container for parameters that determine which algorithm results to include in the response.</p>
      */
     @NameInMap("IncludeResults")
     public QueryVideoCognitionJobRequestIncludeResults includeResults;
 
     /**
-     * <p>The ID of the task to query. It is returned when you call the <a href="https://help.aliyun.com/document_detail/478786.html">SubmitSmarttagJob</a> operation.</p>
+     * <p>The ID of the intelligent tagging job. You can obtain this ID from the response of the <a href="https://help.aliyun.com/document_detail/478786.html">SubmitIntelligentTaggingJob</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class QueryVideoCognitionJobRequest extends TeaModel {
     public String jobId;
 
     /**
-     * <p>Additional request parameters, provided as a JSON string.</p>
+     * <p>Additional request parameters, specified as a JSON string.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -60,7 +60,7 @@ public class QueryVideoCognitionJobRequest extends TeaModel {
 
     public static class QueryVideoCognitionJobRequestIncludeResults extends TeaModel {
         /**
-         * <p>Specifies whether to include Automatic Speech Recognition (ASR) results.</p>
+         * <p>Specifies whether to return the ASR results.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -69,7 +69,7 @@ public class QueryVideoCognitionJobRequest extends TeaModel {
         public Boolean needAsr;
 
         /**
-         * <p>Specifies whether to include Optical Character Recognition (OCR) results.</p>
+         * <p>Specifies whether to return the OCR results.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -78,7 +78,7 @@ public class QueryVideoCognitionJobRequest extends TeaModel {
         public Boolean needOcr;
 
         /**
-         * <p>Specifies whether to include the URL to the raw output of the algorithm.</p>
+         * <p>Specifies whether to return a link to the raw operator results.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

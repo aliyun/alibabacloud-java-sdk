@@ -18,6 +18,24 @@ public class GetMediaMarksResponseBody extends TeaModel {
      * <ul>
      * <li>The value is in the JSONArray format.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>[
+     *  {
+     *  &quot;MarkStartTime&quot;: &quot;12.1&quot;,
+     *  &quot;MarkEndTime&quot;: &quot;12.2&quot;,
+     *  &quot;MarkTag&quot;: &quot;tag-1&quot;,
+     *  &quot;MarkContent&quot;: &quot;content-1&quot;,
+     *  &quot;MarkStatus&quot;: &quot;a&quot;
+     *  },
+     *  {
+     *  &quot;MarkStartTime&quot;: &quot;12.3&quot;,
+     *  &quot;MarkEndTime&quot;: &quot;12.4&quot;,
+     *  &quot;MarkTag&quot;: &quot;tag-2&quot;,
+     *  &quot;MarkContent&quot;: &quot;content-2&quot;,
+     *  &quot;MarkStatus&quot;: &quot;online&quot;
+     *  }
+     * ]</p>
      */
     @NameInMap("MediaMarks")
     public String mediaMarks;

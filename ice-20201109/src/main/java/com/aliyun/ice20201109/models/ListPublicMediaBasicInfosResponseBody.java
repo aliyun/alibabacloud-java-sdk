@@ -437,6 +437,9 @@ public class ListPublicMediaBasicInfosResponseBody extends TeaModel {
 
         /**
          * <p>The title of the media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>My video title</p>
          */
         @NameInMap("Title")
         public String title;

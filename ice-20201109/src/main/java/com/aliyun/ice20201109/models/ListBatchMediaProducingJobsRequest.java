@@ -26,8 +26,10 @@ public class ListBatchMediaProducingJobsRequest extends TeaModel {
      * <p>The job type.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>Script: script-based editing job that mixes media assets.</li>
-     * <li>Smart_Mix: intelligent editing job that mixes media assets.</li>
+     * <li><p>Script: script-based editing job that mixes media assets.</p>
+     * </li>
+     * <li><p>Smart_Mix: intelligent editing job that mixes media assets.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,8 +59,10 @@ public class ListBatchMediaProducingJobsRequest extends TeaModel {
     /**
      * <p>The sorting parameter. Valid values:</p>
      * <ul>
-     * <li>desc (default): sorted by creation time in descending order.</li>
-     * <li>asc: sorted by creation time in ascending order.</li>
+     * <li><p>desc (default): sorted by creation time in descending order.</p>
+     * </li>
+     * <li><p>asc: sorted by creation time in ascending order.</p>
+     * </li>
      * </ul>
      * <!---->
      * 
@@ -81,10 +85,14 @@ public class ListBatchMediaProducingJobsRequest extends TeaModel {
      * <p>The job state.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>Finished</li>
-     * <li>Init</li>
-     * <li>Failed</li>
-     * <li>Processing</li>
+     * <li><p>Finished</p>
+     * </li>
+     * <li><p>Init</p>
+     * </li>
+     * <li><p>Failed</p>
+     * </li>
+     * <li><p>Processing</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

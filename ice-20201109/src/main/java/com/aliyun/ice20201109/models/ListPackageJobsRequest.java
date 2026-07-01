@@ -17,7 +17,7 @@ public class ListPackageJobsRequest extends TeaModel {
      * <p>The job ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>7b38a5d86f1e47838927b6e7ccb11cbe</p>
+     * <p>7b38a5d86f1e47838927b6e7ccb1****</p>
      */
     @NameInMap("JobId")
     public String jobId;
@@ -26,7 +26,7 @@ public class ListPackageJobsRequest extends TeaModel {
      * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</p>
      * 
      * <strong>example:</strong>
-     * <p>ab4802364a2e49208c99efab82dfa8e8</p>
+     * <p>ab4802364a2e49208c99efab82df****</p>
      */
     @NameInMap("NextPageToken")
     public String nextPageToken;
@@ -34,8 +34,10 @@ public class ListPackageJobsRequest extends TeaModel {
     /**
      * <p>The order that you use to sort the query results. Valid values:</p>
      * <ul>
-     * <li>CreateTimeDesc: sorts the jobs by creation time in descending order.</li>
-     * <li>CreateTimeAsc: sorts the jobs by creation time in ascending order.</li>
+     * <li><p>CreateTimeDesc: sorts the jobs by creation time in descending order.</p>
+     * </li>
+     * <li><p>CreateTimeAsc: sorts the jobs by creation time in ascending order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,9 +67,12 @@ public class ListPackageJobsRequest extends TeaModel {
     /**
      * <p>The state of the job.</p>
      * <ul>
-     * <li>Init: The job is submitted.</li>
-     * <li>Success: The job is successful.</li>
-     * <li>Fail: The job failed.</li>
+     * <li><p>Init: The job is submitted.</p>
+     * </li>
+     * <li><p>Success: The job is successful.</p>
+     * </li>
+     * <li><p>Fail: The job failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

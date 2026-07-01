@@ -40,8 +40,10 @@ public class ListLiveSnapshotFilesRequest extends TeaModel {
      * <p>The sorting order. Default value: asc.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>asc: sorts the query results by creation time in ascending order.</li>
-     * <li>desc: sorts the query results by creation time in descending order.</li>
+     * <li><p>asc: sorts the query results by creation time in ascending order.</p>
+     * </li>
+     * <li><p>desc: sorts the query results by creation time in descending order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

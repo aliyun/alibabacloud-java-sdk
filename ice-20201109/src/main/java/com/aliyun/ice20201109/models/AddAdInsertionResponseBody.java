@@ -84,7 +84,7 @@ public class AddAdInsertionResponseBody extends TeaModel {
 
     public static class AddAdInsertionResponseBodyConfigManifestEndpointConfig extends TeaModel {
         /**
-         * <p>DASH清单播放端点前缀</p>
+         * <p>DASH manifest playback endpoint prefix</p>
          */
         @NameInMap("DashPrefix")
         public String dashPrefix;

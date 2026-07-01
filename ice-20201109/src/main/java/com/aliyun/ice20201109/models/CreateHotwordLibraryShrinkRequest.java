@@ -8,7 +8,7 @@ public class CreateHotwordLibraryShrinkRequest extends TeaModel {
      * <p>The description of the hotword library. It can be up to 200 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>存放名人的词库</p>
+     * <p>Lexicon containing celebrity names</p>
      */
     @NameInMap("Description")
     public String description;

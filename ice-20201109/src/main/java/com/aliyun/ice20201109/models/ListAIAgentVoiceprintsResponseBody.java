@@ -14,7 +14,7 @@ public class ListAIAgentVoiceprintsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of voiceprints that match the query criteria.</p>
+     * <p>The total number of matching voiceprints.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -23,7 +23,7 @@ public class ListAIAgentVoiceprintsResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The voiceprints.</p>
+     * <p>A list of voiceprint objects.</p>
      */
     @NameInMap("Voiceprints")
     public java.util.List<ListAIAgentVoiceprintsResponseBodyVoiceprints> voiceprints;
@@ -59,7 +59,7 @@ public class ListAIAgentVoiceprintsResponseBody extends TeaModel {
 
     public static class ListAIAgentVoiceprintsResponseBodyVoiceprints extends TeaModel {
         /**
-         * <p>The creation time of the voiceprint.</p>
+         * <p>The time the voiceprint was created. The time is in UTC and formatted according to the ISO 8601 standard.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-07-28T10:03:58.000+00:00</p>
@@ -68,7 +68,7 @@ public class ListAIAgentVoiceprintsResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The last modification time of the voiceprint.</p>
+         * <p>The time the voiceprint was last modified. The time is in UTC and formatted according to the ISO 8601 standard.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-07-28T10:03:58.000+00:00</p>
@@ -77,7 +77,7 @@ public class ListAIAgentVoiceprintsResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The unique identifier for the voiceprint.</p>
+         * <p>The unique voiceprint ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vp_1699123456_8527</p>

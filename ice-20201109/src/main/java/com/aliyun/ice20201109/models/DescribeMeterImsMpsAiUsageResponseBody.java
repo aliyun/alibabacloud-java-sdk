@@ -61,6 +61,10 @@ public class DescribeMeterImsMpsAiUsageResponseBody extends TeaModel {
 
         /**
          * <p>The AI type. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Censor：审核类型
+         * Product：生产类型</p>
          */
         @NameInMap("Type")
         public String type;

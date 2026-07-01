@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class SubmitDynamicImageJobShrinkRequest extends TeaModel {
     /**
-     * <p>The input of the job.</p>
+     * <p>The job input.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Input")
     public String inputShrink;
 
     /**
-     * <p>The name of the job.</p>
+     * <p>The job name.</p>
      * 
      * <strong>example:</strong>
      * <p>SampleJob</p>
@@ -21,14 +21,14 @@ public class SubmitDynamicImageJobShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The output of the job.</p>
+     * <p>The job output.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Output")
     public String outputShrink;
 
     /**
-     * <p>The scheduling settings.</p>
+     * <p>The scheduling configuration.</p>
      */
     @NameInMap("ScheduleConfig")
     public String scheduleConfigShrink;

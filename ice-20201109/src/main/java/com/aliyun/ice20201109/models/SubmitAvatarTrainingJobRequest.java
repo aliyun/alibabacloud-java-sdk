@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitAvatarTrainingJobRequest extends TeaModel {
     /**
-     * <p>The ID of the digital human training job.</p>
+     * <p>The unique identifier for the avatar training job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

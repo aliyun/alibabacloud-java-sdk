@@ -70,6 +70,9 @@ public class CreateLivePackageOriginEndpointResponseBody extends TeaModel {
 
         /**
          * <p>The endpoint description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is an origin endpoint.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -128,6 +131,9 @@ public class CreateLivePackageOriginEndpointResponseBody extends TeaModel {
         @NameInMap("LastModified")
         public String lastModified;
 
+        /**
+         * <p>Live packaging configuration</p>
+         */
         @NameInMap("LivePackagingConfig")
         public LivePackagingConfig livePackagingConfig;
 

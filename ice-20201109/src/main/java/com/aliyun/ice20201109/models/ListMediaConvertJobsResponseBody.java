@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListMediaConvertJobsResponseBody extends TeaModel {
     /**
-     * <p>The tasks.</p>
+     * <p>A list of media convert jobs.</p>
      */
     @NameInMap("Jobs")
     public java.util.List<MediaConvertJobWithoutDetail> jobs;
 
     /**
-     * <p>Indicates the read position returned by the current call. An empty value means all data has been read.</p>
+     * <p>The token to retrieve the next page of results. This value is empty when there are no more results to return.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class ListMediaConvertJobsResponseBody extends TeaModel {
     public String nextPageToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>

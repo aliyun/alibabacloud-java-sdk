@@ -17,8 +17,10 @@ public class QueryMediaCensorJobDetailRequest extends TeaModel {
     /**
      * <p>The number of entries per page.</p>
      * <ul>
-     * <li>Default value: <strong>30</strong>.</li>
-     * <li>Valid values: <strong>1 to 300</strong>.</li>
+     * <li><p>Default value: <strong>30</strong>.</p>
+     * </li>
+     * <li><p>Valid values: <strong>1 to 300</strong>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

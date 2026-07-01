@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetYikeUserRequest extends TeaModel {
     /**
+     * <p>The user name of the sub-account.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="mailto:test.xxx@xxx.yikeai">test.xxx@xxx.yikeai</a></p>
      */

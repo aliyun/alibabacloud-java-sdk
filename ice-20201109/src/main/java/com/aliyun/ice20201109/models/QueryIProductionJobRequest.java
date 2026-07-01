@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class QueryIProductionJobRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>A token that ensures request idempotence.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The ID of the intelligent production job.</p>
+     * <p>The intelligent job ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

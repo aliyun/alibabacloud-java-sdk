@@ -7,9 +7,12 @@ public class DropSearchIndexRequest extends TeaModel {
     /**
      * <p>The category of the index. Valid values:</p>
      * <ul>
-     * <li>mm: large visual model.</li>
-     * <li>face: face recognition.</li>
-     * <li>aiLabel: smart tagging.</li>
+     * <li><p>mm: large visual model.</p>
+     * </li>
+     * <li><p>face: face recognition.</p>
+     * </li>
+     * <li><p>aiLabel: smart tagging.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -22,8 +25,10 @@ public class DropSearchIndexRequest extends TeaModel {
     /**
      * <p>The name of the search library.</p>
      * <ul>
-     * <li>If you leave this parameter empty, the search index is created in the default search library of Intelligent Media Service (IMS). Default value: ims-default-search-lib.</li>
-     * <li>To query information about an existing search library, call the <a href="https://help.aliyun.com/document_detail/2584455.html">QuerySearchLib</a> API operation.</li>
+     * <li><p>If you leave this parameter empty, the search index is created in the default search library of Intelligent Media Service (IMS). Default value: ims-default-search-lib.</p>
+     * </li>
+     * <li><p>To query information about an existing search library, call the <a href="https://help.aliyun.com/document_detail/2584455.html">QuerySearchLib</a> API operation.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

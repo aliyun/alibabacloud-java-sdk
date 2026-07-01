@@ -71,7 +71,7 @@ public class ListTemplatesResponseBody extends TeaModel {
          * <p>The template configurations.</p>
          * 
          * <strong>example:</strong>
-         * <p>参考Timeline模板配置详解</p>
+         * <p>See Timeline template configuration details.</p>
          */
         @NameInMap("Config")
         public String config;
@@ -89,9 +89,12 @@ public class ListTemplatesResponseBody extends TeaModel {
          * <p>The source from which the template was created.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>AliyunConsole</li>
-         * <li>WebSDK</li>
-         * <li>OpenAPI</li>
+         * <li><p>AliyunConsole</p>
+         * </li>
+         * <li><p>WebSDK</p>
+         * </li>
+         * <li><p>OpenAPI</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -113,9 +116,12 @@ public class ListTemplatesResponseBody extends TeaModel {
          * <p>The source from which the template was modified.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>AliyunConsole</li>
-         * <li>WebSDK</li>
-         * <li>OpenAPI</li>
+         * <li><p>AliyunConsole</p>
+         * </li>
+         * <li><p>WebSDK</p>
+         * </li>
+         * <li><p>OpenAPI</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -137,7 +143,7 @@ public class ListTemplatesResponseBody extends TeaModel {
          * <p>The template name.</p>
          * 
          * <strong>example:</strong>
-         * <p>视频添加水印模板</p>
+         * <p>Cloud editing template</p>
          */
         @NameInMap("Name")
         public String name;
@@ -155,10 +161,14 @@ public class ListTemplatesResponseBody extends TeaModel {
          * <p>The state of the preview media asset.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>PrepareFail</li>
-         * <li>Init</li>
-         * <li>Normal</li>
-         * <li>Preparing</li>
+         * <li><p>PrepareFail</p>
+         * </li>
+         * <li><p>Init</p>
+         * </li>
+         * <li><p>Normal</p>
+         * </li>
+         * <li><p>Preparing</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -171,12 +181,18 @@ public class ListTemplatesResponseBody extends TeaModel {
          * <p>The template state.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>UploadFailed: Failed to upload the video.</li>
-         * <li>ProcessFailed: Failed to process the advanced template.</li>
-         * <li>Available: The template is available.</li>
-         * <li>Uploading: The video is being uploaded.</li>
-         * <li>Created: The template is created but not ready for use.</li>
-         * <li>Processing: The advanced template is being processed.</li>
+         * <li><p>UploadFailed: Failed to upload the video.</p>
+         * </li>
+         * <li><p>ProcessFailed: Failed to process the advanced template.</p>
+         * </li>
+         * <li><p>Available: The template is available.</p>
+         * </li>
+         * <li><p>Uploading: The video is being uploaded.</p>
+         * </li>
+         * <li><p>Created: The template is created but not ready for use.</p>
+         * </li>
+         * <li><p>Processing: The advanced template is being processed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -198,8 +214,10 @@ public class ListTemplatesResponseBody extends TeaModel {
          * <p>The template type.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Timeline: regular template.</li>
-         * <li>VETemplate: advanced template.</li>
+         * <li><p>Timeline: regular template.</p>
+         * </li>
+         * <li><p>VETemplate: advanced template.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

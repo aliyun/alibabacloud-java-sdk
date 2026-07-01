@@ -6,14 +6,17 @@ import com.aliyun.tea.*;
 public class SearchEditingProjectRequest extends TeaModel {
     /**
      * <p>The source of the project.</p>
-     * <p>\-OpenAPI</p>
-     * <p>\-AliyunConsole</p>
-     * <p>\-WebSDK</p>
+     * <p>-OpenAPI</p>
+     * <p>-AliyunConsole</p>
+     * <p>-WebSDK</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>AliyunConsole: The project is created in the Alibaba Cloud console.</li>
-     * <li>WebSDK: The project is created by using the SDK for Web.</li>
-     * <li>OpenAPI: The project is created by calling API operations.</li>
+     * <li><p>AliyunConsole: The project is created in the Alibaba Cloud console.</p>
+     * </li>
+     * <li><p>WebSDK: The project is created by using the SDK for Web.</p>
+     * </li>
+     * <li><p>OpenAPI: The project is created by calling API operations.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,8 +55,10 @@ public class SearchEditingProjectRequest extends TeaModel {
     /**
      * <p>The type of the editing project. Default value: EditingProject. Valid values:</p>
      * <ul>
-     * <li>EditingProject: a regular editing project.</li>
-     * <li>LiveEditingProject: a live stream editing project.</li>
+     * <li><p>EditingProject: a regular editing project.</p>
+     * </li>
+     * <li><p>LiveEditingProject: a live stream editing project.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -85,10 +90,10 @@ public class SearchEditingProjectRequest extends TeaModel {
     /**
      * <p>The status of the online editing project. Separate multiple values with commas (,). By default, all online editing projects are queried.</p>
      * <p>Valid values:</p>
-     * <p>\-Draft</p>
-     * <p>\-Producing</p>
-     * <p>\-Produced</p>
-     * <p>\-ProduceFailed</p>
+     * <p>-Draft</p>
+     * <p>-Producing</p>
+     * <p>-Produced</p>
+     * <p>-ProduceFailed</p>
      * 
      * <strong>example:</strong>
      * <p>Producing</p>
@@ -98,13 +103,16 @@ public class SearchEditingProjectRequest extends TeaModel {
 
     /**
      * <p>The template type. Valid values:</p>
-     * <p>\-Timeline</p>
-     * <p>\-VETemplate</p>
+     * <p>-Timeline</p>
+     * <p>-VETemplate</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>Timeline: regular template.</li>
-     * <li>VETemplate: advanced template.</li>
-     * <li>None: No template is used.</li>
+     * <li><p>Timeline: regular template.</p>
+     * </li>
+     * <li><p>VETemplate: advanced template.</p>
+     * </li>
+     * <li><p>None: No template is used.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

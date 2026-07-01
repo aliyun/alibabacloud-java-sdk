@@ -22,8 +22,10 @@ public class ListAvatarsResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -64,6 +66,9 @@ public class ListAvatarsResponseBody extends TeaModel {
     public static class ListAvatarsResponseBodyDataAvatarList extends TeaModel {
         /**
          * <p>The description of the digital human.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a digital human used for a specific scenario.</p>
          */
         @NameInMap("AvatarDescription")
         public String avatarDescription;
@@ -79,6 +84,9 @@ public class ListAvatarsResponseBody extends TeaModel {
 
         /**
          * <p>The name of the digital human.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Decimal</p>
          */
         @NameInMap("AvatarName")
         public String avatarName;

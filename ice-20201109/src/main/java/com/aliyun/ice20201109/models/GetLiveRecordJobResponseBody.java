@@ -63,8 +63,10 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
          * <p>The type of the storage address.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>vod</li>
-         * <li>oss</li>
+         * <li><p>vod</p>
+         * </li>
+         * <li><p>oss</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -168,6 +170,9 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
 
         /**
          * <p>The name of the recording job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Live event recording task 1</p>
          */
         @NameInMap("Name")
         public String name;
@@ -191,9 +196,12 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
          * <p>The state of the recording job.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>paused: The job is paused.</li>
-         * <li>initial: The job is not started.</li>
-         * <li>started: The job is in progress.</li>
+         * <li><p>paused: The job is paused.</p>
+         * </li>
+         * <li><p>initial: The job is not started.</p>
+         * </li>
+         * <li><p>started: The job is in progress.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAIAgentConcurrencyResponseBody extends TeaModel {
     /**
+     * <p>The number of active concurrent calls.</p>
+     * 
      * <strong>example:</strong>
      * <p>39</p>
      */
@@ -12,6 +14,8 @@ public class GetAIAgentConcurrencyResponseBody extends TeaModel {
     public Integer activeCount;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
      */

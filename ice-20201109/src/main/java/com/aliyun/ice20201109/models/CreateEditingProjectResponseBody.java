@@ -53,11 +53,16 @@ public class CreateEditingProjectResponseBody extends TeaModel {
         /**
          * <p>The business status of the project. This parameter can be ignored for general editing projects. Valid values:</p>
          * <ul>
-         * <li>Reserving</li>
-         * <li>ReservationCanceled</li>
-         * <li>BroadCasting</li>
-         * <li>LoadingFailed</li>
-         * <li>LiveFinished</li>
+         * <li><p>Reserving</p>
+         * </li>
+         * <li><p>ReservationCanceled</p>
+         * </li>
+         * <li><p>BroadCasting</p>
+         * </li>
+         * <li><p>LoadingFailed</p>
+         * </li>
+         * <li><p>LiveFinished</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -68,6 +73,9 @@ public class CreateEditingProjectResponseBody extends TeaModel {
 
         /**
          * <p>The template material parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>See the template user guide.</p>
          */
         @NameInMap("ClipsParam")
         public String clipsParam;
@@ -211,7 +219,7 @@ public class CreateEditingProjectResponseBody extends TeaModel {
         public String templateType;
 
         /**
-         * <p>The timeline of the online editing project, in the JSON format.&lt;props=&quot;china&quot;&gt;For more information about objects in a timeline, see <a href="https://help.aliyun.com/document_detail/198823.htm?spm=a2c4g.11186623.2.9.90dc653dF67srN#topic-2024662">Timeline configurations</a>.  If you leave this parameter empty, an empty timeline is created and the duration of the online editing project is zero.</p>
+         * <p>The timeline of the online editing project, in the JSON format.&lt;props=&quot;china&quot;&gt;For more information about objects in a timeline, see <a href="https://help.aliyun.com/document_detail/198823.htm?spm=a2c4g.11186623.2.9.90dc653dF67srN#topic-2024662">Timeline configurations</a>. If you leave this parameter empty, an empty timeline is created and the duration of the online editing project is zero.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;VideoTracks&quot;:[{&quot;VideoTrackClips&quot;:[{&quot;MediaId&quot;:&quot;<strong><strong>4d7cf14dc7b83b0e801c</strong></strong>&quot;},{&quot;MediaId&quot;:&quot;<strong><strong>4d7cf14dc7b83b0e801c</strong></strong>&quot;}]}]}</p>

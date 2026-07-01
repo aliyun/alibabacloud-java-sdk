@@ -31,8 +31,10 @@ public class QueryMediaIndexJobResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,9 +102,12 @@ public class QueryMediaIndexJobResponseBody extends TeaModel {
         /**
          * <p>The index type. Valid values:</p>
          * <ul>
-         * <li>mm: large visual model.</li>
-         * <li>face: face recognition.</li>
-         * <li>aiLabel: smart tagging.</li>
+         * <li><p>mm: large visual model.</p>
+         * </li>
+         * <li><p>face: face recognition.</p>
+         * </li>
+         * <li><p>aiLabel: smart tagging.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -114,9 +119,12 @@ public class QueryMediaIndexJobResponseBody extends TeaModel {
         /**
          * <p>The job status. Valid values:</p>
          * <ul>
-         * <li>Running</li>
-         * <li>Success</li>
-         * <li>Fail</li>
+         * <li><p>Running</p>
+         * </li>
+         * <li><p>Success</p>
+         * </li>
+         * <li><p>Fail</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

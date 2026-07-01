@@ -23,6 +23,12 @@ public class DeleteMediaFromSearchLibRequest extends TeaModel {
     @NameInMap("MsgBody")
     public String msgBody;
 
+    /**
+     * <p>Namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name-1</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 

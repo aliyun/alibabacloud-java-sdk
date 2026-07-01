@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateUploadMediaResponseBody extends TeaModel {
     /**
-     * <p>The OSS URL of the file. The URL does not contain the information used for authentication.</p>
+     * <p>The OSS URL of the file, without authentication parameters.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://outin-***.oss-cn-north-2-gov-1.aliyuncs.com/sv/40360f05-181f63c3110-0004-cd8e-27f-de3c9.mp4">http://outin-***.oss-cn-north-2-gov-1.aliyuncs.com/sv/40360f05-181f63c3110-0004-cd8e-27f-de3c9.mp4</a></p>
@@ -25,7 +25,7 @@ public class CreateUploadMediaResponseBody extends TeaModel {
     /**
      * <p>The URL of the media asset.</p>
      * <blockquote>
-     * <p> If a domain name for Alibaba Cloud CDN (CDN) is specified, a CDN URL is returned. Otherwise, an OSS URL is returned. If the HTTP status code 403 is returned when you access the URL from your browser, the URL authentication feature of ApsaraVideo VOD is enabled. To resolve this issue, disable URL authentication or generate an authentication signature.</p>
+     * <p>This will be a CDN URL if a CDN domain is configured, or an OSS URL otherwise. If you receive a 403 error when accessing this URL in a browser, it is likely because URL authentication is enabled for the VOD domain. To resolve this, either disable URL authentication or generate a signed URL for access.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class CreateUploadMediaResponseBody extends TeaModel {
     public String mediaURL;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>4E84BE44-58A7-<strong><strong>-</strong></strong>-FBEBEA16EF94</p>
@@ -44,13 +44,13 @@ public class CreateUploadMediaResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The upload URL.</p>
+     * <p>The upload address.</p>
      * <blockquote>
-     * <p> The returned upload URL is a Base64-encoded URL. You must decode the Base64-encoded upload URL before you use an SDK or call an API operation to upload media files. You need to parse UploadAddress only if you use OSS SDK or call an OSS API operation to upload media files.</p>
+     * <p>The returned upload address is Base64-encoded and must be decoded before use. You only need to manually decode this address if you are using a native OSS SDK or an OSS API to perform the upload.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>eyJFbmRwb2ludCI6Imh0dHBzOi8vb3NzLWNuLXNoYW5naGFpLmFsaXl1bmNzLmNvbSIsIkJ1Y2tldCI6InN6aGQtdmlkZW8iLCJGaWxlTmFtZSI6InZvZC0yOTYzMWEvc3YvNTBmYTJlODQtMTgxMjdhZGRiMTcvNTBmYTJlODQtMTgxMjdhZGRiM***</p>
+     * <p>eyJTZWN1cml0a2VuIjoiQ0FJU3p3TjF****</p>
      */
     @NameInMap("UploadAddress")
     public String uploadAddress;
@@ -58,11 +58,11 @@ public class CreateUploadMediaResponseBody extends TeaModel {
     /**
      * <p>The upload credential.</p>
      * <blockquote>
-     * <p> The returned upload credential is a Base64-encoded value. You must decode the Base64-encoded upload URL before you use an SDK or call an API operation to upload media files. You need to parse UploadAuth only if you use OSS SDK or call an OSS API operation to upload media files.</p>
+     * <p>The returned upload credential is Base64-encoded and must be decoded before use. You only need to manually decode this credential if you are using a native OSS SDK or an OSS API to perform the upload.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>eyJBY2Nlc3NLZXlJZCI6IkxUQUk0Rm53bTk1dHdxQjMxR3IzSE5hRCIsIkFjY2Vzc0tleVNlY3JldCI6Ik9lWllKR0dTMTlkNkZaM1E3UVpJQmdmSVdnM3BPaiIsIkV4cGlyYXRpb24iOiI***</p>
+     * <p>eyJFbmRwb2ludCI6Imm****</p>
      */
     @NameInMap("UploadAuth")
     public String uploadAuth;

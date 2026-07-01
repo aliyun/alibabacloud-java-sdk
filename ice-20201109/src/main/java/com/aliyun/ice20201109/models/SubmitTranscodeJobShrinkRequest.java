@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitTranscodeJobShrinkRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>The idempotence key. Ensures request idempotence.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>12e8864746a0a398</strong></strong></p>
@@ -14,7 +14,7 @@ public class SubmitTranscodeJobShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The input group of the job. An input of a single file indicates a transcoding job. An input of multiple files indicates an audio and video stream merge job.</p>
+     * <p>The input group for the job. A single input creates a transcoding job. Multiple inputs create a media merging job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class SubmitTranscodeJobShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The output group of the job.</p>
+     * <p>The output group for the job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class SubmitTranscodeJobShrinkRequest extends TeaModel {
     public String outputGroupShrink;
 
     /**
-     * <p>The scheduling information about the job.</p>
+     * <p>The job scheduling information.</p>
      * 
      * <strong>example:</strong>
      * <p>job-name</p>
@@ -52,7 +52,7 @@ public class SubmitTranscodeJobShrinkRequest extends TeaModel {
     public String scheduleConfigShrink;
 
     /**
-     * <p>The custom settings. The value must be in the JSON format and can be up to 512 bytes in length. You can specify a <a href="https://help.aliyun.com/document_detail/451631.html">custom callback URL</a>.</p>
+     * <p>Custom settings in JSON format. The length is limited to 512 bytes. Supports <a href="https://help.aliyun.com/document_detail/451631.html">custom webhook address configuration</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>user-data</p>

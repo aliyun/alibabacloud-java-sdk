@@ -17,8 +17,10 @@ public class SubmitLiveTranscodeJobRequest extends TeaModel {
     /**
      * <p>The start mode of the transcoding job.</p>
      * <ul>
-     * <li>0: The transcoding job immediately starts.</li>
-     * <li>1: The transcoding job starts at the scheduled time.</li>
+     * <li><p>0: The transcoding job immediately starts.</p>
+     * </li>
+     * <li><p>1: The transcoding job starts at the scheduled time.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

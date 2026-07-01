@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddMediaConnectFlowInputRequest extends TeaModel {
     /**
-     * <p>The IP address whitelist in CIDR format. Separate multiple CIDR blocks with commas (,).</p>
+     * <p>IP address whitelist in CIDR notation. Separate multiple CIDR blocks with commas.</p>
      * 
      * <strong>example:</strong>
      * <p>19.168.1.1/32,18.168.1.1/16</p>
@@ -14,7 +14,7 @@ public class AddMediaConnectFlowInputRequest extends TeaModel {
     public String cidrs;
 
     /**
-     * <p>The flow ID.</p>
+     * <p>Flow instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class AddMediaConnectFlowInputRequest extends TeaModel {
     public String flowId;
 
     /**
-     * <p>The source URL. This parameter is required when the source type is RTMP-PULL or SRT-Listener.</p>
+     * <p>Input URL. Required only when the input type is RTMP-PULL or SRT-Listener.</p>
      * 
      * <strong>example:</strong>
      * <p>rtmp://pull.test.alivecdn.com/live/alitest</p>
@@ -33,7 +33,7 @@ public class AddMediaConnectFlowInputRequest extends TeaModel {
     public String inputFromUrl;
 
     /**
-     * <p>The source name.</p>
+     * <p>Input name</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,15 +43,7 @@ public class AddMediaConnectFlowInputRequest extends TeaModel {
     public String inputName;
 
     /**
-     * <p>The source type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>RTMP-PUSH</li>
-     * <li>SRT-Caller</li>
-     * <li>RTMP-PULL</li>
-     * <li>SRT-Listener</li>
-     * <li>Flow</li>
-     * </ul>
+     * <p>Input type</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +53,7 @@ public class AddMediaConnectFlowInputRequest extends TeaModel {
     public String inputProtocol;
 
     /**
-     * <p>The maximum bitrate. Unit: bit/s.</p>
+     * <p>Maximum bitrate in bits per second (bps)</p>
      * 
      * <strong>example:</strong>
      * <p>2000000</p>
@@ -70,7 +62,7 @@ public class AddMediaConnectFlowInputRequest extends TeaModel {
     public Integer maxBitrate;
 
     /**
-     * <p>The ID of the source flow. This parameter is required when the source type is Flow.</p>
+     * <p>Upstream Flow ID. Required only when the input type is Flow.</p>
      * 
      * <strong>example:</strong>
      * <p>805fbdd0-575e-4146-b35d-ec7f63937b20</p>
@@ -79,7 +71,7 @@ public class AddMediaConnectFlowInputRequest extends TeaModel {
     public String pairFlowId;
 
     /**
-     * <p>The output of the source flow. This parameter is required when the source type is Flow.</p>
+     * <p>Upstream Flow output name. Required only when the input type is Flow.</p>
      * 
      * <strong>example:</strong>
      * <p>AliTestOutput</p>
@@ -88,7 +80,7 @@ public class AddMediaConnectFlowInputRequest extends TeaModel {
     public String pairOutputName;
 
     /**
-     * <p>The latency for the SRT stream. This parameter is required the source type is SRT-Listener or SRT-Caller.</p>
+     * <p>SRT latency in milliseconds. Required only when the input type is SRT-Listener or SRT-Caller.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -97,7 +89,7 @@ public class AddMediaConnectFlowInputRequest extends TeaModel {
     public Integer srtLatency;
 
     /**
-     * <p>The SRT key. This parameter is required when the source type is SRT-Listener or SRT-Caller.</p>
+     * <p>SRT encryption key. Required only when the input type is SRT-Listener or SRT-Caller.</p>
      * 
      * <strong>example:</strong>
      * <p>BETTERG08S01</p>
@@ -106,14 +98,7 @@ public class AddMediaConnectFlowInputRequest extends TeaModel {
     public String srtPassphrase;
 
     /**
-     * <p>The encryption key length. This parameter is required when the source type is SRT-Listener or SRT-Caller.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>0</li>
-     * <li>16</li>
-     * <li>24</li>
-     * <li>32</li>
-     * </ul>
+     * <p>SRT encryption key length in bytes. Required only when the input type is SRT-Listener or SRT-Caller.</p>
      * 
      * <strong>example:</strong>
      * <p>32</p>

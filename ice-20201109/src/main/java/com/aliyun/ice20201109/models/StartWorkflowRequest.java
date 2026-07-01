@@ -4,6 +4,18 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class StartWorkflowRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to skip verification of the input path supported by the pipeline. This parameter takes effect only when the pipeline input is an OSS file. We recommend that you do not skip this verification to avoid faults caused by incorrect paths. If this parameter is not specified, verification is performed by default. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: Skip verification</p>
+     * </li>
+     * <li><p><strong>false</strong>: Do not skip verification</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("SkipInputVerification")
     public Boolean skipInputVerification;
 
@@ -12,8 +24,12 @@ public class StartWorkflowRequest extends TeaModel {
      * 
      * <strong>example:</strong>
      * <p>{
-     *       &quot;Type&quot;: &quot;Media&quot;,
-     *       &quot;Media&quot;: &quot;<strong><strong><strong>30706071edbfe290b488</strong></strong></strong>&quot;
+     *       &quot;Type&quot;: &quot;Media&quot;,
+     *       &quot;Media&quot;: &quot;<strong><strong><strong>30706071edbfe290b488</strong></strong></strong>&quot;
+     * } or
+     * {
+     *       &quot;Type&quot;: &quot;OSS&quot;,
+     *       &quot;Media&quot;: &quot;oss://bucket/path/to/video.mp4&quot;
      * }</p>
      */
     @NameInMap("TaskInput")
@@ -21,6 +37,9 @@ public class StartWorkflowRequest extends TeaModel {
 
     /**
      * <p>The user-defined data in the JSON format, which cannot be up to 512 bytes in length. You can specify a custom callback URL. For more information, see <a href="https://help.aliyun.com/document_detail/451631.html">Configure a callback upon editing completion</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;NotifyAddress&quot;:&quot;<a href="https://xx.xx.xxx%22%7D">https://xx.xx.xxx&quot;}</a> or{&quot;NotifyAddress&quot;:&quot;ice-callback-demo&quot;}</p>
      */
     @NameInMap("UserData")
     public String userData;

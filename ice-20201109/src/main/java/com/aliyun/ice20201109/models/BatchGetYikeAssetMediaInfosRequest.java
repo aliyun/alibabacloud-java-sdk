@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BatchGetYikeAssetMediaInfosRequest extends TeaModel {
     /**
+     * <p>The media asset IDs, separated by commas.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>b48fb04483915d4f2cd8</strong></strong></strong>,<strong><strong><strong>c48fb37407365d4f2cd8</strong></strong></strong></p>
      */

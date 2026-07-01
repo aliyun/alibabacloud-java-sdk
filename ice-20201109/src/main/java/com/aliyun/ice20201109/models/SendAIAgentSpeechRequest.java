@@ -14,6 +14,10 @@ public class SendAIAgentSpeechRequest extends TeaModel {
     public Boolean enableInterrupt;
 
     /**
+     * <p>Agent instance ID.</p>
+     * <blockquote>
+     * <p>The InstanceId is the unique ID returned after successfully starting an agent instance. For details about starting an agent instance, see <a href="https://help.aliyun.com/document_detail/2846201.html">StartAIAgentInstance</a> and <a href="https://help.aliyun.com/document_detail/2846209.html">GenerateAIAgentCall</a>.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,11 +27,28 @@ public class SendAIAgentSpeechRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The text content to be played back. The supported input format varies based on the Type parameter. The length cannot exceed 1024 characters.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Hello, welcome to our service.</p>
      */
     @NameInMap("Text")
     public String text;
 
+    /**
+     * <p>Input type. Valid values:</p>
+     * <ul>
+     * <li><p>Text: Input is plain text.</p>
+     * </li>
+     * <li><p>AudioUrl: Input is an audio URL.</p>
+     * </li>
+     * </ul>
+     * <p>Default value: Text.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Text</p>
+     */
     @NameInMap("Type")
     public String type;
 

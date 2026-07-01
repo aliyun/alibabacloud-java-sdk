@@ -105,7 +105,7 @@ public class ListSmartJobsResponseBody extends TeaModel {
          * <p>The keyword information.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试关键词</p>
+         * <p>Test keyword</p>
          */
         @NameInMap("Keyword")
         public String keyword;
@@ -189,7 +189,7 @@ public class ListSmartJobsResponseBody extends TeaModel {
          * <p>The job description.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试描述</p>
+         * <p>Test description</p>
          */
         @NameInMap("Description")
         public String description;
@@ -222,10 +222,14 @@ public class ListSmartJobsResponseBody extends TeaModel {
          * <p>The job state.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Finished: The job is complete.</li>
-         * <li>Failed: The job failed.</li>
-         * <li>Executing: The job is in progress.</li>
-         * <li>Created: The job is created.</li>
+         * <li><p>Finished: The job is complete.</p>
+         * </li>
+         * <li><p>Failed: The job failed.</p>
+         * </li>
+         * <li><p>Executing: The job is in progress.</p>
+         * </li>
+         * <li><p>Created: The job is created.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -238,9 +242,12 @@ public class ListSmartJobsResponseBody extends TeaModel {
          * <p>The job type.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>ASR: ASR job.</li>
-         * <li>DynamicChart: dynamic chart job.</li>
-         * <li>TextToSpeech: intelligent audio production job.</li>
+         * <li><p>ASR: ASR job.</p>
+         * </li>
+         * <li><p>DynamicChart: dynamic chart job.</p>
+         * </li>
+         * <li><p>TextToSpeech: intelligent audio production job.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -268,7 +275,7 @@ public class ListSmartJobsResponseBody extends TeaModel {
          * <p>The job title.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试标题</p>
+         * <p>Test title</p>
          */
         @NameInMap("Title")
         public String title;

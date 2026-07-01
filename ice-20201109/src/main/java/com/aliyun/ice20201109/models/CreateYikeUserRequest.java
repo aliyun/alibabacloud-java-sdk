@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateYikeUserRequest extends TeaModel {
     /**
+     * <p>The user\&quot;s nickname.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateYikeUserRequest extends TeaModel {
     public String nickname;
 
     /**
+     * <p>The user\&quot;s password.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,12 @@ public class CreateYikeUserRequest extends TeaModel {
     public String password;
 
     /**
+     * <p>The IDs of productions to add the user to. You can specify multiple IDs separated by commas.</p>
+     * <blockquote>
+     * <ul>
+     * <li>A user can be added to multiple productions.</li>
+     * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,12 +40,23 @@ public class CreateYikeUserRequest extends TeaModel {
     public String productionIds;
 
     /**
+     * <p>The user name prefix for the sub-account. The prefix must meet the following requirements:</p>
+     * <ul>
+     * <li><p>The prefix can be up to 50 characters long and must be unique within the workspace.</p>
+     * </li>
+     * <li><p>The system automatically generates a user login name in the format: {UserNamePrefix}.{WorkspaceCode}@{AlibabaCloudUID}.yikeai.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:test.xxx@xxx.yikeai">test.xxx@xxx.yikeai</a></p>
      */
     @NameInMap("UserNamePrefix")
     public String userNamePrefix;
 
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

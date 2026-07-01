@@ -53,9 +53,12 @@ public class GetVodPackagingAssetResponseBody extends TeaModel {
         /**
          * <p>The asset status. Valid values:</p>
          * <ul>
-         * <li>Queuing: The asset is waiting for packaging.</li>
-         * <li>Playable: The asset is packaged and playable.</li>
-         * <li>Failed: The asset fails to be packaged.</li>
+         * <li><p>Queuing: The asset is waiting for packaging.</p>
+         * </li>
+         * <li><p>Playable: The asset is packaged and playable.</p>
+         * </li>
+         * <li><p>Failed: The asset fails to be packaged.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

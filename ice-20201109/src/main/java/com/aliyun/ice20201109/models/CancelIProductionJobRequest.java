@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CancelIProductionJobRequest extends TeaModel {
     /**
+     * <p>Idempotency parameter</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>12e8864746a0a398</strong></strong></p>
      */

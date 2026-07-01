@@ -61,8 +61,10 @@ public class DetectAudioForCustomizedVoiceJobResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the audio file passes the check. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -73,6 +75,9 @@ public class DetectAudioForCustomizedVoiceJobResponseBody extends TeaModel {
 
         /**
          * <p>The reason returned if the audio file failed to pass the check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>发音错误，请准确读出文案中的内容</p>
          */
         @NameInMap("Reason")
         public String reason;

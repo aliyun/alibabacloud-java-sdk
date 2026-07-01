@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAIAgentDialoguesRequest extends TeaModel {
     /**
-     * <p>Specify the end of the time range to query using a UNIX timestamp accurate to milliseconds.</p>
+     * <p>The end Unix timestamp (inclusive), in milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,11 +15,7 @@ public class ListAIAgentDialoguesRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The sorting order. Valid values: </p>
-     * <ul>
-     * <li>DESC: descending order (default)</li>
-     * <li>ASC: ascending order</li>
-     * </ul>
+     * <p>The sort order. Valid values: <code>ASC</code> (ascending) and <code>DESC</code> (descending). Default value: <code>DESC</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>DESC</p>
@@ -37,7 +33,7 @@ public class ListAIAgentDialoguesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 20. Valid values: 1 to 100.</p>
+     * <p>The number of items per page. Maximum value: 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -45,6 +41,12 @@ public class ListAIAgentDialoguesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The number of most recent dialogue rounds to return. This value must be a positive integer. This parameter is mutually exclusive with pagination parameters; if specified, it overrides them.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("RoundLimit")
     public String roundLimit;
 
@@ -59,7 +61,7 @@ public class ListAIAgentDialoguesRequest extends TeaModel {
     public String sessionId;
 
     /**
-     * <p>Specify the start of the time range to query using a UNIX timestamp accurate to milliseconds.</p>
+     * <p>The start Unix timestamp (inclusive), in milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

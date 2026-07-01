@@ -23,10 +23,14 @@ public class CreateLiveTranscodeTemplateRequest extends TeaModel {
     /**
      * <p>The type of the template. Valid values:</p>
      * <ul>
-     * <li>normal</li>
-     * <li>narrow-band</li>
-     * <li>audio-only</li>
-     * <li>origin</li>
+     * <li><p>normal</p>
+     * </li>
+     * <li><p>narrow-band</p>
+     * </li>
+     * <li><p>audio-only</p>
+     * </li>
+     * <li><p>origin</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -87,8 +91,10 @@ public class CreateLiveTranscodeTemplateRequest extends TeaModel {
         /**
          * <p>The audio codec. Valid values:</p>
          * <ul>
-         * <li>AAC</li>
-         * <li>MP3</li>
+         * <li><p>AAC</p>
+         * </li>
+         * <li><p>MP3</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -100,10 +106,14 @@ public class CreateLiveTranscodeTemplateRequest extends TeaModel {
         /**
          * <p>The audio codec profile. Valid values when the Codec parameter is set to AAC:</p>
          * <ul>
-         * <li>aac_low</li>
-         * <li>aac_he</li>
-         * <li>aac_he_v2</li>
-         * <li>aac_ld</li>
+         * <li><p>aac_low</p>
+         * </li>
+         * <li><p>aac_he</p>
+         * </li>
+         * <li><p>aac_he_v2</p>
+         * </li>
+         * <li><p>aac_ld</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -182,8 +192,10 @@ public class CreateLiveTranscodeTemplateRequest extends TeaModel {
         /**
          * <p>The encoding type. Valid values:</p>
          * <ul>
-         * <li>H.264</li>
-         * <li>H.265</li>
+         * <li><p>H.264</p>
+         * </li>
+         * <li><p>H.265</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

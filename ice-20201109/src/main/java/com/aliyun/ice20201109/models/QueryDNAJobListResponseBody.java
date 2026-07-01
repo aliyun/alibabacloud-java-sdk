@@ -43,7 +43,7 @@ public class QueryDNAJobListResponseBody extends TeaModel {
     public static class QueryDNAJobListResponseBodyJobListInput extends TeaModel {
         /**
          * <p>The input file. The file can be an OSS object or a media asset. The path of an OSS object can be in one of the following formats:</p>
-         * <p>1\. oss://bucket/object</p>
+         * <p>1\. oss\://bucket/object</p>
          * <p>2\. http(s)://bucket.oss-[regionId].aliyuncs.com/object</p>
          * <p>In the preceding paths, bucket indicates an OSS bucket that resides in the same region as the current project, and object indicates the path of the object in the bucket.</p>
          * 
@@ -56,8 +56,10 @@ public class QueryDNAJobListResponseBody extends TeaModel {
         /**
          * <p>The type of the input file. Valid values:</p>
          * <ol>
-         * <li>OSS: Object Storage Service (OSS) object.</li>
-         * <li>Media: media asset.</li>
+         * <li><p>OSS: Object Storage Service (OSS) object.</p>
+         * </li>
+         * <li><p>Media: media asset.</p>
+         * </li>
          * </ol>
          * 
          * <strong>example:</strong>
@@ -180,10 +182,14 @@ public class QueryDNAJobListResponseBody extends TeaModel {
         /**
          * <p>The job state. Valid values:</p>
          * <ul>
-         * <li><strong>Queuing</strong>: The job is waiting in the queue.</li>
-         * <li><strong>Analysing</strong>: The job is in progress.</li>
-         * <li><strong>Success</strong>: The job is successful.</li>
-         * <li><strong>Fail</strong>: The job failed.</li>
+         * <li><p><strong>Queuing</strong>: The job is waiting in the queue.</p>
+         * </li>
+         * <li><p><strong>Analysing</strong>: The job is in progress.</p>
+         * </li>
+         * <li><p><strong>Success</strong>: The job is successful.</p>
+         * </li>
+         * <li><p><strong>Fail</strong>: The job failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

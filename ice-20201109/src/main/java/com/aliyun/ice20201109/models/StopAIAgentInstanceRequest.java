@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class StopAIAgentInstanceRequest extends TeaModel {
     /**
+     * <p>The agent instance ID.</p>
+     * <blockquote>
+     * <p>The InstanceId is the unique ID returned after successfully starting an agent instance. For information about starting an agent, see <a href="https://help.aliyun.com/document_detail/2846201.html">StartAIAgentInstance</a> and <a href="https://help.aliyun.com/document_detail/2846209.html">GenerateAIAgentCall</a>.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitSmarttagJobShrinkRequest extends TeaModel {
     /**
-     * <p>The video description. The description can contain letters, digits, and hyphens (-) and cannot start with a special character. The description can be up to 1 KB in length.</p>
+     * <p>The description of the video content can contain Chinese characters, English letters, digits, and hyphens (-). It cannot start with a special character and must not exceed 1 KB.</p>
      * 
      * <strong>example:</strong>
      * <p>example content ****</p>
@@ -14,31 +14,25 @@ public class SubmitSmarttagJobShrinkRequest extends TeaModel {
     public String content;
 
     /**
-     * <p>This parameter is discontinued.</p>
-     * 
-     * <strong>example:</strong>
-     * <p><a href="http://123.com/testVideo.mp4">http://123.com/testVideo.mp4</a></p>
+     * <p>Deprecated.</p>
      */
     @NameInMap("ContentAddr")
     public String contentAddr;
 
     /**
-     * <p>This parameter is discontinued.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>application/zip</p>
+     * <p>Deprecated.</p>
      */
     @NameInMap("ContentType")
     public String contentType;
 
     /**
-     * <p>The job input.</p>
+     * <p>The input file for the job.</p>
      */
     @NameInMap("Input")
     public String inputShrink;
 
     /**
-     * <p>The URL for receiving callbacks. Set the value to an HTTP URL or an HTTPS URL.</p>
+     * <p>The callback URL. Only HTTP and HTTPS URLs are supported.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/endpoint/aliyun/ai?id=76401125000">https://example.com/endpoint/aliyun/ai?id=76401125000</a>***</p>
@@ -47,16 +41,20 @@ public class SubmitSmarttagJobShrinkRequest extends TeaModel {
     public String notifyUrl;
 
     /**
-     * <p>The additional request parameters. The value is a JSON string. Example: {&quot;needAsrData&quot;:true, &quot;needOcrData&quot;:false}. The following parameters are supported:</p>
+     * <p>Additional request parameters, specified as a JSON string. For example: <code>{&quot;needAsrData&quot;:true, &quot;needOcrData&quot;:false}</code>.</p>
      * <ul>
-     * <li>needAsrData: specifies whether to query the automatic speech recognition (ASR) data. The value is of the BOOLEAN type. Default value: false. Valid values: true and false.</li>
-     * <li>needOcrData: specifies whether to query the optical character recognition (OCR) data. The value is of the BOOLEAN type. Default value: false. Valid values: true and false.</li>
-     * <li>needMetaData: specifies whether to query the metadata. The value is of the BOOLEAN type. Default value: false. Valid values: true and false.</li>
-     * <li>nlpParams: the input parameters of the natural language processing (NLP) operator. The value is a JSON object. This parameter is empty by default, which indicates that the NLP operator is not used. For more information, see the &quot;nlpParams&quot; section of this topic.</li>
+     * <li><p><code>needAsrData</code>: Specifies whether to include the raw Automatic Speech Recognition (ASR) results in the analysis output. The default is <code>false</code>.</p>
+     * </li>
+     * <li><p><code>needOcrData</code>: Specifies whether to include the raw Optical Character Recognition (OCR) results in the analysis output. The default is <code>false</code>.</p>
+     * </li>
+     * <li><p><code>needMetaData</code>: Specifies whether to include metadata in the analysis output. The default is <code>false</code>.</p>
+     * </li>
+     * <li><p><code>nlpParams</code>: A JSON object that specifies the input parameters for the Natural Language Processing (NLP) operator. If left empty, the operator is not used. For details, see the <code>nlpParams</code> table below.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;needAsrData&quot;:true, &quot;needOcrData&quot;:false}</p>
+     * <p>{&quot;needAsrData&quot;:true, &quot;needOcrData&quot;:false, &quot;nlpParams&quot;:{&quot;sourceLanguage&quot;:&quot;cn&quot;}}</p>
      */
     @NameInMap("Params")
     public String params;
@@ -67,11 +65,35 @@ public class SubmitSmarttagJobShrinkRequest extends TeaModel {
     @NameInMap("ScheduleConfig")
     public String scheduleConfigShrink;
 
+    /**
+     * <p>Dynamic parameters for the job, which temporarily override or supplement the base template specified by <code>TemplateId</code>. The service merges the dynamic and template parameters to generate the final configuration for the current job and validates it before execution.</p>
+     * <ul>
+     * <li>Merge rules:</li>
+     * </ul>
+     * <ol>
+     * <li><p>Values in the request override corresponding values in the template.</p>
+     * </li>
+     * <li><p>Fields in the request that do not exist in the template are added to the configuration.</p>
+     * </li>
+     * </ol>
+     * <ul>
+     * <li>Currently supported dynamic fields:</li>
+     * </ul>
+     * <ol>
+     * <li><code>FaceCategoryIds</code>: A list of face library IDs for recognition, separated by commas (,). You can include both system and custom library IDs.</li>
+     * </ol>
+     * <ul>
+     * <li>Note: These dynamic parameters affect only the current job and do not modify the template itself.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;FaceCategoryIds&quot;:&quot;custom_face_lib1&quot;}</p>
+     */
     @NameInMap("TemplateConfig")
     public String templateConfig;
 
     /**
-     * <p>The ID of the template that specifies the analysis algorithms. For more information about template operations, see <a href="https://help.aliyun.com/document_detail/445702.html">Configure templates</a>.</p>
+     * <p>The ID of the template that specifies the analysis algorithms to use.</p>
      * 
      * <strong>example:</strong>
      * <p>39f8e0bc005e4f309379701645f4</p>
@@ -80,7 +102,7 @@ public class SubmitSmarttagJobShrinkRequest extends TeaModel {
     public String templateId;
 
     /**
-     * <p>The video title. The title can contain letters, digits, and hyphens (-) and cannot start with a special character. The title can be up to 256 bytes in length.</p>
+     * <p>The video title can contain Chinese characters, English letters, digits, and hyphens (-). It cannot start with a special character and must not exceed 256 bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>example-title-****</p>
@@ -89,7 +111,7 @@ public class SubmitSmarttagJobShrinkRequest extends TeaModel {
     public String title;
 
     /**
-     * <p>The data to be passed through Simple Message Queue (SMQ, formerly MNS) during callbacks. The data can be up to 1 KB in length. For more information about how to specify an SMQ queue for receiving callbacks, see UpdatePipeline.</p>
+     * <p>Custom data to include in the callback. If you use Message Service (MNS) for callbacks, this data is included in the message. The maximum length is 1 KB.</p>
      * 
      * <strong>example:</strong>
      * <p>{“a”:&quot;test&quot;}</p>
