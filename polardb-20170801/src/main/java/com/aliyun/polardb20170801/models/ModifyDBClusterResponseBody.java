@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterResponseBody extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-*************</p>
@@ -14,7 +14,7 @@ public class ModifyDBClusterResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The generated order ID.</p>
+     * <p>The order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2148126708*****</p>
@@ -23,7 +23,7 @@ public class ModifyDBClusterResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CD3FA5F3-FAF3-44CA-AFFF-BAF869******</p>

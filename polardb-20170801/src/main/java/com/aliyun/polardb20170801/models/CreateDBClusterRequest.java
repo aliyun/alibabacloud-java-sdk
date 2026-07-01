@@ -4,17 +4,26 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class CreateDBClusterRequest extends TeaModel {
+    @NameInMap("AgenticDbClusterDescription")
+    public String agenticDbClusterDescription;
+
+    @NameInMap("AgenticDbClusterId")
+    public String agenticDbClusterId;
+
+    @NameInMap("AgenticDbType")
+    public String agenticDbType;
+
     /**
-     * <p>Specifies whether to enable pause on inactivity. Valid values:</p>
+     * <p>Specifies whether to enable No-activity Suspension. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: enables pause on inactivity.</p>
+     * <li><p><strong>true</strong>: Enabled.</p>
      * </li>
-     * <li><p><strong>false</strong> (default): disables pause on inactivity.</p>
+     * <li><p><strong>false</strong>: Disabled. This is the default value.</p>
+     * <blockquote>
+     * <p>Only serverless clusters support this parameter.</p>
+     * </blockquote>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>This parameter is supported only for serverless clusters.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -25,10 +34,8 @@ public class CreateDBClusterRequest extends TeaModel {
     /**
      * <p>The CPU architecture. Valid values:</p>
      * <ul>
-     * <li><p>X86</p>
-     * </li>
-     * <li><p>ARM</p>
-     * </li>
+     * <li>X86</li>
+     * <li>ARM</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,10 +47,8 @@ public class CreateDBClusterRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable auto-renewal. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: enables auto-renewal.</p>
-     * </li>
-     * <li><p><strong>false</strong>: disables auto-renewal.</p>
-     * </li>
+     * <li><strong>true</strong>: Auto-renewal is enabled.</li>
+     * <li><strong>false</strong>: Auto-renewal is disabled.</li>
      * </ul>
      * <p>Default value: <strong>false</strong>.</p>
      * <blockquote>
@@ -57,12 +62,10 @@ public class CreateDBClusterRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>Specifies whether to automatically use a coupon. Valid values:</p>
+     * <p>Specifies whether to automatically use coupons. Valid values:</p>
      * <ul>
-     * <li><p>true (default): Automatically uses a coupon.</p>
-     * </li>
-     * <li><p>false: does not use a coupon.</p>
-     * </li>
+     * <li>true (default): Coupons are used.</li>
+     * <li>false: Coupons are not used.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -72,22 +75,17 @@ public class CreateDBClusterRequest extends TeaModel {
     public Boolean autoUseCoupon;
 
     /**
-     * <p>The backup retention policy to apply when the cluster is deleted. Valid values:</p>
+     * <p>The data retention policy applied when the cluster is deleted. Valid values:</p>
      * <ul>
-     * <li><p><strong>ALL</strong>: retains all backup sets.</p>
-     * </li>
-     * <li><p><strong>LATEST</strong>: retains only the last backup set. An automatic backup is performed before the cluster is deleted.</p>
-     * </li>
-     * <li><p><strong>NONE</strong>: does not retain backup sets.</p>
-     * </li>
+     * <li><strong>ALL</strong>: All backups are retained for long-term retention (LTR).</li>
+     * <li><strong>LATEST</strong>: The last backup is retained for long-term retention (LTR). An automatic backup is performed before deletion.</li>
+     * <li><strong>NONE</strong>: No backups are retained when the cluster is deleted.</li>
      * </ul>
-     * <p>Default value: <strong>NONE</strong>.</p>
+     * <p>Default value: <strong>NONE</strong>, which means no backups are retained when the cluster is deleted.</p>
      * <blockquote>
      * <ul>
-     * <li><p>This parameter is valid only if <strong>DBType</strong> is set to <strong>MySQL</strong>.</p>
-     * </li>
-     * <li><p>Serverless clusters do not support this parameter.</p>
-     * </li>
+     * <li>This parameter takes effect only when <strong>DBType</strong> is set to <strong>MySQL</strong>.</li>
+     * <li>Serverless clusters do not support this parameter.</li>
      * </ul>
      * </blockquote>
      * 
@@ -98,15 +96,13 @@ public class CreateDBClusterRequest extends TeaModel {
     public String backupRetentionPolicyOnClusterDeletion;
 
     /**
-     * <p>Specifies whether to enable the performance burst feature for the ESSD AutoPL cloud disk. Valid values:</p>
+     * <p>Specifies whether to enable I/O performance burst for the ESSD AutoPL cloud disk. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: enables the performance burst feature.</p>
-     * </li>
-     * <li><p><strong>false</strong> (default): disables the performance burst feature.</p>
-     * </li>
+     * <li><strong>true</strong>: Enabled.</li>
+     * <li><strong>false</strong>: Disabled. This is the default value.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is supported only when <strong>StorageType</strong> is set to ESSDAUTOPL.</p>
+     * <p>This parameter is supported only when StorageType is set to ESSDAUTOPL.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -116,7 +112,7 @@ public class CreateDBClusterRequest extends TeaModel {
     public String burstingEnabled;
 
     /**
-     * <p>A client-generated token that ensures the idempotence of the request. This token must be unique across all requests and is case-sensitive. It can contain up to 64 ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. The value is generated by the client and must be unique among different requests. It is case-sensitive and cannot exceed 64 ASCII characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>6000170000591aed949d0f5********************</p>
@@ -125,18 +121,15 @@ public class CreateDBClusterRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The point in time for the clone. Valid values:</p>
+     * <p>The point in time at which data is cloned. Valid values: </p>
      * <ul>
-     * <li><p><strong>LATEST</strong>: The latest point in time.</p>
-     * </li>
-     * <li><p><strong>BackupID</strong>: The ID of a historical backup set.</p>
-     * </li>
-     * <li><p><strong>Timestamp</strong>: A specific point in time in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
-     * </li>
+     * <li><strong>LATEST</strong>: The latest point in time.</li>
+     * <li><strong>BackupID</strong>: A historical backup set ID. Specify the actual backup set ID.</li>
+     * <li><strong>Timestamp</strong>: A historical point in time. Specify the actual time in the <code>YYYY-MM-DDThh:mm:ssZ</code> format (UTC).</li>
      * </ul>
-     * <p>Default value: <strong>LATEST</strong>.</p>
+     * <p> Default value: <strong>LATEST</strong>.</p>
      * <blockquote>
-     * <p>If you set <strong>CreationOption</strong> to <strong>CloneFromRDS</strong>, you can set this parameter only to <strong>LATEST</strong>.</p>
+     * <p>If <strong>CreationOption</strong> is set to <strong>CloneFromRDS</strong>, this parameter can only be set to <strong>LATEST</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -155,7 +148,7 @@ public class CreateDBClusterRequest extends TeaModel {
     public String cloudProvider;
 
     /**
-     * <p>The network type of the cluster. Only <strong>VPC</strong> is supported.</p>
+     * <p>The network type of the cluster. Only Virtual Private Cloud (VPC) is supported. Set the value to <strong>VPC</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>VPC</p>
@@ -166,28 +159,20 @@ public class CreateDBClusterRequest extends TeaModel {
     /**
      * <p>The edition of the cluster. Valid values:</p>
      * <ul>
-     * <li><p><strong>Normal</strong>: Cluster Edition (default)</p>
-     * </li>
-     * <li><p><strong>Basic</strong>: Single-node Edition</p>
-     * </li>
-     * <li><p><strong>ArchiveNormal</strong>: X-Engine Edition</p>
-     * </li>
-     * <li><p><strong>NormalMultimaster</strong>: Multi-master Cluster Edition</p>
-     * </li>
-     * <li><p><strong>SENormal</strong>: Standard Edition</p>
-     * </li>
+     * <li><strong>Normal</strong>: Cluster Edition. This is the default value.</li>
+     * <li><strong>Basic</strong>: Single Node Edition.</li>
+     * <li><strong>ArchiveNormal</strong>: X-Engine Edition.</li>
+     * <li><strong>NormalMultimaster</strong>: Multi-master Cluster Edition.</li>
+     * <li><strong>SENormal</strong>: Standard Edition.</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li><p>The <strong>Basic</strong> edition is supported for PolarDB for MySQL <strong>5.6</strong>, <strong>5.7</strong>, and <strong>8.0</strong>; PolarDB for PostgreSQL <strong>14</strong>; and PolarDB for PostgreSQL (compatible with Oracle) <strong>2.0</strong>.</p>
-     * </li>
-     * <li><p>The <strong>ArchiveNormal</strong> and <strong>NormalMultimaster</strong> editions are supported for PolarDB for MySQL <strong>8.0</strong>.</p>
-     * </li>
-     * <li><p>The <strong>SENormal</strong> edition is supported for PolarDB for MySQL <strong>5.6</strong>, <strong>5.7</strong>, and <strong>8.0</strong> and PolarDB for PostgreSQL <strong>14</strong>.</p>
-     * </li>
+     * <li><strong>MySQL</strong> <strong>5.6</strong>, <strong>5.7</strong>, <strong>8.0</strong>, <strong>PostgreSQL</strong> <strong>14</strong>, and <strong>Oracle syntax-compatible 2.0</strong> support <strong>Basic</strong>.</li>
+     * <li><strong>MySQL</strong> <strong>8.0</strong> supports <strong>ArchiveNormal</strong> and <strong>NormalMultimaster</strong>.</li>
+     * <li><strong>MySQL</strong> <strong>5.6</strong>, <strong>5.7</strong>, <strong>8.0</strong>, and <strong>PostgreSQL</strong> <strong>14</strong> support <strong>SENormal</strong>.</li>
      * </ul>
      * </blockquote>
-     * <p>For more information about product editions, see <a href="https://help.aliyun.com/document_detail/183258.html">Editions</a>.</p>
+     * <p>For more information about editions, see <a href="https://help.aliyun.com/document_detail/183258.html">Product editions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>Normal</p>
@@ -196,50 +181,41 @@ public class CreateDBClusterRequest extends TeaModel {
     public String creationCategory;
 
     /**
-     * <p>The method to create the cluster. Valid values:</p>
+     * <p>The method used to create the cluster. Valid values: </p>
      * <ul>
-     * <li><p><strong>Normal</strong>: Creates a new PolarDB cluster. For more information, see the following topics:</p>
+     * <li><p><strong>Normal</strong>: Creates a new PolarDB cluster. For console operations, see the following topics:</p>
      * <ul>
-     * <li><p><a href="https://help.aliyun.com/document_detail/58769.html">Create a PolarDB for MySQL cluster</a></p>
-     * </li>
-     * <li><p><a href="https://help.aliyun.com/document_detail/118063.html">Create a PolarDB for PostgreSQL cluster</a></p>
-     * </li>
-     * <li><p><a href="https://help.aliyun.com/document_detail/118182.html">Create a PolarDB for PostgreSQL (compatible with Oracle) cluster</a></p>
-     * </li>
+     * <li><a href="https://help.aliyun.com/document_detail/58769.html">Create a PolarDB for MySQL database cluster</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/118063.html">Create a PolarDB for PostgreSQL database cluster</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/118182.html">Create a PolarDB for PostgreSQL (Compatible with Oracle) database cluster</a></li>
      * </ul>
      * </li>
-     * <li><p><strong>CloneFromPolarDB</strong>: Clones data from an existing PolarDB cluster. For more information, see the following topics:</p>
+     * <li><p><strong>CloneFromPolarDB</strong>: Clones data from an existing PolarDB cluster to a new PolarDB cluster. For console operations, see the following topics:</p>
      * <ul>
-     * <li><p><a href="https://help.aliyun.com/document_detail/87966.html">Clone a PolarDB for MySQL cluster</a></p>
-     * </li>
-     * <li><p><a href="https://help.aliyun.com/document_detail/118108.html">Clone a PolarDB for PostgreSQL cluster</a></p>
-     * </li>
-     * <li><p><a href="https://help.aliyun.com/document_detail/118221.html">Clone a PolarDB for PostgreSQL (compatible with Oracle) cluster</a></p>
-     * </li>
+     * <li><a href="https://help.aliyun.com/document_detail/87966.html">Clone a PolarDB for MySQL cluster</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/118108.html">Clone a PolarDB for PostgreSQL cluster</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/118221.html">Clone a PolarDB for PostgreSQL (Compatible with Oracle) cluster</a></li>
      * </ul>
      * </li>
-     * <li><p><strong>RecoverFromRecyclebin</strong>: Restores a PolarDB cluster from the recycle bin. For more information, see the following topics:</p>
+     * <li><p><strong>RecoverFromRecyclebin</strong>: Recovers data from a released PolarDB cluster to a new PolarDB cluster. For console operations, see the following topics:</p>
      * <ul>
-     * <li><p><a href="https://help.aliyun.com/document_detail/164880.html">Restore a released PolarDB for MySQL cluster</a></p>
-     * </li>
-     * <li><p><a href="https://help.aliyun.com/document_detail/432844.html">Restore a released PolarDB for PostgreSQL cluster</a></p>
-     * </li>
-     * <li><p><a href="https://help.aliyun.com/document_detail/424632.html">Restore a released PolarDB for PostgreSQL (compatible with Oracle) cluster</a></p>
-     * </li>
+     * <li><a href="https://help.aliyun.com/document_detail/164880.html">Restore a released PolarDB for MySQL cluster</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/432844.html">Restore a released PolarDB for PostgreSQL cluster</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/424632.html">Restore a released PolarDB for PostgreSQL (Compatible with Oracle) cluster</a></li>
      * </ul>
      * </li>
-     * <li><p><strong>CloneFromRDS</strong>: Clones data from an existing ApsaraDB RDS instance to a new PolarDB cluster. For more information, see <a href="https://help.aliyun.com/document_detail/121812.html">One-click cloning from ApsaraDB RDS for MySQL to PolarDB for MySQL</a>.</p>
+     * <li><p><strong>CloneFromRDS</strong>: Clones data from an existing ApsaraDB RDS instance to a new PolarDB cluster. For console operations, see <a href="https://help.aliyun.com/document_detail/121812.html">Clone an ApsaraDB RDS for MySQL instance to a PolarDB for MySQL cluster</a>.</p>
      * </li>
-     * <li><p><strong>MigrationFromRDS</strong>: Migrates data from an existing ApsaraDB RDS instance. The created PolarDB cluster is in read-only mode and has binary logging enabled by default. For more information, see <a href="https://help.aliyun.com/document_detail/121582.html">One-click upgrade from ApsaraDB RDS for MySQL to PolarDB for MySQL</a>.</p>
+     * <li><p><strong>MigrationFromRDS</strong>: Migrates data from an existing ApsaraDB RDS instance to a new PolarDB cluster. The created PolarDB cluster is in read-only pattern and has binary logging enabled by default. For console operations, see <a href="https://help.aliyun.com/document_detail/121582.html">Upgrade an ApsaraDB RDS for MySQL instance to a PolarDB for MySQL cluster</a>.</p>
      * </li>
-     * <li><p><strong>CreateGdnStandby</strong>: Creates a secondary cluster in a Global Database Network (GDN). For more information, see <a href="https://help.aliyun.com/document_detail/160381.html">Add a secondary cluster</a>.</p>
+     * <li><p><strong>CreateGdnStandby</strong>: Creates a secondary cluster. For console operations, see <a href="https://help.aliyun.com/document_detail/160381.html">Add a secondary cluster</a>.</p>
      * </li>
-     * <li><p><strong>UpgradeFromPolarDB</strong>: Upgrades the major version of a PolarDB cluster. For more information, see <a href="https://help.aliyun.com/document_detail/459712.html">Perform a major version upgrade</a>.</p>
+     * <li><p><strong>UpgradeFromPolarDB</strong>: Performs instance migration from PolarDB. For console operations, see <a href="https://help.aliyun.com/document_detail/459712.html">Major engine version upgrade</a>.</p>
      * </li>
      * </ul>
      * <p>Default value: <strong>Normal</strong>.</p>
      * <blockquote>
-     * <p>If <strong>DBType</strong> is set to <strong>MySQL</strong> and <strong>DBVersion</strong> is set to <strong>8.0</strong>, you can set this parameter to <strong>CreateGdnStandby</strong>.</p>
+     * <p>When <strong>DBType</strong> is set to <strong>MySQL</strong> and <strong>DBVersion</strong> is set to <strong>8.0</strong>, you can set this parameter to <strong>CreateGdnStandby</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -249,12 +225,10 @@ public class CreateDBClusterRequest extends TeaModel {
     public String creationOption;
 
     /**
-     * <p>The description of the cluster. The description must meet the following requirements:</p>
+     * <p>The name of the cluster. The name must meet the following requirements:</p>
      * <ul>
-     * <li><p>It cannot start with <code>http://</code> or <code>https://</code>.</p>
-     * </li>
-     * <li><p>It must be 2 to 256 characters in length.</p>
-     * </li>
+     * <li>It cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>It must be 2 to 256 characters in length.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -264,7 +238,7 @@ public class CreateDBClusterRequest extends TeaModel {
     public String DBClusterDescription;
 
     /**
-     * <p>The minor version of the database engine. Valid values:</p>
+     * <p>The minor engine version. Valid values:</p>
      * <ul>
      * <li><p><strong>8.0.2</strong></p>
      * </li>
@@ -272,7 +246,7 @@ public class CreateDBClusterRequest extends TeaModel {
      * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is valid only if <strong>DBType</strong> is set to <strong>MySQL</strong> and <strong>DBVersion</strong> is set to <strong>8.0</strong>.</p>
+     * <p>This parameter takes effect only when <strong>DBType</strong> is set to <strong>MySQL</strong> and <strong>DBVersion</strong> is set to <strong>8.0</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -284,25 +258,17 @@ public class CreateDBClusterRequest extends TeaModel {
     /**
      * <p>The node specification. For more information, see the following topics:</p>
      * <ul>
-     * <li><p>PolarDB for MySQL: <a href="https://help.aliyun.com/document_detail/102542.html">Compute node specifications</a></p>
-     * </li>
-     * <li><p>PolarDB for PostgreSQL (compatible with Oracle): <a href="https://help.aliyun.com/document_detail/207921.html">Compute node specifications</a></p>
-     * </li>
-     * <li><p>PolarDB for PostgreSQL: <a href="https://help.aliyun.com/document_detail/209380.html">Compute node specifications</a></p>
-     * </li>
+     * <li>PolarDB for MySQL: <a href="https://help.aliyun.com/document_detail/102542.html">Compute node specifications</a>.</li>
+     * <li>PolarDB for PostgreSQL (Compatible with Oracle): <a href="https://help.aliyun.com/document_detail/207921.html">Compute node specifications</a>.</li>
+     * <li>PolarDB for PostgreSQL: <a href="https://help.aliyun.com/document_detail/209380.html">Compute node specifications</a>.</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li><p>To create a PolarDB for MySQL Cluster Edition serverless cluster, set this parameter to <strong>polar.mysql.sl.small</strong>.</p>
-     * </li>
-     * <li><p>To create a PolarDB for MySQL Standard Edition serverless cluster, set this parameter to <strong>polar.mysql.sl.small.c</strong>.</p>
-     * </li>
-     * <li><p>To create a PolarDB for PostgreSQL Cluster Edition serverless cluster, set this parameter to <strong>polar.pg.sl.small</strong>.</p>
-     * </li>
-     * <li><p>To create a PolarDB for PostgreSQL Standard Edition serverless cluster, set this parameter to <strong>polar.pg.sl.small.c</strong>.</p>
-     * </li>
-     * <li><p>To create a PolarDB for PostgreSQL (compatible with Oracle) serverless cluster, set this parameter to <strong>polar.o.sl.small</strong>.</p>
-     * </li>
+     * <li>To create a serverless cluster for PolarDB for MySQL Cluster Edition, set this parameter to <strong>polar.mysql.sl.small</strong>.</li>
+     * <li>To create a serverless cluster for PolarDB for MySQL Standard Edition, set this parameter to <strong>polar.mysql.sl.small.c</strong>.</li>
+     * <li>To create a serverless cluster for PolarDB for PostgreSQL Cluster Edition, set this parameter to <strong>polar.pg.sl.small</strong>.</li>
+     * <li>To create a serverless cluster for PolarDB for PostgreSQL Standard Edition, set this parameter to <strong>polar.pg.sl.small.c</strong>.</li>
+     * <li>To create a serverless cluster for PolarDB for PostgreSQL (Compatible with Oracle), set this parameter to <strong>polar.o.sl.small</strong>.</li>
      * </ul>
      * </blockquote>
      * 
@@ -313,23 +279,18 @@ public class CreateDBClusterRequest extends TeaModel {
     public String DBNodeClass;
 
     /**
-     * <p>The number of nodes for a Standard Edition or Enterprise Edition cluster. Valid values:</p>
+     * <p>The number of nodes for Standard Edition and Enterprise Edition. Valid values:</p>
      * <ul>
-     * <li><p>Standard Edition: 1 to 8. A cluster of this edition includes one read/write node and up to seven read-only nodes.</p>
-     * </li>
-     * <li><p>Enterprise Edition: 1 to 16. A cluster of this edition includes one read/write node and up to 15 read-only nodes.</p>
-     * </li>
-     * </ul>
-     * <blockquote>
+     * <li>Standard Edition: 1 to 8 (supports 1 read/write node and 7 read-only nodes).</li>
+     * <li>Enterprise Edition: 1 to 16 (supports 1 read/write node and 15 read-only nodes).<blockquote>
      * <ul>
-     * <li><p>By default, an Enterprise Edition cluster has two nodes and a Standard Edition cluster has one node.</p>
-     * </li>
-     * <li><p>This parameter is supported only for PolarDB for MySQL.</p>
-     * </li>
-     * <li><p>You cannot change the number of nodes in a Multi-master Cluster Edition cluster.</p>
-     * </li>
+     * <li>Enterprise Edition has 2 nodes by default. Standard Edition has 1 node by default.</li>
+     * <li>Only PolarDB for MySQL supports this parameter.</li>
+     * <li>Changing the number of nodes for Multi-master Cluster Edition clusters is not supported.</li>
      * </ul>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -338,14 +299,11 @@ public class CreateDBClusterRequest extends TeaModel {
     public Integer DBNodeNum;
 
     /**
-     * <p>The database engine. Valid values:</p>
+     * <p>The database engine type. Valid values: </p>
      * <ul>
-     * <li><p><strong>MySQL</strong></p>
-     * </li>
-     * <li><p><strong>PostgreSQL</strong></p>
-     * </li>
-     * <li><p><strong>Oracle</strong></p>
-     * </li>
+     * <li><strong>MySQL</strong></li>
+     * <li><strong>PostgreSQL</strong></li>
+     * <li><strong>Oracle</strong></li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -356,16 +314,13 @@ public class CreateDBClusterRequest extends TeaModel {
     public String DBType;
 
     /**
-     * <p>The version of the database engine.</p>
+     * <p>The database engine version.</p>
      * <ul>
-     * <li><p>Valid values for MySQL:</p>
+     * <li><p>Valid values for MySQL: </p>
      * <ul>
-     * <li><p><strong>5.6</strong></p>
-     * </li>
-     * <li><p><strong>5.7</strong></p>
-     * </li>
-     * <li><p><strong>8.0</strong></p>
-     * </li>
+     * <li><strong>5.6</strong></li>
+     * <li><strong>5.7</strong></li>
+     * <li><strong>8.0</strong></li>
      * </ul>
      * </li>
      * <li><p>Valid values for PostgreSQL:</p>
@@ -374,17 +329,21 @@ public class CreateDBClusterRequest extends TeaModel {
      * </li>
      * <li><p><strong>14</strong></p>
      * </li>
-     * <li><p><strong>15</strong>&lt;props=&quot;china&quot;&gt;</p>
-     * </li>
-     * </ul>
-     * </li>
-     * </ul>
+     * <li><p><strong>15</strong>
+     *   &lt;props=&quot;china&quot;&gt;</p>
      * <blockquote>
-     * <p>If you create a serverless cluster for PolarDB for PostgreSQL, you must set this parameter to <code>14</code>.</p>
+     * <p>To create a serverless cluster for PolarDB for PostgreSQL, only version 14 is supported.</p>
      * </blockquote>
-     * <p>\* Valid values for Oracle:
-     * \* <strong>11</strong>
-     * \* <strong>14</strong></p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li><p>Valid values for Oracle:</p>
+     * <ul>
+     * <li><strong>11</strong></li>
+     * <li><strong>14</strong></li>
+     * </ul>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -394,9 +353,9 @@ public class CreateDBClusterRequest extends TeaModel {
     public String DBVersion;
 
     /**
-     * <p>Cluster time zone (UTC). The value can be any full-hour offset from <strong>-12:00 to +13:00</strong>, such as <strong>00:00</strong>. The default value is <strong>SYSTEM</strong>, which uses the region\&quot;s time zone.</p>
+     * <p>The default time zone of the cluster (UTC). The value can be any time frame within the range of <strong>-12:00 to +13:00</strong>, such as <strong>00:00</strong>. Default value: <strong>SYSTEM</strong>, which indicates that the default time zone is the same as the time zone of the region.</p>
      * <blockquote>
-     * <p>This parameter takes effect only when <strong>DBType</strong> is <strong>MySQL</strong>.</p>
+     * <p>This parameter takes effect only when <strong>DBType</strong> is set to <strong>MySQL</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -406,7 +365,7 @@ public class CreateDBClusterRequest extends TeaModel {
     public String defaultTimeZone;
 
     /**
-     * <p>The ID of the Edge Node Service (ENS) node. This parameter is required if you want to create an ENS database instance.</p>
+     * <p>The ENS node ID required when creating an ENS database.</p>
      * 
      * <strong>example:</strong>
      * <p>vn-hanoi-3</p>
@@ -415,9 +374,9 @@ public class CreateDBClusterRequest extends TeaModel {
     public String ensRegionId;
 
     /**
-     * <p>The ID of the Global Database Network (GDN).</p>
+     * <p>The ID of the global database network (GDN).</p>
      * <blockquote>
-     * <p>This parameter is required if <strong>CreationOption</strong> is set to <strong>CreateGdnStandby</strong>.</p>
+     * <p>This parameter is required when <strong>CreationOption</strong> is set to <strong>CreateGdnStandby</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -427,22 +386,17 @@ public class CreateDBClusterRequest extends TeaModel {
     public String GDNId;
 
     /**
-     * <p>Specifies whether to enable the hot standby cluster feature. Valid values:</p>
+     * <p>Specifies whether to enable the hot standby cluster. Valid values:</p>
      * <ul>
-     * <li><p><strong>ON</strong> (default): enables a hot standby storage cluster.</p>
-     * </li>
-     * <li><p><strong>OFF</strong>: disables the hot standby cluster feature.</p>
-     * </li>
-     * <li><p><strong>STANDBY</strong>: enables a hot standby cluster.</p>
-     * </li>
-     * <li><p><strong>EQUAL</strong>: enables hot standby for both storage and computing resources.</p>
-     * </li>
-     * <li><p><strong>3AZ</strong>: enables multi-AZ strong consistency.</p>
+     * <li><strong>ON</strong> (default): Enables the hot standby storage cluster.</li>
+     * <li><strong>OFF</strong>: Disables the hot standby cluster.</li>
+     * <li><strong>STANDBY</strong>: Enables the hot standby cluster.</li>
+     * <li><strong>EQUAL</strong>: Enables both the hot standby storage cluster and the hot standby compute cluster.</li>
+     * <li><strong>3AZ</strong>: Enables multi-zone strong data consistency.<blockquote>
+     * <p><strong>STANDBY</strong> takes effect only for PolarDB for PostgreSQL.</p>
+     * </blockquote>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>The value <strong>STANDBY</strong> is valid only for PolarDB for PostgreSQL.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>ON</p>
@@ -451,16 +405,14 @@ public class CreateDBClusterRequest extends TeaModel {
     public String hotStandbyCluster;
 
     /**
-     * <p>Specifies whether to enable binary logging. Valid values:</p>
+     * <p>Specifies whether to enable the binary logging feature. Valid values:</p>
      * <ul>
-     * <li><p><strong>ON</strong>: enables binary logging.</p>
-     * </li>
-     * <li><p><strong>OFF</strong>: disables binary logging.</p>
+     * <li><strong>ON</strong>: Binary logging is enabled for the cluster.</li>
+     * <li><strong>OFF</strong>: Binary logging is disabled for the cluster.<blockquote>
+     * <p>This parameter takes effect only when <strong>DBType</strong> is set to <strong>MySQL</strong>.</p>
+     * </blockquote>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>This parameter is valid only if <strong>DBType</strong> is set to <strong>MySQL</strong>.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>ON</p>
@@ -471,14 +423,12 @@ public class CreateDBClusterRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the X-Engine storage engine. Valid values:</p>
      * <ul>
-     * <li><p><strong>ON</strong>: enables the X-Engine storage engine.</p>
-     * </li>
-     * <li><p><strong>OFF</strong>: disables the X-Engine storage engine.</p>
+     * <li><strong>ON</strong>: The X-Engine engine is enabled for the cluster.</li>
+     * <li><strong>OFF</strong>: The X-Engine engine is disabled for the cluster.<blockquote>
+     * <p>This parameter takes effect only when <strong>CreationOption</strong> is not set to <strong>CreateGdnStandby</strong>, <strong>DBType</strong> is set to <strong>MySQL</strong>, and <strong>DBVersion</strong> is set to <strong>8.0</strong>. The memory specification of nodes with X-Engine enabled must be 8 GB or more.</p>
+     * </blockquote>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>This parameter is valid only if the <strong>CreationOption</strong> parameter is not set to <strong>CreateGdnStandby</strong>, <strong>DBType</strong> is set to <strong>MySQL</strong>, and <strong>DBVersion</strong> is set to <strong>8.0</strong>. To enable the X-Engine storage engine, the node must have at least 8 GB of memory.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>ON</p>
@@ -489,7 +439,7 @@ public class CreateDBClusterRequest extends TeaModel {
     /**
      * <p>The percentage of memory allocated to the X-Engine storage engine. Valid values: integers from 10 to 90.</p>
      * <blockquote>
-     * <p>This parameter is valid only if <strong>LooseXEngine</strong> is set to <strong>ON</strong>.</p>
+     * <p>This parameter takes effect only when <strong>LooseXEngine</strong> is set to <strong>ON</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -499,16 +449,14 @@ public class CreateDBClusterRequest extends TeaModel {
     public String looseXEngineUseMemoryPct;
 
     /**
-     * <p>The time zone of the cluster. The value must be a UTC offset in the <code>±HH:mm</code> format. Valid values: from <strong>-12:00</strong> to <strong>+13:00</strong> on the hour. For example, <strong>00:00</strong>. The default value <strong>SYSTEM</strong> indicates that the cluster uses the time zone of its region.</p>
+     * <p>Specifies whether table names are case-sensitive. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: Case-insensitive</p>
-     * </li>
-     * <li><p><strong>0</strong>: Case-sensitive</p>
-     * </li>
+     * <li><strong>1</strong>: Table names are case-insensitive.</li>
+     * <li><strong>0</strong>: Table names are case-sensitive.</li>
      * </ul>
-     * <p>The default value is <strong>1</strong>.</p>
+     * <p>Default value: <strong>1</strong>.</p>
      * <blockquote>
-     * <p>This parameter is valid only if <strong>DBType</strong> is set to <strong>MySQL</strong>.</p>
+     * <p>This parameter takes effect only when <strong>DBType</strong> is set to <strong>MySQL</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -526,7 +474,7 @@ public class CreateDBClusterRequest extends TeaModel {
     /**
      * <p>The ID of the parameter template.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/207178.html">DescribeParameterGroups</a> operation to query the parameter templates in a specific region, including the IDs of the parameter templates.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/207178.html">DescribeParameterGroups</a> operation to query the parameter template list in the specified region, including the parameter template ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -536,12 +484,10 @@ public class CreateDBClusterRequest extends TeaModel {
     public String parameterGroupId;
 
     /**
-     * <p>The billing method. Valid values:</p>
+     * <p>The billing method. Valid values: </p>
      * <ul>
-     * <li><p><strong>Postpaid</strong>: pay-as-you-go.</p>
-     * </li>
-     * <li><p><strong>Prepaid</strong>: subscription.</p>
-     * </li>
+     * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+     * <li><strong>Prepaid</strong>: subscription.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -552,12 +498,10 @@ public class CreateDBClusterRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The unit of the subscription duration. This parameter is required if you set the <strong>PayType</strong> parameter to <strong>Prepaid</strong>. Valid values:</p>
+     * <p>This parameter is required when <strong>PayType</strong> is set to <strong>Prepaid</strong>. Pass this parameter to specify whether the upfront cluster uses a yearly or monthly billing cycle. </p>
      * <ul>
-     * <li><p><strong>Year</strong>: The subscription duration is measured in years.</p>
-     * </li>
-     * <li><p><strong>Month</strong>: The subscription duration is measured in months.</p>
-     * </li>
+     * <li><strong>Year</strong>: The subscription period is measured in years.</li>
+     * <li><strong>Month</strong>: The subscription period is measured in months.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -567,7 +511,7 @@ public class CreateDBClusterRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>The promotion code. If you do not specify this parameter, the default coupon is used.</p>
+     * <p>The coupon code. If not specified, the default coupon is used.</p>
      * 
      * <strong>example:</strong>
      * <p>727xxxxxx934</p>
@@ -576,14 +520,9 @@ public class CreateDBClusterRequest extends TeaModel {
     public String promotionCode;
 
     /**
-     * <p>&lt;props=&quot;china&quot;&gt;</p>
-     * <p>The provisioned read/write IOPS of the ESSD AutoPL cloud disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</p>
-     * <p>&lt;props=&quot;china&quot;&gt;</p>
-     * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</p>
-     * <p>&lt;props=&quot;china&quot;&gt;</p>
-     * <blockquote>
-     * <p>This parameter is supported only when <strong>StorageType</strong> is set to ESSDAUTOPL.</p>
-     * </blockquote>
+     * <p id="p_wyg_t4a_glm" props="china" icmsditafragmentmagic=1>The provisioned read/write IOPS of the ESSD AutoPL cloud disk. Valid values: 0 to min{50,000, 1000 × capacity - baseline performance}.</p>
+     * <p id="p_6de_jxy_k2g" props="china" icmsditafragmentmagic=1>Baseline performance = min{1,800 + 50 × capacity, 50,000}.</p>
+     * <note id="note_7kj_j0o_rgs" props="china" icmsditafragmentmagic=1>This parameter is supported only when StorageType is set to ESSDAUTOPL.</note>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -592,22 +531,15 @@ public class CreateDBClusterRequest extends TeaModel {
     public Long provisionedIops;
 
     /**
-     * <p>The specification of the database proxy for a Standard Edition cluster. Valid values:</p>
+     * <p>The specification of the database proxy for Standard Edition. Valid values:</p>
      * <ul>
-     * <li><p><strong>polar.maxscale.g2.medium.c</strong>: 2 cores</p>
-     * </li>
-     * <li><p><strong>polar.maxscale.g2.large.c</strong>: 4 cores</p>
-     * </li>
-     * <li><p><strong>polar.maxscale.g2.xlarge.c</strong>: 8 cores</p>
-     * </li>
-     * <li><p><strong>polar.maxscale.g2.2xlarge.c</strong>: 16 cores</p>
-     * </li>
-     * <li><p><strong>polar.maxscale.g2.3xlarge.c</strong>: 24 cores</p>
-     * </li>
-     * <li><p><strong>polar.maxscale.g2.4xlarge.c</strong>: 32 cores</p>
-     * </li>
-     * <li><p><strong>polar.maxscale.g2.8xlarge.c</strong>: 64 cores</p>
-     * </li>
+     * <li><strong>polar.maxscale.g2.medium.c</strong>: 2 cores.</li>
+     * <li><strong>polar.maxscale.g2.large.c</strong>: 4 cores.</li>
+     * <li><strong>polar.maxscale.g2.xlarge.c</strong>: 8 cores.</li>
+     * <li><strong>polar.maxscale.g2.2xlarge.c</strong>: 16 cores.</li>
+     * <li><strong>polar.maxscale.g2.3xlarge.c</strong>: 24 cores.</li>
+     * <li><strong>polar.maxscale.g2.4xlarge.c</strong>: 32 cores.</li>
+     * <li><strong>polar.maxscale.g2.8xlarge.c</strong>: 64 cores.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -619,20 +551,16 @@ public class CreateDBClusterRequest extends TeaModel {
     /**
      * <p>The type of the database proxy. Valid values:</p>
      * <ul>
-     * <li><p><strong>EXCLUSIVE</strong>: Enterprise Dedicated</p>
-     * </li>
-     * <li><p><strong>GENERAL</strong>: Enterprise General-purpose</p>
-     * </li>
-     * </ul>
-     * <blockquote>
-     * <p>The proxy type must be consistent with the type that corresponds to the node specification of the cluster:</p>
+     * <li><strong>EXCLUSIVE</strong>: Dedicated Enterprise Edition.</li>
+     * <li><strong>GENERAL</strong>: Standard Enterprise Edition.<blockquote>
+     * <p>The proxy type must match the type that corresponds to the node specifications of the cluster:</p>
      * <ul>
-     * <li><p>If the node specification is general-purpose, the proxy type must be Enterprise General-purpose.</p>
-     * </li>
-     * <li><p>If the node specification is dedicated, the proxy type must be Enterprise Dedicated.</p>
-     * </li>
+     * <li>If the node specifications are General-purpose, set the proxy type to Standard Enterprise Edition.</li>
+     * <li>If the node specifications are Dedicated, set the proxy type to Dedicated Enterprise Edition.</li>
      * </ul>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Exclusive</p>
@@ -654,7 +582,7 @@ public class CreateDBClusterRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-************</p>
@@ -669,9 +597,9 @@ public class CreateDBClusterRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The maximum number of PCUs for a single-node serverless cluster to scale up to. Valid values: 1 to 32.</p>
+     * <p>The maximum scaling limit for a single node. Valid values: 1 PCU to 32 PCU.</p>
      * <blockquote>
-     * <p>This parameter is supported only for serverless clusters.</p>
+     * <p>Only serverless clusters support this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -681,9 +609,9 @@ public class CreateDBClusterRequest extends TeaModel {
     public String scaleMax;
 
     /**
-     * <p>The minimum number of PolarDB compute units (PCUs) for a single-node serverless cluster to scale down to. Valid values: 1 to 31.</p>
+     * <p>The minimum scaling limit for a single node. Valid values: 1 PCU to 31 PCU.</p>
      * <blockquote>
-     * <p>This parameter is supported only for serverless clusters.</p>
+     * <p>Only serverless clusters support this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -693,9 +621,9 @@ public class CreateDBClusterRequest extends TeaModel {
     public String scaleMin;
 
     /**
-     * <p>The maximum number of read-only nodes that the serverless cluster scales up to. Valid values: 0 to 15.</p>
+     * <p>The maximum number of read-only nodes for scaling. Valid values: 0 to 15.</p>
      * <blockquote>
-     * <p>This parameter is supported only for serverless clusters.</p>
+     * <p>Only serverless clusters support this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -705,9 +633,9 @@ public class CreateDBClusterRequest extends TeaModel {
     public String scaleRoNumMax;
 
     /**
-     * <p>The minimum number of read-only nodes that the serverless cluster scales down to. Valid values: 0 to 15.</p>
+     * <p>The minimum number of read-only nodes for scaling. Valid values: 0 to 15.</p>
      * <blockquote>
-     * <p>This parameter is supported only for serverless clusters.</p>
+     * <p>Only serverless clusters support this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -717,9 +645,9 @@ public class CreateDBClusterRequest extends TeaModel {
     public String scaleRoNumMin;
 
     /**
-     * <p>The IP whitelist of the PolarDB cluster.</p>
+     * <p>The IP addresses in the whitelist of the PolarDB cluster.</p>
      * <blockquote>
-     * <p>You can specify multiple IP addresses in the IP whitelist. Separate the IP addresses with commas (,).</p>
+     * <p>You can specify multiple IP addresses. Separate multiple IP addresses with commas (,).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -729,9 +657,9 @@ public class CreateDBClusterRequest extends TeaModel {
     public String securityIPList;
 
     /**
-     * <p>The type of the serverless cluster. Set the value to <strong>AgileServerless</strong>.</p>
+     * <p>The serverless type. Set the value to <strong>AgileServerless</strong> (agile).</p>
      * <blockquote>
-     * <p>This parameter is supported only for serverless clusters.</p>
+     * <p>Only serverless clusters support this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -741,13 +669,13 @@ public class CreateDBClusterRequest extends TeaModel {
     public String serverlessType;
 
     /**
-     * <p>The ID of the source ApsaraDB RDS instance or source PolarDB cluster. This parameter is required only if <strong>CreationOption</strong> is set to <strong>MigrationFromRDS</strong>, <strong>CloneFromRDS</strong>, <strong>CloneFromPolarDB</strong>, or <strong>RecoverFromRecyclebin</strong>.</p>
+     * <p>Instance ID of the source ApsaraDB RDS instance or the source PolarDB cluster. This parameter is required only when <strong>CreationOption</strong> is set to <strong>MigrationFromRDS</strong>, <strong>CloneFromRDS</strong>, <strong>CloneFromPolarDB</strong>, or <strong>RecoverFromRecyclebin</strong>.</p>
      * <ul>
-     * <li><p>If <strong>CreationOption</strong> is set to <strong>MigrationFromRDS</strong> or <strong>CloneFromRDS</strong>, specify the ID of the source ApsaraDB RDS instance. The source ApsaraDB RDS instance must be ApsaraDB RDS for MySQL 5.6, 5.7, or 8.0 High-availability Edition.</p>
+     * <li><p>If <strong>CreationOption</strong> is set to <strong>MigrationFromRDS</strong> or <strong>CloneFromRDS</strong>, set this parameter to instance ID of the source ApsaraDB RDS instance. The source ApsaraDB RDS instance must run RDS MySQL 5.6, 5.7, or 8.0 on RDS High-availability Edition.</p>
      * </li>
-     * <li><p>If <strong>CreationOption</strong> is set to <strong>CloneFromPolarDB</strong>, specify the ID of the source PolarDB cluster. The new cluster must use the same database engine as the source cluster. For example, if the source cluster runs MySQL 8.0, you must set <strong>DBType</strong> to <strong>MySQL</strong> and <strong>DBVersion</strong> to <strong>8.0</strong> for the new cluster.</p>
+     * <li><p>If <strong>CreationOption</strong> is set to <strong>CloneFromPolarDB</strong>, set this parameter to instance ID of the source PolarDB cluster. The cloned cluster and the source cluster have the same DBType by default. For example, if the source cluster runs MySQL 8.0, set <strong>DBType</strong> to <strong>MySQL</strong> and <strong>DBVersion</strong> to <strong>8.0</strong> for the cloned cluster.</p>
      * </li>
-     * <li><p>If <strong>CreationOption</strong> is set to <strong>RecoverFromRecyclebin</strong>, specify the ID of the released source PolarDB cluster. The restored cluster must use the same database engine as the source cluster. For example, if the source cluster runs MySQL 8.0, you must set <strong>DBType</strong> to <strong>MySQL</strong> and <strong>DBVersion</strong> to <strong>8.0</strong> for the restored cluster.</p>
+     * <li><p>If <strong>CreationOption</strong> is set to <strong>RecoverFromRecyclebin</strong>, set this parameter to instance ID of the released source PolarDB cluster. The recovered cluster and the source cluster must have the same DBType. For example, if the source cluster runs MySQL 8.0, set <strong>DBType</strong> to <strong>MySQL</strong> and <strong>DBVersion</strong> to <strong>8.0</strong> for the recovered cluster.</p>
      * </li>
      * </ul>
      * 
@@ -758,7 +686,7 @@ public class CreateDBClusterRequest extends TeaModel {
     public String sourceResourceId;
 
     /**
-     * <p>The UID of the source backup set owner in cross-account backup and restoration scenarios.</p>
+     * <p>The UID of the account that owns the source backup set in cross-account backup restoration scenarios.</p>
      * 
      * <strong>example:</strong>
      * <p>1022xxxxxxxx</p>
@@ -767,9 +695,9 @@ public class CreateDBClusterRequest extends TeaModel {
     public Long sourceUid;
 
     /**
-     * <p>The zone for the hot standby cluster.</p>
+     * <p>The zone of the hot standby cluster.</p>
      * <blockquote>
-     * <p>This parameter is valid only when the hot standby cluster feature or multi-AZ strong consistency is enabled.</p>
+     * <p>This parameter takes effect only when the hot standby cluster or multi-zone strong data consistency is enabled.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -779,12 +707,10 @@ public class CreateDBClusterRequest extends TeaModel {
     public String standbyAZ;
 
     /**
-     * <p>Specifies whether to enable automatic storage scaling for a Standard Edition cluster. Valid values:</p>
+     * <p>Specifies whether to enable automatic storage scaling for Standard Edition clusters. Valid values:</p>
      * <ul>
-     * <li><p>Enable: enables automatic storage scaling.</p>
-     * </li>
-     * <li><p>Disable: disables automatic storage scaling.</p>
-     * </li>
+     * <li>Enable: Automatic storage scaling is enabled.</li>
+     * <li>Disable: Automatic storage scaling is shutdown.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -796,29 +722,27 @@ public class CreateDBClusterRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable cloud disk encryption. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: enables cloud disk encryption.</p>
-     * </li>
-     * <li><p><strong>false</strong> (default): disables cloud disk encryption.</p>
+     * <li><strong>true</strong>: Cloud disk encryption is enabled.</li>
+     * <li><strong>false</strong>: Cloud disk encryption is disabled. This is the default value.<blockquote>
+     * <p>This parameter takes effect only when <strong>DBType</strong> is set to <strong>MySQL</strong>.</p>
+     * </blockquote>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is valid only if <strong>DBType</strong> is set to <strong>MySQL</strong>.</p>
-     * </blockquote>
-     * <blockquote>
-     * <p>This parameter is valid only if <strong>StorageType</strong> is set to a Standard Edition storage type.</p>
+     * <p>This parameter takes effect only when <strong>StorageType</strong> is set to a Standard Edition storage type.</p>
      * </blockquote>
      */
     @NameInMap("StorageEncryption")
     public Boolean storageEncryption;
 
     /**
-     * <p>The ID of a custom key from Key Management Service (KMS) for cloud disk encryption. The key must be in the same region as the cluster. If you specify this parameter, cloud disk encryption is automatically enabled and cannot be disabled. If this parameter is empty, the default service key is used.</p>
-     * <p>You can view the key ID or create a new key in the Key Management Service (KMS) console.</p>
+     * <p>The ID of the custom encryption key for cloud disk encryption in the same region as the instance. Specifying this parameter automatically enables cloud disk encryption, which cannot be disabled after it is enabled. Leave this parameter empty to use the default service key for cloud disk encryption.</p>
+     * <p>You can view the key ID in the Key Management Service (KMS) console or create a new key.</p>
      * <blockquote>
-     * <p>This parameter is valid only if <strong>DBType</strong> is set to <strong>MySQL</strong>.</p>
+     * <p>This parameter takes effect only when <strong>DBType</strong> is set to <strong>MySQL</strong>.</p>
      * </blockquote>
      * <blockquote>
-     * <p>This parameter is valid only if <strong>StorageType</strong> is set to a Standard Edition storage type.</p>
+     * <p>This parameter takes effect only when <strong>StorageType</strong> is set to a Standard Edition storage type.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -828,12 +752,10 @@ public class CreateDBClusterRequest extends TeaModel {
     public String storageEncryptionKey;
 
     /**
-     * <p>The billing method for storage. Valid values:</p>
+     * <p>The billing type for storage. Valid values:</p>
      * <ul>
-     * <li><p>Postpaid: pay-by-capacity (a pay-as-you-go method).</p>
-     * </li>
-     * <li><p>Prepaid: pay-by-space (a subscription method).</p>
-     * </li>
+     * <li>Postpaid: pay-by-capacity (pay-as-you-go).</li>
+     * <li>Prepaid: pay-by-space (subscription).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -843,15 +765,12 @@ public class CreateDBClusterRequest extends TeaModel {
     public String storagePayType;
 
     /**
-     * <p>The storage space for a pay-by-space (subscription) cluster. Unit: GB.</p>
+     * <p>The storage space for subscription billing (pay-by-space). Unit: GB.</p>
      * <blockquote>
      * <ul>
-     * <li><p>Valid values for a PolarDB for MySQL Enterprise Edition cluster: 10 to 50000.</p>
-     * </li>
-     * <li><p>Valid values for a PolarDB for MySQL Standard Edition cluster: 20 to 64000.</p>
-     * </li>
-     * <li><p>If the storage type of a Standard Edition cluster is ESSD AutoPL, the storage space must be a multiple of 10 between 40 and 64000.</p>
-     * </li>
+     * <li>Valid values for PolarDB for MySQL Enterprise Edition: 10 to 50000.</li>
+     * <li>Valid values for PolarDB for MySQL Standard Edition: 20 to 64000.</li>
+     * <li>When the Standard Edition storage type is ESSDAUTOPL, valid values are 40 to 64000 with a minimum step of 10. Only values such as 40, 50, 60, and so on are accepted.</li>
      * </ul>
      * </blockquote>
      * 
@@ -862,25 +781,18 @@ public class CreateDBClusterRequest extends TeaModel {
     public Long storageSpace;
 
     /**
-     * <p>Valid values for Enterprise Edition:</p>
+     * <p>Valid values for Enterprise Edition storage type:</p>
      * <ul>
-     * <li><p><strong>PSL5</strong></p>
-     * </li>
-     * <li><p><strong>PSL4</strong></p>
-     * </li>
+     * <li><strong>PSL5</strong></li>
+     * <li><strong>PSL4</strong></li>
      * </ul>
-     * <p>Valid values for Standard Edition:</p>
+     * <p>Valid values for Standard Edition storage type:</p>
      * <ul>
-     * <li><p><strong>ESSDPL0</strong></p>
-     * </li>
-     * <li><p><strong>ESSDPL1</strong></p>
-     * </li>
-     * <li><p><strong>ESSDPL2</strong></p>
-     * </li>
-     * <li><p><strong>ESSDPL3</strong></p>
-     * </li>
-     * <li><p><strong>ESSDAUTOPL</strong></p>
-     * </li>
+     * <li><strong>ESSDPL0</strong></li>
+     * <li><strong>ESSDPL1</strong></li>
+     * <li><strong>ESSDPL2</strong></li>
+     * <li><strong>ESSDPL3</strong></li>
+     * <li><strong>ESSDAUTOPL</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -890,7 +802,7 @@ public class CreateDBClusterRequest extends TeaModel {
     public String storageType;
 
     /**
-     * <p>The maximum storage capacity for a Standard Edition cluster when automatic storage scaling is enabled. Unit: GB.</p>
+     * <p>Sets the upper limit for automatic storage scaling of Standard Edition clusters. Unit: GB.</p>
      * <blockquote>
      * <p>The maximum value is 32000.</p>
      * </blockquote>
@@ -902,11 +814,11 @@ public class CreateDBClusterRequest extends TeaModel {
     public Long storageUpperBound;
 
     /**
-     * <p>Specifies whether to enable multi-AZ strong consistency for the cluster. Valid values:</p>
+     * <p>Specifies whether multi-zone strong data consistency is enabled for the cluster. Valid values:</p>
      * <ul>
-     * <li><p><strong>ON</strong>: enables multi-AZ strong consistency. This feature is applicable to Standard Edition clusters that are deployed across three zones.</p>
+     * <li><p><strong>ON</strong>: Multi-zone strong data consistency is enabled. This value applies to the Standard Edition 3AZ scenario.</p>
      * </li>
-     * <li><p><strong>OFF</strong>: disables multi-AZ strong consistency.</p>
+     * <li><p><strong>OFF</strong>: Multi-zone strong data consistency is disabled.</p>
      * </li>
      * </ul>
      * 
@@ -917,21 +829,16 @@ public class CreateDBClusterRequest extends TeaModel {
     public String strictConsistency;
 
     /**
-     * <p>Specifies whether to enable transparent data encryption (TDE). Valid values:</p>
+     * <p>Specifies whether to enable Transparent Data Encryption (TDE). Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: enables TDE.</p>
-     * </li>
-     * <li><p><strong>false</strong> (default): disables TDE.</p>
-     * </li>
+     * <li><strong>true</strong>: TDE is enabled.</li>
+     * <li><strong>false</strong>: TDE is disabled. This is the default value.</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li><p>This parameter is valid only when <strong>DBType</strong> is set to <strong>PostgreSQL</strong> or <strong>Oracle</strong>.</p>
-     * </li>
-     * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/167982.html">ModifyDBClusterTDE</a> operation to enable TDE for a PolarDB for MySQL cluster.</p>
-     * </li>
-     * <li><p>TDE cannot be disabled after it is enabled.</p>
-     * </li>
+     * <li>This parameter takes effect only when <strong>DBType</strong> is set to <strong>PostgreSQL</strong> or <strong>Oracle</strong>.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/167982.html">ModifyDBClusterTDE</a> operation to enable TDE for a PolarDB for MySQL cluster.</li>
+     * <li>TDE cannot be disabled after it is enabled.</li>
      * </ul>
      * </blockquote>
      * 
@@ -942,7 +849,7 @@ public class CreateDBClusterRequest extends TeaModel {
     public Boolean TDEStatus;
 
     /**
-     * <p>The tags to add to the cluster.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateDBClusterRequestTag> tag;
@@ -957,12 +864,10 @@ public class CreateDBClusterRequest extends TeaModel {
     public String targetMinorVersion;
 
     /**
-     * <p>The subscription duration. This parameter is required if you set the <strong>PayType</strong> parameter to <strong>Prepaid</strong>.</p>
+     * <p>This parameter is required when <strong>PayType</strong> is set to <strong>Prepaid</strong>.</p>
      * <ul>
-     * <li><p>If <strong>Period</strong> is set to <strong>Month</strong>, <strong>UsedTime</strong> must be an integer from <code>[1-9]</code>.</p>
-     * </li>
-     * <li><p>If <strong>Period</strong> is set to <strong>Year</strong>, <strong>UsedTime</strong> must be an integer from <code>[1-3]</code>.</p>
-     * </li>
+     * <li>When <strong>Period</strong> is set to <strong>Month</strong>, the valid values of <strong>UsedTime</strong> are integers in the range of <code>[1-9]</code>.</li>
+     * <li>When <strong>Period</strong> is set to <strong>Year</strong>, the valid values of <strong>UsedTime</strong> are integers in the range of <code>[1-3]</code>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -972,7 +877,7 @@ public class CreateDBClusterRequest extends TeaModel {
     public String usedTime;
 
     /**
-     * <p>The ID of the VPC.</p>
+     * <p>The VPC ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-**********</p>
@@ -981,9 +886,9 @@ public class CreateDBClusterRequest extends TeaModel {
     public String VPCId;
 
     /**
-     * <p>The ID of the VSwitch.</p>
+     * <p>The vSwitch ID.</p>
      * <blockquote>
-     * <p>If you specify the VPCId parameter, you must also specify this parameter.</p>
+     * <p>If you specify VPCId, you must also specify VSwitchId.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -1007,6 +912,30 @@ public class CreateDBClusterRequest extends TeaModel {
     public static CreateDBClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDBClusterRequest self = new CreateDBClusterRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateDBClusterRequest setAgenticDbClusterDescription(String agenticDbClusterDescription) {
+        this.agenticDbClusterDescription = agenticDbClusterDescription;
+        return this;
+    }
+    public String getAgenticDbClusterDescription() {
+        return this.agenticDbClusterDescription;
+    }
+
+    public CreateDBClusterRequest setAgenticDbClusterId(String agenticDbClusterId) {
+        this.agenticDbClusterId = agenticDbClusterId;
+        return this;
+    }
+    public String getAgenticDbClusterId() {
+        return this.agenticDbClusterId;
+    }
+
+    public CreateDBClusterRequest setAgenticDbType(String agenticDbType) {
+        this.agenticDbType = agenticDbType;
+        return this;
+    }
+    public String getAgenticDbType() {
+        return this.agenticDbType;
     }
 
     public CreateDBClusterRequest setAllowShutDown(String allowShutDown) {
@@ -1515,9 +1444,9 @@ public class CreateDBClusterRequest extends TeaModel {
 
     public static class CreateDBClusterRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key. To add multiple tags to the cluster at a time, click <strong>Add</strong> to add tag keys.</p>
          * <blockquote>
-         * <p>You can add up to 20 tags at a time. The Nth tag is a key-value pair, where <code>Tag.N.Key</code> is the key and <code>Tag.N.Value</code> is the value.</p>
+         * <p>You can add up to 20 tag pairs at a time. <code>Tag.N.Key</code> corresponds to <code>Tag.N.Value</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1527,9 +1456,9 @@ public class CreateDBClusterRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value. To add multiple tags to the cluster at a time, click <strong>Add</strong> to add tag values.</p>
          * <blockquote>
-         * <p>You can add up to 20 tags at a time. The Nth tag is a key-value pair, where <code>Tag.N.Key</code> is the key and <code>Tag.N.Value</code> is the value.</p>
+         * <p>You can add up to 20 tag pairs at a time. <code>Tag.N.Value</code> corresponds to <code>Tag.N.Key</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

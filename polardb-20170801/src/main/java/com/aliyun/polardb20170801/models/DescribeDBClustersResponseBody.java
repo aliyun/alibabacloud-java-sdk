@@ -4,9 +4,6 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClustersResponseBody extends TeaModel {
-    /**
-     * <p>The details of the clusters.</p>
-     */
     @NameInMap("Items")
     public DescribeDBClustersResponseBodyItems items;
 
@@ -20,7 +17,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of clusters returned on the current page.</p>
+     * <p>The number of clusters on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -262,6 +259,12 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         @NameInMap("Category")
         public String category;
 
+        @NameInMap("ConnectionResourceQuota")
+        public Long connectionResourceQuota;
+
+        @NameInMap("ConnectionResourceUsed")
+        public Long connectionResourceUsed;
+
         @NameInMap("CpuCores")
         public String cpuCores;
 
@@ -383,6 +386,22 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         }
         public String getCategory() {
             return this.category;
+        }
+
+        public DescribeDBClustersResponseBodyItemsDBCluster setConnectionResourceQuota(Long connectionResourceQuota) {
+            this.connectionResourceQuota = connectionResourceQuota;
+            return this;
+        }
+        public Long getConnectionResourceQuota() {
+            return this.connectionResourceQuota;
+        }
+
+        public DescribeDBClustersResponseBodyItemsDBCluster setConnectionResourceUsed(Long connectionResourceUsed) {
+            this.connectionResourceUsed = connectionResourceUsed;
+            return this;
+        }
+        public Long getConnectionResourceUsed() {
+            return this.connectionResourceUsed;
         }
 
         public DescribeDBClustersResponseBodyItemsDBCluster setCpuCores(String cpuCores) {

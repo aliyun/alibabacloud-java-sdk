@@ -2598,6 +2598,198 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Creates an AgenticDB branch.</p>
+     * 
+     * @param request CreateAgenticDBBranchRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAgenticDBBranchResponse
+     */
+    public CreateAgenticDBBranchResponse createAgenticDBBranchWithOptions(CreateAgenticDBBranchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.branchName)) {
+            query.put("BranchName", request.branchName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parentBranchId)) {
+            query.put("ParentBranchId", request.parentBranchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("TenantId", request.tenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAgenticDBBranch"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAgenticDBBranchResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an AgenticDB branch.</p>
+     * 
+     * @param request CreateAgenticDBBranchRequest
+     * @return CreateAgenticDBBranchResponse
+     */
+    public CreateAgenticDBBranchResponse createAgenticDBBranch(CreateAgenticDBBranchRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createAgenticDBBranchWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an AgenticDB project.</p>
+     * 
+     * @param request CreateAgenticDBProjectRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAgenticDBProjectResponse
+     */
+    public CreateAgenticDBProjectResponse createAgenticDBProjectWithOptions(CreateAgenticDBProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.defaultBranchName)) {
+            query.put("DefaultBranchName", request.defaultBranchName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
+            query.put("ProjectName", request.projectName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("TenantId", request.tenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAgenticDBProject"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAgenticDBProjectResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an AgenticDB project.</p>
+     * 
+     * @param request CreateAgenticDBProjectRequest
+     * @return CreateAgenticDBProjectResponse
+     */
+    public CreateAgenticDBProjectResponse createAgenticDBProject(CreateAgenticDBProjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createAgenticDBProjectWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建 AgenticDB 租户 API Key</p>
+     * 
+     * @param request CreateAgenticDBTenantApiKeyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAgenticDBTenantApiKeyResponse
+     */
+    public CreateAgenticDBTenantApiKeyResponse createAgenticDBTenantApiKeyWithOptions(CreateAgenticDBTenantApiKeyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expireTime)) {
+            query.put("ExpireTime", request.expireTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantName)) {
+            query.put("TenantName", request.tenantName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAgenticDBTenantApiKey"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAgenticDBTenantApiKeyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建 AgenticDB 租户 API Key</p>
+     * 
+     * @param request CreateAgenticDBTenantApiKeyRequest
+     * @return CreateAgenticDBTenantApiKeyResponse
+     */
+    public CreateAgenticDBTenantApiKeyResponse createAgenticDBTenantApiKey(CreateAgenticDBTenantApiKeyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createAgenticDBTenantApiKeyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates an application attached to a PolarDB instance.</p>
      * 
      * @param tmpReq CreateApplicationRequest
@@ -3594,7 +3786,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a db cluster.</p>
+     * <p>Creates a PolarDB cluster.</p>
      * 
      * @param request CreateDBClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3603,6 +3795,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateDBClusterResponse createDBClusterWithOptions(CreateDBClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agenticDbClusterDescription)) {
+            query.put("AgenticDbClusterDescription", request.agenticDbClusterDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.agenticDbClusterId)) {
+            query.put("AgenticDbClusterId", request.agenticDbClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.agenticDbType)) {
+            query.put("AgenticDbType", request.agenticDbType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.allowShutDown)) {
             query.put("AllowShutDown", request.allowShutDown);
         }
@@ -3874,7 +4078,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a db cluster.</p>
+     * <p>Creates a PolarDB cluster.</p>
      * 
      * @param request CreateDBClusterRequest
      * @return CreateDBClusterResponse
@@ -6384,6 +6588,230 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteAccountZonalResponse deleteAccountZonal(DeleteAccountZonalRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteAccountZonalWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an AgenticDB branch.</p>
+     * 
+     * @param request DeleteAgenticDBBranchRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAgenticDBBranchResponse
+     */
+    public DeleteAgenticDBBranchResponse deleteAgenticDBBranchWithOptions(DeleteAgenticDBBranchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.branchId)) {
+            query.put("BranchId", request.branchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("TenantId", request.tenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAgenticDBBranch"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAgenticDBBranchResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an AgenticDB branch.</p>
+     * 
+     * @param request DeleteAgenticDBBranchRequest
+     * @return DeleteAgenticDBBranchResponse
+     */
+    public DeleteAgenticDBBranchResponse deleteAgenticDBBranch(DeleteAgenticDBBranchRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAgenticDBBranchWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an AgenticDB compute cluster.</p>
+     * 
+     * @param request DeleteAgenticDBComputeClusterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAgenticDBComputeClusterResponse
+     */
+    public DeleteAgenticDBComputeClusterResponse deleteAgenticDBComputeClusterWithOptions(DeleteAgenticDBComputeClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.computeClusterId)) {
+            query.put("ComputeClusterId", request.computeClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAgenticDBComputeCluster"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAgenticDBComputeClusterResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an AgenticDB compute cluster.</p>
+     * 
+     * @param request DeleteAgenticDBComputeClusterRequest
+     * @return DeleteAgenticDBComputeClusterResponse
+     */
+    public DeleteAgenticDBComputeClusterResponse deleteAgenticDBComputeCluster(DeleteAgenticDBComputeClusterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAgenticDBComputeClusterWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an AgenticDB project.</p>
+     * 
+     * @param request DeleteAgenticDBProjectRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAgenticDBProjectResponse
+     */
+    public DeleteAgenticDBProjectResponse deleteAgenticDBProjectWithOptions(DeleteAgenticDBProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("TenantId", request.tenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAgenticDBProject"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAgenticDBProjectResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an AgenticDB project.</p>
+     * 
+     * @param request DeleteAgenticDBProjectRequest
+     * @return DeleteAgenticDBProjectResponse
+     */
+    public DeleteAgenticDBProjectResponse deleteAgenticDBProject(DeleteAgenticDBProjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAgenticDBProjectWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an API key for an AgenticDB tenant.</p>
+     * 
+     * @param request DeleteAgenticDBTenantApiKeyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAgenticDBTenantApiKeyResponse
+     */
+    public DeleteAgenticDBTenantApiKeyResponse deleteAgenticDBTenantApiKeyWithOptions(DeleteAgenticDBTenantApiKeyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiKeyId)) {
+            query.put("ApiKeyId", request.apiKeyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("TenantId", request.tenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAgenticDBTenantApiKey"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAgenticDBTenantApiKeyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an API key for an AgenticDB tenant.</p>
+     * 
+     * @param request DeleteAgenticDBTenantApiKeyRequest
+     * @return DeleteAgenticDBTenantApiKeyResponse
+     */
+    public DeleteAgenticDBTenantApiKeyResponse deleteAgenticDBTenantApiKey(DeleteAgenticDBTenantApiKeyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAgenticDBTenantApiKeyWithOptions(request, runtime);
     }
 
     /**
@@ -9820,6 +10248,612 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries the details of an AgenticDB branch.</p>
+     * 
+     * @param request DescribeAgenticDBBranchRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAgenticDBBranchResponse
+     */
+    public DescribeAgenticDBBranchResponse describeAgenticDBBranchWithOptions(DescribeAgenticDBBranchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.branchId)) {
+            query.put("BranchId", request.branchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("TenantId", request.tenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAgenticDBBranch"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAgenticDBBranchResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of an AgenticDB branch.</p>
+     * 
+     * @param request DescribeAgenticDBBranchRequest
+     * @return DescribeAgenticDBBranchResponse
+     */
+    public DescribeAgenticDBBranchResponse describeAgenticDBBranch(DescribeAgenticDBBranchRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAgenticDBBranchWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the connection information of an AgenticDB branch.</p>
+     * 
+     * @param request DescribeAgenticDBBranchEndpointsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAgenticDBBranchEndpointsResponse
+     */
+    public DescribeAgenticDBBranchEndpointsResponse describeAgenticDBBranchEndpointsWithOptions(DescribeAgenticDBBranchEndpointsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.branchId)) {
+            query.put("BranchId", request.branchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("TenantId", request.tenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAgenticDBBranchEndpoints"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAgenticDBBranchEndpointsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the connection information of an AgenticDB branch.</p>
+     * 
+     * @param request DescribeAgenticDBBranchEndpointsRequest
+     * @return DescribeAgenticDBBranchEndpointsResponse
+     */
+    public DescribeAgenticDBBranchEndpointsResponse describeAgenticDBBranchEndpoints(DescribeAgenticDBBranchEndpointsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAgenticDBBranchEndpointsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the branch lineage of an AgenticDB cluster.</p>
+     * 
+     * @param request DescribeAgenticDBBranchLineageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAgenticDBBranchLineageResponse
+     */
+    public DescribeAgenticDBBranchLineageResponse describeAgenticDBBranchLineageWithOptions(DescribeAgenticDBBranchLineageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.branchId)) {
+            query.put("BranchId", request.branchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.includeDestroying)) {
+            query.put("IncludeDestroying", request.includeDestroying);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxViewDepth)) {
+            query.put("MaxViewDepth", request.maxViewDepth);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("TenantId", request.tenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAgenticDBBranchLineage"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAgenticDBBranchLineageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the branch lineage of an AgenticDB cluster.</p>
+     * 
+     * @param request DescribeAgenticDBBranchLineageRequest
+     * @return DescribeAgenticDBBranchLineageResponse
+     */
+    public DescribeAgenticDBBranchLineageResponse describeAgenticDBBranchLineage(DescribeAgenticDBBranchLineageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAgenticDBBranchLineageWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of AgenticDB branches.</p>
+     * 
+     * @param request DescribeAgenticDBBranchesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAgenticDBBranchesResponse
+     */
+    public DescribeAgenticDBBranchesResponse describeAgenticDBBranchesWithOptions(DescribeAgenticDBBranchesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.branchName)) {
+            query.put("BranchName", request.branchName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("TenantId", request.tenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAgenticDBBranches"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAgenticDBBranchesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of AgenticDB branches.</p>
+     * 
+     * @param request DescribeAgenticDBBranchesRequest
+     * @return DescribeAgenticDBBranchesResponse
+     */
+    public DescribeAgenticDBBranchesResponse describeAgenticDBBranches(DescribeAgenticDBBranchesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAgenticDBBranchesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This operation supports filtering and returning the list of related model operators based on the <code>RelativeDBClusterId</code> and <code>KubeType</code> parameters.</li>
+     * <li>Note: Ensure that the <code>RelativeDBClusterId</code> provided in the request matches an existing PolarDB database instance ID. Otherwise, data cannot be retrieved correctly.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of Agentic Database clusters.</p>
+     * 
+     * @param request DescribeAgenticDBClustersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAgenticDBClustersResponse
+     */
+    public DescribeAgenticDBClustersResponse describeAgenticDBClustersWithOptions(DescribeAgenticDBClustersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agenticDbClusterIds)) {
+            query.put("AgenticDbClusterIds", request.agenticDbClusterIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterDescription)) {
+            query.put("DBClusterDescription", request.DBClusterDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterIds)) {
+            query.put("DBClusterIds", request.DBClusterIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterStatus)) {
+            query.put("DBClusterStatus", request.DBClusterStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAgenticDBClusters"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAgenticDBClustersResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This operation supports filtering and returning the list of related model operators based on the <code>RelativeDBClusterId</code> and <code>KubeType</code> parameters.</li>
+     * <li>Note: Ensure that the <code>RelativeDBClusterId</code> provided in the request matches an existing PolarDB database instance ID. Otherwise, data cannot be retrieved correctly.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of Agentic Database clusters.</p>
+     * 
+     * @param request DescribeAgenticDBClustersRequest
+     * @return DescribeAgenticDBClustersResponse
+     */
+    public DescribeAgenticDBClustersResponse describeAgenticDBClusters(DescribeAgenticDBClustersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAgenticDBClustersWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询 AgenticDB 计算实例列表</p>
+     * 
+     * @param request DescribeAgenticDBComputeClustersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAgenticDBComputeClustersResponse
+     */
+    public DescribeAgenticDBComputeClustersResponse describeAgenticDBComputeClustersWithOptions(DescribeAgenticDBComputeClustersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.computeClusterId)) {
+            query.put("ComputeClusterId", request.computeClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAgenticDBComputeClusters"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAgenticDBComputeClustersResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询 AgenticDB 计算实例列表</p>
+     * 
+     * @param request DescribeAgenticDBComputeClustersRequest
+     * @return DescribeAgenticDBComputeClustersResponse
+     */
+    public DescribeAgenticDBComputeClustersResponse describeAgenticDBComputeClusters(DescribeAgenticDBComputeClustersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAgenticDBComputeClustersWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询 AgenticDB 项目详情</p>
+     * 
+     * @param request DescribeAgenticDBProjectRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAgenticDBProjectResponse
+     */
+    public DescribeAgenticDBProjectResponse describeAgenticDBProjectWithOptions(DescribeAgenticDBProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("TenantId", request.tenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAgenticDBProject"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAgenticDBProjectResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询 AgenticDB 项目详情</p>
+     * 
+     * @param request DescribeAgenticDBProjectRequest
+     * @return DescribeAgenticDBProjectResponse
+     */
+    public DescribeAgenticDBProjectResponse describeAgenticDBProject(DescribeAgenticDBProjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAgenticDBProjectWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询 AgenticDB 项目列表</p>
+     * 
+     * @param request DescribeAgenticDBProjectsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAgenticDBProjectsResponse
+     */
+    public DescribeAgenticDBProjectsResponse describeAgenticDBProjectsWithOptions(DescribeAgenticDBProjectsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
+            query.put("ProjectName", request.projectName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("TenantId", request.tenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAgenticDBProjects"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAgenticDBProjectsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询 AgenticDB 项目列表</p>
+     * 
+     * @param request DescribeAgenticDBProjectsRequest
+     * @return DescribeAgenticDBProjectsResponse
+     */
+    public DescribeAgenticDBProjectsResponse describeAgenticDBProjects(DescribeAgenticDBProjectsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAgenticDBProjectsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of API keys for an AgenticDB tenant.</p>
+     * 
+     * @param request DescribeAgenticDBTenantApiKeysRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAgenticDBTenantApiKeysResponse
+     */
+    public DescribeAgenticDBTenantApiKeysResponse describeAgenticDBTenantApiKeysWithOptions(DescribeAgenticDBTenantApiKeysRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantName)) {
+            query.put("TenantName", request.tenantName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAgenticDBTenantApiKeys"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAgenticDBTenantApiKeysResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of API keys for an AgenticDB tenant.</p>
+     * 
+     * @param request DescribeAgenticDBTenantApiKeysRequest
+     * @return DescribeAgenticDBTenantApiKeysResponse
+     */
+    public DescribeAgenticDBTenantApiKeysResponse describeAgenticDBTenantApiKeys(DescribeAgenticDBTenantApiKeysRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAgenticDBTenantApiKeysWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the details of a specified API key.</p>
      * 
      * @param request DescribeApikeyAttributeRequest
@@ -11770,7 +12804,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the attributes of a specified cluster.</p>
+     * <p>Queries the attribute information of a cluster.</p>
      * 
      * @param request DescribeDBClusterAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11822,7 +12856,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the attributes of a specified cluster.</p>
+     * <p>Queries the attribute information of a cluster.</p>
      * 
      * @param request DescribeDBClusterAttributeRequest
      * @return DescribeDBClusterAttributeResponse
@@ -13008,7 +14042,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of PolarDB clusters, including clusters that you are authorized to access through Resource Access Management (RAM).</p>
+     * <p>Queries the details of PolarDB clusters or clusters authorized by RAM authorization.</p>
      * 
      * @param request DescribeDBClustersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13120,7 +14154,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of PolarDB clusters, including clusters that you are authorized to access through Resource Access Management (RAM).</p>
+     * <p>Queries the details of PolarDB clusters or clusters authorized by RAM authorization.</p>
      * 
      * @param request DescribeDBClustersRequest
      * @return DescribeDBClustersResponse
@@ -22451,7 +23485,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify the feature configuration of a PolarDB MySQL cluster.</p>
+     * <p>Modifies the feature configurations of a PolarDB for MySQL cluster.</p>
      * 
      * @param request ModifyDBClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22462,6 +23496,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.compressStorage)) {
             query.put("CompressStorage", request.compressStorage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.connectionResourceQuota)) {
+            query.put("ConnectionResourceQuota", request.connectionResourceQuota);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
@@ -22543,7 +23581,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify the feature configuration of a PolarDB MySQL cluster.</p>
+     * <p>Modifies the feature configurations of a PolarDB for MySQL cluster.</p>
      * 
      * @param request ModifyDBClusterRequest
      * @return ModifyDBClusterResponse
@@ -27211,6 +28249,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Resets the API key of an AgenticDB tenant.</p>
+     * 
+     * @param request ResetAgenticDBTenantApiKeyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ResetAgenticDBTenantApiKeyResponse
+     */
+    public ResetAgenticDBTenantApiKeyResponse resetAgenticDBTenantApiKeyWithOptions(ResetAgenticDBTenantApiKeyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiKeyId)) {
+            query.put("ApiKeyId", request.apiKeyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("TenantId", request.tenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ResetAgenticDBTenantApiKey"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ResetAgenticDBTenantApiKeyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Resets the API key of an AgenticDB tenant.</p>
+     * 
+     * @param request ResetAgenticDBTenantApiKeyRequest
+     * @return ResetAgenticDBTenantApiKeyResponse
+     */
+    public ResetAgenticDBTenantApiKeyResponse resetAgenticDBTenantApiKey(ResetAgenticDBTenantApiKeyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.resetAgenticDBTenantApiKeyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Resets an api key.</p>
      * 
      * @param request ResetConsumerApiKeyRequest
@@ -29479,5 +30573,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpgradePolarClawSkillsResponse upgradePolarClawSkills(UpgradePolarClawSkillsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.upgradePolarClawSkillsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>校验 AgenticDB 租户 API Key</p>
+     * 
+     * @param request VerifyAgenticDBTenantApiKeyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return VerifyAgenticDBTenantApiKeyResponse
+     */
+    public VerifyAgenticDBTenantApiKeyResponse verifyAgenticDBTenantApiKeyWithOptions(VerifyAgenticDBTenantApiKeyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiKey)) {
+            query.put("ApiKey", request.apiKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "VerifyAgenticDBTenantApiKey"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new VerifyAgenticDBTenantApiKeyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>校验 AgenticDB 租户 API Key</p>
+     * 
+     * @param request VerifyAgenticDBTenantApiKeyRequest
+     * @return VerifyAgenticDBTenantApiKeyResponse
+     */
+    public VerifyAgenticDBTenantApiKeyResponse verifyAgenticDBTenantApiKey(VerifyAgenticDBTenantApiKeyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.verifyAgenticDBTenantApiKeyWithOptions(request, runtime);
     }
 }

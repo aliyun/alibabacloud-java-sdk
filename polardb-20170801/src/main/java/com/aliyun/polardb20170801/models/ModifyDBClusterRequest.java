@@ -13,10 +13,13 @@ public class ModifyDBClusterRequest extends TeaModel {
     @NameInMap("CompressStorage")
     public String compressStorage;
 
+    @NameInMap("ConnectionResourceQuota")
+    public Long connectionResourceQuota;
+
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>You can call the DescribeDBClusters operation to query the details of all clusters in a specific region, including their cluster IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/173433.html">DescribeDBClusters</a> operation to query information about all clusters in the specified region, including cluster IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -27,9 +30,9 @@ public class ModifyDBClusterRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The names of the nodes to target in the fault simulation.</p>
+     * <p>The list of node instance names for the disaster recovery drill.</p>
      * <blockquote>
-     * <p>For a node-level simulation, you can specify only a single node. For a zone-level simulation, you can leave this parameter empty or specify all nodes.</p>
+     * <p>Node-level drills support only a single node. For zone-level drills, you can leave this parameter empty or specify all nodes.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -39,12 +42,10 @@ public class ModifyDBClusterRequest extends TeaModel {
     public String DBNodeCrashList;
 
     /**
-     * <p>The cross-zone data replication method for the cluster. Valid values:</p>
+     * <p>The cross-zone data replication mode of the cluster. Valid values:</p>
      * <ul>
-     * <li><p><strong>AsyncSync</strong>: asynchronous.</p>
-     * </li>
-     * <li><p><strong>SemiSync</strong>: semi-synchronous.</p>
-     * </li>
+     * <li><strong>AsyncSync</strong>: asynchronous</li>
+     * <li><strong>SemiSync</strong>: semi-synchronous</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,7 +57,7 @@ public class ModifyDBClusterRequest extends TeaModel {
     /**
      * <p>The fault injection method. Valid values:</p>
      * <ul>
-     * <li><code>0</code>: instance-level fault injection based on Crash SQL.</li>
+     * <li>0: instance fault injection based on <code>Crash SQL</code></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,21 +67,17 @@ public class ModifyDBClusterRequest extends TeaModel {
     public String faultInjectionType;
 
     /**
-     * <p>The fault simulation scope for the cluster. Valid values:</p>
+     * <p>The dimension of the disaster recovery drill for the cluster. Valid values:</p>
      * <ul>
-     * <li><p><code>0</code> or <code>FaultInjection</code>: primary zone-level fault simulation.</p>
-     * </li>
-     * <li><p><code>1</code>: node-level fault simulation.</p>
-     * </li>
-     * </ul>
-     * <blockquote>
+     * <li><code>0</code> or <code>FaultInjection</code>: primary zone-level disaster recovery drill.</li>
+     * <li><code>1</code>: node-level disaster recovery drill.<blockquote>
      * <ul>
-     * <li><p>In a <strong>primary zone-level fault simulation</strong>, all compute nodes in the primary zone become unavailable. The disaster recovery failover in this scenario is lossy.</p>
-     * </li>
-     * <li><p>In a <strong>node-level fault simulation</strong>, you can simulate a fault on only a single compute node. You must specify the target compute node by using the <code>DBNodeCrashList</code> parameter.</p>
-     * </li>
+     * <li>In the <strong>primary zone-level disaster recovery drill</strong> scenario, all compute nodes in the primary zone become unavailable. The failover in this scenario causes service interruptions.</li>
+     * <li>In the <strong>node-level disaster recovery drill</strong> scenario, only a single compute node is supported for the drill. Specify the desired compute node name by using <code>DBNodeCrashList</code>.</li>
      * </ul>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -89,19 +86,15 @@ public class ModifyDBClusterRequest extends TeaModel {
     public String faultSimulateMode;
 
     /**
-     * <p>Controls the automatic columnar index feature. Valid values:</p>
+     * <p>The automatic IMCI-based query acceleration feature. Valid values:</p>
      * <ul>
-     * <li><p><code>ON</code>: enables the feature.</p>
-     * </li>
-     * <li><p><code>OFF</code>: disables the feature.</p>
-     * </li>
+     * <li><code>ON</code>: enabled.</li>
+     * <li><code>OFF</code>: disabled.</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li><p>This feature is available only for PolarDB for MySQL clusters.</p>
-     * </li>
-     * <li><p>For cluster version limits, see <a href="https://help.aliyun.com/document_detail/2854119.html">Automatic indexing (AutoIndex)</a>.</p>
-     * </li>
+     * <li>Only PolarDB for MySQL clusters are supported.</li>
+     * <li>For cluster version requirements, see <a href="https://help.aliyun.com/document_detail/2854119.html">Automatic acceleration (AutoIndex)</a>.</li>
      * </ul>
      * </blockquote>
      * 
@@ -112,7 +105,7 @@ public class ModifyDBClusterRequest extends TeaModel {
     public String imciAutoIndex;
 
     /**
-     * <p>Enables or disables row-level compression.</p>
+     * <p>Modifies the row compression settings.</p>
      * 
      * <strong>example:</strong>
      * <p>OFF</p>
@@ -133,12 +126,10 @@ public class ModifyDBClusterRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The automatic cross-zone failover mode for the cluster. Valid values:</p>
+     * <p>The cross-zone automatic switchover mode of the cluster. Valid values:</p>
      * <ul>
-     * <li><p><strong>ON</strong>: enables automatic cross-zone failover.</p>
-     * </li>
-     * <li><p><strong>OFF</strong>: disables automatic cross-zone failover.</p>
-     * </li>
+     * <li><strong>ON</strong>: enables cross-zone automatic switchover.</li>
+     * <li><strong>OFF</strong>: disables cross-zone automatic switchover.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -148,12 +139,10 @@ public class ModifyDBClusterRequest extends TeaModel {
     public String standbyHAMode;
 
     /**
-     * <p>Enables or disables automatic storage scaling for a standard cluster. Valid values:</p>
+     * <p>Specifies whether to enable automatic storage scaling for the Standard Edition cluster. Valid values:</p>
      * <ul>
-     * <li><p>Enable: enables automatic storage scaling.</p>
-     * </li>
-     * <li><p>Disable: disables automatic storage scaling.</p>
-     * </li>
+     * <li>Enable: enables automatic storage scaling.</li>
+     * <li>Disable: disables automatic storage scaling.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -163,7 +152,7 @@ public class ModifyDBClusterRequest extends TeaModel {
     public String storageAutoScale;
 
     /**
-     * <p>The upper limit for automatic storage scaling on a standard cluster. Unit: GB.</p>
+     * <p>The upper limit for automatic storage scaling of the Standard Edition cluster. Unit: GB.</p>
      * <blockquote>
      * <p>The maximum value is 32000.</p>
      * </blockquote>
@@ -175,10 +164,10 @@ public class ModifyDBClusterRequest extends TeaModel {
     public Long storageUpperBound;
 
     /**
-     * <p>A JSON string that specifies information about the destination databases and tables to be restored. All values in the database and table information must be strings.
-     * Example: <code>[ { &quot;tables&quot;:[ { &quot;name&quot;:&quot;testtb&quot;, &quot;type&quot;:&quot;table&quot;, &quot;newname&quot;:&quot;testtb_restore&quot; } ], &quot;name&quot;:&quot;testdb&quot;, &quot;type&quot;:&quot;db&quot;, &quot;newname&quot;:&quot;testdb_restore&quot; } ]</code>.</p>
+     * <p>The JSON string that contains the information about the databases and tables to be restored. The values of the database and table information are strings.
+     * Example: <code>[    {        &quot;tables&quot;:[            {                &quot;name&quot;:&quot;testtb&quot;,                &quot;type&quot;:&quot;table&quot;,                &quot;newname&quot;:&quot;testtb_restore&quot;            }        ],        &quot;name&quot;:&quot;testdb&quot;,        &quot;type&quot;:&quot;db&quot;,        &quot;newname&quot;:&quot;testdb_restore&quot;    } ]</code>.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/194770.html">DescribeMetaList</a> operation to query for restorable databases and tables. Use the returned information to populate the fields in the example JSON.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/194770.html">DescribeMetaList</a> operation to query the names of databases and tables that can be restored, and then specify the information in the corresponding fields in the preceding example.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -198,6 +187,14 @@ public class ModifyDBClusterRequest extends TeaModel {
     }
     public String getCompressStorage() {
         return this.compressStorage;
+    }
+
+    public ModifyDBClusterRequest setConnectionResourceQuota(Long connectionResourceQuota) {
+        this.connectionResourceQuota = connectionResourceQuota;
+        return this;
+    }
+    public Long getConnectionResourceQuota() {
+        return this.connectionResourceQuota;
     }
 
     public ModifyDBClusterRequest setDBClusterId(String DBClusterId) {

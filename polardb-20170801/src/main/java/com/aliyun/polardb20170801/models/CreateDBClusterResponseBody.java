@@ -4,6 +4,12 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class CreateDBClusterResponseBody extends TeaModel {
+    @NameInMap("AgenticDbClusterDescription")
+    public String agenticDbClusterDescription;
+
+    @NameInMap("AgenticDbClusterId")
+    public String agenticDbClusterId;
+
     /**
      * <p>The cluster ID.</p>
      * 
@@ -43,6 +49,22 @@ public class CreateDBClusterResponseBody extends TeaModel {
     public static CreateDBClusterResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateDBClusterResponseBody self = new CreateDBClusterResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateDBClusterResponseBody setAgenticDbClusterDescription(String agenticDbClusterDescription) {
+        this.agenticDbClusterDescription = agenticDbClusterDescription;
+        return this;
+    }
+    public String getAgenticDbClusterDescription() {
+        return this.agenticDbClusterDescription;
+    }
+
+    public CreateDBClusterResponseBody setAgenticDbClusterId(String agenticDbClusterId) {
+        this.agenticDbClusterId = agenticDbClusterId;
+        return this;
+    }
+    public String getAgenticDbClusterId() {
+        return this.agenticDbClusterId;
     }
 
     public CreateDBClusterResponseBody setDBClusterId(String DBClusterId) {
