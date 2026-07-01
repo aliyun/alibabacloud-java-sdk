@@ -43,8 +43,8 @@ public class UpdateApiKeyResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the API call is successful. Valid values:</p>
      * <ul>
-     * <li>true: The call succeeded.</li>
-     * <li>false: The call failed.</li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

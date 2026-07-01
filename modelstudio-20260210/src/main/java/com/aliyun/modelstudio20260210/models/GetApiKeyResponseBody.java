@@ -47,7 +47,7 @@ public class GetApiKeyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request was successful.</p>
      * <ul>
      * <li>true: The request was successful.</li>
      * <li>false: The request failed.</li>
@@ -113,9 +113,22 @@ public class GetApiKeyResponseBody extends TeaModel {
     }
 
     public static class GetApiKeyResponseBodyApiKeyAuthModelAccessScope extends TeaModel {
+        /**
+         * <p>The list of accessible models.</p>
+         */
         @NameInMap("accessibleModels")
         public java.util.List<String> accessibleModels;
 
+        /**
+         * <p>Indicates whether all models with granted inference permissions in the workspace can be accessed. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("allowAllModels")
         public Boolean allowAllModels;
 
@@ -144,16 +157,19 @@ public class GetApiKeyResponseBody extends TeaModel {
 
     public static class GetApiKeyResponseBodyApiKeyAuth extends TeaModel {
         /**
-         * <p>The IP address whitelist.</p>
+         * <p>The IP access whitelist.</p>
          */
         @NameInMap("accessIps")
         public java.util.List<String> accessIps;
 
+        /**
+         * <p>The model access scope.</p>
+         */
         @NameInMap("modelAccessScope")
         public GetApiKeyResponseBodyApiKeyAuthModelAccessScope modelAccessScope;
 
         /**
-         * <p>The permission type. Valid values: All: all permissions. Custom: custom permissions.</p>
+         * <p>All: all permissions. Custom: custom permissions.</p>
          * 
          * <strong>example:</strong>
          * <p>Custom</p>
@@ -236,7 +252,7 @@ public class GetApiKeyResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Indicates whether the API key is disabled. Valid values:</p>
+         * <p>Indicates whether the API key is disabled.</p>
          * <ul>
          * <li><strong>0</strong>: Active.</li>
          * <li><strong>1</strong>: Disabled.</li>
@@ -249,7 +265,7 @@ public class GetApiKeyResponseBody extends TeaModel {
         public Integer disabled;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the API key was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1774338222000</p>

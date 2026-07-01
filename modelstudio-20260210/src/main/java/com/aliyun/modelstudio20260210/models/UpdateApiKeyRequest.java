@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateApiKeyRequest extends TeaModel {
     /**
      * <p>The API key permission settings.</p>
+     * <blockquote>
+     * <p>Do not fill in this section or fill it in completely for each UpdateApiKey operation. Otherwise, the configuration may not match your expectations.</p>
+     * </blockquote>
      */
     @NameInMap("auth")
     public UpdateApiKeyRequestAuth auth;
@@ -41,9 +44,22 @@ public class UpdateApiKeyRequest extends TeaModel {
     }
 
     public static class UpdateApiKeyRequestAuthModelAccessScope extends TeaModel {
+        /**
+         * <p>The list of accessible models.</p>
+         * <blockquote>
+         * <p>Notice: The content takes effect only when allowAllModels is set to false.</p>
+         * </blockquote>
+         */
         @NameInMap("accessibleModels")
         public java.util.List<String> accessibleModels;
 
+        /**
+         * <p>Specifies whether to allow access to all models with granted inference permissions in the workspace. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         */
         @NameInMap("allowAllModels")
         public Boolean allowAllModels;
 
@@ -75,13 +91,16 @@ public class UpdateApiKeyRequest extends TeaModel {
          * <p>The IP access whitelist.</p>
          * <blockquote>
          * <ul>
-         * <li>When you set custom permissions and do not specify the IP access whitelist, the server sets the whitelist to IPv4 (0.0.0.0/0) and IPv6 (::/0) by default, which allows all traffic.</li>
+         * <li>When you customize the permission scope, if the IP access whitelist is not specified, the server sets it to IPv4 (0.0.0.0/0) and IPv6 (::/0) by default, which allows all traffic.</li>
          * </ul>
          * </blockquote>
          */
         @NameInMap("accessIps")
         public java.util.List<String> accessIps;
 
+        /**
+         * <p>The model access scope.</p>
+         */
         @NameInMap("modelAccessScope")
         public UpdateApiKeyRequestAuthModelAccessScope modelAccessScope;
 

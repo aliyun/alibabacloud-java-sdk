@@ -23,7 +23,7 @@ public class CreateApiKeyRequest extends TeaModel {
      * <p>The workspace ID.</p>
      * <blockquote>
      * <ul>
-     * <li>If you leave this parameter empty, the created API key is automatically assigned to the default workspace.</li>
+     * <li>If you leave this parameter empty, the API key is automatically assigned to the default workspace.</li>
      * </ul>
      * </blockquote>
      * 
@@ -63,9 +63,25 @@ public class CreateApiKeyRequest extends TeaModel {
     }
 
     public static class CreateApiKeyRequestAuthModelAccessScope extends TeaModel {
+        /**
+         * <p>The list of accessible models.</p>
+         * <blockquote>
+         * <p>Notice: This parameter takes effect only when allowAllModels is set to false.</p>
+         * </blockquote>
+         */
         @NameInMap("accessibleModels")
         public java.util.List<String> accessibleModels;
 
+        /**
+         * <p>Specifies whether all models with granted inference permissions in the workspace are accessible. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("allowAllModels")
         public Boolean allowAllModels;
 
@@ -94,16 +110,19 @@ public class CreateApiKeyRequest extends TeaModel {
 
     public static class CreateApiKeyRequestAuth extends TeaModel {
         /**
-         * <p>The IP address whitelist.</p>
+         * <p>The IP access whitelist.</p>
          * <blockquote>
          * <ul>
-         * <li>When you use custom permissions, if you do not specify the IP address whitelist, the server sets it to IPv4 (0.0.0.0/0) and IPv6 (::/0) by default, which allows all traffic.</li>
+         * <li>When you set custom permissions and leave the IP access whitelist empty, the server sets the default values to IPv4 (0.0.0.0/0) and IPv6 (::/0), which allows all traffic.</li>
          * </ul>
          * </blockquote>
          */
         @NameInMap("accessIps")
         public java.util.List<String> accessIps;
 
+        /**
+         * <p>The model access scope.</p>
+         */
         @NameInMap("modelAccessScope")
         public CreateApiKeyRequestAuthModelAccessScope modelAccessScope;
 

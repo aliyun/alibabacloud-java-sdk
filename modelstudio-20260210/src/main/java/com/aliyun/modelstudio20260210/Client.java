@@ -527,7 +527,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>An API key cannot be disabled if it is already disabled.</p>
+     * <p>An API key that is already disabled cannot be disabled again.</p>
      * 
      * <b>summary</b> : 
      * <p>Disables an API key.</p>
@@ -558,7 +558,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>An API key cannot be disabled if it is already disabled.</p>
+     * <p>An API key that is already disabled cannot be disabled again.</p>
      * 
      * <b>summary</b> : 
      * <p>Disables an API key.</p>
@@ -621,7 +621,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the information of a specified authentication credential API key.</p>
+     * <p>Retrieves the information about a specified API key.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -647,7 +647,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the information of a specified authentication credential API key.</p>
+     * <p>Retrieves the information about a specified API key.</p>
      * @return GetApiKeyResponse
      */
     public GetApiKeyResponse getApiKey(String apiKeyId) throws Exception {
@@ -997,7 +997,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of API key authentication credentials.</p>
+     * <p>Retrieves a list of API key information for authentication credentials.</p>
      * 
      * @param request ListApiKeysRequest
      * @param headers map
@@ -1055,7 +1055,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of API key authentication credentials.</p>
+     * <p>Retrieves a list of API key information for authentication credentials.</p>
      * 
      * @param request ListApiKeysRequest
      * @return ListApiKeysResponse

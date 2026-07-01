@@ -29,7 +29,7 @@ public class ListApiKeysResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The page size.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -47,7 +47,7 @@ public class ListApiKeysResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The token used to retrieve more results. You do not need to provide this parameter for the first query. For subsequent queries, use the token obtained from the previous response.</p>
+     * <p>The token used to retrieve more results. This parameter is not required for the first query. For subsequent queries, use the token obtained from the previous response.</p>
      * 
      * <strong>example:</strong>
      * <p>lwytFRtLdNk=</p>
@@ -164,9 +164,15 @@ public class ListApiKeysResponseBody extends TeaModel {
     }
 
     public static class ListApiKeysResponseBodyApiKeysAuthModelAccessScope extends TeaModel {
+        /**
+         * <p>The list of accessible models.</p>
+         */
         @NameInMap("accessibleModels")
         public java.util.List<String> accessibleModels;
 
+        /**
+         * <p>Indicates whether access to all models with inference permissions in the workspace is allowed.</p>
+         */
         @NameInMap("allowAllModels")
         public Boolean allowAllModels;
 
@@ -195,11 +201,14 @@ public class ListApiKeysResponseBody extends TeaModel {
 
     public static class ListApiKeysResponseBodyApiKeysAuth extends TeaModel {
         /**
-         * <p>The IP address whitelist.</p>
+         * <p>The IP access whitelist.</p>
          */
         @NameInMap("accessIps")
         public java.util.List<String> accessIps;
 
+        /**
+         * <p>The model access scope.</p>
+         */
         @NameInMap("modelAccessScope")
         public ListApiKeysResponseBodyApiKeysAuthModelAccessScope modelAccessScope;
 
