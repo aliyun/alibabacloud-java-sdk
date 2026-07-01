@@ -17,7 +17,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token returned in this call. For more information about how to use it, refer to the operation description.</p>
+     * <p>The pagination token returned in this call. For more information about how to use this token, refer to the operation description.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****</p>

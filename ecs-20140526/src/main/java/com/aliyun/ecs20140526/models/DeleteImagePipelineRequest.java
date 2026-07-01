@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteImagePipelineRequest extends TeaModel {
     /**
-     * <p>The ID of the image template.</p>
+     * <p>The image template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

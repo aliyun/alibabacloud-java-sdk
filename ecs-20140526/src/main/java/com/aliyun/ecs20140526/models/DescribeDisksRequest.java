@@ -10,7 +10,7 @@ public class DescribeDisksRequest extends TeaModel {
     /**
      * <p>The list of additional attribute values. The only valid value is <code>Placement</code>, which queries the data storage location of the disk.</p>
      * <blockquote>
-     * <p>Only regional ESSD disks have data storage locations.</p>
+     * <p>Only regional (cross-zone redundant) disks have a valid data storage location.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -20,7 +20,7 @@ public class DescribeDisksRequest extends TeaModel {
     public java.util.List<String> additionalAttributes;
 
     /**
-     * <p>The ID of the automatic snapshot policy that is applied to the disk.</p>
+     * <p>The ID of the automatic snapshot policy used to query cloud disks.</p>
      * 
      * <strong>example:</strong>
      * <p>sp-m5e2w2jutw8bv31****</p>
@@ -31,7 +31,7 @@ public class DescribeDisksRequest extends TeaModel {
     /**
      * <p>The category of the disk. Valid values: </p>
      * <ul>
-     * <li>all: all disks, local disks, and elastic ephemeral disks.</li>
+     * <li>all: all cloud disks, local disks, and elastic ephemeral disks.</li>
      * <li>cloud: basic disk.</li>
      * <li>cloud_efficiency: ultra disk.</li>
      * <li>cloud_ssd: standard SSD.</li>
@@ -39,8 +39,8 @@ public class DescribeDisksRequest extends TeaModel {
      * <li>cloud_auto: ESSD AutoPL disk.</li>
      * <li>cloud_regional_disk_auto: regional ESSD.</li>
      * <li>cloud_essd_entry: ESSD Entry disk.</li>
-     * <li>elastic_ephemeral_disk_standard: elastic ephemeral disk - Standard.</li>
-     * <li>elastic_ephemeral_disk_premium: elastic ephemeral disk - Premium.</li>
+     * <li>elastic_ephemeral_disk_standard: elastic ephemeral disk - standard.</li>
+     * <li>elastic_ephemeral_disk_premium: elastic ephemeral disk - premium.</li>
      * <li>local_ssd_pro: I/O-intensive local disk.</li>
      * <li>local_hdd_pro: throughput-intensive local disk.</li>
      * <li>ephemeral: (retired) local disk.</li>
@@ -55,11 +55,11 @@ public class DescribeDisksRequest extends TeaModel {
     public String category;
 
     /**
-     * <p>Specifies whether automatic snapshots are released when the disk is released.</p>
+     * <p>Specifies whether automatic snapshots are released when the cloud disk is released.</p>
      * <ul>
-     * <li><p>true: Automatic snapshots are released.</p>
+     * <li><p>true: Yes.</p>
      * </li>
-     * <li><p>false: Automatic snapshots are not released.</p>
+     * <li><p>false: No.</p>
      * </li>
      * </ul>
      * <p>Default value: false.</p>
@@ -71,10 +71,10 @@ public class DescribeDisksRequest extends TeaModel {
     public Boolean deleteAutoSnapshot;
 
     /**
-     * <p>Specifies whether the disk is released together with the instance. Valid values:</p>
+     * <p>Specifies whether the disk is set to be released together with the instance. Valid values:</p>
      * <ul>
      * <li>true: The disk is released together with the instance.</li>
-     * <li>false: The disk is retained as a pay-as-you-go data disk after the instance is released.</li>
+     * <li>false: The disk is retained as a pay-as-you-go data disk when the instance is released.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -98,7 +98,7 @@ public class DescribeDisksRequest extends TeaModel {
     public String diskChargeType;
 
     /**
-     * <p>The IDs of disks, local disks, or elastic ephemeral disks. The value is a JSON array that can contain up to 100 IDs. Separate the IDs with commas (,).</p>
+     * <p>The IDs of cloud disks, local disks, or elastic ephemeral disks. The value is a JSON array that can contain up to 100 IDs. Separate the IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;d-bp67acfmxazb4p****&quot;, &quot;d-bp67acfmxazb4g****&quot;, … &quot;d-bp67acfmxazb4d****&quot;]</p>
@@ -107,7 +107,7 @@ public class DescribeDisksRequest extends TeaModel {
     public String diskIds;
 
     /**
-     * <p>The name of the disk. The name must be 2 to 128 characters in length and can contain letters, digits, and characters categorized as letter in Unicode. The name can contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <p>The name of the disk. The name must be 2 to 128 characters in length and can contain Unicode characters under the letter category (including letters, digits, and characters from other languages). The name can contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>testDiskName</p>
@@ -116,7 +116,7 @@ public class DescribeDisksRequest extends TeaModel {
     public String diskName;
 
     /**
-     * <p>The type of the disk, local disk, or elastic ephemeral disk to query. Valid values: </p>
+     * <p>The type of the cloud disk, local disk, or elastic ephemeral disk to query. Valid values: </p>
      * <ul>
      * <li>all: queries both system disks and data disks.</li>
      * <li>system: queries only system disks.</li>
@@ -134,10 +134,10 @@ public class DescribeDisksRequest extends TeaModel {
     public String diskType;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run. Valid values:</p>
      * <ul>
-     * <li>true: Only a dry run is performed. The system checks whether your AccessKey pair is valid, whether the Resource Access Management (RAM) user is granted the required authorization, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li>false: A Normal request is sent. If the request passes the dry run, a 2XX HTTP status code is returned and the operation is performed.</li>
+     * <li>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized Resource Access Management (RAM) users, and missing parameter values. If the request fails the dry run, the corresponding error is returned. If the request passes the dry run, the DryRunOperation error code is returned.</li>
+     * <li>false: performs a dry run and sends the Normal request. If the request passes the dry run, a 2XX HTTP status code is returned and the authorization is verified.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -148,13 +148,13 @@ public class DescribeDisksRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether the automatic snapshot policy feature is enabled for the disk.</p>
+     * <p>Specifies whether the automatic snapshot policy feature is enabled for the cloud disk.</p>
      * <ul>
      * <li>true: Enabled.</li>
      * <li>false: Not enabled.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is deprecated. After a disk is created, the automatic snapshot policy feature is enabled by default. You only need to apply an automatic snapshot policy to the disk.</p>
+     * <p>This parameter is deprecated. After a cloud disk is created, the automatic snapshot policy feature is enabled by default. You only need to associate an automatic snapshot policy with the cloud disk.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -164,10 +164,10 @@ public class DescribeDisksRequest extends TeaModel {
     public Boolean enableAutoSnapshot;
 
     /**
-     * <p>Specifies whether an automatic snapshot policy is applied to the disk.</p>
+     * <p>Specifies whether an automatic snapshot policy is applied to the cloud disk.</p>
      * <ul>
-     * <li>true: An automatic snapshot policy is applied.</li>
-     * <li>false: No automatic snapshot policy is applied.</li>
+     * <li>true: Applied.</li>
+     * <li>false: Not applied.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -187,11 +187,11 @@ public class DescribeDisksRequest extends TeaModel {
     public Boolean enableShared;
 
     /**
-     * <p>Specifies whether to query only encrypted disks.</p>
+     * <p>Specifies whether to query only encrypted cloud disks.</p>
      * <ul>
-     * <li><p>true: Only encrypted disks are queried.</p>
+     * <li><p>true: Yes.</p>
      * </li>
-     * <li><p>false: Encrypted disks are not exclusively queried.</p>
+     * <li><p>false: No.</p>
      * </li>
      * </ul>
      * <p>Default value: false.</p>
@@ -203,7 +203,7 @@ public class DescribeDisksRequest extends TeaModel {
     public Boolean encrypted;
 
     /**
-     * <p>The instance ID of the instance to which the disk, local disk, or elastic ephemeral disk is attached.</p>
+     * <p>The instance ID of the instance to which the cloud disk, local disk, or elastic ephemeral disk is attached.</p>
      * 
      * <strong>example:</strong>
      * <p>i-bp67acfmxazb4q****</p>
@@ -212,7 +212,7 @@ public class DescribeDisksRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the Key Management Service (KMS) key used by the disk.</p>
+     * <p>The ID of the Key Management Service (KMS) key used by the cloud disk.</p>
      * 
      * <strong>example:</strong>
      * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
@@ -223,8 +223,8 @@ public class DescribeDisksRequest extends TeaModel {
     /**
      * <p>The reason why the disk is locked. Valid values:</p>
      * <ul>
-     * <li>financial: The disk is locked due to overdue payments.</li>
-     * <li>security: The disk is locked for security reasons.</li>
+     * <li>financial: locked due to overdue payment.</li>
+     * <li>security: locked for security reasons.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -237,7 +237,7 @@ public class DescribeDisksRequest extends TeaModel {
      * <p>The maximum number of entries to return. Valid values: 10 to 500.</p>
      * <p>Default value:</p>
      * <ul>
-     * <li>If this parameter is not specified or is set to a value smaller than 10, the default value is 10.</li>
+     * <li>If this parameter is not specified or is set to a value less than 10, the default value is 10.</li>
      * <li>If this parameter is set to a value greater than 500, the default value is 500.</li>
      * </ul>
      * 
@@ -248,10 +248,10 @@ public class DescribeDisksRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Specifies whether the multi-attach feature is enabled for the disk. Valid values:</p>
+     * <p>Specifies whether the multi-attach feature is enabled. Valid values:</p>
      * <ul>
-     * <li>Disabled: The multi-attach feature is not enabled.</li>
-     * <li>Enabled: The multi-attach feature is enabled.</li>
+     * <li>Disabled: not enabled.</li>
+     * <li>Enabled: enabled.</li>
      * <li>LegacyShared: queries Shared Block Storage devices.</li>
      * </ul>
      * 
@@ -279,7 +279,7 @@ public class DescribeDisksRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is about to be deprecated. Use NextToken and MaxResults to complete paging query operations.</p>
+     * <p>This parameter is about to be deprecated. Use NextToken and MaxResults for paging operations.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -290,7 +290,7 @@ public class DescribeDisksRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is about to be deprecated. Use NextToken and MaxResults to complete paging query operations.</p>
+     * <p>This parameter is about to be deprecated. Use NextToken and MaxResults for paging operations.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -302,9 +302,9 @@ public class DescribeDisksRequest extends TeaModel {
     /**
      * <p>Specifies whether the disk is removable. Valid values:</p>
      * <ul>
-     * <li><p>true: The disk is removable. The disk can exist independently and can be freely attached to or detached from instances within the same zone.</p>
+     * <li><p>true: The disk can exist independently and can be freely attached and detached within the zone.</p>
      * </li>
-     * <li><p>false: The disk is not removable. The disk cannot exist independently and cannot be freely attached to or detached from instances within the same zone.</p>
+     * <li><p>false: The disk cannot exist independently and cannot be freely attached and detached within the zone.</p>
      * </li>
      * </ul>
      * <p>The Portable attribute of the following types of block storage devices is false, and their lifecycle is the same as that of the instance:</p>
@@ -349,7 +349,7 @@ public class DescribeDisksRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the snapshot used to create the disk.</p>
+     * <p>The ID of the snapshot used to create the cloud disk.</p>
      * 
      * <strong>example:</strong>
      * <p>s-bp67acfmxazb4p****</p>
@@ -670,7 +670,7 @@ public class DescribeDisksRequest extends TeaModel {
 
     public static class DescribeDisksRequestFilter extends TeaModel {
         /**
-         * <p>查询资源时的筛选键，取值必须为<code>CreationStartTime</code>。同时设置<code>Filter.1.Key</code>和<code>Filter.1.Value</code>可以查询在指定时间点后创建的资源信息。</p>
+         * <p>The filter key used to query resources. Set the value to <code>CreationStartTime</code>. You can specify both Filter.1.Key and Filter.1.Value to query resources created after the specified point in time.</p>
          * 
          * <strong>example:</strong>
          * <p>CreationStartTime</p>
@@ -679,7 +679,7 @@ public class DescribeDisksRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>查询资源时的筛选值。指定该参数时必须同时指定<code>Filter.1.Key</code>参数，格式为：<code>yyyy-MM-ddTHH:mmZ</code>，采用UTC +0时区。</p>
+         * <p>The filter value used to query resources. When you specify this parameter, you must also specify Filter.1.Key. Specify the time in the <code>yyyy-MM-ddTHH:mmZ</code> format in UTC+0.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-12-05T22:40Z</p>
@@ -713,7 +713,7 @@ public class DescribeDisksRequest extends TeaModel {
     public static class DescribeDisksRequestTag extends TeaModel {
         /**
          * <p>The tag key of the disk. Valid values of N: 1 to 20.</p>
-         * <p>If you use a single tag to filter resources, the resource count with the specified tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count with all specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, call <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a>.</p>
+         * <p>If you use a single tag to filter resources, the resource count with the specified tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that are attached with all specified tags cannot exceed 1,000. If the resource count exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>

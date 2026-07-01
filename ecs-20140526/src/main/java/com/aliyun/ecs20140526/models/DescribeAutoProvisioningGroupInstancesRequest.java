@@ -21,8 +21,8 @@ public class DescribeAutoProvisioningGroupInstancesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number.</p>
-     * <p>Pages start from page 1.</p>
+     * <p>The page number for the paging query.</p>
+     * <p>Minimum value: 1.</p>
      * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -32,8 +32,8 @@ public class DescribeAutoProvisioningGroupInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
-     * <p>Valid values: 1 to 100.</p>
+     * <p>The number of entries per page in the paging query. You can use this parameter to configure paging settings.</p>
+     * <p>Maximum value: 100.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class DescribeAutoProvisioningGroupInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the auto provisioning group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region where the auto provisioning group resides. You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

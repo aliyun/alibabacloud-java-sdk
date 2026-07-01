@@ -10,10 +10,8 @@ public class RenewElasticityAssurancesRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
+     * <li>true: Automatic payment is enabled.</li>
+     * <li>false: Automatic payment is not enabled.</li>
      * </ul>
      * <p>Default value: true.</p>
      * 
@@ -24,11 +22,11 @@ public class RenewElasticityAssurancesRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>Specifies whether to enable auto-renewal for the elasticity assurance. Valid values:</p>
+     * <p>Specifies whether to enable auto-renewal. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
+     * <li><p>true: Auto-renewal is enabled.</p>
      * </li>
-     * <li><p>false</p>
+     * <li><p>false: Auto-renewal is not enabled.</p>
      * </li>
      * </ul>
      * <p>Default value: false.</p>
@@ -40,15 +38,15 @@ public class RenewElasticityAssurancesRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The auto-renewal period. Unit: month. Valid values: 1, 2, 3, 6, 12, 24, and 36.</p>
+     * <p>The auto-renewal period. Unit: months. Valid values: 1, 2, 3, 6, 12, 24, and 36.</p>
      * <ul>
-     * <li><p>If you set <code>PeriodUnit</code> to Month, the default value is 1.</p>
+     * <li><p>When <code>PeriodUnit=Month</code>, the default value is 1.</p>
      * </li>
-     * <li><p>If you set <code>PeriodUnit</code> to Year, the default value is 12.</p>
+     * <li><p>When <code>PeriodUnit=Year</code>, the default value is 12.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is required if you set <code>AutoRenew</code> to <code>true</code>.</p>
+     * <p>This parameter is required when <code>AutoRenew</code> is set to <code>true</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -58,8 +56,8 @@ public class RenewElasticityAssurancesRequest extends TeaModel {
     public Integer autoRenewPeriod;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
-     * <p>The <code>token</code> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests.</p>
+     * <p><code>ClientToken</code> supports only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -74,11 +72,13 @@ public class RenewElasticityAssurancesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The renewal duration. The unit of the renewal duration is determined by the <code>PeriodUnit</code> value. Valid values:</p>
+     * <p>The renewal period. The unit of the renewal period is determined by the <code>PeriodUnit</code> parameter. Valid values:</p>
      * <ul>
-     * <li><p>Valid values if you set <code>PeriodUnit</code> to <code>Month</code>: 1, 2, 3, 4, 5, 6, 7, 8, and 9.</p>
+     * <li><p>When <code>PeriodUnit</code> is set to <code>Weekly</code>: 1, 2, and 3.</p>
      * </li>
-     * <li><p>Valid values if you set <code>PeriodUnit</code> to <code>Year</code>: 1, 2, and 3.</p>
+     * <li><p>When <code>PeriodUnit</code> is set to <code>Month</code>: 1, 2, 3, 4, 5, 6, 7, 8, and 9.</p>
+     * </li>
+     * <li><p>When <code>PeriodUnit</code> is set to <code>Year</code>: 1, 2, 3, 4, and 5.</p>
      * </li>
      * </ul>
      * <p>Default value: 1.</p>
@@ -90,11 +90,13 @@ public class RenewElasticityAssurancesRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the renewal duration. Valid values:</p>
+     * <p>The unit of the renewal period. Valid values:</p>
      * <ul>
-     * <li><p>Month</p>
+     * <li><p>Weekly: week</p>
      * </li>
-     * <li><p>Year</p>
+     * <li><p>Month: month</p>
+     * </li>
+     * <li><p>Year: year</p>
      * </li>
      * </ul>
      * <p>Default value: Year.</p>
@@ -106,8 +108,8 @@ public class RenewElasticityAssurancesRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The region ID of the elasticity assurance.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2680071.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the elasticity assurance service.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/2680071.html">DescribeRegions</a> to query the most recent region list.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -224,9 +226,9 @@ public class RenewElasticityAssurancesRequest extends TeaModel {
 
     public static class RenewElasticityAssurancesRequestPrivatePoolOptions extends TeaModel {
         /**
-         * <p>The IDs of elasticity assurances.</p>
-         * <p><strong>Limits</strong>: You can renew up to 20 elasticity assurances at a time.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2679748.html">DescribeElasticityAssurances</a> operation to query the elasticity assurances that you purchased.</p>
+         * <p>The list of elasticity assurance service IDs.</p>
+         * <p><strong>Limit</strong>: You can renew up to 20 elasticity assurance services at a time.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/2679748.html">DescribeElasticityAssurances</a> to query purchased elasticity assurance services.</p>
          */
         @NameInMap("Id")
         public java.util.List<String> id;

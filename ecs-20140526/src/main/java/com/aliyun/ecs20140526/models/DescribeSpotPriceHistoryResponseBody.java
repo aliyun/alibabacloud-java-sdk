@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
     /**
-     * <p>The instance type of the spot instance.</p>
+     * <p>The currency unit of the price.</p>
+     * <p>China site: CNY.</p>
+     * <p>International site: USD.</p>
      * 
      * <strong>example:</strong>
      * <p>CNY</p>
@@ -14,7 +16,7 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
     public String currency;
 
     /**
-     * <p>The network type of the spot instance.</p>
+     * <p>The start row of the next page. Set the <code>Offset</code> parameter to this value to query the next page of data.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -23,7 +25,7 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
     public Integer nextOffset;
 
     /**
-     * <p>The instance type of the spot instance.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>

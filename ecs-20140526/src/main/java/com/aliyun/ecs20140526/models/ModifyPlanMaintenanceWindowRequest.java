@@ -188,7 +188,7 @@ public class ModifyPlanMaintenanceWindowRequest extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The resource type for the O&amp;M window.</p>
+         * <p>The resource type for the O&amp;M window configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>Tag</p>
@@ -239,7 +239,7 @@ public class ModifyPlanMaintenanceWindowRequest extends TeaModel {
          * <ul>
          * <li>If PeriodUnit is set to Weekly, the format is Monday,22:00. Monday can be replaced with Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday.</li>
          * <li>If PeriodUnit is set to Daily, the format is 22:00.</li>
-         * <li>The comma delimiter separates two parts. The first part represents the hour, with valid values from 00 to 23. The second part represents the minutes, which currently supports only 00.</li>
+         * <li>The comma delimiter separates two parts. The first part represents the hour, with valid values from 00 to 23. The second part represents the minute, which currently supports only 00.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -253,7 +253,7 @@ public class ModifyPlanMaintenanceWindowRequest extends TeaModel {
          * <ul>
          * <li>If PeriodUnit is set to Weekly, the format is Monday,22:00. Monday can be replaced with Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday.</li>
          * <li>If PeriodUnit is set to Daily, the format is 22:00.</li>
-         * <li>The comma delimiter separates two parts. The first part represents the hour, with valid values from 00 to 23. The second part represents the minutes, which currently supports only 00.</li>
+         * <li>The comma delimiter separates two parts. The first part represents the hour, with valid values from 00 to 23. The second part represents the minute, which currently supports only 00.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -296,7 +296,7 @@ public class ModifyPlanMaintenanceWindowRequest extends TeaModel {
         public String periodUnit;
 
         /**
-         * <p>The time ranges of the recurring O&amp;M window cycle (UTC time zone).</p>
+         * <p>The time ranges of the O&amp;M window recurring cycle (UTC time zone).</p>
          */
         @NameInMap("RangeList")
         public java.util.List<ModifyPlanMaintenanceWindowRequestTimePeriodRangeList> rangeList;

@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class StopInstancesRequest extends TeaModel {
     /**
-     * <p>Specifies the batch operation mode. Valid values:</p>
+     * <p>The batch operation mode. Valid values:</p>
      * <ul>
-     * <li><p>AllTogether: The batch operation is successful only after all operations are successful. If any operation fails, the batch operation is considered failed, and all operations that have been performed are undone to restore the instances to the status before the batch operation.</p>
+     * <li><p>AllTogether: All operations must succeed for the entire batch operation to be considered successful. If any operation fails, the entire batch operation fails and all completed operations are rolled back to the previous state.</p>
      * </li>
-     * <li><p>SuccessFirst: allows each operation in a batch to be independently executed. If an operation fails, other operations can continue and confirm success. In this mode, successful operations are committed and failed operations are marked as failed, but the execution results of other operations are not affected.</p>
+     * <li><p>SuccessFirst: Each operation in the batch is executed independently. If an operation fails, other operations can still be executed and confirmed as successful. Successful operations are committed, and failed operations are marked as failed without affecting the results of other operations.</p>
      * </li>
      * </ul>
      * <p>Default value: AllTogether.</p>
@@ -21,15 +21,15 @@ public class StopInstancesRequest extends TeaModel {
     public String batchOptimization;
 
     /**
-     * <p>Specifies whether to send a precheck request. Valid values:</p>
+     * <p>Specifies whether to send a dry run request. Valid values:</p>
      * <ul>
-     * <li>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and instance status. If the check fails, the corresponding error message is returned. If the request passes the dry run, <code>DRYRUN.SUCCESS</code> is returned.</li>
-     * </ul>
+     * <li><p>true: sends a dry run request without stopping the instances. The system checks the required parameters, request format, and instance status. If the check fails, the corresponding error is returned. If the check succeeds, <code>DRYRUN.SUCCESS</code> is returned.</p>
      * <blockquote>
-     * <p>If you set <code>BatchOptimization</code> to <code>SuccessFirst</code> and <code>DryRun</code> to true, only <code>DRYRUN.SUCCESS</code> is returned, regardless of whether the request passes the dry run.</p>
+     * <p>If the BatchOptimization parameter is set to <code>SuccessFirst</code>, the dry run result for <code>DryRun=true</code> returns only <code>DRYRUN.SUCCESS</code>.</p>
      * </blockquote>
-     * <ul>
-     * <li>false: performs a dry run and performs the actual request. If the request passes the dry run, instances are stopped.</li>
+     * </li>
+     * <li><p>false: sends a normal request. After the request passes the check, the instances are stopped.</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -40,14 +40,13 @@ public class StopInstancesRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether to forcefully stop instances. Valid values:</p>
+     * <p>Specifies whether to forcefully stop the instances. Valid values:</p>
      * <ul>
-     * <li><p>true: forcefully stops the ECS instance.</p>
-     * <p>\<em>\</em></p>
-     * <p><strong>Alert</strong> Force Stop: forcefully stops the instance. A force stop is equivalent to a physical shutdown and may cause data loss if instance data has not been written to disks.</p>
+     * <li>true: forcefully stops the instances.<blockquote>
+     * <p>Warning: A forced stop is equivalent to a power-off. Data that is not written to disks in the instance operating system may be lost. Proceed with caution.</p>
+     * </blockquote>
      * </li>
-     * <li><p>false: normally stops the ECS instance.</p>
-     * </li>
+     * <li>false: normally stops the instances.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -58,7 +57,7 @@ public class StopInstancesRequest extends TeaModel {
     public Boolean forceStop;
 
     /**
-     * <p>The IDs of ECS instances. You can specify 1 to 100 instance IDs.</p>
+     * <p>The instance IDs. Array length: 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,7 +73,7 @@ public class StopInstancesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the instances. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -90,27 +89,26 @@ public class StopInstancesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Stop mode. Valid values:</p>
+     * <p>The stop mode. Valid values:</p>
      * <ul>
-     * <li><p>StopCharging: economical mode. After an instance is stopped in economical mode:</p>
+     * <li><p>StopCharging: economical mode. After economical mode is enabled:</p>
      * <ul>
-     * <li><p>Billing for the following resources of the instance stops: computing resources (vCPUs, memory, and GPUs), image licenses, and public bandwidth of the static public IP address (if any) that uses the pay-by-bandwidth metering method.</p>
-     * </li>
-     * <li><p>Billing for the following resources of the instance continues: system disk, data disks, and public bandwidth of the elastic IP address (EIP) (if any) that uses the pay-by-bandwidth metering method.</p>
-     * </li>
-     * <li><p>The instance may fail to restart due to the reclaimed computing resources or insufficient resources. Try again later or change the instance type of the instance.</p>
-     * </li>
-     * <li><p>If an EIP is associated with the instance before the instance is stopped, the EIP remains unchanged after the instance is restarted. If a static public IP address is associated with the instance before the instance is stopped, the static public IP address may change, but the private IP address does not change.</p>
-     * </li>
+     * <li>Billing for compute resources (vCPUs, memory, and GPUs), image license fees, and fixed bandwidth of static public IP addresses is suspended.</li>
+     * <li>Billing for system disks, data disks, and fixed bandwidth of Elastic IP Addresses (EIPs) continues.</li>
+     * <li>Because compute resources are released, the instance may fail to start due to insufficient resources. Try again later or change the instance type.</li>
+     * <li>If an EIP is associated with the instance before it is stopped, the IP address remains unchanged after the instance is restarted. Otherwise, the static public IP address may change, but the private IP address remains unchanged.</li>
      * </ul>
      * <p>For more information, see <a href="https://help.aliyun.com/document_detail/63353.html">Economical mode</a>.</p>
-     * <p>\<em>\</em></p>
-     * <p><strong>Note</strong> If the instance itself does not support the economical shutdown mode, the API side does not intercept errors, and the instance is preferentially stopped. The following types of instances are not supported: classic network instances, local disks, and monthly instances.</p>
-     * </li>
-     * <li><p>KeepCharging: standard mode. After the instance is stopped in standard mode, you continue to be charged for the instance. If you want to change the operating system, re-initialize disks, change the instance type, or modify the private IP address, we recommend selecting this mode to avoid startup failures.</p>
+     * <blockquote>
+     * <p>Notice:</p>
+     * </blockquote>
      * </li>
      * </ul>
-     * <p>Default value: If the conditions for <a href="~~63353#default~~">enabling the economical mode for an instance in a VPC</a> are met and you have enabled this mode in the ECS console, the default value is <code>StopCharging</code>. Otherwise, the default value is <code>KeepCharging</code>.</p>
+     * <p>If the instance does not support economical mode, the API does not return an error. Stopping the instance takes priority. Instance types that do not support economical mode include instances with local SSDs and subscription instances.</p>
+     * <ul>
+     * <li>KeepCharging: standard stop mode. After the instance is stopped, resources are retained and billing continues. The instance type inventory and public IP address are also retained. If you stop the instance to replace the operating system, reinitialize a disk, change the instance type, or modify the private IP address, select this mode to avoid startup failures.</li>
+     * </ul>
+     * <p>Default value: If you <a href="~~63353#default~~">enable economical mode for VPC-connected instances</a> and the conditions are met, the default value is <code>StopCharging</code>. Otherwise, the default value is <code>KeepCharging</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>KeepCharging</p>

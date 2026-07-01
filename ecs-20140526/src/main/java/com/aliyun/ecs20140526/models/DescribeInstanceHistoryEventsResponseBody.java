@@ -10,7 +10,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
     /**
      * <p>The query token returned in this invocation.</p>
      * <blockquote>
-     * <p>When you use MaxResults and NextToken for paging and no NextToken is returned, no more data is available.</p>
+     * <p>When you use MaxResults and NextToken parameters for paging query and no NextToken is returned, no more data is available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -23,8 +23,8 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
      * <p>The page number of the instance event list.</p>
      * <blockquote>
      * <ul>
-     * <li>When you use MaxResults and NextToken for paging, the returned PageNumber parameter value is meaningless.</li>
-     * <li>This parameter will be deprecated. Use NextToken and MaxResults for paging instead.</li>
+     * <li>When you use MaxResults and NextToken parameters for paging query, the returned PageNumber parameter value is meaningless.</li>
+     * <li>This parameter will be deprecated. Use NextToken and MaxResults for paging query instead.</li>
      * </ul>
      * </blockquote>
      * 
@@ -38,8 +38,8 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
      * <p>The number of entries per page as specified in the request.</p>
      * <blockquote>
      * <ul>
-     * <li>When you use MaxResults and NextToken for paging, the returned PageSize parameter value is meaningless.</li>
-     * <li>This parameter will be deprecated. Use NextToken and MaxResults for paging instead.</li>
+     * <li>When you use MaxResults and NextToken parameters for paging query, the returned PageSize parameter value is meaningless.</li>
+     * <li>This parameter will be deprecated. Use NextToken and MaxResults for paging query instead.</li>
      * </ul>
      * </blockquote>
      * 
@@ -61,7 +61,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
     /**
      * <p>The total number of instance events.</p>
      * <blockquote>
-     * <p>When you use MaxResults and NextToken for paging, the returned TotalCount parameter value is meaningless.</p>
+     * <p>When you use MaxResults and NextToken parameters for paging query, the returned TotalCount parameter value is meaningless.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

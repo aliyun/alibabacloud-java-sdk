@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSecurityGroupRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. <strong>The token can contain only ASCII characters and cannot exceed 64 characters in length.</strong> For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -14,8 +14,8 @@ public class CreateSecurityGroupRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the security group. The description must be 2 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
-     * <p>By default, this parameter is left empty.</p>
+     * <p>The description of the security group. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>Default value: empty.</p>
      * 
      * <strong>example:</strong>
      * <p>testDescription</p>
@@ -30,7 +30,7 @@ public class CreateSecurityGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the security group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the security group. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class CreateSecurityGroupRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The name of the security group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <p>The name of the security group. The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>. The name can contain characters that are categorized as letter in Unicode, including Chinese characters and English letters, and digits. The name can also contain colons (:), underscores (_), periods (.), or hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>testSecurityGroupName</p>
@@ -66,10 +66,8 @@ public class CreateSecurityGroupRequest extends TeaModel {
     /**
      * <p>The type of the security group. Valid values:</p>
      * <ul>
-     * <li><p>normal: basic security group</p>
-     * </li>
-     * <li><p>enterprise: advanced security group For more information, see <a href="https://help.aliyun.com/document_detail/120621.html">Advanced security groups</a>.</p>
-     * </li>
+     * <li>normal: basic security group.</li>
+     * <li>enterprise: advanced security group. For more information, see <a href="https://help.aliyun.com/document_detail/120621.html">Overview of advanced security groups</a>.</li>
      * </ul>
      * <p>Default value: normal.</p>
      * 
@@ -89,16 +87,13 @@ public class CreateSecurityGroupRequest extends TeaModel {
     public Boolean serviceManaged;
 
     /**
-     * <p>The tags to add to the security group. You can add up to 20 tags.</p>
+     * <p>The tags to bind to the security group. Array length: 0 to 20.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateSecurityGroupRequestTag> tag;
 
     /**
-     * <p>The ID of the VPC in which you want to create the security group.</p>
-     * <blockquote>
-     * <p>The VpcId parameter is required only if you want to create security groups of the VPC type. In regions that support the classic network, you can create security groups of the classic network type without the need to specify the VpcId parameter.</p>
-     * </blockquote>
+     * <p>The ID of the VPC to which the security group belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp1opxu1zkhn00gzv****</p>
@@ -217,8 +212,8 @@ public class CreateSecurityGroupRequest extends TeaModel {
 
     public static class CreateSecurityGroupRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag to add to the security group.</p>
-         * <p>The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the security group.</p>
+         * <p>The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -227,8 +222,8 @@ public class CreateSecurityGroupRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag to add to the security group.</p>
-         * <p>The tag value can be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the security group.</p>
+         * <p>The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

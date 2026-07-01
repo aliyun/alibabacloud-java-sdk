@@ -30,7 +30,7 @@ public class DescribeInstancesRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform only a dry run. Valid values:</p>
      * <ul>
-     * <li>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized RAM users, and missing parameter values. If the request fails the dry run, the corresponding error is returned. If the request passes the dry run, the DryRunOperation error code is returned.  </li>
+     * <li>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized RAM users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.  </li>
      * <li>false: performs a dry run and sends the request. If the request passes the dry run, a 2XX HTTP status code is returned and the operation is performed.</li>
      * </ul>
      * <p>Default value: false.</p>
@@ -42,7 +42,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The Elastic IP Address (EIP) list of instances. This parameter takes effect when InstanceNetworkType is set to vpc. The value can be a JSON array that consists of up to 100 IP addresses. Separate the IP addresses with commas (,).</p>
+     * <p>The elastic IP addresses (EIPs) of instances. This parameter takes effect when InstanceNetworkType is set to vpc. The value can be a JSON array that consists of up to 100 IP addresses. Separate the IP addresses with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;42.1.1.<strong>&quot;, &quot;42.1.2.</strong>&quot;, … &quot;42.1.10.**&quot;]</p>
@@ -60,7 +60,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public String hpcClusterId;
 
     /**
-     * <p>Specifies whether the access channel for instance metadata is enabled. Valid values:</p>
+     * <p>Specifies whether to enable the access channel for instance metadata. Valid values:</p>
      * <ul>
      * <li>enabled: enabled.</li>
      * <li>disabled: disabled.</li>
@@ -88,14 +88,14 @@ public class DescribeInstancesRequest extends TeaModel {
     public Integer httpPutResponseHopLimit;
 
     /**
-     * <p>Specifies whether the China mode (IMDSv2) is forcefully used for accessing instance metadata. Valid values:</p>
+     * <p>Specifies whether to forcefully use the security-hardened mode (IMDSv2) to access instance metadata. Valid values:</p>
      * <ul>
-     * <li>optional: not forcefully used.</li>
-     * <li>required: forcefully used. After this value is set, instance metadata cannot be accessed in normal mode.</li>
+     * <li>optional: does not forcefully use the security-hardened mode.</li>
+     * <li>required: forcefully uses the security-hardened mode. After you set this value, the normal mode cannot be used to access instance metadata.</li>
      * </ul>
      * <p>Default value: optional.</p>
      * <blockquote>
-     * <p>For more information about instance metadata access modes, see <a href="https://help.aliyun.com/document_detail/150575.html">Instance metadata access modes</a>.</p>
+     * <p>For more information about the modes for accessing instance metadata, see <a href="https://help.aliyun.com/document_detail/150575.html">Instance metadata access modes</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -114,7 +114,12 @@ public class DescribeInstancesRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The internal IP address list of instances in the classic network type. This parameter takes effect when InstanceNetworkType is set to classic. The value can be a JSON array that consists of up to 100 IP addresses. Separate the IP addresses with commas (,).</p>
+     * <p>The internal network IP addresses of classic network type instances. This parameter takes effect when InstanceNetworkType is set to classic. The value can be a JSON array that consists of up to 100 IP addresses. Separate the IP addresses with commas (,). </p>
+     * <blockquote>
+     * <ul>
+     * <li>The classic network feature has been offline. For details, see <a href="https://help.aliyun.com/document_detail/2833134.html">Offline notice</a>.</li>
+     * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>[&quot;10.1.1.1&quot;, &quot;10.1.2.1&quot;, … &quot;10.1.10.1&quot;]</p>
@@ -136,7 +141,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public String instanceChargeType;
 
     /**
-     * <p>The IDs of instances. The value can be a JSON array that consists of up to 100 instance IDs. Separate the IDs with commas (,).</p>
+     * <p>The instance IDs. The value can be a JSON array that consists of up to 100 instance IDs. Separate the IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;i-bp67acfmxazb4p****&quot;, &quot;i-bp67acfmxazb4p****&quot;, … &quot;i-bp67acfmxazb4p****&quot;]</p>
@@ -145,7 +150,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public String instanceIds;
 
     /**
-     * <p>The name of the instance. Fuzzy search with the wildcard * is supported.</p>
+     * <p>The instance name. Fuzzy search with the wildcard * is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>Test</p>
@@ -156,8 +161,8 @@ public class DescribeInstancesRequest extends TeaModel {
     /**
      * <p>The network type of the instance. Valid values:</p>
      * <ul>
-     * <li>classic: classic network.</li>
      * <li>vpc: VPC.</li>
+     * <li>classic: classic network. The classic network is deprecated. For more information, see <a href="https://help.aliyun.com/document_detail/2833134.html">Deprecation notice</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -167,7 +172,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public String instanceNetworkType;
 
     /**
-     * <p>The instance type of the instance.</p>
+     * <p>The instance type.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.g5.large</p>
@@ -176,7 +181,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The instance family of the instance.</p>
+     * <p>The instance family.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.g5</p>
@@ -223,7 +228,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public java.util.List<String> ipv6Address;
 
     /**
-     * <p>The name of the SSH key pair bound to the instance.</p>
+     * <p>The name of the SSH key pair used by the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>KeyPairNameTest</p>
@@ -256,8 +261,8 @@ public class DescribeInstancesRequest extends TeaModel {
      * <p>The maximum number of entries per page for a paging query. Maximum value: 100.</p>
      * <p>Default value:</p>
      * <ul>
-     * <li>If this parameter is not set or is set to a value smaller than 10, the default value is 10.</li>
-     * <li>If the value is greater than 100, the default value is 100.</li>
+     * <li>If you do not set this parameter or set it to a value smaller than 10, the default value is 10.</li>
+     * <li>If you set this parameter to a value greater than 100, the default value is 100.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -294,7 +299,7 @@ public class DescribeInstancesRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is about to go offline. Use NextToken and MaxResults to complete paging query operations.</p>
+     * <p>This parameter will be offline soon. Use NextToken and MaxResults to complete paging query operations.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -305,7 +310,7 @@ public class DescribeInstancesRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is about to go offline. Use NextToken and MaxResults to complete paging query operations.</p>
+     * <p>This parameter will be offline soon. Use NextToken and MaxResults to complete paging query operations.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -315,7 +320,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The private IP addresses of instances whose network type is VPC. This parameter takes effect when InstanceNetworkType is set to vpc. The value can be a JSON array that consists of up to 100 IP addresses. Separate the IP addresses with commas (,).</p>
+     * <p>The private IP addresses of VPC network type instances. This parameter takes effect when InstanceNetworkType is set to vpc. The value can be a JSON array that consists of up to 100 IP addresses. Separate the IP addresses with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;172.16.1.1&quot;, &quot;172.16.2.1&quot;, … &quot;172.16.10.1&quot;]</p>
@@ -370,7 +375,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the security group to which the instance belongs.</p>
+     * <p>The security group to which the instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>sg-bp67acfmxazb4p****</p>
@@ -395,13 +400,13 @@ public class DescribeInstancesRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeInstancesRequestTag> tag;
 
     /**
-     * <p>The ID of the vSwitch.</p>
+     * <p>The vSwitch ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-bp67acfmxazb4p****</p>
@@ -770,7 +775,7 @@ public class DescribeInstancesRequest extends TeaModel {
 
     public static class DescribeInstancesRequestFilter extends TeaModel {
         /**
-         * <p>The filter key for querying resources. The value must be <code>CreationStartTime</code>. Set both <code>Filter.1.Key</code> and <code>Filter.1.Value</code> to query resources created after a specified point in time.</p>
+         * <p>The filter key used to query resources. Set the value to <code>CreationStartTime</code>. Set both <code>Filter.1.Key</code> and <code>Filter.1.Value</code> to query resources that were created after the specified point in time.</p>
          * 
          * <strong>example:</strong>
          * <p>CreationStartTime</p>
@@ -779,7 +784,7 @@ public class DescribeInstancesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The filter value for querying resources. You must also specify the <code>Filter.1.Key</code> parameter when you specify this parameter. Specify the time in the <code>yyyy-MM-ddTHH:mmZ</code> format in UTC+0.</p>
+         * <p>The filter value used to query resources. When you specify this parameter, you must also specify <code>Filter.1.Key</code>. Specify the time in the <code>yyyy-MM-ddTHH:mmZ</code> format in UTC+0.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-12-05T22:40Z</p>
@@ -813,7 +818,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public static class DescribeInstancesRequestTag extends TeaModel {
         /**
          * <p>The tag key of the instance. Valid values of N: 1 to 20.</p>
-         * <p>If you use a single tag to filter resources, the resource count with the tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count that are attached to all specified tags cannot exceed 1,000. If the resource count exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
+         * <p>If you use a single tag to filter resources, the resource count with the tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count with all the specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>

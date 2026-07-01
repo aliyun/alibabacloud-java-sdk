@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateImageComponentResponseBody extends TeaModel {
     /**
-     * <p>The ID of the image component.</p>
+     * <p>The image component ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ic-bp67acfmxazb4p****</p>

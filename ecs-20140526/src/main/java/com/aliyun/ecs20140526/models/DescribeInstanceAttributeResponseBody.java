@@ -7,7 +7,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     /**
      * <p>The ID of the cluster to which the instance belongs.</p>
      * <blockquote>
-     * <p>This parameter will be removed in the future. To ensure future compatibility, we recommend that you use other parameters.</p>
+     * <p>This parameter will be deprecated soon. To ensure future compatibility, use other parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The number of vCPUs.</p>
+     * <p>The number of vCPU cores.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -26,7 +26,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     public Integer cpu;
 
     /**
-     * <p>The time when the instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</p>
+     * <p>The time when the instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>2017-12-10T04:04Z</p>
@@ -35,12 +35,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     public String creationTime;
 
     /**
-     * <p>The performance mode of the burstable instance. Valid values:</p>
+     * <p>The running mode of the burstable instance. Valid values:</p>
      * <ul>
-     * <li><p>Standard: the standard mode. For more information, see the <a href="~~59977#section-svb-w9d-dju~~">Performance modes</a> section of the &quot;Overview of burstable instances&quot; topic.</p>
-     * </li>
-     * <li><p>Unlimited: the unlimited mode. For more information, see the <a href="~~59977#section-svb-w9d-dju~~">Performance modes</a> section of the &quot;Overview of burstable instances&quot; topic.</p>
-     * </li>
+     * <li>Standard: standard mode. For more information about instance performance, see <a href="~~59977#section-svb-w9d-dju~~">Performance mode</a>. </li>
+     * <li>Unlimited: unlimited mode. For more information about instance performance, see <a href="~~59977#section-svb-w9d-dju~~">Performance mode</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,7 +48,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     public String creditSpecification;
 
     /**
-     * <p>Details about the dedicated host. It is an array that consists of the DedicatedHostClusterId, DedicatedHostId, and DedicatedHostName parameters.</p>
+     * <p>The dedicated host attributes, which consist of the dedicated host cluster ID (DedicatedHostClusterId), dedicated host ID (DedicatedHostId), and dedicated host name (DedicatedHostName).</p>
      */
     @NameInMap("DedicatedHostAttribute")
     public DescribeInstanceAttributeResponseBodyDedicatedHostAttribute dedicatedHostAttribute;
@@ -65,20 +63,20 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The elastic IP address (EIP) associated with the instance.</p>
+     * <p>The Elastic IP Address (EIP) binding information.</p>
      */
     @NameInMap("EipAddress")
     public DescribeInstanceAttributeResponseBodyEipAddress eipAddress;
 
     /**
-     * <p>Indicates whether the Jumbo Frame feature is enabled for the instance. Valid values:</p>
+     * <p>Indicates whether the Jumbo Frame feature is enabled for the ECS instance. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
+     * <li><p>true: enabled.</p>
      * </li>
-     * <li><p>false</p>
+     * <li><p>false: not enabled.</p>
      * </li>
      * </ul>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/200512.html">MTUs</a>.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/200512.html">ECS instance MTU</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -89,14 +87,12 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     /**
      * <p>Indicates whether VPC network traffic encryption is enabled for the instance. Valid values:</p>
      * <ul>
-     * <li><p>true: Enabled.</p>
-     * </li>
-     * <li><p>false: Not enabled.</p>
+     * <li>true: enabled.</li>
+     * <li>false: not enabled.<blockquote>
+     * <p>This parameter is in invitational preview and is not publicly available.</p>
+     * </blockquote>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>This parameter is in invitational preview and is not publicly available yet.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -105,7 +101,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     public Boolean enableNetworkEncryption;
 
     /**
-     * <p>The time when the instance expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</p>
+     * <p>The expiration time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>2017-12-10T04:04Z</p>
@@ -137,10 +133,8 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     /**
      * <p>The billing method of the instance. Valid values:</p>
      * <ul>
-     * <li><p>PrePaid: subscription.</p>
-     * </li>
-     * <li><p>PostPaid: pay-as-you-go</p>
-     * </li>
+     * <li>PrePaid: subscription.</li>
+     * <li>PostPaid: pay-as-you-go.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -150,7 +144,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     public String instanceChargeType;
 
     /**
-     * <p>The instance ID</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>i-uf6f5trc95ug8t33****</p>
@@ -159,7 +153,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The instance name.</p>
+     * <p>Instance name</p>
      * 
      * <strong>example:</strong>
      * <p>testInstanceName</p>
@@ -168,12 +162,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The network type of the instance. Valid values:</p>
+     * <p>The network type of the instance. Valid values: </p>
      * <ul>
-     * <li><p>classic: classic network</p>
-     * </li>
-     * <li><p>vpc: VPC</p>
-     * </li>
+     * <li>vpc: virtual private cloud (VPC).</li>
+     * <li>classic: classic network. The classic network is deprecated. For more information, see <a href="https://help.aliyun.com/document_detail/2833134.html">Deprecation notice</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -183,7 +175,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     public String instanceNetworkType;
 
     /**
-     * <p>The instance type.</p>
+     * <p>The instance type of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.g5.large</p>
@@ -192,15 +184,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The billing method for network usage. Valid values:</p>
+     * <p>The billing method for public bandwidth. Valid values:</p>
      * <ul>
-     * <li><p>PayByBandwidth</p>
-     * </li>
-     * <li><p>PayByTraffic</p>
-     * </li>
+     * <li>PayByBandwidth: pay-by-bandwidth.</li>
+     * <li>PayByTraffic: pay-by-traffic.</li>
      * </ul>
      * <blockquote>
-     * <p>When the <strong>pay-by-traffic</strong> billing method is used for network usage, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios in which demands exceed resource supplies, the maximum bandwidths may not be reached. If you want guaranteed bandwidths for your instance, use the <strong>pay-by-bandwidth</strong> billing method for network usage.</p>
+     * <p>In <strong>pay-by-traffic</strong> mode, the peak inbound and outbound bandwidths are used as upper limits for bandwidths and are not guaranteed. When resource contention occurs, the peak bandwidths may be limited. If your workloads require guaranteed bandwidth, use the <strong>pay-by-bandwidth</strong> mode.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -228,11 +218,11 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     public Integer internetMaxBandwidthOut;
 
     /**
-     * <p>Indicates whether the ECS instance is I/O optimized. Valid values:</p>
+     * <p>Indicates whether the instance is I/O optimized. Valid values:</p>
      * <ul>
-     * <li><p>optimized: The ECS instance is I/O optimized.</p>
+     * <li><p>optimized: I/O optimized.</p>
      * </li>
-     * <li><p>none: The ECS instance is not I/O optimized.</p>
+     * <li><p>none: not I/O optimized.</p>
      * </li>
      * </ul>
      * 
@@ -243,7 +233,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     public String ioOptimized;
 
     /**
-     * <p>The memory size of the instance. Unit: MiB.</p>
+     * <p>The memory size. Unit: MiB.</p>
      * 
      * <strong>example:</strong>
      * <p>16384</p>
@@ -252,7 +242,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     public Integer memory;
 
     /**
-     * <p>Details about network options.</p>
+     * <p>The network-related attributes.</p>
      * <blockquote>
      * <p>This parameter is in invitational preview and is not publicly available.</p>
      * </blockquote>
@@ -267,7 +257,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     public DescribeInstanceAttributeResponseBodyPublicIpAddress publicIpAddress;
 
     /**
-     * <p>The ID of the region in which the instance resides.</p>
+     * <p>The region ID of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -297,18 +287,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     public String serialNumber;
 
     /**
-     * <p>The status of the instance. Valid values:</p>
+     * <p>The instance status. Valid values:</p>
      * <ul>
-     * <li><p>Pending: The instance is being created.</p>
-     * </li>
-     * <li><p>Running: The instance is running.</p>
-     * </li>
-     * <li><p>Starting: The instance is being started.</p>
-     * </li>
-     * <li><p>Stopping: The instance is being stopped.</p>
-     * </li>
-     * <li><p>Stopped: The instance is stopped.</p>
-     * </li>
+     * <li>Pending: being created.</li>
+     * <li>Running: running.</li>
+     * <li>Starting: being started.</li>
+     * <li>Stopping: being stopped.</li>
+     * <li>Stopped: stopped.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -318,14 +303,11 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indicates whether the system implements billing after the instance is stopped. Valid values:</p>
+     * <p>Indicates whether the instance continues to be billed after it is stopped. Valid values:</p>
      * <ul>
-     * <li><p>KeepCharging: The instance is stopped in standard mode. The billing of the instance continues after the instance is stopped, and resources are retained for the instance.</p>
-     * </li>
-     * <li><p>StopCharging: The instance is stopped in economical mode. The billing of some resources of the instance stops after the instance is stopped. When the instance is stopped, its resources such as vCPUs, memory, and public IP address are released. The instance may be unable to start again if some required resources are out of stock in the current region.</p>
-     * </li>
-     * <li><p>Not-applicable: The instance does not support economical mode.</p>
-     * </li>
+     * <li>KeepCharging: The instance continues to be billed after it is stopped. Inventory resources are reserved for the instance.</li>
+     * <li>StopCharging: The instance is not billed after it is stopped. After the instance is stopped, its resources such as vCPUs, memory, and public IP addresses are released. Whether the instance can be restarted depends on resource availability in the current region.</li>
+     * <li>Not-applicable: The instance does not support the No Fees for Stopped Instances feature.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -335,9 +317,9 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     public String stoppedMode;
 
     /**
-     * <p>The virtual LAN (VLAN) ID of the instance.</p>
+     * <p>The VLAN ID of the instance.</p>
      * <blockquote>
-     * <p>This parameter will be removed in the future. To ensure future compatibility, we recommend that you use other parameters.</p>
+     * <p>This parameter will be deprecated soon. To ensure future compatibility, use other parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -347,13 +329,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     public String vlanId;
 
     /**
-     * <p>The VPC attributes of the instance.</p>
+     * <p>The VPC attributes.</p>
      */
     @NameInMap("VpcAttributes")
     public DescribeInstanceAttributeResponseBodyVpcAttributes vpcAttributes;
 
     /**
-     * <p>The ID of the zone in which the instance resides.</p>
+     * <p>The zone ID of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-g</p>
@@ -699,7 +681,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String allocationId;
 
         /**
-         * <p>The maximum public bandwidth of the EIP. Unit: Mbit/s.</p>
+         * <p>The public bandwidth limit of the EIP. Unit: Mbit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -708,15 +690,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public Integer bandwidth;
 
         /**
-         * <p>The billing method for network usage. Valid values:</p>
+         * <p>The billing method for public bandwidth. Valid values:</p>
          * <ul>
-         * <li><p>PayByBandwidth</p>
-         * </li>
-         * <li><p>PayByTraffic</p>
-         * </li>
+         * <li>PayByBandwidth: pay-by-bandwidth.</li>
+         * <li>PayByTraffic: pay-by-traffic.</li>
          * </ul>
          * <blockquote>
-         * <p>When the <strong>pay-by-traffic</strong> billing method is used for network usage, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios in which demands exceed resource supplies, the maximum bandwidths may not be reached. If you want guaranteed bandwidths for your instance, use the <strong>pay-by-bandwidth</strong> billing method for network usage.</p>
+         * <p>In <strong>pay-by-traffic</strong> mode, the peak inbound and outbound bandwidths are used as upper limits for bandwidths and are not guaranteed. When resource contention occurs, the peak bandwidths may be limited. If your workloads require guaranteed bandwidth, use the <strong>pay-by-bandwidth</strong> mode.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -726,7 +706,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String internetChargeType;
 
         /**
-         * <p>The ID of the elastic IP address (EIP).</p>
+         * <p>The EIP.</p>
          * 
          * <strong>example:</strong>
          * <p><code>30.21.**.**</code></p>
@@ -795,20 +775,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     public static class DescribeInstanceAttributeResponseBodyNetworkOptions extends TeaModel {
         /**
          * <p>The bandwidth weight.</p>
-         * <p>The supported values vary with instance types. You can query the bandwidth weights supported by the current instance type by using the DescribeInstanceTypes.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>Vpc-L1.</p>
-         * </li>
-         * <li><p>Vpc-L2.</p>
-         * </li>
-         * <li><p>Ebs-L1.</p>
-         * </li>
-         * <li><p>Ebs-L2.</p>
-         * </li>
-         * <li><p>Default.</p>
-         * </li>
-         * </ul>
+         * <p>Different instance types support different values. Call <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> to query the bandwidth weight values supported by the current instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>Vpc-L1</p>
@@ -817,16 +784,16 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String bandwidthWeighting;
 
         /**
-         * <p>Indicates whether the Jumbo frame attribute is enabled for the instance. Valid values:</p>
+         * <p>Indicates whether the Jumbo Frame feature is enabled for the instance. Valid values:</p>
          * <ul>
-         * <li><p>true: Enabled.</p>
+         * <li><p>true: enabled.</p>
          * </li>
-         * <li><p>false: Not enabled.</p>
+         * <li><p>false: not enabled.</p>
          * </li>
          * </ul>
-         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/200512.html">ECS Instance MTU</a>.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/200512.html">ECS instance MTU</a>.</p>
          * <blockquote>
-         * <p>This parameter is in invitational preview and is not publicly available yet.</p>
+         * <p>This parameter is in invitational preview and is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -838,14 +805,12 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>Indicates whether VPC network traffic encryption is enabled for the instance. Valid values:</p>
          * <ul>
-         * <li><p>true: Enabled.</p>
-         * </li>
-         * <li><p>false: Not enabled.</p>
+         * <li>true: enabled.</li>
+         * <li>false: not enabled.<blockquote>
+         * <p>This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
          * </li>
          * </ul>
-         * <blockquote>
-         * <p>This parameter is in invitational preview and is not publicly available yet.</p>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -981,7 +946,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
 
     public static class DescribeInstanceAttributeResponseBodyVpcAttributes extends TeaModel {
         /**
-         * <p>The NAT IP address of the instance. It is used by ECS instances in different VPCs for communication.</p>
+         * <p>The IP address of the cloud service, which is used for network communication between VPC-connected cloud services.</p>
          * 
          * <strong>example:</strong>
          * <p><code>172.17.**.**</code></p>
@@ -993,7 +958,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public DescribeInstanceAttributeResponseBodyVpcAttributesPrivateIpAddress privateIpAddress;
 
         /**
-         * <p>The ID of the vSwitch to which the instance is connected.</p>
+         * <p>The vSwitch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-uf6ixacqz8osrwnqb****</p>
@@ -1002,7 +967,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-wz9e4e9pmbcnj6ki6****</p>

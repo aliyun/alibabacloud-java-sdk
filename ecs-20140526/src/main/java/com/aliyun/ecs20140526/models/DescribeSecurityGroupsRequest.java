@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityGroupsRequest extends TeaModel {
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run. Valid values:</p>
      * <ul>
-     * <li>true: performs only a dry run. The system checks the request for potential issues, including AccessKey validity, RAM user authorization, and required parameters. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned.</li>
-     * <li>false: performs a dry run and performs the actual request. If the check succeeds, a 2XX HTTP status code is returned and the resource status is queried.</li>
+     * <li>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized Resource Access Management (RAM) users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</li>
+     * <li>false: performs a dry run and sends the Normal request. If the request passes the dry run, a 2xx HTTP status code is returned and the authorization is verified.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -30,7 +30,7 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
     public Boolean fuzzyQuery;
 
     /**
-     * <p>Specifies whether to query the capacity information of the security group. When set to True, the <code>EcsCount</code> and <code>AvailableInstanceAmount</code> values in the response are valid.</p>
+     * <p>Specifies whether to query the capacity information of the security group. If you set this parameter to True, the <code>EcsCount</code> and <code>AvailableInstanceAmount</code> values in the response are valid.</p>
      * <blockquote>
      * <p>This parameter is deprecated.</p>
      * </blockquote>
@@ -42,7 +42,7 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
     public Boolean isQueryEcsCount;
 
     /**
-     * <p>The maximum number of entries per page for a paged query. Once this parameter is set, the query uses the combination of <code>MaxResults</code> and <code>NextToken</code> parameters.</p>
+     * <p>The maximum number of entries per page for paging query. If you set this parameter, the <code>MaxResults</code> and <code>NextToken</code> paging method is used.</p>
      * <p>Maximum value: 100.</p>
      * <p>Default value: 10.</p>
      * 
@@ -55,8 +55,8 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
     /**
      * <p>The network type of the security group. Valid values:</p>
      * <ul>
-     * <li>vpc: Virtual Private Cloud (VPC).</li>
-     * <li>classic: classic network.</li>
+     * <li>vpc: VPC.</li>
+     * <li>classic: classic network. The classic network is deprecated. For more information, see <a href="https://help.aliyun.com/document_detail/2833134.html">Deprecation notice</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,7 +66,7 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
     public String networkType;
 
     /**
-     * <p>The query token. Set the value to the NextToken value returned in the previous call to this operation. You do not need to set this parameter for the first call.</p>
+     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous request. You do not need to set this parameter for the first request.</p>
      * 
      * <strong>example:</strong>
      * <p>e71d8a535bd9cc11</p>
@@ -82,7 +82,7 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is about to be deprecated. We recommend that you use NextToken and MaxResults for paged queries.</p>
+     * <p>This parameter will be offline. Use NextToken and MaxResults for paging.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -93,7 +93,7 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is about to be deprecated. We recommend that you use NextToken and MaxResults for paged queries.</p>
+     * <p>This parameter will be offline. Use NextToken and MaxResults for paging.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the latest region list of Alibaba Cloud.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -113,7 +113,7 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the security group belongs. When you use this parameter to filter resources, the number of resources cannot exceed 1000. You can call <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> to query the list of resource groups.</p>
+     * <p>The ID of the resource group to which the security group belongs. When you use this parameter to filter resources, the resource count cannot exceed 1,000. You can invoke <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> to query resource groups.</p>
      * <blockquote>
      * <p>Filtering by the default resource group is not supported.</p>
      * </blockquote>
@@ -140,7 +140,7 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The list of security group IDs. A maximum of 100 security group IDs are supported at a time. The IDs are separated by commas (,) in the format of a JSON array.</p>
+     * <p>The IDs of security groups. You can specify up to 100 security group IDs. Separate multiple IDs with commas (,) in a JSON array format.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;sg-bp67acfmxazb4p****&quot;, &quot;sg-bp67acfmxazb4p****&quot;, &quot;sg-bp67acfmxazb4p****&quot;,....]</p>
@@ -164,7 +164,7 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
      * <li>enterprise: advanced security group.</li>
      * </ul>
      * <blockquote>
-     * <p>If you do not specify this parameter, all types of security groups are queried.</p>
+     * <p>If you do not specify this parameter, security groups of all types are queried.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -174,10 +174,10 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
     public String securityGroupType;
 
     /**
-     * <p>Specifies whether the security group is managed. Valid values:</p>
+     * <p>Specifies whether managed security group is managed. Valid values:</p>
      * <ul>
-     * <li>true: The security group is managed.</li>
-     * <li>false: The security group is not managed.</li>
+     * <li>true: Managed security group is managed.</li>
+     * <li>false: Managed security group is not managed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -190,13 +190,13 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
     public Boolean serviceManaged;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeSecurityGroupsRequestTag> tag;
 
     /**
-     * <p>The ID of the VPC to which the security group belongs.</p>
+     * <p>The ID of the virtual private cloud (VPC) to which the security group belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp67acfmxazb4p****</p>
@@ -380,7 +380,7 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
     public static class DescribeSecurityGroupsRequestTag extends TeaModel {
         /**
          * <p>The tag key of the security group. Valid values of N: 1 to 20.</p>
-         * <p>When you use a single tag to filter resources, the number of resources with the tag cannot exceed 1000. When you use multiple tags to filter resources, the number of resources bound with all specified tags cannot exceed 1000. If the number of resources exceeds 1000, use the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query.</p>
+         * <p>If you use a single tag to filter resources, the resource count with the specified tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count that have all specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, call <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> to query resources.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>

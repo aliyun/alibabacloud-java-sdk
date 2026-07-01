@@ -14,7 +14,7 @@ public class CreateSecurityGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the security group.</p>
+     * <p>The security group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>sg-bp1fg655nh68xyz9****</p>

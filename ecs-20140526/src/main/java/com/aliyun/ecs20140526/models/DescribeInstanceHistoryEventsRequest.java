@@ -11,15 +11,15 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
     public DescribeInstanceHistoryEventsRequestNotBefore notBefore;
 
     /**
-     * <p>The lifecycle status of the system event. EventCycleStatus takes effect only when the InstanceEventCycleStatus.N parameter is not specified. Valid values: </p>
+     * <p>The lifecycle status of the system event. EventCycleStatus takes effect only when InstanceEventCycleStatus.N is not specified. Valid values: </p>
      * <ul>
-     * <li>Scheduled: the event is waiting to be executed.</li>
-     * <li>Avoided: the event has been avoided.</li>
-     * <li>Executing: the event is being executed.</li>
-     * <li>Executed: the event has been executed.</li>
-     * <li>Canceled: the event has been canceled.</li>
-     * <li>Failed: the event execution failed.</li>
-     * <li>Inquiring: the event is being inquired.</li>
+     * <li>Scheduled: The event is waiting to be executed.</li>
+     * <li>Avoided: The event has been avoided.</li>
+     * <li>Executing: The event is being executed.</li>
+     * <li>Executed: The event has been executed.</li>
+     * <li>Canceled: The event has been canceled.</li>
+     * <li>Failed: The event execution failed.</li>
+     * <li>Inquiring: The event is being inquired.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,21 +38,21 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
     public java.util.List<String> eventId;
 
     /**
-     * <p>The type of the system event. EventType takes effect only when the InstanceEventType.N parameter is not specified. Valid values: </p>
+     * <p>The type of the system event. EventType takes effect only when InstanceEventType.N is not specified. Valid values: </p>
      * <ul>
-     * <li>SystemMaintenance.Reboot: the instance is restarted due to system maintenance.</li>
-     * <li>SystemMaintenance.Redeploy: the instance is redeployed due to system maintenance.</li>
-     * <li>SystemFailure.Reboot: the instance is restarted due to a system error.</li>
-     * <li>SystemFailure.Redeploy: the instance is redeployed due to a system error.</li>
-     * <li>SystemFailure.Delete: the instance is released due to an instance creation failure.</li>
-     * <li>InstanceFailure.Reboot: the instance is restarted due to an instance error.</li>
-     * <li>InstanceExpiration.Stop: the instance is stopped because the subscription has expired.</li>
-     * <li>InstanceExpiration.Delete: the instance is released because the subscription has expired.</li>
-     * <li>AccountUnbalanced.Stop: the pay-as-you-go instance is stopped due to an overdue payment.</li>
-     * <li>AccountUnbalanced.Delete: the pay-as-you-go instance is released due to an overdue payment.</li>
+     * <li>SystemMaintenance.Reboot: The instance is restarted due to system maintenance.</li>
+     * <li>SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.</li>
+     * <li>SystemFailure.Reboot: The instance is restarted due to a system error.</li>
+     * <li>SystemFailure.Redeploy: The instance is redeployed due to a system error.</li>
+     * <li>SystemFailure.Delete: The instance is released due to an instance creation failure.</li>
+     * <li>InstanceFailure.Reboot: The instance is restarted due to an instance error.</li>
+     * <li>InstanceExpiration.Stop: The instance is stopped due to subscription expiration.</li>
+     * <li>InstanceExpiration.Delete: The instance is released due to subscription expiration.</li>
+     * <li>AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment.</li>
+     * <li>AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.</li>
      * </ul>
      * <blockquote>
-     * <p>For more information about event types, see <a href="https://help.aliyun.com/document_detail/66574.html">System event overview</a>. The value of this parameter can only be an instance system event, not a disk system event.</p>
+     * <p>For more information about event types, see <a href="https://help.aliyun.com/document_detail/66574.html">System event overview</a>. The value of this parameter must be an instance system event, not a disk system event.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is not yet available for use.</p>
+     * <p>This parameter is not yet available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -75,13 +75,13 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
     /**
      * <p>One or more lifecycle statuses of the system event. Valid values of N: 1 to 7. Specify multiple values in a repeated list format. Valid values:</p>
      * <ul>
-     * <li>Scheduled: the event is waiting to be executed.</li>
-     * <li>Avoided: the event has been avoided.</li>
-     * <li>Executing: the event is being executed.</li>
-     * <li>Executed: the event has been executed.</li>
-     * <li>Canceled: the event has been canceled.</li>
-     * <li>Failed: the event execution failed.</li>
-     * <li>Inquiring: the event is being inquired.</li>
+     * <li>Scheduled: The event is waiting to be executed.</li>
+     * <li>Avoided: The event has been avoided.</li>
+     * <li>Executing: The event is being executed.</li>
+     * <li>Executed: The event has been executed.</li>
+     * <li>Canceled: The event has been canceled.</li>
+     * <li>Failed: The event execution failed.</li>
+     * <li>Inquiring: The event is being inquired.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -93,19 +93,19 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
     /**
      * <p>One or more types of the system event. Valid values of N: 1 to 30. Specify multiple values in a repeated list format. Valid values:</p>
      * <ul>
-     * <li>SystemMaintenance.Reboot: the instance is restarted due to system maintenance.</li>
-     * <li>SystemMaintenance.Redeploy: the instance is redeployed due to system maintenance.</li>
-     * <li>SystemFailure.Reboot: the instance is restarted due to a system error.</li>
-     * <li>SystemFailure.Redeploy: the instance is redeployed due to a system error.</li>
-     * <li>SystemFailure.Delete: the instance is released due to an instance creation failure.</li>
-     * <li>InstanceFailure.Reboot: the instance is restarted due to an instance error.</li>
-     * <li>InstanceExpiration.Stop: the instance is stopped because the subscription has expired.</li>
-     * <li>InstanceExpiration.Delete: the instance is released because the subscription has expired.</li>
-     * <li>AccountUnbalanced.Stop: the pay-as-you-go instance is stopped due to an overdue payment.</li>
-     * <li>AccountUnbalanced.Delete: the pay-as-you-go instance is released due to an overdue payment.</li>
+     * <li>SystemMaintenance.Reboot: The instance is restarted due to system maintenance.</li>
+     * <li>SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.</li>
+     * <li>SystemFailure.Reboot: The instance is restarted due to a system error.</li>
+     * <li>SystemFailure.Redeploy: The instance is redeployed due to a system error.</li>
+     * <li>SystemFailure.Delete: The instance is released due to an instance creation failure.</li>
+     * <li>InstanceFailure.Reboot: The instance is restarted due to an instance error.</li>
+     * <li>InstanceExpiration.Stop: The instance is stopped due to subscription expiration.</li>
+     * <li>InstanceExpiration.Delete: The instance is released due to subscription expiration.</li>
+     * <li>AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment.</li>
+     * <li>AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.</li>
      * </ul>
      * <blockquote>
-     * <p>For more information about event types, see <a href="https://help.aliyun.com/document_detail/66574.html">System event overview</a>. The value of this parameter can only be an instance system event, not a disk system event.</p>
+     * <p>For more information about event types, see <a href="https://help.aliyun.com/document_detail/66574.html">System event overview</a>. The value of this parameter must be an instance system event, not a disk system event.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
     public java.util.List<String> instanceEventType;
 
     /**
-     * <p>The instance ID. If this parameter is not specified, the system events of all instances in the specified region are queried.</p>
+     * <p>The instance ID. If you do not specify an instance ID, the system events of all instances in the specified region are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>i-uf678mass4zvr9n1****</p>
@@ -124,11 +124,11 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The maximum number of entries per page for paging. Valid values: 10 to 100.</p>
+     * <p>The maximum number of entries per page for a paging query. Valid values: 10 to 100.</p>
      * <p>Default value:</p>
      * <ul>
-     * <li>When the specified value is greater than 0 but less than 10, the default value is 10.</li>
-     * <li>When the specified value is greater than 100, the default value is 100.</li>
+     * <li>When the settings value is greater than 0 but less than 10, the default value is 10.</li>
+     * <li>When the settings value is greater than 100, the default value is 100.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -138,7 +138,7 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
+     * <p>The query token. Set this parameter to the NextToken value returned in the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>f1c9fa9de5752***</p>
@@ -154,7 +154,7 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter will be deprecated. Use MaxResults and NextToken for pagination instead.</p>
+     * <p>This parameter will be deprecated. Use MaxResults or NextToken for paginated queries instead.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -165,7 +165,7 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter will be deprecated. Use MaxResults and NextToken for pagination instead.</p>
+     * <p>This parameter will be deprecated. Use MaxResults or NextToken for paginated queries instead.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -196,13 +196,13 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
     /**
      * <p>One or more resource IDs. Valid values of N: 1 to 100. Specify multiple values in a repeated list format. Valid values:</p>
      * <ul>
-     * <li>When <code>ResourceType=instance</code>, the resource ID indicates the ECS instance ID.</li>
-     * <li>When <code>ResourceType=ddh</code>, the resource ID indicates the dedicated host ID.</li>
-     * <li>When <code>ResourceType=managedhost</code>, the resource ID indicates the physical machine ID in an intelligent fully managed resource pool.</li>
+     * <li>When <code>ResourceType=instance</code>, the resource ID is the ECS instance ID.</li>
+     * <li>When <code>ResourceType=ddh</code>, the resource ID is the dedicated host ID.</li>
+     * <li>When <code>ResourceType=managedhost</code>, the resource ID is the physical machine ID in an intelligent fully managed resource pool.</li>
      * </ul>
-     * <p>If this parameter is not specified, the system events of all resources in the specified region (<code>RegionId</code>) and of the specified resource type (<code>ResourceType</code>) are queried.</p>
+     * <p>If you do not specify this parameter, the system events of all resources of the specified resource type (<code>ResourceType</code>) in the specified region (<code>RegionId</code>) are queried.</p>
      * <blockquote>
-     * <p>We recommend that you use the <code>ResourceId.N</code> parameter to specify one or more resource IDs. If you specify both <code>ResourceId.N</code> and <code>InstanceId</code>, the <code>ResourceId.N</code> parameter takes precedence by default.</p>
+     * <p>Use <code>ResourceId.N</code> to specify one or more resource IDs. If you specify both <code>ResourceId.N</code> and <code>InstanceId</code>, <code>ResourceId.N</code> takes precedence by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -421,7 +421,7 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
 
     public static class DescribeInstanceHistoryEventsRequestEventPublishTime extends TeaModel {
         /**
-         * <p>查询系统事件发布时间的结束时间。按照<a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>标准表示，并需要使用UTC +0时间，格式为yyyy-MM-ddTHH:mm:ssZ。</p>
+         * <p>The end of the time range during which the system event is published. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-12-01T06:32:31Z</p>
@@ -430,7 +430,7 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
         public String end;
 
         /**
-         * <p>查询系统事件发布时间的开始时间。按照<a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>标准表示，并需要使用UTC +0时间，格式为yyyy-MM-ddTHH:mm:ssZ。</p>
+         * <p>The start of the time range during which the system event is published. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-11-30T06:32:31Z</p>
@@ -463,7 +463,7 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
 
     public static class DescribeInstanceHistoryEventsRequestNotBefore extends TeaModel {
         /**
-         * <p>查询系统事件计划执行时间的结束时间。按照<a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>标准表示，并需要使用UTC +0时间，格式为yyyy-MM-ddTHH:mm:ssZ。</p>
+         * <p>The end of the time range during which the system event is scheduled to execute. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-12-01T06:32:31Z</p>
@@ -472,7 +472,7 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
         public String end;
 
         /**
-         * <p>查询系统事件计划执行时间的开始时间。按照<a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>标准表示，并需要使用UTC +0时间，格式为yyyy-MM-ddTHH:mm:ssZ。</p>
+         * <p>The start of the time range during which the system event is scheduled to execute. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-11-30T06:32:31Z</p>

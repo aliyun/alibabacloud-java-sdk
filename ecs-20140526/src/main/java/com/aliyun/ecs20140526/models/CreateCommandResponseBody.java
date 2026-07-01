@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCommandResponseBody extends TeaModel {
     /**
-     * <p>The ID of the command.</p>
+     * <p>The command ID.</p>
      * 
      * <strong>example:</strong>
      * <p>c-7d2a745b412b4601b2d47f6a768d****</p>
@@ -14,7 +14,7 @@ public class CreateCommandResponseBody extends TeaModel {
     public String commandId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>

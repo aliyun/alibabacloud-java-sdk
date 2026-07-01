@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityGroupAttributeRequest extends TeaModel {
     /**
-     * <p>The attributes of the security group. Valid value:</p>
+     * <p>The security group attribute. Valid values:</p>
      * <ul>
-     * <li>snapshotPolicyIds: queries information about snapshot policies associated with a security group.</li>
+     * <li>snapshotPolicyIds: queries the snapshot policies associated with the security group.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -17,14 +17,11 @@ public class DescribeSecurityGroupAttributeRequest extends TeaModel {
     public String attribute;
 
     /**
-     * <p>The direction in which the security group rule is applied. Valid values:</p>
+     * <p>The direction of the security group rule. Valid values: </p>
      * <ul>
-     * <li><p>egress: outbound</p>
-     * </li>
-     * <li><p>ingress: inbound</p>
-     * </li>
-     * <li><p>all: outbound and inbound</p>
-     * </li>
+     * <li>egress: outbound.</li>
+     * <li>ingress: inbound.</li>
+     * <li>all: both inbound and outbound.</li>
      * </ul>
      * <p>Default value: all.</p>
      * 
@@ -35,12 +32,10 @@ public class DescribeSecurityGroupAttributeRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>The maximum number of entries per page.</p>
+     * <p>The maximum number of entries per page for a paged query.</p>
      * <ul>
-     * <li><p>Minimum value: 10.</p>
-     * </li>
-     * <li><p>Maximum value: 1000.</p>
-     * </li>
+     * <li>Minimum value: 10.</li>
+     * <li>Maximum value: 1000.</li>
      * </ul>
      * <p>Default value: 500.</p>
      * 
@@ -51,7 +46,7 @@ public class DescribeSecurityGroupAttributeRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous call. You do not need to set this parameter for the first request.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****</p>
@@ -60,21 +55,21 @@ public class DescribeSecurityGroupAttributeRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The network interface controller (NIC) type of the security group rule.</p>
+     * <p>The network type of the security group rule.</p>
      * <ul>
-     * <li><p>Valid values for rules of security groups in the classic network:</p>
-     * <ul>
-     * <li><p>internet (default)</p>
+     * <li><p>For security groups in a VPC, the only valid value is intranet (default), which indicates internal network.</p>
+     * <blockquote>
+     * <p>If you set this parameter to internet or leave it empty, the value is automatically set to intranet.</p>
+     * </blockquote>
      * </li>
-     * <li><p>intranet</p>
+     * <li><p>Valid values for security groups in the classic network:</p>
+     * <ul>
+     * <li>internet (default): Internet.</li>
+     * <li>intranet: internal network.<blockquote>
+     * <p>The classic network feature has been offline. For details, see <a href="https://help.aliyun.com/document_detail/2833134.html">Retirement announcement</a>.</p>
+     * </blockquote>
      * </li>
      * </ul>
-     * <p>\<em>\</em></p>
-     * <p><strong>Note</strong> You can query security group rules of only one NIC type in a single call. To query security group rules of both NIC types, call the operation twice.</p>
-     * </li>
-     * <li><p>When the security group is in a virtual private cloud (VPC), set the value to intranet, which is the default value for rules of security groups in VPCs.</p>
-     * <p>\<em>\</em></p>
-     * <p><strong>Note</strong> If you set this parameter to internet or leave this parameter empty, a value of intranet is automatically used.</p>
      * </li>
      * </ul>
      * 
@@ -91,7 +86,7 @@ public class DescribeSecurityGroupAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the security group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the security group. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -107,7 +102,7 @@ public class DescribeSecurityGroupAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the security group.</p>
+     * <p>The security group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

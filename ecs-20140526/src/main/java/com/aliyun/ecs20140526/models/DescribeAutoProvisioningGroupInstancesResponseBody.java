@@ -35,7 +35,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
     public String requestId;
 
     /**
-     * <p>The number of queried instances in the auto provisioning group.</p>
+     * <p>The total number of instances in the auto provisioning group.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

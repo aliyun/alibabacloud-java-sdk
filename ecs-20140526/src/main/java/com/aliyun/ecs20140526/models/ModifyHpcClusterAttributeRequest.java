@@ -34,7 +34,7 @@ public class ModifyHpcClusterAttributeRequest extends TeaModel {
     public String hpcClusterId;
 
     /**
-     * <p>The name of the HPC cluster. The name must be 2 to 128 characters in length. The name must start with a letter or a Chinese character and cannot start with http:// or https://. The name can contain digits, underscores (_), or hyphens (-).</p>
+     * <p>The name of the HPC cluster. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with http:// or https://. It can contain digits, underscores (_), or hyphens (-).</p>
      * <p>Default value: empty.</p>
      * 
      * <strong>example:</strong>

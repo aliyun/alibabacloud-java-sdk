@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityGroupsResponseBody extends TeaModel {
     /**
-     * <p>The query token returned in this call. When you use the MaxResults and NextToken method for paged queries and this return value is empty, no more data is available.</p>
+     * <p>The pagination token returned in this call. If this value is empty when you use MaxResults and NextToken for paging, no more data is available.</p>
      * 
      * <strong>example:</strong>
      * <p>e71d8a535bd9cc11</p>
@@ -16,7 +16,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
     /**
      * <p>The current page number.</p>
      * <blockquote>
-     * <p>This parameter is about to be deprecated. We recommend that you use NextToken and MaxResults for paged queries.</p>
+     * <p>This parameter will be offline. Use NextToken and MaxResults for paging.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
     /**
      * <p>The number of entries per page.</p>
      * <blockquote>
-     * <p>This parameter is about to be deprecated. We recommend that you use NextToken and MaxResults for paged queries.</p>
+     * <p>This parameter will be offline. Use NextToken and MaxResults for paging.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -59,7 +59,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
     public DescribeSecurityGroupsResponseBodySecurityGroups securityGroups;
 
     /**
-     * <p>The total number of security groups. This parameter value is not returned when you use the <code>MaxResults</code> and <code>NextToken</code> parameters for queries.</p>
+     * <p>The total number of security groups. This parameter is not returned when you use <code>MaxResults</code> and <code>NextToken</code> for parameter query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

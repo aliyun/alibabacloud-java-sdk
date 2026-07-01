@@ -32,7 +32,7 @@ public class StartTerminalSessionResponseBody extends TeaModel {
     public String sessionId;
 
     /**
-     * <p>The URL of the WebSocket session for the remote connection to the ECS instance. The URL contains the session ID (SessionId) and the SecurityToken used for system verification.</p>
+     * <p>The URL of the WebSocket session for the remote connection to the ECS instance. The URL contains the session ID (<code>SessionId</code>) and the <code>SecurityToken</code> for system verification.</p>
      * 
      * <strong>example:</strong>
      * <p>wss://cn-hangzhou.axt.aliyuncs.com/session?sessionId=s-hz023od0x9****&amp;token=d86c2df2-d19c-4bd8-b817-a19ef123****</p>

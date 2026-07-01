@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableResourceResponseBody extends TeaModel {
-    /**
-     * <p>Information about the availability zones.</p>
-     */
     @NameInMap("AvailableZones")
     public DescribeAvailableResourceResponseBodyAvailableZones availableZones;
 

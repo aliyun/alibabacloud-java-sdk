@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCommandRequest extends TeaModel {
     /**
-     * <p>Ensures the idempotence of the request. Generate a unique value for this parameter from your client to guarantee uniqueness across different requests. <strong>ClientToken</strong> supports only ASCII characters and cannot exceed 64 characters. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. <strong>ClientToken</strong> supports only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -14,58 +14,46 @@ public class CreateCommandRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The Base64-encoded content of the command. Take note of the following items:</p>
+     * <p>The Base64-encoded content of the command.</p>
      * <ul>
-     * <li><p>The value must be Base64-encoded and cannot exceed 18 KB in size.</p>
+     * <li><p>The value of this parameter must be Base64-encoded, and the script content cannot exceed 18 KB in size after Base64 encoding.</p>
      * </li>
-     * <li><p>You can use custom parameters in the command content. To enable the custom parameter feature, you must set <code>EnableParameter</code> to true.</p>
+     * <li><p>The command content supports custom parameters. To enable the custom parameter feature, set <code>EnableParameter=true</code>:</p>
      * <ul>
-     * <li><p>Custom parameters are defined in the <code>{{}}</code> format. Within <code>{{}}</code>, the spaces and line feeds before and after the parameter names are ignored.</p>
-     * </li>
-     * <li><p>You can specify up to 20 custom parameters.</p>
-     * </li>
-     * <li><p>A custom parameter name can contain only letters, digits, underscores (_), and hyphens (-). The name is case-insensitive. The ACS:: prefix cannot be used to specify non-built-in environment parameters.</p>
-     * </li>
-     * <li><p>Each custom parameter name can be up to 64 bytes in length.</p>
-     * </li>
+     * <li>Custom parameters are defined by enclosing them in <code>{{}}</code>. Spaces and line breaks before and after the parameter name within <code>{{}}</code> are ignored.</li>
+     * <li>The number of custom parameters cannot exceed 20.</li>
+     * <li>Custom parameter names can contain letters (a-z, A-Z), digits (0-9), hyphens (-), and underscores (_). The acs:: prefix for specifying non-built-in environment parameters is not supported. Other characters are not supported. Parameter names are case-insensitive.</li>
+     * <li>Each parameter name cannot exceed 64 bytes in length.</li>
      * </ul>
      * </li>
-     * <li><p>You can specify built-in environment parameters as custom parameters in a command. When you run the command, Cloud Assistant automatically uses the environment parameter values for the custom parameters. You can specify the following built-in environment variables:</p>
+     * <li><p>You can specify built-in environment parameters as custom parameters. When the command is run, Cloud Assistant automatically replaces them with the corresponding values from the environment without requiring manual assignment. The following built-in environment parameters are supported:</p>
      * <ul>
      * <li><p><code>{{ACS::RegionId}}</code>: the region ID.</p>
      * </li>
      * <li><p><code>{{ACS::AccountId}}</code>: the UID of the Alibaba Cloud account.</p>
      * </li>
-     * <li><p><code>{{ACS::InstanceId}}</code>: the instance ID. If you want to run the command on multiple instances and specify <code>{{ACS::InstanceId}}</code> as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following versions:</p>
+     * <li><p><code>{{ACS::InstanceId}}</code>: the instance ID. When a command is sent to multiple instances and you want to use <code>{{ACS::InstanceId}}</code> as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than:</p>
      * <ul>
-     * <li><p>Linux: 2.2.3.309</p>
-     * </li>
-     * <li><p>Windows: 2.1.3.309</p>
-     * </li>
+     * <li>Linux: 2.2.3.309</li>
+     * <li>Windows: 2.1.3.309</li>
      * </ul>
      * </li>
-     * <li><p><code>{{ACS::InstanceName}}</code>: the instance name. If you want to run the command on multiple instances and specify <code>{{ACS::InstanceName}}</code> as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following versions:</p>
+     * <li><p><code>{{ACS::InstanceName}}</code>: the instance name. When a command is sent to multiple instances and you want to use <code>{{ACS::InstanceName}}</code> as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than:</p>
      * <ul>
-     * <li><p>Linux: 2.2.3.344</p>
-     * </li>
-     * <li><p>Windows: 2.1.3.344</p>
-     * </li>
+     * <li>Linux: 2.2.3.344</li>
+     * <li>Windows: 2.1.3.344</li>
      * </ul>
      * </li>
-     * <li><p><code>{{ACS::InvokeId}}</code>: the ID of the task. If you want to specify <code>{{ACS::InvokeId}}</code> as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following versions:</p>
+     * <li><p><code>{{ACS::InvokeId}}</code>: the command execution ID. To use <code>{{ACS::InvokeId}}</code> as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than:</p>
      * <ul>
-     * <li><p>Linux: 2.2.3.309</p>
-     * </li>
-     * <li><p>Windows: 2.1.3.309</p>
-     * </li>
+     * <li>Linux: 2.2.3.309</li>
+     * <li>Windows: 2.1.3.309</li>
      * </ul>
      * </li>
-     * <li><p><code>{{ACS::CommandId}}</code>: the command ID. If you want to call the <a href="https://help.aliyun.com/document_detail/141751.html">RunCommand</a> operation to run the command and specify <code>{{ACS::CommandId}}</code> as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following versions:</p>
+     * <li><p><code>{{ACS::CommandId}}</code>: the command ID. When you run a command by calling the <a href="https://help.aliyun.com/document_detail/141751.html">RunCommand</a> operation and want to use <code>{{ACS::CommandId}}</code> as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than:</p>
      * <ul>
-     * <li><p>Linux: 2.2.3.309</p>
-     * </li>
-     * <li><p>Windows: 2.1.3.309</p>
-     * </li>
+     * <li>Linux: 2.2.3.309</li>
+     * <li>Windows: 2.1.3.309.</li>
      * </ul>
      * </li>
      * </ul>
@@ -82,14 +70,14 @@ public class CreateCommandRequest extends TeaModel {
     /**
      * <p>The encoding mode of the command content (CommandContent). Valid values:</p>
      * <ul>
-     * <li><p>PlainText: The command content is not encoded.</p>
+     * <li><p>PlainText: no encoding. The content is transmitted in plaintext.</p>
      * </li>
-     * <li><p>Base64: The command content is Base64-encoded.</p>
+     * <li><p>Base64: Base64 encoding.</p>
      * </li>
      * </ul>
      * <p>Default value: Base64.</p>
      * <blockquote>
-     * <p>If the specified value of this parameter is invalid, Base64 is used by default.</p>
+     * <p>If an invalid value is specified, it is treated as Base64.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -99,7 +87,7 @@ public class CreateCommandRequest extends TeaModel {
     public String contentEncoding;
 
     /**
-     * <p>The description of the command. The description supports all character sets and can be up to 512 characters in length.</p>
+     * <p>The command description. All character sets are supported. The description cannot exceed 512 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>testDescription</p>
@@ -108,7 +96,7 @@ public class CreateCommandRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to use custom parameters in the command.</p>
+     * <p>Specifies whether the command uses custom parameters.</p>
      * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
@@ -118,7 +106,7 @@ public class CreateCommandRequest extends TeaModel {
     public Boolean enableParameter;
 
     /**
-     * <p>The launcher for script execution. The value cannot exceed 1 KB in length.</p>
+     * <p>The bootstrap program for script execution. The value cannot exceed 1 KB in length.</p>
      * 
      * <strong>example:</strong>
      * <p>python3 -u {{ACS::ScriptFileName|Ext(&quot;.py&quot;)}}</p>
@@ -127,7 +115,7 @@ public class CreateCommandRequest extends TeaModel {
     public String launcher;
 
     /**
-     * <p>The name of the command. The name supports all character sets and can be up to 128 characters in length.</p>
+     * <p>The command name. All character sets are supported. The name cannot exceed 128 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -143,7 +131,7 @@ public class CreateCommandRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region in which to create the command. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -153,7 +141,7 @@ public class CreateCommandRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which to assign the command.</p>
+     * <p>The ID of the resource group to which the command belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-123******</p>
@@ -168,13 +156,13 @@ public class CreateCommandRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags to add to the command.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateCommandRequestTag> tag;
 
     /**
-     * <p>he maximum timeout period for the command execution on the instance. Unit: seconds. When a command that you created cannot be run, the command times out. When a command execution times out, Cloud Assistant Agent forcefully terminates the command process by canceling the PID.</p>
+     * <p>The maximum timeout period for the command to run on the ECS instance. Unit: seconds. If the command cannot be run for any reason, a timeout occurs. After the timeout, the command process is forcefully terminated by canceling the PID of the command.</p>
      * <p>Default value: 60.</p>
      * 
      * <strong>example:</strong>
@@ -184,14 +172,11 @@ public class CreateCommandRequest extends TeaModel {
     public Long timeout;
 
     /**
-     * <p>The command type. Valid values:</p>
+     * <p>The type of the command. Valid values: </p>
      * <ul>
-     * <li><p>RunBatScript: batch commands. These commands are applicable to Windows instances.</p>
-     * </li>
-     * <li><p>RunPowerShellScript: PowerShell commands. These commands are applicable to Windows instances.</p>
-     * </li>
-     * <li><p>RunShellScript: shell commands. These commands are applicable to Linux instances.</p>
-     * </li>
+     * <li>RunBatScript: creates a Bat script to run on Windows instances.</li>
+     * <li>RunPowerShellScript: creates a PowerShell script to run on Windows instances.</li>
+     * <li>RunShellScript: creates a Shell script to run on Linux instances.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -202,16 +187,14 @@ public class CreateCommandRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The execution path of the command on ECS instances. The value can be up to 200 characters in length.</p>
-     * <p>Default values:</p>
+     * <p>The directory where the command is run on the ECS instance. The value cannot exceed 200 characters in length.</p>
+     * <p>Default value: </p>
      * <ul>
-     * <li><p>For Linux instance, the default value is the home directory of the root user, which is the <code>/root</code> directory.</p>
-     * </li>
-     * <li><p>For Windows instances, the default value is the directory where the Cloud Assistant Agent process resides, such as <code>C:\\Windows\\System32\\</code>.</p>
-     * </li>
+     * <li>Linux instances: the home directory of the root user, which is <code>/root</code>.  </li>
+     * <li>Windows instances: the directory where the Cloud Assistant Agent process is located, such as <code>C:\\Windows\\System32</code>.</li>
      * </ul>
      * <blockquote>
-     * <p>If you set WorkingDir to a directory other than default ones, make sure that the directory exists on the instances.</p>
+     * <p>If you set this parameter to a different directory, make sure that the directory exists on the instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -363,9 +346,9 @@ public class CreateCommandRequest extends TeaModel {
 
     public static class CreateCommandRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
-         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags, call <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
-         * <p>The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the command. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
+         * <p>If you use a single tag to filter resources, the resource count with the specified tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that have all specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, use the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</p>
+         * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -374,8 +357,8 @@ public class CreateCommandRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
-         * <p>It can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the command. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

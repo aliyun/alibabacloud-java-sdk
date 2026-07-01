@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateActivationResponseBody extends TeaModel {
     /**
-     * <p>The value of the activation code. The value is returned only once when you call this operation and cannot be queried afterwards. Make sure that you properly save the returned value.</p>
+     * <p>The value of the activation code. The code is returned only once when you call this operation and cannot be queried afterward. Store the return value properly.</p>
      * 
      * <strong>example:</strong>
      * <p>a-hz0ch3SwhOlE1234+Xo32lAZC****</p>

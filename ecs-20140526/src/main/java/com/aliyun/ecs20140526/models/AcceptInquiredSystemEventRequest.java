@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class AcceptInquiredSystemEventRequest extends TeaModel {
     /**
      * <blockquote>
-     * <p>This parameter is in invitational preview and is not supported for use.</p>
+     * <p>This parameter is in invitational preview and is not publicly available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -16,7 +16,7 @@ public class AcceptInquiredSystemEventRequest extends TeaModel {
     public String choice;
 
     /**
-     * <p>The ID of the system event.</p>
+     * <p>The system event ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class AcceptInquiredSystemEventRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID where the system event is located. You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to view the latest list of Alibaba Cloud regions.</p>
+     * <p>The region ID of the system event. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

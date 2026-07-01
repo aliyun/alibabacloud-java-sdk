@@ -14,7 +14,7 @@ public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
     public String autoSnapshotPolicyId;
 
     /**
-     * <p>The name of the automatic snapshot policy.</p>
+     * <p>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-). It must support characters in the Unicode letter category, which includes characters from various languages such as English and Chinese.</p>
      * 
      * <strong>example:</strong>
      * <p>TestName</p>
@@ -29,8 +29,8 @@ public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number.</p>
-     * <p>Pages start from page 1.</p>
+     * <p>The page number of the automatic snapshot policy list.</p>
+     * <p>Minimum value: 1.</p>
      * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -40,8 +40,8 @@ public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
-     * <p>Valid values: 1 to 100.</p>
+     * <p>The number of entries per page when automatic snapshot policies are displayed in paging mode.</p>
+     * <p>Maximum value: 100.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the automatic snapshot policy. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the automatic snapshot policies that you want to query. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,9 +61,9 @@ public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
+     * <p>The ID of the resource group. When you use this parameter to filter resources, the resource count cannot exceed 1000.</p>
      * <blockquote>
-     * <p>Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
+     * <p>Filtering by the default resource group is not supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -79,7 +79,7 @@ public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags of the automatic snapshot policy.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeAutoSnapshotPolicyExRequestTag> tag;
@@ -179,7 +179,7 @@ public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
 
     public static class DescribeAutoSnapshotPolicyExRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the automatic snapshot policy. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http\:// or https\://. The tag key cannot start with acs: or aliyun.</p>
+         * <p>The tag key of the automatic snapshot policy. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. The tag key cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -188,7 +188,7 @@ public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N of the automatic snapshot policy. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http\:// or https\://. The tag value cannot start with acs:.</p>
+         * <p>The tag value of the automatic snapshot policy. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

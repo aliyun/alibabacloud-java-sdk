@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelImagePipelineExecutionRequest extends TeaModel {
     /**
-     * <p>The ID of the image building task.</p>
+     * <p>The ID of the build task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class CancelImagePipelineExecutionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -15,9 +15,9 @@ public class AttachNetworkInterfaceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The index of the network interface controller (NIC).</p>
+     * <p>The index of the network card specified for the ENI.</p>
      * <blockquote>
-     * <p>The value of this parameter varies based on the instance family of the specified instance. If the instance type of the specified instance does not support NICs, leave this parameter empty. If the instance type of the specified instance supports NICs, set this parameter to a valid value. For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
+     * <p>Valid values of NetworkCardIndex depend on the instance family. If the instance type does not support network cards, you cannot specify this parameter. If the instance type supports network cards, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> for valid values.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class AttachNetworkInterfaceRequest extends TeaModel {
     public Integer networkCardIndex;
 
     /**
-     * <p>The ID of the ENI.</p>
+     * <p>The network interface controller (NIC) ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class AttachNetworkInterfaceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +61,7 @@ public class AttachNetworkInterfaceRequest extends TeaModel {
     /**
      * <p>The ID of the trunk ENI.</p>
      * <blockquote>
-     * <p>This parameter is unavailable.</p>
+     * <p>This parameter is not yet available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -72,7 +72,7 @@ public class AttachNetworkInterfaceRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is no longer supported.</p>
+     * <p>This parameter is deprecated.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

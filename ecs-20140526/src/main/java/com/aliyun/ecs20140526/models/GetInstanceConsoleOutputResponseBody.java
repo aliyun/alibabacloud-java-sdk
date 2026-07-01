@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInstanceConsoleOutputResponseBody extends TeaModel {
     /**
-     * <p>The system command line output of the instance, encoded in Base64.</p>
+     * <p>The Base64-encoded system command-line output of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>V2VsY29tZSB0byBDZW50T1MgCgpDaGVja2luZyBmaWxlc3lzdGVtcwpDaGVja2luZyBhbGwgZmlsZSBzeXN0ZW1zLgpbL3NiaW4vZnNjay5leHQ0ICgxKSAtLSAvXSBmc2NrLmV4dDQgLWEgL2Rldi92ZGExIAovZGV2L3ZkYTE6IGNsZWFuLCAzMjAxNi8yNjIxNDQwIGZpbGVzLCA0NDc5NzQvMTA0ODU1MDQgYmxvY2tzCgpFbnRlcmluZyBub24taW50ZXJhY3RpdmUgc3RhcnR1cApDYWxsaW5nIHRoZSBzeXN0ZW0gYWN0aXZpdHkgZGF0YSBjb2xsZWN0b3IgKHNhZGMpLi4uIAoKQnJpbmdpbmcgdXAgaW50ZXJmYWNlIGV0aDA6ICAKRGV0ZXJtaW5pbmcgSVAgaW5mb3JtYXRpb24gZm9yIGV0aDAuLi4gZG9uZS4KCmFsaXl1bi1zZXJ2aWNlIHN0YXJ0L3J1bm5pbmcsIHByb2Nlc3MgMTczMwpmaW5pc2hlZAoKQ2VudE9TIHJlbGVhc2UgNi44IChGaW5hbCkKS2VybmVsIDIuNi4zMi02OTYuMy4yLmVsNi5pNjg2IG9uIGFuIGk2ODYKCmlaMnplZDk2ZTQ2MmF5cjBxeioqKioqIGxvZ2luOg==</p>
@@ -23,7 +23,7 @@ public class GetInstanceConsoleOutputResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The UTC+8 time recorded when the last entry of the Linux kernel logs was printed. Format: yyyy-MM-dd HH:mm:ss.</p>
+     * <p>The record of the time when the last line of the Linux kernel logs was printed, in UTC+8. Format: yyyy-MM-dd HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2018-03-22 10:04:57</p>

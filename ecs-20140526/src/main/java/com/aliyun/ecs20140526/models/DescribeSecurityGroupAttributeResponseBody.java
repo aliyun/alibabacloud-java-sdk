@@ -14,12 +14,10 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The access control policy of the security group. Valid values:</p>
+     * <p>The internal network connectivity policy of the security group. Valid values: </p>
      * <ul>
-     * <li><p>Accept: All instances in the security group can communicate with each other.</p>
-     * </li>
-     * <li><p>Drop: All instances in the security group are isolated from each other.</p>
-     * </li>
+     * <li>Accept: service interconnection.</li>
+     * <li>Drop: internal isolation.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,7 +27,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
     public String innerAccessPolicy;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If the return value of this parameter is empty when you specify <code>MaxResults</code> and <code>NextToken</code> for a paged query, no more results are to be returned.</p>
+     * <p>The paging token returned in this call. When you use <code>MaxResults</code> and <code>NextToken</code> for paging query, if this value is empty, no more data is available.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****</p>
@@ -41,7 +39,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
     public DescribeSecurityGroupAttributeResponseBodyPermissions permissions;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -50,7 +48,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -59,7 +57,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the security group.</p>
+     * <p>The security group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>sg-bp1gxw6bznjjvhu3****</p>
@@ -80,7 +78,10 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
     public DescribeSecurityGroupAttributeResponseBodySnapshotPolicyIds snapshotPolicyIds;
 
     /**
-     * <p>The ID of the VPC. If a VPC ID is returned, the network type of the security group is VPC. If no VPC ID is returned, the network type of the security group is classic network.</p>
+     * <p>The VPC ID. If a VPC ID is returned, the network type of the security group is VPC. Otherwise, the security group belongs to the classic network.</p>
+     * <blockquote>
+     * <p>The classic network feature has been offline. For details, see <a href="https://help.aliyun.com/document_detail/2833134.html">Retirement announcement</a>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp1opxu1zkhn00gzv****</p>

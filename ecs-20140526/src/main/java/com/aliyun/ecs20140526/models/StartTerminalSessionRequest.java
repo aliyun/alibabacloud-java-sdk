@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartTerminalSessionRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The value of <strong>ClientToken</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -16,7 +16,7 @@ public class StartTerminalSessionRequest extends TeaModel {
     /**
      * <p>The command to run after the session is initiated. The command can be up to 512 characters in length.</p>
      * <blockquote>
-     * <p>After you specify CommandLine, you cannot specify PortNumber or TargetServer.</p>
+     * <p>After you specify <code>CommandLine</code>, you cannot specify <code>PortNumber</code> or <code>TargetServer</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,10 +26,10 @@ public class StartTerminalSessionRequest extends TeaModel {
     public String commandLine;
 
     /**
-     * <p>The network type of the WebSocket URL for the remote connection to the instance. Valid values:</p>
+     * <p>The network type of the WebSocket URL required for the remote connection to the instance. Valid values:</p>
      * <ul>
-     * <li>Internet: public network. This is the default value.</li>
-     * <li>Intranet: internal network.</li>
+     * <li>Internet: the Internet. This is the default value.</li>
+     * <li>Intranet: the internal network.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,8 +58,8 @@ public class StartTerminalSessionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The name of the password used by the user when using Session Manager on a Windows instance. The name can be up to 255 characters in length.
-     * When you want to use Session Manager on a Windows instance as a non-default user (System), you must specify both Username and this parameter. To reduce the risk of password leaks, store the plaintext password in the parameter repository of operations management and specify only the password name here. For more information, see <a href="https://help.aliyun.com/document_detail/186828.html">Encryption parameters</a>.</p>
+     * <p>The name of the password for the user when you use Session Manager on a Windows instance. The name can be up to 255 characters in length.
+     * When you want to use Session Manager on a Windows instance as a non-default user (System), specify both Username and this parameter. To reduce the risk of password leaks, store the plaintext password in the parameter repository of operations management and specify only the password name here. For more information, see <a href="https://help.aliyun.com/document_detail/186828.html">Encryption parameters</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>axtSecretPassword</p>
@@ -68,8 +68,8 @@ public class StartTerminalSessionRequest extends TeaModel {
     public String passwordName;
 
     /**
-     * <p>The port number of the ECS instance for data forwarding. After this parameter is set, Cloud Assistant Agent forwards data to the specified port for port forwarding. For example, SSH uses port 22.</p>
-     * <p>Default value: empty, which indicates that no port number is set for data forwarding.</p>
+     * <p>The port number of the ECS instance for data forwarding. After this parameter is specified, Cloud Assistant Agent forwards data to the specified port for port forwarding. For example, SSH uses port 22.</p>
+     * <p>Default value: empty, which indicates that no port number is specified for data forwarding.</p>
      * 
      * <strong>example:</strong>
      * <p>22</p>
@@ -78,7 +78,7 @@ public class StartTerminalSessionRequest extends TeaModel {
     public Integer portNumber;
 
     /**
-     * <p>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent list of regions.</p>
+     * <p>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -96,7 +96,7 @@ public class StartTerminalSessionRequest extends TeaModel {
     /**
      * <p>The address of the destination server in the VPC that you want to access through the instance.</p>
      * <blockquote>
-     * <p>When this parameter is not empty, PortNumber specifies the port number of the destination server in the VPC that you want to access through the managed instance.</p>
+     * <p>If this parameter is not empty, <code>PortNumber</code> specifies the port number of the destination server in the VPC that you want to access through the managed instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -246,7 +246,7 @@ public class StartTerminalSessionRequest extends TeaModel {
          * Note:</p>
          * <ul>
          * <li>Only KMS symmetric keys are supported.</li>
-         * <li>This parameter is supported only when the encryption mode is set to Kms.</li>
+         * <li>This parameter can be specified only when the encryption mode is set to Kms.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -256,15 +256,15 @@ public class StartTerminalSessionRequest extends TeaModel {
         public String KMSKeyId;
 
         /**
-         * <p>The encryption pattern. Valid values:</p>
+         * <p>The secret key encryption pattern. Valid values:</p>
          * <ul>
-         * <li>Auto: uses an automatically negotiated secret key encryption for the session.</li>
-         * <li>Kms: uses a KMS secret key encryption for the session.</li>
+         * <li>Auto: uses an automatically negotiated key to encrypt the session.</li>
+         * <li>Kms: uses a KMS key to encrypt the session.</li>
          * <li>Default value: Auto.</li>
          * </ul>
          * <p>Note:</p>
          * <ul>
-         * <li>This parameter is supported only when session encryption is enabled.</li>
+         * <li>This parameter can be specified only when session encryption is enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>

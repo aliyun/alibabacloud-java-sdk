@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RevokeSecurityGroupRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>A client token used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -14,7 +14,7 @@ public class RevokeSecurityGroupRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>This parameter is deprecated. Use <code>Permissions.N.Description</code> to specify the rule description.</p>
+     * <p>Deprecated. Use <code>Permissions.N.Description</code> to specify the rule description.</p>
      * 
      * <strong>example:</strong>
      * <p>This is description.</p>
@@ -24,7 +24,7 @@ public class RevokeSecurityGroupRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>This parameter is deprecated. Use <code>Permissions.N.DestCidrIp</code> to specify the destination IPv4 CIDR block.</p>
+     * <p>Deprecated. Use <code>Permissions.N.DestCidrIp</code> to specify the destination IPv4 CIDR block.</p>
      * 
      * <strong>example:</strong>
      * <p>10.0.0.0/8</p>
@@ -34,7 +34,7 @@ public class RevokeSecurityGroupRequest extends TeaModel {
     public String destCidrIp;
 
     /**
-     * <p>This parameter is deprecated. Use <code>Permissions.N.IpProtocol</code> to specify the protocol.</p>
+     * <p>Deprecated. Use <code>Permissions.N.IpProtocol</code> to specify the protocol type.</p>
      * 
      * <strong>example:</strong>
      * <p>ALL</p>
@@ -44,7 +44,7 @@ public class RevokeSecurityGroupRequest extends TeaModel {
     public String ipProtocol;
 
     /**
-     * <p>This parameter is deprecated. Use <code>Permissions.N.Ipv6DestCidrIp</code> to specify the destination IPv6 CIDR block.</p>
+     * <p>Deprecated. Use <code>Permissions.N.Ipv6DestCidrIp</code> to specify the destination IPv6 CIDR block.</p>
      * 
      * <strong>example:</strong>
      * <p>2001:db8:1233:1a00::***</p>
@@ -54,7 +54,7 @@ public class RevokeSecurityGroupRequest extends TeaModel {
     public String ipv6DestCidrIp;
 
     /**
-     * <p>This parameter is deprecated. Use <code>Permissions.N.Ipv6SourceCidrIp</code> to specify the source IPv6 CIDR block.</p>
+     * <p>Deprecated. Use <code>Permissions.N.Ipv6SourceCidrIp</code> to specify the source IPv6 Classless Inter-Domain Routing (CIDR) block.</p>
      * 
      * <strong>example:</strong>
      * <p>2001:db8:1234:1a00::***</p>
@@ -64,7 +64,7 @@ public class RevokeSecurityGroupRequest extends TeaModel {
     public String ipv6SourceCidrIp;
 
     /**
-     * <p>This parameter is deprecated. Use <code>Permissions.N.NicType</code> to specify the network interface type.</p>
+     * <p>Deprecated. Use <code>Permissions.N.NicType</code> to specify the network interface type.</p>
      * 
      * <strong>example:</strong>
      * <p>intranet</p>
@@ -80,13 +80,13 @@ public class RevokeSecurityGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The security group rules. You can specify up to 100 security group rules.</p>
+     * <p>The security group rules. Array length: 0 to 100.</p>
      */
     @NameInMap("Permissions")
     public java.util.List<RevokeSecurityGroupRequestPermissions> permissions;
 
     /**
-     * <p>This parameter is deprecated. Use <code>Permissions.N.Policy</code> to specify whether to allow inbound access.</p>
+     * <p>Deprecated. Use <code>Permissions.N.Policy</code> to set the access permissions.</p>
      * 
      * <strong>example:</strong>
      * <p>accept</p>
@@ -96,7 +96,7 @@ public class RevokeSecurityGroupRequest extends TeaModel {
     public String policy;
 
     /**
-     * <p>This parameter is deprecated. Use <code>Permissions.N.PortRange</code> to specify the range of destination ports.</p>
+     * <p>Deprecated. Use <code>Permissions.N.PortRange</code> to specify the port range.</p>
      * 
      * <strong>example:</strong>
      * <p>1/200</p>
@@ -106,7 +106,7 @@ public class RevokeSecurityGroupRequest extends TeaModel {
     public String portRange;
 
     /**
-     * <p>This parameter is deprecated. Use <code>Permissions.N.Priority</code> to specify the rule priority.</p>
+     * <p>Deprecated. Use <code>Permissions.N.Priority</code> to specify the rule priority.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -116,7 +116,7 @@ public class RevokeSecurityGroupRequest extends TeaModel {
     public String priority;
 
     /**
-     * <p>The region ID of the security group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the security group. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -132,7 +132,7 @@ public class RevokeSecurityGroupRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the security group.</p>
+     * <p>The security group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -142,13 +142,13 @@ public class RevokeSecurityGroupRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The security group rule IDs. You can specify 1 to 100 security group rule IDs in a request.</p>
+     * <p>The IDs of security group rules. Array length: 0 to 100.</p>
      */
     @NameInMap("SecurityGroupRuleId")
     public java.util.List<String> securityGroupRuleId;
 
     /**
-     * <p>This parameter is deprecated. Use <code>Permissions.N.SourceCidrIp</code> to specify the source IPv4 CIDR block.</p>
+     * <p>Deprecated. Use <code>Permissions.N.SourceCidrIp</code> to specify the source IPv4 Classless Inter-Domain Routing (CIDR) block.</p>
      * 
      * <strong>example:</strong>
      * <p>10.0.0.0/8</p>
@@ -158,7 +158,7 @@ public class RevokeSecurityGroupRequest extends TeaModel {
     public String sourceCidrIp;
 
     /**
-     * <p>This parameter is deprecated. Use <code>Permissions.N.SourceGroupId</code> to specify the ID of the source security group.</p>
+     * <p>Deprecated. Use <code>Permissions.N.SourceGroupId</code> to specify the source security group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>sg-bp67acfmxa123b****</p>
@@ -168,7 +168,7 @@ public class RevokeSecurityGroupRequest extends TeaModel {
     public String sourceGroupId;
 
     /**
-     * <p>This parameter is deprecated. Use <code>Permissions.N.SourceGroupOwnerAccount</code> to specify the Alibaba Cloud account that manages the source security group.</p>
+     * <p>Deprecated. Use <code>Permissions.N.SourceGroupOwnerAccount</code> to specify the Alibaba Cloud account that owns the source security group.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="mailto:Test@aliyun.com">Test@aliyun.com</a></p>
@@ -178,7 +178,7 @@ public class RevokeSecurityGroupRequest extends TeaModel {
     public String sourceGroupOwnerAccount;
 
     /**
-     * <p>This parameter is deprecated. Use <code>Permissions.N.SourceGroupOwnerId</code> to specify the ID of the Alibaba Cloud account that manages the source security group.</p>
+     * <p>Deprecated. Use <code>Permissions.N.SourceGroupOwnerId</code> to specify the ID of the Alibaba Cloud account that owns the source security group.</p>
      * 
      * <strong>example:</strong>
      * <p>12345678910</p>
@@ -188,7 +188,7 @@ public class RevokeSecurityGroupRequest extends TeaModel {
     public Long sourceGroupOwnerId;
 
     /**
-     * <p>This parameter is deprecated. Use <code>Permissions.N.SourcePortRange</code> to specify the range of source ports.</p>
+     * <p>Deprecated. Use <code>Permissions.N.SourcePortRange</code> to specify the source port range.</p>
      * 
      * <strong>example:</strong>
      * <p>80/80</p>
@@ -198,7 +198,7 @@ public class RevokeSecurityGroupRequest extends TeaModel {
     public String sourcePortRange;
 
     /**
-     * <p>This parameter is deprecated. Use <code>Permissions.N.SourcePrefixListId</code> to specify the ID of the source prefix list.</p>
+     * <p>Deprecated. Use <code>Permissions.N.SourcePrefixListId</code> to specify the source prefix list ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pl-x1j1k5ykzqlixdcy****</p>
@@ -430,8 +430,8 @@ public class RevokeSecurityGroupRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The destination IPv4 CIDR block. IPv4 CIDR blocks and IPv4 addresses are supported.</p>
-         * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
+         * <p>The destination IPv4 CIDR block. CIDR blocks and IPv4 address range are supported.</p>
+         * <p>This parameter is used for quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.0.0/8</p>
@@ -440,20 +440,14 @@ public class RevokeSecurityGroupRequest extends TeaModel {
         public String destCidrIp;
 
         /**
-         * <p>The protocol. The values of this parameter are case-insensitive. Valid values:</p>
+         * <p>The protocol type. The value is case-insensitive. Valid values: </p>
          * <ul>
-         * <li><p>TCP.</p>
-         * </li>
-         * <li><p>UDP.</p>
-         * </li>
-         * <li><p>ICMP.</p>
-         * </li>
-         * <li><p>ICMPv6.</p>
-         * </li>
-         * <li><p>GRE.</p>
-         * </li>
-         * <li><p>ALL: All protocols are supported.</p>
-         * </li>
+         * <li>TCP.</li>
+         * <li>UDP.</li>
+         * <li>ICMP.</li>
+         * <li>ICMPv6.</li>
+         * <li>GRE.</li>
+         * <li>ALL: all protocols.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -463,10 +457,10 @@ public class RevokeSecurityGroupRequest extends TeaModel {
         public String ipProtocol;
 
         /**
-         * <p>The destination IPv6 CIDR block. IPv6 CIDR blocks and IPv6 addresses are supported.</p>
-         * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
+         * <p>The destination IPv6 CIDR block. CIDR blocks and IPv6 address range are supported.</p>
+         * <p>This parameter is used for quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
          * <blockquote>
-         * <p>This parameter is valid only for ECS instances that reside in VPCs and support IPv6 CIDR blocks. You cannot specify both this parameter and <code>DestCidrIp</code> in the same request.</p>
+         * <p>This parameter is valid only for VPC-type ECS instances that support IPv6. You cannot specify both this parameter and <code>DestCidrIp</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -476,9 +470,9 @@ public class RevokeSecurityGroupRequest extends TeaModel {
         public String ipv6DestCidrIp;
 
         /**
-         * <p>The source IPv6 CIDR block of the security group rule. IPv6 CIDR blocks and IPv6 addresses are supported.</p>
+         * <p>The source IPv6 Classless Inter-Domain Routing (CIDR) block from which you want to revoke access permissions. CIDR format and IPv6 address range are supported.</p>
          * <blockquote>
-         * <p>This parameter is valid only for Elastic Compute Service (ECS) instances that reside in virtual private clouds (VPCs) and support IPv6 CIDR blocks. You cannot specify both this parameter and <code>SourceCidrIp</code> in the same request.</p>
+         * <p>This parameter is valid only for VPC-type ECS instances that support IPv6. You cannot specify both this parameter and <code>SourceCidrIp</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -488,16 +482,14 @@ public class RevokeSecurityGroupRequest extends TeaModel {
         public String ipv6SourceCidrIp;
 
         /**
-         * <p>The network interface controller (NIC) type of the security group rule if the security group resides in the classic network. Valid values:</p>
+         * <p>The network interface controller (NIC) type of the security group rule. For VPC-type security groups, you do not need to set the network type. The default value is intranet, and only intranet is supported.</p>
+         * <blockquote>
+         * <p>The classic network feature has been taken offline. For details, see <a href="https://help.aliyun.com/document_detail/2833134.html">Retirement notice</a>. For classic network-type security group rules, valid values are:</p>
          * <ul>
-         * <li><p>internet: public NIC.</p>
-         * </li>
-         * <li><p>intranet: internal NIC.</p>
-         * </li>
+         * <li>internet: public network interface controller (NIC).</li>
+         * <li>intranet: internal network interface controller (NIC).</li>
          * </ul>
-         * <p>If the security group resides in a VPC, this parameter is set to intranet by default and cannot be modified.</p>
-         * <p>If you specify <code>SourceGroupId</code> to delete inbound security group rules that reference the specified security group as an authorization object, you must set this parameter to intranet.</p>
-         * <p>Default value: internet.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>intranet</p>
@@ -506,12 +498,10 @@ public class RevokeSecurityGroupRequest extends TeaModel {
         public String nicType;
 
         /**
-         * <p>The action of the security group rule. Valid values:</p>
+         * <p>The access permissions. Valid values: </p>
          * <ul>
-         * <li><p>accept: allows inbound access.</p>
-         * </li>
-         * <li><p>drop: denies inbound access and returns no responses. In this case, the request times out or the connection cannot be established.</p>
-         * </li>
+         * <li>accept: Accepts access.</li>
+         * <li>drop: Deny access without returning any denial information. The request appears to timeout or the connection cannot be established.</li>
          * </ul>
          * <p>Default value: accept.</p>
          * 
@@ -522,16 +512,12 @@ public class RevokeSecurityGroupRequest extends TeaModel {
         public String policy;
 
         /**
-         * <p>The destination port range of the security group rule. Valid values:</p>
+         * <p>The range of destination ports that correspond to the transport layer protocol. Valid values:</p>
          * <ul>
-         * <li><p>If you set IpProtocol to TCP or UDP, the valid values of this parameter are 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.</p>
-         * </li>
-         * <li><p>If you set IpProtocol to ICMP, the port range is -1/-1.</p>
-         * </li>
-         * <li><p>If you set IpProtocol to GRE, the port range is -1/-1.</p>
-         * </li>
-         * <li><p>If you set IpProtocol to ALL, the port range is -1/-1.</p>
-         * </li>
+         * <li>TCP/UDP: Valid values are 1 to 65535. Separate the start port and the end port with a forward slash (/). Example: 1/200.</li>
+         * <li>ICMP: -1/-1.</li>
+         * <li>GRE: -1/-1.</li>
+         * <li>ALL: -1/-1.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -541,13 +527,10 @@ public class RevokeSecurityGroupRequest extends TeaModel {
         public String portRange;
 
         /**
-         * <p>The ID of the port list. You can call the <code>DescribePortRangeLists</code> operation to query the IDs of available port lists.</p>
-         * <ul>
-         * <li><p>If you specify <code>Permissions.N.PortRange</code>, this parameter is ignored.</p>
-         * </li>
-         * <li><p>If a security group resides in the classic network, you cannot reference port lists in the rules of the security group. For information about the limits on security groups and port lists, see the <a href="~~25412#SecurityGroupQuota1~~">Security groups</a> section of the &quot;Limits and quotas on ECS&quot; topic.</p>
-         * </li>
-         * </ul>
+         * <p>The port list ID.</p>
+         * <p>You can call <code>DescribePortRangeLists</code> to query available port list IDs.</p>
+         * <p>If you specify <code>Permissions.N.PortRange</code>, this parameter is ignored.</p>
+         * <p>For more information, see <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>prl-2ze9743****</p>
@@ -556,7 +539,7 @@ public class RevokeSecurityGroupRequest extends TeaModel {
         public String portRangeListId;
 
         /**
-         * <p>The priority of the security group rule. A smaller value specifies a higher priority. Valid values: 1 to 100.</p>
+         * <p>The priority of the security group rule. A smaller value indicates a higher priority. Valid values: 1 to 100.</p>
          * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
@@ -566,7 +549,7 @@ public class RevokeSecurityGroupRequest extends TeaModel {
         public String priority;
 
         /**
-         * <p>The source IPv4 CIDR block of the security group rule. IPv4 CIDR blocks and IPv4 addresses are supported.</p>
+         * <p>The source IPv4 Classless Inter-Domain Routing (CIDR) block from which you want to revoke access permissions. CIDR format and IPv4 address range are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.0.0/8</p>
@@ -575,20 +558,20 @@ public class RevokeSecurityGroupRequest extends TeaModel {
         public String sourceCidrIp;
 
         /**
-         * <p>The ID of the source security group referenced in the security group rule.</p>
+         * <p>The ID of the source security group from which you want to revoke access permissions.</p>
          * <ul>
-         * <li><p>You must specify at least one of the following parameters: <code>SourceGroupId</code>, <code>SourceCidrIp</code>, <code>Ipv6SourceCidrIp</code>, and <code>SourcePrefixListId</code>.</p>
+         * <li><p>Set at least one of <code>SourceGroupId</code>, <code>SourceCidrIp</code>, <code>Ipv6SourceCidrIp</code>, or <code>SourcePrefixListId</code>.</p>
          * </li>
-         * <li><p>If you specify <code>SourceGroupId</code> but do not specify <code>SourceCidrIp</code> or <code>Ipv6SourceCidrIp</code>, you must set NicType to intranet.</p>
+         * <li><p>If you specify <code>SourceGroupId</code> but do not specify the <code>SourceCidrIp</code> or <code>Ipv6SourceCidrIp</code> parameter, set NicType to intranet.</p>
          * </li>
-         * <li><p>If you specify both <code>SourceGroupId</code> and <code>SourceCidrIp</code>, <code>SourceCidrIp</code> takes precedence.</p>
+         * <li><p>If you specify both <code>SourceGroupId</code> and <code>SourceCidrIp</code>, <code>SourceCidrIp</code> takes precedence by default.</p>
          * </li>
          * </ul>
-         * <p>Take note of the following items:</p>
+         * <p>Note:</p>
          * <ul>
-         * <li><p>Advanced security groups do not support security group rules that reference security groups as authorization objects (sources or destinations of traffic).</p>
+         * <li><p>Advanced security groups do not support authorization by security group access.</p>
          * </li>
-         * <li><p>Each basic security group can contain up to 20 security group rules that reference security groups as authorization objects.</p>
+         * <li><p>A maximum of 20 security groups can be authorized for a basic security group.</p>
          * </li>
          * </ul>
          * 
@@ -599,12 +582,10 @@ public class RevokeSecurityGroupRequest extends TeaModel {
         public String sourceGroupId;
 
         /**
-         * <p>The Alibaba Cloud account that manages the source security group referenced in the security group rule.</p>
+         * <p>The Alibaba Cloud account that owns the source security group when you revoke a cross-account authorization security group rule.</p>
          * <ul>
-         * <li><p>If both <code>SourceGroupOwnerAccount</code> and <code>SourceGroupOwnerId</code> are empty, access control on another security group in your Alibaba Cloud account is removed.</p>
-         * </li>
-         * <li><p>If you specify <code>SourceCidrIp</code>, <code>SourceGroupOwnerAccount</code> is ignored.</p>
-         * </li>
+         * <li>If neither <code>SourceGroupOwnerAccount</code> nor <code>SourceGroupOwnerId</code> is set, the access permissions for another security group within your account are revoked.</li>
+         * <li>If the <code>SourceCidrIp</code> parameter is set, the <code>SourceGroupOwnerAccount</code> parameter is ignored.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -614,12 +595,10 @@ public class RevokeSecurityGroupRequest extends TeaModel {
         public String sourceGroupOwnerAccount;
 
         /**
-         * <p>The ID of the Alibaba Cloud account that manages the source security group referenced in the security group rule.</p>
+         * <p>The ID of the Alibaba Cloud account that owns the source security group when you revoke a cross-account authorization security group rule.</p>
          * <ul>
-         * <li><p>If both <code>SourceGroupOwnerId</code> and <code>SourceGroupOwnerAccount</code> are empty, access control on another security group in your Alibaba Cloud account is removed.</p>
-         * </li>
-         * <li><p>If you specify <code>SourceCidrIp</code>, <code>SourceGroupOwnerId</code> is ignored.</p>
-         * </li>
+         * <li>If neither <code>SourceGroupOwnerId</code> nor <code>SourceGroupOwnerAccount</code> is set, the access permissions for another security group within your account are revoked.</li>
+         * <li>If the <code>SourceCidrIp</code> parameter is set, the <code>SourceGroupOwnerId</code> parameter is ignored.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -629,18 +608,14 @@ public class RevokeSecurityGroupRequest extends TeaModel {
         public Long sourceGroupOwnerId;
 
         /**
-         * <p>The source port range of the security group rule. Valid values:</p>
+         * <p>The range of source ports that correspond to the transport layer protocol. Valid values: </p>
          * <ul>
-         * <li><p>If you set IpProtocol to TCP or UDP, the valid values of this parameter are 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.</p>
-         * </li>
-         * <li><p>If you set IpProtocol to ICMP, the port range is -1/-1.</p>
-         * </li>
-         * <li><p>If you set IpProtocol to GRE, the port range is -1/-1.</p>
-         * </li>
-         * <li><p>If you set IpProtocol to ALL, the port range is -1/-1.</p>
-         * </li>
+         * <li>TCP/UDP: Valid values are 1 to 65535. Separate the start port and the end port with a forward slash (/). Example: 1/200.</li>
+         * <li>ICMP: -1/-1.</li>
+         * <li>GRE: -1/-1.</li>
+         * <li>ALL: -1/-1.</li>
          * </ul>
-         * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
+         * <p>This parameter is used for quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>80/80</p>
@@ -649,14 +624,10 @@ public class RevokeSecurityGroupRequest extends TeaModel {
         public String sourcePortRange;
 
         /**
-         * <p>The ID of the source prefix list of the security group rule. You can call the <a href="https://help.aliyun.com/document_detail/205046.html">DescribePrefixLists</a> operation to query the IDs of available prefix lists.</p>
-         * <p>Take note of the following items:</p>
-         * <ul>
-         * <li><p>If a security group resides in the classic network, you cannot specify prefix lists in the rules of the security group. For information about the limits on security groups and prefix lists, see the <a href="~~25412#SecurityGroupQuota1~~">Security groups</a> section of the &quot;Limits and quotas on ECS&quot; topic.</p>
-         * </li>
-         * <li><p>If you specify <code>SourceCidrIp</code>, <code>Ipv6SourceCidrIp</code>, or <code>SourceGroupId</code>, this parameter is ignored.</p>
-         * </li>
-         * </ul>
+         * <p>The ID of the source prefix list from which you want to revoke access permissions. You can invoke <a href="https://help.aliyun.com/document_detail/205046.html">DescribePrefixLists</a> to query available prefix list IDs.</p>
+         * <p>Note:</p>
+         * <p>If you specify <code>SourceCidrIp</code>, <code>Ipv6SourceCidrIp</code>, or <code>SourceGroupId</code>, this parameter is ignored.</p>
+         * <p>For more information, see <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>pl-x1j1k5ykzqlixdcy****</p>
