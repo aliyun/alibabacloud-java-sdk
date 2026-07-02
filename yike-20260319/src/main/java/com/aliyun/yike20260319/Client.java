@@ -1635,6 +1635,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>提交一刻数字人口播视频生成任务</p>
+     * 
+     * @param request SubmitYikeVideoCloneJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitYikeVideoCloneJobResponse
+     */
+    public SubmitYikeVideoCloneJobResponse submitYikeVideoCloneJobWithOptions(SubmitYikeVideoCloneJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobParams)) {
+            body.put("JobParams", request.jobParams);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
+            body.put("UserData", request.userData);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitYikeVideoCloneJob"),
+            new TeaPair("version", "2026-03-19"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitYikeVideoCloneJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交一刻数字人口播视频生成任务</p>
+     * 
+     * @param request SubmitYikeVideoCloneJobRequest
+     * @return SubmitYikeVideoCloneJobResponse
+     */
+    public SubmitYikeVideoCloneJobResponse submitYikeVideoCloneJob(SubmitYikeVideoCloneJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitYikeVideoCloneJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates an intelligent video generation task for a voiceover-only scenario (without a digital human). This task is applicable to video scenarios such as product showcases and news broadcasts.</p>
      * 
      * @param request SubmitYikeVoiceNarratorJobRequest
