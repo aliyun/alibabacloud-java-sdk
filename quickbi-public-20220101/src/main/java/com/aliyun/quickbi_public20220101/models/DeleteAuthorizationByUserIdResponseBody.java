@@ -3,22 +3,18 @@ package com.aliyun.quickbi_public20220101.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateCubeBySqlResponseBody extends TeaModel {
+public class DeleteAuthorizationByUserIdResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>617277******************ABA47E31</p>
+     * <p>46e53***********70</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The execution result of the operation. Valid values:</p>
-     * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false: The request failed.</li>
-     * </ul>
+     * <p>Indicates whether the deletion was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -27,11 +23,7 @@ public class UpdateCubeBySqlResponseBody extends TeaModel {
     public Boolean result;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false: The request failed.</li>
-     * </ul>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -39,12 +31,12 @@ public class UpdateCubeBySqlResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static UpdateCubeBySqlResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        UpdateCubeBySqlResponseBody self = new UpdateCubeBySqlResponseBody();
+    public static DeleteAuthorizationByUserIdResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeleteAuthorizationByUserIdResponseBody self = new DeleteAuthorizationByUserIdResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public UpdateCubeBySqlResponseBody setRequestId(String requestId) {
+    public DeleteAuthorizationByUserIdResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -52,7 +44,7 @@ public class UpdateCubeBySqlResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UpdateCubeBySqlResponseBody setResult(Boolean result) {
+    public DeleteAuthorizationByUserIdResponseBody setResult(Boolean result) {
         this.result = result;
         return this;
     }
@@ -60,7 +52,7 @@ public class UpdateCubeBySqlResponseBody extends TeaModel {
         return this.result;
     }
 
-    public UpdateCubeBySqlResponseBody setSuccess(Boolean success) {
+    public DeleteAuthorizationByUserIdResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

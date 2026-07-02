@@ -8,7 +8,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("us-east-1", "quickbi-public.us-east-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "quickbi-public.me-central-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "quickbi-public.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "quickbi-public.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "quickbi-public.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "quickbi-public.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "quickbi-public.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "quickbi-public.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "quickbi-public.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "quickbi-public.ap-northeast-1.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("quickbi-public", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -746,7 +758,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch add Feishu users.</p>
+     * <p>Adds Lark users in batches.</p>
      * 
      * @deprecated OpenAPI BatchAddFeishuUsers is deprecated
      * 
@@ -798,7 +810,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch add Feishu users.</p>
+     * <p>Adds Lark users in batches.</p>
      * 
      * @deprecated OpenAPI BatchAddFeishuUsers is deprecated
      * 
@@ -1202,7 +1214,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a dataset from a custom SQL statement.</p>
+     * <p>Creates a dataset based on a custom SQL statement.</p>
      * 
      * @param request CreateCubeBySqlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1231,8 +1243,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("WorkspaceId", request.workspaceId);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.placeholders)) {
+            body.put("Placeholders", request.placeholders);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateCubeBySql"),
@@ -1250,7 +1268,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a dataset from a custom SQL statement.</p>
+     * <p>Creates a dataset based on a custom SQL statement.</p>
      * 
      * @param request CreateCubeBySqlRequest
      * @return CreateCubeBySqlResponse
@@ -1326,10 +1344,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For detailed usage, please refer to <a href="https://help.aliyun.com/document_detail/391291.html">Report Embedding Data Permission Control and Parameter Passing Security Enhancement Solution</a>.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/391291.html">Security enhancement for data permission control and parameter passing in embedded reports</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Generate a ticket for third-party embedding.</p>
+     * <p>Generates a ticket required for embedded report access.</p>
      * 
      * @param request CreateTicketRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1354,10 +1372,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ExpireTime", request.expireTime);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.globalParam)) {
-            query.put("GlobalParam", request.globalParam);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.ticketNum)) {
             query.put("TicketNum", request.ticketNum);
         }
@@ -1374,8 +1388,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("WorksId", request.worksId);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.globalParam)) {
+            body.put("GlobalParam", request.globalParam);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateTicket"),
@@ -1393,10 +1413,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For detailed usage, please refer to <a href="https://help.aliyun.com/document_detail/391291.html">Report Embedding Data Permission Control and Parameter Passing Security Enhancement Solution</a>.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/391291.html">Security enhancement for data permission control and parameter passing in embedded reports</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Generate a ticket for third-party embedding.</p>
+     * <p>Generates a ticket required for embedded report access.</p>
      * 
      * @param request CreateTicketRequest
      * @return CreateTicketResponse
@@ -1800,6 +1820,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DelayTicketExpireTimeResponse delayTicketExpireTime(DelayTicketExpireTimeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.delayTicketExpireTimeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes the collaborative authorization record of a specified user.</p>
+     * 
+     * @param request DeleteAuthorizationByUserIdRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAuthorizationByUserIdResponse
+     */
+    public DeleteAuthorizationByUserIdResponse deleteAuthorizationByUserIdWithOptions(DeleteAuthorizationByUserIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.qbiUserId)) {
+            query.put("QbiUserId", request.qbiUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            query.put("ResourceId", request.resourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAuthorizationByUserId"),
+            new TeaPair("version", "2022-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAuthorizationByUserIdResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes the collaborative authorization record of a specified user.</p>
+     * 
+     * @param request DeleteAuthorizationByUserIdRequest
+     * @return DeleteAuthorizationByUserIdResponse
+     */
+    public DeleteAuthorizationByUserIdResponse deleteAuthorizationByUserId(DeleteAuthorizationByUserIdRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAuthorizationByUserIdWithOptions(request, runtime);
     }
 
     /**
@@ -2488,6 +2560,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetWorksEmbedListResponse getWorksEmbedList(GetWorksEmbedListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getWorksEmbedListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Configures the IP address whitelist for data security.</p>
+     * 
+     * @param request IpWhiteListConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return IpWhiteListConfigResponse
+     */
+    public IpWhiteListConfigResponse ipWhiteListConfigWithOptions(IpWhiteListConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ipWhiteList)) {
+            query.put("IpWhiteList", request.ipWhiteList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operation)) {
+            query.put("Operation", request.operation);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "IpWhiteListConfig"),
+            new TeaPair("version", "2022-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new IpWhiteListConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Configures the IP address whitelist for data security.</p>
+     * 
+     * @param request IpWhiteListConfigRequest
+     * @return IpWhiteListConfigResponse
+     */
+    public IpWhiteListConfigResponse ipWhiteListConfig(IpWhiteListConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.ipWhiteListConfigWithOptions(request, runtime);
     }
 
     /**
@@ -5299,7 +5419,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据绑定的第三方账号ID查询UserId</p>
+     * <p>Queries a UserId by the bound third-party account ID.</p>
      * 
      * @param request QueryUserByMobileAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5335,7 +5455,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据绑定的第三方账号ID查询UserId</p>
+     * <p>Queries a UserId by the bound third-party account ID.</p>
      * 
      * @param request QueryUserByMobileAccountRequest
      * @return QueryUserByMobileAccountResponse
@@ -6454,7 +6574,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a dataset that is based on a custom SQL statement.</p>
+     * <p>Migrates a user group.</p>
+     * 
+     * @param request TransferUsergroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TransferUsergroupResponse
+     */
+    public TransferUsergroupResponse transferUsergroupWithOptions(TransferUsergroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.parentUserGroupId)) {
+            query.put("ParentUserGroupId", request.parentUserGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userGroupId)) {
+            query.put("UserGroupId", request.userGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TransferUsergroup"),
+            new TeaPair("version", "2022-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TransferUsergroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Migrates a user group.</p>
+     * 
+     * @param request TransferUsergroupRequest
+     * @return TransferUsergroupResponse
+     */
+    public TransferUsergroupResponse transferUsergroup(TransferUsergroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.transferUsergroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a custom SQL dataset.</p>
      * 
      * @param request UpdateCubeBySqlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6473,6 +6641,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.dsId)) {
             query.put("DsId", request.dsId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.placeholders)) {
+            query.put("Placeholders", request.placeholders);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
@@ -6502,7 +6674,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a dataset that is based on a custom SQL statement.</p>
+     * <p>Updates a custom SQL dataset.</p>
      * 
      * @param request UpdateCubeBySqlRequest
      * @return UpdateCubeBySqlResponse

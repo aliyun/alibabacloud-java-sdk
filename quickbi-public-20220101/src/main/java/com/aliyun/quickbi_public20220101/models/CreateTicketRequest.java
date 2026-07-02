@@ -5,15 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateTicketRequest extends TeaModel {
     /**
-     * <p>The user\&quot;s account name.</p>
+     * <p>The account name of the user.</p>
      * <ul>
-     * <li><p>If the user is an Alibaba Cloud primary account <strong>wangwu</strong>, the format is <strong>[Primary Account]</strong>, for example, <strong>wangwu</strong>.</p>
-     * </li>
-     * <li><p>If the user is a RAM account <strong>zhangsan</strong>@aliyun.cn\<em>\</em>, the format is <strong>[Primary Account: Sub-Account]</strong>, for example, <strong>wangwu:zhangsan</strong>.</p>
-     * </li>
+     * <li>If the user is an Alibaba Cloud account <strong>wangwu</strong>, the format is <strong>[primary account]</strong>, for example, <strong>wangwu</strong>.</li>
+     * <li>If the user is a Resource Access Management (RAM) users account <strong>zhangsan</strong>@aliyun.cn**, the format is <strong>[primary account:RAM user]</strong>, for example, <strong>wangwu:zhangsan</strong>.</li>
      * </ul>
      * <blockquote>
-     * <p>Only one of UserId and AccountName needs to be filled in. If neither is filled in, it will default to binding the report\&quot;s Owner, and the report will be accessed with that user\&quot;s identity. If you need to configure row-level permissions, please refer to <a href="https://help.aliyun.com/document_detail/322783.html">Row-Level Permissions</a>.</p>
+     * <p>Specify either UserId or AccountName. If neither is specified, the report owner is attached by default, and the report is accessed under that user\&quot;s identity. To configure row-level permissions for data, see <a href="https://help.aliyun.com/document_detail/322783.html">Row-level permissions</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -24,24 +22,18 @@ public class CreateTicketRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The type of the user\&quot;s account.</p>
+     * <p>The account type of the user. Valid values:</p>
      * <ul>
-     * <li><p>1: Alibaba Cloud account</p>
-     * </li>
-     * <li><p>3: Quick BI self-built account</p>
-     * </li>
-     * <li><p>4: DingTalk</p>
-     * </li>
-     * <li><p>5: RAM sub-account</p>
-     * </li>
-     * <li><p>9: WeCom</p>
-     * </li>
-     * <li><p>10: Feishu</p>
+     * <li>1: Alibaba Cloud account</li>
+     * <li>3: Quick BI custom account</li>
+     * <li>4: DingTalk</li>
+     * <li>5: RAM user</li>
+     * <li>9: WeCom</li>
+     * <li>10: Lark<blockquote>
+     * <p>If AccountName is specified, AccountType must also be specified.</p>
+     * </blockquote>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>If AccountName is not empty, then AccountType must also not be empty.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -51,8 +43,8 @@ public class CreateTicketRequest extends TeaModel {
     public Integer accountType;
 
     /**
-     * <p>Component ID. This is the ID of a component within the above-mentioned dashboard; other types of works do not support this.
-     * Refer to <a href="https://next.api.aliyun.com/api/quickbi-public/2022-01-01/QueryWorksBloodRelationship?spm=a2c4g.11186623.0.0.15615d7aWVvWAl%5C&params=%7B%7D%5C&lang=JAVA%5C&tab=DOC%5C&sdkStyle=old">QueryWorksBloodRelationship</a> for the API to get the component ID.</p>
+     * <p>The component ID. This is the ID of a specific component in the dashboard. Other report types are not supported.
+     * To obtain the component ID, see <a href="https://next.api.aliyun.com/api/quickbi-public/2022-01-01/QueryWorksBloodRelationship?spm=a2c4g.11186623.0.0.15615d7aWVvWAl&params=%7B%7D&lang=JAVA&tab=DOC&sdkStyle=old">QueryWorksBloodRelationship</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>0fc6a275c7f64f17b1****a306ce0f31</p>
@@ -61,12 +53,10 @@ public class CreateTicketRequest extends TeaModel {
     public String cmptId;
 
     /**
-     * <p>Expiration time</p>
+     * <p>The expiration time.</p>
      * <ul>
-     * <li><p>Unit: minutes</p>
-     * </li>
-     * <li><p>Default: 240</p>
-     * </li>
+     * <li>Unit: minutes.</li>
+     * <li>Default value: 240.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -76,13 +66,7 @@ public class CreateTicketRequest extends TeaModel {
     public Integer expireTime;
 
     /**
-     * <p>Global parameters for the report filter conditions.</p>
-     * <ul>
-     * <li>A string in JsonArray format.</li>
-     * </ul>
-     * <blockquote>
-     * <p>If you need to use global parameter capabilities, please contact the <a href="https://h5-alimebot.dingtalk.com/intl/index.htm?spm=a2c4g.11186623.0.0.3da14f6chrDv9e%5C&sourceType=ding_talk%5C&from=DEFFB9G5KBByQkwq23wneFIOmaJ">Quick BI Operations Manager</a>.</p>
-     * </blockquote>
+     * <p>The global parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;paramKey&quot;:&quot;price&quot;,&quot;joinType&quot;:&quot;and&quot;,&quot;conditionList&quot;:[{&quot;operate&quot;:&quot;&gt;&quot;,&quot;value&quot;:&quot;0&quot;}]}]</p>
@@ -91,14 +75,11 @@ public class CreateTicketRequest extends TeaModel {
     public String globalParam;
 
     /**
-     * <p>The number of tickets. Each time a ticket is used, the number of tickets decreases by 1.</p>
+     * <p>The number of times the ticket can be used. Each time the ticket is used for access, the count decreases by 1.</p>
      * <ul>
-     * <li><p>Default value: 1</p>
-     * </li>
-     * <li><p>Recommended value: 1</p>
-     * </li>
-     * <li><p>Maximum value: 99999</p>
-     * </li>
+     * <li>Default value: 1.</li>
+     * <li>Recommended value: 1.</li>
+     * <li>Maximum value: 99999.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -108,10 +89,10 @@ public class CreateTicketRequest extends TeaModel {
     public Integer ticketNum;
 
     /**
-     * <p>Quick BI\&quot;s UserId, which is not your Alibaba Cloud account ID.
-     * You can call the <a href="https://next.api.aliyun.com/api/quickbi-public/2022-01-01/QueryUserInfoByAccount?spm=a2c4g.11186623.0.0.15615d7aWVvWAl%5C&params=%7B%7D%5C&tab=DOC%5C&sdkStyle=old">QueryUserInfoByAccount</a> interface to obtain the UserId. An example of a UserId is fe67f61a35a94b7da1a34ba174a7\<em>\</em>\<em>\</em>.</p>
+     * <p>The Quick BI user ID, not your Alibaba Cloud account ID.
+     * You can call the <a href="https://next.api.aliyun.com/api/quickbi-public/2022-01-01/QueryUserInfoByAccount?spm=a2c4g.11186623.0.0.15615d7aWVvWAl&params=%7B%7D&tab=DOC&sdkStyle=old">QueryUserInfoByAccount</a> operation to obtain the user ID. Example: fe67f61a35a94b7da1a34ba174a7****.</p>
      * <blockquote>
-     * <p>Only one of UserId and AccountName needs to be filled in. If neither is filled in, it will default to binding the report\&quot;s Owner, and the report will be accessed with that user\&quot;s identity. If you need to configure row-level permissions, please refer to <a href="https://help.aliyun.com/document_detail/322783.html">Row-Level Permissions</a>.</p>
+     * <p>Specify either UserId or AccountName. If neither is specified, the report owner is used by default, and the report is accessed under that user\&quot;s identity. To configure row-level permissions for data, see <a href="https://help.aliyun.com/document_detail/322783.html">Row-level permissions</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -121,12 +102,10 @@ public class CreateTicketRequest extends TeaModel {
     public String userId;
 
     /**
-     * <p>Watermark parameters for the report.</p>
+     * <p>The watermark parameter for the report.</p>
      * <ul>
-     * <li><p>Must not exceed 50 characters.</p>
-     * </li>
-     * <li><p>When the report type is a large screen, watermark parameter passing is not supported.</p>
-     * </li>
+     * <li>The value cannot exceed 50 characters.</li>
+     * <li>Watermark parameters are not supported when the report type is data screen.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -136,7 +115,7 @@ public class CreateTicketRequest extends TeaModel {
     public String watermarkParam;
 
     /**
-     * <p>The ID of the report to be embedded. Currently supports dashboards, spreadsheets, data screens, self-service data retrieval, ad-hoc analysis, and data entry.</p>
+     * <p>The ID of the report for which embedding is enabled. Dashboards, workbooks, data screens, ad hoc queries, ad hoc analyses, and data entry forms are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

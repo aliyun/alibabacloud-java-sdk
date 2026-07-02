@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateCubeBySqlRequest extends TeaModel {
     /**
-     * <p>The ID of the dataset.</p>
+     * <p>The dataset ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class UpdateCubeBySqlRequest extends TeaModel {
     public String customSql;
 
     /**
-     * <p>The ID of the data source.</p>
+     * <p>The data source ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,22 @@ public class UpdateCubeBySqlRequest extends TeaModel {
     public String dsId;
 
     /**
-     * <p>The ID of the Quick BI user. The user must have permissions to create datasets. This ID is not your Alibaba Cloud account ID. Call the <a href="https://next.api.aliyun.com/api/quickbi-public/2022-01-01/QueryUserInfoByAccount?spm=api-workbench.api_explorer.0.0.672f50daGq9ooV%5C&params=%7B%7D%5C&tab=DOC%5C&sdkStyle=old%5C&RegionId=cn-hangzhou">QueryUserInfoByAccount</a> operation to obtain the user ID.</p>
+     * <p>The placeholder parameters. For more information, see the supplementary description below.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[
+     *     {
+     *         &quot;name&quot;: &quot;test&quot;,
+     *         &quot;style&quot;: &quot;placeholder&quot;,
+     *         &quot;type&quot;: &quot;string&quot;
+     *     }
+     * ]</p>
+     */
+    @NameInMap("Placeholders")
+    public String placeholders;
+
+    /**
+     * <p>The Quick BI UserId of a user who has permissions to create datasets. This is not your Alibaba Cloud account ID. Call the <a href="https://next.api.aliyun.com/api/quickbi-public/2022-01-01/QueryUserInfoByAccount?spm=api-workbench.api_explorer.0.0.672f50daGq9ooV&params=%7B%7D&tab=DOC&sdkStyle=old&RegionId=cn-hangzhou">QueryUserInfoByAccount</a> operation to obtain the UserId.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +60,7 @@ public class UpdateCubeBySqlRequest extends TeaModel {
     public String userId;
 
     /**
-     * <p>The ID of the workspace.</p>
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -81,6 +96,14 @@ public class UpdateCubeBySqlRequest extends TeaModel {
     }
     public String getDsId() {
         return this.dsId;
+    }
+
+    public UpdateCubeBySqlRequest setPlaceholders(String placeholders) {
+        this.placeholders = placeholders;
+        return this;
+    }
+    public String getPlaceholders() {
+        return this.placeholders;
     }
 
     public UpdateCubeBySqlRequest setUserId(String userId) {

@@ -4,12 +4,31 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class QueryUserByMobileAccountResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>46e53***********270</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The user information bound to the third-party account.</p>
+     */
     @NameInMap("Result")
     public QueryUserByMobileAccountResponseBodyResult result;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,9 +62,21 @@ public class QueryUserByMobileAccountResponseBody extends TeaModel {
     }
 
     public static class QueryUserByMobileAccountResponseBodyResult extends TeaModel {
+        /**
+         * <p>The QuickBI user ID of the bound account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("BoundUserId")
         public String boundUserId;
 
+        /**
+         * <p>The mobile account name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("ThirdAccountName")
         public String thirdAccountName;
 
