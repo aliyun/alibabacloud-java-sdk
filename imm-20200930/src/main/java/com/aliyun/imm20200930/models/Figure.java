@@ -14,7 +14,7 @@ public class Figure extends TeaModel {
     public Long age;
 
     /**
-     * <p>The standard deviation of the age.</p>
+     * <p>The age standard deviation.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -23,7 +23,7 @@ public class Figure extends TeaModel {
     public Float ageSD;
 
     /**
-     * <p>The face attractiveness. A high score indicates strong attractiveness. Valid values: 0 to 1.</p>
+     * <p>The face attractiveness score. A higher score indicates greater attractiveness. Valid values: 0 to 1.</p>
      * 
      * <strong>example:</strong>
      * <p>0.96</p>
@@ -32,11 +32,7 @@ public class Figure extends TeaModel {
     public Float attractive;
 
     /**
-     * <p>Specifies whether the figure has a beard. Valid values:</p>
-     * <ul>
-     * <li>beard</li>
-     * <li>none</li>
-     * </ul>
+     * <p>Indicates whether the person has a beard.</p>
      * 
      * <strong>example:</strong>
      * <p>none</p>
@@ -45,7 +41,7 @@ public class Figure extends TeaModel {
     public String beard;
 
     /**
-     * <p>The confidence level of detecting whether the figure has a beard. Valid values: 0 to 1. The value 0 indicates the lowest confidence level. The value 1 indicates the highest confidence level.</p>
+     * <p>The confidence score for whether the person has a beard. Valid values: 0 (lowest confidence) to 1 (highest confidence).</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -60,11 +56,7 @@ public class Figure extends TeaModel {
     public Boundary boundary;
 
     /**
-     * <p>The emotion. Valid values:</p>
-     * <ul>
-     * <li>happiness</li>
-     * <li>none</li>
-     * </ul>
+     * <p>The emotion.</p>
      * 
      * <strong>example:</strong>
      * <p>happiness</p>
@@ -73,7 +65,7 @@ public class Figure extends TeaModel {
     public String emotion;
 
     /**
-     * <p>The confidence level of the emotion. Valid values: 0 to 1. The value 0 indicates the lowest confidence level. The value 1 indicates the highest confidence level.</p>
+     * <p>The emotion confidence score. Valid values: 0 (lowest confidence) to 1 (highest confidence).</p>
      * 
      * <strong>example:</strong>
      * <p>0.707845687866210</p>
@@ -82,7 +74,7 @@ public class Figure extends TeaModel {
     public Float emotionConfidence;
 
     /**
-     * <p>The face quality.</p>
+     * <p>The face quality score, which evaluates whether the image quality is suitable for face recognition. A higher score indicates better quality. Valid values: 0 to 1.</p>
      * 
      * <strong>example:</strong>
      * <p>0.960875928401947</p>
@@ -91,7 +83,7 @@ public class Figure extends TeaModel {
     public Float faceQuality;
 
     /**
-     * <p>The confidence level of the face clustering task. Valid values: 0 to 1. The value 0 indicates the lowest confidence level. The value 1 indicates the highest confidence level.</p>
+     * <p>The clustering confidence score. Valid values: 0 (lowest confidence) to 1 (highest confidence).</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -100,10 +92,12 @@ public class Figure extends TeaModel {
     public Float figureClusterConfidence;
 
     /**
-     * <p>The ID of the face clustering task. The following IDs of special face clustering tasks are reserved:</p>
+     * <p>The figure cluster ID. The following reserved special cluster ID names are included:</p>
      * <ul>
-     * <li>figure-cluster-id-independent: the ID of a face clustering task in which faces do not belong to any face group. After images are added to a dataset, the faces may be categorized into different face groups when you perform face clustering.</li>
-     * <li>figure-cluster-id-unavailable: the ID of a face clustering task in which face clustering is not performed after images are added to a dataset.</li>
+     * <li><p>figure-cluster-id-independent: The face does not currently belong to any suitable group. After new images are added to the dataset and face clustering is performed, the face may be assigned to a group.</p>
+     * </li>
+     * <li><p>figure-cluster-id-unavailable: The face has not been clustered yet. This means that after new images were added to the dataset, face clustering has not been performed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -113,7 +107,7 @@ public class Figure extends TeaModel {
     public String figureClusterId;
 
     /**
-     * <p>The confidence level of the figure. Valid values: 0 to 1. The value 0 indicates the lowest confidence level. The value 1 indicates the highest confidence level.</p>
+     * <p>The confidence score of the figure object. Valid values: 0 (lowest confidence) to 1 (highest confidence).</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -122,7 +116,7 @@ public class Figure extends TeaModel {
     public Float figureConfidence;
 
     /**
-     * <p>The figure ID.</p>
+     * <p>The ID of the figure object.</p>
      * 
      * <strong>example:</strong>
      * <p>868a9e74-cde5-4c7a-9013-28bb984****</p>
@@ -132,7 +126,6 @@ public class Figure extends TeaModel {
 
     /**
      * <p>The figure type.</p>
-     * <p>Set this parameter to face.</p>
      * 
      * <strong>example:</strong>
      * <p>face</p>
@@ -141,11 +134,7 @@ public class Figure extends TeaModel {
     public String figureType;
 
     /**
-     * <p>The gender. Valid values:</p>
-     * <ul>
-     * <li>female</li>
-     * <li>male</li>
-     * </ul>
+     * <p>The gender.</p>
      * 
      * <strong>example:</strong>
      * <p>female</p>
@@ -154,7 +143,7 @@ public class Figure extends TeaModel {
     public String gender;
 
     /**
-     * <p>The confidence level of the gender. Valid values: 0 to 1. The value 0 indicates the lowest confidence level. The value 1 indicates the highest confidence level.</p>
+     * <p>The gender confidence score. Valid values: 0 (lowest confidence) to 1 (highest confidence).</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -163,12 +152,7 @@ public class Figure extends TeaModel {
     public Float genderConfidence;
 
     /**
-     * <p>Specifies whether the figure wears glasses. Valid values:</p>
-     * <ul>
-     * <li>glasses</li>
-     * <li>sunglasses</li>
-     * <li>none</li>
-     * </ul>
+     * <p>Indicates whether the person is wearing glasses.</p>
      * 
      * <strong>example:</strong>
      * <p>none</p>
@@ -177,7 +161,7 @@ public class Figure extends TeaModel {
     public String glasses;
 
     /**
-     * <p>The confidence level of detecting whether the figure wears glasses. Valid values: 0 to 1. The value 0 indicates the lowest confidence level. The value 1 indicates the highest confidence level.</p>
+     * <p>The confidence score for whether the person is wearing glasses. Valid values: 0 (lowest confidence) to 1 (highest confidence).</p>
      * 
      * <strong>example:</strong>
      * <p>0.8</p>
@@ -186,11 +170,7 @@ public class Figure extends TeaModel {
     public Float glassesConfidence;
 
     /**
-     * <p>Specifies whether the figure wears a hat. Valid values:</p>
-     * <ul>
-     * <li>hat</li>
-     * <li>none</li>
-     * </ul>
+     * <p>Indicates whether the person is wearing a hat.</p>
      * 
      * <strong>example:</strong>
      * <p>none</p>
@@ -199,7 +179,7 @@ public class Figure extends TeaModel {
     public String hat;
 
     /**
-     * <p>The confidence level of detecting whether the figure wears a hat.</p>
+     * <p>The confidence score for whether the person is wearing a hat. Valid values: 0 (lowest confidence) to 1 (highest confidence).</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -208,17 +188,13 @@ public class Figure extends TeaModel {
     public Float hatConfidence;
 
     /**
-     * <p>The head orientation.</p>
+     * <p>The head pose information.</p>
      */
     @NameInMap("HeadPose")
     public HeadPose headPose;
 
     /**
-     * <p>Specifies whether the figure wears a mask. Valid values:</p>
-     * <ul>
-     * <li>mask</li>
-     * <li>none</li>
-     * </ul>
+     * <p>Indicates whether the person is wearing a mask.</p>
      * 
      * <strong>example:</strong>
      * <p>none</p>
@@ -227,7 +203,7 @@ public class Figure extends TeaModel {
     public String mask;
 
     /**
-     * <p>The confidence level of detecting whether the figure wears a mask. Valid values: 0 to 1. The value 0 indicates the lowest confidence level. The value 1 indicates the highest confidence level.</p>
+     * <p>The confidence score for whether the person is wearing a mask. Valid values: 0 (lowest confidence) to 1 (highest confidence).</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -236,11 +212,7 @@ public class Figure extends TeaModel {
     public Float maskConfidence;
 
     /**
-     * <p>Specifies whether the mouth is open. Valid values:</p>
-     * <ul>
-     * <li>open</li>
-     * <li>close</li>
-     * </ul>
+     * <p>Indicates whether the mouth is open.</p>
      * 
      * <strong>example:</strong>
      * <p>close</p>
@@ -249,7 +221,7 @@ public class Figure extends TeaModel {
     public String mouth;
 
     /**
-     * <p>The confidence level of detecting whether the mouth is open. Valid values: 0 to 1. The value 0 indicates the lowest confidence level. The value 1 indicates the highest confidence level.</p>
+     * <p>The confidence score for whether the mouth is open. Valid values: 0 (lowest confidence) to 1 (highest confidence).</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -258,7 +230,7 @@ public class Figure extends TeaModel {
     public Float mouthConfidence;
 
     /**
-     * <p>The clarity.</p>
+     * <p>The sharpness score. A higher score indicates a clearer face. Valid values: 0 to 1.</p>
      * 
      * <strong>example:</strong>
      * <p>0.7</p>

@@ -14,7 +14,7 @@ public class ListProjectsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The array of projects. Returns information about the projects.</p>
+     * <p>The array of projects. Project information is returned.</p>
      */
     @NameInMap("Projects")
     public java.util.List<Project> projects;

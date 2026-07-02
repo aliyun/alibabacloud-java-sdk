@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class VideoReadPPTOption extends TeaModel {
     /**
-     * <p>Specifies whether to extract content from the presentation slides. Set this parameter to <code>true</code> to enable extraction.</p>
+     * <p>Specifies whether to fetch.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Extract")
     public Boolean extract;

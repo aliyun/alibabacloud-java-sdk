@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class DocumentReadKeywordOption extends TeaModel {
     /**
-     * <p>The maximum number of keywords to return.</p>
+     * <p>The number of keywords. Valid values: 0 to 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Count")
     public Integer count;
 
     /**
-     * <p>Whether to extract keywords from the document.</p>
+     * <p>Specifies whether to extract keywords.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Extract")
     public Boolean extract;

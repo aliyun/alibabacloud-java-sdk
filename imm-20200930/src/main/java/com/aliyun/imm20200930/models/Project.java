@@ -13,9 +13,6 @@ public class Project extends TeaModel {
     @NameInMap("CreateTime")
     public String createTime;
 
-    @NameInMap("DatasetConfig")
-    public DatasetConfig datasetConfig;
-
     /**
      * <p>The current number of datasets in the project.</p>
      * 
@@ -77,7 +74,7 @@ public class Project extends TeaModel {
     public Long datasetMaxTotalFileSize;
 
     /**
-     * <p>The project description.</p>
+     * <p>The description of the project.</p>
      * 
      * <strong>example:</strong>
      * <p>test project</p>
@@ -86,7 +83,7 @@ public class Project extends TeaModel {
     public String description;
 
     /**
-     * <p>The maximum number of tasks that the project can process per second. This specifies the maximum number of operators that can run in parallel at the same time across the project. Default value: 100.</p>
+     * <p>The maximum number of tasks that the project can process per second. This specifies the maximum number of operators across the project that can run in parallel at the same time. Default value: 100.</p>
      * <ul>
      * <li><p>Synchronous tasks: if the number of concurrent tasks exceeds this limit, task execution time increases until a timeout occurs.</p>
      * </li>
@@ -172,7 +169,7 @@ public class Project extends TeaModel {
     /**
      * <p>The timestamp when the project was last modified, in RFC3339Nano format.</p>
      * <blockquote>
-     * <p>If the project has not been updated since creation, this timestamp is the same as the creation timestamp.</p>
+     * <p>If the project has not been updated since it was created, the modification timestamp is the same as the creation timestamp.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -192,14 +189,6 @@ public class Project extends TeaModel {
     }
     public String getCreateTime() {
         return this.createTime;
-    }
-
-    public Project setDatasetConfig(DatasetConfig datasetConfig) {
-        this.datasetConfig = datasetConfig;
-        return this;
-    }
-    public DatasetConfig getDatasetConfig() {
-        return this.datasetConfig;
     }
 
     public Project setDatasetCount(Long datasetCount) {
@@ -340,7 +329,7 @@ public class Project extends TeaModel {
 
     public static class ProjectTags extends TeaModel {
         /**
-         * <p>标签键。</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -349,7 +338,7 @@ public class Project extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>标签值。</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

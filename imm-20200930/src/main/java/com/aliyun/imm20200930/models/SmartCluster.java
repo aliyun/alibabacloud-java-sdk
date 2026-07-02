@@ -4,11 +4,17 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class SmartCluster extends TeaModel {
+    /**
+     * <p>The category of the grouping.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>figure</p>
+     */
     @NameInMap("ClusterType")
     public String clusterType;
 
     /**
-     * <p>The creation time.</p>
+     * <p>The time when the grouping was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-01-14T10:17:18.102700407+08:00</p>
@@ -26,13 +32,16 @@ public class SmartCluster extends TeaModel {
     public String datasetName;
 
     /**
-     * <p>The group description.</p>
+     * <p>The description of the grouping.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>这是一个智能分组的描述示例，它用于展示记录的格式。</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The group name.</p>
+     * <p>The grouping name.</p>
      * 
      * <strong>example:</strong>
      * <p>MySmartCluster1</p>
@@ -41,7 +50,7 @@ public class SmartCluster extends TeaModel {
     public String name;
 
     /**
-     * <p>The smart cluster ID.</p>
+     * <p>The intelligent grouping ID.</p>
      * 
      * <strong>example:</strong>
      * <p>SmartCluster-12cd1645-deae-4b5e-9434-613747b75f6d</p>
@@ -50,7 +59,7 @@ public class SmartCluster extends TeaModel {
     public String objectId;
 
     /**
-     * <p>The group status. Valid values are <code>Succeeded</code>, <code>Failed</code>, and <code>Running</code>.</p>
+     * <p>The status of the grouping.</p>
      * 
      * <strong>example:</strong>
      * <p>Succeeded</p>
@@ -59,7 +68,7 @@ public class SmartCluster extends TeaModel {
     public String objectStatus;
 
     /**
-     * <p>The group type. The value is always <code>smart-cluster</code>.</p>
+     * <p>The grouping type.</p>
      * 
      * <strong>example:</strong>
      * <p>smart-cluster</p>
@@ -85,20 +94,29 @@ public class SmartCluster extends TeaModel {
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <p>The reason why the grouping failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[InvalidArgument.BaseURIs] Each BaseURI must contain exactly one figure</p>
+     */
     @NameInMap("Reason")
     public String reason;
 
     /**
-     * <p>The clustering rule.</p>
+     * <p>The grouping rule. This parameter is deprecated. Use the Rules parameter instead.</p>
      */
     @NameInMap("Rule")
     public SmartClusterRule rule;
 
+    /**
+     * <p>The list of grouping rules.</p>
+     */
     @NameInMap("Rules")
     public java.util.List<SmartClusterRule> rules;
 
     /**
-     * <p>The update time.</p>
+     * <p>The time when the grouping was last updated.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-01-14T10:17:18.102700407+08:00</p>

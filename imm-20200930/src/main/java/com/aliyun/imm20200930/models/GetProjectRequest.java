@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetProjectRequest extends TeaModel {
     /**
-     * <p>The project name. For information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">创建项目</a>.</p>
+     * <p>The project name. For information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -19,11 +19,11 @@ public class GetProjectRequest extends TeaModel {
      * <ul>
      * <li><p>File statistics are collected. The FileCount and TotalFileSize values in the returned Project struct are valid.</p>
      * </li>
-     * <li><p>File statistics are not collected. The FileCount and TotalFileSize values in the returned Project struct may be inaccurate or both may be 0.</p>
+     * <li><p>File statistics are not collected. The FileCount and TotalFileSize values in the returned Project struct may be inaccurate or zero.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>Notice: Only files in datasets created before December 20, 2025 can be counted..</p>
+     * <p>Notice: Only files in datasets created before December 20, 2025 can be counted.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

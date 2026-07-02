@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class VideoReadKeywordOption extends TeaModel {
     /**
-     * <p>Specifies the maximum number of keywords to return. The service may return fewer keywords than this limit. If omitted, the service returns all extracted keywords.</p>
+     * <p>The number of keywords. Valid values: 0 to 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Count")
     public Integer count;
 
     /**
-     * <p>Specifies whether to extract keywords from the video. Set to <code>true</code> to enable keyword extraction. The default is <code>false</code>.</p>
+     * <p>Specifies whether to fetch keywords.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Extract")
     public Boolean extract;

@@ -5,13 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDatasetRequest extends TeaModel {
     /**
-     * <p>The dataset configuration.</p>
-     */
-    @NameInMap("DatasetConfig")
-    public DatasetConfig datasetConfig;
-
-    /**
-     * <p>The maximum number of bindings for the dataset. Valid values: 1 to 10.</p>
+     * <p>The maximum number of bindings for each dataset. Valid values: 1 to 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -20,9 +14,9 @@ public class UpdateDatasetRequest extends TeaModel {
     public Long datasetMaxBindCount;
 
     /**
-     * <p>The maximum number of metadata entities, such as data files, file relationships, and cluster groups, in the dataset. The maximum value is 2^63 - 1.</p>
+     * <p>The maximum number of metadata entities (including data files, file relationships, and clustering groups) in each dataset. The maximum value is 2^63-1.</p>
      * <blockquote>
-     * <p>This parameter is reserved and not enforced in practice.</p>
+     * <p>This is a reserved parameter and is not enforced during use.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -32,7 +26,7 @@ public class UpdateDatasetRequest extends TeaModel {
     public Long datasetMaxEntityCount;
 
     /**
-     * <p>The maximum number of files in the dataset. Valid values: 1 to 100000000.</p>
+     * <p>The maximum number of files in each dataset. Valid values: 1 to 100000000.</p>
      * 
      * <strong>example:</strong>
      * <p>100000000</p>
@@ -41,9 +35,9 @@ public class UpdateDatasetRequest extends TeaModel {
     public Long datasetMaxFileCount;
 
     /**
-     * <p>The maximum number of metadata relationships in the dataset. The maximum value is 2^63 - 1.</p>
+     * <p>The maximum number of metadata relationships in each dataset. The maximum value is 2^63-1.</p>
      * <blockquote>
-     * <p>This parameter is reserved and not enforced in practice.</p>
+     * <p>This is a reserved parameter and is not enforced during use.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,7 +47,7 @@ public class UpdateDatasetRequest extends TeaModel {
     public Long datasetMaxRelationCount;
 
     /**
-     * <p>The maximum total size of all files in the dataset, in bytes. If this limit is exceeded, you can no longer add new index entries. The maximum value is 2^63 - 1.</p>
+     * <p>The maximum total file size in each dataset. After this limit is exceeded, no more indexes can be added. The maximum value is 2^63-1. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>90000000000000000</p>
@@ -72,7 +66,7 @@ public class UpdateDatasetRequest extends TeaModel {
     public String datasetName;
 
     /**
-     * <p>The dataset description.</p>
+     * <p>The description of the dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>immtest</p>
@@ -100,22 +94,15 @@ public class UpdateDatasetRequest extends TeaModel {
     public String templateId;
 
     /**
-     * <p>This parameter is invalid.</p>
+     * <p>Invalid parameter.</p>
      */
     @NameInMap("WorkflowParameters")
+    @Deprecated
     public java.util.List<WorkflowParameter> workflowParameters;
 
     public static UpdateDatasetRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateDatasetRequest self = new UpdateDatasetRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateDatasetRequest setDatasetConfig(DatasetConfig datasetConfig) {
-        this.datasetConfig = datasetConfig;
-        return this;
-    }
-    public DatasetConfig getDatasetConfig() {
-        return this.datasetConfig;
     }
 
     public UpdateDatasetRequest setDatasetMaxBindCount(Long datasetMaxBindCount) {
@@ -190,6 +177,7 @@ public class UpdateDatasetRequest extends TeaModel {
         return this.templateId;
     }
 
+    @Deprecated
     public UpdateDatasetRequest setWorkflowParameters(java.util.List<WorkflowParameter> workflowParameters) {
         this.workflowParameters = workflowParameters;
         return this;

@@ -5,19 +5,28 @@ import com.aliyun.tea.*;
 
 public class PPTDetails extends TeaModel {
     /**
-     * <p>The URL of the captured slide image, which is stored in an Object Storage Service (OSS) bucket.</p>
+     * <p>The image path of the PPT frame capture.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;ppts/video_snapshots_0.jpg&quot;</p>
      */
     @NameInMap("ImagePath")
     public String imagePath;
 
     /**
-     * <p>The zero-based index of the slide in the sequence of detected slides.</p>
+     * <p>The index of the PPT frame capture.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("PPTShotIndex")
     public Long PPTShotIndex;
 
     /**
-     * <p>The start time of the slide, in milliseconds, from the beginning of the video.</p>
+     * <p>The time in the video.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5000</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

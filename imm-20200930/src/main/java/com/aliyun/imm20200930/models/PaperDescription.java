@@ -4,9 +4,15 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class PaperDescription extends TeaModel {
+    /**
+     * <p>The guide result.</p>
+     */
     @NameInMap("Description")
     public java.util.List<Summary> description;
 
+    /**
+     * <p>The section heading included in the guide result.</p>
+     */
     @NameInMap("TitleID")
     public java.util.List<String> titleID;
 

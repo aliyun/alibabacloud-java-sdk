@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateProjectResponseBody extends TeaModel {
     /**
-     * <p>The project information. Click Project for details.</p>
+     * <p>The project information. Click Project to view details.</p>
      */
     @NameInMap("Project")
     public Project project;

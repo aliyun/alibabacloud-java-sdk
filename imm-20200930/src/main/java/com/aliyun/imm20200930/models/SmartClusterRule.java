@@ -4,20 +4,29 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class SmartClusterRule extends TeaModel {
+    /**
+     * <p>The array of URIs for the reference files.</p>
+     */
     @NameInMap("BaseURIs")
     public java.util.List<String> baseURIs;
 
     /**
-     * <p>An array of keywords for clustering.</p>
+     * <p>The keywords.</p>
      */
     @NameInMap("Keywords")
     public java.util.List<String> keywords;
 
+    /**
+     * <p>The rule type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>figure</p>
+     */
     @NameInMap("RuleType")
     public String ruleType;
 
     /**
-     * <p>The sensitivity for clustering, ranging from 0.0 to 1.0.</p>
+     * <p>The sensitivity.</p>
      * 
      * <strong>example:</strong>
      * <p>0.5</p>

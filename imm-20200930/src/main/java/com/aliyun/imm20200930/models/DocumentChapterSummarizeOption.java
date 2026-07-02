@@ -5,19 +5,28 @@ import com.aliyun.tea.*;
 
 public class DocumentChapterSummarizeOption extends TeaModel {
     /**
-     * <p>The maximum number of results to return per request. If you do not specify this parameter, the default value is used.</p>
+     * <p>The number of section-by-section summaries. If neither Marker nor Index is specified, the entire article is summarized by default. Marker and Index must either both be specified or both be omitted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("Limit")
     public Integer limit;
 
     /**
-     * <p>The pagination token. It specifies the starting point for the query. To retrieve the next page of results, set this parameter to the marker value from the previous response.</p>
+     * <p>The start position for section-by-section summarization.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Marker")
     public Integer marker;
 
     /**
-     * <p>The summarization model version. If you do not specify this parameter, the default model version is used.</p>
+     * <p>The version of section-by-section summarization.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v1</p>
      */
     @NameInMap("Version")
     public String version;

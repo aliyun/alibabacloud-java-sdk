@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class VideoReadQuestionOption extends TeaModel {
     /**
-     * <p>Specifies the maximum number of answers to return when <code>Extract</code> is <code>true</code>. If omitted, the service returns all detected answers.</p>
+     * <p>The number of keywords. Valid values: 0 to 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Count")
     public Integer count;
 
     /**
-     * <p>Specifies whether to extract answer segments from the video. When <code>true</code>, the service identifies and returns these segments. The default is <code>false</code>.</p>
+     * <p>Specifies whether to fetch.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Extract")
     public Boolean extract;

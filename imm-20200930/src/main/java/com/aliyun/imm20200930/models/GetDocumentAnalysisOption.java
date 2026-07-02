@@ -5,46 +5,70 @@ import com.aliyun.tea.*;
 
 public class GetDocumentAnalysisOption extends TeaModel {
     /**
-     * <p>Specifies whether to generate summaries for each chapter. Set to <code>true</code> to enable this feature. Use <code>ChapterSummaryOption</code> to configure detailed options. Defaults to <code>false</code>.</p>
+     * <p>Specifies whether to retrieve chapter-by-chapter summaries of the document.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("ChapterSummary")
     public Boolean chapterSummary;
 
+    /**
+     * <p>The options for retrieving chapter-by-chapter summaries of the document.</p>
+     */
     @NameInMap("ChapterSummaryOption")
     public DocumentChapterSummarizeOption chapterSummaryOption;
 
     /**
-     * <p>Specifies whether to analyze each image within the document. Set to <code>true</code> to enable this feature. Defaults to <code>false</code>.</p>
+     * <p>Specifies whether to retrieve images extracted from the document, such as pictures, tables, and formulas.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Images")
     public Boolean images;
 
     /**
-     * <p>Specifies whether to extract keywords from the document. Set to <code>true</code> to enable this feature. Defaults to <code>false</code>.</p>
+     * <p>Specifies whether to retrieve keywords.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Keyword")
     public Boolean keyword;
 
     /**
-     * <p>Specifies whether to analyze the document layout. Set to <code>true</code> to enable this feature. Defaults to <code>false</code>.</p>
+     * <p>Specifies whether to retrieve the layout.jsonl file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Layouts")
     public Boolean layouts;
 
     /**
-     * <p>Specifies whether to identify the narrator in the document. Set to <code>true</code> to enable this feature. Defaults to <code>false</code>.</p>
+     * <p>Specifies whether to retrieve the document reading guide results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Narrator")
     public Boolean narrator;
 
     /**
-     * <p>Specifies whether to generate questions based on the document content. Set to <code>true</code> to enable this feature. Defaults to <code>false</code>.</p>
+     * <p>Specifies whether to retrieve the generated questions and corresponding answers.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Question")
     public Boolean question;
 
     /**
-     * <p>Specifies whether to generate a summary for the document. Set to <code>true</code> to enable this feature. Defaults to <code>false</code>.</p>
+     * <p>Specifies whether to retrieve the full-text summary.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Summary")
     public Boolean summary;

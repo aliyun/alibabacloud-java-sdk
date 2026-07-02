@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DocumentReadNarratorOption extends TeaModel {
     /**
-     * <p>Whether to enable the document narration feature. Set to <code>true</code> to enable narration. Defaults to <code>false</code>.</p>
+     * <p>Specifies whether to fetch.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Narrate")
     public Boolean narrate;

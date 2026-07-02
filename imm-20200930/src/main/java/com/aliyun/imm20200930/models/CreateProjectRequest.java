@@ -4,11 +4,8 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateProjectRequest extends TeaModel {
-    @NameInMap("DatasetConfig")
-    public DatasetConfig datasetConfig;
-
     /**
-     * <p>The maximum number of bindings for each dataset. Valid values: 1 to 10. Default value: 10.</p>
+     * <p>The maximum number of bindings per dataset. Valid values: 1 to 10. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -17,7 +14,7 @@ public class CreateProjectRequest extends TeaModel {
     public Long datasetMaxBindCount;
 
     /**
-     * <p>The maximum number of metadata entities in each dataset. Default value: 10000000000.</p>
+     * <p>The maximum number of metadata entities per dataset. Default value: 10000000000.</p>
      * <blockquote>
      * <p>This parameter is reserved for future use and is not enforced.</p>
      * </blockquote>
@@ -29,7 +26,7 @@ public class CreateProjectRequest extends TeaModel {
     public Long datasetMaxEntityCount;
 
     /**
-     * <p>The maximum number of files in each dataset. Valid values: 1 to 100000000. Default value: 10000000000.</p>
+     * <p>The maximum number of files per dataset. Valid values: 1 to 100000000. Default value: 10000000000.</p>
      * 
      * <strong>example:</strong>
      * <p>100000000</p>
@@ -38,7 +35,7 @@ public class CreateProjectRequest extends TeaModel {
     public Long datasetMaxFileCount;
 
     /**
-     * <p>The maximum number of metadata relationships in each dataset. Default value: 100000000000.</p>
+     * <p>The maximum number of metadata relationships per dataset. Default value: 100000000000.</p>
      * <blockquote>
      * <p>This parameter is reserved for future use and is not enforced.</p>
      * </blockquote>
@@ -50,7 +47,7 @@ public class CreateProjectRequest extends TeaModel {
     public Long datasetMaxRelationCount;
 
     /**
-     * <p>The maximum total file size in each dataset. After the limit is exceeded, no more indexes can be added. Unit: bytes. Default value: 90000000000000000.</p>
+     * <p>The maximum total file size per dataset. After this limit is reached, no more indexes can be added. Unit: bytes. Default value: 90000000000000000.</p>
      * 
      * <strong>example:</strong>
      * <p>90000000000000000</p>
@@ -77,7 +74,7 @@ public class CreateProjectRequest extends TeaModel {
     public Long projectMaxDatasetCount;
 
     /**
-     * <p>The project name. The naming rules are as follows:</p>
+     * <p>The project name. The following naming rules apply:</p>
      * <ul>
      * <li><p>The name must be 1 to 128 characters in length.</p>
      * </li>
@@ -122,14 +119,6 @@ public class CreateProjectRequest extends TeaModel {
     public static CreateProjectRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateProjectRequest self = new CreateProjectRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateProjectRequest setDatasetConfig(DatasetConfig datasetConfig) {
-        this.datasetConfig = datasetConfig;
-        return this;
-    }
-    public DatasetConfig getDatasetConfig() {
-        return this.datasetConfig;
     }
 
     public CreateProjectRequest setDatasetMaxBindCount(Long datasetMaxBindCount) {

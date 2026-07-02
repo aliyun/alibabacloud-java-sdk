@@ -5,18 +5,25 @@ import com.aliyun.tea.*;
 
 public class DocumentReadSummaryOption extends TeaModel {
     /**
-     * <p>Specifies whether to generate a summary for each chapter. This setting applies only if the service can identify chapters.</p>
-     * <p><strong>Default value</strong>: <code>false</code>.</p>
+     * <p>Specifies whether to extract the chapter-level summary of the article.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ChapterSummarize")
     public Boolean chapterSummarize;
 
+    /**
+     * <p>The chapter-level summary options for the article.</p>
+     */
     @NameInMap("ChapterSummarizeOption")
     public DocumentChapterSummarizeOption chapterSummarizeOption;
 
     /**
-     * <p>Specifies whether to generate a summary for the entire document.</p>
-     * <p><strong>Default value</strong>: <code>false</code>.</p>
+     * <p>Specifies whether to extract the article summary.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Summarize")
     public Boolean summarize;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Dataset extends TeaModel {
     /**
-     * <p>Number of OSS buckets currently attached to the dataset.</p>
+     * <p>The number of OSS buckets currently bound to the dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -14,7 +14,7 @@ public class Dataset extends TeaModel {
     public Long bindCount;
 
     /**
-     * <p>Timestamp of dataset creation in RFC3339Nano format.</p>
+     * <p>The timestamp when the dataset was created, in RFC3339Nano format.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-06-29T14:50:13.011643661+08:00</p>
@@ -23,13 +23,7 @@ public class Dataset extends TeaModel {
     public String createTime;
 
     /**
-     * <p>Dataset configuration.</p>
-     */
-    @NameInMap("DatasetConfig")
-    public DatasetConfig datasetConfig;
-
-    /**
-     * <p>Maximum number of bindings per dataset.</p>
+     * <p>The maximum number of bindings allowed for each dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +32,7 @@ public class Dataset extends TeaModel {
     public Long datasetMaxBindCount;
 
     /**
-     * <p>Maximum number of metadata entities in the dataset.</p>
+     * <p>The maximum number of metadata entities allowed in the dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>10000000000</p>
@@ -47,7 +41,7 @@ public class Dataset extends TeaModel {
     public Long datasetMaxEntityCount;
 
     /**
-     * <p>Maximum number of files in the dataset.</p>
+     * <p>The maximum number of files allowed in the dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>100000000</p>
@@ -56,7 +50,7 @@ public class Dataset extends TeaModel {
     public Long datasetMaxFileCount;
 
     /**
-     * <p>Maximum number of metadata relations in the dataset.</p>
+     * <p>The maximum number of metadata relationships allowed in the dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>100000000000</p>
@@ -65,7 +59,7 @@ public class Dataset extends TeaModel {
     public Long datasetMaxRelationCount;
 
     /**
-     * <p>Maximum total file size in the dataset, in bytes.</p>
+     * <p>The maximum total file size allowed in the dataset, in bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>90000000000000000</p>
@@ -74,7 +68,7 @@ public class Dataset extends TeaModel {
     public Long datasetMaxTotalFileSize;
 
     /**
-     * <p>Dataset name.</p>
+     * <p>The dataset name.</p>
      * 
      * <strong>example:</strong>
      * <p>dataset001</p>
@@ -83,7 +77,7 @@ public class Dataset extends TeaModel {
     public String datasetName;
 
     /**
-     * <p>Dataset description.</p>
+     * <p>The description of the dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>测试数据集</p>
@@ -92,7 +86,7 @@ public class Dataset extends TeaModel {
     public String description;
 
     /**
-     * <p>Current number of files in the dataset.</p>
+     * <p>The current number of files in the dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -101,7 +95,7 @@ public class Dataset extends TeaModel {
     public Long fileCount;
 
     /**
-     * <p>Project name.</p>
+     * <p>The project name.</p>
      * 
      * <strong>example:</strong>
      * <p>immtest</p>
@@ -110,7 +104,7 @@ public class Dataset extends TeaModel {
     public String projectName;
 
     /**
-     * <p>Workflow template ID.</p>
+     * <p>The workflow template ID.</p>
      * 
      * <strong>example:</strong>
      * <p>Official:ImageManagement</p>
@@ -119,7 +113,7 @@ public class Dataset extends TeaModel {
     public String templateId;
 
     /**
-     * <p>Total file size in the dataset, in bytes.</p>
+     * <p>The total file size in the dataset, in bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>100000</p>
@@ -128,9 +122,9 @@ public class Dataset extends TeaModel {
     public Long totalFileSize;
 
     /**
-     * <p>Timestamp of the last dataset update in RFC3339Nano format.</p>
+     * <p>The timestamp when the dataset was last modified, in RFC3339Nano format.</p>
      * <blockquote>
-     * <p>If the dataset has never been updated since creation, the update timestamp equals the creation timestamp.</p>
+     * <p>If the dataset has not been updated since it was created, this timestamp is the same as the creation timestamp.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -140,12 +134,13 @@ public class Dataset extends TeaModel {
     public String updateTime;
 
     /**
-     * <p>Custom parameters.</p>
+     * <p>The custom parameters.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
     @NameInMap("WorkflowParameters")
+    @Deprecated
     public java.util.List<WorkflowParameter> workflowParameters;
 
     public static Dataset build(java.util.Map<String, ?> map) throws Exception {
@@ -167,14 +162,6 @@ public class Dataset extends TeaModel {
     }
     public String getCreateTime() {
         return this.createTime;
-    }
-
-    public Dataset setDatasetConfig(DatasetConfig datasetConfig) {
-        this.datasetConfig = datasetConfig;
-        return this;
-    }
-    public DatasetConfig getDatasetConfig() {
-        return this.datasetConfig;
     }
 
     public Dataset setDatasetMaxBindCount(Long datasetMaxBindCount) {
@@ -273,6 +260,7 @@ public class Dataset extends TeaModel {
         return this.updateTime;
     }
 
+    @Deprecated
     public Dataset setWorkflowParameters(java.util.List<WorkflowParameter> workflowParameters) {
         this.workflowParameters = workflowParameters;
         return this;

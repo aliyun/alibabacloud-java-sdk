@@ -8,7 +8,7 @@ public class InsightsConfig extends TeaModel {
     public ImageInsightsConfig image;
 
     /**
-     * <p>The language of the source content.</p>
+     * <p>The language.</p>
      * 
      * <strong>example:</strong>
      * <p>zh-Hans</p>
@@ -16,6 +16,9 @@ public class InsightsConfig extends TeaModel {
     @NameInMap("Language")
     public String language;
 
+    /**
+     * <p>The video content-aware configuration.</p>
+     */
     @NameInMap("Video")
     public VideoInsightsConfig video;
 

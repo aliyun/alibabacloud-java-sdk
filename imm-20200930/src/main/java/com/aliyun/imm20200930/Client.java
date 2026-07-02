@@ -1409,14 +1409,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>You must understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management before using this API.</strong></li>
-     * <li>Dataset names must be unique within a project.</li>
-     * <li>The number of datasets you can create is limited. You can query this limit using <a href="https://help.aliyun.com/document_detail/478155.html">GetProject</a>.</li>
-     * <li>After creating a dataset, you can use <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> to index object metadata. This enables diverse <a href="https://help.aliyun.com/document_detail/478175.html">data retrieval and statistics</a> and intelligent management.</li>
+     * <li><strong>Before you use this operation, make sure that you fully understand the billing of Intelligent Media Management (IMM) and its <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a></strong>.</li>
+     * <li>Dataset names must be unique within the same project.</li>
+     * <li>The number of datasets that can be created is limited. You can call <a href="https://help.aliyun.com/document_detail/478155.html">GetProjcet</a> to query this limit.</li>
+     * <li>After you create a dataset, you can call <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> to create file metadata indexes for diversified <a href="https://help.aliyun.com/document_detail/478175.html">data retrieval, statistics</a>, and intelligent management.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Create a dataset.</p>
+     * <p>Creates a dataset.</p>
      * 
      * @param tmpReq CreateDatasetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1426,19 +1426,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateDatasetShrinkRequest request = new CreateDatasetShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.datasetConfig)) {
-            request.datasetConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.datasetConfig, "DatasetConfig", "json");
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.workflowParameters)) {
             request.workflowParametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.workflowParameters, "WorkflowParameters", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.datasetConfigShrink)) {
-            query.put("DatasetConfig", request.datasetConfigShrink);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.datasetMaxBindCount)) {
             query.put("DatasetMaxBindCount", request.datasetMaxBindCount);
         }
@@ -1499,14 +1491,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>You must understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management before using this API.</strong></li>
-     * <li>Dataset names must be unique within a project.</li>
-     * <li>The number of datasets you can create is limited. You can query this limit using <a href="https://help.aliyun.com/document_detail/478155.html">GetProject</a>.</li>
-     * <li>After creating a dataset, you can use <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> to index object metadata. This enables diverse <a href="https://help.aliyun.com/document_detail/478175.html">data retrieval and statistics</a> and intelligent management.</li>
+     * <li><strong>Before you use this operation, make sure that you fully understand the billing of Intelligent Media Management (IMM) and its <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a></strong>.</li>
+     * <li>Dataset names must be unique within the same project.</li>
+     * <li>The number of datasets that can be created is limited. You can call <a href="https://help.aliyun.com/document_detail/478155.html">GetProjcet</a> to query this limit.</li>
+     * <li>After you create a dataset, you can call <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> to create file metadata indexes for diversified <a href="https://help.aliyun.com/document_detail/478175.html">data retrieval, statistics</a>, and intelligent management.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Create a dataset.</p>
+     * <p>Creates a dataset.</p>
      * 
      * @param request CreateDatasetRequest
      * @return CreateDatasetResponse
@@ -3201,7 +3193,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li><a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a></li>
      * <li><a href="https://help.aliyun.com/document_detail/479912.html">Create a trigger</a></li>
      * <li><a href="https://help.aliyun.com/document_detail/606694.html">Create a batch task</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/478202.html">Create a binding task</a>.</li>
+     * <li><a href="https://help.aliyun.com/document_detail/478202.html">Create a binding task</a></li>
      * </ul>
      * </li>
      * </ul>
@@ -3217,19 +3209,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateProjectShrinkRequest request = new CreateProjectShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.datasetConfig)) {
-            request.datasetConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.datasetConfig, "DatasetConfig", "json");
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.tag)) {
             request.tagShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tag, "Tag", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.datasetConfigShrink)) {
-            query.put("DatasetConfig", request.datasetConfigShrink);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.datasetMaxBindCount)) {
             query.put("DatasetMaxBindCount", request.datasetMaxBindCount);
         }
@@ -3300,7 +3284,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li><a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a></li>
      * <li><a href="https://help.aliyun.com/document_detail/479912.html">Create a trigger</a></li>
      * <li><a href="https://help.aliyun.com/document_detail/606694.html">Create a batch task</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/478202.html">Create a binding task</a>.</li>
+     * <li><a href="https://help.aliyun.com/document_detail/478202.html">Create a binding task</a></li>
      * </ul>
      * </li>
      * </ul>
@@ -6312,13 +6296,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Querying project information supports real-time retrieval of file statistics. Enable this feature through parameter settings. For details, see the request parameters section.</p>
+     * <p>Querying project information supports real-time retrieval of file statistics information. You can enable this feature through parameter settings. For details, see the request parameters section.</p>
      * <blockquote>
      * <p>Notice: Only files in datasets created before December 20, 2025 can be counted.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries information about a specified project, including basic information and statistics related to datasets and files.</p>
+     * <p>Queries information about a specified project, including basic information and statistics information related to datasets and files.</p>
      * 
      * @param request GetProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6354,13 +6338,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Querying project information supports real-time retrieval of file statistics. Enable this feature through parameter settings. For details, see the request parameters section.</p>
+     * <p>Querying project information supports real-time retrieval of file statistics information. You can enable this feature through parameter settings. For details, see the request parameters section.</p>
      * <blockquote>
      * <p>Notice: Only files in datasets created before December 20, 2025 can be counted.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries information about a specified project, including basic information and statistics related to datasets and files.</p>
+     * <p>Queries information about a specified project, including basic information and statistics information related to datasets and files.</p>
      * 
      * @param request GetProjectRequest
      * @return GetProjectResponse
@@ -8715,14 +8699,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>Before calling this operation, review</strong> the billing model and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management (IMM).</li>
-     * <li>The dataset must exist before you can update it.</li>
-     * <li>You only need to specify the parameters that you want to update. Unspecified parameters remain unchanged.</li>
+     * <li><strong>Before you use this operation, make sure that you fully understand the billing of Intelligent Media Management (IMM) and its <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a></strong>.</li>
+     * <li>Before you update dataset information, make sure that the dataset has been created. To create a dataset, refer to the request parameter descriptions.</li>
+     * <li>When you update dataset information, specify only the fields that you want to update. Fields that are not specified remain unchanged.</li>
      * <li>After a dataset is updated, the changes may take up to 5 minutes to take effect.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Updates information for a dataset.</p>
+     * <p>Updates the information of a dataset.</p>
      * 
      * @param tmpReq UpdateDatasetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8732,19 +8716,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateDatasetShrinkRequest request = new UpdateDatasetShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.datasetConfig)) {
-            request.datasetConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.datasetConfig, "DatasetConfig", "json");
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.workflowParameters)) {
             request.workflowParametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.workflowParameters, "WorkflowParameters", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.datasetConfigShrink)) {
-            query.put("DatasetConfig", request.datasetConfigShrink);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.datasetMaxBindCount)) {
             query.put("DatasetMaxBindCount", request.datasetMaxBindCount);
         }
@@ -8805,14 +8781,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>Before calling this operation, review</strong> the billing model and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management (IMM).</li>
-     * <li>The dataset must exist before you can update it.</li>
-     * <li>You only need to specify the parameters that you want to update. Unspecified parameters remain unchanged.</li>
+     * <li><strong>Before you use this operation, make sure that you fully understand the billing of Intelligent Media Management (IMM) and its <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a></strong>.</li>
+     * <li>Before you update dataset information, make sure that the dataset has been created. To create a dataset, refer to the request parameter descriptions.</li>
+     * <li>When you update dataset information, specify only the fields that you want to update. Fields that are not specified remain unchanged.</li>
      * <li>After a dataset is updated, the changes may take up to 5 minutes to take effect.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Updates information for a dataset.</p>
+     * <p>Updates the information of a dataset.</p>
      * 
      * @param request UpdateDatasetRequest
      * @return UpdateDatasetResponse
@@ -9067,19 +9043,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateProjectShrinkRequest request = new UpdateProjectShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.datasetConfig)) {
-            request.datasetConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.datasetConfig, "DatasetConfig", "json");
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.tag)) {
             request.tagShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tag, "Tag", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.datasetConfigShrink)) {
-            query.put("DatasetConfig", request.datasetConfigShrink);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.datasetMaxBindCount)) {
             query.put("DatasetMaxBindCount", request.datasetMaxBindCount);
         }
