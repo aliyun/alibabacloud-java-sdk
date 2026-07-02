@@ -126,6 +126,9 @@ public class RunAgentTaskResponseBody extends TeaModel {
         @NameInMap("RunningAt")
         public String runningAt;
 
+        @NameInMap("SessionId")
+        public String sessionId;
+
         /**
          * <p>The task ID, which is globally unique.</p>
          * 
@@ -171,6 +174,14 @@ public class RunAgentTaskResponseBody extends TeaModel {
         }
         public String getRunningAt() {
             return this.runningAt;
+        }
+
+        public RunAgentTaskResponseBodyTasks setSessionId(String sessionId) {
+            this.sessionId = sessionId;
+            return this;
+        }
+        public String getSessionId() {
+            return this.sessionId;
         }
 
         public RunAgentTaskResponseBodyTasks setTaskId(String taskId) {

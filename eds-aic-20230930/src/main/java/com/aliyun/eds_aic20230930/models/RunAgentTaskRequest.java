@@ -15,7 +15,6 @@ public class RunAgentTaskRequest extends TeaModel {
 
     /**
      * <p>The list of Mobile node IDs. A maximum of 100 nodes are supported per request.</p>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
@@ -31,6 +30,9 @@ public class RunAgentTaskRequest extends TeaModel {
 
     @NameInMap("ScheduleId")
     public String scheduleId;
+
+    @NameInMap("Targets")
+    public java.util.List<RunAgentTaskRequestTargets> targets;
 
     @NameInMap("TaskConfigId")
     public String taskConfigId;
@@ -90,6 +92,14 @@ public class RunAgentTaskRequest extends TeaModel {
         return this.scheduleId;
     }
 
+    public RunAgentTaskRequest setTargets(java.util.List<RunAgentTaskRequestTargets> targets) {
+        this.targets = targets;
+        return this;
+    }
+    public java.util.List<RunAgentTaskRequestTargets> getTargets() {
+        return this.targets;
+    }
+
     public RunAgentTaskRequest setTaskConfigId(String taskConfigId) {
         this.taskConfigId = taskConfigId;
         return this;
@@ -112,6 +122,36 @@ public class RunAgentTaskRequest extends TeaModel {
     }
     public String getUserPrompt() {
         return this.userPrompt;
+    }
+
+    public static class RunAgentTaskRequestTargets extends TeaModel {
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("SessionId")
+        public String sessionId;
+
+        public static RunAgentTaskRequestTargets build(java.util.Map<String, ?> map) throws Exception {
+            RunAgentTaskRequestTargets self = new RunAgentTaskRequestTargets();
+            return TeaModel.build(map, self);
+        }
+
+        public RunAgentTaskRequestTargets setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public RunAgentTaskRequestTargets setSessionId(String sessionId) {
+            this.sessionId = sessionId;
+            return this;
+        }
+        public String getSessionId() {
+            return this.sessionId;
+        }
+
     }
 
 }

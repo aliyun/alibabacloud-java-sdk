@@ -6111,6 +6111,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ScheduleId", request.scheduleId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.targets)) {
+            query.put("Targets", request.targets);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.taskConfigId)) {
             query.put("TaskConfigId", request.taskConfigId);
         }
