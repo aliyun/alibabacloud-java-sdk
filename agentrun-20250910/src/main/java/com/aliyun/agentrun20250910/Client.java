@@ -794,7 +794,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a template for launching sandboxes. A template defines the runtime environment, resource configuration, and other settings for a sandbox.</p>
+     * <p>Creates a new template for subsequently creating sandboxes. A template defines the runtime environment, resource configuration, and other settings for sandboxes.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a template.</p>
@@ -826,7 +826,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a template for launching sandboxes. A template defines the runtime environment, resource configuration, and other settings for a sandbox.</p>
+     * <p>Creates a new template for subsequently creating sandboxes. A template defines the runtime environment, resource configuration, and other settings for sandboxes.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a template.</p>

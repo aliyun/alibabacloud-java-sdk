@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTemplateInput extends TeaModel {
     /**
-     * <p>Controls whether data plane calls can create, stop, or delete the sandbox.</p>
+     * <p>Whether to allow data channel to call create/stop/delete sandbox APIs</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -17,19 +17,19 @@ public class CreateTemplateInput extends TeaModel {
     public Boolean allowAnonymousManage;
 
     /**
-     * <p>The Application Real-Time Monitoring Service (ARMS) configuration.</p>
+     * <p>ARMS configuration</p>
      */
     @NameInMap("armsConfiguration")
     public ArmsConfiguration armsConfiguration;
 
     /**
-     * <p>The container configuration. You can only use images based on the Browser or Code Interpreter base images.</p>
+     * <p>Container configuration, only images based on Browser/Code Interpreter base images are allowed</p>
      */
     @NameInMap("containerConfiguration")
     public ContainerConfiguration containerConfiguration;
 
     /**
-     * <p>The number of CPU cores.</p>
+     * <p>CPU resource configuration (unit: cores)</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,13 +39,13 @@ public class CreateTemplateInput extends TeaModel {
     public Float cpu;
 
     /**
-     * <p>The credential configuration.</p>
+     * <p>Credential configuration</p>
      */
     @NameInMap("credentialConfiguration")
     public CredentialConfiguration credentialConfiguration;
 
     /**
-     * <p>The template description.</p>
+     * <p>Template description</p>
      * 
      * <strong>example:</strong>
      * <p>模板描述</p>
@@ -54,7 +54,7 @@ public class CreateTemplateInput extends TeaModel {
     public String description;
 
     /**
-     * <p>The disk size in MB.</p>
+     * <p>Disk size</p>
      * 
      * <strong>example:</strong>
      * <p>10240</p>
@@ -63,25 +63,22 @@ public class CreateTemplateInput extends TeaModel {
     public Integer diskSize;
 
     /**
-     * <p>Controls whether to enable the Sandbox Agent.</p>
+     * <p>Sandbox Agent switch</p>
      */
     @NameInMap("enableAgent")
     public Boolean enableAgent;
 
-    /**
-     * <p>Specifies whether to enable the pre-stop hook.</p>
-     */
     @NameInMap("enablePreStop")
     public Boolean enablePreStop;
 
     /**
-     * <p>The environment variables for the sandbox.</p>
+     * <p>Environment variables</p>
      */
     @NameInMap("environmentVariables")
     public java.util.Map<String, String> environmentVariables;
 
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the execution role.</p>
+     * <p>Execution role ARN</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::123456789:role/aliyunfcdefaultrole</p>
@@ -90,13 +87,13 @@ public class CreateTemplateInput extends TeaModel {
     public String executionRoleArn;
 
     /**
-     * <p>The log configuration.</p>
+     * <p>Log configuration</p>
      */
     @NameInMap("logConfiguration")
     public LogConfiguration logConfiguration;
 
     /**
-     * <p>The memory size in MB.</p>
+     * <p>Memory resource configuration (unit: MB)</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -106,32 +103,29 @@ public class CreateTemplateInput extends TeaModel {
     public Integer memory;
 
     /**
-     * <p>The Network Attached Storage (NAS) mount configuration.</p>
+     * <p>NAS mount configuration</p>
      */
     @NameInMap("nasConfig")
     public NASConfig nasConfig;
 
     /**
-     * <p>The network configuration.</p>
+     * <p>Network configuration</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("networkConfiguration")
     public NetworkConfiguration networkConfiguration;
 
     /**
-     * <p>A list of Object Storage Service (OSS) configurations.</p>
+     * <p>OSS configuration</p>
      */
     @NameInMap("ossConfiguration")
     public java.util.List<OssConfiguration> ossConfiguration;
 
-    /**
-     * <p>The timeout for the pre-stop hook, in seconds. This parameter applies only when <code>enablePreStop</code> is set to <code>true</code>.</p>
-     */
     @NameInMap("preStopTimeoutInSeconds")
     public Integer preStopTimeoutInSeconds;
 
     /**
-     * <p>The duration in seconds that a sandbox can be idle before it is automatically stopped.</p>
+     * <p>Sandbox idle timeout (in seconds)</p>
      * 
      * <strong>example:</strong>
      * <p>1800</p>
@@ -140,7 +134,7 @@ public class CreateTemplateInput extends TeaModel {
     public Integer sandboxIdleTimeoutInSeconds;
 
     /**
-     * <p>The maximum time-to-live (TTL) in seconds for the sandbox. The sandbox is terminated after this duration, regardless of activity.</p>
+     * <p>Sandbox time-to-live (in seconds)</p>
      * 
      * <strong>example:</strong>
      * <p>26000</p>
@@ -149,19 +143,19 @@ public class CreateTemplateInput extends TeaModel {
     public Integer sandboxTTLInSeconds;
 
     /**
-     * <p>The scaling configuration.</p>
+     * <p>Scaling configuration</p>
      */
     @NameInMap("scalingConfig")
     public ScalingConfig scalingConfig;
 
     /**
-     * <p>The template configuration. This is a flexible object whose structure varies depending on the <code>templateType</code>.</p>
+     * <p>Template configuration (flexible object structure that varies depending on templateType)</p>
      */
     @NameInMap("templateConfiguration")
     public java.util.Map<String, ?> templateConfiguration;
 
     /**
-     * <p>A unique name for the template within your account.</p>
+     * <p>Template name (must be unique within the account)</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -171,7 +165,7 @@ public class CreateTemplateInput extends TeaModel {
     public String templateName;
 
     /**
-     * <p>The template type.</p>
+     * <p>Template type</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -180,9 +174,6 @@ public class CreateTemplateInput extends TeaModel {
     @NameInMap("templateType")
     public String templateType;
 
-    /**
-     * <p>The ID of the workspace.</p>
-     */
     @NameInMap("workspaceId")
     public String workspaceId;
 

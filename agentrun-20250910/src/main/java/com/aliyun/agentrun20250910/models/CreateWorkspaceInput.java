@@ -7,6 +7,9 @@ public class CreateWorkspaceInput extends TeaModel {
     @NameInMap("description")
     public String description;
 
+    @NameInMap("enablePresetModel")
+    public Boolean enablePresetModel;
+
     @NameInMap("name")
     public String name;
 
@@ -24,6 +27,14 @@ public class CreateWorkspaceInput extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateWorkspaceInput setEnablePresetModel(Boolean enablePresetModel) {
+        this.enablePresetModel = enablePresetModel;
+        return this;
+    }
+    public Boolean getEnablePresetModel() {
+        return this.enablePresetModel;
     }
 
     public CreateWorkspaceInput setName(String name) {

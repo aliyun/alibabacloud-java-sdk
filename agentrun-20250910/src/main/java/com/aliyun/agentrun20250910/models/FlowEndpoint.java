@@ -32,7 +32,7 @@ public class FlowEndpoint extends TeaModel {
      * <p>The Alibaba Cloud Resource Name (ARN) of the flow endpoint.</p>
      * 
      * <strong>example:</strong>
-     * <p>acs:agentrun:cn-hangzhou:1760720386195983:workspaces/ws-xxx/flows/flow-xxx/endpoints/fe-xxx</p>
+     * <p>acs:agentrun:cn-hangzhou:123456789012:workspaces/ws-xxx/flows/flow-xxx/endpoints/fe-xxx</p>
      */
     @NameInMap("flowEndpointArn")
     public String flowEndpointArn;
