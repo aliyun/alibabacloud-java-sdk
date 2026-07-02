@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ObtainDomainProxyTokenRequest extends TeaModel {
     /**
-     * <p>The domain ID.</p>
+     * <p>The domain name ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ObtainDomainProxyTokenRequest extends TeaModel {
     public String domainId;
 
     /**
-     * <p>The ID of the domain name proxy token.</p>
+     * <p>The domain proxy token ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

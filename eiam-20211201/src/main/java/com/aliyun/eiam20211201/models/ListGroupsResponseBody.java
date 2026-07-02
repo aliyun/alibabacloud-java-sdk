@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListGroupsResponseBody extends TeaModel {
     /**
-     * <p>The queried account groups.</p>
+     * <p>Account group list.</p>
      */
     @NameInMap("Groups")
     public java.util.List<ListGroupsResponseBodyGroups> groups;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
@@ -20,7 +20,7 @@ public class ListGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned. The maximum number of entries returned at a time depends on the value of PageSize.</p>
+     * <p>Total number of matched entries. The maximum number of entries returned in a single request is determined by pageSize.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -59,7 +59,7 @@ public class ListGroupsResponseBody extends TeaModel {
 
     public static class ListGroupsResponseBodyGroups extends TeaModel {
         /**
-         * <p>The time at which the group was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>Group creation time in Unix timestamp format, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1652085686179</p>
@@ -68,7 +68,7 @@ public class ListGroupsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The description of the group.</p>
+         * <p>Group description.</p>
          * 
          * <strong>example:</strong>
          * <p>test group</p>
@@ -77,7 +77,7 @@ public class ListGroupsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The external ID of the group, which can be used to associate the group with an external system. By default, the external ID is the group ID.</p>
+         * <p>Group external ID, used for association with external systems. Defaults to the account group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>group_d6sbsuumeta4h66ec3il7yxxxx</p>
@@ -86,7 +86,7 @@ public class ListGroupsResponseBody extends TeaModel {
         public String groupExternalId;
 
         /**
-         * <p>The group ID.</p>
+         * <p>Group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>group_d6sbsuumeta4h66ec3il7yxxxx</p>
@@ -95,7 +95,7 @@ public class ListGroupsResponseBody extends TeaModel {
         public String groupId;
 
         /**
-         * <p>The name of the group.</p>
+         * <p>Group name.</p>
          * 
          * <strong>example:</strong>
          * <p>group_name</p>
@@ -104,7 +104,7 @@ public class ListGroupsResponseBody extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The source ID of the group. If the group was imported from other services, this value indicates the external source ID. By default, the source ID is the instance ID.</p>
+         * <p>Group source ID. If created by importing from other sources, this is the external source ID. Defaults to the instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -113,7 +113,10 @@ public class ListGroupsResponseBody extends TeaModel {
         public String groupSourceId;
 
         /**
-         * <p>The source type of the group. Only build_in may be returned, which indicates that the group was created in IDaaS.</p>
+         * <p>Group source type. Currently, only self-built is supported. Valid values:</p>
+         * <ul>
+         * <li>build_in: self-built.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>build_in</p>
@@ -122,7 +125,7 @@ public class ListGroupsResponseBody extends TeaModel {
         public String groupSourceType;
 
         /**
-         * <p>The instance ID.</p>
+         * <p>Instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -131,7 +134,7 @@ public class ListGroupsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The time at which the group was last updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>Group last update time in Unix timestamp format, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1652085686179</p>

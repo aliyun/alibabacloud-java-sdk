@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCloudAccountResponseBody extends TeaModel {
     /**
-     * <p>The details of the Alibaba Cloud account.</p>
+     * <p>The cloud account details.</p>
      */
     @NameInMap("CloudAccount")
     public GetCloudAccountResponseBodyCloudAccount cloudAccount;
@@ -51,7 +51,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The description of the error.</p>
+         * <p>The error description.</p>
          * 
          * <strong>example:</strong>
          * <p>There is no permission.</p>
@@ -84,13 +84,13 @@ public class GetCloudAccountResponseBody extends TeaModel {
 
     public static class GetCloudAccountResponseBodyCloudAccountCloudAccountHealthCheckResult extends TeaModel {
         /**
-         * <p>The reason for the fault. This field returns a value when the health check status is unhealthy.</p>
+         * <p>The error reason. This field is returned when the health check status is unhealthy.</p>
          */
         @NameInMap("ErrorReason")
         public GetCloudAccountResponseBodyCloudAccountCloudAccountHealthCheckResultErrorReason errorReason;
 
         /**
-         * <p>The time of the last check. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The time of the last health check. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>
@@ -99,12 +99,10 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public Long lastCheckTime;
 
         /**
-         * <p>The result of the health check for the cloud account. Valid values:</p>
+         * <p>The health check result of the cloud account. Valid values:</p>
          * <ul>
-         * <li><p>success: The health check was successful.</p>
-         * </li>
-         * <li><p>failed: The health check failed.</p>
-         * </li>
+         * <li>success: Succeeded.</li>
+         * <li>failed: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -146,7 +144,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
 
     public static class GetCloudAccountResponseBodyCloudAccountCloudAccountProviderConfig extends TeaModel {
         /**
-         * <p>The audience identity.</p>
+         * <p>The audience identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>urn:cloud:idaas:sts:xxx:xxx</p>
@@ -155,7 +153,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public String audience;
 
         /**
-         * <p>The ID of the authorization server.</p>
+         * <p>The authorization server ID.</p>
          * 
          * <strong>example:</strong>
          * <p>iauths_system</p>
@@ -164,7 +162,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public String authorizationServerId;
 
         /**
-         * <p>The issuer.</p>
+         * <p>Issuer。</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xxxxx.aliyunidaas.com/api/v2/iauths_system/oauth2">https://xxxxx.aliyunidaas.com/api/v2/iauths_system/oauth2</a></p>
@@ -173,7 +171,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public String issuer;
 
         /**
-         * <p>The public key endpoint for signature verification.</p>
+         * <p>The signature verification public key endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xxxxx.aliyunidaas.com/api/v2/iauths_system/oauth2/jwks">https://xxxxx.aliyunidaas.com/api/v2/iauths_system/oauth2/jwks</a></p>
@@ -222,7 +220,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
 
     public static class GetCloudAccountResponseBodyCloudAccount extends TeaModel {
         /**
-         * <p>The unique external ID of the Alibaba Cloud account.</p>
+         * <p>The external unique identifier of the cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567</p>
@@ -231,14 +229,11 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public String cloudAccountExternalId;
 
         /**
-         * <p>The health status of the Alibaba Cloud account. Valid values:</p>
+         * <p>The health status of the cloud account. Valid values:</p>
          * <ul>
-         * <li><p>healthy: Healthy.</p>
-         * </li>
-         * <li><p>unhealthy: Unhealthy.</p>
-         * </li>
-         * <li><p>unknown: Unknown.</p>
-         * </li>
+         * <li>healthy: Healthy.</li>
+         * <li>unhealthy: Unhealthy.</li>
+         * <li>unknown: Unknown.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -248,13 +243,13 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public String cloudAccountHealth;
 
         /**
-         * <p>The health check result for the cloud account.</p>
+         * <p>The health check result of the cloud account.</p>
          */
         @NameInMap("CloudAccountHealthCheckResult")
         public GetCloudAccountResponseBodyCloudAccountCloudAccountHealthCheckResult cloudAccountHealthCheckResult;
 
         /**
-         * <p>The ID of the Alibaba Cloud account.</p>
+         * <p>The cloud account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ca_01kmegjc11qa1txxxxx</p>
@@ -263,7 +258,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public String cloudAccountId;
 
         /**
-         * <p>The name of the Alibaba Cloud account.</p>
+         * <p>The cloud account name.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_accout_xxxx</p>
@@ -272,13 +267,13 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public String cloudAccountName;
 
         /**
-         * <p>The configuration of the identity provider.</p>
+         * <p>The identity provider configuration.</p>
          */
         @NameInMap("CloudAccountProviderConfig")
         public GetCloudAccountResponseBodyCloudAccountCloudAccountProviderConfig cloudAccountProviderConfig;
 
         /**
-         * <p>The name of the identity provider.</p>
+         * <p>The identity provider name.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas-eiam-oidc-provider</p>
@@ -286,10 +281,13 @@ public class GetCloudAccountResponseBody extends TeaModel {
         @NameInMap("CloudAccountProviderName")
         public String cloudAccountProviderName;
 
+        @NameInMap("CloudAccountSite")
+        public String cloudAccountSite;
+
         /**
-         * <p>The type of the Alibaba Cloud account. The valid value is:</p>
+         * <p>The cloud account type. Valid values:</p>
          * <ul>
-         * <li>alibaba_cloud: Alibaba Cloud</li>
+         * <li>alibaba_cloud: Alibaba Cloud.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -308,7 +306,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The description of the Alibaba Cloud account.</p>
+         * <p>The cloud account description.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_accout_description</p>
@@ -326,7 +324,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The time of the last update. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The most recent update time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830227000</p>
@@ -393,6 +391,14 @@ public class GetCloudAccountResponseBody extends TeaModel {
         }
         public String getCloudAccountProviderName() {
             return this.cloudAccountProviderName;
+        }
+
+        public GetCloudAccountResponseBodyCloudAccount setCloudAccountSite(String cloudAccountSite) {
+            this.cloudAccountSite = cloudAccountSite;
+            return this;
+        }
+        public String getCloudAccountSite() {
+            return this.cloudAccountSite;
         }
 
         public GetCloudAccountResponseBodyCloudAccount setCloudAccountVendorType(String cloudAccountVendorType) {

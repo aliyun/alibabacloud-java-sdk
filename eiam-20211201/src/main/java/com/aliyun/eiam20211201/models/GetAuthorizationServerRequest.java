@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAuthorizationServerRequest extends TeaModel {
     /**
-     * <p>IDaaS的授权服务器资源ID。</p>
+     * <p>The authorization server ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetAuthorizationServerRequest extends TeaModel {
     public String authorizationServerId;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

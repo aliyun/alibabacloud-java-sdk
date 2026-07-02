@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListEventTypesResponseBody extends TeaModel {
     /**
-     * <p>List of event types</p>
+     * <p>The list of event types.</p>
      */
     @NameInMap("EventTypes")
     public java.util.List<ListEventTypesResponseBodyEventTypes> eventTypes;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
@@ -20,7 +20,7 @@ public class ListEventTypesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total number of items in the list</p>
+     * <p>The total number of entries in the list.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -59,7 +59,7 @@ public class ListEventTypesResponseBody extends TeaModel {
 
     public static class ListEventTypesResponseBodyEventTypes extends TeaModel {
         /**
-         * <p>Event type</p>
+         * <p>The event type.</p>
          * 
          * <strong>example:</strong>
          * <p>urn:alibaba:idaas:event:user:create</p>

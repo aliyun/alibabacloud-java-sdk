@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListApplicationsForGroupResponseBody extends TeaModel {
     /**
-     * <p>The list of applications that are granted access.</p>
+     * <p>List of applications authorized for access.</p>
      */
     @NameInMap("Applications")
     public java.util.List<ListApplicationsForGroupResponseBodyApplications> applications;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
@@ -20,7 +20,7 @@ public class ListApplicationsForGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>Total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -59,7 +59,7 @@ public class ListApplicationsForGroupResponseBody extends TeaModel {
 
     public static class ListApplicationsForGroupResponseBodyApplicationsApplicationRoles extends TeaModel {
         /**
-         * <p>The application role ID.</p>
+         * <p>Application role ID.</p>
          * 
          * <strong>example:</strong>
          * <p>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</p>
@@ -84,7 +84,7 @@ public class ListApplicationsForGroupResponseBody extends TeaModel {
 
     public static class ListApplicationsForGroupResponseBodyApplications extends TeaModel {
         /**
-         * <p>The application ID.</p>
+         * <p>Application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
@@ -93,18 +93,16 @@ public class ListApplicationsForGroupResponseBody extends TeaModel {
         public String applicationId;
 
         /**
-         * <p>The list of application roles.</p>
+         * <p>Application role list.</p>
          */
         @NameInMap("ApplicationRoles")
         public java.util.List<ListApplicationsForGroupResponseBodyApplicationsApplicationRoles> applicationRoles;
 
         /**
-         * <p>Indicates whether a direct authorization exists. Valid values:</p>
+         * <p>Whether direct authorization exists. Valid values:</p>
          * <ul>
-         * <li><p>true: A direct authorization record exists between the application and the group.</p>
-         * </li>
-         * <li><p>false: No direct authorization record exists between the application and the group.</p>
-         * </li>
+         * <li>true: A direct authorization relationship record exists between the application and the group.</li>
+         * <li>false: No direct authorization relationship record exists between the application and the group.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -114,7 +112,7 @@ public class ListApplicationsForGroupResponseBody extends TeaModel {
         public Boolean hasDirectAuthorization;
 
         /**
-         * <p>Indicates whether an inherited authorization exists.</p>
+         * <p>Whether inherited authorization exists.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

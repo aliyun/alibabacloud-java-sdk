@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetIdentityProviderUdPullConfigurationRequest extends TeaModel {
     /**
-     * <p>Identity provider ID</p>
+     * <p>The identity provider ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

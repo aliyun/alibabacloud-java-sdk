@@ -14,7 +14,7 @@ public class GetResourceServerScopeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the scope permission of the resource server.</p>
+     * <p>The scope permission information under the ResourceServer.</p>
      */
     @NameInMap("ResourceServerScope")
     public GetResourceServerScopeResponseBodyResourceServerScope resourceServerScope;
@@ -69,7 +69,7 @@ public class GetResourceServerScopeResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The ID of the scope permission.</p>
+         * <p>The scope permission ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rss_xxxxxxxxxxx</p>
@@ -78,7 +78,7 @@ public class GetResourceServerScopeResponseBody extends TeaModel {
         public String resourceServerScopeId;
 
         /**
-         * <p>The name of the scope permission.</p>
+         * <p>The scope permission name.</p>
          * 
          * <strong>example:</strong>
          * <p>Read User Info</p>
@@ -87,7 +87,7 @@ public class GetResourceServerScopeResponseBody extends TeaModel {
         public String resourceServerScopeName;
 
         /**
-         * <p>The type of the scope permission.</p>
+         * <p>The scope permission type.</p>
          * 
          * <strong>example:</strong>
          * <p>urn:alibaba:idaas:resourceserver:scope:delegated</p>
@@ -96,7 +96,7 @@ public class GetResourceServerScopeResponseBody extends TeaModel {
         public String resourceServerScopeType;
 
         /**
-         * <p>The value of the scope permission.</p>
+         * <p>The scope permission value.</p>
          * 
          * <strong>example:</strong>
          * <p>User:Read:ALL</p>

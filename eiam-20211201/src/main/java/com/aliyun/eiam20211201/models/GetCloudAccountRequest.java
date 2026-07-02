@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCloudAccountRequest extends TeaModel {
     /**
-     * <p>The ID of the Alibaba Cloud account.</p>
+     * <p>The cloud account ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

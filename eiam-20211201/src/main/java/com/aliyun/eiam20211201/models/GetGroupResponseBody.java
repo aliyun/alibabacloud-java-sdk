@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetGroupResponseBody extends TeaModel {
     /**
-     * <p>The information about the account group.</p>
+     * <p>The account group object information.</p>
      */
     @NameInMap("Group")
     public GetGroupResponseBodyGroup group;
@@ -42,7 +42,7 @@ public class GetGroupResponseBody extends TeaModel {
 
     public static class GetGroupResponseBodyGroup extends TeaModel {
         /**
-         * <p>The time at which the group was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The time when the group was created. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1652085686179</p>
@@ -51,7 +51,7 @@ public class GetGroupResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The description of the group.</p>
+         * <p>The group description.</p>
          * 
          * <strong>example:</strong>
          * <p>test_group</p>
@@ -60,7 +60,7 @@ public class GetGroupResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The external ID of the group, which can be used to associate the group with an external system. By default, the external ID is the group ID.</p>
+         * <p>The external ID of the group, which is used to associate the group with an external system. The default value is the account group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>group_d6sbsuumeta4h66ec3il7yxxxx</p>
@@ -78,7 +78,7 @@ public class GetGroupResponseBody extends TeaModel {
         public String groupId;
 
         /**
-         * <p>The name of the group.</p>
+         * <p>The group name.</p>
          * 
          * <strong>example:</strong>
          * <p>group_name</p>
@@ -87,7 +87,7 @@ public class GetGroupResponseBody extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The source ID of the group. By default, the source ID is the instance ID.</p>
+         * <p>The source ID of the group. The default value is the instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -96,8 +96,10 @@ public class GetGroupResponseBody extends TeaModel {
         public String groupSourceId;
 
         /**
-         * <p>The source type of the group. Only build_in may be returned, which indicates that the group was created in IDaaS.</p>
-         * <p>\*build_in:Create By Self.</p>
+         * <p>The source type of the group. Currently, only built-in groups are supported. Valid values:</p>
+         * <ul>
+         * <li>build_in: built-in.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>build_in</p>
@@ -115,7 +117,7 @@ public class GetGroupResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The time at which the group was last updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The time when the group was last updated. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1652085686179</p>

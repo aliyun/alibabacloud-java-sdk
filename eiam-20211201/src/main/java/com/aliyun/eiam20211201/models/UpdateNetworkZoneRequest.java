@@ -46,7 +46,7 @@ public class UpdateNetworkZoneRequest extends TeaModel {
     public String networkZoneId;
 
     /**
-     * <p>The name of the network zone.</p>
+     * <p>The network zone name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,7 +56,7 @@ public class UpdateNetworkZoneRequest extends TeaModel {
     public String networkZoneName;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC).</p>
+     * <p>The VPC ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc_xxxxx</p>

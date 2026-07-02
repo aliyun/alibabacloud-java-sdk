@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableIdentityProviderAuthnRequest extends TeaModel {
     /**
-     * <p>The ID of the identity provider (IdP).</p>
+     * <p>The identity provider ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

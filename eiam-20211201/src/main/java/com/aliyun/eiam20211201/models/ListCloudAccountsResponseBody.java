@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListCloudAccountsResponseBody extends TeaModel {
     /**
-     * <p>The list of Alibaba Cloud accounts.</p>
+     * <p>The list of cloud accounts.</p>
      */
     @NameInMap("CloudAccounts")
     public java.util.List<ListCloudAccountsResponseBodyCloudAccounts> cloudAccounts;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of rows per page for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token returned from this call.</p>
+     * <p>The token returned for the current call.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -38,7 +38,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -135,13 +135,13 @@ public class ListCloudAccountsResponseBody extends TeaModel {
 
     public static class ListCloudAccountsResponseBodyCloudAccountsCloudAccountHealthCheckResult extends TeaModel {
         /**
-         * <p>The reason for the error. This field is returned when the health check status is unhealthy.</p>
+         * <p>The error reason. This field is returned when the health check status is unhealthy.</p>
          */
         @NameInMap("ErrorReason")
         public ListCloudAccountsResponseBodyCloudAccountsCloudAccountHealthCheckResultErrorReason errorReason;
 
         /**
-         * <p>The time of the last health check. This is a UNIX timestamp in milliseconds.</p>
+         * <p>The time of the last health check. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>
@@ -150,12 +150,10 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         public Long lastCheckTime;
 
         /**
-         * <p>The result of the health check. Valid values:</p>
+         * <p>The health check result of the cloud account. Valid values:</p>
          * <ul>
-         * <li><p>success: The check was successful.</p>
-         * </li>
-         * <li><p>failed: The check failed.</p>
-         * </li>
+         * <li>success: Succeeded.</li>
+         * <li>failed: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -197,7 +195,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
 
     public static class ListCloudAccountsResponseBodyCloudAccounts extends TeaModel {
         /**
-         * <p>The external unique ID of the Alibaba Cloud account.</p>
+         * <p>The external unique identifier of the cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567</p>
@@ -206,14 +204,11 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         public String cloudAccountExternalId;
 
         /**
-         * <p>The health check status of the Alibaba Cloud account. Valid values:</p>
+         * <p>The health status of the cloud account. Valid values:</p>
          * <ul>
-         * <li><p>healthy: The account is healthy.</p>
-         * </li>
-         * <li><p>unhealthy: The account is unhealthy.</p>
-         * </li>
-         * <li><p>unknown: The status is unknown.</p>
-         * </li>
+         * <li>healthy: Healthy.</li>
+         * <li>unhealthy: Unhealthy.</li>
+         * <li>unknown: Unknown.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -223,13 +218,13 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         public String cloudAccountHealth;
 
         /**
-         * <p>The result of the health check for the Alibaba Cloud account.</p>
+         * <p>The health check result of the cloud account.</p>
          */
         @NameInMap("CloudAccountHealthCheckResult")
         public ListCloudAccountsResponseBodyCloudAccountsCloudAccountHealthCheckResult cloudAccountHealthCheckResult;
 
         /**
-         * <p>The ID of the Alibaba Cloud account.</p>
+         * <p>The cloud account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ca_01kmegjc11qa1txxxxx</p>
@@ -238,7 +233,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         public String cloudAccountId;
 
         /**
-         * <p>The name of the Alibaba Cloud account.</p>
+         * <p>The cloud account name.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_accout_xxxx</p>
@@ -247,7 +242,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         public String cloudAccountName;
 
         /**
-         * <p>The name of the identity provider.</p>
+         * <p>The identity provider name.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas-eiam-oidc-provider</p>
@@ -255,10 +250,13 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         @NameInMap("CloudAccountProviderName")
         public String cloudAccountProviderName;
 
+        @NameInMap("CloudAccountSite")
+        public String cloudAccountSite;
+
         /**
-         * <p>The type of the Alibaba Cloud account. Valid values:</p>
+         * <p>The cloud account type. Valid values:</p>
          * <ul>
-         * <li>alibaba_cloud: Alibaba Cloud</li>
+         * <li>alibaba_cloud: Alibaba Cloud.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -268,7 +266,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         public String cloudAccountVendorType;
 
         /**
-         * <p>The time when the account was created. This is a UNIX timestamp in milliseconds.</p>
+         * <p>The time when the cloud account was created. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830225000</p>
@@ -277,7 +275,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The description of the Alibaba Cloud account.</p>
+         * <p>The description of the cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_accout_description</p>
@@ -295,7 +293,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The time when the account was last updated. This is a UNIX timestamp in milliseconds.</p>
+         * <p>The time when the cloud account was last updated. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830227000</p>
@@ -354,6 +352,14 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         }
         public String getCloudAccountProviderName() {
             return this.cloudAccountProviderName;
+        }
+
+        public ListCloudAccountsResponseBodyCloudAccounts setCloudAccountSite(String cloudAccountSite) {
+            this.cloudAccountSite = cloudAccountSite;
+            return this;
+        }
+        public String getCloudAccountSite() {
+            return this.cloudAccountSite;
         }
 
         public ListCloudAccountsResponseBodyCloudAccounts setCloudAccountVendorType(String cloudAccountVendorType) {

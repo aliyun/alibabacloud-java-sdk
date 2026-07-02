@@ -25,7 +25,7 @@ public class AddUsersToGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The account IDs.</p>
+     * <p>The list of account IDs. The list can contain up to 100 elements.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

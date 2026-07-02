@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListConditionalAccessPoliciesForApplicationResponseBody extends TeaModel {
     /**
-     * <p>A collection of conditional access policies.</p>
+     * <p>Collection of conditional access policies.</p>
      */
     @NameInMap("ConditionalAccessPolicies")
     public java.util.List<ListConditionalAccessPoliciesForApplicationResponseBodyConditionalAccessPolicies> conditionalAccessPolicies;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
@@ -42,13 +42,13 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
 
     public static class ListConditionalAccessPoliciesForApplicationResponseBodyConditionalAccessPoliciesConditionsConfigApplications extends TeaModel {
         /**
-         * <p>The excluded applications.</p>
+         * <p>Excluded applications.</p>
          */
         @NameInMap("ExcludeApplications")
         public java.util.List<String> excludeApplications;
 
         /**
-         * <p>The selected applications.</p>
+         * <p>Included applications.</p>
          */
         @NameInMap("IncludeApplications")
         public java.util.List<String> includeApplications;
@@ -78,13 +78,13 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
 
     public static class ListConditionalAccessPoliciesForApplicationResponseBodyConditionalAccessPoliciesConditionsConfigNetworkZones extends TeaModel {
         /**
-         * <p>The excluded network zones.</p>
+         * <p>Excluded network zones.</p>
          */
         @NameInMap("ExcludeNetworkZones")
         public java.util.List<String> excludeNetworkZones;
 
         /**
-         * <p>The selected network zones.</p>
+         * <p>Included network zones.</p>
          */
         @NameInMap("IncludeNetworkZones")
         public java.util.List<String> includeNetworkZones;
@@ -114,37 +114,37 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
 
     public static class ListConditionalAccessPoliciesForApplicationResponseBodyConditionalAccessPoliciesConditionsConfigUsers extends TeaModel {
         /**
-         * <p>The excluded user groups.</p>
+         * <p>Excluded groups.</p>
          */
         @NameInMap("ExcludeGroups")
         public java.util.List<String> excludeGroups;
 
         /**
-         * <p>The excluded organizations.</p>
+         * <p>Excluded organizational units.</p>
          */
         @NameInMap("ExcludeOrganizationalUnits")
         public java.util.List<String> excludeOrganizationalUnits;
 
         /**
-         * <p>The excluded users.</p>
+         * <p>Excluded users.</p>
          */
         @NameInMap("ExcludeUsers")
         public java.util.List<String> excludeUsers;
 
         /**
-         * <p>The selected user groups.</p>
+         * <p>Included groups.</p>
          */
         @NameInMap("IncludeGroups")
         public java.util.List<String> includeGroups;
 
         /**
-         * <p>The selected organizations.</p>
+         * <p>Included organizational units.</p>
          */
         @NameInMap("IncludeOrganizationalUnits")
         public java.util.List<String> includeOrganizationalUnits;
 
         /**
-         * <p>The selected users.</p>
+         * <p>Included users.</p>
          */
         @NameInMap("IncludeUsers")
         public java.util.List<String> includeUsers;
@@ -206,19 +206,19 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
 
     public static class ListConditionalAccessPoliciesForApplicationResponseBodyConditionalAccessPoliciesConditionsConfig extends TeaModel {
         /**
-         * <p>The target applications of the conditional access policy.</p>
+         * <p>Conditional access policy target applications.</p>
          */
         @NameInMap("Applications")
         public ListConditionalAccessPoliciesForApplicationResponseBodyConditionalAccessPoliciesConditionsConfigApplications applications;
 
         /**
-         * <p>The network zones of the conditional access policy.</p>
+         * <p>Conditional access policy network zones.</p>
          */
         @NameInMap("NetworkZones")
         public ListConditionalAccessPoliciesForApplicationResponseBodyConditionalAccessPoliciesConditionsConfigNetworkZones networkZones;
 
         /**
-         * <p>The target users of the conditional access policy.</p>
+         * <p>Conditional access policy target users.</p>
          */
         @NameInMap("Users")
         public ListConditionalAccessPoliciesForApplicationResponseBodyConditionalAccessPoliciesConditionsConfigUsers users;
@@ -256,7 +256,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
 
     public static class ListConditionalAccessPoliciesForApplicationResponseBodyConditionalAccessPoliciesDecisionConfig extends TeaModel {
         /**
-         * <p>Indicates whether session reuse is enabled.</p>
+         * <p>Whether session reuse is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>disabled</p>
@@ -265,7 +265,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
         public String activeSessionReuseStatus;
 
         /**
-         * <p>The effect of the policy.</p>
+         * <p>Conditional access policy decision action.</p>
          * 
          * <strong>example:</strong>
          * <p>allow</p>
@@ -274,7 +274,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
         public String effect;
 
         /**
-         * <p>The re-authentication interval of the conditional access policy, in seconds.</p>
+         * <p>Conditional access policy re-authentication interval (seconds).</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -283,13 +283,13 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
         public Long mfaAuthenticationIntervalSeconds;
 
         /**
-         * <p>The collection of MFA methods allowed by the conditional access policy.</p>
+         * <p>Collection of MFA authentication methods allowed by the conditional access policy.</p>
          */
         @NameInMap("MfaAuthenticationMethods")
         public java.util.List<String> mfaAuthenticationMethods;
 
         /**
-         * <p>The multi-factor authentication (MFA) type of the conditional access policy.</p>
+         * <p>Conditional access policy MFA type.</p>
          * 
          * <strong>example:</strong>
          * <p>directly_access</p>
@@ -346,7 +346,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
 
     public static class ListConditionalAccessPoliciesForApplicationResponseBodyConditionalAccessPolicies extends TeaModel {
         /**
-         * <p>The conditional access policy ID.</p>
+         * <p>Conditional access policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cap_m5etun43kejxphsbke6mjxxxxx</p>
@@ -355,7 +355,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
         public String conditionalAccessPolicyId;
 
         /**
-         * <p>The name of the conditional access policy.</p>
+         * <p>Conditional access policy name.</p>
          * 
          * <strong>example:</strong>
          * <p>myPolicy</p>
@@ -364,7 +364,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
         public String conditionalAccessPolicyName;
 
         /**
-         * <p>The type of the conditional access policy.</p>
+         * <p>Conditional access policy type.</p>
          * 
          * <strong>example:</strong>
          * <p>arn:alibaba:idaas:authn:access:policy:system</p>
@@ -373,13 +373,13 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
         public String conditionalAccessPolicyType;
 
         /**
-         * <p>The content of the conditional access policy.</p>
+         * <p>Conditional access policy conditions.</p>
          */
         @NameInMap("ConditionsConfig")
         public ListConditionalAccessPoliciesForApplicationResponseBodyConditionalAccessPoliciesConditionsConfig conditionsConfig;
 
         /**
-         * <p>The creation time.</p>
+         * <p>Creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1741857554000</p>
@@ -388,13 +388,13 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
         public Long createTime;
 
         /**
-         * <p>The execution configuration of the conditional access policy.</p>
+         * <p>Conditional access policy decision configuration.</p>
          */
         @NameInMap("DecisionConfig")
         public ListConditionalAccessPoliciesForApplicationResponseBodyConditionalAccessPoliciesDecisionConfig decisionConfig;
 
         /**
-         * <p>The execution type of the conditional access policy.</p>
+         * <p>Conditional access policy decision type.</p>
          * 
          * <strong>example:</strong>
          * <p>enforcement</p>
@@ -403,7 +403,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
         public String decisionType;
 
         /**
-         * <p>The description of the conditional access policy.</p>
+         * <p>Conditional access policy description.</p>
          * 
          * <strong>example:</strong>
          * <p>policyTest</p>
@@ -412,7 +412,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
         public String description;
 
         /**
-         * <p>The policy enforcement point.</p>
+         * <p>Conditional access policy evaluation point.</p>
          * 
          * <strong>example:</strong>
          * <p>arn:alibaba:idaas:authn:access:rule:eval_at:after_step1</p>
@@ -421,7 +421,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
         public String evaluateAt;
 
         /**
-         * <p>The instance ID.</p>
+         * <p>Instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_oynbcyaaejuik6b37eldzxxxxx</p>
@@ -430,7 +430,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
         public String instanceId;
 
         /**
-         * <p>The update time.</p>
+         * <p>Last updated time.</p>
          * 
          * <strong>example:</strong>
          * <p>1741857554000</p>
@@ -439,7 +439,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
         public Long lastUpdatedTime;
 
         /**
-         * <p>The priority.</p>
+         * <p>Priority.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -448,7 +448,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
         public Integer priority;
 
         /**
-         * <p>The status of the conditional access policy.</p>
+         * <p>Enabled or disabled status of the conditional access policy.</p>
          * 
          * <strong>example:</strong>
          * <p>disabled</p>

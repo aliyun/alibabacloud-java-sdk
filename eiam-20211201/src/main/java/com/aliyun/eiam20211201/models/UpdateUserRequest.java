@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateUserRequest extends TeaModel {
     /**
-     * <p>A list of custom field objects.</p>
+     * <p>The list of custom field objects.</p>
      */
     @NameInMap("CustomFields")
     public java.util.List<UpdateUserRequestCustomFields> customFields;
 
     /**
-     * <p>The display name. It can be a maximum of 256 characters.</p>
+     * <p>The display name of the account. The name can be up to 256 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>test_name</p>
@@ -20,7 +20,7 @@ public class UpdateUserRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The email address. The local-part can contain uppercase letters, lowercase letters, digits, dots (.), underscores (_), and hyphens (-).</p>
+     * <p>The email address. The prefix of the email address can contain uppercase letters, lowercase letters, digits, periods (.), underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p><a href="mailto:example@example.com">example@example.com</a></p>
@@ -29,7 +29,7 @@ public class UpdateUserRequest extends TeaModel {
     public String email;
 
     /**
-     * <p>Indicates whether the email address is verified. This parameter is required when specifying an email address. In most cases, set this to <code>true</code>.</p>
+     * <p>Specifies whether the email address is verified. This parameter is required if an email address is specified. If no special business requirements exist, set this parameter to true.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -48,7 +48,7 @@ public class UpdateUserRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The mobile phone number. It must be between 6 and 15 digits long.</p>
+     * <p>The phone number. The value must be 6 to 15 digits in length.</p>
      * 
      * <strong>example:</strong>
      * <p>156xxxxxxxxx</p>
@@ -57,7 +57,7 @@ public class UpdateUserRequest extends TeaModel {
     public String phoneNumber;
 
     /**
-     * <p>Indicates whether the mobile phone number is verified. This parameter is required when specifying a mobile phone number. In most cases, set this to <code>true</code>.</p>
+     * <p>Specifies whether the phone number is verified as a trusted phone number. This parameter is required if a phone number is specified. If no special business requirements exist, set this parameter to true.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -66,7 +66,7 @@ public class UpdateUserRequest extends TeaModel {
     public Boolean phoneNumberVerified;
 
     /**
-     * <p>The country code for the mobile phone number. Example: 86 for Chinese mainland. Do not include <code>00</code> or <code>+</code>. This parameter is required if you specify a mobile phone number.</p>
+     * <p>The phone region code. Example: 86 for the Chinese mainland, without the 00 or + prefix. This parameter is required if a phone number is specified.</p>
      * 
      * <strong>example:</strong>
      * <p>86</p>
@@ -85,7 +85,7 @@ public class UpdateUserRequest extends TeaModel {
     public String userId;
 
     /**
-     * <p>The username. It must be no more than 256 characters and can contain letters, digits, and the special characters: _, ., @, and -.</p>
+     * <p>The account name. The name can contain letters, digits, underscores (_), periods (.), at signs (@), and hyphens (-). The name can be up to 256 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>username_test</p>
@@ -180,7 +180,7 @@ public class UpdateUserRequest extends TeaModel {
 
     public static class UpdateUserRequestCustomFields extends TeaModel {
         /**
-         * <p>The custom field name. You must create the custom field in the console before using it. For more information, see the custom fields module in the console.</p>
+         * <p>The identifier of the custom field. Create the custom field in advance. For more information, refer to the custom fields module in the console.</p>
          * 
          * <strong>example:</strong>
          * <p>nick_name</p>
@@ -189,7 +189,7 @@ public class UpdateUserRequest extends TeaModel {
         public String fieldName;
 
         /**
-         * <p>The custom field value. The value must comply with the constraints of the custom field.</p>
+         * <p>The value of the custom field. The value must comply with the property constraints of the corresponding custom field.</p>
          * 
          * <strong>example:</strong>
          * <p>test_value</p>
@@ -200,12 +200,9 @@ public class UpdateUserRequest extends TeaModel {
         /**
          * <p>The operation type for the custom field. Valid values:</p>
          * <ul>
-         * <li><p><code>add</code>: Adds a value to the custom field.</p>
-         * </li>
-         * <li><p><code>replace</code>: Replaces the existing value of the custom field. If the field has no existing value, this operation adds the value instead.</p>
-         * </li>
-         * <li><p><code>remove</code>: Removes a value from the custom field.</p>
-         * </li>
+         * <li>add: adds a custom field value to the account.</li>
+         * <li>replace: replaces an existing custom field value of the account. If the custom field value does not exist, the operation is converted to an add operation.</li>
+         * <li>remove: removes the custom field value from the account.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteOrganizationalUnitChildrenRequest extends TeaModel {
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteOrganizationalUnitChildrenRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Organizational Unit ID.</p>
+     * <p>The organization ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

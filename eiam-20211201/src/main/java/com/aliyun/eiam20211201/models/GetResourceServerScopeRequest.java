@@ -25,7 +25,7 @@ public class GetResourceServerScopeRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the scope permission.</p>
+     * <p>The scope permission ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

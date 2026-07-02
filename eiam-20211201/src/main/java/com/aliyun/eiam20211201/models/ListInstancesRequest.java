@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListInstancesRequest extends TeaModel {
     /**
+     * <p>The cross-region replication status.</p>
+     * 
      * <strong>example:</strong>
      * <p>disabled</p>
      */
@@ -16,7 +18,7 @@ public class ListInstancesRequest extends TeaModel {
      * <ul>
      * <li>free: Free Edition.</li>
      * <li>trial: Trial Edition.</li>
-     * <li>scalability: Capability Expansion Edition.</li>
+     * <li>scalability: Scalability Edition.</li>
      * <li>standard: Standard Edition.</li>
      * <li>enterprise: Enterprise Edition.</li>
      * </ul>

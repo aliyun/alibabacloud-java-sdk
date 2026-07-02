@@ -4,10 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class GetAuthorizationServerResponseBody extends TeaModel {
+    /**
+     * <p>The authorization server.</p>
+     */
     @NameInMap("AuthorizationServer")
     public GetAuthorizationServerResponseBodyAuthorizationServer authorizationServer;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -37,6 +42,8 @@ public class GetAuthorizationServerResponseBody extends TeaModel {
 
     public static class GetAuthorizationServerResponseBodyAuthorizationServerProtocolEndpoint extends TeaModel {
         /**
+         * <p>The token endpoint of the authorization server.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://xxxx.aliyunidaas.com/api/v2/iauths_system/oauth2/token">https://xxxx.aliyunidaas.com/api/v2/iauths_system/oauth2/token</a></p>
          */
@@ -44,6 +51,8 @@ public class GetAuthorizationServerResponseBody extends TeaModel {
         public String oauth2TokenEndpoint;
 
         /**
+         * <p>The JWKS endpoint of the authorization server.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://xxxx.aliyunidaas.com/api/v2/iauths_system/oauth2/jwks">https://xxxx.aliyunidaas.com/api/v2/iauths_system/oauth2/jwks</a></p>
          */
@@ -75,7 +84,7 @@ public class GetAuthorizationServerResponseBody extends TeaModel {
 
     public static class GetAuthorizationServerResponseBodyAuthorizationServer extends TeaModel {
         /**
-         * <p>IDaaS EIAM 授权服务器ID</p>
+         * <p>The authorization server ID.</p>
          * 
          * <strong>example:</strong>
          * <p>iauths_system</p>
@@ -84,7 +93,7 @@ public class GetAuthorizationServerResponseBody extends TeaModel {
         public String authorizationServerId;
 
         /**
-         * <p>IDaaS EIAM 授权服务器名称</p>
+         * <p>The name of the authorization server.</p>
          * 
          * <strong>example:</strong>
          * <p>System_Default</p>
@@ -93,7 +102,7 @@ public class GetAuthorizationServerResponseBody extends TeaModel {
         public String authorizationServerName;
 
         /**
-         * <p>IDaaS EIAM 授权服务器创建时间</p>
+         * <p>The time when the authorization server was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1754620108295</p>
@@ -102,7 +111,7 @@ public class GetAuthorizationServerResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>创建类型：system_init-系统默认创建，jwt_credential_provider-JWT凭据提供商创建，user_custom-用户创建</p>
+         * <p>The creation type.</p>
          * 
          * <strong>example:</strong>
          * <p>system_init</p>
@@ -111,7 +120,7 @@ public class GetAuthorizationServerResponseBody extends TeaModel {
         public String creationType;
 
         /**
-         * <p>授权服务器描述</p>
+         * <p>The description of the authorization server.</p>
          * 
          * <strong>example:</strong>
          * <p>description of authorization server</p>
@@ -120,7 +129,7 @@ public class GetAuthorizationServerResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>IDaaS EIAM 实例Id</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_qzljgbhtwnnsywtdbz7yzy2any</p>
@@ -129,7 +138,7 @@ public class GetAuthorizationServerResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>IDaaS EIAM 授权token颁发者</p>
+         * <p>The issuer of the authorization token.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xxxx.aliyunidaas.com/api/v2/iauths_system/oauth2">https://xxxx.aliyunidaas.com/api/v2/iauths_system/oauth2</a></p>
@@ -138,7 +147,7 @@ public class GetAuthorizationServerResponseBody extends TeaModel {
         public String issuer;
 
         /**
-         * <p>Issuer使用的域名，可为初始化域名或已添加的自定义域名</p>
+         * <p>The domain name used by the issuer.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx.aliyunidaas.com</p>
@@ -147,7 +156,7 @@ public class GetAuthorizationServerResponseBody extends TeaModel {
         public String issuerDomain;
 
         /**
-         * <p>Issuer模式：dynamic-动态基于请求域名，static-使用固定域名</p>
+         * <p>The issuer mode.</p>
          * 
          * <strong>example:</strong>
          * <p>static</p>
@@ -156,7 +165,7 @@ public class GetAuthorizationServerResponseBody extends TeaModel {
         public String issuerMode;
 
         /**
-         * <p>IDaaS EIAM 授权服务器最近更新时间</p>
+         * <p>The time when the authorization server was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>1781608572164</p>
@@ -164,11 +173,14 @@ public class GetAuthorizationServerResponseBody extends TeaModel {
         @NameInMap("LastUpdateTime")
         public Long lastUpdateTime;
 
+        /**
+         * <p>The endpoint configuration of the authorization server.</p>
+         */
         @NameInMap("ProtocolEndpoint")
         public GetAuthorizationServerResponseBodyAuthorizationServerProtocolEndpoint protocolEndpoint;
 
         /**
-         * <p>IDaaS EIAM 授权服务器状态，enabled启用，disabled禁用</p>
+         * <p>The status of the authorization server.</p>
          * 
          * <strong>example:</strong>
          * <p>ENABLE</p>

@@ -15,7 +15,7 @@ public class DisableUserRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the account.</p>
+     * <p>The account ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

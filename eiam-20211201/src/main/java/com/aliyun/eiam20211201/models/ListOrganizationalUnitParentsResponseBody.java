@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOrganizationalUnitParentsResponseBody extends TeaModel {
     /**
-     * <p>The list of parent organizational units.</p>
+     * <p>The list of parent organizations.</p>
      */
     @NameInMap("Parents")
     public java.util.List<ListOrganizationalUnitParentsResponseBodyParents> parents;
@@ -42,7 +42,7 @@ public class ListOrganizationalUnitParentsResponseBody extends TeaModel {
 
     public static class ListOrganizationalUnitParentsResponseBodyParents extends TeaModel {
         /**
-         * <p>The organizational unit ID.</p>
+         * <p>The organization ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ou_4lag76zc2km5ssg5vsmm2lznvu</p>
@@ -51,7 +51,7 @@ public class ListOrganizationalUnitParentsResponseBody extends TeaModel {
         public String organizationalUnitId;
 
         /**
-         * <p>The parent organizational unit ID.</p>
+         * <p>The parent organization ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ou_x3beoyepv2ls5iwuge3xhjkwbm</p>

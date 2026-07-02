@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateGroupRequest extends TeaModel {
     /**
-     * <p>The description of the group. The value can be up to 256 characters in length.</p>
+     * <p>Description. The maximum length is 256 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>this is a test.</p>
@@ -14,7 +14,7 @@ public class CreateGroupRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The external ID of the group, which can be used to associate the group with an external system. By default, the external ID is the group ID. The value can be up to 64 characters in length.</p>
+     * <p>Group external ID, used for association with external systems. The default value is the group ID. The maximum length is 64 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>group_d6sbsuumeta4h66ec3il7yxxxx</p>
@@ -23,7 +23,7 @@ public class CreateGroupRequest extends TeaModel {
     public String groupExternalId;
 
     /**
-     * <p>The name of the group. The name can be up to 64 characters in length.</p>
+     * <p>Group name. The maximum length is 64 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class CreateGroupRequest extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

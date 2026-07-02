@@ -20,7 +20,7 @@ public class ListInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries in the list.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -68,10 +68,10 @@ public class ListInstancesResponseBody extends TeaModel {
         public String endpoint;
 
         /**
-         * <p>The status of the instance endpoint. Valid values:</p>
+         * <p>The endpoint status. Valid values:</p>
          * <ul>
          * <li>resolved: Resolved.</li>
-         * <li>unresolved: Unresolved.</li>
+         * <li>unresolved: Not resolved.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -105,6 +105,8 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyInstancesReplicationConfiguration extends TeaModel {
         /**
+         * <p>The instance ID of the backup instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>idaas_xxxxxx</p>
          */
@@ -112,6 +114,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String backupInstanceId;
 
         /**
+         * <p>The region ID of the backup instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -119,6 +123,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String backupInstanceRegionId;
 
         /**
+         * <p>The instance ID of the primary instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>idaas_xxxxxx</p>
          */
@@ -126,6 +132,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String primaryInstanceId;
 
         /**
+         * <p>The region ID of the primary instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -133,6 +141,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String primaryInstanceRegionId;
 
         /**
+         * <p>The time when the disaster recovery data replication was created, in UNIX timestamp format. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1778499337000</p>
          */
@@ -188,7 +198,7 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyInstances extends TeaModel {
         /**
-         * <p>The time when the instance was created. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The instance creation time, in UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1550115455000</p>
@@ -197,6 +207,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>Indicates whether cross-region replication is enabled. Valid values: enabled or disabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>enabled</p>
          */
@@ -204,6 +216,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String crossRegionReplication;
 
         /**
+         * <p>The cross-region replication role. Valid values: primary (primary instance) or backup (backup instance).</p>
+         * 
          * <strong>example:</strong>
          * <p>primary</p>
          */
@@ -217,7 +231,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public ListInstancesResponseBodyInstancesDefaultEndpoint defaultEndpoint;
 
         /**
-         * <p>The description of the instance.</p>
+         * <p>The instance description.</p>
          * 
          * <strong>example:</strong>
          * <p>instance_for_test</p>
@@ -226,6 +240,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The instance failover activation status. Valid values: active (activated) or inactive (not activated).</p>
+         * 
          * <strong>example:</strong>
          * <p>inactive</p>
          */
@@ -250,6 +266,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("ManagedServiceCode")
         public String managedServiceCode;
 
+        /**
+         * <p>The replication configuration. This parameter is returned only when CrossRegionReplication is set to enabled.</p>
+         */
         @NameInMap("ReplicationConfiguration")
         public ListInstancesResponseBodyInstancesReplicationConfiguration replicationConfiguration;
 

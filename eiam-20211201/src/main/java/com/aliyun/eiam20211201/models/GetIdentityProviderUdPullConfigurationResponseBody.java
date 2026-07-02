@@ -14,7 +14,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
     public String requestId;
 
     /**
-     * <p>Inbound Synchronization Configuration Information</p>
+     * <p>The inbound synchronization configuration.</p>
      */
     @NameInMap("UdPullConfiguration")
     public GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfiguration udPullConfiguration;
@@ -42,7 +42,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
 
     public static class GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfigurationLdapUdPullConfig extends TeaModel {
         /**
-         * <p>Group Member Identifier</p>
+         * <p>The group member identifier attribute.</p>
          * 
          * <strong>example:</strong>
          * <p>group</p>
@@ -51,7 +51,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
         public String groupMemberAttributeName;
 
         /**
-         * <p>Group ObjectClass</p>
+         * <p>The group ObjectClass.</p>
          * 
          * <strong>example:</strong>
          * <p>member</p>
@@ -60,7 +60,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
         public String groupObjectClass;
 
         /**
-         * <p>Group Custom Filter</p>
+         * <p>The custom filter for groups.</p>
          * 
          * <strong>example:</strong>
          * <p>(|(cn=test)(group=<a href="mailto:test@test.com">test@test.com</a>))</p>
@@ -69,7 +69,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
         public String groupObjectClassCustomFilter;
 
         /**
-         * <p>Organization ObjectClass</p>
+         * <p>The organizational unit ObjectClass.</p>
          * 
          * <strong>example:</strong>
          * <p>ou,top</p>
@@ -78,7 +78,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
         public String organizationUnitObjectClass;
 
         /**
-         * <p>User ObjectClass</p>
+         * <p>The user ObjectClass.</p>
          * 
          * <strong>example:</strong>
          * <p>ou,top</p>
@@ -87,7 +87,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
         public String userObjectClass;
 
         /**
-         * <p>User ObjectClass Custom Filter</p>
+         * <p>The custom filter for users.</p>
          * 
          * <strong>example:</strong>
          * <p>(|(cn=test)(mail=<a href="mailto:test@test.com">test@test.com</a>))</p>
@@ -152,7 +152,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
 
     public static class GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfigurationPeriodicSyncConfig extends TeaModel {
         /**
-         * <p>Cron expression</p>
+         * <p>The cron expression.</p>
          * 
          * <strong>example:</strong>
          * <p>0 45 1 * * ?</p>
@@ -161,7 +161,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
         public String periodicSyncCron;
 
         /**
-         * <p>Execution time slots, for example 3,5, meaning the task runs once between 03:00–04:00 and once between 05:00–06:00.</p>
+         * <p>The execution time points. For example, [3, 5] indicates that synchronization runs once between 3:00 and 4:00 and once between 5:00 and 6:00.</p>
          * 
          * <strong>example:</strong>
          * <p>[3,5]</p>
@@ -170,7 +170,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
         public Integer periodicSyncTimes;
 
         /**
-         * <p>type</p>
+         * <p>The periodic synchronization type.</p>
          * 
          * <strong>example:</strong>
          * <p>cron</p>
@@ -211,7 +211,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
 
     public static class GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfigurationPullProtectedRule extends TeaModel {
         /**
-         * <p>Group Deletion Threshold: If the number of deleted groups exceeds this value, the synchronization task will be terminated.</p>
+         * <p>The threshold for the number of deleted groups. If the number of deleted groups exceeds this value, the synchronization task is terminated.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -220,7 +220,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
         public Integer groupDeletedThreshold;
 
         /**
-         * <p>Organization Deletion Threshold: If the number of deleted organizations exceeds this value, the synchronization task will be terminated.</p>
+         * <p>The threshold for the number of deleted organizational units. If the number of deleted organizational units exceeds this value, the synchronization task is terminated.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -229,7 +229,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
         public Integer organizationalUnitDeletedThreshold;
 
         /**
-         * <p>Account Deletion Threshold: If the number of deleted users exceeds this value, the synchronization task will be terminated.</p>
+         * <p>The threshold for the number of deleted accounts. If the number of deleted users exceeds this value, the synchronization task is terminated.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -270,13 +270,13 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
 
     public static class GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfigurationUdSyncScopeConfig extends TeaModel {
         /**
-         * <p>Synchronization Source Node</p>
+         * <p>The list of source nodes for synchronization.</p>
          */
         @NameInMap("SourceScopes")
         public java.util.List<String> sourceScopes;
 
         /**
-         * <p>Synchronization Target Node</p>
+         * <p>The target node for synchronization.</p>
          * 
          * <strong>example:</strong>
          * <p>ou_asjdfhaskfhw213mnsj33sXXX</p>
@@ -309,10 +309,11 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
 
     public static class GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfiguration extends TeaModel {
         /**
-         * <p>Group Synchronization Status
-         * Possible values:</p>
-         * <p>Disabled: disabled</p>
-         * <p>Enabled: enabled</p>
+         * <p>The group synchronization status. Valid values:</p>
+         * <ul>
+         * <li>disabled</li>
+         * <li>enabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -321,7 +322,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
         public String groupSyncStatus;
 
         /**
-         * <p>Identity provider ID</p>
+         * <p>The identity provider ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idp_my664lwkhpicbyzirog3xxxxx</p>
@@ -330,7 +331,11 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
         public String identityProviderId;
 
         /**
-         * <p>Incremental Callback Status: Whether to process incremental callback data from the IdP</p>
+         * <p>The incremental callback status, which specifies whether to process incremental callback data from the IdP. Valid values:</p>
+         * <ul>
+         * <li>disabled</li>
+         * <li>enabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -339,7 +344,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
         public String incrementalCallbackStatus;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -348,21 +353,23 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
         public String instanceId;
 
         /**
-         * <p>LDAP Synchronization Side Related Configuration Information</p>
+         * <p>The LDAP synchronization configuration.</p>
          */
         @NameInMap("LdapUdPullConfig")
         public GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfigurationLdapUdPullConfig ldapUdPullConfig;
 
         /**
-         * <p>Scheduled sync configuration</p>
+         * <p>The periodic synchronization configuration.</p>
          */
         @NameInMap("PeriodicSyncConfig")
         public GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfigurationPeriodicSyncConfig periodicSyncConfig;
 
         /**
-         * <p>Scheduled Validation Status: Whether to periodically validate data discrepancies between IDaaS and the Identity Provider. Possible values:</p>
-         * <p>Disabled: disabled</p>
-         * <p>Enabled: enabled</p>
+         * <p>The periodic verification status, which specifies whether to periodically verify data differences between IDaaS and the identity provider. Valid values:</p>
+         * <ul>
+         * <li>disabled</li>
+         * <li>enabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -371,13 +378,13 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
         public String periodicSyncStatus;
 
         /**
-         * <p>Inbound Synchronization Protection Rule Configuration</p>
+         * <p>The inbound synchronization protection rule configuration.</p>
          */
         @NameInMap("PullProtectedRule")
         public GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfigurationPullProtectedRule pullProtectedRule;
 
         /**
-         * <p>Synchronization Scope Configuration Information</p>
+         * <p>The synchronization scope configuration.</p>
          */
         @NameInMap("UdSyncScopeConfig")
         public GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfigurationUdSyncScopeConfig udSyncScopeConfig;

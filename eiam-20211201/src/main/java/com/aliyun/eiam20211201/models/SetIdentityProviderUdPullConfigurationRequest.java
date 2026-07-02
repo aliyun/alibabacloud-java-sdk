@@ -7,9 +7,9 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
     /**
      * <p>The group synchronization status. Valid values:</p>
      * <ul>
-     * <li><p>disabled: The feature is disabled.</p>
+     * <li><p>disabled: Disabled.</p>
      * </li>
-     * <li><p>enabled: The feature is enabled.</p>
+     * <li><p>enabled: Enabled.</p>
      * </li>
      * </ul>
      * 
@@ -30,11 +30,11 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
     public String identityProviderId;
 
     /**
-     * <p>The status of incremental callback. This parameter specifies whether to process incremental callback data from the IdP. Valid values:</p>
+     * <p>Specifies whether to process incremental callback data from the IdP. Valid values:</p>
      * <ul>
-     * <li><p>disabled: The feature is disabled.</p>
+     * <li><p>disabled: Disabled.</p>
      * </li>
-     * <li><p>enabled: The feature is enabled.</p>
+     * <li><p>enabled: Enabled.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -56,23 +56,23 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The configurations of LDAP synchronization.</p>
+     * <p>The LDAP synchronization configuration.</p>
      */
     @NameInMap("LdapUdPullConfig")
     public SetIdentityProviderUdPullConfigurationRequestLdapUdPullConfig ldapUdPullConfig;
 
     /**
-     * <p>The scheduled synchronization configuration.</p>
+     * <p>The periodic synchronization configuration.</p>
      */
     @NameInMap("PeriodicSyncConfig")
     public SetIdentityProviderUdPullConfigurationRequestPeriodicSyncConfig periodicSyncConfig;
 
     /**
-     * <p>The status of scheduled check. This parameter specifies whether to periodically check for data inconsistencies between IDaaS and the IdP. Valid values:</p>
+     * <p>Specifies whether to periodically verify data differences between IDaaS and the identity provider. Valid values:</p>
      * <ul>
-     * <li><p>disabled: The feature is disabled.</p>
+     * <li><p>disabled: Disabled.</p>
      * </li>
-     * <li><p>enabled: The feature is enabled.</p>
+     * <li><p>enabled: Enabled.</p>
      * </li>
      * </ul>
      * 
@@ -89,7 +89,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
     public SetIdentityProviderUdPullConfigurationRequestPullProtectedRule pullProtectedRule;
 
     /**
-     * <p>The inbound synchronization configuration.</p>
+     * <p>The inbound synchronization scope configuration.</p>
      */
     @NameInMap("UdSyncScopeConfig")
     public SetIdentityProviderUdPullConfigurationRequestUdSyncScopeConfig udSyncScopeConfig;
@@ -182,7 +182,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
         public String groupMemberAttributeName;
 
         /**
-         * <p>The group objectClass.</p>
+         * <p>The group ObjectClass.</p>
          * 
          * <strong>example:</strong>
          * <p>group</p>
@@ -191,7 +191,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
         public String groupObjectClass;
 
         /**
-         * <p>The custom group filter.</p>
+         * <p>The custom filter for groups.</p>
          * 
          * <strong>example:</strong>
          * <p>(|(cn=test)(group=<a href="mailto:test@test.com">test@test.com</a>))</p>
@@ -200,7 +200,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
         public String groupObjectClassCustomFilter;
 
         /**
-         * <p>The organizational unit objectClass.</p>
+         * <p>The organizational unit ObjectClass.</p>
          * 
          * <strong>example:</strong>
          * <p>organizationUnit,top</p>
@@ -209,7 +209,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
         public String organizationUnitObjectClass;
 
         /**
-         * <p>The user objectClass.</p>
+         * <p>The user ObjectClass.</p>
          * 
          * <strong>example:</strong>
          * <p>userPrincipalName, mail</p>
@@ -218,7 +218,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
         public String userObjectClass;
 
         /**
-         * <p>The custom user filter.</p>
+         * <p>The custom filter for users.</p>
          * 
          * <strong>example:</strong>
          * <p>(|(cn=test)(mail=<a href="mailto:test@test.com">test@test.com</a>))</p>
@@ -292,13 +292,13 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
         public String periodicSyncCron;
 
         /**
-         * <p>The time points for synchronization. This parameter is required when periodicSyncType is set to time. For example, if you set this parameter to [3, 5], the synchronization is performed from 03:00 to 04:00 and from 05:00 to 06:00.</p>
+         * <p>The execution time points. This parameter is required when periodicSyncType is set to time. For example, [3, 5] indicates that the task runs once between 3:00 and 4:00 and once between 5:00 and 6:00.</p>
          */
         @NameInMap("PeriodicSyncTimes")
         public java.util.List<Integer> periodicSyncTimes;
 
         /**
-         * <p>The type.</p>
+         * <p>The type of periodic synchronization.</p>
          * 
          * <strong>example:</strong>
          * <p>cron</p>
@@ -339,7 +339,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
 
     public static class SetIdentityProviderUdPullConfigurationRequestPullProtectedRule extends TeaModel {
         /**
-         * <p>The threshold for the number of groups to be deleted. If the number of groups to be deleted exceeds this value, the synchronization task is stopped.</p>
+         * <p>The threshold for the number of deleted groups. If the number of deleted groups exceeds this value, the synchronization task is terminated.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -348,7 +348,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
         public Integer groupDeletedThreshold;
 
         /**
-         * <p>The threshold for the number of organizational units to be deleted. If the number of organizational units to be deleted exceeds this value, the synchronization task is stopped.</p>
+         * <p>The threshold for the number of deleted organizational units. If the number of deleted organizational units exceeds this value, the synchronization task is terminated.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -357,7 +357,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
         public Integer organizationalUnitDeletedThreshold;
 
         /**
-         * <p>The threshold for the number of users to be deleted. If the number of users to be deleted exceeds this value, the synchronization task is stopped.</p>
+         * <p>The threshold for the number of deleted accounts. If the number of deleted users exceeds this value, the synchronization task is terminated.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>

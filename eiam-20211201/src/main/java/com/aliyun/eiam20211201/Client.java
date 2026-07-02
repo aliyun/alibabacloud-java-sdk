@@ -342,7 +342,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a specified EIAM account to one or more EIAM organizations. If the account already exists in one of the specified organizations, the request succeeds.</p>
+     * <p>Adds a specified EIAM account to multiple EIAM organizations. If the account already exists in an organization, the operation returns a success response directly.</p>
      * 
      * @param request AddUserToOrganizationalUnitsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -382,7 +382,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a specified EIAM account to one or more EIAM organizations. If the account already exists in one of the specified organizations, the request succeeds.</p>
+     * <p>Adds a specified EIAM account to multiple EIAM organizations. If the account already exists in an organization, the operation returns a success response directly.</p>
      * 
      * @param request AddUserToOrganizationalUnitsRequest
      * @return AddUserToOrganizationalUnitsResponse
@@ -394,7 +394,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds Employee Identity and Access Management (EIAM) accounts to an EIAM group of Identity as a Service (IDaaS).</p>
+     * <p>Adds multiple Employee Identity and Access Management (EIAM) accounts to a specified EIAM account group.</p>
      * 
      * @param request AddUsersToGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -434,7 +434,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds Employee Identity and Access Management (EIAM) accounts to an EIAM group of Identity as a Service (IDaaS).</p>
+     * <p>Adds multiple Employee Identity and Access Management (EIAM) accounts to a specified EIAM account group.</p>
      * 
      * @param request AddUsersToGroupRequest
      * @return AddUsersToGroupResponse
@@ -2396,7 +2396,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an account group in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</p>
+     * <p>Create an EIAM account group.</p>
      * 
      * @param request CreateGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2440,7 +2440,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an account group in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</p>
+     * <p>Create an EIAM account group.</p>
      * 
      * @param request CreateGroupRequest
      * @return CreateGroupResponse
@@ -2452,7 +2452,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an identity provider.</p>
+     * <p>Create an identity provider.</p>
      * 
      * @param request CreateIdentityProviderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2552,7 +2552,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an identity provider.</p>
+     * <p>Create an identity provider.</p>
      * 
      * @param request CreateIdentityProviderRequest
      * @return CreateIdentityProviderResponse
@@ -2836,7 +2836,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an organization in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</p>
+     * <p>Creates an EIAM organization under a specified organization.</p>
      * 
      * @param request CreateOrganizationalUnitRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2884,7 +2884,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an organization in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</p>
+     * <p>Creates an EIAM organization under a specified organization.</p>
      * 
      * @param request CreateOrganizationalUnitRequest
      * @return CreateOrganizationalUnitResponse
@@ -2960,7 +2960,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create an EIAM account in a specific EIAM instance.</p>
+     * <p>Creates an EIAM account in a specified EIAM instance.</p>
      * 
      * @param request CreateUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3052,7 +3052,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create an EIAM account in a specific EIAM instance.</p>
+     * <p>Creates an EIAM account in a specified EIAM instance.</p>
      * 
      * @param request CreateUserRequest
      * @return CreateUserResponse
@@ -4026,7 +4026,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the information of an account group in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</p>
+     * <p>Delete an EIAM account group.</p>
      * 
      * @param request DeleteGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4062,7 +4062,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the information of an account group in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</p>
+     * <p>Delete an EIAM account group.</p>
      * 
      * @param request DeleteGroupRequest
      * @return DeleteGroupResponse
@@ -4074,7 +4074,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete identity provider</p>
+     * <p>Deletes an identity provider.</p>
      * 
      * @param request DeleteIdentityProviderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4110,7 +4110,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete identity provider</p>
+     * <p>Deletes an identity provider.</p>
      * 
      * @param request DeleteIdentityProviderRequest
      * @return DeleteIdentityProviderResponse
@@ -4268,7 +4268,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an organization in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM). If the organization has EIAM accounts or child organizations, the delete operation fails.</p>
+     * <p>Deletes a specified EIAM organizational unit. The deletion fails if the organizational unit contains EIAM accounts or child organizational units.</p>
      * 
      * @param request DeleteOrganizationalUnitRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4304,7 +4304,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an organization in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM). If the organization has EIAM accounts or child organizations, the delete operation fails.</p>
+     * <p>Deletes a specified EIAM organizational unit. The deletion fails if the organizational unit contains EIAM accounts or child organizational units.</p>
      * 
      * @param request DeleteOrganizationalUnitRequest
      * @return DeleteOrganizationalUnitResponse
@@ -4316,7 +4316,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes information about an organization and forcefully deletes all accounts and sub-organizations in the organization.</p>
+     * <p>Deletes all data of a specified organization. This operation can force delete all accounts and sub-organizations under the specified organization.</p>
      * 
      * @param request DeleteOrganizationalUnitChildrenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4352,7 +4352,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes information about an organization and forcefully deletes all accounts and sub-organizations in the organization.</p>
+     * <p>Deletes all data of a specified organization. This operation can force delete all accounts and sub-organizations under the specified organization.</p>
      * 
      * @param request DeleteOrganizationalUnitChildrenRequest
      * @return DeleteOrganizationalUnitChildrenResponse
@@ -4416,7 +4416,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a specified EIAM user and purges all related information.</p>
+     * <p>Deletes a specified EIAM account and purges all information associated with the account.</p>
      * 
      * @param request DeleteUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4452,7 +4452,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a specified EIAM user and purges all related information.</p>
+     * <p>Deletes a specified EIAM account and purges all information associated with the account.</p>
      * 
      * @param request DeleteUserRequest
      * @return DeleteUserResponse
@@ -5632,7 +5632,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you disable an application, all its features, such as single sign-on (SSO) and account synchronization, become unavailable. Before you perform this operation, make sure that you understand the associated risks.</p>
+     * <p>When you change an application from the enabled state to the disabled state, all features of the application become unavailable, such as SSO and account synchronization. Make sure that you are aware of the risks that this operation may cause.</p>
      * 
      * <b>summary</b> : 
      * <p>Disables authentication.</p>
@@ -5671,7 +5671,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you disable an application, all its features, such as single sign-on (SSO) and account synchronization, become unavailable. Before you perform this operation, make sure that you understand the associated risks.</p>
+     * <p>When you change an application from the enabled state to the disabled state, all features of the application become unavailable, such as SSO and account synchronization. Make sure that you are aware of the risks that this operation may cause.</p>
      * 
      * <b>summary</b> : 
      * <p>Disables authentication.</p>
@@ -5686,7 +5686,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disable identity provider synchronization</p>
+     * <p>Disables the inbound synchronization feature of an identity provider.</p>
      * 
      * @param request DisableIdentityProviderUdPullRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5722,7 +5722,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disable identity provider synchronization</p>
+     * <p>Disables the inbound synchronization feature of an identity provider.</p>
      * 
      * @param request DisableIdentityProviderUdPullRequest
      * @return DisableIdentityProviderUdPullResponse
@@ -5874,7 +5874,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables an Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM) account. If the account is disabled, a success message is returned.</p>
+     * <p>Sets an account status to disabled. If the account is already disabled, the operation returns success directly.</p>
      * 
      * @param request DisableUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5910,7 +5910,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables an Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM) account. If the account is disabled, a success message is returned.</p>
+     * <p>Sets an account status to disabled. If the account is already disabled, the operation returns success directly.</p>
      * 
      * @param request DisableUserRequest
      * @return DisableUserResponse
@@ -6984,7 +6984,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When a conditional access policy is disabled, it no longer blocks access. Ensure that you understand the potential security threats before you perform this operation.</p>
+     * <p>When you change a conditional access policy from enabled to disabled, the policy no longer intercepts requests. Make sure that you are aware of the risks that this operation may cause.</p>
      * 
      * <b>summary</b> : 
      * <p>Enables authentication.</p>
@@ -7023,7 +7023,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When a conditional access policy is disabled, it no longer blocks access. Ensure that you understand the potential security threats before you perform this operation.</p>
+     * <p>When you change a conditional access policy from enabled to disabled, the policy no longer intercepts requests. Make sure that you are aware of the risks that this operation may cause.</p>
      * 
      * <b>summary</b> : 
      * <p>Enables authentication.</p>
@@ -7038,7 +7038,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enable identity provider synchronization.</p>
+     * <p>Enables the inbound synchronization feature for an identity provider.</p>
      * 
      * @param request EnableIdentityProviderUdPullRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7074,7 +7074,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enable identity provider synchronization.</p>
+     * <p>Enables the inbound synchronization feature for an identity provider.</p>
      * 
      * @param request EnableIdentityProviderUdPullRequest
      * @return EnableIdentityProviderUdPullResponse
@@ -7226,7 +7226,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables an Employee Identity and Access Management (EIAM) account of Identity as a Service (IDaaS).</p>
+     * <p>Sets an account to the enabled state.</p>
      * 
      * @param request EnableUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7262,7 +7262,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables an Employee Identity and Access Management (EIAM) account of Identity as a Service (IDaaS).</p>
+     * <p>Sets an account to the enabled state.</p>
      * 
      * @param request EnableUserRequest
      * @return EnableUserResponse
@@ -8174,7 +8174,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询授权服务器</p>
+     * <p>Queries an authorization server.</p>
      * 
      * @param request GetAuthorizationServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8210,7 +8210,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询授权服务器</p>
+     * <p>Queries an authorization server.</p>
      * 
      * @param request GetAuthorizationServerRequest
      * @return GetAuthorizationServerResponse
@@ -8322,7 +8322,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves information about resources in an Alibaba Cloud account.</p>
+     * <p>Queries the resource information of a cloud account.</p>
      * 
      * @param request GetCloudAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8358,7 +8358,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves information about resources in an Alibaba Cloud account.</p>
+     * <p>Queries the resource information of a cloud account.</p>
      * 
      * @param request GetCloudAccountRequest
      * @return GetCloudAccountResponse
@@ -8856,7 +8856,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the information about an account group in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</p>
+     * <p>Queries the details of an EIAM account group.</p>
      * 
      * @param request GetGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8892,7 +8892,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the information about an account group in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</p>
+     * <p>Queries the details of an EIAM account group.</p>
      * 
      * @param request GetGroupRequest
      * @return GetGroupResponse
@@ -8904,7 +8904,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get an identity provider.</p>
+     * <p>Retrieves an identity provider.</p>
      * 
      * @param request GetIdentityProviderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8940,7 +8940,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get an identity provider.</p>
+     * <p>Retrieves an identity provider.</p>
      * 
      * @param request GetIdentityProviderRequest
      * @return GetIdentityProviderResponse
@@ -9052,7 +9052,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get IdP Inbound Synchronization Configuration Information</p>
+     * <p>Retrieves the inbound synchronization configuration of an identity provider (IdP).</p>
      * 
      * @param request GetIdentityProviderUdPullConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9088,7 +9088,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get IdP Inbound Synchronization Configuration Information</p>
+     * <p>Retrieves the inbound synchronization configuration of an identity provider (IdP).</p>
      * 
      * @param request GetIdentityProviderUdPullConfigurationRequest
      * @return GetIdentityProviderUdPullConfigurationResponse
@@ -9618,7 +9618,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about an organizational unit in Identity as a Service (IDaaS) Employee IAM (EIAM).</p>
+     * <p>Queries the information of an EIAM organizational unit.</p>
      * 
      * @param request GetOrganizationalUnitRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9654,7 +9654,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about an organizational unit in Identity as a Service (IDaaS) Employee IAM (EIAM).</p>
+     * <p>Queries the information of an EIAM organizational unit.</p>
      * 
      * @param request GetOrganizationalUnitRequest
      * @return GetOrganizationalUnitResponse
@@ -9842,7 +9842,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the permission scopes for a specified resource server.</p>
+     * <p>Queries the scope permissions under a specified ResourceServer.</p>
      * 
      * @param request GetResourceServerScopeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9882,7 +9882,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the permission scopes for a specified resource server.</p>
+     * <p>Queries the scope permissions under a specified ResourceServer.</p>
      * 
      * @param request GetResourceServerScopeRequest
      * @return GetResourceServerScopeResponse
@@ -10030,7 +10030,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of an account in Identity as a Service (IDaaS) Employee IAM (EIAM).</p>
+     * <p>Queries the details of an EIAM account.</p>
      * 
      * @param request GetUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10066,7 +10066,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of an account in Identity as a Service (IDaaS) Employee IAM (EIAM).</p>
+     * <p>Queries the details of an EIAM account.</p>
      * 
      * @param request GetUserRequest
      * @return GetUserResponse
@@ -10732,7 +10732,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of applications that an EIAM group can access.</p>
+     * <p>Query the list of applications accessible to an EIAM group.</p>
      * 
      * @param request ListApplicationsForGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10780,7 +10780,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of applications that an EIAM group can access.</p>
+     * <p>Query the list of applications accessible to an EIAM group.</p>
      * 
      * @param request ListApplicationsForGroupRequest
      * @return ListApplicationsForGroupResponse
@@ -10908,10 +10908,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries only the applications that are directly assigned to an organization. You can use the <strong>ApplicationIds</strong> parameter to filter the applications.</p>
+     * <p>This operation queries only the direct permissions of the organizational unit, that is, applications directly assigned to the organizational unit. When you call this operation, you can use the <strong>ApplicationIds</strong> parameter to filter applications.</p>
      * 
      * <b>summary</b> : 
-     * <p>This operation queries a paginated list of applications that an EIAM organization can access. The response includes application IDs. To retrieve detailed information about an application, call the GetApplication operation.</p>
+     * <p>Queries the list of applications accessible to an EIAM organizational unit by paging. The response includes application IDs. To obtain detailed application information, call the GetApplication operation.</p>
      * 
      * @param request ListApplicationsForOrganizationalUnitRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10959,10 +10959,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries only the applications that are directly assigned to an organization. You can use the <strong>ApplicationIds</strong> parameter to filter the applications.</p>
+     * <p>This operation queries only the direct permissions of the organizational unit, that is, applications directly assigned to the organizational unit. When you call this operation, you can use the <strong>ApplicationIds</strong> parameter to filter applications.</p>
      * 
      * <b>summary</b> : 
-     * <p>This operation queries a paginated list of applications that an EIAM organization can access. The response includes application IDs. To retrieve detailed information about an application, call the GetApplication operation.</p>
+     * <p>Queries the list of applications accessible to an EIAM organizational unit by paging. The response includes application IDs. To obtain detailed application information, call the GetApplication operation.</p>
      * 
      * @param request ListApplicationsForOrganizationalUnitRequest
      * @return ListApplicationsForOrganizationalUnitResponse
@@ -11546,7 +11546,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Returns a paginated list of information about one or more Alibaba Cloud accounts.</p>
+     * <p>Queries information about one or more cloud accounts by using paging.</p>
      * 
      * @param request ListCloudAccountsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11590,7 +11590,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Returns a paginated list of information about one or more Alibaba Cloud accounts.</p>
+     * <p>Queries information about one or more cloud accounts by using paging.</p>
      * 
      * @param request ListCloudAccountsRequest
      * @return ListCloudAccountsResponse
@@ -11664,7 +11664,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the conditional access policies associated with an application.</p>
+     * <p>List conditional access policies associated with an application.</p>
      * 
      * @param request ListConditionalAccessPoliciesForApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11700,7 +11700,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the conditional access policies associated with an application.</p>
+     * <p>List conditional access policies associated with an application.</p>
      * 
      * @param request ListConditionalAccessPoliciesForApplicationRequest
      * @return ListConditionalAccessPoliciesForApplicationResponse
@@ -12255,7 +12255,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>View the event list.</p>
+     * <p>Queries the event list.</p>
      * 
      * @param request ListEventTypesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12291,7 +12291,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>View the event list.</p>
+     * <p>Queries the event list.</p>
      * 
      * @param request ListEventTypesRequest
      * @return ListEventTypesResponse
@@ -12367,7 +12367,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of account groups in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</p>
+     * <p>List EIAM account groups.</p>
      * 
      * @param request ListGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12423,7 +12423,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of account groups in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</p>
+     * <p>List EIAM account groups.</p>
      * 
      * @param request ListGroupsRequest
      * @return ListGroupsResponse
@@ -12623,7 +12623,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of account groups to which an Employee Identity and Access Management (EIAM) account of Identity as a Service (IDaaS) belongs.</p>
+     * <p>Queries the list of account groups to which a specified EIAM account belongs.</p>
      * 
      * @param request ListGroupsForUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12667,7 +12667,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of account groups to which an Employee Identity and Access Management (EIAM) account of Identity as a Service (IDaaS) belongs.</p>
+     * <p>Queries the list of account groups to which a specified EIAM account belongs.</p>
      * 
      * @param request ListGroupsForUserRequest
      * @return ListGroupsForUserResponse
@@ -12679,7 +12679,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of identity providers.</p>
+     * <p>Query the list of identity providers.</p>
      * 
      * @param request ListIdentityProvidersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12723,7 +12723,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of identity providers.</p>
+     * <p>Query the list of identity providers.</p>
      * 
      * @param request ListIdentityProvidersRequest
      * @return ListIdentityProvidersResponse
@@ -12791,7 +12791,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about one or more Employee Identity and Access Management (EIAM) instances.</p>
+     * <p>Queries information about one or more EIAM instances.</p>
      * 
      * @param request ListInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12843,7 +12843,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about one or more Employee Identity and Access Management (EIAM) instances.</p>
+     * <p>Queries information about one or more EIAM instances.</p>
      * 
      * @param request ListInstancesRequest
      * @return ListInstancesResponse
@@ -13108,7 +13108,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all parent organizational units of a specified EIAM organizational unit. The returned organizational units are sorted in hierarchical order from the highest level to the lowest level.</p>
+     * <p>Queries all ancestor organizations of a specified EIAM organization. The organizations in the result list are sorted in hierarchical order from the top level to the bottom level.</p>
      * 
      * @param request ListOrganizationalUnitParentsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13144,7 +13144,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all parent organizational units of a specified EIAM organizational unit. The returned organizational units are sorted in hierarchical order from the highest level to the lowest level.</p>
+     * <p>Queries all ancestor organizations of a specified EIAM organization. The organizations in the result list are sorted in hierarchical order from the top level to the bottom level.</p>
      * 
      * @param request ListOrganizationalUnitParentsRequest
      * @return ListOrganizationalUnitParentsResponse
@@ -13703,10 +13703,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API retrieves only applications directly assigned to an organization. Use the <strong>ApplicationIds</strong> parameter to filter applications.</p>
+     * <p>This operation queries only the direct permissions of an organizational unit, which are the applications directly assigned to the organizational unit. When you call this operation, you can use the <strong>ApplicationIds</strong> parameter to filter applications.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a paginated list of EIAM accounts.</p>
+     * <p>Queries EIAM account information by using paging.</p>
      * 
      * @param request ListUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13798,10 +13798,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API retrieves only applications directly assigned to an organization. Use the <strong>ApplicationIds</strong> parameter to filter applications.</p>
+     * <p>This operation queries only the direct permissions of an organizational unit, which are the applications directly assigned to the organizational unit. When you call this operation, you can use the <strong>ApplicationIds</strong> parameter to filter applications.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a paginated list of EIAM accounts.</p>
+     * <p>Queries EIAM account information by using paging.</p>
      * 
      * @param request ListUsersRequest
      * @return ListUsersResponse
@@ -14219,7 +14219,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the proxy token for a domain name in an EIAM instance.</p>
+     * <p>Queries the proxy token of an EIAM instance domain name.</p>
      * 
      * @param request ObtainDomainProxyTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14259,7 +14259,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the proxy token for a domain name in an EIAM instance.</p>
+     * <p>Queries the proxy token of an EIAM instance domain name.</p>
      * 
      * @param request ObtainDomainProxyTokenRequest
      * @return ObtainDomainProxyTokenResponse
@@ -15559,7 +15559,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the default domain name for a specified EIAM instance.</p>
+     * <p>Sets a specified domain name of an EIAM instance as the default domain name.</p>
      * 
      * @param request SetDefaultDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15595,7 +15595,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the default domain name for a specified EIAM instance.</p>
+     * <p>Sets a specified domain name of an EIAM instance as the default domain name.</p>
      * 
      * @param request SetDefaultDomainRequest
      * @return SetDefaultDomainResponse
@@ -15659,7 +15659,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update authentication information</p>
+     * <p>Modify Authentication Information</p>
      * 
      * @param request SetIdentityProviderAuthnConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15711,7 +15711,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update authentication information</p>
+     * <p>Modify Authentication Information</p>
      * 
      * @param request SetIdentityProviderAuthnConfigurationRequest
      * @return SetIdentityProviderAuthnConfigurationResponse
@@ -15723,7 +15723,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the inbound synchronization configuration for an IdP.</p>
+     * <p>Modifies the inbound synchronization configuration of an Identity Provider (IdP).</p>
      * 
      * @param request SetIdentityProviderUdPullConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15787,7 +15787,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the inbound synchronization configuration for an IdP.</p>
+     * <p>Modifies the inbound synchronization configuration of an Identity Provider (IdP).</p>
      * 
      * @param request SetIdentityProviderUdPullConfigurationRequest
      * @return SetIdentityProviderUdPullConfigurationResponse
@@ -16535,7 +16535,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Unlocks an Employee Identity and Access Management (EIAM) account of Identity as a Service (IDaaS) that is locked.</p>
+     * <p>Unlocks a locked EIAM account.</p>
      * 
      * @param request UnlockUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16571,7 +16571,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Unlocks an Employee Identity and Access Management (EIAM) account of Identity as a Service (IDaaS) that is locked.</p>
+     * <p>Unlocks a locked EIAM account.</p>
      * 
      * @param request UnlockUserRequest
      * @return UnlockUserResponse

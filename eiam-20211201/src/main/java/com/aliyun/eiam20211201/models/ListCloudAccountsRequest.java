@@ -21,11 +21,11 @@ public class ListCloudAccountsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The maximum number of records to return on each page.</p>
+     * <p>The maximum number of records per page.</p>
      * <ul>
-     * <li><p>The default value is 20.</p>
+     * <li><p>Default value: 20.</p>
      * </li>
-     * <li><p>The maximum value is 100.</p>
+     * <li><p>Maximum value: 100.</p>
      * </li>
      * </ul>
      * 
@@ -36,9 +36,9 @@ public class ListCloudAccountsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that specifies the start of the next page.</p>
+     * <p>The token that marks the starting position of the next page.</p>
      * <ul>
-     * <li>If you leave this parameter empty, the query starts from the first page.</li>
+     * <li>If you do not specify this parameter, the query starts from the first page.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -88,12 +88,9 @@ public class ListCloudAccountsRequest extends TeaModel {
         /**
          * <p>The name of the filter field. Valid values:</p>
          * <ul>
-         * <li><p>CloudAccountId: The ID of the Alibaba Cloud account.</p>
-         * </li>
-         * <li><p>CloudAccountExternalId: The external unique ID of the Alibaba Cloud account.</p>
-         * </li>
-         * <li><p>CloudAccountVendorType: The type of the Alibaba Cloud account.</p>
-         * </li>
+         * <li>CloudAccountId: the cloud account ID.</li>
+         * <li>CloudAccountExternalId: the external unique identifier of the cloud account.</li>
+         * <li>CloudAccountVendorType: the cloud account type.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -103,7 +100,7 @@ public class ListCloudAccountsRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>A list of values for the filter field.</p>
+         * <p>The values of the filter field.</p>
          */
         @NameInMap("Value")
         public java.util.List<String> value;

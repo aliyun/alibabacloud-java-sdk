@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateUserRequest extends TeaModel {
     /**
-     * <p>A client-provided token to ensure the idempotence of the request. This value must be unique for each request. The token can contain only ASCII characters and must be no more than 64 characters long. For more information, see <a href="~~~/doc-en/6a938a5b-2402-4c9d-b235-3733a1f813c9.dita">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate a parameter value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see References: How to ensure idempotence.</p>
      * 
      * <strong>example:</strong>
      * <p>client-token-example</p>
@@ -23,7 +23,7 @@ public class CreateUserRequest extends TeaModel {
     public java.util.List<CreateUserRequestCustomFields> customFields;
 
     /**
-     * <p>The description. The maximum length is 256 characters.</p>
+     * <p>The description. The description can be up to 256 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>description text</p>
@@ -32,7 +32,7 @@ public class CreateUserRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The display name. The maximum length is 128 characters.</p>
+     * <p>The display name of the account. The display name can be up to 128 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>name_001</p>
@@ -41,7 +41,7 @@ public class CreateUserRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The email address. The local part of the address can contain uppercase letters, lowercase letters, digits, periods (.), underscores (_), or hyphens (-). The maximum length is 128 characters.</p>
+     * <p>The email address. The email prefix can contain uppercase letters, lowercase letters, digits, periods (.), underscores (_), and hyphens (-). The email address can be up to 128 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="mailto:example@example.com">example@example.com</a></p>
@@ -50,7 +50,7 @@ public class CreateUserRequest extends TeaModel {
     public String email;
 
     /**
-     * <p>Indicates whether the email address is verified. A verified address is considered trusted. This parameter is required if you specify the <code>Email</code> parameter. For typical use, set this to <code>true</code>.</p>
+     * <p>Specifies whether the email address is verified as a trusted email address. This parameter is required if Email is specified. If no special business requirement exists, set this parameter to true.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -59,7 +59,7 @@ public class CreateUserRequest extends TeaModel {
     public Boolean emailVerified;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,13 +69,13 @@ public class CreateUserRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>A list of subordinate organizational unit IDs. A user can belong to multiple organizational units.</p>
+     * <p>The list of organizational unit IDs to which the account belongs. An account can belong to multiple organizational units.</p>
      */
     @NameInMap("OrganizationalUnitIds")
     public java.util.List<String> organizationalUnitIds;
 
     /**
-     * <p>The password. The format must comply with the password policy.</p>
+     * <p>The password. The password must meet the requirements of the password policy.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -84,13 +84,13 @@ public class CreateUserRequest extends TeaModel {
     public String password;
 
     /**
-     * <p>The settings for the password initialization policy.</p>
+     * <p>The password initialization configuration.</p>
      */
     @NameInMap("PasswordInitializationConfig")
     public CreateUserRequestPasswordInitializationConfig passwordInitializationConfig;
 
     /**
-     * <p>The phone number. It must be 6 to 15 digits long.</p>
+     * <p>The phone number. The value is a 6 to 15-digit number.</p>
      * 
      * <strong>example:</strong>
      * <p>12345678901</p>
@@ -99,7 +99,7 @@ public class CreateUserRequest extends TeaModel {
     public String phoneNumber;
 
     /**
-     * <p>Indicates whether the phone number is verified. A verified number is considered trusted. This parameter is required if you specify the <code>PhoneNumber</code> parameter. For typical use, set this to <code>true</code>.</p>
+     * <p>Specifies whether the phone number is verified as a trusted phone number. This parameter is required if PhoneNumber is specified. If no special business requirement exists, set this parameter to true.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -108,7 +108,7 @@ public class CreateUserRequest extends TeaModel {
     public Boolean phoneNumberVerified;
 
     /**
-     * <p>The country code. It must contain 1 to 6 digits and must not include the plus sign (+).</p>
+     * <p>The phone region code. The value is a 1 to 6-digit number and does not include a plus sign (+).</p>
      * 
      * <strong>example:</strong>
      * <p>86</p>
@@ -127,7 +127,7 @@ public class CreateUserRequest extends TeaModel {
     public String primaryOrganizationalUnitId;
 
     /**
-     * <p>The external ID for associating the user with an external system. The maximum length is 128 characters. If this parameter is not specified, its value defaults to the system-generated user ID.</p>
+     * <p>The external ID of the account. This parameter is used to associate the account with an external system. The value can be up to 128 characters in length. If this parameter is not specified, the account ID is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
@@ -136,7 +136,7 @@ public class CreateUserRequest extends TeaModel {
     public String userExternalId;
 
     /**
-     * <p>The username. It can contain letters, digits, and the following special characters: underscores (_), periods (.), at signs (@), and hyphens (-). The maximum length is 256 characters.</p>
+     * <p>The username. The username can contain letters, digits, underscores (_), periods (.), at signs (@), and hyphens (-). The username can be up to 256 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -280,7 +280,7 @@ public class CreateUserRequest extends TeaModel {
 
     public static class CreateUserRequestCustomFields extends TeaModel {
         /**
-         * <p>The identifier of the custom field. You must create this field in the console before you can use it in a request. For more information, see the Custom Fields module in the console.</p>
+         * <p>The identifier of the custom field. Create the custom field in advance. For more information, refer to the custom fields module in the console.</p>
          * 
          * <strong>example:</strong>
          * <p>age</p>
@@ -289,7 +289,7 @@ public class CreateUserRequest extends TeaModel {
         public String fieldName;
 
         /**
-         * <p>The value of the custom field. This value must comply with the constraints defined for the corresponding custom field.</p>
+         * <p>The value of the custom field. The value must comply with the attribute constraints of the corresponding custom field.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -322,12 +322,10 @@ public class CreateUserRequest extends TeaModel {
 
     public static class CreateUserRequestPasswordInitializationConfig extends TeaModel {
         /**
-         * <p>The status of forced password update. This setting is disabled by default. Valid values:</p>
+         * <p>The forced password change status. By default, this feature is not enabled. Valid values:</p>
          * <ul>
-         * <li><p><code>enabled</code>: Enables forced password updates.</p>
-         * </li>
-         * <li><p><code>disabled</code>: Disables forced password updates.</p>
-         * </li>
+         * <li>enabled: Enabled.</li>
+         * <li>disabled: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -337,12 +335,10 @@ public class CreateUserRequest extends TeaModel {
         public String passwordForcedUpdateStatus;
 
         /**
-         * <p>The priority of the password initialization policy. This setting is disabled by default. Valid values:</p>
+         * <p>The priority of the password initialization policy. By default, this parameter does not take effect. Valid values:</p>
          * <ul>
-         * <li><p><code>global</code>: The service uses the instance-level password initialization policy and ignores the policy specified in this request. For more information, see the password initialization policy settings.</p>
-         * </li>
-         * <li><p><code>custom</code>: The service uses the password initialization policy defined in this request. This includes the forced password update setting, the password initialization method, and the notification channels.</p>
-         * </li>
+         * <li>global: The global policy policy priority. The instance-level password initialization policy is used, and the password initialization policy specified in this request does not take effect. For more information, refer to the password initialization policy in password-related policies.</li>
+         * <li>custom: The custom policy policy priority. The password initialization policy defined in this request is used, including whether to enable forced password change, the password initialization method, and the notification channel.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -352,9 +348,9 @@ public class CreateUserRequest extends TeaModel {
         public String passwordInitializationPolicyPriority;
 
         /**
-         * <p>The password initialization type. Valid values:</p>
+         * <p>The password initialization method. Valid values:</p>
          * <ul>
-         * <li><code>random</code>: The system generates a random password.</li>
+         * <li>random: random.</li>
          * </ul>
          * 
          * <strong>example:</strong>

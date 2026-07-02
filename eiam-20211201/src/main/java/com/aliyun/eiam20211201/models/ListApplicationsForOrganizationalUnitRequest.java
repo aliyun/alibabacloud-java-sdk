@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListApplicationsForOrganizationalUnitRequest extends TeaModel {
     /**
-     * <p>A list of application IDs. You can specify up to 100 application IDs in a single operation.</p>
+     * <p>The list of application IDs. A maximum of 100 application IDs are supported in a single operation.</p>
      * 
      * <strong>example:</strong>
      * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
@@ -24,7 +24,7 @@ public class ListApplicationsForOrganizationalUnitRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The organization ID.</p>
+     * <p>The organizational unit ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class ListApplicationsForOrganizationalUnitRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
