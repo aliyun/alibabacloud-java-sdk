@@ -4,14 +4,11 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class ListKmsInstancesResponseBody extends TeaModel {
-    /**
-     * <p>A list of KMS instances.</p>
-     */
     @NameInMap("KmsInstances")
     public ListKmsInstancesResponseBodyKmsInstances kmsInstances;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the returned page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +17,7 @@ public class ListKmsInstancesResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of KMS instances returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +26,7 @@ public class ListKmsInstancesResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>d3eca5c8-a856-4347-8eb6-e1898c3fda2e</p>
@@ -92,21 +89,9 @@ public class ListKmsInstancesResponseBody extends TeaModel {
     }
 
     public static class ListKmsInstancesResponseBodyKmsInstancesKmsInstance extends TeaModel {
-        /**
-         * <p>The ARN of the KMS instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>acs:kms:pre-hangzhou:120708975881****:keystore/kst-phzz64c9f84eo32dbs****</p>
-         */
         @NameInMap("KmsInstanceArn")
         public String kmsInstanceArn;
 
-        /**
-         * <p>The ID of the KMS instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>kst-phzz64c9f84eo32dbs****</p>
-         */
         @NameInMap("KmsInstanceId")
         public String kmsInstanceId;
 

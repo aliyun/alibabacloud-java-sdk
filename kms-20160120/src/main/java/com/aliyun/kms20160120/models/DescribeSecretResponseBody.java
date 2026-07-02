@@ -160,10 +160,6 @@ public class DescribeSecretResponseBody extends TeaModel {
     @NameInMap("SecretType")
     public String secretType;
 
-    /**
-     * <p>The resource tags of the secret.</p>
-     * <p>This parameter is not returned if you set the FetchTags parameter to false or you do not specify the FetchTags parameter.</p>
-     */
     @NameInMap("Tags")
     public DescribeSecretResponseBodyTags tags;
 
@@ -318,21 +314,9 @@ public class DescribeSecretResponseBody extends TeaModel {
     }
 
     public static class DescribeSecretResponseBodyTagsTag extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>key1</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>val1</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 

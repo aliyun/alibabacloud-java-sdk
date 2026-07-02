@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PutSecretValueRequest extends TeaModel {
     /**
-     * <p>The secret value. The value is encrypted and then stored in the new version.</p>
+     * <p>The secret value. The value is encrypted and stored in the specified new version.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,8 +17,10 @@ public class PutSecretValueRequest extends TeaModel {
     /**
      * <p>The type of the secret value. Valid values:</p>
      * <ul>
-     * <li>text: This is the default value.</li>
-     * <li>binary</li>
+     * <li><p>text (default)</p>
+     * </li>
+     * <li><p>binary</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +30,10 @@ public class PutSecretValueRequest extends TeaModel {
     public String secretDataType;
 
     /**
-     * <p>The name of the secret.</p>
+     * <p>The name or Alibaba Cloud Resource Name (ARN) of the secret.</p>
+     * <blockquote>
+     * <p>When you access a secret in another Alibaba Cloud account, you must specify the ARN of the secret. The ARN of a secret is in the format of <code>acs:kms:${region}:${account}:secret/${secret-name}</code>.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,17 +43,17 @@ public class PutSecretValueRequest extends TeaModel {
     public String secretName;
 
     /**
-     * <p>The new version of the secret value. Version numbers must be unique in each secret.</p>
+     * <p>The version number of the secret. The value must be unique in the secret.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>00000000000000000000000000000000203</p>
+     * <p>v3</p>
      */
     @NameInMap("VersionId")
     public String versionId;
 
     /**
-     * <p>The stage labels that are used to mark the new version. If you do not specify this parameter, Secrets Manager marks the new version with ACSCurrent.</p>
+     * <p>The stage labels that are used to mark the new version. If you do not specify this parameter, KMS marks the new version with ACSCurrent.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;ACSCurrent&quot;,&quot;ACSNext&quot;]</p>

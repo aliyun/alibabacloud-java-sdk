@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImportKeyMaterialResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ec1017cf-ead4-f3ca-babc-c3b34f3dbecb</p>

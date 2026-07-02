@@ -5,13 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListSecretVersionIdsRequest extends TeaModel {
     /**
-     * <p>Specifies whether to return deprecated secret versions.</p>
+     * <p>Specifies whether to include credential versions that have no version stages in the response.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>false: no</li>
-     * <li>true: yes</li>
+     * <li><p>false (default): No</p>
+     * </li>
+     * <li><p>true: Yes</p>
+     * </li>
      * </ul>
-     * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -20,7 +21,7 @@ public class ListSecretVersionIdsRequest extends TeaModel {
     public String includeDeprecated;
 
     /**
-     * <p>The number of the page to return. Default value: 1.</p>
+     * <p>The number of the page to return for a paged query. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,7 +30,7 @@ public class ListSecretVersionIdsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 10.</p>
+     * <p>The number of entries to return on each page for a paged query. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +39,10 @@ public class ListSecretVersionIdsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The name of the secret.</p>
+     * <p>The name or Alibaba Cloud Resource Name (ARN) of the credential.</p>
+     * <blockquote>
+     * <p>When you access a credential that belongs to another Alibaba Cloud account, you must specify the ARN of the credential. The ARN of a credential is in the format of <code>acs:kms:${region}:${account}:secret/${secret-name}</code>.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

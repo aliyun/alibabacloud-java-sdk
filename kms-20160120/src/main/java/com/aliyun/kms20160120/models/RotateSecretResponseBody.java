@@ -14,7 +14,7 @@ public class RotateSecretResponseBody extends TeaModel {
     public String arn;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10257c86-269d-43aa-aaf3-90ed4144bb7c</p>

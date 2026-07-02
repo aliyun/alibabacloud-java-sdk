@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteNetworkRuleRequest extends TeaModel {
     /**
-     * <p>The name of the network access rule that you want to delete.</p>
+     * <p>The name of the network control rule to delete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

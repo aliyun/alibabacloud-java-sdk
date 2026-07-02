@@ -14,7 +14,7 @@ public class GetRandomPasswordResponseBody extends TeaModel {
     public String randomPassword;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6b0cbe25-5e33-467e-972e-7a83c6c97604</p>

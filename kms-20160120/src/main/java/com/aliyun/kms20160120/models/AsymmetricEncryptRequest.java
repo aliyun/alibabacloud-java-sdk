@@ -14,26 +14,47 @@ public class AsymmetricEncryptRequest extends TeaModel {
     @NameInMap("Algorithm")
     public String algorithm;
 
+    /**
+     * <p>Specifies whether to enable the dry run feature.</p>
+     * <ul>
+     * <li><p>true: enables the feature.</p>
+     * </li>
+     * <li><p>false (default): disables the feature.</p>
+     * </li>
+     * </ul>
+     * <p>The dry run feature is used to test the API call and verify the permissions on the specified resources and the validity of the request parameters. If you enable the dry run feature, KMS always returns a failed result and a failure reason. The failure reasons include the following:</p>
+     * <ul>
+     * <li><p>DryRunOperationError: The request would have succeeded if the DryRun parameter was not specified.</p>
+     * </li>
+     * <li><p>ValidationError: The specified parameters in the request are invalid.</p>
+     * </li>
+     * <li><p>AccessDeniedError: You are not authorized to perform this operation on the KMS resource.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("DryRun")
     public String dryRun;
 
     /**
-     * <p>The ID of the CMK. The ID must be globally unique.</p>
+     * <p>The ID of the key. You can also specify the alias or the Amazon Resource Name (ARN) of the key. For more information about aliases, see <a href="https://help.aliyun.com/document_detail/480655.html">Manage aliases</a>.</p>
      * <blockquote>
-     * <p> You can also set this parameter to an alias that is bound to the CMK. For more information, see <a href="https://help.aliyun.com/document_detail/68522.html">Overview of aliases</a>.</p>
+     * <p>To access a key of another Alibaba Cloud account, you must specify the ARN of the key. The key ARN is in the format of <code>acs:kms:${region}:${account}:key/${keyid}</code>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>5c438b18-05be-40ad-b6c2-3be6752c****</p>
+     * <p>key-hzz630494463ejqjx****</p>
      */
     @NameInMap("KeyId")
     public String keyId;
 
     /**
-     * <p>The version ID of the CMK. The ID must be globally unique.</p>
+     * <p>The ID of the key version. The ID must be a globally unique identifier.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/133966.html">ListKeyVersions</a> operation to query the versions of a CMK. The ID of a version is specified by the KeyVersionId parameter.</p>
+     * <p>To obtain the key version ID, call the <a href="https://help.aliyun.com/document_detail/133966.html">ListKeyVersions</a> operation.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -44,7 +65,7 @@ public class AsymmetricEncryptRequest extends TeaModel {
     public String keyVersionId;
 
     /**
-     * <p>The plaintext that you want to encrypt. The plaintext must be Base64-encoded.</p>
+     * <p>The plaintext to be encrypted. The value must be Base64-encoded.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

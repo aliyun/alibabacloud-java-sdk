@@ -17,7 +17,7 @@ public class RotateSecretRequest extends TeaModel {
     /**
      * <p>The version number of the secret after the secret is rotated.</p>
      * <blockquote>
-     * <p> The version number is used to ensure the idempotence of the request. Secrets Manager uses this version number to prevent your application from creating the same version of the secret when the application retries a request. If a version number already exists, Secrets Manager ignores the request for rotation and returns a success message.</p>
+     * <p>The version number is used to ensure the idempotence of the request. Secrets Manager uses this version number to prevent your application from creating the same version of the secret when the application retries a request. If a version number already exists, Secrets Manager ignores the request for rotation and returns a success message.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

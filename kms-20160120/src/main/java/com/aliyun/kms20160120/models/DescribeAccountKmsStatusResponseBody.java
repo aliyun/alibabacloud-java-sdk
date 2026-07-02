@@ -28,7 +28,7 @@ public class DescribeAccountKmsStatusResponseBody extends TeaModel {
     public String accountStatus;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3ac84333-d64d-4784-a8bc-997834a7ac6c</p>

@@ -10,7 +10,7 @@ public class DescribeKeyRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>05754286-3ba2-4fa6-8d41-4323aca6****</p>
+     * <p>key-hzz630494463ejqjx****</p>
      */
     @NameInMap("KeyId")
     public String keyId;

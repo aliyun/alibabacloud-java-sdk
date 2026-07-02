@@ -4,17 +4,33 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class GetSecretValueRequest extends TeaModel {
+    /**
+     * <p>Indicates whether to enable DryRun mode.</p>
+     * <ul>
+     * <li>true: Enabled  </li>
+     * <li>false (Default Value): Disabled</li>
+     * </ul>
+     * <p>DryRun mode is used for Testing API Calls to authenticate whether you have the required permissions on the specified resource and whether the Request Parameters are correctly configured. When DryRun mode is enabled, KMS always returns a failed response along with the failure reason. Possible failure reasons include:</p>
+     * <ul>
+     * <li>DryRunOperationError: The request would succeed if the DryRun parameter were not specified.  </li>
+     * <li>ValidationError: One or more parameters in the request are invalid.  </li>
+     * <li>AccessDeniedError: You do not have permission to execute this operation on the KMS resource.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("DryRun")
     public String dryRun;
 
     /**
-     * <p>Specifies whether to obtain the extended configuration of the secret. Valid values:</p>
+     * <p>Indicates whether to retrieve the extended configuration of the credential. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false: This is the default value.</li>
+     * <li>true: Retrieve  </li>
+     * <li>false (Default Value): Do not retrieve</li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is ignored for a generic secret.</p>
+     * <p>Generic secrets do not support extended configuration. If you specify this parameter, it will be ignored.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -24,7 +40,10 @@ public class GetSecretValueRequest extends TeaModel {
     public Boolean fetchExtendedConfig;
 
     /**
-     * <p>The name of the secret.</p>
+     * <p>The name or ARN of the credential.  </p>
+     * <blockquote>
+     * <p>When accessing a credential under another Alibaba Cloud account, you must specify the credential ARN. The ARN format is <code>acs:kms:${region}:${account}:secret/${secret-name}</code>.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,22 +53,22 @@ public class GetSecretValueRequest extends TeaModel {
     public String secretName;
 
     /**
-     * <p>The version number of the secret value. If you specify this parameter, Secrets Manager returns the secret value of the specified version.</p>
+     * <p>Version number.</p>
      * <blockquote>
-     * <p> This parameter is ignored for a managed ApsaraDB RDS secret, a managed RAM secret, or a managed ECS secret.</p>
+     * <p>The VersionId parameter is not supported for RDS credentials, PolarDB credentials, Redis/Tair credentials, RAM credentials, and ECS credentials. If you specify this parameter, it will be ignored.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>00000000000000000000000000000001</p>
+     * <p>v1</p>
      */
     @NameInMap("VersionId")
     public String versionId;
 
     /**
-     * <p>The stage label that marks the secret version. If you specify this parameter, Secrets Manager returns the secret value of the version that is marked with the specified stage label.</p>
-     * <p>Default value: ACSCurrent.</p>
+     * <p>The version stage. Default value: ACSCurrent.  </p>
+     * <p>If you specify this parameter, the credential value of the specified version stage is returned. If you do not specify this parameter, the credential value of the ACSCurrent version stage is returned.  </p>
      * <blockquote>
-     * <p> For a managed ApsaraDB RDS secret, a managed RAM secret, or a managed ECS secret, Secrets Manager can return only the secret value of the version marked with ACSPrevious or ACSCurrent.</p>
+     * <p>For RDS credentials, PolarDB credentials, Redis/Tair credentials, RAM credentials, and ECS credentials, you can retrieve only the credential values corresponding to the ACSPrevious or ACSCurrent version stages.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

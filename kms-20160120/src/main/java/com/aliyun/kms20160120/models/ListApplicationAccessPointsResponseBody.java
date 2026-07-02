@@ -4,9 +4,6 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class ListApplicationAccessPointsResponseBody extends TeaModel {
-    /**
-     * <p>A list of AAPs.</p>
-     */
     @NameInMap("ApplicationAccessPoints")
     public ListApplicationAccessPointsResponseBodyApplicationAccessPoints applicationAccessPoints;
 
@@ -29,7 +26,7 @@ public class ListApplicationAccessPointsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>bcfefe15-46f0-44a3-bd96-3d422474b71a</p>
@@ -92,21 +89,9 @@ public class ListApplicationAccessPointsResponseBody extends TeaModel {
     }
 
     public static class ListApplicationAccessPointsResponseBodyApplicationAccessPointsApplicationAccessPoint extends TeaModel {
-        /**
-         * <p>The authentication method.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ClientKey</p>
-         */
         @NameInMap("AuthenticationMethod")
         public String authenticationMethod;
 
-        /**
-         * <p>The name of the AAP.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>aap_test</p>
-         */
         @NameInMap("Name")
         public String name;
 

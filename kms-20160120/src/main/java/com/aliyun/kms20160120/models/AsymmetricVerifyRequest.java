@@ -15,9 +15,9 @@ public class AsymmetricVerifyRequest extends TeaModel {
     public String algorithm;
 
     /**
-     * <p>The digest that is generated for the original message by using a hash algorithm. The hash algorithm is specified by the <strong>Algorithm</strong> parameter.</p>
+     * <p>The digest that is generated using the hash algorithm that corresponds to the value of <strong>Algorithm</strong> to hash the original message.</p>
      * <blockquote>
-     * <p> The value is encoded in Base64.</p>
+     * <p>The value is Base64-encoded.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -27,13 +27,34 @@ public class AsymmetricVerifyRequest extends TeaModel {
     @NameInMap("Digest")
     public String digest;
 
+    /**
+     * <p>Specifies whether to perform a dry run.</p>
+     * <ul>
+     * <li><p>true: performs a dry run.</p>
+     * </li>
+     * <li><p>false (default): does not perform a dry run.</p>
+     * </li>
+     * </ul>
+     * <p>A dry run is used to test API calls and verify whether you have the permissions to access the specified resources and whether the request parameters are valid. If you perform a dry run, KMS always returns a failure response that indicates the cause of the failure. The following failure causes are included:</p>
+     * <ul>
+     * <li><p>DryRunOperationError: The request would have succeeded if the DryRun parameter is not specified.</p>
+     * </li>
+     * <li><p>ValidationError: The specified parameters in the request are invalid.</p>
+     * </li>
+     * <li><p>AccessDeniedError: You are not authorized to perform this operation on the KMS resource.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("DryRun")
     public String dryRun;
 
     /**
-     * <p>The ID of the CMK. The ID must be globally unique.</p>
+     * <p>The globally unique identifier (GUID) of the customer master key (CMK).</p>
      * <blockquote>
-     * <p> You can also set this parameter to an alias that is bound to the CMK. For more information, see <a href="https://help.aliyun.com/document_detail/68522.html">Overview of aliases</a>.</p>
+     * <p>You can also specify the alias that is bound to the CMK. For more information, see <a href="https://help.aliyun.com/document_detail/68522.html">Overview of aliases</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -44,7 +65,7 @@ public class AsymmetricVerifyRequest extends TeaModel {
     public String keyId;
 
     /**
-     * <p>The version ID of the CMK. The ID must be globally unique.</p>
+     * <p>The ID of the key version. The ID must be the GUID of the key version.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,7 +77,7 @@ public class AsymmetricVerifyRequest extends TeaModel {
     /**
      * <p>The signature value to be verified.</p>
      * <blockquote>
-     * <p> The value is encoded in Base64.</p>
+     * <p>The value is Base64-encoded.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

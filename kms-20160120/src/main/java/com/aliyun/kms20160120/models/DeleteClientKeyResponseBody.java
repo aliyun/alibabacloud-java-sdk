@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteClientKeyResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID. This is a unique identifier that Alibaba Cloud generates for the request. Use this ID to troubleshoot and locate issues.</p>
      * 
      * <strong>example:</strong>
      * <p>2312e45f-b2fa-4c34-ad94-3eca50932916</p>

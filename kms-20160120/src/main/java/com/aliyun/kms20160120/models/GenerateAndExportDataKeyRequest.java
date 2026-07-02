@@ -4,11 +4,32 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class GenerateAndExportDataKeyRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable the dry run feature.</p>
+     * <ul>
+     * <li><p>true: enables the feature.</p>
+     * </li>
+     * <li><p>false (default): disables the feature.</p>
+     * </li>
+     * </ul>
+     * <p>The DryRun mode is used to test API calls and verify the permissions on the resources that you have access to and the validity of the request parameters. If you enable the DryRun mode, KMS always returns a failure response and the cause of the failure. The following failure causes are included:</p>
+     * <ul>
+     * <li><p>DryRunOperationError: The request would have succeeded if the DryRun parameter is not specified.</p>
+     * </li>
+     * <li><p>ValidationError: The parameters specified in the request are invalid.</p>
+     * </li>
+     * <li><p>AccessDeniedError: You are not authorized to perform this operation on the KMS resource.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("DryRun")
     public String dryRun;
 
     /**
-     * <p>A JSON string of key-value pairs. If you specify this parameter here, an equivalent value is required when you decrypt or re-encrypt the data key. For more information, see <a href="https://help.aliyun.com/document_detail/42975.html">EncryptionContext</a>.</p>
+     * <p>A JSON string that consists of key-value pairs. If you specify this parameter, you must specify the same parameter when you call the Decrypt operation or other operations to re-encrypt the data key. For more information, see <a href="https://help.aliyun.com/document_detail/42975.html">EncryptionContext</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;Example&quot;:&quot;Example&quot;}</p>
@@ -17,7 +38,10 @@ public class GenerateAndExportDataKeyRequest extends TeaModel {
     public java.util.Map<String, ?> encryptionContext;
 
     /**
-     * <p>The globally unique ID of the CMK. You can also set this parameter to an alias that is bound to the CMK. For more information, see <a href="https://help.aliyun.com/document_detail/68522.html">Use aliases</a>.</p>
+     * <p>The ID of the key. You can also specify the alias or Amazon Resource Name (ARN) of the key. For more information about aliases, see <a href="https://help.aliyun.com/document_detail/480655.html">Manage aliases</a>.</p>
+     * <blockquote>
+     * <p>To access a key in another Alibaba Cloud account, you must specify the ARN of the key. The key ARN is in the format of <code>acs:kms:${region}:${account}:key/${keyid}</code>.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,11 +53,13 @@ public class GenerateAndExportDataKeyRequest extends TeaModel {
     /**
      * <p>The length of the data key that you want to generate. Valid values:</p>
      * <ul>
-     * <li>AES_256: a 256-bit symmetric key</li>
-     * <li>AES_128: a 128-bit symmetric key</li>
+     * <li><p>AES_256: a 256-bit symmetric key.</p>
+     * </li>
+     * <li><p>AES_128: a 128-bit symmetric key.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> We recommend that you use the KeySpec or NumberOfBytes parameter to specify the length of a data key. If both parameters are not specified, KMS generates a 256-bit data key. If both parameters are specified, KMS ignores the KeySpec parameter.</p>
+     * <p>We recommend that you use the KeySpec or NumberOfBytes parameter to specify the length of a data key. If you do not specify either of the parameters, KMS generates a 256-bit data key. If you specify both parameters, KMS ignores the KeySpec parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -54,7 +80,7 @@ public class GenerateAndExportDataKeyRequest extends TeaModel {
     public Integer numberOfBytes;
 
     /**
-     * <p>A Base64-encoded public key.</p>
+     * <p>The public key that is encoded in Base64.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,12 +90,14 @@ public class GenerateAndExportDataKeyRequest extends TeaModel {
     public String publicKeyBlob;
 
     /**
-     * <p>The encryption algorithm based on which you want to use the public key specified by PublicKeyBlob to encrypt the data key. For more information about encryption algorithms, see <a href="https://help.aliyun.com/document_detail/148130.html">AsymmetricDecrypt</a>.</p>
-     * <p>Valid values:</p>
+     * <p>The encryption algorithm that is used to encrypt the data key using the public key specified by PublicKeyBlob. For more information about encryption algorithms, see <a href="https://help.aliyun.com/document_detail/148130.html">AsymmetricDecrypt</a>.<br> Valid values:<br><br></p>
      * <ul>
-     * <li>RSAES_OAEP_SHA_256</li>
-     * <li>RSAES_OAEP_SHA_1</li>
-     * <li>SM2PKE</li>
+     * <li><p>RSAES_OAEP_SHA_256</p>
+     * </li>
+     * <li><p>RSAES_OAEP_SHA_1</p>
+     * </li>
+     * <li><p>SM2PKE</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -80,11 +108,12 @@ public class GenerateAndExportDataKeyRequest extends TeaModel {
     public String wrappingAlgorithm;
 
     /**
-     * <p>The key type of the public key specified by PublicKeyBlob. For more information about key types, see <a href="https://help.aliyun.com/document_detail/148147.html">Introduction to asymmetric keys</a>.</p>
-     * <p>Valid values:</p>
+     * <p>The type of the key specified by PublicKeyBlob. For more information about key types, see <a href="https://help.aliyun.com/document_detail/148147.html">Introduction to asymmetric keys</a>.<br> Valid values:<br><br></p>
      * <ul>
-     * <li>RSA_2048</li>
-     * <li>EC_SM2</li>
+     * <li><p>RSA_2048</p>
+     * </li>
+     * <li><p>EC_SM2</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

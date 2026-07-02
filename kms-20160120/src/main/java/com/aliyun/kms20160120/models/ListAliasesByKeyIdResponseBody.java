@@ -4,9 +4,6 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class ListAliasesByKeyIdResponseBody extends TeaModel {
-    /**
-     * <p>An array that consists of aliases.</p>
-     */
     @NameInMap("Aliases")
     public ListAliasesByKeyIdResponseBodyAliases aliases;
 
@@ -92,30 +89,12 @@ public class ListAliasesByKeyIdResponseBody extends TeaModel {
     }
 
     public static class ListAliasesByKeyIdResponseBodyAliasesAlias extends TeaModel {
-        /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the alias.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>acs:kms:cn-hangzhou:123456:alias/ExampleAlias1</p>
-         */
         @NameInMap("AliasArn")
         public String aliasArn;
 
-        /**
-         * <p>The ID of the alias.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>alias/ExampleAlias1</p>
-         */
         @NameInMap("AliasName")
         public String aliasName;
 
-        /**
-         * <p>The CMK to which an alias is bound.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>08c33a6f-4e0a-4a1b-a3fa-7ddfa1d4****</p>
-         */
         @NameInMap("KeyId")
         public String keyId;
 

@@ -5,14 +5,18 @@ import com.aliyun.tea.*;
 
 public class UpdateKmsInstanceBindVpcRequest extends TeaModel {
     /**
-     * <p>The VPC configuration. The configuration of each VPC contains the following content:</p>
+     * <p>The VPC configuration. Each VPC configuration contains the following parameters:</p>
      * <ul>
-     * <li>VpcId: the ID of the VPC.</li>
-     * <li>VSwitchId: the vSwitch in the VPC.</li>
-     * <li>RegionID: the ID of the region to which the VPC belongs.</li>
-     * <li>VpcOwnerId: the Alibaba Cloud account to which the VPC belongs.</li>
+     * <li><p>VpcId: The ID of the VPC.</p>
+     * </li>
+     * <li><p>VSwitchId: The vSwitch in the VPC.</p>
+     * </li>
+     * <li><p>RegionID: The region where the VPC resides.</p>
+     * </li>
+     * <li><p>VpcOwnerId: The Alibaba Cloud account that owns the VPC.</p>
+     * </li>
      * </ul>
-     * <p>Format: <code>[{&quot;VpcId&quot;:&quot;${VpcId}&quot;,&quot;VSwitchId&quot;:&quot;${VSwitchId}&quot;,&quot;RegionId&quot;:&quot;${RegionId}&quot;,&quot;VpcOwnerId&quot;:${VpcOwnerId}},..]</code>.</p>
+     * <p>The value is a JSON string in the following format: <code>[{&quot;VpcId&quot;:&quot;${VpcId}&quot;,&quot;VSwitchId&quot;:&quot;${VSwitchId}&quot;,&quot;RegionId&quot;:&quot;${RegionId}&quot;,&quot;VpcOwnerId&quot;:${VpcOwnerId}},...]</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

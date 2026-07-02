@@ -8,7 +8,7 @@ public class ListKmsInstancesRequest extends TeaModel {
     public String filters;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The number of the page to return. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class ListKmsInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+     * <p>The number of entries to return on each page. Valid values: 1 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

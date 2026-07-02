@@ -7,7 +7,7 @@ public class TagResourceRequest extends TeaModel {
     /**
      * <p>The ID of the certificate.</p>
      * <blockquote>
-     * <p> You can configure only one of the KeyId, SecretName, and CertificateId parameters.</p>
+     * <p>You can configure only one of the KeyId, SecretName, and CertificateId parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -19,11 +19,11 @@ public class TagResourceRequest extends TeaModel {
     /**
      * <p>The ID of the customer master key (CMK). The ID must be globally unique.</p>
      * <blockquote>
-     * <p> You can configure only one of the KeyId, SecretName, and CertificateId parameters.</p>
+     * <p>You can configure only one of the KeyId, SecretName, and CertificateId parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>08c33a6f-4e0a-4a1b-a3fa-7ddf****</p>
+     * <p>key-hzz630494463ejqjx****</p>
      */
     @NameInMap("KeyId")
     public String keyId;
@@ -31,7 +31,7 @@ public class TagResourceRequest extends TeaModel {
     /**
      * <p>The name of the secret.</p>
      * <blockquote>
-     * <p> You can configure only one of the KeyId, SecretName, and CertificateId parameters.</p>
+     * <p>You can configure only one of the KeyId, SecretName, and CertificateId parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,8 +44,10 @@ public class TagResourceRequest extends TeaModel {
      * <p>One or more tags that you want to add. The value is in the array format.</p>
      * <p>Tag attributes:</p>
      * <ul>
-     * <li>TagKey: the tag key.</li>
-     * <li>TagValue: the tag value.</li>
+     * <li><p>TagKey: the tag key.</p>
+     * </li>
+     * <li><p>TagValue: the tag value.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

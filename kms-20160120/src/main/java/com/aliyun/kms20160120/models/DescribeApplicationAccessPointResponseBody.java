@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApplicationAccessPointResponseBody extends TeaModel {
     /**
-     * <p>The ARN of the AAP.</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) of the AAP.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:kms:cn-hangzhou:119285303511****:applicationaccesspoint/aap_test</p>
@@ -41,7 +41,7 @@ public class DescribeApplicationAccessPointResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The permission policy that is bound to the AAP.</p>
+     * <p>The attached access policies.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;kst-hzz62ee817bvyyr5x****.efkd&quot;,&quot;kst-hzz62ee817bvyyr5x****.eyyp&quot;]</p>
@@ -50,7 +50,7 @@ public class DescribeApplicationAccessPointResponseBody extends TeaModel {
     public String policies;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the request. Alibaba Cloud generates a unique ID for each request. Use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>bcfefe15-46f0-44a3-bd96-3d422474b71a</p>

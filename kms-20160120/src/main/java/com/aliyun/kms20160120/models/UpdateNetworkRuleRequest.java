@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class UpdateNetworkRuleRequest extends TeaModel {
     /**
-     * <p>The description after the update.</p>
+     * <p>The updated description.</p>
      * 
      * <strong>example:</strong>
-     * <p>Creat by kst-hzz62ee817bvyyr5****</p>
+     * <p>Create by kst-hzz62ee817bvyyr5****</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The name of the access control rule that you want to update.</p>
+     * <p>The name of the network control rule that you want to update.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class UpdateNetworkRuleRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The private IP address or CIDR block after the update. Separate multiple items with commas (,).</p>
+     * <p>The updated private IP addresses or private CIDR blocks. Separate multiple IP addresses or private CIDR blocks with a comma (,).</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;192.10.XX.XX&quot;,&quot;192.168.XX.XX/24&quot;]</p>

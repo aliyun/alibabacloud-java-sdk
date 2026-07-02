@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNetworkRuleResponseBody extends TeaModel {
     /**
-     * <p>The ARN of the access control rule.</p>
+     * <p>The ARN of the network rule.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:kms:cn-hangzhou:119285303511****:network/networkrule_test</p>
@@ -17,13 +17,13 @@ public class DescribeNetworkRuleResponseBody extends TeaModel {
      * <p>The description.</p>
      * 
      * <strong>example:</strong>
-     * <p>Creat by kst-hzz62ee817bvyyr5****</p>
+     * <p>Create by kst-hzz62ee817bvyyr5****</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the request. Alibaba Cloud generates a unique ID for each request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>3bf02f7a-015b-4f93-be0f-cc043fda2d33</p>
@@ -32,7 +32,7 @@ public class DescribeNetworkRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The private IP address or private CIDR block.</p>
+     * <p>The private IP addresses or private CIDR blocks.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;192.10.XX.XX&quot;,&quot;192.168.XX.XX/24&quot;]</p>
@@ -41,7 +41,7 @@ public class DescribeNetworkRuleResponseBody extends TeaModel {
     public String sourcePrivateIp;
 
     /**
-     * <p>The network type. Only private IP addresses are supported. The value is fixed as Private.</p>
+     * <p>The network type. The only valid value is Private, which means only private IP addresses are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>Private</p>

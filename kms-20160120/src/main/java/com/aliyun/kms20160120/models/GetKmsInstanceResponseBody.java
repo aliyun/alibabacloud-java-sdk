@@ -6,12 +6,15 @@ import com.aliyun.tea.*;
 public class GetKmsInstanceResponseBody extends TeaModel {
     /**
      * <p>The details of the KMS instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("KmsInstance")
     public GetKmsInstanceResponseBodyKmsInstance kmsInstance;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use this ID to locate and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>46b4a94a-57d2-44b4-9810-1e87d31abb33</p>
@@ -41,39 +44,15 @@ public class GetKmsInstanceResponseBody extends TeaModel {
     }
 
     public static class GetKmsInstanceResponseBodyKmsInstanceBindVpcsBindVpc extends TeaModel {
-        /**
-         * <p>The region to which the VPC belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The vSwitch in the VPC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vsw-bp1i512amhdje10f1****</p>
-         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
-        /**
-         * <p>The ID of the VPC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vpc-bp19z7djuhtad5dff****</p>
-         */
         @NameInMap("VpcId")
         public String vpcId;
 
-        /**
-         * <p>The Alibaba Cloud account to which the VPC belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>190325303126****</p>
-         */
         @NameInMap("VpcOwnerId")
         public String vpcOwnerId;
 
@@ -136,17 +115,11 @@ public class GetKmsInstanceResponseBody extends TeaModel {
     }
 
     public static class GetKmsInstanceResponseBodyKmsInstance extends TeaModel {
-        /**
-         * <p>A list of associated VPCs.</p>
-         * <blockquote>
-         * <p> If your self-managed applications are deployed in multiple VPCs in the same region, you can associate VPCs with the KMS instance beyond the VPC that you specify when you enable the KMS instance. The VPCs can belong to the same Alibaba Cloud account or different Alibaba Cloud accounts. After the configuration is complete, self-managed applications in the VPCs can access the specified KMS instance.</p>
-         * </blockquote>
-         */
         @NameInMap("BindVpcs")
         public GetKmsInstanceResponseBodyKmsInstanceBindVpcs bindVpcs;
 
         /**
-         * <p>The content of the certificate authority (CA) certificate of the KMS instance.</p>
+         * <p>The CA certificate chain for the KMS instance in PEM format.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE-----\r\nMIIDuzCCAqOgAwIBAgIJALTKwWAjvbMiMA0GCSqGSIb3DQEBCwUAMHQxCzAJBgNV****-----END CERTIFICATE-----</p>
@@ -154,17 +127,35 @@ public class GetKmsInstanceResponseBody extends TeaModel {
         @NameInMap("CaCertificateChainPem")
         public String caCertificateChainPem;
 
+        /**
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li><p><code>PREPAY</code>: subscription</p>
+         * </li>
+         * <li><p><code>POSTPAY</code>: pay-as-you-go</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>POSTPAY</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
         /**
-         * <p>The time when the KMS instance is created.</p>
+         * <p>The creation time of the KMS instance.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-09-05T12:44:20Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
+
+        @NameInMap("DeletionProtection")
+        public Boolean deletionProtection;
+
+        @NameInMap("DeletionProtectionDescription")
+        public String deletionProtectionDescription;
 
         /**
          * <p>The expiration time of the KMS instance.</p>
@@ -194,7 +185,7 @@ public class GetKmsInstanceResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>The number of keys that can be created for the KMS instance.</p>
+         * <p>The maximum number of keys that can be created in the KMS instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -202,23 +193,53 @@ public class GetKmsInstanceResponseBody extends TeaModel {
         @NameInMap("KeyNum")
         public Long keyNum;
 
+        /**
+         * <p>Indicates whether logging is enabled for the KMS instance. Valid values: <code>1</code> (enabled) and <code>0</code> (disabled).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Log")
         public Long log;
 
+        /**
+         * <p>The log storage capacity. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("LogStorage")
         public Long logStorage;
 
+        /**
+         * <p>The product type.<br>Subscription:<br><code>kms_ddi_public_cn</code>: China site<br><code>kms_ddi_public_intl</code>: international site<br>Pay-as-you-go:<br><code>kms_ppi_public_cn</code>: China site<br><code>kms_ppi_public_intl</code>: international site<br><br><br><br><br><br></p>
+         * 
+         * <strong>example:</strong>
+         * <p>kms_ddi_public_cn</p>
+         */
         @NameInMap("ProductType")
         public String productType;
 
+        /**
+         * <p>The version of the KMS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("ProductVersion")
         public String productVersion;
 
+        /**
+         * <p>The sales status of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("SaleStatus")
         public String saleStatus;
 
         /**
-         * <p>The number of secrets that can be created for the KMS instance.</p>
+         * <p>The maximum number of credentials that can be created in the KMS instance.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -236,7 +257,7 @@ public class GetKmsInstanceResponseBody extends TeaModel {
         public Long spec;
 
         /**
-         * <p>The time when the KMS instance is enabled.</p>
+         * <p>The time when the KMS instance was enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-09-05T12:44:19Z</p>
@@ -247,11 +268,16 @@ public class GetKmsInstanceResponseBody extends TeaModel {
         /**
          * <p>The status of the KMS instance. Valid values:</p>
          * <ul>
-         * <li>Uninitialized: The KMS instance is not enabled.</li>
-         * <li>Connecting: The KMS instance is being connected.</li>
-         * <li>Connected: The KMS instance is enabled.</li>
-         * <li>Disconnected: The KMS instance is disconnected.</li>
-         * <li>Error: The KMS instance is abnormal.</li>
+         * <li><p><code>Uninitialized</code>: The instance is not enabled.</p>
+         * </li>
+         * <li><p><code>Connecting</code>: The instance is connecting.</p>
+         * </li>
+         * <li><p><code>Connected</code>: The instance is enabled.</p>
+         * </li>
+         * <li><p><code>Disconnected</code>: The instance is disconnected.</p>
+         * </li>
+         * <li><p><code>Error</code>: The instance is in an error state.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -261,7 +287,7 @@ public class GetKmsInstanceResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The virtual private cloud (VPC) with which the KMS instance is associated.</p>
+         * <p>The VPC to which the KMS instance is attached.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp19z7cwmltad5dff****</p>
@@ -270,7 +296,7 @@ public class GetKmsInstanceResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The access management quota for the KMS instance.</p>
+         * <p>The maximum number of VPCs that can be associated with the KMS instance for access control.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -279,7 +305,7 @@ public class GetKmsInstanceResponseBody extends TeaModel {
         public Long vpcNum;
 
         /**
-         * <p>The vSwitch in the VPC.</p>
+         * <p>The vSwitches in the VPC to which the KMS instance is attached.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp1i512amda6d10a0****</p>
@@ -288,7 +314,7 @@ public class GetKmsInstanceResponseBody extends TeaModel {
         public java.util.List<String> vswitchIds;
 
         /**
-         * <p>The zone with which the KMS instance is associated.</p>
+         * <p>The zones to which the KMS instance is attached.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;cn-hangzhou-k&quot;,       &quot;cn-hangzhou-j&quot;</p>
@@ -331,6 +357,22 @@ public class GetKmsInstanceResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public GetKmsInstanceResponseBodyKmsInstance setDeletionProtection(Boolean deletionProtection) {
+            this.deletionProtection = deletionProtection;
+            return this;
+        }
+        public Boolean getDeletionProtection() {
+            return this.deletionProtection;
+        }
+
+        public GetKmsInstanceResponseBodyKmsInstance setDeletionProtectionDescription(String deletionProtectionDescription) {
+            this.deletionProtectionDescription = deletionProtectionDescription;
+            return this;
+        }
+        public String getDeletionProtectionDescription() {
+            return this.deletionProtectionDescription;
         }
 
         public GetKmsInstanceResponseBodyKmsInstance setEndDate(String endDate) {

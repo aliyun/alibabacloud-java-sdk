@@ -5,9 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListSecretsRequest extends TeaModel {
     /**
-     * <p>The number of entries to return on each page.</p>
-     * <p>Valid values: 1 to 100.</p>
-     * <p>Default value: 10.</p>
+     * <p>Specifies whether to return resource tags for each secret. Valid values:</p>
+     * <ul>
+     * <li><p><code>true</code>: Resource tags are returned.</p>
+     * </li>
+     * <li><p><code>false</code> (default): Resource tags are not returned.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -16,7 +20,45 @@ public class ListSecretsRequest extends TeaModel {
     public String fetchTags;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>Filters secrets based on specified conditions. The value is a list of up to 10 key-value pairs. When you filter by tag, the query returns a maximum of 4,000 resources. If more than 4,000 resources match the filter, call the <a href="https://help.aliyun.com/document_detail/120090.html">ListResourceTags</a> operation.</p>
+     * <ul>
+     * <li><p>Key</p>
+     * <ul>
+     * <li><p>Description: The filter property.</p>
+     * </li>
+     * <li><p>Type: String.</p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li><p>Values</p>
+     * <ul>
+     * <li><p>Description: The filter value.</p>
+     * </li>
+     * <li><p>Type: String.</p>
+     * </li>
+     * <li><p>You can specify up to 10 items.</p>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <p>Valid values for Key:</p>
+     * <ul>
+     * <li><p>Set <code>Key</code> to <strong>SecretName</strong> to filter by secret name.</p>
+     * </li>
+     * <li><p>Set <code>Key</code> to <strong>Description</strong> to filter by secret description.</p>
+     * </li>
+     * <li><p>Set <code>Key</code> to <strong>TagKey</strong> to filter by tag key.</p>
+     * </li>
+     * <li><p>Set <code>Key</code> to <strong>TagValue</strong> to filter by tag value.</p>
+     * </li>
+     * <li><p>Set <code>Key</code> to <strong>DKMSInstanceId</strong> to filter by KMS instance ID.</p>
+     * </li>
+     * <li><p>Set Key to <strong>SecretType</strong> to filter by secret type. <code>Values</code> can be <code>Generic</code>, <code>RDS</code>, <code>Redis</code>, <code>RAMCredentials</code>, <code>ECS</code>, or <code>PolarDB</code>.</p>
+     * </li>
+     * <li><p>Set <code>Key</code> to <strong>Creator</strong> to filter by the creator of the secret.</p>
+     * </li>
+     * </ul>
+     * <p>If you specify multiple values for a key, the filter applies a logical OR. For example, if you enter <code>[ {&quot;Key&quot;:&quot;SecretName&quot;, &quot;Values&quot;:[&quot;sec1&quot;,&quot;sec2&quot;]} ]</code>, this means: <code>(SecretName=sec1 OR SecretName=sec2)</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;Key&quot;:&quot;SecretName&quot;, &quot;Values&quot;:[&quot;Val1&quot;,&quot;Val2&quot;]}]</p>
@@ -25,44 +67,9 @@ public class ListSecretsRequest extends TeaModel {
     public String filters;
 
     /**
-     * <p>The secret filter. The filter consists of one or more key-value pairs. You can specify one key-value pair or leave this parameter empty. If you use one tag key or tag value to filter resources, up to 4,000 resources can be queried. If you want to query more than 4,000 resources, call the <a href="https://help.aliyun.com/document_detail/120090.html">ListResourceTags</a> operation.</p>
-     * <ul>
-     * <li><p>Key</p>
-     * <ul>
-     * <li><p>Description: the property that you want to filter.</p>
-     * </li>
-     * <li><p>Type: string.</p>
-     * </li>
-     * <li><p>Valid values:</p>
-     * <ul>
-     * <li>SecretName: the secret name.</li>
-     * <li>Description: the description of the secret.</li>
-     * <li>TagKey: the tag key.</li>
-     * <li>TagValue: the tag value.</li>
-     * </ul>
-     * </li>
-     * </ul>
-     * </li>
-     * <li><p>Values</p>
-     * <ul>
-     * <li><p>Description: the value to be included after filtering.</p>
-     * </li>
-     * <li><p>Type: string.</p>
-     * </li>
-     * <li><p>Length: 0 to 10.</p>
-     * </li>
-     * <li><p>Valid values:</p>
-     * <ul>
-     * <li>If the Key field is set to SecretName, the value must be 1 to 192 characters in length and can contain letters, digits, and special characters <code>_ / + = . @ -</code>.</li>
-     * <li>If the Key field is set to Description, the value must be 1 to 256 characters in length.</li>
-     * <li>If the Key field is set to TagKey, the value must be 1 to 256 characters in length and can contain letters, digits, and special characters <code>/ _ - . + = @ :</code>.</li>
-     * <li>If the Key field is set to TagValue, the value must be 1 to 256 characters in length and can contain letters, numbers, and special characters <code>/ _ - . + = @ :</code>.</li>
-     * </ul>
-     * </li>
-     * </ul>
-     * </li>
-     * </ul>
-     * <p>The logical relationship between values of the Values field in a key-value pair is OR. Example: <code>[ {&quot;Key&quot;:&quot;SecretName&quot;, &quot;Values&quot;:[&quot;sec1&quot;,&quot;sec2&quot;]}]</code>. In this example, the semantics are <code>SecretName=sec 1 OR SecretName=sec 2</code>.</p>
+     * <p>The page number.<br>
+     * The value must be greater than 0.<br>
+     * Default: 1.<br><br></p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -71,7 +78,9 @@ public class ListSecretsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page size.<br>
+     * The value must be between 1 and 100.<br>
+     * Default: 10.<br><br></p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

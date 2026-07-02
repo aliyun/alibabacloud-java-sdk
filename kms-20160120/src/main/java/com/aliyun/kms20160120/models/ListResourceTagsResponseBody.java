@@ -13,9 +13,6 @@ public class ListResourceTagsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The tags of the CMK.</p>
-     */
     @NameInMap("Tags")
     public ListResourceTagsResponseBodyTags tags;
 
@@ -41,30 +38,12 @@ public class ListResourceTagsResponseBody extends TeaModel {
     }
 
     public static class ListResourceTagsResponseBodyTagsTag extends TeaModel {
-        /**
-         * <p>The globally unique ID of the CMK.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>33caea95-c3e5-4b3e-a9c6-cec76e4e****</p>
-         */
         @NameInMap("KeyId")
         public String keyId;
 
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Project</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Test</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 

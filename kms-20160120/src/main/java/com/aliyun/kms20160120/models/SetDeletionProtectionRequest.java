@@ -7,11 +7,11 @@ public class SetDeletionProtectionRequest extends TeaModel {
     /**
      * <p>The description of deletion protection.</p>
      * <blockquote>
-     * <p> This parameter takes effect only when you set the EnableDeletionProtection parameter to true.</p>
+     * <p>This parameter is available only when EnableDeletionProtection is set to true.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>This key is being used by XXX service. You are protected from deletion.</p>
+     * <p>The CMK is being used by XXX. Deletion protection is set.</p>
      */
     @NameInMap("DeletionProtectionDescription")
     public String deletionProtectionDescription;
@@ -19,8 +19,10 @@ public class SetDeletionProtectionRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable deletion protection. Valid values:</p>
      * <ul>
-     * <li>true: enables deletion protection.</li>
-     * <li>false: disables deletion protection.</li>
+     * <li><p>true: enables deletion protection.</p>
+     * </li>
+     * <li><p>false: disables deletion protection. This is the default value.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -30,12 +32,21 @@ public class SetDeletionProtectionRequest extends TeaModel {
     @NameInMap("EnableDeletionProtection")
     public Boolean enableDeletionProtection;
 
+    /**
+     * <p>The ID of the key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>key-hzz65f3a68554s6ms****</p>
+     */
     @NameInMap("KeyId")
     public String keyId;
 
+    @NameInMap("KmsInstanceId")
+    public String kmsInstanceId;
+
     /**
-     * <p>The ARN of the CMK for which you want to set deletion protection.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation to query the CMK ARN.</p>
+     * <p>The ARN of the CMK for which you want to configure deletion protection.<br>
+     * You can call the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation to query the ARN of the CMK.<br><br></p>
      * 
      * <strong>example:</strong>
      * <p>acs:kms:cn-hangzhou:123213123****:key/0225f411-b21d-46d1-be5b-93931c82****</p>
@@ -70,6 +81,14 @@ public class SetDeletionProtectionRequest extends TeaModel {
     }
     public String getKeyId() {
         return this.keyId;
+    }
+
+    public SetDeletionProtectionRequest setKmsInstanceId(String kmsInstanceId) {
+        this.kmsInstanceId = kmsInstanceId;
+        return this;
+    }
+    public String getKmsInstanceId() {
+        return this.kmsInstanceId;
     }
 
     public SetDeletionProtectionRequest setProtectedResourceArn(String protectedResourceArn) {

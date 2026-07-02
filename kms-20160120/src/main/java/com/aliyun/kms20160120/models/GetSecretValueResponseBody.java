@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class GetSecretValueResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether automatic rotation is enabled. Valid values:</p>
+     * <p>Indicates whether automatic rotation is enabled. Valid values:  </p>
      * <ul>
-     * <li>Enabled: indicates that automatic rotation is enabled.</li>
-     * <li>Disabled: indicates that automatic rotation is disabled.</li>
-     * <li>Invalid: indicates that the status of automatic rotation is abnormal. In this case, Secrets Manager cannot automatically rotate the secret.</li>
+     * <li>Enabled: Automatic rotation is enabled.  </li>
+     * <li>Disabled: Automatic rotation is disabled.  </li>
+     * <li>Invalid: The rotation status is abnormal, and KMS cannot automatically rotate the credential for you.</li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is returned only for a managed ApsaraDB RDS secret, a managed RAM secret, or a managed ECS secret.</p>
+     * <p>This parameter is returned only for RDS credentials, PolarDB credentials, Redis/Tair credentials, RAM credentials, or ECS credentials.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -22,18 +22,18 @@ public class GetSecretValueResponseBody extends TeaModel {
     public String automaticRotation;
 
     /**
-     * <p>The time when the secret was created.</p>
+     * <p>The time when the credential was created.</p>
      * 
      * <strong>example:</strong>
-     * <p>2020-02-21T15:39:26Z</p>
+     * <p>2024-02-21T15:39:26Z</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
     /**
-     * <p>The extended configuration of the secret.</p>
+     * <p>The extended configuration of the credential.  </p>
      * <blockquote>
-     * <p> This parameter is returned if you set the FetchExtendedConfig parameter to true. This parameter is returned only for a managed ApsaraDB RDS secret, a managed RAM secret, or a managed ECS secret.</p>
+     * <p>This parameter is returned only for RDS credentials, PolarDB credentials, Redis/Tair credentials, RAM credentials, or ECS credentials when FetchExtendedConfig is set to true.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,31 +43,31 @@ public class GetSecretValueResponseBody extends TeaModel {
     public String extendedConfig;
 
     /**
-     * <p>The time when the last rotation was performed.</p>
+     * <p>The time of the most recent rotation.  </p>
      * <blockquote>
-     * <p> This parameter is returned if the secret was rotated.</p>
+     * <p>This parameter is returned only if the credential has been rotated.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>2020-07-05T08:22:03Z</p>
+     * <p>2023-07-05T08:22:03Z</p>
      */
     @NameInMap("LastRotationDate")
     public String lastRotationDate;
 
     /**
-     * <p>The time when the next rotation will be performed.</p>
+     * <p>The time of the next rotation.  </p>
      * <blockquote>
-     * <p> This parameter is returned if automatic rotation is enabled.</p>
+     * <p>This parameter is returned only when automatic rotation is enabled.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>2020-07-06T18:22:03Z</p>
+     * <p>2024-07-06T18:22:03Z</p>
      */
     @NameInMap("NextRotationDate")
     public String nextRotationDate;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the current request. Alibaba Cloud generates a unique identifier for each request, which can be used for troubleshooting and issue tracking.</p>
      * 
      * <strong>example:</strong>
      * <p>6a3e9c36-1150-4881-84d3-eb8672fcafad</p>
@@ -76,10 +76,9 @@ public class GetSecretValueResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The interval for automatic rotation.</p>
-     * <p>The value is in the <code>integer[unit]</code> format. The <code>unit</code> field has a fixed value of s. For example, if the value is 604800s, automatic rotation is performed at a 7-day interval.</p>
+     * <p>The epoch for automatic credential rotation.<br>The format is <code>integer[unit]</code>, where <code>integer</code> indicates the time duration and <code>unit</code> indicates the time unit. Valid value for <code>unit</code>: s (seconds). For example, a 7-day rotation epoch is 604800s.</p>
      * <blockquote>
-     * <p> This parameter is returned if automatic rotation is enabled.</p>
+     * <p>This parameter is returned only when automatic rotation is enabled.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -89,19 +88,21 @@ public class GetSecretValueResponseBody extends TeaModel {
     public String rotationInterval;
 
     /**
-     * <p>The secret value. Secrets Manager decrypts the ciphertext of the secret value and returns the plaintext of the secret value in this parameter.</p>
+     * <p>The value of the credential. KMS decrypts the stored ciphertext and returns this parameter.  </p>
      * <ul>
-     * <li><p>For a generic secret, the secret value of the specified version is returned.</p>
+     * <li><p>For generic secrets, the credential value you specified is returned.  </p>
      * </li>
-     * <li><p>For a managed ApsaraDB RDS secret, the value is returned in the following format:<code>{&quot;AccountName&quot;:&quot;&quot;,&quot;AccountPassword&quot;:&quot;&quot;}</code> .</p>
+     * <li><p>For RDS credentials and Redis/Tair credentials, the credential value is in the format: <code>{&quot;AccountName&quot;:&quot;&quot;,&quot;AccountPassword&quot;:&quot;&quot;}</code>.  </p>
      * </li>
-     * <li><p>For a managed RAM secret, the secret value is returned in the following format: <code>{&quot;AccessKeyId&quot;:&quot;Adfdsfd&quot;,&quot;AccessKeySecret&quot;:&quot;fdsfdsf&quot;,&quot;GenerateTimestamp&quot;: &quot;2016-03-25T10:42:40Z&quot;}</code>.</p>
+     * <li><p>For RAM credentials, the credential value is in the format: <code>{&quot;AccessKeyId&quot;:&quot;Adfdsfd&quot;,&quot;AccessKeySecret&quot;:&quot;fdsfdsf&quot;,&quot;GenerateTimestamp&quot;: &quot;2023-03-25T10:42:40Z&quot;}</code>.  </p>
      * </li>
-     * <li><p>For a managed ECS secret, the secret value is returned in one of the following formats:</p>
+     * <li><p>For ECS credentials, the credential value is in one of the following formats:  </p>
      * <ul>
-     * <li><code>{&quot;UserName&quot;:&quot;root&quot;,&quot;Password&quot;:&quot;H5asdasdsads****&quot;}</code>: The secret value is returned in this format if the ECS secret is a password.</li>
-     * <li><code>{&quot;UserName&quot;:&quot;root&quot;,&quot;PublicKey&quot;:&quot;ssh-rsa ****mKwnVix9YTFY9Rs= imported-openssh-key&quot;,&quot;PrivateKey&quot;: &quot;d6bee1cb-2e14-4277-ba6b-73786b21****&quot;}</code>: The secret value is returned in this format is the ECS secret is a pair of SSH keys. The private key is in the Privacy Enhanced Mail (PEM) format.</li>
+     * <li>Security token type: <code>{&quot;UserName&quot;:&quot;ecs-user&quot;,&quot;Password&quot;:&quot;H5asdasdsads****&quot;}</code>.  </li>
+     * <li>Public-private key pair type (private key in PEM format): <code>{&quot;UserName&quot;:&quot;ecs-user&quot;,&quot;PublicKey&quot;:&quot;ssh-rsa ****mKwnVix9YTFY9Rs= imported-openssh-key&quot;,&quot;PrivateKey&quot;: &quot;d6bee1cb-2e14-4277-ba6b-73786b21****&quot;}</code>.</li>
      * </ul>
+     * </li>
+     * <li><p>For PolarDB credentials, the credential value is in the format: <code>{&quot;AccountName&quot;:&quot;&quot;,&quot;AccountPassword&quot;:&quot;&quot;}</code>.</p>
      * </li>
      * </ul>
      * 
@@ -112,7 +113,7 @@ public class GetSecretValueResponseBody extends TeaModel {
     public String secretData;
 
     /**
-     * <p>The type of the secret value. Valid values:</p>
+     * <p>The value type of the credential. Valid values:</p>
      * <ul>
      * <li>text</li>
      * <li>binary</li>
@@ -125,7 +126,7 @@ public class GetSecretValueResponseBody extends TeaModel {
     public String secretDataType;
 
     /**
-     * <p>The name of the secret.</p>
+     * <p>The name of the credential.</p>
      * 
      * <strong>example:</strong>
      * <p>secret001</p>
@@ -134,12 +135,14 @@ public class GetSecretValueResponseBody extends TeaModel {
     public String secretName;
 
     /**
-     * <p>The type of the secret. Valid values:</p>
+     * <p>The type of the credential. Valid values:</p>
      * <ul>
-     * <li>Generic: indicates a generic secret.</li>
-     * <li>Rds: indicates a managed ApsaraDB RDS secret.</li>
-     * <li>RAMCredentials: indicates a managed RAM secret.</li>
-     * <li>ECS: indicates a managed ECS secret.</li>
+     * <li>Generic: generic secret.  </li>
+     * <li>Rds: RDS credential.  </li>
+     * <li>Redis: Redis/Tair credential.</li>
+     * <li>RAMCredentials: RAM credential.  </li>
+     * <li>ECS: ECS credential.</li>
+     * <li>PolarDB: PolarDB credential.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -149,17 +152,14 @@ public class GetSecretValueResponseBody extends TeaModel {
     public String secretType;
 
     /**
-     * <p>The version number of the secret value.</p>
+     * <p>The version number of the credential.</p>
      * 
      * <strong>example:</strong>
-     * <p>00000000000000000000000000000001</p>
+     * <p>v1</p>
      */
     @NameInMap("VersionId")
     public String versionId;
 
-    /**
-     * <p>The stage labels that mark the secret versions.</p>
-     */
     @NameInMap("VersionStages")
     public GetSecretValueResponseBodyVersionStages versionStages;
 

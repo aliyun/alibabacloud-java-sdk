@@ -20,8 +20,10 @@ public class GetRandomPasswordRequest extends TeaModel {
      * <p>Specifies whether to exclude lowercase letters.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,8 +36,10 @@ public class GetRandomPasswordRequest extends TeaModel {
      * <p>Specifies whether to exclude digits.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,8 +52,10 @@ public class GetRandomPasswordRequest extends TeaModel {
      * <p>Specifies whether to exclude special characters.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,8 +68,10 @@ public class GetRandomPasswordRequest extends TeaModel {
      * <p>Specifies whether to exclude uppercase letters.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -87,8 +95,10 @@ public class GetRandomPasswordRequest extends TeaModel {
      * <p>Specifies whether to include all the preceding character types.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

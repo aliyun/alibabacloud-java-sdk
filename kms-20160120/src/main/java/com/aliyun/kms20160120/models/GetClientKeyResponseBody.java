@@ -32,7 +32,7 @@ public class GetClientKeyResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The private key algorithm of the client key.</p>
+     * <p>The algorithm of the private key for the client key.</p>
      * 
      * <strong>example:</strong>
      * <p>RSA_2048</p>
@@ -41,8 +41,8 @@ public class GetClientKeyResponseBody extends TeaModel {
     public String keyAlgorithm;
 
     /**
-     * <p>The provider of the client key.</p>
-     * <p>Currently, only Key Management Service (KMS) is supported. The value is fixed as KMS_PROVIDED.</p>
+     * <p>The creator of the client key.</p>
+     * <p>Currently, client keys are generated only by KMS. The value is \<code>KMS_PROVIDED\\</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>KMS_PROVIDED</p>
@@ -51,7 +51,7 @@ public class GetClientKeyResponseBody extends TeaModel {
     public String keyOrigin;
 
     /**
-     * <p>The end of the validity period of the client key.</p>
+     * <p>The time when the client key expires.</p>
      * 
      * <strong>example:</strong>
      * <p>2028-08-31T17:14:33Z</p>
@@ -60,7 +60,7 @@ public class GetClientKeyResponseBody extends TeaModel {
     public String notAfter;
 
     /**
-     * <p>The beginning of the validity period of the client key.</p>
+     * <p>The time when the validity period of the client key starts.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-08-31T17:14:33Z</p>
@@ -69,7 +69,7 @@ public class GetClientKeyResponseBody extends TeaModel {
     public String notBefore;
 
     /**
-     * <p>The content of the public key of the client key.</p>
+     * <p>The content of the public key for the client key.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE-----\nMIIDcjCCAlqgAwIBAgIQT/sAVRxwYp54mrw****-----END CERTIFICATE-----</p>
@@ -78,7 +78,7 @@ public class GetClientKeyResponseBody extends TeaModel {
     public String publicKeyData;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the request. Alibaba Cloud generates this unique ID for each request. Use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>63d849a6-045b-4a57-ad9f-c5f756cea9e9</p>

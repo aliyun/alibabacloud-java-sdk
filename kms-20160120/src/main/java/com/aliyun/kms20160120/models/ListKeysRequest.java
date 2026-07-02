@@ -5,54 +5,53 @@ import com.aliyun.tea.*;
 
 public class ListKeysRequest extends TeaModel {
     /**
-     * <p>The CMK filter. The filter consists of one or more key-value pairs. You can specify a maximum of 10 key-value pairs.</p>
+     * <p>A filter for master keys. The filter consists of 0 to 10 key-value pairs.</p>
      * <ul>
      * <li><p>Key</p>
      * <ul>
-     * <li><p>Description: the property that you want to filter.</p>
+     * <li><p>Description: The property to filter.</p>
      * </li>
-     * <li><p>Type: string.</p>
-     * </li>
-     * <li><p>Valid values:</p>
-     * <ul>
-     * <li>KeyState: the status of the CMK.</li>
-     * <li>KeySpec: the type of the CMK.</li>
-     * <li>KeyUsage: the usage of the CMK.</li>
-     * <li>ProtectionLevel: the protection level.</li>
-     * <li>CreatorType: the type of the creator.</li>
-     * </ul>
+     * <li><p>Type: String.</p>
      * </li>
      * </ul>
      * </li>
      * <li><p>Values</p>
      * <ul>
-     * <li><p>Description: the value to be included after filtering.</p>
+     * <li><p>Description: The value to be included after filtering.</p>
      * </li>
-     * <li><p>Format: string array.</p>
+     * <li><p>Type: String array.</p>
      * </li>
      * <li><p>Length: 0 to 10.</p>
      * </li>
-     * <li><p>Valid values:</p>
+     * </ul>
+     * </li>
+     * </ul>
+     * <p>Valid values:</p>
      * <ul>
-     * <li><p>When Key is set to KeyState, the value can be Enabled, Disabled, PendingDeletion, or PendingImport.</p>
+     * <li><p>If \<code>Key\\</code> is set to \<code>KeyState\\</code>, it specifies the key status. Valid values for \<code>Value\\</code> are \<code>Enabled\\</code>, \<code>Disabled\\</code>, \<code>PendingDeletion\\</code>, and \<code>PendingImport\\</code>.</p>
      * </li>
-     * <li><p>When Key is set to KeySpec, the value can be Aliyun_AES_256, Aliyun_SM4, RSA_2048, EC_P256, EC_P256K, or EC_SM2.</p>
-     * <p>Note: You can create CMKs of the EC_SM2 or Aliyun_SM4 type only in regions where State Cryptography Administration (SCA)-certified managed HSMs reside. For more information about the regions, see <a href="https://help.aliyun.com/document_detail/125803.html">Supported regions</a>. If your region does not support EC_SM2 or Aliyun_SM4, the two values are ignored if they are specified.</p>
+     * <li><p>If \<code>Key\\</code> is set to \<code>KeySpec\\</code>, it specifies the key type. Valid values for \<code>Value\\</code> are \<code>Aliyun_AES_256\\</code>, \<code>Aliyun_SM4\\</code>, \<code>RSA_2048\\</code>, \<code>EC_P256\\</code>, \<code>EC_P256K\\</code>, \<code>EC_SM2\\</code>, and \<code>Aliyun_SM4\\</code>.<br> Note: You can create keys of the \<code>EC_SM2\\</code> and \<code>Aliyun_SM4\\</code> types only in regions that support managed HSMs and have passed the compliance assessment of the Office of State Commercial Cryptography Administration (OSCCA). For more information about the supported regions, see <a href="https://help.aliyun.com/document_detail/125803.html">Supported regions</a>. If you specify \<code>EC_SM2\\</code> or \<code>Aliyun_SM4\\</code> in a region that does not support these key types, the parameters are ignored.<br></p>
      * </li>
-     * <li><p>When Key is set to KeyUsage, the value can be ENCRYPT/DECRYPT or SIGN/VERIFY. ENCRYPT/DECRYPT indicates that the CMK is used to encrypt and decrypt data. SIGN/VERIFY indicates that the CMK is used to generate and verify digital signatures.</p>
+     * <li><p>If \<code>Key\\</code> is set to \<code>KeyUsage\\</code>, it specifies the key usage. Valid values for \<code>Value\\</code> are \<code>ENCRYPT/DECRYPT\\</code> (for data encryption and decryption) and \<code>SIGN/VERIFY\\</code> (for generating and verifying digital signatures).</p>
      * </li>
-     * <li><p>When Key is set to ProtectionLevel, the value can be SOFTWARE (software) or HSM (hardware).</p>
-     * <p>You can set ProtectionLevel to HSM in only specific regions. For more information about the regions, see <a href="https://help.aliyun.com/document_detail/125803.html">Supported regions</a>. If your region does not support the value HSM, the value is ignored if the value is specified.</p>
+     * <li><p>If \<code>Key\\</code> is set to \<code>ProtectionLevel\\</code>, it specifies the protection level of the key. Valid values for \<code>Value\\</code> are \<code>SOFTWARE\\</code> and \<code>HSM\\</code>.<br> Note: The HSM protection level is supported only in specific regions. For more information about the supported regions, see <a href="https://help.aliyun.com/document_detail/125803.html">Supported regions</a>. If you specify \<code>HSM\\</code> in a region that does not support it, the parameter is ignored.<br></p>
      * </li>
-     * <li><p>If Key is set to CreatorType, the value can be User or Service. User indicates that CMKs created by the current account are queried. Service indicates that CMKs automatically created by other cloud services authorized by the current account are queried.</p>
+     * <li><p>If \<code>Key\\</code> is set to \<code>CreatorType\\</code>, it specifies the creator type. Valid values for \<code>Value\\</code> are \<code>User\\</code> (returns master keys created by users) and \<code>Service\\</code> (returns master keys that are automatically created by other Alibaba Cloud services based on your authorization).</p>
+     * </li>
+     * <li><p>If \<code>Key\\</code> is set to \<code>DKMSInstanceId\\</code>, it specifies the ID of the KMS instance. Set \<code>Value\\</code> as needed.</p>
+     * </li>
+     * <li><p>If \<code>Key\\</code> is set to \<code>keyId\\</code>, it specifies the key ID. Set \<code>Value\\</code> as needed.</p>
+     * </li>
+     * <li><p>If \<code>Key\\</code> is set to \<code>AliasName\\</code>, it specifies the key alias. Set \<code>Value\\</code> as needed.</p>
+     * </li>
+     * <li><p>If \<code>Key\\</code> is set to \<code>Creator\\</code>, it specifies the key creator. Set \<code>Value\\</code> as needed.</p>
+     * </li>
+     * <li><p>If \<code>Key\\</code> is set to \<code>TagKey\\</code>, it specifies the key of a key tag. Set \<code>Value\\</code> as needed.</p>
+     * </li>
+     * <li><p>If \<code>Key\\</code> is set to \<code>TagValue\\</code>, it specifies the value of a key tag. Set \<code>Value\\</code> as needed.</p>
      * </li>
      * </ul>
-     * </li>
-     * </ul>
-     * </li>
-     * </ul>
-     * <p>The logical relationship between different keys is AND, and the logical relationship between multiple items in the same key is OR. Example:</p>
-     * <p><code>[ {&quot;Key&quot;:&quot;KeyState&quot;, &quot;Values&quot;:[&quot;Enabled&quot;,&quot;Disabled&quot;]}, {&quot;Key&quot;:&quot;KeyState&quot;, &quot;Values&quot;:[&quot;PendingDeletion&quot;]}, {&quot;Key&quot;:&quot;KeySpec&quot;, &quot;Values&quot;:[&quot;Aliyun_AES_256&quot;]}]</code>. In this example, the semantics are:<code>(KeyState=Enabled OR KeyState=Disabled OR KeyState=PendingDeletion) AND (KeySpec=Aliyun_AES_ 256)</code>.</p>
+     * <p>The logical relationship between different keys in \<code>Filters\\</code> is \<code>AND\\</code>. The logical relationship between multiple values for the same key is \<code>OR\\</code>. For example, if you enter <code>[ {&quot;Key&quot;:&quot;KeyState&quot;, &quot;Values&quot;:[&quot;Enabled&quot;,&quot;Disabled&quot;]}, {&quot;Key&quot;:&quot;KeyState&quot;, &quot;Values&quot;:[&quot;PendingDeletion&quot;]}, {&quot;Key&quot;:&quot;KeySpec&quot;, &quot;Values&quot;:[&quot;Aliyun_AES_256&quot;]} ]</code>, the semantics are: <code>(KeyState=Enabled OR KeyState=Disabled OR KeyState=PendingDeletion) AND (KeySpec=Aliyun_AES_256)</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;Key&quot;:&quot;KeyState&quot;, &quot;Values&quot;:[&quot;Enabled&quot;,&quot;Disabled&quot;]}]</p>
@@ -61,9 +60,7 @@ public class ListKeysRequest extends TeaModel {
     public String filters;
 
     /**
-     * <p>The number of the page to return.</p>
-     * <p>Pages start from page 1.</p>
-     * <p>Default value: 1.</p>
+     * <p>The page number.<br> Valid values: greater than 0.<br> Default value: 1.<br><br></p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -72,9 +69,7 @@ public class ListKeysRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
-     * <p>Valid values: 1 to 100.</p>
-     * <p>Default value: 10</p>
+     * <p>The number of entries to return on each page.<br> Valid values: 1 to 100.<br> Default value: 10.<br><br></p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

@@ -7,8 +7,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
      * <ul>
-     * <li>If NextToken is empty (&quot;NextToken&quot;: &quot;&quot;), no next page exists.</li>
-     * <li>If NextToken is not empty, the next query is required, and the value is the token used to start the next query.</li>
+     * <li><p>If NextToken is empty (&quot;NextToken&quot;: &quot;&quot;), no next page exists.</p>
+     * </li>
+     * <li><p>If NextToken is not empty, the next query is required, and the value is the token used to start the next query.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -26,9 +28,6 @@ public class ListTagResourcesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>A list of tags.</p>
-     */
     @NameInMap("TagResources")
     public ListTagResourcesResponseBodyTagResources tagResources;
 
@@ -62,39 +61,15 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
-        /**
-         * <p>The resource ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>key-hzz62f1cb66fa42qo****</p>
-         */
         @NameInMap("ResourceId")
         public String resourceId;
 
-        /**
-         * <p>The type of the resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>key</p>
-         */
         @NameInMap("ResourceType")
         public String resourceType;
 
-        /**
-         * <p>The key of the tag.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>disk-encryption</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The value of the tag.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 

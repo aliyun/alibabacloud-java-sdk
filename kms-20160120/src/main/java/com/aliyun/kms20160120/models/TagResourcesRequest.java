@@ -7,7 +7,7 @@ public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The region ID of the resource.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/601478.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/601478.html">DescribeRegions</a> to query the most recent region list.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -28,8 +28,10 @@ public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The type of the resource to which you want to add tags. Valid values:</p>
      * <ul>
-     * <li>key</li>
-     * <li>secret</li>
+     * <li><p>key</p>
+     * </li>
+     * <li><p>secret</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -88,9 +90,9 @@ public class TagResourcesRequest extends TeaModel {
         /**
          * <p>The key of the tag. A tag consists of a key-value pair.</p>
          * <p>You can enter up to 20 tags. Enter multiple tags in the <code>[{&quot;Key&quot;:&quot;key1&quot;,&quot;Value&quot;:&quot;value1&quot;},{&quot;Key&quot;:&quot;key2&quot;,&quot;Value&quot;:&quot;value2&quot;},..]</code> format.</p>
-         * <p>Each key can be up to 128 characters in length and can contain letters, digits, forward slashes (/), backslashes (\\), underscores (_), hyphens (-), periods (.), plus signs (+), equal signs (=), colons (:), and at signs (@).</p>
+         * <p>Each key can be up to 128 characters in length and can contain letters, digits, forward slashes (/), backslashes (\), underscores (_), hyphens (-), periods (.), plus signs (+), equal signs (=), colons (:), and at signs (@).</p>
          * <blockquote>
-         * <p> The key cannot start with aliyun or acs:.</p>
+         * <p>The key cannot start with aliyun or acs:.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -102,7 +104,7 @@ public class TagResourcesRequest extends TeaModel {
         /**
          * <p>The value of the tag. A tag consists of a key-value pair.</p>
          * <p>You can enter up to 20 tags. Enter multiple tags in the <code>[{&quot;Key&quot;:&quot;key1&quot;,&quot;Value&quot;:&quot;value1&quot;},{&quot;Key&quot;:&quot;key2&quot;,&quot;Value&quot;:&quot;value2&quot;},..]</code> format.</p>
-         * <p>Each value can be up to 128 characters in length and can contain letters, digits, forward slashes (/), backslashes (\\), underscores (_), hyphens (-), periods (.), plus signs (+), equal signs (=), colons (:), and at signs (@).</p>
+         * <p>Each value can be up to 128 characters in length and can contain letters, digits, forward slashes (/), backslashes (\), underscores (_), hyphens (-), periods (.), plus signs (+), equal signs (=), colons (:), and at signs (@).</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
