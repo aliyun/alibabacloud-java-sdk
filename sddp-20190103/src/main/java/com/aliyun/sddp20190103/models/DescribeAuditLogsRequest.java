@@ -14,7 +14,7 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public String asyncRequestId;
 
     /**
-     * <p>The client IP address.</p>
+     * <p>The IP address of the request client.</p>
      * 
      * <strong>example:</strong>
      * <p>10.<em>.</em>.94</p>
@@ -32,7 +32,7 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public String clientUa;
 
     /**
-     * <p>The page number to return. Default value: 1.</p>
+     * <p>The page number in a paged query. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,7 +59,7 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public String effectRowRange;
 
     /**
-     * <p>The end time for querying alert logs, provided as a UNIX timestamp in milliseconds.</p>
+     * <p>The end time of the alert log. The value is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1583856000000</p>
@@ -68,7 +68,7 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The execution time range.</p>
+     * <p>The range of execution time.</p>
      * 
      * <strong>example:</strong>
      * <p>in[1000 2000]</p>
@@ -77,7 +77,7 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public String executeTimeRange;
 
     /**
-     * <p>The name of the data asset instance.</p>
+     * <p>The name of the asset instance.</p>
      * 
      * <strong>example:</strong>
      * <p>i-2zeftaaq4gqcqb9kfkzg</p>
@@ -88,9 +88,9 @@ public class DescribeAuditLogsRequest extends TeaModel {
     /**
      * <p>The network type. Valid values:</p>
      * <ul>
-     * <li><p><strong>default</strong>: The IP address is from outside of Alibaba Cloud. This is the default value.</p>
+     * <li><p><strong>default</strong> (default): non-Alibaba Cloud service</p>
      * </li>
-     * <li><p><strong>aliyun</strong>: The IP address is from within Alibaba Cloud.</p>
+     * <li><p><strong>aliyun</strong>: Alibaba Cloud service</p>
      * </li>
      * </ul>
      * 
@@ -101,12 +101,10 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public String ipType;
 
     /**
-     * <p>Specifies the language of the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh_cn</strong>: Chinese.</p>
-     * </li>
-     * <li><p><strong>en_us</strong>: English.</p>
-     * </li>
+     * <li><strong>zh_cn</strong>: Chinese.</li>
+     * <li><strong>en_us</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -116,7 +114,7 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Specifies whether to retrieve the whitelist status.</p>
+     * <p>Specifies whether to load the whitelist status.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -125,7 +123,7 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public Boolean loadWhiteList;
 
     /**
-     * <p>A JSON string that specifies which query conditions to include or exclude.</p>
+     * <p>The JSON string that specifies whether the query conditions are included.</p>
      * 
      * <strong>example:</strong>
      * <p>[ {   &quot;isContain&quot; : false,   &quot;queryKey&quot; : &quot;effectRowRange&quot; }, {   &quot;isContain&quot; : false,   &quot;queryKey&quot; : &quot;remoteClientIp&quot; } ]</p>
@@ -143,7 +141,7 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public String logSource;
 
     /**
-     * <p>The UID of the member account.</p>
+     * <p>The UID of the member accounts.</p>
      * 
      * <strong>example:</strong>
      * <p>**********8103</p>
@@ -179,7 +177,7 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public String ossObjectKey;
 
     /**
-     * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page in a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -188,7 +186,7 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The service to which the data asset belongs. Valid values include <strong>MaxCompute, OSS, AnalyticDB for MySQL, TableStore, and RDS</strong>.</p>
+     * <p>The name of the product to which the data asset belongs. Valid values: <strong>MaxCompute, OSS, ADS, OTS, RDS</strong>, and more.</p>
      * 
      * <strong>example:</strong>
      * <p>RDS</p>
@@ -197,32 +195,20 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The ID of the service to which the data object belongs. Valid values:</p>
+     * <p>The ID that corresponds to the product name to which the data object belongs. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: MaxCompute</p>
-     * </li>
-     * <li><p><strong>2</strong>: OSS</p>
-     * </li>
-     * <li><p><strong>3</strong>: AnalyticDB for MySQL</p>
-     * </li>
-     * <li><p><strong>4</strong>: TableStore</p>
-     * </li>
-     * <li><p><strong>5</strong>: RDS</p>
-     * </li>
-     * <li><p><strong>6</strong>: SELF_DB</p>
-     * </li>
-     * <li><p><strong>7</strong>: PolarDB-X</p>
-     * </li>
-     * <li><p><strong>8</strong>: PolarDB</p>
-     * </li>
-     * <li><p><strong>9</strong>: AnalyticDB for PostgreSQL</p>
-     * </li>
-     * <li><p><strong>10</strong>: OceanBase</p>
-     * </li>
-     * <li><p><strong>11</strong>: MongoDB</p>
-     * </li>
-     * <li><p><strong>25</strong>: Redis</p>
-     * </li>
+     * <li><strong>1</strong>: MaxCompute</li>
+     * <li><strong>2</strong>: OSS</li>
+     * <li><strong>3</strong>: ADB-MYSQL</li>
+     * <li><strong>4</strong>: TableStore</li>
+     * <li><strong>5</strong>: RDS</li>
+     * <li><strong>6</strong>: SELF_DB</li>
+     * <li><strong>7</strong>: PolarDB-X</li>
+     * <li><strong>8</strong>: PolarDB</li>
+     * <li><strong>9</strong>: ADB-PG</li>
+     * <li><strong>10</strong>: OceanBase</li>
+     * <li><strong>11</strong>: MongoDB</li>
+     * <li><strong>25</strong>: Redis</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -250,16 +236,7 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public String ruleCategory;
 
     /**
-     * <p>The ID of the audit rule.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>994007</p>
-     */
-    @NameInMap("RuleID")
-    public String ruleID;
-
-    /**
-     * <p>The ID of the audit rule.</p>
+     * <p>The ID of the audit policy.</p>
      * 
      * <strong>example:</strong>
      * <p>867028</p>
@@ -268,7 +245,7 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public String ruleId;
 
     /**
-     * <p>The name of the audit rule.</p>
+     * <p>The name of the audit policy.</p>
      * 
      * <strong>example:</strong>
      * <p>test_rule</p>
@@ -277,7 +254,7 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The SQL statement.</p>
+     * <p>The content of the SQL statement.</p>
      * 
      * <strong>example:</strong>
      * <p>select * from test03</p>
@@ -286,7 +263,7 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public String sqlText;
 
     /**
-     * <p>The start time for querying alert logs, provided as a UNIX timestamp in milliseconds.</p>
+     * <p>The start time of the alert log, in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1616068534877</p>
@@ -490,14 +467,6 @@ public class DescribeAuditLogsRequest extends TeaModel {
     }
     public String getRuleCategory() {
         return this.ruleCategory;
-    }
-
-    public DescribeAuditLogsRequest setRuleID(String ruleID) {
-        this.ruleID = ruleID;
-        return this;
-    }
-    public String getRuleID() {
-        return this.ruleID;
     }
 
     public DescribeAuditLogsRequest setRuleId(String ruleId) {

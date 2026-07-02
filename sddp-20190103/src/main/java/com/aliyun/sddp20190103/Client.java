@@ -639,12 +639,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries a list of data audit alert logs, allowing you to search for and handle alerts.</p>
+     * <p>This operation is used to query the list of data audit alert logs, which facilitates alerting search and alerting handling.</p>
      * <h2>QPS limit</h2>
-     * <p>The QPS limit for a single user is 10. If you exceed this limit, the system throttles your API calls. Plan your calls accordingly.</p>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Invoke this operation at an appropriate frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of audit alert logs.</p>
+     * <p>Queries the list of audit alert logs.</p>
      * 
      * @param request DescribeAuditLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -745,10 +745,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RuleCategory", request.ruleCategory);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.ruleID)) {
-            query.put("RuleID", request.ruleID);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.ruleId)) {
             query.put("RuleId", request.ruleId);
         }
@@ -788,12 +784,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries a list of data audit alert logs, allowing you to search for and handle alerts.</p>
+     * <p>This operation is used to query the list of data audit alert logs, which facilitates alerting search and alerting handling.</p>
      * <h2>QPS limit</h2>
-     * <p>The QPS limit for a single user is 10. If you exceed this limit, the system throttles your API calls. Plan your calls accordingly.</p>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Invoke this operation at an appropriate frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of audit alert logs.</p>
+     * <p>Queries the list of audit alert logs.</p>
      * 
      * @param request DescribeAuditLogsRequest
      * @return DescribeAuditLogsResponse

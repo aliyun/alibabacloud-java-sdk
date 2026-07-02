@@ -14,7 +14,7 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
     public String asyncRequestId;
 
     /**
-     * <p>The current page number. Default value: 1.</p>
+     * <p>The page number in a paged query. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,13 +23,13 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>An array of alert logs.</p>
+     * <p>The list of alert logs.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeAuditLogsResponseBodyItems> items;
 
     /**
-     * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page in a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -128,7 +128,7 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public String clientPort;
 
         /**
-         * <p>The user agent of the client.</p>
+         * <p>The client type.</p>
          * 
          * <strong>example:</strong>
          * <p>mysql</p>
@@ -137,7 +137,7 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public String clientUa;
 
         /**
-         * <p>The name of the column.</p>
+         * <p>The column name.</p>
          * 
          * <strong>example:</strong>
          * <p>hide14</p>
@@ -146,7 +146,7 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public String columnName;
 
         /**
-         * <p>The time when the alert was generated. This value is a UNIX timestamp in milliseconds.</p>
+         * <p>The alert time, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1536751124000</p>
@@ -164,7 +164,7 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public String dataSet;
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
          * 
          * <strong>example:</strong>
          * <p>chngc_b2b_migration_sh</p>
@@ -173,7 +173,7 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public String databaseName;
 
         /**
-         * <p>The type of the database.</p>
+         * <p>The database type.</p>
          * 
          * <strong>example:</strong>
          * <p>MySQL</p>
@@ -191,7 +191,11 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public Long effectRow;
 
         /**
-         * <p>The execution status. Valid values: 0 (failed) and 1 (successful).</p>
+         * <p>The execution status. Valid values:</p>
+         * <ul>
+         * <li>0: failed.</li>
+         * <li>1: succeeded.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -200,7 +204,7 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public Integer executeStatus;
 
         /**
-         * <p>The execution duration in milliseconds.</p>
+         * <p>The execution duration, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1751870592000</p>
@@ -209,7 +213,7 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public Long executeTime;
 
         /**
-         * <p>Indicates whether the operation is whitelisted.</p>
+         * <p>Indicates whether the entry is whitelisted.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -218,7 +222,7 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public Boolean inWhiteList;
 
         /**
-         * <p>The audit status of the instance.</p>
+         * <p>The instance audit status.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -227,7 +231,7 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public String instanceAuditStatus;
 
         /**
-         * <p>The description of the data asset.</p>
+         * <p>The description of the data asset instance.</p>
          * 
          * <strong>example:</strong>
          * <p>instance dscription</p>
@@ -236,7 +240,7 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public String instanceDescription;
 
         /**
-         * <p>The name of the data asset.</p>
+         * <p>The name of the asset instance.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-1234</p>
@@ -246,8 +250,8 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
 
         /**
          * <p>The network type. Valid values:</p>
-         * <p><strong>default</strong>: a non-Alibaba Cloud service. This is the default value.</p>
-         * <p><strong>aliyun</strong>: an Alibaba Cloud service.</p>
+         * <p><strong>default</strong> (default): non-Alibaba Cloud service</p>
+         * <p><strong>aliyun</strong>: Alibaba Cloud service</p>
          * 
          * <strong>example:</strong>
          * <p>aliyun</p>
@@ -265,7 +269,7 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public String logSource;
 
         /**
-         * <p>The time when the operation was logged. This value is a UNIX timestamp in milliseconds.</p>
+         * <p>The log execution time.</p>
          * 
          * <strong>example:</strong>
          * <p>1751870592000</p>
@@ -274,7 +278,7 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public Long logTime;
 
         /**
-         * <p>The ID of the member.</p>
+         * <p>The UID of the member accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>**********8103</p>
@@ -292,7 +296,7 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The sensitive data detection rule that was matched.</p>
+         * <p>The sensitive data model that was matched.</p>
          * 
          * <strong>example:</strong>
          * <p>Identity Card</p>
@@ -319,7 +323,7 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public String ossObjectKey;
 
         /**
-         * <p>The name of the MaxCompute package.</p>
+         * <p>The MaxCompute package name.</p>
          * 
          * <strong>example:</strong>
          * <p>test01</p>
@@ -328,7 +332,7 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public String packageName;
 
         /**
-         * <p>The code of the Alibaba Cloud service. Examples: <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>.</p>
+         * <p>The name of the product to which the column data in the data asset table belongs. Valid values: <strong>MaxCompute, OSS, ADS, OTS, RDS</strong>, and more.</p>
          * 
          * <strong>example:</strong>
          * <p>RDS</p>
@@ -337,20 +341,14 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public String productCode;
 
         /**
-         * <p>The ID of the Alibaba Cloud service that contains the data asset. Valid values:</p>
+         * <p>The ID that corresponds to the product name to which the data asset belongs. Valid values:</p>
          * <ul>
-         * <li><p><strong>1</strong>: MaxCompute</p>
-         * </li>
-         * <li><p><strong>2</strong>: OSS</p>
-         * </li>
-         * <li><p><strong>3</strong>: ADS</p>
-         * </li>
-         * <li><p><strong>4</strong>: OTS</p>
-         * </li>
-         * <li><p><strong>5</strong>: RDS</p>
-         * </li>
-         * <li><p><strong>6</strong>: SELF_DB</p>
-         * </li>
+         * <li><strong>1</strong>: MaxCompute.</li>
+         * <li><strong>2</strong>: OSS.</li>
+         * <li><strong>3</strong>: ADS.</li>
+         * <li><strong>4</strong>: OTS.</li>
+         * <li><strong>5</strong>: RDS.</li>
+         * <li><strong>6</strong>: SELF_DB.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -363,7 +361,7 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public String ramConsoleLink;
 
         /**
-         * <p>The type of the rule.</p>
+         * <p>The rule type.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -372,7 +370,7 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public String ruleCategory;
 
         /**
-         * <p>The ID of the audit rule.</p>
+         * <p>The audit policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9952275</p>
@@ -381,7 +379,7 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public String ruleId;
 
         /**
-         * <p>The name of the audit rule.</p>
+         * <p>The name of the audit policy.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -399,7 +397,7 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public String sqlText;
 
         /**
-         * <p>The name of the table.</p>
+         * <p>The table name.</p>
          * 
          * <strong>example:</strong>
          * <p>it_table</p>
@@ -408,7 +406,7 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public String tableName;
 
         /**
-         * <p>The ID of the user.</p>
+         * <p>The user UID.</p>
          * 
          * <strong>example:</strong>
          * <p>19********94</p>
@@ -417,7 +415,7 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public String userId;
 
         /**
-         * <p>The name of the user.</p>
+         * <p>The username.</p>
          * 
          * <strong>example:</strong>
          * <p>admin</p>
@@ -428,12 +426,9 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         /**
          * <p>The risk level. Valid values:</p>
          * <ul>
-         * <li><p><strong>1</strong>: Low</p>
-         * </li>
-         * <li><p><strong>2</strong>: Medium</p>
-         * </li>
-         * <li><p><strong>3</strong>: High</p>
-         * </li>
+         * <li><strong>1</strong>: Low.</li>
+         * <li><strong>2</strong>: Medium.</li>
+         * <li><strong>3</strong>: High.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -445,12 +440,9 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         /**
          * <p>The name of the risk level. Valid values:</p>
          * <ul>
-         * <li><p>Low</p>
-         * </li>
-         * <li><p>Medium</p>
-         * </li>
-         * <li><p>High</p>
-         * </li>
+         * <li>Low.</li>
+         * <li>Medium.</li>
+         * <li>High.</li>
          * </ul>
          * 
          * <strong>example:</strong>

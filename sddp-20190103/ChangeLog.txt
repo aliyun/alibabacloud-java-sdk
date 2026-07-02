@@ -1,3 +1,7 @@
+2026-07-02 Version: 3.0.0
+- Update API DescribeAuditLogs: delete request parameters RuleID.
+
+
 2026-06-24 Version: 2.0.0
 - Update API DescribeAuditLogs: add response parameters Body.Items.$.RamConsoleLink.
 - Update API DescribeDataObjects: add response parameters Body.Items.$.ClusterType.
