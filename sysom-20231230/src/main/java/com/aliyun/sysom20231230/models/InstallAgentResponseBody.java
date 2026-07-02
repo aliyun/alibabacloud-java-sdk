@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InstallAgentResponseBody extends TeaModel {
     /**
-     * <p>Request ID, which can be used for end-to-end diagnosis</p>
+     * <p>The request ID, which can be used for end-to-end diagnostics.</p>
      * 
      * <strong>example:</strong>
      * <p>1D8887FC-4BDB-5A1C-AB19-135C29A9E481</p>
@@ -14,10 +14,10 @@ public class InstallAgentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Status code  </p>
+     * <p>The status code.</p>
      * <ul>
-     * <li><code>code == Success</code> indicates that authorization succeeded.  </li>
-     * <li>Any other status code indicates that authorization failed. If authorization fails, view the <code>message</code> field to obtain detailed error information.</li>
+     * <li>If <code>code == Success</code>, the authorization is successful.</li>
+     * <li>Other status codes indicate authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,16 +27,16 @@ public class InstallAgentResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Returned data</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public InstallAgentResponseBodyData data;
 
     /**
-     * <p>Error message  </p>
+     * <p>The error message.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, this field is empty.  </li>
-     * <li>Otherwise, this field contains the request error message.</li>
+     * <li>If <code>code == Success</code>, this field is empty.</li>
+     * <li>Otherwise, this field contains the request error information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,8 +84,8 @@ public class InstallAgentResponseBody extends TeaModel {
 
     public static class InstallAgentResponseBodyData extends TeaModel {
         /**
-         * <p>Job ID.  </p>
-         * <p>You can use this job ID to invoke the GetAgentTask API to view the job execution status.</p>
+         * <p>The task ID.</p>
+         * <p>You can use this task ID to call the GetAgentTask operation to retrieve the task execution status.</p>
          * 
          * <strong>example:</strong>
          * <p>26b3cd97389c43dcad6bc4901c36fcec</p>

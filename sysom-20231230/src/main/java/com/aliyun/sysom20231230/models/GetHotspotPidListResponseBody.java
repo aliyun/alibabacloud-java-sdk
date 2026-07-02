@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetHotspotPidListResponseBody extends TeaModel {
     /**
-     * <p>error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SysomOpenAPI.InvalidParameter</p>
@@ -14,13 +14,13 @@ public class GetHotspotPidListResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Data returned</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public GetHotspotPidListResponseBodyData data;
 
     /**
-     * <p>Response message</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -76,13 +76,13 @@ public class GetHotspotPidListResponseBody extends TeaModel {
 
     public static class GetHotspotPidListResponseBodyData extends TeaModel {
         /**
-         * <p>List of column names</p>
+         * <p>The list of field names.</p>
          */
         @NameInMap("columns")
         public java.util.List<String> columns;
 
         /**
-         * <p>List of process information</p>
+         * <p>The list of process information.</p>
          */
         @NameInMap("values")
         public java.util.List<java.util.List<String>> values;

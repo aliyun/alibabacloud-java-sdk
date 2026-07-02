@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAgentInstallRecordsRequest extends TeaModel {
     /**
-     * <p>Current page number (starting from 1)</p>
+     * <p>The current page number. Pages start from page 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListAgentInstallRecordsRequest extends TeaModel {
     public Long current;
 
     /**
-     * <p>If this field is specified, the response filters the Agent installation status for the specified instance.</p>
+     * <p>The ID of the instance. If you specify this parameter, only the Agent installation records for the specified instance are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>i-bp118piqcio9tiwgh84b</p>
@@ -23,7 +23,7 @@ public class ListAgentInstallRecordsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Page size</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -32,7 +32,7 @@ public class ListAgentInstallRecordsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>If this parameter is specified, the response filters the installation list for the specified Agent. It can be used together with the plugin_version parameter.</p>
+     * <p>The ID of the Agent. If you specify this parameter, only the installation records for the specified Agent are returned. You can use this parameter together with the plugin_version parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>74a86327-3170-412c-8e67-da3389ec56a9</p>
@@ -41,7 +41,7 @@ public class ListAgentInstallRecordsRequest extends TeaModel {
     public String pluginId;
 
     /**
-     * <p>This parameter cannot be used alone. It must be used together with plugin_id to filter the installation list for a specified version of the specified Agent.</p>
+     * <p>The version of the Agent. This parameter cannot be used alone. Use this parameter together with the plugin_id parameter to filter installation records for a specific version of the specified Agent.</p>
      * 
      * <strong>example:</strong>
      * <p>3.4.0-1</p>
@@ -50,7 +50,7 @@ public class ListAgentInstallRecordsRequest extends TeaModel {
     public String pluginVersion;
 
     /**
-     * <p>Region ID.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -59,7 +59,7 @@ public class ListAgentInstallRecordsRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>Filter widget installation records by status</p>
+     * <p>Filters component installation records by status.</p>
      * 
      * <strong>example:</strong>
      * <p>Installed</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InitialSysomResponseBody extends TeaModel {
     /**
-     * <p>Request ID, which can be used for end-to-end diagnosis</p>
+     * <p>The request ID, which can be used for end-to-end diagnostics.</p>
      * 
      * <strong>example:</strong>
      * <p>3FCA2E38-2A8E-5501-93BD-5CE1BA58F2EF</p>
@@ -14,10 +14,10 @@ public class InitialSysomResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Status code  </p>
+     * <p>The status code.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, authorization succeeded.  </li>
-     * <li>Any other status code indicates a failed authorization. In such cases, view the <code>message</code> field for detailed error information.</li>
+     * <li><code>code == Success</code>: The authorization is successful.</li>
+     * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,16 +27,16 @@ public class InitialSysomResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Return Result.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public InitialSysomResponseBodyData data;
 
     /**
-     * <p>Error message  </p>
+     * <p>The error message.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, this field is empty.  </li>
-     * <li>Otherwise, this field contains the error message.</li>
+     * <li>If <code>code == Success</code>, this field is empty.</li>
+     * <li>Otherwise, this field contains the request error information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,7 +84,7 @@ public class InitialSysomResponseBody extends TeaModel {
 
     public static class InitialSysomResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the service role exists</p>
+         * <p>Indicates whether the service-linked role exists.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

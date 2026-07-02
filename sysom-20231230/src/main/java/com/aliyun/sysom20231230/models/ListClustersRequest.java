@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListClustersRequest extends TeaModel {
     /**
-     * <p>Filter by cluster ID  </p>
+     * <p>Filter by cluster ID.</p>
      * <blockquote>
-     * <p>This cluster ID is not the ACK cluster ID, but the <code>id</code> field in the data returned by this API</p>
+     * <p>This cluster ID is not the ACK cluster ID, but the <code>id</code> field in the data returned by this API.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class ListClustersRequest extends TeaModel {
 
     /**
      * <ul>
-     * <li><code>Running</code>: Cluster management is Normal;  </li>
-     * <li><code>Installing</code>: An install Job is in progress for the cluster;  </li>
-     * <li><code>Uninstalling</code>: An uninstall Job is in progress for the cluster;  </li>
-     * <li><code>Upgrading</code>: An Update Job is in progress for the cluster;  </li>
+     * <li><code>Running</code>: The cluster is managed normally.</li>
+     * <li><code>Installing</code>: The cluster has an installation task in progress.</li>
+     * <li><code>Uninstalling</code>: The cluster has an uninstallation task in progress.</li>
+     * <li><code>Upgrading</code>: The cluster has an upgrade task in progress.</li>
      * <li><code>Offline</code>: The cluster is offline and management is abnormal.</li>
      * </ul>
      * 
@@ -33,8 +33,8 @@ public class ListClustersRequest extends TeaModel {
 
     /**
      * <ul>
-     * <li><code>ACK</code>: ACK cluster  </li>
-     * <li><code>CUSTOM</code>: Custom cluster (default clusters are classified as custom clusters)</li>
+     * <li><code>ACK</code>: ACK cluster.</li>
+     * <li><code>CUSTOM</code>: Custom cluster (the default cluster belongs to custom clusters).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class ListClustersRequest extends TeaModel {
     public Long current;
 
     /**
-     * <p>This field is deprecated. Use the <code>cluster_id</code> field for filtering instead.</p>
+     * <p>This field is deprecated. Use the cluster_id field to filter instead.</p>
      * 
      * <strong>example:</strong>
      * <p>cb7d4cc26c8f845fb8a8255ffd394820e</p>
@@ -62,7 +62,7 @@ public class ListClustersRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>Filter plugins by plugin name</p>
+     * <p>Filter by plugin name</p>
      * 
      * <strong>example:</strong>
      * <p>proxy-next-upstream</p>

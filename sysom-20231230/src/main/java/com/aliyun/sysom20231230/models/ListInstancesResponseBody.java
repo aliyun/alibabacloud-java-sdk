@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
     /**
-     * <p>Status code  </p>
+     * <p>The status code.</p>
      * <ul>
-     * <li><code>code == Success</code> indicates that authorization succeeded.  </li>
-     * <li>Any other status code indicates that authorization failed. When authorization fails, check the <code>message</code> field for detailed error information.</li>
+     * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+     * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,16 +18,16 @@ public class ListInstancesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Return Result.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("data")
     public java.util.List<ListInstancesResponseBodyData> data;
 
     /**
-     * <p>Error message  </p>
+     * <p>The error message.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, this field is empty.  </li>
-     * <li>Otherwise, this field contains the request error message.</li>
+     * <li>If <code>code == Success</code>, this field is empty.</li>
+     * <li>Otherwise, this field contains the request error information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class ListInstancesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request RequestId</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9515E5A0-8905-59B0-9BBF-5F0BE568C3A0</p>
@@ -46,7 +46,7 @@ public class ListInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total number of records</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>623</p>
@@ -101,7 +101,7 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyData extends TeaModel {
         /**
-         * <p>Cluster ID</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c2218ca2b76ec45e7b7ee1693f6fcd374</p>
@@ -110,7 +110,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>ECS instance ID</p>
+         * <p>The ECS instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i-wz9d00ut2ska3mlyhn6j</p>
@@ -119,7 +119,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String instance;
 
         /**
-         * <p>Milvus version of the instance</p>
+         * <p>The current kernel version of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>5.10.134-16.1.an8.x86_64</p>
@@ -128,7 +128,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String kernelVersion;
 
         /**
-         * <p>Metadata of the instance</p>
+         * <p>The metadata of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -153,7 +153,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Object meta;
 
         /**
-         * <p>Architecture of the ECS instance</p>
+         * <p>The architecture of the ECS instance.</p>
          * 
          * <strong>example:</strong>
          * <p>x86</p>
@@ -162,7 +162,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String osArch;
 
         /**
-         * <p>Health score of the instance</p>
+         * <p>The health score of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -171,7 +171,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String osHealthScore;
 
         /**
-         * <p>Operating system name of the instance (retrieved from /etc/os-release)</p>
+         * <p>The operating system name of the instance (obtained from /etc/os-release).</p>
          * 
          * <strong>example:</strong>
          * <p>Anolis OS</p>
@@ -180,7 +180,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String osName;
 
         /**
-         * <p>Operating system name ID of the instance (retrieved from /etc/os-release)</p>
+         * <p>The operating system name ID of the instance (obtained from /etc/os-release).</p>
          * 
          * <strong>example:</strong>
          * <p>anolis</p>
@@ -189,7 +189,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String osNameId;
 
         /**
-         * <p>Operating system version of the instance (obtained from /etc/os-release)</p>
+         * <p>The operating system version of the instance (obtained from /etc/os-release).</p>
          * 
          * <strong>example:</strong>
          * <p>8.9</p>
@@ -198,7 +198,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String osVersion;
 
         /**
-         * <p>Operating system version ID of the instance (retrieved from /etc/os-release)</p>
+         * <p>The operating system version ID of the instance (obtained from /etc/os-release).</p>
          * 
          * <strong>example:</strong>
          * <p>rhel fedora centos</p>
@@ -207,7 +207,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String osVersionId;
 
         /**
-         * <p>Region where the instance is located</p>
+         * <p>The region where the instance resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -216,7 +216,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>Status of the instance</p>
+         * <p>The status of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>

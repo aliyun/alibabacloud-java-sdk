@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListClusterAgentInstallRecordsResponseBody extends TeaModel {
     /**
-     * <p>Request ID, which can be used for end-to-end diagnosis</p>
+     * <p>Request ID, which can be used for end-to-end diagnostics.</p>
      * 
      * <strong>example:</strong>
      * <p>B149FD9C-ED5C-5765-B3AD-05AA4A4D64D7</p>
@@ -14,10 +14,10 @@ public class ListClusterAgentInstallRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Status code  </p>
+     * <p>Status code.</p>
      * <ul>
-     * <li><code>code == Success</code> indicates authorization succeeded;  </li>
-     * <li>Other status codes indicate authorization failed. When authorization fails, view the <code>message</code> field to obtain detailed error message;</li>
+     * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+     * <li>Other status codes indicate authorization failure. When authorization fails, check the <code>message</code> field for detailed error information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,15 +27,15 @@ public class ListClusterAgentInstallRecordsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Return Result.</p>
+     * <p>Response results.</p>
      */
     @NameInMap("data")
     public java.util.List<ListClusterAgentInstallRecordsResponseBodyData> data;
 
     /**
-     * <p>error message  </p>
+     * <p>Error message.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, this field is empty;  </li>
+     * <li>If <code>code == Success</code>, this field is empty.</li>
      * <li>Otherwise, this field contains the request error message.</li>
      * </ul>
      * 
@@ -107,9 +107,9 @@ public class ListClusterAgentInstallRecordsResponseBody extends TeaModel {
         public String agentConfigName;
 
         /**
-         * <p>Cluster ID.  </p>
+         * <p>Cluster ID.</p>
          * <blockquote>
-         * <p>This cluster ID is not the ACK cluster ID</p>
+         * <p>This cluster ID is not the ACK cluster ID.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -119,7 +119,7 @@ public class ListClusterAgentInstallRecordsResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>Creation Time</p>
+         * <p>Creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-12-25T15:08:19</p>
@@ -128,7 +128,7 @@ public class ListClusterAgentInstallRecordsResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>Canary release environment</p>
+         * <p>Canary release configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -137,7 +137,7 @@ public class ListClusterAgentInstallRecordsResponseBody extends TeaModel {
         public String grayscaleConfig;
 
         /**
-         * <p>Widget ID</p>
+         * <p>Component ID.</p>
          * 
          * <strong>example:</strong>
          * <p>74a86327-3170-412c-8e67-da3389ec56a9</p>
@@ -146,7 +146,7 @@ public class ListClusterAgentInstallRecordsResponseBody extends TeaModel {
         public String pluginId;
 
         /**
-         * <p>Plugin version</p>
+         * <p>Plugin version.</p>
          * 
          * <strong>example:</strong>
          * <p>3.4.0-1</p>
@@ -155,7 +155,7 @@ public class ListClusterAgentInstallRecordsResponseBody extends TeaModel {
         public String pluginVersion;
 
         /**
-         * <p>Updated At</p>
+         * <p>Modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-12-25T15:08:19</p>

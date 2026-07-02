@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAbnormalEventsCountRequest extends TeaModel {
     /**
-     * <p>cluster ID</p>
+     * <p>Cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2ijff4be-bf24-4070-89ca-c47c879b0g32</p>
@@ -14,7 +14,7 @@ public class GetAbnormalEventsCountRequest extends TeaModel {
     public String cluster;
 
     /**
-     * <p>End time</p>
+     * <p>End time.</p>
      * 
      * <strong>example:</strong>
      * <p>1725801327754</p>
@@ -23,7 +23,7 @@ public class GetAbnormalEventsCountRequest extends TeaModel {
     public Float end;
 
     /**
-     * <p>instance ID.</p>
+     * <p>Instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>i-wz9d00ut2ska3mlyhn6j</p>
@@ -32,7 +32,7 @@ public class GetAbnormalEventsCountRequest extends TeaModel {
     public String instance;
 
     /**
-     * <p>Level of the anomalous activity</p>
+     * <p>Level of abnormal events.</p>
      * 
      * <strong>example:</strong>
      * <p>potential</p>
@@ -41,7 +41,7 @@ public class GetAbnormalEventsCountRequest extends TeaModel {
     public String level;
 
     /**
-     * <p>Namespace where the pod is located</p>
+     * <p>The namespace where the Pod resides.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -50,7 +50,7 @@ public class GetAbnormalEventsCountRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>Name of the pod</p>
+     * <p>Pod name.</p>
      * 
      * <strong>example:</strong>
      * <p>test-pod</p>
@@ -59,7 +59,7 @@ public class GetAbnormalEventsCountRequest extends TeaModel {
     public String pod;
 
     /**
-     * <p>is whether to display pod anomalous activity</p>
+     * <p>Whether to display Pod abnormal events.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -68,7 +68,7 @@ public class GetAbnormalEventsCountRequest extends TeaModel {
     public Integer showPod;
 
     /**
-     * <p>Start time</p>
+     * <p>Start time.</p>
      * 
      * <strong>example:</strong>
      * <p>1725797727754</p>

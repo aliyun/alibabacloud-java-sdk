@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateFuncSwitchRecordRequest extends TeaModel {
     /**
-     * <p>Diagnosis channel (currently fixed to the ecs channel)</p>
+     * <p>The diagnostic channel. Currently, this parameter is fixed to the ECS channel.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,14 +15,14 @@ public class UpdateFuncSwitchRecordRequest extends TeaModel {
     public String channel;
 
     /**
-     * <p>Diagnosis parameters. Different diagnosis types require different diagnosis parameters. You can use this field to filter records whose parameters match specified values.</p>
+     * <p>The diagnostic parameters. Different types of diagnostics require different diagnostic parameters. You can use this field to filter records whose parameters match the specified values.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("params")
     public UpdateFuncSwitchRecordRequestParams params;
 
     /**
-     * <p>Service Name</p>
+     * <p>The service name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,7 +62,7 @@ public class UpdateFuncSwitchRecordRequest extends TeaModel {
 
     public static class UpdateFuncSwitchRecordRequestParamsArgs extends TeaModel {
         /**
-         * <p>Configuration process</p>
+         * <p>The configuration process.</p>
          * 
          * <strong>example:</strong>
          * <p>java</p>
@@ -71,7 +71,7 @@ public class UpdateFuncSwitchRecordRequest extends TeaModel {
         public String addCmd;
 
         /**
-         * <p>ONCPU tracing Toggle</p>
+         * <p>The ONCPU tracing switch.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -80,7 +80,7 @@ public class UpdateFuncSwitchRecordRequest extends TeaModel {
         public String cpu;
 
         /**
-         * <p>Duration in seconds (s)</p>
+         * <p>The start duration, in seconds (s).</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -89,7 +89,7 @@ public class UpdateFuncSwitchRecordRequest extends TeaModel {
         public Integer duration;
 
         /**
-         * <p>Storage Path</p>
+         * <p>The storage path.</p>
          * 
          * <strong>example:</strong>
          * <p>/tmp/sysom/java-profiler</p>
@@ -98,7 +98,7 @@ public class UpdateFuncSwitchRecordRequest extends TeaModel {
         public String javaStorePath;
 
         /**
-         * <p>Edit Lock tracing Toggle</p>
+         * <p>The lock tracing switch.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -107,7 +107,7 @@ public class UpdateFuncSwitchRecordRequest extends TeaModel {
         public String locks;
 
         /**
-         * <p>Tracing epoch</p>
+         * <p>The tracing cycle.</p>
          * 
          * <strong>example:</strong>
          * <p>-1</p>
@@ -116,7 +116,7 @@ public class UpdateFuncSwitchRecordRequest extends TeaModel {
         public Integer loop;
 
         /**
-         * <p>Memory tracing Toggle</p>
+         * <p>The memory tracing switch.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -125,7 +125,7 @@ public class UpdateFuncSwitchRecordRequest extends TeaModel {
         public String mem;
 
         /**
-         * <p>Process PID</p>
+         * <p>The process PID.</p>
          * 
          * <strong>example:</strong>
          * <p>1243</p>
@@ -134,7 +134,7 @@ public class UpdateFuncSwitchRecordRequest extends TeaModel {
         public Integer pid;
 
         /**
-         * <p>System tracing toggle</p>
+         * <p>The system tracing switch.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -223,13 +223,13 @@ public class UpdateFuncSwitchRecordRequest extends TeaModel {
 
     public static class UpdateFuncSwitchRecordRequestParams extends TeaModel {
         /**
-         * <p>Configuration Parameter</p>
+         * <p>The configuration parameters.</p>
          */
         @NameInMap("args")
         public UpdateFuncSwitchRecordRequestParamsArgs args;
 
         /**
-         * <p>Feature Name</p>
+         * <p>The feature name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -239,7 +239,7 @@ public class UpdateFuncSwitchRecordRequest extends TeaModel {
         public String functionName;
 
         /**
-         * <p>Instance ID</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i-2zei55fwj8nnu31h3z46</p>
@@ -248,7 +248,7 @@ public class UpdateFuncSwitchRecordRequest extends TeaModel {
         public String instance;
 
         /**
-         * <p>Operation Type</p>
+         * <p>The operation type.</p>
          * 
          * <strong>example:</strong>
          * <p>restart</p>
@@ -257,7 +257,7 @@ public class UpdateFuncSwitchRecordRequest extends TeaModel {
         public String op;
 
         /**
-         * <p>Region to which the instance belongs. Ensure that all instance IDs passed in the instances field belong to the same region.</p>
+         * <p>The region to which the instance belongs. All instance IDs passed in instances must belong to the same region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -266,7 +266,7 @@ public class UpdateFuncSwitchRecordRequest extends TeaModel {
         public String region;
 
         /**
-         * <p>User ID</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1664516888213680</p>

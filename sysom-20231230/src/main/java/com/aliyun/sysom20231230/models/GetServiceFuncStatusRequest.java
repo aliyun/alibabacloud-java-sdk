@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetServiceFuncStatusRequest extends TeaModel {
     /**
-     * <p>channel name</p>
+     * <p>The channel name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,14 +15,14 @@ public class GetServiceFuncStatusRequest extends TeaModel {
     public String channel;
 
     /**
-     * <p>Diagnosis parameters. Different types of diagnosis require different diagnosis parameters. You can use this field to filter records whose parameter values match the specified values.</p>
+     * <p>The diagnostic parameters. Different types of diagnostics require different diagnostic parameters. You can use this field to filter records whose parameters match the specified values.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("params")
     public GetServiceFuncStatusRequestParams params;
 
     /**
-     * <p>Service Name</p>
+     * <p>The service name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,7 +62,7 @@ public class GetServiceFuncStatusRequest extends TeaModel {
 
     public static class GetServiceFuncStatusRequestParams extends TeaModel {
         /**
-         * <p>feature name</p>
+         * <p>The feature name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -72,7 +72,7 @@ public class GetServiceFuncStatusRequest extends TeaModel {
         public String functionName;
 
         /**
-         * <p>instance ID</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i-2zei55fwj8nnu31h3z46</p>
@@ -81,7 +81,7 @@ public class GetServiceFuncStatusRequest extends TeaModel {
         public String instance;
 
         /**
-         * <p>User ID</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1338904783509062</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradeAgentResponseBody extends TeaModel {
     /**
-     * <p>Request ID, which can be used for end-to-end Diagnosis</p>
+     * <p>The request ID, which can be used for end-to-end diagnostics.</p>
      * 
      * <strong>example:</strong>
      * <p>B149FD9C-ED5C-5765-B3AD-05AA4A4D64D7</p>
@@ -14,10 +14,10 @@ public class UpgradeAgentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Status code  </p>
+     * <p>The status code.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, authorization Succeeded.  </li>
-     * <li>Other status codes indicate Failed to Authorize. When authorization fails, view the <code>message</code> field to obtain the detailed error message.</li>
+     * <li>If <code>code == Success</code>, the authorization is successful.</li>
+     * <li>Other status codes indicate that the authorization has failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,16 +27,16 @@ public class UpgradeAgentResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Returned Data</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public UpgradeAgentResponseBodyData data;
 
     /**
-     * <p>Error message  </p>
+     * <p>The error message.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, this field is empty.  </li>
-     * <li>Otherwise, this field contains the request error message.</li>
+     * <li>If <code>code == Success</code>, this field is empty.</li>
+     * <li>Otherwise, this field contains the request error information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,7 +84,7 @@ public class UpgradeAgentResponseBody extends TeaModel {
 
     public static class UpgradeAgentResponseBodyData extends TeaModel {
         /**
-         * <p>Job ID.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>391f5aeba2054f66b3aaef0136142fe2</p>

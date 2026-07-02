@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetInspectionReportResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * <ul>
+     * <li>If <code>code == Success</code>, the authorization is successful.</li>
+     * <li>Other status codes indicate authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>SysomOpenAPI.InvalidParameter</p>
      */
@@ -12,6 +18,8 @@ public class GetInspectionReportResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response data.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -19,6 +27,12 @@ public class GetInspectionReportResponseBody extends TeaModel {
     public Object data;
 
     /**
+     * <p>The error message.</p>
+     * <ul>
+     * <li>If <code>code == Success</code>, this field is empty.</li>
+     * <li>Otherwise, this field contains the request error information.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>SysomOpenAPIException: SysomOpenAPI.InvalidParameter Invalid params, should be json string or dict</p>
      */
@@ -26,6 +40,8 @@ public class GetInspectionReportResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>2D693121-C925-5154-8DF6-C09A8B369822</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAlertDestinationRequest extends TeaModel {
     /**
-     * <p>Alert contact ID</p>
+     * <p>The alert contact ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

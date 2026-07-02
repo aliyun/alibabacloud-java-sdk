@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateVmcoreDiagnosisTaskRequest extends TeaModel {
     /**
-     * <p>Download link for the debuginfo-common file. This parameter is optional when the diagnosis type is vmcore.  </p>
-     * <p>For CentOS or Alinux kernel diagnosis, the corresponding debuginfo-common file is automatically downloaded, so you do not need to provide this parameter. For kernels of other distributions, you must manually provide the download link for the debuginfo-common file that matches the kernel version.</p>
+     * <p>The download URL of the debuginfo-common file. This parameter is optional when the diagnostic type is vmcore.</p>
+     * <p>For CentOS or Alinux kernels, the corresponding debuginfo-common file is automatically downloaded, and you do not need to specify this parameter. For other distribution kernels, manually provide the download URL of the debuginfo-common file that corresponds to the kernel version.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/debuginfo-common/file/path">https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/debuginfo-common/file/path</a></p>
@@ -15,8 +15,8 @@ public class CreateVmcoreDiagnosisTaskRequest extends TeaModel {
     public String debuginfoCommonUrl;
 
     /**
-     * <p>The download link of the debuginfo file corresponding to the vmcore file. This parameter is optional when the diagnosis type is vmcore.</p>
-     * <p>For CentOS or Alinux kernel diagnosis, the corresponding debuginfo file is automatically downloaded, so you do not need to provide this parameter. For kernels from other distributions, you must manually provide the download link for the debuginfo file that matches the kernel version.</p>
+     * <p>The download URL of the debuginfo file. This parameter is optional when the diagnostic type is vmcore.</p>
+     * <p>For CentOS or Alinux kernels, the corresponding debuginfo file is automatically downloaded, and you do not need to specify this parameter. For other distribution kernels, manually provide the download URL of the debuginfo file that corresponds to the kernel version.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/debuginfo/file/path">https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/debuginfo/file/path</a></p>
@@ -25,7 +25,7 @@ public class CreateVmcoreDiagnosisTaskRequest extends TeaModel {
     public String debuginfoUrl;
 
     /**
-     * <p>Download link for the dmesg log file. This parameter is required when the diagnosis type is dmesg.</p>
+     * <p>The download URL of the dmesg log file. This parameter is required when the diagnostic type is dmesg.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/dmesg/file/path">https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/dmesg/file/path</a></p>
@@ -34,9 +34,11 @@ public class CreateVmcoreDiagnosisTaskRequest extends TeaModel {
     public String dmesgUrl;
 
     /**
-     * <p>Task Type  </p>
-     * <p>vmcore: vmcore file diagnosis task  </p>
-     * <p>dmesg: dmesg log diagnosis task</p>
+     * <p>The task type. Valid values:</p>
+     * <ul>
+     * <li>vmcore: vmcore file diagnostic task.</li>
+     * <li>dmesg: dmesg log diagnostic task.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +48,7 @@ public class CreateVmcoreDiagnosisTaskRequest extends TeaModel {
     public String taskType;
 
     /**
-     * <p>The download link of the vmcore file. This parameter is required when the diagnosis type is vmcore.</p>
+     * <p>The download URL of the vmcore file. This parameter is required when the diagnostic type is vmcore.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/vmcore/file/path">https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/vmcore/file/path</a></p>

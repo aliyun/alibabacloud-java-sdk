@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class AuthDiagnosisRequest extends TeaModel {
     /**
-     * <p>Automatic creation of role</p>
+     * <p>Specifies whether to enable automatic creation of the service-linked role.</p>
      */
     @NameInMap("autoCreateRole")
     public Boolean autoCreateRole;
 
     /**
-     * <p>Automatic installation of agent</p>
+     * <p>Specifies whether to automatically install the agent.</p>
      */
     @NameInMap("autoInstallAgent")
     public Boolean autoInstallAgent;
 
     /**
-     * <p>List of instances to authorize for diagnosis</p>
+     * <p>The list of instances to authorize for diagnostics.</p>
      */
     @NameInMap("instances")
     public java.util.List<AuthDiagnosisRequestInstances> instances;
@@ -53,7 +53,7 @@ public class AuthDiagnosisRequest extends TeaModel {
 
     public static class AuthDiagnosisRequestInstances extends TeaModel {
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i-wz9b9vucz1iubsz8sjqo</p>
@@ -62,7 +62,7 @@ public class AuthDiagnosisRequest extends TeaModel {
         public String instance;
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListPluginsInstancesResponseBody extends TeaModel {
     /**
-     * <p>Status code  </p>
+     * <p>The status code.</p>
      * <ul>
-     * <li><code>code == Success</code> indicates successful authorization;  </li>
-     * <li>Other status codes indicate failed authorization. When authorization fails, view the <code>message</code> field to obtain detailed error information.</li>
+     * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+     * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,13 +18,13 @@ public class ListPluginsInstancesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Return Result.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("data")
     public java.util.List<ListPluginsInstancesResponseBodyData> data;
 
     /**
-     * <p>Description</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>SysomOpenAPIException: SysomOpenAPI.InvalidParameter Invalid params, should be json string or dict</p>
@@ -33,7 +33,7 @@ public class ListPluginsInstancesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request RequestId</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>35F91AAB-5FDF-5A22-B211-C7C6B00817D0</p>
@@ -42,7 +42,7 @@ public class ListPluginsInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total number of query results.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>42</p>
@@ -97,7 +97,7 @@ public class ListPluginsInstancesResponseBody extends TeaModel {
 
     public static class ListPluginsInstancesResponseBodyDataInstanceTag extends TeaModel {
         /**
-         * <p>Name of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>test_tag_key</p>
@@ -106,7 +106,7 @@ public class ListPluginsInstancesResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>Tag value.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>test_tag_value</p>
@@ -139,7 +139,7 @@ public class ListPluginsInstancesResponseBody extends TeaModel {
 
     public static class ListPluginsInstancesResponseBodyData extends TeaModel {
         /**
-         * <p>Instance ID</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp118piqcio9tiwgh84b</p>
@@ -148,7 +148,7 @@ public class ListPluginsInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>Widget instance name.</p>
+         * <p>The component instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>allowed-repos-qmf8w</p>
@@ -157,13 +157,13 @@ public class ListPluginsInstancesResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>Tags of instances</p>
+         * <p>The instance tag.</p>
          */
         @NameInMap("instance_tag")
         public java.util.List<ListPluginsInstancesResponseBodyDataInstanceTag> instanceTag;
 
         /**
-         * <p>Operating system name of the instance</p>
+         * <p>The operating system name of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>Alibaba Cloud Linux  3.2104 LTS 64 bit</p>
@@ -172,7 +172,7 @@ public class ListPluginsInstancesResponseBody extends TeaModel {
         public String osName;
 
         /**
-         * <p>Private IP address</p>
+         * <p>The private IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>1.1.1.1</p>
@@ -181,7 +181,7 @@ public class ListPluginsInstancesResponseBody extends TeaModel {
         public String privateIp;
 
         /**
-         * <p>Internet IP address</p>
+         * <p>The public IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>1.1.1.1</p>
@@ -190,7 +190,7 @@ public class ListPluginsInstancesResponseBody extends TeaModel {
         public String publicIp;
 
         /**
-         * <p>Area where the instance resides</p>
+         * <p>The region where the instance resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -199,7 +199,7 @@ public class ListPluginsInstancesResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>Resource group ID.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-xxxx</p>
@@ -208,7 +208,7 @@ public class ListPluginsInstancesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>Resource group name</p>
+         * <p>The resource group name.</p>
          * 
          * <strong>example:</strong>
          * <p>default resource group</p>

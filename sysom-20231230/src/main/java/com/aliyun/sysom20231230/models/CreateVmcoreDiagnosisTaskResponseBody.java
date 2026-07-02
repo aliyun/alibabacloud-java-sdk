@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateVmcoreDiagnosisTaskResponseBody extends TeaModel {
     /**
-     * <p>Status code  </p>
+     * <p>The status code.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, authorization succeeded.  </li>
-     * <li>Other status codes indicate authorization failed. When authorization fails, check the <code>message</code> field for detailed error information.</li>
+     * <li>If code is Success, the authorization is successful.</li>
+     * <li>Other status codes indicate that the authorization has failed. Check the message field for the detailed fault message.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,16 +18,16 @@ public class CreateVmcoreDiagnosisTaskResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Returned data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public CreateVmcoreDiagnosisTaskResponseBodyData data;
 
     /**
-     * <p>Error message  </p>
+     * <p>The error message.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, this field is empty.  </li>
-     * <li>Otherwise, this field contains the request error message.</li>
+     * <li>If code is Success, this field is empty.</li>
+     * <li>Otherwise, this field contains the error message for the request.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class CreateVmcoreDiagnosisTaskResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2D693121-C925-5154-8DF6-C09A8B369822</p>
@@ -84,7 +84,7 @@ public class CreateVmcoreDiagnosisTaskResponseBody extends TeaModel {
 
     public static class CreateVmcoreDiagnosisTaskResponseBodyData extends TeaModel {
         /**
-         * <p>ID of the created diagnostic task</p>
+         * <p>The ID of the created diagnostic task.</p>
          * 
          * <strong>example:</strong>
          * <p>bbe94a98-4192-4172-b856-95777e0a55d7</p>

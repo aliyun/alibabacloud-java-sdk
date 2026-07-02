@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckInstanceSupportRequest extends TeaModel {
     /**
-     * <p>List of instance IDs to check</p>
+     * <p>The list of instance IDs to check.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;i-2zxxxxxx&quot;]</p>
@@ -14,7 +14,7 @@ public class CheckInstanceSupportRequest extends TeaModel {
     public java.util.List<String> instances;
 
     /**
-     * <p>Region to which the instances belong. Ensure that all instance IDs passed in the instances list belong to the same region.</p>
+     * <p>The region to which the instances belong. All instance IDs specified in instances must belong to the same region.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

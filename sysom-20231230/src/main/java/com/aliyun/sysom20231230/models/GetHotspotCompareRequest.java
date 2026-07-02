@@ -45,7 +45,7 @@ public class GetHotspotCompareRequest extends TeaModel {
     public Long beg2Start;
 
     /**
-     * <p>Hot spot type</p>
+     * <p>Hotspot type</p>
      * 
      * <strong>example:</strong>
      * <p>alloc</p>
@@ -74,7 +74,7 @@ public class GetHotspotCompareRequest extends TeaModel {
     public String instance2;
 
     /**
-     * <p>Process of instance 1</p>
+     * <p>Instance 1 process</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -83,7 +83,7 @@ public class GetHotspotCompareRequest extends TeaModel {
     public Long pid1;
 
     /**
-     * <p>Process of instance 2</p>
+     * <p>Instance 2 process</p>
      * 
      * <strong>example:</strong>
      * <p>i-2zei55fwj8nnu31h3z46</p>

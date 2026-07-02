@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartAIAnalysisResponseBody extends TeaModel {
     /**
-     * <p>Return code.</p>
+     * <p>Response code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,7 +14,7 @@ public class StartAIAnalysisResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Returned data</p>
+     * <p>Response data</p>
      */
     @NameInMap("data")
     public StartAIAnalysisResponseBodyData data;

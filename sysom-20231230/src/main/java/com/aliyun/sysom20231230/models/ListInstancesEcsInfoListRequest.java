@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstancesEcsInfoListRequest extends TeaModel {
     /**
-     * <p>Type of information to retrieve</p>
+     * <p>The type of information to retrieve.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListInstancesEcsInfoListRequest extends TeaModel {
     public String infoType;
 
     /**
-     * <p>If this field is specified, the response filters and returns the Agent installation status for the specified instance.</p>
+     * <p>Specifies the instance ID to filter and return the Agent installation status of the specified instance.</p>
      * 
      * <strong>example:</strong>
      * <p>i-bp118piqcio9tiwgh84b</p>
@@ -24,7 +24,7 @@ public class ListInstancesEcsInfoListRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Management status of the instance</p>
+     * <p>The management status of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>managed</p>
@@ -33,7 +33,7 @@ public class ListInstancesEcsInfoListRequest extends TeaModel {
     public String managedType;
 
     /**
-     * <p>If this parameter is specified, the response filters and returns the instance information list for the corresponding widget.</p>
+     * <p>Specifies the component ID to filter and return the instance information list for the corresponding component.</p>
      * 
      * <strong>example:</strong>
      * <p>74a86327-3170-412c-8e67-da3389ec56a9</p>
@@ -42,7 +42,7 @@ public class ListInstancesEcsInfoListRequest extends TeaModel {
     public String pluginId;
 
     /**
-     * <p>Filter instances by area</p>
+     * <p>The region used to filter instances.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

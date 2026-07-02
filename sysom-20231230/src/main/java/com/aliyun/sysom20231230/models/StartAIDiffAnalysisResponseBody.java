@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class StartAIDiffAnalysisResponseBody extends TeaModel {
     /**
-     * <p>Status code  </p>
+     * <p>The status code.</p>
      * <ul>
-     * <li><code>code == Success</code> indicates that authorization succeeded.  </li>
-     * <li>Other status codes indicate that authorization failed. When authorization fails, view the <code>message</code> field to obtain detailed error information.</li>
+     * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+     * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class StartAIDiffAnalysisResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>AI differential analysis result data</p>
+     * <p>The AI differential analysis result data.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;[
@@ -44,7 +44,7 @@ public class StartAIDiffAnalysisResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>Error message description; empty if no error occurred</p>
+     * <p>The error code description. This field is empty if no error occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>

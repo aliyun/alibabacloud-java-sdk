@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetHostCountRequest extends TeaModel {
     /**
-     * <p>Cluster ID</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1808078950770264</p>
@@ -14,7 +14,7 @@ public class GetHostCountRequest extends TeaModel {
     public String cluster;
 
     /**
-     * <p>End Time</p>
+     * <p>The end time.</p>
      * 
      * <strong>example:</strong>
      * <p>1725801327754</p>
@@ -23,7 +23,7 @@ public class GetHostCountRequest extends TeaModel {
     public Float end;
 
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>i-wz9d00ut2ska3mlyhn6j</p>
@@ -32,7 +32,7 @@ public class GetHostCountRequest extends TeaModel {
     public String instance;
 
     /**
-     * <p>Start Time</p>
+     * <p>The start time.</p>
      * 
      * <strong>example:</strong>
      * <p>1725797727754</p>

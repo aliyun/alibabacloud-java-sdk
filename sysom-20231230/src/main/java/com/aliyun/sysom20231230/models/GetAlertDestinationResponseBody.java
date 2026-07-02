@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetAlertDestinationResponseBody extends TeaModel {
     /**
-     * <p>Status code.  </p>
+     * <p>The status code.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, authorization succeeded.  </li>
-     * <li>Other status codes indicate authorization failed. When authorization fails, check the <code>message</code> field for detailed error information.</li>
+     * <li>If <code>code == Success</code>, the authorization is successful.</li>
+     * <li>Other status codes indicate authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,16 +18,16 @@ public class GetAlertDestinationResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Returned data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public GetAlertDestinationResponseBodyData data;
 
     /**
-     * <p>Error message.  </p>
+     * <p>The error message.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, this field is empty.  </li>
-     * <li>Otherwise, this field contains the request error message.</li>
+     * <li>If <code>code == Success</code>, this field is empty.</li>
+     * <li>Otherwise, this field contains the request error information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class GetAlertDestinationResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2D693121-C925-5154-8DF6-C09A8B369822</p>
@@ -84,7 +84,7 @@ public class GetAlertDestinationResponseBody extends TeaModel {
 
     public static class GetAlertDestinationResponseBodyData extends TeaModel {
         /**
-         * <p>Creation Time.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1751520976660</p>
@@ -93,7 +93,7 @@ public class GetAlertDestinationResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>Alert contact ID</p>
+         * <p>The alert contact ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -102,7 +102,7 @@ public class GetAlertDestinationResponseBody extends TeaModel {
         public Integer id;
 
         /**
-         * <p>Alert contact name</p>
+         * <p>The alert contact name.</p>
          * 
          * <strong>example:</strong>
          * <p>name1</p>
@@ -111,7 +111,7 @@ public class GetAlertDestinationResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Configuration Parameter</p>
+         * <p>The configuration parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -123,7 +123,7 @@ public class GetAlertDestinationResponseBody extends TeaModel {
         public Object params;
 
         /**
-         * <p>Configuration source</p>
+         * <p>The configuration source.</p>
          * 
          * <strong>example:</strong>
          * <p>console</p>
@@ -132,7 +132,7 @@ public class GetAlertDestinationResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>Alert push target. Currently, only DingTalk Robot is supported.</p>
+         * <p>The alert notification target. Currently, only DingTalk chatbots are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>dingtalk</p>
@@ -141,7 +141,7 @@ public class GetAlertDestinationResponseBody extends TeaModel {
         public String target;
 
         /**
-         * <p>User ID</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1234123412352311</p>
@@ -150,7 +150,7 @@ public class GetAlertDestinationResponseBody extends TeaModel {
         public String uid;
 
         /**
-         * <p>Update Time.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>1751254826285</p>

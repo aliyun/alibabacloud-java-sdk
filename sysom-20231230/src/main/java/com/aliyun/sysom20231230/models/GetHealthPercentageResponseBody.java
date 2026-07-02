@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetHealthPercentageResponseBody extends TeaModel {
     /**
-     * <p>Status code  </p>
+     * <p>The status code.</p>
      * <ul>
-     * <li><code>code == Success</code> indicates that authorization succeeded.  </li>
-     * <li>Other status codes indicate that authorization failed. When authorization fails, view the <code>message</code> field to obtain detailed error information.</li>
+     * <li><code>code == Success</code> indicates that the authorization was successful.</li>
+     * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault message.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,13 +18,13 @@ public class GetHealthPercentageResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Returned data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public java.util.List<GetHealthPercentageResponseBodyData> data;
 
     /**
-     * <p>Error Details</p>
+     * <p>The error details.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -63,7 +63,7 @@ public class GetHealthPercentageResponseBody extends TeaModel {
 
     public static class GetHealthPercentageResponseBodyData extends TeaModel {
         /**
-         * <p>Health level of the edge zone/pod</p>
+         * <p>The health level of the node or pod.</p>
          * 
          * <strong>example:</strong>
          * <p>health</p>
@@ -72,7 +72,7 @@ public class GetHealthPercentageResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>Quantity</p>
+         * <p>The quantity.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

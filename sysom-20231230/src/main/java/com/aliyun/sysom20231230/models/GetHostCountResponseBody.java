@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetHostCountResponseBody extends TeaModel {
     /**
-     * <p>Status code  </p>
+     * <p>The status code.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, authorization succeeded.  </li>
-     * <li>Other status codes indicate authorization failed. When authorization fails, view the <code>message</code> field to obtain detailed error information.</li>
+     * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+     * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,16 +18,16 @@ public class GetHostCountResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Returned data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public java.util.List<GetHostCountResponseBodyData> data;
 
     /**
-     * <p>Error message  </p>
+     * <p>The error message.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, this field is empty.  </li>
-     * <li>Otherwise, this field contains the request error message.</li>
+     * <li>If <code>code == Success</code>, this field is empty.</li>
+     * <li>Otherwise, this field contains the request error information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class GetHostCountResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request RequestId</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>43A910E9-A739-525E-855D-A32C257F1826</p>
@@ -46,7 +46,7 @@ public class GetHostCountResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total number of entries.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -101,7 +101,7 @@ public class GetHostCountResponseBody extends TeaModel {
 
     public static class GetHostCountResponseBodyData extends TeaModel {
         /**
-         * <p>Time point</p>
+         * <p>The point in time.</p>
          * 
          * <strong>example:</strong>
          * <p>1725797727754</p>
@@ -110,7 +110,7 @@ public class GetHostCountResponseBody extends TeaModel {
         public Long time;
 
         /**
-         * <p>Quantity</p>
+         * <p>The count.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>

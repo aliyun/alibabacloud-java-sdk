@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAIQueryResultResponseBody extends TeaModel {
     /**
-     * <p>error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,7 +14,7 @@ public class GetAIQueryResultResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Return Result, with large Data Volume</p>
+     * <p>The returned results. The data volume can be large.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;task_id\&quot;: \&quot;y4ba8uRV\&quot;}</p>
@@ -23,7 +23,7 @@ public class GetAIQueryResultResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>error message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>分析ID: 56dae746-ef55-4f77-8373-cb3594c41457

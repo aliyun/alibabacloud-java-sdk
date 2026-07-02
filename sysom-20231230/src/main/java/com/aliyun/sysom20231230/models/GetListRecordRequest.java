@@ -4,8 +4,11 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class GetListRecordRequest extends TeaModel {
+    @NameInMap("analysisId")
+    public String analysisId;
+
     /**
-     * <p>Current page number</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -13,8 +16,11 @@ public class GetListRecordRequest extends TeaModel {
     @NameInMap("current")
     public Long current;
 
+    @NameInMap("customId")
+    public Long customId;
+
     /**
-     * <p>Number of data entries per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +29,7 @@ public class GetListRecordRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>Region ID.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -36,12 +42,28 @@ public class GetListRecordRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetListRecordRequest setAnalysisId(String analysisId) {
+        this.analysisId = analysisId;
+        return this;
+    }
+    public String getAnalysisId() {
+        return this.analysisId;
+    }
+
     public GetListRecordRequest setCurrent(Long current) {
         this.current = current;
         return this;
     }
     public Long getCurrent() {
         return this.current;
+    }
+
+    public GetListRecordRequest setCustomId(Long customId) {
+        this.customId = customId;
+        return this;
+    }
+    public Long getCustomId() {
+        return this.customId;
     }
 
     public GetListRecordRequest setPageSize(Long pageSize) {

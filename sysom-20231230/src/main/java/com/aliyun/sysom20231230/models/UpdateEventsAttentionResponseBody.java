@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateEventsAttentionResponseBody extends TeaModel {
     /**
-     * <p>Request ID, which can be used for end-to-end diagnosis</p>
+     * <p>The request ID, which can be used for end-to-end diagnostics.</p>
      * 
      * <strong>example:</strong>
      * <p>44841312-7227-55C9-AE03-D59729BFAE38</p>
@@ -14,10 +14,10 @@ public class UpdateEventsAttentionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Status code:  </p>
+     * <p>The status code. Valid values:</p>
      * <ul>
-     * <li><code>code == Success</code> indicates that authorization succeeded;  </li>
-     * <li>Other status codes indicate that authorization failed. When authorization fails, view the <code>message</code> field to obtain the detailed error message.</li>
+     * <li>Success: The authorization is successful.</li>
+     * <li>Other values: The authorization failed. Check the message field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,13 +27,13 @@ public class UpdateEventsAttentionResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Returned data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public UpdateEventsAttentionResponseBodyData data;
 
     /**
-     * <p>Error message</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Instance not belong to current user</p>
@@ -80,7 +80,7 @@ public class UpdateEventsAttentionResponseBody extends TeaModel {
 
     public static class UpdateEventsAttentionResponseBodyData extends TeaModel {
         /**
-         * <p>Updated follow level value</p>
+         * <p>The updated attention level value.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

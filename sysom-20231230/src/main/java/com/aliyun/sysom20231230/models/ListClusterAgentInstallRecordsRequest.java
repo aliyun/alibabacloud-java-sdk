@@ -8,9 +8,9 @@ public class ListClusterAgentInstallRecordsRequest extends TeaModel {
     public String agentConfigId;
 
     /**
-     * <p>Filter by cluster ID.  </p>
+     * <p>Filter by cluster ID.</p>
      * <blockquote>
-     * <p>This cluster ID is not the ACK cluster ID. Instead, it refers to the <code>cluster_id</code> field in the data returned by this API or the <code>id</code> field in the data returned by the ListCluster API.</p>
+     * <p>This cluster ID is not the ACK cluster ID, but the <code>cluster_id</code> field in the data returned by this API, or the <code>id</code> field in the data returned by the ListCluster API.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class ListClusterAgentInstallRecordsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>If this parameter is specified, the response filters the installation list for the specified agent. It can be used together with the plugin_version parameter.</p>
+     * <p>Specify this parameter to filter the installation list for a specific agent. Can be used in combination with the plugin_version parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>74a86327-3170-412c-8e67-da3389ec56a9</p>
@@ -47,7 +47,7 @@ public class ListClusterAgentInstallRecordsRequest extends TeaModel {
     public String pluginId;
 
     /**
-     * <p>This parameter cannot be used alone. It must be used together with plugin_id to filter the installation list for a specific agent version.</p>
+     * <p>Cannot be used alone. Use in combination with plugin_id to filter the installation list for a specific agent version.</p>
      * 
      * <strong>example:</strong>
      * <p>3.4.0-1</p>

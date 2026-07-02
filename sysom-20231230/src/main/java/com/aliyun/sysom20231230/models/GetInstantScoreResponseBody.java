@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetInstantScoreResponseBody extends TeaModel {
     /**
-     * <p>Status code  </p>
+     * <p>Status code.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, authorization succeeded.  </li>
-     * <li>Other status codes indicate authorization failed. When authorization fails, view the <code>message</code> field to obtain detailed error message.</li>
+     * <li>If <code>code == Success</code>, the authorization is successful.</li>
+     * <li>Other status codes indicate authorization failure. Check the <code>message</code> field for detailed error information when authorization fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,15 +18,15 @@ public class GetInstantScoreResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Returned data.</p>
+     * <p>Response data.</p>
      */
     @NameInMap("data")
     public GetInstantScoreResponseBodyData data;
 
     /**
-     * <p>Error message  </p>
+     * <p>Error message.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, this field is empty.  </li>
+     * <li>If <code>code == Success</code>, this field is empty.</li>
      * <li>Otherwise, this field contains the request error message.</li>
      * </ul>
      * 
@@ -84,7 +84,7 @@ public class GetInstantScoreResponseBody extends TeaModel {
 
     public static class GetInstantScoreResponseBodyData extends TeaModel {
         /**
-         * <p>Error score</p>
+         * <p>Error score.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -93,7 +93,7 @@ public class GetInstantScoreResponseBody extends TeaModel {
         public Float error;
 
         /**
-         * <p>Latency score</p>
+         * <p>Latency score.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -102,7 +102,7 @@ public class GetInstantScoreResponseBody extends TeaModel {
         public Float latency;
 
         /**
-         * <p>Load score</p>
+         * <p>Load score.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -111,7 +111,7 @@ public class GetInstantScoreResponseBody extends TeaModel {
         public Float load;
 
         /**
-         * <p>Saturation score</p>
+         * <p>Saturation score.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -120,7 +120,7 @@ public class GetInstantScoreResponseBody extends TeaModel {
         public Float saturation;
 
         /**
-         * <p>Total score</p>
+         * <p>Total score.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

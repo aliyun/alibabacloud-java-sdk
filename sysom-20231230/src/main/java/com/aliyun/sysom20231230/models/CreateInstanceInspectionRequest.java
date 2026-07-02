@@ -5,19 +5,32 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceInspectionRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>i-2ze5ru5rjurix7f71sxv</p>
      */
     @NameInMap("instance")
     public String instance;
 
+    /**
+     * <p>异常项</p>
+     */
     @NameInMap("items")
     public java.util.List<String> items;
 
+    /**
+     * <p>The metric source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sysom</p>
+     */
     @NameInMap("metricSource")
     public String metricSource;
 
     /**
+     * <p>The region to which the instance belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shenzhen</p>
      */
@@ -25,6 +38,8 @@ public class CreateInstanceInspectionRequest extends TeaModel {
     public String region;
 
     /**
+     * <p>The source.</p>
+     * 
      * <strong>example:</strong>
      * <p>console</p>
      */

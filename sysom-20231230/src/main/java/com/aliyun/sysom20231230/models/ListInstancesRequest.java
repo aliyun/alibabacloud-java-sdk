@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstancesRequest extends TeaModel {
     /**
-     * <p>Cluster ID</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxxx</p>
@@ -14,7 +14,7 @@ public class ListInstancesRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>This field exists when paging is used and indicates the current page.</p>
+     * <p>The current page number. This field exists when pagination is used.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListInstancesRequest extends TeaModel {
     public Long current;
 
     /**
-     * <p>Filter by ECS instance ID</p>
+     * <p>The ECS instance ID used to filter results.</p>
      * 
      * <strong>example:</strong>
      * <p>i-8vbfd3g9vs32sfuvv38h</p>
@@ -32,7 +32,7 @@ public class ListInstancesRequest extends TeaModel {
     public String instance;
 
     /**
-     * <p>Page size. Default value is 20. Valid range: [1, 100].</p>
+     * <p>The number of entries per page. Default value: 20. Valid values: 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -41,7 +41,7 @@ public class ListInstancesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>Filter instances by area</p>
+     * <p>Filters instances by region.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shenzhen</p>
@@ -50,7 +50,7 @@ public class ListInstancesRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>Filter instances by status</p>
+     * <p>Filters instances by status.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>

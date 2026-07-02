@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAgentResponseBody extends TeaModel {
     /**
-     * <p>Request ID, which can be used for end-to-end Diagnosis</p>
+     * <p>Request ID, which can be used for end-to-end diagnostics</p>
      * 
      * <strong>example:</strong>
      * <p>2024-09-14T20:46:08</p>
@@ -14,10 +14,10 @@ public class GetAgentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Status code  </p>
+     * <p>Status code</p>
      * <ul>
-     * <li><code>code == Success</code> indicates that authorization succeeded.  </li>
-     * <li>Other status codes indicate that authorization failed. When authorization fails, view the <code>message</code> field to obtain detailed error message.</li>
+     * <li><code>code == Success</code> indicates the authorization is successful;</li>
+     * <li>Other status codes indicate authorization failure. Check the <code>message</code> field for detailed error information when authorization fails;</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,16 +27,16 @@ public class GetAgentResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Returned data.</p>
+     * <p>Response data.</p>
      */
     @NameInMap("data")
     public GetAgentResponseBodyData data;
 
     /**
-     * <p>Error message  </p>
+     * <p>Error message</p>
      * <ul>
-     * <li>If <code>code == Success</code>, this field is empty;  </li>
-     * <li>Otherwise, this field contains the Request error message.</li>
+     * <li>If <code>code == Success</code>, this field is empty;</li>
+     * <li>Otherwise, this field contains the request error message.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,7 +84,7 @@ public class GetAgentResponseBody extends TeaModel {
 
     public static class GetAgentResponseBodyDataVersions extends TeaModel {
         /**
-         * <p>Creation Time of the Agent version</p>
+         * <p>Agent version creation time</p>
          * 
          * <strong>example:</strong>
          * <p>2024-09-14T20:46:08</p>
@@ -93,7 +93,7 @@ public class GetAgentResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>Installation script for this version of the Agent</p>
+         * <p>Installation script for this agent version</p>
          * 
          * <strong>example:</strong>
          * <p>sysom.sh install</p>
@@ -102,7 +102,7 @@ public class GetAgentResponseBody extends TeaModel {
         public String installScript;
 
         /**
-         * <p>Uninstall script for this Agent version</p>
+         * <p>Uninstallation script for this agent version</p>
          * 
          * <strong>example:</strong>
          * <p>sysom.sh uninstall</p>
@@ -111,7 +111,7 @@ public class GetAgentResponseBody extends TeaModel {
         public String uninstallScript;
 
         /**
-         * <p>Update Time of the Agent version</p>
+         * <p>Agent version update time</p>
          * 
          * <strong>example:</strong>
          * <p>2024-09-14T20:46:08</p>
@@ -120,7 +120,7 @@ public class GetAgentResponseBody extends TeaModel {
         public String updatedAt;
 
         /**
-         * <p>Upgrade script for this Agent version</p>
+         * <p>Upgrade script for this agent version</p>
          * 
          * <strong>example:</strong>
          * <p>sysom.sh upgrade</p>
@@ -129,7 +129,7 @@ public class GetAgentResponseBody extends TeaModel {
         public String upgradeScript;
 
         /**
-         * <p>Version number of the Agent</p>
+         * <p>Agent version number</p>
          * 
          * <strong>example:</strong>
          * <p>3.4.0-1</p>
@@ -194,7 +194,7 @@ public class GetAgentResponseBody extends TeaModel {
 
     public static class GetAgentResponseBodyData extends TeaModel {
         /**
-         * <p>Creation Time of the widget</p>
+         * <p>Agent creation time</p>
          * 
          * <strong>example:</strong>
          * <p>2024-09-14T20:46:08</p>
@@ -203,7 +203,7 @@ public class GetAgentResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>Description of the widget</p>
+         * <p>Agent description</p>
          * 
          * <strong>example:</strong>
          * <p>SysOM Agent</p>
@@ -212,7 +212,7 @@ public class GetAgentResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Widget ID</p>
+         * <p>Agent ID</p>
          * 
          * <strong>example:</strong>
          * <p>74a86327-3170-412c-8e67-da3389ec56a9</p>
@@ -221,7 +221,7 @@ public class GetAgentResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>Name of the widget</p>
+         * <p>Agent name</p>
          * 
          * <strong>example:</strong>
          * <p>SysOM</p>
@@ -230,7 +230,7 @@ public class GetAgentResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Supported architecture</p>
+         * <p>Supported architectures</p>
          * 
          * <strong>example:</strong>
          * <p>x86</p>
@@ -239,7 +239,7 @@ public class GetAgentResponseBody extends TeaModel {
         public String supportArch;
 
         /**
-         * <p>Type of the Agent</p>
+         * <p>Agent type</p>
          * 
          * <strong>example:</strong>
          * <p>control</p>
@@ -248,7 +248,7 @@ public class GetAgentResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>Update Time</p>
+         * <p>Update time</p>
          * 
          * <strong>example:</strong>
          * <p>2024-09-14T20:46:08</p>
@@ -257,7 +257,7 @@ public class GetAgentResponseBody extends TeaModel {
         public String updatedAt;
 
         /**
-         * <p>Widget version information</p>
+         * <p>Agent version information</p>
          */
         @NameInMap("versions")
         public java.util.List<GetAgentResponseBodyDataVersions> versions;

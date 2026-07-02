@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAlertEnabledRequest extends TeaModel {
     /**
-     * <p>Indicates whether the alert policy is enabled</p>
+     * <p>Specifies whether the alert policy is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class UpdateAlertEnabledRequest extends TeaModel {
     public Boolean enabled;
 
     /**
-     * <p>Alert policy ID</p>
+     * <p>The ID of the alert policy.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

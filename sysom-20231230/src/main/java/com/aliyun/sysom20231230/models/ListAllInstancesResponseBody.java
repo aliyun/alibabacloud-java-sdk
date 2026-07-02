@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAllInstancesResponseBody extends TeaModel {
     /**
-     * <p>Status code</p>
+     * <p>Status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,13 +14,13 @@ public class ListAllInstancesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Returned data</p>
+     * <p>Returned data.</p>
      */
     @NameInMap("data")
     public java.util.List<ListAllInstancesResponseBodyData> data;
 
     /**
-     * <p>Maximum number of returned items</p>
+     * <p>Maximum number of results returned.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -29,10 +29,10 @@ public class ListAllInstancesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Error message:</p>
+     * <p>Error message.</p>
      * <ul>
      * <li>If <code>code == Success</code>, this field is empty.</li>
-     * <li>Otherwise, this field contains the error message of the request.</li>
+     * <li>Otherwise, this field contains the request error message.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,9 +42,9 @@ public class ListAllInstancesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Paging cursor.</p>
+     * <p>Pagination token.</p>
      * <blockquote>
-     * <p>If not empty, more data is available.</p>
+     * <p>A non-empty value indicates that more data is available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -134,7 +134,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
 
     public static class ListAllInstancesResponseBodyDataAttributes extends TeaModel {
         /**
-         * <p>information key</p>
+         * <p>Information key.</p>
          * 
          * <strong>example:</strong>
          * <p>sysom</p>
@@ -143,7 +143,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String infoKey;
 
         /**
-         * <p>information type</p>
+         * <p>Information type.</p>
          * 
          * <strong>example:</strong>
          * <p>instance_tag</p>
@@ -152,7 +152,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String infoType;
 
         /**
-         * <p>information value</p>
+         * <p>Information value.</p>
          * 
          * <strong>example:</strong>
          * <p>diagnosis</p>
@@ -193,7 +193,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
 
     public static class ListAllInstancesResponseBodyData extends TeaModel {
         /**
-         * <p>Agent configuration ID</p>
+         * <p>Agent configuration ID.</p>
          * 
          * <strong>example:</strong>
          * <p>test_id</p>
@@ -202,7 +202,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String agentConfigId;
 
         /**
-         * <p>Agent configuration name</p>
+         * <p>Agent configuration name.</p>
          * 
          * <strong>example:</strong>
          * <p>test_name</p>
@@ -211,13 +211,13 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String agentConfigName;
 
         /**
-         * <p>Extension information.</p>
+         * <p>Extended information.</p>
          */
         @NameInMap("attributes")
         public java.util.List<ListAllInstancesResponseBodyDataAttributes> attributes;
 
         /**
-         * <p>Cluster ID</p>
+         * <p>Cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3b24a621-acb3-11ef-8c90-00163e1029af</p>
@@ -226,7 +226,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>Cluster name</p>
+         * <p>Cluster name.</p>
          * 
          * <strong>example:</strong>
          * <p>zjk_vpc_domain_1</p>
@@ -244,7 +244,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>Installation level</p>
+         * <p>Installation level.</p>
          * 
          * <strong>example:</strong>
          * <p>Cluster</p>
@@ -253,7 +253,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String installLevel;
 
         /**
-         * <p>Installation type</p>
+         * <p>Installation type.</p>
          * 
          * <strong>example:</strong>
          * <p>console</p>
@@ -262,7 +262,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String installType;
 
         /**
-         * <p>Instance ID</p>
+         * <p>Instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp17uabeke9v7n30abm2</p>
@@ -280,7 +280,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>Instance type</p>
+         * <p>Instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs</p>
@@ -289,7 +289,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>Milvus version</p>
+         * <p>Kernel version.</p>
          * 
          * <strong>example:</strong>
          * <p>5.10.134-18.al8.x86_64</p>
@@ -298,7 +298,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String kernelVersion;
 
         /**
-         * <p>Management level</p>
+         * <p>Management level.</p>
          * 
          * <strong>example:</strong>
          * <p>cluster</p>
@@ -307,7 +307,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String manageLevel;
 
         /**
-         * <p>Management type</p>
+         * <p>Management type.</p>
          * 
          * <strong>example:</strong>
          * <p>managed</p>
@@ -316,7 +316,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String manageType;
 
         /**
-         * <p>Operating system architecture</p>
+         * <p>Operating system architecture.</p>
          * 
          * <strong>example:</strong>
          * <p>x86_64</p>
@@ -325,7 +325,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String osArch;
 
         /**
-         * <p>Operating system health score</p>
+         * <p>Operating system health score.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -334,7 +334,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public Integer osHealthScore;
 
         /**
-         * <p>Operating system name</p>
+         * <p>Operating system name.</p>
          * 
          * <strong>example:</strong>
          * <p>alios</p>
@@ -361,7 +361,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String publicIp;
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>Resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3b24a621-acb3-11ef-8c90-00163e1029af</p>
@@ -370,7 +370,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>Resource group name</p>
+         * <p>Resource group name.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx</p>
@@ -379,13 +379,13 @@ public class ListAllInstancesResponseBody extends TeaModel {
         public String resourceGroupName;
 
         /**
-         * <p>The running status of the instance. Valid values:</p>
+         * <p>Running status of the instance. Valid values:</p>
          * <ul>
          * <li><strong>Running</strong>: The instance is running.</li>
          * <li><strong>Offline</strong>: The instance is offline.</li>
          * </ul>
          * <blockquote>
-         * <p>An instance in the Offline state indicates that the heartbeat from the edge zone to the SysOM Server has been lost. It does not mean that the corresponding ECS instance is not running.</p>
+         * <p>An instance in the Offline status indicates that the heartbeat from the node to the SysOM server is lost. It does not necessarily mean that the corresponding ECS instance is not running.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

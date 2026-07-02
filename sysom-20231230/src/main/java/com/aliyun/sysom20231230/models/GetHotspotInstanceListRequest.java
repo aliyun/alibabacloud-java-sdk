@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetHotspotInstanceListRequest extends TeaModel {
     /**
-     * <p>stop time</p>
+     * <p>End time</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetHotspotInstanceListRequest extends TeaModel {
     public Long begEnd;
 
     /**
-     * <p>start time</p>
+     * <p>Start time</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

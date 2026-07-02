@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAlertDestinationRequest extends TeaModel {
     /**
-     * <p>ID of the alert contact</p>
+     * <p>The ID of the alert contact.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class UpdateAlertDestinationRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>Name of the alert contact</p>
+     * <p>The name of the alert contact.</p>
      * 
      * <strong>example:</strong>
      * <p>name1</p>
@@ -23,13 +23,13 @@ public class UpdateAlertDestinationRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Configuration Parameter</p>
+     * <p>The configuration parameters.</p>
      */
     @NameInMap("params")
     public UpdateAlertDestinationRequestParams params;
 
     /**
-     * <p>Source of the configuration</p>
+     * <p>The configuration source.</p>
      * 
      * <strong>example:</strong>
      * <p>console</p>
@@ -38,7 +38,7 @@ public class UpdateAlertDestinationRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>Push Target for alerts. Currently, only DingTalk contacts are supported.</p>
+     * <p>The alert notification target. Currently, only DingTalk contacts are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>dingtalk</p>
@@ -93,7 +93,7 @@ public class UpdateAlertDestinationRequest extends TeaModel {
 
     public static class UpdateAlertDestinationRequestParams extends TeaModel {
         /**
-         * <p>mailbox</p>
+         * <p>The email address.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:xxx@email.com">xxx@email.com</a></p>
@@ -102,7 +102,7 @@ public class UpdateAlertDestinationRequest extends TeaModel {
         public String email;
 
         /**
-         * <p>Phone number</p>
+         * <p>The phone number.</p>
          * 
          * <strong>example:</strong>
          * <p>1xxx</p>
@@ -111,7 +111,7 @@ public class UpdateAlertDestinationRequest extends TeaModel {
         public String phone;
 
         /**
-         * <p>Robot key</p>
+         * <p>The secret key of the chatbot.</p>
          * 
          * <strong>example:</strong>
          * <p>SECxxx</p>
@@ -120,7 +120,7 @@ public class UpdateAlertDestinationRequest extends TeaModel {
         public String sec;
 
         /**
-         * <p>Robot webhook address</p>
+         * <p>The webhook URL of the chatbot.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=xxx">https://oapi.dingtalk.com/robot/send?access_token=xxx</a></p>

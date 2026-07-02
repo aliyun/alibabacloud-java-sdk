@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAlertStrategyRequest extends TeaModel {
     /**
-     * <p>Policy ID</p>
+     * <p>The policy ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

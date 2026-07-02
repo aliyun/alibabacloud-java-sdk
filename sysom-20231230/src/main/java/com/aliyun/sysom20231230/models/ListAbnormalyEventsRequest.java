@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAbnormalyEventsRequest extends TeaModel {
     /**
-     * <p>Cluster ID</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2d33d4be-bf54-4070-82ca-c1dc2d8b1562</p>
@@ -14,7 +14,7 @@ public class ListAbnormalyEventsRequest extends TeaModel {
     public String cluster;
 
     /**
-     * <p>This field is present when paging is used and indicates the current page.</p>
+     * <p>The current page number. This parameter is present during paginated queries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListAbnormalyEventsRequest extends TeaModel {
     public Integer current;
 
     /**
-     * <p>End time</p>
+     * <p>The end time.</p>
      * 
      * <strong>example:</strong>
      * <p>1725801327754</p>
@@ -32,7 +32,7 @@ public class ListAbnormalyEventsRequest extends TeaModel {
     public Float end;
 
     /**
-     * <p>Anomalous activity name</p>
+     * <p>The name of the anomaly event.</p>
      * 
      * <strong>example:</strong>
      * <p>节点根文件系统使用检测</p>
@@ -41,7 +41,7 @@ public class ListAbnormalyEventsRequest extends TeaModel {
     public String event;
 
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>i-wz9d00ut2ska3mlyhn6j</p>
@@ -50,7 +50,7 @@ public class ListAbnormalyEventsRequest extends TeaModel {
     public String instance;
 
     /**
-     * <p>Level of the anomalous activity</p>
+     * <p>The level of the anomaly event.</p>
      * 
      * <strong>example:</strong>
      * <p>potential</p>
@@ -59,7 +59,7 @@ public class ListAbnormalyEventsRequest extends TeaModel {
     public String level;
 
     /**
-     * <p>Namespace where the pod is located</p>
+     * <p>The namespace of the pod.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -68,7 +68,7 @@ public class ListAbnormalyEventsRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>Page size. The default value is 5. Valid values are in the range [1,100].</p>
+     * <p>The number of entries per page. Default value: 5. Valid values: 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -77,7 +77,7 @@ public class ListAbnormalyEventsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Pod name</p>
+     * <p>The pod name.</p>
      * 
      * <strong>example:</strong>
      * <p>test-pod</p>
@@ -86,7 +86,7 @@ public class ListAbnormalyEventsRequest extends TeaModel {
     public String pod;
 
     /**
-     * <p>Whether to display anomalous activities of the pod</p>
+     * <p>Specifies whether to display pod anomaly events.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -95,7 +95,7 @@ public class ListAbnormalyEventsRequest extends TeaModel {
     public Integer showPod;
 
     /**
-     * <p>Start time</p>
+     * <p>The start time.</p>
      * 
      * <strong>example:</strong>
      * <p>1725797727754</p>

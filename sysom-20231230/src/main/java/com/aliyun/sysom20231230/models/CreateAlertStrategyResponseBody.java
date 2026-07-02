@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateAlertStrategyResponseBody extends TeaModel {
     /**
-     * <p>Status code  </p>
+     * <p>The status code.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, authorization succeeded.  </li>
-     * <li>Any other status code indicates authorization failed. When authorization fails, view the <code>message</code> field to obtain detailed error message.</li>
+     * <li>If <code>code == Success</code>, the request is successful.</li>
+     * <li>Other status codes indicate a failed request. If the request fails, check the <code>message</code> field for detailed error information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class CreateAlertStrategyResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Returned data.</p>
+     * <p>The response data.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -36,10 +36,10 @@ public class CreateAlertStrategyResponseBody extends TeaModel {
     public Object data;
 
     /**
-     * <p>Error message  </p>
+     * <p>The error message.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, this field is empty.  </li>
-     * <li>Otherwise, this field contains the request error message.</li>
+     * <li>If <code>code == Success</code>, this field is empty.</li>
+     * <li>Otherwise, this field contains the error information of the request.</li>
      * </ul>
      * 
      * <strong>example:</strong>

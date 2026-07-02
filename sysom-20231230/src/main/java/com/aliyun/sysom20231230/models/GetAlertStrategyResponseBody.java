@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetAlertStrategyResponseBody extends TeaModel {
     /**
-     * <p>Status code:  </p>
+     * <p>The status code.</p>
      * <ul>
-     * <li><code>code == Success</code> indicates successful authorization;  </li>
-     * <li>Other status codes indicate failed authorization. When authorization fails, view the <code>message</code> field to obtain detailed error message.</li>
+     * <li>If <code>code == Success</code>, the authorization is successful.</li>
+     * <li>Other status codes indicate authorization failed. Check the <code>message</code> field for the detailed fault message.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,15 +18,15 @@ public class GetAlertStrategyResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Returned data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public GetAlertStrategyResponseBodyData data;
 
     /**
-     * <p>Error message  </p>
+     * <p>The error message.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, this field is empty;  </li>
+     * <li>If <code>code == Success</code>, this field is empty.</li>
      * <li>Otherwise, this field contains the request error message.</li>
      * </ul>
      * 
@@ -84,7 +84,7 @@ public class GetAlertStrategyResponseBody extends TeaModel {
 
     public static class GetAlertStrategyResponseBodyDataStrategy extends TeaModel {
         /**
-         * <p>Set of clusters that accept alerts</p>
+         * <p>The collection of clusters for which alerts are received.</p>
          */
         @NameInMap("clusters")
         public java.util.List<String> clusters;
@@ -93,7 +93,7 @@ public class GetAlertStrategyResponseBody extends TeaModel {
         public Object destinations;
 
         /**
-         * <p>List of abnormal items that accept alerts</p>
+         * <p>接收告警的异常项列表</p>
          * 
          * <strong>example:</strong>
          * <p>节点CPU使用率检测</p>
@@ -134,7 +134,7 @@ public class GetAlertStrategyResponseBody extends TeaModel {
 
     public static class GetAlertStrategyResponseBodyData extends TeaModel {
         /**
-         * <p>Creation Time.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1751520976660</p>
@@ -143,7 +143,7 @@ public class GetAlertStrategyResponseBody extends TeaModel {
         public Long createdAt;
 
         /**
-         * <p>Indicates whether the alert policy is enabled</p>
+         * <p>Indicates whether the alert policy is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -152,7 +152,7 @@ public class GetAlertStrategyResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>Alert policy ID</p>
+         * <p>The alert policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -161,13 +161,13 @@ public class GetAlertStrategyResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>k8s label</p>
+         * <p>The Kubernetes label.</p>
          */
         @NameInMap("k8sLabel")
         public Boolean k8sLabel;
 
         /**
-         * <p>Policy Name</p>
+         * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
          * <p>strategy1</p>
@@ -176,13 +176,13 @@ public class GetAlertStrategyResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Details of the alert policy</p>
+         * <p>The alert policy details.</p>
          */
         @NameInMap("strategy")
         public GetAlertStrategyResponseBodyDataStrategy strategy;
 
         /**
-         * <p>User ID</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1222933234714935</p>
@@ -191,7 +191,7 @@ public class GetAlertStrategyResponseBody extends TeaModel {
         public String uid;
 
         /**
-         * <p>Update Time.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>1751254826285</p>

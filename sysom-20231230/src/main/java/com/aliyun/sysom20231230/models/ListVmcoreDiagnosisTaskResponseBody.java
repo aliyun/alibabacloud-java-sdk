@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListVmcoreDiagnosisTaskResponseBody extends TeaModel {
     /**
-     * <p>Status code  </p>
+     * <p>Status code.</p>
      * <ul>
-     * <li><code>code == Success</code> indicates successful authorization;  </li>
-     * <li>Other status codes indicate failed authorization. When authorization fails, view the <code>message</code> field to obtain detailed error message;</li>
+     * <li><code>code == Success</code> indicates the authorization was successful.</li>
+     * <li>Other status codes indicate authorization failure. When authorization fails, check the <code>message</code> field for detailed error information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,15 +18,15 @@ public class ListVmcoreDiagnosisTaskResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Returned data</p>
+     * <p>Response data.</p>
      */
     @NameInMap("data")
     public java.util.List<ListVmcoreDiagnosisTaskResponseBodyData> data;
 
     /**
-     * <p>error message  </p>
+     * <p>Error message.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, this field is empty.  </li>
+     * <li>If <code>code == Success</code>, this field is empty.</li>
      * <li>Otherwise, this field contains the request error message.</li>
      * </ul>
      * 
@@ -46,7 +46,7 @@ public class ListVmcoreDiagnosisTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total number of jobs</p>
+     * <p>Total number of tasks</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -101,7 +101,7 @@ public class ListVmcoreDiagnosisTaskResponseBody extends TeaModel {
 
     public static class ListVmcoreDiagnosisTaskResponseBodyData extends TeaModel {
         /**
-         * <p>Job creation time</p>
+         * <p>Task creation time</p>
          * 
          * <strong>example:</strong>
          * <p>2025-12-02T17:36:12</p>
@@ -110,7 +110,7 @@ public class ListVmcoreDiagnosisTaskResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>error message</p>
+         * <p>Error message</p>
          * 
          * <strong>example:</strong>
          * <p>error message</p>
@@ -119,7 +119,7 @@ public class ListVmcoreDiagnosisTaskResponseBody extends TeaModel {
         public String errorMsg;
 
         /**
-         * <p>Job ID</p>
+         * <p>Task ID</p>
          * 
          * <strong>example:</strong>
          * <p>bbe94a98-4192-4172-b856-95777e0a55d7</p>
@@ -128,7 +128,7 @@ public class ListVmcoreDiagnosisTaskResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>Task Status</p>
+         * <p>Task status</p>
          * 
          * <strong>example:</strong>
          * <p>running</p>
@@ -137,7 +137,7 @@ public class ListVmcoreDiagnosisTaskResponseBody extends TeaModel {
         public String taskStatus;
 
         /**
-         * <p>Task Type</p>
+         * <p>Task type</p>
          * 
          * <strong>example:</strong>
          * <p>vmcore</p>

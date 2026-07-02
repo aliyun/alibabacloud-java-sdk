@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAgentsRequest extends TeaModel {
     /**
-     * <p>Current page number (starting from page 1)</p>
+     * <p>The current page number. Pages start from page 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListAgentsRequest extends TeaModel {
     public Long current;
 
     /**
-     * <p>Filter plugins by plugin name</p>
+     * <p>Filters plug-ins by plug-in name.</p>
      * 
      * <strong>example:</strong>
      * <p>SysOM</p>
@@ -23,7 +23,7 @@ public class ListAgentsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Page size</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,7 +32,7 @@ public class ListAgentsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>Retrieve the list based on the Agent Type. For example, passing &quot;control&quot; retrieves all control-type Agents.</p>
+     * <p>The agent type used to filter the list. For example, set this parameter to control to retrieve all agents of the control type.</p>
      * 
      * <strong>example:</strong>
      * <p>control</p>

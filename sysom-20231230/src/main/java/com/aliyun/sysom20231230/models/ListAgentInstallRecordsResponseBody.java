@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAgentInstallRecordsResponseBody extends TeaModel {
     /**
-     * <p>Request ID, which can be used for end-to-end Diagnosis</p>
+     * <p>The request ID, which is active for end-to-end diagnostics.</p>
      * 
      * <strong>example:</strong>
      * <p>E8CDFBA1-0564-5897-B070-D3C85002AF2F</p>
@@ -14,10 +14,10 @@ public class ListAgentInstallRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Status code  </p>
+     * <p>The status code.</p>
      * <ul>
-     * <li><code>code == Success</code> indicates successful authorization;  </li>
-     * <li>Other status codes indicate failed authorization. When authorization fails, view the <code>message</code> field to obtain detailed error message;</li>
+     * <li>If <code>code == Success</code>, the authorization is successful.</li>
+     * <li>Other status codes indicate that the authorization has failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,16 +27,16 @@ public class ListAgentInstallRecordsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Return Result.</p>
+     * <p>The returned results.</p>
      */
     @NameInMap("data")
     public java.util.List<ListAgentInstallRecordsResponseBodyData> data;
 
     /**
-     * <p>error message  </p>
+     * <p>The error message.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, this field is empty;  </li>
-     * <li>Otherwise, this field contains the request error message.</li>
+     * <li>If <code>code == Success</code>, this field is empty.</li>
+     * <li>Otherwise, this field contains the error message for the request.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class ListAgentInstallRecordsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Total number of records.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>64</p>
@@ -101,7 +101,7 @@ public class ListAgentInstallRecordsResponseBody extends TeaModel {
 
     public static class ListAgentInstallRecordsResponseBodyData extends TeaModel {
         /**
-         * <p>Creation Time</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-11-27T16:37:53</p>
@@ -110,7 +110,7 @@ public class ListAgentInstallRecordsResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>instance ID</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp118piqcio9tiwgh84b</p>
@@ -119,7 +119,7 @@ public class ListAgentInstallRecordsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>widget ID</p>
+         * <p>The component ID.</p>
          * 
          * <strong>example:</strong>
          * <p>74a86327-3170-412c-8e67-da3389ec56a9</p>
@@ -128,7 +128,7 @@ public class ListAgentInstallRecordsResponseBody extends TeaModel {
         public String pluginId;
 
         /**
-         * <p>plugin Version</p>
+         * <p>The plug-in version.</p>
          * 
          * <strong>example:</strong>
          * <p>3.4.0-1</p>
@@ -137,7 +137,7 @@ public class ListAgentInstallRecordsResponseBody extends TeaModel {
         public String pluginVersion;
 
         /**
-         * <p>widget status</p>
+         * <p>The component status.</p>
          * 
          * <strong>example:</strong>
          * <p>Installed</p>
@@ -146,7 +146,7 @@ public class ListAgentInstallRecordsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Updated At</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-11-27T16:37:53</p>

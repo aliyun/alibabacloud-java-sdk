@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradeAgentForClusterRequest extends TeaModel {
     /**
-     * <p>widget ID</p>
+     * <p>The component ID.</p>
      * 
      * <strong>example:</strong>
      * <p>74a86327-3170-412c-8e67-da3389ec56a9</p>
@@ -14,7 +14,7 @@ public class UpgradeAgentForClusterRequest extends TeaModel {
     public String agentId;
 
     /**
-     * <p>widget Version</p>
+     * <p>The component version.</p>
      * 
      * <strong>example:</strong>
      * <p>3.4.0-1</p>
@@ -23,9 +23,9 @@ public class UpgradeAgentForClusterRequest extends TeaModel {
     public String agentVersion;
 
     /**
-     * <p>cluster ID.  </p>
+     * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>This cluster ID must be the ID of the ACK cluster.</p>
+     * <p>The cluster ID must be the ID of an ACK cluster.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

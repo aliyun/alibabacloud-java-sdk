@@ -53,7 +53,7 @@ public class GetHotSpotUniqListRequest extends TeaModel {
     public String table;
 
     /**
-     * <p>Identity flag</p>
+     * <p>Identifier flag</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetHotspotTrackingRequest extends TeaModel {
     /**
-     * <p>End time</p>
+     * <p>The end time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetHotspotTrackingRequest extends TeaModel {
     public Long begEnd;
 
     /**
-     * <p>Start time</p>
+     * <p>The start time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class GetHotspotTrackingRequest extends TeaModel {
     public Long begStart;
 
     /**
-     * <p>Hot spot type</p>
+     * <p>The hot spot type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class GetHotspotTrackingRequest extends TeaModel {
     public String hotType;
 
     /**
-     * <p>Instance ID</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class GetHotspotTrackingRequest extends TeaModel {
     public String instance;
 
     /**
-     * <p>Process PID</p>
+     * <p>The process PID.</p>
      * 
      * <strong>example:</strong>
      * <p>1657494</p>
@@ -54,7 +54,7 @@ public class GetHotspotTrackingRequest extends TeaModel {
     public Long pid;
 
     /**
-     * <p>Query table name</p>
+     * <p>The name of the table to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

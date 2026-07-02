@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InstallAgentForClusterResponseBody extends TeaModel {
     /**
-     * <p>Request ID, which can be used for end-to-end diagnosis</p>
+     * <p>The request ID, which can be used for end-to-end diagnostics.</p>
      * 
      * <strong>example:</strong>
      * <p>B149FD9C-ED5C-5765-B3AD-05AA4A4D64D7</p>
@@ -14,10 +14,10 @@ public class InstallAgentForClusterResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Status code  </p>
+     * <p>The status code.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, authorization succeeded.  </li>
-     * <li>Any other status code indicates authorization failed. When authorization fails, check the <code>message</code> field for detailed error information.</li>
+     * <li>If <code>code == Success</code>, the authorization is successful.</li>
+     * <li>Any other status code indicates authorization failure. Check the <code>message</code> field for detailed error information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,15 +27,15 @@ public class InstallAgentForClusterResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Returned data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public InstallAgentForClusterResponseBodyData data;
 
     /**
-     * <p>Error message  </p>
+     * <p>The error message.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, this field is empty.  </li>
+     * <li>If <code>code == Success</code>, this field is empty.</li>
      * <li>Otherwise, this field contains the request error message.</li>
      * </ul>
      * 
@@ -84,7 +84,7 @@ public class InstallAgentForClusterResponseBody extends TeaModel {
 
     public static class InstallAgentForClusterResponseBodyData extends TeaModel {
         /**
-         * <p>Job ID.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>049ea0609515414b9e19c3389d7ba638</p>

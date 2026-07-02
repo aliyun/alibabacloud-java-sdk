@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeMetricListResponseBody extends TeaModel {
     /**
-     * <p>Status code  </p>
+     * <p>The status code.</p>
      * <ul>
-     * <li><code>code == Success</code> indicates successful authorization;  </li>
-     * <li>Any other status code indicates authorization failure. When authorization fails, check the <code>message</code> field for detailed error information.</li>
+     * <li>If <code>code == Success</code>, the authorization is successful.</li>
+     * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,15 +18,15 @@ public class DescribeMetricListResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Returned data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public java.util.List<DescribeMetricListResponseBodyData> data;
 
     /**
-     * <p>Error message  </p>
+     * <p>The error message.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, this field is empty.  </li>
+     * <li>If <code>code == Success</code>, this field is empty.</li>
      * <li>Otherwise, this field contains the request error message.</li>
      * </ul>
      * 
@@ -85,7 +85,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
 
     public static class DescribeMetricListResponseBodyData extends TeaModel {
         /**
-         * <p>Metric labels</p>
+         * <p>The metric labels.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;taskExecName\&quot;: \&quot;build-and-deploy\&quot;, \&quot;pipelineName\&quot;: \&quot;pipeline-run-1722909642357\&quot;}</p>
@@ -94,7 +94,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
         public String labels;
 
         /**
-         * <p>Metric name</p>
+         * <p>The metric name.</p>
          * 
          * <strong>example:</strong>
          * <p>sysom_cpu_usage_idle</p>
@@ -103,7 +103,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
         public String metricName;
 
         /**
-         * <p>Metric data</p>
+         * <p>The metric data.</p>
          */
         @NameInMap("values")
         public java.util.List<java.util.List<String>> values;

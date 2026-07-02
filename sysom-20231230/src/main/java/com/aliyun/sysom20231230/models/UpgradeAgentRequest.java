@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradeAgentRequest extends TeaModel {
     /**
-     * <p>ID of the widget to update</p>
+     * <p>The ID of the component to update.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpgradeAgentRequest extends TeaModel {
     public String agentId;
 
     /**
-     * <p>Version of the widget to update</p>
+     * <p>The version to which the component is updated.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class UpgradeAgentRequest extends TeaModel {
     public String agentVersion;
 
     /**
-     * <p>List of instances on which to update the widget</p>
+     * <p>The list of instances for which you want to update the component.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("instances")
@@ -62,7 +62,7 @@ public class UpgradeAgentRequest extends TeaModel {
 
     public static class UpgradeAgentRequestInstances extends TeaModel {
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -72,7 +72,7 @@ public class UpgradeAgentRequest extends TeaModel {
         public String instance;
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListAlertStrategiesResponseBody extends TeaModel {
     /**
-     * <p>Status code  </p>
+     * <p>The status code.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, authorization succeeded.  </li>
-     * <li>Other status codes indicate authorization failed. When authorization fails, view the <code>message</code> field to obtain detailed error message.</li>
+     * <li>If <code>code == Success</code>, the authorization is successful.</li>
+     * <li>Other status codes indicate that the authorization has failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,13 +18,13 @@ public class ListAlertStrategiesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Return Result.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("data")
     public java.util.List<ListAlertStrategiesResponseBodyData> data;
 
     /**
-     * <p>Maximum number of returned records</p>
+     * <p>The maximum number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -33,10 +33,10 @@ public class ListAlertStrategiesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Error message  </p>
+     * <p>The error message.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, this field is empty;  </li>
-     * <li>Otherwise, this field contains the request error message.</li>
+     * <li>If <code>code == Success</code>, this field is empty.</li>
+     * <li>Otherwise, this field contains the error information for the request.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class ListAlertStrategiesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Pagination token for the next request.</p>
+     * <p>The pagination token for the next request.</p>
      * 
      * <strong>example:</strong>
      * <p>c2f78a783f49457caba6bace6f6f79e4</p>
@@ -64,7 +64,7 @@ public class ListAlertStrategiesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total number of records</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>92</p>
@@ -135,7 +135,7 @@ public class ListAlertStrategiesResponseBody extends TeaModel {
 
     public static class ListAlertStrategiesResponseBodyDataStrategy extends TeaModel {
         /**
-         * <p>Set of clusters that accept alerts</p>
+         * <p>The collection of clusters for which alerts are received.</p>
          */
         @NameInMap("clusters")
         public java.util.List<String> clusters;
@@ -144,7 +144,7 @@ public class ListAlertStrategiesResponseBody extends TeaModel {
         public java.util.List<Integer> destinations;
 
         /**
-         * <p>List of abnormal items that accept alerts</p>
+         * <p>接收告警的异常项列表</p>
          */
         @NameInMap("items")
         public java.util.List<String> items;
@@ -182,7 +182,7 @@ public class ListAlertStrategiesResponseBody extends TeaModel {
 
     public static class ListAlertStrategiesResponseBodyData extends TeaModel {
         /**
-         * <p>Creation Time.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1753669116286</p>
@@ -191,7 +191,7 @@ public class ListAlertStrategiesResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>Whether the alert policy is enabled</p>
+         * <p>Indicates whether the alert policy is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -200,7 +200,7 @@ public class ListAlertStrategiesResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>Policy ID</p>
+         * <p>The policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -212,7 +212,7 @@ public class ListAlertStrategiesResponseBody extends TeaModel {
         public Boolean k8sLabel;
 
         /**
-         * <p>Policy Name</p>
+         * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
          * <p>strategy1</p>
@@ -221,13 +221,13 @@ public class ListAlertStrategiesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Details of the alert policy</p>
+         * <p>The alert policy details.</p>
          */
         @NameInMap("strategy")
         public ListAlertStrategiesResponseBodyDataStrategy strategy;
 
         /**
-         * <p>User ID</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1880327028143673</p>
@@ -236,7 +236,7 @@ public class ListAlertStrategiesResponseBody extends TeaModel {
         public String uid;
 
         /**
-         * <p>Update Time</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>1753237017710</p>

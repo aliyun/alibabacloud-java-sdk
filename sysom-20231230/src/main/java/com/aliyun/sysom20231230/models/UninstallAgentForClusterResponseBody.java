@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UninstallAgentForClusterResponseBody extends TeaModel {
     /**
-     * <p>Request ID, which can be used for end-to-end diagnosis</p>
+     * <p>The request ID, which can be used for end-to-end diagnostics.</p>
      * 
      * <strong>example:</strong>
      * <p>44841312-7227-55C9-AE03-D59729BFAE38</p>
@@ -14,10 +14,10 @@ public class UninstallAgentForClusterResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Status code  </p>
+     * <p>The status code.</p>
      * <ul>
-     * <li><code>code == Success</code> indicates that authorization succeeded.  </li>
-     * <li>Any other status code indicates that authorization failed. When authorization fails, view the <code>message</code> field to obtain detailed error message.</li>
+     * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+     * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,16 +27,16 @@ public class UninstallAgentForClusterResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Returned data</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public UninstallAgentForClusterResponseBodyData data;
 
     /**
-     * <p>Error message  </p>
+     * <p>The error message.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, this field is empty.  </li>
-     * <li>Otherwise, this field contains the request error message.</li>
+     * <li>If <code>code == Success</code>, this field is empty.</li>
+     * <li>Otherwise, this field contains the error information of the request.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,7 +84,7 @@ public class UninstallAgentForClusterResponseBody extends TeaModel {
 
     public static class UninstallAgentForClusterResponseBodyData extends TeaModel {
         /**
-         * <p>Job ID.<br>You can use this job ID to invoke GetAgentTask to query the execution status of the job.</p>
+         * <p>The task ID. You can use this task ID to call GetAgentTasK to query the execution status of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>049ea0609515414b9e19c3389d7ba638</p>

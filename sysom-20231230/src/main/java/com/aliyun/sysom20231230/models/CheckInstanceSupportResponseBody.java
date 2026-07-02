@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CheckInstanceSupportResponseBody extends TeaModel {
     /**
-     * <p>Status code  </p>
+     * <p>The status code.</p>
      * <ul>
-     * <li><code>code == Success</code> indicates that authorization succeeded.  </li>
-     * <li>Other status codes indicate that authorization failed. When authorization fails, view the <code>message</code> field to obtain detailed error information.</li>
+     * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+     * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,13 +18,13 @@ public class CheckInstanceSupportResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Returned data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public java.util.List<CheckInstanceSupportResponseBodyData> data;
 
     /**
-     * <p>Error message. When code != Success, the error message is stored here.</p>
+     * <p>The error message. This field contains the error information when code is not Success.</p>
      * 
      * <strong>example:</strong>
      * <p>SysomOpenAPIAssumeRoleException: EntityNotExist.Role The role not exists: acs:ram::xxxxx:role/aliyunserviceroleforsysom</p>
@@ -80,7 +80,7 @@ public class CheckInstanceSupportResponseBody extends TeaModel {
 
     public static class CheckInstanceSupportResponseBodyData extends TeaModel {
         /**
-         * <p>ECS instance ID</p>
+         * <p>The ECS instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i-wz9d00ut2ska3mlyhn6j</p>
@@ -89,7 +89,7 @@ public class CheckInstanceSupportResponseBody extends TeaModel {
         public String instance;
 
         /**
-         * <p>When <code>success</code> is false, this value is not empty and indicates the reason why the instance cannot be managed by SysOM.</p>
+         * <p>The reason why the instance cannot be managed. This field is not empty when success is false.</p>
          * 
          * <strong>example:</strong>
          * <p>instance not found in ecs</p>
@@ -98,9 +98,9 @@ public class CheckInstanceSupportResponseBody extends TeaModel {
         public String reason;
 
         /**
-         * <p>Indicates whether the instance can be managed by SysOM.  </p>
+         * <p>Indicates whether the instance can be managed by SysOM.</p>
          * <ul>
-         * <li><p><strong>true</strong>: The instance can be managed by SysOM.  </p>
+         * <li><p><strong>true</strong>: The instance can be managed by SysOM.</p>
          * </li>
          * <li><p><strong>false</strong>: The instance cannot be managed by SysOM.</p>
          * </li>

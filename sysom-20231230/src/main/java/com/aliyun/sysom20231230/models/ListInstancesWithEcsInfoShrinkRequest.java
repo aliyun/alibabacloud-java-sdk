@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstancesWithEcsInfoShrinkRequest extends TeaModel {
     /**
-     * <p>This field exists when using paging and indicates the current page.</p>
+     * <p>The page number for pagination. This parameter specifies the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListInstancesWithEcsInfoShrinkRequest extends TeaModel {
     public Integer current;
 
     /**
-     * <p>Filter instances by health status.</p>
+     * <p>Filters instances by health status.</p>
      * 
      * <strong>example:</strong>
      * <p>healthy</p>
@@ -23,7 +23,7 @@ public class ListInstancesWithEcsInfoShrinkRequest extends TeaModel {
     public String healthStatus;
 
     /**
-     * <p>If this field is specified, filter the Agent installation status for the specified instance.</p>
+     * <p>Specifies an instance ID to filter the Agent installation status of the specified instance.</p>
      * 
      * <strong>example:</strong>
      * <p>i-bp118piqcio9tiwgh84b</p>
@@ -32,7 +32,7 @@ public class ListInstancesWithEcsInfoShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Filter by instance name or instance ID. Fuzzy query is supported.</p>
+     * <p>Filters instances by instance name or instance ID. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>84b</p>
@@ -41,7 +41,7 @@ public class ListInstancesWithEcsInfoShrinkRequest extends TeaModel {
     public String instanceIdName;
 
     /**
-     * <p>Widget instance name.</p>
+     * <p>The name of the component instance.</p>
      * 
      * <strong>example:</strong>
      * <p>block-load-balancer-hjdm9</p>
@@ -50,13 +50,13 @@ public class ListInstancesWithEcsInfoShrinkRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>Filter by tags of instances.</p>
+     * <p>Filters instances by instance tag.</p>
      */
     @NameInMap("instance_tag")
     public String instanceTagShrink;
 
     /**
-     * <p>Filter instances by managed status.</p>
+     * <p>Filters instances by management status.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -65,7 +65,7 @@ public class ListInstancesWithEcsInfoShrinkRequest extends TeaModel {
     public Integer isManaged;
 
     /**
-     * <p>Filter instances by operating system name.</p>
+     * <p>Filters instances by operating system name.</p>
      * 
      * <strong>example:</strong>
      * <p>Alibaba Cloud Linux  3.2104 LTS 64bit</p>
@@ -74,7 +74,7 @@ public class ListInstancesWithEcsInfoShrinkRequest extends TeaModel {
     public String osName;
 
     /**
-     * <p>Page size. Default value is 10.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -83,7 +83,7 @@ public class ListInstancesWithEcsInfoShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Filter instances by private IP address.</p>
+     * <p>Filters instances by private IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>1.1.1.1</p>
@@ -92,7 +92,7 @@ public class ListInstancesWithEcsInfoShrinkRequest extends TeaModel {
     public String privateIp;
 
     /**
-     * <p>Filter instances by public IP address.</p>
+     * <p>Filters instances by public IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>1.1.1.1</p>
@@ -101,7 +101,7 @@ public class ListInstancesWithEcsInfoShrinkRequest extends TeaModel {
     public String publicIp;
 
     /**
-     * <p>Filter instances by region.</p>
+     * <p>Filters instances by region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class ListInstancesWithEcsInfoShrinkRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>Filter instances by resource group ID.</p>
+     * <p>Filters instances by resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-xxxxxxx</p>
@@ -120,7 +120,7 @@ public class ListInstancesWithEcsInfoShrinkRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>Filter by resource group name or resource group ID. Fuzzy query is supported.</p>
+     * <p>Filters instances by resource group name or resource group ID. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -129,7 +129,7 @@ public class ListInstancesWithEcsInfoShrinkRequest extends TeaModel {
     public String resourceGroupIdName;
 
     /**
-     * <p>Filter instances by resource group name.</p>
+     * <p>Filters instances by resource group name.</p>
      * 
      * <strong>example:</strong>
      * <p>default resource group</p>

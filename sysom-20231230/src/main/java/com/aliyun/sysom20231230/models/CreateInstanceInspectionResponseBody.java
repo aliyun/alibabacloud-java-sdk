@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceInspectionResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,6 +14,8 @@ public class CreateInstanceInspectionResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The returned data.</p>
+     * 
      * <strong>example:</strong>
      * <p>reportId</p>
      */
@@ -19,6 +23,8 @@ public class CreateInstanceInspectionResponseBody extends TeaModel {
     public Object data;
 
     /**
+     * <p>The description.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -26,6 +32,8 @@ public class CreateInstanceInspectionResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>2D693121-C925-5154-8DF6-C09A8B369822</p>
      */

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetHotSpotUniqListResponseBody extends TeaModel {
     /**
-     * <p>Status code  </p>
+     * <p>Status code</p>
      * <ul>
-     * <li><code>code == Success</code> indicates successful authorization;  </li>
-     * <li>Other status codes indicate failed authorization. When authorization fails, view the <code>message</code> field to obtain detailed error information.</li>
+     * <li><code>code == Success</code> indicates that the authorization is successful;</li>
+     * <li>Other status codes indicate that the authorization has failed. When authorization fails, check the <code>message</code> field for detailed error information;</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,13 +18,13 @@ public class GetHotSpotUniqListResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Returned data</p>
+     * <p>Response data</p>
      */
     @NameInMap("data")
     public GetHotSpotUniqListResponseBodyData data;
 
     /**
-     * <p>Return message</p>
+     * <p>Response message</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -42,7 +42,7 @@ public class GetHotSpotUniqListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>true if the API call succeeded; false if the API call failed</p>
+     * <p>true indicates the API call succeeded, false indicates the API call failed</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -97,7 +97,7 @@ public class GetHotSpotUniqListResponseBody extends TeaModel {
 
     public static class GetHotSpotUniqListResponseBodyData extends TeaModel {
         /**
-         * <p>List of data names</p>
+         * <p>List of data column names</p>
          */
         @NameInMap("columns")
         public java.util.List<String> columns;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAllInstancesRequest extends TeaModel {
     /**
-     * <p>Current page</p>
+     * <p>Current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class ListAllInstancesRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>Managed type.</p>
+     * <p>Management type.</p>
      * 
      * <strong>example:</strong>
      * <p>managed</p>
@@ -41,7 +41,7 @@ public class ListAllInstancesRequest extends TeaModel {
     public String managedType;
 
     /**
-     * <p>Maximum number of records to retrieve in a single request.</p>
+     * <p>Maximum number of records to retrieve at a time.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -50,9 +50,9 @@ public class ListAllInstancesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Paging cursor.  </p>
+     * <p>Pagination token.</p>
      * <blockquote>
-     * <p>If this parameter is not empty, it indicates that more data is available.</p>
+     * <p>If this parameter is not empty, more data is available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -71,7 +71,7 @@ public class ListAllInstancesRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>Plugin ID</p>
+     * <p>Plugin ID.</p>
      * 
      * <strong>example:</strong>
      * <p>01fc4a0b-f199-4885-9861-b4054a310fe7</p>

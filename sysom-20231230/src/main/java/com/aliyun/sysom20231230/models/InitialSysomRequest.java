@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class InitialSysomRequest extends TeaModel {
     /**
-     * <p>Specifies whether to only check if the service role exists</p>
+     * <p>Specifies whether to only check whether the service-linked role exists.</p>
      */
     @NameInMap("check_only")
     public Boolean checkOnly;
 
     /**
-     * <p>Source, which is fixed as console.</p>
+     * <p>The source. Set this parameter to console.</p>
      * 
      * <strong>example:</strong>
      * <p>console</p>

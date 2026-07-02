@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartAIAnalysisRequest extends TeaModel {
     /**
-     * <p>Analysis tool. This field does not need to be filled in when using OpenAPI.</p>
+     * <p>Analysis tool. Not required for OpenAPI access.</p>
      * 
      * <strong>example:</strong>
      * <p>gp/pyki/analysis</p>
@@ -29,7 +29,7 @@ public class StartAIAnalysisRequest extends TeaModel {
     public String channel;
 
     /**
-     * <p>Process name. This is an optional parameter.</p>
+     * <p>Process name, optional parameter</p>
      * 
      * <strong>example:</strong>
      * <p>python_test</p>
@@ -38,7 +38,7 @@ public class StartAIAnalysisRequest extends TeaModel {
     public String comms;
 
     /**
-     * <p>Creator. You do not need to specify this parameter when using OpenAPI.</p>
+     * <p>Creator. Not required for OpenAPI access.</p>
      * 
      * <strong>example:</strong>
      * <p>445333</p>
@@ -56,7 +56,7 @@ public class StartAIAnalysisRequest extends TeaModel {
     public String instance;
 
     /**
-     * <p>Instance type. This field does not need to be filled in when using OpenAPI.</p>
+     * <p>Instance type. Not required for OpenAPI access.</p>
      * 
      * <strong>example:</strong>
      * <p>ip/sn/hostname</p>
@@ -65,7 +65,7 @@ public class StartAIAnalysisRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>Iteration entry function. Required only in iteration mode. This parameter is optional.</p>
+     * <p>Iteration entry function. Required only in iteration mode. Can be left blank.</p>
      * 
      * <strong>example:</strong>
      * <p>Class.function</p>
@@ -74,7 +74,7 @@ public class StartAIAnalysisRequest extends TeaModel {
     public String iterationFunc;
 
     /**
-     * <p>Iteration entry module. Required only in iteration mode. This parameter is optional.</p>
+     * <p>Iteration entry module. Required only in iteration mode. Can be left blank.</p>
      * 
      * <strong>example:</strong>
      * <p>a.b.module</p>
@@ -83,13 +83,13 @@ public class StartAIAnalysisRequest extends TeaModel {
     public String iterationMod;
 
     /**
-     * <p>Iteration range (iteration count: the number of iterations when the data collection module is activated, independent of the AI job\&quot;s iteration count)</p>
+     * <p>Iteration range (iteration count: refers to the number of iterations when the data collection module is activated, independent of the AI job\&quot;s iteration count)</p>
      */
     @NameInMap("iteration_range")
     public java.util.List<Integer> iterationRange;
 
     /**
-     * <p>Process IDs (PIDs) of the AI job. Batch input is supported, separated by commas.</p>
+     * <p>AI job process PIDs. Supports batch input, separated by commas.</p>
      * 
      * <strong>example:</strong>
      * <p>2421,36547,10043</p>
@@ -107,7 +107,9 @@ public class StartAIAnalysisRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>AI Infra analysis duration.<br>Unit: milliseconds.<br>Default value: 2000.</p>
+     * <p>AI Infra analysis time;
+     * Unit: milliseconds;
+     * Default value: 2000;</p>
      * 
      * <strong>example:</strong>
      * <p>2000</p>
@@ -116,7 +118,7 @@ public class StartAIAnalysisRequest extends TeaModel {
     public Integer timeout;
 
     /**
-     * <p>Alibaba Cloud User ID. You do not need to specify this parameter when using OpenAPI.</p>
+     * <p>Alibaba Cloud user ID. Not required for OpenAPI access.</p>
      * 
      * <strong>example:</strong>
      * <p>123423414</p>

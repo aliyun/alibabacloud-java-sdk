@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InvokeDiagnosisRequest extends TeaModel {
     /**
-     * <p>Diagnosis channel (currently fixed as the ECS channel)</p>
+     * <p>Diagnosis channel (currently fixed as the ECS channel).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,9 +15,9 @@ public class InvokeDiagnosisRequest extends TeaModel {
     public String channel;
 
     /**
-     * <p>Diagnosis parameters. Different diagnosis types require different parameters. For the required parameters of each diagnosis type, see the Request Parameters supplement below.  </p>
+     * <p>Diagnosis parameters. Different types of diagnoses require different diagnosis parameters. For the parameters required by each diagnosis type, refer to the supplementary request parameter description below.</p>
      * <blockquote>
-     * <p>Notice: Please pass a string in JSON format</p>
+     * <p>Notice: Please pass a JSON-formatted string.</notice></p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -32,7 +32,7 @@ public class InvokeDiagnosisRequest extends TeaModel {
     public String params;
 
     /**
-     * <p>Diagnosis type, used to distinguish between different types of diagnosis</p>
+     * <p>Diagnosis type, used to distinguish different types of diagnoses.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

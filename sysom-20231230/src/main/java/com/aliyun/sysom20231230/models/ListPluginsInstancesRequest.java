@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPluginsInstancesRequest extends TeaModel {
     /**
-     * <p>This field exists when paging is used and indicates the current page number.</p>
+     * <p>The current page number. This field is present when pagination is used.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -14,7 +14,7 @@ public class ListPluginsInstancesRequest extends TeaModel {
     public Long current;
 
     /**
-     * <p>Filter by instance ID or instance name. Fuzzy query is supported.</p>
+     * <p>Filters instances by instance ID or instance name. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>i-bpxx</p>
@@ -23,7 +23,7 @@ public class ListPluginsInstancesRequest extends TeaModel {
     public String instanceIdName;
 
     /**
-     * <p>Filter by instance tags.</p>
+     * <p>Filters instances by instance tag.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;key&quot;:&quot;app&quot;,&quot;value&quot;:&quot;sysom-aliyun-com&quot;}</p>
@@ -32,7 +32,7 @@ public class ListPluginsInstancesRequest extends TeaModel {
     public String instanceTag;
 
     /**
-     * <p>Filter instances by plugin installation status.</p>
+     * <p>Filters instances by plug-in installation status.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class ListPluginsInstancesRequest extends TeaModel {
     public String operationType;
 
     /**
-     * <p>Page size. Default value is 10.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -51,7 +51,7 @@ public class ListPluginsInstancesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>If this parameter is specified, the response filters and returns the instance list for the specified agent.</p>
+     * <p>Filters the instance list by the specified agent. If this parameter is specified, only instances associated with the specified agent are returned.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +61,7 @@ public class ListPluginsInstancesRequest extends TeaModel {
     public String pluginId;
 
     /**
-     * <p>Filter instances by area.</p>
+     * <p>Filters instances by region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

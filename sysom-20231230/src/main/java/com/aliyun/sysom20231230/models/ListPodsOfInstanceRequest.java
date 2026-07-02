@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPodsOfInstanceRequest extends TeaModel {
     /**
-     * <p>Cluster identity</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>c96e34d74eb6748f3b2a46552d5d653f6</p>
@@ -14,7 +14,7 @@ public class ListPodsOfInstanceRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>Current page number (starting from 1)</p>
+     * <p>The current page number. Pages start from page 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListPodsOfInstanceRequest extends TeaModel {
     public Long current;
 
     /**
-     * <p>instance ID.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>i-wz9d00ut2ska3mlyhn6j</p>
@@ -32,7 +32,7 @@ public class ListPodsOfInstanceRequest extends TeaModel {
     public String instance;
 
     /**
-     * <p>Page size; default value is 10</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

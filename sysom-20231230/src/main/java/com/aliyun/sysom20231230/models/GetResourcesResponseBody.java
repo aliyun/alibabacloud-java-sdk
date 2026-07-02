@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetResourcesResponseBody extends TeaModel {
     /**
-     * <p>Status code  </p>
+     * <p>The status code.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, authorization succeeded.  </li>
-     * <li>Other status codes indicate authorization failed. When authorization fails, view the <code>message</code> field to obtain detailed error message.</li>
+     * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+     * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,16 +18,16 @@ public class GetResourcesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Returned data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public GetResourcesResponseBodyData data;
 
     /**
-     * <p>Error message  </p>
+     * <p>The error message.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, this field is empty.  </li>
-     * <li>Otherwise, this field contains the request error message.</li>
+     * <li>If <code>code == Success</code>, this field is empty.</li>
+     * <li>Otherwise, this field contains the request error information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class GetResourcesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request RequestId</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>35F91AAB-5FDF-5A22-B211-C7C6B00817D0</p>
@@ -84,7 +84,7 @@ public class GetResourcesResponseBody extends TeaModel {
 
     public static class GetResourcesResponseBodyData extends TeaModel {
         /**
-         * <p>Total amount of resources</p>
+         * <p>The total number of resources.</p>
          * 
          * <strong>example:</strong>
          * <p>2354</p>
@@ -93,7 +93,7 @@ public class GetResourcesResponseBody extends TeaModel {
         public Float total;
 
         /**
-         * <p>Unit</p>
+         * <p>The unit.</p>
          * 
          * <strong>example:</strong>
          * <p>Kbytes</p>
@@ -102,7 +102,7 @@ public class GetResourcesResponseBody extends TeaModel {
         public String unit;
 
         /**
-         * <p>Resource usage</p>
+         * <p>The resource usage.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

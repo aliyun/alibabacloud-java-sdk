@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetInspectionReportRequest extends TeaModel {
     /**
+     * <p>The inspection report ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>91bec4c5a168494e8128468e3995df87</p>
      */

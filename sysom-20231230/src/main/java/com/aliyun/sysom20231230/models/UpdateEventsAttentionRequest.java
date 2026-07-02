@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateEventsAttentionRequest extends TeaModel {
     /**
-     * <p>Sensitivity of the anomalous activity. Valid values are -1 to 3. A value of -1 decreases sensitivity by 1 degree, and a value of 0 increases sensitivity by 1 degree.</p>
+     * <p>The sensitivity of the anomaly event. Valid values: -1 to 3. A value of -1 indicates that the sensitivity is decreased by 1. A value of 0 indicates that the sensitivity is increased by 1.</p>
      * 
      * <strong>example:</strong>
      * <p>-1</p>
@@ -14,7 +14,7 @@ public class UpdateEventsAttentionRequest extends TeaModel {
     public Integer mode;
 
     /**
-     * <p>Scope of effect: cluster or edge zone</p>
+     * <p>The scope in which the update takes effect. Valid values: cluster and node.</p>
      * 
      * <strong>example:</strong>
      * <p>cluster</p>
@@ -23,7 +23,7 @@ public class UpdateEventsAttentionRequest extends TeaModel {
     public String range;
 
     /**
-     * <p>UUID corresponding to the anomalous activity</p>
+     * <p>The UUID of the anomaly event.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

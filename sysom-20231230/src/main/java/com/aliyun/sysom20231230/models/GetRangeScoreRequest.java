@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRangeScoreRequest extends TeaModel {
     /**
-     * <p>Cluster ID</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2ijff4be-bf24-4070-89ca-c47c879b0g32</p>
@@ -14,7 +14,7 @@ public class GetRangeScoreRequest extends TeaModel {
     public String cluster;
 
     /**
-     * <p>End Time</p>
+     * <p>The end time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class GetRangeScoreRequest extends TeaModel {
     public Float end;
 
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>i-wz9d00ut2ska3mlyhn6j</p>
@@ -33,7 +33,7 @@ public class GetRangeScoreRequest extends TeaModel {
     public String instance;
 
     /**
-     * <p>Start Time</p>
+     * <p>The start time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCopilotHistoryResponseBody extends TeaModel {
     /**
-     * <p>error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SysomOpenAPI.InvalidParameter</p>
@@ -14,16 +14,16 @@ public class GetCopilotHistoryResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>List of chat records. The length equals the requested quantity. If the actual number of chat records is less than the requested quantity, the list contains all available records. Format: [{&quot;user&quot;: &quot;&quot;, &quot;content&quot;: &quot;&quot;, &quot;time&quot;: &quot;&quot;}, {...}]</p>
+     * <p>The list of chat records. The length equals the requested count. If the actual number of chat records is less than the requested count, the actual number is returned. Format: [{&quot;user&quot;:&quot;&quot;,&quot;content&quot;:&quot;&quot;.question,&quot;time&quot;:&quot;&quot;},{...}].</p>
      */
     @NameInMap("data")
     public java.util.List<GetCopilotHistoryResponseBodyData> data;
 
     /**
-     * <p>error message  </p>
+     * <p>The error message.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, this field is empty.  </li>
-     * <li>Otherwise, this field contains the request error message.</li>
+     * <li>If <code>code == Success</code>, this field is empty.</li>
+     * <li>Otherwise, this field contains the error message of the request.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -80,7 +80,7 @@ public class GetCopilotHistoryResponseBody extends TeaModel {
 
     public static class GetCopilotHistoryResponseBodyData extends TeaModel {
         /**
-         * <p>Text content of the chat</p>
+         * <p>The text content of the chat message.</p>
          * 
          * <strong>example:</strong>
          * <p>copilot回复的具体内容</p>
@@ -89,7 +89,7 @@ public class GetCopilotHistoryResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>Time of the chat record, string type</p>
+         * <p>The time of the chat record. The value is of the STRING type.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-09-02 10:02:39</p>
@@ -98,7 +98,11 @@ public class GetCopilotHistoryResponseBody extends TeaModel {
         public String time;
 
         /**
-         * <p>user/copilot; user indicates the User, and copilot indicates the bot</p>
+         * <p>The role of the message sender. Valid values:</p>
+         * <ul>
+         * <li>user: the user.</li>
+         * <li>copilot: the bot.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>user

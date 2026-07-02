@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CpuHighAgentStreamResponseRequest extends TeaModel {
     /**
-     * <p>Input parameter for interfacing with the high-CPU agent service. Refer to the standard LLM API input parameter dictionary, convert it into a string, and pass it in the <code>llmParamString</code> field.</p>
+     * <p>The input parameter for the CPU High Agent service. Refer to the standard LLM API input parameter dict, convert it to a string, and pass it in the llmParamString field.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;llmParamString&quot;: &quot;{\&quot;messages\&quot;: [{\&quot;role\&quot;: \&quot;user\&quot;, \&quot;content\&quot;: \&quot;用户12345的机器i-67890，最近2分钟CPU使用率高，请结合最近2分钟的火焰图信息，分析原因\&quot;}]}&quot;</p>

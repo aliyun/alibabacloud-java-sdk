@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetResourcesRequest extends TeaModel {
     /**
-     * <p>Cluster ID</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1808078950770264</p>
@@ -14,7 +14,7 @@ public class GetResourcesRequest extends TeaModel {
     public String cluster;
 
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>i-wz9d00ut2ska3mlyhn6j</p>
@@ -23,7 +23,7 @@ public class GetResourcesRequest extends TeaModel {
     public String instance;
 
     /**
-     * <p>Resource type</p>
+     * <p>The resource type.</p>
      * 
      * <strong>example:</strong>
      * <p>mem</p>

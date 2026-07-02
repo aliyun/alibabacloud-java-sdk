@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetHotspotAnalysisResponseBody extends TeaModel {
     /**
-     * <p>error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SysomOpenAPI.ServerError</p>
@@ -14,7 +14,7 @@ public class GetHotspotAnalysisResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Returned Data</p>
+     * <p>The returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;AliYunDun:1657494进程(1657494):根据提供的热点调用栈信息，热点主要集中在<code>__nanosleep_nocancel</code>以及相关的系统调用<code>SyS_nanosleep</code>上，这表明进程在等待特定的时间间隔。通常这是由于应用中存在长时间的睡眠或高频率的定时操作导致的，比如定时任务、心跳检测等。\n\n应用代码在需要定期执行某些检查或等待外部事件时会使用<code>nanosleep</code>来实现精确的延时控制。为了优化这种情况，可以考虑以下方案：\n- 评估是否可以减少定时任务的频率。\n- 使用条件变量替代单纯的睡眠等待，以响应更快的事件触发。\n- 如果是I/O密集型操作等待，考虑优化I/O路径或提升I/O效率。建议使用SysOM平台的IO诊断工具来进一步定位具体的I/O瓶颈。&quot;</p>
@@ -23,7 +23,7 @@ public class GetHotspotAnalysisResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>Response message</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -41,7 +41,7 @@ public class GetHotspotAnalysisResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the invocation is successful</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

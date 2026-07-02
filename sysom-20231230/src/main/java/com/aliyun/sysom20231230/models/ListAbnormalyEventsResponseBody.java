@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListAbnormalyEventsResponseBody extends TeaModel {
     /**
-     * <p>Status code.  </p>
+     * <p>The status code.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, authorization succeeded.  </li>
-     * <li>Any other status code indicates authorization failed. When authorization fails, check the <code>message</code> field for detailed error message.</li>
+     * <li><code>code == Success</code> indicates that the authorization was successful.</li>
+     * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,13 +18,13 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Return Result.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("data")
     public java.util.List<ListAbnormalyEventsResponseBodyData> data;
 
     /**
-     * <p>Error code description; empty if no error</p>
+     * <p>The error code description. This value is empty if no error occurred.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -33,7 +33,7 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Total number of records.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -80,7 +80,7 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
 
     public static class ListAbnormalyEventsResponseBodyDataOptsResult extends TeaModel {
         /**
-         * <p>Diagnosis status</p>
+         * <p>The diagnostic status.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -89,7 +89,7 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Diagnosis details URL</p>
+         * <p>The URL of the diagnostic details.</p>
          * 
          * <strong>example:</strong>
          * <p>/diagnose/result/PhfFg456</p>
@@ -122,7 +122,7 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
 
     public static class ListAbnormalyEventsResponseBodyDataOpts extends TeaModel {
         /**
-         * <p>Operation Type</p>
+         * <p>The operation type.</p>
          * 
          * <strong>example:</strong>
          * <p>diagnose</p>
@@ -131,13 +131,13 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>Diagnosis result of the abnormal item</p>
+         * <p>The diagnostic result of the anomaly item.</p>
          */
         @NameInMap("result")
         public ListAbnormalyEventsResponseBodyDataOptsResult result;
 
         /**
-         * <p>Diagnosis Type</p>
+         * <p>The diagnostic type.</p>
          * 
          * <strong>example:</strong>
          * <p>auto</p>
@@ -178,7 +178,7 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
 
     public static class ListAbnormalyEventsResponseBodyDataRawMetrics extends TeaModel {
         /**
-         * <p>End Time</p>
+         * <p>The end time.</p>
          * 
          * <strong>example:</strong>
          * <p>1761814928</p>
@@ -187,13 +187,13 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
         public Float endTime;
 
         /**
-         * <p>List of metric values.</p>
+         * <p>The list of metric values.</p>
          */
         @NameInMap("metrics")
         public java.util.List<String> metrics;
 
         /**
-         * <p>Start Time</p>
+         * <p>The start time.</p>
          * 
          * <strong>example:</strong>
          * <p>1761814928</p>
@@ -234,7 +234,7 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
 
     public static class ListAbnormalyEventsResponseBodyData extends TeaModel {
         /**
-         * <p>Creation Time</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1725801090000</p>
@@ -243,7 +243,7 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
         public Long createdAt;
 
         /**
-         * <p>Detailed description of the anomalous item.</p>
+         * <p>The detailed description of the anomaly item.</p>
          * 
          * <strong>example:</strong>
          * <p>节点发生OOM, 可查看OOM发生原因</p>
@@ -252,7 +252,14 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Diagnosis status (1 indicates diagnosis ready, 2 indicates running, 3 indicates completed, 4 indicates undiagnosable, 5 indicates failed)</p>
+         * <p>The diagnostic status. Valid values:</p>
+         * <ul>
+         * <li>1: diagnosis ready.</li>
+         * <li>2: diagnosis in progress.</li>
+         * <li>3: diagnosis completed.</li>
+         * <li>4: not diagnosable.</li>
+         * <li>5: diagnosis failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -261,7 +268,7 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
         public Integer diagStatus;
 
         /**
-         * <p>End time of the anomalous activity.</p>
+         * <p>The end time of the anomaly event.</p>
          * 
          * <strong>example:</strong>
          * <p>1725797727754</p>
@@ -270,7 +277,7 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
         public Long endAt;
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i-wz9d00ut2ska3mlyhn6j</p>
@@ -279,7 +286,7 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
         public String instance;
 
         /**
-         * <p>Name of the anomalous item.</p>
+         * <p>The name of the anomaly item.</p>
          * 
          * <strong>example:</strong>
          * <p>节点CPU使用率检测</p>
@@ -288,7 +295,7 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
         public String item;
 
         /**
-         * <p>Level of the anomalous item.</p>
+         * <p>The level of the anomaly item.</p>
          * 
          * <strong>example:</strong>
          * <p>potential</p>
@@ -297,7 +304,7 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
         public String level;
 
         /**
-         * <p>Namespace where the pod is located</p>
+         * <p>The namespace of the pod.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -306,13 +313,13 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
         public String namespace;
 
         /**
-         * <p>List of operations for the abnormal item</p>
+         * <p>The list of operations for the anomaly item.</p>
          */
         @NameInMap("opts")
         public java.util.List<ListAbnormalyEventsResponseBodyDataOpts> opts;
 
         /**
-         * <p>Pod name.</p>
+         * <p>The pod name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-pod</p>
@@ -321,13 +328,13 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
         public String pod;
 
         /**
-         * <p>Raw metrics</p>
+         * <p>The raw metrics.</p>
          */
         @NameInMap("raw_metrics")
         public ListAbnormalyEventsResponseBodyDataRawMetrics rawMetrics;
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -336,7 +343,7 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>Type of abnormal item</p>
+         * <p>The type of the anomaly item.</p>
          * 
          * <strong>example:</strong>
          * <p>saturation</p>
@@ -345,7 +352,7 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>UUID corresponding to the anomalous activity</p>
+         * <p>The UUID of the anomaly event.</p>
          * 
          * <strong>example:</strong>
          * <p>43f05b46-1034-42e8-a528-6e5ca1108277</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InstallAgentRequest extends TeaModel {
     /**
-     * <p>ID of the widget to install</p>
+     * <p>The ID of the component to install.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class InstallAgentRequest extends TeaModel {
     public String agentId;
 
     /**
-     * <p>Version of the widget to install</p>
+     * <p>The version of the component to install.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,11 +25,12 @@ public class InstallAgentRequest extends TeaModel {
     public String agentVersion;
 
     /**
-     * <p>Installation Type:  </p>
+     * <p>The installation type. Valid values:</p>
      * <ul>
-     * <li>InstallAndUpgrade: Install if not present; update if present.  </li>
-     * <li>OnlyInstallNotHasAgent: Install if not present; do nothing if present.  </li>
-     * <li>OnlyUpgradeHasAgent: Do nothing if not present; update if present.</li>
+     * <li>InstallAndUpgrade: installs the component if it does not exist, or updates it if it exists.</li>
+     * <li>OnlyInstallNotHasAgent: installs the component if it does not exist, or takes no action if it exists.</li>
+     * <li>OnlyUpgradeHasAgent: takes no action if the component does not exist, or updates it if it exists.</li>
+     * <li>OnlyInstallWithoutStart: installs the component only without starting the service.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -40,7 +41,7 @@ public class InstallAgentRequest extends TeaModel {
     public String installType;
 
     /**
-     * <p>List of instances on which to install the widget</p>
+     * <p>The list of instances on which to install the component.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("instances")
@@ -85,7 +86,7 @@ public class InstallAgentRequest extends TeaModel {
 
     public static class InstallAgentRequestInstances extends TeaModel {
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -95,7 +96,7 @@ public class InstallAgentRequest extends TeaModel {
         public String instance;
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

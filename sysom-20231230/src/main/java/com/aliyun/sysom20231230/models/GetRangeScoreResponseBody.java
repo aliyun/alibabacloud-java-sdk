@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetRangeScoreResponseBody extends TeaModel {
     /**
-     * <p>Status code  </p>
+     * <p>The status code.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, authorization succeeded.  </li>
-     * <li>Other status codes indicate authorization failed. When authorization fails, view the <code>message</code> field to obtain detailed error information.</li>
+     * <li>If <code>code == Success</code>, the authorization is successful.</li>
+     * <li>Other status codes indicate that the authorization has failed. Check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,16 +18,16 @@ public class GetRangeScoreResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Returned data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public java.util.List<GetRangeScoreResponseBodyData> data;
 
     /**
-     * <p>Error message  </p>
+     * <p>The error message.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, this field is empty.  </li>
-     * <li>Otherwise, this field contains the request error message.</li>
+     * <li>If <code>code == Success</code>, this field is empty.</li>
+     * <li>Otherwise, this field contains the request error information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class GetRangeScoreResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request RequestId</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>35F91AAB-5FDF-5A22-B211-C7C6B00817D0</p>
@@ -46,7 +46,7 @@ public class GetRangeScoreResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total data volume.</p>
+     * <p>The total amount of data.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -101,7 +101,7 @@ public class GetRangeScoreResponseBody extends TeaModel {
 
     public static class GetRangeScoreResponseBodyData extends TeaModel {
         /**
-         * <p>Time point</p>
+         * <p>The point in time.</p>
          * 
          * <strong>example:</strong>
          * <p>1725797727754</p>
@@ -110,7 +110,7 @@ public class GetRangeScoreResponseBody extends TeaModel {
         public Long time;
 
         /**
-         * <p>Metric type</p>
+         * <p>The metric type.</p>
          * 
          * <strong>example:</strong>
          * <p>saturation</p>
@@ -119,7 +119,7 @@ public class GetRangeScoreResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>Score</p>
+         * <p>The score.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

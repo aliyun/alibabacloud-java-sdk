@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetHotspotTrackingResponseBody extends TeaModel {
     /**
-     * <p>Error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SysomOpenAPI.ServerError</p>
@@ -14,13 +14,13 @@ public class GetHotspotTrackingResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Returned data</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public GetHotspotTrackingResponseBodyData data;
 
     /**
-     * <p>Return message</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -29,7 +29,7 @@ public class GetHotspotTrackingResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2D693121-C925-5154-8DF6-C09A8B369822</p>
@@ -76,13 +76,13 @@ public class GetHotspotTrackingResponseBody extends TeaModel {
 
     public static class GetHotspotTrackingResponseBodyDataFlame extends TeaModel {
         /**
-         * <p>List of column names</p>
+         * <p>The list of field names.</p>
          */
         @NameInMap("columns")
         public java.util.List<String> columns;
 
         /**
-         * <p>List of flame graph data</p>
+         * <p>The list of flame graph data.</p>
          */
         @NameInMap("values")
         public java.util.List<java.util.List<String>> values;
@@ -112,13 +112,13 @@ public class GetHotspotTrackingResponseBody extends TeaModel {
 
     public static class GetHotspotTrackingResponseBodyDataSeries extends TeaModel {
         /**
-         * <p>List of column names</p>
+         * <p>The list of field names.</p>
          */
         @NameInMap("columns")
         public java.util.List<String> columns;
 
         /**
-         * <p>List of hot spot metric data</p>
+         * <p>The list of hot spot time series data.</p>
          */
         @NameInMap("values")
         public java.util.List<java.util.List<String>> values;
@@ -148,13 +148,13 @@ public class GetHotspotTrackingResponseBody extends TeaModel {
 
     public static class GetHotspotTrackingResponseBodyData extends TeaModel {
         /**
-         * <p>Flame graph data</p>
+         * <p>The flame graph data.</p>
          */
         @NameInMap("flame")
         public GetHotspotTrackingResponseBodyDataFlame flame;
 
         /**
-         * <p>Data list</p>
+         * <p>The data list.</p>
          */
         @NameInMap("series")
         public GetHotspotTrackingResponseBodyDataSeries series;

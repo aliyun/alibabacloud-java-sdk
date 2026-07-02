@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetProblemPercentageRequest extends TeaModel {
     /**
-     * <p>Cluster ID</p>
+     * <p>Cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2ijff4be-bf24-4070-89ca-c47c879b0g32</p>
@@ -14,7 +14,7 @@ public class GetProblemPercentageRequest extends TeaModel {
     public String cluster;
 
     /**
-     * <p>End Time</p>
+     * <p>End time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class GetProblemPercentageRequest extends TeaModel {
     public String instance;
 
     /**
-     * <p>Start Time</p>
+     * <p>Start time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

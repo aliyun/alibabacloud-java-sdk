@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetListRecordResponseBody extends TeaModel {
     /**
-     * <p>Status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,13 +14,13 @@ public class GetListRecordResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Returned data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public java.util.List<GetListRecordResponseBodyData> data;
 
     /**
-     * <p>Description of the status code.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -38,7 +38,7 @@ public class GetListRecordResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total number of records</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>19</p>
@@ -93,7 +93,7 @@ public class GetListRecordResponseBody extends TeaModel {
 
     public static class GetListRecordResponseBodyData extends TeaModel {
         /**
-         * <p>AI analysis ID</p>
+         * <p>The AI analysis ID.</p>
          * 
          * <strong>example:</strong>
          * <p>16896fa8-37f6-4c70-bb32-67fa9817d426</p>
@@ -102,7 +102,7 @@ public class GetListRecordResponseBody extends TeaModel {
         public String analysisId;
 
         /**
-         * <p>Analysis time</p>
+         * <p>The analysis time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-12-24 12:02:05</p>
@@ -111,7 +111,7 @@ public class GetListRecordResponseBody extends TeaModel {
         public String analysisTime;
 
         /**
-         * <p>Analysis parameters for the AI job</p>
+         * <p>The analysis parameters of the AI job analysis.</p>
          * 
          * <strong>example:</strong>
          * <p>timeout=2000 ms</p>
@@ -120,7 +120,7 @@ public class GetListRecordResponseBody extends TeaModel {
         public String arguments;
 
         /**
-         * <p>Analysis failure log</p>
+         * <p>The analysis failure log.</p>
          * 
          * <strong>example:</strong>
          * <p>机器i-wz9dej066kii4goqpnze分析失败, 失败原因: Not get GPU trace data for \&quot;e59ce870-dbd4-4c44-a814-174ac6ab5bcf\&quot; \&quot;[\&quot;118534\&quot;]\&quot;!</p>
@@ -129,7 +129,7 @@ public class GetListRecordResponseBody extends TeaModel {
         public String failedLog;
 
         /**
-         * <p>Analysis status</p>
+         * <p>The analysis status.</p>
          * 
          * <strong>example:</strong>
          * <p>已完成/分析失败</p>

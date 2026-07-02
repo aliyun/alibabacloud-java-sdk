@@ -23,7 +23,7 @@ public class ListDiagnosisRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>Diagnostic parameters. Different diagnosis types require different diagnostic parameters. You can use this field to filter records whose parameter values match the specified value.</p>
+     * <p>Diagnostic parameters. Different types of diagnostics require different diagnostic parameters. You can use this field to filter records whose parameters match the specified values.</p>
      * 
      * <strong>example:</strong>
      * <p>[{\&quot;key\&quot;:\&quot;region\&quot;,\&quot;value\&quot;:\&quot;cn-beijing\&quot;}]</p>
@@ -32,7 +32,7 @@ public class ListDiagnosisRequest extends TeaModel {
     public String params;
 
     /**
-     * <p>Diagnosis type</p>
+     * <p>Diagnostic type</p>
      * 
      * <strong>example:</strong>
      * <p>memgraph</p>
@@ -41,12 +41,13 @@ public class ListDiagnosisRequest extends TeaModel {
     public String serviceName;
 
     /**
-     * <p>Status of the diagnostic task execution.<br>Valid values:  </p>
+     * <p>Execution status of the diagnostic task.
+     * Valid values:</p>
      * <ul>
-     * <li><strong>Ready</strong>: Ready  </li>
-     * <li><strong>Running</strong>: Running  </li>
-     * <li><strong>Success</strong>: Succeeded  </li>
-     * <li><strong>Fail</strong>: Failed</li>
+     * <li><strong>Ready</strong>: Ready</li>
+     * <li><strong>Running</strong>: Running</li>
+     * <li><strong>Success</strong>: Execution succeeded</li>
+     * <li><strong>Fail</strong>: Execution failed</li>
      * </ul>
      * 
      * <strong>example:</strong>

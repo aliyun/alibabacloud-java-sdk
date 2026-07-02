@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAgentsResponseBody extends TeaModel {
     /**
-     * <p>Request ID, which can be used for end-to-end Diagnosis</p>
+     * <p>The request ID, which can be used for end-to-end diagnostics.</p>
      * 
      * <strong>example:</strong>
      * <p>66EAED72-542B-583B-BCED-64433DC27AD7</p>
@@ -14,10 +14,10 @@ public class ListAgentsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Status code  </p>
+     * <p>The status code.</p>
      * <ul>
-     * <li><code>code == Success</code> indicates successful authorization;  </li>
-     * <li>Other status codes indicate authorization failure. When authorization fails, view the <code>message</code> field to obtain detailed error message;</li>
+     * <li>If code is Success, the authorization is successful.</li>
+     * <li>Other status codes indicate authorization failed. Check the message field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,15 +27,15 @@ public class ListAgentsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Returned Data</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public java.util.List<ListAgentsResponseBodyData> data;
 
     /**
-     * <p>Error message  </p>
+     * <p>The error message.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, this field is empty.  </li>
+     * <li>If code is Success, this field is empty.</li>
      * <li>Otherwise, this field contains the request error message.</li>
      * </ul>
      * 
@@ -46,7 +46,7 @@ public class ListAgentsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Total number of records.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -101,7 +101,7 @@ public class ListAgentsResponseBody extends TeaModel {
 
     public static class ListAgentsResponseBodyDataVersions extends TeaModel {
         /**
-         * <p>Widget version creation time</p>
+         * <p>The time when the component version was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-09-14T20:46:08</p>
@@ -110,7 +110,7 @@ public class ListAgentsResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The widget\&quot;s install script</p>
+         * <p>The installation script of the component.</p>
          * 
          * <strong>example:</strong>
          * <p>sysom.sh install</p>
@@ -119,7 +119,7 @@ public class ListAgentsResponseBody extends TeaModel {
         public String installScript;
 
         /**
-         * <p>Widget uninstall script</p>
+         * <p>The uninstallation script of the component.</p>
          * 
          * <strong>example:</strong>
          * <p>sysom.sh uninstall</p>
@@ -128,7 +128,7 @@ public class ListAgentsResponseBody extends TeaModel {
         public String uninstallScript;
 
         /**
-         * <p>Widget version update time</p>
+         * <p>The time when the component version was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-09-14T20:46:08</p>
@@ -137,7 +137,7 @@ public class ListAgentsResponseBody extends TeaModel {
         public String updatedAt;
 
         /**
-         * <p>Widget upgrade script</p>
+         * <p>The update script of the component.</p>
          * 
          * <strong>example:</strong>
          * <p>sysom.sh upgrade</p>
@@ -146,7 +146,7 @@ public class ListAgentsResponseBody extends TeaModel {
         public String upgradeScript;
 
         /**
-         * <p>Widget version number</p>
+         * <p>The component version number.</p>
          * 
          * <strong>example:</strong>
          * <p>3.4.0-1</p>
@@ -211,7 +211,7 @@ public class ListAgentsResponseBody extends TeaModel {
 
     public static class ListAgentsResponseBodyData extends TeaModel {
         /**
-         * <p>Widget creation time</p>
+         * <p>The time when the component was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-09-14T20:46:08</p>
@@ -220,7 +220,7 @@ public class ListAgentsResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>Widget description</p>
+         * <p>The component description.</p>
          * 
          * <strong>example:</strong>
          * <p>SysOM Agent</p>
@@ -229,7 +229,7 @@ public class ListAgentsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Widget ID</p>
+         * <p>The component ID.</p>
          * 
          * <strong>example:</strong>
          * <p>74a86327-3170-412c-8e67-da3389ec56a9</p>
@@ -238,7 +238,7 @@ public class ListAgentsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>Widget name</p>
+         * <p>The component name.</p>
          * 
          * <strong>example:</strong>
          * <p>SysOM Agent</p>
@@ -247,7 +247,7 @@ public class ListAgentsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Supported architecture (multiple architectures separated by commas)</p>
+         * <p>The supported architectures. Multiple architectures are separated by commas.</p>
          * 
          * <strong>example:</strong>
          * <p>x86</p>
@@ -256,10 +256,10 @@ public class ListAgentsResponseBody extends TeaModel {
         public String supportArch;
 
         /**
-         * <p>Widget type  </p>
+         * <p>The type of the component. Valid values:</p>
          * <ul>
-         * <li>Control: control-type widget  </li>
-         * <li>AI: AI widget</li>
+         * <li>Control: control-type component.</li>
+         * <li>AI: AI component.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -269,7 +269,7 @@ public class ListAgentsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>Widget Update Time</p>
+         * <p>The time when the component was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-09-14T20:46:08</p>
@@ -278,7 +278,7 @@ public class ListAgentsResponseBody extends TeaModel {
         public String updatedAt;
 
         /**
-         * <p>Widget Version List</p>
+         * <p>The list of component versions.</p>
          */
         @NameInMap("versions")
         public java.util.List<ListAgentsResponseBodyDataVersions> versions;

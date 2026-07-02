@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAlertStrategyRequest extends TeaModel {
     /**
-     * <p>Whether the alert policy is enabled</p>
+     * <p>Specifies whether the alert policy is enabled.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateAlertStrategyRequest extends TeaModel {
     public Boolean enabled;
 
     /**
-     * <p>Alert policy ID</p>
+     * <p>The ID of the alert policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class UpdateAlertStrategyRequest extends TeaModel {
     public Boolean k8sLabel;
 
     /**
-     * <p>Alert policy name</p>
+     * <p>The Policy Name of the alerting policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class UpdateAlertStrategyRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Alert policy details</p>
+     * <p>The details of the alert policy.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("strategy")
@@ -91,7 +91,7 @@ public class UpdateAlertStrategyRequest extends TeaModel {
 
     public static class UpdateAlertStrategyRequestStrategy extends TeaModel {
         /**
-         * <p>Set of clusters that receive alerts</p>
+         * <p>The collection of clusters for which alerts are received.</p>
          */
         @NameInMap("clusters")
         public java.util.List<String> clusters;
@@ -100,7 +100,7 @@ public class UpdateAlertStrategyRequest extends TeaModel {
         public java.util.List<Integer> destinations;
 
         /**
-         * <p>Set of abnormal items that receive alerts</p>
+         * <p>接收告警的异常项合计</p>
          */
         @NameInMap("items")
         public java.util.List<String> items;
