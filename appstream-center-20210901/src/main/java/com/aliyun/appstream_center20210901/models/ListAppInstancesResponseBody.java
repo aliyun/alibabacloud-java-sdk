@@ -93,7 +93,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
 
     public static class ListAppInstancesResponseBodyAppInstanceModelsBindInfo extends TeaModel {
         /**
-         * <p>The ID of the end user bound to the instance.</p>
+         * <p>The end user ID bound to the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>app.test</p>
@@ -163,7 +163,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
          * <ul>
          * <li><strong>PrePaid</strong>: subscription.</li>
          * <li><strong>PostPaid</strong>: pay-as-you-go.<blockquote>
-         * <p>This parameter is returned only when the billing mode of the delivery group to which the instance belongs is set to resource-based billing (ChargeResourceMode=Node).</p>
+         * <p>This parameter is returned only when the billing mode of the delivery group to which this instance belongs is resource-based billing (ChargeResourceMode=Node).</p>
          * </blockquote>
          * </li>
          * </ul>
@@ -193,7 +193,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The public IP address of the primary network interface controller (NIC). This value is returned only when the network policy (<code>StrategyType</code>) of the delivery group is set to mixed mode pattern (<code>Mixed</code>). Otherwise, this value is empty.</p>
+         * <p>The public IP address of the primary network interface controller (NIC). This value is returned only when the network policy (<code>StrategyType</code>) of the delivery group is set to the mixed pattern (<code>Mixed</code>). Otherwise, this value is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>10.13.13.211</p>
@@ -210,7 +210,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
         /**
          * <p>The ID of the node on which the instance runs.</p>
          * <blockquote>
-         * <p>This parameter is returned only when the billing mode of the delivery group to which the instance belongs is set to resource-based billing (ChargeResourceMode=Node).</p>
+         * <p>This parameter is returned only when the billing mode of the delivery group to which this instance belongs is resource-based billing (ChargeResourceMode=Node).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

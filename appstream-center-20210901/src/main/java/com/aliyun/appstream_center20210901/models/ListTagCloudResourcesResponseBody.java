@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagCloudResourcesResponseBody extends TeaModel {
     /**
-     * <p>The pagination token that indicates whether more results are available for the next query.</p>
+     * <p>The token that determines whether the next query exists based on the NextToken value.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAYRHtOLVQzCYj17y+OP7LZRrUJaF4rnBGQkWwMiVHlLZBB1w3Us37CVvhvyM0TXavA==</p>
@@ -29,7 +29,7 @@ public class ListTagCloudResourcesResponseBody extends TeaModel {
     public java.util.List<ListTagCloudResourcesResponseBodyResourceTags> resourceTags;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>

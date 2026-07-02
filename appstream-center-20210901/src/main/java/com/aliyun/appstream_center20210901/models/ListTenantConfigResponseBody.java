@@ -42,13 +42,27 @@ public class ListTenantConfigResponseBody extends TeaModel {
 
     public static class ListTenantConfigResponseBodyTenantConfigModel extends TeaModel {
         /**
-         * <p>Indicates whether resource expiration reminders are enabled.</p>
+         * <p>Indicates whether resource expiration reminders are enabled. Valid values:</p>
+         * <ul>
+         * <li>true: Enabled.</li>
+         * <li>false: Not enabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("AppInstanceGroupExpireRemind")
         public Boolean appInstanceGroupExpireRemind;
+
+        /**
+         * <strong>example:</strong>
+         * <p>None</p>
+         */
+        @NameInMap("MultiSessionSupportType")
+        public String multiSessionSupportType;
+
+        @NameInMap("MultiSessionSupportedRegions")
+        public java.util.List<String> multiSessionSupportedRegions;
 
         public static ListTenantConfigResponseBodyTenantConfigModel build(java.util.Map<String, ?> map) throws Exception {
             ListTenantConfigResponseBodyTenantConfigModel self = new ListTenantConfigResponseBodyTenantConfigModel();
@@ -61,6 +75,22 @@ public class ListTenantConfigResponseBody extends TeaModel {
         }
         public Boolean getAppInstanceGroupExpireRemind() {
             return this.appInstanceGroupExpireRemind;
+        }
+
+        public ListTenantConfigResponseBodyTenantConfigModel setMultiSessionSupportType(String multiSessionSupportType) {
+            this.multiSessionSupportType = multiSessionSupportType;
+            return this;
+        }
+        public String getMultiSessionSupportType() {
+            return this.multiSessionSupportType;
+        }
+
+        public ListTenantConfigResponseBodyTenantConfigModel setMultiSessionSupportedRegions(java.util.List<String> multiSessionSupportedRegions) {
+            this.multiSessionSupportedRegions = multiSessionSupportedRegions;
+            return this;
+        }
+        public java.util.List<String> getMultiSessionSupportedRegions() {
+            return this.multiSessionSupportedRegions;
         }
 
     }

@@ -18,7 +18,7 @@ public class ListTagCloudResourcesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next query.</p>
+     * <p>The token for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>ptnJAAAAAAAxNzE5OTEwNQ==</p>

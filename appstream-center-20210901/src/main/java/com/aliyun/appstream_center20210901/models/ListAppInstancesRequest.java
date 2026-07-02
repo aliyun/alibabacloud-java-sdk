@@ -24,7 +24,7 @@ public class ListAppInstancesRequest extends TeaModel {
     public String appInstanceId;
 
     /**
-     * <p>The list of application instance IDs. A maximum of 100 IDs can be specified.</p>
+     * <p>The list of application instance IDs. Maximum length: 100.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>false</p>
@@ -69,7 +69,7 @@ public class ListAppInstancesRequest extends TeaModel {
     public java.util.List<String> status;
 
     /**
-     * <p>The list of user IDs. A maximum of 100 IDs can be specified.</p>
+     * <p>The list of user IDs. Maximum length: 100.</p>
      */
     @NameInMap("UserIdList")
     public java.util.List<String> userIdList;

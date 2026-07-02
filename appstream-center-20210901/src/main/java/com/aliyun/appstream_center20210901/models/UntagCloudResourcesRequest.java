@@ -22,7 +22,7 @@ public class UntagCloudResourcesRequest extends TeaModel {
 
     /**
      * <p>The list of tags. System tags and custom tags are supported. You can specify up to 10 tags.</p>
-     * <p>Enumerated values for system tags:</p>
+     * <p>Valid values of system tags:</p>
      * <ul>
      * <li><code>System/Scheduler/GRAYSCALE</code>: canary release tag</li>
      * <li><code>System/Scheduler/STOP_NEW_USER_CONNECTION</code>: tag that prevents newly bound users in a delivery group from establishing connections.</li>

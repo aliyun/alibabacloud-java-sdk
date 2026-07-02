@@ -59,13 +59,17 @@ public class GetRuntimeChannelResponseBody extends TeaModel {
 
     public static class GetRuntimeChannelResponseBodyData extends TeaModel {
         /**
-         * <p>The channel avatar URL.</p>
+         * <p>The URL of the channel avatar.</p>
          */
         @NameInMap("AvatarUrl")
         public String avatarUrl;
 
         /**
-         * <p>The channel type. Valid values: System: a system-supported channel. Custom: a custom channel.</p>
+         * <p>The channel type. Valid values:</p>
+         * <ul>
+         * <li>System: a channel supported by the system.</li>
+         * <li>Custom: a custom channel.</li>
+         * </ul>
          */
         @NameInMap("ChannelType")
         public String channelType;
@@ -81,7 +85,7 @@ public class GetRuntimeChannelResponseBody extends TeaModel {
 
         /**
          * <p>The channel configuration JSON string.</p>
-         * <p>Currently, only the simple configuration mode is supported. You must pass in AppKey and AppSecret.</p>
+         * <p>Currently, only the simple configuration mode is supported. You must pass the AppKey and AppSecret parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -93,13 +97,17 @@ public class GetRuntimeChannelResponseBody extends TeaModel {
         public String config;
 
         /**
-         * <p>The configuration mode. Valid values: Simple: simple configuration mode. Custom: custom configuration mode.</p>
+         * <p>The configuration mode. Valid values:</p>
+         * <ul>
+         * <li>Simple: simple configuration mode.</li>
+         * <li>Custom: custom configuration mode.</li>
+         * </ul>
          */
         @NameInMap("ConfigMode")
         public String configMode;
 
         /**
-         * <p>The QR code configuration notification page URL. This parameter is returned only for the ENTERPRISE or ENTERPRISE_JVS platform.</p>
+         * <p>The URL of the QR code configuration notification page. This parameter is returned only for the ENTERPRISE or ENTERPRISE_JVS platform.</p>
          */
         @NameInMap("QrCodeNotifyUrl")
         public String qrCodeNotifyUrl;

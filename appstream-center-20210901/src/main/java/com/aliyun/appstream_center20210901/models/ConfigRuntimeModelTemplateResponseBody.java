@@ -59,7 +59,7 @@ public class ConfigRuntimeModelTemplateResponseBody extends TeaModel {
 
     public static class ConfigRuntimeModelTemplateResponseBodyData extends TeaModel {
         /**
-         * <p>The error code returned if the execution fails.</p>
+         * <p>The error code returned when the execution fails.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -68,7 +68,7 @@ public class ConfigRuntimeModelTemplateResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The HTTP status code returned if the execution fails.</p>
+         * <p>The HTTP status code returned when the execution fails.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -77,7 +77,7 @@ public class ConfigRuntimeModelTemplateResponseBody extends TeaModel {
         public Integer httpStatusCode;
 
         /**
-         * <p>The error message returned if the execution fails.</p>
+         * <p>The error message returned when the execution fails.</p>
          * 
          * <strong>example:</strong>
          * <p>The parameter callerUid may not be null.</p>

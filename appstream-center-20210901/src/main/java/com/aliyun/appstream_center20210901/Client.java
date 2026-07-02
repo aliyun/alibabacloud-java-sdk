@@ -297,8 +297,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can assign a model group to resources associated with agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. The model group serves as the inference engine for tasks executed by agents within the resource group.
-     * When both an agent runtime and its resource group have model groups configured, the model group bound to the resource group takes effect. The resource group setting takes priority over the agent runtime setting.
+     * <p>You can assign a model group to the resources associated with agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. The model group serves as the inference engine for tasks executed by agents within the resource group.
+     * When an agent runtime has its own model group configured and the resource group it belongs to also has a model group configured, the model group bound to the resource group takes effect. The resource group setting has a higher priority than the agent runtime setting.
      * Before calling this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</p>
      * 
      * <b>summary</b> : 
@@ -338,8 +338,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can assign a model group to resources associated with agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. The model group serves as the inference engine for tasks executed by agents within the resource group.
-     * When both an agent runtime and its resource group have model groups configured, the model group bound to the resource group takes effect. The resource group setting takes priority over the agent runtime setting.
+     * <p>You can assign a model group to the resources associated with agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. The model group serves as the inference engine for tasks executed by agents within the resource group.
+     * When an agent runtime has its own model group configured and the resource group it belongs to also has a model group configured, the model group bound to the resource group takes effect. The resource group setting has a higher priority than the agent runtime setting.
      * Before calling this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</p>
      * 
      * <b>summary</b> : 
@@ -436,7 +436,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>You can authorize model groups for Agent runtime resources such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. The model groups serve as inference engines for Agent task execution.
-     * Make sure that you are familiar with the operations and usage of the Wuying Agent Management Center before calling this operation.</p>
+     * Before calling this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</p>
      * 
      * <b>summary</b> : 
      * <p>Configures model groups for Agent runtime resources.</p>
@@ -480,7 +480,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>You can authorize model groups for Agent runtime resources such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. The model groups serve as inference engines for Agent task execution.
-     * Make sure that you are familiar with the operations and usage of the Wuying Agent Management Center before calling this operation.</p>
+     * Before calling this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</p>
      * 
      * <b>summary</b> : 
      * <p>Configures model groups for Agent runtime resources.</p>
@@ -2345,7 +2345,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of session instances in a delivery group, including instance IDs, instance statuses, creation time, update time, session statuses, and public IP addresses of primary network interfaces.</p>
+     * <p>Queries the details of session instances in a delivery group, including instance ID, instance status, creation time, update time, session status, and public IP address of the primary network interface.</p>
      * 
      * @param request ListAppInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2407,7 +2407,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of session instances in a delivery group, including instance IDs, instance statuses, creation time, update time, session statuses, and public IP addresses of primary network interfaces.</p>
+     * <p>Queries the details of session instances in a delivery group, including instance ID, instance status, creation time, update time, session status, and public IP address of the primary network interface.</p>
      * 
      * @param request ListAppInstancesRequest
      * @return ListAppInstancesResponse
@@ -4383,7 +4383,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to remove a specific third-party channel configuration from agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. After the configuration is removed, the agent can no longer use the third-party channel for conversations.
+     * <p>You can call this operation to remove a specific third-party channel configuration from an agent runtime such as JVS Computer, OpenClaw, or Hermes Agent in the Wuying Agent Management Center. After the configuration is removed, the agent can no longer use the third-party channel for conversations.
      * Before calling this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</p>
      * 
      * <b>summary</b> : 
@@ -4435,7 +4435,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to remove a specific third-party channel configuration from agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. After the configuration is removed, the agent can no longer use the third-party channel for conversations.
+     * <p>You can call this operation to remove a specific third-party channel configuration from an agent runtime such as JVS Computer, OpenClaw, or Hermes Agent in the Wuying Agent Management Center. After the configuration is removed, the agent can no longer use the third-party channel for conversations.
      * Before calling this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</p>
      * 
      * <b>summary</b> : 
@@ -4455,7 +4455,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * Make sure that you are familiar with the operations and usage of the Wuying Agent Management Center before calling this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Removes a model group from an Agent runtime resource.</p>
+     * <p>Removes model groups from Agent runtime resources.</p>
      * 
      * @param request RemoveRuntimeModelTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4499,7 +4499,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * Make sure that you are familiar with the operations and usage of the Wuying Agent Management Center before calling this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Removes a model group from an Agent runtime resource.</p>
+     * <p>Removes model groups from Agent runtime resources.</p>
      * 
      * @param request RemoveRuntimeModelTemplateRequest
      * @return RemoveRuntimeModelTemplateResponse
