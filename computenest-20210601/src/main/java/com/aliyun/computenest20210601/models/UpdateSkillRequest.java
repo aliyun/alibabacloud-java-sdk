@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateSkillRequest extends TeaModel {
     /**
-     * <p>A unique, client-generated token to ensure request idempotence. <strong>ClientToken</strong> can contain only ASCII characters and must not exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The value of <strong>ClientToken</strong> can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -14,7 +14,7 @@ public class UpdateSkillRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>This parameter is required if <code>SourceType</code> is set to <code>UPLOAD</code>. It specifies the Object Storage Service (OSS) URL of the compressed skill package to upload.</p>
+     * <p>Required when SourceType is set to UPLOAD. The OSS URL of the skill package to upload.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/30516570">https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/30516570</a></p>
@@ -23,13 +23,16 @@ public class UpdateSkillRequest extends TeaModel {
     public String ossUrl;
 
     /**
-     * <p>The skill description.</p>
+     * <p>The description of the skill.</p>
      * 
      * <strong>example:</strong>
      * <p>11111</p>
      */
     @NameInMap("SkillDescription")
     public String skillDescription;
+
+    @NameInMap("SkillDisplayName")
+    public String skillDisplayName;
 
     /**
      * <p>The ID of the skill to update.</p>
@@ -42,13 +45,13 @@ public class UpdateSkillRequest extends TeaModel {
     public String skillId;
 
     /**
-     * <p>An array of skill labels.</p>
+     * <p>The labels of the skill.</p>
      */
     @NameInMap("SkillLabels")
     public java.util.List<String> skillLabels;
 
     /**
-     * <p>The skill name.</p>
+     * <p>The name of the skill.</p>
      * 
      * <strong>example:</strong>
      * <p>111111</p>
@@ -57,7 +60,7 @@ public class UpdateSkillRequest extends TeaModel {
     public String skillName;
 
     /**
-     * <p>This parameter is required if <code>SourceType</code> is set to <code>COPY</code>. It specifies the ID of the public skill.</p>
+     * <p>Required when SourceType is set to COPY. The ID of the public skill.</p>
      * 
      * <strong>example:</strong>
      * <p>s-111</p>
@@ -66,8 +69,7 @@ public class UpdateSkillRequest extends TeaModel {
     public String sourceSkillId;
 
     /**
-     * <p>The source type for the skill update.</p>
-     * <p>This parameter is required.</p>
+     * <p>The source type for updating the skill.</p>
      * 
      * <strong>example:</strong>
      * <p>COPY</p>
@@ -102,6 +104,14 @@ public class UpdateSkillRequest extends TeaModel {
     }
     public String getSkillDescription() {
         return this.skillDescription;
+    }
+
+    public UpdateSkillRequest setSkillDisplayName(String skillDisplayName) {
+        this.skillDisplayName = skillDisplayName;
+        return this;
+    }
+    public String getSkillDisplayName() {
+        return this.skillDisplayName;
     }
 
     public UpdateSkillRequest setSkillId(String skillId) {

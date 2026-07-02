@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GenerateServicePolicyShrinkRequest extends TeaModel {
     /**
-     * <p>The types of operations for which to generate policy information.</p>
+     * <p>The operation types for which policy information needs to be generated.</p>
      */
     @NameInMap("OperationTypes")
     public java.util.List<String> operationTypes;
@@ -52,11 +52,11 @@ public class GenerateServicePolicyShrinkRequest extends TeaModel {
     public String templateName;
 
     /**
-     * <p>The trial type. The default value is NotTrial. Valid values:</p>
+     * <p>The trial type. Default value: NotTrial. Valid values:</p>
      * <ul>
-     * <li><p>Trial: The service supports trial use.</p>
+     * <li><p>Trial: Trial is supported.</p>
      * </li>
-     * <li><p>NotTrial: The service does not support trial use.</p>
+     * <li><p>NotTrial: Trial is not supported.</p>
      * </li>
      * </ul>
      * 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSkillsResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of entries returned per page.</p>
+     * <p>The maximum number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListSkillsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token to retrieve the next page of results. This parameter is empty when all results have been returned.</p>
+     * <p>The token for the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAWns8w4MmhzeptXVRG0PUEU=</p>
@@ -23,7 +23,7 @@ public class ListSkillsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>06BF8F22-02DC-4750-83DF-3FFC11C065EA</p>
@@ -32,13 +32,13 @@ public class ListSkillsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A list of Skills.</p>
+     * <p>The list of skills.</p>
      */
     @NameInMap("Skills")
     public java.util.List<ListSkillsResponseBodySkills> skills;
 
     /**
-     * <p>The total number of entries that match the query.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -91,9 +91,50 @@ public class ListSkillsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListSkillsResponseBodySkillsLocales extends TeaModel {
+        @NameInMap("EnValue")
+        public String enValue;
+
+        @NameInMap("OriginalValue")
+        public String originalValue;
+
+        @NameInMap("ZhValue")
+        public String zhValue;
+
+        public static ListSkillsResponseBodySkillsLocales build(java.util.Map<String, ?> map) throws Exception {
+            ListSkillsResponseBodySkillsLocales self = new ListSkillsResponseBodySkillsLocales();
+            return TeaModel.build(map, self);
+        }
+
+        public ListSkillsResponseBodySkillsLocales setEnValue(String enValue) {
+            this.enValue = enValue;
+            return this;
+        }
+        public String getEnValue() {
+            return this.enValue;
+        }
+
+        public ListSkillsResponseBodySkillsLocales setOriginalValue(String originalValue) {
+            this.originalValue = originalValue;
+            return this;
+        }
+        public String getOriginalValue() {
+            return this.originalValue;
+        }
+
+        public ListSkillsResponseBodySkillsLocales setZhValue(String zhValue) {
+            this.zhValue = zhValue;
+            return this;
+        }
+        public String getZhValue() {
+            return this.zhValue;
+        }
+
+    }
+
     public static class ListSkillsResponseBodySkills extends TeaModel {
         /**
-         * <p>The creation time of the Skill.</p>
+         * <p>The time when the skill was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-05-10T02:22:18Z</p>
@@ -102,7 +143,7 @@ public class ListSkillsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The download URL of the Skill package. This parameter is returned only if <code>NeedDownloadUrl</code> is set to <code>true</code>.</p>
+         * <p>The download URL of the skill package.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://testts-1.oss-cn-beijing.aliyuncs.com/app/yyb_9.1.1.zip">https://testts-1.oss-cn-beijing.aliyuncs.com/app/yyb_9.1.1.zip</a></p>
@@ -111,7 +152,14 @@ public class ListSkillsResponseBody extends TeaModel {
         public String downloadUrl;
 
         /**
-         * <p>The Skill description.</p>
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("Locales")
+        public java.util.List<ListSkillsResponseBodySkillsLocales> locales;
+
+        /**
+         * <p>The skill description.</p>
          * 
          * <strong>example:</strong>
          * <p>1111</p>
@@ -119,8 +167,11 @@ public class ListSkillsResponseBody extends TeaModel {
         @NameInMap("SkillDescription")
         public String skillDescription;
 
+        @NameInMap("SkillDisplayName")
+        public String skillDisplayName;
+
         /**
-         * <p>The Skill ID.</p>
+         * <p>Skill ID</p>
          * 
          * <strong>example:</strong>
          * <p>s-111111</p>
@@ -129,13 +180,13 @@ public class ListSkillsResponseBody extends TeaModel {
         public String skillId;
 
         /**
-         * <p>The Skill labels.</p>
+         * <p>The set of skill labels.</p>
          */
         @NameInMap("SkillLabels")
         public java.util.List<String> skillLabels;
 
         /**
-         * <p>The Skill name.</p>
+         * <p>The skill name.</p>
          * 
          * <strong>example:</strong>
          * <p>reimbursement-print</p>
@@ -144,7 +195,7 @@ public class ListSkillsResponseBody extends TeaModel {
         public String skillName;
 
         /**
-         * <p>The ID of the SkillSpace to which the Skill belongs.</p>
+         * <p>The ID of the SkillSpace to which the skill belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>ss-11111</p>
@@ -153,7 +204,7 @@ public class ListSkillsResponseBody extends TeaModel {
         public String skillSpaceId;
 
         /**
-         * <p>The last update time of the Skill.</p>
+         * <p>The time when the skill was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-11-03T22:58:52Z</p>
@@ -182,12 +233,28 @@ public class ListSkillsResponseBody extends TeaModel {
             return this.downloadUrl;
         }
 
+        public ListSkillsResponseBodySkills setLocales(java.util.List<ListSkillsResponseBodySkillsLocales> locales) {
+            this.locales = locales;
+            return this;
+        }
+        public java.util.List<ListSkillsResponseBodySkillsLocales> getLocales() {
+            return this.locales;
+        }
+
         public ListSkillsResponseBodySkills setSkillDescription(String skillDescription) {
             this.skillDescription = skillDescription;
             return this;
         }
         public String getSkillDescription() {
             return this.skillDescription;
+        }
+
+        public ListSkillsResponseBodySkills setSkillDisplayName(String skillDisplayName) {
+            this.skillDisplayName = skillDisplayName;
+            return this;
+        }
+        public String getSkillDisplayName() {
+            return this.skillDisplayName;
         }
 
         public ListSkillsResponseBodySkills setSkillId(String skillId) {

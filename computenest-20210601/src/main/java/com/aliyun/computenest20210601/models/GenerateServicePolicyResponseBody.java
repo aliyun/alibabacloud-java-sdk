@@ -11,7 +11,7 @@ public class GenerateServicePolicyResponseBody extends TeaModel {
     public java.util.List<GenerateServicePolicyResponseBodyMissingPolicy> missingPolicy;
 
     /**
-     * <p>The required access policy.</p>
+     * <p>The custom properties of the required access policy.</p>
      * 
      * <strong>example:</strong>
      * <p>{Statement&quot;: [{ &quot;Action&quot;: [&quot;oos:<em>&quot;], &quot;Effect&quot;: &quot;Allow&quot;, &quot;Resource&quot;: &quot;</em>&quot;},{ &quot;Action&quot;: [&quot;ecs:DescribeInstances&quot;], &quot;Effect&quot;: &quot;Allow&quot;, &quot;Resource&quot;: &quot;<em>&quot;},{ &quot;Action&quot;: [&quot;ecs:RunInstance&quot;], &quot;Effect&quot;: &quot;Allow&quot;, &quot;Resource&quot;: &quot;</em>&quot;}], &quot;Version&quot;: &quot;1&quot;}</p>
@@ -65,7 +65,7 @@ public class GenerateServicePolicyResponseBody extends TeaModel {
         public java.util.List<String> action;
 
         /**
-         * <p>The object to which the permissions are granted. An asterisk (\*) indicates all resources.</p>
+         * <p>The specific resource that is authorized. An asterisk (*) indicates all resources.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -76,7 +76,7 @@ public class GenerateServicePolicyResponseBody extends TeaModel {
         public String resource;
 
         /**
-         * <p>The name of the service to which the access policy belongs.</p>
+         * <p>The service name to which the access policy belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs</p>

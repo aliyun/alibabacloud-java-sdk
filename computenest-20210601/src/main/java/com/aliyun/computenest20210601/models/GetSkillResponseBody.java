@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSkillResponseBody extends TeaModel {
     /**
-     * <p>The time the Skill was created.</p>
+     * <p>The time when the Skill was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-05-20T00:00:00Z</p>
@@ -14,7 +14,14 @@ public class GetSkillResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The request ID.</p>
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("Locales")
+    public java.util.List<GetSkillResponseBodyLocales> locales;
+
+    /**
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>13FE89A5-C036-56BF-A0FF-A31C59819FD7</p>
@@ -23,7 +30,7 @@ public class GetSkillResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The description of the Skill.</p>
+     * <p>The Skill description.</p>
      * 
      * <strong>example:</strong>
      * <p>11111111</p>
@@ -31,8 +38,11 @@ public class GetSkillResponseBody extends TeaModel {
     @NameInMap("SkillDescription")
     public String skillDescription;
 
+    @NameInMap("SkillDisplayName")
+    public String skillDisplayName;
+
     /**
-     * <p>The ID of the Skill.</p>
+     * <p>Skill ID</p>
      * 
      * <strong>example:</strong>
      * <p>s-04zzrgosj6xd11yah</p>
@@ -41,13 +51,13 @@ public class GetSkillResponseBody extends TeaModel {
     public String skillId;
 
     /**
-     * <p>The labels of the Skill.</p>
+     * <p>The Skill labels.</p>
      */
     @NameInMap("SkillLabels")
     public java.util.List<String> skillLabels;
 
     /**
-     * <p>The name of the Skill.</p>
+     * <p>The Skill name.</p>
      * 
      * <strong>example:</strong>
      * <p>skill-hello</p>
@@ -65,7 +75,7 @@ public class GetSkillResponseBody extends TeaModel {
     public String skillSpaceId;
 
     /**
-     * <p>The time the Skill was last updated.</p>
+     * <p>The time when the Skill was last updated.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-05-20T00:00:00Z</p>
@@ -86,6 +96,14 @@ public class GetSkillResponseBody extends TeaModel {
         return this.createTime;
     }
 
+    public GetSkillResponseBody setLocales(java.util.List<GetSkillResponseBodyLocales> locales) {
+        this.locales = locales;
+        return this;
+    }
+    public java.util.List<GetSkillResponseBodyLocales> getLocales() {
+        return this.locales;
+    }
+
     public GetSkillResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -100,6 +118,14 @@ public class GetSkillResponseBody extends TeaModel {
     }
     public String getSkillDescription() {
         return this.skillDescription;
+    }
+
+    public GetSkillResponseBody setSkillDisplayName(String skillDisplayName) {
+        this.skillDisplayName = skillDisplayName;
+        return this;
+    }
+    public String getSkillDisplayName() {
+        return this.skillDisplayName;
     }
 
     public GetSkillResponseBody setSkillId(String skillId) {
@@ -140,6 +166,47 @@ public class GetSkillResponseBody extends TeaModel {
     }
     public String getUpdateTime() {
         return this.updateTime;
+    }
+
+    public static class GetSkillResponseBodyLocales extends TeaModel {
+        @NameInMap("EnValue")
+        public String enValue;
+
+        @NameInMap("OriginalValue")
+        public String originalValue;
+
+        @NameInMap("ZhValue")
+        public String zhValue;
+
+        public static GetSkillResponseBodyLocales build(java.util.Map<String, ?> map) throws Exception {
+            GetSkillResponseBodyLocales self = new GetSkillResponseBodyLocales();
+            return TeaModel.build(map, self);
+        }
+
+        public GetSkillResponseBodyLocales setEnValue(String enValue) {
+            this.enValue = enValue;
+            return this;
+        }
+        public String getEnValue() {
+            return this.enValue;
+        }
+
+        public GetSkillResponseBodyLocales setOriginalValue(String originalValue) {
+            this.originalValue = originalValue;
+            return this;
+        }
+        public String getOriginalValue() {
+            return this.originalValue;
+        }
+
+        public GetSkillResponseBodyLocales setZhValue(String zhValue) {
+            this.zhValue = zhValue;
+            return this;
+        }
+        public String getZhValue() {
+            return this.zhValue;
+        }
+
     }
 
 }

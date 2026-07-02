@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSkillRequest extends TeaModel {
     /**
-     * <p>A client-generated token that ensures request idempotence. It must be unique for each request. The <strong>ClientToken</strong> can contain only ASCII characters and must be no more than 64 characters long.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The value of <strong>ClientToken</strong> can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -14,7 +14,7 @@ public class CreateSkillRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Required when SourceType is set to UPLOAD. The OSS URL of the Skill package to upload.</p>
+     * <p>The OSS URL of the Skill package to upload. This parameter is required when SourceType is set to UPLOAD.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/30516570">https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/30516570</a></p>
@@ -23,13 +23,16 @@ public class CreateSkillRequest extends TeaModel {
     public String ossUrl;
 
     /**
-     * <p>The description of the Skill.</p>
+     * <p>The Skill description.</p>
      * 
      * <strong>example:</strong>
      * <p>11111</p>
      */
     @NameInMap("SkillDescription")
     public String skillDescription;
+
+    @NameInMap("SkillDisplayName")
+    public String skillDisplayName;
 
     /**
      * <p>The Skill labels.</p>
@@ -41,7 +44,7 @@ public class CreateSkillRequest extends TeaModel {
     public java.util.List<String> skillLabels;
 
     /**
-     * <p>The name of the Skill.</p>
+     * <p>The Skill name.</p>
      * 
      * <strong>example:</strong>
      * <p>11111</p>
@@ -50,7 +53,7 @@ public class CreateSkillRequest extends TeaModel {
     public String skillName;
 
     /**
-     * <p>The ID of the SkillSpace containing the Skill.</p>
+     * <p>The ID of the SkillSpace to which the Skill belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,7 +63,7 @@ public class CreateSkillRequest extends TeaModel {
     public String skillSpaceId;
 
     /**
-     * <p>Required when SourceType is set to COPY. The ID of the public Skill.</p>
+     * <p>The public Skill ID. This parameter is required when SourceType is set to COPY.</p>
      * 
      * <strong>example:</strong>
      * <p>s-11111</p>
@@ -69,7 +72,7 @@ public class CreateSkillRequest extends TeaModel {
     public String sourceSkillId;
 
     /**
-     * <p>The creation method for the Skill.</p>
+     * <p>The source type used when creating the Skill.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -105,6 +108,14 @@ public class CreateSkillRequest extends TeaModel {
     }
     public String getSkillDescription() {
         return this.skillDescription;
+    }
+
+    public CreateSkillRequest setSkillDisplayName(String skillDisplayName) {
+        this.skillDisplayName = skillDisplayName;
+        return this;
+    }
+    public String getSkillDisplayName() {
+        return this.skillDisplayName;
     }
 
     public CreateSkillRequest setSkillLabels(java.util.List<String> skillLabels) {

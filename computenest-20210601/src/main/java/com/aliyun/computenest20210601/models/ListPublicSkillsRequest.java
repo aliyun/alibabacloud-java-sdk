@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListPublicSkillsRequest extends TeaModel {
     /**
-     * <p>A list of filters.</p>
+     * <p>The filter.</p>
      */
     @NameInMap("Filter")
     public java.util.List<ListPublicSkillsRequestFilter> filter;
 
     /**
-     * <p>The maximum number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListPublicSkillsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Specifies whether to return the download link for the skill package.</p>
+     * <p>Specifies whether to include the download URL of the skill package.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -29,7 +29,7 @@ public class ListPublicSkillsRequest extends TeaModel {
     public Boolean needDownloadUrl;
 
     /**
-     * <p>The token to retrieve the next page of results.</p>
+     * <p>The token for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAfu+XtuBE55iRLHEYYuojI4=</p>
@@ -76,17 +76,17 @@ public class ListPublicSkillsRequest extends TeaModel {
 
     public static class ListPublicSkillsRequestFilter extends TeaModel {
         /**
-         * <p>The filter criterion. Valid values:</p>
+         * <p>The filter name. You can specify one or more names for the query. Valid values:</p>
          * <ul>
-         * <li><p><code>SkillId</code>: The ID of the skill. An exact match is performed.</p>
+         * <li><p>SkillId: the skill ID. Exact match.</p>
          * </li>
-         * <li><p><code>SkillName</code>: The name of the skill.</p>
+         * <li><p>SkillName: the skill name.</p>
          * </li>
-         * <li><p><code>MatchType</code>: The match type for the <code>SkillName</code> filter. Valid values: <code>exact</code> (exact match), <code>prefix</code> (prefix match), and <code>fuzzy</code> (fuzzy match).</p>
+         * <li><p>MatchType: the match type that controls how SkillName is matched. Valid values: exact, prefix, and fuzzy.</p>
          * </li>
-         * <li><p><code>Keyword</code>: The keyword used for a fuzzy match on the skill name or skill description.</p>
+         * <li><p>Keyword: keyword match for the skill name or skill description. Fuzzy match.</p>
          * </li>
-         * <li><p><code>SkillLabels</code>: The skill labels. A fuzzy match is performed.</p>
+         * <li><p>SkillLabels: the skill label set. Fuzzy match.</p>
          * </li>
          * </ul>
          * 
@@ -97,7 +97,7 @@ public class ListPublicSkillsRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The filter values. You can specify 1 to 10 values.</p>
+         * <p>The list of filter values. Valid values of N: 1 to 10.</p>
          */
         @NameInMap("Value")
         public java.util.List<String> value;
