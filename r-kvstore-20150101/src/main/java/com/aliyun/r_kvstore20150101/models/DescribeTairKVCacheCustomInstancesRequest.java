@@ -4,52 +4,24 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeTairKVCacheCustomInstancesRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>PrePaid</p>
-     */
     @NameInMap("ChargeType")
     public String chargeType;
 
-    /**
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("Expired")
     public String expired;
 
-    /**
-     * <strong>example:</strong>
-     * <p>tair.gpu.test.16g</p>
-     */
     @NameInMap("InstanceClass")
     public String instanceClass;
 
-    /**
-     * <strong>example:</strong>
-     * <p>tc-bp16e70a4338****</p>
-     */
     @NameInMap("InstanceIds")
     public String instanceIds;
 
-    /**
-     * <strong>example:</strong>
-     * <p>Normal</p>
-     */
     @NameInMap("InstanceStatus")
     public String instanceStatus;
 
-    /**
-     * <strong>example:</strong>
-     * <p>TairCustom</p>
-     */
     @NameInMap("InstanceType")
     public String instanceType;
 
-    /**
-     * <strong>example:</strong>
-     * <p>VPC</p>
-     */
     @NameInMap("NetworkType")
     public String networkType;
 
@@ -59,34 +31,18 @@ public class DescribeTairKVCacheCustomInstancesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <strong>example:</strong>
-     * <p>30</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("PrivateIp")
     public String privateIp;
 
-    /**
-     * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>rg-acfmyiu4ekp****</p>
-     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -96,10 +52,6 @@ public class DescribeTairKVCacheCustomInstancesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>apitest</p>
-     */
     @NameInMap("SearchKey")
     public String searchKey;
 
@@ -109,24 +61,12 @@ public class DescribeTairKVCacheCustomInstancesRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<DescribeTairKVCacheCustomInstancesRequestTag> tag;
 
-    /**
-     * <strong>example:</strong>
-     * <p>vsw-bp1e7clcw529l773d****</p>
-     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>vpc-bp1nme44gek34slfc****</p>
-     */
     @NameInMap("VpcId")
     public String vpcId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>cn-hangzhou-h</p>
-     */
     @NameInMap("ZoneId")
     public String zoneId;
 
@@ -312,17 +252,9 @@ public class DescribeTairKVCacheCustomInstancesRequest extends TeaModel {
     }
 
     public static class DescribeTairKVCacheCustomInstancesRequestTag extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>key1_test</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <strong>example:</strong>
-         * <p>value1_test</p>
-         */
         @NameInMap("Value")
         public String value;
 

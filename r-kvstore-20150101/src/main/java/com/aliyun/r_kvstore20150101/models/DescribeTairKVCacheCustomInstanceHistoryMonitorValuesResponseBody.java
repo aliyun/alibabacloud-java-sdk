@@ -4,31 +4,15 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeTairKVCacheCustomInstanceHistoryMonitorValuesResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>{ “timestamp”: 1490164200000, “Maximum”: 100, “userId”: “1234567898765432”, “Minimum”: 4.55, “instanceId”: “i-bp18abl200xk9599ck7c”, “Average”: 93.84 }</p>
-     */
     @NameInMap("Datapoints")
     public String datapoints;
 
-    /**
-     * <strong>example:</strong>
-     * <p>212db86sca4384811e0b5e8707ec2****</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    /**
-     * <strong>example:</strong>
-     * <p>60</p>
-     */
     @NameInMap("Period")
     public String period;
 
-    /**
-     * <strong>example:</strong>
-     * <p>F3F44BE3-5419-4B61-9BAC-E66E295A****</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

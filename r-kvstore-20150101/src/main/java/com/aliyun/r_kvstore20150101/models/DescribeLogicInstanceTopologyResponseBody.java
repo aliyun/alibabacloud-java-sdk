@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>r-bp1zxszhcgatnx****</p>
@@ -20,7 +20,7 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
     public DescribeLogicInstanceTopologyResponseBodyRedisShardList redisShardList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>794120D1-E0CF-4713-BAE4-EBAEA04506AF</p>

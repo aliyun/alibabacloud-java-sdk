@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class StartTairKVCacheCustomInstanceRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>tc-bp1zxszhcgatnx****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

@@ -8,7 +8,7 @@ public class CreateBackupResponseBody extends TeaModel {
      * <p>The ID of the backup task.</p>
      * 
      * <strong>example:</strong>
-     * <p>1162****</p>
+     * <p>&quot;1022,2480&quot;</p>
      */
     @NameInMap("BackupJobID")
     public String backupJobID;

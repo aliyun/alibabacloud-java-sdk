@@ -35,7 +35,7 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of returned records.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>

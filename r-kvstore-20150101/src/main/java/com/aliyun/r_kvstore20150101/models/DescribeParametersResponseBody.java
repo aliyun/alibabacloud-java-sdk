@@ -8,7 +8,7 @@ public class DescribeParametersResponseBody extends TeaModel {
     public DescribeParametersResponseBodyConfigParameters configParameters;
 
     /**
-     * <p>The database engine that the instance runs.</p>
+     * <p>The database type.</p>
      * 
      * <strong>example:</strong>
      * <p>redis</p>
@@ -17,7 +17,7 @@ public class DescribeParametersResponseBody extends TeaModel {
     public String engine;
 
     /**
-     * <p>The database engine version of the instance.</p>
+     * <p>The database engine version.</p>
      * 
      * <strong>example:</strong>
      * <p>4.0</p>
@@ -26,7 +26,7 @@ public class DescribeParametersResponseBody extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9C1338BE-8DE8-4890-A900-E1BC06BF****</p>

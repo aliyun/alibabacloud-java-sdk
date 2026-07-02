@@ -57,7 +57,7 @@ public class DescribeInstancesOverviewRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>4.0</p>
+     * <p>6.0</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;

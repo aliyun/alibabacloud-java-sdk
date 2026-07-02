@@ -18,7 +18,7 @@ public class DescribeClusterBackupListRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2021-05-13T00:00:00Z</p>
+     * <p>2024-07-01T09:26Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -111,7 +111,7 @@ public class DescribeClusterBackupListRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2018-12-03T07:01Z</p>
+     * <p>2024-06-28T08:26Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

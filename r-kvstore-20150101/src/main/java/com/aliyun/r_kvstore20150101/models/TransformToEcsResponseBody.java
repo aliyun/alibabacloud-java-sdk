@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TransformToEcsResponseBody extends TeaModel {
     /**
-     * <p>The order ID.</p>
+     * <p>The ID of the order.</p>
      * 
      * <strong>example:</strong>
      * <p>20905403119****</p>
@@ -14,7 +14,7 @@ public class TransformToEcsResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>DAABAD9B-890F-56C0-806C-6144946594AB</p>

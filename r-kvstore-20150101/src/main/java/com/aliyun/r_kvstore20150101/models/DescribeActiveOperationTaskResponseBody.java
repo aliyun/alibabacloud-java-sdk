@@ -96,7 +96,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
          * <p>The time when the O\&amp;M task was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
-         * <p>2018-07-15 23:59:59</p>
+         * <p>2023-02-24T06:00:11Z</p>
          */
         @NameInMap("CreatedTime")
         public String createdTime;
@@ -114,7 +114,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
          * <p>The deadline before which the time to preform the O&amp;M task can be modified. The time in UTC is displayed in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format.</p>
          * 
          * <strong>example:</strong>
-         * <p>2018-07-19 23:59:59</p>
+         * <p>2023-03-29T13:59:59Z</p>
          */
         @NameInMap("Deadline")
         public String deadline;
@@ -123,7 +123,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
          * <p>The ID of the O&amp;M task.</p>
          * 
          * <strong>example:</strong>
-         * <p>114111</p>
+         * <p>1****1</p>
          */
         @NameInMap("Id")
         public Integer id;
@@ -141,7 +141,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
          * <p>The time when the O\&amp;M task was modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
-         * <p>2018-07-19 14:00:00</p>
+         * <p>2023-02-24T08:18:53Z</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
@@ -168,7 +168,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
          * <p>The time when the O\&amp;M task was preformed. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
-         * <p>2018-07-19 10:00:00</p>
+         * <p>2023-03-20T02:40:00Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -194,7 +194,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
          * <p>The time when the system performs the switchover operation. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
-         * <p>2018-07-19 14:00:00</p>
+         * <p>2023-03-20T03:10:00Z</p>
          */
         @NameInMap("SwitchTime")
         public String switchTime;

@@ -183,7 +183,7 @@ public class DescribePriceResponseBody extends TeaModel {
          * <p>The activity name.</p>
          * 
          * <strong>example:</strong>
-         * <p>contract promotion_order_xxx discount</p>
+         * <p>合同优惠_整单_xxx折</p>
          */
         @NameInMap("ActivityName")
         public String activityName;

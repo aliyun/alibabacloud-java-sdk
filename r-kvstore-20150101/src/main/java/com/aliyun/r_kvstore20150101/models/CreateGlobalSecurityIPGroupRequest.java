@@ -12,7 +12,7 @@ public class CreateGlobalSecurityIPGroupRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>111.175.56.206,47.253.88.168,111.181.0.162</p>
+     * <p>192.168.0.1,10.10.10.10,172.16.0.1</p>
      */
     @NameInMap("GIpList")
     public String GIpList;

@@ -72,7 +72,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>redis</p>
+         * <p>tair_pena</p>
          */
         @NameInMap("Engine")
         public String engine;

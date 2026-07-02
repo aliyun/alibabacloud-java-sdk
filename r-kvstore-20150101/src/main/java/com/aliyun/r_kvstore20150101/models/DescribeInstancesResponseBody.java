@@ -8,7 +8,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
     public DescribeInstancesResponseBodyInstances instances;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number of the instance list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -26,7 +26,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1E83311F-0EE4-4922-A3BF-730B312B****</p>
@@ -225,6 +225,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("QPS")
         public Long QPS;
 
+        @NameInMap("QuotaCount")
+        public Long quotaCount;
+
         @NameInMap("ReadOnlyCount")
         public String readOnlyCount;
 
@@ -257,6 +260,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         @NameInMap("Tags")
         public DescribeInstancesResponseBodyInstancesKVStoreInstanceTags tags;
+
+        @NameInMap("UsedCount")
+        public Long usedCount;
 
         @NameInMap("UserName")
         public String userName;
@@ -510,6 +516,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.QPS;
         }
 
+        public DescribeInstancesResponseBodyInstancesKVStoreInstance setQuotaCount(Long quotaCount) {
+            this.quotaCount = quotaCount;
+            return this;
+        }
+        public Long getQuotaCount() {
+            return this.quotaCount;
+        }
+
         public DescribeInstancesResponseBodyInstancesKVStoreInstance setReadOnlyCount(String readOnlyCount) {
             this.readOnlyCount = readOnlyCount;
             return this;
@@ -596,6 +610,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public DescribeInstancesResponseBodyInstancesKVStoreInstanceTags getTags() {
             return this.tags;
+        }
+
+        public DescribeInstancesResponseBodyInstancesKVStoreInstance setUsedCount(Long usedCount) {
+            this.usedCount = usedCount;
+            return this;
+        }
+        public Long getUsedCount() {
+            return this.usedCount;
         }
 
         public DescribeInstancesResponseBodyInstancesKVStoreInstance setUserName(String userName) {

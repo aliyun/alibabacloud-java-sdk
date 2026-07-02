@@ -150,7 +150,7 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>all</p>
+     * <p>rds_apsradb_transfer</p>
      */
     @NameInMap("TaskType")
     public String taskType;

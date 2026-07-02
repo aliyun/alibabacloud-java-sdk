@@ -18,7 +18,7 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2019-03-22T14:11Z</p>
+     * <p>2019-03-10T15:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -131,7 +131,7 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2019-03-10T14:11Z</p>
+     * <p>2019-03-10T14:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

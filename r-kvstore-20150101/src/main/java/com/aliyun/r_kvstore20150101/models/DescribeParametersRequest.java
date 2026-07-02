@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeParametersRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,9 +15,9 @@ public class DescribeParametersRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The ID of the node.</p>
+     * <p>The node ID.</p>
      * <blockquote>
-     * <p>You can set this parameter to query the parameter settings of the specified node in a cluster instance.</p>
+     * <p>Specify this parameter to query the parameter settings of a specific node in a cluster instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class DescribeParametersRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> to query available regions. Use this parameter to specify the region of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

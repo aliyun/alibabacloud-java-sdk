@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeTairSkvDdbTableResponseBody extends TeaModel {
     /**
+     * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>2363CEDF-C697-14B6-AB9E-C57A4AA0EAD4</p>
      */

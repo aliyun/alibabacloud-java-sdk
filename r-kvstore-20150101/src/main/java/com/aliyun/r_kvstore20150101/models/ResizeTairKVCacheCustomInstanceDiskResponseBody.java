@@ -4,17 +4,9 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class ResizeTairKVCacheCustomInstanceDiskResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>20905403119****</p>
-     */
     @NameInMap("OrderId")
     public String orderId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>ABAF95F6-35C1-4177-AF3A-70969EBD****</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

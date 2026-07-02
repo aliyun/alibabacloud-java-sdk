@@ -23,7 +23,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
      * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
-     * <p>30</p>
+     * <p>25</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -41,7 +41,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
      * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>0</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;

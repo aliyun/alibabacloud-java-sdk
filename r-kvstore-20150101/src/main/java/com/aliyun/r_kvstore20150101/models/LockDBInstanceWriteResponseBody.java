@@ -17,7 +17,7 @@ public class LockDBInstanceWriteResponseBody extends TeaModel {
      * <p>The reason why write operations on the instance are locked.</p>
      * 
      * <strong>example:</strong>
-     * <p>lock reason</p>
+     * <p>锁定写操作测试。</p>
      */
     @NameInMap("LockReason")
     public String lockReason;

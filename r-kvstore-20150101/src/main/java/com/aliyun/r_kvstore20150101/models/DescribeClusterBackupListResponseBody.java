@@ -272,7 +272,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
          * <p>The instance name.</p>
          * 
          * <strong>example:</strong>
-         * <p>hins100322105_data_20240108012127.rdb</p>
+         * <p>r-bp1y4is8svonly****-db-0</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
@@ -476,6 +476,12 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
         @NameInMap("ClusterBackupStatus")
         public String clusterBackupStatus;
 
+        /**
+         * <p>The time-to-live (TTL) of the backup set, in the format yyyy-MM-ddTHH:mmZ (UTC time).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-06-01T21:51:22Z</p>
+         */
         @NameInMap("ExpectExpireTime")
         public String expectExpireTime;
 

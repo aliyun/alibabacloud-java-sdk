@@ -8,7 +8,7 @@ public class DeleteParameterGroupResponseBody extends TeaModel {
      * <p>The parameter template ID, which is globally unique.</p>
      * 
      * <strong>example:</strong>
-     * <p>sys-001*****</p>
+     * <p>rpg-sys-00*****</p>
      */
     @NameInMap("ParamGroupId")
     public String paramGroupId;

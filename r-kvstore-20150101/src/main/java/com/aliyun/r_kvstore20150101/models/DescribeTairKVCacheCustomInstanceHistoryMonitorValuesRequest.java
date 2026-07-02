@@ -6,40 +6,22 @@ import com.aliyun.tea.*;
 public class DescribeTairKVCacheCustomInstanceHistoryMonitorValuesRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2024-09-20T00:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
-    /**
-     * <strong>example:</strong>
-     * <p>{\&quot;extend\&quot;:{\&quot;workers\&quot;:\&quot;avg_dispatchers\&quot;}}</p>
-     */
     @NameInMap("Express")
     public String express;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>tc-bp1zxszhcgatnx****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1000</p>
-     */
     @NameInMap("Length")
     public String length;
 
-    /**
-     * <strong>example:</strong>
-     * <p>CPUUtilization</p>
-     */
     @NameInMap("MetricName")
     public String metricName;
 
@@ -49,10 +31,6 @@ public class DescribeTairKVCacheCustomInstanceHistoryMonitorValuesRequest extend
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>60</p>
-     */
     @NameInMap("Period")
     public String period;
 
@@ -67,9 +45,6 @@ public class DescribeTairKVCacheCustomInstanceHistoryMonitorValuesRequest extend
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2024-09-05T08:49:27Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeTairKVCacheInferInstancesRequest extends TeaModel {
     /**
-     * <p>The billing method of the simple application servers. Valid values:</p>
+     * <p>The billing method of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>PrePaid</strong>: subscription</li>
-     * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+     * <li><strong>PrePaid</strong>: subscription.</li>
+     * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class DescribeTairKVCacheInferInstancesRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>Specifies whether the instance has expired. Valid values:</p>
+     * <p>The expiration status of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The instance has expired.</li>
-     * <li><strong>false</strong>: The instance has not expired.</li>
+     * <li><strong>true</strong>: expired.</li>
+     * <li><strong>false</strong>: not expired.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class DescribeTairKVCacheInferInstancesRequest extends TeaModel {
     /**
      * <p>The IDs of the instances that you want to query.</p>
      * <blockquote>
-     * <p> If you want to specify multiple instance IDs, separate the instance IDs with commas (,). You can specify a maximum of 30 instance IDs in a single request.</p>
+     * <p>To specify multiple instance IDs, separate them with commas (,). You can specify up to 30 instance IDs in a single request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -52,13 +52,13 @@ public class DescribeTairKVCacheInferInstancesRequest extends TeaModel {
     public String instanceIds;
 
     /**
-     * <p>The state of the instance. Valid values:</p>
+     * <p>The instance status. Valid values:</p>
      * <ul>
-     * <li><strong>Normal</strong>: The instance is normal.</li>
+     * <li><strong>Normal</strong>: Normal.</li>
      * <li><strong>Creating</strong>: The instance is being created.</li>
      * </ul>
      * <blockquote>
-     * <p> For more information about instance states, see <a href="https://help.aliyun.com/document_detail/200740.html">Instance states and impacts</a>.</p>
+     * <p>For more information about instance statuses, see <a href="https://help.aliyun.com/document_detail/200740.html">Instance states and impacts</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -68,14 +68,9 @@ public class DescribeTairKVCacheInferInstancesRequest extends TeaModel {
     public String instanceStatus;
 
     /**
-     * <p>The network type of the instance. Default value: VPC. Valid values:</p>
+     * <p>The network type. Valid values:</p>
      * <ul>
-     * <li><strong>VPC</strong> (default)</li>
-     * </ul>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>CLASSIC</li>
-     * <li>VPC</li>
+     * <li><strong>VPC</strong>: virtual private cloud (VPC). This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -91,7 +86,7 @@ public class DescribeTairKVCacheInferInstancesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number of the instance list. Start value: 1. Default value: 1.</p>
+     * <p>The page number. The value starts from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -109,7 +104,7 @@ public class DescribeTairKVCacheInferInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The private IP address of the instance. This parameter is deprecated.</p>
+     * <p>The private IP address in the VPC. This parameter is deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>172.16.49.***</p>
@@ -118,7 +113,7 @@ public class DescribeTairKVCacheInferInstancesRequest extends TeaModel {
     public String privateIp;
 
     /**
-     * <p>The ID of the region where the instance resides.</p>
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -128,7 +123,7 @@ public class DescribeTairKVCacheInferInstancesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID. You can leave this parameter empty.</p>
+     * <p>The resource group ID. This parameter can be left empty.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmyiu4ekp****</p>
@@ -143,7 +138,7 @@ public class DescribeTairKVCacheInferInstancesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The keyword that you want to use for fuzzy match. The keyword can be a part of an instance name or an instance ID.</p>
+     * <p>The keyword used for fuzzy search by instance name or instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>apitest</p>
@@ -155,13 +150,13 @@ public class DescribeTairKVCacheInferInstancesRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>Details of the tags.</p>
+     * <p>The tags of the instance.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeTairKVCacheInferInstancesRequestTag> tag;
 
     /**
-     * <p>The ID of the vSwitch.</p>
+     * <p>The vSwitch ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-bp1e7clcw529l773d****</p>
@@ -170,7 +165,7 @@ public class DescribeTairKVCacheInferInstancesRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The ID of the VPC.</p>
+     * <p>The VPC ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp1nme44gek34slfc****</p>
@@ -362,9 +357,9 @@ public class DescribeTairKVCacheInferInstancesRequest extends TeaModel {
 
     public static class DescribeTairKVCacheInferInstancesRequestTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of the tag. The key and value of a tag form a key-value pair.</p>
          * <blockquote>
-         * <p> A maximum of five key-value pairs can be specified at a time.</p>
+         * <p>You can specify up to 5 key-value pairs of tags in a single request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -374,9 +369,9 @@ public class DescribeTairKVCacheInferInstancesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N of the instance.</p>
+         * <p>The value of the tag.</p>
          * <blockquote>
-         * <p> <strong>N</strong> specifies the value of the nth tag. For example, <strong>Tag.1.Value</strong> specifies the value of the first tag, and <strong>Tag.2.Value</strong> specifies the value of the second tag.</p>
+         * <p><strong>N</strong> specifies the sequence number of the tag. For example, <strong>Tag.1.Value</strong> specifies the value of the first tag, and <strong>Tag.2.Value</strong> specifies the value of the second tag.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

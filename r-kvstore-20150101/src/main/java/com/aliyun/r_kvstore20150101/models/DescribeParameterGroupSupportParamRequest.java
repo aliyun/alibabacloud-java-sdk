@@ -42,7 +42,7 @@ public class DescribeParameterGroupSupportParamRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>5</p>
+     * <p>5.0</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;

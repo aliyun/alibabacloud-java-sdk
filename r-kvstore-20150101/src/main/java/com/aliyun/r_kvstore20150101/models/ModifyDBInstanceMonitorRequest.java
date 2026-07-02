@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceMonitorRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,11 +15,11 @@ public class ModifyDBInstanceMonitorRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The interval at which monitoring data is collected. Valid values: 5 and 60. Unit: seconds.</p>
+     * <p>This parameter is deprecated. The monitoring granularity is fixed at 60 seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>5</p>
+     * <p>60</p>
      */
     @NameInMap("Interval")
     public String interval;

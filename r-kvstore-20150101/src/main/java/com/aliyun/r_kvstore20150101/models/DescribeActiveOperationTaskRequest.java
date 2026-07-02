@@ -73,7 +73,7 @@ public class DescribeActiveOperationTaskRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>all</p>
+     * <p>rds_apsaradb_ha</p>
      */
     @NameInMap("TaskType")
     public String taskType;

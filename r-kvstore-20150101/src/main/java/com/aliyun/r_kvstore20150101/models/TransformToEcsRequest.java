@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class TransformToEcsRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the auto-renewal feature. Valid values:</p>
+     * <p>Specifies whether to enable auto-renewal. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables auto-renewal.</li>
-     * <li><strong>false</strong>: does not enable auto-renewal.</li>
+     * <li><p><strong>true</strong>: enables auto-renewal.</p>
+     * </li>
+     * <li><p><strong>false</strong>: disables auto-renewal.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,9 +20,9 @@ public class TransformToEcsRequest extends TeaModel {
     public String autoRenew;
 
     /**
-     * <p>The subscription duration that is supported by auto-renewal. Unit: month. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>6</strong>, and <strong>12</strong>.</p>
+     * <p>The auto-renewal cycle. Unit: month. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>6</strong>, and <strong>12</strong>.</p>
      * <blockquote>
-     * <p>This parameter is required if the <strong>AutoRenew</strong> parameter is set to <strong>true</strong>.</p>
+     * <p>This parameter is required if you set <strong>AutoRenew</strong> to <strong>true</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -30,10 +32,12 @@ public class TransformToEcsRequest extends TeaModel {
     public Long autoRenewPeriod;
 
     /**
-     * <p>The new billing method. Valid values:</p>
+     * <p>The billing method of the target instance. Valid values:</p>
      * <ul>
-     * <li><strong>PostPaid:</strong> pay-as-you-go</li>
-     * <li><strong>PrePaid</strong>: subscription. If you set this parameter to PrePaid, you must also specify the <strong>Period</strong> parameter.</li>
+     * <li><p><strong>PostPaid</strong>: pay-as-you-go</p>
+     * </li>
+     * <li><p><strong>PrePaid</strong>: subscription. If you set this parameter to PrePaid, you must also specify the <strong>Period</strong> parameter.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,10 +47,12 @@ public class TransformToEcsRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>Specifies whether to perform a precheck before the system creates the instance. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The system performs a dry run and does not create the cloud-native instance. The system prechecks the request parameters, request format, service limits, and available resources. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong>: performs a dry run and sends the request. If the request passes the dry run, the instance is created.</li>
+     * <li><p><strong>true</strong>: performs a dry run to check the request. The check items include the required parameters, request format, service limits, and available resources. If the check fails, the corresponding error is returned. If the check passes, the <code>DryRunOperation</code> error code is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): sends a normal request and creates an instance after the request passes the check.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,13 +62,15 @@ public class TransformToEcsRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The time when a database switchover is performed after data is migrated. Valid values:</p>
+     * <p>The time when to switch the database after data migration. Valid values:</p>
      * <ul>
-     * <li><strong>Immediately</strong>: A database switchover is performed immediately after data is migrated.</li>
-     * <li><strong>MaintainTime</strong>: A database switchover is performed during the maintenance window.</li>
+     * <li><p><strong>Immediately</strong>: The database is immediately switched after the migration is complete.</p>
+     * </li>
+     * <li><p><strong>MaintainTime</strong>: The database is switched within the maintenance window.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>Default value: Immediately.</p>
+     * <p>Default value: <strong>Immediately</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -72,7 +80,7 @@ public class TransformToEcsRequest extends TeaModel {
     public String effectiveTime;
 
     /**
-     * <p>The database engine version of the instance. Valid values: <strong>5.0</strong>, <strong>6.0</strong>, and <strong>7.0</strong>.</p>
+     * <p>The Redis-compatible version of the instance. Valid values: <strong>5.0</strong>, <strong>6.0</strong>, and <strong>7.0</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -82,17 +90,24 @@ public class TransformToEcsRequest extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>The instance specification of the cloud-native instance. For more information, see <a href="https://help.aliyun.com/document_detail/26350.html">Overview</a>.</p>
+     * <p>The instance type of the target cloud-native instance. For more information, see <a href="https://help.aliyun.com/document_detail/26350.html">Instance types</a>.</p>
+     * <blockquote>
+     * <p>If you want to convert a cluster instance, you must specify the corresponding cloud-native cluster instance type that includes .with.proxy in its name and specify the ShardCount parameter.</p>
+     * <ul>
+     * <li>For a cluster instance, you must provide the corresponding cloud-native cluster specification that includes <code>.proxy</code>. You must also specify the number of shards by using the <code>ShardCount</code> parameter.</li>
+     * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>tair.rdb.1g</p>
+     * <p>tair.rdb.1g
+     * tair.rdb.with.proxy.1g</p>
      */
     @NameInMap("InstanceClass")
     public String instanceClass;
 
     /**
-     * <p>The ID of the instance that you want to convert.</p>
+     * <p>The ID of the classic instance that you want to convert.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -101,6 +116,18 @@ public class TransformToEcsRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>Specifies whether to deploy the instance across availability zones. This feature is supported only for cluster instances.</p>
+     */
+    @NameInMap("IsAcrossZone")
+    public Boolean isAcrossZone;
+
+    /**
+     * <p>The ID of the availability zone.</p>
+     */
+    @NameInMap("IzNo")
+    public String izNo;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -108,9 +135,9 @@ public class TransformToEcsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The subscription duration of the instance. Unit: months. Valid values: <strong>1</strong>, 2, 3, 4, 5, 6, 7, 8, <strong>9</strong>, <strong>12</strong>, <strong>24</strong>, <strong>36</strong>.</p>
+     * <p>The subscription duration. Unit: month. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, <strong>5</strong>, 6, 7, 8, 9, 12, 24, and 36.</p>
      * <blockquote>
-     * <p>This parameter is available and required only if the <strong>ChargeType</strong> parameter is set to <strong>PrePaid</strong>.</p>
+     * <p>This parameter is available and required only if you set the <strong>ChargeType</strong> parameter to <strong>PrePaid</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -126,6 +153,12 @@ public class TransformToEcsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The ID of the secondary availability zone.</p>
+     */
+    @NameInMap("SecondaryIzNo")
+    public String secondaryIzNo;
+
+    /**
      * <p>The number of data shards in the cloud-native cluster instance.</p>
      * 
      * <strong>example:</strong>
@@ -133,6 +166,12 @@ public class TransformToEcsRequest extends TeaModel {
      */
     @NameInMap("ShardCount")
     public Long shardCount;
+
+    /**
+     * <p>The ID of the vSwitch.</p>
+     */
+    @NameInMap("VSwitchId")
+    public String vSwitchId;
 
     public static TransformToEcsRequest build(java.util.Map<String, ?> map) throws Exception {
         TransformToEcsRequest self = new TransformToEcsRequest();
@@ -203,6 +242,22 @@ public class TransformToEcsRequest extends TeaModel {
         return this.instanceId;
     }
 
+    public TransformToEcsRequest setIsAcrossZone(Boolean isAcrossZone) {
+        this.isAcrossZone = isAcrossZone;
+        return this;
+    }
+    public Boolean getIsAcrossZone() {
+        return this.isAcrossZone;
+    }
+
+    public TransformToEcsRequest setIzNo(String izNo) {
+        this.izNo = izNo;
+        return this;
+    }
+    public String getIzNo() {
+        return this.izNo;
+    }
+
     public TransformToEcsRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
@@ -243,12 +298,28 @@ public class TransformToEcsRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public TransformToEcsRequest setSecondaryIzNo(String secondaryIzNo) {
+        this.secondaryIzNo = secondaryIzNo;
+        return this;
+    }
+    public String getSecondaryIzNo() {
+        return this.secondaryIzNo;
+    }
+
     public TransformToEcsRequest setShardCount(Long shardCount) {
         this.shardCount = shardCount;
         return this;
     }
     public Long getShardCount() {
         return this.shardCount;
+    }
+
+    public TransformToEcsRequest setVSwitchId(String vSwitchId) {
+        this.vSwitchId = vSwitchId;
+        return this;
+    }
+    public String getVSwitchId() {
+        return this.vSwitchId;
     }
 
 }

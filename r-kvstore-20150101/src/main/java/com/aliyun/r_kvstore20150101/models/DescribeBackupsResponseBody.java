@@ -5,16 +5,21 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupsResponseBody extends TeaModel {
     /**
-     * <p>The following parameters are no longer used. Ignore the parameters.</p>
+     * <p>This parameter is deprecated.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public DescribeBackupsResponseBodyAccessDeniedDetail accessDeniedDetail;
 
+    /**
+     * <p>Details about the backup sets.</p>
+     */
     @NameInMap("Backups")
     public DescribeBackupsResponseBodyBackups backups;
 
     /**
-     * <p>This parameter does not take effect. Ignore this parameter.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The free backup quota for the instance, in bytes. The free quota is equal to the default memory size of the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/2664017.html">Changes to the free backup quota policy</a>.
+     * Full backups and log backups share this free quota. When the instance type is changed, the free quota also changes.
+     * &lt;props=&quot;intl&quot;&gt;This parameter is not in effect. Ignore this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>100000</p>
@@ -23,9 +28,9 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public Long freeSize;
 
     /**
-     * <p>The size of the full backup file of the instance. Unit: bytes. Full backups originate from scheduled backups, manual backups, and backups generated during cache analysis.</p>
+     * <p>The total size of full backups for the instance, in bytes. Full backups are generated from scheduled daily backups, manual backups, or cache analysis.</p>
      * <blockquote>
-     * <p> The value of this parameter is independent of the number and size of the returned backup sets. Instead, it reflects the total size of all valid full backups of the instance.</p>
+     * <p>This value represents the total size of all valid full backups for the instance, regardless of the backup sets returned in this request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,9 +40,9 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public Long fullStorageSize;
 
     /**
-     * <p>The size of the log backup file of the instance. Unit: bytes. This value is valid only when flashback is enabled.</p>
+     * <p>The total size of log backups for the instance, in bytes. This parameter is returned only if flashback is enabled.</p>
      * <blockquote>
-     * <p> The value of this parameter is independent of the number and size of the returned backup sets. Instead, it reflects the total size of all valid log backups of the instance.</p>
+     * <p>This value represents the total size of all valid log backups for the instance, regardless of the backup sets returned in this request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -47,7 +52,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public Long logStorageSize;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -56,7 +61,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -65,7 +70,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>963C20F0-7CE1-4591-AAF3-6F3CD1CE****</p>
@@ -74,7 +79,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of backup files that were returned.</p>
+     * <p>The total number of backup sets.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -161,64 +166,78 @@ public class DescribeBackupsResponseBody extends TeaModel {
 
     public static class DescribeBackupsResponseBodyAccessDeniedDetail extends TeaModel {
         /**
-         * <p>This parameter is no longer used. Ignore this parameter.</p>
+         * <p>This parameter is deprecated.</p>
          * 
          * <strong>example:</strong>
-         * <p>_</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("AuthAction")
         public String authAction;
 
         /**
-         * <p>This parameter is no longer used. Ignore this parameter.</p>
+         * <p>This parameter is deprecated.</p>
          * 
          * <strong>example:</strong>
-         * <p>_</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;
 
         /**
-         * <p>This parameter is no longer used. Ignore this parameter.</p>
+         * <p>This parameter is deprecated.</p>
          * 
          * <strong>example:</strong>
-         * <p>_</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("AuthPrincipalOwnerId")
         public String authPrincipalOwnerId;
 
         /**
-         * <p>This parameter is no longer used. Ignore this parameter.</p>
+         * <p>This parameter is deprecated.</p>
          * 
          * <strong>example:</strong>
-         * <p>_</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("AuthPrincipalType")
         public String authPrincipalType;
 
         /**
-         * <p>This parameter is no longer used. Ignore this parameter.</p>
+         * <p>This parameter is deprecated.</p>
          * 
          * <strong>example:</strong>
-         * <p>_</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("EncodedDiagnosticMessage")
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>This parameter is no longer used. Ignore this parameter.</p>
+         * <p>This parameter is deprecated.</p>
          * 
          * <strong>example:</strong>
-         * <p>_</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("NoPermissionType")
         public String noPermissionType;
 
         /**
-         * <p>This parameter is no longer used. Ignore this parameter.</p>
+         * <p>This parameter is deprecated.</p>
          * 
          * <strong>example:</strong>
-         * <p>_</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("PolicyType")
         public String policyType;

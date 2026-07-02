@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteBackupRequest extends TeaModel {
     /**
+     * <p>The backup file ID of the instance. You can invoke <a href="https://help.aliyun.com/document_detail/473823.html">DescribeBackups</a> to query it.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

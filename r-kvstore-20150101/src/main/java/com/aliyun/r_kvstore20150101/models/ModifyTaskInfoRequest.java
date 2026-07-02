@@ -19,7 +19,7 @@ public class ModifyTaskInfoRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;recoverMode\&quot;:\&quot;immediate\&quot;}</p>
+     * <p>{&quot;recoverMode&quot;:&quot;immediate&quot;}</p>
      */
     @NameInMap("ActionParams")
     public String actionParams;
@@ -47,7 +47,7 @@ public class ModifyTaskInfoRequest extends TeaModel {
      * <p>The name of the current step.</p>
      * 
      * <strong>example:</strong>
-     * <p>exec_task</p>
+     * <p>do_pause</p>
      */
     @NameInMap("StepName")
     public String stepName;

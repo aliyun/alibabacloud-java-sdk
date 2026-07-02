@@ -3,9 +3,12 @@ package com.aliyun.r_kvstore20150101.models;
 
 import com.aliyun.tea.*;
 
-public class StopTairKVCacheCustomInstanceRequest extends TeaModel {
+public class DescribeInstanceMultiVIPRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -22,15 +25,12 @@ public class StopTairKVCacheCustomInstanceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
-    public static StopTairKVCacheCustomInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
-        StopTairKVCacheCustomInstanceRequest self = new StopTairKVCacheCustomInstanceRequest();
+    public static DescribeInstanceMultiVIPRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribeInstanceMultiVIPRequest self = new DescribeInstanceMultiVIPRequest();
         return TeaModel.build(map, self);
     }
 
-    public StopTairKVCacheCustomInstanceRequest setInstanceId(String instanceId) {
+    public DescribeInstanceMultiVIPRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -38,7 +38,7 @@ public class StopTairKVCacheCustomInstanceRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public StopTairKVCacheCustomInstanceRequest setOwnerAccount(String ownerAccount) {
+    public DescribeInstanceMultiVIPRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -46,7 +46,7 @@ public class StopTairKVCacheCustomInstanceRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public StopTairKVCacheCustomInstanceRequest setOwnerId(Long ownerId) {
+    public DescribeInstanceMultiVIPRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -54,7 +54,7 @@ public class StopTairKVCacheCustomInstanceRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public StopTairKVCacheCustomInstanceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public DescribeInstanceMultiVIPRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -62,20 +62,12 @@ public class StopTairKVCacheCustomInstanceRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public StopTairKVCacheCustomInstanceRequest setResourceOwnerId(Long resourceOwnerId) {
+    public DescribeInstanceMultiVIPRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public StopTairKVCacheCustomInstanceRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
 }

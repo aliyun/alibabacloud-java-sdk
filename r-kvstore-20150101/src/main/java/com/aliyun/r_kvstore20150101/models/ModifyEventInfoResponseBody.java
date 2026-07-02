@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyEventInfoResponseBody extends TeaModel {
     /**
-     * <p>The error code that is returned if the request failed.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>mst.errorcode.success.errormessage</p>
@@ -14,7 +14,7 @@ public class ModifyEventInfoResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error ID.</p>
+     * <p>The IDs of the events that failed to be processed.</p>
      * 
      * <strong>example:</strong>
      * <p>12343</p>
@@ -32,7 +32,7 @@ public class ModifyEventInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of successful records.</p>
+     * <p>The number of events that were successfully processed.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -41,7 +41,7 @@ public class ModifyEventInfoResponseBody extends TeaModel {
     public Integer successCount;
 
     /**
-     * <p>The ID of the successful event.</p>
+     * <p>The IDs of the events that were successfully processed.</p>
      * 
      * <strong>example:</strong>
      * <p>234221</p>

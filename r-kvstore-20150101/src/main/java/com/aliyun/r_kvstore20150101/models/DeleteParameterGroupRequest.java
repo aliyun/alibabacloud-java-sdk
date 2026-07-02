@@ -15,7 +15,7 @@ public class DeleteParameterGroupRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rpg-sys-00*****</p>
+     * <p>g-sysa00*****</p>
      */
     @NameInMap("ParameterGroupId")
     public String parameterGroupId;

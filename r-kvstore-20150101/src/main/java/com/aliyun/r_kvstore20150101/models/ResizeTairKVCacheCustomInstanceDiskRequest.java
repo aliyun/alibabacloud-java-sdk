@@ -4,34 +4,20 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class ResizeTairKVCacheCustomInstanceDiskRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>d-5v1aggi3ffoxufb57**</p>
      */
     @NameInMap("DiskId")
     public String diskId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>5000</p>
-     */
     @NameInMap("DiskSize")
     public String diskSize;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>tc-bp1zxszhcgatnx****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

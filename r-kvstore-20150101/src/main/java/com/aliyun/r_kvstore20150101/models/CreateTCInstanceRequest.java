@@ -4,45 +4,21 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class CreateTCInstanceRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("AutoRenew")
     public String autoRenew;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("AutoRenewPeriod")
     public String autoRenewPeriod;
 
-    /**
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("AutoUseCoupon")
     public String autoUseCoupon;
 
-    /**
-     * <strong>example:</strong>
-     * <p>000000000</p>
-     */
     @NameInMap("BusinessInfo")
     public String businessInfo;
 
-    /**
-     * <strong>example:</strong>
-     * <p>ETnLKlblzczshOTUbOCz****</p>
-     */
     @NameInMap("ClientToken")
     public String clientToken;
 
-    /**
-     * <strong>example:</strong>
-     * <p>youhuiquan_promotion_option_id_for_blank</p>
-     */
     @NameInMap("CouponNo")
     public String couponNo;
 
@@ -52,50 +28,27 @@ public class CreateTCInstanceRequest extends TeaModel {
     @NameInMap("DataDisk")
     public java.util.List<CreateTCInstanceRequestDataDisk> dataDisk;
 
-    /**
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ubuntu_20_04_64_20G_alibase_20210412</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>PrePaid</p>
-     */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
-    /**
-     * <strong>example:</strong>
-     * <p>tair.kvcache.guis.8.gu60</p>
-     */
     @NameInMap("InstanceClass")
     public String instanceClass;
 
-    /**
-     * <strong>example:</strong>
-     * <p>newinstancename</p>
-     */
     @NameInMap("InstanceName")
     public String instanceName;
 
     @NameInMap("NeedEni")
     public Boolean needEni;
 
-    /**
-     * <strong>example:</strong>
-     * <p>VPC</p>
-     */
     @NameInMap("NetworkType")
     public String networkType;
 
@@ -105,26 +58,15 @@ public class CreateTCInstanceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>12</p>
-     */
     @NameInMap("Period")
     public String period;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>rg-acfmyiu4e******</p>
-     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -134,10 +76,6 @@ public class CreateTCInstanceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>sg-bpcfmyiu4ekp****</p>
-     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
@@ -147,24 +85,12 @@ public class CreateTCInstanceRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<CreateTCInstanceRequestTag> tag;
 
-    /**
-     * <strong>example:</strong>
-     * <p>vsw-bp1e7clcw529l773d****</p>
-     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>vpc-bp1nme44gek34slfc****</p>
-     */
     @NameInMap("VpcId")
     public String vpcId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>cn-hangzhou-b</p>
-     */
     @NameInMap("ZoneId")
     public String zoneId;
 
@@ -392,27 +318,18 @@ public class CreateTCInstanceRequest extends TeaModel {
     public static class CreateTCInstanceRequestDataDisk extends TeaModel {
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cloud_essd</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>PL0</p>
          */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
          */
         @NameInMap("Size")
         public Integer size;
@@ -449,17 +366,9 @@ public class CreateTCInstanceRequest extends TeaModel {
     }
 
     public static class CreateTCInstanceRequestTag extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>key1_test</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <strong>example:</strong>
-         * <p>testvalue</p>
-         */
         @NameInMap("Value")
         public String value;
 

@@ -4,10 +4,6 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class ResetTairKVCacheCustomInstancePasswordResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>AD425AD3-CC7B-4EE2-A5CB-2F61BA73****</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

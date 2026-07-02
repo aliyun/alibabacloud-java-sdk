@@ -164,7 +164,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
          * <p>This parameter is no longer used. Ignore this parameter.</p>
          * 
          * <strong>example:</strong>
-         * <p>_</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("AuthAction")
         public String authAction;
@@ -173,7 +175,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
          * <p>This parameter is no longer used. Ignore this parameter.</p>
          * 
          * <strong>example:</strong>
-         * <p>_</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;
@@ -182,7 +186,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
          * <p>This parameter is no longer used. Ignore this parameter.</p>
          * 
          * <strong>example:</strong>
-         * <p>_</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("AuthPrincipalOwnerId")
         public String authPrincipalOwnerId;
@@ -191,7 +197,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
          * <p>This parameter is no longer used. Ignore this parameter.</p>
          * 
          * <strong>example:</strong>
-         * <p>_</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("AuthPrincipalType")
         public String authPrincipalType;
@@ -200,7 +208,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
          * <p>This parameter is no longer used. Ignore this parameter.</p>
          * 
          * <strong>example:</strong>
-         * <p>_</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("EncodedDiagnosticMessage")
         public String encodedDiagnosticMessage;
@@ -209,7 +219,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
          * <p>This parameter is no longer used. Ignore this parameter.</p>
          * 
          * <strong>example:</strong>
-         * <p>_</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("NoPermissionType")
         public String noPermissionType;
@@ -218,7 +230,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
          * <p>This parameter is no longer used. Ignore this parameter.</p>
          * 
          * <strong>example:</strong>
-         * <p>_</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("PolicyType")
         public String policyType;

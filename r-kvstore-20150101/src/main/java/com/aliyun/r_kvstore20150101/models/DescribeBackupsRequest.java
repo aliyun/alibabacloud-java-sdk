@@ -14,7 +14,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public Long backupId;
 
     /**
-     * <p>The backup task ID, returned by CreateBackup. If CreateBackup returns multiple BackupJobIds, you need to use this interface to query each of them separately.</p>
+     * <p>The ID of the backup job returned by the <code>CreateBackup</code> operation. If <code>CreateBackup</code> returns multiple backup job IDs, call this operation for each ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10001</p>
@@ -23,7 +23,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public Long backupJobId;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC. The end time must be later than the start time.</p>
+     * <p>The end time for the query. The end time must be later than the start time. Specify the time in UTC using the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The ID of the instance whose backup files you want to query.</p>
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,13 +43,15 @@ public class DescribeBackupsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Specifies whether to enable append-only files (AOFs) persistence. Valid values:</p>
+     * <p>Specifies whether to enable AOF persistence. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: no</li>
-     * <li><strong>1</strong>: yes</li>
+     * <li><p><strong>0</strong>: Disabled.</p>
+     * </li>
+     * <li><p><strong>1</strong>: Enabled.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> The default value is <strong>0</strong>.</p>
+     * <p>The default value is <strong>0</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -65,7 +67,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. The value must be an integer that is greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number to return. The value must be greater than <strong>0</strong>. The default value is <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -74,7 +76,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The maximum number of entries per page. Valid values: 30, 50, 100, 200, and 300.</p>
+     * <p>The maximum number of entries to return per page. Valid values: <code>30</code>, <code>50</code>, <code>100</code>, <code>200</code>, and <code>300</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -92,7 +94,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+     * <p>The start time for the query. Specify the time in UTC using the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

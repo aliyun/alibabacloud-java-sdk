@@ -5,16 +5,19 @@ import com.aliyun.tea.*;
 
 public class ModifyEventInfoRequest extends TeaModel {
     /**
-     * <p>The JSON-formatted parameters related to the action. Set this parameter to <code>{&quot;recoverMode&quot;: &quot;xxx&quot;, &quot;recoverTime&quot;: &quot;xxx&quot;}</code> if the <strong>TaskAction</strong> parameter is set to <strong>modifySwitchTime</strong>.</p>
+     * <p>The parameters for the action, in JSON format. For example: <code>{&quot;recoverMode&quot;: &quot;xxx&quot;, &quot;recoverTime&quot;: &quot;xxx&quot;}</code>.</p>
      * <ul>
-     * <li><p><strong>recoverMode</strong>: specifies the restoration mode for the task. Valid values:</p>
+     * <li><p><strong>recoverMode</strong>: The recovery mode. Valid values:</p>
      * <ul>
-     * <li><strong>timePoint</strong>: performs the task at the specified point in time.</li>
-     * <li><strong>immediate</strong>: performs the task immediately.</li>
-     * <li><strong>maintainTime</strong>: performs the task within the maintenance window.</li>
+     * <li><p><strong>timePoint</strong>: Executes the task at the time specified by <code>recoverTime</code>.</p>
+     * </li>
+     * <li><p><strong>immediate</strong>: Executes the task immediately.</p>
+     * </li>
+     * <li><p><strong>maintainTime</strong>: Executes the task during the maintenance window.</p>
+     * </li>
      * </ul>
      * </li>
-     * <li><p><strong>recoverTime</strong>: specifies the point in time for restoration. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. This parameter is required if the <strong>recoverMode</strong> parameter is set to <strong>timePoint</strong>.</p>
+     * <li><p><strong>recoverTime</strong>: The time to execute the task. This parameter is required when <strong>recoverMode</strong> is set to <strong>timePoint</strong>. Specify the time in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
      * </li>
      * </ul>
      * 
@@ -25,10 +28,12 @@ public class ModifyEventInfoRequest extends TeaModel {
     public String actionParams;
 
     /**
-     * <p>The event handling action. Valid values:</p>
+     * <p>The action to perform on the event. Valid values:</p>
      * <ul>
-     * <li><strong>archive</strong></li>
-     * <li><strong>undo</strong></li>
+     * <li><p><strong>archive</strong>: Archives the event.</p>
+     * </li>
+     * <li><p><strong>undo</strong>: Cancels processing for the event.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,7 +43,7 @@ public class ModifyEventInfoRequest extends TeaModel {
     public String eventAction;
 
     /**
-     * <p>The event IDs. Separate multiple event IDs with commas (,). You can specify up to 20 event IDs.</p>
+     * <p>The ID of the event. You can specify up to 20 event IDs. Separate multiple IDs with commas.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +53,7 @@ public class ModifyEventInfoRequest extends TeaModel {
     public String eventId;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The ID of the region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

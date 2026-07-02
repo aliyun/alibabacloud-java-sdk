@@ -4,24 +4,12 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class RestartTairKVCacheCustomInstanceResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>tc-bp1zxszhcgatnx****</p>
-     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>5D622714-AEDD-4609-9167-F5DDD3D1****</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>578678678</p>
-     */
     @NameInMap("TaskId")
     public String taskId;
 

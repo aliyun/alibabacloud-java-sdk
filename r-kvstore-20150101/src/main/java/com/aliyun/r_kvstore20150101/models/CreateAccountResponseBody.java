@@ -4,6 +4,12 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class CreateAccountResponseBody extends TeaModel {
+    /**
+     * <p>The account name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demoaccount</p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class TransformInstanceChargeTypeResponseBody extends TeaModel {
     /**
-     * <p>The time when the instance expires.</p>
+     * <p>The expiration time of the instance.</p>
      * <blockquote>
-     * <p> A value is returned for this parameter only if the instance was changed from pay-as-you-go to subscription.</p>
+     * <p>This parameter is returned only when you change the billing method of an instance from pay-as-you-go to subscription.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class TransformInstanceChargeTypeResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The ID of the order.</p>
+     * <p>The order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>20881824000****</p>
@@ -26,7 +26,7 @@ public class TransformInstanceChargeTypeResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>82C791FB-8979-489E-853D-706D7743****</p>

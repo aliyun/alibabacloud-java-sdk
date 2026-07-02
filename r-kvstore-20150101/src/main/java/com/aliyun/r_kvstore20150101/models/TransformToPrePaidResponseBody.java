@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TransformToPrePaidResponseBody extends TeaModel {
     /**
-     * <p>The time when the instance expires after the billing method of the instance is changed from pay-as-you-go to subscription.</p>
+     * <p>The expiration time of the instance\&quot;s new subscription.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-01-18T16:00:00Z</p>
@@ -14,7 +14,7 @@ public class TransformToPrePaidResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The ID of the order.</p>
+     * <p>The order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>111111111111111</p>
@@ -23,7 +23,7 @@ public class TransformToPrePaidResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>426F1356-B6EF-4DAD-A1C3-DE53B9DAF586</p>

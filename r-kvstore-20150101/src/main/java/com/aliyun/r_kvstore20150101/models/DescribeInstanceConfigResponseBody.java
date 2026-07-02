@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceConfigResponseBody extends TeaModel {
     /**
-     * <p>The parameter settings of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/43885.html">Parameter overview and configuration guide</a>.</p>
+     * <p>The default configuration parameters of the instance. To view the full list of parameters, call the <a href="https://help.aliyun.com/document_detail/473847.html">DescribeParameters</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;EvictionPolicy\&quot;:\&quot;volatile-lru\&quot;,\&quot;hash-max-ziplist-entries\&quot;:512,\&quot;zset-max-ziplist-entries\&quot;:128,\&quot;list-max-ziplist-entries\&quot;:512,\&quot;list-max-ziplist-value\&quot;:64,\&quot;zset-max-ziplist-value\&quot;:64,\&quot;set-max-intset-entries\&quot;:512,\&quot;hash-max-ziplist-value\&quot;:64}</p>
@@ -14,16 +14,31 @@ public class DescribeInstanceConfigResponseBody extends TeaModel {
     public String config;
 
     /**
-     * <p>The Sentinel-compatible mode, which is applicable to non-cluster instances. For more information about the parameter, see the relevant documentation.</p>
+     * <p>Specifies whether to enable Sentinel compatibility mode. This parameter applies only to non-cluster instances. Valid values:</p>
+     * <ul>
+     * <li><p><strong>no</strong> (default): Disabled</p>
+     * </li>
+     * <li><p><strong>yes</strong>: Enabled</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/178911.html">Sentinel compatibility mode</a>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <hr>
+     * <p>no</p>
      */
     @NameInMap("ParamNoLooseSentinelEnabled")
     public String paramNoLooseSentinelEnabled;
 
     /**
-     * <p>Indicates whether Sentinel commands can be run without requiring a password when the Sentinel mode is enabled. Valid values: Valid values: yes and no. Default value: no. After you set this parameter to yes, you can run Sentinel commands in a virtual private cloud (VPC) without the need to enable the password-free access feature.</p>
+     * <p>Specifies whether to allow password-free execution of Sentinel commands when Sentinel compatibility mode is enabled. Valid values:</p>
+     * <ul>
+     * <li><p><strong>no</strong> (default): Disabled.</p>
+     * </li>
+     * <li><p><strong>yes</strong>: Enabled. Allows you to run Sentinel commands on any connection without a password and use the <code>SENTINEL</code> command to subscribe to the <code>+switch-master</code> channel.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>no</p>
@@ -32,7 +47,7 @@ public class DescribeInstanceConfigResponseBody extends TeaModel {
     public String paramNoLooseSentinelPasswordFreeAccess;
 
     /**
-     * <p>After you enable the Sentinel mode and set the ParamNoLooseSentinelPasswordFreeAccess parameter to yes, you can use this parameter to specify an additional list of commands that can be run without requiring a password. By default, this parameter is empty. After you configure this parameter, you can run the specified commands without a password on any connection. Proceed with caution. The commands must be written in lowercase letters. Multiple commands are separated by commas (,).</p>
+     * <p>Additional commands that can be run without a password. This parameter is valid only when Sentinel compatibility mode is enabled and <code>ParamNoLooseSentinelPasswordFreeAccess</code> is set to <code>yes</code>. By default, this parameter is empty.</p>
      * 
      * <strong>example:</strong>
      * <hr>
@@ -41,10 +56,12 @@ public class DescribeInstanceConfigResponseBody extends TeaModel {
     public String paramNoLooseSentinelPasswordFreeCommands;
 
     /**
-     * <p>The synchronization mode.</p>
+     * <p>The replication mode. Valid values:</p>
      * <ul>
-     * <li><strong>semisync</strong></li>
-     * <li><strong>async</strong></li>
+     * <li><p><strong>async</strong> (default): asynchronous mode</p>
+     * </li>
+     * <li><p><strong>semisync</strong>: semi-synchronous mode</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,19 +71,31 @@ public class DescribeInstanceConfigResponseBody extends TeaModel {
     public String paramReplMode;
 
     /**
-     * <p>The degradation threshold time of the semi-synchronous replication mode. This parameter is required only when semi-synchronous replication is enabled. Unit: milliseconds. Valid values: 10 to 60000.</p>
+     * <p>The degradation threshold for the semi-synchronous mode. This parameter is valid only in semi-synchronous mode. Unit: milliseconds. Valid values: 10 to 60000. Default value: 500.</p>
+     * <blockquote>
+     * <p>If replication latency exceeds this threshold, the replication mode degrades to asynchronous mode. When the replication latency returns to normal, the mode reverts to semi-synchronous mode.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <hr>
+     * <p>500</p>
      */
     @NameInMap("ParamReplTimeout")
     public String paramReplTimeout;
 
     /**
-     * <p>The Sentinel-compatible mode, which is applicable to cluster instances in proxy mode or read/write splitting instances. For more information about the parameter, see the relevant documentation.</p>
+     * <p>Specifies whether to enable Sentinel compatibility mode. This parameter applies to instances that use the cluster architecture with proxy connection mode or the read/write splitting architecture. Valid values:</p>
+     * <ul>
+     * <li><p><strong>0</strong> (default): Disabled</p>
+     * </li>
+     * <li><p><strong>1</strong>: Enabled</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/178911.html">Sentinel compatibility mode</a>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>0</p>
      */
     @NameInMap("ParamSentinelCompatEnable")
     public String paramSentinelCompatEnable;

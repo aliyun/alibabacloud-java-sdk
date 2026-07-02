@@ -4,10 +4,17 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeTairSkvDdbTableSchemaRequest extends TeaModel {
+    /**
+     * <p>The ID of the backup file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>78241****</p>
+     */
     @NameInMap("BackupId")
     public String backupId;
 
     /**
+     * <p>The ID of the instance to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

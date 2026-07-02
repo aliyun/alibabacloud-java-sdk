@@ -65,7 +65,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
      * <p>The start time of the query.</p>
      * 
      * <strong>example:</strong>
-     * <p>2019-03-10T13:11Z</p>
+     * <p>2019-03-10T14:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

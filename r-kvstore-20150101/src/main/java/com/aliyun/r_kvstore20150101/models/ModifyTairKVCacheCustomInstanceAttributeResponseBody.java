@@ -4,10 +4,6 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class ModifyTairKVCacheCustomInstanceAttributeResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>2FF6158E-3394-4A90-B634-79C49184****</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

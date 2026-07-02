@@ -63,7 +63,7 @@ public class DescribeParameterGroupTemplateListResponseBody extends TeaModel {
          * <p>The regular expression used to validate input.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;\\d+\\s+\\d+\\s+\\d+&quot;</p>
+         * <p>[0|1]</p>
          */
         @NameInMap("CheckingCode")
         public String checkingCode;
@@ -90,7 +90,7 @@ public class DescribeParameterGroupTemplateListResponseBody extends TeaModel {
          * <p>The description of the parameter.</p>
          * 
          * <strong>example:</strong>
-         * <p>Open AOF persistence mode</p>
+         * <p>开启Aof持久化模式。</p>
          */
         @NameInMap("ParameterDescription")
         public String parameterDescription;

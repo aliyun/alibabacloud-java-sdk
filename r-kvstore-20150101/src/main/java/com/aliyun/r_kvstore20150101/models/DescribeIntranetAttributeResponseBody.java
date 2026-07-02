@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class DescribeIntranetAttributeResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether auto-renewal is enabled for the extra internal bandwidth that you purchased. Valid values:</p>
+     * <p>Indicates whether auto-renewal is enabled for the bandwidth package. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Auto-renewal is enabled.</li>
-     * <li><strong>false</strong>: Auto-renewal is disabled.</li>
+     * <li><p><strong>true</strong>: Auto-renewal is enabled.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Auto-renewal is disabled.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>If no extra internal bandwidth is purchased, this parameter is not returned.</p>
+     * <p>This parameter is not returned if no additional bandwidth is purchased.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -21,9 +23,9 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
     public Boolean autoRenewal;
 
     /**
-     * <p>The expiration time of the purchased bandwidth. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em> T <em>HH:mm:ss</em> Z format.</p>
+     * <p>The expiration time of the bandwidth package. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format.</p>
      * <blockquote>
-     * <p>If no extra internal bandwidth is purchased, this parameter is not returned.</p>
+     * <p>This parameter is not returned if no additional bandwidth is purchased.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -33,10 +35,12 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
     public String bandwidthExpireTime;
 
     /**
-     * <p>The billing method of the bandwidth plan. Valid values:</p>
+     * <p>The billing method of the bandwidth package. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: pay-as-you-go</li>
-     * <li><strong>1</strong>: subscription</li>
+     * <li><p><strong>0</strong>: pay-as-you-go.</p>
+     * </li>
+     * <li><p><strong>1</strong>: subscription.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,9 +50,9 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
     public String bandwidthPrePaid;
 
     /**
-     * <p>The time when the extra internal bandwidth that you purchased for temporary use expires. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * <p>The expiration time of the temporary bandwidth. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format.</p>
      * <blockquote>
-     * <p>If no extra internal bandwidth for temporary use is purchased or the extra internal bandwidth that you purchased for temporary use has expired, <strong>0</strong> is returned for this parameter.</p>
+     * <p>This parameter returns <strong>0</strong> if the instance has no temporary bandwidth or if the temporary bandwidth has expired.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -58,13 +62,15 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
     public String expireTime;
 
     /**
-     * <p>Specifies whether the instance has unexpired bandwidth plans. Valid values:</p>
+     * <p>Indicates whether the instance has an unexpired bandwidth package. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The instance has unexpired bandwidth plans.</li>
-     * <li><strong>false</strong>: The instance does not have unexpired bandwidth plans.</li>
+     * <li><p><strong>true</strong>: An unexpired bandwidth package exists.</p>
+     * </li>
+     * <li><p><strong>false</strong>: No unexpired bandwidth package exists.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>If no extra internal bandwidth is purchased, this parameter is not returned.</p>
+     * <p>This parameter is not returned if no additional bandwidth is purchased.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -77,7 +83,7 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
     public Integer intranetBandWidthBurst;
 
     /**
-     * <p>The internal bandwidth of the instance. This parameter indicates the combined bandwidth of all shards in the instance. Unit: Mbit/s.</p>
+     * <p>The total intranet bandwidth across all shards in the instance, in MB/s.</p>
      * 
      * <strong>example:</strong>
      * <p>102</p>
@@ -86,7 +92,7 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
     public Integer intranetBandwidth;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>25D42CC3-FBA1-4AEC-BCE2-B8DD3137****</p>

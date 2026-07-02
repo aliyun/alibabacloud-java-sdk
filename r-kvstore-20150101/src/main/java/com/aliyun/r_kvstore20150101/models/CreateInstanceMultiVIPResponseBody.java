@@ -3,22 +3,20 @@ package com.aliyun.r_kvstore20150101.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteBackupResponseBody extends TeaModel {
+public class CreateInstanceMultiVIPResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
-     * <p>F14475F4-644E-51EA-B1E8-E4D442093D0C</p>
+     * <p>52D901ED-E0A5-42FB-B9DB-39C295C3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static DeleteBackupResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteBackupResponseBody self = new DeleteBackupResponseBody();
+    public static CreateInstanceMultiVIPResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        CreateInstanceMultiVIPResponseBody self = new CreateInstanceMultiVIPResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteBackupResponseBody setRequestId(String requestId) {
+    public CreateInstanceMultiVIPResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

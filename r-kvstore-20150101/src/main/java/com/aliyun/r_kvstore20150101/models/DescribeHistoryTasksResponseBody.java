@@ -123,7 +123,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;steps\&quot;:[{\&quot;action_info\&quot;:{\&quot;Waiting\&quot;:[\&quot;modifySwitchTime\&quot;]},\&quot;step_name\&quot;:\&quot;exec_task\&quot;}]}</p>
+         * <p>{&quot;steps&quot;:[{&quot;action_info&quot;:{&quot;Waiting&quot;:[&quot;modifySwitchTime&quot;]},&quot;step_name&quot;:&quot;exec_task&quot;}]}</p>
          */
         @NameInMap("ActionInfo")
         public String actionInfo;
@@ -226,7 +226,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
          * <p>The reason why the current task was initiated.</p>
          * 
          * <strong>example:</strong>
-         * <p>UpgradeMinorVersion</p>
+         * <p>小版本升级</p>
          */
         @NameInMap("ReasonCode")
         public String reasonCode;

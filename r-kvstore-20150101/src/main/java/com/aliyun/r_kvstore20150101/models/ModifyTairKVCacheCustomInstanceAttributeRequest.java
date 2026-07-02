@@ -6,18 +6,12 @@ import com.aliyun.tea.*;
 public class ModifyTairKVCacheCustomInstanceAttributeRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>redistest</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
@@ -37,10 +31,6 @@ public class ModifyTairKVCacheCustomInstanceAttributeRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    /**
-     * <strong>example:</strong>
-     * <p>SDK</p>
-     */
     @NameInMap("SourceBiz")
     public String sourceBiz;
 

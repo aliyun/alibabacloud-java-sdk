@@ -29,9 +29,12 @@ public class ModifyInstanceSSLRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable TLS (SSL) encryption. Valid values:</p>
      * <ul>
-     * <li><strong>Disable</strong>: disables SSL encryption.</li>
-     * <li><strong>Enable</strong>: enables SSL encryption.</li>
-     * <li><strong>Update</strong>: updates the SSL certificate.</li>
+     * <li><p><strong>Disable</strong>: disables SSL encryption.</p>
+     * </li>
+     * <li><p><strong>Enable</strong>: enables SSL encryption.</p>
+     * </li>
+     * <li><p><strong>Update</strong>: updates the SSL certificate.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

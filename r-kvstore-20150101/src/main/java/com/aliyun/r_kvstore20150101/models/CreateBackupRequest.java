@@ -4,6 +4,12 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class CreateBackupRequest extends TeaModel {
+    /**
+     * <p>The expiration period of this manual backup, in days. Valid values range from 7 to 730. If you specify -1, the backup data will not expire during the instance lifetime. If you do not specify a value (default), the expiration period follows the current automatic backup policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("BackupRetentionPeriod")
     public Long backupRetentionPeriod;
 

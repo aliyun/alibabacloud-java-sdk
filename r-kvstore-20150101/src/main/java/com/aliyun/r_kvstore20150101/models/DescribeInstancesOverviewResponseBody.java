@@ -89,7 +89,7 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>PostPaid</p>
+         * <p>PrePaid</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
@@ -125,7 +125,7 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
          * <p>The engine version of the instance. Valid values: <strong>2.8</strong>, <strong>4.0</strong>, <strong>5.0</strong>, <strong>6.0</strong>, and <strong>7.0</strong>.</p>
          * 
          * <strong>example:</strong>
-         * <p>4.0</p>
+         * <p>6.0</p>
          */
         @NameInMap("EngineVersion")
         public String engineVersion;

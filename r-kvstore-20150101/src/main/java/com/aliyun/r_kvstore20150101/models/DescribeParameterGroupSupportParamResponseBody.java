@@ -63,7 +63,7 @@ public class DescribeParameterGroupSupportParamResponseBody extends TeaModel {
          * <p>The engine version.</p>
          * 
          * <strong>example:</strong>
-         * <p>5</p>
+         * <p>5.0</p>
          */
         @NameInMap("DbVersion")
         public String dbVersion;

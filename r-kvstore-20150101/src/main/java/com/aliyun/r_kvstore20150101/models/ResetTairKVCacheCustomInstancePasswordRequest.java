@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class ResetTairKVCacheCustomInstancePasswordRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -21,9 +18,6 @@ public class ResetTairKVCacheCustomInstancePasswordRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Pass!123456</p>
      */
     @NameInMap("Password")
     public String password;
@@ -37,10 +31,6 @@ public class ResetTairKVCacheCustomInstancePasswordRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    /**
-     * <strong>example:</strong>
-     * <p>SDK</p>
-     */
     @NameInMap("SourceBiz")
     public String sourceBiz;
 

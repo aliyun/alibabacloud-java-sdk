@@ -47,7 +47,9 @@ public class RenewInstanceRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>1024</p>
+     * <ul>
+     * <li></li>
+     * </ul>
      */
     @NameInMap("Capacity")
     public String capacity;
@@ -56,7 +58,7 @@ public class RenewInstanceRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token is case-sensitive. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>TF-ModifyInstanceSpec-1686645570-7dac7257-4a14-4811-939c-51a282f</p>
+     * <p>0.6823317918435086</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -86,7 +88,9 @@ public class RenewInstanceRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>redis.master.small.default</p>
+     * <ul>
+     * <li></li>
+     * </ul>
      */
     @NameInMap("InstanceClass")
     public String instanceClass;

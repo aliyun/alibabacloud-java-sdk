@@ -45,7 +45,7 @@ public class CreateGlobalSecurityIPGroupResponseBody extends TeaModel {
          * <p>The IP addresses in the IP whitelist template.</p>
          * 
          * <strong>example:</strong>
-         * <p>192.168.0.1</p>
+         * <p>192.168.0.1,10.10.10.10,172.16.0.1</p>
          */
         @NameInMap("GIpList")
         public String GIpList;
@@ -54,7 +54,7 @@ public class CreateGlobalSecurityIPGroupResponseBody extends TeaModel {
          * <p>The name of the IP whitelist template.</p>
          * 
          * <strong>example:</strong>
-         * <p>white_list_test_sg</p>
+         * <p>test_123</p>
          */
         @NameInMap("GlobalIgName")
         public String globalIgName;
@@ -63,7 +63,7 @@ public class CreateGlobalSecurityIPGroupResponseBody extends TeaModel {
          * <p>The ID of the IP whitelist template.</p>
          * 
          * <strong>example:</strong>
-         * <p>g-sdgwqyp4f5j1x3qk7yvm</p>
+         * <p>g-sdgwqyp4f5j1x3qk****</p>
          */
         @NameInMap("GlobalSecurityGroupId")
         public String globalSecurityGroupId;

@@ -19,7 +19,7 @@ public class LockDBInstanceWriteRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>lock reason</p>
+     * <p>锁写操作验证。</p>
      */
     @NameInMap("LockReason")
     public String lockReason;

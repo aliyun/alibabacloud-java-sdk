@@ -48,7 +48,7 @@ public class MasterNodeShutDownFailOverRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>Safe</p>
+     * <p>Hard</p>
      */
     @NameInMap("FailMode")
     public String failMode;

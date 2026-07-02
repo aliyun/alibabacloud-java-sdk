@@ -44,7 +44,7 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>standardredis</p>
+     * <p>standardredis123</p>
      */
     @NameInMap("NewConnectionString")
     public String newConnectionString;

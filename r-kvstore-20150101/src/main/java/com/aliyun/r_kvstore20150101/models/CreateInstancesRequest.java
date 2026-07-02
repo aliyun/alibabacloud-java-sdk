@@ -5,14 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateInstancesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable automatic payment. Valid values:</p>
-     * <ul>
-     * <li><strong>true</strong> (default).</li>
-     * <li><strong>false</strong>. If automatic payment is disabled, you must perform the following steps to complete the payment in the Tair (Redis OSS-compatible) console: In the top navigation bar, choose <strong>Expenses</strong> &gt; <strong>Renewal Management</strong>. In the left-side navigation pane, click <strong>Orders</strong>. On the <strong>Orders</strong> page, find the order and complete the payment.</li>
-     * </ul>
-     * <blockquote>
-     * <p> This parameter is valid only if the value of the <strong>ChargeType</strong> field in the <strong>Instances</strong> parameter is set to <strong>PrePaid</strong>.</p>
-     * </blockquote>
+     * <p>Specifies whether to enable automatic payment. Valid values:
+     * \* <strong>true</strong>: Enables automatic payment. This is the default value.
+     * \* <strong>false</strong>: Disables automatic payment. You must go to the console to complete the payment. In the top navigation bar, choose <strong>Expenses</strong> &gt; <strong>Renewal Management</strong>. In the navigation pane on the left, click <strong>Or*er Management</strong> &gt; <strong>My Or*ers</strong>, find the or*er, and then complete the payment.
+     * \&gt; This parameter is valid only when <strong>ChargeType</strong> is set to <strong>PrePaid</strong> in <strong>Instances</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -21,14 +17,10 @@ public class CreateInstancesRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>Specifies whether to enable auto-renewal for the instance. Default value: false. Valid values:</p>
-     * <ul>
-     * <li><strong>true</strong>: yes</li>
-     * <li><strong>false</strong>: no</li>
-     * </ul>
-     * <blockquote>
-     * <p> This parameter is available only if <strong>ChargeType</strong> in the <strong>Instances</strong> parameter is set to <strong>PrePaid</strong>.</p>
-     * </blockquote>
+     * <p>Specifies whether to enable auto-renewal for the instance. Valid values:
+     * \* <strong>true</strong>: Enables auto-renewal.
+     * \* <strong>false</strong>: Disables auto-renewal. This is the default value.
+     * \&gt; This parameter is valid only when <strong>ChargeType</strong> is set to <strong>PrePaid</strong> in <strong>Instances</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -37,7 +29,7 @@ public class CreateInstancesRequest extends TeaModel {
     public String autoRenew;
 
     /**
-     * <p>The additional business information about the instance.</p>
+     * <p>Additional business information.</p>
      * 
      * <strong>example:</strong>
      * <p>000000000</p>
@@ -46,7 +38,7 @@ public class CreateInstancesRequest extends TeaModel {
     public String businessInfo;
 
     /**
-     * <p>The coupon code. Default value: <code>youhuiquan_promotion_option_id_for_blank</code>.</p>
+     * <p>The coupon code. The default value is <code>youhuiquan_promotion_option_id_for_blank</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>youhuiquan_promotion_option_id_for_blank</p>
@@ -55,16 +47,7 @@ public class CreateInstancesRequest extends TeaModel {
     public String couponNo;
 
     /**
-     * <p>The database engine version of the instance. Valid values: <strong>4.0</strong> and <strong>5.0</strong>.</p>
-     * <blockquote>
-     * <p> The default value is <strong>5.0</strong>.</p>
-     * </blockquote>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>2.8</li>
-     * <li>4.0</li>
-     * <li>5.0</li>
-     * </ul>
+     * <p>The Redis-compatible engine version for the instance. Valid values: <strong>4.0</strong> and <strong>5.0</strong>. The default value is <strong>5.0</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>5.0</p>
@@ -73,11 +56,23 @@ public class CreateInstancesRequest extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>The JSON-formatted configurations of the instance. For more information, see the &quot;Additional description of the Instances parameter&quot; section.</p>
+     * <p>The configurations of the new instances, specified in JSON format. For more information, see the details of the Instances parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{	&quot;RegionId&quot;: &quot;cn-hangzhou&quot;,	&quot;izNo&quot;: &quot;cn-hangzhou-b&quot;,	&quot;quantity&quot;: 2,	&quot;instanceType&quot;: &quot;Redis&quot;,	&quot;instanceClass&quot;: &quot;redis.master.small.default&quot;,	&quot;EngineVersion&quot;: &quot;5.0&quot;,	&quot;ChargeType&quot;: &quot;PostPaid&quot;}]</p>
+     * <p>[{
+     *     &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,
+     *     &quot;izNo&quot;: &quot;cn-hangzhou-b&quot;,
+     *     &quot;quantity&quot;: 1,
+     *     &quot;instanceType&quot;: &quot;Redis&quot;,
+     *     &quot;instanceClass&quot;: &quot;redis.logic.sharding.1g.2db.0rodb.4proxy.default&quot;,
+     *     &quot;EngineVersion&quot;: &quot;5.0&quot;, 
+     *     &quot;ChargeType&quot;:&quot;PrePaid&quot;,
+     *     &quot;Period&quot;:&quot;1&quot;,
+     *     &quot;networkType&quot;: &quot;VPC&quot; ,
+     *     &quot;vpcId&quot;: &quot;vpc-2zex6u1nu32k3ux35oxxx&quot;, 
+     *     &quot;vSwitchId&quot;: &quot;vsw-2zesk464e647104kw3xxx&quot;
+     * }]</p>
      */
     @NameInMap("Instances")
     public String instances;
@@ -89,14 +84,10 @@ public class CreateInstancesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Specifies whether to restore the source instance from the recycle bin. Valid values:</p>
-     * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong> (default)</li>
-     * </ul>
-     * <blockquote>
-     * <p> This parameter is valid only if the <strong>SrcDBInstanceId</strong> field in the <strong>Instances</strong> parameter is specified.</p>
-     * </blockquote>
+     * <p>Specifies whether to rebuild an instance from the recycle bin. Valid values:
+     * \* <strong>true</strong>: Rebuilds the instance.
+     * \* <strong>false</strong>: Does not rebuild the instance. This is the default value.
+     * \&gt; This parameter is valid only when <strong>SrcDBInstanceId</strong> is specified in <strong>Instances</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -105,7 +96,7 @@ public class CreateInstancesRequest extends TeaModel {
     public Boolean rebuildInstance;
 
     /**
-     * <p>The ID of the resource group to which to assign the instance.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-resourcegroupid1</p>
@@ -123,7 +114,7 @@ public class CreateInstancesRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token is case-sensitive. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>A client-generated token to ensure request idempotence. The value must be unique across requests, case-sensitive, and up to 64 ASCII characters long.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>

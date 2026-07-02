@@ -29,7 +29,7 @@ public class DescribeCacheAnalysisReportRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>-bp1zxszhcgatnx****</p>
+     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -41,7 +41,7 @@ public class DescribeCacheAnalysisReportRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>-bp1zxszhcgatnx****-db-0</p>
+     * <p>r-bp1zxszhcgatnx****-db-0</p>
      */
     @NameInMap("NodeId")
     public String nodeId;

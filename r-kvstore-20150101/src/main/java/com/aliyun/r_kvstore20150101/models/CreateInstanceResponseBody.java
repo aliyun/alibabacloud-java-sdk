@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceResponseBody extends TeaModel {
     /**
-     * <p>The maximum bandwidth of the instance. Unit: MB/s.</p>
+     * <p>The bandwidth of the instance. Unit: MB/s.</p>
      * 
      * <strong>example:</strong>
      * <p>32</p>
@@ -14,7 +14,7 @@ public class CreateInstanceResponseBody extends TeaModel {
     public Long bandwidth;
 
     /**
-     * <p>The storage capacity of the instance. Unit: MB.</p>
+     * <p>The storage capacity of the instance, in MB.</p>
      * 
      * <strong>example:</strong>
      * <p>16384</p>
@@ -23,10 +23,12 @@ public class CreateInstanceResponseBody extends TeaModel {
     public Long capacity;
 
     /**
-     * <p>The billing method of the instance. Valid values:</p>
+     * <p>The billing method. Valid values:</p>
      * <ul>
-     * <li><strong>PrePaid</strong>: subscription</li>
-     * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+     * <li><p><strong>PrePaid</strong>: subscription</p>
+     * </li>
+     * <li><p><strong>PostPaid</strong>: pay-as-you-go</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,7 +47,7 @@ public class CreateInstanceResponseBody extends TeaModel {
     public String config;
 
     /**
-     * <p>The internal endpoint of the instance.</p>
+     * <p>The private connection endpoint of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>r-bp1zxszhcgatnx****.redis.rds.aliyuncs.com</p>
@@ -54,7 +56,7 @@ public class CreateInstanceResponseBody extends TeaModel {
     public String connectionDomain;
 
     /**
-     * <p>The maximum number of connections supported by the instance.</p>
+     * <p>The maximum number of connections.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -63,7 +65,7 @@ public class CreateInstanceResponseBody extends TeaModel {
     public Long connections;
 
     /**
-     * <p>The time when the subscription expires. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * <p>The expiration time of the subscription instance. The time is displayed in UTC. Format: <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-01-18T16:00:00Z</p>
@@ -72,7 +74,7 @@ public class CreateInstanceResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The GUID of the instance.</p>
+     * <p>The ID of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>r-bp1zxszhcgatnx****</p>
@@ -90,7 +92,7 @@ public class CreateInstanceResponseBody extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The state of the instance. The return value is Creating.</p>
+     * <p>The state of the instance. For this operation, the returned value is always <code>Creating</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>Creating</p>
@@ -99,10 +101,12 @@ public class CreateInstanceResponseBody extends TeaModel {
     public String instanceStatus;
 
     /**
-     * <p>The network type of the instance. Valid values:</p>
+     * <p>The network type. Valid values:</p>
      * <ul>
-     * <li><strong>CLASSIC</strong>: classic network</li>
-     * <li><strong>VPC</strong>: VPC</li>
+     * <li><p><strong>CLASSIC</strong>: classic network</p>
+     * </li>
+     * <li><p><strong>VPC</strong>: VPC</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,8 +118,10 @@ public class CreateInstanceResponseBody extends TeaModel {
     /**
      * <p>The node type. Valid values:</p>
      * <ul>
-     * <li><strong>STAND_ALONE</strong>: standalone</li>
-     * <li><strong>MASTER_SLAVE</strong>: master-replica</li>
+     * <li><p><strong>STAND_ALONE</strong>: standalone</p>
+     * </li>
+     * <li><p><strong>MASTER_SLAVE</strong>: primary-replica</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -135,7 +141,7 @@ public class CreateInstanceResponseBody extends TeaModel {
     public Long orderId;
 
     /**
-     * <p>The port number that is used to connect to the instance.</p>
+     * <p>The connection port of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>6379</p>
@@ -153,7 +159,7 @@ public class CreateInstanceResponseBody extends TeaModel {
     public String privateIpAddr;
 
     /**
-     * <p>The expected maximum queries per second (QPS).</p>
+     * <p>The theoretical queries per second (QPS) of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>100000</p>
@@ -162,7 +168,7 @@ public class CreateInstanceResponseBody extends TeaModel {
     public Long QPS;
 
     /**
-     * <p>The region ID of the instance.</p>
+     * <p>The ID of the region.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hongkong</p>
@@ -180,7 +186,7 @@ public class CreateInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The username that is used to connect to the instance. By default, Tair (Redis OSS-compatible) provides a username that is named after the instance ID.</p>
+     * <p>The username of the account. By default, the username is the same as the instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>r-bp1zxszhcgatnx****</p>
@@ -189,7 +195,7 @@ public class CreateInstanceResponseBody extends TeaModel {
     public String userName;
 
     /**
-     * <p>The ID of the vSwitch to which the instance is connected.</p>
+     * <p>The ID of the vSwitch.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-bp1e7clcw529l773d****</p>
@@ -207,7 +213,7 @@ public class CreateInstanceResponseBody extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The zone ID of the instance.</p>
+     * <p>The ID of the zone.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-b</p>

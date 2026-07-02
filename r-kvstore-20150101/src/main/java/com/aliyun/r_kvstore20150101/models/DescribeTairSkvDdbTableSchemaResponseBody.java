@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeTairSkvDdbTableSchemaResponseBody extends TeaModel {
     /**
+     * <p>The request ID. For more information, see common parameters.</p>
+     * 
      * <strong>example:</strong>
      * <p>A1604E1B-6825-1577-BBDA-2A64E8D5F126</p>
      */
@@ -12,6 +14,8 @@ public class DescribeTairSkvDdbTableSchemaResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The table schema information in JSON format.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;attributeDefinitions&quot;:[{&quot;attributeType&quot;:&quot;S&quot;,&quot;attributeName&quot;:&quot;pk&quot;},{&quot;attributeType&quot;:&quot;S&quot;,&quot;attributeName&quot;:&quot;sk&quot;}],&quot;keySchema&quot;:[{&quot;attributeName&quot;:&quot;pk&quot;,&quot;keyType&quot;:&quot;HASH&quot;},{&quot;attributeName&quot;:&quot;sk&quot;,&quot;keyType&quot;:&quot;RANGE&quot;}]}</p>
      */
@@ -19,6 +23,8 @@ public class DescribeTairSkvDdbTableSchemaResponseBody extends TeaModel {
     public String schema;
 
     /**
+     * <p>The TTL property. The parameter settings toggle in JSON format.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;attributeName&quot;:&quot;Expiretime&quot;,&quot;enabled&quot;:true}</p>
      */

@@ -142,7 +142,7 @@ public class DescribeHistoryTasksRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2022-03-02T11:31:03Z</p>
+     * <p>2022-02-02T11:31:03Z</p>
      */
     @NameInMap("ToStartTime")
     public String toStartTime;

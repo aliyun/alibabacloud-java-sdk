@@ -8,7 +8,7 @@ public class DescribeGlobalSecurityIPGroupRequest extends TeaModel {
     public String engine;
 
     /**
-     * <p>The ID of the IP whitelist template.</p>
+     * <p>The ID of the global IP whitelist template.</p>
      * 
      * <strong>example:</strong>
      * <p>g-zsldxfiwjmti0kcm****</p>
@@ -23,7 +23,7 @@ public class DescribeGlobalSecurityIPGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The ID of the region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class DescribeGlobalSecurityIPGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmyiu4ekp****</p>
