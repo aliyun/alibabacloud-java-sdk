@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribePrepayBillTotalRequest extends TeaModel {
     /**
+     * <p>The billing type. Valid values:</p>
+     * <ul>
+     * <li>elastic_traffic: elastic traffic.</li>
+     * <li>sdl: sensitive data leak detection traffic.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>sdl</p>
      */
@@ -12,6 +18,8 @@ public class DescribePrepayBillTotalRequest extends TeaModel {
     public String billType;
 
     /**
+     * <p>The page number for a paged query. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +27,7 @@ public class DescribePrepayBillTotalRequest extends TeaModel {
     public Long currentPage;
 
     /**
+     * <p>The end time. Specify a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +37,13 @@ public class DescribePrepayBillTotalRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The language. Valid values:</p>
+     * <ul>
+     * <li>zh</li>
+     * <li>en</li>
+     * </ul>
+     * <p>Default value: zh.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -35,6 +51,8 @@ public class DescribePrepayBillTotalRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The number of entries per page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -42,6 +60,7 @@ public class DescribePrepayBillTotalRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The start time of the query. Specify a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

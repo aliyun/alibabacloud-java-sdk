@@ -24,10 +24,10 @@ public class DescribePostpayBillRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The time interval for querying data. This is an enumerated value. Valid values:</p>
+     * <p>The time interval for querying data. This is an enumeration value. Valid values:</p>
      * <ul>
-     * <li>3600: queries hourly data.</li>
-     * <li>86400: queries daily data.</li>
+     * <li>3600: queries data at the hourly level.</li>
+     * <li>86400: queries data at the daily level.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class DescribePostpayBillRequest extends TeaModel {
     public Integer interval;
 
     /**
-     * <p>The language. This is an enumerated value.
+     * <p>The language. This is an enumeration value.
      * Default value: zh.
      * Valid values: en.</p>
      * 

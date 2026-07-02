@@ -14,7 +14,7 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
     public Boolean autoResourceEnable;
 
     /**
-     * <p>The general instance specifications for version 2.0.</p>
+     * <p>The general instance specifications for the 2.0 billing model.</p>
      */
     @NameInMap("GeneralInstanceSpecStatistic")
     public DescribeAssetStatisticResponseBodyGeneralInstanceSpecStatistic generalInstanceSpecStatistic;
@@ -29,7 +29,7 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The consumed quota statistics information.</p>
+     * <p>The quota usage statistics information.</p>
      */
     @NameInMap("ResourceSpecStatistic")
     public DescribeAssetStatisticResponseBodyResourceSpecStatistic resourceSpecStatistic;
@@ -151,13 +151,13 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
 
     public static class DescribeAssetStatisticResponseBodyGeneralInstanceSpecStatistic extends TeaModel {
         /**
-         * <p>The region-specific statistics for the Internet firewall.</p>
+         * <p>The region-specific statistics of Internet firewall instances.</p>
          */
         @NameInMap("CfwGeneralInstanceRegionStatistic")
         public java.util.List<DescribeAssetStatisticResponseBodyGeneralInstanceSpecStatisticCfwGeneralInstanceRegionStatistic> cfwGeneralInstanceRegionStatistic;
 
         /**
-         * <p>The region-specific statistics for all Internet firewall instances.</p>
+         * <p>The full region-specific statistics of Internet firewall instances.</p>
          */
         @NameInMap("CfwTotalGeneralInstanceRegionStatistic")
         public java.util.List<DescribeAssetStatisticResponseBodyGeneralInstanceSpecStatisticCfwTotalGeneralInstanceRegionStatistic> cfwTotalGeneralInstanceRegionStatistic;
@@ -181,7 +181,7 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
         public Integer totalCfwGeneralInstanceUsedCnt;
 
         /**
-         * <p>The total quota.</p>
+         * <p>The total quota of general instances.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -307,7 +307,7 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
         public Integer ipNumUsed;
 
         /**
-         * <p>The quota for sensitive data IP addresses.</p>
+         * <p>The quota for IP addresses with sensitive data protection.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -316,7 +316,7 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
         public Long sensitiveDataIpNumSpec;
 
         /**
-         * <p>The number of sensitive data IP addresses with protection enabled.</p>
+         * <p>The number of IP addresses with sensitive data protection enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

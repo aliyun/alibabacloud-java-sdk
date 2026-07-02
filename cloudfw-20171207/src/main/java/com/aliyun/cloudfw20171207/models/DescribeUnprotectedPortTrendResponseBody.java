@@ -59,7 +59,7 @@ public class DescribeUnprotectedPortTrendResponseBody extends TeaModel {
 
     public static class DescribeUnprotectedPortTrendResponseBodyDataList extends TeaModel {
         /**
-         * <p>The number of blocked requests.</p>
+         * <p>The number of interceptions.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

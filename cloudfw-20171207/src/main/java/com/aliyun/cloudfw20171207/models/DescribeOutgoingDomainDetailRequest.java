@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOutgoingDomainDetailRequest extends TeaModel {
     /**
-     * <p>The policy coverage status to filter by.</p>
+     * <p>The policy coverage status.</p>
      * 
      * <strong>example:</strong>
      * <p>FullCoverage</p>
@@ -14,7 +14,7 @@ public class DescribeOutgoingDomainDetailRequest extends TeaModel {
     public String aclCoverage;
 
     /**
-     * <p>The page number to return.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeOutgoingDomainDetailRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>The domain name to query.</p>
+     * <p>The domain name.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -32,7 +32,7 @@ public class DescribeOutgoingDomainDetailRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>A list of domain names to query.</p>
+     * <p>The list of domain names.</p>
      */
     @NameInMap("DomainList")
     public java.util.List<String> domainList;
@@ -48,7 +48,7 @@ public class DescribeOutgoingDomainDetailRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The IP address type. Set to <code>NatPrivate</code> to query details for outbound connections that originate from a private IP address via a NAT Gateway.</p>
+     * <p>Specifies whether to query NAT private network outbound connections.</p>
      * 
      * <strong>example:</strong>
      * <p>NatPrivate</p>
@@ -57,7 +57,7 @@ public class DescribeOutgoingDomainDetailRequest extends TeaModel {
     public String IPType;
 
     /**
-     * <p>The language of the response.</p>
+     * <p>The language type.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -66,7 +66,7 @@ public class DescribeOutgoingDomainDetailRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the NAT Gateway.</p>
+     * <p>The ID of the NAT gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>ngw-uf62zzi7000bca7zn****</p>
@@ -84,7 +84,7 @@ public class DescribeOutgoingDomainDetailRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The number of entries to return per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -93,7 +93,7 @@ public class DescribeOutgoingDomainDetailRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The private IP address to query.</p>
+     * <p>The private IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>10.210.0.XXX</p>
@@ -102,7 +102,7 @@ public class DescribeOutgoingDomainDetailRequest extends TeaModel {
     public String privateIP;
 
     /**
-     * <p>The public IP address to query.</p>
+     * <p>The public IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>47.96.181.XXX</p>
@@ -111,7 +111,7 @@ public class DescribeOutgoingDomainDetailRequest extends TeaModel {
     public String publicIP;
 
     /**
-     * <p>The field to sort the results by.</p>
+     * <p>The field by which to sort the results.</p>
      * 
      * <strong>example:</strong>
      * <p>OutBytes</p>
@@ -120,7 +120,7 @@ public class DescribeOutgoingDomainDetailRequest extends TeaModel {
     public String sort;
 
     /**
-     * <p>The source IP address.</p>
+     * <p>The source IP address of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>121.15.137.XXX</p>
@@ -129,7 +129,7 @@ public class DescribeOutgoingDomainDetailRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The start of the time range to query. The value is a UNIX timestamp in seconds.</p>
+     * <p>The beginning of the time range to query. The value is a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class DescribeOutgoingDomainDetailRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The tag ID to filter by.</p>
+     * <p>The tag ID.</p>
      * 
      * <strong>example:</strong>
      * <p>FirstFlow</p>

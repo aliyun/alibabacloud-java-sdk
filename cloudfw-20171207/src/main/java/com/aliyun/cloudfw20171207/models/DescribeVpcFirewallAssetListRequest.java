@@ -23,7 +23,7 @@ public class DescribeVpcFirewallAssetListRequest extends TeaModel {
     public String assetIP;
 
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,7 +59,7 @@ public class DescribeVpcFirewallAssetListRequest extends TeaModel {
     public String ecsInstanceName;
 
     /**
-     * <p>The end time. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The end time. The value is a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -114,7 +114,7 @@ public class DescribeVpcFirewallAssetListRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The instance ID of the peer VPC.</p>
+     * <p>The instance ID of the peer VPC instance.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-90rq0anm6t8vbwbo****</p>
@@ -150,7 +150,7 @@ public class DescribeVpcFirewallAssetListRequest extends TeaModel {
     public String sort;
 
     /**
-     * <p>The start time. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The start time. The value is a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

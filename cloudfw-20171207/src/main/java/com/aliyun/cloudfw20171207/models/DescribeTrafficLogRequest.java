@@ -189,7 +189,7 @@ public class DescribeTrafficLogRequest extends TeaModel {
      * <p>The language type of the received message. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -344,7 +344,7 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String srcVpcRegionNo;
 
     /**
-     * <p>The start time. Specify a UNIX timestamp in seconds. Only data within the last 7 days can be queried. We recommend that a single query does not exceed one day.</p>
+     * <p>The start time. Specify a UNIX timestamp in seconds. Only data within the last 7 days can be queried. A single query should not exceed one day.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

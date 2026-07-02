@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionResourceTypeAutoEnableResponseBody extends TeaModel {
     /**
-     * <p>The traffic redirection switch for asset types in the region.</p>
+     * <p>The traffic redirection settings for asset types in each region.</p>
      */
     @NameInMap("RegionResourceAutoEnable")
     public java.util.Map<String, java.util.Map<String, ?>> regionResourceAutoEnable;

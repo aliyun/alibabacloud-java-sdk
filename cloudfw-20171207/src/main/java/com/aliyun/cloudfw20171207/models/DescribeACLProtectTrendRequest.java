@@ -16,9 +16,9 @@ public class DescribeACLProtectTrendRequest extends TeaModel {
     /**
      * <p>The type of the firewall border. Valid values:</p>
      * <ul>
-     * <li><strong>internet</strong> (default): Internet Border firewall, which detects and controls traffic between your assets and the Internet.</li>
-     * <li><strong>vpc</strong>: virtual private cloud (VPC) firewalls, which detect and control traffic between VPCs.</li>
-     * <li><strong>nat</strong>: NAT firewalls, which detect and control traffic from internal-facing assets to the Internet.</li>
+     * <li><strong>internet</strong> (default): Internet Border firewall, which monitors traffic between the Internet and your assets.</li>
+     * <li><strong>vpc</strong>: virtual private cloud (VPC) firewalls, which monitor traffic between VPCs.</li>
+     * <li><strong>nat</strong>: NAT firewalls, which monitor traffic from internal-facing assets to the Internet.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class DescribeACLProtectTrendRequest extends TeaModel {
     public String firewallType;
 
     /**
-     * <p>The time aggregation granularity for trend data. Unit: seconds. Valid values:</p>
+     * <p>The time aggregation granularity for trend data, in seconds. Valid values:</p>
      * <ul>
      * <li><strong>60</strong>: 1-minute granularity (uses the minute-level detail table).</li>
      * <li><strong>1800</strong>: 30-minute granularity.</li>

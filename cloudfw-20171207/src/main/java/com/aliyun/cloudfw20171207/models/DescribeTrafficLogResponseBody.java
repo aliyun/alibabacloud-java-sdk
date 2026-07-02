@@ -65,7 +65,7 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String regionNo;
 
         /**
-         * <p>The VPC instance ID.</p>
+         * <p>The VPC-connected instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-8vba1c1em97h0ji71b****</p>
@@ -233,7 +233,7 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
 
     public static class DescribeTrafficLogResponseBodyDataList extends TeaModel {
         /**
-         * <p>The policy ID of the ACL pre-match. If this parameter is empty, all policies are included.</p>
+         * <p>The policy ID of the ACL pre-match. If this parameter is not specified, all policies are included.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -254,7 +254,7 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
          * <p>The ACL pre-match status. Valid values:</p>
          * <p><strong>app_unknown</strong>: application not identified</p>
          * <p><strong>domain_unknown</strong>: domain name not identified</p>
-         * <p><strong>normal</strong>: normal.</p>
+         * <p><strong>normal</strong>: normal</p>
          * 
          * <strong>example:</strong>
          * <p>normal</p>
@@ -271,7 +271,7 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
          * <p><strong>analysing</strong>: identification in progress</p>
          * <p><strong>unknown_loose</strong>: loose mode, identification failed, continuing identification</p>
          * <p><strong>unknown_strict</strong>: strict mode, identification failed</p>
-         * <p><strong>success</strong>: identification succeeded.</p>
+         * <p><strong>success</strong>: identification succeeded</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -416,7 +416,7 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The additional extension data.</p>
+         * <p>Other extended data.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -425,7 +425,7 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String ext;
 
         /**
-         * <p>The inbound traffic in bytes.</p>
+         * <p>The inbound traffic.</p>
          * 
          * <strong>example:</strong>
          * <p>125</p>
@@ -488,7 +488,7 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String memberUid;
 
         /**
-         * <p>The outbound traffic in bytes.</p>
+         * <p>The outbound traffic.</p>
          * 
          * <strong>example:</strong>
          * <p>230</p>
@@ -614,7 +614,7 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String srcIP;
 
         /**
-         * <p>The source port.</p>
+         * <p>The port of the data source.</p>
          * 
          * <strong>example:</strong>
          * <p>20206</p>

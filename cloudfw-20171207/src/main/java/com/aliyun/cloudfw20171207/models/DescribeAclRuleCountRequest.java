@@ -8,7 +8,7 @@ public class DescribeAclRuleCountRequest extends TeaModel {
      * <p>The language type. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>

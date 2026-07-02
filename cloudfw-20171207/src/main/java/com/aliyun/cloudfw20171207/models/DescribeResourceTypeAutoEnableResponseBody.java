@@ -14,7 +14,7 @@ public class DescribeResourceTypeAutoEnableResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether traffic redirection is enabled by default.</p>
+     * <p>Indicates whether default traffic redirection is enabled.</p>
      */
     @NameInMap("ResourceTypeAutoEnable")
     public java.util.Map<String, Boolean> resourceTypeAutoEnable;

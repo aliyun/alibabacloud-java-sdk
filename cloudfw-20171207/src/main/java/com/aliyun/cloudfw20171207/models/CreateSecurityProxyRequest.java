@@ -93,7 +93,7 @@ public class CreateSecurityProxyRequest extends TeaModel {
     public Integer strictMode;
 
     /**
-     * <p>The instance ID of the VPC.</p>
+     * <p>The VPC-connected instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -86,7 +86,7 @@ public class DescribeVpcFirewallAssetListResponseBody extends TeaModel {
         public String assetInstanceName;
 
         /**
-         * <p>The inbound traffic. Unit: bytes.</p>
+         * <p>The inbound traffic, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0</p>
@@ -104,7 +104,7 @@ public class DescribeVpcFirewallAssetListResponseBody extends TeaModel {
         public Long ipsHitCnt;
 
         /**
-         * <p>The outbound traffic. Unit: bytes.</p>
+         * <p>The outbound traffic, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0</p>
@@ -113,7 +113,7 @@ public class DescribeVpcFirewallAssetListResponseBody extends TeaModel {
         public Long outBytes;
 
         /**
-         * <p>The list of ports.</p>
+         * <p>The port list.</p>
          */
         @NameInMap("PortList")
         public java.util.List<String> portList;

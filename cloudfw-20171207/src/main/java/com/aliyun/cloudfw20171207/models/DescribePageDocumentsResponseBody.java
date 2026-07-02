@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePageDocumentsResponseBody extends TeaModel {
     /**
-     * <p>The document list.</p>
+     * <p>The list of documents.</p>
      */
     @NameInMap("Docs")
     public java.util.List<DescribePageDocumentsResponseBodyDocs> docs;

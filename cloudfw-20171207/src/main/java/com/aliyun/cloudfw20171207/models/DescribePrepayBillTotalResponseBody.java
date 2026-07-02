@@ -4,10 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribePrepayBillTotalResponseBody extends TeaModel {
+    /**
+     * <p>The bill list, aggregated by day.</p>
+     */
     @NameInMap("BillList")
     public java.util.List<DescribePrepayBillTotalResponseBodyBillList> billList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>450D47F5-956E-543E-8502-***********</p>
      */
@@ -15,6 +20,8 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>132</p>
      */
@@ -52,6 +59,8 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
 
     public static class DescribePrepayBillTotalResponseBodyBillList extends TeaModel {
         /**
+         * <p>The actual billed traffic for sensitive data leak detection.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -59,6 +68,8 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
         public Float billedDetectionTraffic;
 
         /**
+         * <p>The sensitive data detection traffic for the day.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -66,6 +77,8 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
         public Float dailyDetectionTraffic;
 
         /**
+         * <p>The total elastic traffic for the day. Unit: GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -73,6 +86,8 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
         public Float dailyOverflowTraffic;
 
         /**
+         * <p>The default bandwidth of the edition. Unit: Mbit/s.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -80,6 +95,8 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
         public Long defaultBandwidth;
 
         /**
+         * <p>The elastic bandwidth. Unit: Mbit/s.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -87,6 +104,8 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
         public Long elasticBandwidth;
 
         /**
+         * <p>The end time of the day. The value is a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1761667200</p>
          */
@@ -94,6 +113,8 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
         public Long endTime;
 
         /**
+         * <p>The extended bandwidth. Unit: Mbit/s.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -101,6 +122,8 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
         public Long extensionBandwidth;
 
         /**
+         * <p>The Internet traffic bandwidth. Unit: Gbit/s.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -108,6 +131,8 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
         public Float internetTrafficBandwidth;
 
         /**
+         * <p>The monthly free traffic quota for sensitive data detection. Unit: GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -115,6 +140,8 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
         public Float monthlyRemainingFreeTraffic;
 
         /**
+         * <p>The NAT traffic bandwidth. Unit: Gbit/s.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -122,6 +149,8 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
         public Float natTrafficBandwidth;
 
         /**
+         * <p>The timestamp when the maximum combined bandwidth (Internet + VPC + NAT) occurred on that day.</p>
+         * 
          * <strong>example:</strong>
          * <p>1761588300</p>
          */
@@ -129,6 +158,8 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
         public Long overflowTime;
 
         /**
+         * <p>The start time of the day. The value is a UNIX timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1761580800</p>
          */
@@ -136,6 +167,8 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
         public Long startTime;
 
         /**
+         * <p>The temporary upgrade bandwidth. Unit: Mbit/s.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -143,6 +176,8 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
         public Long temporaryBandwidth;
 
         /**
+         * <p>The VPC traffic bandwidth. Unit: Gbit/s.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

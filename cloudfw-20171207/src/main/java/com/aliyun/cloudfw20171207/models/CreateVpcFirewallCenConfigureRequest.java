@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateVpcFirewallCenConfigureRequest extends TeaModel {
     /**
-     * <p>The Cloud Enterprise Network (CEN) instance ID.</p>
+     * <p>The instance ID of the CEN instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,10 @@ public class CreateVpcFirewallCenConfigureRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The switch status of the VPC border firewall. Valid values:</p>
+     * <p>Settings for the virtual private cloud (VPC) firewall switch status. Valid values:</p>
      * <ul>
-     * <li><strong>open</strong> (default): Protection is automatically enabled after the VPC border firewall is created.</li>
-     * <li><strong>close</strong>: Protection is not automatically enabled after the VPC border firewall is created. You can call the <a href="https://help.aliyun.com/document_detail/345780.html">ModifyVpcFirewallCenSwitchStatus</a> operation to enable protection.</li>
+     * <li><strong>open</strong> (default): The VPC firewall is automatically enabled after you create a VPC firewall.</li>
+     * <li><strong>close</strong>: The VPC firewall is not automatically enabled after you create a VPC firewall. You can invoke the <a href="https://help.aliyun.com/document_detail/345780.html">ModifyVpcFirewallCenSwitchStatus</a> operation to enable the VPC firewall.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -29,20 +29,20 @@ public class CreateVpcFirewallCenConfigureRequest extends TeaModel {
     public String firewallSwitch;
 
     /**
-     * <p>The vSwitch CIDR block used by the firewall. You must configure a CIDR block with a subnet mask no larger than 29 bits that does not conflict with the network plan to allocate a vSwitch CIDR block for the firewall creation process. This is used to automatically create a vSwitch (Cloud_Firewall_VSWITCH) within the firewall security VPC for traffic redirection. The vSwitch CIDR block must be a subnet of the firewall VPC CIDR block.</p>
-     * <p>If this parameter is not specified, the CIDR block 10.219.219.216/29 is automatically allocated by default.</p>
+     * <p>The CIDR block of the vSwitch used by the firewall. Specify a CIDR block with a subnet mask of no more than 29 bits that does not conflict with your network planning. This CIDR block is allocated to the vSwitch during the procedure for automatic creation of the firewall security VPC (Cloud_Firewall_VSWITCH) for traffic redirection. The vSwitch CIDR block must be a subnet of the firewall VPC CIDR block.</p>
+     * <p>If you leave this parameter empty, the default CIDR block 10.219.219.216/29 is automatically assigned.</p>
      * <blockquote>
-     * <p>This parameter is only valid when a VPC firewall is created for the first time in this CEN region.</p>
+     * <p>This parameter takes effect only when you create a VPC firewall for the first time in the local region of the CEN instance.</p>
      * </blockquote>
      */
     @NameInMap("FirewallVSwitchCidrBlock")
     public String firewallVSwitchCidrBlock;
 
     /**
-     * <p>The VPC CIDR block used by the firewall. You must configure a CIDR block with a subnet mask no larger than 28 bits to allocate a VPC CIDR block for the firewall creation process. This is used to automatically create a firewall security VPC (Cloud_Firewall_VPC) for traffic redirection.</p>
-     * <p>If this parameter is not specified, the CIDR block 10.0.0.0/8 is automatically allocated by default.</p>
+     * <p>The CIDR block of the VPC used by the firewall. Specify a CIDR block with a subnet mask of no more than 28 bits. This CIDR block is allocated to the VPC that is created during the procedure to create a VPC firewall (Cloud_Firewall_VPC) for automatic creation of the firewall security VPC for traffic redirection.</p>
+     * <p>If you leave this parameter empty, the default CIDR block 10.0.0.0/8 is automatically assigned.</p>
      * <blockquote>
-     * <p>This parameter is only valid when a VPC firewall is created for the first time in this CEN region.</p>
+     * <p>This parameter takes effect only when a VPC firewall is created for the first time in the local region of the CEN instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -52,10 +52,10 @@ public class CreateVpcFirewallCenConfigureRequest extends TeaModel {
     public String firewallVpcCidrBlock;
 
     /**
-     * <p>The standby availability zone ID of the firewall. The firewall automatically switches to the standby availability zone and continues to run only when the primary availability zone service is unavailable.</p>
-     * <p>If this parameter is not specified, the firewall standby availability zone is automatically allocated by default.</p>
+     * <p>The ID of the secondary zone of the firewall. The firewall performs an automatic switchover to the secondary zone to continue running only when the primary zone becomes unavailable.</p>
+     * <p>If you leave this parameter empty, a default active secondary zone is automatically allocated.</p>
      * <blockquote>
-     * <p>This parameter is only valid when a VPC firewall is created for the first time in this CEN region.</p>
+     * <p>This parameter takes effect only when you create a VPC firewall for the first time in the local region of the CEN instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -65,11 +65,10 @@ public class CreateVpcFirewallCenConfigureRequest extends TeaModel {
     public String firewallVpcStandbyZoneId;
 
     /**
-     * <p>The primary availability zone ID of the firewall.
-     * If your business is latency-sensitive, you can customize the firewall availability zone to be the same as your business VPC vSwitch availability zone to reduce latency.</p>
-     * <p>If this parameter is not specified, the firewall availability zone is automatically allocated by default.</p>
+     * <p>The ID of the primary zone of the firewall. If your business is latency-sensitive, set this parameter to the same zone as the vSwitch of the business VPC to reduce latency.</p>
+     * <p>If you leave this parameter empty, a default active zone is automatically allocated.</p>
      * <blockquote>
-     * <p>This parameter is only valid when a VPC firewall is created for the first time in this CEN region.</p>
+     * <p>This parameter takes effect only when you create a VPC firewall for the first time in the local region of the CEN instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -79,7 +78,7 @@ public class CreateVpcFirewallCenConfigureRequest extends TeaModel {
     public String firewallVpcZoneId;
 
     /**
-     * <p>The language type for the request and response messages. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
      * <li><p><strong>zh</strong> (default): Chinese.</p>
      * </li>
@@ -94,7 +93,7 @@ public class CreateVpcFirewallCenConfigureRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The member account UID of the current Alibaba Cloud account.</p>
+     * <p>The UID of the member account of the current Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>258039427902****</p>
@@ -103,7 +102,7 @@ public class CreateVpcFirewallCenConfigureRequest extends TeaModel {
     public String memberUid;
 
     /**
-     * <p>The VPC instance ID for which the VPC border firewall is created.</p>
+     * <p>The instance ID of the VPC-connected instance for which you want to create a virtual private cloud (VPC) firewall.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -113,7 +112,7 @@ public class CreateVpcFirewallCenConfigureRequest extends TeaModel {
     public String networkInstanceId;
 
     /**
-     * <p>The vSwitch ID to which the Cloud Firewall interface belongs.</p>
+     * <p>The ID of the vSwitch to which the Cloud Firewall interface belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-qzeaol304m***</p>
@@ -122,7 +121,7 @@ public class CreateVpcFirewallCenConfigureRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The instance name of the VPC border firewall.</p>
+     * <p>The instance name of the virtual private cloud (VPC) firewall.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -132,7 +131,7 @@ public class CreateVpcFirewallCenConfigureRequest extends TeaModel {
     public String vpcFirewallName;
 
     /**
-     * <p>The region ID of the VPC for which the VPC border firewall is created.</p>
+     * <p>The region ID of the VPC for which you want to create a virtual private cloud (VPC) firewall.</p>
      * <blockquote>
      * <p>For more information about the regions supported by Cloud Firewall, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
      * </blockquote>

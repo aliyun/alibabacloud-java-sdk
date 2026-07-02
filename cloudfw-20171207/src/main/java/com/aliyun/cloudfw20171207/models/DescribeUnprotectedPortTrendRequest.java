@@ -14,11 +14,7 @@ public class DescribeUnprotectedPortTrendRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The language of the response. Valid values:</p>
-     * <ul>
-     * <li><strong>en</strong>: English</li>
-     * <li><strong>zh</strong>: Chinese.</li>
-     * </ul>
+     * <p>The language type of the received message.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -27,7 +23,7 @@ public class DescribeUnprotectedPortTrendRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The source IP address of the visitor.</p>
      * 
      * <strong>example:</strong>
      * <p>61.155.60.XXX</p>

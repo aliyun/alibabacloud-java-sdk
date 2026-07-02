@@ -23,7 +23,7 @@ public class DescribeAclRuleCountResponseBody extends TeaModel {
     public Integer internetOutAclCount;
 
     /**
-     * <p>The number of inbound access control policies for the NAT firewall.&gt;Notice: This field is deprecated..</p>
+     * <p>The number of inbound access control policies for the NAT firewall.&gt;Notice: This field is deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -60,7 +60,7 @@ public class DescribeAclRuleCountResponseBody extends TeaModel {
     public Integer totalAclCount;
 
     /**
-     * <p>The number of access control policies for the VPC firewall.</p>
+     * <p>The number of access control policies for VPC firewalls.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>

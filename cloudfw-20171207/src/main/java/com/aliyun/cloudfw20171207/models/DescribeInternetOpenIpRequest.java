@@ -42,7 +42,7 @@ public class DescribeInternetOpenIpRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>The end time when the public IP address was exposed. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The end time of the public IP address exposure. Specify the value as a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1663640336</p>
@@ -51,12 +51,10 @@ public class DescribeInternetOpenIpRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The language of the response message.</p>
+     * <p>The language of the content within the response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese</p>
-     * </li>
-     * <li><p><strong>en</strong>: English</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,7 +64,7 @@ public class DescribeInternetOpenIpRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries to return on each page for a paged query.</p>
+     * <p>The number of entries per page for a paged query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -103,16 +101,12 @@ public class DescribeInternetOpenIpRequest extends TeaModel {
     public String regionNo;
 
     /**
-     * <p>The risk level. If you leave this parameter empty, all risk levels are queried. Valid values:</p>
+     * <p>The risk level. If this parameter is not specified, all risk levels are returned. Valid values:</p>
      * <ul>
-     * <li><p><strong>3</strong>: high</p>
-     * </li>
-     * <li><p><strong>2</strong>: medium</p>
-     * </li>
-     * <li><p><strong>1</strong>: low</p>
-     * </li>
-     * <li><p><strong>0</strong>: none</p>
-     * </li>
+     * <li><strong>3</strong>: high risk</li>
+     * <li><strong>2</strong>: medium risk</li>
+     * <li><strong>1</strong>: low risk</li>
+     * <li><strong>0</strong>: no risk.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -122,7 +116,7 @@ public class DescribeInternetOpenIpRequest extends TeaModel {
     public String riskLevel;
 
     /**
-     * <p>The name of the application to query.</p>
+     * <p>The application name to query.</p>
      * 
      * <strong>example:</strong>
      * <p>SSH</p>
@@ -131,7 +125,7 @@ public class DescribeInternetOpenIpRequest extends TeaModel {
     public String serviceName;
 
     /**
-     * <p>The start time when the public IP address was exposed. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The start time of the public IP address exposure. Specify the value as a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1681957629</p>
