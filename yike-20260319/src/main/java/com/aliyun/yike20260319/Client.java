@@ -466,6 +466,106 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>该API用于根据提供的文本内容及其它参数（如数字人信息、应用场景类型等）生成一段由虚拟人物口播的视频。用户需指定文本类型（原始稿或口播稿）、成片尺寸与清晰度等关键配置项，并可选择是否添加字幕或指定输出语言种类。此外，支持通过<code>UserData</code>字段传递自定义参数，在回调时原样返回。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询图片生成任务</p>
+     * 
+     * @param request GetImageGenerationJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetImageGenerationJobResponse
+     */
+    public GetImageGenerationJobResponse getImageGenerationJobWithOptions(GetImageGenerationJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetImageGenerationJob"),
+            new TeaPair("version", "2026-03-19"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetImageGenerationJobResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>该API用于根据提供的文本内容及其它参数（如数字人信息、应用场景类型等）生成一段由虚拟人物口播的视频。用户需指定文本类型（原始稿或口播稿）、成片尺寸与清晰度等关键配置项，并可选择是否添加字幕或指定输出语言种类。此外，支持通过<code>UserData</code>字段传递自定义参数，在回调时原样返回。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询图片生成任务</p>
+     * 
+     * @param request GetImageGenerationJobRequest
+     * @return GetImageGenerationJobResponse
+     */
+    public GetImageGenerationJobResponse getImageGenerationJob(GetImageGenerationJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getImageGenerationJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询视频生成任务</p>
+     * 
+     * @param request GetVideoGenerationJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetVideoGenerationJobResponse
+     */
+    public GetVideoGenerationJobResponse getVideoGenerationJobWithOptions(GetVideoGenerationJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetVideoGenerationJob"),
+            new TeaPair("version", "2026-03-19"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetVideoGenerationJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询视频生成任务</p>
+     * 
+     * @param request GetVideoGenerationJobRequest
+     * @return GetVideoGenerationJobResponse
+     */
+    public GetVideoGenerationJobResponse getVideoGenerationJob(GetVideoGenerationJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getVideoGenerationJobWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Retrieves the details of an AI application task.</p>
      * 
@@ -1314,6 +1414,186 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>该API用于根据提供的文本内容及其它参数（如数字人信息、应用场景类型等）生成一段由虚拟人物口播的视频。用户需指定文本类型（原始稿或口播稿）、成片尺寸与清晰度等关键配置项，并可选择是否添加字幕或指定输出语言种类。此外，支持通过<code>UserData</code>字段传递自定义参数，在回调时原样返回。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>提交图像生成接口</p>
+     * 
+     * @param request SubmitImageGenerationJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitImageGenerationJobResponse
+     */
+    public SubmitImageGenerationJobResponse submitImageGenerationJobWithOptions(SubmitImageGenerationJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aspectRatio)) {
+            query.put("AspectRatio", request.aspectRatio);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.input)) {
+            query.put("Input", request.input);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobParameters)) {
+            query.put("JobParameters", request.jobParameters);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobType)) {
+            query.put("JobType", request.jobType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.model)) {
+            query.put("Model", request.model);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.n)) {
+            query.put("N", request.n);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resolution)) {
+            query.put("Resolution", request.resolution);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scene)) {
+            query.put("Scene", request.scene);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
+            query.put("UserData", request.userData);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitImageGenerationJob"),
+            new TeaPair("version", "2026-03-19"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitImageGenerationJobResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>该API用于根据提供的文本内容及其它参数（如数字人信息、应用场景类型等）生成一段由虚拟人物口播的视频。用户需指定文本类型（原始稿或口播稿）、成片尺寸与清晰度等关键配置项，并可选择是否添加字幕或指定输出语言种类。此外，支持通过<code>UserData</code>字段传递自定义参数，在回调时原样返回。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>提交图像生成接口</p>
+     * 
+     * @param request SubmitImageGenerationJobRequest
+     * @return SubmitImageGenerationJobResponse
+     */
+    public SubmitImageGenerationJobResponse submitImageGenerationJob(SubmitImageGenerationJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitImageGenerationJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>该API用于根据提供的文本内容及其它参数（如数字人信息、应用场景类型等）生成一段由虚拟人物口播的视频。用户需指定文本类型（原始稿或口播稿）、成片尺寸与清晰度等关键配置项，并可选择是否添加字幕或指定输出语言种类。此外，支持通过<code>UserData</code>字段传递自定义参数，在回调时原样返回。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>提交视频生成接口</p>
+     * 
+     * @param request SubmitVideoGenerationJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitVideoGenerationJobResponse
+     */
+    public SubmitVideoGenerationJobResponse submitVideoGenerationJobWithOptions(SubmitVideoGenerationJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aspectRatio)) {
+            query.put("AspectRatio", request.aspectRatio);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.duration)) {
+            query.put("Duration", request.duration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.input)) {
+            query.put("Input", request.input);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobParameters)) {
+            query.put("JobParameters", request.jobParameters);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobType)) {
+            query.put("JobType", request.jobType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.model)) {
+            query.put("Model", request.model);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.n)) {
+            query.put("N", request.n);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resolution)) {
+            query.put("Resolution", request.resolution);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scene)) {
+            query.put("Scene", request.scene);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
+            query.put("UserData", request.userData);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitVideoGenerationJob"),
+            new TeaPair("version", "2026-03-19"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitVideoGenerationJobResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>该API用于根据提供的文本内容及其它参数（如数字人信息、应用场景类型等）生成一段由虚拟人物口播的视频。用户需指定文本类型（原始稿或口播稿）、成片尺寸与清晰度等关键配置项，并可选择是否添加字幕或指定输出语言种类。此外，支持通过<code>UserData</code>字段传递自定义参数，在回调时原样返回。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>提交视频生成接口</p>
+     * 
+     * @param request SubmitVideoGenerationJobRequest
+     * @return SubmitVideoGenerationJobResponse
+     */
+    public SubmitVideoGenerationJobResponse submitVideoGenerationJob(SubmitVideoGenerationJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitVideoGenerationJobWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Submits an AI application task to Yike AI.</p>
      * 
@@ -1635,7 +1915,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交一刻数字人口播视频生成任务</p>
+     * <p>Creates a video replication task that supports same-category content rewriting scenarios by preserving the original video framework and generating deduplicated variants through replacing partial elements (person/voice/image/text).</p>
      * 
      * @param request SubmitYikeVideoCloneJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1671,7 +1951,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交一刻数字人口播视频生成任务</p>
+     * <p>Creates a video replication task that supports same-category content rewriting scenarios by preserving the original video framework and generating deduplicated variants through replacing partial elements (person/voice/image/text).</p>
      * 
      * @param request SubmitYikeVideoCloneJobRequest
      * @return SubmitYikeVideoCloneJobResponse

@@ -3,31 +3,27 @@ package com.aliyun.yike20260319.models;
 
 import com.aliyun.tea.*;
 
-public class SubmitYikeVideoCloneJobResponseBody extends TeaModel {
+public class SubmitVideoGenerationJobResponseBody extends TeaModel {
     /**
-     * <p>The task ID.</p>
-     * 
      * <strong>example:</strong>
-     * <p>task_abc123def456</p>
+     * <p><strong><strong>3e761e9d11edba640c42a1b7</strong></strong></p>
      */
     @NameInMap("JobId")
     public String jobId;
 
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
-     * <p>req_create_20260420_001</p>
+     * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static SubmitYikeVideoCloneJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        SubmitYikeVideoCloneJobResponseBody self = new SubmitYikeVideoCloneJobResponseBody();
+    public static SubmitVideoGenerationJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        SubmitVideoGenerationJobResponseBody self = new SubmitVideoGenerationJobResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public SubmitYikeVideoCloneJobResponseBody setJobId(String jobId) {
+    public SubmitVideoGenerationJobResponseBody setJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
@@ -35,7 +31,7 @@ public class SubmitYikeVideoCloneJobResponseBody extends TeaModel {
         return this.jobId;
     }
 
-    public SubmitYikeVideoCloneJobResponseBody setRequestId(String requestId) {
+    public SubmitVideoGenerationJobResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
