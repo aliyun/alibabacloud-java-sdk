@@ -2849,6 +2849,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Creates an unstructured workflow node using JSON script mode. Online version: v6.2.0.</p>
+     * 
+     * @param tmpReq CreateWorkFlowByJsonRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateWorkFlowByJsonResponse
+     */
+    public CreateWorkFlowByJsonResponse createWorkFlowByJsonWithOptions(CreateWorkFlowByJsonRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateWorkFlowByJsonShrinkRequest request = new CreateWorkFlowByJsonShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.context)) {
+            request.contextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.context, "Context", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.createCommand)) {
+            request.createCommandShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.createCommand, "CreateCommand", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.contextShrink)) {
+            body.put("Context", request.contextShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.createCommandShrink)) {
+            body.put("CreateCommand", request.createCommandShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateWorkFlowByJson"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateWorkFlowByJsonResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an unstructured workflow node using JSON script mode. Online version: v6.2.0.</p>
+     * 
+     * @param request CreateWorkFlowByJsonRequest
+     * @return CreateWorkFlowByJsonResponse
+     */
+    public CreateWorkFlowByJsonResponse createWorkFlowByJson(CreateWorkFlowByJsonRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createWorkFlowByJsonWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes an ad hoc query file from the menu tree.</p>
      * 
      * @param request DeleteAdHocFileRequest
