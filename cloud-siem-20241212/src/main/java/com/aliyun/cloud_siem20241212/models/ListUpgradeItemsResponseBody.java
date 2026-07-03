@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListUpgradeItemsResponseBody extends TeaModel {
     /**
+     * <p>The maximum number of entries returned on the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -12,6 +14,8 @@ public class ListUpgradeItemsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token that is used to retrieve the next page of results. If the value is not empty, more results are available.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
      */
@@ -19,6 +23,8 @@ public class ListUpgradeItemsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
      */
@@ -26,12 +32,17 @@ public class ListUpgradeItemsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>57</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The list of upgrade items.</p>
+     */
     @NameInMap("UpgradeItems")
     public java.util.List<ListUpgradeItemsResponseBodyUpgradeItems> upgradeItems;
 
@@ -82,6 +93,8 @@ public class ListUpgradeItemsResponseBody extends TeaModel {
 
     public static class ListUpgradeItemsResponseBodyUpgradeItems extends TeaModel {
         /**
+         * <p>The ID of the upgrade item.</p>
+         * 
          * <strong>example:</strong>
          * <p>data_storage_2_upgrade</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExecuteLogQueryResponseBody extends TeaModel {
     /**
+     * <p>The query result.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]。</p>
      */
@@ -12,8 +14,10 @@ public class ExecuteLogQueryResponseBody extends TeaModel {
     public java.util.List<?> queryResult;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>6276D891-*****-55B2-87B9-74D413F7****。</p>
+     * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

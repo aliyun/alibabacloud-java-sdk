@@ -4,11 +4,14 @@ package com.aliyun.cloud_siem20241212.models;
 import com.aliyun.tea.*;
 
 public class GetAutoDisposeConfigResponseBody extends TeaModel {
+    /**
+     * <p>The automatic response configuration.</p>
+     */
     @NameInMap("AutoDisposeConfig")
     public GetAutoDisposeConfigResponseBodyAutoDisposeConfig autoDisposeConfig;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
@@ -39,6 +42,14 @@ public class GetAutoDisposeConfigResponseBody extends TeaModel {
 
     public static class GetAutoDisposeConfigResponseBodyAutoDisposeConfig extends TeaModel {
         /**
+         * <p>Indicates whether automatic response is enabled. Valid values:</p>
+         * <ul>
+         * <li><p>enabled: Enabled.</p>
+         * </li>
+         * <li><p>disabled: Disabled.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>enabled</p>
          */
@@ -46,6 +57,8 @@ public class GetAutoDisposeConfigResponseBody extends TeaModel {
         public String autoDecisionStatus;
 
         /**
+         * <p>The code for the cloud product.</p>
+         * 
          * <strong>example:</strong>
          * <p>alibaba_cloud_sas</p>
          */

@@ -5,72 +5,141 @@ import com.aliyun.tea.*;
 
 public class ListDataSourcesRequest extends TeaModel {
     /**
+     * <p>The source of the data. Valid values:</p>
+     * <ul>
+     * <li><p>center</p>
+     * </li>
+     * <li><p>custom</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>center。</p>
+     * <p>center</p>
      */
     @NameInMap("DataSourceFrom")
     public String dataSourceFrom;
 
+    /**
+     * <p>The IDs of the data sources.</p>
+     */
     @NameInMap("DataSourceIds")
     public java.util.List<String> dataSourceIds;
 
     /**
+     * <p>The name of the data source.</p>
+     * 
      * <strong>example:</strong>
-     * <p>alibaba_cloud_waf_alert_log。</p>
+     * <p>alibaba_cloud_waf_alert_log</p>
      */
     @NameInMap("DataSourceName")
     public String dataSourceName;
 
+    /**
+     * <p>The status of the data source. Valid values:</p>
+     * <ul>
+     * <li><p>unconfigured</p>
+     * </li>
+     * <li><p>normal</p>
+     * </li>
+     * <li><p>abnormal</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>unconfigured</p>
+     */
     @NameInMap("DataSourceStatus")
     public String dataSourceStatus;
 
+    /**
+     * <p>The status of the Logstore. Valid values:</p>
+     * <ul>
+     * <li><p>normal</p>
+     * </li>
+     * <li><p>abnormal</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>normal</p>
+     */
     @NameInMap("DataSourceStoreStatus")
     public String dataSourceStoreStatus;
 
+    /**
+     * <p>The IDs of the data source templates.</p>
+     */
     @NameInMap("DataSourceTemplateIds")
     public java.util.List<String> dataSourceTemplateIds;
 
     /**
+     * <p>The type of the data source. Valid values:</p>
+     * <ul>
+     * <li><p>preset</p>
+     * </li>
+     * <li><p>custom</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>custom。</p>
+     * <p>custom</p>
      */
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>zh。</p>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
+     * <p>The name of the Simple Log Service project.</p>
+     * 
      * <strong>example:</strong>
-     * <p>aliyun-cloudsiem-data-173326*******-cn-hangzhou。</p>
+     * <p>aliyun-cloudsiem-data-173326*******-cn-hangzhou</p>
      */
     @NameInMap("LogProjectName")
     public String logProjectName;
 
     /**
+     * <p>The ID of the log storage region.</p>
+     * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou。</p>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("LogRegionId")
     public String logRegionId;
 
     /**
+     * <p>The name of the Simple Log Service Logstore.</p>
+     * 
      * <strong>example:</strong>
-     * <p>audit-activity。</p>
+     * <p>audit-activity</p>
      */
     @NameInMap("LogStoreName")
     public String logStoreName;
 
+    /**
+     * <p>The IDs of the users who can access the data.</p>
+     */
     @NameInMap("LogUserIds")
     public java.util.List<Long> logUserIds;
 
     /**
+     * <p>The maximum number of entries to return for a single request.</p>
+     * 
      * <strong>example:</strong>
-     * <p>50。</p>
+     * <p>50</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -79,50 +148,76 @@ public class ListDataSourcesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token that is used to retrieve the next page of results. Set this parameter to the value of NextToken that is returned in the response to the previous query. Leave this parameter empty for the first query.</p>
+     * 
      * <strong>example:</strong>
-     * <p>AAAAAUqcj6VO4E3ECWIrFczs****。</p>
+     * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
+     * <p>The sorting order. Valid values:</p>
+     * <ul>
+     * <li><p>desc</p>
+     * </li>
+     * <li><p>asc</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>desc。</p>
+     * <p>desc</p>
      */
     @NameInMap("Order")
     public String order;
 
     /**
+     * <p>The sorting field.</p>
+     * 
      * <strong>example:</strong>
-     * <p>UpdateTime。</p>
+     * <p>UpdateTime</p>
      */
     @NameInMap("OrderField")
     public String orderField;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
-     * <p>1。</p>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
-     * <p>5。</p>
+     * <p>5</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
+     * <p>The region where the Data Management Center of your threat analysis feature is located. Select a region based on the location of your assets. Valid values:</p>
+     * <ul>
+     * <li><p>cn-hangzhou: Your assets are in the Chinese mainland.</p>
+     * </li>
+     * <li><p>ap-southeast-1: Your assets are in a region outside China.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou。</p>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
+     * <p>The user ID of the member. You can use this parameter to switch the perspective to a member.</p>
+     * 
      * <strong>example:</strong>
-     * <p>173326*******。</p>
+     * <p>173326*******</p>
      */
     @NameInMap("RoleFor")
     public Long roleFor;

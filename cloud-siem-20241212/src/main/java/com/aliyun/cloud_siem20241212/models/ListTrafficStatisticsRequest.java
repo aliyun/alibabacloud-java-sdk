@@ -5,65 +5,114 @@ import com.aliyun.tea.*;
 
 public class ListTrafficStatisticsRequest extends TeaModel {
     /**
+     * <p>The language of the response messages. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>zh。</p>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>A list of user IDs for batch data ingestion.</p>
+     */
     @NameInMap("LogUserIds")
     public java.util.List<Long> logUserIds;
 
     /**
+     * <p>The product ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>alibaba_cloud_sas。</p>
+     * <p>alibaba_cloud_sas</p>
      */
     @NameInMap("ProductId")
     public String productId;
 
     /**
+     * <p>The region of the Data Management center for threat analysis. Select a region based on the location of your asset. Valid values:</p>
+     * <ul>
+     * <li><p>cn-hangzhou: Your asset is in the Chinese mainland.</p>
+     * </li>
+     * <li><p>ap-southeast-1: Your asset is outside China.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou。</p>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
+     * <p>The region.</p>
+     * 
      * <strong>example:</strong>
-     * <p>1。</p>
+     * <p>1</p>
      */
     @NameInMap("RegionTag")
     public Integer regionTag;
 
     /**
+     * <p>The user ID of a member. This parameter is used by an administrator to switch to the perspective of the member.</p>
+     * 
      * <strong>example:</strong>
-     * <p>173326*******。</p>
+     * <p>173326*******</p>
      */
     @NameInMap("RoleFor")
     public Long roleFor;
 
     /**
+     * <p>The statistical period.</p>
+     * 
      * <strong>example:</strong>
-     * <p>30。</p>
+     * <p>30</p>
      */
     @NameInMap("TrafficStatisticPeriod")
     public String trafficStatisticPeriod;
 
     /**
+     * <p>The statistic granularity. Valid values:</p>
+     * <ul>
+     * <li><p>day: day. This is the default value.</p>
+     * </li>
+     * <li><p>hour: hour.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>day。</p>
+     * <p>day</p>
      */
     @NameInMap("TrafficStatisticPeriodType")
     public String trafficStatisticPeriodType;
 
     /**
+     * <p>The statistic dimension. Valid values:</p>
+     * <ul>
+     * <li><p>Region</p>
+     * </li>
+     * <li><p>Product</p>
+     * </li>
+     * <li><p>DataIngetion</p>
+     * </li>
+     * <li><p>logUserId</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>Region。</p>
+     * <p>Region</p>
      */
     @NameInMap("TrafficStatisticType")
     public String trafficStatisticType;
 
     /**
+     * <p>The type of the log traffic.</p>
+     * 
      * <strong>example:</strong>
      * <p>agentAnalysisLogTraffic</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.cloud_siem20241212.models;
 import com.aliyun.tea.*;
 
 public class GetDataStorageResponseBody extends TeaModel {
+    /**
+     * <p>The returned details.</p>
+     */
     @NameInMap("Data")
     public GetDataStorageResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>81FB0DEA-52C1-55A0-8631-8E1B9A9D****</p>
      */
@@ -37,6 +42,8 @@ public class GetDataStorageResponseBody extends TeaModel {
 
     public static class GetDataStorageResponseBodyDataNormalizationLogStores extends TeaModel {
         /**
+         * <p>The name of the Logstore that stores normalized data.</p>
+         * 
          * <strong>example:</strong>
          * <p>vulnerability-activity</p>
          */
@@ -44,6 +51,8 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String logStoreName;
 
         /**
+         * <p>The storage duration of normalized data.</p>
+         * 
          * <strong>example:</strong>
          * <p>180</p>
          */
@@ -51,6 +60,8 @@ public class GetDataStorageResponseBody extends TeaModel {
         public Integer logStoreTtl;
 
         /**
+         * <p>The hot storage capacity used.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.333</p>
          */
@@ -90,6 +101,8 @@ public class GetDataStorageResponseBody extends TeaModel {
 
     public static class GetDataStorageResponseBodyDataNormalizationLogViews extends TeaModel {
         /**
+         * <p>The log type of the normalized log.</p>
+         * 
          * <strong>example:</strong>
          * <p>API security risk log</p>
          */
@@ -97,6 +110,8 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String activityName;
 
         /**
+         * <p>The category of the normalized log.</p>
+         * 
          * <strong>example:</strong>
          * <p>Security Category</p>
          */
@@ -104,16 +119,23 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String categoryName;
 
         /**
+         * <p>The number of times the normalized dataset is referenced in the threat analysis access center.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
         @NameInMap("DetectionRuleReferenceCount")
         public Integer detectionRuleReferenceCount;
 
+        /**
+         * <p>The list of products that reference the normalized dataset in the threat analysis access center.</p>
+         */
         @NameInMap("DetectionRuleReferenceProductIds")
         public java.util.List<String> detectionRuleReferenceProductIds;
 
         /**
+         * <p>The query statement used to query the log type in the normalized dataset.</p>
+         * 
          * <strong>example:</strong>
          * <p>[{\&quot;SCHEMA\&quot;:\&quot;AZURE_ACTIVE_DIRECTORY_AUDIT_ACTIVITY\&quot;}]</p>
          */
@@ -121,6 +143,8 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String logSearchConditions;
 
         /**
+         * <p>The Logstore where threat analysis stores normalized logs.</p>
+         * 
          * <strong>example:</strong>
          * <p>risk-activity</p>
          */
@@ -128,6 +152,12 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String logStoreName;
 
         /**
+         * <p>Indicates whether the normalized dataset exists. Valid values:</p>
+         * <ul>
+         * <li>true: The normalized dataset exists.</li>
+         * <li>false: The normalized dataset does not exist.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -135,6 +165,8 @@ public class GetDataStorageResponseBody extends TeaModel {
         public Boolean logViewExisted;
 
         /**
+         * <p>The name of the normalized dataset.</p>
+         * 
          * <strong>example:</strong>
          * <p>risk_activity</p>
          */
@@ -212,8 +244,69 @@ public class GetDataStorageResponseBody extends TeaModel {
 
     }
 
+    public static class GetDataStorageResponseBodyDataRecordLogStores extends TeaModel {
+        /**
+         * <p>The Logstore name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alert-record</p>
+         */
+        @NameInMap("LogStoreName")
+        public String logStoreName;
+
+        /**
+         * <p>The time-to-live (TTL) of the Logstore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
+         */
+        @NameInMap("LogStoreTtl")
+        public Integer logStoreTtl;
+
+        /**
+         * <p>The used capacity of the Logstore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11.111</p>
+         */
+        @NameInMap("UsedCapacity")
+        public Double usedCapacity;
+
+        public static GetDataStorageResponseBodyDataRecordLogStores build(java.util.Map<String, ?> map) throws Exception {
+            GetDataStorageResponseBodyDataRecordLogStores self = new GetDataStorageResponseBodyDataRecordLogStores();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDataStorageResponseBodyDataRecordLogStores setLogStoreName(String logStoreName) {
+            this.logStoreName = logStoreName;
+            return this;
+        }
+        public String getLogStoreName() {
+            return this.logStoreName;
+        }
+
+        public GetDataStorageResponseBodyDataRecordLogStores setLogStoreTtl(Integer logStoreTtl) {
+            this.logStoreTtl = logStoreTtl;
+            return this;
+        }
+        public Integer getLogStoreTtl() {
+            return this.logStoreTtl;
+        }
+
+        public GetDataStorageResponseBodyDataRecordLogStores setUsedCapacity(Double usedCapacity) {
+            this.usedCapacity = usedCapacity;
+            return this;
+        }
+        public Double getUsedCapacity() {
+            return this.usedCapacity;
+        }
+
+    }
+
     public static class GetDataStorageResponseBodyDataSasLogStores extends TeaModel {
         /**
+         * <p>The log code.</p>
+         * 
          * <strong>example:</strong>
          * <p>sas-net-block</p>
          */
@@ -221,6 +314,12 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String logCode;
 
         /**
+         * <p>The group to which the log belongs. Valid values:</p>
+         * <ul>
+         * <li>host: host logs.</li>
+         * <li>security: security logs.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>host</p>
          */
@@ -228,6 +327,12 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String logDeliveryGroup;
 
         /**
+         * <p>Indicates whether log delivery can be toggled. Log delivery cannot be enabled if the service is not purchased. Valid values:</p>
+         * <ul>
+         * <li>allow: Allowed.</li>
+         * <li>deny: Not allowed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>deny</p>
          */
@@ -235,6 +340,12 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String logDeliveryPermission;
 
         /**
+         * <p>The log delivery status. Valid values:</p>
+         * <ul>
+         * <li>enable: log delivery is enabled.</li>
+         * <li>disable: log delivery is disabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>enable</p>
          */
@@ -242,6 +353,8 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String logDeliveryStatus;
 
         /**
+         * <p>The time when the log delivery was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-07-16T15:10:29</p>
          */
@@ -249,6 +362,8 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String logDeliveryUpdateTime;
 
         /**
+         * <p>The log name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Process Snapshot</p>
          */
@@ -256,6 +371,8 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String logName;
 
         /**
+         * <p>The default log query conditions for the log. When multiple logs are stored in the same Logstore, log query conditions are required to query individual logs.</p>
+         * 
          * <strong>example:</strong>
          * <p>[{\&quot;<strong>topic</strong>\&quot;:\&quot;sas-net-block\&quot;}]</p>
          */
@@ -263,6 +380,12 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String logSearchConditions;
 
         /**
+         * <p>Indicates whether the Logstore where the log is stored exists. Valid values:</p>
+         * <ul>
+         * <li>true: The Logstore exists.</li>
+         * <li>false: The Logstore does not exist.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -270,6 +393,8 @@ public class GetDataStorageResponseBody extends TeaModel {
         public Boolean logStoreExisted;
 
         /**
+         * <p>The name of the Logstore where the log is stored.</p>
+         * 
          * <strong>example:</strong>
          * <p>sas-security-log</p>
          */
@@ -277,6 +402,8 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String logStoreName;
 
         /**
+         * <p>The storage duration of the Logstore where the log is stored. Logs are stored for at least 30 days.</p>
+         * 
          * <strong>example:</strong>
          * <p>180</p>
          */
@@ -284,6 +411,8 @@ public class GetDataStorageResponseBody extends TeaModel {
         public Integer logStoreTtl;
 
         /**
+         * <p>The hot storage capacity used.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.333</p>
          */
@@ -387,6 +516,8 @@ public class GetDataStorageResponseBody extends TeaModel {
 
     public static class GetDataStorageResponseBodyDataUnusedLogStores extends TeaModel {
         /**
+         * <p>The Logstore name.</p>
+         * 
          * <strong>example:</strong>
          * <p>cloud-siem</p>
          */
@@ -394,6 +525,8 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String logStoreName;
 
         /**
+         * <p>The data storage duration.</p>
+         * 
          * <strong>example:</strong>
          * <p>180</p>
          */
@@ -401,6 +534,8 @@ public class GetDataStorageResponseBody extends TeaModel {
         public Integer logStoreTtl;
 
         /**
+         * <p>The hot storage capacity used.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.333</p>
          */
@@ -440,6 +575,8 @@ public class GetDataStorageResponseBody extends TeaModel {
 
     public static class GetDataStorageResponseBodyData extends TeaModel {
         /**
+         * <p>The cold storage capacity used by user logs.</p>
+         * 
          * <strong>example:</strong>
          * <p>100.0</p>
          */
@@ -447,6 +584,8 @@ public class GetDataStorageResponseBody extends TeaModel {
         public Double coldStorageUsedCapacity;
 
         /**
+         * <p>The storage region of user logs.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
          */
@@ -454,6 +593,12 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String dataStorageRegionId;
 
         /**
+         * <p>Indicates whether the storage region can be modified. By default, the storage region cannot be modified. Contact your account manager to reset the region. The region can be reset only once. Valid values:</p>
+         * <ul>
+         * <li>allow: The storage region can be modified.</li>
+         * <li>deny: The storage region cannot be modified.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>deny</p>
          */
@@ -461,6 +606,8 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String dataStorageRegionPermission;
 
         /**
+         * <p>The storage capacity purchased in the subscription scenario.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -468,6 +615,8 @@ public class GetDataStorageResponseBody extends TeaModel {
         public Long dataStorageTotalCapacity;
 
         /**
+         * <p>The storage capacity used in user log management.</p>
+         * 
          * <strong>example:</strong>
          * <p>100.0</p>
          */
@@ -475,6 +624,8 @@ public class GetDataStorageResponseBody extends TeaModel {
         public Double dataStorageUsedCapacity;
 
         /**
+         * <p>The storage usage details in log management.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;purchasedHotStorageCapacity\&quot;:1000,\&quot;usedHotStorageCapacity\&quot;:4.2,\&quot;usedHotStorageCapacityDetail\&quot;:{\&quot;ap-southeast-1\&quot;:4.2,\&quot;cn-shenzhen\&quot;:0.0,\&quot;cn-shanghai\&quot;:0.0}}</p>
          */
@@ -482,21 +633,41 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String dataStorageUsedCapacityDetail;
 
         /**
+         * <p>The name of the Simple Log Service project that stores user logs.</p>
+         * 
          * <strong>example:</strong>
          * <p>aliyun-cloudsiem-data-171835723111****-cn-shanghai</p>
          */
         @NameInMap("LogProject")
         public String logProject;
 
+        /**
+         * <p>The details of the Logstores for normalized data.</p>
+         */
         @NameInMap("NormalizationLogStores")
         public java.util.List<GetDataStorageResponseBodyDataNormalizationLogStores> normalizationLogStores;
 
+        /**
+         * <p>The details of normalized datasets.</p>
+         */
         @NameInMap("NormalizationLogViews")
         public java.util.List<GetDataStorageResponseBodyDataNormalizationLogViews> normalizationLogViews;
 
+        /**
+         * <p>The list of record Logstores.</p>
+         */
+        @NameInMap("RecordLogStores")
+        public java.util.List<GetDataStorageResponseBodyDataRecordLogStores> recordLogStores;
+
+        /**
+         * <p>The details of raw log storage in Security Center.</p>
+         */
         @NameInMap("SasLogStores")
         public java.util.List<GetDataStorageResponseBodyDataSasLogStores> sasLogStores;
 
+        /**
+         * <p>The list of legacy SIEM V1 Logstores.</p>
+         */
         @NameInMap("UnusedLogStores")
         public java.util.List<GetDataStorageResponseBodyDataUnusedLogStores> unusedLogStores;
 
@@ -575,6 +746,14 @@ public class GetDataStorageResponseBody extends TeaModel {
         }
         public java.util.List<GetDataStorageResponseBodyDataNormalizationLogViews> getNormalizationLogViews() {
             return this.normalizationLogViews;
+        }
+
+        public GetDataStorageResponseBodyData setRecordLogStores(java.util.List<GetDataStorageResponseBodyDataRecordLogStores> recordLogStores) {
+            this.recordLogStores = recordLogStores;
+            return this;
+        }
+        public java.util.List<GetDataStorageResponseBodyDataRecordLogStores> getRecordLogStores() {
+            return this.recordLogStores;
         }
 
         public GetDataStorageResponseBodyData setSasLogStores(java.util.List<GetDataStorageResponseBodyDataSasLogStores> sasLogStores) {

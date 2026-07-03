@@ -4,10 +4,14 @@ package com.aliyun.cloud_siem20241212.models;
 import com.aliyun.tea.*;
 
 public class ListAutoDisposeEntitiesRequest extends TeaModel {
+    /**
+     * <p>The IDs of automated disposal records.</p>
+     */
     @NameInMap("AutoDisposeRecordIds")
     public java.util.List<String> autoDisposeRecordIds;
 
     /**
+     * <p>The page number. The value must be 1 or greater.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +21,7 @@ public class ListAutoDisposeEntitiesRequest extends TeaModel {
     public String currentPage;
 
     /**
+     * <p>The type of the data source.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +31,14 @@ public class ListAutoDisposeEntitiesRequest extends TeaModel {
     public String dataSourceType;
 
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -33,6 +46,8 @@ public class ListAutoDisposeEntitiesRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The maximum number of entries to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -40,6 +55,8 @@ public class ListAutoDisposeEntitiesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token that is used to retrieve the next page of results. You can obtain this token from the response to a previous call.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
      */
@@ -47,6 +64,7 @@ public class ListAutoDisposeEntitiesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The number of entries to return on each page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,6 +74,8 @@ public class ListAutoDisposeEntitiesRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The unique identifier of the playbook.</p>
+     * 
      * <strong>example:</strong>
      * <p>b2491e39-ddf2-478a-8c07-*****</p>
      */

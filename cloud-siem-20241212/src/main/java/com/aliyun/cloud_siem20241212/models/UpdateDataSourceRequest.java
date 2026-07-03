@@ -4,81 +4,140 @@ package com.aliyun.cloud_siem20241212.models;
 import com.aliyun.tea.*;
 
 public class UpdateDataSourceRequest extends TeaModel {
+    /**
+     * <p>The source of the data. Valid values:</p>
+     * <ul>
+     * <li><p>center</p>
+     * </li>
+     * <li><p>custom</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>custom</p>
+     */
     @NameInMap("DataSourceFrom")
     public String dataSourceFrom;
 
     /**
+     * <p>The ID of the data source.</p>
+     * 
      * <strong>example:</strong>
-     * <p>ds-014frtpy28m5ct2eoyo1。</p>
+     * <p>ds-014frtpy28m5ct2eoyo1</p>
      */
     @NameInMap("DataSourceId")
     public String dataSourceId;
 
     /**
+     * <p>The name of the data source.</p>
+     * 
      * <strong>example:</strong>
-     * <p>ActiontrailLog。</p>
+     * <p>ActiontrailLog</p>
      */
     @NameInMap("DataSourceName")
     public String dataSourceName;
 
     /**
+     * <p>Specifies whether to automatically discover new Logstores.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("DataSourceRecognizeEnabled")
     public Boolean dataSourceRecognizeEnabled;
 
+    /**
+     * <p>The list of Simple Log Service Logstores.</p>
+     */
     @NameInMap("DataSourceStores")
     public java.util.List<UpdateDataSourceRequestDataSourceStores> dataSourceStores;
 
     /**
+     * <p>The language of the response messages. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>zh。</p>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
+     * <p>The name of the Simple Log Service project.</p>
+     * 
      * <strong>example:</strong>
-     * <p>aliyun-cloudsiem-data-173326*******-cn-hangzhou。</p>
+     * <p>aliyun-cloudsiem-data-173326*******-cn-hangzhou</p>
      */
     @NameInMap("LogProjectName")
     public String logProjectName;
 
     /**
+     * <p>The ID of the log storage region.</p>
+     * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou。</p>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("LogRegionId")
     public String logRegionId;
 
     /**
+     * <p>The name of the Simple Log Service Logstore.</p>
+     * 
      * <strong>example:</strong>
-     * <p>cn-rds-sqlaudit。</p>
+     * <p>cn-rds-sqlaudit</p>
      */
     @NameInMap("LogStoreName")
     public String logStoreName;
 
     /**
+     * <p>The user ID for data access.</p>
+     * 
      * <strong>example:</strong>
-     * <p>173326*******。</p>
+     * <p>173326*******</p>
      */
     @NameInMap("LogUserId")
     public Long logUserId;
 
+    /**
+     * <p>The field to use for sorting the rule list. Valid values:</p>
+     * <ul>
+     * <li><p>GmtModified: Sorts the list by modification time.</p>
+     * </li>
+     * <li><p>Id: Sorts the list by rule ID. This is the default value.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Id</p>
+     */
     @NameInMap("OrderField")
     public String orderField;
 
     /**
+     * <p>The region of the Data Management center for threat analysis. Select a region based on the location of the assets. Valid values:</p>
+     * <ul>
+     * <li><p>cn-hangzhou: Assets are in the Chinese mainland.</p>
+     * </li>
+     * <li><p>ap-southeast-1: Assets are outside China.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou。</p>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
+     * <p>The user ID of the member whose perspective the administrator switches to.</p>
+     * 
      * <strong>example:</strong>
-     * <p>173326*******。</p>
+     * <p>173326*******</p>
      */
     @NameInMap("RoleFor")
     public Long roleFor;
@@ -193,29 +252,53 @@ public class UpdateDataSourceRequest extends TeaModel {
     }
 
     public static class UpdateDataSourceRequestDataSourceStores extends TeaModel {
+        /**
+         * <p>The source of the data. Valid values:</p>
+         * <ul>
+         * <li><p>center</p>
+         * </li>
+         * <li><p>custom</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
+         */
         @NameInMap("DataSourceStoreFrom")
         public String dataSourceStoreFrom;
 
+        /**
+         * <p>The ID of the log storage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("DataSourceStoreId")
         public String dataSourceStoreId;
 
         /**
+         * <p>The name of the Simple Log Service project.</p>
+         * 
          * <strong>example:</strong>
-         * <p>aliyun-cloudsiem-data-173326*******-cn-hangzhou。</p>
+         * <p>aliyun-cloudsiem-data-173326*******-cn-hangzhou</p>
          */
         @NameInMap("LogProjectName")
         public String logProjectName;
 
         /**
+         * <p>The ID of the log storage region.</p>
+         * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou。</p>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("LogRegionId")
         public String logRegionId;
 
         /**
+         * <p>The name of the Simple Log Service Logstore.</p>
+         * 
          * <strong>example:</strong>
-         * <p>cn-rds-sqlaudit。</p>
+         * <p>cn-rds-sqlaudit</p>
          */
         @NameInMap("LogStoreName")
         public String logStoreName;

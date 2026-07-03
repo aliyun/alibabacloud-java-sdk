@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteResponseRuleRequest extends TeaModel {
     /**
+     * <p>The language of the response message. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +20,8 @@ public class DeleteResponseRuleRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The maximum number of entries to return on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -19,6 +29,8 @@ public class DeleteResponseRuleRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token used to retrieve the next page of results. If you do not specify this parameter, the service returns the first page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
      */
@@ -26,6 +38,14 @@ public class DeleteResponseRuleRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The region ID of the data management center for threat analysis. This must be the region where your assets are located. Valid values:</p>
+     * <ul>
+     * <li><p><code>cn-hangzhou</code>: for assets in the Chinese mainland or Hong Kong (China).</p>
+     * </li>
+     * <li><p><code>ap-southeast-1</code>: for assets in international regions.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
@@ -33,6 +53,8 @@ public class DeleteResponseRuleRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the automatic response rule to delete.</p>
+     * 
      * <strong>example:</strong>
      * <p>403235</p>
      */

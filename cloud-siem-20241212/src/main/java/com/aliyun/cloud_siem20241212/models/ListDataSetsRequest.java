@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListDataSetsRequest extends TeaModel {
     /**
+     * <p>The ID of the dataset.</p>
+     * 
      * <strong>example:</strong>
      * <p>dataset-qt0n8246gs9nackg****</p>
      */
     @NameInMap("DataSetId")
     public String dataSetId;
 
+    /**
+     * <p>The list of dataset IDs.</p>
+     */
     @NameInMap("DataSetIds")
     public java.util.List<String> dataSetIds;
 
     /**
+     * <p>The name of the dataset.</p>
+     * 
      * <strong>example:</strong>
      * <p>lmftest</p>
      */
@@ -22,6 +29,14 @@ public class ListDataSetsRequest extends TeaModel {
     public String dataSetName;
 
     /**
+     * <p>The status of the dataset. Valid values:</p>
+     * <ul>
+     * <li><p>0: deleted.</p>
+     * </li>
+     * <li><p>1: enabled.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -29,6 +44,14 @@ public class ListDataSetsRequest extends TeaModel {
     public Integer dataSetStatus;
 
     /**
+     * <p>The type of the dataset. Valid values:</p>
+     * <ul>
+     * <li><p>custom: custom.</p>
+     * </li>
+     * <li><p>preset: predefined.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>custom</p>
      */
@@ -36,6 +59,14 @@ public class ListDataSetsRequest extends TeaModel {
     public String dataSetType;
 
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -43,6 +74,8 @@ public class ListDataSetsRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The maximum number of results to return for the request. This parameter is used for queries that use NextToken. Valid values: 1 to 100. Default value: 50.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -50,6 +83,8 @@ public class ListDataSetsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token that is used to start the next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
      */
@@ -57,6 +92,14 @@ public class ListDataSetsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The sort order. Valid values:</p>
+     * <ul>
+     * <li><p><strong>asc</strong> (default): ascending.</p>
+     * </li>
+     * <li><p><strong>desc</strong>: descending.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>asc</p>
      */
@@ -64,6 +107,14 @@ public class ListDataSetsRequest extends TeaModel {
     public String orderDirection;
 
     /**
+     * <p>The field to use for sorting. Valid values:</p>
+     * <ul>
+     * <li><p>GmtCreate: creation time.</p>
+     * </li>
+     * <li><p>GmtModified: update time.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>GmtCreate</p>
      */
@@ -71,6 +122,8 @@ public class ListDataSetsRequest extends TeaModel {
     public String orderFieldName;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -78,6 +131,8 @@ public class ListDataSetsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -85,6 +140,14 @@ public class ListDataSetsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region where the Data Management Center for threat analysis is deployed. Select a region based on the location of your assets. Valid values:</p>
+     * <ul>
+     * <li><p>cn-hangzhou: Your assets are in the Chinese mainland.</p>
+     * </li>
+     * <li><p>ap-southeast-1: Your assets are in a region outside China.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -92,6 +155,8 @@ public class ListDataSetsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The user ID that an administrator uses to switch to the perspective of a member.</p>
+     * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
      */

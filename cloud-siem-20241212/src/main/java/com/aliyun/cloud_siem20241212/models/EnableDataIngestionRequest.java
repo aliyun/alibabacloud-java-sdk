@@ -5,32 +5,58 @@ import com.aliyun.tea.*;
 
 public class EnableDataIngestionRequest extends TeaModel {
     /**
+     * <p>The data ingestion ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>alibaba_cloud_sas_netstat_ingestion_173326*******。</p>
+     * <p>alibaba_cloud_sas_netstat_ingestion_173326*******</p>
      */
     @NameInMap("DataIngestionId")
     public String dataIngestionId;
 
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>zh。</p>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The product ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alibaba_cloud_sas</p>
+     */
     @NameInMap("ProductId")
     public String productId;
 
     /**
+     * <p>The region of the Data Management center for threat analysis. Select the region of the management center based on the region where your assets are located. Valid values:</p>
+     * <ul>
+     * <li><p>cn-hangzhou: Your assets are in the Chinese mainland.</p>
+     * </li>
+     * <li><p>ap-southeast-1: Your assets are in a region outside China.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou。</p>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
+     * <p>The user ID of the member. An administrator can use this parameter to assume the permissions of the specified member.</p>
+     * 
      * <strong>example:</strong>
-     * <p>173326*******。</p>
+     * <p>173326*******</p>
      */
     @NameInMap("RoleFor")
     public Long roleFor;

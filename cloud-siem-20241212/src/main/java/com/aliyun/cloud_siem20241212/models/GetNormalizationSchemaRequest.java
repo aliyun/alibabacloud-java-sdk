@@ -5,36 +5,58 @@ import com.aliyun.tea.*;
 
 public class GetNormalizationSchemaRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>zh。</p>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
+     * <p>The ID of the normalization rule category.</p>
+     * 
      * <strong>example:</strong>
-     * <p>HTTP_ACTIVITY。</p>
+     * <p>HTTP_ACTIVITY</p>
      */
     @NameInMap("NormalizationSchemaId")
     public String normalizationSchemaId;
 
     /**
+     * <p>The normalization schema type. Valid values:</p>
+     * <ul>
+     * <li>log: log.</li>
+     * <li>entity: entity.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>log。</p>
+     * <p>log</p>
      */
     @NameInMap("NormalizationSchemaType")
     public String normalizationSchemaType;
 
     /**
+     * <p>The region where the threat analysis data management center resides. Specify the management center based on the region of your assets. Valid values:</p>
+     * <ul>
+     * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
+     * <li>ap-southeast-1: Your assets reside outside the Chinese mainland.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou。</p>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
+     * <p>The user ID that the administrator switches to when viewing as another member.</p>
+     * 
      * <strong>example:</strong>
-     * <p>173326*******。</p>
+     * <p>173326*******</p>
      */
     @NameInMap("RoleFor")
     public Long roleFor;

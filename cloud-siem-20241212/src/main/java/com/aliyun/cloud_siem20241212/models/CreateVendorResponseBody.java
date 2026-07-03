@@ -5,15 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateVendorResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>6276D891-*****-55B2-87B9-74D413F7****。</p>
+     * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>The vendor ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>vd-qlsw5eocx94w9。</p>
+     * <p>vd-qlsw5eocx94w9</p>
      */
     @NameInMap("VendorId")
     public String vendorId;

@@ -4,54 +4,71 @@ package com.aliyun.cloud_siem20241212.models;
 import com.aliyun.tea.*;
 
 public class ListDataSourcesResponseBody extends TeaModel {
+    /**
+     * <p>The data sources.</p>
+     */
     @NameInMap("DataSources")
     public java.util.List<ListDataSourcesResponseBodyDataSources> dataSources;
 
     /**
+     * <p>The maximum number of entries returned on each page.</p>
+     * 
      * <strong>example:</strong>
-     * <p>50。</p>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
+     * <p>The token that is used to retrieve the next page of results. If a value is returned, it indicates that not all results have been returned. You can use this token in the next query to continue retrieving results.</p>
+     * 
      * <strong>example:</strong>
-     * <p>AAAAAUqcj6VO4E3ECWIrFczs****。</p>
+     * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
-     * <p>1。</p>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
-     * <p>1。</p>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>6276D891-*****-55B2-87B9-74D413F7****。</p>
+     * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
-     * <p>2。</p>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
     /**
+     * <p>The total number of pages.</p>
+     * 
      * <strong>example:</strong>
-     * <p>1。</p>
+     * <p>1</p>
      */
     @NameInMap("TotalPage")
     public Integer totalPage;
@@ -127,8 +144,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
 
     public static class ListDataSourcesResponseBodyDataSourcesDataSourceReferences extends TeaModel {
         /**
+         * <p>The data ingestion ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>alibaba_cloud_sas_account_snapshot_log_173326*******。</p>
+         * <p>alibaba_cloud_sas_account_snapshot_log_173326*******</p>
          */
         @NameInMap("DataIngestionId")
         public String dataIngestionId;
@@ -149,38 +168,66 @@ public class ListDataSourcesResponseBody extends TeaModel {
     }
 
     public static class ListDataSourcesResponseBodyDataSourcesDataSourceStores extends TeaModel {
+        /**
+         * <p>The time when the check was performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1733269771123</p>
+         */
         @NameInMap("CheckTime")
         public Long checkTime;
 
         /**
+         * <p>The time when the log storage was created.</p>
+         * 
          * <strong>example:</strong>
-         * <p>1733269771123。</p>
+         * <p>1733269771123</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
+         * <p>The source of the data. Valid values:</p>
+         * <ul>
+         * <li><p>center</p>
+         * </li>
+         * <li><p>custom</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>center。</p>
+         * <p>center</p>
          */
         @NameInMap("DataSourceStoreFrom")
         public String dataSourceStoreFrom;
 
         /**
+         * <p>The ID of the log storage.</p>
+         * 
          * <strong>example:</strong>
-         * <p>di_xxxx_source_1。</p>
+         * <p>di_xxxx_source_1</p>
          */
         @NameInMap("DataSourceStoreId")
         public String dataSourceStoreId;
 
         /**
+         * <p>The status of the log storage. Valid values:</p>
+         * <ul>
+         * <li><p>normal</p>
+         * </li>
+         * <li><p>abnormal</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>normal。</p>
+         * <p>normal</p>
          */
         @NameInMap("DataSourceStoreStatus")
         public String dataSourceStoreStatus;
 
         /**
+         * <p>The status code of the log storage.</p>
+         * 
          * <strong>example:</strong>
          * <p>LogStoreNotExist</p>
          */
@@ -188,29 +235,37 @@ public class ListDataSourcesResponseBody extends TeaModel {
         public String dataSourceStoreStatusCode;
 
         /**
+         * <p>The name of the Simple Log Service project.</p>
+         * 
          * <strong>example:</strong>
-         * <p>aliyun-cloudsiem-data-173326*******-cn-hangzhou。</p>
+         * <p>aliyun-cloudsiem-data-173326*******-cn-hangzhou</p>
          */
         @NameInMap("LogProjectName")
         public String logProjectName;
 
         /**
+         * <p>The ID of the log storage region.</p>
+         * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou。</p>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("LogRegionId")
         public String logRegionId;
 
         /**
+         * <p>The name of the Simple Log Service Logstore.</p>
+         * 
          * <strong>example:</strong>
-         * <p>audit-activity。</p>
+         * <p>audit-activity</p>
          */
         @NameInMap("LogStoreName")
         public String logStoreName;
 
         /**
+         * <p>The time when the log storage was last updated.</p>
+         * 
          * <strong>example:</strong>
-         * <p>1733269771123。</p>
+         * <p>1733269771123</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;
@@ -304,101 +359,159 @@ public class ListDataSourcesResponseBody extends TeaModel {
 
     public static class ListDataSourcesResponseBodyDataSources extends TeaModel {
         /**
+         * <p>The time when the data source was created.</p>
+         * 
          * <strong>example:</strong>
-         * <p>1733269771123。</p>
+         * <p>1733269771123</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
+         * <p>The source of the data. Valid values:</p>
+         * <ul>
+         * <li><p>center</p>
+         * </li>
+         * <li><p>custom</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>center。</p>
+         * <p>center</p>
          */
         @NameInMap("DataSourceFrom")
         public String dataSourceFrom;
 
         /**
+         * <p>The ID of the data source.</p>
+         * 
          * <strong>example:</strong>
-         * <p>ds-scpfegri73oyoknbc90c。</p>
+         * <p>ds-scpfegri73oyoknbc90c</p>
          */
         @NameInMap("DataSourceId")
         public String dataSourceId;
 
         /**
+         * <p>The name of the data source.</p>
+         * 
          * <strong>example:</strong>
-         * <p>AD_LOG。</p>
+         * <p>AD_LOG</p>
          */
         @NameInMap("DataSourceName")
         public String dataSourceName;
 
         /**
+         * <p>Indicates whether new Logstores are automatically discovered.</p>
+         * 
          * <strong>example:</strong>
-         * <p>true。</p>
+         * <p>true</p>
          */
         @NameInMap("DataSourceRecognizeEnabled")
         public Boolean dataSourceRecognizeEnabled;
 
         /**
+         * <p>The data source recognizer.</p>
+         * 
          * <strong>example:</strong>
-         * <p>alibaba_cloud_sas_account_snapshot。</p>
+         * <p>alibaba_cloud_sas_account_snapshot</p>
          */
         @NameInMap("DataSourceRecognizer")
         public String dataSourceRecognizer;
 
+        /**
+         * <p>The list of data ingestion IDs that are associated with the data source.</p>
+         */
         @NameInMap("DataSourceReferences")
         public java.util.List<ListDataSourcesResponseBodyDataSourcesDataSourceReferences> dataSourceReferences;
 
+        /**
+         * <p>The status of the data source. Valid values:</p>
+         * <ul>
+         * <li><p>unconfigured</p>
+         * </li>
+         * <li><p>normal</p>
+         * </li>
+         * <li><p>abnormal</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>unconfigured</p>
+         */
         @NameInMap("DataSourceStatus")
         public String dataSourceStatus;
 
+        /**
+         * <p>The list of Logstores.</p>
+         */
         @NameInMap("DataSourceStores")
         public java.util.List<ListDataSourcesResponseBodyDataSourcesDataSourceStores> dataSourceStores;
 
         /**
+         * <p>The ID of the data source template.</p>
+         * 
          * <strong>example:</strong>
-         * <p>alibaba_cloud_sas_account_snapshot_log_173326*******。</p>
+         * <p>alibaba_cloud_sas_account_snapshot_log_173326*******</p>
          */
         @NameInMap("DataSourceTemplateId")
         public String dataSourceTemplateId;
 
         /**
+         * <p>The type of the data source. Valid values:</p>
+         * <ul>
+         * <li><p>preset</p>
+         * </li>
+         * <li><p>custom</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>custom。</p>
+         * <p>custom</p>
          */
         @NameInMap("DataSourceType")
         public String dataSourceType;
 
         /**
+         * <p>The name of the Simple Log Service project.</p>
+         * 
          * <strong>example:</strong>
-         * <p>aliyun-cloudsiem-data-173326*******-cn-hangzhou。</p>
+         * <p>aliyun-cloudsiem-data-173326*******-cn-hangzhou</p>
          */
         @NameInMap("LogProjectName")
         public String logProjectName;
 
         /**
+         * <p>The ID of the log storage region.</p>
+         * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou。</p>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("LogRegionId")
         public String logRegionId;
 
         /**
+         * <p>The name of the Simple Log Service Logstore.</p>
+         * 
          * <strong>example:</strong>
-         * <p>audit-activity。</p>
+         * <p>audit-activity</p>
          */
         @NameInMap("LogStoreName")
         public String logStoreName;
 
         /**
+         * <p>The ID of the user who can access the data.</p>
+         * 
          * <strong>example:</strong>
-         * <p>173326*******。</p>
+         * <p>173326*******</p>
          */
         @NameInMap("LogUserId")
         public Long logUserId;
 
         /**
+         * <p>The time when the data source was last updated.</p>
+         * 
          * <strong>example:</strong>
-         * <p>1733269771123。</p>
+         * <p>1733269771123</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;

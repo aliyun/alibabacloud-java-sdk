@@ -5,15 +5,19 @@ import com.aliyun.tea.*;
 
 public class GetLogTicketResponseBody extends TeaModel {
     /**
+     * <p>The ticket for Simple Log Service.</p>
+     * 
      * <strong>example:</strong>
-     * <p>*******。</p>
+     * <hr>
      */
     @NameInMap("LogTicket")
     public String logTicket;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
-     * <p>173326*******。</p>
+     * <p>173326*******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

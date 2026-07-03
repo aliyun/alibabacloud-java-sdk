@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDataSetRequest extends TeaModel {
     /**
+     * <p>The description of the dataset.</p>
+     * 
      * <strong>example:</strong>
      * <p>lmftest contains ip list</p>
      */
@@ -12,6 +14,7 @@ public class CreateDataSetRequest extends TeaModel {
     public String dataSetDescription;
 
     /**
+     * <p>The name of the unique key for the dataset.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class CreateDataSetRequest extends TeaModel {
     public String dataSetFieldKeyName;
 
     /**
+     * <p>The name of the uploaded dataset file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class CreateDataSetRequest extends TeaModel {
     public String dataSetFileName;
 
     /**
+     * <p>The name of the dataset.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,16 +43,51 @@ public class CreateDataSetRequest extends TeaModel {
     @NameInMap("DataSetName")
     public String dataSetName;
 
+    /**
+     * <p>The status of the dataset. Valid values:</p>
+     * <ul>
+     * <li><p>0: deleted.</p>
+     * </li>
+     * <li><p>1: enabled.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("DataSetStatus")
     public Integer dataSetStatus;
 
+    /**
+     * <p>The type of the dataset. Valid values:</p>
+     * <ul>
+     * <li><p>custom: custom.</p>
+     * </li>
+     * <li><p>preset: predefined.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>custom</p>
+     */
     @NameInMap("DataSetType")
     public String dataSetType;
 
+    /**
+     * <p>The list of recognizers.</p>
+     */
     @NameInMap("IpWhitelistRecognizers")
     public java.util.List<CreateDataSetRequestIpWhitelistRecognizers> ipWhitelistRecognizers;
 
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -55,6 +95,14 @@ public class CreateDataSetRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The region of the Data Management center for threat analysis. Select a region based on where your assets are located. Valid values:</p>
+     * <ul>
+     * <li><p>cn-hangzhou: Your assets are in the Chinese mainland.</p>
+     * </li>
+     * <li><p>ap-southeast-1: Your assets are outside China.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -62,6 +110,8 @@ public class CreateDataSetRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The user ID of the member whose permissions are used to perform the operation. This parameter is used when an administrator acts on behalf of a member.</p>
+     * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
      */
@@ -155,6 +205,14 @@ public class CreateDataSetRequest extends TeaModel {
 
     public static class CreateDataSetRequestIpWhitelistRecognizers extends TeaModel {
         /**
+         * <p>The automatic detection status. Valid values:</p>
+         * <ul>
+         * <li><p>enabled: enabled.</p>
+         * </li>
+         * <li><p>disabled: disabled.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>enabled</p>
          */
@@ -162,6 +220,28 @@ public class CreateDataSetRequest extends TeaModel {
         public String autoRecognizeStatus;
 
         /**
+         * <p>The type of IP address that the recognizer detects. Valid values:</p>
+         * <ul>
+         * <li><p>sas_vulnerability_scanner_ip: The IP address of the Security Center web vulnerability scanner.</p>
+         * </li>
+         * <li><p>waf_back_source_ip: The back-to-origin IP address of Web Application Firewall (WAF).</p>
+         * </li>
+         * <li><p>ddos_back_source_ip: The back-to-origin IP address of Anti-DDoS.</p>
+         * </li>
+         * <li><p>esa_back_source_ip: The back-to-origin IP address of an Edge Security Acceleration (ESA) node.</p>
+         * </li>
+         * <li><p>ecs_public_ip: The public IP address of an Elastic Compute Service (ECS) instance.</p>
+         * </li>
+         * <li><p>slb_public_ip: The public IP address of a Server Load Balancer (SLB) instance.</p>
+         * </li>
+         * <li><p>vpc_eip: An Elastic IP Address (EIP).</p>
+         * </li>
+         * <li><p>cdn_back_source_ip: The back-to-origin IP address of a content delivery network (CDN).</p>
+         * </li>
+         * <li><p>ga_back_source_ip: The back-to-origin IP address of Global Accelerator (GA).</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>waf_back_source_ip</p>
          */
@@ -169,6 +249,14 @@ public class CreateDataSetRequest extends TeaModel {
         public String ipWhitelistRecognizerType;
 
         /**
+         * <p>The detection scope. Valid values:</p>
+         * <ul>
+         * <li><p>current_account: the current account only.</p>
+         * </li>
+         * <li><p>rd_accounts: all accounts in your resource directory.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>current_account</p>
          */

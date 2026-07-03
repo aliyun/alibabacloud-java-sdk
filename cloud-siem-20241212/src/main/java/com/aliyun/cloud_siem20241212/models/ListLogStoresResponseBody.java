@@ -4,33 +4,44 @@ package com.aliyun.cloud_siem20241212.models;
 import com.aliyun.tea.*;
 
 public class ListLogStoresResponseBody extends TeaModel {
+    /**
+     * <p>The list of Simple Log Service Logstores.</p>
+     */
     @NameInMap("LogStores")
     public java.util.List<String> logStores;
 
     /**
+     * <p>The maximum number of entries returned on this call.</p>
+     * 
      * <strong>example:</strong>
-     * <p>50。</p>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
+     * <p>The token that is used to start the next query. If this parameter is empty, no subsequent query is required.</p>
+     * 
      * <strong>example:</strong>
-     * <p>AAAAAUqcj6VO4E3ECWIrFczs****。</p>
+     * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>6276D891-*****-55B2-87B9-74D413F7****。</p>
+     * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
-     * <p>57。</p>
+     * <p>57</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;

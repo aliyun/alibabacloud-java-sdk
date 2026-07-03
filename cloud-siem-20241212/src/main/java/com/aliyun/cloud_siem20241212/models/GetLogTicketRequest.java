@@ -5,29 +5,49 @@ import com.aliyun.tea.*;
 
 public class GetLogTicketRequest extends TeaModel {
     /**
+     * <p>The language of the response messages. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>zh。</p>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
+     * <p>The user ID for data access.</p>
+     * 
      * <strong>example:</strong>
-     * <p>173326*******。</p>
+     * <p>173326*******</p>
      */
     @NameInMap("LogUserId")
     public Long logUserId;
 
     /**
+     * <p>The region of the Data Management hub for threat analysis. Select the region based on the location of your asset. Valid values:</p>
+     * <ul>
+     * <li><p>cn-hangzhou: The asset is in the Chinese mainland.</p>
+     * </li>
+     * <li><p>ap-southeast-1: The asset is in a region outside China.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou。</p>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
+     * <p>The user ID of a member. This parameter lets an administrator switch to the perspective of the member.</p>
+     * 
      * <strong>example:</strong>
-     * <p>173326*******。</p>
+     * <p>173326*******</p>
      */
     @NameInMap("RoleFor")
     public Long roleFor;

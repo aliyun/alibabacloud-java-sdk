@@ -5,15 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateNormalizationRuleResponseBody extends TeaModel {
     /**
+     * <p>The normalization rule ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>nr-z0b2ssjteut85uoh9nzp。</p>
+     * <p>nr-z0b2ssjteut85uoh9nzp</p>
      */
     @NameInMap("NormalizationRuleId")
     public String normalizationRuleId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>6276D891-*****-55B2-87B9-74D413F7****。</p>
+     * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

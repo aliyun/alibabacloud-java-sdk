@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class GetUserConfigRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -12,6 +20,14 @@ public class GetUserConfigRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The region of the Data Management center for threat analysis. Select a region for the Management Hub based on the region where your assets are located. Valid values:</p>
+     * <ul>
+     * <li><p>cn-hangzhou: Assets in the Chinese mainland.</p>
+     * </li>
+     * <li><p>ap-southeast-1: Assets outside China.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -19,6 +35,8 @@ public class GetUserConfigRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The user ID of a member. An administrator can use this parameter to switch to the perspective of the specified member.</p>
+     * 
      * <strong>example:</strong>
      * <p>173326*******</p>
      */

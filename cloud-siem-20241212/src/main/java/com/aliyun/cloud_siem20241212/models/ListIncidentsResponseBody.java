@@ -4,10 +4,15 @@ package com.aliyun.cloud_siem20241212.models;
 import com.aliyun.tea.*;
 
 public class ListIncidentsResponseBody extends TeaModel {
+    /**
+     * <p>The list of incidents.</p>
+     */
     @NameInMap("Incidents")
     public java.util.List<ListIncidentsResponseBodyIncidents> incidents;
 
     /**
+     * <p>The maximum number of entries to return in this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -15,6 +20,8 @@ public class ListIncidentsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token for the next query. Leave this parameter empty for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
      */
@@ -22,6 +29,8 @@ public class ListIncidentsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -29,6 +38,8 @@ public class ListIncidentsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -36,6 +47,8 @@ public class ListIncidentsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
      */
@@ -43,6 +56,8 @@ public class ListIncidentsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>57</p>
      */
@@ -112,16 +127,26 @@ public class ListIncidentsResponseBody extends TeaModel {
 
     public static class ListIncidentsResponseBodyIncidents extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1603248483000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The ID of the detection rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dr-qo5ww6ux0uc28*****</p>
+         */
         @NameInMap("DetectionRuleId")
         public String detectionRuleId;
 
         /**
+         * <p>The name of the incident.</p>
+         * 
          * <strong>example:</strong>
          * <p>ECS unusual log in</p>
          */
@@ -129,6 +154,8 @@ public class ListIncidentsResponseBody extends TeaModel {
         public String incidentName;
 
         /**
+         * <p>The remarks of the incident.</p>
+         * 
          * <strong>example:</strong>
          * <p>remark</p>
          */
@@ -136,6 +163,14 @@ public class ListIncidentsResponseBody extends TeaModel {
         public String incidentRemark;
 
         /**
+         * <p>The status of the incident. Valid values:</p>
+         * <ul>
+         * <li>0: unhandled.</li>
+         * <li>1: handling.</li>
+         * <li>5: handling failed.</li>
+         * <li>10: handled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -143,6 +178,8 @@ public class ListIncidentsResponseBody extends TeaModel {
         public Integer incidentStatus;
 
         /**
+         * <p>The tags of the incident.</p>
+         * 
          * <strong>example:</strong>
          * <p>[&quot;sys:data_source:siem&quot;,&quot;sys:trigger_type:auto&quot;]</p>
          */
@@ -150,6 +187,8 @@ public class ListIncidentsResponseBody extends TeaModel {
         public String incidentTags;
 
         /**
+         * <p>The UUID of the incident.</p>
+         * 
          * <strong>example:</strong>
          * <p>dbb1d7211c9285c862aa89385098****</p>
          */
@@ -157,6 +196,8 @@ public class ListIncidentsResponseBody extends TeaModel {
         public String incidentUuid;
 
         /**
+         * <p>The UID of the account that owns the incident.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234567890xxxxxx</p>
          */
@@ -164,6 +205,8 @@ public class ListIncidentsResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The number of alerts associated with the incident.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -171,6 +214,8 @@ public class ListIncidentsResponseBody extends TeaModel {
         public Integer relateAlertCount;
 
         /**
+         * <p>The number of assets associated with the incident.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -178,6 +223,24 @@ public class ListIncidentsResponseBody extends TeaModel {
         public Integer relateAssetCount;
 
         /**
+         * <p>The response time, in milliseconds (ms).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1603248483000</p>
+         */
+        @NameInMap("ResponseTime")
+        public Long responseTime;
+
+        /**
+         * <p>The threat level. Valid values:</p>
+         * <ul>
+         * <li>5: critical.</li>
+         * <li>4: high.</li>
+         * <li>3: medium.</li>
+         * <li>2: low.</li>
+         * <li>1: informational.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -185,6 +248,8 @@ public class ListIncidentsResponseBody extends TeaModel {
         public String threatLevel;
 
         /**
+         * <p>The update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1603248483000</p>
          */
@@ -274,6 +339,14 @@ public class ListIncidentsResponseBody extends TeaModel {
         }
         public Integer getRelateAssetCount() {
             return this.relateAssetCount;
+        }
+
+        public ListIncidentsResponseBodyIncidents setResponseTime(Long responseTime) {
+            this.responseTime = responseTime;
+            return this;
+        }
+        public Long getResponseTime() {
+            return this.responseTime;
         }
 
         public ListIncidentsResponseBodyIncidents setThreatLevel(String threatLevel) {

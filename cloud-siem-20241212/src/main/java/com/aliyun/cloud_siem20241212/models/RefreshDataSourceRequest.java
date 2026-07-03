@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RefreshDataSourceRequest extends TeaModel {
     /**
+     * <p>The ID of the data source.</p>
+     * 
      * <strong>example:</strong>
      * <p>ds-jl67vixpe1scwysgyu3x</p>
      */
@@ -12,6 +14,14 @@ public class RefreshDataSourceRequest extends TeaModel {
     public String dataSourceId;
 
     /**
+     * <p>The language of the messages. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -19,6 +29,14 @@ public class RefreshDataSourceRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The region where the Data Management Center for threat analysis is located. Select the region of the Data Management Center based on the region of your assets. Valid values:</p>
+     * <ul>
+     * <li><p>cn-hangzhou: Your assets are in the Chinese mainland or China (Hong Kong).</p>
+     * </li>
+     * <li><p>ap-southeast-1: Your assets are in a region outside China.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -26,6 +44,8 @@ public class RefreshDataSourceRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The user ID of a member. An administrator can use this parameter to switch to the perspective of the specified member.</p>
+     * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
      */

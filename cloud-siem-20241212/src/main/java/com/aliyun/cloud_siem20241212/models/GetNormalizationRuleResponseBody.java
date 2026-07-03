@@ -4,12 +4,17 @@ package com.aliyun.cloud_siem20241212.models;
 import com.aliyun.tea.*;
 
 public class GetNormalizationRuleResponseBody extends TeaModel {
+    /**
+     * <p>The normalization rule.</p>
+     */
     @NameInMap("NormalizationRule")
     public GetNormalizationRuleResponseBodyNormalizationRule normalizationRule;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>6276D891-*****-55B2-87B9-74D413F7****。</p>
+     * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -37,16 +42,35 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
 
     public static class GetNormalizationRuleResponseBodyNormalizationRule extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
-         * <p>1733269771123。</p>
+         * <p>1733269771123</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>Specifies whether to pack non-standard fields into the extend_content field. Valid values:</p>
+         * <ul>
+         * <li>enabled: Enabled.</li>
+         * <li>disabled: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
+         */
         @NameInMap("ExtendContentPacked")
         public String extendContentPacked;
 
         /**
+         * <p>The storage mode for extended fields. Valid values:</p>
+         * <ul>
+         * <li>flat: ingested as-is.</li>
+         * <li>reject: not ingested.</li>
+         * <li>pack: packed into the extend_content field.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>flat</p>
          */
@@ -54,107 +78,171 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
         public String extendFieldStoreMode;
 
         /**
+         * <p>The category ID of the normalization rule.</p>
+         * 
          * <strong>example:</strong>
-         * <p>NETWORK_CATEGORY。</p>
+         * <p>NETWORK_CATEGORY</p>
          */
         @NameInMap("NormalizationCategoryId")
         public String normalizationCategoryId;
 
         /**
          * <strong>example:</strong>
-         * <p>normalization_rule_Z57np。</p>
+         * <p>normalized</p>
+         */
+        @NameInMap("NormalizationFieldSource")
+        public String normalizationFieldSource;
+
+        /**
+         * <p>The description of the normalization rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>normalization_rule_Z57np</p>
          */
         @NameInMap("NormalizationRuleDescription")
         public String normalizationRuleDescription;
 
         /**
+         * <p>The expression of the normalization rule.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
-         * <li>| pack-fields -include=\&quot;[\s\S]+\&quot; as extend_content。</li>
+         * <li>| pack-fields -include=\&quot;[\s\S]+\&quot; as extend_content</li>
          * </ul>
          */
         @NameInMap("NormalizationRuleExpression")
         public String normalizationRuleExpression;
 
         /**
+         * <p>The format of the normalization rule.</p>
+         * 
          * <strong>example:</strong>
-         * <p>SPL。</p>
+         * <p>SPL</p>
          */
         @NameInMap("NormalizationRuleFormat")
         public String normalizationRuleFormat;
 
         /**
+         * <p>The normalization rule ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>nr-z0b2ssjteut85uoh9nzp。</p>
+         * <p>nr-z0b2ssjteut85uoh9nzp</p>
          */
         @NameInMap("NormalizationRuleId")
         public String normalizationRuleId;
 
+        /**
+         * <p>The list of normalization rule IDs.</p>
+         */
         @NameInMap("NormalizationRuleIds")
         public java.util.List<String> normalizationRuleIds;
 
         /**
+         * <p>The mode of the normalization rule. Valid values:</p>
+         * <ul>
+         * <li>both</li>
+         * <li>scan</li>
+         * <li>realtime.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>both。</p>
+         * <p>both</p>
          */
         @NameInMap("NormalizationRuleMode")
         public String normalizationRuleMode;
 
         /**
+         * <p>The name of the normalization rule.</p>
+         * 
          * <strong>example:</strong>
-         * <p>normalization_rule_Z57np。</p>
+         * <p>normalization_rule_Z57np</p>
          */
         @NameInMap("NormalizationRuleName")
         public String normalizationRuleName;
 
         /**
+         * <p>The status of the normalization rule.</p>
+         * 
          * <strong>example:</strong>
-         * <p>started。</p>
+         * <p>started</p>
          */
         @NameInMap("NormalizationRuleStatus")
         public String normalizationRuleStatus;
 
         /**
+         * <p>The type of the normalization rule. Valid values:</p>
+         * <ul>
+         * <li>predefined: predefined normalization rule.</li>
+         * <li>custom: custom normalization rule.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>predefined。</p>
+         * <p>predefined</p>
          */
         @NameInMap("NormalizationRuleType")
         public String normalizationRuleType;
 
         /**
+         * <p>The version of the normalization rule.</p>
+         * 
          * <strong>example:</strong>
-         * <p>V1。</p>
+         * <p>V1</p>
          */
         @NameInMap("NormalizationRuleVersion")
         public Integer normalizationRuleVersion;
 
         /**
+         * <p>The normalization schema ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>HTTP_ACTIVITY。</p>
+         * <p>HTTP_ACTIVITY</p>
          */
         @NameInMap("NormalizationSchemaId")
         public String normalizationSchemaId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NETWORK_AND_WEB_SECURITY</p>
+         */
+        @NameInMap("NormalizationSecurityDomainId")
+        public String normalizationSecurityDomainId;
+
+        /**
+         * <p>The field used to sort the rule list. Valid values:</p>
+         * <ul>
+         * <li>GmtModified: sorted by modification time.</li>
+         * <li>Id: sorted by rule ID (default).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GmtModified</p>
+         */
         @NameInMap("OrderField")
         public String orderField;
 
         /**
+         * <p>The product ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>alibaba_cloud_sas。</p>
+         * <p>alibaba_cloud_sas</p>
          */
         @NameInMap("ProductId")
         public String productId;
 
         /**
+         * <p>The update time.</p>
+         * 
          * <strong>example:</strong>
-         * <p>1733269771123。</p>
+         * <p>1733269771123</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
         /**
+         * <p>The vendor ID associated with the normalization rule.</p>
+         * 
          * <strong>example:</strong>
-         * <p>alibaba_cloud。</p>
+         * <p>alibaba_cloud</p>
          */
         @NameInMap("VendorId")
         public String vendorId;
@@ -194,6 +282,14 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
         }
         public String getNormalizationCategoryId() {
             return this.normalizationCategoryId;
+        }
+
+        public GetNormalizationRuleResponseBodyNormalizationRule setNormalizationFieldSource(String normalizationFieldSource) {
+            this.normalizationFieldSource = normalizationFieldSource;
+            return this;
+        }
+        public String getNormalizationFieldSource() {
+            return this.normalizationFieldSource;
         }
 
         public GetNormalizationRuleResponseBodyNormalizationRule setNormalizationRuleDescription(String normalizationRuleDescription) {
@@ -282,6 +378,14 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
         }
         public String getNormalizationSchemaId() {
             return this.normalizationSchemaId;
+        }
+
+        public GetNormalizationRuleResponseBodyNormalizationRule setNormalizationSecurityDomainId(String normalizationSecurityDomainId) {
+            this.normalizationSecurityDomainId = normalizationSecurityDomainId;
+            return this;
+        }
+        public String getNormalizationSecurityDomainId() {
+            return this.normalizationSecurityDomainId;
         }
 
         public GetNormalizationRuleResponseBodyNormalizationRule setOrderField(String orderField) {

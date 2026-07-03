@@ -4,12 +4,17 @@ package com.aliyun.cloud_siem20241212.models;
 import com.aliyun.tea.*;
 
 public class GetNormalizationSchemaResponseBody extends TeaModel {
+    /**
+     * <p>The normalization schema.</p>
+     */
     @NameInMap("NormalizationSchema")
     public GetNormalizationSchemaResponseBodyNormalizationSchema normalizationSchema;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>6276D891-*****-55B2-87B9-74D413F7****。</p>
+     * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -37,6 +42,8 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
 
     public static class GetNormalizationSchemaResponseBodyNormalizationSchemaNormalizationFieldsNormalizationFieldJsonKeys extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1736386610000</p>
          */
@@ -44,13 +51,17 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The key description of the JSON-type standard field.</p>
+         * 
          * <strong>example:</strong>
-         * <p>云code，枚举值：\n<br>● alibaba_cloud\n<br>● huawei_cloud\n<br>● tencent_cloud</p>
+         * <p>Cloud Provider Code</p>
          */
         @NameInMap("NormalizationFieldDescription")
         public String normalizationFieldDescription;
 
         /**
+         * <p>The key example of the JSON-type standard field.</p>
+         * 
          * <strong>example:</strong>
          * <p>alibaba_cloud</p>
          */
@@ -58,6 +69,8 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
         public String normalizationFieldExample;
 
         /**
+         * <p>The key source of the JSON-type standard field.</p>
+         * 
          * <strong>example:</strong>
          * <p>preset</p>
          */
@@ -65,22 +78,35 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
         public String normalizationFieldFrom;
 
         /**
+         * <p>The key name of the JSON-type standard field.</p>
+         * 
          * <strong>example:</strong>
          * <p>cloud_code</p>
          */
         @NameInMap("NormalizationFieldName")
         public String normalizationFieldName;
 
+        /**
+         * <p>Indicates whether the key of the JSON-type standard field is required.</p>
+         */
         @NameInMap("NormalizationFieldRequired")
         public Boolean normalizationFieldRequired;
 
+        /**
+         * <p>Indicates whether the field is a system built-in standard field name.</p>
+         */
         @NameInMap("NormalizationFieldReserved")
         public Boolean normalizationFieldReserved;
 
+        /**
+         * <p>Indicates whether the key of the JSON-type standard field is tokenized.</p>
+         */
         @NameInMap("NormalizationFieldTokenize")
         public Boolean normalizationFieldTokenize;
 
         /**
+         * <p>The key type of the JSON-type standard field.</p>
+         * 
          * <strong>example:</strong>
          * <p>varchar</p>
          */
@@ -88,6 +114,8 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
         public String normalizationFieldType;
 
         /**
+         * <p>The update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1736386610000</p>
          */
@@ -183,6 +211,8 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
 
     public static class GetNormalizationSchemaResponseBodyNormalizationSchemaNormalizationFields extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1736386610000</p>
          */
@@ -190,67 +220,104 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The normalization field description.</p>
+         * 
          * <strong>example:</strong>
-         * <p>cloud_user。</p>
+         * <p>cloud_user</p>
          */
         @NameInMap("NormalizationFieldDescription")
         public String normalizationFieldDescription;
 
         /**
+         * <p>The normalization field example.</p>
+         * 
          * <strong>example:</strong>
-         * <p>173326*******。</p>
+         * <p>173326*******</p>
          */
         @NameInMap("NormalizationFieldExample")
         public String normalizationFieldExample;
 
         /**
+         * <p>The source of the standard field. Valid values:</p>
+         * <ul>
+         * <li>preset: built-in.</li>
+         * <li>custom: custom.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>preset</p>
          */
         @NameInMap("NormalizationFieldFrom")
         public String normalizationFieldFrom;
 
+        /**
+         * <p>Indicates whether indexes are created for all keys of the JSON-type standard field.</p>
+         */
         @NameInMap("NormalizationFieldJsonIndexAll")
         public Boolean normalizationFieldJsonIndexAll;
 
+        /**
+         * <p>The key list of the JSON-type standard field.</p>
+         */
         @NameInMap("NormalizationFieldJsonKeys")
         public java.util.List<GetNormalizationSchemaResponseBodyNormalizationSchemaNormalizationFieldsNormalizationFieldJsonKeys> normalizationFieldJsonKeys;
 
         /**
+         * <p>The normalization field name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>cloud_user。</p>
+         * <p>cloud_user</p>
          */
         @NameInMap("NormalizationFieldName")
         public String normalizationFieldName;
 
+        /**
+         * <p>Indicates whether the field is required.</p>
+         */
         @NameInMap("NormalizationFieldRequired")
         public Boolean normalizationFieldRequired;
 
         /**
+         * <p>Indicates whether the normalization field is required.</p>
+         * 
          * <strong>example:</strong>
-         * <p>true。</p>
+         * <p>true</p>
          */
         @NameInMap("NormalizationFieldRequirement")
         public Boolean normalizationFieldRequirement;
 
         /**
+         * <p>Indicates whether the normalization field is reserved.</p>
+         * 
          * <strong>example:</strong>
-         * <p>true。</p>
+         * <p>true</p>
          */
         @NameInMap("NormalizationFieldReserved")
         public Boolean normalizationFieldReserved;
 
+        /**
+         * <p>Indicates whether the standard field is tokenized.</p>
+         */
         @NameInMap("NormalizationFieldTokenize")
         public Boolean normalizationFieldTokenize;
 
         /**
+         * <p>The normalization field type. Valid values:</p>
+         * <ul>
+         * <li>varchar</li>
+         * <li>bigint</li>
+         * <li>double</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>varchar。</p>
+         * <p>varchar</p>
          */
         @NameInMap("NormalizationFieldType")
         public String normalizationFieldType;
 
         /**
+         * <p>The update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1736386610000</p>
          */
@@ -370,6 +437,8 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
 
     public static class GetNormalizationSchemaResponseBodyNormalizationSchemaNormalizationSchemaReferences extends TeaModel {
         /**
+         * <p>The normalization rule ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>alibaba_cloud_cfw_flow_rule</p>
          */
@@ -393,6 +462,8 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
 
     public static class GetNormalizationSchemaResponseBodyNormalizationSchema extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1733269771123</p>
          */
@@ -400,23 +471,43 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The ID of the normalization rule category.</p>
+         * 
          * <strong>example:</strong>
-         * <p>NETWORK_CATEGORY。</p>
+         * <p>NETWORK_CATEGORY</p>
          */
         @NameInMap("NormalizationCategoryId")
         public String normalizationCategoryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>native</p>
+         */
+        @NameInMap("NormalizationFieldSource")
+        public String normalizationFieldSource;
+
+        /**
+         * <p>The list of normalization fields.</p>
+         */
         @NameInMap("NormalizationFields")
         public java.util.List<GetNormalizationSchemaResponseBodyNormalizationSchemaNormalizationFields> normalizationFields;
 
         /**
+         * <p>The normalization schema description.</p>
+         * 
          * <strong>example:</strong>
-         * <p>网络五元组日志</p>
+         * <p>Network 5-Tuple Logs</p>
          */
         @NameInMap("NormalizationSchemaDescription")
         public String normalizationSchemaDescription;
 
         /**
+         * <p>The source of the normalization schema. Valid values:</p>
+         * <ul>
+         * <li>preset: predefined.</li>
+         * <li>custom: custom.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>preset</p>
          */
@@ -424,49 +515,93 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
         public String normalizationSchemaFrom;
 
         /**
+         * <p>The normalization schema ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>HTTP_ACTIVITY。</p>
+         * <p>HTTP_ACTIVITY</p>
          */
         @NameInMap("NormalizationSchemaId")
         public String normalizationSchemaId;
 
         /**
+         * <p>The normalization schema name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>normalization_rule_Z57np。</p>
+         * <p>normalization_rule_Z57np</p>
          */
         @NameInMap("NormalizationSchemaName")
         public String normalizationSchemaName;
 
+        /**
+         * <p>The list of normalization schema references.</p>
+         */
         @NameInMap("NormalizationSchemaReferences")
         public java.util.List<GetNormalizationSchemaResponseBodyNormalizationSchemaNormalizationSchemaReferences> normalizationSchemaReferences;
 
         /**
+         * <p>The normalization schema type. Valid values:</p>
+         * <ul>
+         * <li>log</li>
+         * <li>entity</li>
+         * <li>incident</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>preset</p>
+         * <p>log</p>
          */
         @NameInMap("NormalizationSchemaType")
         public String normalizationSchemaType;
 
         /**
          * <strong>example:</strong>
-         * <p>network-activity。</p>
+         * <p>DATA_SECURITY</p>
+         */
+        @NameInMap("NormalizationSecurityDomainId")
+        public String normalizationSecurityDomainId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>alibaba_cloud_bastionhost</p>
+         */
+        @NameInMap("ProductId")
+        public String productId;
+
+        @NameInMap("RecommendEntities")
+        public java.util.List<String> recommendEntities;
+
+        /**
+         * <p>The Simple Log Service LogStore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>network-activity</p>
          */
         @NameInMap("TargetLogStore")
         public String targetLogStore;
 
         /**
+         * <p>The Simple Log Service StoreView.</p>
+         * 
          * <strong>example:</strong>
-         * <p>network_activity。</p>
+         * <p>network_activity</p>
          */
         @NameInMap("TargetStoreView")
         public String targetStoreView;
 
         /**
+         * <p>The update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1733269771123</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;
+
+        /**
+         * <strong>example:</strong>
+         * <p>alibaba_cloud</p>
+         */
+        @NameInMap("VendorId")
+        public String vendorId;
 
         public static GetNormalizationSchemaResponseBodyNormalizationSchema build(java.util.Map<String, ?> map) throws Exception {
             GetNormalizationSchemaResponseBodyNormalizationSchema self = new GetNormalizationSchemaResponseBodyNormalizationSchema();
@@ -487,6 +622,14 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
         }
         public String getNormalizationCategoryId() {
             return this.normalizationCategoryId;
+        }
+
+        public GetNormalizationSchemaResponseBodyNormalizationSchema setNormalizationFieldSource(String normalizationFieldSource) {
+            this.normalizationFieldSource = normalizationFieldSource;
+            return this;
+        }
+        public String getNormalizationFieldSource() {
+            return this.normalizationFieldSource;
         }
 
         public GetNormalizationSchemaResponseBodyNormalizationSchema setNormalizationFields(java.util.List<GetNormalizationSchemaResponseBodyNormalizationSchemaNormalizationFields> normalizationFields) {
@@ -545,6 +688,30 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             return this.normalizationSchemaType;
         }
 
+        public GetNormalizationSchemaResponseBodyNormalizationSchema setNormalizationSecurityDomainId(String normalizationSecurityDomainId) {
+            this.normalizationSecurityDomainId = normalizationSecurityDomainId;
+            return this;
+        }
+        public String getNormalizationSecurityDomainId() {
+            return this.normalizationSecurityDomainId;
+        }
+
+        public GetNormalizationSchemaResponseBodyNormalizationSchema setProductId(String productId) {
+            this.productId = productId;
+            return this;
+        }
+        public String getProductId() {
+            return this.productId;
+        }
+
+        public GetNormalizationSchemaResponseBodyNormalizationSchema setRecommendEntities(java.util.List<String> recommendEntities) {
+            this.recommendEntities = recommendEntities;
+            return this;
+        }
+        public java.util.List<String> getRecommendEntities() {
+            return this.recommendEntities;
+        }
+
         public GetNormalizationSchemaResponseBodyNormalizationSchema setTargetLogStore(String targetLogStore) {
             this.targetLogStore = targetLogStore;
             return this;
@@ -567,6 +734,14 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
         }
         public Long getUpdateTime() {
             return this.updateTime;
+        }
+
+        public GetNormalizationSchemaResponseBodyNormalizationSchema setVendorId(String vendorId) {
+            this.vendorId = vendorId;
+            return this;
+        }
+        public String getVendorId() {
+            return this.vendorId;
         }
 
     }

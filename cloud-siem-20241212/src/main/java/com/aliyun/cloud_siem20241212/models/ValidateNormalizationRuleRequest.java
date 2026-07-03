@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class ValidateNormalizationRuleRequest extends TeaModel {
     /**
+     * <p>The rule ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>123456。</p>
+     * <p>123456</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
+     * <p>The storage mode for extended fields. Valid values: \<code>flat\\</code>, \<code>pack\\</code>, and \<code>reject\\</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>flat</p>
      */
@@ -19,13 +23,23 @@ public class ValidateNormalizationRuleRequest extends TeaModel {
     public String extendFieldStoreMode;
 
     /**
+     * <p>The language of the response messages. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>zh。</p>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
+     * <p>The sample log. The value must be in the JSON format.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;aaa&quot;:&quot;bbb&quot;,&quot;xxx&quot;:&quot;yyy&quot;}</p>
      */
@@ -33,13 +47,17 @@ public class ValidateNormalizationRuleRequest extends TeaModel {
     public String logSample;
 
     /**
+     * <p>The normalization category of the rule.</p>
+     * 
      * <strong>example:</strong>
-     * <p>NETWORK_CATEGORY。</p>
+     * <p>NETWORK_CATEGORY</p>
      */
     @NameInMap("NormalizationCategoryId")
     public String normalizationCategoryId;
 
     /**
+     * <p>The expression for the normalization rule.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -49,6 +67,8 @@ public class ValidateNormalizationRuleRequest extends TeaModel {
     public String normalizationRuleExpression;
 
     /**
+     * <p>The mode of the normalization rule. Valid values: \<code>both\\</code> and \<code>realtime\\</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>realtime</p>
      */
@@ -56,13 +76,17 @@ public class ValidateNormalizationRuleRequest extends TeaModel {
     public String normalizationRuleMode;
 
     /**
+     * <p>The ID of the normalization pattern for the rule.</p>
+     * 
      * <strong>example:</strong>
-     * <p>HTTP_ACTIVITY。</p>
+     * <p>HTTP_ACTIVITY</p>
      */
     @NameInMap("NormalizationSchemaId")
     public String normalizationSchemaId;
 
     /**
+     * <p>The product ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>alibaba_cloud_sas</p>
      */
@@ -70,20 +94,32 @@ public class ValidateNormalizationRuleRequest extends TeaModel {
     public String productId;
 
     /**
+     * <p>The region where the Data Management center for threat analysis is deployed. Select the region based on the location of your assets. Valid values:</p>
+     * <ul>
+     * <li><p>cn-hangzhou: Your assets are in the Chinese mainland.</p>
+     * </li>
+     * <li><p>ap-southeast-1: Your assets are in regions outside the Chinese mainland.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou。</p>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
+     * <p>The user ID of the member. An administrator uses this parameter to switch to the perspective of the member.</p>
+     * 
      * <strong>example:</strong>
-     * <p>173326*******。</p>
+     * <p>173326*******</p>
      */
     @NameInMap("RoleFor")
     public Long roleFor;
 
     /**
+     * <p>The vendor ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>alibaba_cloud</p>
      */

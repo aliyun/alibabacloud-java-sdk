@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class ExecuteAutoDisposeRecordsRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,9 +18,15 @@ public class ExecuteAutoDisposeRecordsRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The list of entities selected for manual handling.</p>
+     */
     @NameInMap("SelectedEntityList")
     public java.util.List<ExecuteAutoDisposeRecordsRequestSelectedEntityList> selectedEntityList;
 
+    /**
+     * <p>The list of entities not selected for manual handling.</p>
+     */
     @NameInMap("UnSelectedEntityList")
     public java.util.List<ExecuteAutoDisposeRecordsRequestUnSelectedEntityList> unSelectedEntityList;
 
@@ -50,6 +61,8 @@ public class ExecuteAutoDisposeRecordsRequest extends TeaModel {
 
     public static class ExecuteAutoDisposeRecordsRequestSelectedEntityList extends TeaModel {
         /**
+         * <p>The unique ID of the investigation record.</p>
+         * 
          * <strong>example:</strong>
          * <p>0000089b040b8935fed2e24ca2ec8335</p>
          */
@@ -57,6 +70,8 @@ public class ExecuteAutoDisposeRecordsRequest extends TeaModel {
         public String autoDisposeRecordId;
 
         /**
+         * <p>The UUID of the entity.</p>
+         * 
          * <strong>example:</strong>
          * <p>9938fc2708ddc7b7651f3a19e4f09962</p>
          */
@@ -88,6 +103,8 @@ public class ExecuteAutoDisposeRecordsRequest extends TeaModel {
 
     public static class ExecuteAutoDisposeRecordsRequestUnSelectedEntityList extends TeaModel {
         /**
+         * <p>The unique ID of the investigation record.</p>
+         * 
          * <strong>example:</strong>
          * <p>0000089b040b8935fed2e24ca2ec8335</p>
          */
@@ -95,6 +112,8 @@ public class ExecuteAutoDisposeRecordsRequest extends TeaModel {
         public String autoDisposeRecordId;
 
         /**
+         * <p>The UUID of the entity.</p>
+         * 
          * <strong>example:</strong>
          * <p>ae6ac3e1c9ada174eb8dadd029a2e9d1</p>
          */

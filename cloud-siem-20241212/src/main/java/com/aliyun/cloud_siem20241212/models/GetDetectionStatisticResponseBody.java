@@ -4,10 +4,15 @@ package com.aliyun.cloud_siem20241212.models;
 import com.aliyun.tea.*;
 
 public class GetDetectionStatisticResponseBody extends TeaModel {
+    /**
+     * <p>The detection rule count result.</p>
+     */
     @NameInMap("DetectionStatistic")
     public GetDetectionStatisticResponseBodyDetectionStatistic detectionStatistic;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6FB890AC-90B2-5EEA-845B-F7C86FB2****</p>
      */
@@ -36,7 +41,12 @@ public class GetDetectionStatisticResponseBody extends TeaModel {
     }
 
     public static class GetDetectionStatisticResponseBodyDetectionStatistic extends TeaModel {
+        @NameInMap("AiPoweredAggregationRuleCount")
+        public Integer aiPoweredAggregationRuleCount;
+
         /**
+         * <p>The number of online rules.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -44,6 +54,8 @@ public class GetDetectionStatisticResponseBody extends TeaModel {
         public Integer detectionRuleOnlineCount;
 
         /**
+         * <p>The number of rule templates.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -51,6 +63,8 @@ public class GetDetectionStatisticResponseBody extends TeaModel {
         public Integer detectionRuleTemplateCount;
 
         /**
+         * <p>The number of test rules.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -58,6 +72,8 @@ public class GetDetectionStatisticResponseBody extends TeaModel {
         public Integer detectionRuleTestCount;
 
         /**
+         * <p>The number of graph computing rules.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -65,6 +81,8 @@ public class GetDetectionStatisticResponseBody extends TeaModel {
         public Integer graphComputeRuleCount;
 
         /**
+         * <p>The number of alert pass-through rules.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -72,6 +90,8 @@ public class GetDetectionStatisticResponseBody extends TeaModel {
         public Integer passthroughRuleCount;
 
         /**
+         * <p>The number of similar aggregation rules.</p>
+         * 
          * <strong>example:</strong>
          * <p>6</p>
          */
@@ -81,6 +101,14 @@ public class GetDetectionStatisticResponseBody extends TeaModel {
         public static GetDetectionStatisticResponseBodyDetectionStatistic build(java.util.Map<String, ?> map) throws Exception {
             GetDetectionStatisticResponseBodyDetectionStatistic self = new GetDetectionStatisticResponseBodyDetectionStatistic();
             return TeaModel.build(map, self);
+        }
+
+        public GetDetectionStatisticResponseBodyDetectionStatistic setAiPoweredAggregationRuleCount(Integer aiPoweredAggregationRuleCount) {
+            this.aiPoweredAggregationRuleCount = aiPoweredAggregationRuleCount;
+            return this;
+        }
+        public Integer getAiPoweredAggregationRuleCount() {
+            return this.aiPoweredAggregationRuleCount;
         }
 
         public GetDetectionStatisticResponseBodyDetectionStatistic setDetectionRuleOnlineCount(Integer detectionRuleOnlineCount) {

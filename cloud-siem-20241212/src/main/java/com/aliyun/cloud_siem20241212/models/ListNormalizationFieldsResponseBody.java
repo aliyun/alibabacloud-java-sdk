@@ -5,32 +5,43 @@ import com.aliyun.tea.*;
 
 public class ListNormalizationFieldsResponseBody extends TeaModel {
     /**
+     * <p>The maximum number of entries to return in this request.</p>
+     * 
      * <strong>example:</strong>
-     * <p>50。</p>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
+     * <p>Specifies whether a next query token exists. You do not need to specify this parameter for the first query or if no next query exists. If a next query exists, set this parameter to the NextToken value returned by the previous API call.</p>
+     * 
      * <strong>example:</strong>
-     * <p>AAAAAUqcj6VO4E3ECWIrFczs****。</p>
+     * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The list of normalization fields.</p>
+     */
     @NameInMap("NormalizationFields")
     public java.util.List<ListNormalizationFieldsResponseBodyNormalizationFields> normalizationFields;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>6276D891-*****-55B2-87B9-74D413F7****。</p>
+     * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
-     * <p>57。</p>
+     * <p>57</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,6 +93,8 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
 
     public static class ListNormalizationFieldsResponseBodyNormalizationFieldsNormalizationFieldJsonKeys extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1736386610000</p>
          */
@@ -89,20 +102,26 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The description of the JSON-type normalization field key.</p>
+         * 
          * <strong>example:</strong>
-         * <p>告警等级</p>
+         * <p>alert_level</p>
          */
         @NameInMap("NormalizationFieldDescription")
         public String normalizationFieldDescription;
 
         /**
+         * <p>The example value of the JSON-type normalization field key.</p>
+         * 
          * <strong>example:</strong>
-         * <p>枚举值：1、2、3、4、5</p>
+         * <p>1</p>
          */
         @NameInMap("NormalizationFieldExample")
         public String normalizationFieldExample;
 
         /**
+         * <p>The source of the normalization field key of the JSON type.</p>
+         * 
          * <strong>example:</strong>
          * <p>preset</p>
          */
@@ -110,22 +129,35 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
         public String normalizationFieldFrom;
 
         /**
+         * <p>The name of the JSON-type normalization field key.</p>
+         * 
          * <strong>example:</strong>
-         * <p>alert_name</p>
+         * <p>alert_level</p>
          */
         @NameInMap("NormalizationFieldName")
         public String normalizationFieldName;
 
+        /**
+         * <p>Indicates whether the JSON-type normalization field key is required.</p>
+         */
         @NameInMap("NormalizationFieldRequired")
         public Boolean normalizationFieldRequired;
 
+        /**
+         * <p>Indicates whether the normalization field key is a built-in system field key.</p>
+         */
         @NameInMap("NormalizationFieldReserved")
         public Boolean normalizationFieldReserved;
 
+        /**
+         * <p>Indicates whether the JSON-type normalization field key is tokenized.</p>
+         */
         @NameInMap("NormalizationFieldTokenize")
         public Boolean normalizationFieldTokenize;
 
         /**
+         * <p>The type of the JSON-type normalization field key.</p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */
@@ -133,6 +165,8 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
         public String normalizationFieldType;
 
         /**
+         * <p>The update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1736386610000</p>
          */
@@ -228,6 +262,8 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
 
     public static class ListNormalizationFieldsResponseBodyNormalizationFields extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1736386610000</p>
          */
@@ -235,81 +271,125 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The ID of the normalization category.</p>
+         * 
          * <strong>example:</strong>
-         * <p>NETWORK_CATEGORY。</p>
+         * <p>NETWORK_CATEGORY</p>
          */
         @NameInMap("NormalizationCategoryId")
         public String normalizationCategoryId;
 
         /**
+         * <p>The description of the normalization field.</p>
+         * 
          * <strong>example:</strong>
-         * <p>cloud_user。</p>
+         * <p>cloud_user</p>
          */
         @NameInMap("NormalizationFieldDescription")
         public String normalizationFieldDescription;
 
         /**
+         * <p>The example value of the normalization field.</p>
+         * 
          * <strong>example:</strong>
-         * <p>173326*******。</p>
+         * <p>173326*******</p>
          */
         @NameInMap("NormalizationFieldExample")
         public String normalizationFieldExample;
 
         /**
+         * <p>The source of the normalization field key of the JSON type.</p>
+         * 
          * <strong>example:</strong>
          * <p>preset</p>
          */
         @NameInMap("NormalizationFieldFrom")
         public String normalizationFieldFrom;
 
+        /**
+         * <p>Indicates whether indexes are created for all keys of the JSON-type normalization field.</p>
+         */
         @NameInMap("NormalizationFieldJsonIndexAll")
         public Boolean normalizationFieldJsonIndexAll;
 
+        /**
+         * <p>The list of keys for the JSON-type normalization field.</p>
+         */
         @NameInMap("NormalizationFieldJsonKeys")
         public java.util.List<ListNormalizationFieldsResponseBodyNormalizationFieldsNormalizationFieldJsonKeys> normalizationFieldJsonKeys;
 
         /**
+         * <p>The name of the normalization field.</p>
+         * 
          * <strong>example:</strong>
-         * <p>cloud_user。</p>
+         * <p>cloud_user</p>
          */
         @NameInMap("NormalizationFieldName")
         public String normalizationFieldName;
 
+        /**
+         * <p>Indicates whether the normalization field key is required.</p>
+         */
         @NameInMap("NormalizationFieldRequired")
         public Boolean normalizationFieldRequired;
 
         /**
+         * <p>Indicates whether the normalization field is required.</p>
+         * 
          * <strong>example:</strong>
-         * <p>true。</p>
+         * <p>true</p>
          */
         @NameInMap("NormalizationFieldRequirement")
         public Boolean normalizationFieldRequirement;
 
         /**
+         * <p>Indicates whether the normalization field is reserved.</p>
+         * 
          * <strong>example:</strong>
-         * <p>true。</p>
+         * <p>true</p>
          */
         @NameInMap("NormalizationFieldReserved")
         public Boolean normalizationFieldReserved;
 
+        /**
+         * <p>Indicates whether the normalization field is tokenized.</p>
+         */
         @NameInMap("NormalizationFieldTokenize")
         public Boolean normalizationFieldTokenize;
 
         /**
+         * <p>The type of the normalization field. Valid values:</p>
+         * <ul>
+         * <li>varchar</li>
+         * <li>bigint</li>
+         * <li>double.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>varchar。</p>
+         * <p>varchar</p>
          */
         @NameInMap("NormalizationFieldType")
         public String normalizationFieldType;
 
         /**
+         * <p>The ID of the normalization schema.</p>
+         * 
          * <strong>example:</strong>
-         * <p>NETWORK_SESSION_ACTIVITY。</p>
+         * <p>NETWORK_SESSION_ACTIVITY</p>
          */
         @NameInMap("NormalizationSchemaId")
         public String normalizationSchemaId;
 
         /**
+         * <strong>example:</strong>
+         * <p>NETWORK_AND_WEB_SECURITY</p>
+         */
+        @NameInMap("NormalizationSecurityDomainId")
+        public String normalizationSecurityDomainId;
+
+        /**
+         * <p>The update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1736386610000</p>
          */
@@ -431,6 +511,14 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
         }
         public String getNormalizationSchemaId() {
             return this.normalizationSchemaId;
+        }
+
+        public ListNormalizationFieldsResponseBodyNormalizationFields setNormalizationSecurityDomainId(String normalizationSecurityDomainId) {
+            this.normalizationSecurityDomainId = normalizationSecurityDomainId;
+            return this;
+        }
+        public String getNormalizationSecurityDomainId() {
+            return this.normalizationSecurityDomainId;
         }
 
         public ListNormalizationFieldsResponseBodyNormalizationFields setUpdateTime(Long updateTime) {

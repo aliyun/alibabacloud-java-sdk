@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListUpgradeItemsRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +20,8 @@ public class ListUpgradeItemsRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The maximum number of entries to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -19,6 +29,8 @@ public class ListUpgradeItemsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token that is used to retrieve the next page of results. Leave this parameter empty for the first request. To retrieve the next page, set this parameter to the NextToken value from the previous response.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
      */
@@ -26,6 +38,14 @@ public class ListUpgradeItemsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The region where the Data Management center is located. Select a region based on where your assets are. Valid values:</p>
+     * <ul>
+     * <li><p>cn-hangzhou: Your assets are in the Chinese mainland.</p>
+     * </li>
+     * <li><p>ap-southeast-1: Your assets are outside China.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -33,6 +53,8 @@ public class ListUpgradeItemsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The user ID of the member. An administrator can use this parameter to switch to the member\&quot;s view.</p>
+     * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
      */

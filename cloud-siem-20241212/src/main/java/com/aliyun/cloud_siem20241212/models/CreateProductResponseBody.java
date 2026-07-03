@@ -5,15 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateProductResponseBody extends TeaModel {
     /**
+     * <p>The ID of the product.</p>
+     * 
      * <strong>example:</strong>
-     * <p>alibaba_cloud_sas。</p>
+     * <p>alibaba_cloud_sas</p>
      */
     @NameInMap("ProductId")
     public String productId;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
-     * <p>6276D891-*****-55B2-87B9-74D413F7****。</p>
+     * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

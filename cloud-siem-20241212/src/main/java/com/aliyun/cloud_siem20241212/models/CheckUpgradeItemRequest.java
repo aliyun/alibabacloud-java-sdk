@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class CheckUpgradeItemRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +20,14 @@ public class CheckUpgradeItemRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The region of the Data Management center. Select a region based on the location of your assets. Valid values:</p>
+     * <ul>
+     * <li><p>cn-hangzhou: The assets are in the Chinese mainland.</p>
+     * </li>
+     * <li><p>ap-southeast-1: The assets are in a region outside the Chinese mainland.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
@@ -19,6 +35,8 @@ public class CheckUpgradeItemRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The user ID of a member. An administrator can use this parameter to switch to the member\&quot;s perspective.</p>
+     * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
      */
@@ -26,6 +44,8 @@ public class CheckUpgradeItemRequest extends TeaModel {
     public String roleFor;
 
     /**
+     * <p>The ID of the upgrade item.</p>
+     * 
      * <strong>example:</strong>
      * <p>dispose_task_upgrade</p>
      */

@@ -5,23 +5,46 @@ import com.aliyun.tea.*;
 
 public class ExecuteLogQueryRequest extends TeaModel {
     /**
+     * <p>The end time.</p>
+     * 
      * <strong>example:</strong>
-     * <p>1733269771123。</p>
+     * <p>1733269771123</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>Specifies whether to pack non-standard fields into the extension field extend_content. Valid values:</p>
+     * <ul>
+     * <li>enabled: Enabled.</li>
+     * <li>disabled: Disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>enabled</p>
+     */
     @NameInMap("ExtendContentPacked")
     public String extendContentPacked;
 
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>zh。</p>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("LogCondition")
+    public String logCondition;
+
     /**
+     * <p>The Simple Log Service project name.</p>
+     * 
      * <strong>example:</strong>
      * <p>slsaudit-center-173326*******-cn-hangzhou</p>
      */
@@ -29,6 +52,8 @@ public class ExecuteLogQueryRequest extends TeaModel {
     public String logProjectName;
 
     /**
+     * <p>The Simple Log Service query statement.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -38,13 +63,17 @@ public class ExecuteLogQueryRequest extends TeaModel {
     public String logQuery;
 
     /**
+     * <p>The log storage region ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou。</p>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("LogRegionId")
     public String logRegionId;
 
     /**
+     * <p>The Simple Log Service project name.</p>
+     * 
      * <strong>example:</strong>
      * <p>huawei-cn-cfw</p>
      */
@@ -52,32 +81,50 @@ public class ExecuteLogQueryRequest extends TeaModel {
     public String logStoreName;
 
     /**
+     * <p>The user ID for data access.</p>
+     * 
      * <strong>example:</strong>
-     * <p>173326*******。</p>
+     * <p>173326*******</p>
      */
     @NameInMap("LogUserId")
     public Long logUserId;
 
+    /**
+     * <p>If packing is enabled, you must specify NormalizationSchemaId.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WAF_ALERT_ACTIVITY</p>
+     */
     @NameInMap("NormalizationSchemaId")
     public String normalizationSchemaId;
 
     /**
+     * <p>The region where the threat analysis data management center is located. Specify the management center based on the region of your assets. Valid values:</p>
+     * <ul>
+     * <li>cn-hangzhou: the asset is in the Chinese mainland.</li>
+     * <li>ap-southeast-1: the asset is outside the Chinese mainland.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou。</p>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
+     * <p>The user ID of the member to which the administrator switches the view.</p>
+     * 
      * <strong>example:</strong>
-     * <p>173326*******。</p>
+     * <p>173326*******</p>
      */
     @NameInMap("RoleFor")
     public Long roleFor;
 
     /**
+     * <p>The start time.</p>
+     * 
      * <strong>example:</strong>
-     * <p>1733269771123。</p>
+     * <p>1733269771123</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -109,6 +156,14 @@ public class ExecuteLogQueryRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public ExecuteLogQueryRequest setLogCondition(String logCondition) {
+        this.logCondition = logCondition;
+        return this;
+    }
+    public String getLogCondition() {
+        return this.logCondition;
     }
 
     public ExecuteLogQueryRequest setLogProjectName(String logProjectName) {

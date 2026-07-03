@@ -5,50 +5,76 @@ import com.aliyun.tea.*;
 
 public class ValidateLogStoreRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>zh。</p>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
+     * <p>The name of the Simple Log Service project.</p>
+     * 
      * <strong>example:</strong>
-     * <p>aliyun-cloudsiem-data-173326*******-cn-hangzhou。</p>
+     * <p>aliyun-cloudsiem-data-173326*******-cn-hangzhou</p>
      */
     @NameInMap("LogProjectName")
     public String logProjectName;
 
     /**
+     * <p>The ID of the log storage region.</p>
+     * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou。</p>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("LogRegionId")
     public String logRegionId;
 
     /**
+     * <p>The name of the Simple Log Service Logstore.</p>
+     * 
      * <strong>example:</strong>
-     * <p>ssglauncher-log。</p>
+     * <p>ssglauncher-log</p>
      */
     @NameInMap("LogStoreName")
     public String logStoreName;
 
     /**
+     * <p>The user ID for data access.</p>
+     * 
      * <strong>example:</strong>
-     * <p>173326*******。</p>
+     * <p>173326*******</p>
      */
     @NameInMap("LogUserId")
     public Long logUserId;
 
     /**
+     * <p>The region of the Data Management Center for threat analysis. Select a region based on the location of your assets. Valid values:</p>
+     * <ul>
+     * <li><p>cn-hangzhou: The Chinese mainland.</p>
+     * </li>
+     * <li><p>ap-southeast-1: Regions outside China.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou。</p>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
+     * <p>The user ID of a member. This lets an administrator switch to the member\&quot;s perspective.</p>
+     * 
      * <strong>example:</strong>
-     * <p>173326*******。</p>
+     * <p>173326*******</p>
      */
     @NameInMap("RoleFor")
     public Long roleFor;

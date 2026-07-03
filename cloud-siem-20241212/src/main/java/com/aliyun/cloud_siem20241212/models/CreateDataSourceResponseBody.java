@@ -5,15 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateDataSourceResponseBody extends TeaModel {
     /**
+     * <p>The ID of the data source.</p>
+     * 
      * <strong>example:</strong>
-     * <p>ds-jl67vixpe1scwysgyu3x。</p>
+     * <p>ds-jl67vixpe1scwysgyu3x</p>
      */
     @NameInMap("DataSourceId")
     public String dataSourceId;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
-     * <p>6276D891-*****-55B2-87B9-74D413F7****。</p>
+     * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

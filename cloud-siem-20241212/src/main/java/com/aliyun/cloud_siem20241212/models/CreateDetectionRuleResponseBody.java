@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDetectionRuleResponseBody extends TeaModel {
     /**
+     * <p>The ID of the detection rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>dr-ha1i09ob3zmqrs85****</p>
      */
@@ -12,6 +14,8 @@ public class CreateDetectionRuleResponseBody extends TeaModel {
     public String detectionRuleId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5CC09D0C-1CD7-54BD-A853-DCB2D945****</p>
      */

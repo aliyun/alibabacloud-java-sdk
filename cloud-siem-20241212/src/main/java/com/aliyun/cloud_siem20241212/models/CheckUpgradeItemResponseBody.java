@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class CheckUpgradeItemResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The upgrade item.</p>
+     */
     @NameInMap("UpgradeItem")
     public CheckUpgradeItemResponseBodyUpgradeItem upgradeItem;
 
@@ -37,6 +42,8 @@ public class CheckUpgradeItemResponseBody extends TeaModel {
 
     public static class CheckUpgradeItemResponseBodyUpgradeItem extends TeaModel {
         /**
+         * <p>The name of the module.</p>
+         * 
          * <strong>example:</strong>
          * <p>OK</p>
          */
@@ -44,6 +51,8 @@ public class CheckUpgradeItemResponseBody extends TeaModel {
         public String checkResult;
 
         /**
+         * <p>The check status.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -51,6 +60,8 @@ public class CheckUpgradeItemResponseBody extends TeaModel {
         public String checkStatus;
 
         /**
+         * <p>The ID of the upgrade item.</p>
+         * 
          * <strong>example:</strong>
          * <p>incident_upgrade</p>
          */

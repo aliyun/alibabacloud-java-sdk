@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListTrafficStatisticsResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>6276D891-*****-55B2-87B9-74D413F7****。</p>
+     * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of traffic statistics.</p>
+     */
     @NameInMap("TrafficStatistics")
     public java.util.List<ListTrafficStatisticsResponseBodyTrafficStatistics> trafficStatistics;
 
@@ -37,15 +42,19 @@ public class ListTrafficStatisticsResponseBody extends TeaModel {
 
     public static class ListTrafficStatisticsResponseBodyTrafficStatisticsTrafficStatisticData extends TeaModel {
         /**
+         * <p>The statistic time.</p>
+         * 
          * <strong>example:</strong>
-         * <p>20250815。</p>
+         * <p>20250815</p>
          */
         @NameInMap("TrafficStatisticTime")
         public Long trafficStatisticTime;
 
         /**
+         * <p>The statistic value.</p>
+         * 
          * <strong>example:</strong>
-         * <p>1.699814。</p>
+         * <p>1.699814</p>
          */
         @NameInMap("TrafficStatisticValue")
         public Double trafficStatisticValue;
@@ -74,12 +83,17 @@ public class ListTrafficStatisticsResponseBody extends TeaModel {
     }
 
     public static class ListTrafficStatisticsResponseBodyTrafficStatistics extends TeaModel {
+        /**
+         * <p>The statistics information.</p>
+         */
         @NameInMap("TrafficStatisticData")
         public java.util.List<ListTrafficStatisticsResponseBodyTrafficStatisticsTrafficStatisticData> trafficStatisticData;
 
         /**
+         * <p>The statistic target.</p>
+         * 
          * <strong>example:</strong>
-         * <p>all。</p>
+         * <p>all</p>
          */
         @NameInMap("TrafficStatisticTarget")
         public String trafficStatisticTarget;

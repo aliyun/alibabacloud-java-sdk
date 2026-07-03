@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateResponseRuleRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +20,8 @@ public class CreateResponseRuleRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The maximum number of results to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -19,6 +29,8 @@ public class CreateResponseRuleRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token that specifies the position from which to start the query. If you do not specify this parameter, the query starts from the beginning.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
      */
@@ -26,6 +38,14 @@ public class CreateResponseRuleRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The deployment region of the data management center for threat analysis. You must select a region based on the location of your assets. Valid values:</p>
+     * <ul>
+     * <li><p>cn-hangzhou: Your assets are in the Chinese mainland or Hong Kong (China).</p>
+     * </li>
+     * <li><p>ap-southeast-1: Your assets are in regions outside the Chinese mainland.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -33,6 +53,8 @@ public class CreateResponseRuleRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The action configuration, specified as a JSON string.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{&quot;actionType&quot;:&quot;doPlaybook&quot;,&quot;playbookName&quot;:&quot;block waf IP&quot;,&quot;playbookUuid&quot;:&quot;system_aliyun_waf_whole_process_book&quot;,&quot;disposeParam&quot;:{&quot;period&quot;:&quot;7d&quot;}}]</p>
      */
@@ -40,6 +62,22 @@ public class CreateResponseRuleRequest extends TeaModel {
     public String responseActionConfig;
 
     /**
+     * <p>The action type for the automatic response rule. Valid values:</p>
+     * <ul>
+     * <li><p>doPlaybook: Runs a playbook.</p>
+     * </li>
+     * <li><p>changeEventStatus: Changes the status of an event.</p>
+     * </li>
+     * <li><p>changeThreatLevel: Changes the threat level of an event.</p>
+     * </li>
+     * <li><p>addEventTag: Adds a tag to an event.</p>
+     * </li>
+     * <li><p>deleteEventTag: Deletes a tag from an event.</p>
+     * </li>
+     * <li><p>alertWhitelist: Adds an alert to the allowlist.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>doPlaybook</p>
      */
@@ -47,6 +85,8 @@ public class CreateResponseRuleRequest extends TeaModel {
     public String responseActionType;
 
     /**
+     * <p>The trigger conditions for the rule, specified as a JSON string.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{&quot;left&quot;:{&quot;value&quot;:&quot;threat_level&quot;},&quot;operator&quot;:&quot;equals&quot;,&quot;right&quot;:{&quot;value&quot;:&quot;suspicious&quot;}}]</p>
      */
@@ -54,6 +94,8 @@ public class CreateResponseRuleRequest extends TeaModel {
     public String responseExecutionCondition;
 
     /**
+     * <p>The name of the automatic response rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>Send Notification When Generating Urgent Incident</p>
      */
@@ -61,6 +103,8 @@ public class CreateResponseRuleRequest extends TeaModel {
     public String responseRuleName;
 
     /**
+     * <p>The execution priority of the automatic response rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -68,6 +112,16 @@ public class CreateResponseRuleRequest extends TeaModel {
     public String responseRulePriority;
 
     /**
+     * <p>The trigger type for the automatic response rule. Valid values:</p>
+     * <ul>
+     * <li><p>event: An event is generated.</p>
+     * </li>
+     * <li><p>event_update: An event is updated.</p>
+     * </li>
+     * <li><p>alert: An alert is generated.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>event</p>
      */
@@ -75,6 +129,8 @@ public class CreateResponseRuleRequest extends TeaModel {
     public String responseTriggerType;
 
     /**
+     * <p>The ID of the member account. An administrator uses this parameter to operate on behalf of the specified member.</p>
+     * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
      */
@@ -82,6 +138,14 @@ public class CreateResponseRuleRequest extends TeaModel {
     public Long roleFor;
 
     /**
+     * <p>The operational scope. Valid values:</p>
+     * <ul>
+     * <li><p>0: Sets the scope to the current Alibaba Cloud account.</p>
+     * </li>
+     * <li><p>1: Sets the scope to all accounts in the enterprise.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

@@ -5,15 +5,25 @@ import com.aliyun.tea.*;
 
 public class ListVendorsRequest extends TeaModel {
     /**
+     * <p>The language of the response message. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>en。</p>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
+     * <p>The maximum number of entries to return for this request.</p>
+     * 
      * <strong>example:</strong>
-     * <p>50。</p>
+     * <p>50</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -22,39 +32,64 @@ public class ListVendorsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token that is used to retrieve the next page of results. If this is your first query or if no next page exists, you do not need to specify this parameter. If a next page exists, set the value to the NextToken value that is returned in the last response.</p>
+     * 
      * <strong>example:</strong>
-     * <p>AAAAAUqcj6VO4E3ECWIrFczs****。</p>
+     * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
+     * <p>The region where the Data Management center for threat analysis is located. Select a region for the Management Hub based on the region where your asset resides. Valid values:</p>
+     * <ul>
+     * <li><p>cn-hangzhou: Your asset is in the Chinese mainland.</p>
+     * </li>
+     * <li><p>ap-southeast-1: Your asset is outside China.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou。</p>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
+     * <p>The user ID of a member. An administrator can use this ID to switch to the member\&quot;s perspective.</p>
+     * 
      * <strong>example:</strong>
-     * <p>173326*******。</p>
+     * <p>173326*******</p>
      */
     @NameInMap("RoleFor")
     public Long roleFor;
 
+    /**
+     * <p>A list of vendors.</p>
+     */
     @NameInMap("VendorIds")
     public java.util.List<String> vendorIds;
 
     /**
+     * <p>The vendor name.</p>
+     * 
      * <strong>example:</strong>
-     * <p>111。</p>
+     * <p>111</p>
      */
     @NameInMap("VendorName")
     public String vendorName;
 
     /**
+     * <p>The vendor type. Valid values:</p>
+     * <ul>
+     * <li><p>preset</p>
+     * </li>
+     * <li><p>custom</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>preset。</p>
+     * <p>preset</p>
      */
     @NameInMap("VendorType")
     public String vendorType;

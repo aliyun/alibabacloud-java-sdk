@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ValidateNormalizationRuleResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>6276D891-*****-55B2-87B9-74D413F7****。</p>
+     * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of validation results.</p>
+     */
     @NameInMap("ValidateResult")
     public java.util.List<ValidateNormalizationRuleResponseBodyValidateResult> validateResult;
 
@@ -37,20 +42,26 @@ public class ValidateNormalizationRuleResponseBody extends TeaModel {
 
     public static class ValidateNormalizationRuleResponseBodyValidateResult extends TeaModel {
         /**
+         * <p>The field name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>host。</p>
+         * <p>host</p>
          */
         @NameInMap("FieldName")
         public String fieldName;
 
         /**
+         * <p>The field value.</p>
+         * 
          * <strong>example:</strong>
-         * <p>ze。</p>
+         * <p>ze</p>
          */
         @NameInMap("FieldValue")
         public String fieldValue;
 
         /**
+         * <p>The name of the log field.</p>
+         * 
          * <strong>example:</strong>
          * <p>aaa</p>
          */
@@ -58,6 +69,8 @@ public class ValidateNormalizationRuleResponseBody extends TeaModel {
         public String logFieldName;
 
         /**
+         * <p>The value of the log field.</p>
+         * 
          * <strong>example:</strong>
          * <p>bbb</p>
          */
@@ -65,13 +78,33 @@ public class ValidateNormalizationRuleResponseBody extends TeaModel {
         public String logFieldValue;
 
         /**
+         * <p>The reason for the validation result. Valid values:</p>
+         * <ul>
+         * <li><p>OperationDenied.TheValueIsRequired: A required parameter is empty.</p>
+         * </li>
+         * <li><p>OperationDenied.TheValueIsNull: The parameter value is empty.</p>
+         * </li>
+         * <li><p>OperationDenied.TheEnumValueNotSupport: The field value is not within the valid enumeration.</p>
+         * </li>
+         * <li><p>OperationDenied.TheValueLessThanMin: The field value is less than the minimum value.</p>
+         * </li>
+         * <li><p>OperationDenied.TheValueMoreThanMax: The field value is greater than the maximum value.</p>
+         * </li>
+         * <li><p>OperationDenied.TheValueNotMatchRegularExpression: The field value does not match the regular expression.</p>
+         * </li>
+         * <li><p>success: The validation passed.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>success。</p>
+         * <p>success</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
+         * <p>The source of the normalized field. Valid values: \<code>preset\\</code> (built-in) and \<code>custom\\</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>preset</p>
          */
@@ -79,23 +112,32 @@ public class ValidateNormalizationRuleResponseBody extends TeaModel {
         public String normalizationFieldFrom;
 
         /**
+         * <p>The name of the normalized field.</p>
+         * 
          * <strong>example:</strong>
-         * <p>host。</p>
+         * <p>host</p>
          */
         @NameInMap("NormalizationFieldName")
         public String normalizationFieldName;
 
         /**
+         * <p>Indicates whether the normalized field is required.</p>
+         * 
          * <strong>example:</strong>
-         * <p>true。</p>
+         * <p>true</p>
          */
         @NameInMap("NormalizationFieldRequired")
         public Boolean normalizationFieldRequired;
 
+        /**
+         * <p>Indicates whether the name of the normalized field is a built-in field name.</p>
+         */
         @NameInMap("NormalizationFieldReserved")
         public Boolean normalizationFieldReserved;
 
         /**
+         * <p>The type of the normalized field. Supported types: \<code>text\\</code>, \<code>long\\</code>, \<code>double\\</code>, and \<code>json\\</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */
@@ -103,6 +145,8 @@ public class ValidateNormalizationRuleResponseBody extends TeaModel {
         public String normalizationFieldType;
 
         /**
+         * <p>The reason why the validation of the normalized field failed.</p>
+         * 
          * <strong>example:</strong>
          * <p>OperationDenied.TheValueIsRequired</p>
          */
@@ -110,6 +154,8 @@ public class ValidateNormalizationRuleResponseBody extends TeaModel {
         public String normalizationFieldValidationReason;
 
         /**
+         * <p>The validation status of the normalized field. Valid values: \<code>pass\\</code> and \<code>fail\\</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>pass</p>
          */
@@ -117,8 +163,18 @@ public class ValidateNormalizationRuleResponseBody extends TeaModel {
         public String normalizationFieldValidationStatus;
 
         /**
+         * <p>The result of the validation. Valid values:</p>
+         * <ul>
+         * <li><p>1: The validation passed.</p>
+         * </li>
+         * <li><p>0: A warning is returned.</p>
+         * </li>
+         * <li><p>-1: The validation failed.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>1。</p>
+         * <p>1</p>
          */
         @NameInMap("Result")
         public Integer result;

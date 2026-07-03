@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateExportTaskResponseBody extends TeaModel {
     /**
+     * <p>The name of the exported file.</p>
+     * 
      * <strong>example:</strong>
      * <p>event_1193842352994186_17344888****.xlsx</p>
      */
@@ -12,6 +14,8 @@ public class CreateExportTaskResponseBody extends TeaModel {
     public String fileName;
 
     /**
+     * <p>The ID of the export task.</p>
+     * 
      * <strong>example:</strong>
      * <p>400151</p>
      */
@@ -19,6 +23,8 @@ public class CreateExportTaskResponseBody extends TeaModel {
     public Long id;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
      */

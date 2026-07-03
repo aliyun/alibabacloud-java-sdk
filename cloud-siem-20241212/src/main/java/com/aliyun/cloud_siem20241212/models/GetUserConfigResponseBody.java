@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetUserConfigResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The user.</p>
+     */
     @NameInMap("User")
     public GetUserConfigResponseBodyUser user;
 
@@ -37,6 +42,8 @@ public class GetUserConfigResponseBody extends TeaModel {
 
     public static class GetUserConfigResponseBodyUser extends TeaModel {
         /**
+         * <p>The current CTDR version.</p>
+         * 
          * <strong>example:</strong>
          * <p>v2</p>
          */
@@ -44,6 +51,18 @@ public class GetUserConfigResponseBody extends TeaModel {
         public String ctdrVersion;
 
         /**
+         * <p>The upgrade status. Valid values:</p>
+         * <ul>
+         * <li><p>pending: The upgrade is pending.</p>
+         * </li>
+         * <li><p>upgrading: The upgrade is in progress.</p>
+         * </li>
+         * <li><p>success: The upgrade is successful.</p>
+         * </li>
+         * <li><p>failed: The upgrade failed.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>pending</p>
          */
@@ -51,6 +70,8 @@ public class GetUserConfigResponseBody extends TeaModel {
         public String dataStorageVersion;
 
         /**
+         * <p>The version of Log Management.</p>
+         * 
          * <strong>example:</strong>
          * <p>v2</p>
          */
@@ -58,6 +79,8 @@ public class GetUserConfigResponseBody extends TeaModel {
         public String upgradeCtdrVersion;
 
         /**
+         * <p>The target CTDR version for the upgrade.</p>
+         * 
          * <strong>example:</strong>
          * <p>v2</p>
          */

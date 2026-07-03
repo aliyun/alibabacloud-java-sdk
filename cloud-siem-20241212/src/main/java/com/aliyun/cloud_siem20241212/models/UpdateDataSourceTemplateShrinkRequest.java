@@ -5,74 +5,115 @@ import com.aliyun.tea.*;
 
 public class UpdateDataSourceTemplateShrinkRequest extends TeaModel {
     /**
+     * <p>Specifies whether to automatically discover new users.</p>
+     * <ul>
+     * <li><p>enabled: Enabled.</p>
+     * </li>
+     * <li><p>disabled: Disabled.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>enabled。</p>
+     * <p>enabled</p>
      */
     @NameInMap("AutoScanNew")
     public String autoScanNew;
 
     /**
+     * <p>Specifies whether to automatically discover new data sources.</p>
+     * 
      * <strong>example:</strong>
-     * <p>true。</p>
+     * <p>true</p>
      */
     @NameInMap("DataSourceRecognizeEnabled")
     public Boolean dataSourceRecognizeEnabled;
 
     /**
+     * <p>The ID of the data source template.</p>
+     * 
      * <strong>example:</strong>
-     * <p>alibaba_cloud_actiontrail_event_ingestion。</p>
+     * <p>alibaba_cloud_actiontrail_event_ingestion</p>
      */
     @NameInMap("DataSourceTemplateId")
     public String dataSourceTemplateId;
 
     /**
+     * <p>The name of the data source template.</p>
+     * 
      * <strong>example:</strong>
-     * <p>alibaba_cloud_actiontrail_event_ingestion。</p>
+     * <p>alibaba_cloud_actiontrail_event_ingestion</p>
      */
     @NameInMap("DataSourceTemplateName")
     public String dataSourceTemplateName;
 
     /**
+     * <p>The language of the response message. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>zh。</p>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
+     * <p>The matching rule for the names of Simple Log Service projects.</p>
+     * 
      * <strong>example:</strong>
-     * <p>aliyun-cloudsiem-data-173326*******。</p>
+     * <p>aliyun-cloudsiem-data-173326*******</p>
      */
     @NameInMap("LogProjectPattern")
     public String logProjectPattern;
 
     /**
+     * <p>The list of IDs of log storage regions.</p>
+     * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou。</p>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("LogRegionIds")
     public String logRegionIds;
 
     /**
+     * <p>The matching rule for the names of Simple Log Service Logstores.</p>
+     * 
      * <strong>example:</strong>
-     * <p>audit-activity。</p>
+     * <p>audit-activity</p>
      */
     @NameInMap("LogStorePattern")
     public String logStorePattern;
 
+    /**
+     * <p>The list of user IDs for batch data access.</p>
+     */
     @NameInMap("LogUserIds")
     public String logUserIdsShrink;
 
     /**
+     * <p>The region where the Management Hub of threat analysis is located. Select a region based on the region where your assets are located. Valid values:</p>
+     * <ul>
+     * <li><p>cn-hangzhou: Assets are in the Chinese mainland.</p>
+     * </li>
+     * <li><p>ap-southeast-1: Assets are outside the Chinese mainland.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou。</p>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
+     * <p>The user ID of the member. This parameter lets an administrator switch to the perspective of the member.</p>
+     * 
      * <strong>example:</strong>
-     * <p>173326*******。</p>
+     * <p>173326*******</p>
      */
     @NameInMap("RoleFor")
     public Long roleFor;

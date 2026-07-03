@@ -5,32 +5,43 @@ import com.aliyun.tea.*;
 
 public class ListNormalizationRuleVersionsResponseBody extends TeaModel {
     /**
+     * <p>The maximum number of entries returned on each page.</p>
+     * 
      * <strong>example:</strong>
-     * <p>50。</p>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. If the NextToken parameter is empty, no more results are available.</p>
+     * 
      * <strong>example:</strong>
-     * <p>AAAAAUqcj6VO4E3ECWIrFczs****。</p>
+     * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The list of normalization rule versions.</p>
+     */
     @NameInMap("NormalizationRuleVersions")
     public java.util.List<ListNormalizationRuleVersionsResponseBodyNormalizationRuleVersions> normalizationRuleVersions;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
-     * <p>6276D891-*****-55B2-87B9-74D413F7****。</p>
+     * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
-     * <p>57。</p>
+     * <p>57</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,38 +93,48 @@ public class ListNormalizationRuleVersionsResponseBody extends TeaModel {
 
     public static class ListNormalizationRuleVersionsResponseBodyNormalizationRuleVersions extends TeaModel {
         /**
+         * <p>The time when the version was created.</p>
+         * 
          * <strong>example:</strong>
-         * <p>1733269771123。</p>
+         * <p>1733269771123</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
+         * <p>The expression of the normalization rule.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
-         * <li>| pack-fields -include=\&quot;[\s\S]+\&quot; as extend_content。</li>
+         * <li>| pack-fields -include=\&quot;[\s\S]+\&quot; as extend_content</li>
          * </ul>
          */
         @NameInMap("NormalizationRuleExpression")
         public String normalizationRuleExpression;
 
         /**
+         * <p>The ID of the normalization rule.</p>
+         * 
          * <strong>example:</strong>
-         * <p>nr-z0b2ssjteut85uoh9nzp。</p>
+         * <p>nr-z0b2ssjteut85uoh9nzp</p>
          */
         @NameInMap("NormalizationRuleId")
         public String normalizationRuleId;
 
         /**
+         * <p>The version of the normalization rule.</p>
+         * 
          * <strong>example:</strong>
-         * <p>V1。</p>
+         * <p>V1</p>
          */
         @NameInMap("NormalizationRuleVersion")
         public Integer normalizationRuleVersion;
 
         /**
+         * <p>The time when the version was updated.</p>
+         * 
          * <strong>example:</strong>
-         * <p>1733269771123。</p>
+         * <p>1733269771123</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateDataStorageResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EA7FC160-8D86-5ABE-A08A-7962FDC1****</p>
      */

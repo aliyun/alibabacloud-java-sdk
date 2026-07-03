@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListProductsShrinkRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +20,8 @@ public class ListProductsShrinkRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The maximum number of entries to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      * 
@@ -22,16 +32,23 @@ public class ListProductsShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token that is used to start the next query. You do not need to specify this parameter for the first query. For subsequent queries, set this parameter to the \<code>NextToken\\</code> value that is returned from the previous API call.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The list of product IDs.</p>
+     */
     @NameInMap("ProductIds")
     public String productIdsShrink;
 
     /**
+     * <p>The product name.</p>
+     * 
      * <strong>example:</strong>
      * <p>sas</p>
      */
@@ -39,6 +56,14 @@ public class ListProductsShrinkRequest extends TeaModel {
     public String productName;
 
     /**
+     * <p>The product type. Valid values:</p>
+     * <ul>
+     * <li><p>preset</p>
+     * </li>
+     * <li><p>custom</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>preset</p>
      */
@@ -46,6 +71,14 @@ public class ListProductsShrinkRequest extends TeaModel {
     public String productType;
 
     /**
+     * <p>The region of the Data Management center for threat analysis. Select the region for the Management Hub based on the region where your assets are located. Valid values:</p>
+     * <ul>
+     * <li><p>cn-hangzhou: Your assets are in the Chinese mainland or China (Hong Kong).</p>
+     * </li>
+     * <li><p>ap-southeast-1: Your assets are in regions outside China.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -53,6 +86,8 @@ public class ListProductsShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The user ID of the member. An administrator can specify this parameter to switch to the perspective of this member.</p>
+     * 
      * <strong>example:</strong>
      * <p>173326*******</p>
      */
@@ -60,6 +95,8 @@ public class ListProductsShrinkRequest extends TeaModel {
     public Long roleFor;
 
     /**
+     * <p>The vendor ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>vd-qlsw5eocx94w9</p>
      */

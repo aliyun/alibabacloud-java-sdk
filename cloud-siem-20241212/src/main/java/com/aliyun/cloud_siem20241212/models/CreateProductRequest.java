@@ -5,36 +5,58 @@ import com.aliyun.tea.*;
 
 public class CreateProductRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>zh。</p>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
+     * <p>The name of the product.</p>
+     * 
      * <strong>example:</strong>
-     * <p>alibaba_cloud_sas。</p>
+     * <p>alibaba_cloud_sas</p>
      */
     @NameInMap("ProductName")
     public String productName;
 
     /**
+     * <p>The region of the Data Management center. Select a region based on the location of your assets. Valid values:</p>
+     * <ul>
+     * <li><p>cn-hangzhou: Assets are in the Chinese mainland.</p>
+     * </li>
+     * <li><p>ap-southeast-1: Assets are outside China.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou。</p>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
+     * <p>The user ID of a member. This parameter is used when an administrator operates as another member.</p>
+     * 
      * <strong>example:</strong>
-     * <p>173326*******。</p>
+     * <p>173326*******</p>
      */
     @NameInMap("RoleFor")
     public Long roleFor;
 
     /**
+     * <p>The name of the vendor.</p>
+     * 
      * <strong>example:</strong>
-     * <p>111。</p>
+     * <p>111</p>
      */
     @NameInMap("VendorName")
     public String vendorName;

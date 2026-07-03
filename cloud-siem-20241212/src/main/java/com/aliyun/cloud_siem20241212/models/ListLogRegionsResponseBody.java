@@ -4,12 +4,17 @@ package com.aliyun.cloud_siem20241212.models;
 import com.aliyun.tea.*;
 
 public class ListLogRegionsResponseBody extends TeaModel {
+    /**
+     * <p>A list of log storage region IDs.</p>
+     */
     @NameInMap("LogRegions")
     public java.util.List<String> logRegions;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
-     * <p>6276D891-*****-55B2-87B9-74D413F7****。</p>
+     * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

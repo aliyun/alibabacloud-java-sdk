@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataSetRecordsRequest extends TeaModel {
     /**
+     * <p>The ID of the dataset.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListDataSetRecordsRequest extends TeaModel {
     public String dataSetId;
 
     /**
+     * <p>The filter conditions, specified as a JSON string. For example: {&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;}</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;}</p>
      */
@@ -21,6 +24,14 @@ public class ListDataSetRecordsRequest extends TeaModel {
     public String filter;
 
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -28,6 +39,8 @@ public class ListDataSetRecordsRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The maximum number of results to return for each request when <code>NextToken</code> is used for pagination. Valid values: 1 to 100. Default value: 50.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -35,6 +48,8 @@ public class ListDataSetRecordsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
      */
@@ -42,6 +57,14 @@ public class ListDataSetRecordsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The sort order. Valid values:</p>
+     * <ul>
+     * <li><p>&quot;desc&quot; (default)</p>
+     * </li>
+     * <li><p>&quot;asc&quot;</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>desc</p>
      */
@@ -49,6 +72,14 @@ public class ListDataSetRecordsRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The sort field. Valid values:</p>
+     * <ul>
+     * <li><p>&quot;updatetime&quot; (default)</p>
+     * </li>
+     * <li><p>&quot;createtime&quot;</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>updatetime</p>
      */
@@ -56,6 +87,7 @@ public class ListDataSetRecordsRequest extends TeaModel {
     public String orderField;
 
     /**
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,6 +97,7 @@ public class ListDataSetRecordsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,6 +107,14 @@ public class ListDataSetRecordsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region of the data management center for Threat Analysis. Select the region where your assets are located. Valid values:</p>
+     * <ul>
+     * <li><p><code>cn-hangzhou</code>: For assets in the Chinese mainland.</p>
+     * </li>
+     * <li><p><code>ap-southeast-1</code>: For assets in regions outside mainland China.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -81,6 +122,8 @@ public class ListDataSetRecordsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The user ID that an administrator can use to view data as another member.</p>
+     * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
      */

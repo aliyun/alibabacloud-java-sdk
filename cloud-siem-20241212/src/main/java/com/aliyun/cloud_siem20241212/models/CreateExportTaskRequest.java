@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateExportTaskRequest extends TeaModel {
     /**
+     * <p>The parameters for the export task. The value is a JSON string that is generated based on the query conditions.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *     &quot;IncidentName&quot;: &quot;name&quot;,
@@ -17,6 +19,11 @@ public class CreateExportTaskRequest extends TeaModel {
     public String exportTaskParameter;
 
     /**
+     * <p>The type of data to export. Valid values:</p>
+     * <ul>
+     * <li>incident_list: event list.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>incident_list</p>
      */
@@ -24,6 +31,14 @@ public class CreateExportTaskRequest extends TeaModel {
     public String exportTaskType;
 
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -31,6 +46,14 @@ public class CreateExportTaskRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The region of the Data Management center. Select a region based on where your assets are located. Valid values:</p>
+     * <ul>
+     * <li><p>cn-hangzhou: The Chinese mainland.</p>
+     * </li>
+     * <li><p>ap-southeast-1: Regions outside China.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -38,6 +61,8 @@ public class CreateExportTaskRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The user ID of a member. An administrator can use this parameter to switch to the perspective of a member.</p>
+     * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
      */

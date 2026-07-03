@@ -5,53 +5,70 @@ import com.aliyun.tea.*;
 
 public class ListNormalizationRuleCapacitiesResponseBody extends TeaModel {
     /**
+     * <p>The maximum number of entries returned.</p>
+     * 
      * <strong>example:</strong>
-     * <p>50。</p>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
+     * <p>The token for the next query. If the response is truncated, use this token in your next request to retrieve the next page of results. If this parameter is empty, all results have been returned.</p>
+     * 
      * <strong>example:</strong>
-     * <p>AAAAAUqcj6VO4E3ECWIrFczs****。</p>
+     * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The list of security capabilities that are associated with the normalization rules.</p>
+     */
     @NameInMap("NormalizationRuleCapacities")
     public java.util.List<ListNormalizationRuleCapacitiesResponseBodyNormalizationRuleCapacities> normalizationRuleCapacities;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
-     * <p>1。</p>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
-     * <p>10。</p>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
-     * <p>6276D891-*****-55B2-87B9-74D413F7****。</p>
+     * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
-     * <p>57。</p>
+     * <p>57</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
     /**
+     * <p>The total number of pages.</p>
+     * 
      * <strong>example:</strong>
-     * <p>3。</p>
+     * <p>3</p>
      */
     @NameInMap("TotalPage")
     public Integer totalPage;
@@ -126,19 +143,36 @@ public class ListNormalizationRuleCapacitiesResponseBody extends TeaModel {
     }
 
     public static class ListNormalizationRuleCapacitiesResponseBodyNormalizationRuleCapacities extends TeaModel {
+        /**
+         * <p>The list of security capabilities.</p>
+         */
         @NameInMap("Capacities")
         public java.util.List<String> capacities;
 
         /**
+         * <p>The type of the security capability. Valid values:</p>
+         * <ul>
+         * <li><p>detection_preset_rule: predefined analysis rule.</p>
+         * </li>
+         * <li><p>detection_custom_rule: custom analysis rule.</p>
+         * </li>
+         * <li><p>incident_investigation: security event handling.</p>
+         * </li>
+         * <li><p>soar_playbooks: predefined playbook.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>detection_preset_rule。</p>
+         * <p>detection_preset_rule</p>
          */
         @NameInMap("CapacityType")
         public String capacityType;
 
         /**
+         * <p>The ID of the normalization rule.</p>
+         * 
          * <strong>example:</strong>
-         * <p>nr-z0b2ssjteut85uoh9nzp。</p>
+         * <p>nr-z0b2ssjteut85uoh9nzp</p>
          */
         @NameInMap("NormalizationRuleId")
         public String normalizationRuleId;

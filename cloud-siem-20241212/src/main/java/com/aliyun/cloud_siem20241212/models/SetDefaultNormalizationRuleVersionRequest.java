@@ -5,36 +5,54 @@ import com.aliyun.tea.*;
 
 public class SetDefaultNormalizationRuleVersionRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>zh。</p>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
+     * <p>The normalization rule ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>nr-z0b2ssjteut85uoh9nzp。</p>
+     * <p>nr-z0b2ssjteut85uoh9nzp</p>
      */
     @NameInMap("NormalizationRuleId")
     public String normalizationRuleId;
 
     /**
+     * <p>The normalization rule version.</p>
+     * 
      * <strong>example:</strong>
-     * <p>V1。</p>
+     * <p>V1</p>
      */
     @NameInMap("NormalizationRuleVersion")
     public Integer normalizationRuleVersion;
 
     /**
+     * <p>The data management center of the threat analysis feature. Specify this parameter based on the region where your assets reside. Valid values:</p>
+     * <ul>
+     * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
+     * <li>ap-southeast-1: Your assets reside outside China.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou。</p>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
+     * <p>The user ID of the member to which the administrator switches the view.</p>
+     * 
      * <strong>example:</strong>
-     * <p>173326*******。</p>
+     * <p>173326*******</p>
      */
     @NameInMap("RoleFor")
     public Long roleFor;

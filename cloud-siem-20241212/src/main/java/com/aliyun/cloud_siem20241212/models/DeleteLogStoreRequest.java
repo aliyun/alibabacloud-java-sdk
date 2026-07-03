@@ -5,13 +5,23 @@ import com.aliyun.tea.*;
 
 public class DeleteLogStoreRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>zh。</p>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
+     * <p>The name of the Simple Log Service project.</p>
+     * 
      * <strong>example:</strong>
      * <p>aliyun-cloudsiem-data-173326*******-cn-hangzhou</p>
      */
@@ -19,36 +29,52 @@ public class DeleteLogStoreRequest extends TeaModel {
     public String logProjectName;
 
     /**
+     * <p>The ID of the log storage region.</p>
+     * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou。</p>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("LogRegionId")
     public String logRegionId;
 
     /**
+     * <p>The name of the Simple Log Service Logstore.</p>
+     * 
      * <strong>example:</strong>
-     * <p>rds-logstore。</p>
+     * <p>rds-logstore</p>
      */
     @NameInMap("LogStoreName")
     public String logStoreName;
 
     /**
+     * <p>The user ID for data ingestion.</p>
+     * 
      * <strong>example:</strong>
-     * <p>173326*******。</p>
+     * <p>173326*******</p>
      */
     @NameInMap("LogUserId")
     public Long logUserId;
 
     /**
+     * <p>The region of the Management Hub. Select a region based on the location of your assets. Valid values:</p>
+     * <ul>
+     * <li><p>cn-hangzhou: if your assets are in the Chinese mainland.</p>
+     * </li>
+     * <li><p>ap-southeast-1: if your assets are outside China.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou。</p>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
+     * <p>The user ID of the member whose perspective the administrator wants to switch to.</p>
+     * 
      * <strong>example:</strong>
-     * <p>173326*******。</p>
+     * <p>173326*******</p>
      */
     @NameInMap("RoleFor")
     public Long roleFor;

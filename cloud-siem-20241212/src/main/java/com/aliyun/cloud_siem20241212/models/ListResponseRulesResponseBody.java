@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListResponseRulesResponseBody extends TeaModel {
     /**
+     * <p>The maximum number of entries returned for the current request.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -12,6 +14,7 @@ public class ListResponseRulesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The position where the current query ends. If this parameter is empty, all data is returned.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class ListResponseRulesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -28,6 +33,8 @@ public class ListResponseRulesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -35,7 +42,7 @@ public class ListResponseRulesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
@@ -43,10 +50,15 @@ public class ListResponseRulesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of automated response rules.</p>
+     */
     @NameInMap("ResponseRules")
     public java.util.List<ListResponseRulesResponseBodyResponseRules> responseRules;
 
     /**
+     * <p>The total number of entries that match the query conditions. This parameter is optional and may not always be returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>57</p>
      */
@@ -116,6 +128,8 @@ public class ListResponseRulesResponseBody extends TeaModel {
 
     public static class ListResponseRulesResponseBodyResponseRules extends TeaModel {
         /**
+         * <p>The time when the rule was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1769843323000</p>
          */
@@ -123,6 +137,8 @@ public class ListResponseRulesResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The configuration of the action that is performed if the automated response rule is triggered.</p>
+         * 
          * <strong>example:</strong>
          * <p>[{&quot;actionType&quot;:&quot;doPlaybook&quot;,&quot;playbookName&quot;:&quot;block waf IP&quot;,&quot;playbookUuid&quot;:&quot;system_aliyun_waf_whole_process_book&quot;,&quot;disposeParam&quot;:{&quot;period&quot;:&quot;7d&quot;}}]</p>
          */
@@ -130,6 +146,22 @@ public class ListResponseRulesResponseBody extends TeaModel {
         public String responseActionConfig;
 
         /**
+         * <p>The type of the action. Valid values:</p>
+         * <ul>
+         * <li><p><code>doPlaybook</code>: executes a playbook.</p>
+         * </li>
+         * <li><p><code>changeEventStatus</code>: changes the status of an event.</p>
+         * </li>
+         * <li><p><code>changeThreatLevel</code>: changes the threat level of an event.</p>
+         * </li>
+         * <li><p><code>addEventTag</code>: adds a tag to an event.</p>
+         * </li>
+         * <li><p><code>deleteEventTag</code>: removes a tag from an event.</p>
+         * </li>
+         * <li><p><code>alertWhitelist</code>: adds an alert to the whitelist.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>doPlaybook</p>
          */
@@ -137,6 +169,8 @@ public class ListResponseRulesResponseBody extends TeaModel {
         public String responseActionType;
 
         /**
+         * <p>The trigger condition of the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>[{&quot;left&quot;:{&quot;value&quot;:&quot;threat_level&quot;},&quot;operator&quot;:&quot;equals&quot;,&quot;right&quot;:{&quot;value&quot;:&quot;suspicious&quot;}}]</p>
          */
@@ -144,6 +178,8 @@ public class ListResponseRulesResponseBody extends TeaModel {
         public String responseExecutionCondition;
 
         /**
+         * <p>The ID of the automated response rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>403235</p>
          */
@@ -151,6 +187,8 @@ public class ListResponseRulesResponseBody extends TeaModel {
         public String responseRuleId;
 
         /**
+         * <p>The name of the automated response rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>Send Notification When Generating Urgent Incident</p>
          */
@@ -158,6 +196,8 @@ public class ListResponseRulesResponseBody extends TeaModel {
         public String responseRuleName;
 
         /**
+         * <p>The priority of the automated response rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -165,6 +205,14 @@ public class ListResponseRulesResponseBody extends TeaModel {
         public Integer responseRulePriority;
 
         /**
+         * <p>The status of the automated response rule. Valid values:</p>
+         * <ul>
+         * <li><p><code>0</code>: disabled.</p>
+         * </li>
+         * <li><p><code>100</code>: enabled.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -172,6 +220,14 @@ public class ListResponseRulesResponseBody extends TeaModel {
         public Integer responseRuleStatus;
 
         /**
+         * <p>The type of the response rule. Valid values:</p>
+         * <ul>
+         * <li><p><code>preset</code>: a predefined rule.</p>
+         * </li>
+         * <li><p><code>custom</code>: a custom rule.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>custom</p>
          */
@@ -179,6 +235,16 @@ public class ListResponseRulesResponseBody extends TeaModel {
         public String responseRuleType;
 
         /**
+         * <p>The trigger type of the automated response rule. Valid values:</p>
+         * <ul>
+         * <li><p><code>event</code>: triggered when an event occurs.</p>
+         * </li>
+         * <li><p><code>event_update</code>: triggered when an event is updated.</p>
+         * </li>
+         * <li><p><code>alert</code>: triggered when an alert is generated.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>event</p>
          */
@@ -186,6 +252,8 @@ public class ListResponseRulesResponseBody extends TeaModel {
         public String responseTriggerType;
 
         /**
+         * <p>The time when the rule was updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>1769843323000</p>
          */

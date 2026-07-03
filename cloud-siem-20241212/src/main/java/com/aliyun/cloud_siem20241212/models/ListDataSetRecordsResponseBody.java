@@ -4,10 +4,15 @@ package com.aliyun.cloud_siem20241212.models;
 import com.aliyun.tea.*;
 
 public class ListDataSetRecordsResponseBody extends TeaModel {
+    /**
+     * <p>A list of dataset records.</p>
+     */
     @NameInMap("DataSetRecords")
     public java.util.List<ListDataSetRecordsResponseBodyDataSetRecords> dataSetRecords;
 
     /**
+     * <p>The maximum number of results to return per page for token-based pagination. Valid values: 1 to 100. Default: 50.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -15,6 +20,8 @@ public class ListDataSetRecordsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token to retrieve the next page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
      */
@@ -22,6 +29,8 @@ public class ListDataSetRecordsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -29,6 +38,8 @@ public class ListDataSetRecordsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -36,6 +47,8 @@ public class ListDataSetRecordsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
      */
@@ -43,6 +56,8 @@ public class ListDataSetRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries that match the query.</p>
+     * 
      * <strong>example:</strong>
      * <p>57</p>
      */
@@ -112,6 +127,8 @@ public class ListDataSetRecordsResponseBody extends TeaModel {
 
     public static class ListDataSetRecordsResponseBodyDataSetRecords extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1658974643000</p>
          */
@@ -119,6 +136,8 @@ public class ListDataSetRecordsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The dataset ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>dataset-t8ha6p7k61rmniqw****</p>
          */
@@ -126,6 +145,8 @@ public class ListDataSetRecordsResponseBody extends TeaModel {
         public String dataSetId;
 
         /**
+         * <p>The dataset name.</p>
+         * 
          * <strong>example:</strong>
          * <p>lmftest</p>
          */
@@ -133,16 +154,23 @@ public class ListDataSetRecordsResponseBody extends TeaModel {
         public String dataSetName;
 
         /**
+         * <p>The dataset record ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>124566</p>
          */
         @NameInMap("DataSetRecordId")
         public String dataSetRecordId;
 
+        /**
+         * <p>The dataset record value.</p>
+         */
         @NameInMap("DataSetRecordValues")
         public String dataSetRecordValues;
 
         /**
+         * <p>The update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1658974643000</p>
          */

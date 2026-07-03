@@ -5,15 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateDataIngestionResponseBody extends TeaModel {
     /**
+     * <p>The data ingestion ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>di-yxtm3l2rwa7fr5uvxtc7。</p>
+     * <p>di-yxtm3l2rwa7fr5uvxtc7</p>
      */
     @NameInMap("DataIngestionId")
     public String dataIngestionId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>6276D891-*****-55B2-87B9-74D413F7****。</p>
+     * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

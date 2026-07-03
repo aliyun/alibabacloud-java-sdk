@@ -4,12 +4,17 @@ package com.aliyun.cloud_siem20241212.models;
 import com.aliyun.tea.*;
 
 public class GetDataBatchIngestionResponseBody extends TeaModel {
+    /**
+     * <p>The details of the batch data ingestion task.</p>
+     */
     @NameInMap("DataBatchIngestion")
     public GetDataBatchIngestionResponseBodyDataBatchIngestion dataBatchIngestion;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
-     * <p>6276D891-*****-55B2-87B9-74D413F7****。</p>
+     * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -37,36 +42,52 @@ public class GetDataBatchIngestionResponseBody extends TeaModel {
 
     public static class GetDataBatchIngestionResponseBodyDataBatchIngestionDataIngestions extends TeaModel {
         /**
+         * <p>The ID of the data ingestion task.</p>
+         * 
          * <strong>example:</strong>
-         * <p>alibaba_cloud_sas_process_ingestion_173326*******。</p>
+         * <p>alibaba_cloud_sas_process_ingestion_173326*******</p>
          */
         @NameInMap("DataIngestionId")
         public String dataIngestionId;
 
         /**
+         * <p>The status of the data ingestion task. Valid values:</p>
+         * <ul>
+         * <li><p>enabled: enabled</p>
+         * </li>
+         * <li><p>disabled: disabled</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>enabled。</p>
+         * <p>enabled</p>
          */
         @NameInMap("DataIngestionStatus")
         public String dataIngestionStatus;
 
         /**
+         * <p>The ID of the data source.</p>
+         * 
          * <strong>example:</strong>
-         * <p>alibaba_cloud_sas_process_log_173326*******。</p>
+         * <p>alibaba_cloud_sas_process_log_173326*******</p>
          */
         @NameInMap("DataSourceId")
         public String dataSourceId;
 
         /**
+         * <p>The ID of the product.</p>
+         * 
          * <strong>example:</strong>
-         * <p>alibaba_cloud_sas。</p>
+         * <p>alibaba_cloud_sas</p>
          */
         @NameInMap("ProductId")
         public String productId;
 
         /**
+         * <p>The ID of the vendor.</p>
+         * 
          * <strong>example:</strong>
-         * <p>alibaba_cloud。</p>
+         * <p>alibaba_cloud</p>
          */
         @NameInMap("VendorId")
         public String vendorId;
@@ -119,57 +140,97 @@ public class GetDataBatchIngestionResponseBody extends TeaModel {
     }
 
     public static class GetDataBatchIngestionResponseBodyDataBatchIngestion extends TeaModel {
+        /**
+         * <p>The list of data ingestion IDs for Alibaba Cloud services.</p>
+         */
         @NameInMap("ApsaraDataIngestionIds")
         public java.util.List<String> apsaraDataIngestionIds;
 
         /**
+         * <p>Specifies whether to automatically discover new users. Valid values:</p>
+         * <ul>
+         * <li><p>enabled: New users are automatically discovered.</p>
+         * </li>
+         * <li><p>disabled: New users are not automatically discovered.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>enabled。</p>
+         * <p>enabled</p>
          */
         @NameInMap("AutoScanNew")
         public String autoScanNew;
 
         /**
+         * <p>The time when the configuration of the batch data ingestion task took effect.</p>
+         * 
          * <strong>example:</strong>
-         * <p>1733269771123。</p>
+         * <p>1733269771123</p>
          */
         @NameInMap("DataBatchIngestionEffectTime")
         public String dataBatchIngestionEffectTime;
 
         /**
+         * <p>The mode of the batch data ingestion task.</p>
+         * 
          * <strong>example:</strong>
-         * <p>full。</p>
+         * <p>full</p>
          */
         @NameInMap("DataBatchIngestionMode")
         public String dataBatchIngestionMode;
 
         /**
+         * <p>The time when the batch data ingestion task was configured.</p>
+         * 
          * <strong>example:</strong>
-         * <p>1733269771123。</p>
+         * <p>1733269771123</p>
          */
         @NameInMap("DataBatchIngestionSetTime")
         public String dataBatchIngestionSetTime;
 
         /**
+         * <p>The status of the batch data ingestion task. Valid values:</p>
+         * <ul>
+         * <li><p>pending: The configuration is pending to take effect.</p>
+         * </li>
+         * <li><p>running: The configuration is taking effect.</p>
+         * </li>
+         * <li><p>success: The configuration has taken effect.</p>
+         * </li>
+         * <li><p>failed: The configuration failed to take effect.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>pending。</p>
+         * <p>pending</p>
          */
         @NameInMap("DataBatchIngestionStatus")
         public String dataBatchIngestionStatus;
 
+        /**
+         * <p>The list of data ingestion tasks.</p>
+         */
         @NameInMap("DataIngestions")
         public java.util.List<GetDataBatchIngestionResponseBodyDataBatchIngestionDataIngestions> dataIngestions;
 
         /**
+         * <p>Specifies whether to automatically discover new Logstores.</p>
+         * 
          * <strong>example:</strong>
-         * <p>true。</p>
+         * <p>true</p>
          */
         @NameInMap("DataSourceRecognizeEnabled")
         public Boolean dataSourceRecognizeEnabled;
 
+        /**
+         * <p>The list of user IDs for batch data ingestion.</p>
+         */
         @NameInMap("LogUserIds")
         public java.util.List<String> logUserIds;
 
+        /**
+         * <p>The list of recommended data ingestion IDs.</p>
+         */
         @NameInMap("RecommendDataIngestionIds")
         public java.util.List<String> recommendDataIngestionIds;
 

@@ -5,49 +5,91 @@ import com.aliyun.tea.*;
 
 public class UpdateDataBatchIngestionShrinkRequest extends TeaModel {
     /**
+     * <p>Specifies whether to automatically discover new users.</p>
+     * <ul>
+     * <li><p>enabled: Enables the feature.</p>
+     * </li>
+     * <li><p>disabled: Disables the feature.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>enabled。</p>
+     * <p>enabled</p>
      */
     @NameInMap("AutoScanNew")
     public String autoScanNew;
 
     /**
+     * <p>The mode for batch data ingestion. Valid values:</p>
+     * <ul>
+     * <li><p>full</p>
+     * </li>
+     * <li><p>increment</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>full。</p>
+     * <p>full</p>
      */
     @NameInMap("DataBatchIngestionMode")
     public String dataBatchIngestionMode;
 
+    /**
+     * <p>The list of ingestion policy IDs.</p>
+     */
     @NameInMap("DataIngestionIds")
     public String dataIngestionIdsShrink;
 
     /**
+     * <p>Specifies whether to automatically discover new Logstores.</p>
+     * 
      * <strong>example:</strong>
-     * <p>true。</p>
+     * <p>true</p>
      */
     @NameInMap("DataSourceRecognizeEnabled")
     public Boolean dataSourceRecognizeEnabled;
 
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>zh。</p>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The list of user IDs for batch data ingestion.</p>
+     */
     @NameInMap("LogUserIds")
     public String logUserIdsShrink;
 
     /**
+     * <p>The region of the Data Management hub for threat analysis. Select a region for the management hub based on the region of your assets. Valid values:</p>
+     * <ul>
+     * <li><p>cn-hangzhou: Your assets are in the Chinese mainland.</p>
+     * </li>
+     * <li><p>ap-southeast-1: Your assets are in a region outside China.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou。</p>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
+     * <p>The user ID of the member whose perspective the administrator wants to switch to.</p>
+     * 
      * <strong>example:</strong>
-     * <p>173326*******。</p>
+     * <p>173326*******</p>
      */
     @NameInMap("RoleFor")
     public Long roleFor;

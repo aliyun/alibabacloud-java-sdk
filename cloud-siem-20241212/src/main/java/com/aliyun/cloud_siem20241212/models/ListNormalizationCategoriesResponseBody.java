@@ -5,32 +5,43 @@ import com.aliyun.tea.*;
 
 public class ListNormalizationCategoriesResponseBody extends TeaModel {
     /**
+     * <p>The maximum number of entries returned on the current page.</p>
+     * 
      * <strong>example:</strong>
-     * <p>50。</p>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
+     * <p>The token that is used to retrieve the next page of results. If the response does not contain this parameter, no more results are available.</p>
+     * 
      * <strong>example:</strong>
-     * <p>AAAAAUqcj6VO4E3ECWIrFczs****。</p>
+     * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>A list of normalization categories.</p>
+     */
     @NameInMap("NormalizationCategories")
     public java.util.List<ListNormalizationCategoriesResponseBodyNormalizationCategories> normalizationCategories;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>6276D891-*****-55B2-87B9-74D413F7****。</p>
+     * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
-     * <p>57。</p>
+     * <p>57</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,15 +93,19 @@ public class ListNormalizationCategoriesResponseBody extends TeaModel {
 
     public static class ListNormalizationCategoriesResponseBodyNormalizationCategories extends TeaModel {
         /**
+         * <p>The ID of the normalization category.</p>
+         * 
          * <strong>example:</strong>
-         * <p>COMMON_CATEGORY。</p>
+         * <p>COMMON_CATEGORY</p>
          */
         @NameInMap("NormalizationCategoryId")
         public String normalizationCategoryId;
 
         /**
+         * <p>The name of the normalization category.</p>
+         * 
          * <strong>example:</strong>
-         * <p>COMMON_CATEGORY。</p>
+         * <p>COMMON_CATEGORY</p>
          */
         @NameInMap("NormalizationCategoryName")
         public String normalizationCategoryName;

@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class UpdateDataStorageTtlRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +20,8 @@ public class UpdateDataStorageTtlRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The storage duration for cold storage in Simple Log Service. This setting is not yet available.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -19,6 +29,8 @@ public class UpdateDataStorageTtlRequest extends TeaModel {
     public String logStoreColdTtl;
 
     /**
+     * <p>The storage duration for hot storage in Simple Log Service.</p>
+     * 
      * <strong>example:</strong>
      * <p>180</p>
      */
@@ -26,6 +38,8 @@ public class UpdateDataStorageTtlRequest extends TeaModel {
     public String logStoreHotTtl;
 
     /**
+     * <p>The name of the Logstore for threat analysis.</p>
+     * 
      * <strong>example:</strong>
      * <p>network-activity</p>
      */
@@ -33,6 +47,8 @@ public class UpdateDataStorageTtlRequest extends TeaModel {
     public String logStoreName;
 
     /**
+     * <p>The storage duration of the Logstore.</p>
+     * 
      * <strong>example:</strong>
      * <p>180</p>
      */
@@ -40,6 +56,14 @@ public class UpdateDataStorageTtlRequest extends TeaModel {
     public String logStoreTtl;
 
     /**
+     * <p>The region of the Data Management Center for threat analysis. Select a region based on the location of your assets. Valid values:</p>
+     * <ul>
+     * <li><p>cn-hangzhou: The Chinese mainland.</p>
+     * </li>
+     * <li><p>ap-southeast-1: Regions outside the Chinese mainland.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -47,6 +71,8 @@ public class UpdateDataStorageTtlRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The user ID of the member whose perspective the administrator assumes.</p>
+     * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
      */

@@ -4,10 +4,18 @@ package com.aliyun.cloud_siem20241212.models;
 import com.aliyun.tea.*;
 
 public class UpdateAutoDisposeRecordRequest extends TeaModel {
+    /**
+     * <p>The conclusion of the automatic alert analysis.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>疑似误报</p>
+     */
     @NameInMap("AutoDecisionConclusion")
     public String autoDecisionConclusion;
 
     /**
+     * <p>The list of entities for analysis.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{&quot;entityType&quot;:&quot;file&quot;,&quot;entityName&quot;:&quot;/path/file.file&quot;,&quot;entityUuid&quot;:&quot;b7efb45ce7ff09758****&quot;,&quot;disposalMethod&quot;:&quot;delete&quot;,&quot;playbookUuid&quot;:&quot;9213bhdjagdja****&quot;}]</p>
      */
@@ -15,6 +23,8 @@ public class UpdateAutoDisposeRecordRequest extends TeaModel {
     public String autoDecisionEntityList;
 
     /**
+     * <p>The analysis result.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +32,7 @@ public class UpdateAutoDisposeRecordRequest extends TeaModel {
     public String autoDecisionResult;
 
     /**
+     * <p>The unique ID of the analysis record.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,6 +42,13 @@ public class UpdateAutoDisposeRecordRequest extends TeaModel {
     public String autoDisposeRecordId;
 
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

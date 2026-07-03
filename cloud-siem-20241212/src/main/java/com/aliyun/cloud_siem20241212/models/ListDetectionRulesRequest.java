@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDetectionRulesRequest extends TeaModel {
     /**
+     * <p>The ATT\&amp;CK technique of the alert.</p>
+     * 
      * <strong>example:</strong>
      * <p>Discovery</p>
      */
@@ -12,6 +14,20 @@ public class ListDetectionRulesRequest extends TeaModel {
     public String alertAttCk;
 
     /**
+     * <p>The threat level of the alert. Valid values:</p>
+     * <ul>
+     * <li><p>5: critical.</p>
+     * </li>
+     * <li><p>4: important.</p>
+     * </li>
+     * <li><p>3: medium.</p>
+     * </li>
+     * <li><p>2: low.</p>
+     * </li>
+     * <li><p>1: informational.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +35,8 @@ public class ListDetectionRulesRequest extends TeaModel {
     public String alertLevel;
 
     /**
+     * <p>The alert tactic phase.</p>
+     * 
      * <strong>example:</strong>
      * <p>TA0042</p>
      */
@@ -26,6 +44,8 @@ public class ListDetectionRulesRequest extends TeaModel {
     public String alertTacticId;
 
     /**
+     * <p>The alert type.</p>
+     * 
      * <strong>example:</strong>
      * <p>siem_rule_type_alert_storm</p>
      */
@@ -33,6 +53,8 @@ public class ListDetectionRulesRequest extends TeaModel {
     public String alertType;
 
     /**
+     * <p>The type of the detection rule expression.</p>
+     * 
      * <strong>example:</strong>
      * <p>playbook</p>
      */
@@ -40,16 +62,23 @@ public class ListDetectionRulesRequest extends TeaModel {
     public String detectionExpressionType;
 
     /**
+     * <p>The ID of the detection rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>dr-ppa85gfw69tgwkys****</p>
      */
     @NameInMap("DetectionRuleId")
     public String detectionRuleId;
 
+    /**
+     * <p>The list of detection rule IDs.</p>
+     */
     @NameInMap("DetectionRuleIds")
     public java.util.List<String> detectionRuleIds;
 
     /**
+     * <p>The name of the detection rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>Detect Discovery Behavior for Local Systems Groups</p>
      */
@@ -57,6 +86,8 @@ public class ListDetectionRulesRequest extends TeaModel {
     public String detectionRuleName;
 
     /**
+     * <p>The status of the detection rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>enabled</p>
      */
@@ -64,6 +95,16 @@ public class ListDetectionRulesRequest extends TeaModel {
     public String detectionRuleStatus;
 
     /**
+     * <p>The type of the detection rule. Valid values:</p>
+     * <ul>
+     * <li><p>preset: a built-in detection rule.</p>
+     * </li>
+     * <li><p>custom: a custom detection rule.</p>
+     * </li>
+     * <li><p>custom_template: a rule template.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>preset</p>
      */
@@ -71,6 +112,20 @@ public class ListDetectionRulesRequest extends TeaModel {
     public String detectionRuleType;
 
     /**
+     * <p>The event aggregation type. Valid values:</p>
+     * <ul>
+     * <li><p>none: No events are generated.</p>
+     * </li>
+     * <li><p>graph_compute: graph computing (supported by predefined rules).</p>
+     * </li>
+     * <li><p>expert: expert rule.</p>
+     * </li>
+     * <li><p>passthrough: alert passthrough (one-to-one).</p>
+     * </li>
+     * <li><p>window: aggregation of similar alerts (by window).</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>graph_compute</p>
      */
@@ -78,6 +133,14 @@ public class ListDetectionRulesRequest extends TeaModel {
     public String incidentAggregationType;
 
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -85,6 +148,8 @@ public class ListDetectionRulesRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The ID of the log normalization category.</p>
+     * 
      * <strong>example:</strong>
      * <p>NETWORK_CATEGORY</p>
      */
@@ -92,6 +157,8 @@ public class ListDetectionRulesRequest extends TeaModel {
     public String logCategoryId;
 
     /**
+     * <p>The ID of the log normalization schema.</p>
+     * 
      * <strong>example:</strong>
      * <p>API_RISK_ACTIVITY</p>
      */
@@ -99,6 +166,8 @@ public class ListDetectionRulesRequest extends TeaModel {
     public String logSchemaId;
 
     /**
+     * <p>The maximum number of data entries to read.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -106,6 +175,8 @@ public class ListDetectionRulesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token that is used to start the next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
      */
@@ -113,6 +184,14 @@ public class ListDetectionRulesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The sort order. Valid values:</p>
+     * <ul>
+     * <li><p><strong>asc</strong>: ascending order. This is the default value.</p>
+     * </li>
+     * <li><p><strong>desc</strong>: descending order.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>asc</p>
      */
@@ -120,6 +199,14 @@ public class ListDetectionRulesRequest extends TeaModel {
     public String orderDirection;
 
     /**
+     * <p>The field to sort by. Valid values:</p>
+     * <ul>
+     * <li><p>GmtCreate: the creation time.</p>
+     * </li>
+     * <li><p>GmtModified: the update time.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>GmtModified</p>
      */
@@ -127,6 +214,8 @@ public class ListDetectionRulesRequest extends TeaModel {
     public String orderFieldName;
 
     /**
+     * <p>The pagination parameter. This specifies the current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -134,6 +223,8 @@ public class ListDetectionRulesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The pagination parameter. This specifies the number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -141,6 +232,14 @@ public class ListDetectionRulesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region where the Data Management center of threat analysis is located. Select a region based on the region where your assets are located. Valid values:</p>
+     * <ul>
+     * <li><p>cn-hangzhou: Your assets are in the Chinese mainland.</p>
+     * </li>
+     * <li><p>ap-southeast-1: Your assets are outside China.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -148,6 +247,8 @@ public class ListDetectionRulesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The user ID that the administrator uses to switch to the perspective of another member.</p>
+     * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
      */
