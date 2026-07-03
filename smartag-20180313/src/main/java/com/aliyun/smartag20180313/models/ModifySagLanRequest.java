@@ -26,8 +26,10 @@ public class ModifySagLanRequest extends TeaModel {
     /**
      * <p>The connection type of the LAN port. Valid values:</p>
      * <ul>
-     * <li><strong>DHCP</strong>: a dynamic IP address. Uses the Dynamic Host Configuration Protocol (DHCP) to dynamically assign an IP address to a connected device.</li>
-     * <li><strong>STATIC</strong>: a static IP address. Specifies a static IP address for the LAN port.</li>
+     * <li><p><strong>DHCP</strong>: a dynamic IP address. Uses the Dynamic Host Configuration Protocol (DHCP) to dynamically assign an IP address to a connected device.</p>
+     * </li>
+     * <li><p><strong>STATIC</strong>: a static IP address. Specifies a static IP address for the LAN port.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

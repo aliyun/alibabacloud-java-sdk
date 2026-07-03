@@ -8,7 +8,7 @@ public class DescribeACLAttributeResponseBody extends TeaModel {
     public DescribeACLAttributeResponseBodyAcrs acrs;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number in a paginated query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class DescribeACLAttributeResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of access control rule entries displayed per page in a paginated query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -26,7 +26,7 @@ public class DescribeACLAttributeResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8F62CE77-FBA2-4F8D-AED9-0A02814EDA69</p>
@@ -35,7 +35,7 @@ public class DescribeACLAttributeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of access control rule entries in the current ACL instance.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>

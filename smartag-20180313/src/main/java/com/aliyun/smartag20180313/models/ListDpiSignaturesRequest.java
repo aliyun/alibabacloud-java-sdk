@@ -14,6 +14,8 @@ public class ListDpiSignaturesRequest extends TeaModel {
     public String dpiGroupId;
 
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>235</p>
      */
@@ -21,6 +23,8 @@ public class ListDpiSignaturesRequest extends TeaModel {
     public java.util.List<String> dpiSignatureIds;
 
     /**
+     * <p>The application name.</p>
+     * 
      * <strong>example:</strong>
      * <p>EdgeCast</p>
      */
@@ -28,7 +32,7 @@ public class ListDpiSignaturesRequest extends TeaModel {
     public java.util.List<String> dpiSignatureNames;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of applications to return on each page.</p>
      * <p>Valid values: <strong>1</strong> to <strong>100</strong>.</p>
      * <p>Default value: <strong>20</strong>.</p>
      * 
@@ -39,7 +43,7 @@ public class ListDpiSignaturesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token used to query the next page.</p>
+     * <p>The token for the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2****</p>
@@ -54,8 +58,8 @@ public class ListDpiSignaturesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region to which the application or application group belongs.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the regions and their IDs that are supported by SAG.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListDpiConfigErrorResponseBody extends TeaModel {
     /**
-     * <p>The information about the configuration errors.</p>
+     * <p>A list of DPI configuration errors.</p>
      */
     @NameInMap("DpiConfigError")
     public java.util.List<ListDpiConfigErrorResponseBodyDpiConfigError> dpiConfigError;
 
     /**
-     * <p>The maximum number of entries returned per page.</p>
+     * <p>The maximum number of configuration errors to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -20,7 +20,7 @@ public class ListDpiConfigErrorResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that was used to query the next page.</p>
+     * <p>The token for the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a****</p>
@@ -29,7 +29,7 @@ public class ListDpiConfigErrorResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F47B5293-27B6-48EF-A9C6-E90A41449813</p>
@@ -38,7 +38,7 @@ public class ListDpiConfigErrorResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of DPI configuration errors.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,24 +93,22 @@ public class ListDpiConfigErrorResponseBody extends TeaModel {
 
     public static class ListDpiConfigErrorResponseBodyDpiConfigErrorRuleConfigErrorList extends TeaModel {
         /**
-         * <p>The IDs of the application groups that have configuration errors.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/196754.html">ListDpiGroups</a> operation to query application group IDs and information about the applications.</p>
+         * <p>A list of IDs of application groups that have configuration errors.</p>
          */
         @NameInMap("DpiGroupIds")
         public java.util.List<String> dpiGroupIds;
 
         /**
-         * <p>The IDs of applications that have configuration errors.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/196630.html">ListDpiSignatures</a> operation to query application IDs and information about the applications.</p>
+         * <p>A list of IDs of applications that have configuration errors.</p>
          */
         @NameInMap("DpiSignatureIds")
         public java.util.List<String> dpiSignatureIds;
 
         /**
-         * <p>The IDs of rules that are applied to applications with configuration errors.</p>
+         * <p>The ID of the rule that is associated with the application that has a configuration error.</p>
          * <ul>
-         * <li>If you make the request to query configuration errors of ACLs, the IDs of ACL rules that have configuration errors are returned.</li>
-         * <li>If you make the request to query configuration errors of QoS polices, the IDs of the 5-tuples in the QoS polices that have configuration errors are returned.</li>
+         * <li>If you query DPI configuration errors for Resource Access Management, this parameter indicates the ID of the Resource Access Management rule instance that has a configuration error.</li>
+         * <li>If you query DPI configuration errors for a QoS policy, this parameter indicates the ID of the quintuple rule instance that has a configuration error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -152,11 +150,11 @@ public class ListDpiConfigErrorResponseBody extends TeaModel {
 
     public static class ListDpiConfigErrorResponseBodyDpiConfigError extends TeaModel {
         /**
-         * <p>The type of the configuration error. Valid values:</p>
+         * <p>The type of the configuration error.</p>
          * <ul>
-         * <li><strong>DeviceNotSupported</strong>: The SAG instance does not support the DPI feature.</li>
-         * <li><strong>VersionNotSupported</strong>: The version of the DPI feature is outdated.</li>
-         * <li><strong>NotEnable</strong>: The DPI feature is disabled on the SAG instance.</li>
+         * <li>DeviceNotSupported: The Smart Access Gateway device does not support the DPI feature.</li>
+         * <li>VersionNotSupported: The DPI version of the Smart Access Gateway device is too old.</li>
+         * <li><strong>NotEnable</strong>: The DPI feature is disabled for the Smart Access Gateway device.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -166,13 +164,13 @@ public class ListDpiConfigErrorResponseBody extends TeaModel {
         public String errorType;
 
         /**
-         * <p>The information about the configuration errors.</p>
+         * <p>A list of rule configuration errors.</p>
          */
         @NameInMap("RuleConfigErrorList")
         public java.util.List<ListDpiConfigErrorResponseBodyDpiConfigErrorRuleConfigErrorList> ruleConfigErrorList;
 
         /**
-         * <p>The serial number of the SAG instance.</p>
+         * <p>The serial number of the Smart Access Gateway device.</p>
          * 
          * <strong>example:</strong>
          * <p>sag-2160808****</p>
@@ -181,7 +179,7 @@ public class ListDpiConfigErrorResponseBody extends TeaModel {
         public String SN;
 
         /**
-         * <p>The ID of the SAG instance.</p>
+         * <p>The ID of the Smart Access Gateway instance.</p>
          * 
          * <strong>example:</strong>
          * <p>sag-1e8sgws6b133b8****</p>

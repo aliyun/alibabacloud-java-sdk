@@ -49,8 +49,10 @@ public class ModifySagWanSnatRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable SNAT. Valid values:</p>
      * <ul>
-     * <li><strong>ENABLE</strong>: enables SNAT.</li>
-     * <li><strong>DISABLE</strong>: disables SNAT.</li>
+     * <li><p><strong>ENABLE</strong>: enables SNAT.</p>
+     * </li>
+     * <li><p><strong>DISABLE</strong>: disables SNAT.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

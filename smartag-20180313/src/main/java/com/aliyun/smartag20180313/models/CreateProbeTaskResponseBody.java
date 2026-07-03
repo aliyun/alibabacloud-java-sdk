@@ -14,7 +14,7 @@ public class CreateProbeTaskResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The ID of the probe task.</p>
+     * <p>The ID of the probe task that was created.</p>
      * 
      * <strong>example:</strong>
      * <p>probe-****</p>
@@ -32,7 +32,7 @@ public class CreateProbeTaskResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>324223F3-93D3-4CE4-B26F-66C0C3809922</p>

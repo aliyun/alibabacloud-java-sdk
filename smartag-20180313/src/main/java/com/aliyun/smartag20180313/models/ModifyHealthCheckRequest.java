@@ -9,7 +9,7 @@ public class ModifyHealthCheckRequest extends TeaModel {
      * <p>The description must be 2 to 256 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</p>
      * 
      * <strong>example:</strong>
-     * <p>description</p>
+     * <p>Health check instance 1</p>
      */
     @NameInMap("Description")
     public String description;

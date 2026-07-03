@@ -14,8 +14,8 @@ public class CreateCloudConnectNetworkRequest extends TeaModel {
     public String cidrBlock;
 
     /**
-     * <p>The description of the CCN instance.</p>
-     * <p>The description must be 2 to 128 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The description must start with a letter.</p>
+     * <p>The description of the Cloud Connect Network (CCN) instance. </p>
+     * <p>The description must be 2 to 128 characters in length and must start with a letter or a Chinese character. It can contain digits, underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>ccndesc</p>
@@ -24,8 +24,8 @@ public class CreateCloudConnectNetworkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The name of the CCN instance.</p>
-     * <p>The name must be 2 to 100 characters in length and can contain letters, digits, periods (.), underscores (_),and hyphens (-). The name must start with a letter.</p>
+     * <p>The name of the Cloud Connect Network (CCN) instance. </p>
+     * <p>The name must be 2 to 100 characters in length and must start with a letter or a Chinese character. It can contain digits, underscores (_), periods (.), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>ccnname</p>
@@ -40,7 +40,7 @@ public class CreateCloudConnectNetworkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the CCN instance is deployed.</p>
+     * <p>The region ID of the Cloud Connect Network (CCN) instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -55,7 +55,7 @@ public class CreateCloudConnectNetworkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The private CIDR block used for Source Network Address Translation (SNAT).</p>
+     * <p>The SNAT private CIDR block.</p>
      * 
      * <strong>example:</strong>
      * <p>172.XX.XX.0/25</p>

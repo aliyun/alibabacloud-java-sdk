@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateQosPolicyResponseBody extends TeaModel {
     /**
-     * <p>The description of the traffic classification rule.</p>
+     * <p>The description of the traffic classification rule for the QoS policy.</p>
      * 
      * <strong>example:</strong>
      * <p>desctest</p>
@@ -47,7 +47,7 @@ public class CreateQosPolicyResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The protocol that applies to the traffic classification rule.</p>
+     * <p>The protocol type to which the traffic classification rule applies.</p>
      * 
      * <strong>example:</strong>
      * <p>TCP</p>
@@ -56,7 +56,7 @@ public class CreateQosPolicyResponseBody extends TeaModel {
     public String ipProtocol;
 
     /**
-     * <p>The name of the traffic classification rule.</p>
+     * <p>The name of the traffic classification rule for the QoS policy.</p>
      * 
      * <strong>example:</strong>
      * <p>nametest</p>
@@ -65,7 +65,7 @@ public class CreateQosPolicyResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The priority of the traffic throttling policy to which the traffic classification rule belongs.</p>
+     * <p>The priority of the rate limiting rule to which the traffic classification rule belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -74,7 +74,7 @@ public class CreateQosPolicyResponseBody extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>The ID of the QoS policy.</p>
+     * <p>The instance ID of the QoS policy.</p>
      * 
      * <strong>example:</strong>
      * <p>qos-xitd8690ucu8ro****</p>
@@ -83,7 +83,7 @@ public class CreateQosPolicyResponseBody extends TeaModel {
     public String qosId;
 
     /**
-     * <p>The ID of the traffic classification rule.</p>
+     * <p>The instance ID of the traffic classification rule for the QoS policy.</p>
      * 
      * <strong>example:</strong>
      * <p>qospy-xhwhyuo43l********</p>
@@ -92,7 +92,7 @@ public class CreateQosPolicyResponseBody extends TeaModel {
     public String qosPolicyId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>97862812-2C7E-4D25-B0D5-B26DAC7FA293</p>

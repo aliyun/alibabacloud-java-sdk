@@ -76,11 +76,16 @@ public class DescribeSagPortListResponseBody extends TeaModel {
         /**
          * <p>Port role:</p>
          * <ul>
-         * <li><strong>NONE</strong>: No role is assigned to the port.</li>
-         * <li><strong>WAN</strong>: The port is used as a WAN port. The WAN port supports a Dynamic Host Configuration Protocol (DHCP) client, PPPoE, or a static IP address to access the Internet.</li>
-         * <li><strong>LAN</strong>: The port is used as a LAN port. The LAN port supports a DHCP server or a static IP address to connect to a local terminal or switch.</li>
-         * <li><strong>ECC</strong>: The port is used as a leased line port to connect to a leased line.</li>
-         * <li><strong>MGT</strong>: The port is used as the management port.</li>
+         * <li><p><strong>NONE</strong>: No role is assigned to the port.</p>
+         * </li>
+         * <li><p><strong>WAN</strong>: The port is used as a WAN port. The WAN port supports a Dynamic Host Configuration Protocol (DHCP) client, PPPoE, or a static IP address to access the Internet.</p>
+         * </li>
+         * <li><p><strong>LAN</strong>: The port is used as a LAN port. The LAN port supports a DHCP server or a static IP address to connect to a local terminal or switch.</p>
+         * </li>
+         * <li><p><strong>ECC</strong>: The port is used as a leased line port to connect to a leased line.</p>
+         * </li>
+         * <li><p><strong>MGT</strong>: The port is used as the management port.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -92,9 +97,12 @@ public class DescribeSagPortListResponseBody extends TeaModel {
         /**
          * <p>Port states:</p>
          * <ul>
-         * <li><strong>Up</strong>: The port is enabled.</li>
-         * <li><strong>Down</strong>: The port is disabled.</li>
-         * <li><strong>Unavailable</strong>: The SAG device is disconnected from Alibaba Cloud.</li>
+         * <li><p><strong>Up</strong>: The port is enabled.</p>
+         * </li>
+         * <li><p><strong>Down</strong>: The port is disabled.</p>
+         * </li>
+         * <li><p><strong>Unavailable</strong>: The SAG device is disconnected from Alibaba Cloud.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -173,15 +181,24 @@ public class DescribeSagPortListResponseBody extends TeaModel {
         /**
          * <p>Asynchronous task states:</p>
          * <ul>
-         * <li><strong>Initialized</strong>: The query task is initialized.</li>
-         * <li><strong>Offline</strong>: The SAG device is disconnected from Alibaba Cloud and Alibaba Cloud has not assigned the query task to the SAG device. When the SAG device is connected to Alibaba Cloud, Alibaba Cloud continues to assign the query task to the SAG device.</li>
-         * <li><strong>Succeed</strong>: Alibaba Cloud has assigned the query task to the SAG device.</li>
-         * <li><strong>Processing</strong>: Alibaba Cloud is assigning the query task to the SAG device.</li>
-         * <li><strong>VersionNotSupport</strong>: not supported by the current version of the SAG device.</li>
-         * <li><strong>BuildRequestError</strong>: not supported by the control and management center in the cloud.</li>
-         * <li><strong>HardwareError</strong>: Alibaba Cloud failed to assign the query task to the SAG device because the SAG device is faulty.</li>
-         * <li><strong>TaskNotExist</strong>: The query task does not exist.</li>
-         * <li><strong>OfflineNotConfiged</strong>: The SAG device is disconnected from Alibaba Cloud and Alibaba Cloud has not assigned the query task to the SAG device. When the SAG device is connected to Alibaba Cloud, Alibaba Cloud does not assign the query task to the SAG device.</li>
+         * <li><p><strong>Initialized</strong>: The query task is initialized.</p>
+         * </li>
+         * <li><p><strong>Offline</strong>: The SAG device is disconnected from Alibaba Cloud and Alibaba Cloud has not assigned the query task to the SAG device. When the SAG device is connected to Alibaba Cloud, Alibaba Cloud continues to assign the query task to the SAG device.</p>
+         * </li>
+         * <li><p><strong>Succeed</strong>: Alibaba Cloud has assigned the query task to the SAG device.</p>
+         * </li>
+         * <li><p><strong>Processing</strong>: Alibaba Cloud is assigning the query task to the SAG device.</p>
+         * </li>
+         * <li><p><strong>VersionNotSupport</strong>: not supported by the current version of the SAG device.</p>
+         * </li>
+         * <li><p><strong>BuildRequestError</strong>: not supported by the control and management center in the cloud.</p>
+         * </li>
+         * <li><p><strong>HardwareError</strong>: Alibaba Cloud failed to assign the query task to the SAG device because the SAG device is faulty.</p>
+         * </li>
+         * <li><p><strong>TaskNotExist</strong>: The query task does not exist.</p>
+         * </li>
+         * <li><p><strong>OfflineNotConfiged</strong>: The SAG device is disconnected from Alibaba Cloud and Alibaba Cloud has not assigned the query task to the SAG device. When the SAG device is connected to Alibaba Cloud, Alibaba Cloud does not assign the query task to the SAG device.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

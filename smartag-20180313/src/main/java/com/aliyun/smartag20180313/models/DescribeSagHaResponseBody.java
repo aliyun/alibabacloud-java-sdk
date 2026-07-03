@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeSagHaResponseBody extends TeaModel {
     /**
-     * <p>The HA mode. Valid values:</p>
+     * <p>The high-availability (HA) pattern. Valid values:</p>
      * <ul>
-     * <li><strong>NONE</strong>: HA is disabled.</li>
-     * <li><strong>STATIC</strong>: static HA is enabled.</li>
-     * <li><strong>DYNAMIC</strong>: dynamic HA is enabled.</li>
+     * <li><strong>NONE</strong>: The HA feature is not enabled.</li>
+     * <li><strong>STATIC</strong>: static pattern.</li>
+     * <li><strong>DYNAMIC</strong>: dynamic schema.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,13 +19,13 @@ public class DescribeSagHaResponseBody extends TeaModel {
     public String mode;
 
     /**
-     * <p>The information about the port.</p>
+     * <p>The list of port information.</p>
      */
     @NameInMap("Ports")
     public java.util.List<DescribeSagHaResponseBodyPorts> ports;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>273D62FD-E346-4959-AA18-D79B9276FEFB</p>
@@ -34,7 +34,7 @@ public class DescribeSagHaResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the query task.</p>
+     * <p>The list of query task information.</p>
      */
     @NameInMap("TaskStates")
     public java.util.List<DescribeSagHaResponseBodyTaskStates> taskStates;
@@ -78,7 +78,7 @@ public class DescribeSagHaResponseBody extends TeaModel {
 
     public static class DescribeSagHaResponseBodyPorts extends TeaModel {
         /**
-         * <p>The name of the port.</p>
+         * <p>The port name.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -87,7 +87,7 @@ public class DescribeSagHaResponseBody extends TeaModel {
         public String portName;
 
         /**
-         * <p>The virtual IP address of the SAG device.</p>
+         * <p>The virtual IP address of the Smart Access Gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>192.XX.XX.1</p>
@@ -129,7 +129,7 @@ public class DescribeSagHaResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The error code returned for a query task. The 200 error code indicates that the query task is successful.</p>
+         * <p>The error code. 200 indicates that the query task succeeded.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -138,7 +138,7 @@ public class DescribeSagHaResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The error message returned for a query task. The Successful error message indicates that the query task is successful.</p>
+         * <p>The error message. &quot;Successful&quot; indicates that the query task succeeded.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful</p>
@@ -147,17 +147,17 @@ public class DescribeSagHaResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The status of the query task. Valid values:</p>
+         * <p>The status of the asynchronous task. Valid values:</p>
          * <ul>
-         * <li><strong>Initialized</strong>: The query task has been initialized.</li>
-         * <li><strong>Offline</strong>: The query task is not dispatched because the SAG device is disconnected from Alibaba Cloud. The task will be dispatched after the SAG device is connected to Alibaba Cloud.</li>
-         * <li><strong>Succeed</strong>: The query task has been dispatched.</li>
-         * <li><strong>Processing</strong>: The query task is being dispatched.</li>
-         * <li><strong>VersionNotSupport</strong>: The current version of the SAG device does not support query tasks.</li>
-         * <li><strong>BuildRequestError</strong>: The SAG control system does not support query tasks.</li>
-         * <li><strong>HardwareError</strong>: The query task failed to be dispatched due to device errors.</li>
+         * <li><strong>Initialized</strong>: The query task is initialized.</li>
+         * <li><strong>Offline</strong>: The Smart Access Gateway device is offline and the query task is not delivered. The task will be delivered after the device comes online.</li>
+         * <li><strong>Succeed</strong>: The query task is delivered.</li>
+         * <li><strong>Processing</strong>: The query task is being delivered.</li>
+         * <li><strong>VersionNotSupport</strong>: The current version of the Smart Access Gateway device does not support this operation.</li>
+         * <li><strong>BuildRequestError</strong>: The China Cloud Management Platform does not support this operation.</li>
+         * <li><strong>HardwareError</strong>: The query task failed to be delivered due to a device error.</li>
          * <li><strong>TaskNotExist</strong>: The query task does not exist.</li>
-         * <li><strong>OfflineNotConfiged</strong>: The query task is not dispatched because the SAG device is disconnected from Alibaba Cloud. The task will not be dispatched after the device is connected to Alibaba Cloud.</li>
+         * <li><strong>OfflineNotConfiged</strong>: The Smart Access Gateway device is offline and the query task is not delivered. The task will not be delivered even after the device comes online.</li>
          * </ul>
          * 
          * <strong>example:</strong>

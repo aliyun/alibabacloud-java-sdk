@@ -11,8 +11,8 @@ public class DescribeSAGDeviceInfoRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the SAG instance is deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region where the Smart Access Gateway instance is deployed.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class DescribeSAGDeviceInfoRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the SAG instance.</p>
+     * <p>The instance ID of the Smart Access Gateway.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class DescribeSAGDeviceInfoRequest extends TeaModel {
     public String smartAGId;
 
     /**
-     * <p>The serial number of the SAG device associated with the SAG instance.</p>
+     * <p>The serial number of the associated Smart Access Gateway device.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

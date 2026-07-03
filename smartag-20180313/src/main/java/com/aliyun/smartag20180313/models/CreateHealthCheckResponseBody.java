@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateHealthCheckResponseBody extends TeaModel {
     /**
-     * <p>The ID of the health check.</p>
+     * <p>The ID of the health check instance.</p>
      * 
      * <strong>example:</strong>
      * <p>hc-rrqoucina3gmpn****</p>
@@ -14,7 +14,7 @@ public class CreateHealthCheckResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E38E950D-28A4-4C41-9428-A8908EC6AE5C</p>

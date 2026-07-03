@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListDpiGroupsResponseBody extends TeaModel {
     /**
-     * <p>The information about the application group.</p>
+     * <p>The list of application groups.</p>
      */
     @NameInMap("DpiGroup")
     public java.util.List<ListDpiGroupsResponseBodyDpiGroup> dpiGroup;
 
     /**
-     * <p>The token returned for the next query.</p>
+     * <p>The token for the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>FFPSpX59Ebw****</p>
@@ -20,7 +20,7 @@ public class ListDpiGroupsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EC184A86-3C93-49D6-BB34-6C193E14D37F</p>
@@ -29,7 +29,7 @@ public class ListDpiGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of application groups returned.</p>
      * 
      * <strong>example:</strong>
      * <p>22</p>
@@ -94,7 +94,7 @@ public class ListDpiGroupsResponseBody extends TeaModel {
         public String dpiGroupName;
 
         /**
-         * <p>The earliest version of engine that supports the application group.</p>
+         * <p>The minimum version of the deep packet inspection (DPI) engine that supports the application group.</p>
          * 
          * <strong>example:</strong>
          * <p>0-0.0.1</p>
@@ -103,7 +103,7 @@ public class ListDpiGroupsResponseBody extends TeaModel {
         public String minEngineVersion;
 
         /**
-         * <p>The earliest version of signature database that supports the application group.</p>
+         * <p>The minimum version of the signature database that supports the application group.</p>
          * 
          * <strong>example:</strong>
          * <p>20201117_1_0-0.0.1</p>

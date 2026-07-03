@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateQosCarRequest extends TeaModel {
     /**
-     * <p>The description of the traffic throttling rule.</p>
+     * <p>The description of the QoS rate limiting rule.</p>
      * 
      * <strong>example:</strong>
      * <p>Qosdesc</p>
@@ -14,10 +14,12 @@ public class CreateQosCarRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The type of the traffic throttling rule. Valid values:</p>
+     * <p>The type of rate limiting. Valid values:</p>
      * <ul>
-     * <li><strong>Absolute</strong>: throttles traffic based on a specific range of bandwidth values.</li>
-     * <li><strong>Percent</strong>: throttles traffic based on a specific range of bandwidth percentage.</li>
+     * <li><p><strong>Absolute</strong>: by bandwidth value.</p>
+     * </li>
+     * <li><p><strong>Percent</strong>: by percentage.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -29,9 +31,9 @@ public class CreateQosCarRequest extends TeaModel {
 
     /**
      * <p>The maximum bandwidth value. The value must be an integer. Unit: Mbit/s.</p>
-     * <p>This parameter is returned when <strong>LimitType</strong> is set to <strong>Absolute</strong>.</p>
+     * <p>This parameter is required when <strong>LimitType</strong> is set to <strong>Absolute</strong>.</p>
      * <blockquote>
-     * <p> The maximum bandwidth value must be greater than the minimum bandwidth value.</p>
+     * <p>The maximum bandwidth value must be greater than the minimum bandwidth value.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,10 +43,10 @@ public class CreateQosCarRequest extends TeaModel {
     public Integer maxBandwidthAbs;
 
     /**
-     * <p>The maximum bandwidth percentage. Unit: percent (%). Valid values: <strong>1 to 100</strong>.</p>
-     * <p>This parameter is required when you set <strong>LimitType</strong> to <strong>Percent</strong>.</p>
+     * <p>The maximum bandwidth percentage. Unit: percent (%). Valid values: <strong>1</strong> to <strong>100</strong>.</p>
+     * <p>This parameter is required when <strong>LimitType</strong> is set to <strong>Percent</strong>.</p>
      * <blockquote>
-     * <p> The maximum bandwidth percentage must be greater than the minimum bandwidth percentage.</p>
+     * <p>The maximum bandwidth percentage must be greater than the minimum bandwidth percentage.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -55,7 +57,7 @@ public class CreateQosCarRequest extends TeaModel {
 
     /**
      * <p>The minimum bandwidth value. The value must be an integer. Unit: Mbit/s.</p>
-     * <p>This parameter is returned when <strong>LimitType</strong> is set to <strong>Absolute</strong>.</p>
+     * <p>This parameter is required when <strong>LimitType</strong> is set to <strong>Absolute</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -64,8 +66,8 @@ public class CreateQosCarRequest extends TeaModel {
     public Integer minBandwidthAbs;
 
     /**
-     * <p>The minimum bandwidth percentage. Unit: percent (%). Valid values: <strong>1 to 100</strong>.</p>
-     * <p>This parameter is required when you set <strong>LimitType</strong> to <strong>Percent</strong>.</p>
+     * <p>The minimum bandwidth percentage. Unit: percent (%). Valid values: <strong>1</strong> to <strong>100</strong>.</p>
+     * <p>This parameter is required when <strong>LimitType</strong> is set to <strong>Percent</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -74,8 +76,8 @@ public class CreateQosCarRequest extends TeaModel {
     public Integer minBandwidthPercent;
 
     /**
-     * <p>The name of the traffic throttling rule.</p>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name of the QoS rate limiting rule.</p>
+     * <p>The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It can contain Chinese characters, letters, digits, periods (.), underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>nametest</p>
@@ -90,10 +92,12 @@ public class CreateQosCarRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The type of bandwidth when traffic is throttled based on bandwidth percentage. Valid values:</p>
+     * <p>The bandwidth type when rate limiting by percentage. Valid values:</p>
      * <ul>
-     * <li><strong>CcnBandwidth</strong>: CCN bandwidth</li>
-     * <li><strong>InternetUpBandwidth</strong>: total Internet bandwidth</li>
+     * <li><p><strong>CcnBandwidth</strong>: CCN bandwidth.</p>
+     * </li>
+     * <li><p><strong>InternetUpBandwidth</strong>: total Internet bandwidth.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -103,8 +107,8 @@ public class CreateQosCarRequest extends TeaModel {
     public String percentSourceType;
 
     /**
-     * <p>The priority of the traffic throttling rule.</p>
-     * <p>Valid values: <strong>1</strong> to <strong>3</strong>. A smaller value indicates a higher priority. If rules have the same priority, the one created the earliest is applied.</p>
+     * <p>The priority of the rate limiting rule. </p>
+     * <p>Valid values: <strong>1</strong> to <strong>3</strong>. A smaller value indicates a higher priority. If two rules have the same priority, the rule that is created first takes effect.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -114,7 +118,7 @@ public class CreateQosCarRequest extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>The ID of the QoS policy.</p>
+     * <p>The instance ID of the QoS policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -124,8 +128,8 @@ public class CreateQosCarRequest extends TeaModel {
     public String qosId;
 
     /**
-     * <p>The ID of the region to which the QoS policy belongs.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the QoS policy instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

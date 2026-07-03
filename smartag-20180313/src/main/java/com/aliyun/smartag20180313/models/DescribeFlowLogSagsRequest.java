@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeFlowLogSagsRequest extends TeaModel {
     /**
-     * <p>The instance ID of the flow log.</p>
+     * <p>The flow log instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>fl-l934tsa5504yuc****</p>
@@ -20,7 +20,7 @@ public class DescribeFlowLogSagsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number of the SAG instance list. Minimum value: <strong>1</strong>. Default value: <strong>1</strong></p>
+     * <p>The page number of the query list. Minimum value: <strong>1</strong>. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,7 +29,7 @@ public class DescribeFlowLogSagsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page in the case of a paged query result. Maximum value: <strong>50</strong>. Default value: <strong>10</strong></p>
+     * <p>The number of entries per page in a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +38,7 @@ public class DescribeFlowLogSagsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region to which the flow log belongs.</p>
+     * <p>The region ID of the flow log.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

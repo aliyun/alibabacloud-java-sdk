@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateQosResponseBody extends TeaModel {
     /**
-     * <p>The ID of the QoS policy.</p>
+     * <p>The instance ID of the QoS policy.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm2iu4fnc****</p>
@@ -14,7 +14,7 @@ public class CreateQosResponseBody extends TeaModel {
     public String qosId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AACF5140-783D-48F0-9E4F-E59D716F7D08</p>
@@ -23,7 +23,7 @@ public class CreateQosResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the resource group to which the QoS policy belongs.</p>
+     * <p>The ID of the resource group to which the QoS policy instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>qos-oek3r2cmvk7m8q****</p>

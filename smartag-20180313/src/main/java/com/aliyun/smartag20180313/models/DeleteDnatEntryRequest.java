@@ -26,7 +26,7 @@ public class DeleteDnatEntryRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -45,7 +45,7 @@ public class DeleteDnatEntryRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>sag-jfh*********</p>
+     * <p>sag-ntwc9r1a6z3xz0****</p>
      */
     @NameInMap("SagId")
     public String sagId;

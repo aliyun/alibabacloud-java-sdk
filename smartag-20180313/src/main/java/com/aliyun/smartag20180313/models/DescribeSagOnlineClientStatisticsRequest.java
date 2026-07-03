@@ -11,7 +11,7 @@ public class DescribeSagOnlineClientStatisticsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the SAG app instance is deployed.</p>
+     * <p>The region ID of the SAG app instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +27,8 @@ public class DescribeSagOnlineClientStatisticsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The IDs of the SAG app instances. The list can contain up to 50 instance IDs.</p>
+     * 
      * <strong>example:</strong>
      * <p>sag-va03wf4l4idaj*****</p>
      */

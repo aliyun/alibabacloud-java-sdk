@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListDpiSignaturesResponseBody extends TeaModel {
     /**
-     * <p>The information about the application.</p>
+     * <p>A list of applications.</p>
      */
     @NameInMap("DpiSignature")
     public java.util.List<ListDpiSignaturesResponseBodyDpiSignature> dpiSignature;
 
     /**
-     * <p>The token returned for the next query.</p>
+     * <p>The token for the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>FFrMV38kR4****</p>
@@ -20,7 +20,7 @@ public class ListDpiSignaturesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>63081123-B7C0-4BC9-B9E5-59E77A616EC9</p>
@@ -29,7 +29,7 @@ public class ListDpiSignaturesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned on the current page.</p>
+     * <p>The total number of applications returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -85,7 +85,7 @@ public class ListDpiSignaturesResponseBody extends TeaModel {
         public String dpiGroupId;
 
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>235</p>
@@ -94,7 +94,7 @@ public class ListDpiSignaturesResponseBody extends TeaModel {
         public String dpiSignatureId;
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>EdgeCast</p>
@@ -103,7 +103,7 @@ public class ListDpiSignaturesResponseBody extends TeaModel {
         public String dpiSignatureName;
 
         /**
-         * <p>The earliest version of engine that supports the application.</p>
+         * <p>The minimum version of the deep packet inspection (DPI) engine that supports the application.</p>
          * 
          * <strong>example:</strong>
          * <p>0-0.0.1</p>
@@ -112,7 +112,7 @@ public class ListDpiSignaturesResponseBody extends TeaModel {
         public String minEngineVersion;
 
         /**
-         * <p>The earliest version of signature database that supports the application.</p>
+         * <p>The minimum version of the signature library that supports the application.</p>
          * 
          * <strong>example:</strong>
          * <p>20201117_1_0-0.0.1</p>

@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateHealthCheckRequest extends TeaModel {
     /**
-     * <p>The description of the health check.</p>
-     * <p>The description must be 2 to 256 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</p>
+     * <p>The description of the health check instance.</p>
+     * <p>The description must be 2 to 256 characters in length, and must start with a letter or a Chinese character. The description can contain digits, periods (.), underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>hc_123</p>
@@ -27,7 +27,7 @@ public class CreateHealthCheckRequest extends TeaModel {
     /**
      * <p>The destination port of the health check.</p>
      * <blockquote>
-     * <p> This parameter is not supported.</p>
+     * <p>This feature is currently not supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -37,8 +37,8 @@ public class CreateHealthCheckRequest extends TeaModel {
     public Integer dstPort;
 
     /**
-     * <p>The maximum number of failed probes before a health check is declared failed.</p>
-     * <p>Valid values: <strong>1 to 15</strong>.</p>
+     * <p>The threshold for the number of consecutive probe failures.</p>
+     * <p>Valid values: <strong>1</strong> to <strong>15</strong>.</p>
      * <p>Default value: <strong>3</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -48,8 +48,8 @@ public class CreateHealthCheckRequest extends TeaModel {
     public Integer failCountThreshold;
 
     /**
-     * <p>The name of the health check.</p>
-     * <p>The name must be 2 to 100 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</p>
+     * <p>The name of the health check instance.</p>
+     * <p>The name must be 2 to 100 characters in length, and must start with a letter or a Chinese character. The name can contain digits, periods (.), underscores (_), and hyphens (-).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,7 +65,7 @@ public class CreateHealthCheckRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of probes performed per health check.</p>
+     * <p>The number of probes per health check.</p>
      * <p>Valid values: <strong>1</strong> to <strong>20</strong>.</p>
      * <p>Default value: <strong>1</strong>.</p>
      * 
@@ -76,7 +76,7 @@ public class CreateHealthCheckRequest extends TeaModel {
     public Integer probeCount;
 
     /**
-     * <p>The time interval at which probes are performed. The next probe does not start before the current one is completed.</p>
+     * <p>The interval between health check probes. The next probe will not be initiated until the current probe is complete.</p>
      * <p>Valid values: <strong>1000</strong> to <strong>60000</strong>.</p>
      * <p>Default value: <strong>2000</strong>.</p>
      * <p>Unit: milliseconds.</p>
@@ -88,7 +88,7 @@ public class CreateHealthCheckRequest extends TeaModel {
     public Integer probeInterval;
 
     /**
-     * <p>The timeout period of a probe.</p>
+     * <p>The timeout period for a single probe.</p>
      * <p>Valid values: <strong>10</strong> to <strong>30000</strong>.</p>
      * <p>Default value: <strong>1000</strong>.</p>
      * <p>Unit: milliseconds.</p>
@@ -100,7 +100,7 @@ public class CreateHealthCheckRequest extends TeaModel {
     public Integer probeTimeout;
 
     /**
-     * <p>The region ID of the SAG instance.</p>
+     * <p>The ID of the region where the Smart Access Gateway instance is deployed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class CreateHealthCheckRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The number of times that the maximum RTT is exceeded before an alert is triggered.</p>
+     * <p>The number of times that the RTT threshold can be reached.</p>
      * <p>Valid values: <strong>1</strong> to <strong>15</strong>.</p>
      * <p>Default value: <strong>3</strong>.</p>
      * 
@@ -127,9 +127,9 @@ public class CreateHealthCheckRequest extends TeaModel {
     public Integer rttFailThreshold;
 
     /**
-     * <p>The maximum round-trip time (RTT).</p>
-     * <p>Valid values: <strong>-1</strong> and <strong>1</strong> to <strong>5000</strong>.</p>
-     * <p>Default value: <strong>-1</strong>. This value indicates that the maximum RTT is not specified.</p>
+     * <p>The round-trip time (RTT) threshold.</p>
+     * <p>Valid values: <strong>-1</strong> or <strong>1</strong> to <strong>5000</strong>.</p>
+     * <p>Default value: <strong>-1</strong>, which indicates that no RTT threshold is set.</p>
      * <p>Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class CreateHealthCheckRequest extends TeaModel {
     public Integer rttThreshold;
 
     /**
-     * <p>The ID of the SAG instance.</p>
+     * <p>The ID of the Smart Access Gateway instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -149,7 +149,7 @@ public class CreateHealthCheckRequest extends TeaModel {
     public String smartAGId;
 
     /**
-     * <p>The source IP address of the health check.</p>
+     * <p>The source IP address of the health check instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -161,7 +161,7 @@ public class CreateHealthCheckRequest extends TeaModel {
     /**
      * <p>The source port of the health check.</p>
      * <blockquote>
-     * <p> This parameter is not supported.</p>
+     * <p>This feature is currently not supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -171,9 +171,9 @@ public class CreateHealthCheckRequest extends TeaModel {
     public Integer srcPort;
 
     /**
-     * <p>The type of packets used in the health check.</p>
+     * <p>The type of health check packets.</p>
      * <blockquote>
-     * <p> Only <strong>ICMP_ECHO</strong> is supported.</p>
+     * <p>Only <strong>ICMP_ECHO</strong> is supported.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

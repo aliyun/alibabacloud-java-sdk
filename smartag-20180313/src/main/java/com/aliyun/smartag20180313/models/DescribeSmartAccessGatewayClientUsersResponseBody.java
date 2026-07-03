@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSmartAccessGatewayClientUsersResponseBody extends TeaModel {
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeSmartAccessGatewayClientUsersResponseBody extends TeaModel 
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page when paging is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class DescribeSmartAccessGatewayClientUsersResponseBody extends TeaModel 
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>62F4CF10-F909-487E-8E95-BC35457C5F50</p>
@@ -32,7 +32,7 @@ public class DescribeSmartAccessGatewayClientUsersResponseBody extends TeaModel 
     public String requestId;
 
     /**
-     * <p>The number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

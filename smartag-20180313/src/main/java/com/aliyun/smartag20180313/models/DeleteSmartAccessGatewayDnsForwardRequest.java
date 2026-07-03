@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSmartAccessGatewayDnsForwardRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The ID of the DNS forwarding rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

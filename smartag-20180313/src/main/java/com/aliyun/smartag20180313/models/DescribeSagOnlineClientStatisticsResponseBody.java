@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSagOnlineClientStatisticsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9EC839B6-0EA5-4F19-A4B7-A9E465D057AE</p>

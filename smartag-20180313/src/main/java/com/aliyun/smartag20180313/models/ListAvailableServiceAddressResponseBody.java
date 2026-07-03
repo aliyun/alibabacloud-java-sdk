@@ -26,7 +26,7 @@ public class ListAvailableServiceAddressResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>324223F3-93D3-4CE4-B26F-66C0C3809922</p>
@@ -82,7 +82,7 @@ public class ListAvailableServiceAddressResponseBody extends TeaModel {
         public String address;
 
         /**
-         * <p>The type of service address.</p>
+         * <p>The type of the service address.</p>
          * 
          * <strong>example:</strong>
          * <p>ProbeTask</p>

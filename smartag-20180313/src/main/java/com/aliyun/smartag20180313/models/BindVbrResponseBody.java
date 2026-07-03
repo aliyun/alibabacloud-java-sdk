@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BindVbrResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>09A2010F-602B-4EC6-A60F-9914AAE2DCA0</p>

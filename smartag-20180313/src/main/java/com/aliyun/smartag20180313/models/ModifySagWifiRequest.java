@@ -7,9 +7,12 @@ public class ModifySagWifiRequest extends TeaModel {
     /**
      * <p>The authentication type. Valid values:</p>
      * <ul>
-     * <li><strong>NONE</strong></li>
-     * <li><strong>WPA-PSK</strong></li>
-     * <li><strong>WPA2-PSK</strong></li>
+     * <li><p><strong>NONE</strong></p>
+     * </li>
+     * <li><p><strong>WPA-PSK</strong></p>
+     * </li>
+     * <li><p><strong>WPA2-PSK</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,13 +24,16 @@ public class ModifySagWifiRequest extends TeaModel {
     /**
      * <p>The bandwidth of the channel. Valid values:</p>
      * <ul>
-     * <li><strong>Automatic</strong></li>
-     * <li><strong>20 MHz</strong></li>
-     * <li><strong>40 MHz</strong></li>
+     * <li><p><strong>Automatic</strong></p>
+     * </li>
+     * <li><p><strong>20 MHz</strong></p>
+     * </li>
+     * <li><p><strong>40 MHz</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>20 MHz</p>
+     * <p>Automatic</p>
      */
     @NameInMap("Bandwidth")
     public String bandwidth;
@@ -45,9 +51,12 @@ public class ModifySagWifiRequest extends TeaModel {
     /**
      * <p>The encryption algorithm. Valid values:</p>
      * <ul>
-     * <li><strong>AUTO</strong>: automatically selects the encryption algorithm.</li>
-     * <li><strong>TKIP</strong>: uses the Temporal Key Integrity Protocol (TKIP).</li>
-     * <li><strong>AES</strong>: uses the Advanced Encryption Standard authorized by Wi-Fi®.</li>
+     * <li><p><strong>AUTO</strong>: automatically selects the encryption algorithm.</p>
+     * </li>
+     * <li><p><strong>TKIP</strong>: uses the Temporal Key Integrity Protocol (TKIP).</p>
+     * </li>
+     * <li><p><strong>AES</strong>: uses the Advanced Encryption Standard authorized by Wi-Fi®.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -59,8 +68,10 @@ public class ModifySagWifiRequest extends TeaModel {
     /**
      * <p>Specifies whether wireless security is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables wireless security.</li>
-     * <li><strong>False</strong>: disables wireless security.</li>
+     * <li><p><strong>true</strong>: enables wireless security.</p>
+     * </li>
+     * <li><p><strong>False</strong>: disables wireless security.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -72,11 +83,13 @@ public class ModifySagWifiRequest extends TeaModel {
     /**
      * <p>Specifies whether broadcast over Wi-Fi is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables broadcast.</li>
-     * <li><strong>False</strong>: disables broadcast.</li>
+     * <li><p><strong>true</strong>: enables broadcast.</p>
+     * </li>
+     * <li><p><strong>False</strong>: disables broadcast.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> Only after you enable broadcast, terminals that support wireless connections can search the Wi-Fi network by its SSID and receive Wi-Fi signals.</p>
+     * <p>Only after you enable broadcast, terminals that support wireless connections can search the Wi-Fi network by its SSID and receive Wi-Fi signals.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -88,8 +101,10 @@ public class ModifySagWifiRequest extends TeaModel {
     /**
      * <p>Specifies whether Wi-Fi is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables Wi-Fi.</li>
-     * <li><strong>False</strong>: disables Wi-Fi.</li>
+     * <li><p><strong>true</strong>: enables Wi-Fi.</p>
+     * </li>
+     * <li><p><strong>False</strong>: disables Wi-Fi.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

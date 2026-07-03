@@ -11,7 +11,7 @@ public class DescribeSmartAccessGatewayClientUsersRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class DescribeSmartAccessGatewayClientUsersRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page when paging is used. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class DescribeSmartAccessGatewayClientUsersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the SAG app instance is deployed.</p>
+     * <p>The region ID of the Smart Access Gateway app instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class DescribeSmartAccessGatewayClientUsersRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the SAG app instance.</p>
+     * <p>The instance ID of the Smart Access Gateway app.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class DescribeSmartAccessGatewayClientUsersRequest extends TeaModel {
     public String smartAGId;
 
     /**
-     * <p>The email address of the client account.</p>
+     * <p>The email address of the client.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="mailto:username@example.com">username@example.com</a></p>
@@ -64,7 +64,7 @@ public class DescribeSmartAccessGatewayClientUsersRequest extends TeaModel {
     public String userMail;
 
     /**
-     * <p>The username of the client account.</p>
+     * <p>The username of the client.</p>
      * 
      * <strong>example:</strong>
      * <p>username</p>

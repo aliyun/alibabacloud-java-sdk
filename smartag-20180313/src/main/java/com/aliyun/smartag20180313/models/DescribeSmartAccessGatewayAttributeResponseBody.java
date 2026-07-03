@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
     /**
-     * <p>The maximum bandwidth value for application acceleration. Unit: Mbit/s.</p>
+     * <p>The peak bandwidth of application acceleration for the SAG instance. Unit: Mbit/s.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
     public Long accelerateBandwidth;
 
     /**
-     * <p>The ID of the access point for the SAG instance.</p>
+     * <p>The ID of the access point of the SAG instance.</p>
      * 
      * <strong>example:</strong>
      * <p>238</p>
@@ -26,10 +26,10 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
     public DescribeSmartAccessGatewayAttributeResponseBodyAclIds aclIds;
 
     /**
-     * <p>The status of the bandwidth plan for application acceleration. Valid value:</p>
+     * <p>The status of the application acceleration bandwidth package instance.</p>
      * <ul>
-     * <li><strong>Abnormal</strong>: abnormal</li>
-     * <li><strong>Normal</strong>: normal</li>
+     * <li><strong>Abnormal</strong>: Abnormal.</li>
+     * <li><strong>Normal</strong>: Normal.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
     public String applicationBandwidthPackageBussinessStatus;
 
     /**
-     * <p>The ID of the bandwidth plan for application acceleration that is associated with the SAG instance.</p>
+     * <p>The ID of the application acceleration bandwidth package associated with the SAG instance.</p>
      * 
      * <strong>example:</strong>
      * <p>abwp-7963l7iqnquyj3****</p>
@@ -48,7 +48,7 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
     public String applicationBandwidthPackageId;
 
     /**
-     * <p>The name of the bandwidth plan for application acceleration that is associated with the SAG instance.</p>
+     * <p>The name of the application acceleration bandwidth package associated with the SAG instance.</p>
      * 
      * <strong>example:</strong>
      * <p>testname</p>
@@ -57,13 +57,13 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
     public String applicationBandwidthPackageName;
 
     /**
-     * <p>Indicates whether the bandwidth plan is locked.</p>
+     * <p>The lock information of the application acceleration bandwidth package instance.</p>
      */
     @NameInMap("ApplicationBandwidthPackageOperationLocks")
     public DescribeSmartAccessGatewayAttributeResponseBodyApplicationBandwidthPackageOperationLocks applicationBandwidthPackageOperationLocks;
 
     /**
-     * <p>The ID of the Cloud Connect Network (CCN) instance with which the SAG instance is associated.</p>
+     * <p>The ID of the CCN instance associated with the SAG instance.</p>
      * 
      * <strong>example:</strong>
      * <p>ccn-iz26o9zye6lhoo****</p>
@@ -72,7 +72,7 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
     public String associatedCcnId;
 
     /**
-     * <p>The ID of the Cloud Connect Network (CCN) instance with which the SAG instance is associated.</p>
+     * <p>The name of the Cloud Connect Network (CCN) instance associated with the SAG instance.</p>
      * 
      * <strong>example:</strong>
      * <p>testname</p>
@@ -90,7 +90,7 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
     public String backupBoxControllerIp;
 
     /**
-     * <p>The public IP address of the active SAG device.</p>
+     * <p>The public IP address of the primary SAG device.</p>
      * 
      * <strong>example:</strong>
      * <p>112.XX.XX.25</p>
@@ -99,7 +99,7 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
     public String boxControllerIp;
 
     /**
-     * <p>The private CIDR block of the destination network with which the on-premises network or client needs to communicate.</p>
+     * <p>The private CIDR block used for communication between the on-premises network or clients and the cloud.</p>
      * 
      * <strong>example:</strong>
      * <p>10.0.9.0/24</p>
@@ -108,7 +108,7 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
     public String cidrBlock;
 
     /**
-     * <p>The ID of the city where the SAG device is deployed.</p>
+     * <p>The ID of the city where the SAG device is located.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -117,7 +117,7 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
     public String city;
 
     /**
-     * <p>The timestamp when the SAG instance was created.</p>
+     * <p>The creation timestamp of the SAG instance.</p>
      * 
      * <strong>example:</strong>
      * <p>1622617250000</p>
@@ -126,9 +126,9 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
     public Long createTime;
 
     /**
-     * <p>The data transfer plan of the SAG instance. Unit: GB.</p>
+     * <p>The data plan of the SAG instance. Unit: GB.</p>
      * <blockquote>
-     * <p> Each client account has a data transfer plan free of charge for 5 GB each month.</p>
+     * <p>Currently, only 5 GB of complimentary data traffic is provided for each account per month.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -150,10 +150,10 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
     public DescribeSmartAccessGatewayAttributeResponseBodyDevices devices;
 
     /**
-     * <p>Indicates whether the transmission optimization feature is enabled.</p>
+     * <p>Indicates whether the optimized retransmission feature is enabled for the SAG instance.</p>
      * <ul>
-     * <li><strong>true</strong>: yes</li>
-     * <li><strong>false</strong>: no</li>
+     * <li><strong>true</strong>: Enabled.</li>
+     * <li><strong>false</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -163,10 +163,12 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
     public Boolean enableOptimization;
 
     /**
-     * <p>Indicates whether the audit log for connections to the SAG app instance is enabled. Valid values:</p>
+     * <p>Indicates whether connection log auditing is enabled for the SAG APP instance. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enabled</li>
-     * <li><strong>false</strong>: disabled</li>
+     * <li><p><strong>true</strong>: Connection log auditing is enabled for the SAG APP instance.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Connection log auditing is disabled for the SAG APP instance.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -176,7 +178,7 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
     public Boolean enableSoftwareConnectionAudit;
 
     /**
-     * <p>The timestamp when the SAG instance expires.</p>
+     * <p>The expiration timestamp of the SAG instance.</p>
      * 
      * <strong>example:</strong>
      * <p>1628265600000</p>
@@ -191,12 +193,12 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
     public DescribeSmartAccessGatewayAttributeResponseBodyIRIds IRIds;
 
     /**
-     * <p>The type of the SAG instance. Valid values:</p>
+     * <p>The type of the SAG instance.</p>
      * <ul>
-     * <li><strong>sag-1000</strong>: indicates an SAG CPE instance and the instance is associated with an SAG-1000 device.</li>
-     * <li><strong>sag-10wm</strong>: indicates an SAG CPE instance and the instance is associated with an SAG-100WM device.</li>
-     * <li><strong>sag-software</strong>: indicates an SAG app instance.</li>
-     * <li><strong>sag-vcpe</strong>: an SAG vCPE instance.</li>
+     * <li><strong>sag-1000</strong>: The instance is a hardware SAG instance with a SAG-1000 device.</li>
+     * <li><strong>sag-10wm</strong>: The instance is a hardware SAG instance with a SAG-100WM device.</li>
+     * <li><strong>sag-software</strong>: The instance is an SAG APP instance.</li>
+     * <li><strong>sag-vcpe</strong>: The instance is an SAG vCPE instance.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -206,10 +208,10 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The status of the IPsec-VPN connection. Valid values:</p>
+     * <p>The status of the IPsec-VPN connection.</p>
      * <ul>
-     * <li><strong>up</strong>: normal</li>
-     * <li><strong>down</strong>: abnormal</li>
+     * <li><strong>up</strong>: The IPsec-VPN connection is normal.</li>
+     * <li><strong>down</strong>: The IPsec-VPN connection is abnormal.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -222,7 +224,7 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
     public DescribeSmartAccessGatewayAttributeResponseBodyLinks links;
 
     /**
-     * <p>The maximum bandwidth value of the SAG instance. Unit: Mbit/s.</p>
+     * <p>The peak bandwidth of the SAG instance. Unit: Mbit/s.</p>
      * 
      * <strong>example:</strong>
      * <p>50 M</p>
@@ -240,7 +242,7 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The transmission optimization type of the SAG instance. If transmission optimization is enabled, the default value is <strong>fec</strong>.</p>
+     * <p>The optimized retransmission type of the SAG instance. After the optimized retransmission type is enabled, the default value is <strong>fec</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>fec</p>
@@ -249,7 +251,10 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
     public Boolean optimizationType;
 
     /**
-     * <p>The location of the SAG instance.</p>
+     * <p>The location of the SAG device.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>shanghai</p>
      */
     @NameInMap("Position")
     public String position;
@@ -258,7 +263,7 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
     public DescribeSmartAccessGatewayAttributeResponseBodyQosIds qosIds;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F02D092B-A0B7-4BA1-BCA7-014B953C5DC7</p>
@@ -267,7 +272,7 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the instance provided by the third-party reseller.</p>
+     * <p>The ID of the reseller instance.</p>
      * 
      * <strong>example:</strong>
      * <p>sag-v0fkpk4akfz5******</p>
@@ -276,7 +281,7 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
     public String resellerInstanceId;
 
     /**
-     * <p>The ID of the third-party reseller.</p>
+     * <p>The ID of the reseller account.</p>
      * 
      * <strong>example:</strong>
      * <p>1210123456123456</p>
@@ -294,10 +299,12 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The method that the SAG instance uses to advertise routes to Alibaba Cloud.</p>
+     * <p>The routing synchronization method of the SAG instance.</p>
      * <ul>
-     * <li><strong>static</strong>: static routing</li>
-     * <li><strong>dynamic</strong>: dynamic routing</li>
+     * <li><p><strong>static</strong>: Static routing.</p>
+     * </li>
+     * <li><p><strong>dynamic</strong>: Dynamic routing.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -307,7 +314,7 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
     public String routingStrategy;
 
     /**
-     * <p>The time threshold. If the SAG device remains disconnected for the specified period of time, the SAG device is locked.</p>
+     * <p>The time threshold for locking the SAG device when it goes offline.</p>
      * <p>Unit: seconds.</p>
      * 
      * <strong>example:</strong>
@@ -335,15 +342,15 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
     public String smartAGId;
 
     /**
-     * <p>The status of the SAG instance. Valid values:</p>
+     * <p>The status of the SAG instance.</p>
      * <ul>
-     * <li><strong>Ordered</strong>: The order is to be shipped.</li>
-     * <li><strong>Delivered</strong>: The SAG instance is shipped.</li>
-     * <li><strong>Received</strong>: The SAG instance is activated.</li>
-     * <li><strong>Unconfirmed</strong>: The SAG instance is to be confirmed.</li>
-     * <li><strong>Active</strong>: The SAG instance is available.</li>
-     * <li><strong>Offline</strong>: The SAG instance is disconnected.</li>
-     * <li><strong>Arrearage</strong>: The SAG device is locked due to overdue payments.</li>
+     * <li><strong>Ordered</strong>: Pending delivery.</li>
+     * <li><strong>Delivered</strong>: Delivered.</li>
+     * <li><strong>Received</strong>: Activated.</li>
+     * <li><strong>Unconfirmed</strong>: Pending confirmation.</li>
+     * <li><strong>Active</strong>: Available.</li>
+     * <li><strong>Offline</strong>: Offline.</li>
+     * <li><strong>Arrearage</strong>: Locked due to overdue payment.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -353,7 +360,7 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The serial number of the active SAG device.</p>
+     * <p>The serial number of the SAG device that is currently responsible for transmitting traffic.</p>
      * 
      * <strong>example:</strong>
      * <p>sage6nniq3d****</p>
@@ -362,7 +369,7 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
     public String trafficMasterSn;
 
     /**
-     * <p>The maximum upstream bandwidth of 4G network connections established by the SAG device. Unit: Mbit/s.</p>
+     * <p>The maximum upstream bandwidth of the 4G public network for the SAG device. Unit: Mbit/s.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -371,7 +378,7 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
     public Integer upBandwidth4G;
 
     /**
-     * <p>The maximum upstream bandwidth of network connections established on the WAN port of the SAG device. Unit: Mbit/s.</p>
+     * <p>The maximum upstream bandwidth of the WAN port for the SAG device. Unit: Mbit/s.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -380,7 +387,7 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
     public Integer upBandwidthWan;
 
     /**
-     * <p>The number of client accounts on the SAG instance.</p>
+     * <p>The number of client accounts of the SAG instance.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -389,10 +396,10 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
     public Integer userCount;
 
     /**
-     * <p>The status of the VPN connection. Valid values:</p>
+     * <p>The status of the aliVPN connection.</p>
      * <ul>
-     * <li><strong>up</strong>: normal</li>
-     * <li><strong>down</strong>: abnormal</li>
+     * <li><strong>up</strong>: The aliVPN connection is normal.</li>
+     * <li><strong>down</strong>: The aliVPN connection is abnormal.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -779,7 +786,7 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
 
     public static class DescribeSmartAccessGatewayAttributeResponseBodyApplicationBandwidthPackageOperationLocks extends TeaModel {
         /**
-         * <p>The reason why the instance was locked.</p>
+         * <p>The reason for the lock.</p>
          * 
          * <strong>example:</strong>
          * <p>Message</p>
@@ -788,7 +795,7 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
         public String lockReason;
 
         /**
-         * <p>The lock mode of the instance. The value is set to <strong>FinancialLocked</strong>.</p>
+         * <p>The lock type. Valid value: <strong>FinancialLocked</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinancialLocked</p>

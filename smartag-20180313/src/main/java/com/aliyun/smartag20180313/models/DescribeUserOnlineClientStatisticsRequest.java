@@ -37,6 +37,7 @@ public class DescribeUserOnlineClientStatisticsRequest extends TeaModel {
     public String smartAGId;
 
     /**
+     * <p>The usernames. You can query up to 50 users at a time. Separate multiple usernames with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

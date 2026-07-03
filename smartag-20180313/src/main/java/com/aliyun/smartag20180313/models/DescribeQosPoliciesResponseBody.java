@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeQosPoliciesResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeQosPoliciesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of quintuple rules returned on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -26,7 +26,7 @@ public class DescribeQosPoliciesResponseBody extends TeaModel {
     public DescribeQosPoliciesResponseBodyQosPolicies qosPolicies;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>97862812-2C7E-4D25-B0D5-B26DAC7FA293</p>
@@ -35,7 +35,7 @@ public class DescribeQosPoliciesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of quintuple rules that meet the query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

@@ -26,7 +26,7 @@ public class GetAdvancedMonitorStateResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>324223F3-93D3-4CE4-B26F-66C0C3809922</p>
@@ -73,10 +73,12 @@ public class GetAdvancedMonitorStateResponseBody extends TeaModel {
 
     public static class GetAdvancedMonitorStateResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the DPI feature is enabled. Valid values:</p>
+         * <p>Indicates whether the advanced monitoring feature is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: enabled</li>
-         * <li><strong>false</strong>: disabled</li>
+         * <li><p><strong>true</strong>: The feature is enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The feature is disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

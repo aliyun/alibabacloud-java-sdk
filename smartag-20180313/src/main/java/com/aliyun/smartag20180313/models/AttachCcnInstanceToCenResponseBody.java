@@ -3,9 +3,9 @@ package com.aliyun.smartag20180313.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteQosCarResponseBody extends TeaModel {
+public class AttachCcnInstanceToCenResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>551CD836-9E46-4F2C-A167-B4363180A647</p>
@@ -13,12 +13,12 @@ public class DeleteQosCarResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static DeleteQosCarResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteQosCarResponseBody self = new DeleteQosCarResponseBody();
+    public static AttachCcnInstanceToCenResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        AttachCcnInstanceToCenResponseBody self = new AttachCcnInstanceToCenResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteQosCarResponseBody setRequestId(String requestId) {
+    public AttachCcnInstanceToCenResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

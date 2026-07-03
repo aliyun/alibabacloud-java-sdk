@@ -7,9 +7,12 @@ public class DescribeSagWifiResponseBody extends TeaModel {
     /**
      * <p>The authentication type. Valid values:</p>
      * <ul>
-     * <li><strong>NONE</strong>: authentication is disabled.</li>
-     * <li><strong>WPA-PSK</strong>: WPA-PSK authentication is enabled.</li>
-     * <li><strong>WPA2-PSK</strong>: WPA2-PSK authentication is enabled.</li>
+     * <li><p><strong>NONE</strong>: authentication is disabled.</p>
+     * </li>
+     * <li><p><strong>WPA-PSK</strong>: WPA-PSK authentication is enabled.</p>
+     * </li>
+     * <li><p><strong>WPA2-PSK</strong>: WPA2-PSK authentication is enabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,10 +24,16 @@ public class DescribeSagWifiResponseBody extends TeaModel {
     /**
      * <p>The bandwidth of the Wi-Fi channel. Valid values:</p>
      * <ul>
-     * <li><strong>Automatic</strong></li>
-     * <li><strong>20 HMz</strong></li>
-     * <li><strong>40 MHz</strong></li>
+     * <li><p><strong>Automatic</strong></p>
+     * </li>
+     * <li><p><strong>20 HMz</strong></p>
+     * </li>
+     * <li><p><strong>40 MHz</strong></p>
+     * </li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Automatic</p>
      */
     @NameInMap("Bandwidth")
     public String bandwidth;
@@ -41,9 +50,12 @@ public class DescribeSagWifiResponseBody extends TeaModel {
     /**
      * <p>The encryption algorithm.</p>
      * <ul>
-     * <li><strong>AUTO</strong>: automatically selects the encryption algorithm.</li>
-     * <li><strong>TKIP</strong>: uses the Temporal Key Integrity Protocol (TKIP).</li>
-     * <li><strong>AES</strong>: uses the Advanced Encryption Standard authorized by Wi-Fi®.</li>
+     * <li><p><strong>AUTO</strong>: automatically selects the encryption algorithm.</p>
+     * </li>
+     * <li><p><strong>TKIP</strong>: uses the Temporal Key Integrity Protocol (TKIP).</p>
+     * </li>
+     * <li><p><strong>AES</strong>: uses the Advanced Encryption Standard authorized by Wi-Fi®.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,8 +67,10 @@ public class DescribeSagWifiResponseBody extends TeaModel {
     /**
      * <p>Indicates whether wireless security is enabled.</p>
      * <ul>
-     * <li><strong>True</strong>: wireless security is enabled.</li>
-     * <li><strong>False</strong>: wireless security is disabled.</li>
+     * <li><p><strong>True</strong>: wireless security is enabled.</p>
+     * </li>
+     * <li><p><strong>False</strong>: wireless security is disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,8 +82,10 @@ public class DescribeSagWifiResponseBody extends TeaModel {
     /**
      * <p>Indicates whether broadcast over Wi-Fi is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>True</strong>: broadcast is enabled.</li>
-     * <li><strong>False</strong>: broadcast is disabled.</li>
+     * <li><p><strong>True</strong>: broadcast is enabled.</p>
+     * </li>
+     * <li><p><strong>False</strong>: broadcast is disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -81,8 +97,10 @@ public class DescribeSagWifiResponseBody extends TeaModel {
     /**
      * <p>Indicates whether wireless connections are enabled. Valid values:</p>
      * <ul>
-     * <li><strong>True</strong>: wireless connections are enabled.</li>
-     * <li><strong>False</strong>: wireless connections are disabled.</li>
+     * <li><p><strong>True</strong>: wireless connections are enabled.</p>
+     * </li>
+     * <li><p><strong>False</strong>: wireless connections are disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -231,15 +249,24 @@ public class DescribeSagWifiResponseBody extends TeaModel {
         /**
          * <p>The status of the query task. Valid values:</p>
          * <ul>
-         * <li><strong>Initialized</strong>: The query task has been initialized.</li>
-         * <li><strong>Offline</strong>: The query task is not dispatched because the SAG device is disconnected from Alibaba Cloud. The task will be dispatched after the SAG device is connected to Alibaba Cloud.</li>
-         * <li><strong>Succeed</strong>: The query task has been dispatched.</li>
-         * <li><strong>Processing</strong>: The query task is being dispatched.</li>
-         * <li><strong>VersionNotSupport</strong>: The current version of the SAG device does not support query tasks.</li>
-         * <li><strong>BuildRequestError</strong>: The SAG control system does not support query tasks.</li>
-         * <li><strong>HardwareError</strong>: The query task failed to be dispatched due to device errors.</li>
-         * <li><strong>TaskNotExist</strong>: The query task does not exist.</li>
-         * <li><strong>OfflineNotConfiged</strong>: The query task is not dispatched because the SAG device is disconnected from Alibaba Cloud. The task will not be dispatched after the device is connected to Alibaba Cloud.</li>
+         * <li><p><strong>Initialized</strong>: The query task has been initialized.</p>
+         * </li>
+         * <li><p><strong>Offline</strong>: The query task is not dispatched because the SAG device is disconnected from Alibaba Cloud. The task will be dispatched after the SAG device is connected to Alibaba Cloud.</p>
+         * </li>
+         * <li><p><strong>Succeed</strong>: The query task has been dispatched.</p>
+         * </li>
+         * <li><p><strong>Processing</strong>: The query task is being dispatched.</p>
+         * </li>
+         * <li><p><strong>VersionNotSupport</strong>: The current version of the SAG device does not support query tasks.</p>
+         * </li>
+         * <li><p><strong>BuildRequestError</strong>: The SAG control system does not support query tasks.</p>
+         * </li>
+         * <li><p><strong>HardwareError</strong>: The query task failed to be dispatched due to device errors.</p>
+         * </li>
+         * <li><p><strong>TaskNotExist</strong>: The query task does not exist.</p>
+         * </li>
+         * <li><p><strong>OfflineNotConfiged</strong>: The query task is not dispatched because the SAG device is disconnected from Alibaba Cloud. The task will not be dispatched after the device is connected to Alibaba Cloud.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

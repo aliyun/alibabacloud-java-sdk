@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DisableSmartAccessGatewayUserResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>05E86199-6CF6-4F4E-A9CE-9BFC5B020B72</p>

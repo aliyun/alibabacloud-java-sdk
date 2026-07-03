@@ -23,7 +23,7 @@ public class DeleteSmartAccessGatewayDnsForwardResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The message that is returned.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>Successful</p>
@@ -32,7 +32,7 @@ public class DeleteSmartAccessGatewayDnsForwardResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>0BAAF2B9-88B8-4574-BDBE-102A90EE3FEE</p>
@@ -41,7 +41,7 @@ public class DeleteSmartAccessGatewayDnsForwardResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

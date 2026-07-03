@@ -11,7 +11,7 @@ public class DescribeSnatEntriesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the instance status list. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class DescribeSnatEntriesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>10</strong>. Maximum value: <strong>50</strong>.</p>
+     * <p>The number of entries per page in a paged query. Default value: <strong>10</strong>. Maximum value: <strong>50</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -29,7 +29,7 @@ public class DescribeSnatEntriesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the SAG instance is deployed.</p>
+     * <p>The region ID of the Smart Access Gateway instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class DescribeSnatEntriesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the SAG instance.</p>
+     * <p>The instance ID of the Smart Access Gateway instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

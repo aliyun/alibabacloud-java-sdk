@@ -12,7 +12,7 @@ public class DescribeSmartAccessGatewayAttributeRequest extends TeaModel {
 
     /**
      * <p>The ID of the region where the SAG instance is deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

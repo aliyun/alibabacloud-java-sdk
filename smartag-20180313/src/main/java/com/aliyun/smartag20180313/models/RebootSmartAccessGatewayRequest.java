@@ -30,7 +30,7 @@ public class RebootSmartAccessGatewayRequest extends TeaModel {
      * <p>The serial number of the SAG device.</p>
      * 
      * <strong>example:</strong>
-     * <p>a1b2c3d4e5f6g7h8f9</p>
+     * <p>a1b2c3d4e****</p>
      */
     @NameInMap("SerialNumber")
     public String serialNumber;

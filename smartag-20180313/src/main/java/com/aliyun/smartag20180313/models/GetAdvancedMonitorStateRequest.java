@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAdvancedMonitorStateRequest extends TeaModel {
     /**
-     * <p>The region ID of the SAG instance.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region where the Smart Access Gateway instance is deployed.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,7 +16,7 @@ public class GetAdvancedMonitorStateRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the SAG instance.</p>
+     * <p>The ID of the Smart Access Gateway instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

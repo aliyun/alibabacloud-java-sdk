@@ -11,7 +11,7 @@ public class DescribeSagExpressConnectInterfaceListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The name of the Express Connect circuit port.</p>
+     * <p>The name of the dedicated connection port.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,8 +21,8 @@ public class DescribeSagExpressConnectInterfaceListRequest extends TeaModel {
     public String portName;
 
     /**
-     * <p>The ID of the region where the Smart Access Gateway (SAG) instance is deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the Smart Access Gateway instance.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> to query the regions supported by Smart Access Gateway and the corresponding region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class DescribeSagExpressConnectInterfaceListRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the SAG instance.</p>
+     * <p>The instance ID of the Smart Access Gateway instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +48,7 @@ public class DescribeSagExpressConnectInterfaceListRequest extends TeaModel {
     public String smartAGId;
 
     /**
-     * <p>The serial number of the SAG device associated with the SAG instance.</p>
+     * <p>The serial number of the associated Smart Access Gateway device.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

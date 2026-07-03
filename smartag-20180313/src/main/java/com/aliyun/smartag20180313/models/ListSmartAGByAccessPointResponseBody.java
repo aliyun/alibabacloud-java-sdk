@@ -70,8 +70,10 @@ public class ListSmartAGByAccessPointResponseBody extends TeaModel {
         /**
          * <p>The model of the SAG device with which the SAG instance is associated. Valid values:</p>
          * <ul>
-         * <li><strong>sag-1000</strong>.</li>
-         * <li><strong>sag-100WM</strong>.</li>
+         * <li><p><strong>sag-1000</strong>.</p>
+         * </li>
+         * <li><p><strong>sag-100WM</strong>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -83,8 +85,10 @@ public class ListSmartAGByAccessPointResponseBody extends TeaModel {
         /**
          * <p>The method that the SAG instance uses to synchronize Alibaba Cloud-facing routes. Valid values:</p>
          * <ul>
-         * <li><strong>static</strong>: static routing.</li>
-         * <li><strong>dynamic</strong>: dynamic routing.</li>
+         * <li><p><strong>static</strong>: static routing.</p>
+         * </li>
+         * <li><p><strong>dynamic</strong>: dynamic routing.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -123,8 +127,10 @@ public class ListSmartAGByAccessPointResponseBody extends TeaModel {
         /**
          * <p>The status of the SAG instance. Valid values:</p>
          * <ul>
-         * <li><strong>Active</strong>: The SAG device is connected to Alibaba Cloud.</li>
-         * <li><strong>offline</strong>: The SAG device is disconnected from Alibaba Cloud.</li>
+         * <li><p><strong>Active</strong>: The SAG device is connected to Alibaba Cloud.</p>
+         * </li>
+         * <li><p><strong>offline</strong>: The SAG device is disconnected from Alibaba Cloud.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

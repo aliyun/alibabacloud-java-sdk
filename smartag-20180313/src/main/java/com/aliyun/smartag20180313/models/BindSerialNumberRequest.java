@@ -11,7 +11,7 @@ public class BindSerialNumberRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the SAG instance.</p>
+     * <p>The region ID of the Smart Access Gateway instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class BindSerialNumberRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The serial number of the SAG device.</p>
+     * <p>The serial number of the Smart Access Gateway device.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class BindSerialNumberRequest extends TeaModel {
     public String serialNumber;
 
     /**
-     * <p>The SAG instance ID.</p>
+     * <p>The instance ID of the Smart Access Gateway.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

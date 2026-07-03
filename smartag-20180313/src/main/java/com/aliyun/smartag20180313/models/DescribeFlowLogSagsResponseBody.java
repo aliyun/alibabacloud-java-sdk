@@ -23,7 +23,7 @@ public class DescribeFlowLogSagsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8D945945-85F2-4BD7-A144-7DC0E8B5A0DC</p>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeSAGDeviceInfoResponseBody extends TeaModel {
     /**
-     * <p>The control status of the SAG device. Valid values:</p>
+     * <p>The control status of the Smart Access Gateway device. Valid values:</p>
      * <ul>
-     * <li><strong>Normal</strong>: normal</li>
-     * <li><strong>Abnormal</strong>: abnormal</li>
+     * <li><strong>Normal</strong>: Normal.</li>
+     * <li><strong>Abnormal</strong>: Abnormal.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeSAGDeviceInfoResponseBody extends TeaModel {
     public String controllerState;
 
     /**
-     * <p>The last time when the SAG device was connected to Alibaba Cloud.</p>
+     * <p>The most recent time when the Smart Access Gateway device connected to the controller.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-07-14 00:27:48</p>
@@ -27,7 +27,7 @@ public class DescribeSAGDeviceInfoResponseBody extends TeaModel {
     public String lastConnectedControllerTime;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B6A991F4-F533-1627-8144-B64E01C5EE85</p>
@@ -36,10 +36,10 @@ public class DescribeSAGDeviceInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the reset button of the SAG device is enabled. Valid values:</p>
+     * <p>Indicates whether the reset button of the Smart Access Gateway device is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>Enabled</strong>: enabled</li>
-     * <li><strong>Disabled</strong>: disabled</li>
+     * <li><strong>Enabled</strong>: Enabled.</li>
+     * <li><strong>Disabled</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +49,7 @@ public class DescribeSAGDeviceInfoResponseBody extends TeaModel {
     public String resettableStatus;
 
     /**
-     * <p>The IP address of the SAG device.</p>
+     * <p>The service IP address of the Smart Access Gateway device.</p>
      * 
      * <strong>example:</strong>
      * <p>42.XX.XX.151</p>
@@ -58,10 +58,10 @@ public class DescribeSAGDeviceInfoResponseBody extends TeaModel {
     public String serviceIP;
 
     /**
-     * <p>The model of the SAG device. Valid values:</p>
+     * <p>The type of the Smart Access Gateway device. Valid values:</p>
      * <ul>
-     * <li><strong>sag-100wm</strong></li>
-     * <li><strong>sag-1000</strong></li>
+     * <li><strong>sag-100wm</strong>.</li>
+     * <li><strong>sag-1000</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +71,7 @@ public class DescribeSAGDeviceInfoResponseBody extends TeaModel {
     public String smartAGType;
 
     /**
-     * <p>The time when the SAG device was started.</p>
+     * <p>The startup time of the Smart Access Gateway device.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-06-15 17:33:43</p>
@@ -80,11 +80,11 @@ public class DescribeSAGDeviceInfoResponseBody extends TeaModel {
     public String startupTime;
 
     /**
-     * <p>Indicates whether the settings of the SAG device are synchronized to Alibaba Cloud. Valid values:</p>
+     * <p>The synchronization status between the local Smart Access Gateway device and the cloud. Valid values:</p>
      * <ul>
-     * <li><strong>Synchronized</strong>: synchronized</li>
-     * <li><strong>Unsynchronized</strong>: unsynchronized</li>
-     * <li><strong>Synchronizing</strong>: being synchronized</li>
+     * <li><strong>Synchronized</strong>: Synchronization is complete.</li>
+     * <li><strong>Unsynchronized</strong>: Not synchronized.</li>
+     * <li><strong>Synchronizing</strong>: Synchronization is in progress.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -94,7 +94,7 @@ public class DescribeSAGDeviceInfoResponseBody extends TeaModel {
     public String synStatus;
 
     /**
-     * <p>The version of the SAG device.</p>
+     * <p>The software version that runs on the Smart Access Gateway device.</p>
      * 
      * <strong>example:</strong>
      * <p>2.3.1.1</p>
@@ -103,10 +103,10 @@ public class DescribeSAGDeviceInfoResponseBody extends TeaModel {
     public String version;
 
     /**
-     * <p>The VPN connection status of the SAG device. Valid values:</p>
+     * <p>The VPN connection status of the Smart Access Gateway device. Valid values:</p>
      * <ul>
-     * <li><strong>Normal</strong>: normal</li>
-     * <li><strong>Abnormal</strong>: abnormal</li>
+     * <li><strong>Normal</strong>: Normal.</li>
+     * <li><strong>Abnormal</strong>: Abnormal.</li>
      * </ul>
      * 
      * <strong>example:</strong>

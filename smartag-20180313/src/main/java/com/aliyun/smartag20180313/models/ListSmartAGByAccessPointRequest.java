@@ -58,8 +58,10 @@ public class ListSmartAGByAccessPointRequest extends TeaModel {
     /**
      * <p>The status of the SAG instance. Valid values:</p>
      * <ul>
-     * <li><strong>Active</strong>: The SAG device is connected to Alibaba Cloud.</li>
-     * <li><strong>offline</strong>: The SAG device is disconnected from Alibaba Cloud.</li>
+     * <li><p><strong>Active</strong>: The SAG device is connected to Alibaba Cloud.</p>
+     * </li>
+     * <li><p><strong>offline</strong>: The SAG device is disconnected from Alibaba Cloud.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

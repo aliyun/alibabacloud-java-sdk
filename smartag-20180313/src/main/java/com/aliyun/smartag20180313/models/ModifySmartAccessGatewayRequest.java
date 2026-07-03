@@ -17,6 +17,9 @@ public class ModifySmartAccessGatewayRequest extends TeaModel {
     /**
      * <p>The description of the SAG instance.</p>
      * <p>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SAG description</p>
      */
     @NameInMap("Description")
     public String description;
@@ -24,8 +27,10 @@ public class ModifySmartAccessGatewayRequest extends TeaModel {
     /**
      * <p>Specifies whether to audit the network connection logs of the SAS app instance.</p>
      * <ul>
-     * <li><strong>true</strong>: yes</li>
-     * <li><strong>false</strong>: no</li>
+     * <li><p><strong>true</strong>: yes</p>
+     * </li>
+     * <li><p><strong>false</strong>: no</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,6 +57,9 @@ public class ModifySmartAccessGatewayRequest extends TeaModel {
 
     /**
      * <p>The location where the SAG instance is deployed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[ { &quot;adcode&quot;:&quot;&quot;, &quot;label&quot;:&quot;Hangzhou, Zhejiang xx zone xx Road xx number&quot;, &quot;value&quot;:&quot;B0FFGxxxx&quot;, &quot;center&quot;:&quot;120.190xxxx, 30.182xxxx&quot;, &quot;_new&quot;:&quot;true&quot; } ]</p>
      */
     @NameInMap("Position")
     public String position;
@@ -75,8 +83,10 @@ public class ModifySmartAccessGatewayRequest extends TeaModel {
     /**
      * <p>The policy that is used to advertise routes to Alibaba Cloud. Valid values:</p>
      * <ul>
-     * <li><strong>static</strong>: static routing</li>
-     * <li><strong>dynamic</strong>: dynamic routing</li>
+     * <li><p><strong>static</strong>: static routing</p>
+     * </li>
+     * <li><p><strong>dynamic</strong>: dynamic routing</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

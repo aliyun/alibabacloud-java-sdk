@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSnatEntriesResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number of the instance status list.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>
@@ -14,7 +14,7 @@ public class DescribeSnatEntriesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -23,7 +23,7 @@ public class DescribeSnatEntriesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>674BC3B2-5828-41D5-830E-148EE6CF86C2</p>

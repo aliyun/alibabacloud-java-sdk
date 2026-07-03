@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyACLRuleRequest extends TeaModel {
     /**
-     * <p>The ID of the ACL.</p>
+     * <p>The ID of the ACL instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,8 +15,8 @@ public class ModifyACLRuleRequest extends TeaModel {
     public String aclId;
 
     /**
-     * <p>The ID of the ACL rule.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/114017.html">DescribeACLAttribute</a> operation to query the ID of the ACL rule that is added to the ACL.</p>
+     * <p>The ID of the access control rule.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/114017.html">DescribeACLAttribute</a> operation to query the IDs of access control rules in an ACL instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class ModifyACLRuleRequest extends TeaModel {
     public String acrId;
 
     /**
-     * <p>The description of the ACL rule.</p>
+     * <p>The description of the access control rule.</p>
      * <p>The description must be <strong>1</strong> to <strong>512</strong> characters in length.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class ModifyACLRuleRequest extends TeaModel {
 
     /**
      * <p>The destination CIDR block.</p>
-     * <p>Specify the value of this parameter in CIDR notation. Example: 192.168.10.0/24.</p>
+     * <p>The destination CIDR block must be in CIDR format. For example: 192.168.10.0/24.</p>
      * 
      * <strong>example:</strong>
      * <p>0.0.0.0/0</p>
@@ -46,12 +46,12 @@ public class ModifyACLRuleRequest extends TeaModel {
     public String destCidr;
 
     /**
-     * <p>The destination port range. Valid values: <strong>1</strong> to <strong>65535</strong> and <strong>-1</strong>.</p>
-     * <p>Examples:</p>
+     * <p>The destination port range. Valid values: <strong>-1</strong> or <strong>1</strong> to <strong>65535</strong>.</p>
+     * <p>Examples of the destination port range format:</p>
      * <ul>
-     * <li>1/200: port 1 to port 200.</li>
+     * <li>1/200: ports 1 to 200.</li>
      * <li>80/80: port 80.</li>
-     * <li>\-1/-1: all ports.</li>
+     * <li>-1/-1: all ports.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -61,10 +61,10 @@ public class ModifyACLRuleRequest extends TeaModel {
     public String destPortRange;
 
     /**
-     * <p>The direction of traffic in which the ACL rule is applied. Valid values:</p>
+     * <p>The direction in which the access control rule is applied. Valid values:</p>
      * <ul>
-     * <li><strong>in</strong>: The ACL rule controls inbound network traffic of the on-premises network that is associated with the SAG instance.</li>
-     * <li><strong>out</strong>: The ACL rule controls outbound network traffic of the on-premises network that is associated with the SAG instance.</li>
+     * <li><strong>in</strong>: inbound. This is the direction of traffic from an external network to the on-premises network where the Smart Access Gateway instance is deployed.</li>
+     * <li><strong>out</strong>: outbound. This is the direction of traffic from the on-premises network where the Smart Access Gateway instance is deployed to an external network.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -73,15 +73,21 @@ public class ModifyACLRuleRequest extends TeaModel {
     @NameInMap("Direction")
     public String direction;
 
+    /**
+     * <p>A list of application group IDs that the access control rule matches.</p>
+     */
     @NameInMap("DpiGroupIds")
     public java.util.List<String> dpiGroupIds;
 
+    /**
+     * <p>A list of application IDs that the access control rule matches.</p>
+     */
     @NameInMap("DpiSignatureIds")
     public java.util.List<String> dpiSignatureIds;
 
     /**
-     * <p>The protocol used by the ACL rule.</p>
-     * <p>The supported protocols provided in this topic are for reference only. The actual protocols in the SAG console shall prevail. The value of the parameter is not case-sensitive.</p>
+     * <p>The protocol used by the access control rule.</p>
+     * <p>For the protocols supported by the access control feature, see the information in the console. The protocol is not case-sensitive.</p>
      * 
      * <strong>example:</strong>
      * <p>tcp</p>
@@ -90,8 +96,8 @@ public class ModifyACLRuleRequest extends TeaModel {
     public String ipProtocol;
 
     /**
-     * <p>The name of the ACL rule.</p>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name of the access control rule.</p>
+     * <p>The name must be 2 to 128 characters in length, start with a letter or a Chinese character, and can contain digits, underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>doctest</p>
@@ -106,10 +112,10 @@ public class ModifyACLRuleRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The action of the ACL rule. Valid values:</p>
+     * <p>The authorization policy of the access control rule. Valid values:</p>
      * <ul>
-     * <li><strong>accept</strong>: allows network traffic.</li>
-     * <li><strong>drop</strong>: blocks network traffic.</li>
+     * <li><strong>accept</strong>: allows access.</li>
+     * <li><strong>drop</strong>: denies access.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -119,9 +125,9 @@ public class ModifyACLRuleRequest extends TeaModel {
     public String policy;
 
     /**
-     * <p>The priority of the ACL rule.</p>
-     * <p>A smaller value indicates a higher priority. If multiple rules have the same priority, the rule that is applied earlier takes effect.</p>
-     * <p>Valid values: <strong>1 to 100</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The priority of the access control rule.</p>
+     * <p>A smaller value indicates a higher priority. If rules have the same priority, the one that is first delivered to the Smart Access Gateway device takes precedence.</p>
+     * <p>Valid values: 1 to <strong>100</strong>. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -130,7 +136,7 @@ public class ModifyACLRuleRequest extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>The ID of the region where the ACL is deployed.</p>
+     * <p>The region ID of the access control list (ACL) instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -147,7 +153,7 @@ public class ModifyACLRuleRequest extends TeaModel {
 
     /**
      * <p>The source CIDR block.</p>
-     * <p>Specify the value of this parameter in CIDR notation. Example: 192.168.1.0/24.</p>
+     * <p>The source CIDR block must be in CIDR format. For example: 192.168.1.0/24.</p>
      * 
      * <strong>example:</strong>
      * <p>0.0.0.0/0</p>
@@ -156,12 +162,12 @@ public class ModifyACLRuleRequest extends TeaModel {
     public String sourceCidr;
 
     /**
-     * <p>The source port range. Valid values: <strong>1</strong> to <strong>65535</strong> and <strong>-1</strong>.</p>
-     * <p>Examples:</p>
+     * <p>The source port range. Valid values: <strong>-1</strong> or <strong>1</strong> to <strong>65535</strong>.</p>
+     * <p>Examples of the source port range format:</p>
      * <ul>
-     * <li>1/200: port 1 to port 200.</li>
+     * <li>1/200: ports 1 to 200.</li>
      * <li>80/80: port 80.</li>
-     * <li>\-1/-1: all ports.</li>
+     * <li>-1/-1: all ports.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -171,10 +177,10 @@ public class ModifyACLRuleRequest extends TeaModel {
     public String sourcePortRange;
 
     /**
-     * <p>The type of the ACL rule: Valid values:</p>
+     * <p>The type of the access control rule. Valid values:</p>
      * <ul>
-     * <li><strong>LAN</strong>: The ACL rule controls traffic of private IP addresses.</li>
-     * <li><strong>WAN</strong>: The ACL rule controls traffic of public IP addresses.</li>
+     * <li><strong>LAN</strong>: (Default) private network. This value indicates that the access control rule applies to traffic from private IP addresses.</li>
+     * <li><strong>WAN</strong>: public network. This value indicates that the access control rule applies to traffic from public IP addresses.</li>
      * </ul>
      * 
      * <strong>example:</strong>

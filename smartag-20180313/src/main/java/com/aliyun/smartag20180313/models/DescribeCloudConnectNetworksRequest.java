@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudConnectNetworksRequest extends TeaModel {
     /**
-     * <p>The ID of the CCN instance.</p>
+     * <p>The ID of the CCN.</p>
      * 
      * <strong>example:</strong>
      * <p>ccn-l9340rlu5enst*****</p>
@@ -14,8 +14,8 @@ public class DescribeCloudConnectNetworksRequest extends TeaModel {
     public String ccnId;
 
     /**
-     * <p>The name of the CCN instance.</p>
-     * <p>The name must be 2 to 100 characters in length and can contain letters, digits, periods (.), underscores (_),and hyphens (-). The name must start with a letter.</p>
+     * <p>The name of the CCN.</p>
+     * <p>The name must be 2 to 100 characters long, start with a letter or a Chinese character, and can contain digits, underscores (_), periods (.), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>ccnname</p>
@@ -30,7 +30,7 @@ public class DescribeCloudConnectNetworksRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -48,7 +48,7 @@ public class DescribeCloudConnectNetworksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the CCN instances are deployed.</p>
+     * <p>The ID of the region where the CCN is located.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,6 +63,12 @@ public class DescribeCloudConnectNetworksRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tags to filter CCN instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DescribeCloudConnectNetworks</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeCloudConnectNetworksRequestTag> tag;
 
@@ -153,7 +159,7 @@ public class DescribeCloudConnectNetworksRequest extends TeaModel {
 
     public static class DescribeCloudConnectNetworksRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag that is bound to the CCN instance.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -162,7 +168,7 @@ public class DescribeCloudConnectNetworksRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag that is bound to the CCN instance.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

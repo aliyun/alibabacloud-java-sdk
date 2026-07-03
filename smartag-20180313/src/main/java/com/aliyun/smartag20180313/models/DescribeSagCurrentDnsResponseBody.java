@@ -14,7 +14,7 @@ public class DescribeSagCurrentDnsResponseBody extends TeaModel {
     public String masterDns;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0937DEA0-AB4B-42F4-9314-07B97D30282B</p>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeSagPortRouteProtocolListResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the details of the port.</p>
+     * <p>The list of port information.</p>
      */
     @NameInMap("Ports")
     public java.util.List<DescribeSagPortRouteProtocolListResponseBodyPorts> ports;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CE6642D4-21EB-4168-9BF9-F217953F9892</p>
@@ -20,7 +20,7 @@ public class DescribeSagPortRouteProtocolListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The details about the status of the query task.</p>
+     * <p>The query task status.</p>
      */
     @NameInMap("TaskStates")
     public java.util.List<DescribeSagPortRouteProtocolListResponseBodyTaskStates> taskStates;
@@ -56,7 +56,7 @@ public class DescribeSagPortRouteProtocolListResponseBody extends TeaModel {
 
     public static class DescribeSagPortRouteProtocolListResponseBodyPorts extends TeaModel {
         /**
-         * <p>The IP address of the neighbor device.</p>
+         * <p>The neighbor IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>192.XX.XX.1</p>
@@ -65,7 +65,7 @@ public class DescribeSagPortRouteProtocolListResponseBody extends TeaModel {
         public String neighborIp;
 
         /**
-         * <p>The name of the port.</p>
+         * <p>The port name.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -74,7 +74,7 @@ public class DescribeSagPortRouteProtocolListResponseBody extends TeaModel {
         public String portName;
 
         /**
-         * <p>The number of the autonomous system (AS) to which the SAG device belongs.</p>
+         * <p>The autonomous system number of the peer BGP network.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>
@@ -83,7 +83,7 @@ public class DescribeSagPortRouteProtocolListResponseBody extends TeaModel {
         public String remoteAs;
 
         /**
-         * <p>The IP address of the peer device.</p>
+         * <p>The IP address of the peer.</p>
          * 
          * <strong>example:</strong>
          * <p>192.XX.XX.1</p>
@@ -92,11 +92,11 @@ public class DescribeSagPortRouteProtocolListResponseBody extends TeaModel {
         public String remoteIp;
 
         /**
-         * <p>The routing protocol. Valid values:</p>
+         * <p>The routable protocol of the port. Valid values:</p>
          * <ul>
-         * <li><strong>STATIC</strong>: static routing protocol</li>
-         * <li><strong>OSPF</strong>: Open Shortest Path First protocol (OSPF)</li>
-         * <li><strong>BGP</strong>: Border Gateway Protocol (BGP)</li>
+         * <li><strong>STATIC</strong>: static routable protocol.</li>
+         * <li><strong>OSPF</strong>: OSPF dynamic routable protocol.</li>
+         * <li><strong>BGP</strong>: BGP dynamic routable protocol.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -106,10 +106,10 @@ public class DescribeSagPortRouteProtocolListResponseBody extends TeaModel {
         public String routeProtocol;
 
         /**
-         * <p>The status of the port. Valid values:</p>
+         * <p>The port status. Valid values:</p>
          * <ul>
-         * <li><strong>UP</strong>: The port was enabled.</li>
-         * <li><strong>DOWN</strong>: The port was disabled.</li>
+         * <li><strong>UP</strong>: The port is enabled.</li>
+         * <li><strong>DOWN</strong>: The port is disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -201,7 +201,7 @@ public class DescribeSagPortRouteProtocolListResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The error code returned. A value of 200 indicates that the query task is successful.</p>
+         * <p>The error code. A value of 200 indicates that the query task succeeded.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -210,7 +210,7 @@ public class DescribeSagPortRouteProtocolListResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The error message returned. A value of Successful indicates that the query task is successful.</p>
+         * <p>The error message. A value of Successful indicates that the query task succeeded.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful</p>
@@ -219,17 +219,17 @@ public class DescribeSagPortRouteProtocolListResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The status of the query task. Valid values:</p>
+         * <p>The status of the asynchronous task. Valid values:</p>
          * <ul>
          * <li><strong>Initialized</strong>: The query task is initialized.</li>
-         * <li><strong>Offline</strong>: The SAG device is disconnected from Alibaba Cloud and Alibaba Cloud has not assigned the query task to the SAG device. After the SAG device is connected to Alibaba Cloud, Alibaba Cloud assigns the query task to the SAG device.</li>
-         * <li><strong>Succeed</strong>: Alibaba Cloud has assigned the query task to the SAG device.</li>
-         * <li><strong>Processing</strong>: Alibaba Cloud is assigning the query task to the SAG device.</li>
-         * <li><strong>VersionNotSupport</strong>: The query task is not supported by the current version of the SAG device.</li>
-         * <li><strong>BuildRequestError</strong>: The query task is not supported by the controller of the SAG device.</li>
-         * <li><strong>HardwareError</strong>: Alibaba Cloud failed to assign the query task to the SAG device because the SAG device is faulty.</li>
+         * <li><strong>Offline</strong>: The Smart Access Gateway device is offline and the query task has not been delivered. The task will be delivered after the device comes online.</li>
+         * <li><strong>Succeed</strong>: The query task is delivered.</li>
+         * <li><strong>Processing</strong>: The query task is being delivered.</li>
+         * <li><strong>VersionNotSupport</strong>: The current version of the Smart Access Gateway device does not support this operation.</li>
+         * <li><strong>BuildRequestError</strong>: The China Cloud Management Platform does not support this operation.</li>
+         * <li><strong>HardwareError</strong>: The query task failed to be delivered due to a device error.</li>
          * <li><strong>TaskNotExist</strong>: The query task does not exist.</li>
-         * <li><strong>OfflineNotConfiged</strong>: The SAG device is disconnected from Alibaba Cloud and Alibaba Cloud has not assigned the query task to the SAG device. Alibaba Cloud does not assign the query task to the SAG device even after the SAG device is connected to Alibaba Cloud.</li>
+         * <li><strong>OfflineNotConfiged</strong>: The Smart Access Gateway device is offline and the query task has not been delivered. The task will not be delivered even after the device comes online.</li>
          * </ul>
          * 
          * <strong>example:</strong>

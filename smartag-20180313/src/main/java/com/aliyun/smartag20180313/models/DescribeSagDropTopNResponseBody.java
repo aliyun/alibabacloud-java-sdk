@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeSagDropTopNResponseBody extends TeaModel {
     /**
-     * <p>The information about packets dropped by the SAG instance.</p>
+     * <p>The list of packet loss information about Smart Access Gateway instances.</p>
      */
     @NameInMap("DropTopN")
     public java.util.List<DescribeSagDropTopNResponseBodyDropTopN> dropTopN;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AFF7E5A6-6897-4FDC-A5A8-1978B5B3E545</p>
@@ -42,7 +42,7 @@ public class DescribeSagDropTopNResponseBody extends TeaModel {
 
     public static class DescribeSagDropTopNResponseBodyDropTopN extends TeaModel {
         /**
-         * <p>The packet loss rate of the SAG instance. Unit: packets per second (PPS).</p>
+         * <p>The packet loss rate of the Smart Access Gateway instance. Unit: pps.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0</p>
@@ -51,7 +51,7 @@ public class DescribeSagDropTopNResponseBody extends TeaModel {
         public String dropRate;
 
         /**
-         * <p>The ID of the SAG instance.</p>
+         * <p>The ID of the Smart Access Gateway instance.</p>
          * 
          * <strong>example:</strong>
          * <p>sag-whfn****</p>
@@ -60,7 +60,7 @@ public class DescribeSagDropTopNResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The name of the SAG instance.</p>
+         * <p>The name of the Smart Access Gateway instance.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -69,7 +69,7 @@ public class DescribeSagDropTopNResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The ID of the region where the SAG instance is deployed.</p>
+         * <p>The region ID of the Smart Access Gateway instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>

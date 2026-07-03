@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AssociateFlowLogResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A6E1680B-B34F-4BB7-B504-F8ED675E721C</p>

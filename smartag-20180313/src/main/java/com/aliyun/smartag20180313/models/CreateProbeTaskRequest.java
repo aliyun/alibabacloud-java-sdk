@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateProbeTaskRequest extends TeaModel {
     /**
-     * <p>The domain name that is probed by the task. If the protocol of the probe task is ICMP or TCP, set the value to the IP address or domain name of the service that you want to probe. If the protocol of the probe task is HTTP, set the value to the URL of the service that you want to probe.</p>
+     * <p>The destination domain name of the probe node.
+     * For ICMP and TCP Protocol Type probes, set this parameter to the IP address or domain name of the destination service. For HTTP Protocol Type probes, set this parameter to the URL of the destination service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,8 +18,8 @@ public class CreateProbeTaskRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the probe task. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: yes</li>
-     * <li><strong>false</strong>: no</li>
+     * <li><strong>true</strong>: Enabled.</li>
+     * <li><strong>false</strong>: Disabled.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -29,10 +30,10 @@ public class CreateProbeTaskRequest extends TeaModel {
     public Boolean enable;
 
     /**
-     * <p>The number of probe packets transmitted by the probe task per minute.</p>
+     * <p>The number of packets sent per minute for the probe protocol.</p>
      * <p>Valid values: <strong>1</strong> to <strong>60</strong>.</p>
      * <blockquote>
-     * <p>This parameter is required if the protocol of the probe task is ICMP. Ignore this parameter if the protocol of the probe task is not ICMP.</p>
+     * <p>This parameter is required for ICMP Protocol Type probe tasks. Do not specify this parameter for other protocols.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -42,9 +43,9 @@ public class CreateProbeTaskRequest extends TeaModel {
     public Integer packetNumber;
 
     /**
-     * <p>The port that is probed by the task.</p>
+     * <p>The port number of the probe protocol.</p>
      * <blockquote>
-     * <p>This parameter is required if the protocol of the probe task is TCP. Ignore this parameter if the protocol of the probe task is not TCP.</p>
+     * <p>This parameter is required for TCP Protocol Type probe tasks. Do not specify this parameter for other protocols.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -54,9 +55,9 @@ public class CreateProbeTaskRequest extends TeaModel {
     public Integer port;
 
     /**
-     * <p>The source address of the probe task.</p>
+     * <p>The source address for the private network probe.</p>
      * <blockquote>
-     * <p>This parameter is required if the task probes private networks.</p>
+     * <p>This parameter is required for private network probe tasks.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -68,12 +69,12 @@ public class CreateProbeTaskRequest extends TeaModel {
     /**
      * <p>The protocol of the probe task. Valid values:</p>
      * <ul>
-     * <li><strong>ICMP</strong></li>
-     * <li><strong>TCP</strong></li>
-     * <li><strong>HTTP</strong></li>
+     * <li><strong>ICMP</strong>.</li>
+     * <li><strong>TCP</strong>.</li>
+     * <li><strong>HTTP</strong>.</li>
      * </ul>
      * <blockquote>
-     * <p>Tasks that probe private networks support only ICMP and TCP.</p>
+     * <p>Private network probes support only the ICMP and TCP protocols.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -84,8 +85,8 @@ public class CreateProbeTaskRequest extends TeaModel {
     public String protocol;
 
     /**
-     * <p>The region ID of the SAG instance.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the Smart Access Gateway instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -95,7 +96,7 @@ public class CreateProbeTaskRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the SAG instance.</p>
+     * <p>The instance ID of the Smart Access Gateway.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -105,7 +106,7 @@ public class CreateProbeTaskRequest extends TeaModel {
     public String sagId;
 
     /**
-     * <p>The serial number of the SAG device.</p>
+     * <p>The serial number of the Smart Access Gateway device.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -126,8 +127,10 @@ public class CreateProbeTaskRequest extends TeaModel {
     /**
      * <p>The type of the probe task. Valid values:</p>
      * <ul>
-     * <li><strong>Internet</strong>: probes a public network.</li>
-     * <li><strong>Intranet</strong>: probes a private network.</li>
+     * <li><p><strong>Internet</strong>: public network probe.</p>
+     * </li>
+     * <li><p><strong>Intranet</strong>: private network probe.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

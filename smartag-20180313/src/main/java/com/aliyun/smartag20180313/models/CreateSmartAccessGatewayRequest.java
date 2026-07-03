@@ -37,7 +37,7 @@ public class CreateSmartAccessGatewayRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Remarks</p>
+     * <p>Message</p>
      */
     @NameInMap("BuyerMessage")
     public String buyerMessage;
@@ -152,7 +152,7 @@ public class CreateSmartAccessGatewayRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>No.XX</p>
+     * <p>No. XX</p>
      */
     @NameInMap("ReceiverAddress")
     public String receiverAddress;
@@ -212,7 +212,7 @@ public class CreateSmartAccessGatewayRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Alice</p>
+     * <p>John Doe</p>
      */
     @NameInMap("ReceiverName")
     public String receiverName;
@@ -241,7 +241,7 @@ public class CreateSmartAccessGatewayRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Zhuan Tang</p>
+     * <p>Zhuantang</p>
      */
     @NameInMap("ReceiverTown")
     public String receiverTown;

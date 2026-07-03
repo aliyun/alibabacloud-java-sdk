@@ -8,7 +8,7 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
     public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworks cloudConnectNetworks;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -26,7 +26,7 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3F2A0B80-D6D1-4764-8D77-38067DBBA345</p>
@@ -35,7 +35,7 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of the CCN instances.</p>
+     * <p>The total number of entries that match the query.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>

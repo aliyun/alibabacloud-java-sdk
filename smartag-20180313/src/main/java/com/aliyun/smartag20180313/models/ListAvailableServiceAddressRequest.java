@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class ListAvailableServiceAddressRequest extends TeaModel {
     /**
-     * <p>The type of service address. Valid values:</p>
+     * <p>The type of the service address for the Smart Access Gateway instance. Valid values:</p>
      * <ul>
-     * <li><strong>ProbeTask</strong>: probes the source IP address.</li>
-     * <li><strong>RemoteWeb</strong>: probes the IP address for remote logon.</li>
+     * <li><p><strong>ProbeTask</strong>: the source IP address for network probes.</p>
+     * </li>
+     * <li><p><strong>RemoteWeb</strong>: the IP address for remote logon.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>If you do not specify a value, all service IP addresses are queried.</p>
+     * <p>If you do not specify this parameter, all types of service addresses are queried.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -21,8 +23,8 @@ public class ListAvailableServiceAddressRequest extends TeaModel {
     public String addressType;
 
     /**
-     * <p>The ID of the region where the SAG instance is deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region where the Smart Access Gateway instance is deployed.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,7 +34,7 @@ public class ListAvailableServiceAddressRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the SAG instance.</p>
+     * <p>The ID of the Smart Access Gateway instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +44,7 @@ public class ListAvailableServiceAddressRequest extends TeaModel {
     public String sagId;
 
     /**
-     * <p>The serial number of the SAG device.</p>
+     * <p>The serial number of the Smart Access Gateway device.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

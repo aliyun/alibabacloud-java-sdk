@@ -33,7 +33,7 @@ public class AddACLRuleResponseBody extends TeaModel {
 
     /**
      * <p>The destination CIDR block.</p>
-     * <p>The value of this parameter is specified in CIDR notation. Example: 192.168.10.0/24.</p>
+     * <p>For example: 192.168.10.0/24.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.10.0/24</p>
@@ -51,10 +51,10 @@ public class AddACLRuleResponseBody extends TeaModel {
     public String destPortRange;
 
     /**
-     * <p>The direction of traffic in which the ACL rule is applied. Valid values:</p>
+     * <p>The direction of traffic to which the ACL rule applies. Valid values:</p>
      * <ul>
-     * <li><strong>in</strong>: The ACL rule controls inbound network traffic of the on-premises network that is associated with the SAG instance.</li>
-     * <li><strong>out</strong>: The ACL rule controls outbound network traffic of the on-premises network that is associated with the SAG instance.</li>
+     * <li><strong>in</strong>: inbound. Traffic from an external network to the local branch where the SAG instance is deployed.</li>
+     * <li><strong>out</strong>: outbound. Traffic from the local branch where the SAG instance is deployed to an external network.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -70,8 +70,8 @@ public class AddACLRuleResponseBody extends TeaModel {
     public AddACLRuleResponseBodyDpiSignatureIds dpiSignatureIds;
 
     /**
-     * <p>The timestamp when the ACL rule was created.</p>
-     * <p>The timestamp is of the Long data type. If multiple ACL rules have the same priority, the rule with the earliest timestamp takes effect.</p>
+     * <p>The UNIX timestamp when the ACL rule was created.</p>
+     * <p>This value is a long integer. If rules have the same priority, the one with the earlier timestamp takes precedence.</p>
      * 
      * <strong>example:</strong>
      * <p>1553766882689</p>
@@ -80,7 +80,7 @@ public class AddACLRuleResponseBody extends TeaModel {
     public Long gmtCreate;
 
     /**
-     * <p>The protocol used by the ACL rule.</p>
+     * <p>The protocol to which the ACL rule applies.</p>
      * 
      * <strong>example:</strong>
      * <p>TCP</p>
@@ -98,10 +98,10 @@ public class AddACLRuleResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The action policy of the ACL rule.</p>
+     * <p>The authorization policy of the ACL rule.</p>
      * <ul>
-     * <li><strong>accept</strong>: allows the network traffic.</li>
-     * <li><strong>drop</strong>: blocks the network traffic.</li>
+     * <li><strong>accept</strong>: allows access.</li>
+     * <li><strong>drop</strong>: denies access.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -112,7 +112,7 @@ public class AddACLRuleResponseBody extends TeaModel {
 
     /**
      * <p>The priority of the ACL rule.</p>
-     * <p>A smaller value indicates a higher priority. If rules have the same priority, whichever applied to the SAG devices earlier takes effect.</p>
+     * <p>A smaller value indicates a higher priority. If multiple rules have the same priority, the rule that is first delivered to the Smart Access Gateway device takes precedence.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -121,7 +121,7 @@ public class AddACLRuleResponseBody extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>880F84CB-9B54-4413-A8A3-8832C82D1BC4</p>
@@ -131,7 +131,7 @@ public class AddACLRuleResponseBody extends TeaModel {
 
     /**
      * <p>The source CIDR block.</p>
-     * <p>The value of this parameter is specified in CIDR notation. Example: 192.168.1.0/24.</p>
+     * <p>The source CIDR block is in the CIDR format. For example: 192.168.1.0/24.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.20.0/24</p>
@@ -149,10 +149,10 @@ public class AddACLRuleResponseBody extends TeaModel {
     public String sourcePortRange;
 
     /**
-     * <p>The type of the ACL rule:</p>
+     * <p>The type of the ACL rule.</p>
      * <ul>
-     * <li><strong>LAN</strong>: The ACL rule controls network traffic transmitted through private IP addresses.</li>
-     * <li><strong>WAN</strong>: The ACL rule controls network traffic transmitted through public IP addresses.</li>
+     * <li><strong>LAN</strong>: private network. The ACL rule controls traffic on private networks.</li>
+     * <li><strong>WAN</strong>: public network. The ACL rule controls traffic on public networks.</li>
      * </ul>
      * 
      * <strong>example:</strong>

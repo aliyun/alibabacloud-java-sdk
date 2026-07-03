@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyQosPolicyRequest extends TeaModel {
     /**
-     * <p>The description of the traffic classification rule.</p>
-     * <p>The description must be 1 to 512 characters in length, and can contain digits, underscores (_), and hyphens (-). It must start with a letter.</p>
+     * <p>The description of the stream classification rule.</p>
+     * <p>The description must be 1 to 512 characters in length. It must start with a letter and can contain digits, underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>desctest</p>
@@ -15,8 +15,8 @@ public class ModifyQosPolicyRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The range of the destination IP addresses.</p>
-     * <p>Specify the value of this parameter in CIDR notation. Example: 192.168.10.0/24.</p>
+     * <p>The destination CIDR block.</p>
+     * <p>The destination CIDR block must be in CIDR format. Example: 192.168.10.0/24.</p>
      * 
      * <strong>example:</strong>
      * <p>10.10.20.0/24</p>
@@ -25,13 +25,13 @@ public class ModifyQosPolicyRequest extends TeaModel {
     public String destCidr;
 
     /**
-     * <p>The range of destination ports.</p>
-     * <p>Valid values: <strong>1</strong> to <strong>65535</strong> and <strong>-1</strong>.</p>
-     * <p>Set this parameter in one of the following formats:</p>
+     * <p>The destination port range.</p>
+     * <p>Valid values: <strong>-1</strong> or <strong>1</strong> to <strong>65535</strong>.</p>
+     * <p>Examples of how to specify a port range:</p>
      * <ul>
-     * <li><strong>1/200</strong>: port 1 to port 200</li>
-     * <li><strong>80/80</strong>: port 80</li>
-     * <li><strong>-1/-1</strong>: all ports</li>
+     * <li><strong>1/200</strong>: ports 1 through 200.</li>
+     * <li><strong>80/80</strong>: port 80.</li>
+     * <li><strong>-1/-1</strong>: all ports.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,6 +41,8 @@ public class ModifyQosPolicyRequest extends TeaModel {
     public String destPortRange;
 
     /**
+     * <p>The list of application group IDs.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -48,6 +50,8 @@ public class ModifyQosPolicyRequest extends TeaModel {
     public java.util.List<String> dpiGroupIds;
 
     /**
+     * <p>The list of application IDs.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -55,8 +59,8 @@ public class ModifyQosPolicyRequest extends TeaModel {
     public java.util.List<String> dpiSignatureIds;
 
     /**
-     * <p>The time when the traffic classification rule becomes invalid.</p>
-     * <p>Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss+0800 format. The time must be in UTC+8.</p>
+     * <p>The time when the stream classification rule expires.</p>
+     * <p>Specify the time in the ISO 8601 standard. The time must be in UTC+8. Format: YYYY-MM-DDThh:mm:ss+0800.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-09-14T16:41:33+0800</p>
@@ -65,8 +69,8 @@ public class ModifyQosPolicyRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The type of the protocol that applies to the traffic classification rule.</p>
-     * <p>The supported protocols provided in this topic are for reference only. The actual protocols in the console shall prevail.</p>
+     * <p>The protocol.</p>
+     * <p>For a list of supported protocols, see the information in the console.</p>
      * 
      * <strong>example:</strong>
      * <p>TCP</p>
@@ -75,8 +79,8 @@ public class ModifyQosPolicyRequest extends TeaModel {
     public String ipProtocol;
 
     /**
-     * <p>The name of the traffic classification rule.</p>
-     * <p>The name must be 2 to 100 characters in length, and can contain digits, underscores (_), and hyphens (-). It must start with a letter.</p>
+     * <p>The name of the stream classification rule.</p>
+     * <p>The name must be 2 to 100 characters in length. It must start with a letter and can contain digits, underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>nametest</p>
@@ -91,8 +95,8 @@ public class ModifyQosPolicyRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The priority of the traffic throttling policy to which the traffic classification rule belongs.</p>
-     * <p>Valid values: <strong>1 to 3</strong>. A smaller value indicates a higher priority.</p>
+     * <p>The priority of the throttling rule to which the stream classification rule belongs.</p>
+     * <p>Valid values: 1 to <strong>3</strong>. A smaller value indicates a higher priority.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -111,7 +115,7 @@ public class ModifyQosPolicyRequest extends TeaModel {
     public String qosId;
 
     /**
-     * <p>The ID of the traffic classification rule.</p>
+     * <p>The ID of the stream classification rule in the QoS policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -121,7 +125,7 @@ public class ModifyQosPolicyRequest extends TeaModel {
     public String qosPolicyId;
 
     /**
-     * <p>The ID of the region to which the QoS policy belongs.</p>
+     * <p>The ID of the region where the QoS policy is created.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -137,8 +141,8 @@ public class ModifyQosPolicyRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The range of the source IP addresses.</p>
-     * <p>Specify the value of this parameter in CIDR notation. Example: 192.168.1.0/24.</p>
+     * <p>The source CIDR block.</p>
+     * <p>The source CIDR block must be in CIDR format. Example: 192.168.1.0/24.</p>
      * 
      * <strong>example:</strong>
      * <p>10.10.10.0/24</p>
@@ -147,13 +151,13 @@ public class ModifyQosPolicyRequest extends TeaModel {
     public String sourceCidr;
 
     /**
-     * <p>The range of source ports.</p>
-     * <p>Valid values: <strong>1</strong> to <strong>65535</strong> and <strong>-1</strong>.</p>
-     * <p>Set this parameter in one of the following formats:</p>
+     * <p>The source port range.</p>
+     * <p>Valid values: <strong>-1</strong> or <strong>1</strong> to <strong>65535</strong>.</p>
+     * <p>Examples of how to specify a port range:</p>
      * <ul>
-     * <li><strong>1/200</strong>: a port range from 1 to 200</li>
-     * <li><strong>80/80</strong>: port 80</li>
-     * <li><strong>-1/-1</strong>: all ports</li>
+     * <li><strong>1/200</strong>: ports 1 through 200.</li>
+     * <li><strong>80/80</strong>: port 80.</li>
+     * <li><strong>-1/-1</strong>: all ports.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -163,8 +167,8 @@ public class ModifyQosPolicyRequest extends TeaModel {
     public String sourcePortRange;
 
     /**
-     * <p>The time when the traffic classification rule takes effect.</p>
-     * <p>Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss+0800 format. The time must be in UTC+8.</p>
+     * <p>The time when the stream classification rule takes effect.</p>
+     * <p>Specify the time in the ISO 8601 standard. The time must be in UTC+8. Format: YYYY-MM-DDThh:mm:ss+0800.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-07-14T16:41:33+0800</p>

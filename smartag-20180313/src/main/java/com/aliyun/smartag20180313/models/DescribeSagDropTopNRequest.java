@@ -11,7 +11,7 @@ public class DescribeSagDropTopNRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the SAG instance is deployed.</p>
+     * <p>The region ID of the Smart Access Gateway instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class DescribeSagDropTopNRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The number of SAG instances to be queried. Default value:<strong>10</strong>. This value cannot be modified.</p>
+     * <p>The number of Smart Access Gateway instances to query. Default value: <strong>10</strong>. This value cannot be modified.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateServiceAddressRequest extends TeaModel {
     /**
-     * <p>The service address. Example: <strong>192.168.1.1</strong>.</p>
+     * <p>The service address of the Smart Access Gateway instance. Example: <strong>192.168.1.1</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateServiceAddressRequest extends TeaModel {
     public String address;
 
     /**
-     * <p>The type of service address. Set the value to <strong>ProbeTask</strong>.</p>
+     * <p>The service address type of the Smart Access Gateway instance. Set the value to <strong>ProbeTask</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,8 +25,8 @@ public class CreateServiceAddressRequest extends TeaModel {
     public String addressType;
 
     /**
-     * <p>The region ID of the SAG instance.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the Smart Access Gateway instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class CreateServiceAddressRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the SAG instance.</p>
+     * <p>The instance ID of the Smart Access Gateway instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class CreateServiceAddressRequest extends TeaModel {
     public String sagId;
 
     /**
-     * <p>The serial number of the SAG device.</p>
+     * <p>The serial number of the Smart Access Gateway device.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

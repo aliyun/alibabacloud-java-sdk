@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaModel {
     /**
-     * <p>The diagnosis report of the SAG device.</p>
+     * <p>The diagnosis report of the Smart Access Gateway device.</p>
      */
     @NameInMap("DiagnoseResult")
     public DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResult diagnoseResult;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D7D6E3AB-D41A-42E3-8D4E-97B145F4B7C3</p>
@@ -42,41 +42,56 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
 
     public static class DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultDetailsItemsCN extends TeaModel {
         /**
-         * <p>The suggestion for the diagnosis.</p>
+         * <p>The diagnosis suggestion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Check the leased-line port link wiring first, and then go to the local Leased Line Management page for configuration.</p>
          */
         @NameInMap("Advice")
         public java.util.List<String> advice;
 
         /**
-         * <p>The diagnosis.</p>
+         * <p>The diagnosis result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>All leased-line ports have link anomalies or missing port IPs: Port 4.</p>
          */
         @NameInMap("Details")
         public java.util.List<String> details;
 
         /**
-         * <p>The diagnosis level of the item. Valid values:</p>
+         * <p>The severity level of the diagnosis result for the diagnosis item.</p>
          * <ul>
-         * <li><strong>ERROR</strong>: indicates that the item has an issue that may affect your services. We recommend that you handle the issue at the earliest opportunity.</li>
-         * <li><strong>WARNING</strong>: indicates that the item has an issue. You can handle the issue based on your business requirements.</li>
-         * <li><strong>INFO</strong>: indicates that the item is working as expected. No additional operation is required.</li>
+         * <li><strong>严重</strong> (Critical): indicates that the issue of the diagnosis item may affect service running. We recommend that you handle the issue at the earliest opportunity.</li>
+         * <li><strong>警告</strong> (Warning): indicates that the diagnosis item has an issue. Handle the issue based on the suggestion.</li>
+         * <li><strong>正常</strong> (Normal): indicates that the diagnosis item is running as expected. No action is required.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("ItemLevel")
         public String itemLevel;
 
         /**
-         * <p>The name of the item.</p>
+         * <p>The name of the diagnosis item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Leased line port configuration check</p>
          */
         @NameInMap("ItemName")
         public String itemName;
 
         /**
-         * <p>The type of the item. Valid values:</p>
+         * <p>The diagnosis type to which the diagnosis item belongs.</p>
          * <ul>
-         * <li><strong>Config</strong>: <strong>SAG configuration</strong></li>
-         * <li><strong>Service</strong>: <strong>service quality</strong></li>
-         * <li><strong>Internet</strong>: <strong>quality of connections to the Internet</strong></li>
+         * <li><strong>配置</strong> (Configuration): indicates the <strong>SAG configuration</strong> type.</li>
+         * <li><strong>业务</strong> (Service): indicates the <strong>service quality</strong> type.</li>
+         * <li><strong>公网</strong> (Internet): indicates the <strong>Internet quality</strong> type.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Configuration</p>
          */
         @NameInMap("ItemType")
         public String itemType;
@@ -130,23 +145,23 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
 
     public static class DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultDetailsItemsEN extends TeaModel {
         /**
-         * <p>The suggestion for the diagnosis.</p>
+         * <p>The diagnosis suggestion.</p>
          */
         @NameInMap("Advice")
         public java.util.List<String> advice;
 
         /**
-         * <p>The diagnosis.</p>
+         * <p>The diagnosis result.</p>
          */
         @NameInMap("Details")
         public java.util.List<String> details;
 
         /**
-         * <p>The diagnosis level of the item. Valid values:</p>
+         * <p>The severity level of the diagnosis result for the diagnosis item.</p>
          * <ul>
-         * <li><strong>ERROR</strong>: indicates that the item has an issue that may affect your services. We recommend that you handle the issue at the earliest opportunity.</li>
-         * <li><strong>WARNING</strong>: indicates that the item has an issue. You can handle the issue based on your business requirements.</li>
-         * <li><strong>INFO</strong>: indicates that the item is working as expected. No additional operation is required.</li>
+         * <li><strong>ERROR</strong>: indicates that the issue of the diagnosis item may affect service running. We recommend that you handle the issue at the earliest opportunity.</li>
+         * <li><strong>WARNING</strong>: indicates that the diagnosis item has an issue. Handle the issue based on the suggestion.</li>
+         * <li><strong>INFO</strong>: indicates that the diagnosis item is running as expected. No action is required.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -156,7 +171,7 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
         public String itemLevel;
 
         /**
-         * <p>The name of the item.</p>
+         * <p>The name of the diagnosis item.</p>
          * 
          * <strong>example:</strong>
          * <p>Express Connect Port Configuration</p>
@@ -165,11 +180,11 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
         public String itemName;
 
         /**
-         * <p>The type of the item. Valid values:</p>
+         * <p>The diagnosis type to which the diagnosis item belongs.</p>
          * <ul>
-         * <li><strong>Config</strong>: <strong>SAG configuration</strong></li>
-         * <li><strong>Service</strong>: <strong>service quality</strong></li>
-         * <li><strong>Internet</strong>: <strong>quality of connections to the Internet</strong></li>
+         * <li><strong>Config</strong>: indicates the <strong>SAG configuration</strong> type.</li>
+         * <li><strong>Service</strong>: indicates the <strong>service quality</strong> type.</li>
+         * <li><strong>Internet</strong>: indicates the <strong>Internet quality</strong> type.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -227,19 +242,19 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
 
     public static class DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultDetailsItems extends TeaModel {
         /**
-         * <p>The diagnosis report in Chinese.</p>
+         * <p>The diagnosis result in Chinese.</p>
          */
         @NameInMap("CN")
         public DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultDetailsItemsCN CN;
 
         /**
-         * <p>The diagnosis report in English.</p>
+         * <p>The diagnosis result in English.</p>
          */
         @NameInMap("EN")
         public DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultDetailsItemsEN EN;
 
         /**
-         * <p>The timestamp when the system finishes diagnosing the item.</p>
+         * <p>The timestamp when the diagnosis of the diagnosis item ended.</p>
          * 
          * <strong>example:</strong>
          * <p>1602741570596</p>
@@ -248,7 +263,7 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
         public Long endTime;
 
         /**
-         * <p>The name of the item, which is the unique identifier of the item.</p>
+         * <p>The name of the diagnosis item, which is the unique identifier of the diagnosis item.</p>
          * 
          * <strong>example:</strong>
          * <p>eccConfigCheck</p>
@@ -257,11 +272,11 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
         public String itemName;
 
         /**
-         * <p>The diagnosis level of the item. Valid values:</p>
+         * <p>The severity level of the diagnosis result for the diagnosis item.</p>
          * <ul>
-         * <li><strong>error</strong>: severe</li>
-         * <li><strong>warning</strong>: warning</li>
-         * <li><strong>info</strong>: normal</li>
+         * <li><strong>error</strong>: Critical.</li>
+         * <li><strong>warning</strong>: Warning.</li>
+         * <li><strong>info</strong>: Normal.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -271,7 +286,7 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
         public String level;
 
         /**
-         * <p>The timestamp when the system starts to diagnose the item.</p>
+         * <p>The timestamp when the diagnosis of the diagnosis item started.</p>
          * 
          * <strong>example:</strong>
          * <p>1602741570567</p>
@@ -280,11 +295,11 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
         public Long startTime;
 
         /**
-         * <p>The type of the item. Valid values:</p>
+         * <p>The diagnosis type to which the diagnosis item belongs.</p>
          * <ul>
-         * <li><strong>config</strong>: SAG configuration</li>
-         * <li><strong>internet</strong>: quality of connections to the Internet</li>
-         * <li><strong>biz</strong>: service quality</li>
+         * <li><strong>config</strong>: SAG configuration.</li>
+         * <li><strong>internet</strong>: Internet quality.</li>
+         * <li><strong>biz</strong>: Service quality.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -358,7 +373,7 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
 
     public static class DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultDetailsStatistics extends TeaModel {
         /**
-         * <p>The number of items of the <strong>ERROR</strong> level.</p>
+         * <p>The number of diagnosis items with the <strong>Error</strong> severity level.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -367,7 +382,7 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
         public Integer error;
 
         /**
-         * <p>The number of items of the <strong>INFO</strong> level.</p>
+         * <p>The number of diagnosis items with the <strong>Info</strong> severity level.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -376,7 +391,7 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
         public Integer info;
 
         /**
-         * <p>The total number of items for the current diagnosis type.</p>
+         * <p>The total number of diagnosis items under the current diagnosis type.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -385,7 +400,7 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
         public Integer total;
 
         /**
-         * <p>The number of items of the <strong>WARNING</strong> level.</p>
+         * <p>The number of diagnosis items with the <strong>Warning</strong> severity level.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -434,23 +449,23 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
 
     public static class DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultDetails extends TeaModel {
         /**
-         * <p>The list of items diagnosed.</p>
+         * <p>The list of detailed information about diagnosis items.</p>
          */
         @NameInMap("Items")
         public java.util.List<DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultDetailsItems> items;
 
         /**
-         * <p>The information about items of each diagnosis level for the current diagnosis type.</p>
+         * <p>The statistics on the severity levels of diagnosis items under the current diagnosis type.</p>
          */
         @NameInMap("Statistics")
         public DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultDetailsStatistics statistics;
 
         /**
-         * <p>The type of the diagnosis. Valid values:</p>
+         * <p>The diagnosis type.</p>
          * <ul>
-         * <li><strong>config</strong>: SAG configuration</li>
-         * <li><strong>internet</strong>: quality of connections to the Internet</li>
-         * <li><strong>biz</strong>: service quality</li>
+         * <li><strong>config</strong>: SAG configuration.</li>
+         * <li><strong>internet</strong>: Internet quality.</li>
+         * <li><strong>biz</strong>: Service quality.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -492,7 +507,7 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
 
     public static class DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultLevel extends TeaModel {
         /**
-         * <p>The diagnosis level of the service quality.</p>
+         * <p>The diagnosis result level for service quality.</p>
          * 
          * <strong>example:</strong>
          * <p>warning</p>
@@ -501,7 +516,7 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
         public String biz;
 
         /**
-         * <p>The diagnosis level of the SAG configuration.</p>
+         * <p>The diagnosis result level for SAG configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>info</p>
@@ -510,11 +525,11 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
         public String configuration;
 
         /**
-         * <p>The overall diagnosis level.</p>
+         * <p>The overall diagnosis result level.</p>
          * <ul>
-         * <li><strong>error</strong>: severe</li>
-         * <li><strong>warning</strong>: warning</li>
-         * <li><strong>info</strong>: normal</li>
+         * <li><strong>error</strong>: Critical.</li>
+         * <li><strong>warning</strong>: Warning.</li>
+         * <li><strong>info</strong>: Normal.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -556,7 +571,7 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
 
     public static class DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultStatistics extends TeaModel {
         /**
-         * <p>The number of items of the <strong>ERROR</strong> level.</p>
+         * <p>The total number of diagnosis items with the <strong>Error</strong> severity level.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -565,7 +580,7 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
         public Integer error;
 
         /**
-         * <p>The number of items of the <strong>INFO</strong> level.</p>
+         * <p>The total number of diagnosis items with the <strong>Info</strong> severity level.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -574,7 +589,7 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
         public Integer info;
 
         /**
-         * <p>The total number of items.</p>
+         * <p>The total number of all diagnosis items.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -583,7 +598,7 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
         public Integer total;
 
         /**
-         * <p>The number of items of the <strong>WARNING</strong> level.</p>
+         * <p>The total number of diagnosis items with the <strong>Warning</strong> severity level.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -632,7 +647,7 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
 
     public static class DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResult extends TeaModel {
         /**
-         * <p>The model of the SAG device.</p>
+         * <p>The type of the Smart Access Gateway device.</p>
          * <ul>
          * <li><strong>sag-1000</strong></li>
          * <li><strong>sag-100WM</strong></li>
@@ -645,7 +660,7 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
         public String boxType;
 
         /**
-         * <p>The version of the SAG device.</p>
+         * <p>The software version that runs on the Smart Access Gateway device.</p>
          * 
          * <strong>example:</strong>
          * <p>2.1.0</p>
@@ -654,13 +669,13 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
         public String boxVersion;
 
         /**
-         * <p>The list of diagnoses that are returned.</p>
+         * <p>The list of diagnosis results.</p>
          */
         @NameInMap("Details")
         public java.util.List<DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultDetails> details;
 
         /**
-         * <p>The ID of the diagnosis.</p>
+         * <p>The diagnosis ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dia-sag42c3t703trh02olv5rf****</p>
@@ -669,7 +684,7 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
         public String diagnoseId;
 
         /**
-         * <p>The timestamp when the system finishes diagnosing the item.</p>
+         * <p>The timestamp when the diagnosis ended.</p>
          * 
          * <strong>example:</strong>
          * <p>160274157</p>
@@ -678,7 +693,7 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
         public Integer endTime;
 
         /**
-         * <p>The number of items that are diagnosed.</p>
+         * <p>The number of completed diagnosis items.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -687,7 +702,7 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
         public Integer finishedNumber;
 
         /**
-         * <p>The ID of the SAG instance.</p>
+         * <p>The ID of the Smart Access Gateway instance.</p>
          * 
          * <strong>example:</strong>
          * <p>sag-0nnteglltw6z4b***</p>
@@ -696,13 +711,13 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
         public String instanceId;
 
         /**
-         * <p>The diagnosis level.</p>
+         * <p>The diagnosis result level.</p>
          */
         @NameInMap("Level")
         public DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultLevel level;
 
         /**
-         * <p>The version of the monitoring feature that is used by the SAG device.</p>
+         * <p>The monitoring version used by the Smart Access Gateway device.</p>
          * 
          * <strong>example:</strong>
          * <p>2.0.2.9</p>
@@ -720,10 +735,10 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
         public Integer percent;
 
         /**
-         * <p>The status of the diagnosis report to be uploaded to Log Service.</p>
+         * <p>The status of uploading the diagnosis report to SLS.</p>
          * <ul>
-         * <li><strong>0</strong>: The system failed to upload the report.</li>
-         * <li><strong>1</strong>: The system has uploaded the report to Log Service.</li>
+         * <li><strong>0</strong>: The upload failed.</li>
+         * <li><strong>1</strong>: The upload was successful.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -733,7 +748,7 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
         public Integer reportSLSSuccess;
 
         /**
-         * <p>The serial number of the SAG device.</p>
+         * <p>The serial number of the Smart Access Gateway device.</p>
          * 
          * <strong>example:</strong>
          * <p>sag42c3****</p>
@@ -742,7 +757,7 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
         public String SN;
 
         /**
-         * <p>The timestamp when the system starts to diagnose the item.</p>
+         * <p>The timestamp when the diagnosis started.</p>
          * 
          * <strong>example:</strong>
          * <p>160274157</p>
@@ -751,13 +766,13 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
         public Integer startTime;
 
         /**
-         * <p>The diagnosis status. Valid values:</p>
+         * <p>The diagnosis state.</p>
          * <ul>
-         * <li><strong>processing</strong>: The SAG device is being diagnosed.</li>
-         * <li><strong>finished</strong>: The SAG device is diagnosed.</li>
-         * <li><strong>failed</strong>: The system failed to diagnose the SAG device.</li>
-         * <li><strong>error</strong>: A diagnostic error occurred.</li>
-         * <li><strong>upload_to_sls_fail</strong>: The system failed to upload the diagnosis report.</li>
+         * <li><strong>processing</strong>: The diagnosis is in progress.</li>
+         * <li><strong>finished</strong>: The diagnosis is successful.</li>
+         * <li><strong>failed</strong>: The diagnosis failed.</li>
+         * <li><strong>error</strong>: An error occurred during the diagnosis.</li>
+         * <li><strong>upload_to_sls_fail</strong>: The diagnosis report failed to be uploaded.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -767,14 +782,14 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
         public String state;
 
         /**
-         * <p>The overall diagnosis level.</p>
+         * <p>The overall statistics of diagnosis item results.</p>
          */
         @NameInMap("Statistics")
         public DiscribeSmartAccessGatewayDiagnosisReportResponseBodyDiagnoseResultStatistics statistics;
 
         /**
          * <p>The storage type.</p>
-         * <p>The value is set to <strong>both</strong>, which indicates that the data is stored in the SAG device and Log Service.</p>
+         * <p>Value: <strong>both</strong>, which indicates that the diagnosis report is stored on both the Smart Access Gateway device and in Log Service (SLS).</p>
          * 
          * <strong>example:</strong>
          * <p>both</p>
@@ -783,7 +798,7 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
         public String storeType;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of diagnosis result entries.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -792,7 +807,7 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
         public Integer totalNumber;
 
         /**
-         * <p>The user ID (UID) of the Alibaba Cloud account to which the SAG instance belongs.</p>
+         * <p>The ID of the account to which the Smart Access Gateway instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>1688000000000000</p>
@@ -801,7 +816,7 @@ public class DiscribeSmartAccessGatewayDiagnosisReportResponseBody extends TeaMo
         public String UId;
 
         /**
-         * <p>The type of user that initiated the diagnostics. The value is set to <strong>user</strong>.</p>
+         * <p>The type of user who initiated the diagnosis. Value: <strong>user</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>user</p>

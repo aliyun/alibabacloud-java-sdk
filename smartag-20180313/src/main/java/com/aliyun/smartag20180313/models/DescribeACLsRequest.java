@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeACLsRequest extends TeaModel {
     /**
-     * <p>The ID of the ACL.</p>
+     * <p>The access control instance ID.</p>
      * <ul>
-     * <li>If you want to query multiple ACLs at the same time, separate the ACL IDs with commas (,).</li>
-     * <li>If you do not set this parameter, all ACLs in the specified region are queried.</li>
+     * <li>To query multiple access control instances simultaneously, separate multiple instance IDs with commas (,).</li>
+     * <li>If this parameter is not specified, information about all access control instances in the current region is queried.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class DescribeACLsRequest extends TeaModel {
     public String aclIds;
 
     /**
-     * <p>The type of the SAG instance associated with the ACL. Valid values:</p>
+     * <p>The type of Smart Access Gateway (SAG) instance that the access control instance can be associated with. Valid values:</p>
      * <ul>
-     * <li><strong>acl-hardware</strong>: SAG CPE instance</li>
-     * <li><strong>acl-software</strong>: SAG app instance</li>
+     * <li><strong>acl-hardware</strong>: SAG hardware instance.</li>
+     * <li><strong>acl-software</strong>: SAG app instance.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,8 +31,8 @@ public class DescribeACLsRequest extends TeaModel {
     public String aclType;
 
     /**
-     * <p>The name of the ACL.</p>
-     * <p>The name must be 2 to 100 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</p>
+     * <p>The name of the access control instance.</p>
+     * <p>The name must be 2 to 100 characters in length and must start with an uppercase letter, lowercase letter, or Chinese character. The name can contain digits, underscores (_), periods (.), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -47,7 +47,7 @@ public class DescribeACLsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -56,7 +56,7 @@ public class DescribeACLsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page for a paginated query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -65,7 +65,7 @@ public class DescribeACLsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the ACL is deployed.</p>
+     * <p>The region ID of the access control instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

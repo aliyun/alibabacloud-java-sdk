@@ -11,7 +11,7 @@ public class DescribeSagPortRouteProtocolListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the Smart Access Gateway (SAG) instance.</p>
+     * <p>The region ID of the Smart Access Gateway instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class DescribeSagPortRouteProtocolListRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the SAG instance.</p>
+     * <p>The instance ID of the Smart Access Gateway.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class DescribeSagPortRouteProtocolListRequest extends TeaModel {
     public String smartAGId;
 
     /**
-     * <p>The serial number of the SAG device that is associated with the SAG instance.</p>
+     * <p>The serial number of the associated Smart Access Gateway device.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
