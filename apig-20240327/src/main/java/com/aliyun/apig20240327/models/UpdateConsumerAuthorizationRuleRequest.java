@@ -11,7 +11,11 @@ public class UpdateConsumerAuthorizationRuleRequest extends TeaModel {
     public java.util.List<AuthorizationResourceInfo> authorizationResourceInfos;
 
     /**
-     * <p>The expiry mode. Valid values: LongTerm and ShortTerm.</p>
+     * <p>The expiration mode. Valid values:</p>
+     * <ul>
+     * <li>LongTerm</li>
+     * <li>ShortTerm</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>LongTerm</p>

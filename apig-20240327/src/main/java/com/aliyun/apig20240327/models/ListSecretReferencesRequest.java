@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSecretReferencesRequest extends TeaModel {
     /**
-     * <p>The page number. The value starts from 1. Default value: 1.</p>
+     * <p>The page number. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

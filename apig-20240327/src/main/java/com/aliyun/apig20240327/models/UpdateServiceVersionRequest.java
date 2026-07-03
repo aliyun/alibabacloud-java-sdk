@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateServiceVersionRequest extends TeaModel {
     /**
-     * <p>The list of tags.</p>
+     * <p>The list of labels.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("labels")
@@ -26,7 +26,7 @@ public class UpdateServiceVersionRequest extends TeaModel {
 
     public static class UpdateServiceVersionRequestLabels extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The label key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class UpdateServiceVersionRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The label value.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-k</p>

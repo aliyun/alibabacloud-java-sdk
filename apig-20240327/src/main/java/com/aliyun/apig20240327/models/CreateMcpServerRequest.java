@@ -18,11 +18,13 @@ public class CreateMcpServerRequest extends TeaModel {
 
     /**
      * <p>The creation source type. Valid values:</p>
-     * <p>ApiGatewayHttpToMCP: gateway-managed HTTP-to-MCP conversion.
-     * ApiGatewayProxyMcpHosting: gateway-managed direct MCP proxy.
-     * ApiGatewayAssembly: gateway MCP assembly.
-     * NacosHttpToMCP: gateway-managed Nacos-synced HTTP-to-MCP conversion.
-     * NacosMcpHosting: gateway-managed Nacos-synced direct MCP proxy.</p>
+     * <ul>
+     * <li>ApiGatewayHttpToMCP: gateway-managed HTTP-to-MCP conversion.</li>
+     * <li>ApiGatewayProxyMcpHosting: gateway-managed direct MCP proxy.</li>
+     * <li>ApiGatewayAssembly: gateway MCP assembly.</li>
+     * <li>NacosHttpToMCP: gateway-managed Nacos-synced HTTP-to-MCP conversion.</li>
+     * <li>NacosMcpHosting: gateway-managed Nacos-synced direct MCP proxy.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>ApiGatewayMcpHosting</p>
@@ -65,7 +67,7 @@ public class CreateMcpServerRequest extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The canary release route configurations.</p>
+     * <p>The canary release routing configurations.</p>
      */
     @NameInMap("grayMcpServerConfigs")
     public java.util.List<CreateMcpServerRequestGrayMcpServerConfigs> grayMcpServerConfigs;
@@ -112,7 +114,9 @@ public class CreateMcpServerRequest extends TeaModel {
 
     /**
      * <p>The type. Valid values:</p>
-     * <p>RealMCP: standard MCP service.</p>
+     * <ul>
+     * <li>RealMCP: standard MCP service.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

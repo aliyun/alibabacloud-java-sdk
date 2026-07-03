@@ -36,8 +36,10 @@ public class CreateDomainRequest extends TeaModel {
     public String clientCACert;
 
     /**
+     * <p>The domain name scope.</p>
+     * 
      * <strong>example:</strong>
-     * <p>Serverless</p>
+     * <p>Dedicated</p>
      */
     @NameInMap("domainScope")
     public String domainScope;
@@ -61,7 +63,7 @@ public class CreateDomainRequest extends TeaModel {
     public String gatewayType;
 
     /**
-     * <p>The HTTP/2 settings.</p>
+     * <p>The HTTP/2 setting.</p>
      * 
      * <strong>example:</strong>
      * <p>Open</p>
@@ -86,10 +88,10 @@ public class CreateDomainRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The protocol type supported by the domain name.</p>
+     * <p>The protocol type supported by the domain name. Valid values:</p>
      * <ul>
-     * <li>HTTP: supports only HTTP.</li>
-     * <li>HTTPS: supports only HTTPS.</li>
+     * <li>HTTP: Only HTTP is supported.</li>
+     * <li>HTTPS: Only HTTPS is supported.</li>
      * </ul>
      * 
      * <strong>example:</strong>

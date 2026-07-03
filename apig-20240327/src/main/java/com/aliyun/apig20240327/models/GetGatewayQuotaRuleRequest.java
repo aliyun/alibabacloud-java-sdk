@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetGatewayQuotaRuleRequest extends TeaModel {
     /**
+     * <p>The page number of the consumer list.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -13,6 +15,8 @@ public class GetGatewayQuotaRuleRequest extends TeaModel {
     public String consumerPageNumber;
 
     /**
+     * <p>The page size of the consumer list.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -20,6 +24,9 @@ public class GetGatewayQuotaRuleRequest extends TeaModel {
     @Deprecated
     public String consumerPageSize;
 
+    /**
+     * <p>Specifies whether to return the consumer list.</p>
+     */
     @NameInMap("withConsumers")
     public Boolean withConsumers;
 

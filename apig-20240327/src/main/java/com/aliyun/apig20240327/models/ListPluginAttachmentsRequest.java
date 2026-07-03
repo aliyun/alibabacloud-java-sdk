@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPluginAttachmentsRequest extends TeaModel {
     /**
-     * <p>The resource attachment ID.</p>
+     * <p>The mount resource ID.</p>
      * 
      * <strong>example:</strong>
      * <p>hr-cv2h58em1hkg7c6vt43g</p>
@@ -14,7 +14,7 @@ public class ListPluginAttachmentsRequest extends TeaModel {
     public String attachResourceId;
 
     /**
-     * <p>The resource attachment type (not yet in use).</p>
+     * <p>The plug-in mount point type. This parameter is not yet enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>GatewayRoute</p>
@@ -23,7 +23,7 @@ public class ListPluginAttachmentsRequest extends TeaModel {
     public String attachResourceType;
 
     /**
-     * <p>The resource attachment types, separated by commas.</p>
+     * <p>The mount point types. Separate multiple types with commas.</p>
      * 
      * <strong>example:</strong>
      * <p>GatewayRoute</p>
@@ -50,7 +50,7 @@ public class ListPluginAttachmentsRequest extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The page number to return. Pages start from 1. Default value: 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,7 +59,7 @@ public class ListPluginAttachmentsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 10.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -77,7 +77,7 @@ public class ListPluginAttachmentsRequest extends TeaModel {
     public String pluginId;
 
     /**
-     * <p>Specifies whether to return parent resource attachments.</p>
+     * <p>Specifies whether to return parent resource mounts.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

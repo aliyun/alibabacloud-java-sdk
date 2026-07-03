@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateGatewayRequest extends TeaModel {
     /**
-     * <p>The billing method.</p>
+     * <p>The billing method. Valid values:</p>
+     * <ul>
+     * <li>POSTPAY: subscription.</li>
+     * <li>PREPAY: pay-as-you-go.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>POSTPAY</p>
@@ -16,13 +20,13 @@ public class CreateGatewayRequest extends TeaModel {
     /**
      * <p>The gateway instance edition. Valid values:</p>
      * <ul>
-     * <li><p>Professional: Standard instance.</p>
+     * <li><p>Professional: standard instance.</p>
      * </li>
      * <li><p>Serverless: Serverless instance.</p>
      * </li>
-     * <li><p>MultiTenantServerless: Multi-tenant Serverless instance.</p>
+     * <li><p>MultiTenantServerless: multi-tenant Serverless instance.</p>
      * </li>
-     * <li><p>Unknown: Unknown.</p>
+     * <li><p>Unknown: unknown.</p>
      * </li>
      * </ul>
      * 
@@ -33,7 +37,11 @@ public class CreateGatewayRequest extends TeaModel {
     public String gatewayEdition;
 
     /**
-     * <p>The gateway type.</p>
+     * <p>The gateway type. Valid values:</p>
+     * <ul>
+     * <li>AI: AI gateway.</li>
+     * <li>API: cloud-native API gateway.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>API</p>
@@ -243,7 +251,12 @@ public class CreateGatewayRequest extends TeaModel {
 
     public static class CreateGatewayRequestNetworkAccessConfig extends TeaModel {
         /**
-         * <p>The network access type.</p>
+         * <p>The network access type. Valid values:</p>
+         * <ul>
+         * <li>InternetAndIntranet: public and internal network.</li>
+         * <li>Intranet: internal network.</li>
+         * <li>Internet: public network.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Internet</p>
@@ -352,7 +365,11 @@ public class CreateGatewayRequest extends TeaModel {
 
     public static class CreateGatewayRequestZoneConfig extends TeaModel {
         /**
-         * <p>The zone selection option.</p>
+         * <p>The zone selection option. Valid values:</p>
+         * <ul>
+         * <li>Auto: automatic.</li>
+         * <li>Manual: manual.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Manual</p>

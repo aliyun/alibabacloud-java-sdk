@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values: zh, en.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */

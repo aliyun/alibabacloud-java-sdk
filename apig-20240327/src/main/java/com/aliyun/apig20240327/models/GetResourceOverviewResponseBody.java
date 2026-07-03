@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetResourceOverviewResponseBody extends TeaModel {
     /**
-     * <p>Response status code.</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -20,7 +20,7 @@ public class GetResourceOverviewResponseBody extends TeaModel {
     public GetResourceOverviewResponseBodyData data;
 
     /**
-     * <p>Response message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -29,7 +29,7 @@ public class GetResourceOverviewResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DD19A442-93C5-5C97-AFA0-B9C57EBD781B</p>
@@ -76,7 +76,7 @@ public class GetResourceOverviewResponseBody extends TeaModel {
 
     public static class GetResourceOverviewResponseBodyDataApi extends TeaModel {
         /**
-         * <p>Number of published APIs.</p>
+         * <p>The number of published APIs.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -85,7 +85,7 @@ public class GetResourceOverviewResponseBody extends TeaModel {
         public Long publishedCount;
 
         /**
-         * <p>Number of APIs.</p>
+         * <p>The total number of APIs.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -118,7 +118,7 @@ public class GetResourceOverviewResponseBody extends TeaModel {
 
     public static class GetResourceOverviewResponseBodyDataGateway extends TeaModel {
         /**
-         * <p>Number of running gateways.</p>
+         * <p>The number of running gateways.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -127,7 +127,7 @@ public class GetResourceOverviewResponseBody extends TeaModel {
         public Long runningCount;
 
         /**
-         * <p>Number of gateway instances.</p>
+         * <p>The total number of gateway instances.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -187,7 +187,7 @@ public class GetResourceOverviewResponseBody extends TeaModel {
         public String riskLevel;
 
         /**
-         * <p>The risk name list.</p>
+         * <p>The list of risk names.</p>
          */
         @NameInMap("riskNames")
         public java.util.List<String> riskNames;
@@ -250,7 +250,7 @@ public class GetResourceOverviewResponseBody extends TeaModel {
 
     public static class GetResourceOverviewResponseBodyDataRiskOverview extends TeaModel {
         /**
-         * <p>The number of instances at a risk level.</p>
+         * <p>The number of instances at this risk level.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -259,7 +259,7 @@ public class GetResourceOverviewResponseBody extends TeaModel {
         public String count;
 
         /**
-         * <p>The risk details list.</p>
+         * <p>The list of risk details.</p>
          */
         @NameInMap("riskDetails")
         public java.util.List<GetResourceOverviewResponseBodyDataRiskOverviewRiskDetails> riskDetails;
@@ -306,13 +306,13 @@ public class GetResourceOverviewResponseBody extends TeaModel {
 
     public static class GetResourceOverviewResponseBodyData extends TeaModel {
         /**
-         * <p>API information.</p>
+         * <p>The API information.</p>
          */
         @NameInMap("api")
         public GetResourceOverviewResponseBodyDataApi api;
 
         /**
-         * <p>Gateway information.</p>
+         * <p>The gateway information.</p>
          */
         @NameInMap("gateway")
         public GetResourceOverviewResponseBodyDataGateway gateway;

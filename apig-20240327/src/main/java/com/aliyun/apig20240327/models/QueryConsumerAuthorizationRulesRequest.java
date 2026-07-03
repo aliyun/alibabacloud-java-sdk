@@ -14,6 +14,13 @@ public class QueryConsumerAuthorizationRulesRequest extends TeaModel {
     public String apiNameLike;
 
     /**
+     * <strong>example:</strong>
+     * <p>csg-8c13d2b4f8a1</p>
+     */
+    @NameInMap("consumerGroupId")
+    public String consumerGroupId;
+
+    /**
      * <p>The consumer ID.</p>
      * 
      * <strong>example:</strong>
@@ -77,6 +84,13 @@ public class QueryConsumerAuthorizationRulesRequest extends TeaModel {
     public String parentResourceId;
 
     /**
+     * <strong>example:</strong>
+     * <p>ConsumerGroup</p>
+     */
+    @NameInMap("principalType")
+    public String principalType;
+
+    /**
      * <p>The resource ID.</p>
      * 
      * <strong>example:</strong>
@@ -114,6 +128,14 @@ public class QueryConsumerAuthorizationRulesRequest extends TeaModel {
     }
     public String getApiNameLike() {
         return this.apiNameLike;
+    }
+
+    public QueryConsumerAuthorizationRulesRequest setConsumerGroupId(String consumerGroupId) {
+        this.consumerGroupId = consumerGroupId;
+        return this;
+    }
+    public String getConsumerGroupId() {
+        return this.consumerGroupId;
     }
 
     public QueryConsumerAuthorizationRulesRequest setConsumerId(String consumerId) {
@@ -170,6 +192,14 @@ public class QueryConsumerAuthorizationRulesRequest extends TeaModel {
     }
     public String getParentResourceId() {
         return this.parentResourceId;
+    }
+
+    public QueryConsumerAuthorizationRulesRequest setPrincipalType(String principalType) {
+        this.principalType = principalType;
+        return this;
+    }
+    public String getPrincipalType() {
+        return this.principalType;
     }
 
     public QueryConsumerAuthorizationRulesRequest setResourceId(String resourceId) {

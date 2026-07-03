@@ -4,21 +4,57 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class PolicyDetailInfo extends TeaModel {
+    /**
+     * <p>The policy class ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cls-xxx</p>
+     */
     @NameInMap("classId")
     public String classId;
 
+    /**
+     * <p>The policy type name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RateLimit</p>
+     */
     @NameInMap("className")
     public String className;
 
+    /**
+     * <p>The policy configuration content (JSON string).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;rate&quot;:100,&quot;burst&quot;:50}</p>
+     */
     @NameInMap("config")
     public String config;
 
+    /**
+     * <p>The policy description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>每秒限流100次</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The policy name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-rate-limit</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The policy ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>plc-xxx</p>
+     */
     @NameInMap("policyId")
     public String policyId;
 

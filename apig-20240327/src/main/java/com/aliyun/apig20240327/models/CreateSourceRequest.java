@@ -14,13 +14,13 @@ public class CreateSourceRequest extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The Container Service source configuration.</p>
+     * <p>The container service source configuration.</p>
      */
     @NameInMap("k8sSourceConfig")
     public CreateSourceRequestK8sSourceConfig k8sSourceConfig;
 
     /**
-     * <p>The MSE Nacos source configuration.</p>
+     * <p>The configuration of the MSE Nacos source.</p>
      */
     @NameInMap("nacosSourceConfig")
     public CreateSourceRequestNacosSourceConfig nacosSourceConfig;
@@ -38,7 +38,7 @@ public class CreateSourceRequest extends TeaModel {
      * <p>The source type. Valid values:</p>
      * <ul>
      * <li>MSE_NACOS: MSE Nacos.</li>
-     * <li>K8S: Container Service.</li>
+     * <li>K8S: Container Service for Kubernetes (ACK).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -156,7 +156,7 @@ public class CreateSourceRequest extends TeaModel {
         public java.util.List<CreateSourceRequestK8sSourceConfigAuthorizeSecurityGroupRules> authorizeSecurityGroupRules;
 
         /**
-         * <p>The Container Service cluster ID.</p>
+         * <p>The container service cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c3fbe6caaaece4062b*****</p>

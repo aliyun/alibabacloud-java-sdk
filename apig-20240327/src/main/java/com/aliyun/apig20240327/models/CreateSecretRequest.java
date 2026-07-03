@@ -14,7 +14,7 @@ public class CreateSecretRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The type of the gateway.</p>
+     * <p>The gateway type.</p>
      * 
      * <strong>example:</strong>
      * <p>API</p>
@@ -23,13 +23,13 @@ public class CreateSecretRequest extends TeaModel {
     public String gatewayType;
 
     /**
-     * <p>The key configuration information of KMS.</p>
+     * <p>The KMS key configuration information.</p>
      */
     @NameInMap("kmsConfig")
     public KMSConfig kmsConfig;
 
     /**
-     * <p>The key name. It can be up to 64 characters in length and can contain letters, digits, and underscores (_).</p>
+     * <p>The key name. The name can contain letters, digits, and underscores (_), and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>my_secret</p>
@@ -38,7 +38,7 @@ public class CreateSecretRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The value of the KMS credential.</p>
+     * <p>The KMS credential value.</p>
      * 
      * <strong>example:</strong>
      * <p>apikey-123456xxxxxxxx</p>
@@ -47,7 +47,7 @@ public class CreateSecretRequest extends TeaModel {
     public String secretData;
 
     /**
-     * <p>The source of the key.</p>
+     * <p>The key source.</p>
      * 
      * <strong>example:</strong>
      * <p>KMS</p>

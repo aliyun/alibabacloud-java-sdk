@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateConsumerRequest extends TeaModel {
     /**
-     * <p>The list of AK/SK authentication configurations.</p>
+     * <p>The list of AccessKey pair authentication configurations.</p>
      */
     @NameInMap("akSkIdentityConfigs")
     public java.util.List<AkSkIdentityConfig> akSkIdentityConfigs;
 
     /**
-     * <p>The API key authentication configurations.</p>
+     * <p>The API key authentication configuration.</p>
      */
     @NameInMap("apikeyIdentityConfig")
     public ApiKeyIdentityConfig apikeyIdentityConfig;
@@ -26,7 +26,7 @@ public class UpdateConsumerRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies the enablement status.</p>
+     * <p>Specifies whether to enable the API consumer.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

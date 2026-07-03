@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
     /**
+     * <p>The status code or error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200, 404, 500</p>
      */
@@ -12,6 +14,8 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response data.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;key\&quot;: \&quot;value\&quot;}</p>
      */
@@ -19,6 +23,8 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
     public UpdateGatewayQuotaRuleResponseBodyData data;
 
     /**
+     * <p>The message content.</p>
+     * 
      * <strong>example:</strong>
      * <p>你好，世界！</p>
      */
@@ -26,6 +32,8 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234567890</p>
      */
@@ -70,13 +78,27 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
     }
 
     public static class UpdateGatewayQuotaRuleResponseBodyDataConflictPreviewItems extends TeaModel {
+        /**
+         * <p>The period type of the existing conflicting rule on the consumer. Valid values: day: daily period. week: weekly period. month: monthly period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>week</p>
+         */
         @NameInMap("conflictPeriodType")
         public String conflictPeriodType;
 
+        /**
+         * <p>The type of the existing conflicting rule on the consumer. Valid values: calendar: The conflicting rule is a calendar-period rule. epoch: The conflicting rule is a custom-period rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>calendar</p>
+         */
         @NameInMap("conflictType")
         public String conflictType;
 
         /**
+         * <p>The consumer ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cs-d82n1g6m1hkm375xxxxx</p>
          */
@@ -84,6 +106,8 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
         public String consumerId;
 
         /**
+         * <p>The consumer name.</p>
+         * 
          * <strong>example:</strong>
          * <p>consumer-a</p>
          */
@@ -131,16 +155,23 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
 
     public static class UpdateGatewayQuotaRuleResponseBodyDataConflictPreview extends TeaModel {
         /**
+         * <p>The hash of the conflict snapshot.</p>
+         * 
          * <strong>example:</strong>
          * <p>f8f44dc6cf369a017d56b7197eb4fb5ac4bbb6b09a92b9b41999541f50xxxxxx</p>
          */
         @NameInMap("conflictHash")
         public String conflictHash;
 
+        /**
+         * <p>The list of conflicting principals (consumers).</p>
+         */
         @NameInMap("items")
         public java.util.List<UpdateGatewayQuotaRuleResponseBodyDataConflictPreviewItems> items;
 
         /**
+         * <p>The total number of conflicts.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -179,13 +210,24 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
     }
 
     public static class UpdateGatewayQuotaRuleResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether the write request is accepted by the system. A value of false typically indicates a retryable scenario, such as an unconfirmed conflict overwrite.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("accepted")
         public Boolean accepted;
 
+        /**
+         * <p>The conflict preview.</p>
+         */
         @NameInMap("conflictPreview")
         public UpdateGatewayQuotaRuleResponseBodyDataConflictPreview conflictPreview;
 
         /**
+         * <p>Indicates whether this is a dry run.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -193,6 +235,8 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
         public Boolean dryRun;
 
         /**
+         * <p>The ID of the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>qr-xxxxxx</p>
          */

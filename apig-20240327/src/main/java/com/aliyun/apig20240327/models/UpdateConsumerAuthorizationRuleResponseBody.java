@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateConsumerAuthorizationRuleResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -14,7 +14,7 @@ public class UpdateConsumerAuthorizationRuleResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The status message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,7 +23,7 @@ public class UpdateConsumerAuthorizationRuleResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>C67DED2B-F19B-5BEC-88C1-D6EB854CD0D4</p>

@@ -76,7 +76,7 @@ public class GetPluginAttachmentResponseBody extends TeaModel {
 
     public static class GetPluginAttachmentResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the plugin attachment is enabled.</p>
+         * <p>Indicates whether the plugin mount is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -97,13 +97,13 @@ public class GetPluginAttachmentResponseBody extends TeaModel {
         public GatewayInfo gatewayInfo;
 
         /**
-         * <p>The parent attachment resource information.</p>
+         * <p>The parent mount resource information.</p>
          */
         @NameInMap("parentResourceInfo")
         public ParentResourceInfo parentResourceInfo;
 
         /**
-         * <p>The plugin attachment ID.</p>
+         * <p>The plugin mount ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pa-d05f1tmm1hku195dd8j0</p>
@@ -136,7 +136,7 @@ public class GetPluginAttachmentResponseBody extends TeaModel {
         public String pluginId;
 
         /**
-         * <p>The list of attachment resource information.</p>
+         * <p>The list of mount resource information.</p>
          */
         @NameInMap("resourceInfos")
         public java.util.List<ResourceInfo> resourceInfos;

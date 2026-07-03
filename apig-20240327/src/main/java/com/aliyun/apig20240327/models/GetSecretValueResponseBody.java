@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSecretValueResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -14,13 +14,13 @@ public class GetSecretValueResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response payload.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public GetSecretValueResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -29,7 +29,7 @@ public class GetSecretValueResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>479AE38F-A574-52F7-87EA-E91199999F9E</p>

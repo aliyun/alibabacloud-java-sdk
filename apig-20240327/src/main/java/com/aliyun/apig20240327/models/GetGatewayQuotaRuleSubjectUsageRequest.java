@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetGatewayQuotaRuleSubjectUsageRequest extends TeaModel {
     /**
+     * <p>The page number of the detailed consumption (request) records of the consumer within the cycle.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class GetGatewayQuotaRuleSubjectUsageRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of detailed consumption (request) records per page for the consumer within the cycle. Maximum value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

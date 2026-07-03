@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListExternalServicesResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The list of APIs.</p>
+     */
     @NameInMap("data")
     public ListExternalServicesResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Failed to upload data. Please try again</p>
      */
@@ -69,6 +76,8 @@ public class ListExternalServicesResponseBody extends TeaModel {
 
     public static class ListExternalServicesResponseBodyDataItemsServices extends TeaModel {
         /**
+         * <p>The name.</p>
+         * 
          * <strong>example:</strong>
          * <p>enable-slash-merge</p>
          */
@@ -76,6 +85,8 @@ public class ListExternalServicesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The namespace.</p>
+         * 
          * <strong>example:</strong>
          * <p>public</p>
          */
@@ -107,6 +118,8 @@ public class ListExternalServicesResponseBody extends TeaModel {
 
     public static class ListExternalServicesResponseBodyDataItems extends TeaModel {
         /**
+         * <p>The namespace.</p>
+         * 
          * <strong>example:</strong>
          * <p>PUBLIC</p>
          */
@@ -114,12 +127,17 @@ public class ListExternalServicesResponseBody extends TeaModel {
         public String namespace;
 
         /**
+         * <p>The display name of the namespace.</p>
+         * 
          * <strong>example:</strong>
          * <p>PUBLIC</p>
          */
         @NameInMap("namespaceShowName")
         public String namespaceShowName;
 
+        /**
+         * <p>The backend services.</p>
+         */
         @NameInMap("services")
         public java.util.List<ListExternalServicesResponseBodyDataItemsServices> services;
 
@@ -155,6 +173,9 @@ public class ListExternalServicesResponseBody extends TeaModel {
     }
 
     public static class ListExternalServicesResponseBodyData extends TeaModel {
+        /**
+         * <p>The service information.</p>
+         */
         @NameInMap("items")
         public java.util.List<ListExternalServicesResponseBodyDataItems> items;
 

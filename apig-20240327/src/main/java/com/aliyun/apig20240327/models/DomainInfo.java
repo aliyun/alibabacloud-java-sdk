@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DomainInfo extends TeaModel {
     /**
-     * <p>The China Security certificate identity.</p>
+     * <p>The SSL Certificates Service certificate identity.</p>
      * 
      * <strong>example:</strong>
      * <p>235556-cn-hangzhou</p>
@@ -27,7 +27,7 @@ public class DomainInfo extends TeaModel {
     public String clientCACert;
 
     /**
-     * <p>The source from which the domain name was created.</p>
+     * <p>The source from which the domain name is created.</p>
      * 
      * <strong>example:</strong>
      * <p>Console</p>
@@ -53,6 +53,12 @@ public class DomainInfo extends TeaModel {
     @NameInMap("domainId")
     public String domainId;
 
+    /**
+     * <p>domainScope</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Dedicated</p>
+     */
     @NameInMap("domainScope")
     public String domainScope;
 
@@ -66,7 +72,7 @@ public class DomainInfo extends TeaModel {
     public Boolean forceHttps;
 
     /**
-     * <p>Specifies whether to enable mTLS mutual authentication.</p>
+     * <p>Indicates whether MTLS mutual authentication is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -84,10 +90,10 @@ public class DomainInfo extends TeaModel {
     public String name;
 
     /**
-     * <p>The protocol type supported by the domain name. Valid values:</p>
+     * <p>The protocol type supported by the domain name.</p>
      * <ul>
-     * <li>HTTP: Only HTTP is supported.</li>
-     * <li>HTTPS: Only HTTPS is supported.</li>
+     * <li>HTTP: Only the HTTP protocol is supported.</li>
+     * <li>HTTP: Only the HTTPS protocol is supported.</li>
      * </ul>
      * 
      * <strong>example:</strong>

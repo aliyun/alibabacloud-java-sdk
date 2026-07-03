@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateEnvironmentRequest extends TeaModel {
     /**
-     * <p>Schema of Response</p>
+     * <p>The alias of the environment.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateEnvironmentRequest extends TeaModel {
     public String alias;
 
     /**
-     * <p>The status code returned.</p>
+     * <p>The description of the environment. You can specify information such as the purpose and owner of the environment.</p>
      * 
      * <strong>example:</strong>
      * <p>这是xx的xx项目测试环境</p>

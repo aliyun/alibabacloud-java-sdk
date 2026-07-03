@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class AddGatewayQuotaRuleRequest extends TeaModel {
     /**
+     * <p>The conflict snapshot hash used to prevent concurrent dirty overwrites during confirmation. Obtain this value from the response of a previous dryRun=true call.</p>
+     * <p>You do not need to specify this parameter in the following cases: no conflict exists, the request is a dry run (dryRun=true), or overwrite=false.</p>
+     * <p>When dryRun=false and overwrite=true, if this parameter is not specified or the value has expired, the backend returns accepted=false with a new conflict preview. Perform a dry run again to confirm the new conflict.</p>
+     * 
      * <strong>example:</strong>
      * <p>f8f44dc6cf369a017d56b7197eb4fb5ac4bbb6b09a92b9b41999541fxxxxxxxx</p>
      */
@@ -12,6 +16,8 @@ public class AddGatewayQuotaRuleRequest extends TeaModel {
     public String conflictHash;
 
     /**
+     * <p>The list of consumer group IDs. This parameter is not supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>group1,group2</p>
      */
@@ -20,6 +26,8 @@ public class AddGatewayQuotaRuleRequest extends TeaModel {
     public java.util.List<String> consumerGroupIds;
 
     /**
+     * <p>The list of consumer IDs to bind to the rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>1001,1002,1003</p>
      */
@@ -27,6 +35,8 @@ public class AddGatewayQuotaRuleRequest extends TeaModel {
     public java.util.List<String> consumerIds;
 
     /**
+     * <p>Specifies whether to perform only a dry run without persisting or applying the configuration. A dry run checks whether conflicting rules exist on the bound consumers. For example, a consumer that already has a daily calendar quota cannot have another daily calendar quota rule added.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -34,6 +44,8 @@ public class AddGatewayQuotaRuleRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
+     * <p>Specifies whether to allow overwriting on conflict. If overwriting is allowed, the conflicting principals (consumers) are unbound from the old rule and bound to the new rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -41,6 +53,8 @@ public class AddGatewayQuotaRuleRequest extends TeaModel {
     public Boolean overwrite;
 
     /**
+     * <p>The period multiplier.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -48,6 +62,7 @@ public class AddGatewayQuotaRuleRequest extends TeaModel {
     public Long periodMultiplier;
 
     /**
+     * <p>The period type. Valid values: day (calendar day), week (calendar week), and month (calendar month).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,6 +72,7 @@ public class AddGatewayQuotaRuleRequest extends TeaModel {
     public String periodType;
 
     /**
+     * <p>The quota dimension or throttling type. Currently, only token is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,6 +82,7 @@ public class AddGatewayQuotaRuleRequest extends TeaModel {
     public String quotaDimension;
 
     /**
+     * <p>The total available quota per period.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -75,6 +92,7 @@ public class AddGatewayQuotaRuleRequest extends TeaModel {
     public Long quotaLimit;
 
     /**
+     * <p>The name of the rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -84,6 +102,8 @@ public class AddGatewayQuotaRuleRequest extends TeaModel {
     public String ruleName;
 
     /**
+     * <p>The time zone for the calendar period, in UTC+x format.</p>
+     * 
      * <strong>example:</strong>
      * <p>UTC+8</p>
      */
@@ -91,6 +111,8 @@ public class AddGatewayQuotaRuleRequest extends TeaModel {
     public String timezone;
 
     /**
+     * <p>The reset period alignment type. Currently, only calendar alignment is supported, which means windowAlignment=&quot;calendar&quot;.</p>
+     * 
      * <strong>example:</strong>
      * <p>calendar</p>
      */

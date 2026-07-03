@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePolicyRequest extends TeaModel {
     /**
-     * <p>Policy type, including RateLimit, ConcurrencyLimit, CircuitBreaker, HttpRewrite, HeaderModify, Cors, Authentication, FlowCopy, Timeout, Retry, IpAccessControl, DirectResponse, Redirect, Fallback, ServiceTls, ServiceLb, ServicePortTls, Waf, JWTAuth, OIDCAuth, ExternalZAuth, AiProxy, ModelRouter, AiStatistics, AiSecurityGuard, AiFallback, ModelMapper, AiTokenRateLimit, AiCache, DynamicRoute</p>
+     * <p>The policy type. Valid values: RateLimit, ConcurrencyLimit, CircuitBreaker, HttpRewrite, HeaderModify, Cors, Authentication, FlowCopy, Timeout, Retry, IpAccessControl, DirectResponse, Redirect, Fallback, ServiceTls, ServiceLb, ServicePortTls, Waf, JWTAuth, OIDCAuth, ExternalZAuth, AiProxy, ModelRouter, AiStatistics, AiSecurityGuard, AiFallback, ModelMapper, AiTokenRateLimit, AiCache, DynamicRoute.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreatePolicyRequest extends TeaModel {
     public String className;
 
     /**
-     * <p>Policy configuration</p>
+     * <p>The policy configuration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class CreatePolicyRequest extends TeaModel {
     public String config;
 
     /**
-     * <p>Policy description</p>
+     * <p>The description of the policy.</p>
      * 
      * <strong>example:</strong>
      * <p>超时策略</p>
@@ -34,7 +34,7 @@ public class CreatePolicyRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Policy name</p>
+     * <p>The policy name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

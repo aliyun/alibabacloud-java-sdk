@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GatewayInfo extends TeaModel {
     /**
-     * <p>The gateway DPI engine database engine version.</p>
+     * <p>The gateway DPI engine version.</p>
      * 
      * <strong>example:</strong>
      * <p>2.0.7</p>
@@ -14,6 +14,14 @@ public class GatewayInfo extends TeaModel {
     public String engineVersion;
 
     /**
+     * <p>The gateway instance edition. Valid values:</p>
+     * <ul>
+     * <li>Professional: standard instance.</li>
+     * <li>Serverless: Serverless.</li>
+     * <li>MultiTenantServerless: multi-tenant Serverless.</li>
+     * <li>Unknown: unknown.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>MultiTenantServerless</p>
      */

@@ -76,7 +76,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
 
     public static class ListEnvironmentsResponseBodyData extends TeaModel {
         /**
-         * <p>环境信息列表。</p>
+         * <p>The list of environment contexts.</p>
          */
         @NameInMap("items")
         public java.util.List<EnvironmentInfo> items;

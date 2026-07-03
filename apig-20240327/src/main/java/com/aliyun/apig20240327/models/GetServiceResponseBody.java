@@ -29,7 +29,7 @@ public class GetServiceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8FA9BB94-915B-5299-A694-49FCC7F5DD00</p>

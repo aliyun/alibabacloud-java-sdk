@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateConsumerRequest extends TeaModel {
     /**
-     * <p>A list of AK/SK identity configurations.</p>
+     * <p>The list of AK/SK identity configurations.</p>
      */
     @NameInMap("akSkIdentityConfigs")
     public java.util.List<AkSkIdentityConfig> akSkIdentityConfigs;
 
     /**
-     * <p>The identity configuration for API key authentication.</p>
+     * <p>The API key authentication identity configuration.</p>
      */
     @NameInMap("apikeyIdentityConfig")
     public ApiKeyIdentityConfig apikeyIdentityConfig;
@@ -37,10 +37,8 @@ public class CreateConsumerRequest extends TeaModel {
     /**
      * <p>The gateway type. Valid values:</p>
      * <ul>
-     * <li><p>API: For a cloud-native API gateway.</p>
-     * </li>
-     * <li><p>AI: For an AI gateway.</p>
-     * </li>
+     * <li>API: a consumer of a cloud-native API gateway.</li>
+     * <li>AI: a consumer of an AI gateway.</li>
      * </ul>
      * 
      * <strong>example:</strong>

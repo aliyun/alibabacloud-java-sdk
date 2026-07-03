@@ -82,7 +82,7 @@ public class GetEnvironmentResponseBody extends TeaModel {
         public java.util.List<ResourceStatistic> resourceStatistics;
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total count.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
     /**
+     * <p>The status code or error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200, 404, 500</p>
      */
@@ -12,6 +14,8 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response data.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;key\&quot;: \&quot;value\&quot;}</p>
      */
@@ -19,6 +23,8 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
     public ResetGatewayQuotaRuleResponseBodyData data;
 
     /**
+     * <p>The message content.</p>
+     * 
      * <strong>example:</strong>
      * <p>你好，世界！</p>
      */
@@ -26,6 +32,8 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique identifier of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234567890</p>
      */
@@ -71,6 +79,8 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
 
     public static class ResetGatewayQuotaRuleResponseBodyDataConflictPreviewItems extends TeaModel {
         /**
+         * <p>The period type of the existing conflicting rule on the consumer. Valid values: day (daily period), week (weekly period), or month (monthly period).</p>
+         * 
          * <strong>example:</strong>
          * <p>week</p>
          */
@@ -78,6 +88,8 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
         public String conflictPeriodType;
 
         /**
+         * <p>The type of the existing conflicting rule on the consumer. Valid values: calendar (the conflicting rule uses a calendar period) and epoch (the conflicting rule uses a custom period).</p>
+         * 
          * <strong>example:</strong>
          * <p>calendar</p>
          */
@@ -85,6 +97,8 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
         public String conflictType;
 
         /**
+         * <p>The consumer ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cs-d82n1g6m1hkm3xxxxxxx</p>
          */
@@ -92,6 +106,8 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
         public String consumerId;
 
         /**
+         * <p>The consumer name.</p>
+         * 
          * <strong>example:</strong>
          * <p>consumer-a</p>
          */
@@ -139,16 +155,23 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
 
     public static class ResetGatewayQuotaRuleResponseBodyDataConflictPreview extends TeaModel {
         /**
+         * <p>The conflict hash.</p>
+         * 
          * <strong>example:</strong>
          * <p>f8f44dc6cf369a017d56b7197eb4fb5ac4bbb6b09a92b9b41999541fxxxxxxxx</p>
          */
         @NameInMap("conflictHash")
         public String conflictHash;
 
+        /**
+         * <p>The list of conflicting entities (consumers).</p>
+         */
         @NameInMap("items")
         public java.util.List<ResetGatewayQuotaRuleResponseBodyDataConflictPreviewItems> items;
 
         /**
+         * <p>The total number of conflicts.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -188,16 +211,23 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
 
     public static class ResetGatewayQuotaRuleResponseBodyData extends TeaModel {
         /**
+         * <p>Indicates whether the write request semantics are accepted by the system. A value of false typically indicates a retryable scenario such as an unconfirmed conflict overwrite.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("accepted")
         public Boolean accepted;
 
+        /**
+         * <p>The conflict preview.</p>
+         */
         @NameInMap("conflictPreview")
         public ResetGatewayQuotaRuleResponseBodyDataConflictPreview conflictPreview;
 
         /**
+         * <p>Indicates whether this is a dry run.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -205,6 +235,8 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
         public Boolean dryRun;
 
         /**
+         * <p>The rule ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>qr-d8j7fpmm1hks65xxxx</p>
          */

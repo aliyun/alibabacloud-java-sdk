@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListGatewayQuotaRulesRequest extends TeaModel {
     /**
+     * <p>The rule name keyword, used for fuzzy match.</p>
+     * 
      * <strong>example:</strong>
      * <p>daily</p>
      */
@@ -12,6 +14,8 @@ public class ListGatewayQuotaRulesRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>The maximum number of records to retrieve in a single request. This parameter is not supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,6 +23,8 @@ public class ListGatewayQuotaRulesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token. This parameter is not supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>C4tM8BlBJwHSNyjWpGaci4/7dKNGp1JMgsKtvCagmtY=</p>
      */
@@ -26,6 +32,8 @@ public class ListGatewayQuotaRulesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,6 +41,8 @@ public class ListGatewayQuotaRulesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

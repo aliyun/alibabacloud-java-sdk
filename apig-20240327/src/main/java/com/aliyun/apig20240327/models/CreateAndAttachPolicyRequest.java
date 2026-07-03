@@ -5,125 +5,74 @@ import com.aliyun.tea.*;
 
 public class CreateAndAttachPolicyRequest extends TeaModel {
     /**
-     * <p>List of attachment point IDs.</p>
+     * <p>The list of target resource IDs to attach.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("attachResourceIds")
     public java.util.List<String> attachResourceIds;
 
     /**
-     * <p>Types of attachment points supported by the policy.</p>
-     * <ul>
-     * <li>HttpApi: HttpApi.</li>
-     * <li>Operation: Operation of HttpApi.</li>
-     * <li>GatewayRoute: Gateway route.</li>
-     * <li>GatewayService: Gateway service.</li>
-     * <li>GatewayServicePort: Gateway service port.</li>
-     * <li>Domain: Gateway domain.</li>
-     * <li>Gateway: Gateway.</li>
-     * </ul>
+     * <p>The type of the target resource to attach.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>HttpApi</p>
+     * <p>GatewayRoute</p>
      */
     @NameInMap("attachResourceType")
     public String attachResourceType;
 
     /**
-     * <p>The class name types supported by the policy. Different policies support different attachment points, to be used in conjunction with <code>attachResourceType</code>.</p>
-     * <ul>
-     * <li><p>RateLimit: Traffic control, supports HttpApi, Operation, GatewayRoute.</p>
-     * </li>
-     * <li><p>ConcurrencyLimit: Concurrency control, supports HttpApi, Operation, GatewayRoute.</p>
-     * </li>
-     * <li><p>CircuitBreaker: Circuit breaking and degradation, supports HttpApi, Operation, GatewayRoute.</p>
-     * </li>
-     * <li><p>HttpRewrite: HTTP rewrite, supports HttpApi, Operation, GatewayRoute.</p>
-     * </li>
-     * <li><p>HeaderModify: Header modification, supports HttpApi, Operation, GatewayRoute.</p>
-     * </li>
-     * <li><p>Cors: Cross-origin, supports HttpApi, Operation, GatewayRoute.</p>
-     * </li>
-     * <li><p>FlowCopy: Traffic replication, supports HttpApi, Operation, GatewayRoute.</p>
-     * </li>
-     * <li><p>Timeout: Timeout, supports HttpApi, Operation, GatewayRoute.</p>
-     * </li>
-     * <li><p>Retry: Retry, supports HttpApi, Operation, GatewayRoute.</p>
-     * </li>
-     * <li><p>IpAccessControl: IP access control, supports HttpApi, Operation, GatewayRoute, Domain, Gateway.</p>
-     * </li>
-     * <li><p>DirectResponse: Mock, supports Operation, GatewayRoute.</p>
-     * </li>
-     * <li><p>Redirect: Redirection, supports GatewayRoute.</p>
-     * </li>
-     * <li><p>Fallback: Fallback, supports Operation, GatewayRoute.</p>
-     * </li>
-     * <li><p>ServiceTls: Service TLS authentication, supports GatewayService.</p>
-     * </li>
-     * <li><p>ServiceLb: Service load balancing, supports GatewayService.</p>
-     * </li>
-     * <li><p>ServicePortTls: Service port TLS authentication, supports GatewayServicePort.</p>
-     * </li>
-     * <li><p>Waf: WAF protection, supports GatewayRoute, Gateway.</p>
-     * </li>
-     * <li><p>JWTAuth: JWT global authentication, supports Gateway.</p>
-     * </li>
-     * <li><p>OIDCAuth: OIDC global authentication, supports Gateway.</p>
-     * </li>
-     * <li><p>ExternalZAuth: Custom authorization, supports Gateway.</p>
-     * </li>
-     * </ul>
+     * <p>The policy type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>IpAccessControl</p>
+     * <p>AiFallback</p>
      */
     @NameInMap("className")
     public String className;
 
     /**
-     * <p>Configuration information.</p>
+     * <p>The policy configuration content (JSON string).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;enable\&quot;:false}</p>
+     * <p>{&quot;serviceConfigs&quot;:[...]}</p>
      */
     @NameInMap("config")
     public String config;
 
     /**
-     * <p>Policy description.</p>
+     * <p>The policy description.</p>
      * 
      * <strong>example:</strong>
-     * <p>这是策略描述</p>
+     * <p>主路由失败时回退</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>Environment ID.</p>
+     * <p>The environment ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>env-cq7l5s5lhtgi6qasrdc0</p>
+     * <p>env-test</p>
      */
     @NameInMap("environmentId")
     public String environmentId;
 
     /**
-     * <p>Gateway ID.</p>
+     * <p>The gateway ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>gw-cq7l5s5lhtgi6qasrdc0</p>
+     * <p>gw-xxx</p>
      */
     @NameInMap("gatewayId")
     public String gatewayId;
 
     /**
-     * <p>Policy name.</p>
+     * <p>The policy name.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>my-fallback-policy</p>
      */
     @NameInMap("name")
     public String name;

@@ -4,54 +4,156 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class PluginClassInfo extends TeaModel {
+    /**
+     * <p>The plugin class alias.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AI安全护栏</p>
+     */
     @NameInMap("alias")
     public String alias;
 
+    /**
+     * <p>The configuration example (JSON string).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;checkRequest&quot;:true}</p>
+     */
     @NameInMap("configExample")
     public String configExample;
 
+    /**
+     * <p>The plugin class description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AI请求内容安全检测插件</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The execution priority.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("executePriority")
     public Integer executePriority;
 
+    /**
+     * <p>The execution stage.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AUTHN</p>
+     */
     @NameInMap("executeStage")
     public String executeStage;
 
+    /**
+     * <p>The Wasm image name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>higress-registry.tencentcloudcr.com/ai-security-guard</p>
+     */
     @NameInMap("imageName")
     public String imageName;
 
+    /**
+     * <p>Indicates whether the plugin is a built-in plugin.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("innerPlugin")
     public Boolean innerPlugin;
 
+    /**
+     * <p>The plugin running mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Wasm</p>
+     */
     @NameInMap("mode")
     public String mode;
 
+    /**
+     * <p>The plugin class name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ai-security-guard</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The plugin class ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cls-xxx</p>
+     */
     @NameInMap("pluginClassId")
     public String pluginClassId;
 
+    /**
+     * <p>The plugin source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HigressOfficial</p>
+     */
     @NameInMap("source")
     public String source;
 
+    /**
+     * <p>The minimum supported gateway DPI engine version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2.1.11</p>
+     */
     @NameInMap("supportedMinGatewayVersion")
     public String supportedMinGatewayVersion;
 
+    /**
+     * <p>The plugin type category.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AI</p>
+     */
     @NameInMap("type")
     public String type;
 
+    /**
+     * <p>The plugin version number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.0.0</p>
+     */
     @NameInMap("version")
     public String version;
 
+    /**
+     * <p>The version description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>初始版本</p>
+     */
     @NameInMap("versionDescription")
     public String versionDescription;
 
+    /**
+     * <p>The Wasm programming language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Rust</p>
+     */
     @NameInMap("wasmLanguage")
     public String wasmLanguage;
 
+    /**
+     * <p>The Wasm file download URL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>https://...</p>
+     */
     @NameInMap("wasmUrl")
     public String wasmUrl;
 

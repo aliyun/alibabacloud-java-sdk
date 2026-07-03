@@ -131,7 +131,7 @@ public class CreateServiceRequest extends TeaModel {
         public java.util.List<String> addresses;
 
         /**
-         * <p>The Agent service configuration. This parameter is required when sourceType is set to AGENT.</p>
+         * <p>The Agent service configuration. This parameter is required when <code>sourceType</code> is set to <code>AGENT</code>.</p>
          */
         @NameInMap("agentServiceConfig")
         public AgentServiceConfig agentServiceConfig;
@@ -149,7 +149,7 @@ public class CreateServiceRequest extends TeaModel {
         public java.util.List<String> dnsServers;
 
         /**
-         * <p>The service expression type that identifies the special type or mode of the service.</p>
+         * <p>The service expression type. Identifies the special type or mode of the service.</p>
          * 
          * <strong>example:</strong>
          * <p>Standard</p>
@@ -166,6 +166,9 @@ public class CreateServiceRequest extends TeaModel {
         @NameInMap("groupName")
         public String groupName;
 
+        @NameInMap("modelProviderId")
+        public String modelProviderId;
+
         /**
          * <p>The service name.</p>
          * 
@@ -176,7 +179,7 @@ public class CreateServiceRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The namespace of the service.</p>
+         * <p>The namespace of the service:</p>
          * <ul>
          * <li>If sourceType is set to K8S, this parameter specifies the namespace of the Kubernetes service.</li>
          * <li>If sourceType is set to MSE_NACOS, this parameter specifies the namespace in Nacos.</li>
@@ -208,7 +211,7 @@ public class CreateServiceRequest extends TeaModel {
         public String sourceId;
 
         /**
-         * <p>The validation options for service verification configuration.</p>
+         * <p>The validation options. Configuration options related to service validation.</p>
          */
         @NameInMap("validationOptions")
         public CreateServiceRequestServiceConfigsValidationOptions validationOptions;
@@ -264,6 +267,14 @@ public class CreateServiceRequest extends TeaModel {
         }
         public String getGroupName() {
             return this.groupName;
+        }
+
+        public CreateServiceRequestServiceConfigs setModelProviderId(String modelProviderId) {
+            this.modelProviderId = modelProviderId;
+            return this;
+        }
+        public String getModelProviderId() {
+            return this.modelProviderId;
         }
 
         public CreateServiceRequestServiceConfigs setName(String name) {

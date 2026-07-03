@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SyncMCPServersResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -29,7 +29,7 @@ public class SyncMCPServersResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>2F46B9E7-67EF-5C8A-BA52-D38D5B32AF2C</p>
@@ -76,7 +76,7 @@ public class SyncMCPServersResponseBody extends TeaModel {
 
     public static class SyncMCPServersResponseBodyDataFailedMcpServers extends TeaModel {
         /**
-         * <p>The name of the MCP server.</p>
+         * <p>The MCP Server name.</p>
          * 
          * <strong>example:</strong>
          * <p>mcp-fail</p>
@@ -115,7 +115,7 @@ public class SyncMCPServersResponseBody extends TeaModel {
 
     public static class SyncMCPServersResponseBodyDataSucceedMcpServers extends TeaModel {
         /**
-         * <p>The name of the MCP server.</p>
+         * <p>The MCP Server name.</p>
          * 
          * <strong>example:</strong>
          * <p>mcp-success</p>
@@ -124,7 +124,7 @@ public class SyncMCPServersResponseBody extends TeaModel {
         public String mcpServerName;
 
         /**
-         * <p>The protocol.</p>
+         * <p>The protocols.</p>
          */
         @NameInMap("protocols")
         public java.util.List<String> protocols;
@@ -154,13 +154,13 @@ public class SyncMCPServersResponseBody extends TeaModel {
 
     public static class SyncMCPServersResponseBodyData extends TeaModel {
         /**
-         * <p>The list of MCP servers that failed to synchronize.</p>
+         * <p>The list of MCP Servers that failed to sync.</p>
          */
         @NameInMap("failedMcpServers")
         public java.util.List<SyncMCPServersResponseBodyDataFailedMcpServers> failedMcpServers;
 
         /**
-         * <p>The list of MCP servers successfully synchronized.</p>
+         * <p>The list of MCP Servers that were synced successfully.</p>
          */
         @NameInMap("succeedMcpServers")
         public java.util.List<SyncMCPServersResponseBodyDataSucceedMcpServers> succeedMcpServers;

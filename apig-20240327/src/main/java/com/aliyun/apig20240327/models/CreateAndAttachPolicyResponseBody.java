@@ -5,22 +5,22 @@ import com.aliyun.tea.*;
 
 public class CreateAndAttachPolicyResponseBody extends TeaModel {
     /**
-     * <p>Response code.</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
-     * <p>Ok</p>
+     * <p>200</p>
      */
     @NameInMap("code")
     public String code;
 
     /**
-     * <p>Response data.</p>
+     * <p>The response struct.</p>
      */
     @NameInMap("data")
     public CreateAndAttachPolicyResponseBodyData data;
 
     /**
-     * <p>Response message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -29,7 +29,7 @@ public class CreateAndAttachPolicyResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID, used for tracing the API call chain.</p>
+     * <p>Request ID</p>
      * 
      * <strong>example:</strong>
      * <p>585657D2-1C20-5B8A-AF17-D727C6490BE4</p>
@@ -76,16 +76,16 @@ public class CreateAndAttachPolicyResponseBody extends TeaModel {
 
     public static class CreateAndAttachPolicyResponseBodyData extends TeaModel {
         /**
-         * <p>Attachment information.</p>
+         * <p>The attachment information.</p>
          */
         @NameInMap("attachment")
         public Attachment attachment;
 
         /**
-         * <p>Policy ID.</p>
+         * <p>The ID of the newly created policy.</p>
          * 
          * <strong>example:</strong>
-         * <p>p-cq7l5s5lhtgi6qasrdc0</p>
+         * <p>plc-xxx</p>
          */
         @NameInMap("policyId")
         public String policyId;

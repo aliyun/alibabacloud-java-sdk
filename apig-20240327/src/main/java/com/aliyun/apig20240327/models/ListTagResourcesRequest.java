@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
+     * <p>The token that determines the start point of the next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>caeb235b-xxx</p>
      */
@@ -12,6 +14,8 @@ public class ListTagResourcesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The resource ID. You can specify up to 50 subkeys.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;gw-xxx&quot;,&quot;gw-yyy&quot;]</p>
      */
@@ -19,6 +23,8 @@ public class ListTagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
+     * <p>The resource type.</p>
+     * 
      * <strong>example:</strong>
      * <p>Gateway</p>
      */
@@ -26,6 +32,8 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>The list of labels to add. You can specify up to 20 subkeys.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{&quot;key&quot;:&quot;env&quot;,&quot;value&quot;:&quot;prod&quot;}]</p>
      */
@@ -71,6 +79,8 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
+         * <p>The label key.</p>
+         * 
          * <strong>example:</strong>
          * <p>env</p>
          */
@@ -78,6 +88,8 @@ public class ListTagResourcesRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The label value.</p>
+         * 
          * <strong>example:</strong>
          * <p>prod</p>
          */

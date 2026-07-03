@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPluginClassesResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class ListPluginClassesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response parameters.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public ListPluginClassesResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -29,7 +29,7 @@ public class ListPluginClassesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>61EBF577-1601-51E1-B136-9CD6xxxxxxxx</p>
@@ -76,7 +76,7 @@ public class ListPluginClassesResponseBody extends TeaModel {
 
     public static class ListPluginClassesResponseBodyDataItems extends TeaModel {
         /**
-         * <p>The alias of the plugin.</p>
+         * <p>The plug-in alias.</p>
          * 
          * <strong>example:</strong>
          * <p>OAuth2 认证</p>
@@ -85,7 +85,7 @@ public class ListPluginClassesResponseBody extends TeaModel {
         public String alias;
 
         /**
-         * <p>The description of the plugin.</p>
+         * <p>The plug-in description.</p>
          * 
          * <strong>example:</strong>
          * <p>基于 OAuth2 实现身份认证和鉴权。</p>
@@ -94,7 +94,7 @@ public class ListPluginClassesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Indicates whether the plugin is installed.</p>
+         * <p>Indicates whether the plug-in is installed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -103,7 +103,7 @@ public class ListPluginClassesResponseBody extends TeaModel {
         public Boolean installed;
 
         /**
-         * <p>The plugin name.</p>
+         * <p>The plug-in name.</p>
          * 
          * <strong>example:</strong>
          * <p>oauth</p>
@@ -112,7 +112,7 @@ public class ListPluginClassesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The plugin type ID.</p>
+         * <p>The plug-in type ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pls-d4ghv6em1hkixxxxxxxx</p>
@@ -121,7 +121,7 @@ public class ListPluginClassesResponseBody extends TeaModel {
         public String pluginClassId;
 
         /**
-         * <p>The plugin ID.</p>
+         * <p>The plug-in ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pl-cvu6r4um1hkoxxxxxxxx</p>
@@ -130,7 +130,7 @@ public class ListPluginClassesResponseBody extends TeaModel {
         public String pluginId;
 
         /**
-         * <p>The publishing status.</p>
+         * <p>The publish status.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -139,7 +139,7 @@ public class ListPluginClassesResponseBody extends TeaModel {
         public String publishStatus;
 
         /**
-         * <p>The source of the plugin.</p>
+         * <p>The plug-in source.</p>
          * 
          * <strong>example:</strong>
          * <p>HigressOfficial</p>
@@ -148,7 +148,7 @@ public class ListPluginClassesResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The minimum version of the gateway supported by the plugin.</p>
+         * <p>The minimum gateway version supported by the plug-in.</p>
          * 
          * <strong>example:</strong>
          * <p>2.0.0</p>
@@ -157,7 +157,7 @@ public class ListPluginClassesResponseBody extends TeaModel {
         public String supportedMinGatewayVersion;
 
         /**
-         * <p>The type of the plugin.</p>
+         * <p>The plug-in type.</p>
          * 
          * <strong>example:</strong>
          * <p>Auth</p>
@@ -166,7 +166,7 @@ public class ListPluginClassesResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The version.</p>
+         * <p>The plug-in version.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -271,7 +271,7 @@ public class ListPluginClassesResponseBody extends TeaModel {
 
     public static class ListPluginClassesResponseBodyData extends TeaModel {
         /**
-         * <p>The plugin details.</p>
+         * <p>The result objects.</p>
          */
         @NameInMap("items")
         public java.util.List<ListPluginClassesResponseBodyDataItems> items;

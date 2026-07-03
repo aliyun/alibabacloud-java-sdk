@@ -5,19 +5,25 @@ import com.aliyun.tea.*;
 
 public class HiMarketApiKeyConfig extends TeaModel {
     /**
-     * <p>An array of objects, each containing a valid API key and its associated mode.</p>
+     * <p>The list of credentials.</p>
      */
     @NameInMap("credentials")
     public java.util.List<HiMarketApiKeyConfigCredentials> credentials;
 
     /**
-     * <p>The name of the parameter that holds the API key. For example, if <code>source</code> is <code>HEADER</code>, this is the request header name, such as <code>X-API-Key</code>.</p>
+     * <p>The name of the location from which the API key is extracted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Apikey</p>
      */
     @NameInMap("key")
     public String key;
 
     /**
-     * <p>The location of the API key in the request. Valid values are <code>HEADER</code> and <code>QUERY</code>.</p>
+     * <p>The source type of the API key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Header</p>
      */
     @NameInMap("source")
     public String source;
@@ -53,13 +59,19 @@ public class HiMarketApiKeyConfig extends TeaModel {
 
     public static class HiMarketApiKeyConfigCredentials extends TeaModel {
         /**
-         * <p>The value of the API key.</p>
+         * <p>The API key value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-api-key-123</p>
          */
         @NameInMap("apiKey")
         public String apiKey;
 
         /**
-         * <p>The operational mode for the key, such as <code>test</code> or <code>production</code>.</p>
+         * <p>The generation mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom</p>
          */
         @NameInMap("mode")
         public String mode;

@@ -76,13 +76,13 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
 
     public static class QueryConsumerAuthorizationRulesResponseBodyDataItemsResourceInfo extends TeaModel {
         /**
-         * <p>接口信息。</p>
+         * <p>The operation information.</p>
          */
         @NameInMap("operationInfo")
         public HttpApiOperationInfo operationInfo;
 
         /**
-         * <p>路由规则。</p>
+         * <p>The routing rule.</p>
          */
         @NameInMap("route")
         public HttpRoute route;
@@ -112,13 +112,13 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
 
     public static class QueryConsumerAuthorizationRulesResponseBodyDataItems extends TeaModel {
         /**
-         * <p>API信息详情。</p>
+         * <p>The API information.</p>
          */
         @NameInMap("apiInfo")
         public HttpApiApiInfo apiInfo;
 
         /**
-         * <p>消费者授权规则ID。</p>
+         * <p>The consumer authorization rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>car-csgeka5lhtggrjcprok0</p>
@@ -127,7 +127,17 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         public String consumerAuthorizationRuleId;
 
         /**
-         * <p>消费者ID。</p>
+         * <strong>example:</strong>
+         * <p>csg-8c13d2b4f8a1</p>
+         */
+        @NameInMap("consumerGroupId")
+        public String consumerGroupId;
+
+        @NameInMap("consumerGroupInfo")
+        public ConsumerGroupInfo consumerGroupInfo;
+
+        /**
+         * <p>The consumer ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-csheiftlhtgmp0j0hp4g</p>
@@ -136,13 +146,13 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         public String consumerId;
 
         /**
-         * <p>消费者信息详情。</p>
+         * <p>The consumer information.</p>
          */
         @NameInMap("consumerInfo")
         public ConsumerInfo consumerInfo;
 
         /**
-         * <p>创建时间戳。单位: 毫秒。</p>
+         * <p>The creation timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1719386834548</p>
@@ -151,7 +161,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
-         * <p>API在当前环境的发布状态</p>
+         * <p>The publish status of the API in the current environment.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -160,13 +170,17 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         public String deployStatus;
 
         /**
-         * <p>环境信息。</p>
+         * <p>The environment context.</p>
          */
         @NameInMap("environmentInfo")
         public EnvironmentInfo environmentInfo;
 
         /**
-         * <p>失效模式。LongTerm、ShortTerm，二选一。</p>
+         * <p>The expiration mode. Valid values:</p>
+         * <ul>
+         * <li>LongTerm</li>
+         * <li>ShortTerm</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ShortTerm</p>
@@ -175,7 +189,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         public String expireMode;
 
         /**
-         * <p>失效状态。</p>
+         * <p>The expiration status.</p>
          * 
          * <strong>example:</strong>
          * <p>InEffect</p>
@@ -184,7 +198,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         public String expireStatus;
 
         /**
-         * <p>到期时间。</p>
+         * <p>The expiration time.</p>
          * 
          * <strong>example:</strong>
          * <p>172086834548</p>
@@ -193,13 +207,20 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         public Long expireTimestamp;
 
         /**
-         * <p>网关信息。</p>
+         * <p>The gateway information.</p>
          */
         @NameInMap("gatewayInfo")
         public GatewayInfo gatewayInfo;
 
         /**
-         * <p>资源ID。</p>
+         * <strong>example:</strong>
+         * <p>ConsumerGroup</p>
+         */
+        @NameInMap("principalType")
+        public String principalType;
+
+        /**
+         * <p>The resource ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2351944</p>
@@ -208,13 +229,13 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>资源信息详情。</p>
+         * <p>The resource information.</p>
          */
         @NameInMap("resourceInfo")
         public QueryConsumerAuthorizationRulesResponseBodyDataItemsResourceInfo resourceInfo;
 
         /**
-         * <p>资源类型。</p>
+         * <p>The resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>HttpApiRoute</p>
@@ -223,7 +244,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>更新时间戳。单位: 毫秒。</p>
+         * <p>The update timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1719386834548</p>
@@ -250,6 +271,22 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         }
         public String getConsumerAuthorizationRuleId() {
             return this.consumerAuthorizationRuleId;
+        }
+
+        public QueryConsumerAuthorizationRulesResponseBodyDataItems setConsumerGroupId(String consumerGroupId) {
+            this.consumerGroupId = consumerGroupId;
+            return this;
+        }
+        public String getConsumerGroupId() {
+            return this.consumerGroupId;
+        }
+
+        public QueryConsumerAuthorizationRulesResponseBodyDataItems setConsumerGroupInfo(ConsumerGroupInfo consumerGroupInfo) {
+            this.consumerGroupInfo = consumerGroupInfo;
+            return this;
+        }
+        public ConsumerGroupInfo getConsumerGroupInfo() {
+            return this.consumerGroupInfo;
         }
 
         public QueryConsumerAuthorizationRulesResponseBodyDataItems setConsumerId(String consumerId) {
@@ -324,6 +361,14 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             return this.gatewayInfo;
         }
 
+        public QueryConsumerAuthorizationRulesResponseBodyDataItems setPrincipalType(String principalType) {
+            this.principalType = principalType;
+            return this;
+        }
+        public String getPrincipalType() {
+            return this.principalType;
+        }
+
         public QueryConsumerAuthorizationRulesResponseBodyDataItems setResourceId(String resourceId) {
             this.resourceId = resourceId;
             return this;
@@ -360,7 +405,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
 
     public static class QueryConsumerAuthorizationRulesResponseBodyData extends TeaModel {
         /**
-         * <p>消费者规则列表。</p>
+         * <p>The list of consumer rules.</p>
          */
         @NameInMap("items")
         public java.util.List<QueryConsumerAuthorizationRulesResponseBodyDataItems> items;

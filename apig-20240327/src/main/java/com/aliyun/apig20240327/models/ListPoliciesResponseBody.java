@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPoliciesResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -14,13 +14,13 @@ public class ListPoliciesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response payload.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public ListPoliciesResponseBodyData data;
 
     /**
-     * <p>The status message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -29,7 +29,7 @@ public class ListPoliciesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID for API call tracing.</p>
+     * <p>The request ID, which is used to trace the API call chain.</p>
      * 
      * <strong>example:</strong>
      * <p>393E2630-DBE7-5221-AB35-9E740675491A</p>
@@ -91,7 +91,7 @@ public class ListPoliciesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -100,7 +100,7 @@ public class ListPoliciesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>18</p>

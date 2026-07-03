@@ -55,33 +55,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>该接口用于对AI网关增加基于消费者的配额规则。注意，只针对于版本大于2.1.19的AI网关生效。</p>
+     * <p>This operation adds a consumer-based quota rule to an AI gateway. This operation takes effect only on AI gateways of version 2.1.19 or later.</p>
      * <blockquote>
-     * <p> 推荐调用逻辑：</p>
+     * <p> Recommended call logic:</p>
      * <ul>
-     * <li>一、先 dryRun 预检检验是否存在规则冲突</li>
+     * <li><ol>
+     * <li>Perform a dry run to check for rule conflicts.</li>
+     * </ol>
+     * </li>
      * <li><ul>
-     * <li>传dryRun=true</li>
+     * <li>Set dryRun=true.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>返回含conflictHash的冲突预览</li>
+     * <li>The response contains a conflict preview with conflictHash.</li>
      * </ul>
      * </li>
-     * <li>二、确认后正式提交</li>
+     * <li><ol start="2">
+     * <li>Submit the request after confirmation.</li>
+     * </ol>
+     * </li>
      * <li><ul>
-     * <li>无冲突：dryRun=false,overwrite=false</li>
+     * <li>No conflict: dryRun=false, overwrite=false.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>有冲突且确认覆盖：dryRun=false,overwrite=true, conflictHash=&lt;上一步返回的值＞</li>
+     * <li>Conflict exists and overwrite confirmed: dryRun=false, overwrite=true, conflictHash=<value returned in the previous step></li>
      * </ul>
      * </li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>新增网关配额限流规则</p>
+     * <p>Creates a gateway quota throttling rule.</p>
      * 
      * @param request AddGatewayQuotaRuleRequest
      * @param headers map
@@ -159,33 +165,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>该接口用于对AI网关增加基于消费者的配额规则。注意，只针对于版本大于2.1.19的AI网关生效。</p>
+     * <p>This operation adds a consumer-based quota rule to an AI gateway. This operation takes effect only on AI gateways of version 2.1.19 or later.</p>
      * <blockquote>
-     * <p> 推荐调用逻辑：</p>
+     * <p> Recommended call logic:</p>
      * <ul>
-     * <li>一、先 dryRun 预检检验是否存在规则冲突</li>
+     * <li><ol>
+     * <li>Perform a dry run to check for rule conflicts.</li>
+     * </ol>
+     * </li>
      * <li><ul>
-     * <li>传dryRun=true</li>
+     * <li>Set dryRun=true.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>返回含conflictHash的冲突预览</li>
+     * <li>The response contains a conflict preview with conflictHash.</li>
      * </ul>
      * </li>
-     * <li>二、确认后正式提交</li>
+     * <li><ol start="2">
+     * <li>Submit the request after confirmation.</li>
+     * </ol>
+     * </li>
      * <li><ul>
-     * <li>无冲突：dryRun=false,overwrite=false</li>
+     * <li>No conflict: dryRun=false, overwrite=false.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>有冲突且确认覆盖：dryRun=false,overwrite=true, conflictHash=&lt;上一步返回的值＞</li>
+     * <li>Conflict exists and overwrite confirmed: dryRun=false, overwrite=true, conflictHash=<value returned in the previous step></li>
      * </ul>
      * </li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>新增网关配额限流规则</p>
+     * <p>Creates a gateway quota throttling rule.</p>
      * 
      * @param request AddGatewayQuotaRuleRequest
      * @return AddGatewayQuotaRuleResponse
@@ -253,7 +265,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes API consumer authorization rules in batches.</p>
+     * <p>Revokes consumer authorization rules in batches.</p>
      * 
      * @param request BatchDeleteConsumerAuthorizationRuleRequest
      * @param headers map
@@ -287,7 +299,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes API consumer authorization rules in batches.</p>
+     * <p>Revokes consumer authorization rules in batches.</p>
      * 
      * @param request BatchDeleteConsumerAuthorizationRuleRequest
      * @return BatchDeleteConsumerAuthorizationRuleResponse
@@ -300,7 +312,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Moves a resource from one resource group to another.</p>
+     * <p>Transfers a resource to a different resource group.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @param headers map
@@ -346,7 +358,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Moves a resource from one resource group to another.</p>
+     * <p>Transfers a resource to a different resource group.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
@@ -355,6 +367,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.changeResourceGroupWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建AI模型供应商</p>
+     * 
+     * @param request CreateAiModelProviderRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAiModelProviderResponse
+     */
+    public CreateAiModelProviderResponse createAiModelProviderWithOptions(CreateAiModelProviderRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            body.put("displayName", request.displayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
+            body.put("gatewayId", request.gatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.provider)) {
+            body.put("provider", request.provider);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceIds)) {
+            body.put("serviceIds", request.serviceIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAiModelProvider"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/ai-model-providers"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAiModelProviderResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建AI模型供应商</p>
+     * 
+     * @param request CreateAiModelProviderRequest
+     * @return CreateAiModelProviderResponse
+     */
+    public CreateAiModelProviderResponse createAiModelProvider(CreateAiModelProviderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createAiModelProviderWithOptions(request, headers, runtime);
     }
 
     /**
@@ -991,7 +1062,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create an Operation for HTTP API</p>
+     * <p>Creates operations for an HTTP API.</p>
      * 
      * @param request CreateHttpApiOperationRequest
      * @param headers map
@@ -1025,7 +1096,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create an Operation for HTTP API</p>
+     * <p>Creates operations for an HTTP API.</p>
      * 
      * @param request CreateHttpApiOperationRequest
      * @return CreateHttpApiOperationResponse
@@ -1287,6 +1358,89 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Creates a custom plugin class.</p>
+     * 
+     * @param request CreatePluginClassRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreatePluginClassResponse
+     */
+    public CreatePluginClassResponse createPluginClassWithOptions(CreatePluginClassRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.alias)) {
+            body.put("alias", request.alias);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.executePriority)) {
+            body.put("executePriority", request.executePriority);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.executeStage)) {
+            body.put("executeStage", request.executeStage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.supportedMinGatewayVersion)) {
+            body.put("supportedMinGatewayVersion", request.supportedMinGatewayVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
+            body.put("version", request.version);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versionDescription)) {
+            body.put("versionDescription", request.versionDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wasmLanguage)) {
+            body.put("wasmLanguage", request.wasmLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wasmUrl)) {
+            body.put("wasmUrl", request.wasmUrl);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreatePluginClass"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/plugin-classes"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePluginClassResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a custom plugin class.</p>
+     * 
+     * @param request CreatePluginClassRequest
+     * @return CreatePluginClassResponse
+     */
+    public CreatePluginClassResponse createPluginClass(CreatePluginClassRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createPluginClassWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a policy.</p>
      * 
      * @param request CreatePolicyRequest
@@ -1479,7 +1633,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a service.</p>
+     * <p>Creates services.</p>
      * 
      * @param request CreateServiceRequest
      * @param headers map
@@ -1534,7 +1688,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a service.</p>
+     * <p>Creates services.</p>
      * 
      * @param request CreateServiceRequest
      * @return CreateServiceResponse
@@ -1854,10 +2008,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>该接口用于对 AI 网关删除某条基于消费者的配额规则。注意，只针对于版本大于 2.1.19 的 AI 网关生效。</p>
+     * <p>Deletes a consumer-based quota rule from an AI gateway. This operation applies only to AI gateways of version 2.1.19 or later.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除网关配额限流规则</p>
+     * <p>Deletes a quota throttling rule from a gateway.</p>
      * 
      * @param request DeleteGatewayQuotaRuleRequest
      * @param headers map
@@ -1885,10 +2039,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>该接口用于对 AI 网关删除某条基于消费者的配额规则。注意，只针对于版本大于 2.1.19 的 AI 网关生效。</p>
+     * <p>Deletes a consumer-based quota rule from an AI gateway. This operation applies only to AI gateways of version 2.1.19 or later.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除网关配额限流规则</p>
+     * <p>Deletes a quota throttling rule from a gateway.</p>
      * 
      * @param request DeleteGatewayQuotaRuleRequest
      * @return DeleteGatewayQuotaRuleResponse
@@ -1948,7 +2102,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an HTTP API.</p>
+     * <p>Deletes a specified HTTP API.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1974,7 +2128,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an HTTP API.</p>
+     * <p>Deletes a specified HTTP API.</p>
      * @return DeleteHttpApiResponse
      */
     public DeleteHttpApiResponse deleteHttpApi(String httpApiId) throws Exception {
@@ -2022,7 +2176,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a route in an HTTP API.</p>
+     * <p>Deletes a route of an HTTP API.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2048,7 +2202,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a route in an HTTP API.</p>
+     * <p>Deletes a route of an HTTP API.</p>
      * @return DeleteHttpApiRouteResponse
      */
     public DeleteHttpApiRouteResponse deleteHttpApiRoute(String httpApiId, String routeId) throws Exception {
@@ -2207,7 +2361,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>接口支持创建多个服务。</p>
+     * <p>The operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a key value.</p>
@@ -2236,7 +2390,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>接口支持创建多个服务。</p>
+     * <p>The operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a key value.</p>
@@ -2416,7 +2570,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deploys an MCP server.</p>
+     * <p>Publishes an MCP server.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2442,7 +2596,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deploys an MCP server.</p>
+     * <p>Publishes an MCP server.</p>
      * @return DeployMcpServerResponse
      */
     public DeployMcpServerResponse deployMcpServer(String mcpServerId) throws Exception {
@@ -2453,7 +2607,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询当前账号可见的云原生API网关开服地域</p>
+     * <p>Queries the regions where the cloud-native API gateway is available for the current account.</p>
      * 
      * @param request DescribeRegionsRequest
      * @param headers map
@@ -2487,7 +2641,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询当前账号可见的云原生API网关开服地域</p>
+     * <p>Queries the regions where the cloud-native API gateway is available for the current account.</p>
      * 
      * @param request DescribeRegionsRequest
      * @return DescribeRegionsResponse
@@ -2857,10 +3011,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>该接口用于查询 AI 网关上某条消费者配额规则。</p>
+     * <p>This operation queries a specific consumer quota rule on an AI gateway.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询网关配额限流规则详情</p>
+     * <p>Queries the details of a gateway quota rate limiting rule.</p>
      * 
      * @param request GetGatewayQuotaRuleRequest
      * @param headers map
@@ -2902,10 +3056,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>该接口用于查询 AI 网关上某条消费者配额规则。</p>
+     * <p>This operation queries a specific consumer quota rule on an AI gateway.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询网关配额限流规则详情</p>
+     * <p>Queries the details of a gateway quota rate limiting rule.</p>
      * 
      * @param request GetGatewayQuotaRuleRequest
      * @return GetGatewayQuotaRuleResponse
@@ -2918,10 +3072,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>该接口用于获取配额规则下的某个消费者用量详情。注意，只针对于版本大于 2.1.19 的 AI 网关生效。</p>
+     * <p>Retrieves the usage details of a specific consumer under a quota rule. This operation takes effect only for AI gateways with a version later than 2.1.19.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询网关配额限流规则主体用量详情</p>
+     * <p>Queries the usage details of a subject under a gateway quota rate-limiting rule, including used quota, total quota, whether the limit is exceeded, usage details, and consumption records.</p>
      * 
      * @param request GetGatewayQuotaRuleSubjectUsageRequest
      * @param headers map
@@ -2959,10 +3113,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>该接口用于获取配额规则下的某个消费者用量详情。注意，只针对于版本大于 2.1.19 的 AI 网关生效。</p>
+     * <p>Retrieves the usage details of a specific consumer under a quota rule. This operation takes effect only for AI gateways with a version later than 2.1.19.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询网关配额限流规则主体用量详情</p>
+     * <p>Queries the usage details of a subject under a gateway quota rate-limiting rule, including used quota, total quota, whether the limit is exceeded, usage details, and consumption records.</p>
      * 
      * @param request GetGatewayQuotaRuleSubjectUsageRequest
      * @return GetGatewayQuotaRuleSubjectUsageResponse
@@ -2975,7 +3129,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Read HttpApi</p>
+     * <p>Retrieves HTTP API information.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3001,7 +3155,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Read HttpApi</p>
+     * <p>Retrieves HTTP API information.</p>
      * @return GetHttpApiResponse
      */
     public GetHttpApiResponse getHttpApi(String httpApiId) throws Exception {
@@ -3086,10 +3240,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The API supports creating multiple services.</p>
+     * <p>The operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
-     * <p>Get MCP Server.</p>
+     * <p>Retrieves an MCP server.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3115,10 +3269,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The API supports creating multiple services.</p>
+     * <p>The operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
-     * <p>Get MCP Server.</p>
+     * <p>Retrieves an MCP server.</p>
      * @return GetMcpServerResponse
      */
     public GetMcpServerResponse getMcpServer(String mcpServerId) throws Exception {
@@ -3129,7 +3283,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a plugin attachment.</p>
+     * <p>Queries a plugin mount.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3155,13 +3309,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a plugin attachment.</p>
+     * <p>Queries a plugin mount.</p>
      * @return GetPluginAttachmentResponse
      */
     public GetPluginAttachmentResponse getPluginAttachment(String pluginAttachmentId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getPluginAttachmentWithOptions(pluginAttachmentId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves a custom plugin class.</p>
+     * 
+     * @param request GetPluginClassRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetPluginClassResponse
+     */
+    public GetPluginClassResponse getPluginClassWithOptions(String pluginClassId, GetPluginClassRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetPluginClass"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/plugin-classes/" + com.aliyun.openapiutil.Client.getEncodeParam(pluginClassId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetPluginClassResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves a custom plugin class.</p>
+     * 
+     * @param request GetPluginClassRequest
+     * @return GetPluginClassResponse
+     */
+    public GetPluginClassResponse getPluginClass(String pluginClassId, GetPluginClassRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getPluginClassWithOptions(pluginClassId, request, headers, runtime);
     }
 
     /**
@@ -3203,7 +3398,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a policy attachment.</p>
+     * <p>Queries the resource attachment of a policy.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3229,7 +3424,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a policy attachment.</p>
+     * <p>Queries the resource attachment of a policy.</p>
      * @return GetPolicyAttachmentResponse
      */
     public GetPolicyAttachmentResponse getPolicyAttachment(String policyAttachmentId) throws Exception {
@@ -3240,7 +3435,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get resource overview information</p>
+     * <p>Retrieves resource overview information.</p>
      * 
      * @param request GetResourceOverviewRequest
      * @param headers map
@@ -3274,7 +3469,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get resource overview information</p>
+     * <p>Retrieves resource overview information.</p>
      * 
      * @param request GetResourceOverviewRequest
      * @return GetResourceOverviewResponse
@@ -3287,10 +3482,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to create multiple services at a time.</p>
+     * <p>The operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
-     * <p>Obtains the key.</p>
+     * <p>Retrieves a key.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3316,10 +3511,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to create multiple services at a time.</p>
+     * <p>The operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
-     * <p>Obtains the key.</p>
+     * <p>Retrieves a key.</p>
      * @return GetSecretResponse
      */
     public GetSecretResponse getSecret(String secretId) throws Exception {
@@ -3330,10 +3525,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>接口支持创建多个服务。</p>
+     * <p>The operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
-     * <p>Gets the key value.</p>
+     * <p>Retrieves the value of a key.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3359,10 +3554,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>接口支持创建多个服务。</p>
+     * <p>The operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
-     * <p>Gets the key value.</p>
+     * <p>Retrieves the value of a key.</p>
      * @return GetSecretValueResponse
      */
     public GetSecretValueResponse getSecretValue(String name) throws Exception {
@@ -3373,7 +3568,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets service details.</p>
+     * <p>Retrieves the details of a service.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3399,7 +3594,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets service details.</p>
+     * <p>Retrieves the details of a service.</p>
      * @return GetServiceResponse
      */
     public GetServiceResponse getService(String serviceId) throws Exception {
@@ -3699,7 +3894,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询消费者配额限流规则列表</p>
+     * <p>Queries the list of quota rules configured for a specific consumer.</p>
      * 
      * @param request ListConsumerQuotaRulesRequest
      * @param headers map
@@ -3745,7 +3940,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询消费者配额限流规则列表</p>
+     * <p>Queries the list of quota rules configured for a specific consumer.</p>
      * 
      * @param request ListConsumerQuotaRulesRequest
      * @return ListConsumerQuotaRulesResponse
@@ -3758,7 +3953,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of consumers.</p>
+     * <p>Retrieves a list of consumers.</p>
      * 
      * @param request ListConsumersRequest
      * @param headers map
@@ -3804,7 +3999,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of consumers.</p>
+     * <p>Retrieves a list of consumers.</p>
      * 
      * @param request ListConsumersRequest
      * @return ListConsumersResponse
@@ -3888,7 +4083,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of environments.</p>
+     * <p>Queries the list of environments.</p>
      * 
      * @deprecated OpenAPI ListEnvironments is deprecated
      * 
@@ -3954,7 +4149,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of environments.</p>
+     * <p>Queries the list of environments.</p>
      * 
      * @deprecated OpenAPI ListEnvironments is deprecated
      * 
@@ -3971,10 +4166,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>接口支持创建多个服务。</p>
+     * <p>This operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
-     * <p>获取网关外的服务信息</p>
+     * <p>Retrieves the external service information of a gateway.</p>
      * 
      * @param request ListExternalServicesRequest
      * @param headers map
@@ -4024,10 +4219,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>接口支持创建多个服务。</p>
+     * <p>This operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
-     * <p>获取网关外的服务信息</p>
+     * <p>Retrieves the external service information of a gateway.</p>
      * 
      * @param request ListExternalServicesRequest
      * @return ListExternalServicesResponse
@@ -4040,7 +4235,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the feature parameter configurations of an instance.</p>
+     * <p>Queries the list of gateway attribute parameter settings.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4066,7 +4261,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the feature parameter configurations of an instance.</p>
+     * <p>Queries the list of gateway attribute parameter settings.</p>
      * @return ListGatewayFeaturesResponse
      */
     public ListGatewayFeaturesResponse listGatewayFeatures(String gatewayId) throws Exception {
@@ -4077,10 +4272,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>该接口用于查询网关上绑定的消费者配额规则列表</p>
+     * <p>Queries the list of API consumer quota rules bound to a gateway.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询网关周期配额规则列表</p>
+     * <p>Queries the list of API consumer quota rules bound to a gateway.</p>
      * 
      * @param request ListGatewayQuotaRulesRequest
      * @param headers map
@@ -4130,10 +4325,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>该接口用于查询网关上绑定的消费者配额规则列表</p>
+     * <p>Queries the list of API consumer quota rules bound to a gateway.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询网关周期配额规则列表</p>
+     * <p>Queries the list of API consumer quota rules bound to a gateway.</p>
      * 
      * @param request ListGatewayQuotaRulesRequest
      * @return ListGatewayQuotaRulesResponse
@@ -4146,7 +4341,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of instances.</p>
+     * <p>Queries a list of gateways.</p>
      * 
      * @param tmpReq ListGatewaysRequest
      * @param headers map
@@ -4214,7 +4409,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of instances.</p>
+     * <p>Queries a list of gateways.</p>
      * 
      * @param request ListGatewaysRequest
      * @return ListGatewaysResponse
@@ -4227,7 +4422,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List Operations</p>
+     * <p>Retrieves a list of API operations.</p>
      * 
      * @param request ListHttpApiOperationsRequest
      * @param headers map
@@ -4309,7 +4504,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List Operations</p>
+     * <p>Retrieves a list of API operations.</p>
      * 
      * @param request ListHttpApiOperationsRequest
      * @return ListHttpApiOperationsResponse
@@ -4425,7 +4620,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of HTTP APIs.</p>
+     * <p>Retrieves a list of HTTP APIs.</p>
      * 
      * @param request ListHttpApisRequest
      * @param headers map
@@ -4523,7 +4718,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of HTTP APIs.</p>
+     * <p>Retrieves a list of HTTP APIs.</p>
      * 
      * @param request ListHttpApisRequest
      * @return ListHttpApisResponse
@@ -4536,7 +4731,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to create multiple services at a time.</p>
+     * <p>The operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves a list of MCP servers.</p>
@@ -4597,7 +4792,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to create multiple services at a time.</p>
+     * <p>The operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves a list of MCP servers.</p>
@@ -4613,7 +4808,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of plug-in attachments.</p>
+     * <p>Retrieves the list of plug-in mounts.</p>
      * 
      * @param request ListPluginAttachmentsRequest
      * @param headers map
@@ -4679,7 +4874,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of plug-in attachments.</p>
+     * <p>Retrieves the list of plug-in mounts.</p>
      * 
      * @param request ListPluginAttachmentsRequest
      * @return ListPluginAttachmentsResponse
@@ -4692,10 +4887,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to create multiple services at a time.</p>
+     * <p>The operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
-     * <p>Obtains a plugin.</p>
+     * <p>Retrieves plug-ins.</p>
      * 
      * @param request ListPluginClassesRequest
      * @param headers map
@@ -4769,10 +4964,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to create multiple services at a time.</p>
+     * <p>The operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
-     * <p>Obtains a plugin.</p>
+     * <p>Retrieves plug-ins.</p>
      * 
      * @param request ListPluginClassesRequest
      * @return ListPluginClassesResponse
@@ -4785,7 +4980,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries plug-ins.</p>
+     * <p>Retrieves a list of plugins.</p>
      * 
      * @param request ListPluginsRequest
      * @param headers map
@@ -4855,7 +5050,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries plug-ins.</p>
+     * <p>Retrieves a list of plugins.</p>
      * 
      * @param request ListPluginsRequest
      * @return ListPluginsResponse
@@ -4868,7 +5063,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries policies.</p>
+     * <p>Queries a list of policies.</p>
      * 
      * @param request ListPoliciesRequest
      * @param headers map
@@ -4922,7 +5117,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries policies.</p>
+     * <p>Queries a list of policies.</p>
      * 
      * @param request ListPoliciesRequest
      * @return ListPoliciesResponse
@@ -5006,10 +5201,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to create multiple services at a time.</p>
+     * <p>This operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists key references.</p>
+     * <p>Lists secret references.</p>
      * 
      * @param request ListSecretReferencesRequest
      * @param headers map
@@ -5047,10 +5242,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to create multiple services at a time.</p>
+     * <p>This operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists key references.</p>
+     * <p>Lists secret references.</p>
      * 
      * @param request ListSecretReferencesRequest
      * @return ListSecretReferencesResponse
@@ -5063,10 +5258,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The API supports creating multiple services.</p>
+     * <p>The operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
-     * <p>List keys.</p>
+     * <p>Lists keys.</p>
      * 
      * @param request ListSecretsRequest
      * @param headers map
@@ -5112,10 +5307,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The API supports creating multiple services.</p>
+     * <p>The operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
-     * <p>List keys.</p>
+     * <p>Lists keys.</p>
      * 
      * @param request ListSecretsRequest
      * @return ListSecretsResponse
@@ -5258,7 +5453,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查标签接口</p>
+     * <p>Retrieves the list of resource labels.</p>
      * 
      * @param tmpReq ListTagResourcesRequest
      * @param headers map
@@ -5314,7 +5509,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查标签接口</p>
+     * <p>Retrieves the list of resource labels.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -5327,7 +5522,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve the availability zones under a cloud-native API gateway region</p>
+     * <p>Retrieves the zones available for a cloud-native API gateway in a specified region.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5353,7 +5548,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve the availability zones under a cloud-native API gateway region</p>
+     * <p>Retrieves the zones available for a cloud-native API gateway in a specified region.</p>
      * @return ListZonesResponse
      */
     public ListZonesResponse listZones() throws Exception {
@@ -5376,6 +5571,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.apiNameLike)) {
             query.put("apiNameLike", request.apiNameLike);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.consumerGroupId)) {
+            query.put("consumerGroupId", request.consumerGroupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.consumerId)) {
@@ -5404,6 +5603,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.parentResourceId)) {
             query.put("parentResourceId", request.parentResourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.principalType)) {
+            query.put("principalType", request.principalType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
@@ -5451,7 +5654,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a consumer authorization rule.</p>
+     * <p>Deletes an API consumer authorization rule.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5477,7 +5680,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a consumer authorization rule.</p>
+     * <p>Deletes an API consumer authorization rule.</p>
      * @return RemoveConsumerAuthorizationRuleResponse
      */
     public RemoveConsumerAuthorizationRuleResponse removeConsumerAuthorizationRule(String consumerAuthorizationRuleId) throws Exception {
@@ -5488,33 +5691,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>该接口用于重置网关上某条配额限流规则。注意，只针对于版本大于 2.1.19 的 AI 网关生效；重置将清零规则上消费者历史用量。</p>
+     * <p>Resets a quota rate limiting rule on a gateway. This operation takes effect only for AI gateways with a version later than 2.1.19. The reset clears the historical usage of consumers on the rule.</p>
      * <blockquote>
-     * <p> 推荐调用逻辑：</p>
+     * <p> Recommended call logic:</p>
      * <ul>
-     * <li>一、先 dryRun 预检检验是否存在规则冲突</li>
+     * <li><ol>
+     * <li>Perform a dry run to check for rule conflicts.</li>
+     * </ol>
+     * </li>
      * <li><ul>
-     * <li>传dryRun=true</li>
+     * <li>Set dryRun=true.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>返回含conflictHash的冲突预览</li>
+     * <li>The response contains a conflict preview with conflictHash.</li>
      * </ul>
      * </li>
-     * <li>二、确认后正式提交</li>
+     * <li><ol start="2">
+     * <li>Submit the request after confirmation.</li>
+     * </ol>
+     * </li>
      * <li><ul>
-     * <li>无冲突：dryRun=false,overwrite=false</li>
+     * <li>No conflict: dryRun=false, overwrite=false.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>有冲突且确认覆盖：dryRun=false,overwrite=true, conflictHash=&lt;上一步返回的值＞</li>
+     * <li>Conflict exists and overwrite confirmed: dryRun=false, overwrite=true, conflictHash=<value returned in the previous step></li>
      * </ul>
      * </li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>重置网关配额限流规则</p>
+     * <p>Resets a quota rate limiting rule on a gateway.</p>
      * 
      * @param request ResetGatewayQuotaRuleRequest
      * @param headers map
@@ -5576,33 +5785,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>该接口用于重置网关上某条配额限流规则。注意，只针对于版本大于 2.1.19 的 AI 网关生效；重置将清零规则上消费者历史用量。</p>
+     * <p>Resets a quota rate limiting rule on a gateway. This operation takes effect only for AI gateways with a version later than 2.1.19. The reset clears the historical usage of consumers on the rule.</p>
      * <blockquote>
-     * <p> 推荐调用逻辑：</p>
+     * <p> Recommended call logic:</p>
      * <ul>
-     * <li>一、先 dryRun 预检检验是否存在规则冲突</li>
+     * <li><ol>
+     * <li>Perform a dry run to check for rule conflicts.</li>
+     * </ol>
+     * </li>
      * <li><ul>
-     * <li>传dryRun=true</li>
+     * <li>Set dryRun=true.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>返回含conflictHash的冲突预览</li>
+     * <li>The response contains a conflict preview with conflictHash.</li>
      * </ul>
      * </li>
-     * <li>二、确认后正式提交</li>
+     * <li><ol start="2">
+     * <li>Submit the request after confirmation.</li>
+     * </ol>
+     * </li>
      * <li><ul>
-     * <li>无冲突：dryRun=false,overwrite=false</li>
+     * <li>No conflict: dryRun=false, overwrite=false.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>有冲突且确认覆盖：dryRun=false,overwrite=true, conflictHash=&lt;上一步返回的值＞</li>
+     * <li>Conflict exists and overwrite confirmed: dryRun=false, overwrite=true, conflictHash=<value returned in the previous step></li>
      * </ul>
      * </li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>重置网关配额限流规则</p>
+     * <p>Resets a quota rate limiting rule on a gateway.</p>
      * 
      * @param request ResetGatewayQuotaRuleRequest
      * @return ResetGatewayQuotaRuleResponse
@@ -5615,7 +5830,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Restarts an instance.</p>
+     * <p>Restarts a gateway.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5641,7 +5856,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Restarts an instance.</p>
+     * <p>Restarts a gateway.</p>
      * @return RestartGatewayResponse
      */
     public RestartGatewayResponse restartGateway(String gatewayId) throws Exception {
@@ -5652,7 +5867,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Synchronizes Nacos Model Context Protocol (MCP) server configurations to Cloud-native API Gateway.</p>
+     * <p>Syncs an external MCP server.</p>
      * 
      * @param request SyncMCPServersRequest
      * @param headers map
@@ -5702,7 +5917,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Synchronizes Nacos Model Context Protocol (MCP) server configurations to Cloud-native API Gateway.</p>
+     * <p>Syncs an external MCP server.</p>
      * 
      * @param request SyncMCPServersRequest
      * @return SyncMCPServersResponse
@@ -5715,7 +5930,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>打标签接口</p>
+     * <p>Adds labels to resources.</p>
      * 
      * @param request TagResourcesRequest
      * @param headers map
@@ -5757,7 +5972,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>打标签接口</p>
+     * <p>Adds labels to resources.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -5770,7 +5985,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Undeploys an MCP server.</p>
+     * <p>Cancels the publication of an MCP server.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5796,7 +6011,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Undeploys an MCP server.</p>
+     * <p>Cancels the publication of an MCP server.</p>
      * @return UnDeployMcpServerResponse
      */
     public UnDeployMcpServerResponse unDeployMcpServer(String mcpServerId) throws Exception {
@@ -5807,7 +6022,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Unpublishes an HTTP API.</p>
+     * <p>Cancels the deployment of an HTTP API.</p>
      * 
      * @param request UndeployHttpApiRequest
      * @param headers map
@@ -5853,7 +6068,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Unpublishes an HTTP API.</p>
+     * <p>Cancels the deployment of an HTTP API.</p>
      * 
      * @param request UndeployHttpApiRequest
      * @return UndeployHttpApiResponse
@@ -5866,7 +6081,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Uninstalls a plug-in.</p>
+     * <p>Uninstalls a plugin.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5892,7 +6107,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Uninstalls a plug-in.</p>
+     * <p>Uninstalls a plugin.</p>
      * @return UninstallPluginResponse
      */
     public UninstallPluginResponse uninstallPlugin(String pluginId) throws Exception {
@@ -5903,7 +6118,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删标签接口</p>
+     * <p>Removes tags from resources.</p>
      * 
      * @param tmpReq UntagResourcesRequest
      * @param headers map
@@ -5959,7 +6174,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删标签接口</p>
+     * <p>Removes tags from resources.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
@@ -6043,7 +6258,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a consumer.</p>
+     * <p>Updates an API consumer.</p>
      * 
      * @param request UpdateConsumerRequest
      * @param headers map
@@ -6093,7 +6308,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a consumer.</p>
+     * <p>Updates an API consumer.</p>
      * 
      * @param request UpdateConsumerRequest
      * @return UpdateConsumerResponse
@@ -6254,7 +6469,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>UpdateEnvironment</p>
+     * <p>Updates an environment.</p>
      * 
      * @deprecated OpenAPI UpdateEnvironment is deprecated
      * 
@@ -6296,7 +6511,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>UpdateEnvironment</p>
+     * <p>Updates an environment.</p>
      * 
      * @deprecated OpenAPI UpdateEnvironment is deprecated
      * 
@@ -6313,7 +6528,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the configuration of an instance feature parameter.</p>
+     * <p>Updates the attribute parameters of a gateway.</p>
      * 
      * @param request UpdateGatewayFeatureRequest
      * @param headers map
@@ -6347,7 +6562,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the configuration of an instance feature parameter.</p>
+     * <p>Updates the attribute parameters of a gateway.</p>
      * 
      * @param request UpdateGatewayFeatureRequest
      * @return UpdateGatewayFeatureResponse
@@ -6360,7 +6575,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The response message returned.</p>
+     * <p>Modifies the name of a gateway.</p>
      * 
      * @deprecated OpenAPI UpdateGatewayName is deprecated
      * 
@@ -6398,7 +6613,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The response message returned.</p>
+     * <p>Modifies the name of a gateway.</p>
      * 
      * @deprecated OpenAPI UpdateGatewayName is deprecated
      * 
@@ -6415,33 +6630,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>该接口用于编辑网关上某条配额规则。注意，只针对于版本大于2.1.19的AI网关生效；编辑将保留规则上消费者历史用量。</p>
+     * <p>Edits a quota rule on a gateway. This operation takes effect only on AI gateways with a version later than 2.1.19. Editing a rule preserves the historical usage of consumers on the rule.</p>
      * <blockquote>
-     * <p> 推荐调用逻辑：</p>
+     * <p> Recommended call logic:</p>
      * <ul>
-     * <li>一、先 dryRun 预检检验是否存在规则冲突</li>
+     * <li>Step 1: Perform a dry run to check for rule conflicts.</li>
      * <li><ul>
-     * <li>传dryRun=true</li>
+     * <li>Set dryRun to true.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>返回含conflictHash的冲突预览</li>
+     * <li>The response contains a conflict preview with conflictHash.</li>
      * </ul>
      * </li>
-     * <li>二、确认后正式提交</li>
+     * <li>Step 2: Submit the request after confirmation.</li>
      * <li><ul>
-     * <li>无冲突：dryRun=false,overwrite=false</li>
+     * <li>No conflicts: Set dryRun to false and overwrite to false.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>有冲突且确认覆盖：dryRun=false,overwrite=true, conflictHash=&lt;上一步返回的值＞</li>
+     * <li>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</li>
      * </ul>
      * </li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>更新网关配额限流规则</p>
+     * <p>Edits a quota throttling rule on a gateway.</p>
      * 
      * @param request UpdateGatewayQuotaRuleRequest
      * @param headers map
@@ -6503,33 +6718,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>该接口用于编辑网关上某条配额规则。注意，只针对于版本大于2.1.19的AI网关生效；编辑将保留规则上消费者历史用量。</p>
+     * <p>Edits a quota rule on a gateway. This operation takes effect only on AI gateways with a version later than 2.1.19. Editing a rule preserves the historical usage of consumers on the rule.</p>
      * <blockquote>
-     * <p> 推荐调用逻辑：</p>
+     * <p> Recommended call logic:</p>
      * <ul>
-     * <li>一、先 dryRun 预检检验是否存在规则冲突</li>
+     * <li>Step 1: Perform a dry run to check for rule conflicts.</li>
      * <li><ul>
-     * <li>传dryRun=true</li>
+     * <li>Set dryRun to true.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>返回含conflictHash的冲突预览</li>
+     * <li>The response contains a conflict preview with conflictHash.</li>
      * </ul>
      * </li>
-     * <li>二、确认后正式提交</li>
+     * <li>Step 2: Submit the request after confirmation.</li>
      * <li><ul>
-     * <li>无冲突：dryRun=false,overwrite=false</li>
+     * <li>No conflicts: Set dryRun to false and overwrite to false.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>有冲突且确认覆盖：dryRun=false,overwrite=true, conflictHash=&lt;上一步返回的值＞</li>
+     * <li>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</li>
      * </ul>
      * </li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>更新网关配额限流规则</p>
+     * <p>Edits a quota throttling rule on a gateway.</p>
      * 
      * @param request UpdateGatewayQuotaRuleRequest
      * @return UpdateGatewayQuotaRuleResponse
@@ -6542,10 +6757,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>该接口用于启用或者停用网关上某个配额规则。注意，只针对于版本大于2.1.19的AI网关生效。</p>
+     * <p>Enables or disables a quota rule on a gateway. This operation takes effect only for AI gateways with a version later than 2.1.19.</p>
      * 
      * <b>summary</b> : 
-     * <p>启/停用网关配额限流规则</p>
+     * <p>Enables or disables a quota throttling rule for a gateway.</p>
      * 
      * @param request UpdateGatewayQuotaRuleStatusRequest
      * @param headers map
@@ -6583,10 +6798,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>该接口用于启用或者停用网关上某个配额规则。注意，只针对于版本大于2.1.19的AI网关生效。</p>
+     * <p>Enables or disables a quota rule on a gateway. This operation takes effect only for AI gateways with a version later than 2.1.19.</p>
      * 
      * <b>summary</b> : 
-     * <p>启/停用网关配额限流规则</p>
+     * <p>Enables or disables a quota throttling rule for a gateway.</p>
      * 
      * @param request UpdateGatewayQuotaRuleStatusRequest
      * @return UpdateGatewayQuotaRuleStatusResponse
@@ -6741,7 +6956,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a route of an HTTP API.</p>
+     * <p>Updates a route of an HttpApi.</p>
      * 
      * @param request UpdateHttpApiRouteRequest
      * @param headers map
@@ -6799,7 +7014,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a route of an HTTP API.</p>
+     * <p>Updates a route of an HttpApi.</p>
      * 
      * @param request UpdateHttpApiRouteRequest
      * @return UpdateHttpApiRouteResponse
@@ -6812,7 +7027,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can only update the listening Ingress configuration for sources of the <strong>ACK</strong> type.</p>
+     * <p>Only sources of the <strong>Container Service</strong> type are allowed to update the listener Ingress configuration.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates an MCP server.</p>
@@ -6893,7 +7108,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can only update the listening Ingress configuration for sources of the <strong>ACK</strong> type.</p>
+     * <p>Only sources of the <strong>Container Service</strong> type are allowed to update the listener Ingress configuration.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates an MCP server.</p>
@@ -6909,7 +7124,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a plug-in attachment.</p>
+     * <p>Updates a plugin mount.</p>
      * 
      * @param request UpdatePluginAttachmentRequest
      * @param headers map
@@ -6951,7 +7166,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a plug-in attachment.</p>
+     * <p>Updates a plugin mount.</p>
      * 
      * @param request UpdatePluginAttachmentRequest
      * @return UpdatePluginAttachmentResponse
@@ -7019,10 +7234,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can only update the listening Ingress configuration for sources of the <strong>ACK</strong> type.</p>
+     * <p>Only sources of the <strong>container service</strong> type allow you to update the configuration for listening to Ingress.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the key.</p>
+     * <p>Updates a key pair.</p>
      * 
      * @param request UpdateSecretRequest
      * @param headers map
@@ -7056,10 +7271,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can only update the listening Ingress configuration for sources of the <strong>ACK</strong> type.</p>
+     * <p>Only sources of the <strong>container service</strong> type allow you to update the configuration for listening to Ingress.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the key.</p>
+     * <p>Updates a key pair.</p>
      * 
      * @param request UpdateSecretRequest
      * @return UpdateSecretResponse
@@ -7072,7 +7287,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update a service. You can update the health check configuration of the service, and the configuration information of DNS domain names and static addresses.</p>
+     * <p>Updates a service. You can update the health check configuration, DNS domain name, and address configuration of fixed addresses for the service.</p>
      * 
      * @param request UpdateServiceRequest
      * @param headers map
@@ -7104,6 +7319,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.healthyPanicThreshold)) {
             body.put("healthyPanicThreshold", request.healthyPanicThreshold);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelProviderId)) {
+            body.put("modelProviderId", request.modelProviderId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.outlierDetectionConfig)) {
@@ -7138,7 +7357,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update a service. You can update the health check configuration of the service, and the configuration information of DNS domain names and static addresses.</p>
+     * <p>Updates a service. You can update the health check configuration, DNS domain name, and address configuration of fixed addresses for the service.</p>
      * 
      * @param request UpdateServiceRequest
      * @return UpdateServiceResponse
@@ -7198,7 +7417,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the version of a Cloud-native API Gateway instance.</p>
+     * <p>Upgrades the gateway version.</p>
      * 
      * @param request UpgradeGatewayRequest
      * @param headers map
@@ -7232,7 +7451,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the version of a Cloud-native API Gateway instance.</p>
+     * <p>Upgrades the gateway version.</p>
      * 
      * @param request UpgradeGatewayRequest
      * @return UpgradeGatewayResponse

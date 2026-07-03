@@ -13,7 +13,7 @@ public class CreateHttpApiRequest extends TeaModel {
     /**
      * <p>The AI API protocols. The following protocols are supported:</p>
      * <ul>
-     * <li>OpenAI/v1.</li>
+     * <li>OpenAI/v1</li>
      * </ul>
      */
     @NameInMap("aiProtocols")
@@ -50,7 +50,7 @@ public class CreateHttpApiRequest extends TeaModel {
     public java.util.List<HttpApiDeployConfig> deployConfigs;
 
     /**
-     * <p>The API description.</p>
+     * <p>The description of the API.</p>
      * 
      * <strong>example:</strong>
      * <p>测试专用API。</p>
@@ -59,7 +59,7 @@ public class CreateHttpApiRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to perform a dry run without executing the operation.</p>
+     * <p>Specifies whether to perform a dry run without actually executing the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -87,7 +87,7 @@ public class CreateHttpApiRequest extends TeaModel {
     public Integer firstByteTimeout;
 
     /**
-     * <p>The HTTP Ingress API configuration.</p>
+     * <p>The configuration of the HTTP Ingress API.</p>
      */
     @NameInMap("ingressConfig")
     public CreateHttpApiRequestIngressConfig ingressConfig;
@@ -102,7 +102,7 @@ public class CreateHttpApiRequest extends TeaModel {
     public String modelCategory;
 
     /**
-     * <p>The API name.</p>
+     * <p>The name of the API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -152,7 +152,7 @@ public class CreateHttpApiRequest extends TeaModel {
      * <li>WebSocket</li>
      * <li>HttpIngress</li>
      * <li>LLM</li>
-     * <li>Agent.</li>
+     * <li>Agent</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -162,7 +162,7 @@ public class CreateHttpApiRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The API versioning configuration.</p>
+     * <p>The versioning configuration of the API.</p>
      */
     @NameInMap("versionConfig")
     public HttpApiVersionConfig versionConfig;

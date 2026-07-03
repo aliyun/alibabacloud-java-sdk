@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateEnvironmentRequest extends TeaModel {
     /**
-     * <p>The request body.</p>
+     * <p>The environment alias.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateEnvironmentRequest extends TeaModel {
     public String alias;
 
     /**
-     * <p>The environment alias.</p>
+     * <p>The description of the environment. You can specify information such as the purpose and owner of the environment.</p>
      * 
      * <strong>example:</strong>
      * <p>这是xxx的xx项目测试环境</p>
@@ -24,7 +24,7 @@ public class CreateEnvironmentRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The environment description, such as its purpose and owner.</p>
+     * <p>The gateway ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class CreateEnvironmentRequest extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>Create environment.</p>
+     * <p>The environment name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class CreateEnvironmentRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Testing environment for xx project of xxx</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-ahr5uil8raz0rq3b</p>

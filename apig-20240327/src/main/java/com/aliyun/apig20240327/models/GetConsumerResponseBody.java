@@ -74,21 +74,92 @@ public class GetConsumerResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class GetConsumerResponseBodyDataConsumerGroups extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>csg-8c13d2b4f8a1</p>
+         */
+        @NameInMap("consumerGroupId")
+        public String consumerGroupId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>用于线上 API 调用方分组</p>
+         */
+        @NameInMap("description")
+        public String description;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1715769600000</p>
+         */
+        @NameInMap("joinTimestamp")
+        public Long joinTimestamp;
+
+        /**
+         * <strong>example:</strong>
+         * <p>api-consumer-group</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        public static GetConsumerResponseBodyDataConsumerGroups build(java.util.Map<String, ?> map) throws Exception {
+            GetConsumerResponseBodyDataConsumerGroups self = new GetConsumerResponseBodyDataConsumerGroups();
+            return TeaModel.build(map, self);
+        }
+
+        public GetConsumerResponseBodyDataConsumerGroups setConsumerGroupId(String consumerGroupId) {
+            this.consumerGroupId = consumerGroupId;
+            return this;
+        }
+        public String getConsumerGroupId() {
+            return this.consumerGroupId;
+        }
+
+        public GetConsumerResponseBodyDataConsumerGroups setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public GetConsumerResponseBodyDataConsumerGroups setJoinTimestamp(Long joinTimestamp) {
+            this.joinTimestamp = joinTimestamp;
+            return this;
+        }
+        public Long getJoinTimestamp() {
+            return this.joinTimestamp;
+        }
+
+        public GetConsumerResponseBodyDataConsumerGroups setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
     public static class GetConsumerResponseBodyData extends TeaModel {
         /**
-         * <p>The AK/SK identity authentication configurations.</p>
+         * <p>The AccessKey pair authentication configuration.</p>
          */
         @NameInMap("akSkIdentityConfigs")
         public java.util.List<AkSkIdentityConfig> akSkIdentityConfigs;
 
         /**
-         * <p>The API key identity authentication configuration.</p>
+         * <p>The API key authentication configuration.</p>
          */
         @NameInMap("apiKeyIdentityConfig")
         public ApiKeyIdentityConfig apiKeyIdentityConfig;
 
+        @NameInMap("consumerGroups")
+        public java.util.List<GetConsumerResponseBodyDataConsumerGroups> consumerGroups;
+
         /**
-         * <p>The consumer ID.</p>
+         * <p>The API consumer ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-cvgbtk6m1hkji5sb8dr0</p>
@@ -124,7 +195,7 @@ public class GetConsumerResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Indicates whether the consumer is enabled.</p>
+         * <p>Indicates whether the API consumer is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -133,13 +204,13 @@ public class GetConsumerResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The JWT identity authentication configuration.</p>
+         * <p>The JWT authentication configuration.</p>
          */
         @NameInMap("jwtIdentityConfig")
         public JwtIdentityConfig jwtIdentityConfig;
 
         /**
-         * <p>The consumer name.</p>
+         * <p>The API consumer name.</p>
          * 
          * <strong>example:</strong>
          * <p>consumer-1</p>
@@ -175,6 +246,14 @@ public class GetConsumerResponseBody extends TeaModel {
         }
         public ApiKeyIdentityConfig getApiKeyIdentityConfig() {
             return this.apiKeyIdentityConfig;
+        }
+
+        public GetConsumerResponseBodyData setConsumerGroups(java.util.List<GetConsumerResponseBodyDataConsumerGroups> consumerGroups) {
+            this.consumerGroups = consumerGroups;
+            return this;
+        }
+        public java.util.List<GetConsumerResponseBodyDataConsumerGroups> getConsumerGroups() {
+            return this.consumerGroups;
         }
 
         public GetConsumerResponseBodyData setConsumerId(String consumerId) {

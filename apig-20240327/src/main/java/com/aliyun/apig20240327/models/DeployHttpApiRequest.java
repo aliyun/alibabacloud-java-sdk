@@ -12,13 +12,13 @@ public class DeployHttpApiRequest extends TeaModel {
     public DeployHttpApiRequestHttpApiConfig httpApiConfig;
 
     /**
-     * <p>The deployment configuration for the REST API. This parameter is required when the HTTP API to be published is a REST API.</p>
+     * <p>The REST API deployment configuration. Required when the HTTP API being published is a REST API.</p>
      */
     @NameInMap("restApiConfig")
     public DeployHttpApiRequestRestApiConfig restApiConfig;
 
     /**
-     * <p>The route ID. This parameter is required when you publish a route of an HTTP API.</p>
+     * <p>The route ID. Required when publishing a route of an HTTP API.</p>
      * 
      * <strong>example:</strong>
      * <p>hr-cr82undlhtgrl***</p>
@@ -369,7 +369,7 @@ public class DeployHttpApiRequest extends TeaModel {
         public java.util.List<String> operationIds;
 
         /**
-         * <p>The historical version number. If this parameter is specified, the publish information is based on the historical version.</p>
+         * <p>The historical version number. If this field is specified, the publish information is based on the historical version.</p>
          * 
          * <strong>example:</strong>
          * <p>apr-xxx</p>

@@ -29,7 +29,7 @@ public class CreateConsumerResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>479AE38F-A574-52F7-87EA-E91199999F9E</p>

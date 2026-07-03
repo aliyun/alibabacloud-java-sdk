@@ -11,25 +11,25 @@ public class UpdateServiceRequest extends TeaModel {
     public java.util.List<String> addresses;
 
     /**
-     * <p>The agent service configurations.</p>
+     * <p>The agent service configuration.</p>
      */
     @NameInMap("agentServiceConfig")
     public AgentServiceConfig agentServiceConfig;
 
     /**
-     * <p>The AI service configurations.</p>
+     * <p>The AI service configuration.</p>
      */
     @NameInMap("aiServiceConfig")
     public AiServiceConfig aiServiceConfig;
 
     /**
-     * <p>A DNS service address.</p>
+     * <p>The DNS server addresses.</p>
      */
     @NameInMap("dnsServers")
     public java.util.List<String> dnsServers;
 
     /**
-     * <p>The health check configurations.</p>
+     * <p>The health check configuration of the service.</p>
      */
     @NameInMap("healthCheckConfig")
     public UpdateServiceRequestHealthCheckConfig healthCheckConfig;
@@ -43,8 +43,11 @@ public class UpdateServiceRequest extends TeaModel {
     @NameInMap("healthyPanicThreshold")
     public Float healthyPanicThreshold;
 
+    @NameInMap("modelProviderId")
+    public String modelProviderId;
+
     /**
-     * <p>The passive health check configurations.</p>
+     * <p>The passive health check parameter settings.</p>
      */
     @NameInMap("outlierDetectionConfig")
     public UpdateServiceRequestOutlierDetectionConfig outlierDetectionConfig;
@@ -56,7 +59,7 @@ public class UpdateServiceRequest extends TeaModel {
     public java.util.List<UpdateServiceRequestPorts> ports;
 
     /**
-     * <p>The service protocol.</p>
+     * <p>The protocol of the service.</p>
      * 
      * <strong>example:</strong>
      * <p>HTTP</p>
@@ -117,6 +120,14 @@ public class UpdateServiceRequest extends TeaModel {
         return this.healthyPanicThreshold;
     }
 
+    public UpdateServiceRequest setModelProviderId(String modelProviderId) {
+        this.modelProviderId = modelProviderId;
+        return this;
+    }
+    public String getModelProviderId() {
+        return this.modelProviderId;
+    }
+
     public UpdateServiceRequest setOutlierDetectionConfig(UpdateServiceRequestOutlierDetectionConfig outlierDetectionConfig) {
         this.outlierDetectionConfig = outlierDetectionConfig;
         return this;
@@ -143,7 +154,7 @@ public class UpdateServiceRequest extends TeaModel {
 
     public static class UpdateServiceRequestHealthCheckConfig extends TeaModel {
         /**
-         * <p>Specifies whether to enable health checks.</p>
+         * <p>Specifies whether to enable health checks for the service.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -152,13 +163,13 @@ public class UpdateServiceRequest extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The normal status codes to be returned. This parameter is required if the health check protocol is HTTP.</p>
+         * <p>The list of expected HTTP status codes that indicate a healthy response. This parameter is required when the protocol is HTTP.</p>
          */
         @NameInMap("expectedStatuses")
         public java.util.List<String> expectedStatuses;
 
         /**
-         * <p>The healthy threshold.</p>
+         * <p>The healthy threshold for health checks.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -167,7 +178,7 @@ public class UpdateServiceRequest extends TeaModel {
         public Integer healthyThreshold;
 
         /**
-         * <p>The domain name that you want to use for health checks. Optional. This parameter is available if the health check protocol is HTTP.</p>
+         * <p>The domain name for health checks. This parameter is optional and can be configured when the protocol is HTTP.</p>
          * 
          * <strong>example:</strong>
          * <p>dev.itemcener.com</p>
@@ -176,7 +187,7 @@ public class UpdateServiceRequest extends TeaModel {
         public String httpHost;
 
         /**
-         * <p>The request path of health checks. This parameter is required if the health check protocol is HTTP.</p>
+         * <p>The request path for health checks. This parameter is required when the protocol is HTTP.</p>
          * 
          * <strong>example:</strong>
          * <p>/healthz</p>
@@ -185,7 +196,7 @@ public class UpdateServiceRequest extends TeaModel {
         public String httpPath;
 
         /**
-         * <p>The health check interval. Unit: seconds</p>
+         * <p>The health check interval. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -194,12 +205,7 @@ public class UpdateServiceRequest extends TeaModel {
         public Integer interval;
 
         /**
-         * <p>The protocol over which the system performs health checks.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>TCP</li>
-         * <li>HTTP</li>
-         * </ul>
+         * <p>The protocol used for health checks.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP</p>
@@ -208,7 +214,7 @@ public class UpdateServiceRequest extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The timeout period for a health check response. Unit: seconds</p>
+         * <p>The response timeout period for health checks. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -217,7 +223,7 @@ public class UpdateServiceRequest extends TeaModel {
         public Integer timeout;
 
         /**
-         * <p>The unhealthy threshold.</p>
+         * <p>The unhealthy threshold for health checks.</p>
          * 
          * <strong>example:</strong>
          * <p>22</p>
@@ -306,7 +312,7 @@ public class UpdateServiceRequest extends TeaModel {
 
     public static class UpdateServiceRequestOutlierDetectionConfig extends TeaModel {
         /**
-         * <p>The initial isolation duration after a node is isolated (e.g., 30 seconds). The isolation time is calculated as: k \* base_ejection_time (with k initially set to 1). Each subsequent isolation increases the isolation time (k is incremented by 1), while consecutive healthy checks gradually decrease the isolation time (k is decremented by 1).</p>
+         * <p>The base ejection time, which is the initial isolation duration after a node is ejected (for example, 30 seconds). The isolation time is calculated by using the following formula: k × base_ejection_time (the initial value of k is 1). Each ejection increases the isolation time (k is incremented by 1). If consecutive checks are healthy, the isolation time is gradually reduced (k is decremented by 1).</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -325,7 +331,7 @@ public class UpdateServiceRequest extends TeaModel {
 
         /**
          * <p>The panic threshold.</p>
-         * <p>When the proportion of healthy nodes in the service is greater than the panic threshold, health checks take effect normally, and requests are only sent to healthy nodes, not to ejected nodes. When the proportion of healthy nodes in the service is less than or equal to the panic threshold, health checks are effectively disabled, and requests are sent to all nodes, including those that have been ejected nodes.</p>
+         * <p>When the proportion of healthy nodes in the service is greater than the panic threshold, health checks function normally. Requests are sent only to healthy nodes and not to ejected nodes. When the proportion of healthy nodes in the service is less than or equal to the panic threshold, health checks are effectively disabled. Requests are sent to all nodes, including ejected nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -334,7 +340,7 @@ public class UpdateServiceRequest extends TeaModel {
         public Integer failurePercentageMinimumHosts;
 
         /**
-         * <p>When the request failure rate of a node reaches this threshold, the system triggers the isolation mechanism of the node.</p>
+         * <p>The failure percentage threshold. When the percentage of failed requests on a node reaches this threshold, the system triggers the ejection mechanism for the node.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -409,7 +415,7 @@ public class UpdateServiceRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The port.</p>
+         * <p>The port number.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>

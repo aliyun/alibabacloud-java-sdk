@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPluginAttachmentsResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -14,13 +14,13 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response payload.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public ListPluginAttachmentsResponseBodyData data;
 
     /**
-     * <p>The status message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -29,7 +29,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>9640D776-794A-5077-9184-A247CA4B45C1</p>
@@ -76,19 +76,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
 
     public static class ListPluginAttachmentsResponseBodyDataItems extends TeaModel {
         /**
-         * <p>The types of resource attachments.</p>
-         * <ul>
-         * <li><p>HttpApi</p>
-         * </li>
-         * <li><p>Operation</p>
-         * </li>
-         * <li><p>GatewayRoute</p>
-         * </li>
-         * <li><p>GatewayDomain</p>
-         * </li>
-         * <li><p>Gateway</p>
-         * </li>
-         * </ul>
+         * <p>The plug-in mount resource type. Valid values: GatewayRoute, Gateway, GatewayDomain, HttpApi, and Operation.</p>
          * 
          * <strong>example:</strong>
          * <p>GatewayRoute</p>
@@ -97,7 +85,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
         public String attachResourceType;
 
         /**
-         * <p>Indicates if enabled.</p>
+         * <p>Indicates whether the plug-in mount is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -106,19 +94,19 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The environment metadata.</p>
+         * <p>The environment context.</p>
          */
         @NameInMap("environmentInfo")
         public EnvironmentInfo environmentInfo;
 
         /**
-         * <p>The parent resource metadata.</p>
+         * <p>The parent resource information.</p>
          */
         @NameInMap("parentResourceInfo")
         public ParentResourceInfo parentResourceInfo;
 
         /**
-         * <p>The ID of the resource attachment.</p>
+         * <p>The plug-in mount ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pa-d0j9t5em1hkncrlo51mg</p>
@@ -127,13 +115,13 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
         public String pluginAttachmentId;
 
         /**
-         * <p>The plug-in type metadata.</p>
+         * <p>The plug-in type information.</p>
          */
         @NameInMap("pluginClassInfo")
         public PluginClassInfo pluginClassInfo;
 
         /**
-         * <p>The plug-in configurations (Base64-encoded).</p>
+         * <p>The Base64-encoded content of the original plug-in configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>bGltaXRfYnlfaGVhZGVyOiB4LWFwaS1rZXkKbGltaXRfa2V5czoKLSBrZXk6IGV4YW1wbGUta2V5LWEKICBxdWVyeV9wZXJfc2Vjb25kOiAxMAotIGtleTogZXhhbXBsZS1rZXktYgogIHF1ZXJ5X3Blcl9zZWNvbmQ6IDEK</p>
@@ -151,7 +139,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
         public String pluginId;
 
         /**
-         * <p>The information of resource attachments.</p>
+         * <p>The mount resource information.</p>
          */
         @NameInMap("resourceInfos")
         public java.util.List<ResourceInfo> resourceInfos;
@@ -237,7 +225,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
 
     public static class ListPluginAttachmentsResponseBodyData extends TeaModel {
         /**
-         * <p>The details of resource attachments.</p>
+         * <p>The item details.</p>
          */
         @NameInMap("items")
         public java.util.List<ListPluginAttachmentsResponseBodyDataItems> items;
@@ -252,7 +240,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -261,7 +249,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

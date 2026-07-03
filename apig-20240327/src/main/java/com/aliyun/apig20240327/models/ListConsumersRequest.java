@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListConsumersRequest extends TeaModel {
     /**
-     * <p>The instance type. Valid values: <strong>AI</strong> and <strong>API</strong>.</p>
+     * <p>Filters by gateway type. Valid values: <strong>AI</strong> and <strong>API</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>AI</p>
@@ -14,7 +14,7 @@ public class ListConsumersRequest extends TeaModel {
     public String gatewayType;
 
     /**
-     * <p>The name used to perform a fuzzy search for operations.</p>
+     * <p>Fuzzy matches APIs by API name.</p>
      * 
      * <strong>example:</strong>
      * <p>UI-test</p>
@@ -23,7 +23,7 @@ public class ListConsumersRequest extends TeaModel {
     public String nameLike;
 
     /**
-     * <p>The page number to return. Pages start from 1. Default value: 1.</p>
+     * <p>The page number, starting from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

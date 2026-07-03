@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
+     * <p>Specifies whether to delete all tags. This parameter takes effect only when tags are empty. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * <li>True</li>
+     * <li>False</li>
+     * </ul>
+     * <p>Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +21,8 @@ public class UntagResourcesRequest extends TeaModel {
     public Boolean all;
 
     /**
+     * <p>The resource IDs. You can specify up to 50 subkeys.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;gw-xxx&quot;,&quot;gw-yyy&quot;]</p>
      */
@@ -19,6 +30,8 @@ public class UntagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
+     * <p>The resource type.</p>
+     * 
      * <strong>example:</strong>
      * <p>gateway</p>
      */
@@ -26,6 +39,8 @@ public class UntagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>The list of tag keys. You can specify up to 20 subkeys.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;env&quot;,&quot;team&quot;]</p>
      */

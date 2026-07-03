@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response data.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;usedAmount&quot;:500}</p>
      */
@@ -19,6 +23,8 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
     public GetGatewayQuotaRuleSubjectUsageResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -26,6 +32,8 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>1234567890</p>
      */
@@ -71,6 +79,8 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
 
     public static class GetGatewayQuotaRuleSubjectUsageResponseBodyDataDetailsItems extends TeaModel {
         /**
+         * <p>The cached token consumption.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -78,6 +88,8 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public Long cachedAmount;
 
         /**
+         * <p>The input token consumption.</p>
+         * 
          * <strong>example:</strong>
          * <p>120</p>
          */
@@ -85,6 +97,8 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public Long inputAmount;
 
         /**
+         * <p>The model name.</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen-plus</p>
          */
@@ -92,6 +106,8 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public String model;
 
         /**
+         * <p>The output token consumption.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
@@ -99,6 +115,8 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public Long outputAmount;
 
         /**
+         * <p>The consumption (request) time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-06-05 13:16:31</p>
          */
@@ -106,6 +124,8 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The total consumption.</p>
+         * 
          * <strong>example:</strong>
          * <p>210</p>
          */
@@ -169,6 +189,8 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
 
     public static class GetGatewayQuotaRuleSubjectUsageResponseBodyDataDetails extends TeaModel {
         /**
+         * <p>The list of usage details.</p>
+         * 
          * <strong>example:</strong>
          * <p>[{&quot;model&quot;:&quot;qwen-plus&quot;,\&quot;usedAmount\&quot;:210}]</p>
          */
@@ -176,6 +198,8 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public java.util.List<GetGatewayQuotaRuleSubjectUsageResponseBodyDataDetailsItems> items;
 
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -183,6 +207,8 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The current page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -190,6 +216,8 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -237,6 +265,8 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
 
     public static class GetGatewayQuotaRuleSubjectUsageResponseBodyData extends TeaModel {
         /**
+         * <p>The total cached token consumption.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -244,6 +274,8 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public Long cachedAmount;
 
         /**
+         * <p>The paginated consumption details.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;totalSize&quot;:100}</p>
          */
@@ -251,6 +283,8 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public GetGatewayQuotaRuleSubjectUsageResponseBodyDataDetails details;
 
         /**
+         * <p>The total input token consumption.</p>
+         * 
          * <strong>example:</strong>
          * <p>300</p>
          */
@@ -258,6 +292,8 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public Long inputAmount;
 
         /**
+         * <p>The total output token consumption.</p>
+         * 
          * <strong>example:</strong>
          * <p>180</p>
          */
@@ -265,6 +301,8 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public Long outputAmount;
 
         /**
+         * <p>Indicates whether the quota limit is exceeded.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -272,6 +310,8 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public Boolean overLimit;
 
         /**
+         * <p>The total quota of the subject.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -279,6 +319,8 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public Long totalQuota;
 
         /**
+         * <p>The total used amount of the subject.</p>
+         * 
          * <strong>example:</strong>
          * <p>500</p>
          */

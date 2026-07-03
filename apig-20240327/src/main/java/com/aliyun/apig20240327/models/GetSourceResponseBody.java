@@ -76,7 +76,7 @@ public class GetSourceResponseBody extends TeaModel {
 
     public static class GetSourceResponseBodyDataK8SSourceInfo extends TeaModel {
         /**
-         * <p>The container service cluster ID.</p>
+         * <p>The Container Service cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c2d290b2d8b5d4935864cace5f0173f31</p>
@@ -198,7 +198,7 @@ public class GetSourceResponseBody extends TeaModel {
         public GetSourceResponseBodyDataK8SSourceInfo k8SSourceInfo;
 
         /**
-         * <p>The Microservices Engine (MSE) Nacos source information.</p>
+         * <p>The MSE Nacos source information.</p>
          */
         @NameInMap("nacosSourceInfo")
         public GetSourceResponseBodyDataNacosSourceInfo nacosSourceInfo;

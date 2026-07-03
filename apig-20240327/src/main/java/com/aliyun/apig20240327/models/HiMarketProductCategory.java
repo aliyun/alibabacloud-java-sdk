@@ -5,25 +5,34 @@ import com.aliyun.tea.*;
 
 public class HiMarketProductCategory extends TeaModel {
     /**
-     * <p>The unique category ID.</p>
+     * <p>The categorization ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cat-xxx</p>
      */
     @NameInMap("categoryId")
     public String categoryId;
 
     /**
-     * <p>The category description.</p>
+     * <p>The categorization description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AI网关相关产品分类</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The category icon.</p>
+     * <p>The icon configuration.</p>
      */
     @NameInMap("icon")
     public HiMarketIcon icon;
 
     /**
-     * <p>The category name.</p>
+     * <p>The categorization name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AI网关</p>
      */
     @NameInMap("name")
     public String name;

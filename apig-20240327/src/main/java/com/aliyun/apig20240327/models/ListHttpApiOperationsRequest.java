@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListHttpApiOperationsRequest extends TeaModel {
     /**
-     * <p>Filter the operation list based on a specific consumer authorization rule ID, and the interface list in the response only contains authorized operations.</p>
+     * <p>The consumer authorization rule ID used to filter the API operation list. The response includes only authorized API operations.</p>
      * 
      * <strong>example:</strong>
      * <p>cas-xxx</p>
@@ -14,7 +14,7 @@ public class ListHttpApiOperationsRequest extends TeaModel {
     public String consumerAuthorizationRuleId;
 
     /**
-     * <p>Filter operations by authentication status</p>
+     * <p>Specifies whether to filter by authentication enablement status.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +23,7 @@ public class ListHttpApiOperationsRequest extends TeaModel {
     public Boolean enableAuth;
 
     /**
-     * <p>Whether to filter for deployment scenario</p>
+     * <p>Specifies whether the request is for a deployment scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -32,7 +32,7 @@ public class ListHttpApiOperationsRequest extends TeaModel {
     public Boolean forDeploy;
 
     /**
-     * <p>The gateway ID</p>
+     * <p>The gateway ID used to filter results.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-001</p>
@@ -41,7 +41,7 @@ public class ListHttpApiOperationsRequest extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>List interfaces by Method.</p>
+     * <p>Lists API operations by HTTP method.</p>
      * 
      * <strong>example:</strong>
      * <p>GET</p>
@@ -50,7 +50,7 @@ public class ListHttpApiOperationsRequest extends TeaModel {
     public String method;
 
     /**
-     * <p>Search operations by exact name.</p>
+     * <p>Searches for API operations by exact name match.</p>
      * 
      * <strong>example:</strong>
      * <p>getUserInfo</p>
@@ -59,7 +59,7 @@ public class ListHttpApiOperationsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Search operations by name prefix.</p>
+     * <p>Searches for API operations by name prefix.</p>
      * 
      * <strong>example:</strong>
      * <p>GetUser</p>
@@ -68,7 +68,7 @@ public class ListHttpApiOperationsRequest extends TeaModel {
     public String nameLike;
 
     /**
-     * <p>Page number, starting from 1, default is 1 if not specified.</p>
+     * <p>The page number to return. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -77,7 +77,7 @@ public class ListHttpApiOperationsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Page size, valid range [1, 100], default is 10 if not specified.</p>
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -86,7 +86,7 @@ public class ListHttpApiOperationsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Search operations by path prefix.</p>
+     * <p>Searches for API operations by path prefix match.</p>
      * 
      * <strong>example:</strong>
      * <p>/v1</p>
@@ -95,7 +95,7 @@ public class ListHttpApiOperationsRequest extends TeaModel {
     public String pathLike;
 
     /**
-     * <p>Each operation information in the response carries a list of authorization rules for the specified consumer under the specified environment ID. The withConsumerInEnvironmentId field needs to be additionally specified.</p>
+     * <p>The environment ID. When specified, the response includes the authorization rule list of the specified consumer under the specified environment for each API operation. You must also specify the withConsumerInfoById parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>env-xxx</p>
@@ -104,7 +104,7 @@ public class ListHttpApiOperationsRequest extends TeaModel {
     public String withConsumerInEnvironmentId;
 
     /**
-     * <p>Each operation information in the response carries a list of authorization rules for the specified consumer under the specified environment ID. The withConsumerInEnvironmentId field needs to be additionally specified.</p>
+     * <p>The consumer ID. When specified, the response includes the authorization rule list of the specified consumer under the specified environment for each API operation. You must also specify the withConsumerInEnvironmentId parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>cs-xxx</p>
@@ -113,7 +113,7 @@ public class ListHttpApiOperationsRequest extends TeaModel {
     public String withConsumerInfoById;
 
     /**
-     * <p>Plugin ID, use this plugin ID to retrieve the plugin release information.</p>
+     * <p>The plug-in ID used to retrieve plug-in publishing information.</p>
      * 
      * <strong>example:</strong>
      * <p>pl-xxx</p>

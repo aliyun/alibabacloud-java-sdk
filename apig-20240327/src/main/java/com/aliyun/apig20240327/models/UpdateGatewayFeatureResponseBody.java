@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateGatewayFeatureResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -14,7 +14,7 @@ public class UpdateGatewayFeatureResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response message returned.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

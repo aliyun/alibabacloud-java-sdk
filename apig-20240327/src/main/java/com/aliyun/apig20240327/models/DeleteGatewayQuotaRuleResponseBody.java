@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteGatewayQuotaRuleResponseBody extends TeaModel {
     /**
+     * <p>The status code or error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200, 404, 500</p>
      */
@@ -12,6 +14,8 @@ public class DeleteGatewayQuotaRuleResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The message content.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,6 +23,8 @@ public class DeleteGatewayQuotaRuleResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234567890</p>
      */

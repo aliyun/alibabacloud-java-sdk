@@ -245,10 +245,10 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         /**
          * <p>The backend service scenario. Valid values:</p>
          * <ul>
-         * <li>SingleService: Single service.</li>
-         * <li>MultiServiceByRatio: Multiple services with ratio-based canary release.</li>
-         * <li>Mock: Mock service.</li>
-         * <li>Redirect: Redirect service.</li>
+         * <li>SingleService: single service.</li>
+         * <li>MultiServiceByRatio: multiple services with ratio-based canary release.</li>
+         * <li>Mock: mock service.</li>
+         * <li>Redirect: redirect service.</li>
          * </ul>
          * 
          * <strong>example:</strong>

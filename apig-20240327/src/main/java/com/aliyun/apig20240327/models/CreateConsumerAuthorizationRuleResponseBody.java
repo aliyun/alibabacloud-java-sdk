@@ -76,7 +76,7 @@ public class CreateConsumerAuthorizationRuleResponseBody extends TeaModel {
 
     public static class CreateConsumerAuthorizationRuleResponseBodyData extends TeaModel {
         /**
-         * <p>The consumer authorization rule ID. When this ID is used to filter the API list, the response contains only the authorized APIs.</p>
+         * <p>The consumer authorization rule ID. When this ID is used to filter the API list, the response includes only the authorized APIs.</p>
          * 
          * <strong>example:</strong>
          * <p>car-d06p196m1hkg9ukum5pg</p>

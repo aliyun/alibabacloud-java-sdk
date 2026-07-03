@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdatePolicyRequest extends TeaModel {
     /**
-     * <p>Policy configuration</p>
+     * <p>The policy configuration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdatePolicyRequest extends TeaModel {
     public String config;
 
     /**
-     * <p>Description</p>
+     * <p>The description of the policy.</p>
      * 
      * <strong>example:</strong>
      * <p>这是一条网关超时策略</p>
@@ -24,7 +24,7 @@ public class UpdatePolicyRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Policy name</p>
+     * <p>The Policy Name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -23,7 +23,7 @@ public class DeleteEnvironmentResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID, which is used to trace the request chain.</p>
+     * <p>The request ID, which is used to trace the request.</p>
      * 
      * <strong>example:</strong>
      * <p>C61E30D3-579A-5B43-994E-31E02EDC9129</p>

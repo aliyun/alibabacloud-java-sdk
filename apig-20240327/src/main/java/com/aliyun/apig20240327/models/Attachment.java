@@ -5,40 +5,36 @@ import com.aliyun.tea.*;
 
 public class Attachment extends TeaModel {
     /**
-     * <p>The attachment point ID.</p>
+     * <p>attachResourceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-xxx</p>
      */
     @NameInMap("attachResourceId")
     public String attachResourceId;
 
     /**
-     * <p>A list of attached resource IDs.</p>
+     * <p>The list of mounted resource IDs.</p>
      */
     @NameInMap("attachResourceIds")
     public java.util.List<String> attachResourceIds;
 
     /**
-     * <p>A list of parent resource IDs.</p>
+     * <p>The list of parent IDs of the mounted resource.</p>
      */
     @NameInMap("attachResourceParentIds")
     public java.util.List<String> attachResourceParentIds;
 
     /**
-     * <p>The supported attachment point types for the policy.</p>
+     * <p>The type of mount point supported by the policy. Valid values:</p>
      * <ul>
-     * <li><p><code>HttpApi</code>: An HTTP API.</p>
-     * </li>
-     * <li><p><code>Operation</code>: An operation of an HTTP API.</p>
-     * </li>
-     * <li><p><code>GatewayRoute</code>: A gateway route.</p>
-     * </li>
-     * <li><p><code>GatewayService</code>: A gateway service.</p>
-     * </li>
-     * <li><p><code>GatewayServicePort</code>: A gateway service port.</p>
-     * </li>
-     * <li><p><code>Domain</code>: A gateway domain.</p>
-     * </li>
-     * <li><p><code>Gateway</code>: A gateway.</p>
-     * </li>
+     * <li>HttpApi: HttpApi.</li>
+     * <li>Operation: Operation of HttpApi.</li>
+     * <li>GatewayRoute: gateway route.</li>
+     * <li>GatewayService: gateway service.</li>
+     * <li>GatewayServicePort: gateway service port.</li>
+     * <li>Domain: gateway domain name.</li>
+     * <li>Gateway: gateway.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,7 +44,7 @@ public class Attachment extends TeaModel {
     public String attachResourceType;
 
     /**
-     * <p>The ID of the environment for the attached resource. An asterisk (<code>*</code>) indicates that the policy attachment is not environment-specific.</p>
+     * <p>The environment to which the mounted resource belongs. If the environment ID is *, the mounted resource of the policy is not associated with any environment.</p>
      * 
      * <strong>example:</strong>
      * <p>env-cq7l5s5lhtgi6qasrdc0</p>
@@ -57,7 +53,7 @@ public class Attachment extends TeaModel {
     public String environmentId;
 
     /**
-     * <p>The ID of the gateway for the attached resource.</p>
+     * <p>The gateway to which the mounted resource belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-cpr4f9dlhtgq5ksfgmb0</p>
@@ -66,7 +62,7 @@ public class Attachment extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The policy attachment ID.</p>
+     * <p>The policy mount ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pr-cq7l5s5lhtgi6qasrdc0</p>

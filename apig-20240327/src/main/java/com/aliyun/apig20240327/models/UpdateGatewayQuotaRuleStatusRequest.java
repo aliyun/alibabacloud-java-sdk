@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateGatewayQuotaRuleStatusRequest extends TeaModel {
     /**
+     * <p>Specifies whether to clear historical quota usage when enabling or disabling the rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,6 +14,8 @@ public class UpdateGatewayQuotaRuleStatusRequest extends TeaModel {
     public Boolean clearHistory;
 
     /**
+     * <p>Specifies whether to enable or disable the rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

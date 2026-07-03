@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class JwtIdentityConfig extends TeaModel {
     /**
-     * <p>The claims-to-headers configurations.</p>
+     * <p>The list of claim-to-header configurations.</p>
      */
     @NameInMap("claimsToHeadersConfigs")
     public java.util.List<JwtIdentityConfigClaimsToHeadersConfigs> claimsToHeadersConfigs;
@@ -32,7 +32,10 @@ public class JwtIdentityConfig extends TeaModel {
     public JwtIdentityConfigJwtTokenConfig jwtTokenConfig;
 
     /**
-     * <p>The remote JWKS.</p>
+     * <p>The remote JWKS configuration (JSON string).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;uri&quot;:&quot;<a href="https://example.com/.well-known/jwks.json%22%7D">https://example.com/.well-known/jwks.json&quot;}</a></p>
      */
     @NameInMap("remoteJwks")
     public String remoteJwks;
@@ -47,7 +50,7 @@ public class JwtIdentityConfig extends TeaModel {
     public String secretType;
 
     /**
-     * <p>The type of authentication configuration.</p>
+     * <p>The authentication configuration type.</p>
      * 
      * <strong>example:</strong>
      * <p>Jwt</p>
@@ -118,19 +121,28 @@ public class JwtIdentityConfig extends TeaModel {
 
     public static class JwtIdentityConfigClaimsToHeadersConfigs extends TeaModel {
         /**
-         * <p>The claim.</p>
+         * <p>The claim name in the JWT payload.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sub</p>
          */
         @NameInMap("claim")
         public String claim;
 
         /**
-         * <p>The header.</p>
+         * <p>The HTTP header name after conversion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>X-Consumer-Id</p>
          */
         @NameInMap("header")
         public String header;
 
         /**
-         * <p>The override.</p>
+         * <p>Specifies whether to overwrite an existing header with the same name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("override")
         public Boolean override;
@@ -210,7 +222,7 @@ public class JwtIdentityConfig extends TeaModel {
 
     public static class JwtIdentityConfigJwtTokenConfig extends TeaModel {
         /**
-         * <p>The JWT key configuration.</p>
+         * <p>The key configuration of the JWT.</p>
          * 
          * <strong>example:</strong>
          * <p>Authorization</p>
@@ -219,7 +231,7 @@ public class JwtIdentityConfig extends TeaModel {
         public String key;
 
         /**
-         * <p>Specifies whether to pass through.</p>
+         * <p>Indicates whether the request is passed through.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -228,7 +240,7 @@ public class JwtIdentityConfig extends TeaModel {
         public Boolean pass;
 
         /**
-         * <p>The storage location of the JWT.</p>
+         * <p>The location where the JWT is stored.</p>
          * 
          * <strong>example:</strong>
          * <p>HEADER</p>

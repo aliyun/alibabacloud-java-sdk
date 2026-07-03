@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetGatewayQuotaRuleResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response data.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;ruleId&quot;:1001}</p>
      */
@@ -19,6 +23,8 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
     public GetGatewayQuotaRuleResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -26,6 +32,8 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>1234567890</p>
      */
@@ -70,9 +78,21 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
     }
 
     public static class GetGatewayQuotaRuleResponseBodyDataConsumers extends TeaModel {
+        /**
+         * <p>The principal (consumer) ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-aaa</p>
+         */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <p>The principal (consumer) name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>consumer-a</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -101,6 +121,8 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
 
     public static class GetGatewayQuotaRuleResponseBodyData extends TeaModel {
         /**
+         * <p>The base timestamp of the period.</p>
+         * 
          * <strong>example:</strong>
          * <p>1745846400000</p>
          */
@@ -108,16 +130,23 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
         public Long baseTimestamp;
 
         /**
+         * <p>The number of consumers associated with the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
         @NameInMap("consumerCount")
         public Long consumerCount;
 
+        /**
+         * <p>The list of principals (consumers) bound to this rule.</p>
+         */
         @NameInMap("consumers")
         public java.util.List<GetGatewayQuotaRuleResponseBodyDataConsumers> consumers;
 
         /**
+         * <p>The quota period type.</p>
+         * 
          * <strong>example:</strong>
          * <p>day</p>
          */
@@ -125,6 +154,8 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
         public String periodType;
 
         /**
+         * <p>The quota dimension.</p>
+         * 
          * <strong>example:</strong>
          * <p>token</p>
          */
@@ -132,6 +163,8 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
         public String quotaDimension;
 
         /**
+         * <p>The quota limit.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -139,6 +172,8 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
         public Long quotaLimit;
 
         /**
+         * <p>The rule ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>qr-d8j7fpmm1hks65xxxxxx</p>
          */
@@ -146,6 +181,8 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
         public String ruleId;
 
         /**
+         * <p>The rule name.</p>
+         * 
          * <strong>example:</strong>
          * <p>daily-token-limit</p>
          */
@@ -153,6 +190,8 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
         public String ruleName;
 
         /**
+         * <p>The rule status.</p>
+         * 
          * <strong>example:</strong>
          * <p>enabled</p>
          */
@@ -160,6 +199,8 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
         public String ruleStatus;
 
         /**
+         * <p>The time zone corresponding to the calendar period, in UTC+x format.</p>
+         * 
          * <strong>example:</strong>
          * <p>GMT+8</p>
          */
@@ -167,6 +208,8 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
         public String timezone;
 
         /**
+         * <p>The reset period type. Currently, only calendar period is supported, which means windowAlignment=&quot;calendar&quot;.</p>
+         * 
          * <strong>example:</strong>
          * <p>calendar</p>
          */

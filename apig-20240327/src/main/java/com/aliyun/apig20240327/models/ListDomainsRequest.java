@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDomainsRequest extends TeaModel {
     /**
+     * <p>The domain name scope.</p>
+     * 
      * <strong>example:</strong>
      * <p>Serverless</p>
      */

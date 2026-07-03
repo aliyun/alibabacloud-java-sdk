@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSecretResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -14,13 +14,13 @@ public class CreateSecretResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public CreateSecretResponseBodyData data;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error details.</p>
      * 
      * <strong>example:</strong>
      * <p>Failed to upload data. Please try again</p>
@@ -76,7 +76,7 @@ public class CreateSecretResponseBody extends TeaModel {
 
     public static class CreateSecretResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the key.</p>
+         * <p>The key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sec-d5e6shmm1hkoxxxxxxxx</p>

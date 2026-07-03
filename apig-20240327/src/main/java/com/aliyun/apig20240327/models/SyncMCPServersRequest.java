@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class SyncMCPServersRequest extends TeaModel {
     /**
-     * <p>The domain ID.</p>
+     * <p>The domain name IDs.</p>
      */
     @NameInMap("domainIds")
     public java.util.List<String> domainIds;
 
     /**
-     * <p>The ID of the gateway.</p>
+     * <p>The gateway ID.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-cq7l5s5lhtg***</p>
@@ -20,7 +20,7 @@ public class SyncMCPServersRequest extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The synchronized Nacos MCP server list. If the synchronized MCP server is included, add the mcpServerId parameter.</p>
+     * <p>The list of Nacos MCP Servers to sync. If the list contains MCP Servers that have already been synced, include the mcpServerId.</p>
      */
     @NameInMap("nacosMcpServers")
     public java.util.List<SyncMCPServersRequestNacosMcpServers> nacosMcpServers;
@@ -90,7 +90,7 @@ public class SyncMCPServersRequest extends TeaModel {
 
     public static class SyncMCPServersRequestNacosMcpServers extends TeaModel {
         /**
-         * <p>The exposed URI path. This parameter is required when the protocol parameter is set to SSE or StreamableHTTP and the type parameter is set to RealMCP.</p>
+         * <p>The exposed URI path. This parameter is required when protocol is SSE or StreamableHTTP and type is RealMCP.</p>
          * 
          * <strong>example:</strong>
          * <p>/sse</p>
@@ -108,7 +108,7 @@ public class SyncMCPServersRequest extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The MCP server ID.</p>
+         * <p>MCP Server ID</p>
          * 
          * <strong>example:</strong>
          * <p>mcp-d3s8qo6m1hknegofa3bg</p>
@@ -117,7 +117,7 @@ public class SyncMCPServersRequest extends TeaModel {
         public String mcpServerId;
 
         /**
-         * <p>The name of the MCP server.</p>
+         * <p>The MCP Server name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -126,7 +126,7 @@ public class SyncMCPServersRequest extends TeaModel {
         public String mcpServerName;
 
         /**
-         * <p>The protocol.</p>
+         * <p>The protocols.</p>
          */
         @NameInMap("protocols")
         public java.util.List<String> protocols;

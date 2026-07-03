@@ -14,7 +14,7 @@ public class ListPolicyClassesRequest extends TeaModel {
     public String attachResourceId;
 
     /**
-     * <p>The type of resource that the policy can be attached to. Valid values:</p>
+     * <p>The type of the resource to which the policy can be attached. Valid values:</p>
      * <ul>
      * <li>HttpApi: HttpApi.</li>
      * <li>Operation: an operation of an HttpApi.</li>

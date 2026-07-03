@@ -98,6 +98,13 @@ public class CreateConsumerAuthorizationRulesRequest extends TeaModel {
 
     public static class CreateConsumerAuthorizationRulesRequestAuthorizationRules extends TeaModel {
         /**
+         * <strong>example:</strong>
+         * <p>csg-8c13d2b4f8a1</p>
+         */
+        @NameInMap("consumerGroupId")
+        public String consumerGroupId;
+
+        /**
          * <p>The consumer ID.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +132,13 @@ public class CreateConsumerAuthorizationRulesRequest extends TeaModel {
         public Long expireTimestamp;
 
         /**
+         * <strong>example:</strong>
+         * <p>ConsumerGroup</p>
+         */
+        @NameInMap("principalType")
+        public String principalType;
+
+        /**
          * <p>The resource identifier, which serves as a unique identifier for non-standard code sources for space reuse.</p>
          */
         @NameInMap("resourceIdentifier")
@@ -142,6 +156,14 @@ public class CreateConsumerAuthorizationRulesRequest extends TeaModel {
         public static CreateConsumerAuthorizationRulesRequestAuthorizationRules build(java.util.Map<String, ?> map) throws Exception {
             CreateConsumerAuthorizationRulesRequestAuthorizationRules self = new CreateConsumerAuthorizationRulesRequestAuthorizationRules();
             return TeaModel.build(map, self);
+        }
+
+        public CreateConsumerAuthorizationRulesRequestAuthorizationRules setConsumerGroupId(String consumerGroupId) {
+            this.consumerGroupId = consumerGroupId;
+            return this;
+        }
+        public String getConsumerGroupId() {
+            return this.consumerGroupId;
         }
 
         public CreateConsumerAuthorizationRulesRequestAuthorizationRules setConsumerId(String consumerId) {
@@ -166,6 +188,14 @@ public class CreateConsumerAuthorizationRulesRequest extends TeaModel {
         }
         public Long getExpireTimestamp() {
             return this.expireTimestamp;
+        }
+
+        public CreateConsumerAuthorizationRulesRequestAuthorizationRules setPrincipalType(String principalType) {
+            this.principalType = principalType;
+            return this;
+        }
+        public String getPrincipalType() {
+            return this.principalType;
         }
 
         public CreateConsumerAuthorizationRulesRequestAuthorizationRules setResourceIdentifier(CreateConsumerAuthorizationRulesRequestAuthorizationRulesResourceIdentifier resourceIdentifier) {

@@ -12,7 +12,8 @@ public class UpdateAndAttachPolicyRequest extends TeaModel {
     public java.util.List<String> attachResourceIds;
 
     /**
-     * <p>The type of mount point supported by the policy. Valid values:</p>
+     * <p>The type of mount point supported by the policy.</p>
+     * <p>Valid values:</p>
      * <ul>
      * <li>HttpApi: HttpApi.</li>
      * <li>Operation: Operation of HttpApi.</li>

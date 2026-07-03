@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The list of regions.</p>
+     */
     @NameInMap("data")
     public java.util.List<DescribeRegionsResponseBodyData> data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +29,8 @@ public class DescribeRegionsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>E6BD6C79-32B1-5D7E-A89A-93C5A6B7xxxx</p>
      */
@@ -67,6 +76,8 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     public static class DescribeRegionsResponseBodyData extends TeaModel {
         /**
+         * <p>The display name of the region.</p>
+         * 
          * <strong>example:</strong>
          * <p>China (Beijing)</p>
          */
@@ -74,6 +85,8 @@ public class DescribeRegionsResponseBody extends TeaModel {
         public String localName;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */

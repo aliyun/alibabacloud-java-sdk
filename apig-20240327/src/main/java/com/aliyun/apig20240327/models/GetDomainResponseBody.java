@@ -237,7 +237,7 @@ public class GetDomainResponseBody extends TeaModel {
         public String issuer;
 
         /**
-         * <p>Indicates whether mTLS mutual authentication is enabled.</p>
+         * <p>Indicates whether mutual TLS (mTLS) authentication is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -274,10 +274,9 @@ public class GetDomainResponseBody extends TeaModel {
 
         /**
          * <p>The protocol type supported by the domain name.</p>
-         * <p>Valid values:</p>
          * <ul>
-         * <li>HTTP: Only the HTTP protocol is supported.</li>
-         * <li>HTTPS: Only the HTTPS protocol is supported.</li>
+         * <li>HTTP: supports only the HTTP protocol.</li>
+         * <li>HTTPS: supports only the HTTPS protocol.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSecretReferencesResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -14,7 +14,7 @@ public class ListSecretReferencesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public ListSecretReferencesResponseBodyData data;
@@ -219,7 +219,7 @@ public class ListSecretReferencesResponseBody extends TeaModel {
 
     public static class ListSecretReferencesResponseBodyDataItemsMcpServerConfig extends TeaModel {
         /**
-         * <p>The HTTP API ID.</p>
+         * <p>HTTP API ID。</p>
          * 
          * <strong>example:</strong>
          * <p>api-d2vv43em201hxxxxxxxx</p>
@@ -278,19 +278,19 @@ public class ListSecretReferencesResponseBody extends TeaModel {
 
     public static class ListSecretReferencesResponseBodyDataItems extends TeaModel {
         /**
-         * <p>The information about the plug-in that references the current key.</p>
+         * <p>The plug-in information that references the current secret.</p>
          */
         @NameInMap("PluginConfig")
         public ListSecretReferencesResponseBodyDataItemsPluginConfig pluginConfig;
 
         /**
-         * <p>The service information that references the current key.</p>
+         * <p>The service information that references the current secret.</p>
          */
         @NameInMap("ServiceConfig")
         public ListSecretReferencesResponseBodyDataItemsServiceConfig serviceConfig;
 
         /**
-         * <p>The consumer information that references the current key.</p>
+         * <p>The consumer information that references the current secret.</p>
          */
         @NameInMap("consumerConfig")
         public ListSecretReferencesResponseBodyDataItemsConsumerConfig consumerConfig;
@@ -305,13 +305,13 @@ public class ListSecretReferencesResponseBody extends TeaModel {
         public String gatewayId;
 
         /**
-         * <p>MCP service information that references the current key.</p>
+         * <p>The MCP server information that references the current secret.</p>
          */
         @NameInMap("mcpServerConfig")
         public ListSecretReferencesResponseBodyDataItemsMcpServerConfig mcpServerConfig;
 
         /**
-         * <p>The type of resource.</p>
+         * <p>The resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>Plugin</p>
@@ -400,7 +400,7 @@ public class ListSecretReferencesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>25</p>

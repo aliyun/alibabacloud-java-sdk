@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListConsumerQuotaRulesRequest extends TeaModel {
     /**
+     * <p>The gateway ID. This parameter is optional.</p>
+     * 
      * <strong>example:</strong>
      * <p>gw-123456</p>
      */
@@ -12,6 +14,8 @@ public class ListConsumerQuotaRulesRequest extends TeaModel {
     public String gatewayId;
 
     /**
+     * <p>The rule name keyword, used for fuzzy match.</p>
+     * 
      * <strong>example:</strong>
      * <p>daily</p>
      */
@@ -19,6 +23,8 @@ public class ListConsumerQuotaRulesRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class ListConsumerQuotaRulesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

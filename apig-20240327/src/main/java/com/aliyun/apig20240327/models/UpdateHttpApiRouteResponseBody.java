@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateHttpApiRouteResponseBody extends TeaModel {
     /**
-     * <p>The status code of the response.</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>

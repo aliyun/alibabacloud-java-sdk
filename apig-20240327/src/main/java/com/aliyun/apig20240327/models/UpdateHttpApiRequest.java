@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class UpdateHttpApiRequest extends TeaModel {
     /**
-     * <p>The list of agent protocols</p>
+     * <p>The list of Agent protocols.</p>
      */
     @NameInMap("agentProtocols")
     public java.util.List<String> agentProtocols;
 
     /**
-     * <p>The status code.</p>
+     * <p>The list of AI protocols.</p>
      */
     @NameInMap("aiProtocols")
     public java.util.List<String> aiProtocols;
 
     /**
-     * <p>The authentication configuration</p>
+     * <p>The permission authentication configuration.</p>
      */
     @NameInMap("authConfig")
     public AuthConfig authConfig;
 
     /**
-     * <p>The list of API deployment configurations.</p>
+     * <p>The base path of the API. The value must start with a forward slash (/).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,13 +33,13 @@ public class UpdateHttpApiRequest extends TeaModel {
     public String basePath;
 
     /**
-     * <p>The deployment configurations</p>
+     * <p>The list of API deployment configurations.</p>
      */
     @NameInMap("deployConfigs")
     public java.util.List<HttpApiDeployConfig> deployConfigs;
 
     /**
-     * <p>The environment ID.</p>
+     * <p>The API description.</p>
      * 
      * <strong>example:</strong>
      * <p>更新API描述</p>
@@ -48,7 +48,7 @@ public class UpdateHttpApiRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Whether authentication is enabled</p>
+     * <p>Specifies whether to enable permission authentication.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -57,7 +57,7 @@ public class UpdateHttpApiRequest extends TeaModel {
     public Boolean enableAuth;
 
     /**
-     * <p>The first byte timeout in nanoseconds</p>
+     * <p>The first byte timeout period.</p>
      * 
      * <strong>example:</strong>
      * <p>30s</p>
@@ -66,13 +66,13 @@ public class UpdateHttpApiRequest extends TeaModel {
     public Integer firstByteTimeout;
 
     /**
-     * <p>Specifies whether to enable authentication.</p>
+     * <p>The configuration of the HTTP Ingress API.</p>
      */
     @NameInMap("ingressConfig")
     public UpdateHttpApiRequestIngressConfig ingressConfig;
 
     /**
-     * <p>Whether to only change configuration without redeployment</p>
+     * <p>Specifies whether to only modify the configuration. A value of true indicates that only the configuration is modified without triggering redeployment.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -81,13 +81,13 @@ public class UpdateHttpApiRequest extends TeaModel {
     public Boolean onlyChangeConfig;
 
     /**
-     * <p>The listened namespace.</p>
+     * <p>The list of API access protocols.</p>
      */
     @NameInMap("protocols")
     public java.util.List<String> protocols;
 
     /**
-     * <p>Whether to remove base path when forwarding</p>
+     * <p>Specifies whether to remove the base path during forwarding.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -96,7 +96,7 @@ public class UpdateHttpApiRequest extends TeaModel {
     public Boolean removeBasePathOnForward;
 
     /**
-     * <p>A deployment configuration.</p>
+     * <p>The API versioning configuration.</p>
      */
     @NameInMap("versionConfig")
     public HttpApiVersionConfig versionConfig;
@@ -212,7 +212,7 @@ public class UpdateHttpApiRequest extends TeaModel {
 
     public static class UpdateHttpApiRequestIngressConfig extends TeaModel {
         /**
-         * <p>The authentication configuration.</p>
+         * <p>The environment ID.</p>
          * 
          * <strong>example:</strong>
          * <p>env-cr6ql0tlhtgmc****</p>
@@ -221,7 +221,7 @@ public class UpdateHttpApiRequest extends TeaModel {
         public String environmentId;
 
         /**
-         * <p>The response parameters.</p>
+         * <p>The Ingress Class to listen on.</p>
          * 
          * <strong>example:</strong>
          * <p>mse</p>
@@ -230,7 +230,7 @@ public class UpdateHttpApiRequest extends TeaModel {
         public String ingressClass;
 
         /**
-         * <p>The returned message.</p>
+         * <p>Specifies whether to update the address in the Ingress Status.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -239,7 +239,7 @@ public class UpdateHttpApiRequest extends TeaModel {
         public Boolean overrideIngressIp;
 
         /**
-         * <p>json</p>
+         * <p>The source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>src-crdddallhtgtr****</p>
@@ -248,7 +248,7 @@ public class UpdateHttpApiRequest extends TeaModel {
         public String sourceId;
 
         /**
-         * <p>The request ID.</p>
+         * <p>The namespace to listen on.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>

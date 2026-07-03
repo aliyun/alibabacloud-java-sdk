@@ -20,7 +20,7 @@ public class ImportHttpApiRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to perform a dry run. If enabled, only validation is performed without the actual import.</p>
+     * <p>Specifies whether to perform a dry run. If enabled, only validation is performed without importing.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -47,7 +47,7 @@ public class ImportHttpApiRequest extends TeaModel {
     public String mcpRouteId;
 
     /**
-     * <p>The name of the imported API. If this parameter is not specified, the name is extracted from the API definition file. If an API with the same name and version configuration already exists, this import updates the existing API definition based on the strategy parameter.</p>
+     * <p>The name of the imported API. If this parameter is not specified, the name is extracted from the API definition file. If an API with the same name and version configuration already exists, the import updates the existing API definition based on the strategy parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>import-test</p>
@@ -65,7 +65,7 @@ public class ImportHttpApiRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The Base64-encoded API definition. OAS 2.0 and OAS 3.0 specifications are supported in YAML or JSON format. This parameter takes priority over the specFileUrl parameter. If the file size exceeds 10 MB, use the specFileUrl parameter instead.</p>
+     * <p>The Base64-encoded API definition. OAS 2.0 and OAS 3.0 specifications are supported in YAML and JSON formats. This parameter takes priority over the specFileUrl parameter. If the file size exceeds 10 MB, use the specFileUrl parameter instead.</p>
      * 
      * <strong>example:</strong>
      * <p>b3BlbmFwaTogMy4wLjAKaW5mbzoKICAgIHRpdGxlOiBkZW1vCiAgICBkZXNjcmlwdGlvbjogdGhpc2lzZGVtbwogICAgdmVyc2lvbjogIiIKcGF0aHM6CiAgICAvdXNlci97dXNlcklkfToKICAgICAgICBnZXQ6CiAgICAgICAgICAgIHN1bW1hcnk6IOiOt+WPlueUqOaIt+S/oeaBrwogICAgICAgICAgICBkZXNjcmlwdGlvbjog6I635Y+W55So5oi35L+h5oGvCiAgICAgICAgICAgIG9wZXJhdGlvbklkOiBHZXRVc2VySW5mbwogICAgICAgICAgICByZXNwb25zZXM6CiAgICAgICAgICAgICAgICAiMjAwIjoKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbjog5oiQ5YqfCiAgICAgICAgICAgICAgICAgICAgY29udGVudDoKICAgICAgICAgICAgICAgICAgICAgICAgYXBwbGljYXRpb24vanNvbjtjaGFyc2V0PXV0Zi04OgogICAgICAgICAgICAgICAgICAgICAgICAgICAgc2NoZW1hOiBudWxsCnNlcnZlcnM6CiAgICAtIHVybDogaHR0cDovL2FwaS5leGFtcGxlLmNvbS92MQo=</p>
@@ -74,7 +74,7 @@ public class ImportHttpApiRequest extends TeaModel {
     public String specContentBase64;
 
     /**
-     * <p>The download URL of the API definition file. The URL must be accessible over the public network or be an internal network OSS download URL in the same region. The URL must have download permissions. For OSS files that are not publicly readable, see References <a href="https://help.aliyun.com/document_detail/39607.html">Download objects using presigned URLs</a> and provide a URL with download permissions. Only API definition files stored in OSS are supported.</p>
+     * <p>The download URL of the API definition file. The URL must be accessible over the Internet or be an internal network OSS download URL in the same region. The URL must have download permissions. For OSS files that are not publicly readable, see References <a href="https://help.aliyun.com/document_detail/39607.html">Download objects using pre-signed URLs</a> and provide a URL with download permissions. Only API definition files stored in OSS are supported.</p>
      */
     @NameInMap("specFileUrl")
     public String specFileUrl;
@@ -86,9 +86,9 @@ public class ImportHttpApiRequest extends TeaModel {
     public ImportHttpApiRequestSpecOssConfig specOssConfig;
 
     /**
-     * <p>The update strategy to use when the imported API has the same name and version management configuration as an existing API. Valid values:</p>
+     * <p>The update strategy to use when the imported API name and version management match an existing API. Valid values:</p>
      * <ul>
-     * <li>SpecOnly: uses the imported file as the single source of truth.</li>
+     * <li>SpecOnly: uses the imported file as the sole source of truth.</li>
      * <li>SpecFirst: prioritizes the imported file. New operations are added and existing operations are updated. Operations not mentioned in the file remain unchanged.</li>
      * <li>ExistFirst: prioritizes the existing API. Only new operations are added. Existing operations are not updated.</li>
      * </ul>
@@ -101,7 +101,7 @@ public class ImportHttpApiRequest extends TeaModel {
     public String strategy;
 
     /**
-     * <p>The ID of the target HTTP API. If this parameter is specified, this import updates the specified API instead of creating a new one or searching for an existing API by name and version management configuration. The target API must be of the REST type.</p>
+     * <p>If this parameter is specified, the import updates the specified API instead of importing a new one or searching for an existing API by name and version management configuration. The target API must be of the REST type.</p>
      * 
      * <strong>example:</strong>
      * <p>api-xxxx</p>
@@ -110,7 +110,7 @@ public class ImportHttpApiRequest extends TeaModel {
     public String targetHttpApiId;
 
     /**
-     * <p>The API version configuration. If version configuration is enabled and an API with the same version number and name already exists, this import is treated as an update. If version configuration is not enabled and an API with the same name already exists, this import is treated as an update.</p>
+     * <p>The API version configuration. If version configuration is enabled and the version number and API name match an existing API, the import is treated as an update. If version configuration is not enabled and the API name matches an existing API, the import is treated as an update.</p>
      */
     @NameInMap("versionConfig")
     public HttpApiVersionConfig versionConfig;

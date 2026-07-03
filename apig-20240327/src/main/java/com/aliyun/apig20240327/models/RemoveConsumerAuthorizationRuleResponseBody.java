@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveConsumerAuthorizationRuleResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -14,7 +14,7 @@ public class RemoveConsumerAuthorizationRuleResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

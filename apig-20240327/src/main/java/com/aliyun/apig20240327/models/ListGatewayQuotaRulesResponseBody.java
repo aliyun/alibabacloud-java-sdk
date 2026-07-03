@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListGatewayQuotaRulesResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response data.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;totalSize&quot;:100}</p>
      */
@@ -19,6 +23,8 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
     public ListGatewayQuotaRulesResponseBodyData data;
 
     /**
+     * <p>The maximum number of records to retrieve in a single request. This parameter is not supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -26,6 +32,8 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -33,6 +41,8 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The pagination token. This parameter is not supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>762b1fa4e2434fd3959b1f66481979cf</p>
      */
@@ -40,6 +50,8 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>1234567890</p>
      */
@@ -101,6 +113,8 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
 
     public static class ListGatewayQuotaRulesResponseBodyDataItems extends TeaModel {
         /**
+         * <p>The period type.</p>
+         * 
          * <strong>example:</strong>
          * <p>week</p>
          */
@@ -108,6 +122,8 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
         public String periodType;
 
         /**
+         * <p>The quota dimension.</p>
+         * 
          * <strong>example:</strong>
          * <p>token</p>
          */
@@ -115,6 +131,8 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
         public String quotaDimension;
 
         /**
+         * <p>The quota limit.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -122,6 +140,8 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
         public Long quotaLimit;
 
         /**
+         * <p>The rule ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>qr-xxxxx</p>
          */
@@ -129,6 +149,8 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
         public String ruleId;
 
         /**
+         * <p>The rule name.</p>
+         * 
          * <strong>example:</strong>
          * <p>daily-token-limit</p>
          */
@@ -136,6 +158,8 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
         public String ruleName;
 
         /**
+         * <p>The rule status.</p>
+         * 
          * <strong>example:</strong>
          * <p>enabled</p>
          */
@@ -143,6 +167,8 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
         public String ruleStatus;
 
         /**
+         * <p>The time zone for the calendar period, in UTC+x format.</p>
+         * 
          * <strong>example:</strong>
          * <p>GMT+8</p>
          */
@@ -150,6 +176,8 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
         public String timezone;
 
         /**
+         * <p>The reset period type. Only calendar periods are supported, which means windowAlignment=&quot;calendar&quot;.</p>
+         * 
          * <strong>example:</strong>
          * <p>calendar</p>
          */
@@ -229,6 +257,8 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
 
     public static class ListGatewayQuotaRulesResponseBodyData extends TeaModel {
         /**
+         * <p>The list of rules.</p>
+         * 
          * <strong>example:</strong>
          * <p>[{&quot;ruleId&quot;:&quot;rule-001&quot;}]</p>
          */
@@ -236,6 +266,8 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
         public java.util.List<ListGatewayQuotaRulesResponseBodyDataItems> items;
 
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -243,6 +275,8 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The current page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -250,6 +284,8 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

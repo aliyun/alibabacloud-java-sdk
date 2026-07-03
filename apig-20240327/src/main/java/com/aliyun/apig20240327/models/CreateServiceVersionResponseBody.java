@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateServiceVersionResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -14,7 +14,7 @@ public class CreateServiceVersionResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSecretsRequest extends TeaModel {
     /**
-     * <p>Gateway type for filtering secrets of specific gateway type</p>
+     * <p>The gateway type used to filter results. Valid values: <strong>AI</strong> and <strong>API</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>AI</p>
@@ -14,7 +14,7 @@ public class ListSecretsRequest extends TeaModel {
     public String gatewayType;
 
     /**
-     * <p>Secret name for fuzzy matching, supports filtering secrets by name</p>
+     * <p>The key name. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>my_secret</p>
@@ -23,7 +23,7 @@ public class ListSecretsRequest extends TeaModel {
     public String nameLike;
 
     /**
-     * <p>Page number</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class ListSecretsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Number of items per page</p>
+     * <p>The page size. Valid values: 1 to 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

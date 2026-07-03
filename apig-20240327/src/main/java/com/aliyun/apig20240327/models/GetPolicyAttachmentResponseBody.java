@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetPolicyAttachmentResponseBody extends TeaModel {
     /**
-     * <p>Response code.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class GetPolicyAttachmentResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Response data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public GetPolicyAttachmentResponseBodyData data;
 
     /**
-     * <p>Response message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -29,7 +29,7 @@ public class GetPolicyAttachmentResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>ID of the request</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>2C3B9A12-3868-5EB9-fBEA-F99E03DD1***</p>
@@ -76,7 +76,7 @@ public class GetPolicyAttachmentResponseBody extends TeaModel {
 
     public static class GetPolicyAttachmentResponseBodyData extends TeaModel {
         /**
-         * <p>Attached Resource ID</p>
+         * <p>The ID of the attached resource.</p>
          * 
          * <strong>example:</strong>
          * <p>op-csbkd9llhtgqhqua***</p>
@@ -85,7 +85,7 @@ public class GetPolicyAttachmentResponseBody extends TeaModel {
         public String attachResourceId;
 
         /**
-         * <p>Attached resource type, HttpApi, GatewayRoute, Operation, GatewayService, GatewayServicePort, Gateway, Domain</p>
+         * <p>The type of the attached resource. Valid values: HttpApi, GatewayRoute, Operation, GatewayService, GatewayServicePort, Gateway, and Domain.</p>
          * 
          * <strong>example:</strong>
          * <p>Operation</p>
@@ -94,7 +94,7 @@ public class GetPolicyAttachmentResponseBody extends TeaModel {
         public String attachResourceType;
 
         /**
-         * <p>Policy attachment configuration</p>
+         * <p>The configuration of the attached policy.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;unitNum&quot;:1,&quot;timeUnit&quot;:&quot;s&quot;,&quot;enable&quot;:true}</p>
@@ -103,7 +103,7 @@ public class GetPolicyAttachmentResponseBody extends TeaModel {
         public String config;
 
         /**
-         * <p>Environment ID</p>
+         * <p>The environment ID.</p>
          * 
          * <strong>example:</strong>
          * <p>env-cq7l5s5lhtgi6qa***</p>
@@ -112,7 +112,7 @@ public class GetPolicyAttachmentResponseBody extends TeaModel {
         public String environmentId;
 
         /**
-         * <p>Gateway Instance ID</p>
+         * <p>The gateway instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-cq2vundlhtg***</p>
@@ -121,7 +121,7 @@ public class GetPolicyAttachmentResponseBody extends TeaModel {
         public String gatewayId;
 
         /**
-         * <p>Policy Attachment ID</p>
+         * <p>The policy attachment ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pr-cqoojualhtgquuj***</p>
@@ -130,7 +130,7 @@ public class GetPolicyAttachmentResponseBody extends TeaModel {
         public String policyAttachmentId;
 
         /**
-         * <p>Policy ID</p>
+         * <p>The policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>p-cq7l5s5bblhtgi6qas***</p>

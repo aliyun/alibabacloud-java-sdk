@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSecretResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -20,7 +20,7 @@ public class GetSecretResponseBody extends TeaModel {
     public GetSecretResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -85,10 +85,10 @@ public class GetSecretResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
-         * <p>The type of the gateway. Valid values:</p>
+         * <p>The gateway type. Valid values:</p>
          * <ul>
-         * <li>API</li>
-         * <li>AI</li>
+         * <li>API: API gateway.</li>
+         * <li>AI: AI gateway.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -122,7 +122,7 @@ public class GetSecretResponseBody extends TeaModel {
         public Integer referenceCount;
 
         /**
-         * <p>The ID of the key.</p>
+         * <p>The key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sec-d5e6shmm1hkoxxxxxxxx</p>
@@ -131,7 +131,7 @@ public class GetSecretResponseBody extends TeaModel {
         public String secretId;
 
         /**
-         * <p>The source of the key.</p>
+         * <p>The key source.</p>
          * 
          * <strong>example:</strong>
          * <p>KMS</p>
@@ -140,11 +140,11 @@ public class GetSecretResponseBody extends TeaModel {
         public String secretSource;
 
         /**
-         * <p>The state of the key. Valid values:</p>
+         * <p>The key status. Valid values:</p>
          * <ul>
-         * <li>ENALBE</li>
-         * <li>DISABLE</li>
-         * <li>DELETED</li>
+         * <li>ENALBE: Enabled.</li>
+         * <li>DISABLE: Disabled.</li>
+         * <li>DELETED: Deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>

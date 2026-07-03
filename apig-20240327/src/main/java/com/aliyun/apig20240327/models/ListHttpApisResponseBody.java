@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListHttpApisResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -14,13 +14,13 @@ public class ListHttpApisResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Response data.</p>
+     * <p>The API list.</p>
      */
     @NameInMap("data")
     public ListHttpApisResponseBodyData data;
 
     /**
-     * <p>Response message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -29,7 +29,7 @@ public class ListHttpApisResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Get HTTP API List</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>585657D2-1C20-5B8A-AF17-D727C6490BE4</p>
@@ -76,13 +76,13 @@ public class ListHttpApisResponseBody extends TeaModel {
 
     public static class ListHttpApisResponseBodyData extends TeaModel {
         /**
-         * <p>object</p>
+         * <p>The API information.</p>
          */
         @NameInMap("items")
         public java.util.List<HttpApiInfoByName> items;
 
         /**
-         * <p>Page number.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -91,7 +91,7 @@ public class ListHttpApisResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>Page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -100,7 +100,7 @@ public class ListHttpApisResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>Total number of items.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

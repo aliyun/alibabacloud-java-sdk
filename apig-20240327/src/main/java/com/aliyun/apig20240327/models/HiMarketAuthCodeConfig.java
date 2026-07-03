@@ -5,55 +5,82 @@ import com.aliyun.tea.*;
 
 public class HiMarketAuthCodeConfig extends TeaModel {
     /**
-     * <p>The URL of the identity provider\&quot;s authorization endpoint. Your application redirects users to this URL to sign in and grant consent.</p>
+     * <p>The OAuth2 authorization endpoint URL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://idp.example.com/oauth2/authorize">https://idp.example.com/oauth2/authorize</a></p>
      */
     @NameInMap("authorizationEndpoint")
     public String authorizationEndpoint;
 
     /**
-     * <p>The unique identifier for your application. The identity provider assigns this ID when you register your application.</p>
+     * <p>The OAuth2 client ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-client-id</p>
      */
     @NameInMap("clientId")
     public String clientId;
 
     /**
-     * <p>The secret key for your application. This secret authenticates your application with the identity provider.</p>
+     * <p>The OAuth2 client secret. The secret is AES-encrypted when stored.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-client-secret</p>
      */
     @NameInMap("clientSecret")
     public String clientSecret;
 
     /**
-     * <p>The URL of the identity provider that issues the tokens. This URL uniquely identifies the provider.</p>
+     * <p>The OIDC issuer URL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://idp.example.com">https://idp.example.com</a></p>
      */
     @NameInMap("issuer")
     public String issuer;
 
     /**
-     * <p>The URL of the identity provider\&quot;s JSON Web Key Set (JWKS) document. This document contains the public signing keys for token validation.</p>
+     * <p>The JWKS public key set URI, used for token signature verification.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://idp.example.com/.well-known/jwks.json">https://idp.example.com/.well-known/jwks.json</a></p>
      */
     @NameInMap("jwkSetUri")
     public String jwkSetUri;
 
     /**
-     * <p>The URL where the identity provider redirects the user after authorizing your application. This URL must be registered in your application settings with the identity provider.</p>
+     * <p>The OAuth2 callback URL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://gateway.example.com/callback">https://gateway.example.com/callback</a></p>
      */
     @NameInMap("redirectUri")
     public String redirectUri;
 
     /**
-     * <p>A space-separated list of requested permissions. For example: <code>openid profile</code>.</p>
+     * <p>The OAuth2 authorization scopes, separated by spaces.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>openid profile email</p>
      */
     @NameInMap("scopes")
     public String scopes;
 
     /**
-     * <p>The URL of the identity provider\&quot;s token endpoint. Your application uses this endpoint to exchange an authorization code for an access token.</p>
+     * <p>The OAuth2 token endpoint URL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://idp.example.com/oauth2/token">https://idp.example.com/oauth2/token</a></p>
      */
     @NameInMap("tokenEndpoint")
     public String tokenEndpoint;
 
     /**
-     * <p>The URL of the identity provider\&quot;s user info endpoint. Your application can use this endpoint to retrieve the authenticated user\&quot;s profile information.</p>
+     * <p>The OIDC UserInfo endpoint URL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://idp.example.com/userinfo">https://idp.example.com/userinfo</a></p>
      */
     @NameInMap("userInfoEndpoint")
     public String userInfoEndpoint;

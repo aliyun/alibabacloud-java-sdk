@@ -14,7 +14,7 @@ public class AddGatewaySecurityGroupRuleRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The port range.</p>
+     * <p>The port ranges.</p>
      */
     @NameInMap("portRanges")
     public java.util.List<String> portRanges;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSecretsResponseBody extends TeaModel {
     /**
-     * <p>Code of the request</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -14,13 +14,13 @@ public class ListSecretsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Data</p>
+     * <p>The list of key information.</p>
      */
     @NameInMap("data")
     public ListSecretsResponseBodyData data;
 
     /**
-     * <p>message</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -76,7 +76,7 @@ public class ListSecretsResponseBody extends TeaModel {
 
     public static class ListSecretsResponseBodyDataItems extends TeaModel {
         /**
-         * <p>Unix timestamp when the secret was created</p>
+         * <p>The creation timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1725617840096</p>
@@ -85,7 +85,7 @@ public class ListSecretsResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
-         * <p>Gateway type associated with the secret</p>
+         * <p>The gateway type.</p>
          * 
          * <strong>example:</strong>
          * <p>API</p>
@@ -94,13 +94,13 @@ public class ListSecretsResponseBody extends TeaModel {
         public String gatewayType;
 
         /**
-         * <p>KMS configuration object</p>
+         * <p>The KMS configuration information.</p>
          */
         @NameInMap("kmsConfig")
         public KMSConfig kmsConfig;
 
         /**
-         * <p>Name of the secret</p>
+         * <p>The key name.</p>
          * 
          * <strong>example:</strong>
          * <p>my_secret</p>
@@ -109,7 +109,7 @@ public class ListSecretsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Number of resources referencing this secret</p>
+         * <p>The resource count of resources that reference the current key.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -118,7 +118,7 @@ public class ListSecretsResponseBody extends TeaModel {
         public Integer referenceCount;
 
         /**
-         * <p>Source of the ID</p>
+         * <p>The key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sec-d5e6shmm1hkoxxxxxxxx</p>
@@ -127,7 +127,7 @@ public class ListSecretsResponseBody extends TeaModel {
         public String secretId;
 
         /**
-         * <p>Source of the secret</p>
+         * <p>The key source.</p>
          * 
          * <strong>example:</strong>
          * <p>KMS</p>
@@ -136,7 +136,12 @@ public class ListSecretsResponseBody extends TeaModel {
         public String secretSource;
 
         /**
-         * <p>Current status of the secret</p>
+         * <p>The key status. Valid values:</p>
+         * <ul>
+         * <li>ENABLE: Enabled.</li>
+         * <li>DISABLE: Disabled.</li>
+         * <li>DELETED: Deleted.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ENABLE</p>
@@ -145,7 +150,7 @@ public class ListSecretsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Unix timestamp when the secret was last updated</p>
+         * <p>The update timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1721116090326</p>
@@ -234,13 +239,13 @@ public class ListSecretsResponseBody extends TeaModel {
 
     public static class ListSecretsResponseBodyData extends TeaModel {
         /**
-         * <p>Array of secret details</p>
+         * <p>The list of key details.</p>
          */
         @NameInMap("items")
         public java.util.List<ListSecretsResponseBodyDataItems> items;
 
         /**
-         * <p>Page number</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -249,7 +254,7 @@ public class ListSecretsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>Number of items per page</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -258,7 +263,7 @@ public class ListSecretsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>Total number of records matching the query</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
