@@ -75,6 +75,9 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
     }
 
     public static class FaceDuplicationCheckIntlResponseBodyResultExtFaceInfo extends TeaModel {
+        @NameInMap("FaceAttributeInfo")
+        public String faceAttributeInfo;
+
         /**
          * <p>The overall quality score.</p>
          * 
@@ -120,9 +123,32 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
         @NameInMap("SharpnessScore")
         public Double sharpnessScore;
 
+        @NameInMap("TargetFaceQualityScore")
+        public Double targetFaceQualityScore;
+
+        @NameInMap("TargetIlluminationScore")
+        public Double targetIlluminationScore;
+
+        @NameInMap("TargetKaOcclusionScore")
+        public Double targetKaOcclusionScore;
+
+        @NameInMap("TargetOcclusionScore")
+        public Double targetOcclusionScore;
+
+        @NameInMap("TargetSharpnessScore")
+        public Double targetSharpnessScore;
+
         public static FaceDuplicationCheckIntlResponseBodyResultExtFaceInfo build(java.util.Map<String, ?> map) throws Exception {
             FaceDuplicationCheckIntlResponseBodyResultExtFaceInfo self = new FaceDuplicationCheckIntlResponseBodyResultExtFaceInfo();
             return TeaModel.build(map, self);
+        }
+
+        public FaceDuplicationCheckIntlResponseBodyResultExtFaceInfo setFaceAttributeInfo(String faceAttributeInfo) {
+            this.faceAttributeInfo = faceAttributeInfo;
+            return this;
+        }
+        public String getFaceAttributeInfo() {
+            return this.faceAttributeInfo;
         }
 
         public FaceDuplicationCheckIntlResponseBodyResultExtFaceInfo setFaceQualityScore(Double faceQualityScore) {
@@ -165,11 +191,51 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
             return this.sharpnessScore;
         }
 
+        public FaceDuplicationCheckIntlResponseBodyResultExtFaceInfo setTargetFaceQualityScore(Double targetFaceQualityScore) {
+            this.targetFaceQualityScore = targetFaceQualityScore;
+            return this;
+        }
+        public Double getTargetFaceQualityScore() {
+            return this.targetFaceQualityScore;
+        }
+
+        public FaceDuplicationCheckIntlResponseBodyResultExtFaceInfo setTargetIlluminationScore(Double targetIlluminationScore) {
+            this.targetIlluminationScore = targetIlluminationScore;
+            return this;
+        }
+        public Double getTargetIlluminationScore() {
+            return this.targetIlluminationScore;
+        }
+
+        public FaceDuplicationCheckIntlResponseBodyResultExtFaceInfo setTargetKaOcclusionScore(Double targetKaOcclusionScore) {
+            this.targetKaOcclusionScore = targetKaOcclusionScore;
+            return this;
+        }
+        public Double getTargetKaOcclusionScore() {
+            return this.targetKaOcclusionScore;
+        }
+
+        public FaceDuplicationCheckIntlResponseBodyResultExtFaceInfo setTargetOcclusionScore(Double targetOcclusionScore) {
+            this.targetOcclusionScore = targetOcclusionScore;
+            return this;
+        }
+        public Double getTargetOcclusionScore() {
+            return this.targetOcclusionScore;
+        }
+
+        public FaceDuplicationCheckIntlResponseBodyResultExtFaceInfo setTargetSharpnessScore(Double targetSharpnessScore) {
+            this.targetSharpnessScore = targetSharpnessScore;
+            return this;
+        }
+        public Double getTargetSharpnessScore() {
+            return this.targetSharpnessScore;
+        }
+
     }
 
     public static class FaceDuplicationCheckIntlResponseBodyResult extends TeaModel {
         /**
-         * <p>The face ID and UserID retrieved from the face database when a duplicate face is detected.</p>
+         * <p>The face ID and UserID retrieved from the face library when a duplicate face is detected.</p>
          * 
          * <strong>example:</strong>
          * <p>[
@@ -184,13 +250,13 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
         public String duplicateFace;
 
         /**
-         * <p>The additional result information.</p>
+         * <p>The related result information.</p>
          */
         @NameInMap("ExtFaceInfo")
         public FaceDuplicationCheckIntlResponseBodyResultExtFaceInfo extFaceInfo;
 
         /**
-         * <p>The estimated age of the face. This value may not be returned if the prediction fails.</p>
+         * <p>The estimated age of the face. The prediction may fail and no value is returned in some cases.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -199,7 +265,7 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
         public String faceAge;
 
         /**
-         * <p>Indicates whether the captured face involves a liveness attack. A value of Y indicates an attack, and a value of N indicates no attack. This field is returned only when passive liveness detection is enabled.</p>
+         * <p>Indicates whether the captured face involves a liveness attack. Valid values: Y (attack detected) and N (no attack detected). This field is returned when passive liveness detection is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>N</p>
@@ -208,7 +274,7 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
         public String faceAttack;
 
         /**
-         * <p>The probability of a passive liveness detection attack. Value range: 0 to 100. This field is returned only when passive liveness detection is enabled.</p>
+         * <p>The probability of a passive liveness detection attack. The value ranges from 0 to 100. This field is returned when passive liveness detection is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>99</p>
@@ -217,7 +283,7 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
         public String faceAttackScore;
 
         /**
-         * <p>The 1:1 face comparison score returned when the verification mode is 1 or 2. Value range: 0 to 100.</p>
+         * <p>The 1:1 face comparison score returned when the verification mode is 1 or 2. The value ranges from 0 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>98</p>
@@ -226,7 +292,7 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
         public String faceComparisonScore;
 
         /**
-         * <p>The predicted gender of the face. This value may not be returned if the prediction fails. Valid values:</p>
+         * <p>The predicted gender of the face image. The prediction may fail and no value is returned in some cases. Valid values:</p>
          * <ul>
          * <li>M: Male.</li>
          * <li>F: Female.</li>
@@ -252,7 +318,7 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
         public String facePassed;
 
         /**
-         * <p>The FACEID returned only when automatic registration is enabled and the face is registered successfully.</p>
+         * <p>The FACEID returned only when the customer has enabled automatic registration and the face is registered.</p>
          * 
          * <strong>example:</strong>
          * <p>9e792ec84c8f0ca592a</p>
@@ -274,7 +340,7 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
         public Integer faceRegistrationResult;
 
         /**
-         * <p>The description of the verification result. For more information, refer to the ResultObject.SubCode error code description.</p>
+         * <p>The verification result description. For more information, refer to the ResultObject.SubCode error code description.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>

@@ -76,7 +76,7 @@ public class EkycVerifyResponseBody extends TeaModel {
 
     public static class EkycVerifyResponseBodyResult extends TeaModel {
         /**
-         * <p>The face verification result information.</p>
+         * <p>The face verification result.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -90,7 +90,7 @@ public class EkycVerifyResponseBody extends TeaModel {
         public String extFaceInfo;
 
         /**
-         * <p>The document recognition result. This parameter is returned only when the API response is successful.</p>
+         * <p>The document recognition result. This field is returned only when the API response is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -112,11 +112,7 @@ public class EkycVerifyResponseBody extends TeaModel {
         public String extIdInfo;
 
         /**
-         * <p>Indicates whether the verification is passed. Valid values:</p>
-         * <ul>
-         * <li>T: Passed.</li>
-         * <li>F: Not passed.</li>
-         * </ul>
+         * <p>Indicates whether the verification is passed. Valid values: T (passed) and F (not passed).</p>
          * 
          * <strong>example:</strong>
          * <p>Y</p>

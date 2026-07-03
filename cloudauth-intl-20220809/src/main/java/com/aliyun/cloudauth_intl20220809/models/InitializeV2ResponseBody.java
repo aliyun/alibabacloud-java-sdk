@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class InitializeV2ResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,6 +14,8 @@ public class InitializeV2ResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,12 +23,17 @@ public class InitializeV2ResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>86C40EC3-5940-5F47-995C-BFE90B70E540</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The response result.</p>
+     */
     @NameInMap("Result")
     public InitializeV2ResponseBodyResult result;
 
@@ -67,6 +76,8 @@ public class InitializeV2ResponseBody extends TeaModel {
 
     public static class InitializeV2ResponseBodyResult extends TeaModel {
         /**
+         * <p>The client configuration.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -74,6 +85,11 @@ public class InitializeV2ResponseBody extends TeaModel {
         public String clientCfg;
 
         /**
+         * <p>The standard authentication encryption protocol.</p>
+         * <blockquote>
+         * <p>This field is required when you use iframe embedding for H5 web page integration.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>hksb7ba1b28130d24e015d*********</p>
          */
@@ -81,6 +97,8 @@ public class InitializeV2ResponseBody extends TeaModel {
         public String protocol;
 
         /**
+         * <p>The unique ID of the authentication request.</p>
+         * 
          * <strong>example:</strong>
          * <p>4ab0b***cbde97</p>
          */
@@ -88,6 +106,8 @@ public class InitializeV2ResponseBody extends TeaModel {
         public String transactionId;
 
         /**
+         * <p>The web authentication URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>http****</p>
          */

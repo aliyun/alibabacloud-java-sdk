@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class FaceCompareV2ResponseBody extends TeaModel {
     /**
-     * <p>The return code.</p>
-     * <p>200: succeeded. Other values: error codes. For more information, see error codes.</p>
+     * <p>The response code.</p>
+     * <p>200: success. Other values: error codes. For more information, see error codes.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -15,7 +15,7 @@ public class FaceCompareV2ResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The return message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -121,6 +121,21 @@ public class FaceCompareV2ResponseBody extends TeaModel {
         @NameInMap("SharpnessScore")
         public Double sharpnessScore;
 
+        @NameInMap("TargetFaceQualityScore")
+        public Double targetFaceQualityScore;
+
+        @NameInMap("TargetIlluminationScore")
+        public Double targetIlluminationScore;
+
+        @NameInMap("TargetKaOcclusionScore")
+        public Double targetKaOcclusionScore;
+
+        @NameInMap("TargetOcclusionScore")
+        public Double targetOcclusionScore;
+
+        @NameInMap("TargetSharpnessScore")
+        public Double targetSharpnessScore;
+
         public static FaceCompareV2ResponseBodyResultExtFaceInfo build(java.util.Map<String, ?> map) throws Exception {
             FaceCompareV2ResponseBodyResultExtFaceInfo self = new FaceCompareV2ResponseBodyResultExtFaceInfo();
             return TeaModel.build(map, self);
@@ -166,6 +181,46 @@ public class FaceCompareV2ResponseBody extends TeaModel {
             return this.sharpnessScore;
         }
 
+        public FaceCompareV2ResponseBodyResultExtFaceInfo setTargetFaceQualityScore(Double targetFaceQualityScore) {
+            this.targetFaceQualityScore = targetFaceQualityScore;
+            return this;
+        }
+        public Double getTargetFaceQualityScore() {
+            return this.targetFaceQualityScore;
+        }
+
+        public FaceCompareV2ResponseBodyResultExtFaceInfo setTargetIlluminationScore(Double targetIlluminationScore) {
+            this.targetIlluminationScore = targetIlluminationScore;
+            return this;
+        }
+        public Double getTargetIlluminationScore() {
+            return this.targetIlluminationScore;
+        }
+
+        public FaceCompareV2ResponseBodyResultExtFaceInfo setTargetKaOcclusionScore(Double targetKaOcclusionScore) {
+            this.targetKaOcclusionScore = targetKaOcclusionScore;
+            return this;
+        }
+        public Double getTargetKaOcclusionScore() {
+            return this.targetKaOcclusionScore;
+        }
+
+        public FaceCompareV2ResponseBodyResultExtFaceInfo setTargetOcclusionScore(Double targetOcclusionScore) {
+            this.targetOcclusionScore = targetOcclusionScore;
+            return this;
+        }
+        public Double getTargetOcclusionScore() {
+            return this.targetOcclusionScore;
+        }
+
+        public FaceCompareV2ResponseBodyResultExtFaceInfo setTargetSharpnessScore(Double targetSharpnessScore) {
+            this.targetSharpnessScore = targetSharpnessScore;
+            return this;
+        }
+        public Double getTargetSharpnessScore() {
+            return this.targetSharpnessScore;
+        }
+
     }
 
     public static class FaceCompareV2ResponseBodyResult extends TeaModel {
@@ -176,7 +231,7 @@ public class FaceCompareV2ResponseBody extends TeaModel {
         public FaceCompareV2ResponseBodyResultExtFaceInfo extFaceInfo;
 
         /**
-         * <p>The comparison score between the submitted face image and the reference face image during verification. Value range: 0 to 100.</p>
+         * <p>The comparison score between the submitted face image and the reference face image during the verification process. Valid values: 0 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>98</p>
@@ -185,10 +240,10 @@ public class FaceCompareV2ResponseBody extends TeaModel {
         public Double faceComparisonScore;
 
         /**
-         * <p>Indicates whether the verification passed. Valid values:</p>
+         * <p>Indicates whether the verification is passed. Valid values:</p>
          * <ul>
-         * <li>Y: passed.</li>
-         * <li>N: not passed.</li>
+         * <li>Y: Passed.</li>
+         * <li>N: Not passed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

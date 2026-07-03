@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class FaceVerifyIntlResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,6 +14,8 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,12 +23,17 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>5E63B760-0ECB-5C07-8503-A65C27876968</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public FaceVerifyIntlResponseBodyResult result;
 
@@ -66,7 +75,12 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
     }
 
     public static class FaceVerifyIntlResponseBodyResultExtFaceInfo extends TeaModel {
+        @NameInMap("FaceAttributeInfo")
+        public String faceAttributeInfo;
+
         /**
+         * <p>The liveness face quality score. Value range: 0 to 100. A higher value indicates better quality.</p>
+         * 
          * <strong>example:</strong>
          * <p>39.04</p>
          */
@@ -74,6 +88,8 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         public Double faceQualityScore;
 
         /**
+         * <p>The algorithm score for illumination, a sub-dimension of quality assessment. Value range: 0 to 100. A higher value indicates better quality.</p>
+         * 
          * <strong>example:</strong>
          * <p>97.43</p>
          */
@@ -81,6 +97,8 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         public Double illuminationScore;
 
         /**
+         * <p>The algorithm score for key area occlusion, a sub-dimension of quality assessment. Value range: 0 to 100. A higher value indicates better quality.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -88,6 +106,8 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         public Double kaOcclusionScore;
 
         /**
+         * <p>The algorithm score for occlusion, a sub-dimension of quality assessment. Value range: 0 to 100. A higher value indicates better quality.</p>
+         * 
          * <strong>example:</strong>
          * <p>50.26</p>
          */
@@ -95,15 +115,40 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         public Double occlusionScore;
 
         /**
+         * <p>The image sharpness score, a sub-dimension of quality assessment. Value range: 0 to 100. A higher value indicates better quality.</p>
+         * 
          * <strong>example:</strong>
          * <p>86.47</p>
          */
         @NameInMap("SharpnessScore")
         public Double sharpnessScore;
 
+        @NameInMap("TargetFaceQualityScore")
+        public Double targetFaceQualityScore;
+
+        @NameInMap("TargetIlluminationScore")
+        public Double targetIlluminationScore;
+
+        @NameInMap("TargetKaOcclusionScore")
+        public Double targetKaOcclusionScore;
+
+        @NameInMap("TargetOcclusionScore")
+        public Double targetOcclusionScore;
+
+        @NameInMap("TargetSharpnessScore")
+        public Double targetSharpnessScore;
+
         public static FaceVerifyIntlResponseBodyResultExtFaceInfo build(java.util.Map<String, ?> map) throws Exception {
             FaceVerifyIntlResponseBodyResultExtFaceInfo self = new FaceVerifyIntlResponseBodyResultExtFaceInfo();
             return TeaModel.build(map, self);
+        }
+
+        public FaceVerifyIntlResponseBodyResultExtFaceInfo setFaceAttributeInfo(String faceAttributeInfo) {
+            this.faceAttributeInfo = faceAttributeInfo;
+            return this;
+        }
+        public String getFaceAttributeInfo() {
+            return this.faceAttributeInfo;
         }
 
         public FaceVerifyIntlResponseBodyResultExtFaceInfo setFaceQualityScore(Double faceQualityScore) {
@@ -146,10 +191,52 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
             return this.sharpnessScore;
         }
 
+        public FaceVerifyIntlResponseBodyResultExtFaceInfo setTargetFaceQualityScore(Double targetFaceQualityScore) {
+            this.targetFaceQualityScore = targetFaceQualityScore;
+            return this;
+        }
+        public Double getTargetFaceQualityScore() {
+            return this.targetFaceQualityScore;
+        }
+
+        public FaceVerifyIntlResponseBodyResultExtFaceInfo setTargetIlluminationScore(Double targetIlluminationScore) {
+            this.targetIlluminationScore = targetIlluminationScore;
+            return this;
+        }
+        public Double getTargetIlluminationScore() {
+            return this.targetIlluminationScore;
+        }
+
+        public FaceVerifyIntlResponseBodyResultExtFaceInfo setTargetKaOcclusionScore(Double targetKaOcclusionScore) {
+            this.targetKaOcclusionScore = targetKaOcclusionScore;
+            return this;
+        }
+        public Double getTargetKaOcclusionScore() {
+            return this.targetKaOcclusionScore;
+        }
+
+        public FaceVerifyIntlResponseBodyResultExtFaceInfo setTargetOcclusionScore(Double targetOcclusionScore) {
+            this.targetOcclusionScore = targetOcclusionScore;
+            return this;
+        }
+        public Double getTargetOcclusionScore() {
+            return this.targetOcclusionScore;
+        }
+
+        public FaceVerifyIntlResponseBodyResultExtFaceInfo setTargetSharpnessScore(Double targetSharpnessScore) {
+            this.targetSharpnessScore = targetSharpnessScore;
+            return this;
+        }
+        public Double getTargetSharpnessScore() {
+            return this.targetSharpnessScore;
+        }
+
     }
 
     public static class FaceVerifyIntlResponseBodyResult extends TeaModel {
         /**
+         * <p>The face ID, user ID, and comparison score of the corresponding face in the face library when a duplicate face is found during retrieval.</p>
+         * 
          * <strong>example:</strong>
          * <p>[
          *     {
@@ -162,10 +249,15 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         @NameInMap("DuplicateFace")
         public String duplicateFace;
 
+        /**
+         * <p>The additional face result information.</p>
+         */
         @NameInMap("ExtFaceInfo")
         public FaceVerifyIntlResponseBodyResultExtFaceInfo extFaceInfo;
 
         /**
+         * <p>The predicted reference age of the face. Prediction may fail and the value may not be returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -173,6 +265,13 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         public Long faceAge;
 
         /**
+         * <p>Indicates whether the captured face involves a liveness attack. Valid values:</p>
+         * <ul>
+         * <li>Y: attack detected.</li>
+         * <li>N: no attack detected.</li>
+         * </ul>
+         * <p>This field is returned only when passive liveness detection is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>N</p>
          */
@@ -180,6 +279,8 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         public String faceAttack;
 
         /**
+         * <p>The probability of a passive liveness detection attack on the face. Value range: 0 to 100. This field is returned only when passive liveness detection is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>99</p>
          */
@@ -187,6 +288,8 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         public Double faceAttackScore;
 
         /**
+         * <p>The comparison score between the face image submitted during verification and the reference face image. Value range: 0 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>95.0</p>
          */
@@ -194,6 +297,12 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         public Double faceComparisonScore;
 
         /**
+         * <p>The predicted gender of the face image. Prediction may fail and the value may not be returned. Valid values:</p>
+         * <ul>
+         * <li>M: male.</li>
+         * <li>F: female.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>M</p>
          */
@@ -201,6 +310,12 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         public String faceGender;
 
         /**
+         * <p>The final verification result. Valid values:</p>
+         * <ul>
+         * <li>Y: passed.</li>
+         * <li>N: not passed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Y</p>
          */
@@ -208,6 +323,8 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         public String facePassed;
 
         /**
+         * <p>The corresponding face ID returned only when the customer has enabled automatic registration and the face is registered successfully.</p>
+         * 
          * <strong>example:</strong>
          * <p>9e792ec84c8f0ca592a</p>
          */
@@ -215,6 +332,12 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         public String faceRegistrationId;
 
         /**
+         * <p>The face registration result. Valid values: </p>
+         * <ul>
+         * <li>0: failed. </li>
+         * <li>1: succeeded.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -222,6 +345,8 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         public Long faceRegistrationResult;
 
         /**
+         * <p>The sub-result code.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -229,6 +354,8 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         public String subCode;
 
         /**
+         * <p>The unique identifier of the verification request.</p>
+         * 
          * <strong>example:</strong>
          * <p>4ab0b***cbde97</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EkycVerifyV2AdvanceRequest extends TeaModel {
     /**
-     * <p>Indicates whether to enable authoritative identity verification. This parameter currently applies only to second-generation ID cards issued in the Chinese mainland.</p>
+     * <p>Specifies whether to enable authoritative identity verification. Currently, this feature is applicable only to second-generation ID cards of mainland China.</p>
      * 
      * <strong>example:</strong>
      * <p>T</p>
@@ -14,10 +14,10 @@ public class EkycVerifyV2AdvanceRequest extends TeaModel {
     public String authorize;
 
     /**
-     * <p>Indicates whether clipping is allowed. Clipping is disabled by default (T/F).</p>
+     * <p>Specifies whether cropping is allowed. Not allowed by default. Valid values: T and F.</p>
      * <ul>
-     * <li>T: Detection is required.</li>
-     * <li>F: Detection is required (default is F).</li>
+     * <li>T: Cropping is allowed.</li>
+     * <li>F: Cropping is not allowed. (Default: F)</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class EkycVerifyV2AdvanceRequest extends TeaModel {
     public String crop;
 
     /**
-     * <p>The user\&quot;s real name. When Authorize=\&quot;T\&quot; and the certificate type is a Chinese mainland ID card, you must provide at least one of the following: key certificate information (DocName, DocNo) or certificate image (IdOcrPictureBase64/URL). Note: It supports combinations of one or more Chinese characters, excluding special characters except for the interpunct 【·】 used in ethnic minority names.</p>
+     * <p>The real name of the user. When Authorize=\&quot;T\&quot; and the document type is a mainland China ID card, at least one of the following groups must be provided: document key information (DocName, DocNo) or document image (IdOcrPictureBase64/URL). Note: Supports combinations of Chinese characters with a length of at least 1 character. Special characters are not supported, except for the middle dot (·) used in ethnic minority names.</p>
      * 
      * <strong>example:</strong>
      * <p>张**</p>
@@ -36,7 +36,7 @@ public class EkycVerifyV2AdvanceRequest extends TeaModel {
     public String docName;
 
     /**
-     * <p>The user\&quot;s certificate number. When Authorize=\&quot;T\&quot; and the certificate type is a Chinese mainland ID card, you must provide at least one of the following: key certificate information (DocName, DocNo) or certificate image (IdOcrPictureBase64/URL). Note: It supports a combination of letters and digits with a length of 18 characters.</p>
+     * <p>The document number of the user. When Authorize=\&quot;T\&quot; and the document type is a mainland China ID card, at least one of the following groups must be provided: document key information (DocName, DocNo) or document image (IdOcrPictureBase64/URL). Note: Supports a combination of letters and digits with a length of 18 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>410***************</p>
@@ -45,7 +45,7 @@ public class EkycVerifyV2AdvanceRequest extends TeaModel {
     public String docNo;
 
     /**
-     * <p>Certificate type</p>
+     * <p>The document type.</p>
      * 
      * <strong>example:</strong>
      * <p>00000001</p>
@@ -54,11 +54,11 @@ public class EkycVerifyV2AdvanceRequest extends TeaModel {
     public String docType;
 
     /**
-     * <p>Base64 encoding of the facial image.</p>
-     * <p>Notes:</p>
+     * <p>The Base64-encoded face image.</p>
+     * <p>Note:</p>
      * <ul>
-     * <li>If you choose this method to submit the certificate image, check the image size and avoid uploading excessively large images.</li>
-     * <li>You must specify exactly one of FacePictureBase64, FacePictureUrl, or FacePictureFile.</li>
+     * <li>If you use this method to pass the face image, check the photo size and do not pass an overly large photo.</li>
+     * <li>You can only specify one of FacePictureBase64, FacePictureUrl, and FacePictureFile.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,7 +68,7 @@ public class EkycVerifyV2AdvanceRequest extends TeaModel {
     public String facePictureBase64;
 
     /**
-     * <p>File stream of the facial photo</p>
+     * <p>The file stream of the face photo.</p>
      * 
      * <strong>example:</strong>
      * <p>InputStream</p>
@@ -77,7 +77,7 @@ public class EkycVerifyV2AdvanceRequest extends TeaModel {
     public java.io.InputStream facePictureFileObject;
 
     /**
-     * <p>URL of the facial photo</p>
+     * <p>The URL of the face photo.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://digital-face-prod8.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg">https://digital-face-prod8.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg</a></p>
@@ -85,11 +85,14 @@ public class EkycVerifyV2AdvanceRequest extends TeaModel {
     @NameInMap("FacePictureUrl")
     public String facePictureUrl;
 
+    @NameInMap("FaceQualityCheck")
+    public String faceQualityCheck;
+
     /**
-     * <p>Base64-encoded certificate Image. Notes:</p>
+     * <p>The Base64-encoded document image. Note:</p>
      * <ul>
-     * <li>If you use this method to submit the certificate image, check the image size and avoid uploading excessively large images.</li>
-     * <li>You must specify exactly one of IdOcrPictureBase64, IdOcrPictureUrl, or IdOcrPictureFile.</li>
+     * <li>If you use this method to pass the document image, check the photo size and do not pass an overly large photo.</li>
+     * <li>You can only specify one of IdOcrPictureBase64, IdOcrPictureUrl, and IdOcrPictureFile.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -99,7 +102,7 @@ public class EkycVerifyV2AdvanceRequest extends TeaModel {
     public String idOcrPictureBase64;
 
     /**
-     * <p>File stream of the front side of the certificate</p>
+     * <p>The file stream of the front side of the document image.</p>
      * 
      * <strong>example:</strong>
      * <p>InputStream</p>
@@ -108,7 +111,7 @@ public class EkycVerifyV2AdvanceRequest extends TeaModel {
     public java.io.InputStream idOcrPictureFileObject;
 
     /**
-     * <p>URL of the front side of the certificate</p>
+     * <p>The URL of the front side of the document image.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://digital-cardocr-prod8.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg">https://digital-cardocr-prod8.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg</a></p>
@@ -117,12 +120,12 @@ public class EkycVerifyV2AdvanceRequest extends TeaModel {
     public String idOcrPictureUrl;
 
     /**
-     * <p>Custom OCR quality detection threshold mode:</p>
+     * <p>The custom OCR quality detection threshold mode:</p>
      * <ul>
-     * <li>0: System default</li>
-     * <li>1: Strict mode</li>
-     * <li>2: Loose mode</li>
-     * <li>3 (default): Shutdown quality detection</li>
+     * <li>0: System default.</li>
+     * <li>1: Strict mode.</li>
+     * <li>2: Lenient mode.</li>
+     * <li>3 (Default): Quality detection is disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -132,7 +135,7 @@ public class EkycVerifyV2AdvanceRequest extends TeaModel {
     public String idThreshold;
 
     /**
-     * <p>A custom business UUID defined by the merchant, used for subsequent issue tracking and troubleshooting. It supports a combination of letters and digits with a length of 32 characters. Ensure its uniqueness.</p>
+     * <p>A unique business identifier customized by the merchant, used for subsequent troubleshooting. Supports a combination of letters and digits with a length of 32 characters. Ensure that the value is unique.</p>
      * 
      * <strong>example:</strong>
      * <p>e0c34a77f5ac40a5aa5e6ed20c353888</p>
@@ -141,7 +144,7 @@ public class EkycVerifyV2AdvanceRequest extends TeaModel {
     public String merchantBizId;
 
     /**
-     * <p>Your custom user ID or another identifier that can uniquely identify a specific user, such as a mobile phone number or mailbox address. We strongly recommend pre-masking the value of this field—for example, by applying a hash function.</p>
+     * <p>A custom user ID or other identifier that can identify a specific user, such as a phone number or email address. We strongly recommend that you desensitize the value of this field in advance, for example, by hashing the value.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -150,7 +153,7 @@ public class EkycVerifyV2AdvanceRequest extends TeaModel {
     public String merchantUserId;
 
     /**
-     * <p>Product code</p>
+     * <p>The product code.</p>
      * 
      * <strong>example:</strong>
      * <p>eKYC_MIN</p>
@@ -225,6 +228,14 @@ public class EkycVerifyV2AdvanceRequest extends TeaModel {
     }
     public String getFacePictureUrl() {
         return this.facePictureUrl;
+    }
+
+    public EkycVerifyV2AdvanceRequest setFaceQualityCheck(String faceQualityCheck) {
+        this.faceQualityCheck = faceQualityCheck;
+        return this;
+    }
+    public String getFaceQualityCheck() {
+        return this.faceQualityCheck;
     }
 
     public EkycVerifyV2AdvanceRequest setIdOcrPictureBase64(String idOcrPictureBase64) {

@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class FaceLivenessV2AdvanceRequest extends TeaModel {
     /**
+     * <p>The Base64-encoded face image.</p>
+     * <blockquote>
+     * <p><strong>Note</strong></p>
+     * </blockquote>
+     * <ul>
+     * <li>If you use this method to pass in the image, check the image size and do not pass in an excessively large image.</li>
+     * <li>Specify one of the following parameters: FacePictureBase64, FacePictureUrl, or FacePictureFile.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Base64</p>
      */
@@ -12,6 +21,8 @@ public class FaceLivenessV2AdvanceRequest extends TeaModel {
     public String facePictureBase64;
 
     /**
+     * <p>The file stream of the face image.</p>
+     * 
      * <strong>example:</strong>
      * <p>InputStream</p>
      */
@@ -19,6 +30,8 @@ public class FaceLivenessV2AdvanceRequest extends TeaModel {
     public java.io.InputStream facePictureFileObject;
 
     /**
+     * <p>The URL of the face image. The URL must be a publicly accessible HTTPS URL.</p>
+     * 
      * <strong>example:</strong>
      * <p>https://***</p>
      */
@@ -26,6 +39,12 @@ public class FaceLivenessV2AdvanceRequest extends TeaModel {
     public String facePictureUrl;
 
     /**
+     * <p>Specifies whether to check the quality of the face image. Valid values:</p>
+     * <ul>
+     * <li>Y: enabled.</li>
+     * <li>N: disabled. This is the default value.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Y</p>
      */
@@ -33,6 +52,8 @@ public class FaceLivenessV2AdvanceRequest extends TeaModel {
     public String faceQualityCheck;
 
     /**
+     * <p>The merchant-defined unique business ID for subsequent troubleshooting. The value can be a combination of letters and digits with a maximum length of 32 characters. Make sure the value is unique.</p>
+     * 
      * <strong>example:</strong>
      * <p>e0c34a***353888</p>
      */
@@ -40,6 +61,8 @@ public class FaceLivenessV2AdvanceRequest extends TeaModel {
     public String merchantBizId;
 
     /**
+     * <p>The custom user ID or another identifier that can identify a specific user, such as a phone number or email address. We strongly recommend that you desensitize the value of this field in advance, for example, by hashing the value.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456789</p>
      */
@@ -47,6 +70,7 @@ public class FaceLivenessV2AdvanceRequest extends TeaModel {
     public String merchantUserId;
 
     /**
+     * <p>The product plan to use. Valid values: FACE_LIVENESS_MIN_PRO and FACE_LIVENESS_MIN.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

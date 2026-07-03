@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EkycVerifyV2ResponseBody extends TeaModel {
     /**
-     * <p>Return code</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,7 +14,7 @@ public class EkycVerifyV2ResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Return message</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class EkycVerifyV2ResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return Result</p>
+     * <p>The response result.</p>
      */
     @NameInMap("Result")
     public EkycVerifyV2ResponseBodyResult result;
@@ -76,7 +76,7 @@ public class EkycVerifyV2ResponseBody extends TeaModel {
 
     public static class EkycVerifyV2ResponseBodyResult extends TeaModel {
         /**
-         * <p>Face detection result information</p>
+         * <p>The face verification result information.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -90,7 +90,7 @@ public class EkycVerifyV2ResponseBody extends TeaModel {
         public String extFaceInfo;
 
         /**
-         * <p>Certificate Classification Result. Returned only when the API response Succeeded.</p>
+         * <p>The document recognition result. This parameter is returned only when the API response is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -112,7 +112,7 @@ public class EkycVerifyV2ResponseBody extends TeaModel {
         public String extIdInfo;
 
         /**
-         * <p>Indicates whether the verification passed. The value is Y if passed, or N if Failed.</p>
+         * <p>Indicates whether the verification is passed. Valid values: Y (passed) and N (not passed).</p>
          * 
          * <strong>example:</strong>
          * <p>Y</p>
@@ -121,7 +121,7 @@ public class EkycVerifyV2ResponseBody extends TeaModel {
         public String passed;
 
         /**
-         * <p>Sub-result code</p>
+         * <p>The sub-result code.</p>
          * 
          * <strong>example:</strong>
          * <p>205</p>
@@ -130,7 +130,7 @@ public class EkycVerifyV2ResponseBody extends TeaModel {
         public String subCode;
 
         /**
-         * <p>The unique id of the request</p>
+         * <p>The unique identifier of the authentication request.</p>
          * 
          * <strong>example:</strong>
          * <p>4ab0b***cbde97</p>

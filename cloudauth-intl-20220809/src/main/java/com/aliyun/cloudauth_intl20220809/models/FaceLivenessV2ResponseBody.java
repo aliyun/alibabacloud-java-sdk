@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class FaceLivenessV2ResponseBody extends TeaModel {
     /**
+     * <p>The return code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,6 +14,8 @@ public class FaceLivenessV2ResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The return message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,12 +23,17 @@ public class FaceLivenessV2ResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>5E63B760-0ECB-5C07-8503-A65C27876968</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public FaceLivenessV2ResponseBodyResult result;
 
@@ -67,6 +76,8 @@ public class FaceLivenessV2ResponseBody extends TeaModel {
 
     public static class FaceLivenessV2ResponseBodyResultExtFaceInfo extends TeaModel {
         /**
+         * <p>The predicted reference age of the face. The prediction may fail and return no value.</p>
+         * 
          * <strong>example:</strong>
          * <p>18</p>
          */
@@ -74,13 +85,24 @@ public class FaceLivenessV2ResponseBody extends TeaModel {
         public Long faceAge;
 
         /**
+         * <p>The liveness detection result. Valid values: Y (attack detected) and N (Normal).</p>
+         * 
          * <strong>example:</strong>
          * <p>Y</p>
          */
         @NameInMap("FaceAttack")
         public String faceAttack;
 
+        @NameInMap("FaceAttributeInfo")
+        public String faceAttributeInfo;
+
         /**
+         * <p>The predicted gender of the face image. The prediction may fail and return no value. Valid values:</p>
+         * <ul>
+         * <li>M: male.</li>
+         * <li>F: female.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>M</p>
          */
@@ -88,6 +110,8 @@ public class FaceLivenessV2ResponseBody extends TeaModel {
         public String faceGender;
 
         /**
+         * <p>The quality score of the liveness face. Valid values: 0 to 100. A higher value indicates better quality.</p>
+         * 
          * <strong>example:</strong>
          * <p>79.04</p>
          */
@@ -95,6 +119,8 @@ public class FaceLivenessV2ResponseBody extends TeaModel {
         public Double faceQualityScore;
 
         /**
+         * <p>The algorithm score for illumination as a quality sub-dimension. Valid values: 0 to 100. A higher value indicates better quality.</p>
+         * 
          * <strong>example:</strong>
          * <p>97.43</p>
          */
@@ -102,6 +128,8 @@ public class FaceLivenessV2ResponseBody extends TeaModel {
         public Double illuminationScore;
 
         /**
+         * <p>The algorithm score for key area occlusion as a quality sub-dimension. Valid values: 0 to 100. A higher value indicates better quality.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -109,6 +137,8 @@ public class FaceLivenessV2ResponseBody extends TeaModel {
         public Double kaOcclusionScore;
 
         /**
+         * <p>Indicates whether facial occlusion is detected. A value of Y indicates occlusion is detected. A value of N indicates no occlusion is detected.</p>
+         * 
          * <strong>example:</strong>
          * <p>Y</p>
          */
@@ -116,6 +146,8 @@ public class FaceLivenessV2ResponseBody extends TeaModel {
         public String occlusionResult;
 
         /**
+         * <p>The algorithm score for occlusion as a quality sub-dimension. Valid values: 0 to 100. A higher value indicates better quality.</p>
+         * 
          * <strong>example:</strong>
          * <p>50.26</p>
          */
@@ -123,6 +155,8 @@ public class FaceLivenessV2ResponseBody extends TeaModel {
         public Double occlusionScore;
 
         /**
+         * <p>The algorithm score for image sharpness as a quality sub-dimension. Valid values: 0 to 100. A higher value indicates better quality.</p>
+         * 
          * <strong>example:</strong>
          * <p>60.78</p>
          */
@@ -148,6 +182,14 @@ public class FaceLivenessV2ResponseBody extends TeaModel {
         }
         public String getFaceAttack() {
             return this.faceAttack;
+        }
+
+        public FaceLivenessV2ResponseBodyResultExtFaceInfo setFaceAttributeInfo(String faceAttributeInfo) {
+            this.faceAttributeInfo = faceAttributeInfo;
+            return this;
+        }
+        public String getFaceAttributeInfo() {
+            return this.faceAttributeInfo;
         }
 
         public FaceLivenessV2ResponseBodyResultExtFaceInfo setFaceGender(String faceGender) {
@@ -209,10 +251,19 @@ public class FaceLivenessV2ResponseBody extends TeaModel {
     }
 
     public static class FaceLivenessV2ResponseBodyResult extends TeaModel {
+        /**
+         * <p>The face result information.</p>
+         */
         @NameInMap("ExtFaceInfo")
         public FaceLivenessV2ResponseBodyResultExtFaceInfo extFaceInfo;
 
         /**
+         * <p>Indicates whether the authentication is passed. Valid values:</p>
+         * <ul>
+         * <li>Y: passed.</li>
+         * <li>N: not passed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Y</p>
          */
@@ -220,6 +271,8 @@ public class FaceLivenessV2ResponseBody extends TeaModel {
         public String passed;
 
         /**
+         * <p>The sub-result code.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -227,6 +280,8 @@ public class FaceLivenessV2ResponseBody extends TeaModel {
         public String subCode;
 
         /**
+         * <p>The unique ID of the authentication request.</p>
+         * 
          * <strong>example:</strong>
          * <p>hksb7ba1b28130d24e015d694361****</p>
          */

@@ -1715,7 +1715,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>全球证件ocr识别接口</p>
+     * <p>Recognizes identity documents worldwide through OCR.</p>
      * 
      * @param request DocOcrMaxV2Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -1801,7 +1801,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>全球证件ocr识别接口</p>
+     * <p>Recognizes identity documents worldwide through OCR.</p>
      * 
      * @param request DocOcrMaxV2Request
      * @return DocOcrMaxV2Response
@@ -2172,6 +2172,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("FacePictureUrl", request.facePictureUrl);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.faceQualityCheck)) {
+            query.put("FaceQualityCheck", request.faceQualityCheck);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.idOcrPictureUrl)) {
             query.put("IdOcrPictureUrl", request.idOcrPictureUrl);
         }
@@ -2233,7 +2237,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Server-side-only eKYC API</p>
+     * <p>The eKYC solution server-side API.</p>
      * 
      * @param request EkycVerifyV2Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -2264,6 +2268,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.facePictureUrl)) {
             query.put("FacePictureUrl", request.facePictureUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.faceQualityCheck)) {
+            query.put("FaceQualityCheck", request.faceQualityCheck);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.idOcrPictureUrl)) {
@@ -2323,7 +2331,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Server-side-only eKYC API</p>
+     * <p>The eKYC solution server-side API.</p>
      * 
      * @param request EkycVerifyV2Request
      * @return EkycVerifyV2Response
@@ -2447,7 +2455,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Compares two face images by using face recognition technology and returns the comparison result and similarity score.</p>
+     * <p>Uses facial recognition technology to compare and verify two input face images, returning the face comparison result and similarity score.</p>
      * 
      * @param request FaceCompareRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2505,7 +2513,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Compares two face images by using face recognition technology and returns the comparison result and similarity score.</p>
+     * <p>Uses facial recognition technology to compare and verify two input face images, returning the face comparison result and similarity score.</p>
      * 
      * @param request FaceCompareRequest
      * @return FaceCompareResponse
@@ -2793,7 +2801,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>FaceDuplicationCheckIntl is designed for scenarios where SDK integration is not feasible. You can call this API operation to submit facial images and perform the following functions: verify whether the user is a real person, compare the submitted face against a stored face to verify identity, search a face database to check for existing records, and automatically register the face in a specified face database after successful verification.</p>
+     * <p>Performs face duplication check (FaceDuplicationCheckIntl) for scenarios where SDK integration is not feasible. Submits face images through the API to verify whether a user is a real person, compare the face against a retained face image for identity verification, search a face library to determine whether the face already exists, and automatically register the face in a specified face library after successful verification.</p>
      * 
      * @param request FaceDuplicationCheckIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2891,7 +2899,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>FaceDuplicationCheckIntl is designed for scenarios where SDK integration is not feasible. You can call this API operation to submit facial images and perform the following functions: verify whether the user is a real person, compare the submitted face against a stored face to verify identity, search a face database to check for existing records, and automatically register the face in a specified face database after successful verification.</p>
+     * <p>Performs face duplication check (FaceDuplicationCheckIntl) for scenarios where SDK integration is not feasible. Submits face images through the API to verify whether a user is a real person, compare the face against a retained face image for identity verification, search a face library to determine whether the face already exists, and automatically register the face in a specified face library after successful verification.</p>
      * 
      * @param request FaceDuplicationCheckIntlRequest
      * @return FaceDuplicationCheckIntlResponse
@@ -2963,7 +2971,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the server-side API for passive liveness detection.</p>
+     * <p>Provides the server-side passive liveness detection API.</p>
      * 
      * @param request FaceLivenessRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3029,7 +3037,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the server-side API for passive liveness detection.</p>
+     * <p>Provides the server-side passive liveness detection API.</p>
      * 
      * @param request FaceLivenessRequest
      * @return FaceLivenessResponse
@@ -3041,10 +3049,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>调用FaceLivenessV2接口对人脸图片进行活体检测。</p>
+     * <p>Calls the FaceLivenessV2 operation to perform liveness detection on a face image.</p>
      * 
      * <b>summary</b> : 
-     * <p>人脸活体验证</p>
+     * <p>Detects whether a face in an image is from a real person by using an API operation. This service combines the Qwen-VL large model for in-depth forgery risk detection to determine face liveness.</p>
      * 
      * @param request FaceLivenessV2Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -3102,10 +3110,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>调用FaceLivenessV2接口对人脸图片进行活体检测。</p>
+     * <p>Calls the FaceLivenessV2 operation to perform liveness detection on a face image.</p>
      * 
      * <b>summary</b> : 
-     * <p>人脸活体验证</p>
+     * <p>Detects whether a face in an image is from a real person by using an API operation. This service combines the Qwen-VL large model for in-depth forgery risk detection to determine face liveness.</p>
      * 
      * @param request FaceLivenessV2Request
      * @return FaceLivenessV2Response
@@ -3205,10 +3213,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>调用FaceVerifyIntl接口对人脸图片进行活体检测。</p>
+     * <p>Calls the FaceVerifyIntl operation to perform liveness detection on face images.</p>
      * 
      * <b>summary</b> : 
-     * <p>人脸活体验证</p>
+     * <p>Performs real face detection by using face images obtained in advance through the API operation. The algorithm identifies whether a face is a screen recapture or printed photo to detect basic presentation liveness attacks that render fake faces, and supports comparison with another face image to authenticate whether they belong to the same person.</p>
      * 
      * @param request FaceVerifyIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3298,10 +3306,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>调用FaceVerifyIntl接口对人脸图片进行活体检测。</p>
+     * <p>Calls the FaceVerifyIntl operation to perform liveness detection on face images.</p>
      * 
      * <b>summary</b> : 
-     * <p>人脸活体验证</p>
+     * <p>Performs real face detection by using face images obtained in advance through the API operation. The algorithm identifies whether a face is a screen recapture or printed photo to detect basic presentation liveness attacks that render fake faces, and supports comparison with another face image to authenticate whether they belong to the same person.</p>
      * 
      * @param request FaceVerifyIntlRequest
      * @return FaceVerifyIntlResponse
@@ -3621,6 +3629,188 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Verifies the identity of an Indonesian user by calling the authoritative source API in a standalone business scenario.</p>
+     * 
+     * @param request IdnAuthorityVerifyIntlRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return IdnAuthorityVerifyIntlResponse
+     */
+    public IdnAuthorityVerifyIntlResponse idnAuthorityVerifyIntlWithOptions(IdnAuthorityVerifyIntlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.birthDate)) {
+            query.put("BirthDate", request.birthDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.email)) {
+            query.put("Email", request.email);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fullName)) {
+            query.put("FullName", request.fullName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idNumber)) {
+            query.put("IdNumber", request.idNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.merchantBizId)) {
+            query.put("MerchantBizId", request.merchantBizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.merchantUserId)) {
+            query.put("MerchantUserId", request.merchantUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mobile)) {
+            query.put("Mobile", request.mobile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneCode)) {
+            query.put("SceneCode", request.sceneCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceFacePictureFile)) {
+            query.put("SourceFacePictureFile", request.sourceFacePictureFile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceFacePictureUrl)) {
+            query.put("SourceFacePictureUrl", request.sourceFacePictureUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timestamp)) {
+            query.put("Timestamp", request.timestamp);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceFacePicture)) {
+            body.put("SourceFacePicture", request.sourceFacePicture);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "IdnAuthorityVerifyIntl"),
+            new TeaPair("version", "2022-08-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new IdnAuthorityVerifyIntlResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Verifies the identity of an Indonesian user by calling the authoritative source API in a standalone business scenario.</p>
+     * 
+     * @param request IdnAuthorityVerifyIntlRequest
+     * @return IdnAuthorityVerifyIntlResponse
+     */
+    public IdnAuthorityVerifyIntlResponse idnAuthorityVerifyIntl(IdnAuthorityVerifyIntlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.idnAuthorityVerifyIntlWithOptions(request, runtime);
+    }
+
+    public IdnAuthorityVerifyIntlResponse idnAuthorityVerifyIntlAdvance(IdnAuthorityVerifyIntlAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        // Step 0: init client
+        com.aliyun.credentials.models.CredentialModel credentialModel = null;
+        if (com.aliyun.teautil.Common.isUnset(_credential)) {
+            throw new TeaException(TeaConverter.buildMap(
+                new TeaPair("code", "InvalidCredentials"),
+                new TeaPair("message", "Please set up the credentials correctly. If you are setting them through environment variables, please ensure that ALIBABA_CLOUD_ACCESS_KEY_ID and ALIBABA_CLOUD_ACCESS_KEY_SECRET are set correctly. See https://help.aliyun.com/zh/sdk/developer-reference/configure-the-alibaba-cloud-accesskey-environment-variable-on-linux-macos-and-windows-systems for more details.")
+            ));
+        }
+
+        credentialModel = _credential.getCredential();
+        String accessKeyId = credentialModel.accessKeyId;
+        String accessKeySecret = credentialModel.accessKeySecret;
+        String securityToken = credentialModel.securityToken;
+        String credentialType = credentialModel.type;
+        String openPlatformEndpoint = _openPlatformEndpoint;
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
+            openPlatformEndpoint = "openplatform.aliyuncs.com";
+        }
+
+        if (com.aliyun.teautil.Common.isUnset(credentialType)) {
+            credentialType = "access_key";
+        }
+
+        com.aliyun.teaopenapi.models.Config authConfig = com.aliyun.teaopenapi.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
+            new TeaPair("accessKeySecret", accessKeySecret),
+            new TeaPair("securityToken", securityToken),
+            new TeaPair("type", credentialType),
+            new TeaPair("endpoint", openPlatformEndpoint),
+            new TeaPair("protocol", _protocol),
+            new TeaPair("regionId", _regionId)
+        ));
+        com.aliyun.teaopenapi.Client authClient = new com.aliyun.teaopenapi.Client(authConfig);
+        java.util.Map<String, String> authRequest = TeaConverter.buildMap(
+            new TeaPair("Product", "Cloudauth-intl"),
+            new TeaPair("RegionId", _regionId)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest authReq = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(authRequest))
+        ));
+        com.aliyun.teaopenapi.models.Params authParams = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AuthorizeFileUpload"),
+            new TeaPair("version", "2019-12-19"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        java.util.Map<String, Object> authResponse = new java.util.HashMap<>();
+        com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
+        java.util.Map<String, Object> ossHeader = new java.util.HashMap<>();
+        java.util.Map<String, Object> tmpBody = new java.util.HashMap<>();
+        Boolean useAccelerate = false;
+        java.util.Map<String, String> authResponseBody = new java.util.HashMap<>();
+        IdnAuthorityVerifyIntlRequest idnAuthorityVerifyIntlReq = new IdnAuthorityVerifyIntlRequest();
+        com.aliyun.openapiutil.Client.convert(request, idnAuthorityVerifyIntlReq);
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceFacePictureFileObject)) {
+            Object tmpResp0 = authClient.callApi(authParams, authReq, runtime);
+            authResponse = com.aliyun.teautil.Common.assertAsMap(tmpResp0);
+            tmpBody = com.aliyun.teautil.Common.assertAsMap(authResponse.get("body"));
+            useAccelerate = com.aliyun.teautil.Common.assertAsBoolean(tmpBody.get("UseAccelerate"));
+            authResponseBody = com.aliyun.teautil.Common.stringifyMapValue(tmpBody);
+            fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponseBody.get("ObjectKey")),
+                new TeaPair("content", request.sourceFacePictureFileObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = TeaConverter.buildMap(
+                new TeaPair("host", com.aliyun.openapiutil.Client.getEndpoint(authResponseBody.get("Endpoint"), useAccelerate, _endpointType)),
+                new TeaPair("OSSAccessKeyId", authResponseBody.get("AccessKeyId")),
+                new TeaPair("policy", authResponseBody.get("EncodedPolicy")),
+                new TeaPair("Signature", authResponseBody.get("Signature")),
+                new TeaPair("key", authResponseBody.get("ObjectKey")),
+                new TeaPair("file", fileObj),
+                new TeaPair("success_action_status", "201")
+            );
+            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader, runtime);
+            idnAuthorityVerifyIntlReq.sourceFacePictureFile = "http://" + authResponseBody.get("Bucket") + "." + authResponseBody.get("Endpoint") + "/" + authResponseBody.get("ObjectKey") + "";
+        }
+
+        IdnAuthorityVerifyIntlResponse idnAuthorityVerifyIntlResp = this.idnAuthorityVerifyIntlWithOptions(idnAuthorityVerifyIntlReq, runtime);
+        return idnAuthorityVerifyIntlResp;
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Initializes an authentication session.</p>
      * 
      * @param tmpReq InitializeRequest
@@ -3893,7 +4083,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>认证初始化</p>
+     * <p>Initializes an authentication session.</p>
      * 
      * @param tmpReq InitializeV2Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -4161,7 +4351,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>认证初始化</p>
+     * <p>Initializes an authentication session.</p>
      * 
      * @param request InitializeV2Request
      * @return InitializeV2Response

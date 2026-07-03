@@ -7,7 +7,7 @@ public class FaceCompareV2AdvanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable quality check for the input face images.</p>
      * <blockquote>
-     * <p>Danger: Deprecated.</p>
+     * <p>Danger: Deprecated.</danger>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

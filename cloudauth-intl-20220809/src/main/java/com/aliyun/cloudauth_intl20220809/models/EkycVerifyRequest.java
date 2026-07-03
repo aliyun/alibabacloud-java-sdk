@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EkycVerifyRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable authoritative identity verification. This parameter is currently applicable only to second-generation ID cards in the Chinese mainland.</p>
+     * <p>Specifies whether to enable authoritative identity verification. This feature currently applies only to second-generation ID cards issued in the Chinese mainland.</p>
      * 
      * <strong>example:</strong>
      * <p>T</p>
@@ -16,8 +16,8 @@ public class EkycVerifyRequest extends TeaModel {
     /**
      * <p>Specifies whether cropping is allowed. By default, cropping is not allowed. Valid values:</p>
      * <ul>
-     * <li>T: Detection is required.</li>
-     * <li>F: Detection is required (default value: F).</li>
+     * <li>T: Cropping is required.</li>
+     * <li>F: Cropping is not required. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,8 +27,8 @@ public class EkycVerifyRequest extends TeaModel {
     public String crop;
 
     /**
-     * <p>The real name of the user. If Authorize is set to T and the document type is a Chinese mainland ID card, you must provide at least one of the following: document key information (DocName and DocNo) or document images (IdOcrPictureBase64 or IdOcrPictureUrl).
-     * Note: The value must contain at least one Chinese character and no special characters, except for the middle dot (·) used in ethnic minority names.</p>
+     * <p>The real name of the user. If Authorize is set to T and the document type is a Chinese mainland ID card, you must provide at least one of the following: the key document information (DocName and DocNo) or the document image (IdOcrPictureBase64 or IdOcrPictureURL).
+     * Note: The value must contain at least one Chinese character and cannot contain special characters, except for the middle dot (·) used in ethnic minority names.</p>
      * 
      * <strong>example:</strong>
      * <p>张**</p>
@@ -37,7 +37,7 @@ public class EkycVerifyRequest extends TeaModel {
     public String docName;
 
     /**
-     * <p>The document number of the user. If Authorize is set to T and the document type is a Chinese mainland ID card, you must provide at least one of the following: document key information (DocName and DocNo) or document images (IdOcrPictureBase64 or IdOcrPictureUrl).
+     * <p>The document number of the user. If Authorize is set to T and the document type is a Chinese mainland ID card, you must provide at least one of the following: the key document information (DocName and DocNo) or the document image (IdOcrPictureBase64 or IdOcrPictureURL).
      * Note: The value is a combination of letters and digits up to 18 characters in length.</p>
      * 
      * <strong>example:</strong>
@@ -59,7 +59,7 @@ public class EkycVerifyRequest extends TeaModel {
      * <p>The Base64-encoded face image.</p>
      * <p>Note:</p>
      * <ul>
-     * <li>If you use this method to submit the face image, check the image size and do not submit an excessively large image.</li>
+     * <li>If you use this method to pass the face image, check the image size and do not pass an excessively large image.</li>
      * <li>Specify either FacePictureBase64 or FacePictureUrl.</li>
      * </ul>
      * 
@@ -78,11 +78,14 @@ public class EkycVerifyRequest extends TeaModel {
     @NameInMap("FacePictureUrl")
     public String facePictureUrl;
 
+    @NameInMap("FaceQualityCheck")
+    public String faceQualityCheck;
+
     /**
      * <p>The Base64-encoded document image.
      * Note:</p>
      * <ul>
-     * <li>If you use this method to submit the document image, check the image size and do not submit an excessively large image.</li>
+     * <li>If you use this method to pass the document image, check the image size and do not pass an excessively large image.</li>
      * <li>Specify either IdOcrPictureBase64 or IdOcrPictureUrl.</li>
      * </ul>
      * 
@@ -126,7 +129,7 @@ public class EkycVerifyRequest extends TeaModel {
     public String merchantBizId;
 
     /**
-     * <p>Your custom user ID, or another identifier that can identify a specific user, such as a phone number or email address. We strongly recommend that you mask this field value in advance, for example, by hashing the value.</p>
+     * <p>The custom user ID or other identifier that can identify a specific user, such as a phone number or email address. We strongly recommend that you mask the value of this field in advance, for example, by hashing the value.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -202,6 +205,14 @@ public class EkycVerifyRequest extends TeaModel {
     }
     public String getFacePictureUrl() {
         return this.facePictureUrl;
+    }
+
+    public EkycVerifyRequest setFaceQualityCheck(String faceQualityCheck) {
+        this.faceQualityCheck = faceQualityCheck;
+        return this;
+    }
+    public String getFaceQualityCheck() {
+        return this.faceQualityCheck;
     }
 
     public EkycVerifyRequest setIdOcrPictureBase64(String idOcrPictureBase64) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class FaceCompareRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable face image quality check.<danger>Deprecated.</danger>.</p>
+     * <p>Whether to enable quality detection for the input face image&gt;Danger: Deprecated</p>
      * 
      * <strong>example:</strong>
      * <p>N</p>
@@ -14,7 +14,7 @@ public class FaceCompareRequest extends TeaModel {
     public String facePictureQualityCheck;
 
     /**
-     * <p>The face quality check.</p>
+     * <p>Face quality check</p>
      * 
      * <strong>example:</strong>
      * <p>Y</p>
@@ -23,7 +23,7 @@ public class FaceCompareRequest extends TeaModel {
     public String faceQualityCheck;
 
     /**
-     * <p>The merchant-defined unique business ID used for subsequent troubleshooting. The value can be a combination of letters and digits with a maximum length of 32 characters. Ensure that the value is unique.</p>
+     * <p>A unique business identifier customized by the merchant, used for subsequent troubleshooting. Supports a combination of letters and numbers with a maximum length of 32 characters. Ensure it is unique.</p>
      * 
      * <strong>example:</strong>
      * <p>e0c34a77f5ac40a5aa5e6ed20c353888</p>
@@ -32,14 +32,12 @@ public class FaceCompareRequest extends TeaModel {
     public String merchantBizId;
 
     /**
-     * <p>The Base64-encoded source face image.</p>
-     * <blockquote>
-     * <p><strong>Note</strong></p>
+     * <p>Base64-encoded face photo.</p>
+     * <p>Note</p>
      * <ul>
-     * <li>If you use this method to pass in the image, check the image size and do not pass in an excessively large image.</li>
-     * <li>Specify either SourceFacePicture or SourceFacePictureUrl.</li>
+     * <li>If you choose this method to pass in the photo, check the photo size and do not pass in an oversized photo.</li>
+     * <li>Either SourceFacePicture or SourceFacePictureUrl must be specified.</li>
      * </ul>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>base64</p>
@@ -48,7 +46,7 @@ public class FaceCompareRequest extends TeaModel {
     public String sourceFacePicture;
 
     /**
-     * <p>The HTTPS or HTTP URL of the source face image.</p>
+     * <p>The HTTPS or HTTP URL of the face image.</p>
      * 
      * <strong>example:</strong>
      * <p>https://***face1.jpeg</p>
@@ -57,14 +55,12 @@ public class FaceCompareRequest extends TeaModel {
     public String sourceFacePictureUrl;
 
     /**
-     * <p>The Base64-encoded reference face image.</p>
-     * <blockquote>
-     * <p><strong>Note</strong></p>
+     * <p>Base64-encoded reference photo.</p>
+     * <p>Note</p>
      * <ul>
-     * <li>If you use this method to pass in the image, check the image size and do not pass in an excessively large image.</li>
-     * <li>Specify either TargetFacePicture or TargetFacePictureUrl.</li>
+     * <li>If you choose this method to pass in the photo, check the photo size and do not pass in an oversized photo.</li>
+     * <li>Either TargetFacePicture or TargetFacePictureUrl must be specified.</li>
      * </ul>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>base64</p>

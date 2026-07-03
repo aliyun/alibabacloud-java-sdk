@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DocOcrMaxV2ResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,6 +14,8 @@ public class DocOcrMaxV2ResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,12 +23,17 @@ public class DocOcrMaxV2ResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>5E63B760-0ECB-5C07-8503-A65C27876968</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public DocOcrMaxV2ResponseBodyResult result;
 
@@ -67,6 +76,8 @@ public class DocOcrMaxV2ResponseBody extends TeaModel {
 
     public static class DocOcrMaxV2ResponseBodyResult extends TeaModel {
         /**
+         * <p>The card and certificate recognition result. This parameter is returned only when the API response is successful.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *   &quot;ocrIdInfo&quot;: {
@@ -89,6 +100,12 @@ public class DocOcrMaxV2ResponseBody extends TeaModel {
         public String extIdInfo;
 
         /**
+         * <p>Indicates whether the verification passed. Valid values:</p>
+         * <ul>
+         * <li>Y: passed.</li>
+         * <li>N: not passed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Y</p>
          */
@@ -96,6 +113,8 @@ public class DocOcrMaxV2ResponseBody extends TeaModel {
         public String passed;
 
         /**
+         * <p>The sub-result code.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -103,6 +122,8 @@ public class DocOcrMaxV2ResponseBody extends TeaModel {
         public String subCode;
 
         /**
+         * <p>The unique identifier of the verification request.</p>
+         * 
          * <strong>example:</strong>
          * <p>08573be80f944d95ac812e019e3655a8</p>
          */
