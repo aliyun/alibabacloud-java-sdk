@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCustomizeRuleTestResultRequest extends TeaModel {
     /**
-     * <p>The page number. Pages start from page 1.</p>
+     * <p>The page number. The value must be greater than or equal to 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,14 +14,26 @@ public class ListCustomizeRuleTestResultRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The ID of the custom rule. You can obtain the rule ID from the rule list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dr-53np4nguf5jmh1vc****</p>
+     */
     @NameInMap("DetectionRuleId")
     public String detectionRuleId;
 
+    /**
+     * <p>The end time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1731797891000</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
-     * <p>The ID of the rule.</p>
+     * <p>The ID of the custom rule.</p>
      * 
      * <strong>example:</strong>
      * <p>123456789</p>
@@ -30,7 +42,7 @@ public class ListCustomizeRuleTestResultRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100.</p>
+     * <p>The number of entries per page. The maximum value is 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,10 +52,12 @@ public class ListCustomizeRuleTestResultRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+     * <p>The region where the Data Management center of Threat Analysis is located. Select a region based on the region where your assets are deployed. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Your assets reside in regions in China.</li>
-     * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+     * <li><p>cn-hangzhou: assets in the Chinese mainland and China (Hong Kong)</p>
+     * </li>
+     * <li><p>ap-southeast-1: assets outside China</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,7 +67,7 @@ public class ListCustomizeRuleTestResultRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the account that you switch from the management account.</p>
+     * <p>The user ID of a member. This parameter is used by an administrator to switch to the perspective of the member.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
@@ -62,10 +76,12 @@ public class ListCustomizeRuleTestResultRequest extends TeaModel {
     public Long roleFor;
 
     /**
-     * <p>The type of the view. Valid values:</p>
+     * <p>The type of the view.</p>
      * <ul>
-     * <li>0: the current Alibaba Cloud account</li>
-     * <li>1: the global account</li>
+     * <li><p>0: the view of the current Alibaba Cloud account.</p>
+     * </li>
+     * <li><p>1: the view of all accounts that belong to the enterprise.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -74,9 +90,27 @@ public class ListCustomizeRuleTestResultRequest extends TeaModel {
     @NameInMap("RoleType")
     public Integer roleType;
 
+    /**
+     * <p>The start time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1723057091000</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 
+    /**
+     * <p>The verification result for the accuracy of alert fields based on the alert template.</p>
+     * <ul>
+     * <li><p>true: The verification is passed. Alerts that are generated for enabled rules can be synchronized to the product.</p>
+     * </li>
+     * <li><p>false: The verification failed. Alerts cannot be synchronized to the product.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("VerifyType")
     public String verifyType;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAlertTypeResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The request status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -43,8 +43,10 @@ public class DescribeAlertTypeResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,7 +102,7 @@ public class DescribeAlertTypeResponseBody extends TeaModel {
 
     public static class DescribeAlertTypeResponseBodyData extends TeaModel {
         /**
-         * <p>The type of the risk.</p>
+         * <p>The threat type.</p>
          * 
          * <strong>example:</strong>
          * <p>WEBSHELL</p>
@@ -109,7 +111,7 @@ public class DescribeAlertTypeResponseBody extends TeaModel {
         public String alertType;
 
         /**
-         * <p>The internal code of the risk type.</p>
+         * <p>The Medusa code of the threat type.</p>
          * 
          * <strong>example:</strong>
          * <p>siem_rule_type_process_abnormal_command</p>

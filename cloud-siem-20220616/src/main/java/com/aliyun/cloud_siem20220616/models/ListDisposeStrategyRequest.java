@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDisposeStrategyRequest extends TeaModel {
     /**
-     * <p>The page number. Pages start from page 1.</p>
+     * <p>Current page number. Must be greater than or equal to 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,12 @@ public class ListDisposeStrategyRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The status of the policy. Valid values:</p>
+     * <p>Strategy status. Valid values:</p>
      * <ul>
-     * <li>0: invalid</li>
-     * <li>1: valid</li>
+     * <li><p>0: disabled</p>
+     * </li>
+     * <li><p>1: enabled</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +30,7 @@ public class ListDisposeStrategyRequest extends TeaModel {
     public Integer effectiveStatus;
 
     /**
-     * <p>The end of the time range to query. Unit: milliseconds.</p>
+     * <p>End time of the query, in milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +40,7 @@ public class ListDisposeStrategyRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The feature value of the entity. Fuzzy match is supported.</p>
+     * <p>Entity feature value. Use this to perform a fuzzy search on entities.</p>
      * 
      * <strong>example:</strong>
      * <p>test22.php</p>
@@ -47,11 +49,14 @@ public class ListDisposeStrategyRequest extends TeaModel {
     public String entityIdentity;
 
     /**
-     * <p>The entity type of the playbook. Valid values:</p>
+     * <p>Entity type. Valid values:</p>
      * <ul>
-     * <li>ip</li>
-     * <li>process</li>
-     * <li>file</li>
+     * <li><p>ip</p>
+     * </li>
+     * <li><p>process</p>
+     * </li>
+     * <li><p>file</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,14 +65,22 @@ public class ListDisposeStrategyRequest extends TeaModel {
     @NameInMap("EntityType")
     public String entityType;
 
+    /**
+     * <p>Event ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>49670d3bbf7aa9556a2fff3dbaa9****</p>
+     */
     @NameInMap("IncidentUuid")
     public String incidentUuid;
 
     /**
-     * <p>The sort order. Valid values:</p>
+     * <p>Sort order. Valid values:</p>
      * <ul>
-     * <li>desc: descending order.</li>
-     * <li>asc: ascending order.</li>
+     * <li><p>desc: descending</p>
+     * </li>
+     * <li><p>asc: ascending</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -77,11 +90,14 @@ public class ListDisposeStrategyRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The sort field. Valid values:</p>
+     * <p>Sort field. Valid values:</p>
      * <ul>
-     * <li>GmtModified: sorts the policies by update time.</li>
-     * <li>GmtCreate: sorts the policies by creation time.</li>
-     * <li>FinishTime: sorts the policies by end time.</li>
+     * <li><p>GmtModified: sort by last modified time</p>
+     * </li>
+     * <li><p>GmtCreate: sort by creation time</p>
+     * </li>
+     * <li><p>FinishTime: sort by strategy end time</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -91,7 +107,7 @@ public class ListDisposeStrategyRequest extends TeaModel {
     public String orderField;
 
     /**
-     * <p>The number of entries per page. Maximum value: 100.</p>
+     * <p>Number of entries per page. Maximum value is 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -101,7 +117,7 @@ public class ListDisposeStrategyRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The name of the playbook, which is the unique identifier of the playbook.</p>
+     * <p>Unique name of the playbook.</p>
      * 
      * <strong>example:</strong>
      * <p>WafBlockIP</p>
@@ -110,13 +126,18 @@ public class ListDisposeStrategyRequest extends TeaModel {
     public String playbookName;
 
     /**
-     * <p>The type of the playbook. Valid values:</p>
+     * <p>Playbook type. Valid values:</p>
      * <ul>
-     * <li>system: user-triggered playbook</li>
-     * <li>custom: event-triggered playbook</li>
-     * <li>custom_alert: alert-triggered playbook</li>
-     * <li>soar-manual: user-run playbook</li>
-     * <li>soar-mdr: MDR-run playbook</li>
+     * <li><p>system: manual disposal</p>
+     * </li>
+     * <li><p>custom: event-triggered playbook</p>
+     * </li>
+     * <li><p>custom_alert: alert-triggered playbook</p>
+     * </li>
+     * <li><p>soar-manual: manually run playbook</p>
+     * </li>
+     * <li><p>soar-mdr: MDR-run playbook</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -126,7 +147,7 @@ public class ListDisposeStrategyRequest extends TeaModel {
     public String playbookTypes;
 
     /**
-     * <p>The UUID of the playbook.</p>
+     * <p>UUID of the playbook.</p>
      * 
      * <strong>example:</strong>
      * <p>system_aliyun_clb_process_book</p>
@@ -135,10 +156,12 @@ public class ListDisposeStrategyRequest extends TeaModel {
     public String playbookUuid;
 
     /**
-     * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+     * <p>Location of the Data Management center for Threat Analysis and Response. Select the location based on where your assets are deployed. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Your assets reside in regions in China.</li>
-     * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+     * <li><p>cn-hangzhou: assets in the Chinese mainland or Hong Kong (China)</p>
+     * </li>
+     * <li><p>ap-southeast-1: assets outside China</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -148,7 +171,7 @@ public class ListDisposeStrategyRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the account that you switch from the management account.</p>
+     * <p>Alibaba Cloud account ID when an administrator switches to another member\&quot;s perspective.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
@@ -157,10 +180,12 @@ public class ListDisposeStrategyRequest extends TeaModel {
     public Long roleFor;
 
     /**
-     * <p>The type of the view. Valid values:</p>
+     * <p>View type. Valid values:</p>
      * <ul>
-     * <li>0: the current Alibaba Cloud account</li>
-     * <li>1: the global account</li>
+     * <li><p>0: view for the current Alibaba Cloud account</p>
+     * </li>
+     * <li><p>1: view for all accounts under the enterprise</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -170,16 +195,16 @@ public class ListDisposeStrategyRequest extends TeaModel {
     public Integer roleType;
 
     /**
-     * <p>The ID of the SOAR handling policy.</p>
+     * <p>ID of the security orchestration and automated response disposal strategy.</p>
      * 
      * <strong>example:</strong>
-     * <p>a50a49b7-6044-4593-ab15-2b46567caadd</p>
+     * <p>a50a49b7-6044-4593-ab15-2b46567c****</p>
      */
     @NameInMap("SophonTaskId")
     public String sophonTaskId;
 
     /**
-     * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+     * <p>Start time of the query, in milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -188,6 +213,12 @@ public class ListDisposeStrategyRequest extends TeaModel {
     @NameInMap("StartTime")
     public Long startTime;
 
+    /**
+     * <p>Disposal strategy status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Status")
     public Integer status;
 

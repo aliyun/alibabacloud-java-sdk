@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEventDisposeRequest extends TeaModel {
     /**
-     * <p>The page number. Pages start from page 1.</p>
+     * <p>The number of the page to return. The value must be greater than or equal to 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeEventDisposeRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The UUID of the event.</p>
+     * <p>The globally unique UUID of the event.</p>
      * 
      * <strong>example:</strong>
      * <p>85ea4241-798f-4684-a876-65d4f0c3****</p>
@@ -23,7 +23,7 @@ public class DescribeEventDisposeRequest extends TeaModel {
     public String incidentUuid;
 
     /**
-     * <p>The number of entries per page. Maximum value: 500.</p>
+     * <p>The number of entries to return on each page. The maximum value is 500.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,10 +32,12 @@ public class DescribeEventDisposeRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The data management center of the threat analysis feature. Specify this parameter based on the region in which your assets reside. Valid values:</p>
+     * <p>The region where the Data Management center of Threat Analysis is located. Select the region based on the region where your assets are deployed. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Your assets reside in regions inside China.</li>
-     * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+     * <li><p>cn-hangzhou: Your assets are deployed in the Chinese mainland or China (Hong Kong).</p>
+     * </li>
+     * <li><p>ap-southeast-1: Your assets are deployed in regions outside China.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,7 +47,7 @@ public class DescribeEventDisposeRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the account that you switch from the management account.</p>
+     * <p>The user ID of the member. An administrator can use this parameter to switch to the perspective of a member.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
@@ -54,10 +56,12 @@ public class DescribeEventDisposeRequest extends TeaModel {
     public Long roleFor;
 
     /**
-     * <p>The type of the view. Valid values:</p>
+     * <p>The view type.</p>
      * <ul>
-     * <li>0: the current Alibaba Cloud account</li>
-     * <li>1: the global account</li>
+     * <li><p>0: The view of the current Alibaba Cloud account.</p>
+     * </li>
+     * <li><p>1: The view of all accounts that belong to the enterprise.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

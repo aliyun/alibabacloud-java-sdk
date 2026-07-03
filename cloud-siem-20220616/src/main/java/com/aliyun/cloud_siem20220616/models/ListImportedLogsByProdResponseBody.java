@@ -42,10 +42,12 @@ public class ListImportedLogsByProdResponseBody extends TeaModel {
 
     public static class ListImportedLogsByProdResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the log is automatically added to the threat analysis feature within newly added accounts. Valid values:</p>
+         * <p>Indicates whether logs are automatically ingested for new accounts. Valid values:</p>
          * <ul>
-         * <li>1: yes.</li>
-         * <li>0: no.</li>
+         * <li><p>1: Logs are automatically ingested.</p>
+         * </li>
+         * <li><p>0: Logs are not automatically ingested.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -55,11 +57,14 @@ public class ListImportedLogsByProdResponseBody extends TeaModel {
         public Integer autoImported;
 
         /**
-         * <p>The code of the cloud service provider. Valid values:</p>
+         * <p>The multicloud code. Valid values:</p>
          * <ul>
-         * <li>qcloud: Tencent Cloud.</li>
-         * <li>aliyun: Alibaba Cloud.</li>
-         * <li>hcloud: Huawei Cloud.</li>
+         * <li><p>qcloud: Tencent Cloud.</p>
+         * </li>
+         * <li><p>aliyun: Alibaba Cloud.</p>
+         * </li>
+         * <li><p>hcloud: Huawei Cloud.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -69,10 +74,12 @@ public class ListImportedLogsByProdResponseBody extends TeaModel {
         public String cloudCode;
 
         /**
-         * <p>Indicates whether the log is added to the threat analysis feature. Valid values:</p>
+         * <p>Indicates whether the log is ingested. Valid values:</p>
          * <ul>
-         * <li>1: yes.</li>
-         * <li>0: no.</li>
+         * <li><p>1: The log is ingested.</p>
+         * </li>
+         * <li><p>0: The log is not ingested.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -82,7 +89,7 @@ public class ListImportedLogsByProdResponseBody extends TeaModel {
         public Integer imported;
 
         /**
-         * <p>The number of users who have added the log.</p>
+         * <p>The number of users who have ingested the log.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -109,21 +116,22 @@ public class ListImportedLogsByProdResponseBody extends TeaModel {
         public String logMdsCode;
 
         /**
-         * <p>The type of log. Valid values:</p>
+         * <p>The log type. Valid values:</p>
          * <ul>
-         * <li>1: the log produced by other product</li>
-         * <li>2: the predefined log</li>
-         * <li>3: the custom log</li>
+         * <li><p>1: Ingested on the threat analysis side.</p>
+         * </li>
+         * <li><p>2: Predefined Simple Log Service log. -3: Custom Simple Log Service log.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>2023-11-23 12:30:00</p>
          */
         @NameInMap("LogType")
         public Integer logType;
 
         /**
-         * <p>The time when the log was last added.</p>
+         * <p>The time when the log was last ingested.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-11-23 12:30:00</p>
@@ -132,7 +140,7 @@ public class ListImportedLogsByProdResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
-         * <p>The code of the cloud service to which the log belongs.</p>
+         * <p>The code of the product to which the log belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>qcloud_waf</p>
@@ -141,7 +149,7 @@ public class ListImportedLogsByProdResponseBody extends TeaModel {
         public String prodCode;
 
         /**
-         * <p>The total number of users who have the log.</p>
+         * <p>The total number of users for the log.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -150,7 +158,7 @@ public class ListImportedLogsByProdResponseBody extends TeaModel {
         public Integer totalUserCount;
 
         /**
-         * <p>The number of users who have not added the log.</p>
+         * <p>The number of users who have not ingested the log.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

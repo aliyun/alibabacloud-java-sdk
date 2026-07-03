@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class CloseDeliveryResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the threat analysis feature was disabled. Valid values:</p>
+     * <p>The result of the request. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

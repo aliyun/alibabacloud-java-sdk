@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDataSourceInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud account.</p>
+     * <p>The ID of the Alibaba Cloud account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,11 +15,14 @@ public class DescribeDataSourceInstanceRequest extends TeaModel {
     public String accountId;
 
     /**
-     * <p>The code of the cloud service provider. Valid values:</p>
+     * <p>The code for the multicloud environment. Valid values:</p>
      * <ul>
-     * <li>qcloud: Tencent Cloud</li>
-     * <li>aliyun: Alibaba Cloud</li>
-     * <li>hcloud: Huawei Cloud</li>
+     * <li><p>qcloud: Tencent Cloud.</p>
+     * </li>
+     * <li><p>aliyun: Alibaba Cloud.</p>
+     * </li>
+     * <li><p>hcloud: Huawei Cloud.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -30,7 +33,7 @@ public class DescribeDataSourceInstanceRequest extends TeaModel {
     public String cloudCode;
 
     /**
-     * <p>The ID of the data source. The ID is an MD5 hash value that is calculated by the threat analysis feature based on specific parameters. You can call the <a href="https://api.aliyun-inc.com/#/publishment/document/cloud-siem/863fdf54478f4cc5877e27c2a5fe9e44?tenantUuid=f382fccd88b94c5c8c864def6815b854%5C&activeTabKey=api%7CListDataSourceLogs">ListDataSourceLogs</a> operation to query the IDs of data sources.</p>
+     * <p>The ID of the data source. The threat analysis service generates the ID by calculating the MD5 hash of specific parameters. Call the <a href="https://api.aliyun-inc.com/#/publishment/document/cloud-siem/863fdf54478f4cc5877e27c2a5fe9e44?tenantUuid=f382fccd88b94c5c8c864def6815b854%5C&activeTabKey=api%7CListDataSourceLogs">ListDataSourceLogs</a> operation to obtain the data source ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,10 +43,12 @@ public class DescribeDataSourceInstanceRequest extends TeaModel {
     public String dataSourceInstanceId;
 
     /**
-     * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+     * <p>The region where the Data Management center of the threat analysis service is located. Select a region based on the region where your assets are located. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Your assets reside in regions in China.</li>
-     * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+     * <li><p>cn-hangzhou: Your assets are in the Chinese mainland or China (Hong Kong).</p>
+     * </li>
+     * <li><p>ap-southeast-1: Your assets are in a region outside China.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -43,8 +43,10 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,7 +102,7 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
 
     public static class PostCustomizeRuleResponseBodyData extends TeaModel {
         /**
-         * <p>The risk type.</p>
+         * <p>The threat type.</p>
          * 
          * <strong>example:</strong>
          * <p>WEBSHELL</p>
@@ -109,7 +111,7 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
         public String alertType;
 
         /**
-         * <p>The internal code of the risk type.</p>
+         * <p>The Medusa code of the threat type.</p>
          * 
          * <strong>example:</strong>
          * <p>${siem_rule_type_process_abnormal_command}</p>
@@ -118,7 +120,7 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
         public String alertTypeMds;
 
         /**
-         * <p>The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.</p>
+         * <p>The ID of the Alibaba Cloud account that is used to purchase Threat Analysis.</p>
          * 
          * <strong>example:</strong>
          * <p>127608589417****</p>
@@ -127,7 +129,7 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
         public Long aliuid;
 
         /**
-         * <p>告警附加字段attck</p>
+         * <p>The ATT\&amp;CK attack technique.</p>
          * 
          * <strong>example:</strong>
          * <p>T1595.002 Vulnerability Scanning</p>
@@ -136,7 +138,7 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
         public String attCk;
 
         /**
-         * <p>自动化响应规则条件字段数据类型。</p>
+         * <p>The data type of the condition field in the automated response rule.</p>
          * 
          * <strong>example:</strong>
          * <p>varchar</p>
@@ -145,7 +147,7 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
         public Integer dataType;
 
         /**
-         * <p>The extended information about event generation. If eventTransferType is set to allToSingle, the value of this parameter indicates the length and unit of the alert aggregation window. The HTML escape characters are reversed.</p>
+         * <p>The extended information for event generation. This parameter is returned only when EventTransferType is set to allToSingle. The value indicates the length and unit of the alert aggregation window. You must unescape the HTML escape characters.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;time&quot;:&quot;1&quot;,&quot;unit&quot;:&quot;MINUTE&quot;}</p>
@@ -154,10 +156,12 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
         public String eventTransferExt;
 
         /**
-         * <p>Indicates whether the system generates an event for the alert. Valid values:</p>
+         * <p>Indicates whether alerts are converted into events. Valid values:</p>
          * <ul>
-         * <li>0: no</li>
-         * <li>1: yes</li>
+         * <li><p>0: no</p>
+         * </li>
+         * <li><p>1: yes</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -169,9 +173,12 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
         /**
          * <p>The event generation method. Valid values:</p>
          * <ul>
-         * <li>default: The default method is used.</li>
-         * <li>singleToSingle: The system generates an event for each alert.</li>
-         * <li>allToSingle: The system generates an event for alerts within a period of time.</li>
+         * <li><p>default: the default method</p>
+         * </li>
+         * <li><p>singleToSingle: An event is generated for each alert.</p>
+         * </li>
+         * <li><p>allToSingle: An event is generated for all alerts in a period.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -217,7 +224,7 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
         public String logSource;
 
         /**
-         * <p>The internal code of the log source.</p>
+         * <p>The Medusa code of the log source.</p>
          * 
          * <strong>example:</strong>
          * <p>${sas.cloudsiem.prod.cloud_siem_aegis_sas_alert}</p>
@@ -235,7 +242,7 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
         public String logType;
 
         /**
-         * <p>The internal code of the log type.</p>
+         * <p>The Medusa code of the log type.</p>
          * 
          * <strong>example:</strong>
          * <p>${security_event_config.event_name.webshellName_clientav}</p>
@@ -244,7 +251,7 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
         public String logTypeMds;
 
         /**
-         * <p>The window length of the rule. The HTML escape characters are reversed.</p>
+         * <p>The length of the rule window. You must unescape the HTML escape characters.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;time&quot;:&quot;1&quot;,&quot;unit&quot;:&quot;HOUR&quot;}</p>
@@ -253,7 +260,7 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
         public String queryCycle;
 
         /**
-         * <p>The query condition of the rule. The value is in the JSON format. The HTML escape characters are reversed.</p>
+         * <p>The query condition of the rule in the JSON format. You must unescape the HTML escape characters.</p>
          * 
          * <strong>example:</strong>
          * <p>[[{&quot;not&quot;:false,&quot;left&quot;:&quot;alert_name&quot;,&quot;operator&quot;:&quot;=&quot;,&quot;right&quot;:&quot;WEBSHELL&quot;}]]</p>
@@ -271,7 +278,7 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
         public String ruleDesc;
 
         /**
-         * <p>The log aggregation field of the rule. The value is a JSON string. The HTML escape characters are reversed.</p>
+         * <p>The fields that are used to group logs. The value is a JSON array. You must unescape the HTML escape characters.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;asset_id&quot;]</p>
@@ -289,7 +296,7 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The threshold configuration of the rule. The value is in the JSON format. The HTML escape characters are reversed.</p>
+         * <p>The threshold configuration of the rule in the JSON format. You must unescape the HTML escape characters.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;aggregateFunction&quot;:&quot;count&quot;,&quot;aggregateFunctionName&quot;:&quot;count&quot;,&quot;field&quot;:&quot;activity_name&quot;,&quot;operator&quot;:&quot;&lt;=&quot;,&quot;value&quot;:1}</p>
@@ -298,10 +305,12 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
         public String ruleThreshold;
 
         /**
-         * <p>The type of the rule. Valid values:</p>
+         * <p>The rule type. Valid values:</p>
          * <ul>
-         * <li>predefine</li>
-         * <li>customize</li>
+         * <li><p>predefine: predefined</p>
+         * </li>
+         * <li><p>customize: custom</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -311,13 +320,18 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
         public String ruleType;
 
         /**
-         * <p>The rule status. Valid values:</p>
+         * <p>The status of the rule. Valid values:</p>
          * <ul>
-         * <li>0: The rule is in the initial state.</li>
-         * <li>10: The simulation data is tested.</li>
-         * <li>15: The business data is being tested.</li>
-         * <li>20: The business data test ends.</li>
-         * <li>100: The rule takes effect.</li>
+         * <li><p>0: initial</p>
+         * </li>
+         * <li><p>10: testing with simulated data</p>
+         * </li>
+         * <li><p>15: testing with business data</p>
+         * </li>
+         * <li><p>20: test with business data ends</p>
+         * </li>
+         * <li><p>100: published</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -327,11 +341,14 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The risk level. Valid values:</p>
+         * <p>The threat level. Valid values:</p>
          * <ul>
-         * <li>serious: high</li>
-         * <li>suspicious: medium</li>
-         * <li>remind: low</li>
+         * <li><p>serious: high</p>
+         * </li>
+         * <li><p>suspicious: medium</p>
+         * </li>
+         * <li><p>remind: low</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

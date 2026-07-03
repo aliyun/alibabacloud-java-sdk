@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAlertSourceWithEventResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -43,8 +43,10 @@ public class DescribeAlertSourceWithEventResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,7 +102,7 @@ public class DescribeAlertSourceWithEventResponseBody extends TeaModel {
 
     public static class DescribeAlertSourceWithEventResponseBodyData extends TeaModel {
         /**
-         * <p>The internal code of the alert data source.</p>
+         * <p>The Medusa code for the alert data source.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyun.siem.alert_datasource.sas</p>

@@ -25,7 +25,7 @@ public class DeleteBindAccountRequest extends TeaModel {
     public String accountId;
 
     /**
-     * <p>The ID generated when the account is added to the threat analysis feature. You can call the <a href="https://api.aliyun-inc.com/#/publishment/document/cloud-siem/863fdf54478f4cc5877e27c2a5fe9e44?tenantUuid=f382fccd88b94c5c8c864def6815b854%5C&activeTabKey=api%7CListBindAccount">ListBindAccount</a> operation to query the ID.</p>
+     * <p>The binding ID. Call the <a href="https://api.aliyun-inc.com/#/publishment/document/cloud-siem/863fdf54478f4cc5877e27c2a5fe9e44?tenantUuid=f382fccd88b94c5c8c864def6815b854%5C&activeTabKey=api%7CListBindAccount">ListBindAccount</a> operation to obtain the binding ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -34,11 +34,14 @@ public class DeleteBindAccountRequest extends TeaModel {
     public Long bindId;
 
     /**
-     * <p>The code of the cloud service provider. Valid values:</p>
+     * <p>The code for the cloud service provider. Valid values:</p>
      * <ul>
-     * <li>qcloud: Tencent Cloud</li>
-     * <li>aliyun: Alibaba Cloud</li>
-     * <li>hcloud: Huawei Cloud</li>
+     * <li><p>qcloud: Tencent Cloud</p>
+     * </li>
+     * <li><p>aliyun: Alibaba Cloud</p>
+     * </li>
+     * <li><p>hcloud: Huawei Cloud</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -49,10 +52,12 @@ public class DeleteBindAccountRequest extends TeaModel {
     public String cloudCode;
 
     /**
-     * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+     * <p>The region where the threat analysis data center is located. Select a region based on the location of your assets. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Your assets reside in regions in China.</li>
-     * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+     * <li><p>cn-hangzhou: Your assets are in mainland China or the China (Hong Kong) region.</p>
+     * </li>
+     * <li><p>ap-southeast-1: Your assets are in regions outside China.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -61,9 +66,27 @@ public class DeleteBindAccountRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The user ID of the member. An administrator can specify this parameter to perform the operation from the perspective of a member.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>113091674488****</p>
+     */
     @NameInMap("RoleFor")
     public Long roleFor;
 
+    /**
+     * <p>The type of the view. Valid values:</p>
+     * <ul>
+     * <li><p>0: The view of the current Alibaba Cloud account.</p>
+     * </li>
+     * <li><p>1: The view of all accounts that are managed by your enterprise.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RoleType")
     public Integer roleType;
 

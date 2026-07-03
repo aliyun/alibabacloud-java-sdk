@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetCapacityResponseBody extends TeaModel {
     /**
-     * <p>The information about the storage capacity.</p>
+     * <p>Storage capacity details.</p>
      */
     @NameInMap("Data")
     public GetCapacityResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>27D27DCB-D76B-5064-8B3B-0900DEF7****</p>
@@ -42,6 +42,8 @@ public class GetCapacityResponseBody extends TeaModel {
 
     public static class GetCapacityResponseBodyData extends TeaModel {
         /**
+         * <p>Purchased quota for Agent-managed instances.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -49,6 +51,8 @@ public class GetCapacityResponseBody extends TeaModel {
         public Long agentManagedAssetQuota;
 
         /**
+         * <p>Used quota for Agent-managed instances.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -56,10 +60,12 @@ public class GetCapacityResponseBody extends TeaModel {
         public Long agentManagedAssetUsed;
 
         /**
-         * <p>Indicates whether the Logstores for the threat analysis feature exist on the user side. Valid values:</p>
+         * <p>Indicates whether the LogStore for threat analysis exists.</p>
          * <ul>
-         * <li>true: The logs are in the normal state. The log analysis feature is available.</li>
-         * <li>false: The logs are being cleared. The log analysis feature is unavailable.</li>
+         * <li><p>true: Logs are normal and log analysis is available.</p>
+         * </li>
+         * <li><p>false: Logs are being cleaned up and log analysis is unavailable.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -69,7 +75,7 @@ public class GetCapacityResponseBody extends TeaModel {
         public Boolean existLogStore;
 
         /**
-         * <p>The purchased storage capacity of the threat analysis feature. Unit: GB.</p>
+         * <p>Purchased storage capacity for threat analysis, in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>9000</p>
@@ -78,7 +84,7 @@ public class GetCapacityResponseBody extends TeaModel {
         public Long preservedCapacity;
 
         /**
-         * <p>The billable storage capacity of the threat analysis feature. Unit: GB.</p>
+         * <p>Current billable storage usage for threat analysis, in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

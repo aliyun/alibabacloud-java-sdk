@@ -42,11 +42,14 @@ public class ListAllProdsResponseBody extends TeaModel {
 
     public static class ListAllProdsResponseBodyDataProdList extends TeaModel {
         /**
-         * <p>The code of the cloud service provider. Valid values:</p>
+         * <p>The multicloud code. Valid values:</p>
          * <ul>
-         * <li>qcloud: Tencent Cloud.</li>
-         * <li>aliyun: Alibaba Cloud.</li>
-         * <li>hcloud: Huawei Cloud.</li>
+         * <li><p>qcloud: Tencent Cloud.</p>
+         * </li>
+         * <li><p>aliyun: Alibaba Cloud.</p>
+         * </li>
+         * <li><p>hcloud: Huawei Cloud.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -56,7 +59,7 @@ public class ListAllProdsResponseBody extends TeaModel {
         public String cloudCode;
 
         /**
-         * <p>The number of logs within the cloud service that are added to the threat analysis feature.</p>
+         * <p>The number of ingested logs for the product.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -65,7 +68,7 @@ public class ListAllProdsResponseBody extends TeaModel {
         public Integer importedLogCount;
 
         /**
-         * <p>The time when the logs within the cloud service were last added to the threat analysis feature.</p>
+         * <p>The time when logs were last ingested for the product.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-11-23 12:12:12</p>
@@ -74,7 +77,7 @@ public class ListAllProdsResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
-         * <p>The code of the cloud service.</p>
+         * <p>The code of the cloud product.</p>
          * 
          * <strong>example:</strong>
          * <p>sas</p>
@@ -83,7 +86,7 @@ public class ListAllProdsResponseBody extends TeaModel {
         public String prodCode;
 
         /**
-         * <p>The total number of logs within the cloud service.</p>
+         * <p>The total number of logs for the product.</p>
          * 
          * <strong>example:</strong>
          * <p>19</p>
@@ -140,7 +143,7 @@ public class ListAllProdsResponseBody extends TeaModel {
 
     public static class ListAllProdsResponseBodyData extends TeaModel {
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -158,7 +161,7 @@ public class ListAllProdsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The cloud services.</p>
+         * <p>The list of products.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

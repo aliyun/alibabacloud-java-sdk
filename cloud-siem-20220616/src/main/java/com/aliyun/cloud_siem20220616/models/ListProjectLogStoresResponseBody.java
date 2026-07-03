@@ -42,7 +42,7 @@ public class ListProjectLogStoresResponseBody extends TeaModel {
 
     public static class ListProjectLogStoresResponseBodyData extends TeaModel {
         /**
-         * <p>The endpoint of the Simple Log Service project.</p>
+         * <p>The endpoint of the SLS project.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou.log.aliyuncs.com</p>
@@ -51,7 +51,7 @@ public class ListProjectLogStoresResponseBody extends TeaModel {
         public String endPoint;
 
         /**
-         * <p>The name of the region in which the Simple Log Service project resides.</p>
+         * <p>The name of the region where the SLS project resides.</p>
          * 
          * <strong>example:</strong>
          * <p>hangzhou</p>
@@ -60,7 +60,7 @@ public class ListProjectLogStoresResponseBody extends TeaModel {
         public String localName;
 
         /**
-         * <p>The name of the Simple Log Service Logstore.</p>
+         * <p>The name of the SLS Logstore.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud-siem-logstore</p>
@@ -69,7 +69,7 @@ public class ListProjectLogStoresResponseBody extends TeaModel {
         public String logStore;
 
         /**
-         * <p>The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.</p>
+         * <p>The ID of the Alibaba Cloud account that is used to purchase Threat Analysis.</p>
          * 
          * <strong>example:</strong>
          * <p>123XXXXXXXXX</p>
@@ -78,7 +78,7 @@ public class ListProjectLogStoresResponseBody extends TeaModel {
         public Long mainUserId;
 
         /**
-         * <p>The name of the Simple Log Service project.</p>
+         * <p>The name of the SLS project.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud-siem-project</p>
@@ -87,7 +87,7 @@ public class ListProjectLogStoresResponseBody extends TeaModel {
         public String project;
 
         /**
-         * <p>The ID of the region in which the Simple Log Service project resides.</p>
+         * <p>The region where the SLS project resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -96,7 +96,7 @@ public class ListProjectLogStoresResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ID of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.</p>
+         * <p>The ID of the member account for which threat analysis is performed.</p>
          * 
          * <strong>example:</strong>
          * <p>123XXXXXXXX</p>
@@ -105,7 +105,7 @@ public class ListProjectLogStoresResponseBody extends TeaModel {
         public Long subUserId;
 
         /**
-         * <p>The username of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.</p>
+         * <p>The name of the member account.</p>
          * 
          * <strong>example:</strong>
          * <p>sas_account_xxxx</p>

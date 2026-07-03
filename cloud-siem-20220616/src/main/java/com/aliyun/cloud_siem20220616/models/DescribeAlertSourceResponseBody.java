@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAlertSourceResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code of the response. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DescribeAlertSourceResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The list of alert sources.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -23,7 +23,7 @@ public class DescribeAlertSourceResponseBody extends TeaModel {
     public java.util.List<DescribeAlertSourceResponseBodyData> data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -43,8 +43,10 @@ public class DescribeAlertSourceResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p><code>true</code>: The request was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -99,11 +101,14 @@ public class DescribeAlertSourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAlertSourceResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of modules.</p>
+         */
         @NameInMap("Modules")
         public java.util.List<String> modules;
 
         /**
-         * <p>The internal code of the alert data source.</p>
+         * <p>The internal code for the alert source.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyun.siem.alert_datasource.sas</p>
@@ -112,7 +117,7 @@ public class DescribeAlertSourceResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The name of the alert data source.</p>
+         * <p>The name of the alert source.</p>
          * 
          * <strong>example:</strong>
          * <p>sas</p>

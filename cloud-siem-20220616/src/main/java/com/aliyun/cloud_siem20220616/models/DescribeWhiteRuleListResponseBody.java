@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeWhiteRuleListResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The status code of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The return value.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -43,8 +43,10 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -109,7 +111,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -118,7 +120,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -161,8 +163,10 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the left operand is a variable. Valid values:</p>
          * <ul>
-         * <li>true: variable.</li>
-         * <li>false: constant.</li>
+         * <li><p>true: variable</p>
+         * </li>
+         * <li><p>false: constant</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -172,7 +176,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
         public Boolean isVar;
 
         /**
-         * <p>The remarks on the right operand.</p>
+         * <p>The remarks.</p>
          * 
          * <strong>example:</strong>
          * <p>length</p>
@@ -181,16 +185,18 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
         public String modifier;
 
         /**
-         * <p>The key-value pair information of the remarks.</p>
+         * <p>The key-value pair for the remarks.</p>
          */
         @NameInMap("ModifierParam")
         public java.util.Map<String, ?> modifierParam;
 
         /**
-         * <p>Indicates whether the left operand is a constant. Valid values:</p>
+         * <p>Specifies whether the value is a constant. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The value is a constant.</p>
+         * </li>
+         * <li><p>false: The value is not a constant.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -257,10 +263,12 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
 
     public static class DescribeWhiteRuleListResponseBodyDataResponseDataExpressionConditionsRight extends TeaModel {
         /**
-         * <p>Indicates whether the right operand is a constant or a runtime variable that is obtained from the runtime context. Valid values:</p>
+         * <p>Specifies whether the right operand is a constant or a runtime variable. A runtime variable obtains a value from the runtime context. Valid values:</p>
          * <ul>
-         * <li>true: runtime variable.</li>
-         * <li>false: constant.</li>
+         * <li><p>true: runtime variable</p>
+         * </li>
+         * <li><p>false: constant</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -270,7 +278,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
         public Boolean isVar;
 
         /**
-         * <p>The remarks on the right operand.</p>
+         * <p>The remarks.</p>
          * 
          * <strong>example:</strong>
          * <p>length</p>
@@ -279,13 +287,13 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
         public String modifier;
 
         /**
-         * <p>The key-value pair information of the remarks.</p>
+         * <p>The key-value pair for the remarks.</p>
          */
         @NameInMap("ModifierParam")
         public java.util.Map<String, ?> modifierParam;
 
         /**
-         * <p>The data type of the right operand.</p>
+         * <p>The data type.</p>
          * 
          * <strong>example:</strong>
          * <p>String</p>
@@ -294,7 +302,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The right operand.</p>
+         * <p>The value of the right operand.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>
@@ -351,10 +359,12 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
 
     public static class DescribeWhiteRuleListResponseBodyDataResponseDataExpressionConditions extends TeaModel {
         /**
-         * <p>Indicates whether the result is inverted. Valid values:</p>
+         * <p>Indicates whether to negate the result. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The result is negated.</p>
+         * </li>
+         * <li><p>false: The result is not negated.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -364,7 +374,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
         public Boolean isNot;
 
         /**
-         * <p>The ID of the rule condition.</p>
+         * <p>The condition ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -373,20 +383,26 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
         public Integer itemId;
 
         /**
-         * <p>The left operand of the rule condition.</p>
+         * <p>The left operand of the condition.</p>
          */
         @NameInMap("Left")
         public DescribeWhiteRuleListResponseBodyDataResponseDataExpressionConditionsLeft left;
 
         /**
-         * <p>The logical operator of the rule condition. Valid values:</p>
+         * <p>The operator. Valid values:</p>
          * <ul>
-         * <li><code>=</code>: equals to.</li>
-         * <li><code>&lt;&gt;</code>: does not equal to.</li>
-         * <li><code>in</code>: contains.</li>
-         * <li><code>not in</code>: does not contain.</li>
-         * <li><code>REGEXP</code>: matches a regular expression.</li>
-         * <li><code>NOT REGEXP</code>: does not match a regular expression.</li>
+         * <li><p><code>=</code>: equals</p>
+         * </li>
+         * <li><p><code>&lt;&gt;</code>: does not equal</p>
+         * </li>
+         * <li><p><code>in</code>: includes</p>
+         * </li>
+         * <li><p><code>not in</code>: does not include</p>
+         * </li>
+         * <li><p><code>REGEXP</code>: matches a regular expression</p>
+         * </li>
+         * <li><p><code>NOT REGEXP</code>: does not match a regular expression</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -396,7 +412,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
         public String operator;
 
         /**
-         * <p>The right operand of the rule condition.</p>
+         * <p>The right operand.</p>
          */
         @NameInMap("Right")
         public DescribeWhiteRuleListResponseBodyDataResponseDataExpressionConditionsRight right;
@@ -450,13 +466,13 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
 
     public static class DescribeWhiteRuleListResponseBodyDataResponseDataExpression extends TeaModel {
         /**
-         * <p>The rule conditions.</p>
+         * <p>The array of rule conditions.</p>
          */
         @NameInMap("Conditions")
         public java.util.List<DescribeWhiteRuleListResponseBodyDataResponseDataExpressionConditions> conditions;
 
         /**
-         * <p>The logical relationships among the rule conditions.</p>
+         * <p>The logical relation for the conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>(1&amp;2)|(3&amp;4)</p>
@@ -534,7 +550,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
         public String alertUuid;
 
         /**
-         * <p>The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.</p>
+         * <p>The ID of the Alibaba Cloud account that is used to purchase Threat Analysis.</p>
          * 
          * <strong>example:</strong>
          * <p>127608589417****</p>
@@ -543,7 +559,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
         public Long aliuid;
 
         /**
-         * <p>The conditions in the rule. The value is a JSON array.</p>
+         * <p>The rule conditions, which are in the JSON array format.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;conditions&quot;:[{&quot;isNot&quot;:false,&quot;itemId&quot;:0,&quot;left&quot;:{&quot;value&quot;:&quot;host_uuid.host_name&quot;},&quot;operator&quot;:&quot;containsString&quot;,&quot;right&quot;:{&quot;value&quot;:&quot;Cloud-MCH&quot;}}]}]</p>
@@ -552,7 +568,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
         public DescribeWhiteRuleListResponseBodyDataResponseDataExpression expression;
 
         /**
-         * <p>The time when the whitelist rule was created.</p>
+         * <p>The time when the rule was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-06 16:37:29</p>
@@ -561,7 +577,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The time when the whitelist rule was modified.</p>
+         * <p>The time when the rule was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-06 16:37:29</p>
@@ -570,7 +586,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The ID of the whitelist rule.</p>
+         * <p>The unique ID of the whitelist rule.</p>
          * 
          * <strong>example:</strong>
          * <p>123456789</p>
@@ -588,10 +604,12 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
         public String incidentUuid;
 
         /**
-         * <p>The status of the whitelist rule. Valid values:</p>
+         * <p>The status of the rule. Valid values:</p>
          * <ul>
-         * <li>1: enabled.</li>
-         * <li>0: disabled.</li>
+         * <li><p>1: enabled</p>
+         * </li>
+         * <li><p>0: disabled</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -601,7 +619,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The ID of the Alibaba Cloud account that is used to create the whitelist rule.</p>
+         * <p>The ID of the Alibaba Cloud account that is used to create the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>176555323***</p>

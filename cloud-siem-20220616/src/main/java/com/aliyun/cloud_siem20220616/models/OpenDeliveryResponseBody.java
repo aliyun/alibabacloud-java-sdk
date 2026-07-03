@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class OpenDeliveryResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the log delivery feature is enabled. Valid values:</p>
+     * <p>Indicates whether log delivery is enabled. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: Enabled</p>
+     * </li>
+     * <li><p>false: Failed</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

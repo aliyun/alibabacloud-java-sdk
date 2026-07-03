@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEntitiesRequest extends TeaModel {
     /**
+     * <p>The page number of the current page. The value must be greater than or equal to 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListEntitiesRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>The entity name.</p>
+     * 
      * <strong>example:</strong>
      * <p>host1****</p>
      */
@@ -21,6 +24,19 @@ public class ListEntitiesRequest extends TeaModel {
     public String entityName;
 
     /**
+     * <p>The entity type. Valid values:</p>
+     * <ul>
+     * <li>ip: IP address</li>
+     * <li>domain: domain name</li>
+     * <li>url: URL</li>
+     * <li>process: process</li>
+     * <li>file: file</li>
+     * <li>host: host</li>
+     * <li>cloud_account: cloud account</li>
+     * <li>container: container</li>
+     * <li>bucket: Object Storage Service (OSS) bucket.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ip</p>
      */
@@ -28,16 +44,25 @@ public class ListEntitiesRequest extends TeaModel {
     public String entityType;
 
     /**
+     * <p>The entity UUID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6c740667-80b2-476d-8924-2e706feb****</p>
      */
     @NameInMap("EntityUuid")
     public String entityUuid;
 
+    /**
+     * <p>The list of entity UUIDs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6c740667-80b2-476d-8924-2e706feb****,6c740667-80b2-476d-8924-2e706feb****</p>
+     */
     @NameInMap("EntityUuids")
     public String entityUuids;
 
     /**
+     * <p>The incident ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,6 +72,12 @@ public class ListEntitiesRequest extends TeaModel {
     public String incidentUuid;
 
     /**
+     * <p>Specifies whether the entity is malicious. Valid values:</p>
+     * <ul>
+     * <li>0: No.</li>
+     * <li>1: Yes.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -54,6 +85,8 @@ public class ListEntitiesRequest extends TeaModel {
     public String isMalwareEntity;
 
     /**
+     * <p>The malicious entity type.</p>
+     * 
      * <strong>example:</strong>
      * <p>aliyun.siem.sas.alert_tag.miner_software</p>
      */
@@ -61,6 +94,7 @@ public class ListEntitiesRequest extends TeaModel {
     public String malwareType;
 
     /**
+     * <p>The number of entries per page. Maximum value: 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,6 +104,12 @@ public class ListEntitiesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region in which the data management center of the threat analysis feature resides. Select the region based on the region where your assets reside. Valid values:</p>
+     * <ul>
+     * <li>cn-hangzhou: the assets reside in the Chinese mainland or Hong Kong (China).</li>
+     * <li>ap-southeast-1: the assets reside in regions outside China.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -77,6 +117,8 @@ public class ListEntitiesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the member to which the administrator switches the view.</p>
+     * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
      */
@@ -84,12 +126,25 @@ public class ListEntitiesRequest extends TeaModel {
     public Long roleFor;
 
     /**
+     * <p>The view type. Valid values:</p>
+     * <ul>
+     * <li>0: the view of the current Alibaba Cloud account.</li>
+     * <li>1: the view of all accounts in the enterprise.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("RoleType")
     public Integer roleType;
 
+    /**
+     * <p>The entity tags. The value is a JSON array string:</p>
+     * <p><code>&quot;[{&quot;tagKey1&quot;:&quot;tagValue1&quot;},{&quot;tagKey2&quot;:&quot;tagValue2&quot;}]&quot;</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;tagKey1&quot;:&quot;tagValue1&quot;},{&quot;tagKey2&quot;:&quot;tagValue2&quot;}]</p>
+     */
     @NameInMap("Tags")
     public String tags;
 

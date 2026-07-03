@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code that is returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -23,7 +23,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
     public DescribeDisposeAndPlaybookResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -43,8 +43,10 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p><code>true</code>: The request was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -109,7 +111,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -118,7 +120,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -158,11 +160,23 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
     }
 
     public static class DescribeDisposeAndPlaybookResponseBodyDataResponseDataPlaybookList extends TeaModel {
+        /**
+         * <p>Indicates whether the playbook is available.</p>
+         * <ul>
+         * <li><p>1: available</p>
+         * </li>
+         * <li><p>0: unavailable</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Available")
         public String available;
 
         /**
-         * <p>The playbook description.</p>
+         * <p>The description of the playbook.</p>
          * 
          * <strong>example:</strong>
          * <p>WafBlockIP</p>
@@ -180,7 +194,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The playbook name, which is the unique identifier of the playbook.</p>
+         * <p>The name of the playbook, which is the unique identifier of the playbook.</p>
          * 
          * <strong>example:</strong>
          * <p>kill_process_isolate_file</p>
@@ -189,7 +203,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The opcode of the playbook, which corresponds to the opcode of the playbook recommended for entity handling.</p>
+         * <p>The opcode of the playbook. The value corresponds to the recommended playbook opcode of the entity.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -198,10 +212,12 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         public String opCode;
 
         /**
-         * <p>Indicates whether quick event handling is selected by default. Valid values:</p>
+         * <p>Indicates whether the playbook is selected by default for one-click event disposition. Valid values:</p>
          * <ul>
-         * <li>2: Quick event handling is selected.</li>
-         * <li>1: Quick event handling is displayed but not selected.</li>
+         * <li><p>2: selected</p>
+         * </li>
+         * <li><p>1: displayed but not selected</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -211,13 +227,13 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         public String opLevel;
 
         /**
-         * <p>The playbook parameters and the corresponding properties.</p>
+         * <p>The list of parameters for the playbook and the attributes of the parameters.</p>
          */
         @NameInMap("ParamConfig")
         public java.util.List<?> paramConfig;
 
         /**
-         * <p>The opcode configuration.</p>
+         * <p>The configuration of the opcode.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;opCode&quot;:&quot;3&quot;}</p>
@@ -225,10 +241,24 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         @NameInMap("TaskConfig")
         public String taskConfig;
 
+        /**
+         * <p>The reason why the playbook is unavailable.</p>
+         * <ul>
+         * <li><p>PARAM_INVALID: The input parameters are invalid.</p>
+         * </li>
+         * <li><p>NO_INGESTION: The required service is not integrated.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PARAM_INVALID</p>
+         */
         @NameInMap("UnAvailableCode")
         public String unAvailableCode;
 
         /**
+         * <p>The UUID of the playbook, which is the unique identifier of the playbook.</p>
+         * 
          * <strong>example:</strong>
          * <p>kill_process_isolate_file</p>
          */
@@ -236,10 +266,12 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         public String uuid;
 
         /**
-         * <p>Indicates whether the playbook is intended for Web Application Firewall (WAF). Valid values:</p>
+         * <p>Indicates whether the playbook is a WAF playbook. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p><code>true</code>: Yes</p>
+         * </li>
+         * <li><p><code>false</code>: No</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -354,33 +386,49 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         public Integer alertNum;
 
         /**
-         * <p>The object for handling.</p>
+         * <p>The disposition object.</p>
          * 
          * <strong>example:</strong>
-         * <p>192.168.1.1</p>
+         * <p>192.168.<em>.</em></p>
          */
         @NameInMap("Dispose")
         public String dispose;
 
         /**
-         * <p>The entity ID</p>
+         * <p>The ID of the entity.</p>
          * 
          * <strong>example:</strong>
-         * <p>12345</p>
+         * <p>12345****</p>
          */
         @NameInMap("EntityId")
         public Long entityId;
 
         /**
-         * <p>The entity information.</p>
+         * <p>The information about the entity.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;file_path&quot;: &quot;c:/www/leixi.jsp&quot;,&quot;file_hash&quot;: &quot;aa0ca926ad948cd820e0a3d9a18c09d0&quot;,&quot;host_uuid&quot;: &quot;efed2cf7-0b77-45d9-a97b-d2cf246bcbb3&quot;,&quot;malware_type&quot;: &quot;${aliyun.siem.sas.alert_tag.webshell}&quot;,&quot;host_name&quot;: &quot;launch-advisor-20230531&quot;}</p>
+         * <p>{&quot;file_path&quot;: &quot;c:/www/leixi.jsp&quot;,&quot;file_hash&quot;: &quot;aa0ca926ad948cd820e0a3d9a18c****&quot;,&quot;host_uuid&quot;: &quot;efed2cf7-0b77-45d9-a97b-d2cf246b****&quot;,&quot;malware_type&quot;: &quot;${aliyun.siem.sas.alert_tag.webshell}&quot;,&quot;host_name&quot;: &quot;launch-advisor-2023****&quot;}</p>
          */
         @NameInMap("EntityInfo")
         public java.util.Map<String, ?> entityInfo;
 
         /**
+         * <p>The type of the entity. Valid values:</p>
+         * <ul>
+         * <li><p><code>ip</code>: IP address</p>
+         * </li>
+         * <li><p><code>domain</code>: Domain name</p>
+         * </li>
+         * <li><p><code>url</code>: URL</p>
+         * </li>
+         * <li><p><code>process</code>: Process</p>
+         * </li>
+         * <li><p><code>file</code>: File</p>
+         * </li>
+         * <li><p><code>host</code>: Host</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ip</p>
          */
@@ -388,7 +436,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         public String entityType;
 
         /**
-         * <p>The key-value pairs each of which consists of opcode and oplevel.</p>
+         * <p>The opcode and the corresponding operation level.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>
@@ -397,7 +445,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         public java.util.Map<String, String> opcodeMap;
 
         /**
-         * <p>The codes of the playbooks that are recommended for entity handling.</p>
+         * <p>The recommended playbook opcode for the entity.</p>
          * 
          * <strong>example:</strong>
          * <p>[1,3]</p>
@@ -406,13 +454,16 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         public java.util.List<String> opcodeSet;
 
         /**
-         * <p>The playbooks that can handle the entity.</p>
+         * <p>The list of playbooks that can be used to handle the entity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;name&quot;:&quot;云安全中心-云服务器安全&quot;,&quot;code&quot;:&quot;1&quot;}]</p>
          */
         @NameInMap("PlaybookList")
         public java.util.List<DescribeDisposeAndPlaybookResponseBodyDataResponseDataPlaybookList> playbookList;
 
         /**
-         * <p>The IDs of the users who can handle objects.</p>
+         * <p>The list of user IDs that are authorized to perform the disposition.</p>
          * 
          * <strong>example:</strong>
          * <p>176618589410****</p>

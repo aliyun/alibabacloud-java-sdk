@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyBindAccountResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The return value of the request.</p>
      */
     @NameInMap("Data")
     public ModifyBindAccountResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
@@ -42,7 +42,7 @@ public class ModifyBindAccountResponseBody extends TeaModel {
 
     public static class ModifyBindAccountResponseBodyData extends TeaModel {
         /**
-         * <p>The number of the accounts that are modified. The value 1 indicates that the modification is successful, and a value less than or equal to 0 indicates that the modification failed.</p>
+         * <p>The number of account bindings that are modified. A value of 1 indicates that the operation is successful. A value of 0 or less indicates that the operation failed.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

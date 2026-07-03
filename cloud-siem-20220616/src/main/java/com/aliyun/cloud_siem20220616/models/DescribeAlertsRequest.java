@@ -4,9 +4,18 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class DescribeAlertsRequest extends TeaModel {
+    /**
+     * <p>The name of the alert.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Try SNMP weak password</p>
+     */
     @NameInMap("AlertName")
     public String alertName;
 
+    /**
+     * <p>The status of the alert.</p>
+     */
     @NameInMap("AlertStatus")
     public java.util.List<String> alertStatus;
 
@@ -19,11 +28,17 @@ public class DescribeAlertsRequest extends TeaModel {
     @NameInMap("AlertTitle")
     public String alertTitle;
 
+    /**
+     * <p>The type of the alert.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Scan</p>
+     */
     @NameInMap("AlertType")
     public String alertType;
 
     /**
-     * <p>The UUID of the alert.</p>
+     * <p>The unique ID of the alert.</p>
      * 
      * <strong>example:</strong>
      * <p>sas_71e24437d2797ce8fc59692905a4****</p>
@@ -31,14 +46,26 @@ public class DescribeAlertsRequest extends TeaModel {
     @NameInMap("AlertUuid")
     public String alertUuid;
 
+    /**
+     * <p>The ID of the asset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F3385128-69A5-3EE8-BD05-FBEE7DB2****</p>
+     */
     @NameInMap("AssetId")
     public String assetId;
 
+    /**
+     * <p>The name of the asset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hostname-****</p>
+     */
     @NameInMap("AssetName")
     public String assetName;
 
     /**
-     * <p>The page number. Pages start from page 1.</p>
+     * <p>The page number. The value must be greater than or equal to 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +75,7 @@ public class DescribeAlertsRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The end of the time range to query. Unit: milliseconds.</p>
+     * <p>The end of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>1577808000000</p>
@@ -56,17 +83,31 @@ public class DescribeAlertsRequest extends TeaModel {
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>The ID of the entity.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>f366e287ea530e7a324cbe987993****</p>
+     */
     @NameInMap("EntityId")
     public String entityId;
 
+    /**
+     * <p>The name of the entity.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>launch-advisor-*****</p>
+     */
     @NameInMap("EntityName")
     public String entityName;
 
     /**
-     * <p>Specifies whether an attack is defended. Valid values:</p>
+     * <p>Specifies whether the threat is defended. Valid values:</p>
      * <ul>
-     * <li>0: detected.</li>
-     * <li>1: blocked.</li>
+     * <li><p><code>0</code>: detected</p>
+     * </li>
+     * <li><p><code>1</code>: blocked</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -76,18 +117,37 @@ public class DescribeAlertsRequest extends TeaModel {
     public String isDefend;
 
     /**
+     * <p>The alert type. Valid values:</p>
+     * <ul>
+     * <li><p><code>system</code>: An alert generated from aggregated analysis</p>
+     * </li>
+     * <li><p><code>custom</code>: An alert generated from custom analysis</p>
+     * </li>
+     * <li><p><code>cfw</code>: firewall</p>
+     * </li>
+     * <li><p><code>waf</code>: web application firewall</p>
+     * </li>
+     * <li><p><code>edr</code>: endpoint detection and response</p>
+     * </li>
+     * <li><p><code>other</code>: other</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>176555323***</p>
+     * <p>custom</p>
      */
     @NameInMap("LabelType")
     public String labelType;
 
     /**
-     * <p>The risk level. The value is a JSON array. Valid values:</p>
+     * <p>The threat levels. This parameter is a JSON array. Valid values:</p>
      * <ul>
-     * <li>serious: high</li>
-     * <li>suspicious: medium</li>
-     * <li>remind: low</li>
+     * <li><p><code>serious</code>: high</p>
+     * </li>
+     * <li><p><code>suspicious</code>: medium</p>
+     * </li>
+     * <li><p><code>remind</code>: low</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -107,10 +167,12 @@ public class DescribeAlertsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+     * <p>The region where the data management center of the threat analysis feature resides. You are required to specify this parameter based on the region where your assets reside. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Your assets reside in regions in China.</li>
-     * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+     * <li><p><code>cn-hangzhou</code>: Your assets reside in the Chinese mainland or Hong Kong (China).</p>
+     * </li>
+     * <li><p><code>ap-southeast-1</code>: Your assets reside outside the Chinese mainland.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -120,7 +182,7 @@ public class DescribeAlertsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the account that you switch from the management account.</p>
+     * <p>The ID of the user who is used to switch the account to view the data of the member.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
@@ -129,10 +191,12 @@ public class DescribeAlertsRequest extends TeaModel {
     public Long roleFor;
 
     /**
-     * <p>The type of the view. Valid values:</p>
+     * <p>The view type of the alert. Valid values:</p>
      * <ul>
-     * <li>0: the current Alibaba Cloud account</li>
-     * <li>1: the global account</li>
+     * <li><p><code>0</code>: current account</p>
+     * </li>
+     * <li><p><code>1</code>: all accounts</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -151,7 +215,7 @@ public class DescribeAlertsRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+     * <p>The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>1577808000000</p>
@@ -160,7 +224,7 @@ public class DescribeAlertsRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The ID of the Alibaba Cloud account within which the alert is generated.</p>
+     * <p>The ID of the Alibaba Cloud account that is associated with the alert.</p>
      * 
      * <strong>example:</strong>
      * <p>176555323***</p>

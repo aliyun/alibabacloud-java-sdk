@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEntityInfoResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class DescribeEntityInfoResponseBody extends TeaModel {
     public DescribeEntityInfoResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -43,8 +43,10 @@ public class DescribeEntityInfoResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -109,7 +111,7 @@ public class DescribeEntityInfoResponseBody extends TeaModel {
         public Long entityId;
 
         /**
-         * <p>The information about the entry.</p>
+         * <p>The information about the entity.</p>
          * 
          * <strong>example:</strong>
          * <p>{ location: &quot;xian&quot;, net_connect_dir: &quot;in&quot;, malware_type: &quot;${aliyun.siem.sas.alert_tag.login_unusual_account}&quot; }</p>
@@ -120,12 +122,18 @@ public class DescribeEntityInfoResponseBody extends TeaModel {
         /**
          * <p>The type of the entity. Valid values:</p>
          * <ul>
-         * <li>ip</li>
-         * <li>domain</li>
-         * <li>url</li>
-         * <li>process</li>
-         * <li>file</li>
-         * <li>host</li>
+         * <li><p>ip: IP address</p>
+         * </li>
+         * <li><p>domain: domain name</p>
+         * </li>
+         * <li><p>url: URL</p>
+         * </li>
+         * <li><p>process: process</p>
+         * </li>
+         * <li><p>file: file</p>
+         * </li>
+         * <li><p>host: host</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -135,7 +143,7 @@ public class DescribeEntityInfoResponseBody extends TeaModel {
         public String entityType;
 
         /**
-         * <p>The information about the risk Intelligence.</p>
+         * <p>The threat intelligence information.</p>
          * 
          * <strong>example:</strong>
          * <p>{

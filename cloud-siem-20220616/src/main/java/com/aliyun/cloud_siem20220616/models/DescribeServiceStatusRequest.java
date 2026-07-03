@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeServiceStatusRequest extends TeaModel {
     /**
-     * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+     * <p>The region of the Data Management hub. Select a region based on the location of your assets. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Your assets reside in regions in China.</li>
-     * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+     * <li><p>cn-hangzhou: For assets in the Chinese mainland and China (Hong Kong).</p>
+     * </li>
+     * <li><p>ap-southeast-1: For assets in regions outside China.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

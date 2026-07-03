@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOperatorsResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class DescribeOperatorsResponseBody extends TeaModel {
     public java.util.List<DescribeOperatorsResponseBodyData> data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -43,8 +43,10 @@ public class DescribeOperatorsResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -118,7 +120,7 @@ public class DescribeOperatorsResponseBody extends TeaModel {
         public String operator;
 
         /**
-         * <p>The description of the operator in Chinese.</p>
+         * <p>The Chinese description of the operator.</p>
          * 
          * <strong>example:</strong>
          * <p>arger than or equal to</p>
@@ -127,7 +129,7 @@ public class DescribeOperatorsResponseBody extends TeaModel {
         public String operatorDescCn;
 
         /**
-         * <p>The description of the operator in English.</p>
+         * <p>The English description of the operator.</p>
          * 
          * <strong>example:</strong>
          * <p>larger than or equal to</p>
@@ -136,7 +138,7 @@ public class DescribeOperatorsResponseBody extends TeaModel {
         public String operatorDescEn;
 
         /**
-         * <p>The name of the operator.</p>
+         * <p>The display name of the operator.</p>
          * 
          * <strong>example:</strong>
          * <p>&lt;=</p>
@@ -145,7 +147,7 @@ public class DescribeOperatorsResponseBody extends TeaModel {
         public String operatorName;
 
         /**
-         * <p>The data types that are supported by the operator. The data types are separated by commas (,).</p>
+         * <p>The data types that the operator supports. Multiple data types are separated by commas.</p>
          * 
          * <strong>example:</strong>
          * <p>varchar</p>
@@ -154,7 +156,7 @@ public class DescribeOperatorsResponseBody extends TeaModel {
         public String supportDataType;
 
         /**
-         * <p>The scenarios that are supported by the operator. Multiple scenarios are separated by commas (,), such as AGGREGATE scenarios. By default, this parameter is empty.</p>
+         * <p>The scenarios that the operator supports. Multiple scenarios are separated by commas, such as aggregation (AGGREGATE). The default value is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>[AGGREGATE]</p>

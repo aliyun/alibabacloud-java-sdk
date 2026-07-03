@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class AddUserSourceLogConfigRequest extends TeaModel {
     /**
-     * <p>Specifies whether to add logs or delete added logs. Valid values:</p>
+     * <p>Specifies whether to add or delete the log collection task. Valid values:</p>
      * <ul>
-     * <li>\-1: deletes added logs.</li>
-     * <li>0: adds logs.</li>
+     * <li><p>-1: Deletes the task.</p>
+     * </li>
+     * <li><p>0: Adds the task.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class AddUserSourceLogConfigRequest extends TeaModel {
     public Integer deleted;
 
     /**
-     * <p>The display details of the Logstore.</p>
+     * <p>The detailed information about the SLS log to be collected.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai.siem-project.siem-logstore</p>
@@ -27,10 +29,12 @@ public class AddUserSourceLogConfigRequest extends TeaModel {
     public String disPlayLine;
 
     /**
-     * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+     * <p>The region where the Data Management center of Threat Analysis is located. Select a region based on the region where your assets reside. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Your assets reside in regions in China.</li>
-     * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+     * <li><p>cn-hangzhou: Your assets are in the Chinese mainland or Hong Kong (China).</p>
+     * </li>
+     * <li><p>ap-southeast-1: Your assets are in regions outside China.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,7 +44,7 @@ public class AddUserSourceLogConfigRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The log code.</p>
+     * <p>The code of the log.</p>
      * 
      * <strong>example:</strong>
      * <p>cloud_siem_aegis_proc</p>
@@ -49,7 +53,7 @@ public class AddUserSourceLogConfigRequest extends TeaModel {
     public String sourceLogCode;
 
     /**
-     * <p>The details of the Logstore that you want to use in the JSON string format.</p>
+     * <p>The detailed information about the Simple Log Service (SLS) log to be collected. The value is a JSON string.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,7 +63,7 @@ public class AddUserSourceLogConfigRequest extends TeaModel {
     public String sourceLogInfo;
 
     /**
-     * <p>The code of the cloud service.</p>
+     * <p>The code of the product.</p>
      * 
      * <strong>example:</strong>
      * <p>sas</p>
@@ -68,7 +72,7 @@ public class AddUserSourceLogConfigRequest extends TeaModel {
     public String sourceProdCode;
 
     /**
-     * <p>The ID of the Alibaba Cloud account.</p>
+     * <p>The ID of the Alibaba Cloud account for which you want to collect logs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

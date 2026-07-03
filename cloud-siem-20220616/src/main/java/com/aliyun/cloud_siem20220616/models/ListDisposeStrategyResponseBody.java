@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDisposeStrategyResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>Response data.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -23,7 +23,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
     public ListDisposeStrategyResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>Response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
@@ -41,10 +41,12 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request succeeded. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,7 +102,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
 
     public static class ListDisposeStrategyResponseBodyDataPageInfo extends TeaModel {
         /**
-         * <p>The current page number.</p>
+         * <p>Current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -109,7 +111,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>Number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -118,7 +120,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>Total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -159,7 +161,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
 
     public static class ListDisposeStrategyResponseBodyDataResponseData extends TeaModel {
         /**
-         * <p>The UUID of the alert.</p>
+         * <p>Alert UUID.</p>
          * 
          * <strong>example:</strong>
          * <p>sas_71e24437d2797ce8fc59692905a4****</p>
@@ -168,7 +170,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public String alertUuid;
 
         /**
-         * <p>The ID of the Alibaba Cloud account that is associated with the policy in SIEM.</p>
+         * <p>SIEM root account ID associated with the strategy.</p>
          * 
          * <strong>example:</strong>
          * <p>127608589417****</p>
@@ -177,10 +179,12 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public Long aliuid;
 
         /**
-         * <p>The status of the policy. Valid values:</p>
+         * <p>Strategy status. Valid values:</p>
          * <ul>
-         * <li>0: invalid</li>
-         * <li>1: valid</li>
+         * <li><p>0: disabled</p>
+         * </li>
+         * <li><p>1: enabled</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -190,7 +194,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public Integer effectiveStatus;
 
         /**
-         * <p>The details of the entity. The value is a JSON array.</p>
+         * <p>Entity details in JSON array format.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;ip&quot;:&quot;1.1.1.1&quot;}]</p>
@@ -199,7 +203,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public java.util.List<?> entity;
 
         /**
-         * <p>The ID of the entity.</p>
+         * <p>Entity ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123456789</p>
@@ -208,11 +212,14 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public Long entityId;
 
         /**
-         * <p>The type of the entity. Valid values:</p>
+         * <p>Entity type. Valid values:</p>
          * <ul>
-         * <li>ip</li>
-         * <li>process</li>
-         * <li>file</li>
+         * <li><p>ip</p>
+         * </li>
+         * <li><p>process</p>
+         * </li>
+         * <li><p>file</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -222,7 +229,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public String entityType;
 
         /**
-         * <p>The summary information about the failed task.</p>
+         * <p>Summary of task failure.</p>
          * 
          * <strong>example:</strong>
          * <p>DisposalEntity failed which description is Aegis Quarantine File , return_info failed which description is Check Aegis Process Result , [ERROR DETAIL] *******.php:file not found</p>
@@ -231,7 +238,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The end time of the task.</p>
+         * <p>Task completion time.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-08-10 21:34:07</p>
@@ -240,7 +247,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public String finishTime;
 
         /**
-         * <p>The creation time.</p>
+         * <p>Creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-06 16:37:29</p>
@@ -249,7 +256,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The update time.</p>
+         * <p>Last modified time.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-06 16:37:29</p>
@@ -258,7 +265,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The ID of the policy.</p>
+         * <p>Strategy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -267,7 +274,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The name of the event.</p>
+         * <p>Event name.</p>
          * 
          * <strong>example:</strong>
          * <p>Multiple type of alerts, including Miner Network, Command line download and run malicious files, Backdoor Process, etc</p>
@@ -276,7 +283,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public String incidentName;
 
         /**
-         * <p>The UUID of the event.</p>
+         * <p>Global unique UUID of the event.</p>
          * 
          * <strong>example:</strong>
          * <p>85ea4241-798f-4684-a876-65d4f0c3****</p>
@@ -285,7 +292,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public String incidentUuid;
 
         /**
-         * <p>The name of the playbook, which is the unique identifier of the playbook.</p>
+         * <p>Unique name of the playbook.</p>
          * 
          * <strong>example:</strong>
          * <p>WafBlockIP</p>
@@ -294,13 +301,18 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public String playbookName;
 
         /**
-         * <p>The type of the playbook. Valid values:</p>
+         * <p>Playbook type. Valid values:</p>
          * <ul>
-         * <li>system: user-triggered playbook</li>
-         * <li>custom: event-triggered playbook</li>
-         * <li>custom_alert: alert-triggered playbook</li>
-         * <li>soar-manual: user-run playbook</li>
-         * <li>soar-mdr: MDR-run playbook</li>
+         * <li><p>system: manual disposal</p>
+         * </li>
+         * <li><p>custom: event-triggered playbook</p>
+         * </li>
+         * <li><p>custom_alert: alert-triggered playbook</p>
+         * </li>
+         * <li><p>soar-manual: manually run playbook</p>
+         * </li>
+         * <li><p>soar-mdr: MDR-run playbook</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -310,7 +322,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public String playbookType;
 
         /**
-         * <p>The UUID of the playbook.</p>
+         * <p>UUID of the playbook.</p>
          * 
          * <strong>example:</strong>
          * <p>system_aliyun_clb_process_book</p>
@@ -319,7 +331,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public String playbookUuid;
 
         /**
-         * <p>The scope of the policy.</p>
+         * <p>Disposal scope.</p>
          * 
          * <strong>example:</strong>
          * <p>[{ aliUid: 1766185894104675 }]</p>
@@ -328,21 +340,25 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public java.util.List<?> scope;
 
         /**
-         * <p>The ID of the SOAR handling policy.</p>
+         * <p>ID of the security orchestration and automated response disposal strategy.</p>
          * 
          * <strong>example:</strong>
-         * <p>577bbf90-a770-44a7-8154-586aa2d318fa</p>
+         * <p>577bbf90-a770-44a7-8154-586aa2d3****</p>
          */
         @NameInMap("SophonTaskId")
         public String sophonTaskId;
 
         /**
-         * <p>The running status of the playbook. Valid values:</p>
+         * <p>Playbook invocation status. Valid values:</p>
          * <ul>
-         * <li>200: successful</li>
-         * <li>10: deleted</li>
-         * <li>5: failed</li>
-         * <li>0: initial</li>
+         * <li><p>200: succeeded</p>
+         * </li>
+         * <li><p>10: deleted</p>
+         * </li>
+         * <li><p>5: failed</p>
+         * </li>
+         * <li><p>0: initial state</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -352,7 +368,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The ID of the Alibaba account that is used to configure the policy.</p>
+         * <p>The Alibaba Cloud account ID associated with the configuration policy.</p>
          * 
          * <strong>example:</strong>
          * <p>176555323***</p>
@@ -361,7 +377,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public Long subAliuid;
 
         /**
-         * <p>The parameters that are used to trigger the playbook. The value is in the JSON format.</p>
+         * <p>Parameters used to trigger the playbook, in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -400,6 +416,12 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         @NameInMap("TaskParam")
         public String taskParam;
 
+        /**
+         * <p>Playbook URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;playbookUuid&quot;:&quot;system_aliyun_aegis_stop_container_book&quot;,&quot;requestUuid&quot;:&quot;e8924356-448b-4301-aee9-*******&quot;}</p>
+         */
         @NameInMap("TaskUrl")
         public String taskUrl;
 
@@ -588,13 +610,13 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
 
     public static class ListDisposeStrategyResponseBodyData extends TeaModel {
         /**
-         * <p>The pagination information.</p>
+         * <p>Paging information.</p>
          */
         @NameInMap("PageInfo")
         public ListDisposeStrategyResponseBodyDataPageInfo pageInfo;
 
         /**
-         * <p>The detailed data.</p>
+         * <p>Detailed data.</p>
          */
         @NameInMap("ResponseData")
         public java.util.List<ListDisposeStrategyResponseBodyDataResponseData> responseData;

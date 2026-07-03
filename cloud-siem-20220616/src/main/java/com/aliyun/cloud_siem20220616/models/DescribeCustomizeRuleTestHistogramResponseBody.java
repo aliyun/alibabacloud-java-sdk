@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCustomizeRuleTestHistogramResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DescribeCustomizeRuleTestHistogramResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The return value for the request.</p>
+     * <p>The data returned.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -23,7 +23,7 @@ public class DescribeCustomizeRuleTestHistogramResponseBody extends TeaModel {
     public java.util.List<DescribeCustomizeRuleTestHistogramResponseBodyData> data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -43,8 +43,10 @@ public class DescribeCustomizeRuleTestHistogramResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,7 +102,7 @@ public class DescribeCustomizeRuleTestHistogramResponseBody extends TeaModel {
 
     public static class DescribeCustomizeRuleTestHistogramResponseBodyData extends TeaModel {
         /**
-         * <p>The number of alerts that are generated in the query time range.</p>
+         * <p>The number of alerts generated in the subinterval.</p>
          * 
          * <strong>example:</strong>
          * <p>125</p>
@@ -109,7 +111,7 @@ public class DescribeCustomizeRuleTestHistogramResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>The start of the time range for querying alerts. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The start of the time range for the alert. This value is a UNIX timestamp. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1599897188</p>
@@ -118,7 +120,7 @@ public class DescribeCustomizeRuleTestHistogramResponseBody extends TeaModel {
         public Long from;
 
         /**
-         * <p>The end of the time range for querying alerts. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The end of the time range for the alert. This value is a UNIX timestamp. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1599997188</p>

@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeLogTypeRequest extends TeaModel {
     /**
-     * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+     * <p>The region of the Data Management center. Select a region based on where your assets are located. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Your assets reside in regions in China.</li>
-     * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+     * <li><p>cn-hangzhou: for assets in the Chinese mainland and China (Hong Kong)</p>
+     * </li>
+     * <li><p>ap-southeast-1: for assets in regions outside China</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class DescribeLogTypeRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the account that you switch from the management account.</p>
+     * <p>The user ID of the member. An administrator can use this parameter to switch to the perspective of a specific member.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
@@ -29,8 +31,10 @@ public class DescribeLogTypeRequest extends TeaModel {
     /**
      * <p>The type of the view. Valid values:</p>
      * <ul>
-     * <li>0: the current Alibaba Cloud account</li>
-     * <li>1: the global account</li>
+     * <li><p>0: The view of the current Alibaba Cloud account.</p>
+     * </li>
+     * <li><p>1: The view of all accounts in an enterprise.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

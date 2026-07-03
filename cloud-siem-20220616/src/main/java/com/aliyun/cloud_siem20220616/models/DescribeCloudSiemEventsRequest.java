@@ -14,7 +14,7 @@ public class DescribeCloudSiemEventsRequest extends TeaModel {
     public String assetId;
 
     /**
-     * <p>The page number. Pages start from page 1.</p>
+     * <p>The page number. The value must be greater than or equal to 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class DescribeCloudSiemEventsRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The end of the time range to query. Unit: milliseconds.</p>
+     * <p>The end time of the query. This value is a UNIX timestamp. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1577808000000</p>
@@ -33,6 +33,8 @@ public class DescribeCloudSiemEventsRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The UUID of the entity that is associated with the event.</p>
+     * 
      * <strong>example:</strong>
      * <p>6c740667-80b2-476d-8924-2e706feb****</p>
      */
@@ -49,7 +51,7 @@ public class DescribeCloudSiemEventsRequest extends TeaModel {
     public String eventName;
 
     /**
-     * <p>The ID of the event.</p>
+     * <p>The event ID.</p>
      * 
      * <strong>example:</strong>
      * <p>85ea4241-798f-4684-a876-65d4f0c3****</p>
@@ -60,8 +62,10 @@ public class DescribeCloudSiemEventsRequest extends TeaModel {
     /**
      * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li>desc: descending order</li>
-     * <li>asc: ascending order</li>
+     * <li><p>desc: descending</p>
+     * </li>
+     * <li><p>asc: ascending</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,10 +75,12 @@ public class DescribeCloudSiemEventsRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The sort field. Valid values:</p>
+     * <p>The field to sort the event list by. Valid values:</p>
      * <ul>
-     * <li>GmtModified: sorts the events by creation time. This is the default value.</li>
-     * <li>ThreatScore: sorts the events by risk score.</li>
+     * <li><p>GmtModified: Sorts by modification time. This is the default value.</p>
+     * </li>
+     * <li><p>ThreatScore: Sorts by threat score.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,7 +90,7 @@ public class DescribeCloudSiemEventsRequest extends TeaModel {
     public String orderField;
 
     /**
-     * <p>The number of entries per page. Maximum value: 100.</p>
+     * <p>The number of entries per page. The maximum value is 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -94,10 +100,12 @@ public class DescribeCloudSiemEventsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+     * <p>The region where the Data Management center of Threat Analysis &amp; Response is located. Select the region based on the region where your assets are located. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Your assets reside in regions in China.</li>
-     * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+     * <li><p>cn-hangzhou: Your assets are in the Chinese mainland or China (Hong Kong).</p>
+     * </li>
+     * <li><p>ap-southeast-1: Your assets are in regions outside China.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -107,7 +115,7 @@ public class DescribeCloudSiemEventsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the account that you switch from the management account.</p>
+     * <p>The ID of the member. The administrator can use this ID to view the data of the member.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
@@ -116,10 +124,12 @@ public class DescribeCloudSiemEventsRequest extends TeaModel {
     public Long roleFor;
 
     /**
-     * <p>The type of the view. Valid values:</p>
+     * <p>The view type.</p>
      * <ul>
-     * <li>0: the current Alibaba Cloud account</li>
-     * <li>1: the global account</li>
+     * <li><p>0: The view of the current Alibaba Cloud account.</p>
+     * </li>
+     * <li><p>1: The view of all accounts that are managed by the administrator account.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -129,7 +139,7 @@ public class DescribeCloudSiemEventsRequest extends TeaModel {
     public Integer roleType;
 
     /**
-     * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+     * <p>The start time of the query. This value is a UNIX timestamp. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1577808000000</p>
@@ -140,10 +150,14 @@ public class DescribeCloudSiemEventsRequest extends TeaModel {
     /**
      * <p>The status of the event. Valid values:</p>
      * <ul>
-     * <li>0: unhandled</li>
-     * <li>1: handling</li>
-     * <li>5: handling failed</li>
-     * <li>10: handled</li>
+     * <li><p>0: unhandled</p>
+     * </li>
+     * <li><p>1: in progress</p>
+     * </li>
+     * <li><p>5: failed</p>
+     * </li>
+     * <li><p>10: handled</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -153,11 +167,14 @@ public class DescribeCloudSiemEventsRequest extends TeaModel {
     public Integer status;
 
     /**
-     * <p>The risk levels of the events. The value is a JSON array. Valid values:</p>
+     * <p>The threat level of the event. The value is a JSON array. Valid values:</p>
      * <ul>
-     * <li>serious: high</li>
-     * <li>suspicious: medium</li>
-     * <li>remind: low</li>
+     * <li><p>serious: high</p>
+     * </li>
+     * <li><p>suspicious: medium</p>
+     * </li>
+     * <li><p>remind: low</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

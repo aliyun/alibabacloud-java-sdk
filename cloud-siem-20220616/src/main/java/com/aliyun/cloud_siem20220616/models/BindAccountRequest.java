@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BindAccountRequest extends TeaModel {
     /**
-     * <p>The AccessKey ID of the cloud account.</p>
+     * <p>The AccessKey ID of the Alibaba Cloud account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class BindAccountRequest extends TeaModel {
     public String accessId;
 
     /**
-     * <p>The ID of the cloud account.</p>
+     * <p>The ID of the Alibaba Cloud account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class BindAccountRequest extends TeaModel {
     public String accountId;
 
     /**
-     * <p>The username of the cloud account.</p>
+     * <p>The name of the multicloud account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,10 +50,10 @@ public class BindAccountRequest extends TeaModel {
     public String cloudCode;
 
     /**
-     * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+     * <p>The region where the data management center of Threat Analysis is located. You must select a region for the data management center based on the region where your assets reside. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Your assets reside in regions in China.</li>
-     * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+     * <li>cn-hangzhou: Your assets are deployed in the Chinese mainland or Hong Kong (China).</li>
+     * <li>ap-southeast-1: Your assets are deployed in regions outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,9 +62,25 @@ public class BindAccountRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The user ID of the member to whose view the administrator switches.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>113091674488****</p>
+     */
     @NameInMap("RoleFor")
     public Long roleFor;
 
+    /**
+     * <p>The type of the view.</p>
+     * <ul>
+     * <li>0: the view of the current Alibaba Cloud account.</li>
+     * <li>1: the view of all accounts that belong to the enterprise.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RoleType")
     public Integer roleType;
 

@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeCustomizeRuleCountRequest extends TeaModel {
     /**
-     * <p>The data management center of the threat analysis feature. Specify this parameter based on the region in which your assets reside. Valid values:</p>
+     * <p>The region of the management center for threat analysis. Select a region based on where your assets are located. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Your assets reside in regions inside China.</li>
-     * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+     * <li><p>cn-hangzhou: Assets are in the Chinese mainland or China (Hong Kong).</p>
+     * </li>
+     * <li><p>ap-southeast-1: Assets are in regions outside China.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class DescribeCustomizeRuleCountRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the account that you switch from the management account.</p>
+     * <p>The user ID of a member. An administrator can use this ID to switch to the member\&quot;s perspective.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
@@ -27,10 +29,12 @@ public class DescribeCustomizeRuleCountRequest extends TeaModel {
     public Long roleFor;
 
     /**
-     * <p>The type of the view. Valid values:</p>
+     * <p>The type of view. Valid values:</p>
      * <ul>
-     * <li>0: the current Alibaba Cloud account</li>
-     * <li>1: the global account</li>
+     * <li><p>0: the view of the current Alibaba Cloud account.</p>
+     * </li>
+     * <li><p>1: the view of all accounts in the enterprise.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

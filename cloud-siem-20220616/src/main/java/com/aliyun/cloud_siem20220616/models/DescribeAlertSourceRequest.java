@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAlertSourceRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. Unit: milliseconds.</p>
+     * <p>The end of the query time range. The value is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1577808000000</p>
@@ -14,11 +14,14 @@ public class DescribeAlertSourceRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The risk levels. The value is a JSON array. Valid values:</p>
+     * <p>The threat levels. Valid values:</p>
      * <ul>
-     * <li>serious: high</li>
-     * <li>suspicious: medium</li>
-     * <li>remind: low</li>
+     * <li><p><code>serious</code>: High</p>
+     * </li>
+     * <li><p><code>suspicious</code>: Medium</p>
+     * </li>
+     * <li><p><code>remind</code>: Low</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,10 +31,12 @@ public class DescribeAlertSourceRequest extends TeaModel {
     public java.util.List<String> level;
 
     /**
-     * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+     * <p>The region of the data management center for threat analysis. Select the data management center that corresponds to the region where your assets are located. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Your assets reside in regions in China.</li>
-     * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+     * <li><p><code>cn-hangzhou</code>: for assets in the Chinese mainland and Hong Kong (China).</p>
+     * </li>
+     * <li><p><code>ap-southeast-1</code>: for assets in regions outside the Chinese mainland.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,7 +46,7 @@ public class DescribeAlertSourceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the account that you switch from the management account.</p>
+     * <p>The user ID of the member whose data you want to view. An administrator uses this parameter to view data from the perspective of a specific member.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
@@ -50,10 +55,12 @@ public class DescribeAlertSourceRequest extends TeaModel {
     public Long roleFor;
 
     /**
-     * <p>The type of the view. Valid values:</p>
+     * <p>The type of view. Valid values:</p>
      * <ul>
-     * <li>0: the current Alibaba Cloud account</li>
-     * <li>1: the global account</li>
+     * <li><p><code>0</code>: View data for the current Alibaba Cloud account.</p>
+     * </li>
+     * <li><p><code>1</code>: View data for all accounts in the enterprise.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,7 +70,7 @@ public class DescribeAlertSourceRequest extends TeaModel {
     public Integer roleType;
 
     /**
-     * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+     * <p>The start of the query time range. The value is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1577808000000</p>

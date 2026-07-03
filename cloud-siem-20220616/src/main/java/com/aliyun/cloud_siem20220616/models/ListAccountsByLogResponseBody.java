@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAccountsByLogResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The return value of the request.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListAccountsByLogResponseBodyData> data;
@@ -42,7 +42,7 @@ public class ListAccountsByLogResponseBody extends TeaModel {
 
     public static class ListAccountsByLogResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the cloud account.</p>
+         * <p>The ID of the Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>123xxxxxxx</p>
@@ -51,7 +51,7 @@ public class ListAccountsByLogResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>The name of the cloud account.</p>
+         * <p>The name of the Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>sas_account_xxx</p>
@@ -60,7 +60,9 @@ public class ListAccountsByLogResponseBody extends TeaModel {
         public String accountName;
 
         /**
-         * <p>Indicates whether the account is added. Valid values: -1: yes -0: no</p>
+         * <p>Indicates whether the account has been added. Valid values:
+         * -1: The account has been added.
+         * -0: The account has not been added.</p>
          * 
          * <strong>example:</strong>
          * <p>123xxxxxxx</p>
@@ -69,7 +71,7 @@ public class ListAccountsByLogResponseBody extends TeaModel {
         public Integer imported;
 
         /**
-         * <p>The code of the log.</p>
+         * <p>The log code.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_siem_waf_xxxxx</p>
@@ -78,7 +80,7 @@ public class ListAccountsByLogResponseBody extends TeaModel {
         public String logCode;
 
         /**
-         * <p>The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.</p>
+         * <p>The ID of the Alibaba Cloud account that is used to purchase Threat Analysis.</p>
          * 
          * <strong>example:</strong>
          * <p>123XXXXXXXXX</p>
@@ -87,7 +89,7 @@ public class ListAccountsByLogResponseBody extends TeaModel {
         public Long mainUserId;
 
         /**
-         * <p>The code of the service.</p>
+         * <p>The code of the product that corresponds to the log.</p>
          * 
          * <strong>example:</strong>
          * <p>qcloud_waf</p>
@@ -96,7 +98,7 @@ public class ListAccountsByLogResponseBody extends TeaModel {
         public String prodCode;
 
         /**
-         * <p>The ID of the Alibaba Cloud account for which the threat analysis feature is enabled.</p>
+         * <p>The ID of the Alibaba Cloud account that is used for Threat Analysis.</p>
          * 
          * <strong>example:</strong>
          * <p>123XXXXXXXX</p>

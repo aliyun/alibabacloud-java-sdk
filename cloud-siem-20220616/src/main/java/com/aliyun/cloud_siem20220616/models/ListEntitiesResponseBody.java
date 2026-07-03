@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListEntitiesResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class ListEntitiesResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The response data.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456</p>
      */
@@ -19,6 +23,8 @@ public class ListEntitiesResponseBody extends TeaModel {
     public ListEntitiesResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -26,6 +32,8 @@ public class ListEntitiesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
      */
@@ -33,6 +41,12 @@ public class ListEntitiesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true: successful.</li>
+     * <li>false: failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -86,6 +100,8 @@ public class ListEntitiesResponseBody extends TeaModel {
 
     public static class ListEntitiesResponseBodyDataPageInfo extends TeaModel {
         /**
+         * <p>The page number of the current page.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -93,6 +109,8 @@ public class ListEntitiesResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -100,6 +118,8 @@ public class ListEntitiesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -138,11 +158,26 @@ public class ListEntitiesResponseBody extends TeaModel {
     }
 
     public static class ListEntitiesResponseBodyDataResponseDataAgentDisposes extends TeaModel {
+        /**
+         * <p>The disposal suggestion recommended by the agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("AgentDisposalMethod")
         public String agentDisposalMethod;
 
+        /**
+         * <p>The UUID of the playbook recommended by the agent for disposal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12XAD-SFQ-WAF-2ca2</p>
+         */
         @NameInMap("AgentDisposalPlaybookUuid")
         public String agentDisposalPlaybookUuid;
+
+        @NameInMap("AgentDisposalReason")
+        public String agentDisposalReason;
 
         public static ListEntitiesResponseBodyDataResponseDataAgentDisposes build(java.util.Map<String, ?> map) throws Exception {
             ListEntitiesResponseBodyDataResponseDataAgentDisposes self = new ListEntitiesResponseBodyDataResponseDataAgentDisposes();
@@ -165,25 +200,68 @@ public class ListEntitiesResponseBody extends TeaModel {
             return this.agentDisposalPlaybookUuid;
         }
 
+        public ListEntitiesResponseBodyDataResponseDataAgentDisposes setAgentDisposalReason(String agentDisposalReason) {
+            this.agentDisposalReason = agentDisposalReason;
+            return this;
+        }
+        public String getAgentDisposalReason() {
+            return this.agentDisposalReason;
+        }
+
     }
 
     public static class ListEntitiesResponseBodyDataResponseData extends TeaModel {
+        @NameInMap("AgentAnalysisReason")
+        public String agentAnalysisReason;
+
+        /**
+         * <p>The confidence level of the entity as determined by the agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>85</p>
+         */
         @NameInMap("AgentConfidence")
         public String agentConfidence;
 
+        /**
+         * <p>The disposal method recommended by the agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>delete_file</p>
+         */
         @NameInMap("AgentDisposalMethod")
         public String agentDisposalMethod;
 
+        /**
+         * <p>The UUID of the playbook recommended by the agent for disposal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12XAD-SFQ-WAF-2ca2</p>
+         */
         @NameInMap("AgentDisposalPlaybookUuid")
         public String agentDisposalPlaybookUuid;
 
+        @NameInMap("AgentDisposalReason")
+        public String agentDisposalReason;
+
+        /**
+         * <p>The disposal suggestion recommended by the agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("AgentDisposalSuggestion")
         public String agentDisposalSuggestion;
 
+        /**
+         * <p>The list of disposal suggestions recommended by the agent.</p>
+         */
         @NameInMap("AgentDisposes")
         public java.util.List<ListEntitiesResponseBodyDataResponseDataAgentDisposes> agentDisposes;
 
         /**
+         * <p>The number of alerts associated with the entity.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -191,6 +269,8 @@ public class ListEntitiesResponseBody extends TeaModel {
         public Integer alertNum;
 
         /**
+         * <p>The alert UUID.</p>
+         * 
          * <strong>example:</strong>
          * <p>sas_71e24437d2797ce8fc59692905a4****</p>
          */
@@ -198,6 +278,8 @@ public class ListEntitiesResponseBody extends TeaModel {
         public String alertUuid;
 
         /**
+         * <p>The Alibaba Cloud account ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456789****</p>
          */
@@ -205,6 +287,13 @@ public class ListEntitiesResponseBody extends TeaModel {
         public Long aliuid;
 
         /**
+         * <p>The code of the cloud service provider from which the entity originates. Valid values:</p>
+         * <ul>
+         * <li>aliyun: Alibaba Cloud</li>
+         * <li>qcloud: Tencent Cloud</li>
+         * <li>hcloud: Huawei Cloud.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>aliyun</p>
          */
@@ -212,6 +301,8 @@ public class ListEntitiesResponseBody extends TeaModel {
         public String cloudCode;
 
         /**
+         * <p>The logical ID of the entity.</p>
+         * 
          * <strong>example:</strong>
          * <p>12345****</p>
          */
@@ -219,6 +310,8 @@ public class ListEntitiesResponseBody extends TeaModel {
         public String entityId;
 
         /**
+         * <p>The display information of the entity in JSON format.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;file_path&quot;: &quot;c:/www/leixi.jsp&quot;,&quot;file_hash&quot;: &quot;aa0ca926ad948cd820e0a3d9a18c****&quot;,&quot;host_uuid&quot;: &quot;efed2cf7-0b77-45d9-a97b-d2cf246b****&quot;,&quot;malware_type&quot;: &quot;${aliyun.siem.sas.alert_tag.webshell}&quot;,&quot;host_name&quot;: &quot;launch-advisor-2023****&quot;}</p>
          */
@@ -226,6 +319,8 @@ public class ListEntitiesResponseBody extends TeaModel {
         public String entityInfo;
 
         /**
+         * <p>The entity name.</p>
+         * 
          * <strong>example:</strong>
          * <p>123.123.123.123</p>
          */
@@ -233,6 +328,19 @@ public class ListEntitiesResponseBody extends TeaModel {
         public String entityName;
 
         /**
+         * <p>The entity type. Valid values:</p>
+         * <ul>
+         * <li>ip: IP address</li>
+         * <li>domain: domain name</li>
+         * <li>url: URL</li>
+         * <li>process: process</li>
+         * <li>file: file</li>
+         * <li>host: host</li>
+         * <li>cloud_account: cloud account</li>
+         * <li>container: container</li>
+         * <li>bucket: Object Storage Service (OSS) bucket.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ip</p>
          */
@@ -240,6 +348,8 @@ public class ListEntitiesResponseBody extends TeaModel {
         public String entityType;
 
         /**
+         * <p>The entity UUID.</p>
+         * 
          * <strong>example:</strong>
          * <p>8087b3e4aa6862852c100c8738cf****</p>
          */
@@ -247,6 +357,8 @@ public class ListEntitiesResponseBody extends TeaModel {
         public String entityUuid;
 
         /**
+         * <p>The number of events associated with the entity.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -254,6 +366,8 @@ public class ListEntitiesResponseBody extends TeaModel {
         public Integer eventNum;
 
         /**
+         * <p>The time when the entity was collected.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-01-06 16:37:29</p>
          */
@@ -261,6 +375,8 @@ public class ListEntitiesResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The time when the entity was last updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-01-06 16:37:29</p>
          */
@@ -268,6 +384,8 @@ public class ListEntitiesResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The entity ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456789***</p>
          */
@@ -275,19 +393,43 @@ public class ListEntitiesResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The incident UUID. You can obtain this value from the incident list operation.</p>
+         * 
          * <strong>example:</strong>
          * <p>85ea4241-798f-4684-a876-65d4f0c3****</p>
          */
         @NameInMap("IncidentUuid")
         public String incidentUuid;
 
+        /**
+         * <p>Indicates whether the entity is an asset. Valid values:</p>
+         * <ul>
+         * <li>0: No.</li>
+         * <li>1: Yes.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("IsAsset")
         public String isAsset;
 
+        /**
+         * <p>Indicates whether the entity is malicious. Valid values:</p>
+         * <ul>
+         * <li>0: No.</li>
+         * <li>1: Yes.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("IsMalware")
         public String isMalware;
 
         /**
+         * <p>The malware type of the entity.</p>
+         * 
          * <strong>example:</strong>
          * <p>aliyun.siem.sas.alert_tag.webshell</p>
          */
@@ -295,18 +437,35 @@ public class ListEntitiesResponseBody extends TeaModel {
         public String malwareType;
 
         /**
+         * <p>The linked account ID associated with the entity.</p>
+         * 
          * <strong>example:</strong>
          * <p>113091674488****</p>
          */
         @NameInMap("SubUserId")
         public Long subUserId;
 
+        /**
+         * <p>The entity tags. The value is a JSON array string:</p>
+         * <p><code>&quot;[{&quot;tagKey1&quot;:&quot;tagValue1&quot;},{&quot;tagKey2&quot;:&quot;tagValue2&quot;}]&quot;</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;tagKey1&quot;:&quot;tagValue1&quot;},{&quot;tagKey2&quot;:&quot;tagValue2&quot;}]</p>
+         */
         @NameInMap("Tags")
         public String tags;
 
         public static ListEntitiesResponseBodyDataResponseData build(java.util.Map<String, ?> map) throws Exception {
             ListEntitiesResponseBodyDataResponseData self = new ListEntitiesResponseBodyDataResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public ListEntitiesResponseBodyDataResponseData setAgentAnalysisReason(String agentAnalysisReason) {
+            this.agentAnalysisReason = agentAnalysisReason;
+            return this;
+        }
+        public String getAgentAnalysisReason() {
+            return this.agentAnalysisReason;
         }
 
         public ListEntitiesResponseBodyDataResponseData setAgentConfidence(String agentConfidence) {
@@ -331,6 +490,14 @@ public class ListEntitiesResponseBody extends TeaModel {
         }
         public String getAgentDisposalPlaybookUuid() {
             return this.agentDisposalPlaybookUuid;
+        }
+
+        public ListEntitiesResponseBodyDataResponseData setAgentDisposalReason(String agentDisposalReason) {
+            this.agentDisposalReason = agentDisposalReason;
+            return this;
+        }
+        public String getAgentDisposalReason() {
+            return this.agentDisposalReason;
         }
 
         public ListEntitiesResponseBodyDataResponseData setAgentDisposalSuggestion(String agentDisposalSuggestion) {
@@ -504,9 +671,15 @@ public class ListEntitiesResponseBody extends TeaModel {
     }
 
     public static class ListEntitiesResponseBodyData extends TeaModel {
+        /**
+         * <p>The pagination information.</p>
+         */
         @NameInMap("PageInfo")
         public ListEntitiesResponseBodyDataPageInfo pageInfo;
 
+        /**
+         * <p>The detailed data.</p>
+         */
         @NameInMap("ResponseData")
         public java.util.List<ListEntitiesResponseBodyDataResponseData> responseData;
 

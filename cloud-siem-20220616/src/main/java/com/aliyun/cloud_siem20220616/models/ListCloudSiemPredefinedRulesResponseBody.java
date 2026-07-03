@@ -43,8 +43,10 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,7 +102,7 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
 
     public static class ListCloudSiemPredefinedRulesResponseBodyDataPageInfo extends TeaModel {
         /**
-         * <p>The current page number.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -109,7 +111,7 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -118,7 +120,7 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -159,7 +161,7 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
 
     public static class ListCloudSiemPredefinedRulesResponseBodyDataResponseData extends TeaModel {
         /**
-         * <p>The type of the risk.</p>
+         * <p>The threat type.</p>
          * 
          * <strong>example:</strong>
          * <p>WEBSHELL</p>
@@ -168,7 +170,7 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
         public String alertType;
 
         /**
-         * <p>The alert additional field for ATT\&amp;CK.</p>
+         * <p>The ATT\&amp;CK technique.</p>
          * 
          * <strong>example:</strong>
          * <p>T1595.002 Vulnerability Scanning</p>
@@ -177,11 +179,14 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
         public String attCk;
 
         /**
-         * <p>The method that is used to generate an event. Valid values:</p>
+         * <p>The event generation method. Valid values:</p>
          * <ul>
-         * <li>default: built-in method.</li>
-         * <li>singleToSingle: The system generates an event for each alert.</li>
-         * <li>allToSingle: The system generates an event for alerts within a period of time.</li>
+         * <li><p>default: the default built-in method</p>
+         * </li>
+         * <li><p>singleToSingle: An event is generated for each alert.</p>
+         * </li>
+         * <li><p>allToSingle: An event is generated for all alerts in an epoch.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -200,7 +205,7 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The time when the rule was modified.</p>
+         * <p>The time when the rule was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-06 16:37:29</p>
@@ -218,7 +223,7 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The internal code of the rule description.</p>
+         * <p>The Medusa code of the rule description.</p>
          * 
          * <strong>example:</strong>
          * <p>${siem_rule_description_siem_cfw-attack-count-level-up_cfw-attack}</p>
@@ -227,7 +232,7 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
         public String ruleDescMds;
 
         /**
-         * <p>The name of the rule.</p>
+         * <p>The rule name.</p>
          * 
          * <strong>example:</strong>
          * <p>siem_base64-command-exec_aegis-proc</p>
@@ -236,7 +241,7 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The rule name in Chinese.</p>
+         * <p>The Chinese name of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>siem_base64-command-exec_aegis-proc</p>
@@ -245,7 +250,7 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
         public String ruleNameCn;
 
         /**
-         * <p>The rule name in English.</p>
+         * <p>The English name of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>siem_base64-command-exec_aegis-proc</p>
@@ -254,7 +259,7 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
         public String ruleNameEn;
 
         /**
-         * <p>The internal code of the rule name.</p>
+         * <p>The Medusa code of the rule name.</p>
          * 
          * <strong>example:</strong>
          * <p>${siem_rule_name_siem_cfw-attack-count-level-up_cfw-attack}</p>
@@ -274,8 +279,10 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
         /**
          * <p>The status of the predefined rule. Valid values:</p>
          * <ul>
-         * <li>0: The rule is in the initial state.</li>
-         * <li>100: The rule takes effect.</li>
+         * <li><p>0: initial</p>
+         * </li>
+         * <li><p>100: published</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -285,11 +292,14 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The risk level. Valid values:</p>
+         * <p>The threat level. Valid values:</p>
          * <ul>
-         * <li>serious: high.</li>
-         * <li>suspicious: medium.</li>
-         * <li>remind: low.</li>
+         * <li><p>serious: high</p>
+         * </li>
+         * <li><p>suspicious: medium</p>
+         * </li>
+         * <li><p>remind: low</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

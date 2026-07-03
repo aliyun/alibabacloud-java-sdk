@@ -42,7 +42,7 @@ public class ListBindDataSourcesResponseBody extends TeaModel {
 
     public static class ListBindDataSourcesResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the cloud account.</p>
+         * <p>The ID of the Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>123xxxxxxx</p>
@@ -51,7 +51,7 @@ public class ListBindDataSourcesResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>The username of the cloud account.</p>
+         * <p>The name of the multicloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>sas_tq_account_xxxx</p>
@@ -60,11 +60,14 @@ public class ListBindDataSourcesResponseBody extends TeaModel {
         public String accountName;
 
         /**
-         * <p>The code of the cloud service provider. Valid values:</p>
+         * <p>The code of the multicloud environment. Valid values:</p>
          * <ul>
-         * <li>qcloud: Tencent Cloud</li>
-         * <li>aliyun: Alibaba Cloud</li>
-         * <li>hcloud: Huawei Cloud</li>
+         * <li><p>qcloud: Tencent Cloud.</p>
+         * </li>
+         * <li><p>aliyun: Alibaba Cloud.</p>
+         * </li>
+         * <li><p>hcloud: Huawei Cloud.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -74,7 +77,7 @@ public class ListBindDataSourcesResponseBody extends TeaModel {
         public String cloudCode;
 
         /**
-         * <p>The ID of the data source. The ID is an MD5 hash value that is calculated by the threat analysis feature based on specific parameters.</p>
+         * <p>The ID of the data source. This ID is an MD5 hash value that is calculated by Threat Analysis based on specific parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>220ba97c9d1fdb0b9c7e8c7ca328d7ea</p>
@@ -92,7 +95,7 @@ public class ListBindDataSourcesResponseBody extends TeaModel {
         public String dataSourceName;
 
         /**
-         * <p>The remarks on the data source.</p>
+         * <p>The remarks of the data source.</p>
          * 
          * <strong>example:</strong>
          * <p>waf_kafka</p>
@@ -103,9 +106,12 @@ public class ListBindDataSourcesResponseBody extends TeaModel {
         /**
          * <p>The type of the data source. Valid values:</p>
          * <ul>
-         * <li>obs: Huawei Cloud Object Storage Service (OBS)</li>
-         * <li>wafApi: download API of Tencent Cloud Web Application Firewall (WAF)</li>
-         * <li>ckafka: Tencent Cloud Kafka (CKafka)</li>
+         * <li><p>obs: Huawei Cloud OBS.</p>
+         * </li>
+         * <li><p>wafApi: Tencent Cloud WAF download API.</p>
+         * </li>
+         * <li><p>ckafka: Tencent Cloud CKafka.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -115,7 +121,7 @@ public class ListBindDataSourcesResponseBody extends TeaModel {
         public String dataSourceType;
 
         /**
-         * <p>The number of logs that are added within the data source.</p>
+         * <p>The number of logs added to the data source.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -124,7 +130,7 @@ public class ListBindDataSourcesResponseBody extends TeaModel {
         public Integer logCount;
 
         /**
-         * <p>The number of existing tasks that are created to add logs within the data source.</p>
+         * <p>The number of log collection tasks created for the data source.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

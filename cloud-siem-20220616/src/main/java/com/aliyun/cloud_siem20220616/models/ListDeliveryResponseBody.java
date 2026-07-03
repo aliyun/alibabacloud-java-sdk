@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDeliveryResponseBody extends TeaModel {
     /**
-     * <p>The response parameters.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public ListDeliveryResponseBodyData data;
@@ -42,7 +42,7 @@ public class ListDeliveryResponseBody extends TeaModel {
 
     public static class ListDeliveryResponseBodyDataProductListLogListExtraParameters extends TeaModel {
         /**
-         * <p>The ID of the extended parameter.</p>
+         * <p>The key of the additional parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>flag</p>
@@ -51,7 +51,7 @@ public class ListDeliveryResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the extended parameter.</p>
+         * <p>The value of the additional parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>value</p>
@@ -84,10 +84,12 @@ public class ListDeliveryResponseBody extends TeaModel {
 
     public static class ListDeliveryResponseBodyDataProductListLogList extends TeaModel {
         /**
-         * <p>Indicates whether the log delivery feature can be enabled or disabled. The feature can be enabled or disabled only by the administrator of the threat analysis feature. Valid values:</p>
+         * <p>Indicates whether the log delivery switch can be operated. Only the delegated administrator for threat analysis can operate the switch. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The switch can be operated.</p>
+         * </li>
+         * <li><p>false: The switch cannot be operated.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -97,13 +99,13 @@ public class ListDeliveryResponseBody extends TeaModel {
         public Boolean canOperateOrNot;
 
         /**
-         * <p>The extended parameter.</p>
+         * <p>Additional parameters.</p>
          */
         @NameInMap("ExtraParameters")
         public java.util.List<ListDeliveryResponseBodyDataProductListLogListExtraParameters> extraParameters;
 
         /**
-         * <p>The code of the log.</p>
+         * <p>The log code.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_siem_config_log</p>
@@ -112,7 +114,7 @@ public class ListDeliveryResponseBody extends TeaModel {
         public String logCode;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p>This parameter is deprecated. You can ignore it.</p>
          * 
          * <strong>example:</strong>
          * <p>audit log</p>
@@ -121,7 +123,7 @@ public class ListDeliveryResponseBody extends TeaModel {
         public String logName;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p>This parameter is deprecated. You can ignore it.</p>
          * 
          * <strong>example:</strong>
          * <p>audit log</p>
@@ -130,7 +132,7 @@ public class ListDeliveryResponseBody extends TeaModel {
         public String logNameEn;
 
         /**
-         * <p>The language code of the log that is used to indicate the language in which the log is displayed.</p>
+         * <p>The language key of the log name. This key is used to display the log name in different languages.</p>
          * 
          * <strong>example:</strong>
          * <p>${sas.cloudsiem.prod.cloud_siem_aegis_crack_from_beaver}</p>
@@ -139,10 +141,12 @@ public class ListDeliveryResponseBody extends TeaModel {
         public String logNameKey;
 
         /**
-         * <p>The status of the log delivery. Valid values:</p>
+         * <p>The log delivery status. Valid values:</p>
          * <ul>
-         * <li>true: The logs are being delivered.</li>
-         * <li>false: The log delivery feature is disabled.</li>
+         * <li><p>true: Delivery is in progress.</p>
+         * </li>
+         * <li><p>false: Delivery is disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -152,7 +156,7 @@ public class ListDeliveryResponseBody extends TeaModel {
         public Boolean status;
 
         /**
-         * <p>The topic of the log in the Logstore. The value is an index field in the Logstore that can be used to distinguish different logs.</p>
+         * <p>The topic of the log in the LogStore. This parameter is an index field in the LogStore and is used to differentiate logs.</p>
          * 
          * <strong>example:</strong>
          * <p>sas_login_event</p>
@@ -233,43 +237,66 @@ public class ListDeliveryResponseBody extends TeaModel {
 
     public static class ListDeliveryResponseBodyDataProductList extends TeaModel {
         /**
-         * <p>The logs of the cloud services.</p>
+         * <p>A list of logs for cloud products that do not have subcategories.</p>
          */
         @NameInMap("LogList")
         public java.util.List<ListDeliveryResponseBodyDataProductListLogList> logList;
 
         /**
-         * <p>The log group. For example, in Security Center, the logs of hosts and networks are stored in different groups. Key indicates the group information, and value indicates the logs in the group.</p>
+         * <p>A list of logs that are categorized. For example, Security Center logs are categorized into groups such as Host and Network. The group is the key, and the logs in the group are the value.</p>
          */
         @NameInMap("LogMap")
         public java.util.Map<String, java.util.List<DataProductListLogMapValue>> logMap;
 
         /**
-         * <p>The code of the cloud service. Valid values:</p>
+         * <p>The code of the cloud product. Valid values:</p>
          * <ul>
-         * <li>qcloud_waf</li>
-         * <li>qlcoud_cfw</li>
-         * <li>hcloud_waf</li>
-         * <li>hcloud_cfw</li>
-         * <li>ddos</li>
-         * <li>sas</li>
-         * <li>cfw</li>
-         * <li>config</li>
-         * <li>csk</li>
-         * <li>fc</li>
-         * <li>rds</li>
-         * <li>nas</li>
-         * <li>apigateway</li>
-         * <li>cdn</li>
-         * <li>mongodb</li>
-         * <li>eip</li>
-         * <li>slb</li>
-         * <li>vpc</li>
-         * <li>actiontrail</li>
-         * <li>waf</li>
-         * <li>bastionhost</li>
-         * <li>oss</li>
-         * <li>polardb</li>
+         * <li><p>qcloud_waf</p>
+         * </li>
+         * <li><p>qcloud_cfw</p>
+         * </li>
+         * <li><p>hcloud_waf</p>
+         * </li>
+         * <li><p>hcloud_cfw</p>
+         * </li>
+         * <li><p>ddos</p>
+         * </li>
+         * <li><p>sas</p>
+         * </li>
+         * <li><p>cfw</p>
+         * </li>
+         * <li><p>config</p>
+         * </li>
+         * <li><p>csk</p>
+         * </li>
+         * <li><p>fc</p>
+         * </li>
+         * <li><p>rds</p>
+         * </li>
+         * <li><p>nas</p>
+         * </li>
+         * <li><p>apigateway</p>
+         * </li>
+         * <li><p>cdn</p>
+         * </li>
+         * <li><p>mongodb</p>
+         * </li>
+         * <li><p>eip</p>
+         * </li>
+         * <li><p>slb</p>
+         * </li>
+         * <li><p>vpc</p>
+         * </li>
+         * <li><p>actiontrail</p>
+         * </li>
+         * <li><p>waf</p>
+         * </li>
+         * <li><p>bastionhost</p>
+         * </li>
+         * <li><p>oss</p>
+         * </li>
+         * <li><p>polardb</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -279,7 +306,7 @@ public class ListDeliveryResponseBody extends TeaModel {
         public String productCode;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p>This parameter is deprecated. You can ignore it.</p>
          * 
          * <strong>example:</strong>
          * <p>Security Center</p>
@@ -328,7 +355,7 @@ public class ListDeliveryResponseBody extends TeaModel {
 
     public static class ListDeliveryResponseBodyData extends TeaModel {
         /**
-         * <p>The URL that is displayed in charts.</p>
+         * <p>The URL of the dashboard on the log analysis page.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://sls4service.console.aliyun.com/lognext/project/aliyun-cloudsiem-data-127608589417****-cn-shanghai">https://sls4service.console.aliyun.com/lognext/project/aliyun-cloudsiem-data-127608589417****-cn-shanghai</a>
@@ -338,10 +365,12 @@ public class ListDeliveryResponseBody extends TeaModel {
         public String dashboardUrl;
 
         /**
-         * <p>Indicates whether the log delivery switch is displayed. Default value: true. Valid values:</p>
+         * <p>Indicates whether to display the delivery switch. The default value is true. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The delivery switch is displayed.</p>
+         * </li>
+         * <li><p>false: The delivery switch is hidden.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -351,7 +380,7 @@ public class ListDeliveryResponseBody extends TeaModel {
         public Boolean displaySwitchOrNot;
 
         /**
-         * <p>The name of the Logstore for the threat analysis feature on the user side. The value is in the cloud_siem format.</p>
+         * <p>The name of your LogStore for threat analysis. The format is \<code>cloud_siem\\</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud-siem</p>
@@ -360,13 +389,13 @@ public class ListDeliveryResponseBody extends TeaModel {
         public String logStoreName;
 
         /**
-         * <p>The cloud services.</p>
+         * <p>A list of products.</p>
          */
         @NameInMap("ProductList")
         public java.util.List<ListDeliveryResponseBodyDataProductList> productList;
 
         /**
-         * <p>The name of the project for the threat analysis feature in Simple Log service on the user side. The value is in the aliyun-cloudsiem-data-${aliUid}-${region} format.</p>
+         * <p>The name of your Simple Log Service (SLS) project for threat analysis. The format is \<code>aliyun-cloudsiem-data-${aliUid}-${region}\\</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyun-cloudsiem-data-127608589417****-cn-shanghai</p>
@@ -375,7 +404,7 @@ public class ListDeliveryResponseBody extends TeaModel {
         public String projectName;
 
         /**
-         * <p>The URL that is used for log analysis.</p>
+         * <p>The URL of the Search &amp; Analysis page in the SLS console.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://sls4service.console.aliyun.com/lognext/project/aliyun-cloudsiem-data-127608589417****-cn-shanghai">https://sls4service.console.aliyun.com/lognext/project/aliyun-cloudsiem-data-127608589417****-cn-shanghai</a>

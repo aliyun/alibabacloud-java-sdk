@@ -14,7 +14,7 @@ public class ListCloudSiemPredefinedRulesRequest extends TeaModel {
     public String alertType;
 
     /**
-     * <p>The ATT\&amp;CK information.</p>
+     * <p>The ATT\&amp;CK technique.</p>
      * 
      * <strong>example:</strong>
      * <p>T1595.002 Vulnerability Scanning</p>
@@ -23,7 +23,7 @@ public class ListCloudSiemPredefinedRulesRequest extends TeaModel {
     public String attCk;
 
     /**
-     * <p>The page number. Pages start from page 1.</p>
+     * <p>The page number. The value must be greater than or equal to 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class ListCloudSiemPredefinedRulesRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The end of the time range to query. Unit: milliseconds.</p>
+     * <p>The end of the time range to query. This value is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1577808000000</p>
@@ -42,11 +42,14 @@ public class ListCloudSiemPredefinedRulesRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The method that is used to generate an event. Valid values:</p>
+     * <p>The event generation method. Valid values:</p>
      * <ul>
-     * <li>default: built-in method.</li>
-     * <li>singleToSingle: The system generates an event for each alert.</li>
-     * <li>allToSingle: The system generates an event for alerts within a period of time.</li>
+     * <li><p>default: the default built-in method</p>
+     * </li>
+     * <li><p>singleToSingle: An event is generated for each alert.</p>
+     * </li>
+     * <li><p>allToSingle: An event is generated for all alerts in an epoch.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,7 +59,7 @@ public class ListCloudSiemPredefinedRulesRequest extends TeaModel {
     public String eventTransferType;
 
     /**
-     * <p>The ID of the rule.</p>
+     * <p>The rule ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10223</p>
@@ -68,16 +71,18 @@ public class ListCloudSiemPredefinedRulesRequest extends TeaModel {
      * <p>The log source.</p>
      * 
      * <strong>example:</strong>
-     * <p>cloud_siem_aegis_sas_alert</p>
+     * <p>cloud_siem_alb_flow_log</p>
      */
     @NameInMap("LogSource")
     public String logSource;
 
     /**
-     * <p>The sort method. Valid values:</p>
+     * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li>desc: descending order.</li>
-     * <li>asc: ascending order.</li>
+     * <li><p>desc: descending</p>
+     * </li>
+     * <li><p>asc: ascending</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -87,10 +92,12 @@ public class ListCloudSiemPredefinedRulesRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The field that is used to sort the rules. Valid values:</p>
+     * <p>The field to sort the rules by. Valid values:</p>
      * <ul>
-     * <li>GmtModified: The rules are sorted based on the modification time.</li>
-     * <li>Id (default): The rules are sorted based on the rule ID.</li>
+     * <li><p>GmtModified: Sorts by modification time.</p>
+     * </li>
+     * <li><p>Id: Sorts by rule ID. This is the default value.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,7 +107,7 @@ public class ListCloudSiemPredefinedRulesRequest extends TeaModel {
     public String orderField;
 
     /**
-     * <p>The number of entries per page. Maximum value: 100.</p>
+     * <p>The number of entries per page. The maximum value is 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -110,10 +117,12 @@ public class ListCloudSiemPredefinedRulesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+     * <p>The region where the Data Management center of the threat analysis feature is located. Select the region where your assets are located. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Your assets reside in regions in China.</li>
-     * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+     * <li><p>cn-hangzhou: assets in the Chinese mainland or China (Hong Kong)</p>
+     * </li>
+     * <li><p>ap-southeast-1: assets outside China</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -123,7 +132,7 @@ public class ListCloudSiemPredefinedRulesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the destination account to which you switch the view from the management account.</p>
+     * <p>The user ID that the administrator uses to switch to the perspective of a member.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
@@ -132,10 +141,12 @@ public class ListCloudSiemPredefinedRulesRequest extends TeaModel {
     public Long roleFor;
 
     /**
-     * <p>The type of the view.</p>
+     * <p>The view type.</p>
      * <ul>
-     * <li>0: view of the current Alibaba Cloud account.</li>
-     * <li>1: view of all accounts for the enterprise.</li>
+     * <li><p>0: the view of the current Alibaba Cloud account.</p>
+     * </li>
+     * <li><p>1: the view of all accounts in the enterprise.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -145,7 +156,7 @@ public class ListCloudSiemPredefinedRulesRequest extends TeaModel {
     public Integer roleType;
 
     /**
-     * <p>The name of the rule. The name can contain letters, digits, underscores (_), and periods (.).</p>
+     * <p>The rule name. The name can contain only letters, digits, underscores (_), and periods (.).</p>
      * 
      * <strong>example:</strong>
      * <p>waf_scan</p>
@@ -154,10 +165,12 @@ public class ListCloudSiemPredefinedRulesRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The type of the rule. Valid values:</p>
+     * <p>The rule type. Valid values:</p>
      * <ul>
-     * <li>predefine</li>
-     * <li>customize</li>
+     * <li><p>predefine: predefined</p>
+     * </li>
+     * <li><p>customize: custom</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -167,7 +180,7 @@ public class ListCloudSiemPredefinedRulesRequest extends TeaModel {
     public String ruleType;
 
     /**
-     * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+     * <p>The start of the time range to query. This value is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1577808000000</p>
@@ -176,13 +189,18 @@ public class ListCloudSiemPredefinedRulesRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The status of the rule. Valid values:</p>
+     * <p>The rule status. Valid values:</p>
      * <ul>
-     * <li>0: The rule is in the initial state.</li>
-     * <li>10: The simulation data is tested.</li>
-     * <li>15: The business data is being tested.</li>
-     * <li>20: The business data test ends.</li>
-     * <li>100: The rule takes effect.</li>
+     * <li><p>0: initial</p>
+     * </li>
+     * <li><p>10: testing with simulated data</p>
+     * </li>
+     * <li><p>15: testing with production data</p>
+     * </li>
+     * <li><p>20: testing with production data is complete</p>
+     * </li>
+     * <li><p>100: published</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -192,11 +210,14 @@ public class ListCloudSiemPredefinedRulesRequest extends TeaModel {
     public Integer status;
 
     /**
-     * <p>The risk level. The value is a JSON array. Valid values:</p>
+     * <p>The threat level. The value is a JSON array. Valid values:</p>
      * <ul>
-     * <li>serious: high</li>
-     * <li>suspicious: medium</li>
-     * <li>remind: low</li>
+     * <li><p>serious: high</p>
+     * </li>
+     * <li><p>suspicious: medium</p>
+     * </li>
+     * <li><p>remind: low</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

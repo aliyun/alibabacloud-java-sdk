@@ -8,7 +8,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("cn-shanghai", "cloud-siem.cn-shanghai.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "cloud-siem.ap-southeast-1.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("cloud-siem", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -28,7 +32,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a data source to a cloud account that is added to the threat analysis feature.</p>
+     * <p>Adds a data source to an attached multicloud account.</p>
      * 
      * @param request AddDataSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -84,7 +88,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a data source to a cloud account that is added to the threat analysis feature.</p>
+     * <p>Adds a data source to an attached multicloud account.</p>
      * 
      * @param request AddDataSourceRequest
      * @return AddDataSourceResponse
@@ -96,7 +100,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds logs of a cloud account to the threat analysis feature.</p>
+     * <p>Adds a log for a data source.</p>
      * 
      * @param request AddDataSourceLogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -148,7 +152,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds logs of a cloud account to the threat analysis feature.</p>
+     * <p>Adds a log for a data source.</p>
      * 
      * @param request AddDataSourceLogRequest
      * @return AddDataSourceLogResponse
@@ -160,7 +164,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds the logs of a cloud service within a cloud account to the threat analysis feature for alert and event anslysis.</p>
+     * <p>Adds a log collection task to import log data into Threat Analysis for alerting and event analysis.</p>
      * 
      * @param request AddUserSourceLogConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -216,7 +220,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds the logs of a cloud service within a cloud account to the threat analysis feature for alert and event anslysis.</p>
+     * <p>Adds a log collection task to import log data into Threat Analysis for alerting and event analysis.</p>
      * 
      * @param request AddUserSourceLogConfigRequest
      * @return AddUserSourceLogConfigResponse
@@ -228,7 +232,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a third-party cloud account that is displayed on the Multi-cloud assets tab of the Feature Settings page to the threat analysis feature.</p>
+     * <p>Binds a multicloud account from Multicloud Assets of Security Center to Threat Analysis.</p>
      * 
      * @param request BindAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -284,7 +288,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a third-party cloud account that is displayed on the Multi-cloud assets tab of the Feature Settings page to the threat analysis feature.</p>
+     * <p>Binds a multicloud account from Multicloud Assets of Security Center to Threat Analysis.</p>
      * 
      * @param request BindAccountRequest
      * @return BindAccountResponse
@@ -296,7 +300,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables the log delivery feature for a cloud service.</p>
+     * <p>Stops log delivery from a connected cloud service. Once stopped, no new logs are added to your Logstore.</p>
      * 
      * @param request CloseDeliveryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -344,7 +348,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables the log delivery feature for a cloud service.</p>
+     * <p>Stops log delivery from a connected cloud service. Once stopped, no new logs are added to your Logstore.</p>
      * 
      * @param request CloseDeliveryRequest
      * @return CloseDeliveryResponse
@@ -356,7 +360,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the automated response rule with a specified ID.</p>
+     * <p>Deletes an automated response rule by its ID.</p>
      * 
      * @param request DeleteAutomateResponseConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -400,7 +404,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the automated response rule with a specified ID.</p>
+     * <p>Deletes an automated response rule by its ID.</p>
      * 
      * @param request DeleteAutomateResponseConfigRequest
      * @return DeleteAutomateResponseConfigResponse
@@ -412,7 +416,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes a third-party cloud account that is added to the threat analysis feature by using its AccessKey ID. You can add another cloud account based on your business requirements.</p>
+     * <p>Detaches the AccessKey of a multicloud account, such as a Tencent Cloud or Huawei Cloud account, from a threat analysis data source. You can then attach a new account.</p>
      * 
      * @param request DeleteBindAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -468,7 +472,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes a third-party cloud account that is added to the threat analysis feature by using its AccessKey ID. You can add another cloud account based on your business requirements.</p>
+     * <p>Detaches the AccessKey of a multicloud account, such as a Tencent Cloud or Huawei Cloud account, from a threat analysis data source. You can then attach a new account.</p>
      * 
      * @param request DeleteBindAccountRequest
      * @return DeleteBindAccountResponse
@@ -480,7 +484,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a rule by rule ID.</p>
+     * <p>You can customize rules for a specific ID.</p>
      * 
      * @param request DeleteCustomizeRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -524,7 +528,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a rule by rule ID.</p>
+     * <p>You can customize rules for a specific ID.</p>
      * 
      * @param request DeleteCustomizeRuleRequest
      * @return DeleteCustomizeRuleResponse
@@ -536,7 +540,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes a data source that is no longer required.</p>
+     * <p>Call this operation to delete a data source that is no longer required.</p>
      * 
      * @param request DeleteDataSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -580,7 +584,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes a data source that is no longer required.</p>
+     * <p>Call this operation to delete a data source that is no longer required.</p>
      * 
      * @param request DeleteDataSourceRequest
      * @return DeleteDataSourceResponse
@@ -652,7 +656,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an alert whitelist rule with a specified ID.</p>
+     * <p>Deletes an alert whitelist rule with the specified ID.</p>
      * 
      * @param request DeleteWhiteRuleListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -696,7 +700,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an alert whitelist rule with a specified ID.</p>
+     * <p>Deletes an alert whitelist rule with the specified ID.</p>
      * 
      * @param request DeleteWhiteRuleListRequest
      * @return DeleteWhiteRuleListResponse
@@ -708,7 +712,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the aggregate functions that are supported for a custom rule.</p>
+     * <p>Describes the aggregate functions that are supported by custom rules.</p>
      * 
      * @param request DescribeAggregateFunctionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -748,7 +752,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the aggregate functions that are supported for a custom rule.</p>
+     * <p>Describes the aggregate functions that are supported by custom rules.</p>
      * 
      * @param request DescribeAggregateFunctionRequest
      * @return DescribeAggregateFunctionResponse
@@ -760,7 +764,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the scenarios in which an alert needs to be added to the whitelist.</p>
+     * <p>Queries the scenarios in which alerts can be whitelisted.</p>
      * 
      * @param request DescribeAlertSceneRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -800,7 +804,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the scenarios in which an alert needs to be added to the whitelist.</p>
+     * <p>Queries the scenarios in which alerts can be whitelisted.</p>
      * 
      * @param request DescribeAlertSceneRequest
      * @return DescribeAlertSceneResponse
@@ -812,7 +816,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the scenarios and objects that can be added to an alert whitelist rule.</p>
+     * <p>Retrieves a list of alert whitelisting scenarios and objects.</p>
      * 
      * @param request DescribeAlertSceneByEventRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -856,7 +860,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the scenarios and objects that can be added to an alert whitelist rule.</p>
+     * <p>Retrieves a list of alert whitelisting scenarios and objects.</p>
      * 
      * @param request DescribeAlertSceneByEventRequest
      * @return DescribeAlertSceneByEventResponse
@@ -868,7 +872,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries alert data sources.</p>
+     * <p>Retrieves a list of alert sources.</p>
      * 
      * @param request DescribeAlertSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -920,7 +924,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries alert data sources.</p>
+     * <p>Retrieves a list of alert sources.</p>
      * 
      * @param request DescribeAlertSourceRequest
      * @return DescribeAlertSourceResponse
@@ -932,7 +936,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the data sources of the alert that is associated with an event.</p>
+     * <p>Retrieves the alert data sources associated with an event.</p>
      * 
      * @param request DescribeAlertSourceWithEventRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -976,7 +980,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the data sources of the alert that is associated with an event.</p>
+     * <p>Retrieves the alert data sources associated with an event.</p>
      * 
      * @param request DescribeAlertSourceWithEventRequest
      * @return DescribeAlertSourceWithEventResponse
@@ -988,7 +992,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the threat types that you can select when you create a custom rule.</p>
+     * <p>Retrieves a list of threat types for custom rules.</p>
      * 
      * @param request DescribeAlertTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1032,7 +1036,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the threat types that you can select when you create a custom rule.</p>
+     * <p>Retrieves a list of threat types for custom rules.</p>
      * 
      * @param request DescribeAlertTypeRequest
      * @return DescribeAlertTypeResponse
@@ -1044,7 +1048,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries alerts within your account.</p>
+     * <p>Gets the list of alerts for a user.</p>
      * 
      * @param request DescribeAlertsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1156,7 +1160,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries alerts within your account.</p>
+     * <p>Gets the list of alerts for a user.</p>
      * 
      * @param request DescribeAlertsRequest
      * @return DescribeAlertsResponse
@@ -1168,7 +1172,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the number of alerts of different severities.</p>
+     * <p>Queries the count of alerts for different severity levels.</p>
      * 
      * @param request DescribeAlertsCountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1220,7 +1224,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the number of alerts of different severities.</p>
+     * <p>Queries the count of alerts for different severity levels.</p>
      * 
      * @param request DescribeAlertsCountRequest
      * @return DescribeAlertsCountResponse
@@ -1232,7 +1236,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the alerts that are associated with an entity.</p>
+     * <p>Queries for alerts that are associated with an entity.</p>
      * 
      * @param request DescribeAlertsWithEntityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1304,7 +1308,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the alerts that are associated with an entity.</p>
+     * <p>Queries for alerts that are associated with an entity.</p>
      * 
      * @param request DescribeAlertsWithEntityRequest
      * @return DescribeAlertsWithEntityResponse
@@ -1316,7 +1320,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the alerts that are associated with an event.</p>
+     * <p>Retrieves alerts associated with a specific event.</p>
      * 
      * @param request DescribeAlertsWithEventRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1420,7 +1424,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the alerts that are associated with an event.</p>
+     * <p>Retrieves alerts associated with a specific event.</p>
      * 
      * @param request DescribeAlertsWithEventRequest
      * @return DescribeAlertsWithEventResponse
@@ -1432,7 +1436,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks whether the security information and event management (SIEM) system is granted the required permissions to access other cloud resources within your Alibaba Cloud account and whether the AliyunServiceRoleForSasCloudSiem service-linked role is created.</p>
+     * <p>Checks whether an Alibaba Cloud account has granted permissions to Cloud SIEM and the AliyunServiceRoleForSasCloudSiem role has been created.</p>
      * 
      * @param request DescribeAuthRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1464,7 +1468,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks whether the security information and event management (SIEM) system is granted the required permissions to access other cloud resources within your Alibaba Cloud account and whether the AliyunServiceRoleForSasCloudSiem service-linked role is created.</p>
+     * <p>Checks whether an Alibaba Cloud account has granted permissions to Cloud SIEM and the AliyunServiceRoleForSasCloudSiem role has been created.</p>
      * 
      * @param request DescribeAuthRequest
      * @return DescribeAuthResponse
@@ -1476,7 +1480,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the number of automated response rules.</p>
+     * <p>Returns the number of automated response rules.</p>
      * 
      * @param request DescribeAutomateResponseConfigCounterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1516,7 +1520,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the number of automated response rules.</p>
+     * <p>Returns the number of automated response rules.</p>
      * 
      * @param request DescribeAutomateResponseConfigCounterRequest
      * @return DescribeAutomateResponseConfigCounterResponse
@@ -1528,7 +1532,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configurable fields and operators of an automated response rule.</p>
+     * <p>Retrieves the configurable fields and operators for automated response rules.</p>
      * 
      * @param request DescribeAutomateResponseConfigFeatureRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1572,7 +1576,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configurable fields and operators of an automated response rule.</p>
+     * <p>Retrieves the configurable fields and operators for automated response rules.</p>
      * 
      * @param request DescribeAutomateResponseConfigFeatureRequest
      * @return DescribeAutomateResponseConfigFeatureResponse
@@ -1584,7 +1588,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the assets that are associated with an event.</p>
+     * <p>Queries a list of assets that are associated with an event.</p>
      * 
      * @param request DescribeCloudSiemAssetsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1648,7 +1652,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the assets that are associated with an event.</p>
+     * <p>Queries a list of assets that are associated with an event.</p>
      * 
      * @param request DescribeCloudSiemAssetsRequest
      * @return DescribeCloudSiemAssetsResponse
@@ -1660,7 +1664,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the number of assets that are associated with an event by asset type.</p>
+     * <p>Queries the number of assets of each type that are associated with an event.</p>
      * 
      * @param request DescribeCloudSiemAssetsCounterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1704,7 +1708,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the number of assets that are associated with an event by asset type.</p>
+     * <p>Queries the number of assets of each type that are associated with an event.</p>
      * 
      * @param request DescribeCloudSiemAssetsCounterRequest
      * @return DescribeCloudSiemAssetsCounterResponse
@@ -1716,7 +1720,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an event.</p>
+     * <p>Retrieves the details of an event.</p>
      * 
      * @param request DescribeCloudSiemEventDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1760,7 +1764,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an event.</p>
+     * <p>Retrieves the details of an event.</p>
      * 
      * @param request DescribeCloudSiemEventDetailRequest
      * @return DescribeCloudSiemEventDetailResponse
@@ -1772,7 +1776,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries events in SIEM.</p>
+     * <p>Retrieves a list of threat analysis events.</p>
      * 
      * @param request DescribeCloudSiemEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1860,7 +1864,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries events in SIEM.</p>
+     * <p>Retrieves a list of threat analysis events.</p>
      * 
      * @param request DescribeCloudSiemEventsRequest
      * @return DescribeCloudSiemEventsResponse
@@ -1872,7 +1876,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the number of custom rules.</p>
+     * <p>Retrieves the count of custom rules.</p>
      * 
      * @param request DescribeCustomizeRuleCountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1912,7 +1916,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the number of custom rules.</p>
+     * <p>Retrieves the count of custom rules.</p>
      * 
      * @param request DescribeCustomizeRuleCountRequest
      * @return DescribeCustomizeRuleCountResponse
@@ -1924,7 +1928,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the historical simulation data that is used in a simulation test scenario.</p>
+     * <p>Retrieves historical simulated data from a test scenario.</p>
      * 
      * @param request DescribeCustomizeRuleTestRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1968,7 +1972,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the historical simulation data that is used in a simulation test scenario.</p>
+     * <p>Retrieves historical simulated data from a test scenario.</p>
      * 
      * @param request DescribeCustomizeRuleTestRequest
      * @return DescribeCustomizeRuleTestResponse
@@ -1980,7 +1984,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the chart that displays the test results of business data for a custom rule.</p>
+     * <p>Retrieves the chart of test results for a custom rule.</p>
      * 
      * @param request DescribeCustomizeRuleTestHistogramRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2024,7 +2028,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the chart that displays the test results of business data for a custom rule.</p>
+     * <p>Retrieves the chart of test results for a custom rule.</p>
      * 
      * @param request DescribeCustomizeRuleTestHistogramRequest
      * @return DescribeCustomizeRuleTestHistogramResponse
@@ -2092,7 +2096,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the parameters of a data source.</p>
+     * <p>Describes the parameters for a data source.</p>
      * 
      * @param request DescribeDataSourceParametersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2132,7 +2136,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the parameters of a data source.</p>
+     * <p>Describes the parameters for a data source.</p>
      * 
      * @param request DescribeDataSourceParametersRequest
      * @return DescribeDataSourceParametersResponse
@@ -2144,7 +2148,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of entities and playbooks that need to be handled.</p>
+     * <p>Retrieves entities to be remediated and a list of playbooks.</p>
      * 
      * @param request DescribeDisposeAndPlaybookRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2204,7 +2208,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of entities and playbooks that need to be handled.</p>
+     * <p>Retrieves entities to be remediated and a list of playbooks.</p>
      * 
      * @param request DescribeDisposeAndPlaybookRequest
      * @return DescribeDisposeAndPlaybookResponse
@@ -2216,7 +2220,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of playbooks that are used by a handling policy.</p>
+     * <p>Retrieves the list of playbooks used in a disposal policy.</p>
      * 
      * @param request DescribeDisposeStrategyPlaybookRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2264,7 +2268,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of playbooks that are used by a handling policy.</p>
+     * <p>Retrieves the list of playbooks used in a disposal policy.</p>
      * 
      * @param request DescribeDisposeStrategyPlaybookRequest
      * @return DescribeDisposeStrategyPlaybookResponse
@@ -2276,7 +2280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an entity.</p>
+     * <p>Retrieves the details of an entity.</p>
      * 
      * @param request DescribeEntityInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2332,7 +2336,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an entity.</p>
+     * <p>Retrieves the details of an entity.</p>
      * 
      * @param request DescribeEntityInfoRequest
      * @return DescribeEntityInfoResponse
@@ -2344,7 +2348,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the number of events by type.</p>
+     * <p>You can obtain the count for each event type.</p>
      * 
      * @param request DescribeEventCountByThreatLevelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2392,7 +2396,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the number of events by type.</p>
+     * <p>You can obtain the count for each event type.</p>
      * 
      * @param request DescribeEventCountByThreatLevelRequest
      * @return DescribeEventCountByThreatLevelResponse
@@ -2404,7 +2408,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the handling policies of a historical event.</p>
+     * <p>Queries the policy handling history for an event.</p>
      * 
      * @param request DescribeEventDisposeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2456,7 +2460,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the handling policies of a historical event.</p>
+     * <p>Queries the policy handling history for an event.</p>
      * 
      * @param request DescribeEventDisposeRequest
      * @return DescribeEventDisposeResponse
@@ -2468,7 +2472,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the number of logs that are added to the threat analysis feature.</p>
+     * <p>Queries the number of imported logs.</p>
      * 
      * @param request DescribeImportedLogCountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2508,7 +2512,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the number of logs that are added to the threat analysis feature.</p>
+     * <p>Queries the number of imported logs.</p>
      * 
      * @param request DescribeImportedLogCountRequest
      * @return DescribeImportedLogCountResponse
@@ -2520,7 +2524,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the fields that can be configured for a custom rule.</p>
+     * <p>Retrieves the list of configurable fields for custom rules.</p>
      * 
      * @param request DescribeLogFieldsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2568,7 +2572,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the fields that can be configured for a custom rule.</p>
+     * <p>Retrieves the list of configurable fields for custom rules.</p>
      * 
      * @param request DescribeLogFieldsRequest
      * @return DescribeLogFieldsResponse
@@ -2580,7 +2584,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the log sources that can be configured for a custom rule.</p>
+     * <p>Retrieves a list of configurable log sources for custom rules.</p>
      * 
      * @param request DescribeLogSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2624,7 +2628,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the log sources that can be configured for a custom rule.</p>
+     * <p>Retrieves a list of configurable log sources for custom rules.</p>
      * 
      * @param request DescribeLogSourceRequest
      * @return DescribeLogSourceResponse
@@ -2636,7 +2640,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the log types that can be configured for a custom rule.</p>
+     * <p>Retrieves the log types that can be configured for custom rules.</p>
      * 
      * @param request DescribeLogTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2676,7 +2680,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the log types that can be configured for a custom rule.</p>
+     * <p>Retrieves the log types that can be configured for custom rules.</p>
      * 
      * @param request DescribeLogTypeRequest
      * @return DescribeLogTypeResponse
@@ -2688,7 +2692,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the operator of a custom rule.</p>
+     * <p>Retrieves the list of operators for custom rules.</p>
      * 
      * @param request DescribeOperatorsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2732,7 +2736,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the operator of a custom rule.</p>
+     * <p>Retrieves the list of operators for custom rules.</p>
      * 
      * @param request DescribeOperatorsRequest
      * @return DescribeOperatorsResponse
@@ -2744,7 +2748,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the number of services that can be added to the threat analysis feature in Alibaba Cloud, Tenant Cloud, and Huawei Cloud.</p>
+     * <p>Queries the number of Alibaba Cloud, Tencent Cloud, and Huawei Cloud products that can be integrated with Threat Analysis.</p>
      * 
      * @param request DescribeProdCountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2784,7 +2788,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the number of services that can be added to the threat analysis feature in Alibaba Cloud, Tenant Cloud, and Huawei Cloud.</p>
+     * <p>Queries the number of Alibaba Cloud, Tencent Cloud, and Huawei Cloud products that can be integrated with Threat Analysis.</p>
      * 
      * @param request DescribeProdCountRequest
      * @return DescribeProdCountResponse
@@ -2796,7 +2800,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of users in the playbook scope.</p>
+     * <p>Retrieves the list of users in the playbook scope.</p>
      * 
      * @param request DescribeScopeUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2836,7 +2840,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of users in the playbook scope.</p>
+     * <p>Retrieves the list of users in the playbook scope.</p>
      * 
      * @param request DescribeScopeUsersRequest
      * @return DescribeScopeUsersResponse
@@ -2848,7 +2852,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks whether the threat analysis feature is authorized to access a resource directory.</p>
+     * <p>Checks whether a resource directory is authorized for threat analysis.</p>
      * 
      * @param request DescribeServiceStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2880,7 +2884,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks whether the threat analysis feature is authorized to access a resource directory.</p>
+     * <p>Checks whether a resource directory is authorized for threat analysis.</p>
      * 
      * @param request DescribeServiceStatusRequest
      * @return DescribeServiceStatusResponse
@@ -2892,7 +2896,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of the Logstores for the threat analysis feature in Simple Log Service on the user side.</p>
+     * <p>Checks the status of the storage for the threat analysis feature. The storage is a Logstore in Simple Log Service.</p>
      * 
      * @param request DescribeStorageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2932,7 +2936,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of the Logstores for the threat analysis feature in Simple Log Service on the user side.</p>
+     * <p>Checks the status of the storage for the threat analysis feature. The storage is a Logstore in Simple Log Service.</p>
      * 
      * @param request DescribeStorageRequest
      * @return DescribeStorageResponse
@@ -2944,7 +2948,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks whether the current Alibaba Cloud account or the management account of a resource directory is used to purchase the threat analysis feature.</p>
+     * <p>Checks whether the current Alibaba Cloud account or its associated enterprise organization has purchased threat analysis.</p>
      * 
      * @param request DescribeUserBuyStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2980,7 +2984,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks whether the current Alibaba Cloud account or the management account of a resource directory is used to purchase the threat analysis feature.</p>
+     * <p>Checks whether the current Alibaba Cloud account or its associated enterprise organization has purchased threat analysis.</p>
      * 
      * @param request DescribeUserBuyStatusRequest
      * @return DescribeUserBuyStatusResponse
@@ -2992,7 +2996,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the protected domain names of the WAF instance for a user to which an entity belongs.</p>
+     * <p>Retrieves the list of domain names protected by Web Application Firewall (WAF) instances.</p>
      * 
      * @param request DescribeWafScopeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3036,7 +3040,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the protected domain names of the WAF instance for a user to which an entity belongs.</p>
+     * <p>Retrieves the list of domain names protected by Web Application Firewall (WAF) instances.</p>
      * 
      * @param request DescribeWafScopeRequest
      * @return DescribeWafScopeResponse
@@ -3048,7 +3052,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of whitelist rules for alerts.</p>
+     * <p>Queries the rules in the alert whitelist.</p>
      * 
      * @param request DescribeWhiteRuleListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3108,7 +3112,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of whitelist rules for alerts.</p>
+     * <p>Queries the rules in the alert whitelist.</p>
      * 
      * @param request DescribeWhiteRuleListRequest
      * @return DescribeWhiteRuleListResponse
@@ -3120,7 +3124,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a service-linked role named AliyunServiceRoleForSasCloudSiem for the threat analysis feature. The feature can assume this role to access cloud services.</p>
+     * <p>Grants permissions to Threat Analysis and creates the AliyunServiceRoleForSasCloudSiem service-linked role.</p>
      * 
      * @param request EnableAccessForCloudSiemRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3164,7 +3168,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a service-linked role named AliyunServiceRoleForSasCloudSiem for the threat analysis feature. The feature can assume this role to access cloud services.</p>
+     * <p>Grants permissions to Threat Analysis and creates the AliyunServiceRoleForSasCloudSiem service-linked role.</p>
      * 
      * @param request EnableAccessForCloudSiemRequest
      * @return EnableAccessForCloudSiemResponse
@@ -3176,7 +3180,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Authorizes the threat analysis feature to access a resource directory. This operation must be called by the management account of the resource directory.</p>
+     * <p>Enables resource directory authorization for threat analysis. This operation can be called only by a resource directory administrator.</p>
      * 
      * @param request EnableServiceForCloudSiemRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3208,7 +3212,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Authorizes the threat analysis feature to access a resource directory. This operation must be called by the management account of the resource directory.</p>
+     * <p>Enables resource directory authorization for threat analysis. This operation can be called only by a resource directory administrator.</p>
      * 
      * @param request EnableServiceForCloudSiemRequest
      * @return EnableServiceForCloudSiemResponse
@@ -3220,7 +3224,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the storage capacity usage of the threat analysis feature and the purchased storage capacity</p>
+     * <p>Retrieves the current billable storage usage and subscription purchase volume for threat analysis. Units are in GB.</p>
      * 
      * @param request GetCapacityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3260,7 +3264,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the storage capacity usage of the threat analysis feature and the purchased storage capacity</p>
+     * <p>Retrieves the current billable storage usage and subscription purchase volume for threat analysis. Units are in GB.</p>
      * 
      * @param request GetCapacityRequest
      * @return GetCapacityResponse
@@ -3271,8 +3275,102 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The input parameter JsonConfig is a complex JSON configuration. A utility class with configuration examples is provided. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the storage configurations for the threat analysis feature on the user side.</p>
+     * <p>Queries entity counts.</p>
+     * 
+     * @param request GetEntitiyStatRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetEntitiyStatResponse
+     */
+    public GetEntitiyStatResponse getEntitiyStatWithOptions(GetEntitiyStatRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.assetName)) {
+            body.put("AssetName", request.assetName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.assetUuid)) {
+            body.put("AssetUuid", request.assetUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.entityName)) {
+            body.put("EntityName", request.entityName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.entityType)) {
+            body.put("EntityType", request.entityType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.entityUuid)) {
+            body.put("EntityUuid", request.entityUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.incidentUuid)) {
+            body.put("IncidentUuid", request.incidentUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isAsset)) {
+            body.put("IsAsset", request.isAsset);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isMalwareEntity)) {
+            body.put("IsMalwareEntity", request.isMalwareEntity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleFor)) {
+            body.put("RoleFor", request.roleFor);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleType)) {
+            body.put("RoleType", request.roleType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            body.put("Tags", request.tags);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetEntitiyStat"),
+            new TeaPair("version", "2022-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetEntitiyStatResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The input parameter JsonConfig is a complex JSON configuration. A utility class with configuration examples is provided. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries entity counts.</p>
+     * 
+     * @param request GetEntitiyStatRequest
+     * @return GetEntitiyStatResponse
+     */
+    public GetEntitiyStatResponse getEntitiyStat(GetEntitiyStatRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getEntitiyStatWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the storage settings created by the Threat Analysis and Response product in your Simple Log Service (SLS). These settings include the storage duration and storage region.</p>
      * 
      * @param request GetStorageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3312,7 +3410,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the storage configurations for the threat analysis feature on the user side.</p>
+     * <p>Retrieves the storage settings created by the Threat Analysis and Response product in your Simple Log Service (SLS). These settings include the storage duration and storage region.</p>
      * 
      * @param request GetStorageRequest
      * @return GetStorageResponse
@@ -3324,7 +3422,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of AccessKey IDs of third-party cloud accounts that are added to the threat analysis feature.</p>
+     * <p>Lists the AccessKey IDs for attached multicloud accounts.</p>
      * 
      * @param request ListAccountAccessIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3368,7 +3466,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of AccessKey IDs of third-party cloud accounts that are added to the threat analysis feature.</p>
+     * <p>Lists the AccessKey IDs for attached multicloud accounts.</p>
      * 
      * @param request ListAccountAccessIdRequest
      * @return ListAccountAccessIdResponse
@@ -3380,7 +3478,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query accounts by log.</p>
+     * <p>Queries the accounts associated with a log.</p>
      * 
      * @param request ListAccountsByLogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3432,7 +3530,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query accounts by log.</p>
+     * <p>Queries the accounts associated with a log.</p>
      * 
      * @param request ListAccountsByLogRequest
      * @return ListAccountsByLogResponse
@@ -3444,7 +3542,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of cloud services that can be added to the threat analysis feature.</p>
+     * <p>Lists the cloud products supported by Threat Analysis for data ingestion.</p>
      * 
      * @param request ListAllProdsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3484,7 +3582,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of cloud services that can be added to the threat analysis feature.</p>
+     * <p>Lists the cloud products supported by Threat Analysis for data ingestion.</p>
      * 
      * @param request ListAllProdsRequest
      * @return ListAllProdsResponse
@@ -3496,7 +3594,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries automated response rules.</p>
+     * <p>Retrieves a list of automated response rules.</p>
      * 
      * @param request ListAutomateResponseConfigsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3576,7 +3674,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries automated response rules.</p>
+     * <p>Retrieves a list of automated response rules.</p>
      * 
      * @param request ListAutomateResponseConfigsRequest
      * @return ListAutomateResponseConfigsResponse
@@ -3588,7 +3686,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of cloud accounts that are added to the threat analysis feature.</p>
+     * <p>Lists multicloud accounts bound to Threat Analysis.</p>
      * 
      * @param request ListBindAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3632,7 +3730,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of cloud accounts that are added to the threat analysis feature.</p>
+     * <p>Lists multicloud accounts bound to Threat Analysis.</p>
      * 
      * @param request ListBindAccountRequest
      * @return ListBindAccountResponse
@@ -3644,7 +3742,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of data sources that are added to the threat analysis feature.</p>
+     * <p>Queries all bound data sources.</p>
      * 
      * @param request ListBindDataSourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3684,7 +3782,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of data sources that are added to the threat analysis feature.</p>
+     * <p>Queries all bound data sources.</p>
      * 
      * @param request ListBindDataSourcesRequest
      * @return ListBindDataSourcesResponse
@@ -3696,7 +3794,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries custom rules.</p>
+     * <p>Retrieves a list of custom rules.</p>
      * 
      * @param request ListCloudSiemCustomizeRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3784,7 +3882,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries custom rules.</p>
+     * <p>Retrieves a list of custom rules.</p>
      * 
      * @param request ListCloudSiemCustomizeRulesRequest
      * @return ListCloudSiemCustomizeRulesResponse
@@ -3796,7 +3894,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries predefined rules.</p>
+     * <p>Retrieves a list of predefined rules.</p>
      * 
      * @param request ListCloudSiemPredefinedRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3896,7 +3994,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries predefined rules.</p>
+     * <p>Retrieves a list of predefined rules.</p>
      * 
      * @param request ListCloudSiemPredefinedRulesRequest
      * @return ListCloudSiemPredefinedRulesResponse
@@ -3908,7 +4006,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the test results of a custom rule.</p>
+     * <p>Retrieves the list of test results for a custom rule.</p>
      * 
      * @param request ListCustomizeRuleTestResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3976,7 +4074,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the test results of a custom rule.</p>
+     * <p>Retrieves the list of test results for a custom rule.</p>
      * 
      * @param request ListCustomizeRuleTestResultRequest
      * @return ListCustomizeRuleTestResultResponse
@@ -3988,7 +4086,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the logs of a data source.</p>
+     * <p>Lists the logs for a data source.</p>
      * 
      * @param request ListDataSourceLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4032,7 +4130,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the logs of a data source.</p>
+     * <p>Lists the logs for a data source.</p>
      * 
      * @param request ListDataSourceLogsRequest
      * @return ListDataSourceLogsResponse
@@ -4044,7 +4142,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of data source types in third-party cloud services that can be added to the threat analysis feature.</p>
+     * <p>Lists the types of multicloud data sources that Threat Analysis supports.</p>
      * 
      * @param request ListDataSourceTypesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4080,7 +4178,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of data source types in third-party cloud services that can be added to the threat analysis feature.</p>
+     * <p>Lists the types of multicloud data sources that Threat Analysis supports.</p>
      * 
      * @param request ListDataSourceTypesRequest
      * @return ListDataSourceTypesResponse
@@ -4092,7 +4190,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about the cloud services that are integrated with the threat analysis feature, the logs of the cloud services, and the delivery of the logs.</p>
+     * <p>Lists the products and logs that are connected to threat analysis for an enterprise or a member, and the data shipping status of these logs.</p>
      * 
      * @param request ListDeliveryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4132,7 +4230,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about the cloud services that are integrated with the threat analysis feature, the logs of the cloud services, and the delivery of the logs.</p>
+     * <p>Lists the products and logs that are connected to threat analysis for an enterprise or a member, and the data shipping status of these logs.</p>
      * 
      * @param request ListDeliveryRequest
      * @return ListDeliveryResponse
@@ -4144,7 +4242,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries handling policies.</p>
+     * <p>Retrieve a list of system-recommended disposal strategies.</p>
      * 
      * @param request ListDisposeStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4244,7 +4342,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries handling policies.</p>
+     * <p>Retrieve a list of system-recommended disposal strategies.</p>
      * 
      * @param request ListDisposeStrategyRequest
      * @return ListDisposeStrategyResponse
@@ -4256,7 +4354,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries entities.</p>
+     * <p>Queries a list of entities.</p>
      * 
      * @param request ListEntitiesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4336,7 +4434,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries entities.</p>
+     * <p>Queries a list of entities.</p>
      * 
      * @param request ListEntitiesRequest
      * @return ListEntitiesResponse
@@ -4348,7 +4446,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of the logs in a cloud service that is added to the threat analysis feature.</p>
+     * <p>Queries the log ingestion details for a specific product.</p>
      * 
      * @param request ListImportedLogsByProdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4396,7 +4494,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of the logs in a cloud service that is added to the threat analysis feature.</p>
+     * <p>Queries the log ingestion details for a specific product.</p>
      * 
      * @param request ListImportedLogsByProdRequest
      * @return ListImportedLogsByProdResponse
@@ -4408,7 +4506,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the dedicated Simple Log Service project and Logstore for a cloud service based on the patterns of the project and Logstore names.</p>
+     * <p>Queries projects and Logstores based on the name patterns of the default SLS project and Logstore for an Alibaba Cloud service.</p>
      * 
      * @param request ListProjectLogStoresRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4452,7 +4550,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the dedicated Simple Log Service project and Logstore for a cloud service based on the patterns of the project and Logstore names.</p>
+     * <p>Queries projects and Logstores based on the name patterns of the default SLS project and Logstore for an Alibaba Cloud service.</p>
      * 
      * @param request ListProjectLogStoresRequest
      * @return ListProjectLogStoresResponse
@@ -4464,7 +4562,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of Alibaba Cloud accounts that are added to the threat analysis feature for centralized management. These accounts can be used to perform operations supported by the threat analysis feature, such as adding logs and handling events.</p>
+     * <p>Lists the Alibaba Cloud accounts that are managed by the multi-account control feature of Threat Analysis. An account must be managed to use features such as log collection and event handling.</p>
      * 
      * @param request ListRdUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4496,7 +4594,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of Alibaba Cloud accounts that are added to the threat analysis feature for centralized management. These accounts can be used to perform operations supported by the threat analysis feature, such as adding logs and handling events.</p>
+     * <p>Lists the Alibaba Cloud accounts that are managed by the multi-account control feature of Threat Analysis. An account must be managed to use features such as log collection and event handling.</p>
      * 
      * @param request ListRdUsersRequest
      * @return ListRdUsersResponse
@@ -4508,7 +4606,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a third-party cloud account that is added to the threat analysis feature.</p>
+     * <p>Modifies a bound Alibaba Cloud account.</p>
      * 
      * @param request ModifyBindAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4568,7 +4666,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a third-party cloud account that is added to the threat analysis feature.</p>
+     * <p>Modifies a bound Alibaba Cloud account.</p>
      * 
      * @param request ModifyBindAccountRequest
      * @return ModifyBindAccountResponse
@@ -4580,7 +4678,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a data source that is added to the threat analysis feature.</p>
+     * <p>Modifies the description of an existing data source.</p>
      * 
      * @param request ModifyDataSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4640,7 +4738,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a data source that is added to the threat analysis feature.</p>
+     * <p>Modifies the description of an existing data source.</p>
      * 
      * @param request ModifyDataSourceRequest
      * @return ModifyDataSourceResponse
@@ -4652,7 +4750,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the description of the logs that are added to the threat analysis feature for a data source within a cloud account.</p>
+     * <p>Modifies the description of a data source log.</p>
      * 
      * @param request ModifyDataSourceLogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4712,7 +4810,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the description of the logs that are added to the threat analysis feature for a data source within a cloud account.</p>
+     * <p>Modifies the description of a data source log.</p>
      * 
      * @param request ModifyDataSourceLogRequest
      * @return ModifyDataSourceLogResponse
@@ -4724,7 +4822,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables the log delivery feature for a cloud service that is integrated with Simple Log Service.</p>
+     * <p>Enables log delivery for integrated cloud services.</p>
      * 
      * @param request OpenDeliveryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4772,7 +4870,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables the log delivery feature for a cloud service that is integrated with Simple Log Service.</p>
+     * <p>Enables log delivery for integrated cloud services.</p>
      * 
      * @param request OpenDeliveryRequest
      * @return OpenDeliveryResponse
@@ -4784,7 +4882,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates or updates an automatic response rule.</p>
+     * <p>Adds or updates an automated response rule.</p>
      * 
      * @param request PostAutomateResponseConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4852,7 +4950,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates or updates an automatic response rule.</p>
+     * <p>Adds or updates an automated response rule.</p>
      * 
      * @param request PostAutomateResponseConfigRequest
      * @return PostAutomateResponseConfigResponse
@@ -4864,7 +4962,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates or updates a custom rule.</p>
+     * <p>Adds or updates a custom rule.</p>
      * 
      * @param request PostCustomizeRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4976,7 +5074,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates or updates a custom rule.</p>
+     * <p>Adds or updates a custom rule.</p>
      * 
      * @param request PostCustomizeRuleRequest
      * @return PostCustomizeRuleResponse
@@ -5052,7 +5150,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits event handling information.</p>
+     * <p>Submit incident response information to update the incident status and severity level.</p>
      * 
      * @param request PostEventDisposeAndWhiteruleListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5128,7 +5226,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits event handling information.</p>
+     * <p>Submit incident response information to update the incident status and severity level.</p>
      * 
      * @param request PostEventDisposeAndWhiteruleListRequest
      * @return PostEventDisposeAndWhiteruleListResponse
@@ -5140,7 +5238,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits an alert whitelist rule.</p>
+     * <p>Submits alert whitelisting rules.</p>
      * 
      * @param request PostEventWhiteruleListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5188,7 +5286,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits an alert whitelist rule.</p>
+     * <p>Submits alert whitelisting rules.</p>
      * 
      * @param request PostEventWhiteruleListRequest
      * @return PostEventWhiteruleListResponse
@@ -5200,7 +5298,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Ends the test of a custom rule.</p>
+     * <p>Finishes the test for a custom rule.</p>
      * 
      * @param request PostFinishCustomizeRuleTestRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5244,7 +5342,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Ends the test of a custom rule.</p>
+     * <p>Finishes the test for a custom rule.</p>
      * 
      * @param request PostFinishCustomizeRuleTestRequest
      * @return PostFinishCustomizeRuleTestResponse
@@ -5256,7 +5354,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the status of a custom rule.</p>
+     * <p>Updates the statuses of custom rules.</p>
      * 
      * @param request PostRuleStatusChangeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5308,7 +5406,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the status of a custom rule.</p>
+     * <p>Updates the statuses of custom rules.</p>
      * 
      * @param request PostRuleStatusChangeRequest
      * @return PostRuleStatusChangeResponse
@@ -5320,7 +5418,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Releases storage to reduce the storage usage. The release operation is irreversible and may cause data loss. Proceed with caution.</p>
+     * <p>Releases storage space. This operation is irreversible and causes data loss. Use with caution.</p>
      * 
      * @param request RestoreCapacityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5360,7 +5458,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Releases storage to reduce the storage usage. The release operation is irreversible and may cause data loss. Proceed with caution.</p>
+     * <p>Releases storage space. This operation is irreversible and causes data loss. Use with caution.</p>
      * 
      * @param request RestoreCapacityRequest
      * @return RestoreCapacityResponse
@@ -5372,7 +5470,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures the settings of log storage, such as the storage duration and storage region.</p>
+     * <p>Sets user settings, such as the storage duration and storage region.</p>
      * 
      * @param request SetStorageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5420,7 +5518,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures the settings of log storage, such as the storage duration and storage region.</p>
+     * <p>Sets user settings, such as the storage duration and storage region.</p>
      * 
      * @param request SetStorageRequest
      * @return SetStorageResponse
@@ -5432,7 +5530,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits log collection tasks at a time.</p>
+     * <p>Submits a batch of log ingestion tasks.</p>
      * 
      * @param request SubmitImportLogTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5492,7 +5590,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits log collection tasks at a time.</p>
+     * <p>Submits a batch of log ingestion tasks.</p>
      * 
      * @param request SubmitImportLogTasksRequest
      * @return SubmitImportLogTasksResponse
@@ -5504,7 +5602,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the status of an automatic response rule.</p>
+     * <p>Updates the status of an automated response rule.</p>
      * 
      * @param request UpdateAutomateResponseConfigStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5552,7 +5650,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the status of an automatic response rule.</p>
+     * <p>Updates the status of an automated response rule.</p>
      * 
      * @param request UpdateAutomateResponseConfigStatusRequest
      * @return UpdateAutomateResponseConfigStatusResponse
@@ -5564,7 +5662,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates or updates an alert whitelist rule.</p>
+     * <p>Adds or updates alert whitelist rules.</p>
      * 
      * @param request UpdateWhiteRuleListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5616,7 +5714,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates or updates an alert whitelist rule.</p>
+     * <p>Adds or updates alert whitelist rules.</p>
      * 
      * @param request UpdateWhiteRuleListRequest
      * @return UpdateWhiteRuleListResponse

@@ -43,8 +43,10 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,7 +102,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
 
     public static class ListCloudSiemCustomizeRulesResponseBodyDataPageInfo extends TeaModel {
         /**
-         * <p>The current page number.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -118,7 +120,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -159,7 +161,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
 
     public static class ListCloudSiemCustomizeRulesResponseBodyDataResponseData extends TeaModel {
         /**
-         * <p>The type of the risk.</p>
+         * <p>The threat type.</p>
          * 
          * <strong>example:</strong>
          * <p>WEBSHELL</p>
@@ -168,7 +170,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
         public String alertType;
 
         /**
-         * <p>The internal code of the risk type.</p>
+         * <p>The Medusa code of the threat type.</p>
          * 
          * <strong>example:</strong>
          * <p>${siem_rule_type_process_abnormal_command}</p>
@@ -177,7 +179,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
         public String alertTypeMds;
 
         /**
-         * <p>The ID of the Alibaba Cloud account in SIEM.</p>
+         * <p>The ID of the Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>127608589417****</p>
@@ -186,7 +188,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
         public Long aliuid;
 
         /**
-         * <p>The alert additional field for ATT\&amp;CK.</p>
+         * <p>The ATT\&amp;CK attack technique.</p>
          * 
          * <strong>example:</strong>
          * <p>T1595.002 Vulnerability Scanning</p>
@@ -195,8 +197,9 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
         public String attCk;
 
         /**
-         * <p>The type of the view. Valid values:</p>
-         * <p>0: view of the current Alibaba Cloud account. 1: view of all accounts for the enterprise.</p>
+         * <p>The view type.</p>
+         * <p>0: the view of the current Alibaba Cloud account.
+         * 1: the view of all members in the enterprise.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -205,7 +208,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
         public Integer dataType;
 
         /**
-         * <p>The extended information about event generation. If the value of <strong>eventTransferType</strong> is <strong>allToSingle</strong>, the value of this parameter indicates the length and unit of the alert aggregation window. The HTML escape characters are reversed.</p>
+         * <p>The extended information for event generation. This parameter is returned only when <strong>EventTransferType</strong> is set to <strong>allToSingle</strong>. The value is a JSON-formatted string that indicates the window length and unit for alert aggregation. You must unescape the HTML escape characters in the string.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;time&quot;:&quot;1&quot;,&quot;unit&quot;:&quot;MINUTE&quot;}</p>
@@ -214,10 +217,12 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
         public String eventTransferExt;
 
         /**
-         * <p>Indicates whether the system generates an event for the alert. Valid values:</p>
+         * <p>Indicates whether to convert alerts into events. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: no.</li>
-         * <li><strong>1</strong>: yes.</li>
+         * <li><p><strong>0</strong>: no</p>
+         * </li>
+         * <li><p><strong>1</strong>: yes</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -227,11 +232,14 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
         public Integer eventTransferSwitch;
 
         /**
-         * <p>The method that is used to generate an event. Valid values:</p>
+         * <p>The event generation method. Valid values:</p>
          * <ul>
-         * <li><strong>default</strong>: built-in method.</li>
-         * <li><strong>singleToSingle</strong>: The system generates an event for each alert.</li>
-         * <li><strong>allToSingle</strong>: The system generates an event for alerts within a period of time.</li>
+         * <li><p><strong>default</strong>: the default method</p>
+         * </li>
+         * <li><p><strong>singleToSingle</strong>: An event is generated for each alert.</p>
+         * </li>
+         * <li><p><strong>allToSingle</strong>: An event is generated for all alerts within a period.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -268,7 +276,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The log source of the rule.</p>
+         * <p>The log source that is associated with the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_siem_aegis_sas_alert</p>
@@ -277,7 +285,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
         public String logSource;
 
         /**
-         * <p>The internal code of the log source.</p>
+         * <p>The Medusa code of the log source that is associated with the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>${sas.cloudsiem.prod.cloud_siem_aegis_sas_alert}</p>
@@ -286,7 +294,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
         public String logSourceMds;
 
         /**
-         * <p>The log type of the rule.</p>
+         * <p>The log type that is associated with the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>ALERT_ACTIVITY</p>
@@ -295,7 +303,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
         public String logType;
 
         /**
-         * <p>The internal code of the log type.</p>
+         * <p>The Medusa code of the log type that is associated with the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>${sas.cloudsiem.prod.alert_activity}</p>
@@ -304,7 +312,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
         public String logTypeMds;
 
         /**
-         * <p>The window length of the rule. The HTML escape characters are reversed.</p>
+         * <p>The window length of the rule, which is a JSON-formatted string. You must unescape the HTML escape characters in the string.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;time&quot;:&quot;1&quot;,&quot;unit&quot;:&quot;HOUR&quot;}</p>
@@ -313,7 +321,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
         public String queryCycle;
 
         /**
-         * <p>The query condition of the rule. The value is in the JSON format. The HTML escape characters are reversed.</p>
+         * <p>The query condition of the rule, which is a JSON-formatted string that represents an array. You must unescape the HTML escape characters in the string.</p>
          * 
          * <strong>example:</strong>
          * <p>[[{&quot;not&quot;:false,&quot;left&quot;:&quot;alert_name&quot;,&quot;operator&quot;:&quot;=&quot;,&quot;right&quot;:&quot;WEBSHELL&quot;}]]</p>
@@ -331,7 +339,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
         public String ruleDesc;
 
         /**
-         * <p>The log aggregation field. The value is in the JSON format. The HTML escape characters are reversed.</p>
+         * <p>The aggregation field of the log, which is a JSON-formatted string that represents an array. You must unescape the HTML escape characters in the string.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;asset_id&quot;]</p>
@@ -349,7 +357,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The threshold configurations of the rule in the JSON format. The HTML escape characters are reversed.</p>
+         * <p>The threshold of the rule, which is a JSON-formatted string. You must unescape the HTML escape characters in the string.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;aggregateFunction&quot;:&quot;count&quot;,&quot;aggregateFunctionName&quot;:&quot;count&quot;,&quot;field&quot;:&quot;activity_name&quot;,&quot;operator&quot;:&quot;&lt;=&quot;,&quot;value&quot;:1}</p>
@@ -360,8 +368,10 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
         /**
          * <p>The type of the rule. Valid values:</p>
          * <ul>
-         * <li><strong>predefine</strong></li>
-         * <li><strong>customize</strong></li>
+         * <li><p><strong>predefine</strong>: predefined</p>
+         * </li>
+         * <li><p><strong>customize</strong>: custom</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -373,11 +383,16 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
         /**
          * <p>The status of the rule. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: The rule is in the initial state.</li>
-         * <li><strong>10</strong>: The simulation data is tested.</li>
-         * <li><strong>15</strong>: The business data is being tested.</li>
-         * <li><strong>20</strong>: The business data test is complete.</li>
-         * <li><strong>100</strong>: The rule is in effect.</li>
+         * <li><p><strong>0</strong>: initial</p>
+         * </li>
+         * <li><p><strong>10</strong>: testing with simulated data</p>
+         * </li>
+         * <li><p><strong>15</strong>: testing with business data</p>
+         * </li>
+         * <li><p><strong>20</strong>: testing with business data is complete</p>
+         * </li>
+         * <li><p><strong>100</strong>: published</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -387,11 +402,14 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The risk level. Valid values:</p>
+         * <p>The threat level. Valid values:</p>
          * <ul>
-         * <li><strong>serious</strong>: high-risk.</li>
-         * <li><strong>suspicious</strong>: medium-risk.</li>
-         * <li><strong>remind</strong>: low-risk.</li>
+         * <li><p><strong>serious</strong>: high</p>
+         * </li>
+         * <li><p><strong>suspicious</strong>: medium</p>
+         * </li>
+         * <li><p><strong>remind</strong>: low</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>Response data.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -23,7 +23,7 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
     public DescribeEventCountByThreatLevelResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>Response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
@@ -41,10 +41,12 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request succeeded. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The request succeeded.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -99,12 +101,30 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
     }
 
     public static class DescribeEventCountByThreatLevelResponseBodyDataEventDailyNum extends TeaModel {
+        /**
+         * <p>Date.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-10-06</p>
+         */
         @NameInMap("Date")
         public String date;
 
+        /**
+         * <p>Total number of security events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("EventNum")
         public Long eventNum;
 
+        /**
+         * <p>Number of unhandled security events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34</p>
+         */
         @NameInMap("UndealEventNum")
         public Long undealEventNum;
 
@@ -140,11 +160,14 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
     }
 
     public static class DescribeEventCountByThreatLevelResponseBodyData extends TeaModel {
+        /**
+         * <p>Daily event statistics.</p>
+         */
         @NameInMap("EventDailyNum")
         public java.util.List<DescribeEventCountByThreatLevelResponseBodyDataEventDailyNum> eventDailyNum;
 
         /**
-         * <p>The total number of events.</p>
+         * <p>Total number of events.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -153,7 +176,7 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
         public Long eventNum;
 
         /**
-         * <p>The number of high-risk events.</p>
+         * <p>Number of high-risk events.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -161,11 +184,17 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
         @NameInMap("HighLevelEventNum")
         public Long highLevelEventNum;
 
+        /**
+         * <p>Number of informational events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("InfoLevelEventNum")
         public Long infoLevelEventNum;
 
         /**
-         * <p>The number of low-risk events.</p>
+         * <p>Number of low-risk events.</p>
          * 
          * <strong>example:</strong>
          * <p>52</p>
@@ -174,7 +203,7 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
         public Long lowLevelEventNum;
 
         /**
-         * <p>The number of medium-risk events.</p>
+         * <p>Number of medium-risk events.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -182,11 +211,17 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
         @NameInMap("MediumLevelEventNum")
         public Long mediumLevelEventNum;
 
+        /**
+         * <p>Number of critical events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SeriousLevelEventNum")
         public Long seriousLevelEventNum;
 
         /**
-         * <p>The number of unhandled events.</p>
+         * <p>Number of unhandled events.</p>
          * 
          * <strong>example:</strong>
          * <p>75</p>

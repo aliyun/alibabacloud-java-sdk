@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BindAccountResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The detailed information returned by the Threat Analysis service.</p>
      */
     @NameInMap("Data")
     public BindAccountResponseBodyData data;
@@ -42,7 +42,7 @@ public class BindAccountResponseBody extends TeaModel {
 
     public static class BindAccountResponseBodyData extends TeaModel {
         /**
-         * <p>The number of the cloud accounts that are added to the threat analysis feature.</p>
+         * <p>The number of account bindings that are added.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

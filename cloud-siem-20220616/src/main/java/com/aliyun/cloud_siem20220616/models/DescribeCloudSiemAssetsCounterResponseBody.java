@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudSiemAssetsCounterResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code returned.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DescribeCloudSiemAssetsCounterResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -23,7 +23,7 @@ public class DescribeCloudSiemAssetsCounterResponseBody extends TeaModel {
     public java.util.List<DescribeCloudSiemAssetsCounterResponseBodyData> data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class DescribeCloudSiemAssetsCounterResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
@@ -43,8 +43,10 @@ public class DescribeCloudSiemAssetsCounterResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -111,12 +113,18 @@ public class DescribeCloudSiemAssetsCounterResponseBody extends TeaModel {
         /**
          * <p>The type of the asset. Valid values:</p>
          * <ul>
-         * <li>ip</li>
-         * <li>domain</li>
-         * <li>url</li>
-         * <li>process</li>
-         * <li>file</li>
-         * <li>host</li>
+         * <li><p>ip: IP address</p>
+         * </li>
+         * <li><p>domain: domain name</p>
+         * </li>
+         * <li><p>url: URL</p>
+         * </li>
+         * <li><p>process: process</p>
+         * </li>
+         * <li><p>file: file</p>
+         * </li>
+         * <li><p>host: host</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

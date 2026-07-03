@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteDataSourceResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The return value of the request.</p>
      */
     @NameInMap("Data")
     public DeleteDataSourceResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
@@ -42,7 +42,7 @@ public class DeleteDataSourceResponseBody extends TeaModel {
 
     public static class DeleteDataSourceResponseBodyData extends TeaModel {
         /**
-         * <p>The number of data sources that are removed. The value 1 indicates that data source is removed, and a value less than or equal to 0 indicates that the data source failed to be removed.</p>
+         * <p>The number of data sources that are deleted. A value of 1 indicates success. A value of 0 or less indicates failure.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

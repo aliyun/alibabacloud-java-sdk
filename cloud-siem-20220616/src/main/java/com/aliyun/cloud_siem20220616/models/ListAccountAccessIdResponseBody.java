@@ -29,7 +29,7 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
@@ -40,8 +40,10 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,7 +99,7 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
 
     public static class ListAccountAccessIdResponseBodyData extends TeaModel {
         /**
-         * <p>The AccessKey ID of the cloud account that is added to the threat analysis feature.</p>
+         * <p>The attached AccessKey ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ABCXXXXXXXX</p>
@@ -106,7 +108,7 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
         public String accessId;
 
         /**
-         * <p>The MD5 hash value of the AccessKey ID.</p>
+         * <p>The MD5 value of the multicloud AccessKey ID.</p>
          * 
          * <strong>example:</strong>
          * <p>abcXXXXXXXX</p>
@@ -115,7 +117,7 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
         public String accessIdMd5;
 
         /**
-         * <p>The ID of the cloud account.</p>
+         * <p>The ID of the Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>123xxxxxxx</p>
@@ -124,7 +126,7 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>The information about the cloud account to which the AccessKey ID belongs. The value is in the following format: Alibaba Cloud account ID|Alibaba Cloud account username|AccessKey ID.</p>
+         * <p>The information of the account to which the multicloud AccessKey ID belongs. The format is: Alibaba Cloud account ID|Alibaba Cloud account name|Multicloud AccessKey ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123xxxxxx|xxxx|ABCXXXXX</p>
@@ -133,10 +135,12 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
         public String accountStr;
 
         /**
-         * <p>Indicates whether the cloud account to which the AccessKey ID belongs is added to the threat analysis feature. Valid values:</p>
+         * <p>Indicates whether the AccessKey ID is attached to threat analysis. Valid values:</p>
          * <ul>
-         * <li>0: no</li>
-         * <li>1: yes</li>
+         * <li><p>0: Not attached.</p>
+         * </li>
+         * <li><p>1: Attached.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -146,7 +150,7 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
         public Integer bound;
 
         /**
-         * <p>The code of the cloud service provider.</p>
+         * <p>The code for the multicloud environment.</p>
          * 
          * <strong>example:</strong>
          * <p>hcloud</p>
@@ -155,7 +159,7 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
         public String cloudCode;
 
         /**
-         * <p>The ID of the Alibaba Cloud account that is used to add the third-party cloud account.</p>
+         * <p>The ID of the Alibaba Cloud account that corresponds to the multicloud AccessKey ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ABCXXXXXXXX</p>

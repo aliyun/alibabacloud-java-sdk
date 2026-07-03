@@ -4,11 +4,17 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class PostEventDisposeAndWhiteruleListRequest extends TeaModel {
+    /**
+     * <p>A comma-separated list of response strategy IDs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12,13,14</p>
+     */
     @NameInMap("DisposeStrategyIds")
     public String disposeStrategyIds;
 
     /**
-     * <p>The configuration of event handling. The value is a JSON object.</p>
+     * <p>A JSON object that defines the incident response configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>[
@@ -41,7 +47,7 @@ public class PostEventDisposeAndWhiteruleListRequest extends TeaModel {
     public String eventDispose;
 
     /**
-     * <p>The UUID of the event.</p>
+     * <p>The globally unique UUID of the incident.</p>
      * 
      * <strong>example:</strong>
      * <p>85ea4241-798f-4684-a876-65d4f0c3****</p>
@@ -50,6 +56,8 @@ public class PostEventDisposeAndWhiteruleListRequest extends TeaModel {
     public String incidentUuid;
 
     /**
+     * <p>The UID of the incident owner.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234567890xxxxxx</p>
      */
@@ -57,7 +65,7 @@ public class PostEventDisposeAndWhiteruleListRequest extends TeaModel {
     public String owner;
 
     /**
-     * <p>The configuration of the alert recipient. The value is a JSON object.</p>
+     * <p>A JSON object that defines the alert recipient configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -70,10 +78,12 @@ public class PostEventDisposeAndWhiteruleListRequest extends TeaModel {
     public String receiverInfo;
 
     /**
-     * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+     * <p>The region where the Data Management service for threat analysis is deployed. Select a region based on where your assets are located. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Your assets reside in regions in China.</li>
-     * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+     * <li><p>cn-hangzhou: Assets in the Chinese mainland or Hong Kong (China)</p>
+     * </li>
+     * <li><p>ap-southeast-1: Assets outside China</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -83,7 +93,7 @@ public class PostEventDisposeAndWhiteruleListRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The remarks of the event.</p>
+     * <p>A note about the incident.</p>
      * 
      * <strong>example:</strong>
      * <p>dealed</p>
@@ -91,11 +101,17 @@ public class PostEventDisposeAndWhiteruleListRequest extends TeaModel {
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <p>The source of the response policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>system</p>
+     */
     @NameInMap("ResponseSource")
     public String responseSource;
 
     /**
-     * <p>The ID of the account that you switch from the management account.</p>
+     * <p>The UID of the member whose perspective an administrator switches to.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
@@ -104,10 +120,12 @@ public class PostEventDisposeAndWhiteruleListRequest extends TeaModel {
     public Long roleFor;
 
     /**
-     * <p>The type of the view. Valid values:</p>
+     * <p>The view type. Valid values:</p>
      * <ul>
-     * <li>0: the current Alibaba Cloud account</li>
-     * <li>1: the global account</li>
+     * <li><p>0: Current Alibaba Cloud account view</p>
+     * </li>
+     * <li><p>1: View for all accounts in your enterprise</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -117,12 +135,16 @@ public class PostEventDisposeAndWhiteruleListRequest extends TeaModel {
     public Integer roleType;
 
     /**
-     * <p>The status of the event. Valid values:</p>
+     * <p>The incident status. Valid values:</p>
      * <ul>
-     * <li>0: unhandled</li>
-     * <li>1: handing</li>
-     * <li>5: handling failed</li>
-     * <li>10: handled</li>
+     * <li><p>0: Not handled</p>
+     * </li>
+     * <li><p>1: Handling</p>
+     * </li>
+     * <li><p>5: Failed</p>
+     * </li>
+     * <li><p>10: Handled</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -131,6 +153,20 @@ public class PostEventDisposeAndWhiteruleListRequest extends TeaModel {
     @NameInMap("Status")
     public Integer status;
 
+    /**
+     * <p>The threat level. Valid values:</p>
+     * <ul>
+     * <li><p>serious: Important</p>
+     * </li>
+     * <li><p>suspicious: Medium</p>
+     * </li>
+     * <li><p>remind: Low</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>remind</p>
+     */
     @NameInMap("ThreatLevel")
     public String threatLevel;
 

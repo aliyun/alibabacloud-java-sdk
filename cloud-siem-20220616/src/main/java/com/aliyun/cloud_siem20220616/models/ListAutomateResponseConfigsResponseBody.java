@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAutomateResponseConfigsResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The request status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -43,8 +43,10 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,7 +102,7 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
 
     public static class ListAutomateResponseConfigsResponseBodyDataPageInfo extends TeaModel {
         /**
-         * <p>The current page number.</p>
+         * <p>The page number of the returned page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -109,7 +111,7 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -118,7 +120,7 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -159,7 +161,7 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
 
     public static class ListAutomateResponseConfigsResponseBodyDataResponseData extends TeaModel {
         /**
-         * <p>The configuration of the action that is performed after the automated response rule is hit. The value is in the JSON format.</p>
+         * <p>The action configuration of the automated response rule. The value is a JSON array.</p>
          * 
          * <strong>example:</strong>
          * <p>[
@@ -174,11 +176,14 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
         public String actionConfig;
 
         /**
-         * <p>The type of the handling action. Multiple types are separated by commas (,). Valid values:</p>
+         * <p>The handling action. Multiple values are separated by commas. Valid values:</p>
          * <ul>
-         * <li><strong>doPlaybook</strong>: runs the playbook.</li>
-         * <li><strong>changeEventStatus</strong>: changes the event status.</li>
-         * <li><strong>changeThreatLevel</strong>: changes the risk level of the event.</li>
+         * <li><p><strong>doPlaybook</strong>: executes a playbook.</p>
+         * </li>
+         * <li><p><strong>changeEventStatus</strong>: changes the status of an event.</p>
+         * </li>
+         * <li><p><strong>changeThreatLevel</strong>: changes the threat level of an event.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -188,7 +193,7 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
         public String actionType;
 
         /**
-         * <p>The ID of the Alibaba Cloud account that is associated with the rule in SIEM.</p>
+         * <p>The ID of the Alibaba Cloud account that is associated with the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>127608589417****</p>
@@ -197,10 +202,12 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
         public Long aliuid;
 
         /**
-         * <p>The type of the automated response rule. Valid values:</p>
+         * <p>The type of the automated response. Valid values:</p>
          * <ul>
-         * <li><strong>event</strong></li>
-         * <li><strong>alert</strong></li>
+         * <li><p><strong>event</strong></p>
+         * </li>
+         * <li><p><strong>alert</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -210,12 +217,10 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
         public String autoResponseType;
 
         /**
-         * <p>The type of the view. Valid values:</p>
-         * <p>0: the current Alibaba Cloud account
-         * 1: the global account</p>
+         * <p>The data type of the condition field in the automated response rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>varchar</p>
          */
         @NameInMap("DataType")
         public Integer dataType;
@@ -230,7 +235,7 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
         public String executionCondition;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the rule was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-06 16:37:29</p>
@@ -239,7 +244,7 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The update time.</p>
+         * <p>The time when the rule was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-06 16:37:29</p>
@@ -256,6 +261,18 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The type of the response rule.</p>
+         * <ul>
+         * <li><p>preset: predefined</p>
+         * </li>
+         * <li><p>custom: custom</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
+         */
         @NameInMap("ResponseRuleType")
         public String responseRuleType;
 
@@ -271,8 +288,10 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
         /**
          * <p>The status of the rule. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: disabled.</li>
-         * <li><strong>100</strong>: enabled.</li>
+         * <li><p><strong>0</strong>: disabled</p>
+         * </li>
+         * <li><p><strong>100</strong>: enabled</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

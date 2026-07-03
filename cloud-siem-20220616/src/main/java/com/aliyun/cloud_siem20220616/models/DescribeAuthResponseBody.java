@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeAuthResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the SIEM system is granted the required permissions. Valid values:</p>
+     * <p>Indicates whether the permissions are granted.</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The permissions are granted.</p>
+     * </li>
+     * <li><p>false: The permissions are not granted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

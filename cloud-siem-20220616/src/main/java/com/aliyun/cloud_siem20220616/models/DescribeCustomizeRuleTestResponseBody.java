@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCustomizeRuleTestResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The HTTP status code returned.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -43,8 +43,10 @@ public class DescribeCustomizeRuleTestResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,7 +102,7 @@ public class DescribeCustomizeRuleTestResponseBody extends TeaModel {
 
     public static class DescribeCustomizeRuleTestResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the rule.</p>
+         * <p>The ID of the custom rule.</p>
          * 
          * <strong>example:</strong>
          * <p>123456789</p>
@@ -109,7 +111,7 @@ public class DescribeCustomizeRuleTestResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The historical data that is used in the simulation test.</p>
+         * <p>The historical data of the simulated test case.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;,&quot;key3&quot;:&quot;value3&quot;,&quot;key4&quot;:&quot;value4&quot;,&quot;key5&quot;:&quot;value5&quot;}]</p>
@@ -120,11 +122,16 @@ public class DescribeCustomizeRuleTestResponseBody extends TeaModel {
         /**
          * <p>The status of the rule. Valid values:</p>
          * <ul>
-         * <li>0: The rule is in the initial state.</li>
-         * <li>10: The simulation data is tested.</li>
-         * <li>15: The business data is being tested.</li>
-         * <li>20: The business data test ends.</li>
-         * <li>100: The rule takes effect.</li>
+         * <li><p>0: initial</p>
+         * </li>
+         * <li><p>10: simulated data test</p>
+         * </li>
+         * <li><p>15: real-time data test in progress</p>
+         * </li>
+         * <li><p>20: real-time data test complete</p>
+         * </li>
+         * <li><p>100: published</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

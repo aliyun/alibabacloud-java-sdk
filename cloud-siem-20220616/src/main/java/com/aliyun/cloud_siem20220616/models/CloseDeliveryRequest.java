@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CloseDeliveryRequest extends TeaModel {
     /**
-     * <p>The log code of the cloud service, such as the code of the process log for Security Center. You can obtain the log code from the response of the ListDelivery operation.</p>
+     * <p>The code of the log within the cloud service. For example, the process log of Security Center. For valid values, see the return value of the ListDelivery operation.</p>
      * 
      * <strong>example:</strong>
      * <p>cloud_siem_aegis_proc</p>
@@ -16,29 +16,52 @@ public class CloseDeliveryRequest extends TeaModel {
     /**
      * <p>The code of the cloud service. Valid values:</p>
      * <ul>
-     * <li>qcloud_waf</li>
-     * <li>qlcoud_cfw</li>
-     * <li>hcloud_waf</li>
-     * <li>hcloud_cfw</li>
-     * <li>ddos</li>
-     * <li>sas</li>
-     * <li>cfw</li>
-     * <li>config</li>
-     * <li>csk</li>
-     * <li>fc</li>
-     * <li>rds</li>
-     * <li>nas</li>
-     * <li>apigateway</li>
-     * <li>cdn</li>
-     * <li>mongodb</li>
-     * <li>eip</li>
-     * <li>slb</li>
-     * <li>vpc</li>
-     * <li>actiontrail</li>
-     * <li>waf</li>
-     * <li>bastionhost</li>
-     * <li>oss</li>
-     * <li>polardb</li>
+     * <li><p>qcloud_waf</p>
+     * </li>
+     * <li><p>qlcoud_cfw</p>
+     * </li>
+     * <li><p>hcloud_waf</p>
+     * </li>
+     * <li><p>hcloud_cfw</p>
+     * </li>
+     * <li><p>ddos</p>
+     * </li>
+     * <li><p>sas</p>
+     * </li>
+     * <li><p>cfw</p>
+     * </li>
+     * <li><p>config</p>
+     * </li>
+     * <li><p>csk</p>
+     * </li>
+     * <li><p>fc</p>
+     * </li>
+     * <li><p>rds</p>
+     * </li>
+     * <li><p>nas</p>
+     * </li>
+     * <li><p>apigateway</p>
+     * </li>
+     * <li><p>cdn</p>
+     * </li>
+     * <li><p>mongodb</p>
+     * </li>
+     * <li><p>eip</p>
+     * </li>
+     * <li><p>slb</p>
+     * </li>
+     * <li><p>vpc</p>
+     * </li>
+     * <li><p>actiontrail</p>
+     * </li>
+     * <li><p>waf</p>
+     * </li>
+     * <li><p>bastionhost</p>
+     * </li>
+     * <li><p>oss</p>
+     * </li>
+     * <li><p>polardb</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -49,10 +72,12 @@ public class CloseDeliveryRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the region where your assets reside. Valid values:</p>
+     * <p>The region where the data management center of threat analysis is located. Select a region based on the region where your assets are located. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Your assets reside in regions in China.</li>
-     * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+     * <li><p>cn-hangzhou: Select this region if your assets are in the Chinese mainland or Hong Kong (China).</p>
+     * </li>
+     * <li><p>ap-southeast-1: Select this region if your assets are outside China.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,7 +87,7 @@ public class CloseDeliveryRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the account that you switch from the management account.</p>
+     * <p>The user ID of a member. An administrator can use this parameter to switch to the perspective of the member.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
@@ -71,10 +96,12 @@ public class CloseDeliveryRequest extends TeaModel {
     public Long roleFor;
 
     /**
-     * <p>The type of the view. Valid values:</p>
+     * <p>The view type.</p>
      * <ul>
-     * <li>0: the current Alibaba Cloud account</li>
-     * <li>1: the global account</li>
+     * <li><p>0: The view of the current Alibaba Cloud account.</p>
+     * </li>
+     * <li><p>1: The view of all accounts in your enterprise.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeStorageResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the projects and Logstores that are created for the threat analysis feature exist in Simple Log Service. Valid values:</p>
+     * <p>Indicates whether the project and Logstore created by the threat analysis service exist in your Simple Log Service. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The project and Logstore exist.</p>
+     * </li>
+     * <li><p>false: The project and Logstore do not exist.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -11,7 +11,7 @@ public class ModifyDataSourceResponseBody extends TeaModel {
     public ModifyDataSourceResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
@@ -42,7 +42,7 @@ public class ModifyDataSourceResponseBody extends TeaModel {
 
     public static class ModifyDataSourceResponseBodyData extends TeaModel {
         /**
-         * <p>The number of data sources that are modified. The value 1 indicates that the modification is successful, and a value less than or equal to 0 indicates that the modification failed.</p>
+         * <p>The number of modified data sources. A value of 1 indicates success. A value of 0 or less indicates failure.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -51,7 +51,7 @@ public class ModifyDataSourceResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The ID of the data source. The ID is an MD5 hash value that is calculated by the threat analysis feature based on specific parameters.</p>
+         * <p>The ID of the data source. The ID is an MD5 hash that is calculated based on the values of other parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>220ba97c9d1fdb0b9c7e8c7ca328d7ea</p>

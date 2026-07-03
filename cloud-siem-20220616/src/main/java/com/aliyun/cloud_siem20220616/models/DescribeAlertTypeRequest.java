@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeAlertTypeRequest extends TeaModel {
     /**
-     * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+     * <p>The region where the Data Management center is located. Select a region based on the location of your assets. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Your assets reside in regions in China.</li>
-     * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+     * <li><p>cn-hangzhou: Your assets are in the Chinese mainland or China (Hong Kong).</p>
+     * </li>
+     * <li><p>ap-southeast-1: Your assets are in a region outside China.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class DescribeAlertTypeRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the account that you switch from the management account.</p>
+     * <p>The user ID of a member. An administrator can use this parameter to switch to the perspective of the member.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
@@ -27,10 +29,12 @@ public class DescribeAlertTypeRequest extends TeaModel {
     public Long roleFor;
 
     /**
-     * <p>The type of the view. Valid values:</p>
+     * <p>The type of the view.</p>
      * <ul>
-     * <li>0: the current Alibaba Cloud account</li>
-     * <li>1: the global account</li>
+     * <li><p>0: The view of the current Alibaba Cloud account.</p>
+     * </li>
+     * <li><p>1: The view of all accounts in your enterprise.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,10 +44,12 @@ public class DescribeAlertTypeRequest extends TeaModel {
     public Integer roleType;
 
     /**
-     * <p>The type of rule. Valid values:</p>
+     * <p>The type of the rule. Valid values:</p>
      * <ul>
-     * <li>predefine: the defined rule by system</li>
-     * <li>customize: the customed rule by user</li>
+     * <li><p>predefine: predefined</p>
+     * </li>
+     * <li><p>customize: custom</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

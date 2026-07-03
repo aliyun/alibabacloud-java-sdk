@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeUserBuyStatusResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The response parameters.</p>
      */
     @NameInMap("Data")
     public DescribeUserBuyStatusResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>81D8EC0C-0804-51AD-8C38-17ED0BC74892</p>
@@ -42,10 +42,12 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
 
     public static class DescribeUserBuyStatusResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the logon Alibaba Cloud account can be used to place orders for the threat analysis feature, such as purchase, upgrade, and specifications change orders. Valid values:</p>
+         * <p>Indicates whether the current account can perform operations on threat analysis orders. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The account can purchase, upgrade, or downgrade threat analysis.</p>
+         * </li>
+         * <li><p>false: The account cannot perform operations on threat analysis orders.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -55,7 +57,7 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
         public Boolean canBuy;
 
         /**
-         * <p>The log storage capacity that is purchased for the threat analysis feature. Unit: GB.</p>
+         * <p>The purchased capacity of Simple Log Service (SLS) for threat analysis. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>
@@ -64,7 +66,7 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
         public Integer capacity;
 
         /**
-         * <p>The number of days before the expiration time of the threat analysis feature.</p>
+         * <p>The number of days before threat analysis expires.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -73,7 +75,7 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
         public Long durationDays;
 
         /**
-         * <p>The timestamp when the threat analysis feature expires. Unit: milliseconds.</p>
+         * <p>The expiration time of threat analysis. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1669823999000</p>
@@ -82,7 +84,7 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.</p>
+         * <p>The ID of the Alibaba Cloud account that purchased threat analysis.</p>
          * 
          * <strong>example:</strong>
          * <p>123XXXXXX</p>
@@ -91,7 +93,7 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
         public Long mainUserId;
 
         /**
-         * <p>The username of the Alibaba Cloud account that is used to purchase the threat analysis feature.</p>
+         * <p>The name of the Alibaba Cloud account that purchased threat analysis.</p>
          * 
          * <strong>example:</strong>
          * <p>sas_account_xxx</p>
@@ -100,7 +102,7 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
         public String mainUserName;
 
         /**
-         * <p>The ID of the management account of the resource directory.</p>
+         * <p>The ID of the master account of the resource directory.</p>
          * 
          * <strong>example:</strong>
          * <p>123XXXXXX</p>
@@ -109,7 +111,7 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
         public Long masterUserId;
 
         /**
-         * <p>The display name of the management account of the resource directory.</p>
+         * <p>The display name of the master account of the resource directory.</p>
          * 
          * <strong>example:</strong>
          * <p>rd_master_xxx</p>
@@ -118,6 +120,14 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
         public String masterUserName;
 
         /**
+         * <p>The type of the current order.</p>
+         * <ul>
+         * <li><p>0: The order includes threat analysis traffic and capacity.</p>
+         * </li>
+         * <li><p>1: The order includes only threat analysis capacity.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -125,7 +135,7 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
         public Integer rdOrder;
 
         /**
-         * <p>The instance ID of Security Center.</p>
+         * <p>The ID of the Security Center instance.</p>
          * 
          * <strong>example:</strong>
          * <p>sas-instance-xxxxx</p>
@@ -134,7 +144,7 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
         public String sasInstanceId;
 
         /**
-         * <p>The ID of the logon Alibaba Cloud account.</p>
+         * <p>The ID of the currently logged-on Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>123XXXXXX</p>
@@ -143,7 +153,7 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
         public Long subUserId;
 
         /**
-         * <p>The username of the logon Alibaba Cloud account.</p>
+         * <p>The name of the currently logged-on Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>sas_account_xxx</p>

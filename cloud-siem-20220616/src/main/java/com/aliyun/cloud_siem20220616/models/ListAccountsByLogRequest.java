@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAccountsByLogRequest extends TeaModel {
     /**
-     * <p>The code that is used for multi-cloud environments.</p>
+     * <p>The code of the multicloud environment.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListAccountsByLogRequest extends TeaModel {
     public String cloudCode;
 
     /**
-     * <p>The codes of logs. The value is a JSON array.</p>
+     * <p>The list of log codes. The value must be a JSON array.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ListAccountsByLogRequest extends TeaModel {
     public java.util.List<String> logCodes;
 
     /**
-     * <p>The code of the service.</p>
+     * <p>The code of the product.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,10 +35,12 @@ public class ListAccountsByLogRequest extends TeaModel {
     public String prodCode;
 
     /**
-     * <p>The data management center of the threat analysis feature. Specify this parameter based on the region where your assets reside. Valid values:</p>
+     * <p>The region where the Data Management center of Threat Analysis is located. Select the region based on the region where your assets are located. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Your assets reside in regions inside China.</li>
-     * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+     * <li><p>cn-hangzhou: Your assets are in the Chinese mainland or China (Hong Kong).</p>
+     * </li>
+     * <li><p>ap-southeast-1: Your assets are outside China.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,7 +50,7 @@ public class ListAccountsByLogRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the account that you switch from the management account.</p>
+     * <p>The user ID of the member. This parameter allows an administrator to switch to the perspective of a member account.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
@@ -57,10 +59,12 @@ public class ListAccountsByLogRequest extends TeaModel {
     public Long roleFor;
 
     /**
-     * <p>The type of the view. Valid values:</p>
+     * <p>The view type.</p>
      * <ul>
-     * <li>0: the current Alibaba Cloud account</li>
-     * <li>1: the global account</li>
+     * <li><p>0: The view of the current Alibaba Cloud account.</p>
+     * </li>
+     * <li><p>1: The view of all accounts that belong to the enterprise.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

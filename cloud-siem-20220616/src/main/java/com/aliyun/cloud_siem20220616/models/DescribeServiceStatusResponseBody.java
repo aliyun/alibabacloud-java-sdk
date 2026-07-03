@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeServiceStatusResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the threat analysis feature is authorized to access the resource directory. Valid values:</p>
+     * <p>The return value.</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The authorization is granted.</p>
+     * </li>
+     * <li><p>false: The authorization is not granted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

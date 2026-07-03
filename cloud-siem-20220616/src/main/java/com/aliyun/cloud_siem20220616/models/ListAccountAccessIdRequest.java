@@ -5,12 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAccountAccessIdRequest extends TeaModel {
     /**
-     * <p>The code of the cloud service provider.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>qcloud</li>
-     * <li>hcloud</li>
-     * </ul>
+     * <p>The code for the multicloud environment.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,10 +15,12 @@ public class ListAccountAccessIdRequest extends TeaModel {
     public String cloudCode;
 
     /**
-     * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+     * <p>The region of the Data Management center for threat analysis. Select the region of the Management Center based on where your assets are located. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Your assets reside in regions in China.</li>
-     * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+     * <li><p>cn-hangzhou: Your assets are in the Chinese mainland or China (Hong Kong).</p>
+     * </li>
+     * <li><p>ap-southeast-1: Your assets are in regions outside China.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,7 +30,7 @@ public class ListAccountAccessIdRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the account that you switch from the management account.</p>
+     * <p>The user ID of a member. This parameter allows an administrator to switch to the member\&quot;s view.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
@@ -42,14 +39,16 @@ public class ListAccountAccessIdRequest extends TeaModel {
     public Long roleFor;
 
     /**
-     * <p>The type of the view. Valid values:</p>
+     * <p>The type of view. Valid values:</p>
      * <ul>
-     * <li>0: the current Alibaba Cloud account</li>
-     * <li>1: the global account</li>
+     * <li><p>0: The view of the current Alibaba Cloud account.</p>
+     * </li>
+     * <li><p>1: The view of all accounts in your enterprise.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>0</p>
+     * <p>1</p>
      */
     @NameInMap("RoleType")
     public Integer roleType;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddDataSourceRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud account.</p>
+     * <p>The ID of the Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>123xxxxxxxx</p>
@@ -14,13 +14,7 @@ public class AddDataSourceRequest extends TeaModel {
     public String accountId;
 
     /**
-     * <p>The code of the cloud service provider.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>qcloud</li>
-     * <li>hcloud</li>
-     * <li>aliyun</li>
-     * </ul>
+     * <p>The code for the multicloud service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,13 +27,13 @@ public class AddDataSourceRequest extends TeaModel {
      * <p>The name of the data source.</p>
      * 
      * <strong>example:</strong>
-     * <p>beijing_waf_kafka</p>
+     * <p>XX-Beijing-Kafka</p>
      */
     @NameInMap("DataSourceInstanceName")
     public String dataSourceInstanceName;
 
     /**
-     * <p>The parameters of the data source. Set this parameter to a JSON array.</p>
+     * <p>The parameters for the data source. The value must be a JSON array.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;paraCode&quot;:&quot;region_code&quot;,&quot;paraValue&quot;:&quot;ap-guangzhou&quot;}]</p>
@@ -51,7 +45,7 @@ public class AddDataSourceRequest extends TeaModel {
      * <p>The remarks on the data source.</p>
      * 
      * <strong>example:</strong>
-     * <p>waf_alert_log</p>
+     * <p>XX Cloud Firewall Shanghai instance</p>
      */
     @NameInMap("DataSourceInstanceRemark")
     public String dataSourceInstanceRemark;
@@ -59,9 +53,12 @@ public class AddDataSourceRequest extends TeaModel {
     /**
      * <p>The type of the data source. Valid values:</p>
      * <ul>
-     * <li>obs: Huawei Cloud Object Storage Service (OBS)</li>
-     * <li>wafApi: download API of Tencent Cloud Web Application Firewall (WAF)</li>
-     * <li>ckafka: Tencent Cloud Kafka (CKafka)</li>
+     * <li><p>obs: Huawei Cloud Object Storage Service (OBS).</p>
+     * </li>
+     * <li><p>wafApi: Tencent Cloud Web Application Firewall (WAF) download API.</p>
+     * </li>
+     * <li><p>ckafka: Tencent Cloud CKafka.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,10 +68,12 @@ public class AddDataSourceRequest extends TeaModel {
     public String dataSourceType;
 
     /**
-     * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+     * <p>The region of the data management center for threat analysis. Select a region based on the location of your assets. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Your assets reside in regions in China.</li>
-     * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+     * <li><p>cn-hangzhou: For assets in the Chinese mainland or China (Hong Kong).</p>
+     * </li>
+     * <li><p>ap-southeast-1: For assets in regions outside China.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PostCustomizeRuleTestRequest extends TeaModel {
     /**
-     * <p>The ID of the rule.</p>
+     * <p>The ID of the custom rule.</p>
      * 
      * <strong>example:</strong>
      * <p>123456789</p>
@@ -14,10 +14,12 @@ public class PostCustomizeRuleTestRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The data management center of the threat analysis feature. Specify this parameter based on the region in which your assets reside. Valid values:</p>
+     * <p>The region where the Data Management center of threat analysis is located. Select the region based on the region where your assets are located. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Your assets reside in regions inside China.</li>
-     * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+     * <li><p>cn-hangzhou: Your assets are in the Chinese mainland or China (Hong Kong).</p>
+     * </li>
+     * <li><p>ap-southeast-1: Your assets are in regions outside China.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +29,7 @@ public class PostCustomizeRuleTestRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the account that you switch from the management account.</p>
+     * <p>The user ID of the member that the administrator wants to impersonate to view data.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
@@ -36,10 +38,12 @@ public class PostCustomizeRuleTestRequest extends TeaModel {
     public Long roleFor;
 
     /**
-     * <p>The type of the view. Valid values:</p>
+     * <p>The view type.</p>
      * <ul>
-     * <li>0: the current Alibaba Cloud account</li>
-     * <li>1: the global account</li>
+     * <li><p>0: the view of the current Alibaba Cloud account.</p>
+     * </li>
+     * <li><p>1: the view of all accounts in the enterprise.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +53,7 @@ public class PostCustomizeRuleTestRequest extends TeaModel {
     public Integer roleType;
 
     /**
-     * <p>The simulation data for the test. This parameter is available only when TestType is set to simulate.</p>
+     * <p>The simulated data for the test. This parameter is required only when TestType is set to simulate.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;,&quot;key3&quot;:&quot;value3&quot;,&quot;key4&quot;:&quot;value4&quot;,&quot;key5&quot;:&quot;value5&quot;}]</p>
@@ -60,8 +64,10 @@ public class PostCustomizeRuleTestRequest extends TeaModel {
     /**
      * <p>The test type. Valid values:</p>
      * <ul>
-     * <li>simulate: simulation data test</li>
-     * <li>business: business data test</li>
+     * <li><p>simulate: tests the rule with simulated data</p>
+     * </li>
+     * <li><p>business: tests the rule with business data</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

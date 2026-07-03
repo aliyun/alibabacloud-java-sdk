@@ -11,7 +11,7 @@ public class ListDataSourceLogsResponseBody extends TeaModel {
     public ListDataSourceLogsResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
@@ -42,7 +42,7 @@ public class ListDataSourceLogsResponseBody extends TeaModel {
 
     public static class ListDataSourceLogsResponseBodyDataDataSourceInstanceLogsLogParams extends TeaModel {
         /**
-         * <p>The parameter code of the log.</p>
+         * <p>The code of the log parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>region_code</p>
@@ -51,7 +51,7 @@ public class ListDataSourceLogsResponseBody extends TeaModel {
         public String paraCode;
 
         /**
-         * <p>The parameter value of the log.</p>
+         * <p>The value of the log parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>ap-guangzhou</p>
@@ -93,7 +93,7 @@ public class ListDataSourceLogsResponseBody extends TeaModel {
         public String logCode;
 
         /**
-         * <p>The ID of the log. The value is obtained after the threat analysis feature calculates the MD5 hash value of a parameter.</p>
+         * <p>The ID of the log. This ID is an MD5 hash value that is calculated by threat analysis based on specific parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>220ba97c9d1fdb0b9c7e8c7ca328d7ea</p>
@@ -111,16 +111,18 @@ public class ListDataSourceLogsResponseBody extends TeaModel {
         public String logMdsCode;
 
         /**
-         * <p>The parameters of the log.</p>
+         * <p>The detailed parameters for the log.</p>
          */
         @NameInMap("LogParams")
         public java.util.List<ListDataSourceLogsResponseBodyDataDataSourceInstanceLogsLogParams> logParams;
 
         /**
-         * <p>Indicates whether the task for which logs are collected is enabled. Valid values:</p>
+         * <p>The status of the log collection task. Valid values:</p>
          * <ul>
-         * <li>1: yes</li>
-         * <li>0: no</li>
+         * <li><p>1: collected.</p>
+         * </li>
+         * <li><p>0: not collected.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -178,7 +180,7 @@ public class ListDataSourceLogsResponseBody extends TeaModel {
 
     public static class ListDataSourceLogsResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the cloud account.</p>
+         * <p>The ID of the Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>123xxxxxxx</p>
@@ -187,11 +189,14 @@ public class ListDataSourceLogsResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>The code that is used for multi-cloud environments. Valid values:</p>
+         * <p>The code for the cloud service provider. Valid values:</p>
          * <ul>
-         * <li>qcloud: Tencent Cloud</li>
-         * <li>aliyun: Alibaba Cloud</li>
-         * <li>hcloud: Huawei Cloud</li>
+         * <li><p>qcloud: Tencent Cloud.</p>
+         * </li>
+         * <li><p>aliyun: Alibaba Cloud.</p>
+         * </li>
+         * <li><p>hcloud: Huawei Cloud</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -201,7 +206,7 @@ public class ListDataSourceLogsResponseBody extends TeaModel {
         public String cloudCode;
 
         /**
-         * <p>The ID of the data source. The value is obtained after the threat analysis feature calculates the MD5 hash value of a parameter.</p>
+         * <p>The ID of the data source. This ID is an MD5 hash value that is calculated by threat analysis based on specific parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>220ba97c9d1fdb0b9c7e8c7ca328d7ea</p>
@@ -210,7 +215,7 @@ public class ListDataSourceLogsResponseBody extends TeaModel {
         public String dataSourceInstanceId;
 
         /**
-         * <p>The logs of the data source.</p>
+         * <p>The list of logs for the data source.</p>
          */
         @NameInMap("DataSourceInstanceLogs")
         public java.util.List<ListDataSourceLogsResponseBodyDataDataSourceInstanceLogs> dataSourceInstanceLogs;
@@ -225,7 +230,7 @@ public class ListDataSourceLogsResponseBody extends TeaModel {
         public String dataSourceInstanceName;
 
         /**
-         * <p>The remarks of the data source.</p>
+         * <p>The remarks on the data source.</p>
          * 
          * <strong>example:</strong>
          * <p>waf kafka</p>
@@ -234,7 +239,7 @@ public class ListDataSourceLogsResponseBody extends TeaModel {
         public String dataSourceInstanceRemark;
 
         /**
-         * <p>The ID of the Alibaba Cloud account.</p>
+         * <p>The ID of the Alibaba Cloud account to which the log belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>123XXXXXXXX</p>

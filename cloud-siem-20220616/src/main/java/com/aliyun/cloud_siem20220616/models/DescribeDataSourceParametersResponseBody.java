@@ -11,7 +11,7 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
     public java.util.List<DescribeDataSourceParametersResponseBodyData> data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
@@ -42,7 +42,7 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
 
     public static class DescribeDataSourceParametersResponseBodyDataParamValue extends TeaModel {
         /**
-         * <p>The display value.</p>
+         * <p>The displayed content.</p>
          * 
          * <strong>example:</strong>
          * <p>guangzhou</p>
@@ -51,7 +51,7 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>The actual value.</p>
+         * <p>The actual value of the parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>ap-guangzhou</p>
@@ -84,10 +84,12 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
 
     public static class DescribeDataSourceParametersResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the edit operation is supported. Valid values:</p>
+         * <p>Indicates whether the parameter is editable. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong></li>
-         * <li><strong>1</strong></li>
+         * <li><p><strong>0</strong>: The parameter cannot be modified.</p>
+         * </li>
+         * <li><p><strong>1</strong>: The parameter can be modified.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -97,11 +99,14 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
         public Integer canEditted;
 
         /**
-         * <p>The code of the cloud service provider. Valid values:</p>
+         * <p>The code for the multicloud environment. Valid values:</p>
          * <ul>
-         * <li><strong>qcloud</strong>: Tencent Cloud</li>
-         * <li><strong>aliyun</strong>: Alibaba Cloud</li>
-         * <li><strong>hcloud</strong>: Huawei Cloud</li>
+         * <li><p><strong>qcloud</strong>: Tencent Cloud.</p>
+         * </li>
+         * <li><p><strong>aliyun</strong>: Alibaba Cloud.</p>
+         * </li>
+         * <li><p><strong>hcloud</strong>: Huawei Cloud.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -113,9 +118,12 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
         /**
          * <p>The type of the data source. Valid values:</p>
          * <ul>
-         * <li><strong>obs</strong>: Huawei Cloud Object Storage Service (OBS)</li>
-         * <li><strong>wafApi</strong>: download API of Tencent Cloud Web Application Firewall (WAF)</li>
-         * <li><strong>ckafka</strong>: Tencent Cloud TDMQ for CKafka</li>
+         * <li><p><strong>obs</strong>: Huawei Cloud OBS.</p>
+         * </li>
+         * <li><p><strong>wafApi</strong>: Tencent Cloud WAF download API.</p>
+         * </li>
+         * <li><p><strong>ckafka</strong>: Tencent Cloud CKafka.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,10 +142,12 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
         public String defaultValue;
 
         /**
-         * <p>Indicates whether the modification operation is forbidden. Valid values:</p>
+         * <p>Indicates whether the parameter can be modified. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: The parameter cannot be modified.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The parameter can be modified.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -147,7 +157,7 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
         public Boolean disabled;
 
         /**
-         * <p>The method that is used to check the parameter format.</p>
+         * <p>The format check method.</p>
          * 
          * <strong>example:</strong>
          * <p>email</p>
@@ -156,7 +166,7 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
         public String formatCheck;
 
         /**
-         * <p>The additional information.</p>
+         * <p>Additional information.</p>
          * 
          * <strong>example:</strong>
          * <p>obs docment</p>
@@ -174,10 +184,12 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
         public String paraCode;
 
         /**
-         * <p>The parameter level. Valid values:</p>
+         * <p>The level of the parameter. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: the parameters of the data source</li>
-         * <li><strong>2</strong>: the parameters of the log</li>
+         * <li><p><strong>1</strong>: data source parameter.</p>
+         * </li>
+         * <li><p><strong>2</strong>: log parameter.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -196,7 +208,7 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
         public String paraName;
 
         /**
-         * <p>The data type of the parameter.</p>
+         * <p>The type of the parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>string</p>
@@ -205,7 +217,7 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
         public String paraType;
 
         /**
-         * <p>The value of the parameter.</p>
+         * <p>The list of parameters.</p>
          */
         @NameInMap("ParamValue")
         public java.util.List<DescribeDataSourceParametersResponseBodyDataParamValue> paramValue;
@@ -213,8 +225,10 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the parameter is required. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: required</li>
-         * <li><strong>0</strong>: optional</li>
+         * <li><p><strong>1</strong>: The parameter is required.</p>
+         * </li>
+         * <li><p><strong>0</strong>: The parameter is optional.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -224,7 +238,7 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
         public Integer required;
 
         /**
-         * <p>The note for the parameter value.</p>
+         * <p>The prompt for the parameter value.</p>
          * 
          * <strong>example:</strong>
          * <p>obs bucket name</p>

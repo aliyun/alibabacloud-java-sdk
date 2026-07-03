@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PostCustomizeRuleRequest extends TeaModel {
     /**
-     * <p>The risk type.</p>
+     * <p>The threat type.</p>
      * 
      * <strong>example:</strong>
      * <p>WEBSHELL</p>
@@ -14,7 +14,7 @@ public class PostCustomizeRuleRequest extends TeaModel {
     public String alertType;
 
     /**
-     * <p>The internal code of the risk type.</p>
+     * <p>The Medusa code of the threat type.</p>
      * 
      * <strong>example:</strong>
      * <p>${siem_rule_type_process_abnormal_command}</p>
@@ -23,7 +23,7 @@ public class PostCustomizeRuleRequest extends TeaModel {
     public String alertTypeMds;
 
     /**
-     * <p>att&amp;ck.</p>
+     * <p>The ATT\&amp;CK technique.</p>
      * 
      * <strong>example:</strong>
      * <p>T1595.002 Vulnerability Scanning</p>
@@ -32,7 +32,7 @@ public class PostCustomizeRuleRequest extends TeaModel {
     public String attCk;
 
     /**
-     * <p>The extended information about event generation. If eventTransferType is set to allToSingle, the value of this parameter indicates the length and unit of the alert aggregation window.</p>
+     * <p>The extended information for event generation. This parameter is returned only when EventTransferType is set to allToSingle. The value indicates the length and unit of the alert aggregation window.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;time&quot;:&quot;1&quot;,&quot;unit&quot;:&quot;MINUTE&quot;}</p>
@@ -41,10 +41,12 @@ public class PostCustomizeRuleRequest extends TeaModel {
     public String eventTransferExt;
 
     /**
-     * <p>Specifies whether to convert an alert to an event. Valid values:</p>
+     * <p>Specifies whether to convert alerts into events. Valid values:</p>
      * <ul>
-     * <li>0: no</li>
-     * <li>1: yes</li>
+     * <li><p>0: no</p>
+     * </li>
+     * <li><p>1: yes</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,9 +58,12 @@ public class PostCustomizeRuleRequest extends TeaModel {
     /**
      * <p>The event generation method. Valid values:</p>
      * <ul>
-     * <li>default: The default method is used.</li>
-     * <li>singleToSingle: The system generates an event for each alert.</li>
-     * <li>allToSingle: The system generates an event for alerts within a period of time.</li>
+     * <li><p>default: the default method</p>
+     * </li>
+     * <li><p>singleToSingle: An event is generated for each alert.</p>
+     * </li>
+     * <li><p>allToSingle: An event is generated for all alerts in a period.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,7 +73,7 @@ public class PostCustomizeRuleRequest extends TeaModel {
     public String eventTransferType;
 
     /**
-     * <p>The ID of the rule.</p>
+     * <p>The ID of the custom rule.</p>
      * 
      * <strong>example:</strong>
      * <p>123456789</p>
@@ -86,7 +91,7 @@ public class PostCustomizeRuleRequest extends TeaModel {
     public String logSource;
 
     /**
-     * <p>The internal code of the log source.</p>
+     * <p>The Medusa code of the log source.</p>
      * 
      * <strong>example:</strong>
      * <p>${sas.cloudsiem.prod.cloud_siem_aegis_sas_alert}</p>
@@ -104,7 +109,7 @@ public class PostCustomizeRuleRequest extends TeaModel {
     public String logType;
 
     /**
-     * <p>The internal code of the log type.</p>
+     * <p>The Medusa code of the log type.</p>
      * 
      * <strong>example:</strong>
      * <p>${security_event_config.event_name.webshellName_clientav}</p>
@@ -113,7 +118,7 @@ public class PostCustomizeRuleRequest extends TeaModel {
     public String logTypeMds;
 
     /**
-     * <p>The window length of the rule.</p>
+     * <p>The length of the rule window.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;time&quot;:&quot;1&quot;,&quot;unit&quot;:&quot;HOUR&quot;}</p>
@@ -122,10 +127,12 @@ public class PostCustomizeRuleRequest extends TeaModel {
     public String queryCycle;
 
     /**
-     * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+     * <p>The region where the data management center of Threat Analysis is located. Select the region where your assets are located. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Your assets reside in regions in China.</li>
-     * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+     * <li><p>cn-hangzhou: assets in the Chinese mainland and China (Hong Kong)</p>
+     * </li>
+     * <li><p>ap-southeast-1: assets outside China</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -135,7 +142,7 @@ public class PostCustomizeRuleRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the account that you switch from the management account.</p>
+     * <p>The user ID that is used to switch the administrator\&quot;s perspective to a member\&quot;s perspective.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
@@ -144,10 +151,12 @@ public class PostCustomizeRuleRequest extends TeaModel {
     public Long roleFor;
 
     /**
-     * <p>The type of the view. Valid values:</p>
+     * <p>The view type.</p>
      * <ul>
-     * <li>0: the current Alibaba Cloud account</li>
-     * <li>1: the global account</li>
+     * <li><p>0: the view of the current Alibaba Cloud account.</p>
+     * </li>
+     * <li><p>1: the view of all accounts that are managed by the administrator.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -157,7 +166,7 @@ public class PostCustomizeRuleRequest extends TeaModel {
     public Integer roleType;
 
     /**
-     * <p>The query condition of the rule. The value is in the JSON format.</p>
+     * <p>The query condition of the rule. The value is a JSON string.</p>
      * 
      * <strong>example:</strong>
      * <p>[[{&quot;not&quot;:false,&quot;left&quot;:&quot;alert_name&quot;,&quot;operator&quot;:&quot;=&quot;,&quot;right&quot;:&quot;WEBSHELL&quot;}]]</p>
@@ -175,7 +184,7 @@ public class PostCustomizeRuleRequest extends TeaModel {
     public String ruleDesc;
 
     /**
-     * <p>The log aggregation field of the rule. The value is a JSON string.</p>
+     * <p>The fields that are used to group logs. The value is a JSON array.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;asset_id&quot;]</p>
@@ -193,7 +202,7 @@ public class PostCustomizeRuleRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The threshold configuration of the rule. The value is in the JSON format.</p>
+     * <p>The threshold configuration of the rule. The value is a JSON string.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;aggregateFunction&quot;:&quot;count&quot;,&quot;aggregateFunctionName&quot;:&quot;count&quot;,&quot;field&quot;:&quot;activity_name&quot;,&quot;operator&quot;:&quot;&lt;=&quot;,&quot;value&quot;:1}</p>
@@ -202,11 +211,14 @@ public class PostCustomizeRuleRequest extends TeaModel {
     public String ruleThreshold;
 
     /**
-     * <p>The risk level. Valid values:</p>
+     * <p>The threat level. Valid values:</p>
      * <ul>
-     * <li>serious: high</li>
-     * <li>suspicious: medium</li>
-     * <li>remind: low</li>
+     * <li><p>serious: high</p>
+     * </li>
+     * <li><p>suspicious: medium</p>
+     * </li>
+     * <li><p>remind: low</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

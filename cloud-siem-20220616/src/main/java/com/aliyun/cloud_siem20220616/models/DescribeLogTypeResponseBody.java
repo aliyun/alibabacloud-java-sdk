@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLogTypeResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class DescribeLogTypeResponseBody extends TeaModel {
     public java.util.List<DescribeLogTypeResponseBodyData> data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -43,8 +43,10 @@ public class DescribeLogTypeResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,7 +102,7 @@ public class DescribeLogTypeResponseBody extends TeaModel {
 
     public static class DescribeLogTypeResponseBodyData extends TeaModel {
         /**
-         * <p>The log type of the rule.</p>
+         * <p>The log type for the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP_ACTIVITY</p>
@@ -109,7 +111,7 @@ public class DescribeLogTypeResponseBody extends TeaModel {
         public String logType;
 
         /**
-         * <p>The internal code of the log type.</p>
+         * <p>The code for the log type name.</p>
          * 
          * <strong>example:</strong>
          * <p>sas.cloudsiem.prod.http_activity</p>

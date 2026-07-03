@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PostRuleStatusChangeRequest extends TeaModel {
     /**
-     * <p>The rule IDs. The value is a JSON array.</p>
+     * <p>A JSON array of rule IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>[123,345]</p>
@@ -14,10 +14,12 @@ public class PostRuleStatusChangeRequest extends TeaModel {
     public String ids;
 
     /**
-     * <p>Specifies whether to enable the rule. Valid values:</p>
+     * <p>The status of the rule. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: enabled</p>
+     * </li>
+     * <li><p>false: disabled</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,10 +29,12 @@ public class PostRuleStatusChangeRequest extends TeaModel {
     public Boolean inUse;
 
     /**
-     * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+     * <p>The region where the Data Management center of threat analysis is located. Select a region based on the location of your assets. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Your assets reside in regions in China.</li>
-     * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+     * <li><p>cn-hangzhou: Your assets are in the Chinese mainland or China (Hong Kong).</p>
+     * </li>
+     * <li><p>ap-southeast-1: Your assets are in a region outside China.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,7 +44,7 @@ public class PostRuleStatusChangeRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the account that you switch from the management account.</p>
+     * <p>The user ID of a member. An administrator can specify this parameter to switch to the perspective of the member.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
@@ -49,10 +53,12 @@ public class PostRuleStatusChangeRequest extends TeaModel {
     public Long roleFor;
 
     /**
-     * <p>The type of the view. Valid values:</p>
+     * <p>The type of the view.</p>
      * <ul>
-     * <li>0: the current Alibaba Cloud account</li>
-     * <li>1: the global account</li>
+     * <li><p>0: the view of the current Alibaba Cloud account.</p>
+     * </li>
+     * <li><p>1: the view of all accounts that belong to the enterprise.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -64,8 +70,10 @@ public class PostRuleStatusChangeRequest extends TeaModel {
     /**
      * <p>The type of the rule. Valid values:</p>
      * <ul>
-     * <li>predefine</li>
-     * <li>customize</li>
+     * <li><p>predefine: predefined rule</p>
+     * </li>
+     * <li><p>customize: custom rule</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -43,8 +43,10 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,7 +102,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
 
     public static class DescribeCloudSiemAssetsResponseBodyDataPageInfo extends TeaModel {
         /**
-         * <p>The current page number.</p>
+         * <p>The page number of the returned page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -109,7 +111,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -118,7 +120,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -159,7 +161,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
 
     public static class DescribeCloudSiemAssetsResponseBodyDataResponseDataAssetInfo extends TeaModel {
         /**
-         * <p>The attribute key.</p>
+         * <p>The key of the alert property.</p>
          * 
          * <strong>example:</strong>
          * <p>suspicious.wbd.wb.trojanpath</p>
@@ -168,7 +170,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The name of the key.</p>
+         * <p>The name of the alert property.</p>
          * 
          * <strong>example:</strong>
          * <p>Trojan Path</p>
@@ -177,7 +179,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
         public String keyName;
 
         /**
-         * <p>The value of the key.</p>
+         * <p>The value of the alert property.</p>
          * 
          * <strong>example:</strong>
          * <p>/root/test33.php</p>
@@ -218,7 +220,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
 
     public static class DescribeCloudSiemAssetsResponseBodyDataResponseData extends TeaModel {
         /**
-         * <p>The UUID of the alert associated with the event.</p>
+         * <p>The UUID of the alert that is associated with the event.</p>
          * 
          * <strong>example:</strong>
          * <p>sas_71e24437d2797ce8fc59692905a4****</p>
@@ -227,7 +229,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
         public String alertUuid;
 
         /**
-         * <p>The ID of the Alibaba Cloud account in SIEM.</p>
+         * <p>The ID of the Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>1276085894174392</p>
@@ -245,7 +247,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
         public String assetId;
 
         /**
-         * <p>The display information of the asset is in the JSON format.</p>
+         * <p>The asset information, in a JSON array.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;KeyName&quot;: &quot;${aliyun.siem.asset.asset_name}&quot;,&quot;Values&quot;: &quot;zsw-agentless-ubuntu20&quot;,&quot;Key&quot;: &quot;asset_name&quot;}]</p>
@@ -254,7 +256,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
         public java.util.List<DescribeCloudSiemAssetsResponseBodyDataResponseDataAssetInfo> assetInfo;
 
         /**
-         * <p>The name of the asset.</p>
+         * <p>The asset name.</p>
          * 
          * <strong>example:</strong>
          * <p>zsw-agentless-centos****</p>
@@ -263,14 +265,20 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
         public String assetName;
 
         /**
-         * <p>The type of the asset. Valid values:</p>
+         * <p>The asset type. Valid values:</p>
          * <ul>
-         * <li>ip</li>
-         * <li>domain</li>
-         * <li>url</li>
-         * <li>process</li>
-         * <li>file</li>
-         * <li>host</li>
+         * <li><p>ip: IP address</p>
+         * </li>
+         * <li><p>domain: domain name</p>
+         * </li>
+         * <li><p>url: URL</p>
+         * </li>
+         * <li><p>process: process</p>
+         * </li>
+         * <li><p>file: file</p>
+         * </li>
+         * <li><p>host: host</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -280,11 +288,14 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
         public String assetType;
 
         /**
-         * <p>The cloud code of the entity. Valid values:</p>
+         * <p>The cloud service provider of the entity. Valid values:</p>
          * <ul>
-         * <li>aliyun: Alibaba Cloud</li>
-         * <li>qcloud: Tencent Cloud</li>
-         * <li>hcloud: Huawei Cloud</li>
+         * <li><p>aliyun: Alibaba Cloud</p>
+         * </li>
+         * <li><p>qcloud: Tencent Cloud</p>
+         * </li>
+         * <li><p>hcloud: Huawei Cloud</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -312,7 +323,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The ID of the asset.</p>
+         * <p>The asset ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -330,7 +341,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
         public String incidentUuid;
 
         /**
-         * <p>The ID of the associated account to which the asset belongs.</p>
+         * <p>The ID of the linked account.</p>
          * 
          * <strong>example:</strong>
          * <p>176555323***</p>

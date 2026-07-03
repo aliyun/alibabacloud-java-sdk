@@ -5,13 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDataSourceParametersRequest extends TeaModel {
     /**
-     * <p>The code of the cloud service provider.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>qcloud</li>
-     * <li>hcloud</li>
-     * <li>aliyun</li>
-     * </ul>
+     * <p>The code for the multicloud environment.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,9 +17,12 @@ public class DescribeDataSourceParametersRequest extends TeaModel {
     /**
      * <p>The type of the data source. Valid values:</p>
      * <ul>
-     * <li><strong>ckafka</strong>: Tencent Cloud TDMQ for CKafka</li>
-     * <li><strong>obs</strong>: Huawei Cloud Object Storage Service (OBS)</li>
-     * <li><strong>wafApi</strong>: download API of Tencent Cloud Web Application Firewall (WAF)</li>
+     * <li><p><strong>ckafka</strong>: Tencent Cloud CKafka.</p>
+     * </li>
+     * <li><p><strong>obs</strong>: Huawei Cloud OBS.</p>
+     * </li>
+     * <li><p><strong>wafApi</strong>: Tencent Cloud WAF attack log download API.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -36,10 +33,12 @@ public class DescribeDataSourceParametersRequest extends TeaModel {
     public String dataSourceType;
 
     /**
-     * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+     * <p>The region where the Data Management center for threat analysis is deployed. Select a region based on the region where your assets are located. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Your assets reside in regions in China.</li>
-     * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+     * <li><p>cn-hangzhou: Your assets are in the Chinese mainland or China (Hong Kong).</p>
+     * </li>
+     * <li><p>ap-southeast-1: Your assets are outside China.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

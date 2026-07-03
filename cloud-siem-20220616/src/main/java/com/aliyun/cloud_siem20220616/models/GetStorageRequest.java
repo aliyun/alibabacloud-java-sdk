@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetStorageRequest extends TeaModel {
     /**
-     * <p>The data management center of the threat analysis feature. Specify this parameter based on the region where your assets reside. Valid values:</p>
+     * <p>The region where the Data Management hub for threat analysis is located. Select a region for the management hub based on the region of your assets. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Your assets reside in regions in China.</li>
-     * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+     * <li><p>cn-hangzhou: Select this value if your assets are in the Chinese mainland or the China (Hong Kong) region.</p>
+     * </li>
+     * <li><p>ap-southeast-1: Select this value if your assets are in a region outside China.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class GetStorageRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the account that you switch from the management account.</p>
+     * <p>The user ID of the member. This parameter is used by an administrator to switch to the perspective of a member.</p>
      * 
      * <strong>example:</strong>
      * <p>127XXXX</p>
@@ -29,8 +31,10 @@ public class GetStorageRequest extends TeaModel {
     /**
      * <p>The type of the view. Valid values:</p>
      * <ul>
-     * <li>0: the current Alibaba Cloud account</li>
-     * <li>1: the global account</li>
+     * <li><p>0: The view of the current Alibaba Cloud account.</p>
+     * </li>
+     * <li><p>1: The view of all accounts that belong to the enterprise.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

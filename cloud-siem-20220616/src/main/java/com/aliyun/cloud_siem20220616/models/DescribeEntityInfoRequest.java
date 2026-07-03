@@ -14,7 +14,7 @@ public class DescribeEntityInfoRequest extends TeaModel {
     public Long entityId;
 
     /**
-     * <p>The feature value of the entity. Fuzzy match is supported.</p>
+     * <p>The feature value of the entity. You can perform a fuzzy search for the entity.</p>
      * 
      * <strong>example:</strong>
      * <p>test22.php</p>
@@ -23,7 +23,7 @@ public class DescribeEntityInfoRequest extends TeaModel {
     public String entityIdentity;
 
     /**
-     * <p>The UUID of the event.</p>
+     * <p>The globally unique UUID of the event.</p>
      * 
      * <strong>example:</strong>
      * <p>85ea4241-798f-4684-a876-65d4f0c3****</p>
@@ -32,10 +32,12 @@ public class DescribeEntityInfoRequest extends TeaModel {
     public String incidentUuid;
 
     /**
-     * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+     * <p>The region of the Data Management center. Select a region based on the region where your assets are located. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Your assets reside in regions in China.</li>
-     * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+     * <li><p>cn-hangzhou: Your assets are in the Chinese mainland or China (Hong Kong).</p>
+     * </li>
+     * <li><p>ap-southeast-1: Your assets are in a region outside China.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,7 +47,7 @@ public class DescribeEntityInfoRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the account that you switch from the management account.</p>
+     * <p>The user ID of the member. The administrator can use this ID to switch to the view of this member.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
@@ -54,10 +56,12 @@ public class DescribeEntityInfoRequest extends TeaModel {
     public Long roleFor;
 
     /**
-     * <p>The type of the view. Valid values:</p>
+     * <p>The view type.</p>
      * <ul>
-     * <li>0: the current Alibaba Cloud account</li>
-     * <li>1: the global account</li>
+     * <li><p>0: the view of the current Alibaba Cloud account.</p>
+     * </li>
+     * <li><p>1: the view of all accounts that belong to the enterprise.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,7 +71,7 @@ public class DescribeEntityInfoRequest extends TeaModel {
     public Integer roleType;
 
     /**
-     * <p>The ID of the SOAR handling policy.</p>
+     * <p>The ID of the SOAR response policy.</p>
      * 
      * <strong>example:</strong>
      * <p>577bbf90-a770-44a7-8154-586aa2d318fa</p>

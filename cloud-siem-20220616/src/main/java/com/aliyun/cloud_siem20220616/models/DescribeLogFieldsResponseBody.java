@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLogFieldsResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The request status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class DescribeLogFieldsResponseBody extends TeaModel {
     public java.util.List<DescribeLogFieldsResponseBodyData> data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -43,8 +43,10 @@ public class DescribeLogFieldsResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,7 +102,7 @@ public class DescribeLogFieldsResponseBody extends TeaModel {
 
     public static class DescribeLogFieldsResponseBodyData extends TeaModel {
         /**
-         * <p>The type of the log to which the field belongs.</p>
+         * <p>The log type to which the field belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP_ACTIVITY</p>
@@ -109,7 +111,7 @@ public class DescribeLogFieldsResponseBody extends TeaModel {
         public String activityName;
 
         /**
-         * <p>The internal code of the field description.</p>
+         * <p>The Medusa code for the field description.</p>
          * 
          * <strong>example:</strong>
          * <p>sas.cloudsiem.prod.activity_name</p>
@@ -118,7 +120,7 @@ public class DescribeLogFieldsResponseBody extends TeaModel {
         public String fieldDesc;
 
         /**
-         * <p>The name of the field.</p>
+         * <p>The name of the rule field.</p>
          * 
          * <strong>example:</strong>
          * <p>activity_name</p>
@@ -129,8 +131,10 @@ public class DescribeLogFieldsResponseBody extends TeaModel {
         /**
          * <p>The data type of the field. Valid values:</p>
          * <ul>
-         * <li>varchar</li>
-         * <li>bigint</li>
+         * <li><p>varchar: string</p>
+         * </li>
+         * <li><p>bigint: number</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

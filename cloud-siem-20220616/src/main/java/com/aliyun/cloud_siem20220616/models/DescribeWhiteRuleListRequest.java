@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeWhiteRuleListRequest extends TeaModel {
     /**
-     * <p>The name of the alert.</p>
+     * <p>The alert name.</p>
      * 
      * <strong>example:</strong>
      * <p>Try SNMP weak password</p>
@@ -14,7 +14,7 @@ public class DescribeWhiteRuleListRequest extends TeaModel {
     public String alertName;
 
     /**
-     * <p>The type of the alert.</p>
+     * <p>The alert type.</p>
      * 
      * <strong>example:</strong>
      * <p>scan</p>
@@ -23,7 +23,7 @@ public class DescribeWhiteRuleListRequest extends TeaModel {
     public String alertType;
 
     /**
-     * <p>The page number. Pages start from page 1.</p>
+     * <p>The page number. The value must be greater than or equal to 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class DescribeWhiteRuleListRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The UUID of the event.</p>
+     * <p>The universally unique identifier (UUID) of the event.</p>
      * 
      * <strong>example:</strong>
      * <p>85ea4241-798f-4684-a876-65d4f0c3****</p>
@@ -42,7 +42,7 @@ public class DescribeWhiteRuleListRequest extends TeaModel {
     public String incidentUuid;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100.</p>
+     * <p>The number of entries per page. The maximum value is 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,10 +52,12 @@ public class DescribeWhiteRuleListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+     * <p>The region where the data management center of Threat Analysis is deployed. You must select the region where your assets are located. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Your assets reside in regions in China.</li>
-     * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+     * <li><p>cn-hangzhou: Your assets are deployed in the Chinese mainland or in the China (Hong Kong) region.</p>
+     * </li>
+     * <li><p>ap-southeast-1: Your assets are deployed in regions outside the Chinese mainland.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,7 +67,7 @@ public class DescribeWhiteRuleListRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the account that you switch from the management account.</p>
+     * <p>The ID of the member. This parameter is used in a multi-account management scenario. An administrator can specify this parameter to query the data of a member.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
@@ -74,10 +76,12 @@ public class DescribeWhiteRuleListRequest extends TeaModel {
     public Long roleFor;
 
     /**
-     * <p>The type of the view. Valid values:</p>
+     * <p>The view type.</p>
      * <ul>
-     * <li>0: the current Alibaba Cloud account</li>
-     * <li>1: the global account</li>
+     * <li><p>0: the view of the current Alibaba Cloud account.</p>
+     * </li>
+     * <li><p>1: the view of all accounts that are managed by the administrator account.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

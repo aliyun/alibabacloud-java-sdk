@@ -11,7 +11,7 @@ public class DescribeProdCountResponseBody extends TeaModel {
     public DescribeProdCountResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
@@ -41,11 +41,17 @@ public class DescribeProdCountResponseBody extends TeaModel {
     }
 
     public static class DescribeProdCountResponseBodyData extends TeaModel {
+        /**
+         * <p>The number of automatically connected Alibaba Cloud products.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("AliyunImportedCount")
         public Integer aliyunImportedCount;
 
         /**
-         * <p>The number of Alibaba Cloud services.</p>
+         * <p>The number of Alibaba Cloud products.</p>
          * 
          * <strong>example:</strong>
          * <p>19</p>
@@ -53,11 +59,17 @@ public class DescribeProdCountResponseBody extends TeaModel {
         @NameInMap("AliyunProdCount")
         public Integer aliyunProdCount;
 
+        /**
+         * <p>The number of automatically connected Huawei Cloud products.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("HcloudImportedCount")
         public Integer hcloudImportedCount;
 
         /**
-         * <p>The number of Huawei Cloud services.</p>
+         * <p>The number of Huawei Cloud products.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -65,21 +77,35 @@ public class DescribeProdCountResponseBody extends TeaModel {
         @NameInMap("HcloudProdCount")
         public Integer hcloudProdCount;
 
+        /**
+         * <p>The number of automatically connected IDC products.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("IdcImportedCount")
         public Integer idcImportedCount;
 
         /**
+         * <p>The number of IDC products.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
         @NameInMap("IdcProdCount")
         public Integer idcProdCount;
 
+        /**
+         * <p>The number of automatically connected Tencent Cloud products.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("QcloudImportedCount")
         public Integer qcloudImportedCount;
 
         /**
-         * <p>The number of Tencent Cloud services.</p>
+         * <p>The number of Tencent Cloud products.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

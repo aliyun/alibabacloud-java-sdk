@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDisposeStrategyPlaybookResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code that is returned.</p>
+     * <p>The status code of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -43,8 +43,10 @@ public class DescribeDisposeStrategyPlaybookResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,7 +102,7 @@ public class DescribeDisposeStrategyPlaybookResponseBody extends TeaModel {
 
     public static class DescribeDisposeStrategyPlaybookResponseBodyData extends TeaModel {
         /**
-         * <p>The playbook name, which is the unique identifier of the playbook.</p>
+         * <p>The unique name of the playbook.</p>
          * 
          * <strong>example:</strong>
          * <p>WafBlockIP</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeScopeUsersResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code that is returned.</p>
+     * <p>The status code of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
     public java.util.List<DescribeScopeUsersResponseBodyData> data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -43,8 +43,10 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,7 +102,7 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
 
     public static class DescribeScopeUsersResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the security information and event management (SIEM) user.</p>
+         * <p>The user ID in Security Information and Event Management (SIEM).</p>
          * 
          * <strong>example:</strong>
          * <p>123456789****</p>
@@ -109,10 +111,12 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
         public Long aliUid;
 
         /**
-         * <p>云code。  取值：</p>
+         * <p>The cloud code. Valid values:</p>
          * <ul>
-         * <li>qcloud：腾讯云</li>
-         * <li>hcloud：华为云</li>
+         * <li><p>qcloud: Tencent Cloud</p>
+         * </li>
+         * <li><p>hcloud: Huawei Cloud</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -122,7 +126,7 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
         public String cloudCode;
 
         /**
-         * <p>An array consisting of the domain names that are protected by the WAF instance.</p>
+         * <p>The list of domain names protected by the WAF instance.</p>
          * 
          * <strong>example:</strong>
          * <p>[123.com, 456.com]</p>
@@ -140,7 +144,7 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>多云用户ID。</p>
+         * <p>The multicloud user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123456789****</p>

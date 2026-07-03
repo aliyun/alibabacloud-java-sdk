@@ -42,7 +42,7 @@ public class DeleteBindAccountResponseBody extends TeaModel {
 
     public static class DeleteBindAccountResponseBodyData extends TeaModel {
         /**
-         * <p>The number of cloud accounts that are removed. The value 1 indicates that cloud account is removed, and a value less than or equal to 0 indicates that the cloud account failed to be removed.</p>
+         * <p>The number of account bindings that are deleted. A value of 1 indicates that the operation was successful. A value of 0 or less indicates that the operation failed.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

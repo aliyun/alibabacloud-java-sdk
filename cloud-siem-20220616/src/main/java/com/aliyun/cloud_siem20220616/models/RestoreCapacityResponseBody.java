@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class RestoreCapacityResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the release command has been sent. Valid values:</p>
+     * <p>Indicates whether the delete command was sent. Valid values:</p>
      * <ul>
-     * <li>true: The command has been sent and the storage space is being released.</li>
-     * <li>false: The command failed to be sent.</li>
+     * <li><p>true: The delete command was sent and the cleanup is in progress.</p>
+     * </li>
+     * <li><p>false: The command failed to send.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class RestoreCapacityResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6276D891-58D4-55B2-87B9-74D413F7****</p>
