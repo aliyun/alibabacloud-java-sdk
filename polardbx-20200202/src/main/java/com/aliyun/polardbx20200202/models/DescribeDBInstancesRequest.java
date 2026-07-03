@@ -44,7 +44,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values:</p>
+     * <p>The page size. Valid values:</p>
      * <ul>
      * <li>30</li>
      * <li>50</li>

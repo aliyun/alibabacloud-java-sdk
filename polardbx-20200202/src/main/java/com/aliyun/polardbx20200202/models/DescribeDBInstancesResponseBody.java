@@ -237,17 +237,17 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * <p>The CN node specifications. Valid values:</p>
          * <ul>
-         * <li><strong>polarx.x4.medium.2e</strong>: 2 cores, 8 GB memory</li>
-         * <li><strong>polarx.x4.large.2e</strong>: 4 cores, 16 GB memory</li>
-         * <li><strong>polarx.x8.large.2e</strong>: 4 cores, 32 GB memory</li>
-         * <li><strong>polarx.x4.xlarge.2e</strong>: 8 cores, 32 GB memory</li>
-         * <li><strong>polarx.x8.xlarge.2e</strong>: 8 cores, 64 GB memory</li>
-         * <li><strong>polarx.x4.2xlarge.2e</strong>: 16 cores, 64 GB memory</li>
-         * <li><strong>polarx.x8.2xlarge.2e</strong>: 16 cores, 128 GB memory</li>
-         * <li><strong>polarx.x4.4xlarge.2e</strong>: 32 cores, 128 GB memory</li>
-         * <li><strong>polarx.x8.4xlarge.2e</strong>: 32 cores, 256 GB memory</li>
-         * <li><strong>polarx.st.8xlarge.2e</strong>: 60 cores, 470 GB memory</li>
-         * <li><strong>polarx.st.12xlarge.2e</strong>: 90 cores, 720 GB memory.</li>
+         * <li><strong>polarx.x4.medium.2e</strong>: 2 cores, 8 GB</li>
+         * <li><strong>polarx.x4.large.2e</strong>: 4 cores, 16 GB</li>
+         * <li><strong>polarx.x8.large.2e</strong>: 4 cores, 32 GB</li>
+         * <li><strong>polarx.x4.xlarge.2e</strong>: 8 cores, 32 GB</li>
+         * <li><strong>polarx.x8.xlarge.2e</strong>: 8 cores, 64 GB</li>
+         * <li><strong>polarx.x4.2xlarge.2e</strong>: 16 cores, 64 GB</li>
+         * <li><strong>polarx.x8.2xlarge.2e</strong>: 16 cores, 128 GB</li>
+         * <li><strong>polarx.x4.4xlarge.2e</strong>: 32 cores, 128 GB</li>
+         * <li><strong>polarx.x8.4xlarge.2e</strong>: 32 cores, 256 GB</li>
+         * <li><strong>polarx.st.8xlarge.2e</strong>: 60 cores, 470 GB</li>
+         * <li><strong>polarx.st.12xlarge.2e</strong>: 90 cores, 720 GB.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -315,7 +315,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The name of the database instance.</p>
+         * <p>The database instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>pxc-xxxxx</p>
@@ -353,21 +353,21 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * <p>The DN node specifications. Valid values:</p>
          * <ul>
-         * <li><strong>mysql.n2.medium.25</strong>: 2 cores, 4 GB memory</li>
-         * <li><strong>mysql.n4.medium.25</strong>: 2 cores, 8 GB memory</li>
-         * <li><strong>mysql.x8.medium.25</strong>: 2 cores, 16 GB memory</li>
-         * <li><strong>mysql.n2.large.25</strong>: 4 cores, 8 GB memory</li>
-         * <li><strong>mysql.n4.large.25</strong>: 4 cores, 16 GB memory</li>
-         * <li><strong>mysql.x8.large.25</strong>: 4 cores, 32 GB memory</li>
-         * <li><strong>mysql.n2.xlarge.25</strong>: 8 cores, 16 GB memory</li>
-         * <li><strong>mysql.n4.xlarge.25</strong>: 8 cores, 32 GB memory</li>
-         * <li><strong>mysql.x8.xlarge.25</strong>: 8 cores, 64 GB memory</li>
-         * <li><strong>mysql.n4.2xlarge.25</strong>: 16 cores, 64 GB memory</li>
-         * <li><strong>mysql.x8.2xlarge.25</strong>: 16 cores, 128 GB memory</li>
-         * <li><strong>mysql.x4.4xlarge.25</strong>: 32 cores, 128 GB memory</li>
-         * <li><strong>mysql.x8.4xlarge.25</strong>: 32 cores, 256 GB memory</li>
-         * <li><strong>mysql.st.8xlarge.25</strong>: 60 cores, 470 GB memory</li>
-         * <li><strong>mysql.st.12xlarge.25</strong>: 90 cores, 720 GB memory.</li>
+         * <li><strong>mysql.n2.medium.25</strong>: 2 cores, 4 GB</li>
+         * <li><strong>mysql.n4.medium.25</strong>: 2 cores, 8 GB</li>
+         * <li><strong>mysql.x8.medium.25</strong>: 2 cores, 16 GB</li>
+         * <li><strong>mysql.n2.large.25</strong>: 4 cores, 8 GB</li>
+         * <li><strong>mysql.n4.large.25</strong>: 4 cores, 16 GB</li>
+         * <li><strong>mysql.x8.large.25</strong>: 4 cores, 32 GB</li>
+         * <li><strong>mysql.n2.xlarge.25</strong>: 8 cores, 16 GB</li>
+         * <li><strong>mysql.n4.xlarge.25</strong>: 8 cores, 32 GB</li>
+         * <li><strong>mysql.x8.xlarge.25</strong>: 8 cores, 64 GB</li>
+         * <li><strong>mysql.n4.2xlarge.25</strong>: 16 cores, 64 GB</li>
+         * <li><strong>mysql.x8.2xlarge.25</strong>: 16 cores, 128 GB</li>
+         * <li><strong>mysql.x4.4xlarge.25</strong>: 32 cores, 128 GB</li>
+         * <li><strong>mysql.x8.4xlarge.25</strong>: 32 cores, 256 GB</li>
+         * <li><strong>mysql.st.8xlarge.25</strong>: 60 cores, 470 GB</li>
+         * <li><strong>mysql.st.12xlarge.25</strong>: 90 cores, 720 GB.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -434,7 +434,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String lockMode;
 
         /**
-         * <p>The reason why the instance is locked.</p>
+         * <p>The lock reason.</p>
          * 
          * <strong>example:</strong>
          * <p>欠费</p>

@@ -4,10 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class CreateSubCNInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public CreateSubCNInstanceResponseBodyData data;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>D6A4256F-7B83-5BD7-9AC0-72E1FAC05330</p>
      */
@@ -37,6 +42,8 @@ public class CreateSubCNInstanceResponseBody extends TeaModel {
 
     public static class CreateSubCNInstanceResponseBodyData extends TeaModel {
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2209883</p>
          */

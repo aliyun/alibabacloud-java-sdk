@@ -536,6 +536,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Performs a service health check.</p>
+     * 
+     * @param request CheckHealthRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CheckHealthResponse
+     */
+    public CheckHealthResponse checkHealthWithOptions(CheckHealthRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CheckHealth"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckHealthResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Performs a service health check.</p>
+     * 
+     * @param request CheckHealthRequest
+     * @return CheckHealthResponse
+     */
+    public CheckHealthResponse checkHealth(CheckHealthRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.checkHealthWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <ul>
@@ -1581,6 +1618,108 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <hr>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a Supabase instance.</p>
+     * 
+     * @param request CreatePolardbxSupabaseInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreatePolardbxSupabaseInstanceResponse
+     */
+    public CreatePolardbxSupabaseInstanceResponse createPolardbxSupabaseInstanceWithOptions(CreatePolardbxSupabaseInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
+            query.put("AutoRenew", request.autoRenew);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dashboardPassword)) {
+            query.put("DashboardPassword", request.dashboardPassword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dbInstanceDescription)) {
+            query.put("DbInstanceDescription", request.dbInstanceDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dbPassword)) {
+            query.put("DbPassword", request.dbPassword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.payType)) {
+            query.put("PayType", request.payType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            query.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantMode)) {
+            query.put("TenantMode", request.tenantMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.usedTime)) {
+            query.put("UsedTime", request.usedTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
+            query.put("VSwitchId", request.vSwitchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("VpcId", request.vpcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
+            query.put("ZoneId", request.zoneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreatePolardbxSupabaseInstance"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePolardbxSupabaseInstanceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a Supabase instance.</p>
+     * 
+     * @param request CreatePolardbxSupabaseInstanceRequest
+     * @return CreatePolardbxSupabaseInstanceResponse
+     */
+    public CreatePolardbxSupabaseInstanceResponse createPolardbxSupabaseInstance(CreatePolardbxSupabaseInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createPolardbxSupabaseInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>During the data synchronization phase, proactively initiates a diagnostic task for the replication task to check for issues such as latency, replication interruption, or data inconsistency.</p>
      * 
      * <b>summary</b> : 
@@ -1872,7 +2011,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>创建自定义地址</p>
+     * <p>Creates a custom endpoint.</p>
      * 
      * @param request CreateSubCNInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1919,7 +2058,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>创建自定义地址</p>
+     * <p>Creates a custom endpoint.</p>
      * 
      * @param request CreateSubCNInstanceRequest
      * @return CreateSubCNInstanceResponse
@@ -1927,6 +2066,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateSubCNInstanceResponse createSubCNInstance(CreateSubCNInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createSubCNInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables the public endpoint for a Supabase instance.</p>
+     * 
+     * @param request CreateSupabaseNetTypeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateSupabaseNetTypeResponse
+     */
+    public CreateSupabaseNetTypeResponse createSupabaseNetTypeWithOptions(CreateSupabaseNetTypeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.connectionString)) {
+            query.put("ConnectionString", request.connectionString);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateSupabaseNetType"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSupabaseNetTypeResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables the public endpoint for a Supabase instance.</p>
+     * 
+     * @param request CreateSupabaseNetTypeRequest
+     * @return CreateSupabaseNetTypeResponse
+     */
+    public CreateSupabaseNetTypeResponse createSupabaseNetType(CreateSupabaseNetTypeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createSupabaseNetTypeWithOptions(request, runtime);
     }
 
     /**
@@ -2420,6 +2617,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
+     * <p>Deletes a Supabase instance.</p>
+     * 
+     * @param request DeletePolardbxSupabaseInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeletePolardbxSupabaseInstanceResponse
+     */
+    public DeletePolardbxSupabaseInstanceResponse deletePolardbxSupabaseInstanceWithOptions(DeletePolardbxSupabaseInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeletePolardbxSupabaseInstance"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeletePolardbxSupabaseInstanceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a Supabase instance.</p>
+     * 
+     * @param request DeletePolardbxSupabaseInstanceRequest
+     * @return DeletePolardbxSupabaseInstanceResponse
+     */
+    public DeletePolardbxSupabaseInstanceResponse deletePolardbxSupabaseInstance(DeletePolardbxSupabaseInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deletePolardbxSupabaseInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * <b>summary</b> : 
      * <p>删除自定义地址</p>
      * 
      * @param request DeleteSubCNInstanceRequest
@@ -2471,6 +2722,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteSubCNInstanceResponse deleteSubCNInstance(DeleteSubCNInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteSubCNInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * <b>summary</b> : 
+     * <p>Releases the public endpoint of a Supabase instance.</p>
+     * 
+     * @param request DeleteSupabaseNetTypeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteSupabaseNetTypeResponse
+     */
+    public DeleteSupabaseNetTypeResponse deleteSupabaseNetTypeWithOptions(DeleteSupabaseNetTypeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteSupabaseNetType"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSupabaseNetTypeResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * <b>summary</b> : 
+     * <p>Releases the public endpoint of a Supabase instance.</p>
+     * 
+     * @param request DeleteSupabaseNetTypeRequest
+     * @return DeleteSupabaseNetTypeResponse
+     */
+    public DeleteSupabaseNetTypeResponse deleteSupabaseNetType(DeleteSupabaseNetTypeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteSupabaseNetTypeWithOptions(request, runtime);
     }
 
     /**
@@ -5617,6 +5922,262 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Binary log files are retained for 15 days by default.</li>
+     * <li>The returned log list includes all logs whose log record end time is later than the query start time and whose log record start time is earlier than the query end time.</li>
+     * <li>If DownloadLink is not NULL, you can use this URL to download the backup file. The URL is valid for 2 days after it is generated. Download the file before the URL expires.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the Supabase API key.</p>
+     * 
+     * @param request DescribeSupabaseApiKeyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSupabaseApiKeyResponse
+     */
+    public DescribeSupabaseApiKeyResponse describeSupabaseApiKeyWithOptions(DescribeSupabaseApiKeyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeSupabaseApiKey"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSupabaseApiKeyResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Binary log files are retained for 15 days by default.</li>
+     * <li>The returned log list includes all logs whose log record end time is later than the query start time and whose log record start time is earlier than the query end time.</li>
+     * <li>If DownloadLink is not NULL, you can use this URL to download the backup file. The URL is valid for 2 days after it is generated. Download the file before the URL expires.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the Supabase API key.</p>
+     * 
+     * @param request DescribeSupabaseApiKeyRequest
+     * @return DescribeSupabaseApiKeyResponse
+     */
+    public DescribeSupabaseApiKeyResponse describeSupabaseApiKey(DescribeSupabaseApiKeyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeSupabaseApiKeyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a Supabase instance.</p>
+     * 
+     * @param request DescribeSupabaseInstanceAttributeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSupabaseInstanceAttributeResponse
+     */
+    public DescribeSupabaseInstanceAttributeResponse describeSupabaseInstanceAttributeWithOptions(DescribeSupabaseInstanceAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeSupabaseInstanceAttribute"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSupabaseInstanceAttributeResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a Supabase instance.</p>
+     * 
+     * @param request DescribeSupabaseInstanceAttributeRequest
+     * @return DescribeSupabaseInstanceAttributeResponse
+     */
+    public DescribeSupabaseInstanceAttributeResponse describeSupabaseInstanceAttribute(DescribeSupabaseInstanceAttributeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeSupabaseInstanceAttributeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the list of custom endpoints configured by the user for managing and viewing private connection or VPC endpoint service settings.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of Supabase instances.</p>
+     * 
+     * @param request DescribeSupabaseInstancesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSupabaseInstancesResponse
+     */
+    public DescribeSupabaseInstancesResponse describeSupabaseInstancesWithOptions(DescribeSupabaseInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeSupabaseInstances"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSupabaseInstancesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the list of custom endpoints configured by the user for managing and viewing private connection or VPC endpoint service settings.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of Supabase instances.</p>
+     * 
+     * @param request DescribeSupabaseInstancesRequest
+     * @return DescribeSupabaseInstancesResponse
+     */
+    public DescribeSupabaseInstancesResponse describeSupabaseInstances(DescribeSupabaseInstancesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeSupabaseInstancesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Binary log files are retained for 15 days by default.</li>
+     * <li>The returned log list includes all logs whose log record end time is later than the specified query start time and whose log record start time is earlier than the specified query end time.</li>
+     * <li>If DownloadLink is not NULL, you can use this URL to download the backup file. The URL is valid for 2 days after it is generated. Download the file before the URL expires.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the IP whitelist of a Supabase instance.</p>
+     * 
+     * @param request DescribeSupabaseIpWhitelistRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSupabaseIpWhitelistResponse
+     */
+    public DescribeSupabaseIpWhitelistResponse describeSupabaseIpWhitelistWithOptions(DescribeSupabaseIpWhitelistRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupName)) {
+            query.put("GroupName", request.groupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeSupabaseIpWhitelist"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSupabaseIpWhitelistResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Binary log files are retained for 15 days by default.</li>
+     * <li>The returned log list includes all logs whose log record end time is later than the specified query start time and whose log record start time is earlier than the specified query end time.</li>
+     * <li>If DownloadLink is not NULL, you can use this URL to download the backup file. The URL is valid for 2 days after it is generated. Download the file before the URL expires.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the IP whitelist of a Supabase instance.</p>
+     * 
+     * @param request DescribeSupabaseIpWhitelistRequest
+     * @return DescribeSupabaseIpWhitelistResponse
+     */
+    public DescribeSupabaseIpWhitelistResponse describeSupabaseIpWhitelist(DescribeSupabaseIpWhitelistRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeSupabaseIpWhitelistWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Retrieves tag information.</p>
      * 
@@ -7449,6 +8010,130 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the Supabase Dashboard password.</p>
+     * 
+     * @param request ModifySupabaseDashboardPasswordRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifySupabaseDashboardPasswordResponse
+     */
+    public ModifySupabaseDashboardPasswordResponse modifySupabaseDashboardPasswordWithOptions(ModifySupabaseDashboardPasswordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.newPassword)) {
+            query.put("NewPassword", request.newPassword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifySupabaseDashboardPassword"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifySupabaseDashboardPasswordResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the Supabase Dashboard password.</p>
+     * 
+     * @param request ModifySupabaseDashboardPasswordRequest
+     * @return ModifySupabaseDashboardPasswordResponse
+     */
+    public ModifySupabaseDashboardPasswordResponse modifySupabaseDashboardPassword(ModifySupabaseDashboardPasswordRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifySupabaseDashboardPasswordWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the IP whitelist of a Supabase instance.</p>
+     * 
+     * @param request ModifySupabaseSecurityIPListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifySupabaseSecurityIPListResponse
+     */
+    public ModifySupabaseSecurityIPListResponse modifySupabaseSecurityIPListWithOptions(ModifySupabaseSecurityIPListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupName)) {
+            query.put("GroupName", request.groupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modifyMode)) {
+            query.put("ModifyMode", request.modifyMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityIPList)) {
+            query.put("SecurityIPList", request.securityIPList);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifySupabaseSecurityIPList"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifySupabaseSecurityIPListResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the IP whitelist of a Supabase instance.</p>
+     * 
+     * @param request ModifySupabaseSecurityIPListRequest
+     * @return ModifySupabaseSecurityIPListResponse
+     */
+    public ModifySupabaseSecurityIPListResponse modifySupabaseSecurityIPList(ModifySupabaseSecurityIPListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifySupabaseSecurityIPListWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Performs a pre-check and feasibility assessment for a recovery task before you execute SQL flashback recovery.</p>
      * 
@@ -8012,6 +8697,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RestartDataImportTaskResponse restartDataImportTask(RestartDataImportTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.restartDataImportTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * <b>summary</b> : 
+     * <p>Restarts a Supabase instance.</p>
+     * 
+     * @param request RestartSupabaseInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RestartSupabaseInstanceResponse
+     */
+    public RestartSupabaseInstanceResponse restartSupabaseInstanceWithOptions(RestartSupabaseInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RestartSupabaseInstance"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RestartSupabaseInstanceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * <b>summary</b> : 
+     * <p>Restarts a Supabase instance.</p>
+     * 
+     * @param request RestartSupabaseInstanceRequest
+     * @return RestartSupabaseInstanceResponse
+     */
+    public RestartSupabaseInstanceResponse restartSupabaseInstance(RestartSupabaseInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.restartSupabaseInstanceWithOptions(request, runtime);
     }
 
     /**
