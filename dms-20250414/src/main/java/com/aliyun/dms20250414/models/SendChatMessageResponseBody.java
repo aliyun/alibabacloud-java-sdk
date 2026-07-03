@@ -38,7 +38,7 @@ public class SendChatMessageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Success</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +93,7 @@ public class SendChatMessageResponseBody extends TeaModel {
 
     public static class SendChatMessageResponseBodyData extends TeaModel {
         /**
-         * <p>The agent ID.</p>
+         * <p>AgentId</p>
          * 
          * <strong>example:</strong>
          * <p>3jqqdiuxun******</p>
@@ -102,7 +102,7 @@ public class SendChatMessageResponseBody extends TeaModel {
         public String agentId;
 
         /**
-         * <p>The message.</p>
+         * <p>Message</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -120,7 +120,7 @@ public class SendChatMessageResponseBody extends TeaModel {
         public String messageId;
 
         /**
-         * <p>The session ID.</p>
+         * <p>SessionId</p>
          * 
          * <strong>example:</strong>
          * <p>6zbqbho********</p>

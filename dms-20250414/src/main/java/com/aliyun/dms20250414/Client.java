@@ -668,6 +668,98 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Creates an accuracy test instance.</p>
+     * 
+     * @param request CreateDataAgentAccuracyTestRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDataAgentAccuracyTestResponse
+     */
+    public CreateDataAgentAccuracyTestResponse createDataAgentAccuracyTestWithOptions(CreateDataAgentAccuracyTestRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.customAgentId)) {
+            query.put("CustomAgentId", request.customAgentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataset)) {
+            query.put("Dataset", request.dataset);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.desc)) {
+            query.put("Desc", request.desc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dmsUnit)) {
+            query.put("DmsUnit", request.dmsUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.evaluationPrompt)) {
+            query.put("EvaluationPrompt", request.evaluationPrompt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileId)) {
+            query.put("FileId", request.fileId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("Language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxConcurrent)) {
+            query.put("MaxConcurrent", request.maxConcurrent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mode)) {
+            query.put("Mode", request.mode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.needDelete)) {
+            query.put("NeedDelete", request.needDelete);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDataAgentAccuracyTest"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDataAgentAccuracyTestResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an accuracy test instance.</p>
+     * 
+     * @param request CreateDataAgentAccuracyTestRequest
+     * @return CreateDataAgentAccuracyTestResponse
+     */
+    public CreateDataAgentAccuracyTestResponse createDataAgentAccuracyTest(CreateDataAgentAccuracyTestRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createDataAgentAccuracyTestWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a DataAgent knowledge base. The knowledge base creator has read and write permissions. Other workspace members have permission to use it.</p>
      * 
      * @param request CreateDataAgentKnowledgeBaseRequest
@@ -1236,6 +1328,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteCustomAgentResponse deleteCustomAgent(DeleteCustomAgentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteCustomAgentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes an accuracy test item.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an accuracy test configuration item.</p>
+     * 
+     * @param request DeleteDataAgentAccuracyTestRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDataAgentAccuracyTestResponse
+     */
+    public DeleteDataAgentAccuracyTestResponse deleteDataAgentAccuracyTestWithOptions(DeleteDataAgentAccuracyTestRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accuracyTestInsId)) {
+            query.put("AccuracyTestInsId", request.accuracyTestInsId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dmsUnit)) {
+            query.put("DmsUnit", request.dmsUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDataAgentAccuracyTest"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDataAgentAccuracyTestResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes an accuracy test item.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an accuracy test configuration item.</p>
+     * 
+     * @param request DeleteDataAgentAccuracyTestRequest
+     * @return DeleteDataAgentAccuracyTestResponse
+     */
+    public DeleteDataAgentAccuracyTestResponse deleteDataAgentAccuracyTest(DeleteDataAgentAccuracyTestRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteDataAgentAccuracyTestWithOptions(request, runtime);
     }
 
     /**
@@ -3187,6 +3341,238 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Lists accuracy test configuration items that meet the specified conditions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists accuracy test configuration items that meet the specified conditions.</p>
+     * 
+     * @param request ListDataAgentAccuracyTestInstancesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDataAgentAccuracyTestInstancesResponse
+     */
+    public ListDataAgentAccuracyTestInstancesResponse listDataAgentAccuracyTestInstancesWithOptions(ListDataAgentAccuracyTestInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accuracyTestInsId)) {
+            query.put("AccuracyTestInsId", request.accuracyTestInsId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDataAgentAccuracyTestInstances"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDataAgentAccuracyTestInstancesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Lists accuracy test configuration items that meet the specified conditions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists accuracy test configuration items that meet the specified conditions.</p>
+     * 
+     * @param request ListDataAgentAccuracyTestInstancesRequest
+     * @return ListDataAgentAccuracyTestInstancesResponse
+     */
+    public ListDataAgentAccuracyTestInstancesResponse listDataAgentAccuracyTestInstances(ListDataAgentAccuracyTestInstancesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listDataAgentAccuracyTestInstancesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the execution results of a self-test task.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the execution results of a self-test task.</p>
+     * 
+     * @param request ListDataAgentAccuracyTestResultsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDataAgentAccuracyTestResultsResponse
+     */
+    public ListDataAgentAccuracyTestResultsResponse listDataAgentAccuracyTestResultsWithOptions(ListDataAgentAccuracyTestResultsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accuracyTestInsId)) {
+            query.put("AccuracyTestInsId", request.accuracyTestInsId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.accuracyTestResultId)) {
+            query.put("AccuracyTestResultId", request.accuracyTestResultId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.accuracyTestSubtaskId)) {
+            query.put("AccuracyTestSubtaskId", request.accuracyTestSubtaskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.accuracyTestTaskId)) {
+            query.put("AccuracyTestTaskId", request.accuracyTestTaskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDataAgentAccuracyTestResults"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDataAgentAccuracyTestResultsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the execution results of a self-test task.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the execution results of a self-test task.</p>
+     * 
+     * @param request ListDataAgentAccuracyTestResultsRequest
+     * @return ListDataAgentAccuracyTestResultsResponse
+     */
+    public ListDataAgentAccuracyTestResultsResponse listDataAgentAccuracyTestResults(ListDataAgentAccuracyTestResultsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listDataAgentAccuracyTestResultsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the running status of self-test tasks by paging.
+     * If AccuracyTestInsId or AccuracyTestTaskId is empty, all test tasks are queried.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the running status of self-test tasks by paging.</p>
+     * 
+     * @param request ListDataAgentAccuracyTestTasksRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDataAgentAccuracyTestTasksResponse
+     */
+    public ListDataAgentAccuracyTestTasksResponse listDataAgentAccuracyTestTasksWithOptions(ListDataAgentAccuracyTestTasksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accuracyTestInsId)) {
+            query.put("AccuracyTestInsId", request.accuracyTestInsId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.accuracyTestTaskId)) {
+            query.put("AccuracyTestTaskId", request.accuracyTestTaskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDataAgentAccuracyTestTasks"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDataAgentAccuracyTestTasksResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the running status of self-test tasks by paging.
+     * If AccuracyTestInsId or AccuracyTestTaskId is empty, all test tasks are queried.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the running status of self-test tasks by paging.</p>
+     * 
+     * @param request ListDataAgentAccuracyTestTasksRequest
+     * @return ListDataAgentAccuracyTestTasksResponse
+     */
+    public ListDataAgentAccuracyTestTasksResponse listDataAgentAccuracyTestTasks(ListDataAgentAccuracyTestTasksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listDataAgentAccuracyTestTasksWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Retrieves the list of historical session descriptions for a Data Agent.</p>
      * 
@@ -4952,7 +5338,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>发布工作空间的代码</p>
+     * <p>Publishes workspace code.</p>
      * 
      * <b>summary</b> : 
      * <p>Saves workspace code. If the file does not exist, a new file is automatically created.</p>
@@ -5013,7 +5399,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>发布工作空间的代码</p>
+     * <p>Publishes workspace code.</p>
      * 
      * <b>summary</b> : 
      * <p>Saves workspace code. If the file does not exist, a new file is automatically created.</p>
@@ -5031,15 +5417,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Request description</h2>
      * <ul>
      * <li><code>agent_id</code> and <code>session_id</code> are required fields.</li>
-     * <li><code>message_type</code> defaults to <code>primary</code>. When you need to append information or cancel a session, set it to <code>additional</code> or <code>cancel</code>.</li>
+     * <li><code>message_type</code> defaults to <code>primary</code>. Set it to <code>additional</code> or <code>cancel</code> when you need to append information or cancel a session.</li>
      * <li>The <code>reply_to</code> field indicates which Agent message this message is responding to. The default value is <code>0</code>.</li>
      * <li>When <code>message_type</code> is <code>additional</code>, the <code>question</code> field is required.</li>
-     * <li><code>quoted_message</code> can be used to quote the content of the user\&quot;s previous message.</li>
-     * <li>Fields such as <code>data_source</code>, <code>dms_user</code>, <code>db_metadata</code>, and <code>session_config</code> are all optional, but provide more detailed context information.</li>
+     * <li><code>quoted_message</code> can be used to quote the content of a previous user message.</li>
+     * <li>The <code>data_source</code>, <code>dms_user</code>, <code>db_metadata</code>, and <code>session_config</code> fields are optional but provide more detailed context information.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Send a user message to a specified session or cancel the session.</p>
+     * <p>Sends a user message to a specified session or cancels a session.</p>
      * 
      * @param tmpReq SendChatMessageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5118,6 +5504,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TaskConfig", request.taskConfigShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.userOssBucket)) {
+            query.put("UserOssBucket", request.userOssBucket);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
             query.put("WorkspaceId", request.workspaceId);
         }
@@ -5144,15 +5534,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Request description</h2>
      * <ul>
      * <li><code>agent_id</code> and <code>session_id</code> are required fields.</li>
-     * <li><code>message_type</code> defaults to <code>primary</code>. When you need to append information or cancel a session, set it to <code>additional</code> or <code>cancel</code>.</li>
+     * <li><code>message_type</code> defaults to <code>primary</code>. Set it to <code>additional</code> or <code>cancel</code> when you need to append information or cancel a session.</li>
      * <li>The <code>reply_to</code> field indicates which Agent message this message is responding to. The default value is <code>0</code>.</li>
      * <li>When <code>message_type</code> is <code>additional</code>, the <code>question</code> field is required.</li>
-     * <li><code>quoted_message</code> can be used to quote the content of the user\&quot;s previous message.</li>
-     * <li>Fields such as <code>data_source</code>, <code>dms_user</code>, <code>db_metadata</code>, and <code>session_config</code> are all optional, but provide more detailed context information.</li>
+     * <li><code>quoted_message</code> can be used to quote the content of a previous user message.</li>
+     * <li>The <code>data_source</code>, <code>dms_user</code>, <code>db_metadata</code>, and <code>session_config</code> fields are optional but provide more detailed context information.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Send a user message to a specified session or cancel the session.</p>
+     * <p>Sends a user message to a specified session or cancels a session.</p>
      * 
      * @param request SendChatMessageRequest
      * @return SendChatMessageResponse
@@ -5285,6 +5675,130 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Initiates an accuracy self-test task.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Initiates an accuracy self-test task.</p>
+     * 
+     * @param request StartDataAgentAccuracyTestTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartDataAgentAccuracyTestTaskResponse
+     */
+    public StartDataAgentAccuracyTestTaskResponse startDataAgentAccuracyTestTaskWithOptions(StartDataAgentAccuracyTestTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accuracyTestInsId)) {
+            query.put("AccuracyTestInsId", request.accuracyTestInsId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.csvFile)) {
+            query.put("CsvFile", request.csvFile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dmsUnit)) {
+            query.put("DmsUnit", request.dmsUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartDataAgentAccuracyTestTask"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartDataAgentAccuracyTestTaskResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Initiates an accuracy self-test task.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Initiates an accuracy self-test task.</p>
+     * 
+     * @param request StartDataAgentAccuracyTestTaskRequest
+     * @return StartDataAgentAccuracyTestTaskResponse
+     */
+    public StartDataAgentAccuracyTestTaskResponse startDataAgentAccuracyTestTask(StartDataAgentAccuracyTestTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.startDataAgentAccuracyTestTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Stops an accuracy self-test task.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Stops an accuracy self-test task.</p>
+     * 
+     * @param request StopDataAgentAccuracyTestTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopDataAgentAccuracyTestTaskResponse
+     */
+    public StopDataAgentAccuracyTestTaskResponse stopDataAgentAccuracyTestTaskWithOptions(StopDataAgentAccuracyTestTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accuracyTestTaskId)) {
+            query.put("AccuracyTestTaskId", request.accuracyTestTaskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopDataAgentAccuracyTestTask"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopDataAgentAccuracyTestTaskResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Stops an accuracy self-test task.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Stops an accuracy self-test task.</p>
+     * 
+     * @param request StopDataAgentAccuracyTestTaskRequest
+     * @return StopDataAgentAccuracyTestTaskResponse
+     */
+    public StopDataAgentAccuracyTestTaskResponse stopDataAgentAccuracyTestTask(StopDataAgentAccuracyTestTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.stopDataAgentAccuracyTestTaskWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Updates the properties of an Airflow instance.</p>
      * 
@@ -5384,6 +5898,104 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateAirflowResponse updateAirflow(UpdateAirflowRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateAirflowWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates the content of an accuracy test item.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the content of an accuracy test item.</p>
+     * 
+     * @param request UpdateDataAgentAccuracyTestRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateDataAgentAccuracyTestResponse
+     */
+    public UpdateDataAgentAccuracyTestResponse updateDataAgentAccuracyTestWithOptions(UpdateDataAgentAccuracyTestRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accuracyTestInsId)) {
+            query.put("AccuracyTestInsId", request.accuracyTestInsId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customerAgentId)) {
+            query.put("CustomerAgentId", request.customerAgentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataset)) {
+            query.put("Dataset", request.dataset);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.desc)) {
+            query.put("Desc", request.desc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dmsUnit)) {
+            query.put("DmsUnit", request.dmsUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.evaluationPrompt)) {
+            query.put("EvaluationPrompt", request.evaluationPrompt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileId)) {
+            query.put("FileId", request.fileId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxConcurrent)) {
+            query.put("MaxConcurrent", request.maxConcurrent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mode)) {
+            query.put("Mode", request.mode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.needDelete)) {
+            query.put("NeedDelete", request.needDelete);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateDataAgentAccuracyTest"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDataAgentAccuracyTestResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates the content of an accuracy test item.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the content of an accuracy test item.</p>
+     * 
+     * @param request UpdateDataAgentAccuracyTestRequest
+     * @return UpdateDataAgentAccuracyTestResponse
+     */
+    public UpdateDataAgentAccuracyTestResponse updateDataAgentAccuracyTest(UpdateDataAgentAccuracyTestRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateDataAgentAccuracyTestWithOptions(request, runtime);
     }
 
     /**

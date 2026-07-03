@@ -20,7 +20,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message returned if the call failed.</p>
+     * <p>The error message returned when the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
@@ -40,8 +40,8 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
     /**
      * <p>The return value. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The operation was successful.</li>
-     * <li><strong>false</strong>: The operation failed.</li>
+     * <li><strong>true</strong>: Succeeded.</li>
+     * <li><strong>false</strong>: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         public String finishTime;
 
         /**
-         * <p>The globally unique artifact ID. If the report is produced by calling SendChatMessage with MessageType set to REPORT, the artifact ID is the same as the MessageId returned by the SendChatMessage operation.</p>
+         * <p>The globally unique artifact ID. If the report is produced by calling SendChatMessage with MessageType set to REPORT, the artifact ID is the same as the MessageId in the response of the SendChatMessage operation.</p>
          * 
          * <strong>example:</strong>
          * <p>bab******33e1</p>
@@ -124,7 +124,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The artifact name. This is typically a string concatenated by the system. It is aligned with the name field in the ListFileUpload operation. You can use this field to query the download URL of the artifact file.</p>
+         * <p>The artifact name. This is typically a string concatenated by the system and is aligned with the name field in the ListFileUpload operation. You can use this field to query the download URL of the artifact file.</p>
          * 
          * <strong>example:</strong>
          * <p>report_****_2026****</p>
@@ -170,7 +170,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The artifact type. Valid values: TextReport and WebReport.</p>
+         * <p>The artifact type. Valid values: TextReport, WebReport.</p>
          * 
          * <strong>example:</strong>
          * <p>WebReport</p>
@@ -360,7 +360,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         public Double score;
 
         /**
-         * <p>The type of recalled knowledge.</p>
+         * <p>The type of the recalled knowledge.</p>
          * 
          * <strong>example:</strong>
          * <p>memory</p>
@@ -412,8 +412,8 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         /**
          * <p>The stage of the custom agent. Valid values:</p>
          * <ul>
-         * <li><strong>debug</strong>: the debugging stage.</li>
-         * <li><strong>prod</strong>: the production stage.</li>
+         * <li><strong>debug</strong>: test stage.</li>
+         * <li><strong>prod</strong>: production stage.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -432,7 +432,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         public Boolean enableSearch;
 
         /**
-         * <p>The encryption key for storing artifacts in OSS (including built-in and user-specified OSS). This is typically specified in CreateDataAgentSession.</p>
+         * <p>The encryption key for storing artifacts in OSS (both built-in and user-specified). This is typically specified in CreateDataAgentSession.</p>
          * 
          * <strong>example:</strong>
          * <p>ay***1Te</p>
@@ -441,7 +441,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         public String encryptKey;
 
         /**
-         * <p>The encryption type for storing artifacts in OSS (including built-in and user-specified OSS).</p>
+         * <p>The encryption type for storing artifacts in OSS (both built-in and user-specified).</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -450,7 +450,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         public String encryptType;
 
         /**
-         * <p>The list of knowledge base IDs for this session.</p>
+         * <p>The list of knowledge base IDs for the current session.</p>
          */
         @NameInMap("KbUuidList")
         public java.util.List<String> kbUuidList;
@@ -477,9 +477,9 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         /**
          * <p>The mode. Valid values:</p>
          * <ul>
-         * <li><strong>ASK_DATA</strong>: the data query mode.</li>
-         * <li><strong>ANALYSIS</strong>: the analysis mode.</li>
-         * <li><strong>INSIGHT</strong>: the insight mode.</li>
+         * <li><strong>ASK_DATA</strong>: ask data mode.</li>
+         * <li><strong>ANALYSIS</strong>: analysis mode.</li>
+         * <li><strong>INSIGHT</strong>: insight mode.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -507,7 +507,10 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         public String reportWaterMark;
 
         /**
-         * <p>The name of the user OSS bucket. Analysis process files and report artifacts can be uploaded to the user-specified OSS bucket.</p>
+         * <p>The name of the user OSS bucket.</p>
+         * <ul>
+         * <li>Analysis process files and report artifacts can be uploaded to the user-specified OSS bucket.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>user-oss-bucket</p>
@@ -665,7 +668,7 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         public java.util.List<DescribeDataAgentSessionResponseBodyDataDataSources> dataSources;
 
         /**
-         * <p>Indicates whether the session is saved to favorites in the workspace by the current user.</p>
+         * <p>Indicates whether the session is saved as a favorite in the workspace by the current logged-in user.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -683,13 +686,13 @@ public class DescribeDataAgentSessionResponseBody extends TeaModel {
         public String file;
 
         /**
-         * <p>The recall results from the knowledge base and memory for this session.</p>
+         * <p>The recall results from the knowledge base and memory for the current session.</p>
          */
         @NameInMap("RecallResults")
         public java.util.List<DescribeDataAgentSessionResponseBodyDataRecallResults> recallResults;
 
         /**
-         * <p>Indicates whether the session is saved to favorites by the current user.</p>
+         * <p>Indicates whether the session is saved as a favorite by the current logged-in user.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
