@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReopenInstanceResponseBody extends TeaModel {
     /**
-     * <p>The returned HTTP status code. If the request is successful, 200 is returned.</p>
+     * <p>The return code. A return code of 200 indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,7 +32,7 @@ public class ReopenInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

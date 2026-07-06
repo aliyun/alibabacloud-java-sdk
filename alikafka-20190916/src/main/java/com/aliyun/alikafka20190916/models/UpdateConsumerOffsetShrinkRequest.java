@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class UpdateConsumerOffsetShrinkRequest extends TeaModel {
     /**
-     * <p>The name of the consumer group.</p>
+     * <p>Consumer Group name.</p>
      * <ul>
-     * <li>The name can contain letters, digits, hyphens (-), and underscores (_).</li>
-     * <li>The name must be <strong>3 to 64</strong> characters in length. If a name contains more than <strong>64</strong> characters, the name is automatically truncated.</li>
-     * <li>The name of a consumer group cannot be changed after the consumer group is created.</li>
+     * <li><p>Can only contain letters, numbers, hyphens (-), and underscores (_).</p>
+     * </li>
+     * <li><p>Length must be <strong>3-64</strong> characters. If more than <strong>64</strong> characters are provided, they will be automatically truncated.</p>
+     * </li>
+     * <li><p>Cannot be modified once created.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -20,7 +23,7 @@ public class UpdateConsumerOffsetShrinkRequest extends TeaModel {
     public String consumerId;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,7 +33,7 @@ public class UpdateConsumerOffsetShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>If you set resetType to offset, you can use this parameter to reset the consumer offset of each partition of a specific topic in the consumer group.</p>
+     * <p>When resetType is offset, this parameter is used to set the consumer offset for each partition of a topic for the consumer group.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -39,7 +42,7 @@ public class UpdateConsumerOffsetShrinkRequest extends TeaModel {
     public String offsetsShrink;
 
     /**
-     * <p>The region ID of the instance to which the consumer group belongs.</p>
+     * <p>Region ID of the instance to which the Group belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,10 +52,12 @@ public class UpdateConsumerOffsetShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The method that is used to reset the consumer offsets of the subscribed topics of a consumer group. Valid values:</p>
+     * <p>Type of consumer group offset reset, supporting the following two types:</p>
      * <ul>
-     * <li><strong>timestamp</strong> (default)</li>
-     * <li><strong>offset</strong></li>
+     * <li><p><strong>timestamp</strong> (default)</p>
+     * </li>
+     * <li><p><strong>offset</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,10 +67,13 @@ public class UpdateConsumerOffsetShrinkRequest extends TeaModel {
     public String resetType;
 
     /**
-     * <p>The point in time when message consumption starts. The value of this parameter is a UNIX timestamp in milliseconds. The value of this parameter must be <strong>less than 0</strong> or <strong>within the retention period of the consumer offset</strong>. This parameter takes effect only if you set resetType to timestamp.</p>
+     * <p>Time parameter in Unix timestamp format, in milliseconds.
+     * The parameter range should be <strong>less than 0</strong> or <strong>within the retention period of the consumer offset</strong>. This parameter only takes effect when resetType is timestamp.</p>
      * <ul>
-     * <li>If you want to reset the consumer offset to the latest offset, set this parameter to -1.</li>
-     * <li>If you want to reset the consumer offset to the earliest offset, set this parameter to -2.</li>
+     * <li><p>To reset to the latest consumer offset, pass -1.</p>
+     * </li>
+     * <li><p>To reset to the earliest consumer offset, pass -2.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,13 +83,16 @@ public class UpdateConsumerOffsetShrinkRequest extends TeaModel {
     public String time;
 
     /**
-     * <p>The topic name.</p>
+     * <p>Topic name.</p>
      * <ul>
-     * <li>The name can contain letters, digits, underscores (_), and hyphens (-).</li>
-     * <li>The name must be <strong>3 to 64</strong> characters in length. If a name contains more than <strong>64</strong> characters, the name is automatically truncated.</li>
-     * <li>The name of a topic cannot be changed after the topic is created.</li>
+     * <li><p>Can only contain letters, numbers, underscores (_), and hyphens (-).</p>
+     * </li>
+     * <li><p>Length must be <strong>3-64</strong> characters. If more than <strong>64</strong> characters are provided, they will be automatically truncated.</p>
+     * </li>
+     * <li><p>Cannot be modified once created.</p>
+     * </li>
      * </ul>
-     * <p><strong>If you want to reset the consumer offsets of all topics to which the consumer subscribes, specify an empty string.</strong></p>
+     * <p><strong>To set the consumer offset for all topics subscribed by the current consumer, pass an empty string.</strong></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

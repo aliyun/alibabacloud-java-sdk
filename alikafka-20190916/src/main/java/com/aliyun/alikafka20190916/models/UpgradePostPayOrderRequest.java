@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class UpgradePostPayOrderRequest extends TeaModel {
     /**
-     * <p>The disk size. Unit: GB.</p>
+     * <p>The disk capacity. Unit: GB.</p>
      * <ul>
-     * <li>The disk size that you specify must be greater than or equal to the current disk size of the instance.</li>
-     * <li>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
+     * <li><p>The disk capacity that you specify must be greater than or equal to the current disk capacity of the instance.</p>
+     * </li>
+     * <li><p>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If the instance is a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</p>
+     * <p>If the instance is a serverless instance, you do not need to specify this parameter. This parameter is required for pay-as-you-go instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -21,21 +23,18 @@ public class UpgradePostPayOrderRequest extends TeaModel {
     public Integer diskSize;
 
     /**
-     * <p>The maximum Internet traffic of the instance.</p>
+     * <p>The Internet traffic.</p>
      * <ul>
      * <li>The Internet traffic that you specify must be greater than or equal to the current Internet traffic of the instance.</li>
-     * <li>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
+     * <li>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
      * </ul>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>If you set <strong>EipModel</strong> to <strong>true</strong>, set <strong>EipMax</strong> to a value that is greater than 0.</p>
-     * </li>
-     * <li><p>If you set <strong>EipModel</strong> to <strong>false</strong>, set <strong>EipMax</strong> to <strong>0</strong>.</p>
-     * </li>
-     * <li><p>If the instance is a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</p>
-     * </li>
+     * <li>If EipModel is set to true, the value of EipMax must be greater than 0.</li>
+     * <li>If EipModel is set to false, the value of EipMax must be 0.</li>
+     * <li>If the instance is a serverless instance, you do not need to specify this parameter.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -44,10 +43,15 @@ public class UpgradePostPayOrderRequest extends TeaModel {
     public Integer eipMax;
 
     /**
-     * <p>Specifies whether to enable Internet access for the instance. Valid values:</p>
+     * <p>Specifies whether the instance requires Internet access. Valid values:</p>
      * <ul>
-     * <li>true: enables Internet access.</li>
-     * <li>false: disables Internet access.</li>
+     * <li><p>true: Internet access is required.</p>
+     * </li>
+     * <li><p>false: Internet access is not required.</p>
+     * <blockquote>
+     * <p>This parameter is optional for pay-as-you-go instances. This parameter is required for serverless instances.</p>
+     * </blockquote>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,15 +71,18 @@ public class UpgradePostPayOrderRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The maximum traffic of the instance. We recommend that you do not configure this parameter.</p>
+     * <p>The peak traffic (not recommended).</p>
      * <ul>
-     * <li>The maximum traffic that you specify must be greater than or equal to the current maximum traffic of the instance.</li>
-     * <li>You must configure at least one of IoMax and IoMaxSpec. If you configure both parameters, the value of IoMaxSpec takes effect. We recommend that you configure only IoMaxSpec.</li>
-     * <li>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
-     * </ul>
+     * <li><p>The peak traffic that you specify must be greater than or equal to the current peak traffic of the instance.</p>
+     * </li>
+     * <li><p>You must specify either the peak traffic or the traffic specification. If you specify both, the traffic specification takes precedence. Specify only the traffic specification.</p>
+     * </li>
+     * <li><p>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
      * <blockquote>
-     * <p> If the instance is a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</p>
+     * <p>If the instance is a serverless instance, you do not need to specify this parameter.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -84,15 +91,18 @@ public class UpgradePostPayOrderRequest extends TeaModel {
     public Integer ioMax;
 
     /**
-     * <p>The traffic specification of the instance. We recommend that you configure this parameter.</p>
+     * <p>The traffic specification (recommended).</p>
      * <ul>
-     * <li>The traffic specification that you specify must be greater than or equal to the current traffic specification of the instance.</li>
-     * <li>You must configure at least one of IoMax and IoMaxSpec. If you configure both parameters, the value of IoMaxSpec takes effect. We recommend that you configure only IoMaxSpec.</li>
-     * <li>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
-     * </ul>
+     * <li><p>The traffic specification that you specify must be greater than or equal to the current traffic specification of the instance.</p>
+     * </li>
+     * <li><p>You must specify either the peak traffic or the traffic specification. If you specify both, the traffic specification takes precedence. Specify only the traffic specification.</p>
+     * </li>
+     * <li><p>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
      * <blockquote>
-     * <p> If the instance is a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</p>
+     * <p>If the instance is a serverless instance, you do not need to specify this parameter. This parameter is required for pay-as-you-go instances.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>alikafka.hw.6xlarge</p>
@@ -101,15 +111,18 @@ public class UpgradePostPayOrderRequest extends TeaModel {
     public String ioMaxSpec;
 
     /**
-     * <p>The number of partitions. We recommend that you configure this parameter.</p>
+     * <p>The number of partitions (recommended).</p>
      * <ul>
-     * <li>You must configure one of PartitionNum and TopicQuota. We recommend that you configure only PartitionNum.</li>
-     * <li>If you configure PartitionNum and TopicQuota at the same time, the system verifies whether the price of the partitions equals the price of the topics based on the previous topic-based selling mode. If the price of the partitions does not equal the price of the topics, an error is returned. If the price of the partitions equals the price of the topics, the instance is purchased based on the partition number.</li>
-     * <li>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
-     * </ul>
+     * <li><p>You must specify either the number of partitions or the topic specification. Specify only the number of partitions.</p>
+     * </li>
+     * <li><p>If you specify both the number of partitions and the topic specification, the system validates whether the number of partitions and the topic specification are equivalent based on the legacy topic sales model. If they are not equivalent, an error is returned. If they are equivalent, the purchase is made based on the number of partitions.</p>
+     * </li>
+     * <li><p>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
      * <blockquote>
-     * <p> If the instance is a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</p>
+     * <p>If the instance is a serverless instance, you do not need to specify this parameter. This parameter is required for pay-as-you-go instances.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>80</p>
@@ -128,20 +141,20 @@ public class UpgradePostPayOrderRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The parameters that are configured for the serverless instance. These parameters are required only when you create a serverless instance.</p>
+     * <p>The settings of the serverless instance. This parameter is required when you change the specifications of a serverless instance.</p>
      */
     @NameInMap("ServerlessConfig")
     public UpgradePostPayOrderRequestServerlessConfig serverlessConfig;
 
     /**
-     * <p>The instance edition.</p>
-     * <p>Valid values for this parameter if you set PaidType to 1:</p>
+     * <p>The specification type.</p>
+     * <p>If the PaidType of the instance is 1 (pay-as-you-go), valid values:</p>
      * <ul>
-     * <li>normal: Standard Edition (High Write)</li>
-     * <li>professional: Professional Edition (High Write)</li>
-     * <li>professionalForHighRead: Professional Edition (High Read)</li>
+     * <li>normal: Standard Edition (shared throughput)</li>
+     * <li>professional: Professional Edition (shared throughput)</li>
+     * <li>professionalForHighRead: Professional Edition (shared read throughput)</li>
      * </ul>
-     * <p>Valid values for this parameter if you set PaidType to 3:</p>
+     * <p>If the PaidType of the instance is 3 (reserved specification pay-as-you-go + serverless elastic scaling pay-as-you-go), valid values:</p>
      * <ul>
      * <li>normal: Serverless Standard Edition</li>
      * </ul>
@@ -154,16 +167,20 @@ public class UpgradePostPayOrderRequest extends TeaModel {
     public String specType;
 
     /**
-     * <p>The number of topics. We recommend that you do not configure this parameter.</p>
+     * <p>The number of topics (not recommended).</p>
      * <ul>
-     * <li>You must configure one of PartitionNum and TopicQuota. We recommend that you configure only PartitionNum.</li>
-     * <li>If you configure PartitionNum and TopicQuota at the same time, the system verifies whether the price of the partitions equals the price of the topics based on the previous topic-based selling mode. If the price of the partitions does not equal the price of the topics, an error is returned. If the price of the partitions equals the price of the topics, the instance is purchased based on the partition number.</li>
-     * <li>The default value of TopicQuota varies based on the value of IoMaxSpec. If the number of topics that you use exceeds the default value, you are charged additional fees.</li>
-     * <li>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
-     * </ul>
+     * <li><p>You must specify either the number of partitions or the topic specification. Specify only the number of partitions.</p>
+     * </li>
+     * <li><p>If you specify both the number of partitions and the topic specification, the system validates whether the number of partitions and the topic specification are equivalent based on the legacy topic sales model. If they are not equivalent, an error is returned. If they are equivalent, the purchase is made based on the number of partitions.</p>
+     * </li>
+     * <li><p>The default value varies based on the traffic specification. Additional fees are charged if the value exceeds the default value.</p>
+     * </li>
+     * <li><p>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
      * <blockquote>
-     * <p> If the instance is a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</p>
+     * <p>If the instance is a serverless instance, you do not need to specify this parameter.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>80</p>
@@ -266,25 +283,25 @@ public class UpgradePostPayOrderRequest extends TeaModel {
 
     public static class UpgradePostPayOrderRequestServerlessConfig extends TeaModel {
         /**
-         * <p>The reserved capacity for publishing messages. You can specify only an integer for this parameter. Minimum value: 60.</p>
+         * <p>The reserved publish traffic specification. Only integers are supported. The minimum value is 60. This parameter is required for serverless instances.</p>
          * <blockquote>
-         * <p> The maximum capacity that you can reserve for an instance varies based on available resources in a region. The reserved capacity range displayed on the buy page shall prevail.</p>
+         * <p>The actual upper limit is subject to the inventory in the current region. Refer to the purchase page for the available range.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>50</p>
+         * <p>60</p>
          */
         @NameInMap("ReservedPublishCapacity")
         public Long reservedPublishCapacity;
 
         /**
-         * <p>The reserved capacity for subscribing to messages. You can specify only an integer for this parameter. Minimum value: 50.</p>
+         * <p>The reserved subscribe traffic specification. Only integers are supported. The minimum value is 20. This parameter is required for serverless instances.</p>
          * <blockquote>
-         * <p> The maximum capacity that you can reserve for an instance varies based on available resources in a region. The reserved capacity range displayed on the buy page shall prevail.</p>
+         * <p>The actual upper limit is subject to the inventory in the current region. Refer to the purchase page for the available range.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>50</p>
+         * <p>60</p>
          */
         @NameInMap("ReservedSubscribeCapacity")
         public Long reservedSubscribeCapacity;

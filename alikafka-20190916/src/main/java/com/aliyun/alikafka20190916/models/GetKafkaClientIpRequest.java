@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetKafkaClientIpRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query.</p>
+     * <p>End time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,9 +15,9 @@ public class GetKafkaClientIpRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The ID of the consumer group.</p>
+     * <p>Consumer group ID.</p>
      * <blockquote>
-     * <p> This parameter is required only if you set Type to byGroup.</p>
+     * <p>This parameter is required when Type is set to byGroup.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class GetKafkaClientIpRequest extends TeaModel {
     public String group;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class GetKafkaClientIpRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the region where the instance is deployed.</p>
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class GetKafkaClientIpRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query.</p>
+     * <p>Start time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,12 +57,12 @@ public class GetKafkaClientIpRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The topic name.</p>
+     * <p>Topic name.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li>This parameter is required only if you set Type to byTopic.</li>
+     * <li>This parameter is required when Type is set to byTopic.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>topic_name</p>
@@ -71,11 +71,14 @@ public class GetKafkaClientIpRequest extends TeaModel {
     public String topic;
 
     /**
-     * <p>The query method that you want to use to query the client IP addresses. Valid values:</p>
+     * <p>The type of client IP query. You can choose from three methods.</p>
      * <ul>
-     * <li>byInstance: queries the IP addresses of the clients that are connected to the instance within a specific period of time.</li>
-     * <li>byTopic: queries the IP addresses of the clients that are connected to a specific topic on the instance within a specific period of time.</li>
-     * <li>byGroup: queries the IP addresses of the clients that are connected to a specific group on the instance within a specific period of time.</li>
+     * <li><p>byInstance: Query client IPs for the instance within the specified time range.</p>
+     * </li>
+     * <li><p>byTopic: Query client IPs for the topic within the specified time range.</p>
+     * </li>
+     * <li><p>byGroup: Query client IPs for the group within the specified time range.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

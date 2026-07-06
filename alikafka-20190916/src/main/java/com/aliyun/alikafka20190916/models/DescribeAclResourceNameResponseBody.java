@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeAclResourceNameResponseBody extends TeaModel {
     /**
+     * <p>Return code. A value of 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -15,6 +17,8 @@ public class DescribeAclResourceNameResponseBody extends TeaModel {
     public DescribeAclResourceNameResponseBodyData data;
 
     /**
+     * <p>Return message.</p>
+     * 
      * <strong>example:</strong>
      * <p>operation success.</p>
      */
@@ -22,6 +26,8 @@ public class DescribeAclResourceNameResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABA4A7FD-E10F-45C7-9774-A5236015A***</p>
      */
@@ -29,6 +35,14 @@ public class DescribeAclResourceNameResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The call was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The call failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

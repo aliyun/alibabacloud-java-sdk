@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePostPayOrderResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+     * <p>The return code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class CreatePostPayOrderResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>operation success.</p>
@@ -41,7 +41,7 @@ public class CreatePostPayOrderResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

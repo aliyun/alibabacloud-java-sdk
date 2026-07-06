@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class ModifyScheduledScalingRuleRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the scheduled scaling rule. Valid values:</p>
+     * <p>Enable or disable the scheduled task policy. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: Enable.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Disable.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If the scaling task is scheduled to execute only once and you want to enable the scheduled scaling rule, make sure that the value of this parameter is at least 30 minutes later than the current point in time.</p>
+     * <p>For a one-time scheduling policy type, the start execution time must be more than 30 minutes later than the current time for the policy to be enabled.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -32,7 +34,7 @@ public class ModifyScheduledScalingRuleRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the region where the instance resides.</p>
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +44,7 @@ public class ModifyScheduledScalingRuleRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the scheduled scaling rule.</p>
+     * <p>The policy name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

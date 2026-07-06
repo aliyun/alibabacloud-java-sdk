@@ -4,15 +4,23 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class UpgradePrePayOrderShrinkRequest extends TeaModel {
+    /**
+     * <p>Configurations for the Confluent components.</p>
+     */
     @NameInMap("ConfluentConfig")
     public String confluentConfigShrink;
 
     /**
-     * <p>The size of the disk.</p>
+     * <p>The disk capacity.</p>
      * <ul>
-     * <li>The disk size that you specify must be greater than or equal to the current disk size of the instance.</li>
-     * <li>For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</li>
+     * <li><p>The specified disk capacity must be greater than or equal to the current disk capacity of the instance.</p>
+     * </li>
+     * <li><p>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * </li>
      * </ul>
+     * <blockquote>
+     * <p>This parameter is required for subscription instances but not for Confluent-series instances.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>900</p>
@@ -21,17 +29,21 @@ public class UpgradePrePayOrderShrinkRequest extends TeaModel {
     public Integer diskSize;
 
     /**
-     * <p>The Internet traffic for the instance.</p>
+     * <p>The maximum Internet traffic bandwidth.</p>
      * <ul>
-     * <li>The Internet traffic volume that you specify must be greater than or equal to the current Internet traffic volume of the instance.</li>
-     * <li>For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.<blockquote>
-     * <ul>
-     * <li>If the <strong>EipModel</strong> parameter is set to <strong>true</strong>, set the <strong>EipMax</strong> parameter to a value that is greater than 0.</li>
-     * <li>If the <strong>EipModel</strong> parameter is set to <strong>false</strong>, set the <strong>EipMax</strong> parameter to <strong>0</strong>.</li>
-     * </ul>
-     * </blockquote>
+     * <li><p>The specified Internet traffic bandwidth must be greater than or equal to the current Internet traffic bandwidth of the instance.</p>
+     * </li>
+     * <li><p>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
      * </li>
      * </ul>
+     * <blockquote>
+     * <ul>
+     * <li><p>If <strong>EipModel</strong> is set to <strong>true</strong>, <strong>EipMax</strong> must be greater than 0.</p>
+     * </li>
+     * <li><p>If <strong>EipModel</strong> is set to <strong>false</strong>, <strong>EipMax</strong> must be set to <strong>0</strong>.</p>
+     * </li>
+     * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -40,11 +52,16 @@ public class UpgradePrePayOrderShrinkRequest extends TeaModel {
     public Integer eipMax;
 
     /**
-     * <p>Specifies whether to enable Internet access for the instance. Valid values:</p>
+     * <p>Specifies whether to enable Internet access. Valid values:</p>
      * <ul>
-     * <li>true: enables Internet access.</li>
-     * <li>false: disables Internet access.</li>
+     * <li><p><code>true</code>: enables Internet access.</p>
+     * </li>
+     * <li><p><code>false</code>: disables Internet access.</p>
+     * </li>
      * </ul>
+     * <blockquote>
+     * <p>This parameter is required for subscription instances but not for Confluent-series instances.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -63,11 +80,14 @@ public class UpgradePrePayOrderShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The maximum traffic for the instance. We recommend that you do not configure this parameter.</p>
+     * <p>The traffic peak (not recommended).</p>
      * <ul>
-     * <li>The maximum traffic volume that you specify must be greater than or equal to the current maximum traffic volume of the instance.</li>
-     * <li>You must configure at least one of the IoMax and IoMaxSpec parameters. If you configure both parameters, the value of the IoMaxSpec parameter takes effect. We recommend that you configure only the IoMaxSpec parameter.</li>
-     * <li>For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</li>
+     * <li><p>The specified traffic peak must be greater than or equal to the current traffic peak of the instance.</p>
+     * </li>
+     * <li><p>You must specify either this parameter or <code>IoMaxSpec</code>. If you specify both, <code>IoMaxSpec</code> takes precedence. We recommend that you specify only <code>IoMaxSpec</code>.</p>
+     * </li>
+     * <li><p>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -77,12 +97,18 @@ public class UpgradePrePayOrderShrinkRequest extends TeaModel {
     public Integer ioMax;
 
     /**
-     * <p>The traffic specification of the instance. We recommend that you configure this parameter.</p>
+     * <p>The traffic specification (recommended).</p>
      * <ul>
-     * <li>The traffic specification that you specify must be greater than or equal to the current traffic specification of the instance.</li>
-     * <li>You must configure at least one of the IoMax and IoMaxSpec parameters. If you configure both parameters, the value of the IoMaxSpec parameter takes effect. We recommend that you configure only the IoMaxSpec parameter.</li>
-     * <li>For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</li>
+     * <li><p>The specified traffic specification must be greater than or equal to the current traffic specification of the instance.</p>
+     * </li>
+     * <li><p>You must specify either this parameter or <code>IoMax</code>. If you specify both, this parameter takes precedence. We recommend that you specify only this parameter.</p>
+     * </li>
+     * <li><p>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * </li>
      * </ul>
+     * <blockquote>
+     * <p>This parameter is required for subscription instances but not for Confluent-series instances.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>alikafka.hw.2xlarge</p>
@@ -90,16 +116,34 @@ public class UpgradePrePayOrderShrinkRequest extends TeaModel {
     @NameInMap("IoMaxSpec")
     public String ioMaxSpec;
 
+    /**
+     * <p>The billing method. Valid values:</p>
+     * <ul>
+     * <li><p><strong>0</strong>: subscription</p>
+     * </li>
+     * <li><p><strong>4</strong>: subscription for Confluent instances</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("PaidType")
     public Integer paidType;
 
     /**
-     * <p>The number of partitions. We recommend that you configure this parameter.</p>
+     * <p>The number of partitions (recommended).</p>
      * <ul>
-     * <li>You must specify at least one of the PartitionNum and TopicQuota parameters. We recommend that you configure only the PartitionNum parameter.</li>
-     * <li>If you specify both parameters, the topic-based sales model is used to check whether the PartitionNum value and the TopicQuota value are the same. If they are not the same, a failure response is returned. If they are the same, the order is placed based on the PartitionNum value.</li>
-     * <li>For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</li>
+     * <li><p>You must specify either this parameter or <code>TopicQuota</code>. We recommend that you specify only this parameter.</p>
+     * </li>
+     * <li><p>If you specify both <code>PartitionNum</code> and <code>TopicQuota</code>, the system checks if their values are equivalent under the previous topic pricing model. A mismatch causes the request to fail. If they match, the system uses <code>PartitionNum</code> to process the purchase.</p>
+     * </li>
+     * <li><p>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * </li>
      * </ul>
+     * <blockquote>
+     * <p>This parameter is required for subscription instances but not for Confluent-series instances.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -108,7 +152,7 @@ public class UpgradePrePayOrderShrinkRequest extends TeaModel {
     public Integer partitionNum;
 
     /**
-     * <p>The region ID of the instance.</p>
+     * <p>The ID of the region where the instance is located.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -118,13 +162,24 @@ public class UpgradePrePayOrderShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The edition of the instance. Valid values:</p>
+     * <p>The specification type.</p>
+     * <p>Valid values for ApsaraMQ for Kafka instances:</p>
      * <ul>
-     * <li><strong>normal</strong>: Standard Edition (High Write)</li>
-     * <li><strong>professional</strong>: Professional Edition (High Write)</li>
-     * <li><strong>professionalForHighRead</strong>: Professional Edition (High Read)</li>
+     * <li><p><strong>normal</strong>: Standard Edition (high write)</p>
+     * </li>
+     * <li><p><strong>professional</strong>: Professional Edition (high write)</p>
+     * </li>
+     * <li><p><strong>professionalForHighRead</strong>: Professional Edition (high read)</p>
+     * </li>
      * </ul>
-     * <p>You cannot downgrade an instance from the Professional Edition to the Standard Edition. For more information about these instance editions, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</p>
+     * <p>Valid values for Confluent instances:</p>
+     * <ul>
+     * <li><p><strong>professional</strong>: Professional Edition</p>
+     * </li>
+     * <li><p><strong>enterprise</strong>: Enterprise Edition</p>
+     * </li>
+     * </ul>
+     * <p>You cannot downgrade an instance from Professional Edition to Standard Edition. For more information about these specification types, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>professional</p>
@@ -133,12 +188,16 @@ public class UpgradePrePayOrderShrinkRequest extends TeaModel {
     public String specType;
 
     /**
-     * <p>The number of topics. We recommend that you do not configure this parameter.</p>
+     * <p>The number of topics (not recommended).</p>
      * <ul>
-     * <li>You must specify at least one of the PartitionNum and TopicQuota parameters. We recommend that you configure only the PartitionNum parameter.</li>
-     * <li>If you specify both parameters, the topic-based sales model is used to check whether the PartitionNum value and the TopicQuota value are the same. If they are not the same, a failure response is returned. If they are the same, the order is placed based on the PartitionNum value.</li>
-     * <li>The default value of the TopicQuota parameter varies based on the value of the IoMaxSpec parameter. If the number of topics that you consume exceeds the default value, you are charged additional fees.</li>
-     * <li>For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</li>
+     * <li><p>You must specify either this parameter or <code>PartitionNum</code>. We recommend that you specify only <code>PartitionNum</code>.</p>
+     * </li>
+     * <li><p>If you specify both <code>TopicQuota</code> and <code>PartitionNum</code>, the system checks if their values are equivalent under the previous topic pricing model. A mismatch causes the request to fail. If they match, the system uses <code>PartitionNum</code> to process the purchase.</p>
+     * </li>
+     * <li><p>The default value of this parameter varies based on the traffic specification. You are charged additional fees if the specified value exceeds the default value.</p>
+     * </li>
+     * <li><p>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -15,7 +15,7 @@ public class DeleteScheduledScalingRuleRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the region where the instance resides.</p>
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,9 +25,9 @@ public class DeleteScheduledScalingRuleRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the scheduled scaling rule.</p>
+     * <p>The policy name.</p>
      * <blockquote>
-     * <p> You can delete only rules that are disabled and rules that are scheduled only once and have been executed.</p>
+     * <p>Only policies that are disabled or one-time policies that have been executed can be deleted.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

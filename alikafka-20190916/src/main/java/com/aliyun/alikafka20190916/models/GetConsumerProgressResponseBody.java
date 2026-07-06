@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetConsumerProgressResponseBody extends TeaModel {
     /**
-     * <p>The returned HTTP status code. If the request is successful, 200 is returned.</p>
+     * <p>The status code. A value of 200 indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The consumer progress of the consumer group.</p>
+     * <p>The consumption status.</p>
      */
     @NameInMap("ConsumerProgress")
     public GetConsumerProgressResponseBodyConsumerProgress consumerProgress;
@@ -38,7 +38,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -372,10 +372,18 @@ public class GetConsumerProgressResponseBody extends TeaModel {
 
     public static class GetConsumerProgressResponseBodyConsumerProgress extends TeaModel {
         /**
-         * <p>The time when the last message consumed by the consumer group was generated.</p>
+         * <p>The latest time when a message was stored. This time is calculated based on the consumer offsets of all topics in the consumer group.</p>
+         * <blockquote>
+         * <ul>
+         * <li><p>This parameter is not supported for topics on Serverless instances or topics that use local storage on provisioned instances. In these cases, -1 is returned.</p>
+         * </li>
+         * <li><p>For topics that use cloud storage on provisioned instances, this parameter returns the message creation timestamp. This happens only after you submit the consumer offset for a consumer group that was created in the console or by an API call. If the message has no creation timestamp, -1 is returned.</p>
+         * </li>
+         * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>1566874931671</p>
+         * <p>1566874931649</p>
          */
         @NameInMap("LastTimestamp")
         public Long lastTimestamp;
@@ -387,7 +395,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         public GetConsumerProgressResponseBodyConsumerProgressTopicList topicList;
 
         /**
-         * <p>The total number of unconsumed messages in all topics to which the consumer group subscribes.</p>
+         * <p>The total number of unconsumed messages in all topics. This value is the message accumulation.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -395,6 +403,26 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         @NameInMap("TotalDiff")
         public Long totalDiff;
 
+        /**
+         * <p>The status of the consumer group:</p>
+         * <ul>
+         * <li><p>UNKNOWN</p>
+         * </li>
+         * <li><p>PREPARING_REBALANCE</p>
+         * </li>
+         * <li><p>COMPLETING_REBALANCE</p>
+         * </li>
+         * <li><p>STABLE</p>
+         * </li>
+         * <li><p>DEAD</p>
+         * </li>
+         * <li><p>EMPTY</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>STABLE</p>
+         */
         @NameInMap("state")
         public String state;
 

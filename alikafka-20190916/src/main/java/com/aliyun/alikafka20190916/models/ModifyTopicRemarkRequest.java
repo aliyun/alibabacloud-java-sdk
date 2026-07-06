@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyTopicRemarkRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ModifyTopicRemarkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The description of the topic.</p>
+     * <p>Remark.</p>
      * 
      * <strong>example:</strong>
      * <p>testremark</p>

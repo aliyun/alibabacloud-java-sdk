@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTopicStatusResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+     * <p>Status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class GetTopicStatusResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The returned message.</p>
+     * <p>Response message.</p>
      * 
      * <strong>example:</strong>
      * <p>operation success.</p>
@@ -23,7 +23,7 @@ public class GetTopicStatusResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E475C7E2-8C35-46EF-BE7D-5D2A9F5D****</p>
@@ -32,7 +32,7 @@ public class GetTopicStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +41,7 @@ public class GetTopicStatusResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The status information about messages in the topic.</p>
+     * <p>Topic status.</p>
      */
     @NameInMap("TopicStatus")
     public GetTopicStatusResponseBodyTopicStatus topicStatus;
@@ -175,7 +175,7 @@ public class GetTopicStatusResponseBody extends TeaModel {
 
     public static class GetTopicStatusResponseBodyTopicStatus extends TeaModel {
         /**
-         * <p>The time when the last consumed message was generated.</p>
+         * <p>Generation time of the last consumed message. Unit: ms.</p>
          * 
          * <strong>example:</strong>
          * <p>1566470063575</p>
@@ -187,7 +187,7 @@ public class GetTopicStatusResponseBody extends TeaModel {
         public GetTopicStatusResponseBodyTopicStatusOffsetTable offsetTable;
 
         /**
-         * <p>The number of messages in the topic.</p>
+         * <p>Total number of messages.</p>
          * 
          * <strong>example:</strong>
          * <p>423</p>

@@ -5,14 +5,20 @@ import com.aliyun.tea.*;
 
 public class CreateAclRequest extends TeaModel {
     /**
-     * <p>The type of the operation allowed by the access control list (ACL). Valid values:</p>
+     * <p>Operation type. Valid values:</p>
      * <ul>
-     * <li><strong>Write</strong></li>
-     * <li><strong>Read</strong></li>
-     * <li><strong>Describe</strong>: reads of transactional IDs.</li>
-     * <li><strong>IdempotentWrite</strong>: idempotent data writes to clusters.</li>
-     * <li><strong>IDEMPOTENT_WRITE</strong>: idempotent data writes to clusters. This value is available only for serverless ApsaraMQ for Kafka instances.</li>
-     * <li><strong>DESCRIBE_CONFIGS</strong>: configuration query. This value is available only for serverless ApsaraMQ for Kafka instances.</li>
+     * <li><p><strong>Write</strong>: write</p>
+     * </li>
+     * <li><p><strong>Read</strong>: read</p>
+     * </li>
+     * <li><p><strong>Describe</strong>: read TransactionalId</p>
+     * </li>
+     * <li><p><strong>IdempotentWrite</strong>: idempotent write to Cluster</p>
+     * </li>
+     * <li><p><strong>IDEMPOTENT_WRITE</strong>: idempotent write to Cluster, only available for Serverless instances.</p>
+     * </li>
+     * <li><p><strong>DESCRIBE_CONFIGS</strong>: query configuration, only available for Serverless instances.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -23,18 +29,24 @@ public class CreateAclRequest extends TeaModel {
     public String aclOperationType;
 
     /**
-     * <p>The types of operations allowed by the ACL. Separate multiple operation types with commas (,).</p>
+     * <p>Batch authorization operation types. Multiple operations are separated by commas (,).</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><strong>Write</strong></li>
-     * <li><strong>Read</strong></li>
-     * <li><strong>Describe</strong>: reads of transactional IDs.</li>
-     * <li><strong>IdempotentWrite</strong>: idempotent data writes to clusters.</li>
-     * <li><strong>IDEMPOTENT_WRITE</strong>: idempotent data writes to clusters. This value is available only for serverless ApsaraMQ for Kafka instances.</li>
-     * <li><strong>DESCRIBE_CONFIGS</strong>: configuration query. This value is available only for serverless ApsaraMQ for Kafka instances.</li>
+     * <li><p><strong>Write</strong>: read</p>
+     * </li>
+     * <li><p><strong>Read</strong>: write</p>
+     * </li>
+     * <li><p><strong>Describe</strong>: read TransactionalId</p>
+     * </li>
+     * <li><p><strong>IdempotentWrite</strong>: idempotent write to Cluster</p>
+     * </li>
+     * <li><p><strong>IDEMPOTENT_WRITE</strong>: idempotent write to Cluster, only available for Serverless instances.</p>
+     * </li>
+     * <li><p><strong>DESCRIBE_CONFIGS</strong>: query configuration, only available for Serverless instances.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is available only for serverless ApsaraMQ for Kafka instances.</p>
+     * <p>This parameter is only supported for Serverless instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,13 +56,15 @@ public class CreateAclRequest extends TeaModel {
     public String aclOperationTypes;
 
     /**
-     * <p>The authorization method. Valid values:</p>
+     * <p>Authorization method. Valid values:</p>
      * <ul>
-     * <li><strong>DENY</strong></li>
-     * <li><strong>ALLOW</strong></li>
+     * <li><p><strong>DENY</strong>: deny.</p>
+     * </li>
+     * <li><p><strong>ALLOW</strong>: allow.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is available only for serverless ApsaraMQ for Kafka instances.</p>
+     * <p>This parameter is only supported for Serverless instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -60,13 +74,17 @@ public class CreateAclRequest extends TeaModel {
     public String aclPermissionType;
 
     /**
-     * <p>The resource name.</p>
+     * <p>Resource name.</p>
      * <ul>
-     * <li>The value can be a topic name, a group ID, a cluster name, or a transaction ID.</li>
-     * <li>You can use an asterisk (\*) to specify the names of all resources of the specified type.</li>
+     * <li><p>The name of the resource, which can be a topic name, Group ID, cluster name, or transaction ID.</p>
+     * </li>
+     * <li><p>You can use an asterisk (\*) to represent all resources of this type.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>You can use an asterisk (\*) to query the resources on which permissions are granted only after you grant the user the required permissions on all resources.</p>
+     * <ul>
+     * <li>Only after authorization is granted to all resources can you query the authorized resources using an asterisk (\*).</li>
+     * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -77,10 +95,12 @@ public class CreateAclRequest extends TeaModel {
     public String aclResourceName;
 
     /**
-     * <p>The matching mode. Valid values:</p>
+     * <p>Matching pattern. Valid values:</p>
      * <ul>
-     * <li><strong>LITERAL</strong>: exact match</li>
-     * <li><strong>PREFIXED</strong>: prefix match</li>
+     * <li><p><strong>LITERAL</strong>: exact match</p>
+     * </li>
+     * <li><p><strong>PREFIXED</strong>: prefix match</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -91,12 +111,16 @@ public class CreateAclRequest extends TeaModel {
     public String aclResourcePatternType;
 
     /**
-     * <p>The resource type. Valid values:</p>
+     * <p>Resource type. Valid values:</p>
      * <ul>
-     * <li><strong>Topic</strong></li>
-     * <li><strong>Group</strong></li>
-     * <li><strong>Cluster</strong></li>
-     * <li><strong>TransactionalId</strong>: transactional ID</li>
+     * <li><p><strong>Topic</strong>: message topic.</p>
+     * </li>
+     * <li><p><strong>Group</strong>: consumer group.</p>
+     * </li>
+     * <li><p><strong>Cluster</strong>: instance.</p>
+     * </li>
+     * <li><p><strong>TransactionalId</strong>: transaction ID.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -107,15 +131,15 @@ public class CreateAclRequest extends TeaModel {
     public String aclResourceType;
 
     /**
-     * <p>The IP address of the source.</p>
+     * <p>Source IP.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>You can specify a specific IP address or use the asterisk (\*) wildcard character to specify all IP addresses. CIDR blocks are not supported.</p>
+     * <li><p>Only specific IP addresses or \* (all IPs) are supported. IP address ranges are not supported.</p>
      * </li>
-     * <li><p>This parameter is available only for serverless ApsaraMQ for Kafka instances.</p>
+     * <li><p>This parameter is only supported for Serverless instances.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -126,7 +150,7 @@ public class CreateAclRequest extends TeaModel {
     public String host;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -136,7 +160,7 @@ public class CreateAclRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region ID.</p>
+     * <p>Region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -146,12 +170,14 @@ public class CreateAclRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The username.</p>
+     * <p>Username.</p>
      * <ul>
-     * <li>You can use an asterisk (\*) to specify all usernames.</li>
+     * <li>You can use an asterisk (\*) to represent all usernames.</li>
      * </ul>
      * <blockquote>
-     * <p>You can use an asterisk (\*) to query the authorized users only after you grant the required permissions to all users.</p>
+     * <ul>
+     * <li>Only after authorization is granted to all users can you query the authorized users using an asterisk (\*).</li>
+     * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

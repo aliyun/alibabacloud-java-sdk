@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateTopicRequest extends TeaModel {
     /**
-     * <p>The log cleanup policy that is used for the topic. This parameter is available only when LocalTopic is set to true. Valid values:</p>
+     * <p>The cleanup policy for the topic. This parameter is available only if the storage engine of the topic is local storage. Valid values:</p>
      * <ul>
-     * <li>false: The topic uses the default log cleanup policy.</li>
-     * <li>true: The topic uses the log compaction policy.</li>
+     * <li><p>false: The delete cleanup policy.</p>
+     * </li>
+     * <li><p>true: The compact cleanup policy.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,18 +20,36 @@ public class CreateTopicRequest extends TeaModel {
     public Boolean compactTopic;
 
     /**
-     * <p>The additional configuration.</p>
+     * <p>The advanced configurations of the topic.</p>
      * <ul>
-     * <li>The value must be in JSON format.</li>
-     * <li>Set Key to <strong>replications</strong>. This value specifies the number of replicas of the topic. The value must be an integer that ranges from 1 to 3.</li>
-     * <li>You can configure this parameter only if you set <strong>LocalTopic</strong> to <strong>true</strong> or specify <strong>Open Source Edition (Local Disk)</strong> as the instance edition.****</li>
+     * <li><p>Configure this parameter in the JSON format.</p>
+     * </li>
+     * <li><p>This parameter is available only if <strong>LocalTopic</strong> is set to <strong>true</strong>.</p>
+     * </li>
+     * <li><p>The following configurations are supported for reserved instances:</p>
+     * <ul>
+     * <li><p><strong>retention.ms</strong>: The message retention period. The value must be an integer from 3,600,000 to 31,536,000,000. Unit: milliseconds.</p>
+     * </li>
+     * <li><p><strong>max.message.bytes</strong>: The maximum size of a message that can be sent. The value must be an integer from 1,048,576 to 10,485,760. Unit: bytes.</p>
+     * </li>
+     * <li><p>message.timestamp.type: The timestamp type of a message. Valid values: CreateTime or LogAppendTime. CreateTime indicates that the message timestamp is the time when the producer creates the message. If you do not specify a timestamp, the client time is used. LogAppendTime indicates that the message timestamp is the time when the server stores the message. The default value is CreateTime. We recommend that you set this parameter to <strong>LogAppendTime</strong>.</p>
+     * </li>
      * </ul>
-     * <blockquote>
-     * <p> If you specify replications in this parameter, <strong>ReplicationFactor</strong> does not take effect.</p>
-     * </blockquote>
+     * </li>
+     * <li><p>The following configurations are supported for Serverless instances:</p>
+     * <ul>
+     * <li><p><strong>retention.hours</strong>: The message retention period. The value is of the string type. The value must be an integer from 24 to 8,760.</p>
+     * </li>
+     * <li><p><strong>max.message.bytes</strong>: The maximum size of a message that can be sent. The value is of the string type. The value must be an integer from 1,048,576 to 10,485,760.</p>
+     * </li>
+     * <li><p>message.timestamp.type: The timestamp type of a message. Valid values: CreateTime or LogAppendTime. CreateTime indicates that the message timestamp is the time when the producer creates the message. If you do not specify a timestamp, the client time is used. LogAppendTime indicates that the message timestamp is the time when the server stores the message. The default value is CreateTime. We recommend that you set this parameter to <strong>LogAppendTime</strong>.</p>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;replications&quot;: 3}</p>
+     * <p>{&quot;retention.ms&quot;: &quot;3600000&quot;}</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -38,7 +58,7 @@ public class CreateTopicRequest extends TeaModel {
     public String config;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,10 +68,12 @@ public class CreateTopicRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The type of storage that the topic uses. Valid values:</p>
+     * <p>The storage engine of the topic. Valid values:</p>
      * <ul>
-     * <li>false: The topic uses cloud storage.</li>
-     * <li>true: The topic uses local storage.</li>
+     * <li><p>false: cloud storage.</p>
+     * </li>
+     * <li><p>true: local storage.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,9 +85,12 @@ public class CreateTopicRequest extends TeaModel {
     /**
      * <p>The minimum number of in-sync replicas (ISRs).</p>
      * <ul>
-     * <li>This parameter is available only when <strong>LocalTopic</strong> is set to <strong>true</strong>, or the instance is of the <strong>Open Source Edition (Local Disk)</strong>.****</li>
-     * <li>The value of this parameter must be smaller than the value of ReplicationFactor.</li>
-     * <li>Valid values: 1 to 3.</li>
+     * <li><p>This parameter is available only if <strong>LocalTopic</strong> is set to <strong>true</strong>.</p>
+     * </li>
+     * <li><p>The value of this parameter must be smaller than the number of replicas for the topic.</p>
+     * </li>
+     * <li><p>The value must be an integer from 1 to 3.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -80,13 +105,17 @@ public class CreateTopicRequest extends TeaModel {
     /**
      * <p>The number of partitions in the topic.</p>
      * <ul>
-     * <li>Valid values: 1 to 360.</li>
-     * <li>In the ApsaraMQ for Kafka console, you can view the number of partitions that the system recommends based on the specifications of the instance. We recommend that you specify the number that is recommended by the system as the value of this parameter to reduce the risk of data skew.</li>
+     * <li><p>The value must be an integer from 1 to 360.</p>
+     * </li>
+     * <li><p>The console suggests a number of partitions based on the instance type. Follow the suggestion to reduce the risk of data skew.</p>
+     * </li>
      * </ul>
-     * <p>Default values:</p>
+     * <p>Default value:</p>
      * <ul>
-     * <li>ApsaraMQ for Kafka V2 instance: 12</li>
-     * <li>ApsaraMQ for Kafka V3 instance: 3</li>
+     * <li><p>Reserved instance: 12</p>
+     * </li>
+     * <li><p>Serverless instance: 3</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -96,7 +125,7 @@ public class CreateTopicRequest extends TeaModel {
     public String partitionNum;
 
     /**
-     * <p>The region ID of the instance in which you want to create a topic.</p>
+     * <p>The ID of the region where the instance that contains the topic is located.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -106,10 +135,12 @@ public class CreateTopicRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The description of the topic.</p>
+     * <p>The remarks on the topic.</p>
      * <ul>
-     * <li>The description can contain only letters, digits, hyphens (-), and underscores (_).</li>
-     * <li>The description must be 3 to 64 characters in length.</li>
+     * <li><p>The remarks can contain only letters, digits, underscores (_), and hyphens (-).</p>
+     * </li>
+     * <li><p>The remarks must be 3 to 64 characters in length.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -122,11 +153,13 @@ public class CreateTopicRequest extends TeaModel {
     /**
      * <p>The number of replicas for the topic.</p>
      * <ul>
-     * <li>This parameter is available only when <strong>LocalTopic</strong> is set to <strong>true</strong>, or the instance is of the <strong>Open Source Edition (Local Disk)</strong>.****</li>
-     * <li>Valid values: 1 to 3.</li>
+     * <li><p>This parameter is available only if <strong>LocalTopic</strong> is set to <strong>true</strong>.</p>
+     * </li>
+     * <li><p>The value must be an integer from 1 to 3.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>If you set this parameter to <strong>1</strong>, data loss may occur. Exercise caution when you configure this parameter.</p>
+     * <p>If you set the number of replicas to <strong>1</strong>, you may lose data. Set this parameter with caution.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -139,17 +172,18 @@ public class CreateTopicRequest extends TeaModel {
     public Long replicationFactor;
 
     /**
-     * <p>The tags that you want to add to the topic.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateTopicRequestTag> tag;
 
     /**
-     * <p>The topic name.</p>
+     * <p>The name of the topic.</p>
      * <ul>
-     * <li>The name can contain only letters, digits, hyphens (-), and underscores (_).</li>
-     * <li>The name must be 3 to 64 characters in length. If the name that you specify contains more than 64 characters, the system automatically truncates the name.</li>
-     * <li>After a topic is created, you cannot change the name of the topic.</li>
+     * <li><p>Reserved instance: The name can contain uppercase letters, lowercase letters, digits, underscores (_), hyphens (-), and periods (.). The name must be 3 to 64 characters in length.</p>
+     * </li>
+     * <li><p>Serverless instance: The name can contain uppercase letters, lowercase letters, digits, underscores (_), hyphens (-), and periods (.). The name must be 1 to 249 characters in length.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -254,10 +288,14 @@ public class CreateTopicRequest extends TeaModel {
 
     public static class CreateTopicRequestTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The tag key of the resource.</p>
          * <ul>
-         * <li>If you do not specify this parameter, the keys of all tags are matched.</li>
-         * <li>The tag key must be 1 to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
+         * <li><p>N specifies the number of the tag. The value of N must be an integer from 1 to 20.</p>
+         * </li>
+         * <li><p>If this parameter is left empty, all tag keys are matched.</p>
+         * </li>
+         * <li><p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -268,10 +306,14 @@ public class CreateTopicRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The tag value of the resource.</p>
          * <ul>
-         * <li>You can leave this parameter empty.</li>
-         * <li>The tag value must be 1 to 128 characters in length and cannot contain http:// or https://. The tag value cannot start with aliyun or acs:.</li>
+         * <li><p>N specifies the number of the tag. The value of N must be an integer from 1 to 20.</p>
+         * </li>
+         * <li><p>The tag value can be empty.</p>
+         * </li>
+         * <li><p>The tag value can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http\:// or https\://.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreatePostPayInstanceResponseBody extends TeaModel {
     /**
+     * <p>The status code. A value of 200 indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The returned results.</p>
+     */
     @NameInMap("Data")
     public CreatePostPayInstanceResponseBodyData data;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>operation success.</p>
      */
@@ -22,6 +29,8 @@ public class CreatePostPayInstanceResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABA4A7FD-E10F-45C7-9774-A5236015A***</p>
      */
@@ -29,6 +38,8 @@ public class CreatePostPayInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +93,8 @@ public class CreatePostPayInstanceResponseBody extends TeaModel {
 
     public static class CreatePostPayInstanceResponseBodyData extends TeaModel {
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>alikafka_pre-cn-pe333xxxxxx</p>
          */
@@ -89,6 +102,8 @@ public class CreatePostPayInstanceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The ID of the order.</p>
+         * 
          * <strong>example:</strong>
          * <p>236972661580636</p>
          */

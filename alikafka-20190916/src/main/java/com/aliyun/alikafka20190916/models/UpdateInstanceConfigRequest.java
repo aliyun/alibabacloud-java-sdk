@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceConfigRequest extends TeaModel {
     /**
-     * <p>The configurations that you want to update for the ApsaraMQ for Kafka instance. The value must be a valid JSON string.</p>
+     * <p>The configuration of ApsaraMQ for Kafka that needs to be updated. The configuration information must be a valid JSON string.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateInstanceConfigRequest extends TeaModel {
     public String config;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

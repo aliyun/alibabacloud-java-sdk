@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRiskListRequest extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class GetRiskListRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -21,6 +24,7 @@ public class GetRiskListRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class GetRiskListRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The start index for paging.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */

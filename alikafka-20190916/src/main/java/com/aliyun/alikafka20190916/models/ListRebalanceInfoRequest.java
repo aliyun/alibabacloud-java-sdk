@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRebalanceInfoRequest extends TeaModel {
     /**
+     * <p>The name of the consumer group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListRebalanceInfoRequest extends TeaModel {
     public String consumerId;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ListRebalanceInfoRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

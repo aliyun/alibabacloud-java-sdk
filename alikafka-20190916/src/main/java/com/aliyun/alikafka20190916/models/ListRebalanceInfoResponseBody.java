@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListRebalanceInfoResponseBody extends TeaModel {
     /**
+     * <p>The return code. A return code of 200 indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -15,6 +17,8 @@ public class ListRebalanceInfoResponseBody extends TeaModel {
     public ListRebalanceInfoResponseBodyData data;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>operation success.</p>
      */
@@ -22,6 +26,8 @@ public class ListRebalanceInfoResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>06084011-E093-46F3-A51F-4B19A8AD****</p>
      */
@@ -29,6 +35,8 @@ public class ListRebalanceInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInstanceListResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code returned. The HTTP status code 200 indicates that the call is successful.</p>
+     * <p>The status code. A value of 200 indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -17,7 +17,7 @@ public class GetInstanceListResponseBody extends TeaModel {
     public GetInstanceListResponseBodyInstanceList instanceList;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>operation success.</p>
@@ -26,7 +26,7 @@ public class GetInstanceListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4B6D821D-7F67-4CAA-9E13-A5A997C3****</p>
@@ -35,7 +35,7 @@ public class GetInstanceListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>Indicates if the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

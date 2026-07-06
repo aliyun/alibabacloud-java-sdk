@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>The token that determines the start point of the next query.</p>
+     * <p>The token for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -14,7 +14,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the region in which the resource is deployed.</p>
+     * <p>The region ID of the resource.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,15 +24,18 @@ public class ListTagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource whose tags you want to query. The resource ID follows the following rules:</p>
+     * <p>The ID of the resource to be tagged. Resource ID rules:</p>
      * <ul>
-     * <li>Instance ID: instanceId</li>
-     * <li>Topic ID: Kafka_alikafka_instanceId_topic</li>
-     * <li>Group ID: Kafka_alikafka_instanceId_consumerGroup</li>
+     * <li><p>Instance: instanceId</p>
+     * </li>
+     * <li><p>Topic: Kafka_alikafka_instanceId_topic</p>
+     * </li>
+     * <li><p>Group: Kafka_alikafka_instanceId_consumerGroup</p>
+     * </li>
      * </ul>
-     * <p>For example, if the instance ID is alikafka_post-cn-v0h1fgs2xxxx, the topic name is test-topic, and the group name is test-consumer-group, the resource IDs are alikafka_post-cn-v0h1fgs2xxxx, Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-topic, and Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-consumer-group, respectively.</p>
+     * <p>For example: If the instance ID is alikafka_post-cn-v0h1fgs2xxxx, the Topic name is test-topic, and the Group name is test-consumer-group, the resource IDs are alikafka_post-cn-v0h1fgs2xxxx, Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-topic, and Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-consumer-group respectively.</p>
      * <blockquote>
-     * <p> You must configure one of <strong>ResourceId</strong> and <strong>Tag</strong> to query the tags that are bound to a resource. Otherwise, the request fails.</p>
+     * <p>Either the <strong>ResourceId</strong> or <strong>Tag</strong> parameter must be configured to query the tag list bound to resources. Otherwise, the API call fails.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -42,11 +45,14 @@ public class ListTagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resource whose tags you want to query. The value is an enumerated value. Valid values:</p>
+     * <p>The resource type. Enumeration type. Valid values:</p>
      * <ul>
-     * <li><strong>INSTANCE</strong></li>
-     * <li><strong>TOPIC</strong></li>
-     * <li><strong>CONSUMERGROUP</strong></li>
+     * <li><p><strong>INSTANCE</strong>: instance.</p>
+     * </li>
+     * <li><p><strong>TOPIC</strong>: topic.</p>
+     * </li>
+     * <li><p><strong>CONSUMERGROUP</strong>: consumer group.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -57,7 +63,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tag list.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
@@ -109,10 +115,12 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of the resource tag.</p>
+         * <p>The tag key of the resource.</p>
          * <ul>
-         * <li>If you leave this parameter empty, the keys of all tags are matched.</li>
-         * <li>The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</li>
+         * <li><p>If this parameter is empty, all tag keys are matched.</p>
+         * </li>
+         * <li><p>The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http\:// or https\://.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -122,10 +130,12 @@ public class ListTagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the resource tag.</p>
+         * <p>The tag value of the resource.</p>
          * <ul>
-         * <li>If you leave Key empty, you must also leave this parameter empty. If you leave this parameter empty, the values of all tags are matched.</li>
-         * <li>The tag value can be up to 128 characters in length and cannot contain http:// or https://. The tag value cannot start with acs: or aliyun.</li>
+         * <li><p>If the tag key is empty, this parameter must be empty. If this parameter is empty, all tag values are matched.</p>
+         * </li>
+         * <li><p>The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http\:// or https\://.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

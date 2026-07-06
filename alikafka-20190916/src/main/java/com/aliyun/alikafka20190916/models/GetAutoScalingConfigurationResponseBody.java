@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAutoScalingConfigurationResponseBody extends TeaModel {
     /**
-     * <p>The response code. The value 200 indicates that the request was successful.</p>
+     * <p>Status code. A return value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class GetAutoScalingConfigurationResponseBody extends TeaModel {
     public Long code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>Return result.</p>
      */
     @NameInMap("Data")
     public GetAutoScalingConfigurationResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>Return message.</p>
      * 
      * <strong>example:</strong>
      * <p>operation success.</p>
@@ -29,7 +29,7 @@ public class GetAutoScalingConfigurationResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>B7A39AE5-0B36-4442-A304-E0885265***</p>
@@ -38,7 +38,7 @@ public class GetAutoScalingConfigurationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

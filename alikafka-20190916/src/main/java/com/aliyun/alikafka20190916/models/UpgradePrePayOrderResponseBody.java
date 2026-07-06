@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradePrePayOrderResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+     * <p>A return code of 200 indicates that the request succeeded.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class UpgradePrePayOrderResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>operation success.</p>
@@ -22,11 +22,17 @@ public class UpgradePrePayOrderResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The order ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20497346575****</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ABA4A7FD-E10F-45C7-9774-A5236015***</p>
@@ -35,7 +41,7 @@ public class UpgradePrePayOrderResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request succeeded.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

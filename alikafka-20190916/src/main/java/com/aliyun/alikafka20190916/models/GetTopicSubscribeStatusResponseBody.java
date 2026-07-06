@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTopicSubscribeStatusResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>HTTP return code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class GetTopicSubscribeStatusResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The returned message.</p>
+     * <p>Return message.</p>
      * 
      * <strong>example:</strong>
      * <p>operation success</p>
@@ -23,7 +23,7 @@ public class GetTopicSubscribeStatusResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>06084011-E093-46F3-A51F-4B19A8AD****</p>
@@ -41,7 +41,7 @@ public class GetTopicSubscribeStatusResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The subscription details.</p>
+     * <p>Subscription details</p>
      */
     @NameInMap("TopicSubscribeStatus")
     public GetTopicSubscribeStatusResponseBodyTopicSubscribeStatus topicSubscribeStatus;
@@ -93,13 +93,13 @@ public class GetTopicSubscribeStatusResponseBody extends TeaModel {
 
     public static class GetTopicSubscribeStatusResponseBodyTopicSubscribeStatus extends TeaModel {
         /**
-         * <p>The groups that subscribe to the topic.</p>
+         * <p>List of Groups that subscribe to this topic.</p>
          */
         @NameInMap("ConsumerGroups")
         public java.util.List<String> consumerGroups;
 
         /**
-         * <p>The topic name.</p>
+         * <p>Topic name.</p>
          * 
          * <strong>example:</strong>
          * <p>topic_api_1681624879908</p>

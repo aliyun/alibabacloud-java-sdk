@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetQuotaTipRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetQuotaTipRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the region in which the instance resides.</p>
+     * <p>Region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableAutoTopicCreationRequest extends TeaModel {
     /**
-     * <p>The instance ID.</p>
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,11 +15,14 @@ public class EnableAutoTopicCreationRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The operation that you want to perform. Valid values:</p>
+     * <p>Currently only these three request parameters are supported:</p>
      * <ul>
-     * <li>enable: enables the automatic topic creation feature.</li>
-     * <li>disable: disables the automatic topic creation feature.</li>
-     * <li>updatePartition: changes the number of partitions in topics that are automatically created.</li>
+     * <li><p>enable: Enable automatic topic creation.</p>
+     * </li>
+     * <li><p>disable: Disable automatic topic creation.</p>
+     * </li>
+     * <li><p>updatePartition: Modify the number of partitions for automatic creation.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,8 +32,10 @@ public class EnableAutoTopicCreationRequest extends TeaModel {
     public String operate;
 
     /**
-     * <p>The changed number of partitions in topics that are automatically created.</p>
-     * <p>This parameter takes effect only if you set Operate to updatePartition.</p>
+     * <p>Adjust the default number of partitions for automatically created topics.</p>
+     * <blockquote>
+     * <p>This value is passed only when the Operate value is updatePartition, or when UpdatePartition is true.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>12</p>
@@ -39,7 +44,7 @@ public class EnableAutoTopicCreationRequest extends TeaModel {
     public Long partitionNum;
 
     /**
-     * <p>The region ID.</p>
+     * <p>Region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,6 +53,15 @@ public class EnableAutoTopicCreationRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Modify the number of partitions for automatic creation.</p>
+     * <blockquote>
+     * <p>If this parameter is set to true, the Operate parameter must be updatePartition or left empty.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("UpdatePartition")
     public Boolean updatePartition;
 

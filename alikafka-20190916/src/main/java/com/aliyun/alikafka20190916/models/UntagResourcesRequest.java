@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to detach all tags from the resource. This parameter only takes effect when the TagKey.N parameter is not configured. Default value: <strong>false</strong>.</p>
+     * <p>Specifies whether to detach all tags from the resource. This parameter takes effect when TagKey.N is empty. The default value is <strong>false</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -14,7 +14,7 @@ public class UntagResourcesRequest extends TeaModel {
     public Boolean all;
 
     /**
-     * <p>The ID of the region in which the resource is deployed.</p>
+     * <p>The region ID of the resource.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class UntagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IDs of the resources from which you want to detach tags.</p>
+     * <p>The IDs of resources from which you want to detach tags.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,14 +34,17 @@ public class UntagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resources. Valid values:</p>
+     * <p>The resource type. Enumeration type, currently supported resource types:</p>
      * <ul>
-     * <li><strong>INSTANCE</strong></li>
-     * <li><strong>TOPIC</strong></li>
-     * <li><strong>CONSUMERGROUP</strong></li>
+     * <li><p><strong>INSTANCE</strong></p>
+     * </li>
+     * <li><p><strong>TOPIC</strong></p>
+     * </li>
+     * <li><p><strong>CONSUMERGROUP</strong></p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> The value of this parameter is not case-sensitive.</p>
+     * <p>Case-insensitive.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -52,7 +55,7 @@ public class UntagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The key of the resource tag.</p>
+     * <p>The tag keys of the resource.</p>
      * 
      * <strong>example:</strong>
      * <p>FinanceDept</p>

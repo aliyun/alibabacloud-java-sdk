@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTopicListResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+     * <p>The return code. A value of 200 indicates that the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class GetTopicListResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The number of the page returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class GetTopicListResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>operation success.</p>
@@ -32,7 +32,7 @@ public class GetTopicListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>The number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -50,7 +50,7 @@ public class GetTopicListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -62,7 +62,7 @@ public class GetTopicListResponseBody extends TeaModel {
     public GetTopicListResponseBodyTopicList topicList;
 
     /**
-     * <p>The number of topics.</p>
+     * <p>The total number of topics.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

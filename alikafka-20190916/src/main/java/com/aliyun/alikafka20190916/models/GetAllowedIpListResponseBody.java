@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetAllowedIpListResponseBody extends TeaModel {
     /**
-     * <p>The IP address whitelist.</p>
+     * <p>The allowlist.</p>
      */
     @NameInMap("AllowedList")
     public GetAllowedIpListResponseBodyAllowedList allowedList;
 
     /**
-     * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+     * <p>The return code. A value of 200 indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -20,7 +20,7 @@ public class GetAllowedIpListResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The return message.</p>
      * 
      * <strong>example:</strong>
      * <p>operation success.</p>
@@ -29,7 +29,7 @@ public class GetAllowedIpListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A421CCD7-5BC5-4B32-8DD8-64668A8FCB56</p>
@@ -93,25 +93,31 @@ public class GetAllowedIpListResponseBody extends TeaModel {
 
     public static class GetAllowedIpListResponseBodyAllowedListInternetList extends TeaModel {
         /**
-         * <p>The group to which the IP address whitelist belongs.</p>
+         * <p>The Internet IP address allowlist group.</p>
          */
         @NameInMap("AllowedIpGroup")
         public java.util.Map<String, String> allowedIpGroup;
 
         /**
-         * <p>The information about the IP address whitelist.</p>
+         * <p>The Internet IP address allowlists.</p>
          */
         @NameInMap("AllowedIpList")
         public java.util.List<String> allowedIpList;
 
+        /**
+         * <p>The Internet IP address blocklists.</p>
+         */
         @NameInMap("BlackIPList")
         public java.util.List<String> blackIPList;
 
+        /**
+         * <p>The Internet IP address blocklist group.</p>
+         */
         @NameInMap("BlackIPMap")
         public java.util.Map<String, String> blackIPMap;
 
         /**
-         * <p>The port range. Valid value:</p>
+         * <p>The port range. Valid values:</p>
          * <p><strong>9093/9093</strong>.</p>
          * 
          * <strong>example:</strong>
@@ -120,9 +126,21 @@ public class GetAllowedIpListResponseBody extends TeaModel {
         @NameInMap("PortRange")
         public String portRange;
 
+        /**
+         * <p>The security group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-2zea4atm7fvj**********</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        /**
+         * <p>Indicates whether it is a shared security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("UserDefinedSharedSecurityGroup")
         public Boolean userDefinedSharedSecurityGroup;
 
@@ -191,25 +209,31 @@ public class GetAllowedIpListResponseBody extends TeaModel {
 
     public static class GetAllowedIpListResponseBodyAllowedListVpcList extends TeaModel {
         /**
-         * <p>The group to which the IP address whitelist belongs.</p>
+         * <p>The IP address allowlist group.</p>
          */
         @NameInMap("AllowedIpGroup")
         public java.util.Map<String, String> allowedIpGroup;
 
         /**
-         * <p>The information about the IP address whitelist.</p>
+         * <p>The IP address allowlists.</p>
          */
         @NameInMap("AllowedIpList")
         public java.util.List<String> allowedIpList;
 
+        /**
+         * <p>The IP address blocklists.</p>
+         */
         @NameInMap("BlackIPList")
         public java.util.List<String> blackIPList;
 
+        /**
+         * <p>The IP address blocklist group.</p>
+         */
         @NameInMap("BlackIPMap")
         public java.util.Map<String, String> blackIPMap;
 
         /**
-         * <p>The port range. Valid value:</p>
+         * <p>The port range. Valid values:</p>
          * <p><strong>9092/9092</strong>.</p>
          * 
          * <strong>example:</strong>
@@ -218,9 +242,21 @@ public class GetAllowedIpListResponseBody extends TeaModel {
         @NameInMap("PortRange")
         public String portRange;
 
+        /**
+         * <p>The security group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-2zea4atm7fvj**********</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        /**
+         * <p>Indicates whether it is a shared security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("UserDefinedSharedSecurityGroup")
         public Boolean userDefinedSharedSecurityGroup;
 
@@ -289,13 +325,15 @@ public class GetAllowedIpListResponseBody extends TeaModel {
 
     public static class GetAllowedIpListResponseBodyAllowedList extends TeaModel {
         /**
-         * <p>The deployment mode of the instance. Valid values:</p>
+         * <p>The deployment type. Valid values:</p>
          * <ul>
-         * <li><strong>4</strong>: allows access from the Internet and a virtual private cloud (VPC).</li>
-         * <li><strong>5</strong>: allows access from a VPC.</li>
+         * <li><p><strong>4</strong>: Internet/VPC</p>
+         * </li>
+         * <li><p><strong>5</strong>: VPC</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> Only integrators need to concern themselves with the value of this parameter.</p>
+         * <p>This field is not relevant for regular users and is intended for integration partners.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -305,13 +343,13 @@ public class GetAllowedIpListResponseBody extends TeaModel {
         public Integer deployType;
 
         /**
-         * <p>The whitelist for access from the Internet.</p>
+         * <p>The Internet allowlists.</p>
          */
         @NameInMap("InternetList")
         public java.util.List<GetAllowedIpListResponseBodyAllowedListInternetList> internetList;
 
         /**
-         * <p>The whitelist for access from a virtual private cloud (VPC).</p>
+         * <p>The VPC allowlists.</p>
          */
         @NameInMap("VpcList")
         public java.util.List<GetAllowedIpListResponseBodyAllowedListVpcList> vpcList;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetKafkaClientIpResponseBody extends TeaModel {
     /**
-     * <p>The returned status code. The status code 200 indicates that the request was successful.</p>
+     * <p>Return code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class GetKafkaClientIpResponseBody extends TeaModel {
     public Long code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
     public GetKafkaClientIpResponseBodyData data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The prompt message for the result.</p>
      * 
      * <strong>example:</strong>
      * <p>operation success.</p>
@@ -29,7 +29,7 @@ public class GetKafkaClientIpResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E57A8862-DF68-4055-8E55-B80CB4****</p>
@@ -191,9 +191,9 @@ public class GetKafkaClientIpResponseBody extends TeaModel {
 
     public static class GetKafkaClientIpResponseBodyData extends TeaModel {
         /**
-         * <p>The value true indicates that the broker is not of the latest minor version.</p>
+         * <p>If this value is true, it indicates that the minor version is not the latest version.</p>
          * <blockquote>
-         * <p> If the broker is not of the latest minor version, the sampled logs may not be accurate. This may cause inaccurate IP information. Therefore, we recommend that you update your broker to the latest version at the earliest opportunity.</p>
+         * <p>If your server minor version is not the latest version, the sampling logs may not be accurate enough, resulting in less precise IP information statistics. Therefore, it is recommended that you upgrade the server minor version as soon as possible.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -206,7 +206,7 @@ public class GetKafkaClientIpResponseBody extends TeaModel {
         public GetKafkaClientIpResponseBodyDataData data;
 
         /**
-         * <p>The end of the date range within which data is queried.</p>
+         * <p>End time</p>
          * 
          * <strong>example:</strong>
          * <p>1716343502000</p>
@@ -215,9 +215,9 @@ public class GetKafkaClientIpResponseBody extends TeaModel {
         public Long endDate;
 
         /**
-         * <p>The time range within which the client IP addresses are queried.</p>
+         * <p>The time range for querying client IPs.</p>
          * <blockquote>
-         * <p> The valid value is 1 hour. If the beginning of the time range to query and the end of the time range to query exceeds 1 hour, only data within 1 hour is returned.</p>
+         * <p>This range is 1 hour. If the start time and end time you enter exceed 1 hour, only data within 1 hour will be queried.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -227,7 +227,7 @@ public class GetKafkaClientIpResponseBody extends TeaModel {
         public Integer searchTimeRange;
 
         /**
-         * <p>The beginning of the date range within which data is queried.</p>
+         * <p>Start time.</p>
          * 
          * <strong>example:</strong>
          * <p>1716343501000</p>
@@ -236,9 +236,9 @@ public class GetKafkaClientIpResponseBody extends TeaModel {
         public Long startDate;
 
         /**
-         * <p>The date range within which the client IP addresses are queried.</p>
+         * <p>The date range for querying client IPs.</p>
          * <blockquote>
-         * <p> The valid value is 7 days. If the beginning of the date range to query and the end of the date range to query exceeds 7 days, only data within 7 days is returned.</p>
+         * <p>This range is 7 days. If the start time and end time you enter exceed 7 days, only data within 7 days will be queried.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

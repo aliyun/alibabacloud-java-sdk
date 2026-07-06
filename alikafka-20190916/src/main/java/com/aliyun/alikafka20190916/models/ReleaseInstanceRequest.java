@@ -7,8 +7,10 @@ public class ReleaseInstanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to immediately release the physical resources of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The physical resources of the instance are immediately released.</li>
-     * <li><strong>false</strong>: The physical resources of the instance are retained for a period of time before they are released.</li>
+     * <li><p><strong>true</strong>: Immediately releases the physical resources of the instance.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The physical resources of the instance are retained for a period of time before they are released.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class ReleaseInstanceRequest extends TeaModel {
     public Boolean forceDeleteInstance;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

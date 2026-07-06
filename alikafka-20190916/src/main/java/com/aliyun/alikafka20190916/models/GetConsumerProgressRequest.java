@@ -15,15 +15,15 @@ public class GetConsumerProgressRequest extends TeaModel {
     public String consumerId;
 
     /**
-     * <p>Specifies whether to hide LastTimestamp. Default value: false. We recommend that you set this parameter to true.</p>
+     * <p>Specifies whether to hide the \<code>LastTimestamp\\</code> parameter. The default value is false. Set this parameter to true for better performance.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>If you set this parameter to true, -1 is returned for LastTimestamp. If you set this parameter to false, a specific value is returned for LastTimestamp. This parameter is supported only by topics that use cloud storage on reserved instances.</p>
+     * <li><p>If you set this parameter to true, -1 is returned for the \<code>LastTimestamp\\</code> parameter. Otherwise, a specific value is returned. This parameter is supported only for topics of cloud storage on provisioned instances.</p>
      * </li>
-     * <li><p>A large amount of data is processed by this operation, which causes performance loss. We recommend that you set this parameter to true to accelerate processing.</p>
+     * <li><p>This operation processes a large amount of data and consumes a high degree of performance. Set this parameter to true to reduce the processing time.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -32,7 +32,7 @@ public class GetConsumerProgressRequest extends TeaModel {
     public Boolean hideLastTimestamp;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

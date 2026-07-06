@@ -5,22 +5,24 @@ import com.aliyun.tea.*;
 
 public class CreatePrePayOrderShrinkRequest extends TeaModel {
     /**
-     * <p>The configurations of Confluent.</p>
+     * <p>The configuration of Confluent components.</p>
      * <blockquote>
-     * <p> When you create an ApsaraMQ for Confluent instance, you must configure this parameter.</p>
+     * <p>This parameter is required when you create a Confluent series instance.</p>
      * </blockquote>
      */
     @NameInMap("ConfluentConfig")
     public String confluentConfigShrink;
 
     /**
-     * <p>The type of the network in which the instance is deployed. Valid values:</p>
+     * <p>The deployment type. Valid values:</p>
      * <ul>
-     * <li><strong>4</strong>: Internet and virtual private cloud (VPC)</li>
-     * <li><strong>5</strong>: VPC</li>
+     * <li><p><strong>4</strong>: Internet/VPC instance</p>
+     * </li>
+     * <li><p><strong>5</strong>: VPC instance</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you create an ApsaraMQ for Confluent instance, set the value to 5. After the instance is created, you can specify whether to enable each component.</p>
+     * <p>If you are creating a Confluent series instance, you cannot select the deployment type. You can only set the value to 5. After the purchase, you can adjust whether each component is open to the Internet.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -30,10 +32,10 @@ public class CreatePrePayOrderShrinkRequest extends TeaModel {
     public Integer deployType;
 
     /**
-     * <p>The disk size. Unit: GB</p>
-     * <p>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * <p>The disk capacity. Unit: GB.</p>
+     * <p>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
      * <blockquote>
-     * <p> If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.</p>
+     * <p>If you are creating a Confluent series instance, you do not need to pass this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -45,11 +47,13 @@ public class CreatePrePayOrderShrinkRequest extends TeaModel {
     /**
      * <p>The disk type. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: ultra disk</li>
-     * <li><strong>1</strong>: standard SSD</li>
+     * <li><p><strong>0</strong>: ultra disk</p>
+     * </li>
+     * <li><p><strong>1</strong>: SSD</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.</p>
+     * <p>If you are creating a Confluent series instance, you do not need to pass this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -59,9 +63,12 @@ public class CreatePrePayOrderShrinkRequest extends TeaModel {
     public String diskType;
 
     /**
-     * <p>The subscription duration. Unit: months. Default value: 1. Valid values:</p>
+     * <p>The subscription duration. Unit: month. Default value: 1. Valid values:</p>
      * <ul>
-     * <li><strong>1 to 12</strong></li>
+     * <li><p><strong>Confluent instances: 1 or 12</strong></p>
+     * </li>
+     * <li><p><strong>Kafka instances: 1</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,13 +78,15 @@ public class CreatePrePayOrderShrinkRequest extends TeaModel {
     public Integer duration;
 
     /**
-     * <p>The maximum Internet traffic in the instance.</p>
+     * <p>The Internet traffic.</p>
      * <ul>
-     * <li>If you set <strong>DeployType</strong> to <strong>4</strong>, you must configure this parameter.</li>
-     * <li>For information about the valid values, see <a href="https://help.aliyun.com/document_detail/72142.html">Pay-as-you-go</a>.</li>
+     * <li><p>If <strong>DeployType</strong> is set to <strong>4</strong>, you must specify this parameter.</p>
+     * </li>
+     * <li><p>For the valid values, see <a href="https://help.aliyun.com/document_detail/72142.html">pay-as-you-go</a>.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.</p>
+     * <p>If you are creating a Confluent series instance, you do not need to pass this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -87,13 +96,15 @@ public class CreatePrePayOrderShrinkRequest extends TeaModel {
     public Integer eipMax;
 
     /**
-     * <p>The maximum traffic in the instance. We recommend that you do not configure this parameter.</p>
+     * <p>The traffic peak (not recommended).</p>
      * <ul>
-     * <li>You must set one of <strong>IoMax</strong> and <strong>IoMaxSpec</strong>. If both parameters are configured, the value of <strong>IoMaxSpec</strong> is used. We recommend that you configure only <strong>IoMaxSpec</strong>.</li>
-     * <li>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
+     * <li><p>You must specify either <strong>IoMax</strong> or <strong>IoMaxSpec</strong>. If you specify both parameters, <strong>IoMaxSpec</strong> takes precedence. We recommend that you specify only <strong>IoMaxSpec</strong>.</p>
+     * </li>
+     * <li><p>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.</p>
+     * <p>If you are creating a Confluent series instance, you do not need to pass this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -103,13 +114,15 @@ public class CreatePrePayOrderShrinkRequest extends TeaModel {
     public Integer ioMax;
 
     /**
-     * <p>The traffic specification of the instance. We recommend that you configure this parameter.</p>
+     * <p>The traffic specification (recommended).</p>
      * <ul>
-     * <li>You must configure one of <strong>IoMax</strong> and <strong>IoMaxSpec</strong>. If both parameters are configured, the value of <strong>IoMaxSpec</strong> is used. We recommend that you configure only <strong>IoMaxSpec</strong>.</li>
-     * <li>For more information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
+     * <li><p>You must specify either <strong>IoMax</strong> or <strong>IoMaxSpec</strong>. If you specify both parameters, <strong>IoMaxSpec</strong> takes precedence. We recommend that you specify only <strong>IoMaxSpec</strong>.</p>
+     * </li>
+     * <li><p>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.</p>
+     * <p>If you are creating a Confluent series instance, you do not need to pass this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -119,27 +132,32 @@ public class CreatePrePayOrderShrinkRequest extends TeaModel {
     public String ioMaxSpec;
 
     /**
-     * <p>The billing method of the instance. Valid values:</p>
+     * <p>The billing method. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: the subscription billing method</li>
-     * <li><strong>4</strong>: the subscription billing method for ApsaraMQ for Confluent instances</li>
+     * <li><p><strong>0</strong>: subscription</p>
+     * </li>
+     * <li><p><strong>4</strong>: Confluent series subscription</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>0</p>
      */
     @NameInMap("PaidType")
     public Integer paidType;
 
     /**
-     * <p>The number of partitions. We recommend that you configure this parameter.</p>
+     * <p>The number of partitions (recommended).</p>
      * <ul>
-     * <li>You must configure one of PartitionNum and TopicQuota. We recommend that you configure only PartitionNum.</li>
-     * <li>If you configure PartitionNum and TopicQuota at the same time, the system verifies whether the price of the partitions equals the price of the topics based on the previous topic-based selling mode. If the price of the partitions does not equal the price of the topics, an error is returned. If the price of the partitions equals the price of the topics, the instance is purchased based on the partition number.</li>
-     * <li>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
+     * <li><p>You must specify either the number of partitions or the topic specification. We recommend that you specify only the number of partitions.</p>
+     * </li>
+     * <li><p>If you specify both the number of partitions and the topic specification, the system verifies whether the number of partitions is equivalent to the topic specification based on the old topic sales model. If they are not equivalent, the system returns a failure. If they are equivalent, the system makes the purchase based on the number of partitions.</p>
+     * </li>
+     * <li><p>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.</p>
+     * <p>If you are creating a Confluent series instance, you do not need to pass this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -159,8 +177,8 @@ public class CreatePrePayOrderShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
-     * <p>If this parameter is left empty, the default resource group is used. You can view the resource group ID on the Resource Group page in the Resource Management console.</p>
+     * <p>The resource group ID.</p>
+     * <p>If you do not specify this parameter, the instance is added to the default resource group. You can view the resource group ID in the Resource Group console.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-ac***********7q</p>
@@ -169,16 +187,24 @@ public class CreatePrePayOrderShrinkRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The instance edition. Valid values:</p>
+     * <p>The specification type.</p>
+     * <p>Valid values for Kafka instances:</p>
      * <ul>
-     * <li><strong>normal</strong>: Standard Edition (High Write)</li>
-     * <li><strong>professional</strong>: Professional Edition (High Write)</li>
-     * <li><strong>professionalForHighRead</strong>: Professional Edition (High Read)</li>
+     * <li><p><strong>normal</strong>: Standard Edition (high write)</p>
+     * </li>
+     * <li><p><strong>professional</strong>: Professional Edition (high write)</p>
+     * </li>
+     * <li><p><strong>professionalForHighRead</strong>: Professional Edition (high read)</p>
+     * </li>
+     * </ul>
+     * <p>Valid values for Confluent instances:</p>
+     * <ul>
+     * <li><p><strong>professional</strong>: Professional Edition</p>
+     * </li>
+     * <li><p><strong>enterprise</strong>: Enterprise Edition</p>
+     * </li>
      * </ul>
      * <p>For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
-     * <blockquote>
-     * <p> If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>normal</p>
@@ -187,21 +213,25 @@ public class CreatePrePayOrderShrinkRequest extends TeaModel {
     public String specType;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreatePrePayOrderShrinkRequestTag> tag;
 
     /**
-     * <p>The number of topics. We recommend that you do not configure this parameter.</p>
+     * <p>The number of topics (not recommended).</p>
      * <ul>
-     * <li>You must configure one of PartitionNum and TopicQuota. We recommend that you configure only PartitionNum.</li>
-     * <li>If you configure PartitionNum and TopicQuota at the same time, the system verifies whether the price of the partitions equals the price of the topics based on the previous topic-based selling mode. If the price of the partitions does not equal the price of the topics, an error is returned. If the price of the partitions equals the price of the topics, the instance is purchased based on the partition number.</li>
-     * <li>The default value of TopicQuota varies based on the value of IoMaxSpec. If the number of topics that you use exceeds the default value, you are charged additional fees.</li>
-     * <li>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
+     * <li><p>You must specify either the number of partitions or the topic specification. We recommend that you specify only the number of partitions.</p>
+     * </li>
+     * <li><p>If you specify both the number of partitions and the topic specification, the system verifies whether the number of partitions is equivalent to the topic specification based on the old topic sales model. If they are not equivalent, the system returns a failure. If they are equivalent, the system makes the purchase based on the number of partitions.</p>
+     * </li>
+     * <li><p>The default value varies based on the traffic specification. Additional fees are charged if the value exceeds the default value.</p>
+     * </li>
+     * <li><p>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.</p>
+     * <p>If you are creating a Confluent series instance, you do not need to pass this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -337,11 +367,14 @@ public class CreatePrePayOrderShrinkRequest extends TeaModel {
 
     public static class CreatePrePayOrderShrinkRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N.</p>
+         * <p>The tag key of the resource.</p>
          * <ul>
-         * <li>Valid values of N: 1 to 20.</li>
-         * <li>If this parameter is left empty, the keys of all tags are matched.</li>
-         * <li>The tag key can be up to 128 characters in length and cannot start with acs: or aliyun or contain <a href="http://https://%E3%80%82">http:// or https://.</a></li>
+         * <li><p>N ranges from 1 to 20.</p>
+         * </li>
+         * <li><p>If this parameter is empty, all tag keys are matched.</p>
+         * </li>
+         * <li><p>The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http\:// or https\://.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -352,11 +385,14 @@ public class CreatePrePayOrderShrinkRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N.</p>
+         * <p>The tag value of the resource.</p>
          * <ul>
-         * <li>Valid values of N: 1 to 20.</li>
-         * <li>This parameter can be left empty.</li>
-         * <li>The tag value can be 1 to 128 characters in length and cannot start with acs: or aliyun or contain <a href="http://https://%E3%80%82">http:// or https://.</a></li>
+         * <li><p>N ranges from 1 to 20.</p>
+         * </li>
+         * <li><p>This parameter can be empty.</p>
+         * </li>
+         * <li><p>The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http\:// or https\://.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

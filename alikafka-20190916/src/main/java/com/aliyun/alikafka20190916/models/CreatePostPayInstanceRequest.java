@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreatePostPayInstanceRequest extends TeaModel {
     /**
+     * <p>The deployment type. Valid values:</p>
+     * <ul>
+     * <li><p><strong>4</strong>: instance that is accessible over the internet and a VPC</p>
+     * </li>
+     * <li><p><strong>5</strong>: instance that is accessible only over a VPC</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +21,12 @@ public class CreatePostPayInstanceRequest extends TeaModel {
     public Integer deployType;
 
     /**
+     * <p>The disk capacity.</p>
+     * <p>For more information about the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * <blockquote>
+     * <p>This parameter is not required when you create a Serverless instance.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>1500</p>
      */
@@ -21,6 +34,17 @@ public class CreatePostPayInstanceRequest extends TeaModel {
     public Integer diskSize;
 
     /**
+     * <p>The disk type. Valid values:</p>
+     * <ul>
+     * <li><p><strong>0</strong>: ultra disk</p>
+     * </li>
+     * <li><p><strong>1</strong>: SSD</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter is not required when you create a Serverless instance.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -28,6 +52,17 @@ public class CreatePostPayInstanceRequest extends TeaModel {
     public String diskType;
 
     /**
+     * <p>The Internet traffic.</p>
+     * <ul>
+     * <li><p>This parameter is required if you set <strong>DeployType</strong> to <strong>4</strong>.</p>
+     * </li>
+     * <li><p>For more information about the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter is not required when you create a Serverless instance.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -35,6 +70,14 @@ public class CreatePostPayInstanceRequest extends TeaModel {
     public Integer eipMax;
 
     /**
+     * <p>The traffic specification.</p>
+     * <ul>
+     * <li>For more information about the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter is not required when you create a Serverless instance.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>alikafka.hw.2xlarge</p>
      */
@@ -42,6 +85,14 @@ public class CreatePostPayInstanceRequest extends TeaModel {
     public String ioMaxSpec;
 
     /**
+     * <p>The billing method. Valid values:</p>
+     * <ul>
+     * <li><p>1 (default): pay-as-you-go for reserved instances.</p>
+     * </li>
+     * <li><p>3: pay-as-you-go for reserved capacity and elastic scaling of Serverless instances.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -49,6 +100,14 @@ public class CreatePostPayInstanceRequest extends TeaModel {
     public Integer paidType;
 
     /**
+     * <p>The number of partitions.</p>
+     * <ul>
+     * <li>For more information about the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter is not required if the instance is a Serverless instance.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -56,6 +115,7 @@ public class CreatePostPayInstanceRequest extends TeaModel {
     public Integer partitionNum;
 
     /**
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,22 +125,52 @@ public class CreatePostPayInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the resource group.</p>
+     * <p>If you do not specify this parameter, the instance is added to the default resource group. You can view the resource group ID in the Resource Group console.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-ac***********7q</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The settings of the Serverless instance. This parameter is required when you create a Serverless instance.</p>
+     */
     @NameInMap("ServerlessConfig")
     public CreatePostPayInstanceRequestServerlessConfig serverlessConfig;
 
     /**
+     * <p>The edition of the instance.</p>
+     * <p>If you set the PaidType parameter to 1 (pay-as-you-go for reserved instances), valid values are:</p>
+     * <ul>
+     * <li><p>normal: Standard Edition (High-write)</p>
+     * </li>
+     * <li><p>professional: Professional Edition (High-write)</p>
+     * </li>
+     * <li><p>professionalForHighRead: Professional Edition (High-read)</p>
+     * </li>
+     * </ul>
+     * <p>If you set the PaidType parameter to 3 (pay-as-you-go for reserved capacity and elastic scaling of Serverless instances), valid values are:</p>
+     * <ul>
+     * <li><p>basic: Serverless Basic Edition</p>
+     * </li>
+     * <li><p>normal: Serverless Standard Edition</p>
+     * </li>
+     * <li><p>professional: Serverless Professional Edition</p>
+     * </li>
+     * </ul>
+     * <p>For more information about these instance editions, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>professional</p>
      */
     @NameInMap("SpecType")
     public String specType;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreatePostPayInstanceRequestTag> tag;
 
@@ -187,6 +277,11 @@ public class CreatePostPayInstanceRequest extends TeaModel {
 
     public static class CreatePostPayInstanceRequestServerlessConfig extends TeaModel {
         /**
+         * <p>The reserved publish traffic. The value must be an integer. Minimum value: 60. This parameter is required for Serverless instances.</p>
+         * <blockquote>
+         * <p>The actual upper limit is subject to the inventory in the current region. For more information, see the value range on the buy page.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
@@ -194,8 +289,13 @@ public class CreatePostPayInstanceRequest extends TeaModel {
         public Long reservedPublishCapacity;
 
         /**
+         * <p>The reserved subscribe traffic. The value must be an integer. Minimum value: 20. This parameter is required for Serverless instances.</p>
+         * <blockquote>
+         * <p>The actual upper limit is subject to the inventory in the current region. For more information, see the value range on the buy page.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
-         * <p>50</p>
+         * <p>20</p>
          */
         @NameInMap("ReservedSubscribeCapacity")
         public Long reservedSubscribeCapacity;
@@ -225,6 +325,15 @@ public class CreatePostPayInstanceRequest extends TeaModel {
 
     public static class CreatePostPayInstanceRequestTag extends TeaModel {
         /**
+         * <p>The tag key of the resource.</p>
+         * <ul>
+         * <li><p>The value of N can be from 1 to 20.</p>
+         * </li>
+         * <li><p>If this parameter is left empty, all tag keys are matched.</p>
+         * </li>
+         * <li><p>The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http\:// or https\://.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -234,6 +343,16 @@ public class CreatePostPayInstanceRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value of the resource.</p>
+         * <ul>
+         * <li><p>The value of N can be from 1 to 20.</p>
+         * </li>
+         * <li><p>If the tag key is empty, this parameter must also be empty. If this parameter is empty, all tag values are matched.</p>
+         * </li>
+         * <li><p>The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http\:// or https\://.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */

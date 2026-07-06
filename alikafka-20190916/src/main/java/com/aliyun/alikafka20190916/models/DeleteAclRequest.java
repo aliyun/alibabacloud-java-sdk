@@ -5,14 +5,20 @@ import com.aliyun.tea.*;
 
 public class DeleteAclRequest extends TeaModel {
     /**
-     * <p>The type of the operation allowed by the access control list (ACL). Valid values:</p>
+     * <p>Operation type. Valid values:</p>
      * <ul>
-     * <li><strong>Write</strong>: data writes.</li>
-     * <li><strong>Read</strong>: data reads.</li>
-     * <li><strong>Describe</strong>: reads of transaction IDs.</li>
-     * <li><strong>IdempotentWrite</strong>: idempotent data writes to clusters.</li>
-     * <li><strong>IDEMPOTENT_WRITE</strong>: idempotent data writes to clusters. This value is available only for serverless ApsaraMQ for Kafka instances.</li>
-     * <li><strong>DESCRIBE_CONFIGS</strong>: configuration query. This value is available only for serverless ApsaraMQ for Kafka instances.</li>
+     * <li><p><strong>Write</strong>: Write</p>
+     * </li>
+     * <li><p><strong>Read</strong>: Read</p>
+     * </li>
+     * <li><p><strong>Describe</strong>: Read TransactionalId</p>
+     * </li>
+     * <li><p><strong>IdempotentWrite</strong>: Idempotent write to Cluster</p>
+     * </li>
+     * <li><p><strong>IDEMPOTENT_WRITE</strong>: Idempotent write to Cluster, only available for Serverless instances.</p>
+     * </li>
+     * <li><p><strong>DESCRIBE_CONFIGS</strong>: Query configuration, only available for Serverless instances.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -23,18 +29,24 @@ public class DeleteAclRequest extends TeaModel {
     public String aclOperationType;
 
     /**
-     * <p>The types of operations allowed by the ACL. Separate multiple operations with commas (,).</p>
+     * <p>Batch authorization operation types. Multiple operations are separated by commas (,).</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><strong>Write</strong>: data writes.</li>
-     * <li><strong>Read</strong>: data reads.</li>
-     * <li><strong>Describe</strong>: reads of transaction IDs.</li>
-     * <li><strong>IdempotentWrite</strong>: idempotent data writes to clusters.</li>
-     * <li><strong>IDEMPOTENT_WRITE</strong>: idempotent data writes to clusters. This value is available only for serverless ApsaraMQ for Kafka instances.</li>
-     * <li><strong>DESCRIBE_CONFIGS</strong>: configuration query. This value is available only for serverless ApsaraMQ for Kafka instances.</li>
+     * <li><p><strong>Write</strong>: Read</p>
+     * </li>
+     * <li><p><strong>Read</strong>: Write</p>
+     * </li>
+     * <li><p><strong>Describe</strong>: Read TransactionalId</p>
+     * </li>
+     * <li><p><strong>IdempotentWrite</strong>: Idempotent write to Cluster</p>
+     * </li>
+     * <li><p><strong>IDEMPOTENT_WRITE</strong>: Idempotent write to Cluster, only available for Serverless instances.</p>
+     * </li>
+     * <li><p><strong>DESCRIBE_CONFIGS</strong>: Query configuration, only available for Serverless instances.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is available only for serverless ApsaraMQ for Kafka instances.</p>
+     * <p>This parameter is only supported for Serverless instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,13 +56,15 @@ public class DeleteAclRequest extends TeaModel {
     public String aclOperationTypes;
 
     /**
-     * <p>The authorization method. Valid values:</p>
+     * <p>Authorization method. Valid values:</p>
      * <ul>
-     * <li>Deny</li>
-     * <li>ALLOW</li>
+     * <li><p>DENY: Deny</p>
+     * </li>
+     * <li><p>ALLOW: Allow</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is available only for serverless ApsaraMQ for Kafka instances.</p>
+     * <p>This parameter is only supported for Serverless instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -60,10 +74,12 @@ public class DeleteAclRequest extends TeaModel {
     public String aclPermissionType;
 
     /**
-     * <p>The name of the resource.</p>
+     * <p>Resource name.</p>
      * <ul>
-     * <li>The value can be the name of a topic or consumer group.</li>
-     * <li>You can use an asterisk (\*) to indicate the names of all topics or consumer groups.</li>
+     * <li><p>Topic name or Group name.</p>
+     * </li>
+     * <li><p>Asterisk (\*) represents all Topic or Group names.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -74,10 +90,12 @@ public class DeleteAclRequest extends TeaModel {
     public String aclResourceName;
 
     /**
-     * <p>The mode that is used to match resources. Valid values:</p>
+     * <p>Matching pattern. Valid values:</p>
      * <ul>
-     * <li><strong>LITERAL:</strong> full match</li>
-     * <li><strong>PREFIXED</strong>: prefix match</li>
+     * <li><p><strong>LITERAL</strong>: Exact matching pattern</p>
+     * </li>
+     * <li><p><strong>PREFIXED</strong>: Prefix matching pattern</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -88,12 +106,16 @@ public class DeleteAclRequest extends TeaModel {
     public String aclResourcePatternType;
 
     /**
-     * <p>The resource type. Valid values:</p>
+     * <p>Resource type.</p>
      * <ul>
-     * <li><strong>Topic</strong>: topic</li>
-     * <li><strong>Group</strong>: consumer group</li>
-     * <li><strong>Cluster</strong>: cluster</li>
-     * <li><strong>TransactionalId</strong>: transactional ID</li>
+     * <li><p><strong>Topic</strong>: Message topic.</p>
+     * </li>
+     * <li><p><strong>Group</strong>: Consumer group.</p>
+     * </li>
+     * <li><p><strong>Cluster</strong>: Instance.</p>
+     * </li>
+     * <li><p><strong>TransactionalId</strong>: Transaction ID.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -104,15 +126,15 @@ public class DeleteAclRequest extends TeaModel {
     public String aclResourceType;
 
     /**
-     * <p>The IP address of the source.</p>
+     * <p>Source IP.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>You can specify only a specific IP address or use the asterisk (\*) wildcard character to specify all IP addresses. CIDR blocks are not supported.</p>
+     * <li><p>Only supports specific IP addresses or setting \* (all IPs), does not support IP segments.</p>
      * </li>
-     * <li><p>This parameter is available only for serverless ApsaraMQ for Kafka instances.</p>
+     * <li><p>This parameter is only supported for Serverless instances.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -123,7 +145,7 @@ public class DeleteAclRequest extends TeaModel {
     public String host;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -133,7 +155,7 @@ public class DeleteAclRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>Region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -143,7 +165,7 @@ public class DeleteAclRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the user.</p>
+     * <p>Username.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

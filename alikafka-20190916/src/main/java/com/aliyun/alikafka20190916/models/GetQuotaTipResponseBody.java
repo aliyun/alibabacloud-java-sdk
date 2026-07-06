@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetQuotaTipResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+     * <p>Status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class GetQuotaTipResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The additional message. This message is typically used to describe API call failures for troubleshooting.</p>
+     * <p>Additional information. In typical scenarios, it provides a brief description of failed calls to help the caller locate the problem</p>
      * 
      * <strong>example:</strong>
      * <p>operation success.</p>
@@ -23,13 +23,13 @@ public class GetQuotaTipResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The quota.</p>
+     * <p>Quota information.</p>
      */
     @NameInMap("QuotaData")
     public GetQuotaTipResponseBodyQuotaData quotaData;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0178A3A7-E87B-5E50-A16F-3E62F534****</p>
@@ -93,7 +93,7 @@ public class GetQuotaTipResponseBody extends TeaModel {
 
     public static class GetQuotaTipResponseBodyQuotaData extends TeaModel {
         /**
-         * <p>The number of available groups.</p>
+         * <p>Remaining Group quota.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -102,7 +102,7 @@ public class GetQuotaTipResponseBody extends TeaModel {
         public Integer groupLeft;
 
         /**
-         * <p>The number of used groups.</p>
+         * <p>Used Group quota.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -111,10 +111,12 @@ public class GetQuotaTipResponseBody extends TeaModel {
         public Integer groupUsed;
 
         /**
-         * <p>The method that you use to purchase partitions. Valid values:</p>
+         * <p>Partition purchase method distinction, with the following values:</p>
          * <ul>
-         * <li>0: indicates that the instance is purchased based on topics.</li>
-         * <li>1: indicates that the instance is purchased based on partitions.</li>
+         * <li><p>0: indicates that the instance uses the topic model for purchase.</p>
+         * </li>
+         * <li><p>1: indicates partition model purchase.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -124,7 +126,7 @@ public class GetQuotaTipResponseBody extends TeaModel {
         public Integer isPartitionBuy;
 
         /**
-         * <p>The number of available partitions.</p>
+         * <p>Remaining partition quota.</p>
          * 
          * <strong>example:</strong>
          * <p>1050</p>
@@ -133,7 +135,7 @@ public class GetQuotaTipResponseBody extends TeaModel {
         public Integer partitionLeft;
 
         /**
-         * <p>The number of purchased partitions.</p>
+         * <p>Number of purchased partitions.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -142,7 +144,7 @@ public class GetQuotaTipResponseBody extends TeaModel {
         public Integer partitionNumOfBuy;
 
         /**
-         * <p>The quota of partitions.</p>
+         * <p>Partition quota.</p>
          * 
          * <strong>example:</strong>
          * <p>1100</p>
@@ -151,7 +153,7 @@ public class GetQuotaTipResponseBody extends TeaModel {
         public Integer partitionQuota;
 
         /**
-         * <p>The number of used partitions.</p>
+         * <p>Used partition quota.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -160,7 +162,7 @@ public class GetQuotaTipResponseBody extends TeaModel {
         public Integer partitionUsed;
 
         /**
-         * <p>The number of available topics.</p>
+         * <p>Remaining topic quota.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -169,7 +171,7 @@ public class GetQuotaTipResponseBody extends TeaModel {
         public Integer topicLeft;
 
         /**
-         * <p>The number of purchased topics.</p>
+         * <p>Number of purchased topics.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -178,7 +180,7 @@ public class GetQuotaTipResponseBody extends TeaModel {
         public Integer topicNumOfBuy;
 
         /**
-         * <p>The quota of topics.</p>
+         * <p>Topic quota.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -187,7 +189,7 @@ public class GetQuotaTipResponseBody extends TeaModel {
         public Integer topicQuota;
 
         /**
-         * <p>The number of used topics.</p>
+         * <p>Used topic quota.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>

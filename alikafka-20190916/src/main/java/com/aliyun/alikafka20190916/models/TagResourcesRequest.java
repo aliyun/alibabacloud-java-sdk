@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
     /**
-     * <p>The ID of the Message Queue for Apache RocketMQ instance which contains the resource to which you want to attach tags.</p>
+     * <p>The ID of the instance that contains the specified resources.</p>
      * 
      * <strong>example:</strong>
      * <p>alikafka_post-cn-v0h1fgs2****</p>
@@ -14,7 +14,7 @@ public class TagResourcesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the region in which the resource is deployed.</p>
+     * <p>The region ID of the resources.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class TagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource IDs.</p>
+     * <p>A list of resource IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,14 +34,17 @@ public class TagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resources. The value is an enumerated value. Valid values:</p>
+     * <p>The resource type. Valid values:</p>
      * <ul>
-     * <li><strong>INSTANCE</strong></li>
-     * <li><strong>TOPIC</strong></li>
-     * <li><strong>CONSUMERGROUP</strong></li>
+     * <li><p><strong>INSTANCE</strong></p>
+     * </li>
+     * <li><p><strong>TOPIC</strong></p>
+     * </li>
+     * <li><p><strong>CONSUMERGROUP</strong></p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> The value of this parameter is not case-sensitive.</p>
+     * <p>The value is case-insensitive.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -52,7 +55,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags.</p>
+     * <p>A list of tags.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
@@ -107,8 +110,10 @@ public class TagResourcesRequest extends TeaModel {
         /**
          * <p>The tag key.</p>
          * <ul>
-         * <li>You must specify this parameter.</li>
-         * <li>The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</li>
+         * <li><p>The tag key cannot be an empty string.</p>
+         * </li>
+         * <li><p>The tag key can be up to 128 characters long. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -121,8 +126,10 @@ public class TagResourcesRequest extends TeaModel {
         /**
          * <p>The tag value.</p>
          * <ul>
-         * <li>You can leave this parameter empty.</li>
-         * <li>The tag value can be up to 128 characters in length and cannot contain http:// or https://. The tag value cannot start with acs: or aliyun.</li>
+         * <li><p>The tag value can be an empty string.</p>
+         * </li>
+         * <li><p>The tag value can be up to 128 characters long. It cannot start with aliyun or acs: and cannot contain http\:// or https\://.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

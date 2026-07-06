@@ -15,7 +15,7 @@ public class UpgradeInstanceVersionRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the region where the instance resides.</p>
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,12 +25,14 @@ public class UpgradeInstanceVersionRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The major version to be upgraded to. Valid values:</p>
+     * <p>The target open source version. Valid values:</p>
      * <ul>
-     * <li><strong>0.10.2</strong></li>
-     * <li><strong>2.2.0</strong></li>
+     * <li><p><strong>0.10.2</strong></p>
+     * </li>
+     * <li><p><strong>2.2.0</strong></p>
+     * </li>
      * </ul>
-     * <p>If you set this parameter to the current major version, the system upgrades the instance to the latest minor version.</p>
+     * <p>If the value is the same as the current version, a minor version update will be triggered.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -15,10 +15,12 @@ public class ModifyInstanceNameRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The instance name. Valid values:</p>
+     * <p>The name of the instance. The value must meet the following requirements:</p>
      * <ul>
-     * <li>The name can contain only letters, digits, hyphens (-), and underscores (_).</li>
-     * <li>The name must be 3 to 64 characters in length. A name that contains more than 64 characters is automatically truncated.</li>
+     * <li><p>The name can contain only letters, digits, underscores (_), and hyphens (-).</p>
+     * </li>
+     * <li><p>The name must be 3 to 64 characters in length. If the name contains more than 64 characters, the name is automatically truncated.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

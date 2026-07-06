@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateScheduledScalingRuleShrinkRequest extends TeaModel {
     /**
-     * <p>The duration of each scheduled scaling task. Unit: minutes.</p>
+     * <p>The duration (unit: minutes) of a scheduled elastic task.</p>
      * <blockquote>
-     * <p> The value of this parameter must be greater than or equal to 15.</p>
+     * <p>The parameter value must be at least 15 minutes.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,10 +18,10 @@ public class CreateScheduledScalingRuleShrinkRequest extends TeaModel {
     public Integer durationMinutes;
 
     /**
-     * <p>Specifies whether to enable the scheduled scaling rule. Valid values:</p>
+     * <p>Enables or disables the scheduled task policy. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: Enables the policy.</li>
+     * <li><strong>false</strong>: Disables the policy.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,11 +31,14 @@ public class CreateScheduledScalingRuleShrinkRequest extends TeaModel {
     public Boolean enable;
 
     /**
-     * <p>The time when the scheduled scaling task is executed.</p>
-     * <p>If you set ScheduleType to at, make sure that the value of this parameter is at least 30 minutes later than the current point in time.</p>
+     * <p>The time when the scheduled policy starts to execute.</p>
+     * <p>For a one-time scheduling policy type, the start execution time must be more than 30 minutes later than the current time.</p>
      * <blockquote>
-     * <p>Notice: To prevent the broker from repeatedly executing instance upgrade and downgrade tasks, make sure that the interval between two consecutive scheduled scaling tasks is at least 60 minutes.</p>
+     * <p>Notice: </p>
      * </blockquote>
+     * <p>To avoid the service from continuously executing upgrade and downgrade tasks, the time interval between different scheduled tasks must be at least 60 minutes.</p>
+     * </notice>
+     * 
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +58,7 @@ public class CreateScheduledScalingRuleShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the region where the instance resides.</p>
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,11 +68,11 @@ public class CreateScheduledScalingRuleShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The frequency to execute the scheduled scaling task. This parameter is required only if you set ScheduleType to repeat. Valid values:</p>
+     * <p>When ScheduleType is set to repeat, you need to fill in this parameter. Enumeration values are:</p>
      * <ul>
-     * <li><p>Daily: The scheduled scaling task is executed every day.</p>
+     * <li><p>Daily: Daily scheduled task.</p>
      * </li>
-     * <li><p>Weekly: The scheduled scaling task is executed every week.</p>
+     * <li><p>Weekly: Weekly scheduled task.</p>
      * </li>
      * </ul>
      * 
@@ -80,9 +83,9 @@ public class CreateScheduledScalingRuleShrinkRequest extends TeaModel {
     public String repeatType;
 
     /**
-     * <p>The reserved production capacity for scheduled scaling. Unit: MB/s.</p>
+     * <p>The scheduled elastic reserved production specification (unit: MB/s).</p>
      * <blockquote>
-     * <p> You must specify a higher value than the instance specification for at least one of ReservedPubFlow and ReservedSubFlow.</p>
+     * <p>At least one of the ReservedPubFlow and ReservedSubFlow parameters must be higher than the current specification.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -93,9 +96,9 @@ public class CreateScheduledScalingRuleShrinkRequest extends TeaModel {
     public Integer reservedPubFlow;
 
     /**
-     * <p>The reserved consumption capacity for scheduled scaling. Unit: MB/s.</p>
+     * <p>The scheduled elastic reserved consumption specification (unit: MB/s).</p>
      * <blockquote>
-     * <p> You must specify a higher value than the instance specification for at least one of ReservedPubFlow and ReservedSubFlow.</p>
+     * <p>At least one of the ReservedSubFlow and ReservedPubFlow parameters must be higher than the current specification.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -106,9 +109,9 @@ public class CreateScheduledScalingRuleShrinkRequest extends TeaModel {
     public Integer reservedSubFlow;
 
     /**
-     * <p>The name of the scheduled scaling rule.</p>
+     * <p>The name of the scheduled policy rule.</p>
      * <blockquote>
-     * <p> The name of the scheduled scaling rule cannot be the same as the names of other rules for the instance.</p>
+     * <p>The name cannot be the same as other rule names for the same instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -119,10 +122,10 @@ public class CreateScheduledScalingRuleShrinkRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The type of the scheduled scaling task. Valid values:</p>
+     * <p>The schedule type. Valid values:</p>
      * <ul>
-     * <li>at: The scheduled scaling task is executed only once.</li>
-     * <li>repeat: The scheduled scaling task is repeatedly executed.</li>
+     * <li>at: Scheduled only once.</li>
+     * <li>repeat: Scheduled repeatedly.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -133,7 +136,7 @@ public class CreateScheduledScalingRuleShrinkRequest extends TeaModel {
     public String scheduleType;
 
     /**
-     * <p>The time zone in Coordinated Universal Time (UTC).</p>
+     * <p>The time zone (Coordinated Universal Time).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -143,7 +146,7 @@ public class CreateScheduledScalingRuleShrinkRequest extends TeaModel {
     public String timeZone;
 
     /**
-     * <p>The day on which the scheduled scaling task is executed every week. You can specify multiple days.</p>
+     * <p>The weekly types. Supports execution on multiple days.</p>
      */
     @NameInMap("WeeklyTypes")
     public String weeklyTypesShrink;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAllowedIpResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code that is returned. The HTTP status code 200 indicates that the request is successful.</p>
+     * <p>The return code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class UpdateAllowedIpResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The return message.</p>
      * 
      * <strong>example:</strong>
      * <p>operation success.</p>
@@ -23,7 +23,7 @@ public class UpdateAllowedIpResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>17D425C2-4EA3-4AB8-928D-E10511ECF***</p>
@@ -32,7 +32,7 @@ public class UpdateAllowedIpResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

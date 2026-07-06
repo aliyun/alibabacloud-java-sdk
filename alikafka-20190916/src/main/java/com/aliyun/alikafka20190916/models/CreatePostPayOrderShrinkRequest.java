@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreatePostPayOrderShrinkRequest extends TeaModel {
     /**
-     * <p>The deployment mode of the instance. Valid values:</p>
+     * <p>The deployment type. Valid values:</p>
      * <ul>
-     * <li><strong>4</strong>: deploys the instance that allows access from the Internet and a VPC.</li>
-     * <li><strong>5</strong>: deploys the instance that allows access only from a VPC.</li>
+     * <li><p><strong>4</strong>: An instance that is accessible from the Internet and a VPC.</p>
+     * </li>
+     * <li><p><strong>5</strong>: An instance that is accessible only from a VPC.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,10 +21,10 @@ public class CreatePostPayOrderShrinkRequest extends TeaModel {
     public Integer deployType;
 
     /**
-     * <p>The disk size.</p>
-     * <p>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * <p>The disk capacity.</p>
+     * <p>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
      * <blockquote>
-     * <p> If you create a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</p>
+     * <p>Do not specify this parameter if you create a Serverless instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -32,13 +34,15 @@ public class CreatePostPayOrderShrinkRequest extends TeaModel {
     public Integer diskSize;
 
     /**
-     * <p>The disk type of the instance. Valid values:</p>
+     * <p>The disk type. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: ultra disk</li>
-     * <li><strong>1</strong>: standard SSD</li>
+     * <li><p><strong>0</strong>: Ultra disk</p>
+     * </li>
+     * <li><p><strong>1</strong>: SSD</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you create a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</p>
+     * <p>Do not specify this parameter if you create a Serverless instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -50,11 +54,13 @@ public class CreatePostPayOrderShrinkRequest extends TeaModel {
     /**
      * <p>The Internet traffic.</p>
      * <ul>
-     * <li>If you set <strong>DeployType</strong> to <strong>4</strong>, you must configure this parameter.</li>
-     * <li>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
+     * <li><p>This parameter is required if you set <strong>DeployType</strong> to <strong>4</strong>.</p>
+     * </li>
+     * <li><p>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you create a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</p>
+     * <p>Do not specify this parameter if you create a Serverless instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -64,13 +70,15 @@ public class CreatePostPayOrderShrinkRequest extends TeaModel {
     public Integer eipMax;
 
     /**
-     * <p>The maximum traffic in the instance. We recommend that you do not configure this parameter.</p>
+     * <p>The peak traffic. This parameter is not recommended.</p>
      * <ul>
-     * <li>You must configure at least one of IoMax and IoMaxSpec. If you configure both parameters, the value of IoMaxSpec takes effect. We recommend that you configure only IoMaxSpec.</li>
-     * <li>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
+     * <li><p>You must specify this parameter or \<code>IoMaxSpec\\</code>. If you specify both parameters, the value of \<code>IoMaxSpec\\</code> takes precedence. We recommend that you specify only \<code>IoMaxSpec\\</code>.</p>
+     * </li>
+     * <li><p>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you create a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</p>
+     * <p>Do not specify this parameter if you create a Serverless instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -80,13 +88,15 @@ public class CreatePostPayOrderShrinkRequest extends TeaModel {
     public Integer ioMax;
 
     /**
-     * <p>The traffic specification of the instance. We recommend that you configure this parameter.</p>
+     * <p>The traffic specification. This parameter is recommended.</p>
      * <ul>
-     * <li>You must configure at least one of IoMax and IoMaxSpec. If you configure both parameters, the value of IoMaxSpec takes effect. We recommend that you configure only IoMaxSpec.</li>
-     * <li>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
+     * <li><p>You must specify this parameter or \<code>IoMax\\</code>. If you specify both parameters, the value of this parameter takes precedence. We recommend that you specify only this parameter.</p>
+     * </li>
+     * <li><p>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you create a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</p>
+     * <p>Do not specify this parameter if you create a Serverless instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -96,10 +106,12 @@ public class CreatePostPayOrderShrinkRequest extends TeaModel {
     public String ioMaxSpec;
 
     /**
-     * <p>The billing method of the instance. Valid values:</p>
+     * <p>The billing method. Valid values:</p>
      * <ul>
-     * <li>1: pay-as-you-go (reserved capacity).</li>
-     * <li>3: pay-as-you-go (reserved capacity) + pay-as-you-go (on-demand capacity)</li>
+     * <li><p>1 (default): Pay-as-you-go for a reserved instance.</p>
+     * </li>
+     * <li><p>3: Pay-as-you-go for a reserved Serverless instance and pay-as-you-go for elastic scaling of a Serverless instance.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -109,14 +121,17 @@ public class CreatePostPayOrderShrinkRequest extends TeaModel {
     public Integer paidType;
 
     /**
-     * <p>The number of partitions. We recommend that you configure this parameter.</p>
+     * <p>The number of partitions. This parameter is recommended.</p>
      * <ul>
-     * <li>You must configure one of PartitionNum and TopicQuota. We recommend that you configure only ParittionNum.</li>
-     * <li>If you configure PartitionNum and TopicQuota at the same time, the system verifies whether the price of the partitions equals the price of the topics based on the previous topic-based selling mode. If the price of the partitions does not equal the price of the topics, an error is returned. If the price of the partitions equals the price of the topics, the instance is purchased based on the partition number.</li>
-     * <li>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
+     * <li><p>You must specify this parameter or \<code>TopicQuota\\</code>. We recommend that you specify only this parameter.</p>
+     * </li>
+     * <li><p>If you specify both this parameter and \<code>TopicQuota\\</code>, the system verifies whether the values of the two parameters are equivalent based on the previous topic-based sales model. If the values are not equivalent, the system returns a failure. If the values are equivalent, the purchase is made based on the number of partitions.</p>
+     * </li>
+     * <li><p>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you create a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</p>
+     * <p>Do not specify this parameter if you create a Serverless instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -137,7 +152,7 @@ public class CreatePostPayOrderShrinkRequest extends TeaModel {
 
     /**
      * <p>The ID of the resource group.</p>
-     * <p>If this parameter is left empty, the default resource group is used. You can view the resource group ID on the Resource Group page in the Resource Management console.</p>
+     * <p>If you do not set this parameter, the instance is added to the default resource group. You can view the resource group ID in the Resource Group console.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-ac***********7q</p>
@@ -146,24 +161,32 @@ public class CreatePostPayOrderShrinkRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The parameters configured for the serverless ApsaraMQ for Kafka instance. These parameters are required only when you create a serverless instance.</p>
+     * <p>The settings of the Serverless instance. This parameter is required if you create a Serverless instance.</p>
      */
     @NameInMap("ServerlessConfig")
     public String serverlessConfigShrink;
 
     /**
-     * <p>The instance edition.</p>
-     * <p>Valid values if you set PaidType to 1:</p>
+     * <p>The specification type.</p>
+     * <p>If you set \<code>PaidType\\</code> to 1 (pay-as-you-go for a reserved instance), valid values are:</p>
      * <ul>
-     * <li>normal: Standard Edition (High Write)</li>
-     * <li>professional: Professional Edition (High Write)</li>
-     * <li>professionalForHighRead: Professional Edition (High Read)</li>
+     * <li><p>normal: Standard Edition (High-write)</p>
+     * </li>
+     * <li><p>professional: Professional Edition (High-write)</p>
+     * </li>
+     * <li><p>professionalForHighRead: Professional Edition (High-read)</p>
+     * </li>
      * </ul>
-     * <p>Valid values if you set PaidType to 3:</p>
+     * <p>If you set \<code>PaidType\\</code> to 3 (pay-as-you-go for a reserved Serverless instance and pay-as-you-go for elastic scaling of a Serverless instance), valid values are:</p>
      * <ul>
-     * <li>normal: Serverless Standard Edition</li>
+     * <li><p>basic: Serverless Basic Edition</p>
+     * </li>
+     * <li><p>normal: Serverless Standard Edition</p>
+     * </li>
+     * <li><p>professional: Serverless Professional Edition</p>
+     * </li>
      * </ul>
-     * <p>For more information about the instance editions, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * <p>For more information about these specification types, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>normal</p>
@@ -178,15 +201,19 @@ public class CreatePostPayOrderShrinkRequest extends TeaModel {
     public java.util.List<CreatePostPayOrderShrinkRequestTag> tag;
 
     /**
-     * <p>The number of topics. We recommend that you do not configure this parameter.</p>
+     * <p>The number of topics. This parameter is not recommended.</p>
      * <ul>
-     * <li>You must configure one of PartitionNum and TopicQuota. We recommend that you configure only ParittionNum.</li>
-     * <li>If you configure PartitionNum and TopicQuota at the same time, the system verifies whether the price of the partitions equals the price of the topics based on the previous topic-based selling mode. If the price of the partitions does not equal the price of the topics, an error is returned. If the price of the partitions equals the price of the topics, the instance is purchased based on the partition number.</li>
-     * <li>The default value of TopicQuota varies based on the value of IoMaxSpec. If the number of topics that you consume exceeds the default value, you are charged additional fees.</li>
-     * <li>For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
+     * <li><p>You must specify this parameter or \<code>PartitionNum\\</code>. We recommend that you specify only \<code>PartitionNum\\</code>.</p>
+     * </li>
+     * <li><p>If you specify both this parameter and \<code>PartitionNum\\</code>, the system verifies whether the values of the two parameters are equivalent based on the previous topic-based sales model. If the values are not equivalent, the system returns a failure. If the values are equivalent, the purchase is made based on the number of partitions.</p>
+     * </li>
+     * <li><p>The default value of this parameter varies based on the traffic specification. You are charged for the extra topics that exceed the default value.</p>
+     * </li>
+     * <li><p>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you create a serverless ApsaraMQ for Kafka instance, you do not need to configure this parameter.</p>
+     * <p>Do not specify this parameter if you create a Serverless instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -314,11 +341,14 @@ public class CreatePostPayOrderShrinkRequest extends TeaModel {
 
     public static class CreatePostPayOrderShrinkRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N.</p>
+         * <p>The tag key.</p>
          * <ul>
-         * <li>Valid values of N: 1 to 20.</li>
-         * <li>If this parameter is left empty, the keys of all tags are matched.</li>
-         * <li>The tag key must be up to 128 characters in length. It cannot start with acs: or aliyun or contain <a href="http://https://%E3%80%82">http:// or https://.</a></li>
+         * <li><p>N can be an integer from 1 to 20.</p>
+         * </li>
+         * <li><p>If this parameter is empty, all tag keys are matched.</p>
+         * </li>
+         * <li><p>The tag key can be up to 128 characters in length. It cannot start with \<code>aliyun\\</code> or \<code>acs:\\</code> and cannot contain \<code>http\\://\\</code> or \<code>https\\://\\</code>.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -329,11 +359,14 @@ public class CreatePostPayOrderShrinkRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N.</p>
+         * <p>The tag value.</p>
          * <ul>
-         * <li>Valid values of N: 1 to 20.</li>
-         * <li>If you do not specify a tag key, you cannot specify a tag value. If this parameter is not configured, all tag values are matched.</li>
-         * <li>The tag value must be 1 to 128 characters in length. It cannot start with acs: or aliyun or contain <a href="http://https://%E3%80%82">http:// or https://.</a></li>
+         * <li><p>N can be an integer from 1 to 20.</p>
+         * </li>
+         * <li><p>This parameter must be empty if the tag key is empty. If this parameter is empty, all tag values are matched.</p>
+         * </li>
+         * <li><p>The tag value can be up to 128 characters in length. It cannot start with \<code>aliyun\\</code> or \<code>acs:\\</code> and cannot contain \<code>http\\://\\</code> or \<code>https\\://\\</code>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
