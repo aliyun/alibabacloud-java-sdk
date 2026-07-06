@@ -7,8 +7,10 @@ public class ListApplicationProvisionInfosRequest extends TeaModel {
     /**
      * <p>The source of the applications. Valid values:</p>
      * <ul>
-     * <li>inner: The applications are from the current account.</li>
-     * <li>external: The applications are from other accounts.</li>
+     * <li><p>inner: The applications are from the current account.</p>
+     * </li>
+     * <li><p>external: The applications are from other accounts.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

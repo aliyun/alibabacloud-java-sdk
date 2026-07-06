@@ -4,6 +4,18 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class SetUserSsoSettingsRequest extends TeaModel {
+    /**
+     * <p>The supported signature algorithm. Valid values:</p>
+     * <ul>
+     * <li><p>rsa-sha256</p>
+     * </li>
+     * <li><p>rsa-sha1 (default)</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>rsa-sha1</p>
+     */
     @NameInMap("AuthnSignAlgo")
     public String authnSignAlgo;
 
@@ -29,8 +41,10 @@ public class SetUserSsoSettingsRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable SSO for the RAM user. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false (default)</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false (default)</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,12 +54,14 @@ public class SetUserSsoSettingsRequest extends TeaModel {
     public Boolean ssoEnabled;
 
     /**
-     * <p>Specifies whether the SAML SSO requires a domain name in the <code>&lt;saml:NameID&gt;</code> element of the SAML response. If yes, the username specified by the IdP for SSO must have a domain name as the suffix.</p>
+     * <p>Specifies whether the SAML SSO requires a domain name in the <code>&lt;saml:NameID&gt;</code> element of the SAML response. If yes, the username specified by the IdP for SSO must have a domain name as the suffix.</p>
      * <ul>
-     * <li>If the value of the parameter is <code>true</code>, the <code>&lt;saml:NameID&gt;</code> element <strong>must</strong> be in the <code>username@domain</code> format. You can set <code>domain</code> to the default domain name or the configured domain alias.</li>
-     * <li>If the value of the parameter is <code>false</code>, the <code>&lt;saml:NameID&gt;</code> element <strong>must</strong> be in the <code>username</code> format and <strong>cannot</strong> contain the <code>domain</code> suffix.</li>
+     * <li><p>If the value of the parameter is <code>true</code>, the <code>&lt;saml:NameID&gt;</code> element <strong>must</strong> be in the <code>username@domain</code> format. You can set <code>domain</code> to the default domain name or the configured domain alias.</p>
+     * </li>
+     * <li><p>If the value of the parameter is <code>false</code>, the <code>&lt;saml:NameID&gt;</code> element <strong>must</strong> be in the <code>username</code> format and <strong>cannot</strong> contain the <code>domain</code> suffix.</p>
+     * </li>
      * </ul>
-     * <p>Set the value to the default <code>true</code>.</p>
+     * <p>The default value is <code>true</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

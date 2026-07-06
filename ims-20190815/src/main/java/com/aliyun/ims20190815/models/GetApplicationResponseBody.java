@@ -11,7 +11,7 @@ public class GetApplicationResponseBody extends TeaModel {
     public GetApplicationResponseBodyApplication application;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6616F09B-2768-4C11-8866-A8EE4C4A583E</p>
@@ -101,6 +101,9 @@ public class GetApplicationResponseBody extends TeaModel {
     }
 
     public static class GetApplicationResponseBodyApplicationDelegatedScope extends TeaModel {
+        /**
+         * <p>The information about the permissions that are granted on the application.</p>
+         */
         @NameInMap("PredefinedScopes")
         public GetApplicationResponseBodyApplicationDelegatedScopePredefinedScopes predefinedScopes;
 
@@ -158,7 +161,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>472457090344041****</p>
@@ -167,7 +170,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>myapp</p>
@@ -176,11 +179,14 @@ public class GetApplicationResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The type of the application. Valid values:</p>
+         * <p>The application type. Valid values:</p>
          * <ul>
-         * <li>WebApp: a web application.</li>
-         * <li>NativeApp: a native application that runs on an operating system, such as a desktop or mobile operating system.</li>
-         * <li>ServerApp: an application that can access Alibaba Cloud services without the need for user logon. Only applications that synchronize user information based on the System for Cross-domain Identity Management (SCIM) protocol are supported.</li>
+         * <li><p>WebApp: a web application that is based on browser interaction.</p>
+         * </li>
+         * <li><p>NativeApp: a native application that runs on an operating system, such as a desktop or mobile operating system.</p>
+         * </li>
+         * <li><p>ServerApp: an application that directly accesses Alibaba Cloud services without user logon. Currently, only applications that use the System for Cross-domain Identity Management (SCIM) protocol for user synchronization are supported.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -190,7 +196,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public String appType;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the application was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-23T08:06:57Z</p>
@@ -222,9 +228,24 @@ public class GetApplicationResponseBody extends TeaModel {
         @NameInMap("IsMultiTenant")
         public Boolean isMultiTenant;
 
+        /**
+         * <p>The OAuth protocol version of the application. Valid values:</p>
+         * <ul>
+         * <li><p><code>2.0</code>: OAuth 2.0</p>
+         * </li>
+         * <li><p><code>2.1</code>: OAuth 2.1</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
+         */
         @NameInMap("ProtocolVersion")
         public String protocolVersion;
 
+        /**
+         * <p>The redirect URLs.</p>
+         */
         @NameInMap("RedirectUris")
         public GetApplicationResponseBodyApplicationRedirectUris redirectUris;
 
@@ -247,7 +268,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public Boolean secretRequired;
 
         /**
-         * <p>The update time.</p>
+         * <p>The time when the application was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-23T08:06:57Z</p>

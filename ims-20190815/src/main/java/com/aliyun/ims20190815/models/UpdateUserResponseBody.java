@@ -104,9 +104,12 @@ public class UpdateUserResponseBody extends TeaModel {
         /**
          * <p>The source of the RAM user. Valid values:</p>
          * <ul>
-         * <li>Manual: The RAM user is manually created in the RAM console.</li>
-         * <li>SCIM: The RAM user is mapped by using System for Cross-domain Identity Management (SCIM).</li>
-         * <li>CloudSSO: The RAM user is mapped from a CloudSSO user.</li>
+         * <li><p>Manual: The RAM user is manually created in the RAM console.</p>
+         * </li>
+         * <li><p>SCIM: The RAM user is mapped by using System for Cross-domain Identity Management (SCIM).</p>
+         * </li>
+         * <li><p>CloudSSO: The RAM user is mapped from a CloudSSO user.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

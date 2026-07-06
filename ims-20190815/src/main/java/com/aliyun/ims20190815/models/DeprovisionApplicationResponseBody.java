@@ -8,7 +8,7 @@ public class DeprovisionApplicationResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>85836703-8D4F-485F-9726-4D1C730F957E</p>
+     * <p>4507D1CD-526A-4E2B-A1E2-3AB045D1AE0B</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -50,11 +50,23 @@ public class GetSAMLProviderResponseBody extends TeaModel {
         @NameInMap("Arn")
         public String arn;
 
+        /**
+         * <p>The supported signature algorithm. Valid values:</p>
+         * <ul>
+         * <li><p>rsa-sha256</p>
+         * </li>
+         * <li><p>rsa-sha1</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>rsa-sha1</p>
+         */
         @NameInMap("AuthnSignAlgo")
         public String authnSignAlgo;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the information was created. It is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-22T02:37:05Z</p>
@@ -63,7 +75,7 @@ public class GetSAMLProviderResponseBody extends TeaModel {
         public String createDate;
 
         /**
-         * <p>The description.</p>
+         * <p>The IdP description.</p>
          * 
          * <strong>example:</strong>
          * <p>This is a provider.</p>
@@ -72,7 +84,7 @@ public class GetSAMLProviderResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The metadata file, which is Base64 encoded.</p>
+         * <p>The metadata file, which is Base64-encoded.</p>
          * 
          * <strong>example:</strong>
          * <p>PD94bWwgdmVy****</p>
@@ -81,7 +93,7 @@ public class GetSAMLProviderResponseBody extends TeaModel {
         public String encodedSAMLMetadataDocument;
 
         /**
-         * <p>The name of the IdP.</p>
+         * <p>The IdP name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-provider</p>
@@ -90,7 +102,7 @@ public class GetSAMLProviderResponseBody extends TeaModel {
         public String SAMLProviderName;
 
         /**
-         * <p>The update time.</p>
+         * <p>The time when the information was last updated. It is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-22T02:51:20Z</p>

@@ -9,7 +9,7 @@ public class CreateGroupRequest extends TeaModel {
      * <p>The description can be up to 128 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>Dev-Team</p>
+     * <p>开发团队</p>
      */
     @NameInMap("Comments")
     public String comments;

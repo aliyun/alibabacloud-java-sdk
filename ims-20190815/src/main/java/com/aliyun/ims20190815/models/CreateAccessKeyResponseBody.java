@@ -71,8 +71,10 @@ public class CreateAccessKeyResponseBody extends TeaModel {
         /**
          * <p>The status of the AccessKey pair. Valid values:</p>
          * <ul>
-         * <li>Active</li>
-         * <li>Inactive</li>
+         * <li><p>Active</p>
+         * </li>
+         * <li><p>Inactive</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

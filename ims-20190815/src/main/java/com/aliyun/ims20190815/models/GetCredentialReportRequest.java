@@ -15,7 +15,7 @@ public class GetCredentialReportRequest extends TeaModel {
     public String maxItems;
 
     /**
-     * <p>The token that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.``</p>
+     * <p>The token that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.\<code>\\</code></p>
      * 
      * <strong>example:</strong>
      * <p>EXAMPLE</p>

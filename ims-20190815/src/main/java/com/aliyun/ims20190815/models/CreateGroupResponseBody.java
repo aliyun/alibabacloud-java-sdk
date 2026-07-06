@@ -45,7 +45,7 @@ public class CreateGroupResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Dev-Team</p>
+         * <p>开发团队</p>
          */
         @NameInMap("Comments")
         public String comments;

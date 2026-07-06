@@ -16,9 +16,12 @@ public class GenerateCredentialReportResponseBody extends TeaModel {
     /**
      * <p>The generation status of the user credential report. Valid values:</p>
      * <ul>
-     * <li>STARTED: The system starts to generate the user credential report.</li>
-     * <li>INPROGRESS: The user credential report is being generated.</li>
-     * <li>COMPLETED: The user credential report is generated.</li>
+     * <li><p>STARTED: The system starts to generate the user credential report.</p>
+     * </li>
+     * <li><p>INPROGRESS: The user credential report is being generated.</p>
+     * </li>
+     * <li><p>COMPLETED: The user credential report is generated.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

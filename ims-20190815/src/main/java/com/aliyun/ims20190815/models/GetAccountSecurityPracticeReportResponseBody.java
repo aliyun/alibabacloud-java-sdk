@@ -44,8 +44,10 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
         /**
          * <p>Indicates whether multi-factor authentication (MFA) is enabled. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -93,9 +95,12 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
         /**
          * <p>The complexity level of the password for the RAM user. Valid values:</p>
          * <ul>
-         * <li>low</li>
-         * <li>mid</li>
-         * <li>high</li>
+         * <li><p>low</p>
+         * </li>
+         * <li><p>mid</p>
+         * </li>
+         * <li><p>high</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -16,9 +16,12 @@ public class GenerateGovernanceReportResponseBody extends TeaModel {
     /**
      * <p>The report generation status. Valid values:</p>
      * <ul>
-     * <li>Started: The system starts to generate a governance report.</li>
-     * <li>Progressing: The system is generating a governance report.</li>
-     * <li>Completed: A governance report is generated.</li>
+     * <li><p>Started: The system starts to generate a governance report.</p>
+     * </li>
+     * <li><p>Progressing: The system is generating a governance report.</p>
+     * </li>
+     * <li><p>Completed: A governance report is generated.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

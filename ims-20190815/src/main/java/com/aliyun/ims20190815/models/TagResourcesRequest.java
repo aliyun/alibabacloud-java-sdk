@@ -8,7 +8,7 @@ public class TagResourcesRequest extends TeaModel {
      * <p>The ID of resource N.</p>
      * <p>Valid values of N: 1 to 50. If the ResourceType parameter is set to user, the resource ID is the ID of the RAM user.</p>
      * <blockquote>
-     * <p> You must specify only one of the following parameters: <code>ResourceId</code> and <code>ResourcePrincipalName</code>.</p>
+     * <p>You must specify only one of the following parameters: <code>ResourceId</code> and <code>ResourcePrincipalName</code>.</p>
      * </blockquote>
      */
     @NameInMap("ResourceId")
@@ -18,7 +18,7 @@ public class TagResourcesRequest extends TeaModel {
      * <p>The name of resource N.</p>
      * <p>Valid values of N: 1 to 50. If the ResourceType parameter is set to user, the resource name is the name of the RAM user.</p>
      * <blockquote>
-     * <p> You must specify only one of the following parameters: <code>ResourceId</code> and <code>ResourcePrincipalName</code>.</p>
+     * <p>You must specify only one of the following parameters: <code>ResourceId</code> and <code>ResourcePrincipalName</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

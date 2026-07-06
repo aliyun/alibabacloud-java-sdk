@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class AddClientIdToOIDCProviderRequest extends TeaModel {
     /**
-     * <p>The client ID that you want to add.</p>
-     * <p>The client ID can contain letters, digits, and special characters and cannot start with the special characters. The special characters are <code>periods, (.), hyphens (-), underscores (_), colons (:), and forward slashes (/)</code>.``</p>
-     * <p>The client ID can be up to 128 characters in length.</p>
+     * <p>The specified client ID.</p>
+     * <p>Format: letters, digits, and the special characters <code>.-_:/</code> are allowed. The value cannot start with the special characters <code>.-_:/</code>.</p>
+     * <p>Length: up to 128 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>598469743454717****</p>

@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class CreateOIDCProviderRequest extends TeaModel {
     /**
      * <p>The ID of the client, which is provided by the external IdP. If you want to specify multiple client IDs, separate the client IDs with commas (,).</p>
-     * <p>The client ID can contain letters, digits, and special characters and cannot start with the special characters. The special characters are <code>periods (.), hyphens (-), underscores (_), colons (:), and forward slashes (/)</code>.``</p>
+     * <p>The client ID can contain letters, digits, and special characters and cannot start with the special characters. The special characters are <code>periods (.), hyphens (-), underscores (_), colons (:), and forward slashes (/)</code>.\<code>\\</code></p>
      * <p>The client ID can be up to 128 characters in length.</p>
      * 
      * <strong>example:</strong>
@@ -51,14 +51,14 @@ public class CreateOIDCProviderRequest extends TeaModel {
      * <p>The URL can be up to 255 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p><a href="https://dev-xxxxxx.okta.com">https://dev-xxxxxx.okta.com</a></p>
+     * <p><a href="https://xxxxxx.example.com">https://xxxxxx.example.com</a></p>
      */
     @NameInMap("IssuerUrl")
     public String issuerUrl;
 
     /**
      * <p>The name of the OIDC IdP.</p>
-     * <p>The name can contain letters, digits, and special characters and cannot start or end with the special characters. The special characters are <code>periods, (.), hyphens (-), and underscores (_)</code>.``</p>
+     * <p>The name can contain letters, digits, and special characters and cannot start or end with the special characters. The special characters are <code>periods, (.), hyphens (-), and underscores (_)</code>.\<code>\\</code></p>
      * <p>The name can be up to 128 characters in length.</p>
      * 
      * <strong>example:</strong>

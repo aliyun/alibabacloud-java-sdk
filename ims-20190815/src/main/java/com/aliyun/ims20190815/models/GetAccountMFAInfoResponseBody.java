@@ -7,8 +7,10 @@ public class GetAccountMFAInfoResponseBody extends TeaModel {
     /**
      * <p>Indicates whether MFA devices are enabled. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

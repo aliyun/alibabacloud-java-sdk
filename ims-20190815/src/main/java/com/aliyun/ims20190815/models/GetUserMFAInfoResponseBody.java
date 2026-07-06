@@ -7,8 +7,10 @@ public class GetUserMFAInfoResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the MFA device is enabled. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -74,8 +76,10 @@ public class GetUserMFAInfoResponseBody extends TeaModel {
         /**
          * <p>The type of the MFA device. Valid values:</p>
          * <ul>
-         * <li>VMFA: virtual MFA device.</li>
-         * <li>U2F: Universal 2nd Factor (U2F) security key.</li>
+         * <li><p>VMFA: virtual MFA device.</p>
+         * </li>
+         * <li><p>U2F: Universal 2nd Factor (U2F) security key.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

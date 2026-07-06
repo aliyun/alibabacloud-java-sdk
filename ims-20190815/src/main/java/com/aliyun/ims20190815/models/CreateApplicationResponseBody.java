@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateApplicationResponseBody extends TeaModel {
     /**
-     * <p>The information about the application.</p>
+     * <p>The application information.</p>
      */
     @NameInMap("Application")
     public CreateApplicationResponseBodyApplication application;
@@ -101,6 +101,9 @@ public class CreateApplicationResponseBody extends TeaModel {
     }
 
     public static class CreateApplicationResponseBodyApplicationDelegatedScope extends TeaModel {
+        /**
+         * <p>The information about the permissions that are granted on the application.</p>
+         */
         @NameInMap("PredefinedScopes")
         public CreateApplicationResponseBodyApplicationDelegatedScopePredefinedScopes predefinedScopes;
 
@@ -158,7 +161,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>472457090344041****</p>
@@ -185,7 +188,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         public String appType;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the application was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-23T08:06:57Z</p>
@@ -217,9 +220,24 @@ public class CreateApplicationResponseBody extends TeaModel {
         @NameInMap("IsMultiTenant")
         public Boolean isMultiTenant;
 
+        /**
+         * <p>The OAuth protocol version of the application. Valid values:</p>
+         * <ul>
+         * <li><p><code>2.0</code>: OAuth 2.0</p>
+         * </li>
+         * <li><p><code>2.1</code>: OAuth 2.1</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
+         */
         @NameInMap("ProtocolVersion")
         public String protocolVersion;
 
+        /**
+         * <p>The redirect URLs.</p>
+         */
         @NameInMap("RedirectUris")
         public CreateApplicationResponseBodyApplicationRedirectUris redirectUris;
 
@@ -242,7 +260,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         public Boolean secretRequired;
 
         /**
-         * <p>The update time.</p>
+         * <p>The time when the application information was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-23T08:06:57Z</p>

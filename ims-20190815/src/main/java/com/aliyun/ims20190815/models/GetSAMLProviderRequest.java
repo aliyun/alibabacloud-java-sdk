@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSAMLProviderRequest extends TeaModel {
     /**
-     * <p>The name of the IdP.</p>
+     * <p>The name of the IdP whose information you want to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

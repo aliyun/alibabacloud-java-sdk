@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateApplicationRequest extends TeaModel {
     /**
-     * <p>The ID of the application.</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class UpdateApplicationRequest extends TeaModel {
     public Integer newAccessTokenValidity;
 
     /**
-     * <p>The display name.</p>
+     * <p>The display name of the application.</p>
      * 
      * <strong>example:</strong>
      * <p>NewApp</p>
@@ -36,8 +36,10 @@ public class UpdateApplicationRequest extends TeaModel {
     /**
      * <p>Specifies whether the application can be installed by using other Alibaba Cloud accounts. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,10 +49,10 @@ public class UpdateApplicationRequest extends TeaModel {
     public Boolean newIsMultiTenant;
 
     /**
-     * <p>The permission that is granted on the application.</p>
-     * <p>For more information about the application permission scope, see <a href="https://help.aliyun.com/document_detail/93693.html">OAuth scopes</a>. You can also call the <a href="https://help.aliyun.com/document_detail/187206.html">ListPredefinedScopes</a> operation to query the permissions that are supported by different types of applications.</p>
-     * <p>If you enter multiple permissions, separate them with semicolons (;).</p>
-     * <p>The new value of this parameter overwrites the original value, and the permission specified by the new value takes effect. For example, if the original value is <code>/acs/ccc</code>, and the new value is <code>/acs/alidns</code>, <code>/acs/alidns</code> takes effect. If you want to retain the original permission and the <code>/acs/alidns</code> permission, set the value to <code>/acs/ccc;/acs/alidns</code>.</p>
+     * <p>The scope of application permissions.</p>
+     * <p>For more information about the application permission scope, see <a href="https://help.aliyun.com/document_detail/93693.html">OAuth overview</a>. You can also call the <a href="https://help.aliyun.com/document_detail/187206.html">ListPredefinedScopes</a> operation to obtain the scopes that are supported by different application types.</p>
+     * <p>To specify multiple permissions, separate them with semicolons (;).</p>
+     * <p>The new value of this parameter overwrites the original value, and the permission specified by the new value takes effect. For example, if the original value is <code>/acs/ccc</code>, and the new value is <code>/acs/alidns</code>, <code>/acs/alidns</code> takes effect. If you want to retain the original permission and the <code>/acs/alidns</code> permission, set the value to <code>/acs/ccc;/acs/alidns</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>openid</p>
@@ -59,8 +61,8 @@ public class UpdateApplicationRequest extends TeaModel {
     public String newPredefinedScopes;
 
     /**
-     * <p>The callback URL.</p>
-     * <p>If you enter multiple callback URLs, separate them with semicolons (;).</p>
+     * <p>The redirect URL.</p>
+     * <p>To specify multiple URLs, separate them with semicolons (;).</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://www.example.com">https://www.example.com</a></p>
@@ -80,12 +82,12 @@ public class UpdateApplicationRequest extends TeaModel {
 
     /**
      * <p>The required permission.</p>
-     * <p>You can specify one or more permissions for the <code>RequiredScopes</code> parameter. After you specify this parameter, the required permissions are automatically selected and cannot be revoked when a user grants permissions on the application.</p>
-     * <p>If you also specify the <code>NewPredefinedScopes</code> parameter, the <code>NewPredefinedScopes</code> parameter specifies the permissions that can be granted on the application, and this parameter specifies the required permissions.</p>
-     * <p>If you enter multiple permissions, separate them with semicolons (;).</p>
+     * <p>You can specify one or more permissions for the <code>RequiredScopes</code> parameter. When a user grants permissions to the application, the scopes specified in this parameter are pre-selected and cannot be deselected.</p>
+     * <p>If you also specify the <code>NewPredefinedScopes</code> parameter, the <code>NewPredefinedScopes</code> parameter specifies the permissions that can be granted on the application, and this parameter specifies the required permissions.</p>
+     * <p>To enter multiple scopes, separate them with semicolons (;).</p>
      * <p>The new value of this parameter overwrites the original value, and the required permission specified by the new value takes effect.</p>
      * <blockquote>
-     * <p> If the permission that you specify for the <code>RequiredScopes</code> parameter is not included in value of the <code>PredefinedScopes</code> parameter, the permission does not take effect.</p>
+     * <p>Any scope specified here must also be included in <code>PredefinedScopes</code>. Otherwise, the scope will not be set as required.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -97,15 +99,20 @@ public class UpdateApplicationRequest extends TeaModel {
     /**
      * <p>Specifies whether a secret is required. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li>For applications of the WebApp and ServerApp types, this parameter is automatically set to true and cannot be changed.</li>
-     * <li>For applications of the NativeApp type, this parameter can be set to true or false. If you do not set this parameter, false is used. Applications of the NativeApp type run in untrusted environments and the secrets of these applications are not protected. Therefore, we recommend that you do not set this parameter to true unless otherwise specified. For more information, see <a href="https://help.aliyun.com/document_detail/93697.html">Use an application of the NativeApp type to log on to Alibaba Cloud</a>.</li>
+     * <li><p>For applications of the WebApp and ServerApp types, this parameter is automatically set to true and cannot be changed.</p>
+     * </li>
+     * <li><p>For applications of the NativeApp type, this parameter can be set to true or false. If you do not set this parameter, false is used. Applications of the NativeApp type run in untrusted environments and the secrets of these applications are not protected.</p>
+     * </li>
      * </ul>
+     * </blockquote>
+     * <p>We recommend that you do not set this parameter to true unless otherwise specified. For more information, see <a href="https://help.aliyun.com/document_detail/93697.html">Access Alibaba Cloud APIs from a native application</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

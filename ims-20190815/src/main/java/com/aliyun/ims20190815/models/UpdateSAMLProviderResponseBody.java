@@ -14,7 +14,7 @@ public class UpdateSAMLProviderResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the IdP.</p>
+     * <p>The information about the identity provider.</p>
      */
     @NameInMap("SAMLProvider")
     public UpdateSAMLProviderResponseBodySAMLProvider SAMLProvider;
@@ -42,7 +42,7 @@ public class UpdateSAMLProviderResponseBody extends TeaModel {
 
     public static class UpdateSAMLProviderResponseBodySAMLProvider extends TeaModel {
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the IdP.</p>
+         * <p>The Alibaba Cloud Resource Name (ARN) of the identity provider.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::177242285274****:saml-provider/test-provider</p>
@@ -50,11 +50,23 @@ public class UpdateSAMLProviderResponseBody extends TeaModel {
         @NameInMap("Arn")
         public String arn;
 
+        /**
+         * <p>The signature algorithm supported by the Alibaba Cloud SP. Valid values:</p>
+         * <ul>
+         * <li><p>rsa-sha256</p>
+         * </li>
+         * <li><p>rsa-sha1</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>rsa-sha1</p>
+         */
         @NameInMap("AuthnSignAlgo")
         public String authnSignAlgo;
 
         /**
-         * <p>The point in time at which the IdP was created. The time is displayed in UTC.</p>
+         * <p>The time when the identity provider was created. The time is in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-22T02:37:05Z</p>
@@ -63,7 +75,7 @@ public class UpdateSAMLProviderResponseBody extends TeaModel {
         public String createDate;
 
         /**
-         * <p>The description of the IdP.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>This is a new provider.</p>
@@ -72,7 +84,7 @@ public class UpdateSAMLProviderResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The name of the IdP.</p>
+         * <p>The name of the identity provider.</p>
          * 
          * <strong>example:</strong>
          * <p>test-provider</p>
@@ -81,7 +93,7 @@ public class UpdateSAMLProviderResponseBody extends TeaModel {
         public String SAMLProviderName;
 
         /**
-         * <p>The point in time at which the information about the IdP was modified. The time is displayed in UTC.</p>
+         * <p>The time when the identity provider was last updated. The time is in Coordinated Universal Time (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-22T02:51:20Z</p>

@@ -7,7 +7,7 @@ public class DeleteUserRequest extends TeaModel {
     /**
      * <p>The ID of the RAM user.</p>
      * <blockquote>
-     * <p> You must specify only one of the following parameters: <code>UserPrincipalName</code> and <code>UserId</code>.</p>
+     * <p>You must specify only one of the following parameters: <code>UserPrincipalName</code> and <code>UserId</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class DeleteUserRequest extends TeaModel {
     /**
      * <p>The logon name of the RAM user.</p>
      * <blockquote>
-     * <p> You must specify only one of the following parameters: <code>UserPrincipalName</code> and <code>UserId</code>.</p>
+     * <p>You must specify only one of the following parameters: <code>UserPrincipalName</code> and <code>UserId</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

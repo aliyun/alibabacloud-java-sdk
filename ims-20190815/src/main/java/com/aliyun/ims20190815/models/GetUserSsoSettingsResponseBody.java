@@ -41,6 +41,18 @@ public class GetUserSsoSettingsResponseBody extends TeaModel {
     }
 
     public static class GetUserSsoSettingsResponseBodyUserSsoSettings extends TeaModel {
+        /**
+         * <p>The supported signature algorithm. Valid values:</p>
+         * <ul>
+         * <li><p>rsa-sha256</p>
+         * </li>
+         * <li><p>rsa-sha1</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>rsa-sha1</p>
+         */
         @NameInMap("AuthnSignAlgo")
         public String authnSignAlgo;
 
@@ -72,10 +84,12 @@ public class GetUserSsoSettingsResponseBody extends TeaModel {
         public Boolean ssoEnabled;
 
         /**
-         * <p>Indicates whether the Security Assertion Markup Language (SAML) SSO requires a domain name in the <code>&lt;saml:NameID&gt;</code> element of the SAML response. If yes, the username specified by the identity provider (IdP) for SSO must have a domain name as the suffix.</p>
+         * <p>Indicates whether the Security Assertion Markup Language (SAML) SSO requires a domain name in the <code>&lt;saml:NameID&gt;</code> element of the SAML response. If yes, the username specified by the identity provider (IdP) for SSO must have a domain name as the suffix.</p>
          * <ul>
-         * <li>If the value of the parameter is <code>true</code>, the <code>&lt;saml:NameID&gt;</code> element <strong>must</strong> be in the <code>username@domain</code> format. You can set <code>domain</code> to the default domain name or the configured domain alias.</li>
-         * <li>If the value of the parameter is <code>false</code>, the <code>&lt;saml:NameID&gt;</code> element <strong>must</strong> be in the <code>username</code> format and <strong>cannot</strong> contain the <code>domain</code> suffix.</li>
+         * <li><p>If the value of the parameter is <code>true</code>, the <code>&lt;saml:NameID&gt;</code> element <strong>must</strong> be in the <code>username@domain</code> format. You can set <code>domain</code> to the default domain name or the configured domain alias.</p>
+         * </li>
+         * <li><p>If the value of the parameter is <code>false</code>, the <code>&lt;saml:NameID&gt;</code> element <strong>must</strong> be in the <code>username</code> format and <strong>cannot</strong> contain the <code>domain</code> suffix.</p>
+         * </li>
          * </ul>
          * <p>The default value is <code>true</code>.</p>
          * 

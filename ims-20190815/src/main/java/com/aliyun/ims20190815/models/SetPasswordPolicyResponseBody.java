@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetPasswordPolicyResponseBody extends TeaModel {
     /**
-     * <p>The details of the password policy.</p>
+     * <p>Details of the password policy.</p>
      */
     @NameInMap("PasswordPolicy")
     public SetPasswordPolicyResponseBodyPasswordPolicy passwordPolicy;
@@ -42,7 +42,7 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
 
     public static class SetPasswordPolicyResponseBodyPasswordPolicy extends TeaModel {
         /**
-         * <p>Indicates whether to disable logon after the password expires.</p>
+         * <p>Indicates whether logon is blocked after a password expires.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -50,14 +50,26 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
         @NameInMap("HardExpire")
         public Boolean hardExpire;
 
+        /**
+         * <p>The validity period for initial passwords.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14</p>
+         */
         @NameInMap("InitialPasswordAge")
         public Integer initialPasswordAge;
 
+        /**
+         * <p>Indicates whether threat passwords are blocked when set using APIs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("InterceptRiskPasswordOnApi")
         public Boolean interceptRiskPasswordOnApi;
 
         /**
-         * <p>The maximum number of password retries.</p>
+         * <p>Maximum number of failed password attempts.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -66,7 +78,7 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
         public Integer maxLoginAttemps;
 
         /**
-         * <p>The validity period of the password.</p>
+         * <p>The password validity period.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -75,7 +87,7 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
         public Integer maxPasswordAge;
 
         /**
-         * <p>The minimum number of unique characters in the password.</p>
+         * <p>Minimum number of unique characters in a password.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -84,7 +96,7 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
         public Integer minimumPasswordDifferentCharacter;
 
         /**
-         * <p>The minimum number of characters in the password.</p>
+         * <p>Minimum password length.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -93,7 +105,7 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
         public Integer minimumPasswordLength;
 
         /**
-         * <p>Indicates whether to exclude the username from the password.</p>
+         * <p>Indicates whether passwords must not contain the user name.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -102,7 +114,7 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
         public Boolean passwordNotContainUserName;
 
         /**
-         * <p>The policy for password history check.</p>
+         * <p>Prevents reuse of previous passwords.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -111,7 +123,7 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
         public Integer passwordReusePrevention;
 
         /**
-         * <p>Indicates whether the password must contain lowercase letters.</p>
+         * <p>Indicates whether passwords must contain lowercase letters.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -120,7 +132,7 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
         public Boolean requireLowercaseCharacters;
 
         /**
-         * <p>Indicates whether the password must contain digits.</p>
+         * <p>Indicates whether passwords must contain numbers.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -129,7 +141,7 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
         public Boolean requireNumbers;
 
         /**
-         * <p>Indicates whether the password must contain special characters.</p>
+         * <p>Indicates whether passwords must contain special characters.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -138,7 +150,7 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
         public Boolean requireSymbols;
 
         /**
-         * <p>Indicates whether the password must contain uppercase letters.</p>
+         * <p>Indicates whether passwords must contain uppercase letters.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

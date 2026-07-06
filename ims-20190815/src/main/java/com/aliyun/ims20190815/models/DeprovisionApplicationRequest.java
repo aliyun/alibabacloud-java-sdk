@@ -9,7 +9,7 @@ public class DeprovisionApplicationRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>452392483381546****</p>
+     * <p>407342493648015****</p>
      */
     @NameInMap("AppId")
     public String appId;

@@ -98,8 +98,10 @@ public class GetAccessKeyInfoInRecycleBinResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the RAM user to which the AccessKey pair belongs is in the recycle bin. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

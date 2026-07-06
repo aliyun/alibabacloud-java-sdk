@@ -67,8 +67,10 @@ public class GetVerificationInfoResponseBody extends TeaModel {
         /**
          * <p>The status of the email. Valid values:</p>
          * <ul>
-         * <li>active: The email is activated.</li>
-         * <li>pending: The email is pending for activation.</li>
+         * <li><p>active: The email is activated.</p>
+         * </li>
+         * <li><p>pending: The email is pending for activation.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -122,8 +124,10 @@ public class GetVerificationInfoResponseBody extends TeaModel {
         /**
          * <p>The status of the mobile phone. Valid values:</p>
          * <ul>
-         * <li>active: The mobile phone is activated.</li>
-         * <li>pending: The mobile phone is pending for activation.</li>
+         * <li><p>active: The mobile phone is activated.</p>
+         * </li>
+         * <li><p>pending: The mobile phone is pending for activation.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

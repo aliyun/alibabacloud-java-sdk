@@ -17,8 +17,10 @@ public class DeleteAccessKeyInRecycleBinRequest extends TeaModel {
      * <p>The ID of the RAM user.</p>
      * <blockquote>
      * <ul>
-     * <li>If you use an Alibaba Cloud account to call the operation, you must specify the parameter.</li>
-     * <li>If you use a RAM user to call the operation, you can leave the parameter empty. In this case, the ID of the RAM user is used by default.</li>
+     * <li><p>If you use an Alibaba Cloud account to call the operation, you must specify the parameter.</p>
+     * </li>
+     * <li><p>If you use a RAM user to call the operation, you can leave the parameter empty. In this case, the ID of the RAM user is used by default.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 
