@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListNamespaceResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -16,8 +16,10 @@ public class ListNamespaceResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request is successful.</li>
-     * <li><code>false</code>: The request fails.</li>
+     * <li><p><code>true</code>: The request is successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The request fails.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +29,7 @@ public class ListNamespaceResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
-     * <p>The queried namespaces.</p>
+     * <p>The list of namespaces.</p>
      */
     @NameInMap("Namespaces")
     public java.util.List<ListNamespaceResponseBodyNamespaces> namespaces;
@@ -42,7 +44,7 @@ public class ListNamespaceResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -51,7 +53,7 @@ public class ListNamespaceResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>B7E5FCA5-55ED-451C-9649-0BB2B93387D0</p>
@@ -60,7 +62,7 @@ public class ListNamespaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of the queried namespaces.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -131,7 +133,7 @@ public class ListNamespaceResponseBody extends TeaModel {
 
     public static class ListNamespaceResponseBodyNamespaces extends TeaModel {
         /**
-         * <p>Indicates whether the automatically creating repositories feature is enabled for the namespace.</p>
+         * <p>Indicates whether a repository is automatically created when an image is pushed to the namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -143,10 +145,12 @@ public class ListNamespaceResponseBody extends TeaModel {
         public RepoConfiguration defaultRepoConfiguration;
 
         /**
-         * <p>The default type of repositories in the namespace. Valid values:</p>
+         * <p>The default type of the repository. Valid values:</p>
          * <ul>
-         * <li><code>PUBLIC</code>: public repositories.</li>
-         * <li><code>PRIVATE</code>: private repositories.</li>
+         * <li><p><code>PUBLIC</code>: public</p>
+         * </li>
+         * <li><p><code>PRIVATE</code>: private</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -157,7 +161,7 @@ public class ListNamespaceResponseBody extends TeaModel {
         public String defaultRepoType;
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The ID of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cri-94klsruryslx****</p>
@@ -166,7 +170,7 @@ public class ListNamespaceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The namespace ID.</p>
+         * <p>The ID of the namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>crn-tiw8t3f8i5lt****</p>
@@ -175,7 +179,7 @@ public class ListNamespaceResponseBody extends TeaModel {
         public String namespaceId;
 
         /**
-         * <p>The namespace name.</p>
+         * <p>The name of the namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -186,8 +190,10 @@ public class ListNamespaceResponseBody extends TeaModel {
         /**
          * <p>The status of the namespace. Valid values:</p>
          * <ul>
-         * <li><code>NORMAL</code>: The namespace is normal.</li>
-         * <li><code>DELETING</code>: The namespace is being deleted.</li>
+         * <li><p><code>NORMAL</code>: The namespace is normal.</p>
+         * </li>
+         * <li><p><code>DELETING</code>: The namespace is being deleted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -197,7 +203,7 @@ public class ListNamespaceResponseBody extends TeaModel {
         public String namespaceStatus;
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm4n5kzyf2fbi</p>

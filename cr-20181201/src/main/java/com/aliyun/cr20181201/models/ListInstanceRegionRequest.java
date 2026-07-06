@@ -8,7 +8,7 @@ public class ListInstanceRegionRequest extends TeaModel {
      * <p>The language used for response parameters. Set this parameter to <code>zh-CN</code>.</p>
      * 
      * <strong>example:</strong>
-     * <p>zh-CN</p>
+     * <p>zh_CN</p>
      */
     @NameInMap("Lang")
     public String lang;

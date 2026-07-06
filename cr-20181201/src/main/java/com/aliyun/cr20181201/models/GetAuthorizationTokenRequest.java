@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAuthorizationTokenRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The repository instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

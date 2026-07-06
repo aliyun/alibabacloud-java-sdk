@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateScanRuleResponseBody extends TeaModel {
     /**
-     * <p>The returned HTTP or HTTPS status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

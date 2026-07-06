@@ -3,7 +3,7 @@ package com.aliyun.cr20181201.models;
 
 import com.aliyun.tea.*;
 
-public class CreateInstanceEndpointAclPolicyRequest extends TeaModel {
+public class CreateInstanceEndpointAclPolicyShrinkRequest extends TeaModel {
     /**
      * <p>The description.</p>
      * 
@@ -25,7 +25,7 @@ public class CreateInstanceEndpointAclPolicyRequest extends TeaModel {
     public String endpointType;
 
     @NameInMap("Entries")
-    public java.util.List<AccessControlEntry> entries;
+    public String entriesShrink;
 
     /**
      * <p>The IP address range that is allowed to access the instance.</p>
@@ -62,13 +62,13 @@ public class CreateInstanceEndpointAclPolicyRequest extends TeaModel {
     @NameInMap("ModuleName")
     public String moduleName;
 
-    public static CreateInstanceEndpointAclPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateInstanceEndpointAclPolicyRequest self = new CreateInstanceEndpointAclPolicyRequest();
+    public static CreateInstanceEndpointAclPolicyShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateInstanceEndpointAclPolicyShrinkRequest self = new CreateInstanceEndpointAclPolicyShrinkRequest();
         return TeaModel.build(map, self);
     }
 
     @Deprecated
-    public CreateInstanceEndpointAclPolicyRequest setComment(String comment) {
+    public CreateInstanceEndpointAclPolicyShrinkRequest setComment(String comment) {
         this.comment = comment;
         return this;
     }
@@ -76,7 +76,7 @@ public class CreateInstanceEndpointAclPolicyRequest extends TeaModel {
         return this.comment;
     }
 
-    public CreateInstanceEndpointAclPolicyRequest setEndpointType(String endpointType) {
+    public CreateInstanceEndpointAclPolicyShrinkRequest setEndpointType(String endpointType) {
         this.endpointType = endpointType;
         return this;
     }
@@ -84,16 +84,16 @@ public class CreateInstanceEndpointAclPolicyRequest extends TeaModel {
         return this.endpointType;
     }
 
-    public CreateInstanceEndpointAclPolicyRequest setEntries(java.util.List<AccessControlEntry> entries) {
-        this.entries = entries;
+    public CreateInstanceEndpointAclPolicyShrinkRequest setEntriesShrink(String entriesShrink) {
+        this.entriesShrink = entriesShrink;
         return this;
     }
-    public java.util.List<AccessControlEntry> getEntries() {
-        return this.entries;
+    public String getEntriesShrink() {
+        return this.entriesShrink;
     }
 
     @Deprecated
-    public CreateInstanceEndpointAclPolicyRequest setEntry(String entry) {
+    public CreateInstanceEndpointAclPolicyShrinkRequest setEntry(String entry) {
         this.entry = entry;
         return this;
     }
@@ -101,7 +101,7 @@ public class CreateInstanceEndpointAclPolicyRequest extends TeaModel {
         return this.entry;
     }
 
-    public CreateInstanceEndpointAclPolicyRequest setInstanceId(String instanceId) {
+    public CreateInstanceEndpointAclPolicyShrinkRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -109,7 +109,7 @@ public class CreateInstanceEndpointAclPolicyRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public CreateInstanceEndpointAclPolicyRequest setModuleName(String moduleName) {
+    public CreateInstanceEndpointAclPolicyShrinkRequest setModuleName(String moduleName) {
         this.moduleName = moduleName;
         return this;
     }

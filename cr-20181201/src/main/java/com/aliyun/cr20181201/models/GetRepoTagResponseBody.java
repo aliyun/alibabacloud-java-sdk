@@ -32,6 +32,8 @@ public class GetRepoTagResponseBody extends TeaModel {
     public Long imageCreate;
 
     /**
+     * <p>Image ID</p>
+     * 
      * <strong>example:</strong>
      * <p>45023655bf39c382e26a8607d057c27871dee163c1ecf48cc1ebf2a1****</p>
      */

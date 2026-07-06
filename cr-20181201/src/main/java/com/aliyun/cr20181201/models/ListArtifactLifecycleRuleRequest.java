@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListArtifactLifecycleRuleRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable lifecycle management for the artifact.</p>
+     * <p>Indicates whether automatic tag deletion is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class ListArtifactLifecycleRuleRequest extends TeaModel {
     public Boolean enableDeleteTag;
 
     /**
-     * <p>The ID of the Container Registry Enterprise Edition instance.</p>
+     * <p>The ID of the Enterprise Edition instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class ListArtifactLifecycleRuleRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries per page. Maximum value: 100. If you specify a value greater than 100 for this parameter, the system reports a parameter error or uses 100 as the maximum value.</p>
+     * <p>The number of entries to return per page. The maximum value is 100. If you specify a value greater than 100, the system may return a parameter error or use a page size of 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

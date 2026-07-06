@@ -179,7 +179,7 @@ public class ListScanMaliciousFileByTaskResponseBody extends TeaModel {
          * <p>The type of the malicious file.</p>
          * 
          * <strong>example:</strong>
-         * <p>Suspected to contain Webshell code</p>
+         * <p>疑似含有Webshell代码</p>
          */
         @NameInMap("MaliciousName")
         public String maliciousName;

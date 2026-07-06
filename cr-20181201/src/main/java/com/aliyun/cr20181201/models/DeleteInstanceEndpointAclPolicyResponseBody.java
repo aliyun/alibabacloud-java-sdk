@@ -14,10 +14,12 @@ public class DeleteInstanceEndpointAclPolicyResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the call is successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request is successful.</li>
-     * <li><code>false</code>: The request fails.</li>
+     * <li><p><code>true</code>: The call is successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The call failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +29,7 @@ public class DeleteInstanceEndpointAclPolicyResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>BDB1F145-F0FF-44E9-AADF-A678642A7C7D</p>

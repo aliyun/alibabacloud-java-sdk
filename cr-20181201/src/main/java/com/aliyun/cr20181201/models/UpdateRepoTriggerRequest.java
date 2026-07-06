@@ -62,7 +62,7 @@ public class UpdateRepoTriggerRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>TAG_LIST</p>
+     * <p>ALL</p>
      */
     @NameInMap("TriggerType")
     public String triggerType;

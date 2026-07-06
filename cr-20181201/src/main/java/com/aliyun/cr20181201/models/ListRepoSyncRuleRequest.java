@@ -51,7 +51,7 @@ public class ListRepoSyncRuleRequest extends TeaModel {
     public String repoName;
 
     /**
-     * <p>The ID of the destination instance.</p>
+     * <p>The ID of the target instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cri-k77rd2eo9ztt****</p>
@@ -60,7 +60,7 @@ public class ListRepoSyncRuleRequest extends TeaModel {
     public String targetInstanceId;
 
     /**
-     * <p>The region ID of the destination instance.</p>
+     * <p>The ID of the target region.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shenzhen</p>

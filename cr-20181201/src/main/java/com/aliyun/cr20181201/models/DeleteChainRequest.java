@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteChainRequest extends TeaModel {
     /**
-     * <p>The ID of the delivery pipeline.</p>
+     * <p>The delivery chain ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteChainRequest extends TeaModel {
     public String chainId;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

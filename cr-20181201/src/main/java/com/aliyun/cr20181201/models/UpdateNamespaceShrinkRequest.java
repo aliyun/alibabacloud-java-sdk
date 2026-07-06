@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateNamespaceShrinkRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically create a repository when an image is pushed to the namespace.</p>
+     * <p>Whether to automatically create a repository when an image is pushed.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -13,14 +13,19 @@ public class UpdateNamespaceShrinkRequest extends TeaModel {
     @NameInMap("AutoCreateRepo")
     public Boolean autoCreateRepo;
 
+    /**
+     * <p>The default configuration for automatically created repositories.</p>
+     */
     @NameInMap("DefaultRepoConfiguration")
     public String defaultRepoConfigurationShrink;
 
     /**
-     * <p>The default type of the repository. Valid values:</p>
+     * <p>The default type for automatically created repositories. This parameter applies only if <code>AutoCreateRepo</code> is set to <code>true</code>. Valid values:</p>
      * <ul>
-     * <li><code>PUBLIC</code>: The repository is a public repository.</li>
-     * <li><code>PRIVATE</code>: The repository is a private repository.</li>
+     * <li><p><code>PUBLIC</code>: a public repository</p>
+     * </li>
+     * <li><p><code>PRIVATE</code>: a private repository</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +36,7 @@ public class UpdateNamespaceShrinkRequest extends TeaModel {
     public String defaultRepoType;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

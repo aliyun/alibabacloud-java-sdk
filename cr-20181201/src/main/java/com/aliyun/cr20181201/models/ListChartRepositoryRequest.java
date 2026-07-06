@@ -59,7 +59,7 @@ public class ListChartRepositoryRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>ALL</p>
+     * <p>NORMAL</p>
      */
     @NameInMap("RepoStatus")
     public String repoStatus;

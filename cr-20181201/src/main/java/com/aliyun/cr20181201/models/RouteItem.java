@@ -8,9 +8,6 @@ public class RouteItem extends TeaModel {
      * <p>Instance Endpoint Type</p>
      * <p>This parameter is required.</p>
      * 
-     * <strong>example:</strong>
-     * <p>Internet</p>
-     * 
      * <strong>if can be null:</strong>
      * <p>false</p>
      */
@@ -20,9 +17,6 @@ public class RouteItem extends TeaModel {
     /**
      * <p>Instance Domain</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>test-instance-registry-vpc.cn-hangzhou.cr.aliyuncs.com</p>
      */
     @NameInMap("InstanceDomain")
     public String instanceDomain;
@@ -30,9 +24,6 @@ public class RouteItem extends TeaModel {
     /**
      * <p>OSS Domain</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p><a href="https://cri-cfafawer***-registry.oss-cn-hangzhou.aliyuncs.com">https://cri-cfafawer***-registry.oss-cn-hangzhou.aliyuncs.com</a></p>
      */
     @NameInMap("StorageDomain")
     public String storageDomain;

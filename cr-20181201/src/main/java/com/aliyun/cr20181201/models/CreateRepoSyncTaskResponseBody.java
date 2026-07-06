@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateRepoSyncTaskResponseBody extends TeaModel {
     /**
+     * <p>Return value</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -12,6 +14,14 @@ public class CreateRepoSyncTaskResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Indicates whether the invocation succeeded. Valid values:</p>
+     * <ul>
+     * <li><p><code>true</code>: The invocation succeeded.</p>
+     * </li>
+     * <li><p><code>false</code>: Failed to invoke.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +29,8 @@ public class CreateRepoSyncTaskResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>8F8A0BA6-7F06-4BAE-B147-10BD6A25****</p>
      */
@@ -26,6 +38,8 @@ public class CreateRepoSyncTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Sync task ID</p>
+     * 
      * <strong>example:</strong>
      * <p>rst-gbch330f0c****</p>
      */

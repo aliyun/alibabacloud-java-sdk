@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteChartRepositoryRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteChartRepositoryRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The name of the repository.</p>
+     * <p>The repository name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DeleteChartRepositoryRequest extends TeaModel {
     public String repoName;
 
     /**
-     * <p>The name of the namespace to which the repository belongs.</p>
+     * <p>The namespace name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

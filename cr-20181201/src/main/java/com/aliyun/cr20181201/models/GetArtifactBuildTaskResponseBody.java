@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetArtifactBuildTaskResponseBody extends TeaModel {
     /**
-     * <p>The type of the artifact building task. Valid values:</p>
+     * <p>The artifact build type. Valid values:</p>
      * <ul>
-     * <li><code>IMAGE_TO_ACCELERATED_IMAGE</code>: builds accelerated images for Container Service for Kubernetes (ACK) clusters.</li>
-     * <li><code>IMAGE_TO_ECI_ACCELERATED_IMAGE</code>: builds accelerated images for elastic container instances.</li>
+     * <li><p><code>IMAGE_TO_ACCELERATED_IMAGE</code>: an accelerated image for ACK.</p>
+     * </li>
+     * <li><p><code>IMAGE_TO_ECI_ACCELERATED_IMAGE</code>: an accelerated image for ECI.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
     public String artifactBuildType;
 
     /**
-     * <p>The ID of the artifact building task.</p>
+     * <p>The ID of the artifact build task.</p>
      * 
      * <strong>example:</strong>
      * <p>i2a-1yu****</p>
@@ -27,7 +29,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
     public String buildTaskId;
 
     /**
-     * <p>The return value.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -36,10 +38,10 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The time when the artifact building task ends.</p>
+     * <p>The Unix timestamp in seconds when the task ended.</p>
      * 
      * <strong>example:</strong>
-     * <p>156871880</p>
+     * <p>1685415871</p>
      */
     @NameInMap("EndTime")
     public Integer endTime;
@@ -48,7 +50,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
     public java.util.List<String> instructions;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -66,33 +68,37 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the source artifact.</p>
+     * <p>The source artifact.</p>
      */
     @NameInMap("SourceArtifact")
     public GetArtifactBuildTaskResponseBodySourceArtifact sourceArtifact;
 
     /**
-     * <p>The time when the artifact building task starts.</p>
+     * <p>The Unix timestamp in seconds when the task started.</p>
      * 
      * <strong>example:</strong>
-     * <p>156871881</p>
+     * <p>1685437471</p>
      */
     @NameInMap("StartTime")
     public Integer startTime;
 
     /**
-     * <p>The artifact that is built in the task.</p>
+     * <p>The target artifact.</p>
      */
     @NameInMap("TargetArtifact")
     public GetArtifactBuildTaskResponseBodyTargetArtifact targetArtifact;
 
     /**
-     * <p>The status of the artifact that is built in the task. Valid values:</p>
+     * <p>The status of the artifact build task. Valid values:</p>
      * <ul>
-     * <li><code>PENDING</code>: The artifact is being scheduled.</li>
-     * <li><code>BUILDING</code>: The artifact is being built.</li>
-     * <li><code>SUCCESS</code>: The artifact is built.</li>
-     * <li><code>FAILED</code>: The artifact fails to be built.</li>
+     * <li><p><code>PENDING</code>: The task is being scheduled.</p>
+     * </li>
+     * <li><p><code>BUILDING</code>: The task is in progress.</p>
+     * </li>
+     * <li><p><code>SUCCESS</code>: The task is successful.</p>
+     * </li>
+     * <li><p><code>FAILED</code>: The task failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -196,7 +202,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
 
     public static class GetArtifactBuildTaskResponseBodySourceArtifact extends TeaModel {
         /**
-         * <p>The type of the artifact that is built in the task. The value can only be IMAGE.</p>
+         * <p>The artifact type. Currently, only <code>IMAGE</code> is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>IMAGE</p>
@@ -205,7 +211,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         public String artifactType;
 
         /**
-         * <p>The ID of the repository to which the source artifact belongs. The repository can only be an image repository.</p>
+         * <p>The repository ID. Currently, only image repositories are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>cri-shac42yvqzvq****</p>
@@ -214,7 +220,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         public String repoId;
 
         /**
-         * <p>The version of the artifact. The artifact can only be an image.</p>
+         * <p>The artifact version. Currently, only image versions are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>latest</p>
@@ -255,7 +261,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
 
     public static class GetArtifactBuildTaskResponseBodyTargetArtifact extends TeaModel {
         /**
-         * <p>The type of the artifact that is built in the task. The value can only be IMAGE.</p>
+         * <p>The artifact type. Currently, only <code>IMAGE</code> is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>IMAGE</p>
@@ -264,7 +270,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         public String artifactType;
 
         /**
-         * <p>The ID of the repository to which the artifact that is built in the task belongs. The repository can only be an image repository. The value is the same as the ID of the repository to which the source artifact belongs.</p>
+         * <p>The repository ID. It must be the same as the repository ID of the source artifact. Only image repositories are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>crr-1234567</p>
@@ -273,7 +279,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         public String repoId;
 
         /**
-         * <p>The version of the artifact that is built in the task. The artifact can only be an image.</p>
+         * <p>The artifact version. Currently, only image versions are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>latest_accelerated</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteChartRepositoryResponseBody extends TeaModel {
     /**
-     * <p>The return value.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,10 +14,12 @@ public class DeleteChartRepositoryResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the API call is successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request is successful.</li>
-     * <li><code>false</code>: The request fails.</li>
+     * <li><p><code>true</code>: The API call is successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The API call failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +29,7 @@ public class DeleteChartRepositoryResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>12589EF7-96E2-4554-AAD7-F7209E88CAD3</p>

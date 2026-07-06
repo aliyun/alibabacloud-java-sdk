@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAuthorizationTokenResponseBody extends TeaModel {
     /**
-     * <p>The password that you use to log on to the registry.</p>
+     * <p>The password used to log on to the Registry.</p>
      * 
      * <strong>example:</strong>
      * <p>shaunadadakks:uuczxnjcyeyhdjadkkajsjdjadhyucb</p>
@@ -14,7 +14,7 @@ public class GetAuthorizationTokenResponseBody extends TeaModel {
     public String authorizationToken;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,7 +23,7 @@ public class GetAuthorizationTokenResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The timestamp when the temporary token expired. Unit: milliseconds.</p>
+     * <p>The expiration timestamp of the temporary token, in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1571242083000</p>
@@ -41,7 +41,7 @@ public class GetAuthorizationTokenResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
-     * <p>The request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E069EB86-E6AD-4A98-ADDE-0E993390239A</p>
@@ -50,7 +50,7 @@ public class GetAuthorizationTokenResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The username that you use to log on to the registry.</p>
+     * <p>The username used to log on to the Registry.</p>
      * 
      * <strong>example:</strong>
      * <p>temp_user_cr</p>

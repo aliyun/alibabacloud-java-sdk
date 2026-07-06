@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListArtifactSubscriptionRuleResponseBody extends TeaModel {
     /**
-     * <p>The return value.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,10 +14,12 @@ public class ListArtifactSubscriptionRuleResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code></li>
-     * <li><code>false</code></li>
+     * <li><p><code>true</code>: The request was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +38,7 @@ public class ListArtifactSubscriptionRuleResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -54,13 +56,13 @@ public class ListArtifactSubscriptionRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The queried artifact subscription rules.</p>
+     * <p>The subscription rules.</p>
      */
     @NameInMap("Rules")
     public java.util.List<ListArtifactSubscriptionRuleResponseBodyRules> rules;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>13</p>
@@ -131,7 +133,7 @@ public class ListArtifactSubscriptionRuleResponseBody extends TeaModel {
 
     public static class ListArtifactSubscriptionRuleResponseBodyRules extends TeaModel {
         /**
-         * <p>Indicates whether an acceleration link is enabled for image subscription. The subscription acceleration feature is in public preview. The feature is optimized based on scheduling policies and network links to accelerate image subscription.</p>
+         * <p>Indicates whether to enable the accelerated subscription channel. This feature is in public preview. Based on an optimized scheduling policy and network link, the speed of image subscription is improved.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -140,7 +142,7 @@ public class ListArtifactSubscriptionRuleResponseBody extends TeaModel {
         public Boolean accelerate;
 
         /**
-         * <p>The time when the subscription rule was created.</p>
+         * <p>The time when the rule was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1638187989000</p>
@@ -158,7 +160,7 @@ public class ListArtifactSubscriptionRuleResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The time when the subscription rule was modified.</p>
+         * <p>The time when the rule was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>1678341923385</p>
@@ -167,7 +169,7 @@ public class ListArtifactSubscriptionRuleResponseBody extends TeaModel {
         public Long modifiedTime;
 
         /**
-         * <p>The name of the source namespace.</p>
+         * <p>The name of the namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>test-ns</p>
@@ -176,7 +178,7 @@ public class ListArtifactSubscriptionRuleResponseBody extends TeaModel {
         public String namespaceName;
 
         /**
-         * <p>Indicates whether the original image is overwritten.</p>
+         * <p>Indicates whether to overwrite the image.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -185,13 +187,13 @@ public class ListArtifactSubscriptionRuleResponseBody extends TeaModel {
         public Boolean override;
 
         /**
-         * <p>The operating system and architecture. If the source repository contains a multi-arch image, only the images with the specified operating system and architecture are subscribed to the destination repository of the Enterprise Edition instance.</p>
+         * <p>The operating system and architecture. If the source repository contains a multi-architecture image, only images that have a specified operating system and architecture are subscribed to the destination repository of the Enterprise Edition instance.</p>
          */
         @NameInMap("Platform")
         public java.util.List<String> platform;
 
         /**
-         * <p>The name of the source repository.</p>
+         * <p>The name of the repository.</p>
          * 
          * <strong>example:</strong>
          * <p>test-repo</p>
@@ -221,13 +223,7 @@ public class ListArtifactSubscriptionRuleResponseBody extends TeaModel {
         public String sourceNamespaceName;
 
         /**
-         * <p>The source of the artifact.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>DOCKER_HUB: Docker Hub</li>
-         * <li>GCR: GCR</li>
-         * <li>QUAY: Quay.io</li>
-         * </ul>
+         * <p>The source of the artifact. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>DOCKER_HUB</p>
@@ -254,7 +250,7 @@ public class ListArtifactSubscriptionRuleResponseBody extends TeaModel {
         public Long tagCount;
 
         /**
-         * <p>The image tag in the subscription source repository. Regular expressions are supported.</p>
+         * <p>The regular expression that is used to subscribe to the source repository.</p>
          * 
          * <strong>example:</strong>
          * <p>release.*</p>

@@ -132,18 +132,27 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
     public static class ListScanBaselineByTaskResponseBodyScanBaselines extends TeaModel {
         /**
          * <p>The category to which the baseline risk belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>服务配置</p>
          */
         @NameInMap("BaselineClassAlias")
         public String baselineClassAlias;
 
         /**
          * <p>Suggestions about how to fix the baseline risk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>建议对ak混淆加密，避免被利用</p>
          */
         @NameInMap("BaselineDetailAdvice")
         public String baselineDetailAdvice;
 
         /**
          * <p>The description of the baseline risk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Access Key明文存储</p>
          */
         @NameInMap("BaselineDetailDescription")
         public String baselineDetailDescription;
@@ -168,6 +177,9 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
 
         /**
          * <p>The name of the baseline risk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>服务配置</p>
          */
         @NameInMap("BaselineNameAlias")
         public String baselineNameAlias;

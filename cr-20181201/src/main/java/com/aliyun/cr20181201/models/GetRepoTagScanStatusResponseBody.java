@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRepoTagScanStatusResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,10 +14,12 @@ public class GetRepoTagScanStatusResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Specifies whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request is successful.</li>
-     * <li><code>false</code>: The request fails.</li>
+     * <li><p><code>true</code>: The request was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,10 +38,12 @@ public class GetRepoTagScanStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The type of the scanning engine.</p>
+     * <p>The scan engine type. Valid values:</p>
      * <ul>
-     * <li><code>ACR_SCAN_SERVICE</code>: Trivy scan engine provided by Container Registry</li>
-     * <li><code>SAS_SCAN_SERVICE</code>: Security Center scan engine</li>
+     * <li><p><code>ACR_SCAN_SERVICE</code>: the ACR Trivy scan engine.</p>
+     * </li>
+     * <li><p><code>SAS_SCAN_SERVICE</code>: the Cloud Security scan engine.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,12 +53,16 @@ public class GetRepoTagScanStatusResponseBody extends TeaModel {
     public String scanService;
 
     /**
-     * <p>The scanning status of the image tag. Valid values:</p>
+     * <p>The scan status of the image. Valid values:</p>
      * <ul>
-     * <li><code>SCANNING</code>: The image tag is being scanned.</li>
-     * <li><code>COMPLETE</code>: The scanning of the image tag is complete.</li>
-     * <li><code>FAILED</code>: The image tag failed to be scanned.</li>
-     * <li><code>RETRYING</code>: The system is retrying to scan the image tag.</li>
+     * <li><p><code>SCANNING</code>: The image is being scanned.</p>
+     * </li>
+     * <li><p><code>COMPLETE</code>: The scan is complete.</p>
+     * </li>
+     * <li><p><code>FAILED</code>: The scan failed.</p>
+     * </li>
+     * <li><p><code>RETRYING</code>: The scan is being retried.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

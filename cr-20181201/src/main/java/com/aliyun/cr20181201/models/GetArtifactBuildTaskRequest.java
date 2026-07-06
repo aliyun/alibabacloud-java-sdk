@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetArtifactBuildTaskRequest extends TeaModel {
     /**
-     * <p>The ID of the artifact building task.</p>
+     * <p>The ID of the artifact build task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

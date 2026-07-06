@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateRepositoryRequest extends TeaModel {
     /**
+     * <p>The repository description.</p>
+     * 
      * <strong>example:</strong>
      * <p>repo-for-test</p>
      */
@@ -12,6 +14,7 @@ public class UpdateRepositoryRequest extends TeaModel {
     public String detail;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class UpdateRepositoryRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The repository ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>crr-tquyps22md8p****</p>
      */
@@ -28,6 +33,8 @@ public class UpdateRepositoryRequest extends TeaModel {
     public String repoId;
 
     /**
+     * <p>The repository name.</p>
+     * 
      * <strong>example:</strong>
      * <p>dsp/domain-microapp</p>
      */
@@ -35,6 +42,8 @@ public class UpdateRepositoryRequest extends TeaModel {
     public String repoName;
 
     /**
+     * <p>The name of the repository namespace.</p>
+     * 
      * <strong>example:</strong>
      * <p>ejiayou-other</p>
      */
@@ -42,6 +51,13 @@ public class UpdateRepositoryRequest extends TeaModel {
     public String repoNamespaceName;
 
     /**
+     * <p>The repository type. Valid values:</p>
+     * <ul>
+     * <li><p><code>PUBLIC</code>: public repository</p>
+     * </li>
+     * <li><p><code>PRIVATE</code>: private repository.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,6 +67,7 @@ public class UpdateRepositoryRequest extends TeaModel {
     public String repoType;
 
     /**
+     * <p>The summary.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,6 +77,14 @@ public class UpdateRepositoryRequest extends TeaModel {
     public String summary;
 
     /**
+     * <p>Specifies whether image tag immutability is enabled. Valid values:</p>
+     * <ul>
+     * <li><p><code>true</code>: enabled</p>
+     * </li>
+     * <li><p><code>false</code>: disabled.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

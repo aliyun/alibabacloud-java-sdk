@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
     /**
-     * <p>The return value.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,10 +14,12 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the request succeeded. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request is successful.</li>
-     * <li><code>false</code>: The request fails.</li>
+     * <li><p><code>true</code>: The request succeeded.</p>
+     * </li>
+     * <li><p><code>false</code>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +38,7 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries returned on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -54,7 +56,7 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>_</p>
+     * <p>The list of lifecycle management rules.</p>
      */
     @NameInMap("Rules")
     public java.util.List<ListArtifactLifecycleRuleResponseBodyRules> rules;
@@ -232,7 +234,7 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
 
     public static class ListArtifactLifecycleRuleResponseBodyRules extends TeaModel {
         /**
-         * <p>Indicates whether the lifecycle management rule is automatically executed.</p>
+         * <p>Indicates whether the rule runs automatically.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -241,7 +243,7 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
         public Boolean auto;
 
         /**
-         * <p>The time when the lifecycle management rule was created.</p>
+         * <p>The creation time of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>1638187989000</p>
@@ -250,7 +252,7 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>Indicates whether lifecycle management is enabled for the artifact.</p>
+         * <p>Indicates whether the rule is configured to delete tags.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -268,7 +270,7 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The time when the lifecycle management rule was last modified.</p>
+         * <p>The last modification time of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>1678341923385</p>
@@ -277,7 +279,7 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
         public Long modifiedTime;
 
         /**
-         * <p>The name of the namespace.</p>
+         * <p>The namespace name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-ns</p>
@@ -286,7 +288,7 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
         public String namespaceName;
 
         /**
-         * <p>The time when the lifecycle management rule is next executed.</p>
+         * <p>The next execution time.</p>
          * 
          * <strong>example:</strong>
          * <p>1638187989000</p>
@@ -298,7 +300,7 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
         public java.util.List<ListArtifactLifecycleRuleResponseBodyRulesPolicies> policies;
 
         /**
-         * <p>The name of the image repository.</p>
+         * <p>The repository name.</p>
          * 
          * <strong>example:</strong>
          * <p>test_1</p>
@@ -307,7 +309,7 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
         public String repoName;
 
         /**
-         * <p>The number of retained images.</p>
+         * <p>The number of image tags to retain.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -325,7 +327,7 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
         public String ruleId;
 
         /**
-         * <p>The execution cycle of the lifecycle management rule.</p>
+         * <p>The execution schedule.</p>
          * 
          * <strong>example:</strong>
          * <p>WEEK</p>
@@ -334,7 +336,7 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
         public String scheduleTime;
 
         /**
-         * <p>The deletion scope of artifacts.</p>
+         * <p>The scope of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>INSTANCE</p>
@@ -343,7 +345,7 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
         public String scope;
 
         /**
-         * <p>The regular expression that indicates which image tags are retained.</p>
+         * <p>The regular expression that matches image tags to retain.</p>
          * 
          * <strong>example:</strong>
          * <p>.*-alpine</p>

@@ -3,7 +3,7 @@ package com.aliyun.cr20181201.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteInstanceEndpointAclPolicyRequest extends TeaModel {
+public class DeleteInstanceEndpointAclPolicyShrinkRequest extends TeaModel {
     /**
      * <p>The endpoint type. Only Internet is supported.</p>
      * <p>This parameter is required.</p>
@@ -15,7 +15,7 @@ public class DeleteInstanceEndpointAclPolicyRequest extends TeaModel {
     public String endpointType;
 
     @NameInMap("Entries")
-    public java.util.List<AccessControlEntry> entries;
+    public String entriesShrink;
 
     /**
      * <p>The IP CIDR block.</p>
@@ -52,12 +52,12 @@ public class DeleteInstanceEndpointAclPolicyRequest extends TeaModel {
     @NameInMap("ModuleName")
     public String moduleName;
 
-    public static DeleteInstanceEndpointAclPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
-        DeleteInstanceEndpointAclPolicyRequest self = new DeleteInstanceEndpointAclPolicyRequest();
+    public static DeleteInstanceEndpointAclPolicyShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        DeleteInstanceEndpointAclPolicyShrinkRequest self = new DeleteInstanceEndpointAclPolicyShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteInstanceEndpointAclPolicyRequest setEndpointType(String endpointType) {
+    public DeleteInstanceEndpointAclPolicyShrinkRequest setEndpointType(String endpointType) {
         this.endpointType = endpointType;
         return this;
     }
@@ -65,16 +65,16 @@ public class DeleteInstanceEndpointAclPolicyRequest extends TeaModel {
         return this.endpointType;
     }
 
-    public DeleteInstanceEndpointAclPolicyRequest setEntries(java.util.List<AccessControlEntry> entries) {
-        this.entries = entries;
+    public DeleteInstanceEndpointAclPolicyShrinkRequest setEntriesShrink(String entriesShrink) {
+        this.entriesShrink = entriesShrink;
         return this;
     }
-    public java.util.List<AccessControlEntry> getEntries() {
-        return this.entries;
+    public String getEntriesShrink() {
+        return this.entriesShrink;
     }
 
     @Deprecated
-    public DeleteInstanceEndpointAclPolicyRequest setEntry(String entry) {
+    public DeleteInstanceEndpointAclPolicyShrinkRequest setEntry(String entry) {
         this.entry = entry;
         return this;
     }
@@ -82,7 +82,7 @@ public class DeleteInstanceEndpointAclPolicyRequest extends TeaModel {
         return this.entry;
     }
 
-    public DeleteInstanceEndpointAclPolicyRequest setInstanceId(String instanceId) {
+    public DeleteInstanceEndpointAclPolicyShrinkRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -90,7 +90,7 @@ public class DeleteInstanceEndpointAclPolicyRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public DeleteInstanceEndpointAclPolicyRequest setModuleName(String moduleName) {
+    public DeleteInstanceEndpointAclPolicyShrinkRequest setModuleName(String moduleName) {
         this.moduleName = moduleName;
         return this;
     }

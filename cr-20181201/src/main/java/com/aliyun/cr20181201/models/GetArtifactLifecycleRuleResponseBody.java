@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the lifecycle management rule is automatically executed.</p>
+     * <p>Specifies if the rule is executed automatically.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
     public Boolean auto;
 
     /**
-     * <p>The return value.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,7 +23,7 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The time when the lifecycle management rule was created.</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>1571926439000</p>
@@ -32,7 +32,7 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
     public Long createTime;
 
     /**
-     * <p>Indicates whether lifecycle management is enabled for the artifact.</p>
+     * <p>Specifies if lifecycle management is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -50,10 +50,12 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Indicates whether the API request is successful. Valid values:</p>
+     * <p>Indicates whether the request succeeded. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request is successful.</li>
-     * <li><code>false</code>: The request fails.</li>
+     * <li><p><code>true</code>: The request succeeded.</p>
+     * </li>
+     * <li><p><code>false</code>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,7 +65,7 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
-     * <p>The time when the lifecycle management rule was last modified.</p>
+     * <p>The last modified time.</p>
      * 
      * <strong>example:</strong>
      * <p>1638259914000</p>
@@ -72,7 +74,7 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
     public Long modifiedTime;
 
     /**
-     * <p>The name of the namespace.</p>
+     * <p>The namespace name.</p>
      * 
      * <strong>example:</strong>
      * <p>test-namespace</p>
@@ -81,7 +83,7 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
     public String namespaceName;
 
     /**
-     * <p>The time when the lifecycle management rule is next executed.</p>
+     * <p>The timestamp of the next scheduled execution.</p>
      * 
      * <strong>example:</strong>
      * <p>1701878400000</p>
@@ -93,7 +95,7 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
     public java.util.List<GetArtifactLifecycleRuleResponseBodyPolicies> policies;
 
     /**
-     * <p>The name of the image repository.</p>
+     * <p>The repository name.</p>
      * 
      * <strong>example:</strong>
      * <p>test-repo</p>
@@ -111,7 +113,7 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of retained images.</p>
+     * <p>The number of image versions to retain.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -129,7 +131,7 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
     public String ruleId;
 
     /**
-     * <p>The execution cycle of the lifecycle management rule.</p>
+     * <p>The execution schedule.</p>
      * 
      * <strong>example:</strong>
      * <p>WEEK</p>
@@ -138,7 +140,7 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
     public String scheduleTime;
 
     /**
-     * <p>The deletion scope of artifacts.</p>
+     * <p>The scope of the rule.</p>
      * 
      * <strong>example:</strong>
      * <p>INSTANCE</p>
@@ -147,7 +149,7 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
     public String scope;
 
     /**
-     * <p>The regular expression that indicates which image tags are retained.</p>
+     * <p>The regular expression that matches image tags to select versions for retention.</p>
      * 
      * <strong>example:</strong>
      * <p>.*-alpine</p>

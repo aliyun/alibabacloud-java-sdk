@@ -51,6 +51,18 @@ public class ListRepositoryRequest extends TeaModel {
     public String repoNamespaceName;
 
     /**
+     * <p>Repository status. Valid values:</p>
+     * <ul>
+     * <li><p><code>NORMAL</code>: Normal.</p>
+     * </li>
+     * <li><p><code>DELETING</code>: Deleting.</p>
+     * </li>
+     * <li><p><code>DELETED</code>: Deleted.</p>
+     * </li>
+     * <li><p><code>ALL</code>: All repository statuses.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ALL</p>
      */

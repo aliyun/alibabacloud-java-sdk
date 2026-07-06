@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInstanceCountResponseBody extends TeaModel {
     /**
-     * <p>Return value</p>
+     * <p>The return value.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,7 +14,7 @@ public class GetInstanceCountResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Number of instances</p>
+     * <p>The number of instances.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -23,10 +23,12 @@ public class GetInstanceCountResponseBody extends TeaModel {
     public Integer count;
 
     /**
-     * <p>Indicates whether the API call was successful. Values:</p>
+     * <p>Indicates whether the API call is successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The API call was successful. </li>
-     * <li><code>false</code>: The API call failed.</li>
+     * <li><p><code>true</code>: The API call is successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The API call fails.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +38,7 @@ public class GetInstanceCountResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>BC648259-91A7-4502-BED3-EDF64361FA83</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateRepositoryResponseBody extends TeaModel {
     /**
+     * <p>The return code.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -12,6 +14,8 @@ public class UpdateRepositoryResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class UpdateRepositoryResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CC43EC6B-0DD4-40AE-8811-B0519617051A</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateScanRuleShrinkRequest extends TeaModel {
     /**
-     * <p>The instance ID</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,10 @@ public class CreateScanRuleShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The list of namespaces.</p>
+     * <p>The collection of namespaces.</p>
      * <ul>
-     * <li>When the scan scope is NAMESPACE, this parameter cannot be empty.</li>
-     * <li>If the scan scope is REPO, you must specify a unique Namespace for this parameter.</li>
+     * <li>If the scan scope is set to NAMESPACE, this parameter cannot be empty.</li>
+     * <li>If the scan scope is set to REPO, this parameter must contain exactly one namespace.</li>
      * </ul>
      * 
      * <strong>if can be null:</strong>
@@ -30,8 +30,8 @@ public class CreateScanRuleShrinkRequest extends TeaModel {
     /**
      * <p>The list of repositories.</p>
      * <ul>
-     * <li>When the scan scope is NAMESPACE, this parameter must be empty.</li>
-     * <li>When the scan scope is REPO, this parameter cannot be empty.</li>
+     * <li>If the scan scope is set to NAMESPACE, this parameter must be empty.</li>
+     * <li>If the scan scope is set to REPO, this parameter cannot be empty.</li>
      * </ul>
      * 
      * <strong>if can be null:</strong>
@@ -41,7 +41,7 @@ public class CreateScanRuleShrinkRequest extends TeaModel {
     public String repoNamesShrink;
 
     /**
-     * <p>The tag that triggers the scan matches the regular expression</p>
+     * <p>The regular expression used to match tags that trigger a scan.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class CreateScanRuleShrinkRequest extends TeaModel {
     public String repoTagFilterPattern;
 
     /**
-     * <p>The rule name</p>
+     * <p>The rule name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,12 +61,7 @@ public class CreateScanRuleShrinkRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The scan scope</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>NAMESPACE: namespace.</li>
-     * <li>REPO: repository.</li>
-     * </ul>
+     * <p>The scan scope.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -78,10 +73,10 @@ public class CreateScanRuleShrinkRequest extends TeaModel {
     /**
      * <p>The scan type. Valid values:</p>
      * <ul>
-     * <li><code>VUL</code>: Products Cloud Security Scanner</li>
-     * <li><code>SBOM</code>: Product Content Analysis</li>
+     * <li><code>VUL</code>: cloud native artifact vulnerability scanning.</li>
+     * <li><code>SBOM</code>: cloud native artifact content analysis.</li>
      * </ul>
-     * <p>Default value: <code>VUL</code></p>
+     * <p>Default value: <code>VUL</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>VUL</p>
@@ -90,12 +85,7 @@ public class CreateScanRuleShrinkRequest extends TeaModel {
     public String scanType;
 
     /**
-     * <p>Trigger type</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>AUTO: automatically trigger.</li>
-     * <li>MANUAL: manually trigger.</li>
-     * </ul>
+     * <p>The trigger type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

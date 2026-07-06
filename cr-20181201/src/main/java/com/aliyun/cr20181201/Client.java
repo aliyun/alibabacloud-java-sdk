@@ -9,6 +9,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("us-west-1", "cr.us-west-1.aliyuncs.com"),
+            new TeaPair("us-southeast-1", "cr.us-southeast-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "cr.us-east-1.aliyuncs.com"),
+            new TeaPair("na-south-1", "cr.na-south-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "cr.me-east-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "cr.me-central-1.aliyuncs.com"),
+            new TeaPair("eu-west-2", "cr.eu-west-2.aliyuncs.com"),
+            new TeaPair("eu-west-1", "cr.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "cr.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhongwei", "cr.cn-zhongwei.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-jva", "cr.cn-zhengzhou-jva.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "cr.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu-gic-1", "cr.cn-wulanchabu-gic-1.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "cr.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-wuhan-lr", "cr.cn-wuhan-lr.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "cr.cn-shenzhen-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "cr.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "cr.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "cr.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "cr.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "cr.cn-north-2-gov-1.aliyuncs.com"),
+            new TeaPair("cn-nanjing", "cr.cn-nanjing.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "cr.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "cr.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-heyuan-acdr-1", "cr.cn-heyuan-acdr-1.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "cr.cn-heyuan.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "cr.cn-hangzhou-finance.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "cr.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "cr.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-fuzhou", "cr.cn-fuzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "cr.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "cr.cn-beijing-finance-1.aliyuncs.com"),
+            new TeaPair("cn-beijing", "cr.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-8", "cr.ap-southeast-8.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "cr.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "cr.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "cr.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "cr.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "cr.ap-southeast-2.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "cr.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-south-1", "cr.ap-south-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "cr.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "cr.ap-northeast-1.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("cr", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -798,14 +843,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a whitelist policy for the public endpoint of the instance.</p>
+     * <p>Creates a whitelist policy for an instance access endpoint (public network only).</p>
      * 
-     * @param request CreateInstanceEndpointAclPolicyRequest
+     * @param tmpReq CreateInstanceEndpointAclPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateInstanceEndpointAclPolicyResponse
      */
-    public CreateInstanceEndpointAclPolicyResponse createInstanceEndpointAclPolicyWithOptions(CreateInstanceEndpointAclPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreateInstanceEndpointAclPolicyResponse createInstanceEndpointAclPolicyWithOptions(CreateInstanceEndpointAclPolicyRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateInstanceEndpointAclPolicyShrinkRequest request = new CreateInstanceEndpointAclPolicyShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.entries)) {
+            request.entriesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.entries, "Entries", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.comment)) {
             query.put("Comment", request.comment);
@@ -813,6 +864,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.endpointType)) {
             query.put("EndpointType", request.endpointType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.entriesShrink)) {
+            query.put("Entries", request.entriesShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.entry)) {
@@ -846,7 +901,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a whitelist policy for the public endpoint of the instance.</p>
+     * <p>Creates a whitelist policy for an instance access endpoint (public network only).</p>
      * 
      * @param request CreateInstanceEndpointAclPolicyRequest
      * @return CreateInstanceEndpointAclPolicyResponse
@@ -924,7 +979,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a namespace of image repositories.</p>
+     * <p>Creates a repository namespace.</p>
      * 
      * @param tmpReq CreateNamespaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -978,7 +1033,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a namespace of image repositories.</p>
+     * <p>Creates a repository namespace.</p>
      * 
      * @param request CreateNamespaceRequest
      * @return CreateNamespaceResponse
@@ -1234,7 +1289,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Manually creates an image synchronization task.</p>
+     * <p>Manually create a sync task.</p>
      * 
      * @param request CreateRepoSyncTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1302,7 +1357,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Manually creates an image synchronization task.</p>
+     * <p>Manually create a sync task.</p>
      * 
      * @param request CreateRepoSyncTaskRequest
      * @return CreateRepoSyncTaskResponse
@@ -1430,7 +1485,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an image scan task.</p>
+     * <p>Creates a security scan task for an image.</p>
      * 
      * @param request CreateRepoTagScanTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1482,7 +1537,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an image scan task.</p>
+     * <p>Creates a security scan task for an image.</p>
      * 
      * @param request CreateRepoTagScanTaskRequest
      * @return CreateRepoTagScanTaskResponse
@@ -1714,7 +1769,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</p>
+     * <p>此API白名单开放，请<a href="https://smartservice.console.aliyun.com/service/create-ticket">提交工单</a>获取支持。</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an instance store domain name routing rule.</p>
@@ -1759,7 +1814,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</p>
+     * <p>此API白名单开放，请<a href="https://smartservice.console.aliyun.com/service/create-ticket">提交工单</a>获取支持。</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an instance store domain name routing rule.</p>
@@ -2036,7 +2091,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a chart repository from an instance.</p>
+     * <p>Deletes a chart repository.</p>
      * 
      * @param request DeleteChartRepositoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2076,7 +2131,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a chart repository from an instance.</p>
+     * <p>Deletes a chart repository.</p>
      * 
      * @param request DeleteChartRepositoryRequest
      * @return DeleteChartRepositoryResponse
@@ -2136,17 +2191,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a whitelist policy for the public endpoint of an instance.</p>
+     * <p>Deletes a whitelist policy from the public access endpoint of an instance.</p>
      * 
-     * @param request DeleteInstanceEndpointAclPolicyRequest
+     * @param tmpReq DeleteInstanceEndpointAclPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteInstanceEndpointAclPolicyResponse
      */
-    public DeleteInstanceEndpointAclPolicyResponse deleteInstanceEndpointAclPolicyWithOptions(DeleteInstanceEndpointAclPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public DeleteInstanceEndpointAclPolicyResponse deleteInstanceEndpointAclPolicyWithOptions(DeleteInstanceEndpointAclPolicyRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DeleteInstanceEndpointAclPolicyShrinkRequest request = new DeleteInstanceEndpointAclPolicyShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.entries)) {
+            request.entriesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.entries, "Entries", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.endpointType)) {
             query.put("EndpointType", request.endpointType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.entriesShrink)) {
+            query.put("Entries", request.entriesShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.entry)) {
@@ -2180,7 +2245,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a whitelist policy for the public endpoint of an instance.</p>
+     * <p>Deletes a whitelist policy from the public access endpoint of an instance.</p>
      * 
      * @param request DeleteInstanceEndpointAclPolicyRequest
      * @return DeleteInstanceEndpointAclPolicyResponse
@@ -2572,7 +2637,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a scan rule.</p>
+     * <p>删除扫描规则。</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a scan rule.</p>
@@ -2611,7 +2676,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a scan rule.</p>
+     * <p>删除扫描规则。</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a scan rule.</p>
@@ -2626,7 +2691,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</p>
+     * <p>此API白名单开放，请<a href="https://smartservice.console.aliyun.com/service/create-ticket">提交工单</a>获取支持。</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes an instance store domain name routing rule.</p>
@@ -2665,7 +2730,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</p>
+     * <p>此API白名单开放，请<a href="https://smartservice.console.aliyun.com/service/create-ticket">提交工单</a>获取支持。</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes an instance store domain name routing rule.</p>
@@ -2720,7 +2785,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an artifact building task.</p>
+     * <p>Retrieves the details of an artifact build task.</p>
      * 
      * @param request GetArtifactBuildTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2748,7 +2813,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an artifact building task.</p>
+     * <p>Retrieves the details of an artifact build task.</p>
      * 
      * @param request GetArtifactBuildTaskRequest
      * @return GetArtifactBuildTaskResponse
@@ -2760,7 +2825,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the lifecycle management rules of an artifact.</p>
+     * <p>Lists artifact lifecycle management rules.</p>
      * 
      * @param request GetArtifactLifecycleRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2788,7 +2853,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the lifecycle management rules of an artifact.</p>
+     * <p>Lists artifact lifecycle management rules.</p>
      * 
      * @param request GetArtifactLifecycleRuleRequest
      * @return GetArtifactLifecycleRuleResponse
@@ -2800,7 +2865,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about an artifact subscription rule.</p>
+     * <p>Retrieves the details of an artifact subscription rule.</p>
      * 
      * @param request GetArtifactSubscriptionRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2828,7 +2893,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about an artifact subscription rule.</p>
+     * <p>Retrieves the details of an artifact subscription rule.</p>
      * 
      * @param request GetArtifactSubscriptionRuleRequest
      * @return GetArtifactSubscriptionRuleResponse
@@ -2920,15 +2985,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The validity period of the temporary password is 1 hour. If you use STS to request a token, the validity period of the temporary password is the same as the validity period of the STS token.</p>
+     * <p>The temporary password is valid for 1 hour. If you use STS to make the request, the validity period of the temporary password is the same as that of the STS token used in the request.</p>
      * <ul>
-     * <li>If you log on to an instance by using the temporary password obtained through an Alibaba Cloud account, you have the same permissions on resources as the user of the Alibaba Cloud account.</li>
-     * <li>If you log on to an instance by using the temporary password obtained through a RAM user, you have the same permissions as the RAM user.</li>
-     * <li>If you log on to an instance by using the temporary password obtained through STS, you have the same permissions as the STS token.</li>
+     * <li>The permissions granted by a temporary token obtained through an Alibaba Cloud account are the same as the permissions granted when you log on to the instance with the username and password of the Alibaba Cloud account.</li>
+     * <li>The permissions granted by a temporary token obtained through a RAM user are the same as the permissions granted when you log on to the instance with the username and password of the RAM user.</li>
+     * <li>The permissions granted by a temporary token obtained through STS are the same as the permissions of the STS token.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries a pair of temporary username and password that you use to log on to a Container Registry instance.</p>
+     * <p>Retrieves a temporary account and temporary password for logging on to an instance.</p>
      * 
      * @param request GetAuthorizationTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2960,15 +3025,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The validity period of the temporary password is 1 hour. If you use STS to request a token, the validity period of the temporary password is the same as the validity period of the STS token.</p>
+     * <p>The temporary password is valid for 1 hour. If you use STS to make the request, the validity period of the temporary password is the same as that of the STS token used in the request.</p>
      * <ul>
-     * <li>If you log on to an instance by using the temporary password obtained through an Alibaba Cloud account, you have the same permissions on resources as the user of the Alibaba Cloud account.</li>
-     * <li>If you log on to an instance by using the temporary password obtained through a RAM user, you have the same permissions as the RAM user.</li>
-     * <li>If you log on to an instance by using the temporary password obtained through STS, you have the same permissions as the STS token.</li>
+     * <li>The permissions granted by a temporary token obtained through an Alibaba Cloud account are the same as the permissions granted when you log on to the instance with the username and password of the Alibaba Cloud account.</li>
+     * <li>The permissions granted by a temporary token obtained through a RAM user are the same as the permissions granted when you log on to the instance with the username and password of the RAM user.</li>
+     * <li>The permissions granted by a temporary token obtained through STS are the same as the permissions of the STS token.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries a pair of temporary username and password that you use to log on to a Container Registry instance.</p>
+     * <p>Retrieves a temporary account and temporary password for logging on to an instance.</p>
      * 
      * @param request GetAuthorizationTokenRequest
      * @return GetAuthorizationTokenResponse
@@ -2980,7 +3045,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the information of a delivery chain to understand the node execution sequence of the delivery chain.</p>
+     * <p>Obtain the delivery chain definition to understand the execution order of edge zones in the delivery chain.</p>
      * 
      * @param request GetChainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3016,7 +3081,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the information of a delivery chain to understand the node execution sequence of the delivery chain.</p>
+     * <p>Obtain the delivery chain definition to understand the execution order of edge zones in the delivery chain.</p>
      * 
      * @param request GetChainRequest
      * @return GetChainResponse
@@ -3128,7 +3193,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The ID of the resource group to which the instance belongs.</p>
+     * <p>Query instance information.</p>
      * 
      * @param request GetInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3160,7 +3225,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The ID of the resource group to which the instance belongs.</p>
+     * <p>Query instance information.</p>
      * 
      * @param request GetInstanceRequest
      * @return GetInstanceResponse
@@ -3172,7 +3237,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the number of instances.</p>
+     * <p>Queries the number of instances of a user.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetInstanceCountResponse
@@ -3195,7 +3260,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the number of instances.</p>
+     * <p>Queries the number of instances of a user.</p>
      * @return GetInstanceCountResponse
      */
     public GetInstanceCountResponse getInstanceCount() throws Exception {
@@ -3349,7 +3414,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a namespace.</p>
+     * <p>Retrieves information about a namespace.</p>
      * 
      * @param request GetNamespaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3389,7 +3454,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a namespace.</p>
+     * <p>Retrieves information about a namespace.</p>
      * 
      * @param request GetNamespaceRequest
      * @return GetNamespaceResponse
@@ -3603,7 +3668,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about an image tag.</p>
+     * <p>Retrieve information about a single image tag.</p>
      * 
      * @param request GetRepoTagRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3631,7 +3696,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about an image tag.</p>
+     * <p>Retrieve information about a single image tag.</p>
      * 
      * @param request GetRepoTagRequest
      * @return GetRepoTagResponse
@@ -3643,7 +3708,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the scanning status of an image tag.</p>
+     * <p>Retrieves the scan status of a specific image tag.</p>
      * 
      * @param request GetRepoTagScanStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3695,7 +3760,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the scanning status of an image tag.</p>
+     * <p>Retrieves the scan status of a specific image tag.</p>
      * 
      * @param request GetRepoTagScanStatusRequest
      * @return GetRepoTagScanStatusResponse
@@ -3707,7 +3772,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the number of vulnerabilities for each severity level. These vulnerabilities are detected in a security scan that is created for an image version.</p>
+     * <p>Obtain the number of scan results for an image version.</p>
      * 
      * @param request GetRepoTagScanSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3755,7 +3820,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the number of vulnerabilities for each severity level. These vulnerabilities are detected in a security scan that is created for an image version.</p>
+     * <p>Obtain the number of scan results for an image version.</p>
      * 
      * @param request GetRepoTagScanSummaryRequest
      * @return GetRepoTagScanSummaryResponse
@@ -3823,10 +3888,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Get scan rule.</p>
+     * <p>Retrieves a scan rule.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a scan rule.</p>
+     * <p>Retrieves a scan rule.</p>
      * 
      * @param request GetScanRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3862,10 +3927,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Get scan rule.</p>
+     * <p>Retrieves a scan rule.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a scan rule.</p>
+     * <p>Retrieves a scan rule.</p>
      * 
      * @param request GetScanRuleRequest
      * @return GetScanRuleResponse
@@ -3877,10 +3942,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API is open to a whitelist. Please <a href="https://smartservice.console.aliyun.com/service/create-ticket">submit a ticket</a> for support.</p>
+     * <p>This API is available through whitelist access. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a> to obtain support.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries instance storage domain routing rules</p>
+     * <p>Retrieves the instance storage domain name routing list.</p>
      * 
      * @param request GetStorageDomainRoutingRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3916,10 +3981,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API is open to a whitelist. Please <a href="https://smartservice.console.aliyun.com/service/create-ticket">submit a ticket</a> for support.</p>
+     * <p>This API is available through whitelist access. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a> to obtain support.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries instance storage domain routing rules</p>
+     * <p>Retrieves the instance storage domain name routing list.</p>
      * 
      * @param request GetStorageDomainRoutingRuleRequest
      * @return GetStorageDomainRoutingRuleResponse
@@ -3971,7 +4036,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the lifecycle management rules of an artifact.</p>
+     * <p>Lists artifact lifecycle management rules.</p>
      * 
      * @param request ListArtifactLifecycleRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3999,7 +4064,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the lifecycle management rules of an artifact.</p>
+     * <p>Lists artifact lifecycle management rules.</p>
      * 
      * @param request ListArtifactLifecycleRuleRequest
      * @return ListArtifactLifecycleRuleResponse
@@ -4011,7 +4076,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the subscription rules of artifacts.</p>
+     * <p>List artifact subscription rules.</p>
      * 
      * @param request ListArtifactSubscriptionRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4039,7 +4104,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the subscription rules of artifacts.</p>
+     * <p>List artifact subscription rules.</p>
      * 
      * @param request ListArtifactSubscriptionRuleRequest
      * @return ListArtifactSubscriptionRuleResponse
@@ -4151,7 +4216,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries execution records of delivery chains.</p>
+     * <p>Queries the execution records of a delivery chain.</p>
      * 
      * @param request ListChainInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4199,7 +4264,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries execution records of delivery chains.</p>
+     * <p>Queries the execution records of a delivery chain.</p>
      * 
      * @param request ListChainInstanceRequest
      * @return ListChainInstanceResponse
@@ -4479,7 +4544,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries Container Registry instances.</p>
+     * <p>Queries a list of instances.</p>
      * 
      * @param request ListInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4527,7 +4592,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries Container Registry instances.</p>
+     * <p>Queries a list of instances.</p>
      * 
      * @param request ListInstanceRequest
      * @return ListInstanceResponse
@@ -4635,7 +4700,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries namespaces in a Container Registry instance.</p>
+     * <p>Lists namespaces.</p>
      * 
      * @param request ListNamespaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4683,7 +4748,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries namespaces in a Container Registry instance.</p>
+     * <p>Lists namespaces.</p>
      * 
      * @param request ListNamespaceRequest
      * @return ListNamespaceResponse
@@ -4807,7 +4872,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries image building rules of a repository.</p>
+     * <p>Lists the build rules of an image repository.</p>
      * 
      * @param request ListRepoBuildRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4851,7 +4916,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries image building rules of a repository.</p>
+     * <p>Lists the build rules of an image repository.</p>
      * 
      * @param request ListRepoBuildRuleRequest
      * @return ListRepoBuildRuleResponse
@@ -4863,7 +4928,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries image synchronization rules of a repository.</p>
+     * <p>Returns a list of repository synchronization rules.</p>
      * 
      * @param request ListRepoSyncRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4919,7 +4984,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries image synchronization rules of a repository.</p>
+     * <p>Returns a list of repository synchronization rules.</p>
      * 
      * @param request ListRepoSyncRuleRequest
      * @return ListRepoSyncRuleResponse
@@ -4931,7 +4996,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries image synchronization tasks in an image repository.</p>
+     * <p>Lists repository synchronization tasks.</p>
      * 
      * @param request ListRepoSyncTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4987,7 +5052,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries image synchronization tasks in an image repository.</p>
+     * <p>Lists repository synchronization tasks.</p>
      * 
      * @param request ListRepoSyncTaskRequest
      * @return ListRepoSyncTaskResponse
@@ -5187,7 +5252,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries image repositories.</p>
+     * <p>Query the image repository list.</p>
      * 
      * @param request ListRepositoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5239,7 +5304,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries image repositories.</p>
+     * <p>Query the image repository list.</p>
      * 
      * @param request ListRepositoryRequest
      * @return ListRepositoryResponse
@@ -5343,7 +5408,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Lists the scan rules.</p>
+     * <p>列举扫描规则。</p>
      * 
      * <b>summary</b> : 
      * <p>Lists the scan rules.</p>
@@ -5374,7 +5439,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Lists the scan rules.</p>
+     * <p>列举扫描规则。</p>
      * 
      * <b>summary</b> : 
      * <p>Lists the scan rules.</p>
@@ -5388,6 +5453,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>请求中ResourceId.N 及 (Tag.N.Key,Tag.N.Value) 至少存在一个，以确定检索对象。</li>
+     * <li>Tag.N是资源的标签，由一个键值对组成。仅指定Tag.N.Key时，则返回该标签键关联的所有标签值。仅指定Tag.N.Value会报错。</li>
+     * <li>ResourceId.N需满足所有输入的键值对。当输入多个键值对，查询结果为资源中包含指定多个键值对的资源。</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Queries the tags that are added to cloud resources. Instance resources are supported.</p>
      * 
@@ -5436,6 +5508,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>请求中ResourceId.N 及 (Tag.N.Key,Tag.N.Value) 至少存在一个，以确定检索对象。</li>
+     * <li>Tag.N是资源的标签，由一个键值对组成。仅指定Tag.N.Key时，则返回该标签键关联的所有标签值。仅指定Tag.N.Value会报错。</li>
+     * <li>ResourceId.N需满足所有输入的键值对。当输入多个键值对，查询结果为资源中包含指定多个键值对的资源。</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Queries the tags that are added to cloud resources. Instance resources are supported.</p>
      * 
@@ -5496,6 +5575,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>单个实例最多可绑定 20 条标签。绑定标签前，阿里云会校验资源已有标签数量，超过限制值会返回报错信息。</p>
+     * 
      * <b>summary</b> : 
      * <p>Adds tags to resources. Instance resources are supported.</p>
      * 
@@ -5540,6 +5622,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>单个实例最多可绑定 20 条标签。绑定标签前，阿里云会校验资源已有标签数量，超过限制值会返回报错信息。</p>
+     * 
      * <b>summary</b> : 
      * <p>Adds tags to resources. Instance resources are supported.</p>
      * 
@@ -6397,7 +6482,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The ID of the request.</p>
+     * <p>Updates repository information.</p>
      * 
      * @param request UpdateRepositoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6457,7 +6542,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The ID of the request.</p>
+     * <p>Updates repository information.</p>
      * 
      * @param request UpdateRepositoryRequest
      * @return UpdateRepositoryResponse
@@ -6469,7 +6554,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</p>
+     * <p>This API is available through whitelist access. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a> to request access.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates a scan rule.</p>
@@ -6542,7 +6627,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</p>
+     * <p>This API is available through whitelist access. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a> to request access.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates a scan rule.</p>
@@ -6557,7 +6642,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</p>
+     * <p>此API白名单开放，请<a href="https://smartservice.console.aliyun.com/service/create-ticket">提交工单</a>获取支持。</p>
      * 
      * <b>summary</b> : 
      * <p>Updates a routing rule for an instance store domain name.</p>
@@ -6606,7 +6691,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</p>
+     * <p>此API白名单开放，请<a href="https://smartservice.console.aliyun.com/service/create-ticket">提交工单</a>获取支持。</p>
      * 
      * <b>summary</b> : 
      * <p>Updates a routing rule for an instance store domain name.</p>

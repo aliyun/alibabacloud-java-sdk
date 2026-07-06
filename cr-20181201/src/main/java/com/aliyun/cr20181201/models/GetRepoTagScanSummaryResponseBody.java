@@ -32,6 +32,8 @@ public class GetRepoTagScanSummaryResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
+     * <p>Number of low-severity vulnerabilities</p>
+     * 
      * <strong>example:</strong>
      * <p>89</p>
      */

@@ -24,7 +24,7 @@ public class ListRepoSyncTaskRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -42,7 +42,7 @@ public class ListRepoSyncTaskRequest extends TeaModel {
     public String repoName;
 
     /**
-     * <p>The name of the namespace to which the repository belongs.</p>
+     * <p>The name of the repository namespace.</p>
      * 
      * <strong>example:</strong>
      * <p>ns</p>
@@ -51,13 +51,13 @@ public class ListRepoSyncTaskRequest extends TeaModel {
     public String repoNamespaceName;
 
     /**
-     * <p>The ID of the synchronization task record, which is the same as SyncBatchTaskId in the response.</p>
+     * <p>The ID of the sync task. This ID is also the <code>SyncBatchTaskId</code> returned in the response, which identifies the image\&quot;s sync batch task.</p>
      * <blockquote>
-     * <p> If an image meets multiple synchronization rules and multiple synchronization tasks are generated for the image, these synchronization tasks use the same SyncBatchTaskId.</p>
+     * <p>An image that matches multiple sync rules generates multiple sync tasks, each with the same <code>SyncBatchTaskId</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>crsr-7lph66uloi6h****</p>
+     * <p>9d8ac4f6-8138-4c15-a2e3-60624ad3****</p>
      */
     @NameInMap("SyncRecordId")
     public String syncRecordId;

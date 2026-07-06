@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateChainResponseBody extends TeaModel {
     /**
-     * <p>The ID of the delivery chain.</p>
+     * <p>The delivery chain ID.</p>
      * 
      * <strong>example:</strong>
      * <p>chi-02ymhtwl3cq8****</p>
@@ -14,7 +14,7 @@ public class CreateChainResponseBody extends TeaModel {
     public String chainId;
 
     /**
-     * <p>The return value.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,7 +23,7 @@ public class CreateChainResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -32,7 +32,7 @@ public class CreateChainResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4BC03B36-E515-5806-99AC-268AE3C0****</p>

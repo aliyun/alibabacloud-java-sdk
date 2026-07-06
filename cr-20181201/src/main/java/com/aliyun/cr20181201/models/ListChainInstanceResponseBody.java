@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListChainInstanceResponseBody extends TeaModel {
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The list of delivery chain execution records.</p>
      */
     @NameInMap("ChainInstances")
     public java.util.List<ListChainInstanceResponseBodyChainInstances> chainInstances;
 
     /**
-     * <p>The version of the delivery chain.</p>
+     * <p>The return value.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -20,7 +20,7 @@ public class ListChainInstanceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The page number of the page to return.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cri-kmsiwlxxdcva****</p>
@@ -29,7 +29,7 @@ public class ListChainInstanceResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The execution record of the delivery chain.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -38,7 +38,7 @@ public class ListChainInstanceResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
-     * <p>30</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -47,7 +47,7 @@ public class ListChainInstanceResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>Indicates whether the operation is successful.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -56,7 +56,7 @@ public class ListChainInstanceResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the Container Registry instance.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>838D1602-6D8F-47FB-B60A-656645D2****</p>
@@ -65,7 +65,7 @@ public class ListChainInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The name of the repository.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -144,7 +144,7 @@ public class ListChainInstanceResponseBody extends TeaModel {
 
     public static class ListChainInstanceResponseBodyChainInstancesChain extends TeaModel {
         /**
-         * <p>The name of the namespace.</p>
+         * <p>The delivery chain ID.</p>
          * 
          * <strong>example:</strong>
          * <p>chi-m42gbku0****</p>
@@ -153,7 +153,7 @@ public class ListChainInstanceResponseBody extends TeaModel {
         public String chainId;
 
         /**
-         * <p>The number of entries returned on each page.</p>
+         * <p>The delivery chain name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-chain</p>
@@ -162,7 +162,7 @@ public class ListChainInstanceResponseBody extends TeaModel {
         public String chainName;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The delivery chain version.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -203,13 +203,13 @@ public class ListChainInstanceResponseBody extends TeaModel {
 
     public static class ListChainInstanceResponseBodyChainInstances extends TeaModel {
         /**
-         * <p>The name of the namespace.</p>
+         * <p>The delivery chain execution record.</p>
          */
         @NameInMap("Chain")
         public ListChainInstanceResponseBodyChainInstancesChain chain;
 
         /**
-         * <p>1</p>
+         * <p>The delivery chain instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F4CF4DDB-BEF2-5575-<strong><strong>-</strong></strong>***</p>
@@ -218,7 +218,7 @@ public class ListChainInstanceResponseBody extends TeaModel {
         public String chainInstanceId;
 
         /**
-         * <p>The ID of the Container Registry instance.</p>
+         * <p>The end time.</p>
          * 
          * <strong>example:</strong>
          * <p>1636685856000</p>
@@ -227,7 +227,7 @@ public class ListChainInstanceResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The ID of the delivery chain.</p>
+         * <p>The repository name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-repo</p>
@@ -236,13 +236,7 @@ public class ListChainInstanceResponseBody extends TeaModel {
         public String repoName;
 
         /**
-         * <p>The execution result of the delivery chain. Valid values:</p>
-         * <ul>
-         * <li><code>SUCCESS</code></li>
-         * <li><code>FAILED</code></li>
-         * <li><code>CANCELED</code></li>
-         * <li><code>DENIED</code></li>
-         * </ul>
+         * <p>The namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>test-ns</p>
@@ -251,7 +245,13 @@ public class ListChainInstanceResponseBody extends TeaModel {
         public String repoNamespaceName;
 
         /**
-         * <p>The list of the execution records of delivery chains.</p>
+         * <p>The execution result of the delivery chain. Valid values:</p>
+         * <ul>
+         * <li><code>SUCCESS</code>: Succeeded.</li>
+         * <li><code>FAILED</code>: Failed.</li>
+         * <li><code>CANCELED</code>: Canceled.</li>
+         * <li><code>DENIED</code>: Denied.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -260,7 +260,7 @@ public class ListChainInstanceResponseBody extends TeaModel {
         public String result;
 
         /**
-         * <p>test-repo</p>
+         * <p>The start time.</p>
          * 
          * <strong>example:</strong>
          * <p>1636685776000</p>
@@ -269,12 +269,12 @@ public class ListChainInstanceResponseBody extends TeaModel {
         public Long startTime;
 
         /**
-         * <p>The status of the delivery chain. Valid values:</p>
+         * <p>The execution status of the delivery chain. Valid values:</p>
          * <ul>
-         * <li><code>RUNNING</code></li>
-         * <li><code>COMPLETE</code></li>
-         * <li><code>CANCELING</code></li>
-         * <li><code>CANCELED</code></li>
+         * <li><code>RUNNING</code>: Running.</li>
+         * <li><code>COMPLETE</code>: Complete.</li>
+         * <li><code>CANCELING</code>: Canceling.</li>
+         * <li><code>CANCELED</code>: Canceled.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -15,16 +15,24 @@ public class ListInstanceRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The status of the instance. Valid values:</p>
+     * <p>The instance status. Valid values:</p>
      * <ul>
-     * <li><code>PENDING</code>: The instance is being initialized.</li>
-     * <li><code>INIT_ERROR</code>: The initialization of the instance fails.</li>
-     * <li><code>STARTING</code>: The instance is being started.</li>
-     * <li><code>RUNNING</code>: The instance is running.</li>
-     * <li><code>STOPPING</code>: The instance is being stopped.</li>
-     * <li><code>STOPPED</code>: The instance is stopped.</li>
-     * <li><code>DELETING</code>: The instance is being deleted.</li>
-     * <li><code>DELETED</code>: The instance is deleted.</li>
+     * <li><p><code>PENDING</code>: Initializing.</p>
+     * </li>
+     * <li><p><code>INIT_ERROR</code>: Initialization failed.</p>
+     * </li>
+     * <li><p><code>STARTING</code>: Starting.</p>
+     * </li>
+     * <li><p><code>RUNNING</code>: Running.</p>
+     * </li>
+     * <li><p><code>STOPPING</code>: Stopping.</p>
+     * </li>
+     * <li><p><code>STOPPED</code>: Stopped.</p>
+     * </li>
+     * <li><p><code>DELETING</code>: Deleting.</p>
+     * </li>
+     * <li><p><code>DELETED</code>: Deleted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +51,7 @@ public class ListInstanceRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -52,7 +60,7 @@ public class ListInstanceRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the resource group to which the instance belongs.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmv36i4is****</p>

@@ -150,7 +150,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
      * <p>The policy that is used to trigger the synchronization task.</p>
      * 
      * <strong>example:</strong>
-     * <p>null</p>
+     * <p>PASSIVE</p>
      */
     @NameInMap("TaskTrigger")
     public String taskTrigger;

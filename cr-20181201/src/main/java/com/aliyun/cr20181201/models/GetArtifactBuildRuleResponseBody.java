@@ -26,6 +26,12 @@ public class GetArtifactBuildRuleResponseBody extends TeaModel {
     public String buildRuleId;
 
     /**
+     * <p>The API return code:</p>
+     * <ul>
+     * <li><strong>200</strong>: Indicates success.</li>
+     * <li>Others: Indicate error codes.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */

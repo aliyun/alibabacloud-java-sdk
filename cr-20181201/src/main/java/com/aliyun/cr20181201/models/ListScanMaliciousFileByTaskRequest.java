@@ -26,7 +26,7 @@ public class ListScanMaliciousFileByTaskRequest extends TeaModel {
      * <p>The severity of the malicious file.</p>
      * 
      * <strong>example:</strong>
-     * <p>High</p>
+     * <p>serious、suspicious、remind</p>
      */
     @NameInMap("Level")
     public String level;

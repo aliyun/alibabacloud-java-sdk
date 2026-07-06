@@ -79,7 +79,7 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
          * <p>The information about the ACL.</p>
          * 
          * <strong>example:</strong>
-         * <p>null</p>
+         * <p>127.0.0.1</p>
          */
         @NameInMap("Entry")
         public String entry;
@@ -150,7 +150,7 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
          * <p>VPC ID</p>
          * 
          * <strong>example:</strong>
-         * <p>null</p>
+         * <p>vpc-bp1b1xjllp3ve5yze****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

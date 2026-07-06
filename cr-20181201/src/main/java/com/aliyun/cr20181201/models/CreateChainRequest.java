@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateChainRequest extends TeaModel {
     /**
-     * <p>The configuration of the delivery chain in the JSON format.</p>
+     * <p>The JSON-serialized entity object that describes the delivery chain.</p>
      * 
      * <strong>example:</strong>
      * <p>chainconfig</p>
@@ -23,7 +23,7 @@ public class CreateChainRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class CreateChainRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The name of the repository.</p>
+     * <p>The repository name.</p>
      * 
      * <strong>example:</strong>
      * <p>repo1</p>
@@ -52,7 +52,7 @@ public class CreateChainRequest extends TeaModel {
     public String repoName;
 
     /**
-     * <p>The name of the namespace.</p>
+     * <p>The namespace name.</p>
      * 
      * <strong>example:</strong>
      * <p>ns1</p>
@@ -61,7 +61,7 @@ public class CreateChainRequest extends TeaModel {
     public String repoNamespaceName;
 
     /**
-     * <p>Repositories in which the delivery chain does not take effect.</p>
+     * <p>The collection of repositories excluded from the delivery chain execution.</p>
      */
     @NameInMap("ScopeExclude")
     public java.util.List<String> scopeExclude;

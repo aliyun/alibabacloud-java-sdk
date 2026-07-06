@@ -4,10 +4,15 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class GetChainResponseBody extends TeaModel {
+    /**
+     * <p>Delivery chain configuration description</p>
+     */
     @NameInMap("ChainConfig")
     public GetChainResponseBodyChainConfig chainConfig;
 
     /**
+     * <p>Delivery chain ID</p>
+     * 
      * <strong>example:</strong>
      * <p>chi-0ops0gsmw5x2****</p>
      */
@@ -15,6 +20,8 @@ public class GetChainResponseBody extends TeaModel {
     public String chainId;
 
     /**
+     * <p>Return code</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +29,8 @@ public class GetChainResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Delivery chain creation time</p>
+     * 
      * <strong>example:</strong>
      * <p>1638255427000</p>
      */
@@ -29,6 +38,8 @@ public class GetChainResponseBody extends TeaModel {
     public Long createTime;
 
     /**
+     * <p>Delivery chain description</p>
+     * 
      * <strong>example:</strong>
      * <p>description</p>
      */
@@ -36,6 +47,8 @@ public class GetChainResponseBody extends TeaModel {
     public String description;
 
     /**
+     * <p>Instance ID</p>
+     * 
      * <strong>example:</strong>
      * <p>cri-4cdrlqmhn4gm****</p>
      */
@@ -43,6 +56,8 @@ public class GetChainResponseBody extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Indicates whether the operation succeeded</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -50,6 +65,8 @@ public class GetChainResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
+     * <p>Updated At of the delivery chain description</p>
+     * 
      * <strong>example:</strong>
      * <p>1638259914000</p>
      */
@@ -57,6 +74,8 @@ public class GetChainResponseBody extends TeaModel {
     public Long modifiedTime;
 
     /**
+     * <p>Delivery chain name</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -64,16 +83,23 @@ public class GetChainResponseBody extends TeaModel {
     public String name;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>C87993B5-7D61-5CAC-8D64-1AC732DD69FF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Collection of repositories excluded from delivery chain execution</p>
+     */
     @NameInMap("ScopeExclude")
     public java.util.List<String> scopeExclude;
 
     /**
+     * <p>Delivery chain scope ID</p>
+     * 
      * <strong>example:</strong>
      * <p>crr-nyrh2oko32xb****</p>
      */
@@ -81,6 +107,8 @@ public class GetChainResponseBody extends TeaModel {
     public String scopeId;
 
     /**
+     * <p>Delivery chain scope type</p>
+     * 
      * <strong>example:</strong>
      * <p>REPOSITORY</p>
      */
@@ -198,6 +226,16 @@ public class GetChainResponseBody extends TeaModel {
 
     public static class GetChainResponseBodyChainConfigNodesNodeConfigDenyPolicy extends TeaModel {
         /**
+         * <p>Deny action. Valid values:</p>
+         * <ul>
+         * <li><p><code>BLOCK</code>: Block further execution of the delivery chain</p>
+         * </li>
+         * <li><p><code>BLOCK_RETAG</code>: Block overwriting and pushing image tags</p>
+         * </li>
+         * <li><p><code>BLOCK_DELETE_TAG</code>: Block deleting image tags</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>BLOCK</p>
          */
@@ -205,6 +243,8 @@ public class GetChainResponseBody extends TeaModel {
         public String action;
 
         /**
+         * <p>Collection of baseline samples to block. Separate multiple baseline sample names with commas.</p>
+         * 
          * <strong>example:</strong>
          * <p>identification,hc_image_exploit</p>
          */
@@ -212,6 +252,8 @@ public class GetChainResponseBody extends TeaModel {
         public String baselineList;
 
         /**
+         * <p>Number of scanned vulnerabilities that triggers a block</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -219,6 +261,8 @@ public class GetChainResponseBody extends TeaModel {
         public String issueCount;
 
         /**
+         * <p>The vulnerability Level at which blocking is triggered during a scan</p>
+         * 
          * <strong>example:</strong>
          * <p>HIGH</p>
          */
@@ -226,6 +270,8 @@ public class GetChainResponseBody extends TeaModel {
         public String issueLevel;
 
         /**
+         * <p>Collection of CVE vulnerabilities to block. Separate multiple CVE vulnerability names with commas.</p>
+         * 
          * <strong>example:</strong>
          * <p>CVE-2020-8286,CVE-2020-8285</p>
          */
@@ -233,6 +279,8 @@ public class GetChainResponseBody extends TeaModel {
         public String issueList;
 
         /**
+         * <p>The logic that triggers blocking upon scan detection</p>
+         * 
          * <strong>example:</strong>
          * <p>AND</p>
          */
@@ -240,6 +288,8 @@ public class GetChainResponseBody extends TeaModel {
         public String logic;
 
         /**
+         * <p>The collection of malicious samples to block, with multiple sample names separated by commas</p>
+         * 
          * <strong>example:</strong>
          * <p>mutate_cockhorse,abnormal_program</p>
          */
@@ -310,10 +360,15 @@ public class GetChainResponseBody extends TeaModel {
     }
 
     public static class GetChainResponseBodyChainConfigNodesNodeConfig extends TeaModel {
+        /**
+         * <p>Deny rules for scan nodes in the delivery chain</p>
+         */
         @NameInMap("DenyPolicy")
         public GetChainResponseBodyChainConfigNodesNodeConfigDenyPolicy denyPolicy;
 
         /**
+         * <p>Retry Count</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -321,12 +376,24 @@ public class GetChainResponseBody extends TeaModel {
         public Integer retry;
 
         /**
+         * <p>Scan engine for the delivery chain node  </p>
+         * <ul>
+         * <li><code>SAS_SCAN_SERVICE</code>, Security Center scan engine (requires paid activation)  </li>
+         * <li><code>ACR_SCAN_SERVICE</code>, ACR scan engine</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ACR_SCAN_SERVICE</p>
          */
         @NameInMap("ScanEngine")
         public String scanEngine;
 
+        /**
+         * <p>Timeout (in seconds)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>900</p>
+         */
         @NameInMap("Timeout")
         public Long timeout;
 
@@ -371,16 +438,29 @@ public class GetChainResponseBody extends TeaModel {
 
     public static class GetChainResponseBodyChainConfigNodes extends TeaModel {
         /**
+         * <p>Indicates whether to enable the delivery chain edge zone. Valid values:</p>
+         * <ul>
+         * <li><p><code>true</code>: Enable the delivery chain edge zone.</p>
+         * </li>
+         * <li><p><code>false</code>: Do not enable the delivery chain edge zone.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("Enable")
         public Boolean enable;
 
+        /**
+         * <p>Delivery chain edge zone configuration</p>
+         */
         @NameInMap("NodeConfig")
         public GetChainResponseBodyChainConfigNodesNodeConfig nodeConfig;
 
         /**
+         * <p>Delivery chain edge zone name</p>
+         * 
          * <strong>example:</strong>
          * <p>VULNERABILITY_SCANNING</p>
          */
@@ -420,6 +500,8 @@ public class GetChainResponseBody extends TeaModel {
 
     public static class GetChainResponseBodyChainConfigRoutersFrom extends TeaModel {
         /**
+         * <p>source edge zone name</p>
+         * 
          * <strong>example:</strong>
          * <p>DOCKER_IMAGE_BUILD</p>
          */
@@ -443,6 +525,8 @@ public class GetChainResponseBody extends TeaModel {
 
     public static class GetChainResponseBodyChainConfigRoutersTo extends TeaModel {
         /**
+         * <p>destination edge zone name</p>
+         * 
          * <strong>example:</strong>
          * <p>DOCKER_IMAGE_PUSH</p>
          */
@@ -465,9 +549,15 @@ public class GetChainResponseBody extends TeaModel {
     }
 
     public static class GetChainResponseBodyChainConfigRouters extends TeaModel {
+        /**
+         * <p>source edge zone</p>
+         */
         @NameInMap("From")
         public GetChainResponseBodyChainConfigRoutersFrom from;
 
+        /**
+         * <p>destination edge zone</p>
+         */
         @NameInMap("To")
         public GetChainResponseBodyChainConfigRoutersTo to;
 
@@ -496,6 +586,8 @@ public class GetChainResponseBody extends TeaModel {
 
     public static class GetChainResponseBodyChainConfig extends TeaModel {
         /**
+         * <p>Delivery chain configuration ID</p>
+         * 
          * <strong>example:</strong>
          * <p>cci-lz3ycgo69ukt****</p>
          */
@@ -503,19 +595,35 @@ public class GetChainResponseBody extends TeaModel {
         public String chainConfigId;
 
         /**
+         * <p>Indicates whether the delivery chain configuration is active. Valid values:</p>
+         * <ul>
+         * <li><p><code>true</code>: The configuration is active.</p>
+         * </li>
+         * <li><p><code>false</code>: The configuration is not active.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("IsActive")
         public Boolean isActive;
 
+        /**
+         * <p>Each edge zone in the delivery chain</p>
+         */
         @NameInMap("Nodes")
         public java.util.List<GetChainResponseBodyChainConfigNodes> nodes;
 
+        /**
+         * <p>Execution order relationships between edge zones in the delivery chain</p>
+         */
         @NameInMap("Routers")
         public java.util.List<GetChainResponseBodyChainConfigRouters> routers;
 
         /**
+         * <p>Delivery chain version</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

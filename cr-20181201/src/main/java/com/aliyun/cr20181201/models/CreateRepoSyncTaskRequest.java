@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRepoSyncTaskRequest extends TeaModel {
     /**
+     * <p>Source instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,14 @@ public class CreateRepoSyncTaskRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Specifies whether to overwrite an existing image:</p>
+     * <ul>
+     * <li><p><code>true</code>: Overwrite the existing image.</p>
+     * </li>
+     * <li><p><code>false</code>: Do not overwrite the existing image.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -21,6 +30,7 @@ public class CreateRepoSyncTaskRequest extends TeaModel {
     public Boolean override;
 
     /**
+     * <p>Image repository ID in the source instance</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +40,7 @@ public class CreateRepoSyncTaskRequest extends TeaModel {
     public String repoId;
 
     /**
+     * <p>Image tag in the source instance</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +50,7 @@ public class CreateRepoSyncTaskRequest extends TeaModel {
     public String tag;
 
     /**
+     * <p>Target instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,6 +60,7 @@ public class CreateRepoSyncTaskRequest extends TeaModel {
     public String targetInstanceId;
 
     /**
+     * <p>Namespace in the target instance</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,6 +70,7 @@ public class CreateRepoSyncTaskRequest extends TeaModel {
     public String targetNamespace;
 
     /**
+     * <p>Region ID of the target instance</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,6 +80,7 @@ public class CreateRepoSyncTaskRequest extends TeaModel {
     public String targetRegionId;
 
     /**
+     * <p>Name of the image repository in the target instance</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -75,6 +90,7 @@ public class CreateRepoSyncTaskRequest extends TeaModel {
     public String targetRepoName;
 
     /**
+     * <p>Image tag in the target instance</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -84,6 +100,8 @@ public class CreateRepoSyncTaskRequest extends TeaModel {
     public String targetTag;
 
     /**
+     * <p>UID of the account to which the target instance belongs</p>
+     * 
      * <strong>example:</strong>
      * <p>12345***</p>
      */

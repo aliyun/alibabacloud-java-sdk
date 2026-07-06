@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetArtifactSubscriptionRuleResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether an acceleration link is enabled for image subscription. The subscription acceleration feature is in public preview. The feature is optimized based on scheduling policies and network links to accelerate image subscription.</p>
+     * <p>Indicates whether to enable the accelerated data transfer feature. This feature is in public preview. It optimizes scheduling policies and network paths to improve the speed of artifact subscription.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class GetArtifactSubscriptionRuleResponseBody extends TeaModel {
     public Boolean accelerate;
 
     /**
-     * <p>The return value.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,7 +23,7 @@ public class GetArtifactSubscriptionRuleResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The time when the subscription rule was created.</p>
+     * <p>The time when the rule was created.</p>
      * 
      * <strong>example:</strong>
      * <p>1570759546000</p>
@@ -41,10 +41,12 @@ public class GetArtifactSubscriptionRuleResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Indicates whether the API request is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request is successful.</li>
-     * <li><code>false</code>: The request fails.</li>
+     * <li><p><code>true</code>: The request succeeded.</p>
+     * </li>
+     * <li><p><code>false</code>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,7 +56,7 @@ public class GetArtifactSubscriptionRuleResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
-     * <p>The time when the subscription rule was modified.</p>
+     * <p>The time when the rule was last modified.</p>
      * 
      * <strong>example:</strong>
      * <p>1638259914000</p>
@@ -63,7 +65,7 @@ public class GetArtifactSubscriptionRuleResponseBody extends TeaModel {
     public Long modifiedTime;
 
     /**
-     * <p>The name of the Container Registry namespace.</p>
+     * <p>The destination ACR namespace.</p>
      * 
      * <strong>example:</strong>
      * <p>test-ns</p>
@@ -72,7 +74,7 @@ public class GetArtifactSubscriptionRuleResponseBody extends TeaModel {
     public String namespaceName;
 
     /**
-     * <p>Indicates whether the original image is overwritten.</p>
+     * <p>Indicates whether to overwrite the existing images that have the same tag in the destination repository.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -81,13 +83,13 @@ public class GetArtifactSubscriptionRuleResponseBody extends TeaModel {
     public Boolean override;
 
     /**
-     * <p>The operating system and architecture. If the source repository contains multi-arch images, only the images with the specified operating system and architecture are subscribed to the destination repository of the Enterprise Edition instance.</p>
+     * <p>The operating systems and architectures. If a source repository contains multi-architecture images, only images that match the specified platforms are synchronized to the destination repository of the Enterprise Edition instance.</p>
      */
     @NameInMap("Platform")
     public java.util.List<String> platform;
 
     /**
-     * <p>The name of the Container Registry repository.</p>
+     * <p>The destination ACR repository.</p>
      * 
      * <strong>example:</strong>
      * <p>test-repo</p>
@@ -113,11 +115,14 @@ public class GetArtifactSubscriptionRuleResponseBody extends TeaModel {
     @NameInMap("RuleId")
     public String ruleId;
 
+    /**
+     * <p>The domain name of the artifact source.</p>
+     */
     @NameInMap("SourceDomain")
     public String sourceDomain;
 
     /**
-     * <p>The name of the source namespace.</p>
+     * <p>The source namespace.</p>
      * 
      * <strong>example:</strong>
      * <p>library</p>
@@ -126,13 +131,7 @@ public class GetArtifactSubscriptionRuleResponseBody extends TeaModel {
     public String sourceNamespaceName;
 
     /**
-     * <p>The source of the artifact.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>DOCKER_HUB: Docker Hub</li>
-     * <li>GCR: GCR</li>
-     * <li>QUAY: Quay.io</li>
-     * </ul>
+     * <p>The artifact source.</p>
      * 
      * <strong>example:</strong>
      * <p>DOCKER_HUB</p>
@@ -150,7 +149,7 @@ public class GetArtifactSubscriptionRuleResponseBody extends TeaModel {
     public String sourceRepoName;
 
     /**
-     * <p>The number of subscribed images.</p>
+     * <p>The number of images to subscribe to.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -159,7 +158,7 @@ public class GetArtifactSubscriptionRuleResponseBody extends TeaModel {
     public Long tagCount;
 
     /**
-     * <p>The image tag in the subscription source repository. Regular expressions are supported.</p>
+     * <p>The regular expression that is used to match the tags of images in the source repository for subscription.</p>
      * 
      * <strong>example:</strong>
      * <p>release-v.*</p>
