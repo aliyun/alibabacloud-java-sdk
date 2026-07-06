@@ -1475,6 +1475,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Deletes a face record.</p>
+     * 
+     * @param request DeleteFaceRecordV2Request
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteFaceRecordV2Response
+     */
+    public DeleteFaceRecordV2Response deleteFaceRecordV2WithOptions(DeleteFaceRecordV2Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.faceGroupCode)) {
+            query.put("FaceGroupCode", request.faceGroupCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.merchantUserId)) {
+            query.put("MerchantUserId", request.merchantUserId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteFaceRecordV2"),
+            new TeaPair("version", "2022-08-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFaceRecordV2Response());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a face record.</p>
+     * 
+     * @param request DeleteFaceRecordV2Request
+     * @return DeleteFaceRecordV2Response
+     */
+    public DeleteFaceRecordV2Response deleteFaceRecordV2(DeleteFaceRecordV2Request request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteFaceRecordV2WithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes data related to a user authentication record.</p>
      * 
      * @param request DeleteVerifyResultRequest
