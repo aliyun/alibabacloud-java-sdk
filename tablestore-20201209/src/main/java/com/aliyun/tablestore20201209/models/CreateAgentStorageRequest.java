@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAgentStorageRequest extends TeaModel {
     /**
-     * <p>agent storage description</p>
+     * <p>The description of the agent storage. The description must be 3 to 256 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>description for agent storage</p>
@@ -14,17 +14,25 @@ public class CreateAgentStorageRequest extends TeaModel {
     public String agentStorageDescription;
 
     /**
-     * <p>agent storage name</p>
+     * <p>The name of the agent storage. The naming conventions are as follows:</p>
+     * <ul>
+     * <li>The name can contain only letters, digits, and hyphens (-).</li>
+     * <li>The name must start with a letter.</li>
+     * <li>The name cannot end with a hyphen (-).</li>
+     * <li>The name is case-insensitive.</li>
+     * <li>The name must be 3 to 16 characters in length.</li>
+     * <li>The name cannot contain the following words: ali, ay, ots, taobao, or admin.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>first-ins</p>
+     * <p>first-agent</p>
      */
     @NameInMap("AgentStorageName")
     public String agentStorageName;
 
     /**
-     * <p>（已弃用）智能体存储网络类型。NORMAL, VPC_CONSOLE。默认为NORMAL。</p>
+     * <p>(Deprecated) The network type of the agent storage. Valid values: NORMAL and VPC_CONSOLE. Default value: NORMAL.</p>
      * 
      * <strong>example:</strong>
      * <p>VPC</p>
@@ -33,19 +41,27 @@ public class CreateAgentStorageRequest extends TeaModel {
     public String network;
 
     /**
-     * <p>The list of network sources allowed for the agent storage instance. By default, all network sources are allowed. Valid values: TRUST_PROXY: console.</p>
+     * <p>The list of allowed network sources for the agent storage. All sources are allowed by default. Valid values:</p>
+     * <ul>
+     * <li>TRUST_PROXY: console.</li>
+     * </ul>
      */
     @NameInMap("NetworkSourceACL")
     public java.util.List<String> networkSourceACL;
 
     /**
-     * <p>The list of network types allowed for the agent storage instance. By default, all network types are allowed. Valid values: CLASSIC: classic network. INTERNET: Internet. VPC: VPC.</p>
+     * <p>The list of allowed network types for the agent storage. All types are allowed by default. Valid values:</p>
+     * <ul>
+     * <li>CLASSIC: classic network.</li>
+     * <li>INTERNET: public network.</li>
+     * <li>VPC: VPC network.</li>
+     * </ul>
      */
     @NameInMap("NetworkTypeACL")
     public java.util.List<String> networkTypeACL;
 
     /**
-     * <p>The access control policy of the agent storage instance in JSON format. For the policy syntax, see <a href="https://www.alibabacloud.com/help/en/ram/user-guide/policy-structure-and-syntax">https://www.alibabacloud.com/help/en/ram/user-guide/policy-structure-and-syntax</a>.</p>
+     * <p>The access control policy for the agent storage in JSON format. For the syntax, see <a href="https://www.alibabacloud.com/help/en/ram/user-guide/policy-structure-and-syntax">https://www.alibabacloud.com/help/en/ram/user-guide/policy-structure-and-syntax</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -83,7 +99,7 @@ public class CreateAgentStorageRequest extends TeaModel {
     public String policy;
 
     /**
-     * <p>resource group id</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmxh4em5jnbcd</p>
@@ -92,7 +108,7 @@ public class CreateAgentStorageRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>tag</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tags")
     public java.util.List<CreateAgentStorageRequestTags> tags;
@@ -168,8 +184,7 @@ public class CreateAgentStorageRequest extends TeaModel {
 
     public static class CreateAgentStorageRequestTags extends TeaModel {
         /**
-         * <p>The key of the tag.
-         * The key can be up to 64 characters in length.</p>
+         * <p>The key of the tag. The key can be up to 64 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,8 +194,7 @@ public class CreateAgentStorageRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.
-         * The value can be up to 64 characters in length.</p>
+         * <p>The value of the tag. The value can be up to 64 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

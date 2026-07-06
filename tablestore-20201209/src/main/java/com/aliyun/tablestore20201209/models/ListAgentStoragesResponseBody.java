@@ -11,7 +11,7 @@ public class ListAgentStoragesResponseBody extends TeaModel {
     public java.util.List<ListAgentStoragesResponseBodyAgentStorages> agentStorages;
 
     /**
-     * <p>The token used to retrieve the next page of results when the total number of tag resources exceeds the value of MaxResults. This parameter has a value only when not all tag resources are returned.</p>
+     * <p>The pagination token for querying subsequent pages. This parameter has a value only when not all tag resources are returned. If the total number of expected tag resources exceeds the MaxResults value, use this token to retrieve the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>CAESCG15aC1xxxxx</p>
@@ -20,7 +20,7 @@ public class ListAgentStoragesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID, which can be used for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>39871ED2-62C0-578F-A32E-B88072D5582F</p>
@@ -76,7 +76,7 @@ public class ListAgentStoragesResponseBody extends TeaModel {
 
     public static class ListAgentStoragesResponseBodyAgentStorages extends TeaModel {
         /**
-         * <p>agent storage description</p>
+         * <p>The description of the agent storage.</p>
          * 
          * <strong>example:</strong>
          * <p>description for agent storage</p>
@@ -85,7 +85,7 @@ public class ListAgentStoragesResponseBody extends TeaModel {
         public String agentStorageDescription;
 
         /**
-         * <p>The agent storage name, which is a unique key.</p>
+         * <p>The name of the agent storage, which is a unique key.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-test</p>
@@ -94,7 +94,7 @@ public class ListAgentStoragesResponseBody extends TeaModel {
         public String agentStorageName;
 
         /**
-         * <p>The specifications of the agent storage.</p>
+         * <p>The specification of the agent storage.</p>
          * 
          * <strong>example:</strong>
          * <p>SSD</p>
@@ -126,7 +126,7 @@ public class ListAgentStoragesResponseBody extends TeaModel {
         public String aliasName;
 
         /**
-         * <p>The creation time of the agent storage.</p>
+         * <p>The time when the agent storage was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-16T06:02:59Z</p>

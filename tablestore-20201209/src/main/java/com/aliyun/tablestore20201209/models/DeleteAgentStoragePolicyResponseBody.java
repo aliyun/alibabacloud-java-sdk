@@ -3,7 +3,7 @@ package com.aliyun.tablestore20201209.models;
 
 import com.aliyun.tea.*;
 
-public class CreateAgentStorageResponseBody extends TeaModel {
+public class DeleteAgentStoragePolicyResponseBody extends TeaModel {
     /**
      * <p>The response status code.</p>
      * 
@@ -26,17 +26,17 @@ public class CreateAgentStorageResponseBody extends TeaModel {
      * <p>The request ID, which can be used for troubleshooting.</p>
      * 
      * <strong>example:</strong>
-     * <p>18DD77BF-F967-576D-80D1-79121399AB53</p>
+     * <p>39871ED2-62C0-578F-A32E-B88072D5582F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static CreateAgentStorageResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CreateAgentStorageResponseBody self = new CreateAgentStorageResponseBody();
+    public static DeleteAgentStoragePolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeleteAgentStoragePolicyResponseBody self = new DeleteAgentStoragePolicyResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateAgentStorageResponseBody setCode(String code) {
+    public DeleteAgentStoragePolicyResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -44,7 +44,7 @@ public class CreateAgentStorageResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CreateAgentStorageResponseBody setMessage(String message) {
+    public DeleteAgentStoragePolicyResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -52,7 +52,7 @@ public class CreateAgentStorageResponseBody extends TeaModel {
         return this.message;
     }
 
-    public CreateAgentStorageResponseBody setRequestId(String requestId) {
+    public DeleteAgentStoragePolicyResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

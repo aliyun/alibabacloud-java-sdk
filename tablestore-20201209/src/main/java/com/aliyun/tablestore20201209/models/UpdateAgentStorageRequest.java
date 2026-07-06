@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAgentStorageRequest extends TeaModel {
     /**
-     * <p>agent storage description</p>
+     * <p>The description of the agent storage.</p>
      * 
      * <strong>example:</strong>
      * <p>description for agent storage</p>
@@ -14,7 +14,7 @@ public class UpdateAgentStorageRequest extends TeaModel {
     public String agentStorageDescription;
 
     /**
-     * <p>agent storage name</p>
+     * <p>The name of the agent storage.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,16 +42,13 @@ public class UpdateAgentStorageRequest extends TeaModel {
     public String network;
 
     /**
-     * <p>The list of network sources allowed for the agent storage. All sources are allowed by default. Valid values:</p>
-     * <ul>
-     * <li>TRUST_PROXY: console.</li>
-     * </ul>
+     * <p>The list of allowed network sources for the agent storage. All sources are allowed by default. Must be used with TRUST_PROXY (console).</p>
      */
     @NameInMap("NetworkSourceACL")
     public java.util.List<String> networkSourceACL;
 
     /**
-     * <p>The list of network types allowed for the agent storage. All types are allowed by default. Valid values:</p>
+     * <p>The list of allowed network types for the agent storage. All types are allowed by default. Valid values:</p>
      * <ul>
      * <li>CLASSIC: classic network.</li>
      * <li>INTERNET: public network.</li>

@@ -56,6 +56,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Binds agent storage to a VPC.</p>
+     * 
+     * @param request BindAgentStorage2VpcRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BindAgentStorage2VpcResponse
+     */
+    public BindAgentStorage2VpcResponse bindAgentStorage2VpcWithOptions(BindAgentStorage2VpcRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentStorageName)) {
+            body.put("AgentStorageName", request.agentStorageName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.agentStorageVpcName)) {
+            body.put("AgentStorageVpcName", request.agentStorageVpcName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.virtualSwitchId)) {
+            body.put("VirtualSwitchId", request.virtualSwitchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            body.put("VpcId", request.vpcId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BindAgentStorage2Vpc"),
+            new TeaPair("version", "2020-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/openapi/bindagentstorage2vpc"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BindAgentStorage2VpcResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Binds agent storage to a VPC.</p>
+     * 
+     * @param request BindAgentStorage2VpcRequest
+     * @return BindAgentStorage2VpcResponse
+     */
+    public BindAgentStorage2VpcResponse bindAgentStorage2Vpc(BindAgentStorage2VpcRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.bindAgentStorage2VpcWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Binds an instance to a VPC.</p>
      * 
      * @param request BindInstance2VpcRequest
@@ -166,6 +225,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Checks the validity of an agent storage access control policy.</p>
+     * 
+     * @param request CheckAgentStoragePolicyRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CheckAgentStoragePolicyResponse
+     */
+    public CheckAgentStoragePolicyResponse checkAgentStoragePolicyWithOptions(CheckAgentStoragePolicyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentStorageName)) {
+            body.put("AgentStorageName", request.agentStorageName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policy)) {
+            body.put("Policy", request.policy);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CheckAgentStoragePolicy"),
+            new TeaPair("version", "2020-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/openapi/checkagentstoragepolicy"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckAgentStoragePolicyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Checks the validity of an agent storage access control policy.</p>
+     * 
+     * @param request CheckAgentStoragePolicyRequest
+     * @return CheckAgentStoragePolicyResponse
+     */
+    public CheckAgentStoragePolicyResponse checkAgentStoragePolicy(CheckAgentStoragePolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.checkAgentStoragePolicyWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Checks the validity of a Resource Access Management (RAM) policy for an instance.</p>
      * 
      * @param request CheckInstancePolicyRequest
@@ -218,14 +328,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>Before you call this operation, make sure that you fully understand the billing of Tablestore. For more information, see <a href="https://help.aliyun.com/document_detail/27291.html">Billing overview</a>.</strong></li>
-     * <li>You can create up to 10 agent storage instances within a single Alibaba Cloud account. Agent storage instance names must be unique within the same region.
-     * <a href="Deprecated">_single.params.body.props.Network.title</a> The network type of the instance. Valid values: NORMAL, VPC_CONSOLE. Default value: NORMAL.
-     * <a href="Deprecated">_single.params.body.props.Network.desc</a> The network type of the agent storage instance. Valid values: NORMAL, VPC_CONSOLE. Default value: NORMAL.</li>
+     * <li><strong>Before you use this operation, make sure that you fully understand the billing of Tablestore. For more information, see <a href="https://help.aliyun.com/document_detail/27291.html">Billing overview</a>.</strong></li>
+     * <li>You can create up to 10 agent storages for a single Alibaba Cloud account. Agent storage names must be unique within the same region.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an agent storage instance.</p>
+     * <p>Creates an agent storage.</p>
      * 
      * @param request CreateAgentStorageRequest
      * @param headers map
@@ -288,14 +396,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>Before you call this operation, make sure that you fully understand the billing of Tablestore. For more information, see <a href="https://help.aliyun.com/document_detail/27291.html">Billing overview</a>.</strong></li>
-     * <li>You can create up to 10 agent storage instances within a single Alibaba Cloud account. Agent storage instance names must be unique within the same region.
-     * <a href="Deprecated">_single.params.body.props.Network.title</a> The network type of the instance. Valid values: NORMAL, VPC_CONSOLE. Default value: NORMAL.
-     * <a href="Deprecated">_single.params.body.props.Network.desc</a> The network type of the agent storage instance. Valid values: NORMAL, VPC_CONSOLE. Default value: NORMAL.</li>
+     * <li><strong>Before you use this operation, make sure that you fully understand the billing of Tablestore. For more information, see <a href="https://help.aliyun.com/document_detail/27291.html">Billing overview</a>.</strong></li>
+     * <li>You can create up to 10 agent storages for a single Alibaba Cloud account. Agent storage names must be unique within the same region.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an agent storage instance.</p>
+     * <p>Creates an agent storage.</p>
      * 
      * @param request CreateAgentStorageRequest
      * @return CreateAgentStorageResponse
@@ -507,12 +613,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>To avoid conflicts, do not create an agent store with the same name as the agent store being deleted during the deletion process.</li>
-     * <li>After an agent store is deleted, the agent store becomes unavailable, and the tables, table data, and related indexes in the agent store cannot be recovered. Proceed with caution.</li>
+     * <li>To avoid conflicts, do not create an agent storage with the same name as the agent storage being deleted during the deletion process.</li>
+     * <li>After an agent storage is deleted, the agent storage becomes unavailable, and the tables, table data, and related indexes in the agent storage cannot be recovered. Proceed with caution.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an agent store.</p>
+     * <p>Deletes an agent storage.</p>
      * 
      * @param request DeleteAgentStorageRequest
      * @param headers map
@@ -547,12 +653,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>To avoid conflicts, do not create an agent store with the same name as the agent store being deleted during the deletion process.</li>
-     * <li>After an agent store is deleted, the agent store becomes unavailable, and the tables, table data, and related indexes in the agent store cannot be recovered. Proceed with caution.</li>
+     * <li>To avoid conflicts, do not create an agent storage with the same name as the agent storage being deleted during the deletion process.</li>
+     * <li>After an agent storage is deleted, the agent storage becomes unavailable, and the tables, table data, and related indexes in the agent storage cannot be recovered. Proceed with caution.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an agent store.</p>
+     * <p>Deletes an agent storage.</p>
      * 
      * @param request DeleteAgentStorageRequest
      * @return DeleteAgentStorageResponse
@@ -561,6 +667,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteAgentStorageWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>After an agent storage policy is deleted, it cannot be recovered. Proceed with caution.</li>
+     * <li>After an agent storage policy is deleted, the corresponding permission controls become ineffective. Make sure the agent storage is in a secure environment.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an access control policy for agent storage.</p>
+     * 
+     * @param request DeleteAgentStoragePolicyRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAgentStoragePolicyResponse
+     */
+    public DeleteAgentStoragePolicyResponse deleteAgentStoragePolicyWithOptions(DeleteAgentStoragePolicyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentStorageName)) {
+            body.put("AgentStorageName", request.agentStorageName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyVersion)) {
+            body.put("PolicyVersion", request.policyVersion);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAgentStoragePolicy"),
+            new TeaPair("version", "2020-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/openapi/deleteagentstoragepolicy"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAgentStoragePolicyResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>After an agent storage policy is deleted, it cannot be recovered. Proceed with caution.</li>
+     * <li>After an agent storage policy is deleted, the corresponding permission controls become ineffective. Make sure the agent storage is in a secure environment.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an access control policy for agent storage.</p>
+     * 
+     * @param request DeleteAgentStoragePolicyRequest
+     * @return DeleteAgentStoragePolicyResponse
+     */
+    public DeleteAgentStoragePolicyResponse deleteAgentStoragePolicy(DeleteAgentStoragePolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteAgentStoragePolicyWithOptions(request, headers, runtime);
     }
 
     /**
@@ -1149,6 +1318,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Retrieves the list of VPC information stored in an agent storage.</p>
+     * 
+     * @param request ListVpcInfoByAgentStorageRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListVpcInfoByAgentStorageResponse
+     */
+    public ListVpcInfoByAgentStorageResponse listVpcInfoByAgentStorageWithOptions(ListVpcInfoByAgentStorageRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentStorageName)) {
+            query.put("AgentStorageName", request.agentStorageName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            query.put("PageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListVpcInfoByAgentStorage"),
+            new TeaPair("version", "2020-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/openapi/listvpcinfobyagentstorage"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListVpcInfoByAgentStorageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the list of VPC information stored in an agent storage.</p>
+     * 
+     * @param request ListVpcInfoByAgentStorageRequest
+     * @return ListVpcInfoByAgentStorageResponse
+     */
+    public ListVpcInfoByAgentStorageResponse listVpcInfoByAgentStorage(ListVpcInfoByAgentStorageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listVpcInfoByAgentStorageWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Retrieves a list of VPC information for an instance.</p>
      * 
      * @param request ListVpcInfoByInstanceRequest
@@ -1310,6 +1534,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.tagResourcesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Disassociates agent storage from a VPC.</p>
+     * 
+     * @param request UnbindAgentStorage2VpcRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UnbindAgentStorage2VpcResponse
+     */
+    public UnbindAgentStorage2VpcResponse unbindAgentStorage2VpcWithOptions(UnbindAgentStorage2VpcRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentStorageName)) {
+            body.put("AgentStorageName", request.agentStorageName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.agentStorageVpcName)) {
+            body.put("AgentStorageVpcName", request.agentStorageVpcName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UnbindAgentStorage2Vpc"),
+            new TeaPair("version", "2020-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/openapi/unbindagentstorage2vpc"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UnbindAgentStorage2VpcResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Disassociates agent storage from a VPC.</p>
+     * 
+     * @param request UnbindAgentStorage2VpcRequest
+     * @return UnbindAgentStorage2VpcResponse
+     */
+    public UnbindAgentStorage2VpcResponse unbindAgentStorage2Vpc(UnbindAgentStorage2VpcRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.unbindAgentStorage2VpcWithOptions(request, headers, runtime);
     }
 
     /**
@@ -1493,6 +1768,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateAgentStorageWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the access control policy of agent storage.</p>
+     * 
+     * @param request UpdateAgentStoragePolicyRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAgentStoragePolicyResponse
+     */
+    public UpdateAgentStoragePolicyResponse updateAgentStoragePolicyWithOptions(UpdateAgentStoragePolicyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentStorageName)) {
+            body.put("AgentStorageName", request.agentStorageName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policy)) {
+            body.put("Policy", request.policy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyVersion)) {
+            body.put("PolicyVersion", request.policyVersion);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAgentStoragePolicy"),
+            new TeaPair("version", "2020-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/openapi/updateagentstoragepolicy"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAgentStoragePolicyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the access control policy of agent storage.</p>
+     * 
+     * @param request UpdateAgentStoragePolicyRequest
+     * @return UpdateAgentStoragePolicyResponse
+     */
+    public UpdateAgentStoragePolicyResponse updateAgentStoragePolicy(UpdateAgentStoragePolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateAgentStoragePolicyWithOptions(request, headers, runtime);
     }
 
     /**

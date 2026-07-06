@@ -3,12 +3,12 @@ package com.aliyun.tablestore20201209.models;
 
 import com.aliyun.tea.*;
 
-public class CreateAgentStorageResponseBody extends TeaModel {
+public class CheckAgentStoragePolicyResponseBody extends TeaModel {
     /**
      * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
-     * <p>200</p>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -17,7 +17,7 @@ public class CreateAgentStorageResponseBody extends TeaModel {
      * <p>The response message.</p>
      * 
      * <strong>example:</strong>
-     * <p>success</p>
+     * <p>Verification passed.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -26,17 +26,17 @@ public class CreateAgentStorageResponseBody extends TeaModel {
      * <p>The request ID, which can be used for troubleshooting.</p>
      * 
      * <strong>example:</strong>
-     * <p>18DD77BF-F967-576D-80D1-79121399AB53</p>
+     * <p>E734979F-5A44-5993-9CE5-C23103576923</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static CreateAgentStorageResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CreateAgentStorageResponseBody self = new CreateAgentStorageResponseBody();
+    public static CheckAgentStoragePolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        CheckAgentStoragePolicyResponseBody self = new CheckAgentStoragePolicyResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateAgentStorageResponseBody setCode(String code) {
+    public CheckAgentStoragePolicyResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -44,7 +44,7 @@ public class CreateAgentStorageResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CreateAgentStorageResponseBody setMessage(String message) {
+    public CheckAgentStoragePolicyResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -52,7 +52,7 @@ public class CreateAgentStorageResponseBody extends TeaModel {
         return this.message;
     }
 
-    public CreateAgentStorageResponseBody setRequestId(String requestId) {
+    public CheckAgentStoragePolicyResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

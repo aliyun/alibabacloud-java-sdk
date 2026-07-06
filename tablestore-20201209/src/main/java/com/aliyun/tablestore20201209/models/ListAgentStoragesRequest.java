@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAgentStoragesRequest extends TeaModel {
     /**
-     * <p>agent storage name</p>
+     * <p>The name of the agent storage.</p>
      * 
      * <strong>example:</strong>
      * <p>agent-test</p>
@@ -14,7 +14,7 @@ public class ListAgentStoragesRequest extends TeaModel {
     public String agentStorageName;
 
     /**
-     * <p>The list of agent storage names, used to query multiple specified agent storages in a batch.</p>
+     * <p>The list of agent storage names. Use this parameter to query multiple specified agent storages in a batch.</p>
      */
     @NameInMap("AgentStorageNameList")
     public java.util.List<String> agentStorageNameList;
@@ -29,7 +29,7 @@ public class ListAgentStoragesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token used to retrieve the next page of results when the total number of tag resources exceeds the value of MaxResults. This parameter has a value only when not all tag resources are returned.</p>
+     * <p>The pagination token for querying subsequent pages. This parameter has a value only when not all tag resources are returned. If the total number of expected tag resources exceeds the MaxResults value, use this token to retrieve the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>CAESCG15aC1xxxxx</p>
@@ -38,7 +38,7 @@ public class ListAgentStoragesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The resource group ID. You can query this ID in the resource group console.</p>
+     * <p>The ID of the resource group. You can query the ID in the Resource Group console.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmxh4em5jncda</p>

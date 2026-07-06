@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAgentStorageRequest extends TeaModel {
     /**
-     * <p>agent storage name</p>
+     * <p>The name of the agent storage.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -3,22 +3,22 @@ package com.aliyun.tablestore20201209.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteAgentStorageResponseBody extends TeaModel {
+public class UnbindAgentStorage2VpcResponseBody extends TeaModel {
     /**
      * <p>The request ID, which can be used to troubleshoot and locate issues.</p>
      * 
      * <strong>example:</strong>
-     * <p>E734979F-5A44-5993-9CE5-C23103576923</p>
+     * <p>18DD77BF-F967-576D-80D1-79121399AB53</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static DeleteAgentStorageResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteAgentStorageResponseBody self = new DeleteAgentStorageResponseBody();
+    public static UnbindAgentStorage2VpcResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UnbindAgentStorage2VpcResponseBody self = new UnbindAgentStorage2VpcResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteAgentStorageResponseBody setRequestId(String requestId) {
+    public UnbindAgentStorage2VpcResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

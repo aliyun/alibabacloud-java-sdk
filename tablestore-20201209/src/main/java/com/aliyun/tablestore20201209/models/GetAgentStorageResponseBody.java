@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAgentStorageResponseBody extends TeaModel {
     /**
-     * <p>agent storage description</p>
+     * <p>The description of the agent storage.</p>
      * 
      * <strong>example:</strong>
      * <p>description for agent storage</p>
@@ -14,7 +14,7 @@ public class GetAgentStorageResponseBody extends TeaModel {
     public String agentStorageDescription;
 
     /**
-     * <p>agent storage name</p>
+     * <p>The name of the agent storage.</p>
      * 
      * <strong>example:</strong>
      * <p>agent-test</p>
@@ -23,7 +23,7 @@ public class GetAgentStorageResponseBody extends TeaModel {
     public String agentStorageName;
 
     /**
-     * <p>The specification of the agent storage.</p>
+     * <p>The specifications of the agent storage.</p>
      * 
      * <strong>example:</strong>
      * <p>SSD</p>
@@ -70,7 +70,7 @@ public class GetAgentStorageResponseBody extends TeaModel {
     public java.util.List<String> networkSourceACL;
 
     /**
-     * <p>The list of network types allowed for the agent storage. CLASSIC: classic network. INTERNET: Internet. VPC: VPC network.</p>
+     * <p>The list of network types allowed for the agent storage. CLASSIC: classic network. INTERNET: public network. VPC: VPC network.</p>
      */
     @NameInMap("NetworkTypeACL")
     public java.util.List<String> networkTypeACL;
@@ -85,7 +85,7 @@ public class GetAgentStorageResponseBody extends TeaModel {
     public String policy;
 
     /**
-     * <p>The version of the agent storage policy.</p>
+     * <p>The version of the access control policy for the agent storage.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -97,13 +97,13 @@ public class GetAgentStorageResponseBody extends TeaModel {
      * <p>The region ID of the agent storage.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-chengdu</p>
+     * <p>cn-beijing</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID, which can be used for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>3104C83E-6E82-57FB-BB88-8C64CCFDEF89</p>
