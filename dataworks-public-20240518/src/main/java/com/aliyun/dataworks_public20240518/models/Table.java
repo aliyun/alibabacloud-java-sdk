@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class Table extends TeaModel {
     /**
-     * <p>The business metadata. This parameter is specific to DataWorks and includes instructions, tags, categories, upstream tasks, and extended information.</p>
+     * <p>The business metadata related to DataWorks, including usage instructions, tags, categories, upstream production nodes, and extended information.</p>
      */
     @NameInMap("BusinessMetadata")
     public TableBusinessMetadata businessMetadata;
 
     /**
-     * <p>The comment on the table.</p>
+     * <p>The comment.</p>
      * 
      * <strong>example:</strong>
      * <p>测试表</p>
@@ -20,7 +20,7 @@ public class Table extends TeaModel {
     public String comment;
 
     /**
-     * <p>The table creation time, provided as a Unix timestamp in milliseconds.</p>
+     * <p>The creation time, in millisecond-level timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1736852168000</p>
@@ -29,29 +29,22 @@ public class Table extends TeaModel {
     public Long createTime;
 
     /**
-     * <p>The ID of the entity. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</p>
-     * <p>The format is <code>${EntityType}:${instance ID or escaped URL}:${data catalog identifier}:${database name}:${schema name}:${table name}</code>. Use an empty string as a placeholder for any non-existent level.</p>
+     * <p>The ID. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</p>
+     * <p>The format is <code>${EntityType}:${instance ID or encoded URL}:${DataFolderIdentity}:${DatabaseName}:${PatternName}:${TableName}</code>. Use an empty character as a placeholder for levels that do not exist.</p>
      * <blockquote>
-     * <p>For MaxCompute and DLF data types, use an empty string as a placeholder for the instance ID. For MaxCompute, the database name is the MaxCompute project name. You must provide a schema name for projects where the three-layer model is enabled. If the model is not enabled, use an empty string as a placeholder for the schema name.</p>
+     * <p>For maxcompute and dlf types, use an empty string as a placeholder for the instance ID. For the maxcompute type, the database name is the MaxCompute project name. Projects with the three-layer model enabled require a schema name. For projects without the three-layer model enabled, use an empty string as a placeholder for the schema name.</p>
      * </blockquote>
      * <blockquote>
-     * <p>For StarRocks data types, the data catalog identifier is the catalog name. For DLF data types, the data catalog identifier is the catalog ID. Other data types do not support the catalog level. For these types, use an empty string as a placeholder.</p>
+     * <p>For the starrocks type, the data catalog identifier is the catalog name. For the dlf type, the data catalog identifier is the catalog ID. Other types do not support the catalog level. Use an empty string as a placeholder.</p>
      * </blockquote>
-     * <p>The following are the ID formats for several common data types:</p>
+     * <p>The following examples show the ID formats for common types:</p>
      * <p><code>maxcompute-table:::project_name:[schema_name]:table_name</code></p>
      * <p><code>dlf-table::catalog_id:database_name::table_name</code></p>
      * <p><code>hms-table:instance_id::database_name::table_name</code></p>
      * <p><code>holo-table:instance_id::database_name:schema_name:table_name</code></p>
      * <p><code>mysql-table:(instance_id|encoded_jdbc_url)::database_name::table_name</code></p>
      * <blockquote>
-     * <p>Placeholder descriptions:<br>
-     * <code>instance_id</code>: The instance ID. This is required when the data source is registered in instance mode.<br>
-     * <code>encoded_jdbc_url</code>: The URL-encoded JDBC connection string. This is required when the data source is registered by using a connection string.<br>
-     * <code>catalog_id</code>: The DLF catalog ID.<br>
-     * <code>project_name</code>: The MaxCompute project name.<br>
-     * <code>database_name</code>: The database name.<br>
-     * <code>schema_name</code>: The schema name. For the MaxCompute data type, this is required only if the project has the three-layer model enabled. Otherwise, use an empty string as a placeholder.<br>
-     * <code>table_name</code>: The table name.<br><br><br><br><br><br><br></p>
+     * <p>Where<br><code>instance_id</code>: The instance ID. This is required when the data source is registered in instance mode.<br><code>encoded_jdbc_url</code>: The URL-encoded JDBC connection string. This is required when the data source is registered by using a connection string.<br><code>catalog_id</code>: The DLF catalog ID.<br><code>project_name</code>: The MaxCompute project name.<br><code>database_name</code>: The database name.<br><code>schema_name</code>: The schema name. For the maxcompute type, this is required only when the three-layer model is enabled for the project. If the three-layer model is not enabled, use an empty string as a placeholder.<br><code>table_name</code>: The table name.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -61,7 +54,7 @@ public class Table extends TeaModel {
     public String id;
 
     /**
-     * <p>The time the table was last modified, provided as a Unix timestamp in milliseconds.</p>
+     * <p>The modification time, in millisecond-level timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1736852168000</p>
@@ -70,7 +63,7 @@ public class Table extends TeaModel {
     public Long modifyTime;
 
     /**
-     * <p>The name of the table.</p>
+     * <p>The name.</p>
      * 
      * <strong>example:</strong>
      * <p>table_name</p>
@@ -79,34 +72,28 @@ public class Table extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the parent metadata entity. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</p>
+     * <p>The parent-level metadata entity ID. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</p>
      * <ul>
-     * <li><p>For data types that support schemas, such as <code>maxcompute/holo/postgresql/sqlserver/hybriddb_for_postgresql/oracle</code>, <code>ParentMetaEntityId</code> specifies the table\&quot;s database schema. For the MaxCompute data type, this applies only to MaxCompute projects with the three-layer model enabled. The format is <code>${EntityType}:${instance ID or escaped URL}:${data catalog identifier}:${database name}:${schema name}</code>. Use an empty string as a placeholder for any non-existent level.</p>
+     * <li><p>For types that support schemas (<code>maxcompute/holo/postgresql/sqlserver/hybriddb_for_postgresql/oracle, where the maxcompute type requires the Layer 3 model to be enabled for the project</code>), ParentMetaEntityId is the database pattern to which the table belongs. The format is <code>${EntityType}:${instance ID or encoded URL}:${DataFolderIdentity}:${DatabaseName}:${PatternName}</code>. Use an empty character as a placeholder for levels that do not exist.</p>
      * </li>
-     * <li><p>For other data types, <code>ParentMetaEntityId</code> specifies the table\&quot;s database. The format is <code>${EntityType}:${instance ID or escaped URL}:${data catalog identifier}:${database name}</code>. Use an empty string as a placeholder for any non-existent level.</p>
+     * <li><p>For other types, ParentMetaEntityId is the database to which the table belongs. The format is <code>${EntityType}:${instance ID or encoded URL}:${DataFolderIdentity}:${DatabaseName}</code>. Use an empty character as a placeholder for levels that do not exist.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>For MaxCompute and DLF data types, use an empty string as a placeholder for the instance ID. For the MaxCompute data type, the database name is the MaxCompute project name.</p>
+     * <p>For maxcompute and dlf types, use an empty string as a placeholder for the instance ID. For the maxcompute type, the database name is the MaxCompute project name.</p>
      * </blockquote>
      * <blockquote>
-     * <p>For StarRocks data types, the data catalog identifier is the catalog name. For DLF data types, the data catalog identifier is the catalog ID. Other data types do not support the catalog level. For these types, use an empty string as a placeholder.</p>
+     * <p>For the starrocks type, the data catalog identifier is the catalog name. For the dlf type, the data catalog identifier is the catalog ID. Other types do not support the catalog level. Use an empty string as a placeholder.</p>
      * </blockquote>
-     * <p>The following are the formats of <code>ParentMetaEntityId</code> for several common data types:</p>
+     * <p>The following examples show the ParentMetaEntityId formats for common types:</p>
      * <p><code>maxcompute-project:::project_name</code></p>
-     * <p><code>maxcompute-schema:::project_name:schema_name</code> (Only for projects with the three-layer model enabled)</p>
+     * <p><code>maxcompute-schema:::project_name:schema_name</code> (only when the three-layer model is enabled for the project)</p>
      * <p><code>dlf-database::catalog_id:database_name</code></p>
      * <p><code>hms-database:instance_id::database_name</code></p>
      * <p><code>holo-schema:instance_id::database_name:schema_name</code></p>
      * <p><code>mysql-database:(instance_id|encoded_jdbc_url)::database_name</code></p>
      * <blockquote>
-     * <p>Placeholder descriptions:<br>
-     * <code>instance_id</code>: The instance ID. This is required when the data source is registered in instance mode.<br>
-     * <code>encoded_jdbc_url</code>: The URL-encoded JDBC connection string. This is required when the data source is registered by using a connection string.<br>
-     * <code>catalog_id</code>: The DLF catalog ID.<br>
-     * <code>project_name</code>: The MaxCompute project name.<br>
-     * <code>database_name</code>: The database name.<br>
-     * <code>schema_name</code>: The schema name.<br><br><br><br><br><br></p>
+     * <p>Where<br><code>instance_id</code>: The instance ID. This is required when the data source is registered in instance mode.<br><code>encoded_jdbc_url</code>: The URL-encoded JDBC connection string. This is required when the data source is registered by using a connection string.<br><code>catalog_id</code>: The DLF catalog ID.<br><code>project_name</code>: The MaxCompute project name.<br><code>database_name</code>: The database name.<br><code>schema_name</code>: The schema name.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -116,13 +103,16 @@ public class Table extends TeaModel {
     public String parentMetaEntityId;
 
     /**
-     * <p>The list of partition keys. This parameter is empty for non-partitioned tables.</p>
+     * <p>The list of partition keys. This is empty for non-partitioned tables.</p>
      */
     @NameInMap("PartitionKeys")
     public java.util.List<String> partitionKeys;
 
+    @NameInMap("StatisticsInfos")
+    public java.util.Map<String, String> statisticsInfos;
+
     /**
-     * <p>The table type. The value depends on the type of metadata collector.</p>
+     * <p>The table type. The valid values depend on the metadata collector type.</p>
      * 
      * <strong>example:</strong>
      * <p>TABLE</p>
@@ -205,6 +195,14 @@ public class Table extends TeaModel {
         return this.partitionKeys;
     }
 
+    public Table setStatisticsInfos(java.util.Map<String, String> statisticsInfos) {
+        this.statisticsInfos = statisticsInfos;
+        return this;
+    }
+    public java.util.Map<String, String> getStatisticsInfos() {
+        return this.statisticsInfos;
+    }
+
     public Table setTableType(String tableType) {
         this.tableType = tableType;
         return this;
@@ -232,7 +230,7 @@ public class Table extends TeaModel {
         public String id;
 
         /**
-         * <p>The category name.</p>
+         * <p>The name.</p>
          * 
          * <strong>example:</strong>
          * <p>测试类目</p>
@@ -241,7 +239,7 @@ public class Table extends TeaModel {
         public String name;
 
         /**
-         * <p>The parent category\&quot;s ID. This can be an empty string.</p>
+         * <p>The parent category ID. This parameter can be empty.</p>
          * 
          * <strong>example:</strong>
          * <p>CATEGORY.123</p>
@@ -284,10 +282,8 @@ public class Table extends TeaModel {
         /**
          * <p>The environment type. Valid values:</p>
          * <ul>
-         * <li><p>Prod: The production environment.</p>
-         * </li>
-         * <li><p>Dev: The development environment.</p>
-         * </li>
+         * <li>Prod: Production environment.</li>
+         * <li>Dev: Development environment.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -297,7 +293,7 @@ public class Table extends TeaModel {
         public String envType;
 
         /**
-         * <p>The number of times the table was favorited.</p>
+         * <p>The favorite count.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -315,7 +311,7 @@ public class Table extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The number of reads.</p>
+         * <p>The read count.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -324,7 +320,7 @@ public class Table extends TeaModel {
         public Long readCount;
 
         /**
-         * <p>The number of views.</p>
+         * <p>The view count.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -381,7 +377,7 @@ public class Table extends TeaModel {
 
     public static class TableBusinessMetadataTags extends TeaModel {
         /**
-         * <p>The tag key. This value cannot be empty.</p>
+         * <p>The tag key. This parameter cannot be empty.</p>
          * 
          * <strong>example:</strong>
          * <p>tag_key</p>
@@ -390,7 +386,7 @@ public class Table extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. This can be an empty string.</p>
+         * <p>The tag value. This parameter can be empty.</p>
          * 
          * <strong>example:</strong>
          * <p>tag_value</p>
@@ -426,7 +422,7 @@ public class Table extends TeaModel {
 
     public static class TableBusinessMetadataUpstreamTasks extends TeaModel {
         /**
-         * <p>The task ID.</p>
+         * <p>The node ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -435,7 +431,7 @@ public class Table extends TeaModel {
         public Long id;
 
         /**
-         * <p>The task name.</p>
+         * <p>The node name.</p>
          * 
          * <strong>example:</strong>
          * <p>test_task</p>
@@ -468,25 +464,25 @@ public class Table extends TeaModel {
 
     public static class TableBusinessMetadata extends TeaModel {
         /**
-         * <p>The list of categories to which the table belongs.</p>
+         * <p>The list of categories.</p>
          */
         @NameInMap("Categories")
         public java.util.List<java.util.List<TableBusinessMetadataCategories>> categories;
 
         /**
-         * <p>A map of custom attribute identifiers to lists of their corresponding values.</p>
+         * <p>The custom attribute values, where key is the custom attribute identifier and value is the list of attribute values.</p>
          */
         @NameInMap("CustomAttributes")
         public java.util.Map<String, java.util.List<String>> customAttributes;
 
         /**
-         * <p>Extended information. This parameter is supported only for the MaxCompute data type.</p>
+         * <p>The extension information. Currently only supported for MaxCompute type.</p>
          */
         @NameInMap("Extension")
         public TableBusinessMetadataExtension extension;
 
         /**
-         * <p>The instructions for use.</p>
+         * <p>The usage instructions.</p>
          * 
          * <strong>example:</strong>
          * <h2>使用说明</h2>
@@ -501,7 +497,7 @@ public class Table extends TeaModel {
         public java.util.List<TableBusinessMetadataTags> tags;
 
         /**
-         * <p>The list of upstream tasks.</p>
+         * <p>The list of upstream nodes.</p>
          */
         @NameInMap("UpstreamTasks")
         public java.util.List<TableBusinessMetadataUpstreamTasks> upstreamTasks;
@@ -599,7 +595,7 @@ public class Table extends TeaModel {
         public String outputFormat;
 
         /**
-         * <p>The table owner.</p>
+         * <p>The owner.</p>
          * 
          * <strong>example:</strong>
          * <p>test_user</p>
@@ -614,7 +610,7 @@ public class Table extends TeaModel {
         public java.util.Map<String, String> parameters;
 
         /**
-         * <p>The class used by the serializer/deserializer (SerDe).</p>
+         * <p>The class used by SerDe.</p>
          * 
          * <strong>example:</strong>
          * <p>org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe</p>

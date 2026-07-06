@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePipelineRunResponseBody extends TeaModel {
     /**
-     * <p>The ID of the process.</p>
+     * <p>The unique identifier of the publish process.</p>
      * 
      * <strong>example:</strong>
      * <p>a7ef0634-20ec-4a7c-a214-54020f91XXXX</p>
@@ -14,7 +14,7 @@ public class CreatePipelineRunResponseBody extends TeaModel {
     public String id;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>7C352CB7-CD88-50CF-9D0D-E81BDF02XXXX</p>

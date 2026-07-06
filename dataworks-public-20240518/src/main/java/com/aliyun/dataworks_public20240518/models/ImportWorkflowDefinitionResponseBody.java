@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ImportWorkflowDefinitionResponseBody extends TeaModel {
     /**
-     * <p>The status information of the asynchronous task.</p>
+     * <p>The asynchronous task status information.</p>
      */
     @NameInMap("AsyncJob")
     public ImportWorkflowDefinitionResponseBodyAsyncJob asyncJob;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>7C352CB7-CD88-50CF-9D0D-E81BDF020E7F</p>
@@ -51,7 +51,7 @@ public class ImportWorkflowDefinitionResponseBody extends TeaModel {
         public Boolean completed;
 
         /**
-         * <p>The time when the asynchronous task was created. This value is a UNIX timestamp.</p>
+         * <p>The timestamp when the asynchronous task was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1706581425000</p>
@@ -60,7 +60,7 @@ public class ImportWorkflowDefinitionResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The error message returned if the asynchronous task fails.</p>
+         * <p>The error message returned when the asynchronous task fails.</p>
          * 
          * <strong>example:</strong>
          * <p>target folder already exists: XXXX</p>
@@ -87,9 +87,9 @@ public class ImportWorkflowDefinitionResponseBody extends TeaModel {
         public Integer progress;
 
         /**
-         * <p>The response.</p>
+         * <p>The content that the asynchronous task is expected to return.</p>
          * <blockquote>
-         * <p>The workflow ID is returned.</p>
+         * <p>This field currently contains the ID of the workflow created by the asynchronous task.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -102,14 +102,10 @@ public class ImportWorkflowDefinitionResponseBody extends TeaModel {
          * <p>The status of the asynchronous task.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p>Running: The asynchronous task is running.</p>
-         * </li>
-         * <li><p>Success: The asynchronous task is complete.</p>
-         * </li>
-         * <li><p>Fail: The asynchronous task fails.</p>
-         * </li>
-         * <li><p>Cancel: The asynchronous task is canceled.</p>
-         * </li>
+         * <li>Running: The task is running.</li>
+         * <li>Success: The task succeeded.</li>
+         * <li>Fail: The task failed.</li>
+         * <li>Cancel: The task was canceled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -119,13 +115,11 @@ public class ImportWorkflowDefinitionResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The type of the asynchronous task.</p>
+         * <p>The operation type of the asynchronous task.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p>Create: The asynchronous task is used to create an object.</p>
-         * </li>
-         * <li><p>Cancel: The asynchronous task is used to cancel an operation.</p>
-         * </li>
+         * <li>Create: creates a resource. </li>
+         * <li>Cancel: cancels a creation job.</li>
          * </ul>
          * 
          * <strong>example:</strong>

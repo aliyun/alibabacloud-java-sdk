@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetColumnResponseBody extends TeaModel {
     /**
-     * <p>The columns in the table.</p>
+     * <p>The column list.</p>
      */
     @NameInMap("Column")
     public Column column;
@@ -20,7 +20,7 @@ public class GetColumnResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request succeeded.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

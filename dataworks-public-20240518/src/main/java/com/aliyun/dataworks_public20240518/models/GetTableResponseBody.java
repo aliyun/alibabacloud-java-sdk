@@ -14,7 +14,7 @@ public class GetTableResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request succeeded.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +23,7 @@ public class GetTableResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>Detailed information about the table.</p>
+     * <p>The details of the data table.</p>
      */
     @NameInMap("Table")
     public Table table;

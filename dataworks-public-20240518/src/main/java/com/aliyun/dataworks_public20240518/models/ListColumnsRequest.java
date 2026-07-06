@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListColumnsRequest extends TeaModel {
     /**
-     * <p>The column comment. Supports fuzzy match.</p>
+     * <p>The comment. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>test comment</p>
@@ -13,8 +13,11 @@ public class ListColumnsRequest extends TeaModel {
     @NameInMap("Comment")
     public String comment;
 
+    @NameInMap("IncludeExtendedProperties")
+    public Boolean includeExtendedProperties;
+
     /**
-     * <p>The column name. Supports fuzzy match.</p>
+     * <p>The name. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>test_table</p>
@@ -23,12 +26,10 @@ public class ListColumnsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The sort order. Default: Asc. Valid values:</p>
+     * <p>The sort order. Default value: Asc. Valid values:</p>
      * <ul>
-     * <li><p>Asc</p>
-     * </li>
-     * <li><p>Desc</p>
-     * </li>
+     * <li>Asc: ascending order</li>
+     * <li>Desc: descending order</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,7 +39,7 @@ public class ListColumnsRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The page number. Default: 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -47,7 +48,7 @@ public class ListColumnsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The page size. Default: 10. Maximum: 100.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -56,12 +57,10 @@ public class ListColumnsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The sort field. Default: Position. Valid values:</p>
+     * <p>The sort field. Default value: Position. Valid values:</p>
      * <ul>
-     * <li><p>Name</p>
-     * </li>
-     * <li><p>Position</p>
-     * </li>
+     * <li>Name: name</li>
+     * <li>Position: position</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +70,7 @@ public class ListColumnsRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The table ID. Call the ListTables operation or refer to <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a> to obtain this value.</p>
+     * <p>The ID of the data table. You can obtain the ID from the response of the ListTables operation. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -91,6 +90,14 @@ public class ListColumnsRequest extends TeaModel {
     }
     public String getComment() {
         return this.comment;
+    }
+
+    public ListColumnsRequest setIncludeExtendedProperties(Boolean includeExtendedProperties) {
+        this.includeExtendedProperties = includeExtendedProperties;
+        return this;
+    }
+    public Boolean getIncludeExtendedProperties() {
+        return this.includeExtendedProperties;
     }
 
     public ListColumnsRequest setName(String name) {

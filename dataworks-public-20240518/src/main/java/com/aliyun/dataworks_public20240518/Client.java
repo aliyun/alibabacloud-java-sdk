@@ -3659,12 +3659,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Notice: This API does not support batch operations. If you specify multiple entities to be published, all entities except the first one are ignored.
-     * Notice: This API may not be available in earlier versions of the SDK. In that case, use the CreateDeployment API, which accepts the same parameters.</p>
+     * <p>Notice: This operation does not support batch operations. If you specify multiple publish entities in the parameters, all entities except the first one are ignored.
+     * Notice: This operation may not be available in earlier versions of the SDK. In this case, use the CreateDeployment operation. The parameters are the same as those described in this topic.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a deployment process for entities in the Data Studio (new version).</p>
+     * <p>Creates a publish process for an entity in the new-version DataStudio.</p>
      * 
      * @param tmpReq CreatePipelineRunRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3679,6 +3679,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRunUntilStage)) {
+            body.put("AutoRunUntilStage", request.autoRunUntilStage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("Description", request.description);
         }
@@ -3689,6 +3693,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
             body.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.runMode)) {
+            body.put("RunMode", request.runMode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
@@ -3715,12 +3723,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Notice: This API does not support batch operations. If you specify multiple entities to be published, all entities except the first one are ignored.
-     * Notice: This API may not be available in earlier versions of the SDK. In that case, use the CreateDeployment API, which accepts the same parameters.</p>
+     * <p>Notice: This operation does not support batch operations. If you specify multiple publish entities in the parameters, all entities except the first one are ignored.
+     * Notice: This operation may not be available in earlier versions of the SDK. In this case, use the CreateDeployment operation. The parameters are the same as those described in this topic.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a deployment process for entities in the Data Studio (new version).</p>
+     * <p>Creates a publish process for an entity in the new-version DataStudio.</p>
      * 
      * @param request CreatePipelineRunRequest
      * @return CreatePipelineRunResponse
@@ -8395,11 +8403,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>DataWorks Basic Edition or a higher edition is required.</li>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about a specific field of a table in Data Map.</p>
+     * <p>Retrieves the details of a specified column in a Data Map table.</p>
      * 
      * @param request GetColumnRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8428,11 +8436,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>DataWorks Basic Edition or a higher edition is required.</li>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about a specific field of a table in Data Map.</p>
+     * <p>Retrieves the details of a specified column in a Data Map table.</p>
      * 
      * @param request GetColumnRequest
      * @return GetColumnResponse
@@ -10933,11 +10941,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>DataWorks Basic Edition or a higher edition is required.</li>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about a specific table in Data Map.</p>
+     * <p>Retrieves the details of a specified data table in DataWorks Data Map. You can specify whether to return business metadata.</p>
      * 
      * @param request GetTableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10966,11 +10974,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>DataWorks Basic Edition or a higher edition is required.</li>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about a specific table in Data Map.</p>
+     * <p>Retrieves the details of a specified data table in DataWorks Data Map. You can specify whether to return business metadata.</p>
      * 
      * @param request GetTableRequest
      * @return GetTableResponse
@@ -11470,12 +11478,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Notice: </p>
      * </blockquote>
      * <ul>
-     * <li>This API does not support importing multiple workflow definitions. If you define more than one workflow definition in the FlowSpec, all workflow definitions except the first one are ignored.</li>
-     * <li>This is an asynchronous API. Calling this API returns an asynchronous task object. You must call the GetJobStatus API to query the execution status of the task.</li>
+     * <li>This operation does not support importing multiple workflows. If more than one workflow is defined in the FlowSpec, all workflows except the first one are ignored.</li>
+     * <li>This is an asynchronous operation. The response returns an asynchronous task object. Call GetJobStatus to query the execution status of the task.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Imports a workflow and its child nodes that are specified by the FlowSpec field to DataStudio.</p>
+     * <p>Imports a workflow node defined by FlowSpec and its child nodes into DataStudio.</p>
      * 
      * @param request ImportWorkflowDefinitionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11484,6 +11492,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ImportWorkflowDefinitionResponse importWorkflowDefinitionWithOptions(ImportWorkflowDefinitionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            body.put("DryRun", request.dryRun);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
             body.put("ProjectId", request.projectId);
         }
@@ -11515,12 +11527,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Notice: </p>
      * </blockquote>
      * <ul>
-     * <li>This API does not support importing multiple workflow definitions. If you define more than one workflow definition in the FlowSpec, all workflow definitions except the first one are ignored.</li>
-     * <li>This is an asynchronous API. Calling this API returns an asynchronous task object. You must call the GetJobStatus API to query the execution status of the task.</li>
+     * <li>This operation does not support importing multiple workflows. If more than one workflow is defined in the FlowSpec, all workflows except the first one are ignored.</li>
+     * <li>This is an asynchronous operation. The response returns an asynchronous task object. Call GetJobStatus to query the execution status of the task.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Imports a workflow and its child nodes that are specified by the FlowSpec field to DataStudio.</p>
+     * <p>Imports a workflow node defined by FlowSpec and its child nodes into DataStudio.</p>
      * 
      * @param request ImportWorkflowDefinitionRequest
      * @return ImportWorkflowDefinitionResponse
@@ -12003,11 +12015,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>DataWorks Basic Edition or a higher edition is required.</li>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries the column list of a specified table in Data Map.</p>
+     * <p>Queries the column list of a specified data table in DataWorks Data Map.</p>
      * 
      * @param request ListColumnsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12036,11 +12048,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>DataWorks Basic Edition or a higher edition is required.</li>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries the column list of a specified table in Data Map.</p>
+     * <p>Queries the column list of a specified data table in DataWorks Data Map.</p>
      * 
      * @param request ListColumnsRequest
      * @return ListColumnsResponse
@@ -16448,11 +16460,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
+     * <li>DataWorks Basic Edition or a higher edition is required.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of tables in the data map. For data source types that do not support schemas, this operation queries tables within a specified database. For data source types that support schemas, you can query tables within a specified database, MaxCompute project, or schema. The response includes basic table information, technical metadata, and business metadata.</p>
+     * <p>Queries the list of data tables in DataWorks Data Map. For types that do not support the schema level, you can query data tables under a specified database. For types that support the schema level, you can query data tables under a specified database, MaxCompute project, or schema. The response contains only basic table information and does not include technical metadata or business metadata.</p>
      * 
      * @param tmpReq ListTablesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16487,11 +16499,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
+     * <li>DataWorks Basic Edition or a higher edition is required.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of tables in the data map. For data source types that do not support schemas, this operation queries tables within a specified database. For data source types that support schemas, you can query tables within a specified database, MaxCompute project, or schema. The response includes basic table information, technical metadata, and business metadata.</p>
+     * <p>Queries the list of data tables in DataWorks Data Map. For types that do not support the schema level, you can query data tables under a specified database. For types that support the schema level, you can query data tables under a specified database, MaxCompute project, or schema. The response contains only basic table information and does not include technical metadata or business metadata.</p>
      * 
      * @param request ListTablesRequest
      * @return ListTablesResponse

@@ -5,29 +5,22 @@ import com.aliyun.tea.*;
 
 public class GetColumnRequest extends TeaModel {
     /**
-     * <p>The ID. You can refer to the response of the ListColumns operation and the <a href="https://help.aliyun.com/document_detail/2880092.html">description of concepts related to metadata entities.</a></p>
-     * <p>The format: <code>${EntityType}:${Instance ID or escaped URL}:${Catalog identifier}:${Database name}:${Schema name}:${Table name}:${Column name}</code>. Use empty strings as placeholders for levels that do not exist.</p>
+     * <p>The ID. You can obtain this value from the response of the ListColumns operation. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</p>
+     * <p>The format is <code>${EntityType}:${InstanceID or encoded URL}:${DataCatalogIdentifier}:${DatabaseName}:${SchemaName}:${TableName}:${ColumnName}</code>. Use an empty string as a placeholder for levels that do not exist.</p>
      * <blockquote>
-     * <p>For the MaxCompute and DLF types, use an empty string as the placeholder for the instance ID. For MaxCompute, the database name refers to the MaxCompute project name. If the project has schema enabled, you must specify the schema name. Otherwise, use an empty string as the placeholder for the schema name.</p>
+     * <p>For MaxCompute and DLF types, use an empty string as a placeholder for the instance ID. For MaxCompute, the database name is the MaxCompute project name. Projects with the three-layer model enabled must include the schema name. For projects without the three-layer model, use an empty string as a placeholder for the schema name.</p>
      * </blockquote>
      * <blockquote>
-     * <p>The catalog identifier of the StarRocks is the catalog name, and the catalog identifier of the DLF type is the catalog ID. Other types do not support catalog levels. Use empty strings as placeholders.</p>
+     * <p>For StarRocks, the data catalog identifier is the catalog name. For DLF, the data catalog identifier is the catalog ID. Other types do not support the catalog level. Use an empty string as a placeholder.</p>
      * </blockquote>
-     * <p>Examples of common ID formats</p>
+     * <p>The following are ID format examples for common types:</p>
      * <p><code>maxcompute-column:::project_name:[schema_name]:table_name:column_name</code></p>
      * <p><code>dlf-column::catalog_id:database_name::table_name:column_name</code></p>
      * <p><code>hms-column:instance_id::database_name::table_name:column_name</code></p>
      * <p><code>holo-column:instance_id::database_name:schema_name:table_name:column_name</code></p>
      * <p><code>mysql-column:(instance_id|encoded_jdbc_url)::database_name::table_name:column_name</code></p>
      * <blockquote>
-     * <p><br><code>instance_id</code>: the ID of the instance, which is required when the data source is registered in instance mode.<br>
-     * <code>encoded_jdbc_url</code>: The URL-encoded JDBC connection string, which is required when the data source is registered via a connection string.<br>
-     * <code>catalog_id</code>: The DLF catalog ID.<br>
-     * <code>project_name</code>: The MaxCompute project name.<br>
-     * <code>database_name</code>: The database name.<br>
-     * <code>schema_name</code>: The schema name. For the MaxCompute type, this is required only if the project has enabled schema; otherwise, use an empty string as a placeholder.<br>
-     * <code>table_name</code>: The table name.<br>
-     * <code>column_name</code>: The field name.</p>
+     * <p>Other parameters:<br><code>instance_id</code>: The instance ID. This parameter is required when the data source is registered in instance mode.<br><code>encoded_jdbc_url</code>: The URL-encoded JDBC connection string. This parameter is required when the data source is registered by using a connection string.<br><code>catalog_id</code>: The DLF catalog ID.<br><code>project_name</code>: The MaxCompute project name.<br><code>database_name</code>: The database name.<br><code>schema_name</code>: The schema name. For MaxCompute, this parameter is required only when the three-layer model is enabled for the project. If the three-layer model is not enabled, use an empty string as a placeholder.<br><code>table_name</code>: The table name.<br><code>column_name</code>: The column name.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

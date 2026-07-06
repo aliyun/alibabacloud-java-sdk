@@ -5,7 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreatePipelineRunShrinkRequest extends TeaModel {
     /**
-     * <p>The description of the process.</p>
+     * <p>The code of the stage in the publish process. This parameter takes effect only when RunMode is set to Auto. After the publish process is created, it automatically runs to the specified stage.</p>
+     * <blockquote>
+     * <p>Notice: The specified stage is automatically completed. For example, if you set this parameter to DEV, the automatic run stops after the DEV stage reaches the desired state.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>DEV</p>
+     */
+    @NameInMap("AutoRunUntilStage")
+    public String autoRunUntilStage;
+
+    /**
+     * <p>The description of the publish process.</p>
      * 
      * <strong>example:</strong>
      * <p>This is a OdpsSQL-node publishing process. The function is XXXX.</p>
@@ -14,9 +26,9 @@ public class CreatePipelineRunShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The IDs of entities to which you want to apply the process.</p>
+     * <p>The list of entity IDs that you want to publish in this publish process.</p>
      * <blockquote>
-     * <p>A process can be applied to only a single entity and its child entities. If you specify multiple entities in the array, the process is applied only to the first entity in the array and its child entities. Make sure that the array in your request contains only one element. Extra elements will be ignored.</p>
+     * <p>Notice: Only a single entity and its child entities can be published at a time. Only the first entity in this array and its child entities are published. Make sure that the length of this array is 1. Entities beyond the first one are ignored.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      */
@@ -24,7 +36,8 @@ public class CreatePipelineRunShrinkRequest extends TeaModel {
     public String objectIdsShrink;
 
     /**
-     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID. You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace configuration page to obtain the workspace ID.
+     * This parameter specifies the DataWorks workspace for this API call.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,11 +47,25 @@ public class CreatePipelineRunShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>Specifies whether to deploy or undeploy the entity. Valid values:</p>
+     * <p>The run mode of the publish process. Default value: Normal. If you set this parameter to Auto, the publish process is automatically driven to the specified stage. This parameter is used together with the AutoRunUntilStage parameter.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li><p>Online: deploys the entity.</p>
+     * <li>Normal</li>
+     * <li>Auto</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
+     */
+    @NameInMap("RunMode")
+    public String runMode;
+
+    /**
+     * <p>Specifies whether the publish process is used to bring an entity online or offline.</p>
+     * <ul>
+     * <li><p>Online: online</p>
      * </li>
-     * <li><p>Offline: undeploys the entity.</p>
+     * <li><p>Offline: offline</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -52,6 +79,14 @@ public class CreatePipelineRunShrinkRequest extends TeaModel {
     public static CreatePipelineRunShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreatePipelineRunShrinkRequest self = new CreatePipelineRunShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreatePipelineRunShrinkRequest setAutoRunUntilStage(String autoRunUntilStage) {
+        this.autoRunUntilStage = autoRunUntilStage;
+        return this;
+    }
+    public String getAutoRunUntilStage() {
+        return this.autoRunUntilStage;
     }
 
     public CreatePipelineRunShrinkRequest setDescription(String description) {
@@ -76,6 +111,14 @@ public class CreatePipelineRunShrinkRequest extends TeaModel {
     }
     public Long getProjectId() {
         return this.projectId;
+    }
+
+    public CreatePipelineRunShrinkRequest setRunMode(String runMode) {
+        this.runMode = runMode;
+        return this;
+    }
+    public String getRunMode() {
+        return this.runMode;
     }
 
     public CreatePipelineRunShrinkRequest setType(String type) {

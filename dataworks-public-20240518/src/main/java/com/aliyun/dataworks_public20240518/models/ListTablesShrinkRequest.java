@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTablesShrinkRequest extends TeaModel {
     /**
-     * <p>The comment on the table. Fuzzy matching is supported.</p>
+     * <p>The comment. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>this is a comment</p>
@@ -13,8 +13,11 @@ public class ListTablesShrinkRequest extends TeaModel {
     @NameInMap("Comment")
     public String comment;
 
+    @NameInMap("IncludeExtendedProperties")
+    public Boolean includeExtendedProperties;
+
     /**
-     * <p>The name of the table. Fuzzy matching is supported.</p>
+     * <p>The name. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>abc</p>
@@ -23,12 +26,10 @@ public class ListTablesShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The sort order. Default value: <code>Asc</code>. Valid values:</p>
+     * <p>The sort order. Default value: Asc. Valid values:</p>
      * <ul>
-     * <li><p><code>Asc</code>: ascending</p>
-     * </li>
-     * <li><p><code>Desc</code>: descending</p>
-     * </li>
+     * <li>Asc: ascending order</li>
+     * <li>Desc: descending order</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,28 +57,25 @@ public class ListTablesShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the parent metadata entity. You can obtain this ID from the response of the ListDatabases or ListSchemas operation. For details, see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</p>
+     * <p>The ID of the parent-level metadata entity. You can obtain this value from the response of the ListDatabases or ListSchemas operation. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</p>
      * <ul>
-     * <li><p>The value can be the database to which the table belongs. The format is <code>${EntityType}:${instance ID or URL-encoded connection string}:${data catalog identifier}:${database name}</code>. Use an empty string as a placeholder for a hierarchy level that does not exist.</p>
+     * <li><p>The value can be the database to which the table belongs. The ParentMetaEntityId format is <code>${EntityType}:${InstanceID or encoded URL}:${DataCatalogIdentifier}:${DatabaseName}</code>. Use an empty string as a placeholder for levels that do not exist.</p>
      * </li>
-     * <li><p>The value can also be the schema to which the table belongs. The format is <code>${EntityType}:${instance ID or URL-encoded connection string}:${data catalog identifier}:${database name}:${schema name}</code>. Use an empty string as a placeholder for a hierarchy level that does not exist.</p>
+     * <li><p>The value can also be the database schema to which the table belongs. The ParentMetaEntityId format is <code>${EntityType}:${InstanceID or encoded URL}:${DataCatalogIdentifier}:${DatabaseName}:${SchemaName}</code>. Use an empty string as a placeholder for levels that do not exist.</p>
      * </li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li><p>You can specify a schema in <code>ParentMetaEntityId</code> only if the database type supports schemas, such as <code>maxcompute/holo/postgresql/sqlserver/hybriddb_for_postgresql/oracle</code>. For the maxcompute type, the three-layer model must be enabled. Otherwise, you can only specify a database.</p>
-     * </li>
-     * <li><p>For <code>maxcompute</code> and <code>dlf</code> data types, use an empty string as a placeholder for the instance ID. For the maxcompute data type, the database name is the MaxCompute project name.</p>
-     * </li>
-     * <li><p>For the <code>starrocks</code> type, the data catalog identifier is the catalog name. For the <code>dlf</code> type, the data catalog identifier is the catalog ID. Other types do not support the catalog level, so you can use an empty string as a placeholder.</p>
-     * </li>
+     * <li>You can set ParentMetaEntityId to a database schema only when the database type supports schemas (<code>maxcompute/holo/postgresql/sqlserver/hybriddb_for_postgresql/oracle</code>, and the three-level model must be enabled for the maxcompute type). Otherwise, you can set this parameter only to a database.</li>
+     * <li>For the maxcompute and dlf types, use an empty string as a placeholder for the instance ID. For the maxcompute type, the database name is the MaxCompute project name.</li>
+     * <li>For the starrocks type, the data catalog identifier is the catalog name. For the dlf type, the data catalog identifier is the catalog ID. Other types do not support the catalog level. Use an empty string as a placeholder.</li>
      * </ul>
      * </blockquote>
-     * <p>The following list shows the <code>ParentMetaEntityId</code> format for several common data source types:</p>
+     * <p>The following examples show the ParentMetaEntityId formats for common types:</p>
      * <ul>
      * <li><p><code>maxcompute-project:::project_name</code></p>
      * </li>
-     * <li><p><code>maxcompute-schema:::project_name:schema_name</code> (Only when the three-layer model is enabled for the project)</p>
+     * <li><p><code>maxcompute-schema:::project_name:schema_name</code> (only when the three-level model is enabled for the project)</p>
      * </li>
      * <li><p><code>dlf-database::catalog_id:database_name</code></p>
      * </li>
@@ -89,20 +87,14 @@ public class ListTablesShrinkRequest extends TeaModel {
      * </li>
      * </ul>
      * <blockquote>
-     * <p>In these formats:</p>
+     * <p>Where:  </p>
      * <ul>
-     * <li><p><code>instance_id</code>: The instance ID. This parameter is required if the data source is registered in instance mode.</p>
-     * </li>
-     * <li><p><code>encoded_jdbc_url</code>: The URL-encoded JDBC connection string. This parameter is required if the data source is registered by using a connection string.</p>
-     * </li>
-     * <li><p><code>catalog_id</code>: The ID of the DLF data catalog.</p>
-     * </li>
-     * <li><p><code>project_name</code>: The name of the MaxCompute project.</p>
-     * </li>
-     * <li><p><code>database_name</code>: The name of the database.</p>
-     * </li>
-     * <li><p><code>schema_name</code>: The name of the schema.</p>
-     * </li>
+     * <li><code>instance_id</code>: The instance ID. This value is required when the data source is registered in instance mode.</li>
+     * <li><code>encoded_jdbc_url</code>: The URL-encoded JDBC connection string. This value is required when the data source is registered by using a connection string.</li>
+     * <li><code>catalog_id</code>: The DLF catalog ID.</li>
+     * <li><code>project_name</code>: The MaxCompute project name.</li>
+     * <li><code>database_name</code>: The database name.</li>
+     * <li><code>schema_name</code>: The schema name.</li>
      * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>
@@ -114,16 +106,12 @@ public class ListTablesShrinkRequest extends TeaModel {
     public String parentMetaEntityId;
 
     /**
-     * <p>The sort field. Default value: <code>CreateTime</code>. Valid values:</p>
+     * <p>The field by which to sort the results. Default value: CreateTime. Valid values:</p>
      * <ul>
-     * <li><p><code>CreateTime</code>: creation time</p>
-     * </li>
-     * <li><p><code>ModifyTime</code>: modification time</p>
-     * </li>
-     * <li><p><code>Name</code>: name</p>
-     * </li>
-     * <li><p><code>TableType</code>: table type</p>
-     * </li>
+     * <li>CreateTime: creation time</li>
+     * <li>ModifyTime: modification time</li>
+     * <li>Name: name</li>
+     * <li>TableType: table type</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -133,7 +121,7 @@ public class ListTablesShrinkRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>A list of table types to query. If you omit this parameter, tables of all types are returned.</p>
+     * <p>The list of table types to query. If this parameter is left empty, all types are queried.</p>
      */
     @NameInMap("TableTypes")
     public String tableTypesShrink;
@@ -149,6 +137,14 @@ public class ListTablesShrinkRequest extends TeaModel {
     }
     public String getComment() {
         return this.comment;
+    }
+
+    public ListTablesShrinkRequest setIncludeExtendedProperties(Boolean includeExtendedProperties) {
+        this.includeExtendedProperties = includeExtendedProperties;
+        return this;
+    }
+    public Boolean getIncludeExtendedProperties() {
+        return this.includeExtendedProperties;
     }
 
     public ListTablesShrinkRequest setName(String name) {
