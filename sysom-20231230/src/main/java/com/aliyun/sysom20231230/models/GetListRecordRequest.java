@@ -4,6 +4,12 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class GetListRecordRequest extends TeaModel {
+    /**
+     * <p>The ID of the analysis record to query the status of.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxxxxxx-f37b-478d-87f6-2259ed8766bf</p>
+     */
     @NameInMap("analysisId")
     public String analysisId;
 
