@@ -5,19 +5,32 @@ import com.aliyun.tea.*;
 
 public class OrderProductResult extends TeaModel {
     /**
+     * <p>Indicates whether the product is available for sale</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("canSell")
     public Boolean canSell;
 
+    /**
+     * <p>Additional product information</p>
+     */
     @NameInMap("features")
     public java.util.Map<String, ?> features;
 
+    /**
+     * <p>Reason for unavailability</p>
+     * 
+     * <strong>example:</strong>
+     * <p>库存为0</p>
+     */
     @NameInMap("message")
     public String message;
 
     /**
+     * <p>Product price (unit: cent)</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -25,6 +38,8 @@ public class OrderProductResult extends TeaModel {
     public Long price;
 
     /**
+     * <p>Product ID</p>
+     * 
      * <strong>example:</strong>
      * <p>6600****6736</p>
      */
@@ -32,23 +47,35 @@ public class OrderProductResult extends TeaModel {
     public String productId;
 
     /**
+     * <p>Product image link</p>
+     * 
      * <strong>example:</strong>
      * <p>//img.alicdn.com/imgextra/i4/2216003305543/O1CN01bip3Un1qokG0</p>
      */
     @NameInMap("productPicUrl")
     public String productPicUrl;
 
+    /**
+     * <p>Product title</p>
+     * 
+     * <strong>example:</strong>
+     * <p>儿童学习桌</p>
+     */
     @NameInMap("productTitle")
     public String productTitle;
 
     /**
+     * <p>Purchaser ID</p>
+     * 
      * <strong>example:</strong>
-     * <p>56****2304</p>
+     * <p>PID56****2304</p>
      */
     @NameInMap("purchaserId")
     public String purchaserId;
 
     /**
+     * <p>Quantity</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -64,6 +91,12 @@ public class OrderProductResult extends TeaModel {
     @NameInMap("skuId")
     public String skuId;
 
+    /**
+     * <p>SKU title</p>
+     * 
+     * <strong>example:</strong>
+     * <p>浅绿色</p>
+     */
     @NameInMap("skuTitle")
     public String skuTitle;
 

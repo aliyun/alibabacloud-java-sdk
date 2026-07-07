@@ -5,12 +5,19 @@ import com.aliyun.tea.*;
 
 public class SelectionGroupAddProductRequest extends TeaModel {
     /**
+     * <p>Collection of product IDs to add</p>
+     * <blockquote>
+     * <ul>
+     * <li>You can add up to 30 products per call.</li>
+     * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      */
     @NameInMap("productIds")
     public java.util.List<String> productIds;
 
     /**
+     * <p>Purchaser ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

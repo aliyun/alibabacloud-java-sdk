@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ProductPrice extends TeaModel {
     /**
+     * <p>Amount payable</p>
+     * 
      * <strong>example:</strong>
      * <p>120</p>
      */

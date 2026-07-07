@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRefundOrderRequest extends TeaModel {
     /**
+     * <p>Create a return order</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

@@ -5,12 +5,18 @@ import com.aliyun.tea.*;
 
 public class AddressInfo extends TeaModel {
     /**
+     * <p>The detailed shipping address. Enter the full address in the format of province, city, district/county, street, and community.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>陕西省西安市新城区xx街道xxx大厦xx室</p>
      */
     @NameInMap("addressDetail")
     public String addressDetail;
 
     /**
+     * <p>The address ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -18,19 +24,26 @@ public class AddressInfo extends TeaModel {
     public Long addressId;
 
     /**
+     * <p>The level-4 address code for the district or county. This parameter is recommended.</p>
+     * 
      * <strong>example:</strong>
-     * <p>610102</p>
+     * <p>330106</p>
      */
     @NameInMap("divisionCode")
     public String divisionCode;
 
     /**
+     * <p>The recipient.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>任先生</p>
      */
     @NameInMap("receiver")
     public String receiver;
 
     /**
+     * <p>The phone number of the recipient.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,8 +53,10 @@ public class AddressInfo extends TeaModel {
     public String receiverPhone;
 
     /**
+     * <p>The level-5 address code for the town or street. This parameter is required.</p>
+     * 
      * <strong>example:</strong>
-     * <p>61010212</p>
+     * <p>330106109</p>
      */
     @NameInMap("townDivisionCode")
     public String townDivisionCode;

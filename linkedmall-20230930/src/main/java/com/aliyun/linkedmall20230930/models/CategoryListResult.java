@@ -4,9 +4,15 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class CategoryListResult extends TeaModel {
+    /**
+     * <p>category collection</p>
+     */
     @NameInMap("categories")
     public java.util.List<Category> categories;
 
+    /**
+     * <p>request ID</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

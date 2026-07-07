@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RefundRenderResult extends TeaModel {
     /**
+     * <p>The return methods supported for the order.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,18 +17,25 @@ public class RefundRenderResult extends TeaModel {
     public DistributionMaxRefundFee maxRefundFeeData;
 
     /**
+     * <p>The ID of the sub-distribution order.</p>
+     * 
      * <strong>example:</strong>
      * <p>6692****5458</p>
      */
     @NameInMap("orderLineId")
     public String orderLineId;
 
+    /**
+     * <p>A collection of refund reasons.</p>
+     */
     @NameInMap("refundReasonList")
     public java.util.List<RefundReason> refundReasonList;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
-     * <p>3239281273464326823</p>
+     * <p>841471F6-5D61-1331-8C38-2****B55</p>
      */
     @NameInMap("requestId")
     public String requestId;

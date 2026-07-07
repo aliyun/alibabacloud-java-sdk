@@ -4,32 +4,54 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class PurchaseOrderRenderResult extends TeaModel {
+    /**
+     * <p>A collection of addresses.</p>
+     */
     @NameInMap("addressList")
     public java.util.List<AddressInfo> addressList;
 
     /**
+     * <p>Indicates whether the item can be sold.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("canSell")
     public Boolean canSell;
 
+    /**
+     * <p>Extended information.</p>
+     */
     @NameInMap("extInfo")
     public java.util.Map<String, ?> extInfo;
 
+    /**
+     * <p>The reason why the item cannot be sold.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>库存为0</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>A collection of sellable main orders.</p>
+     */
     @NameInMap("orderList")
     public java.util.List<OrderRenderResult> orderList;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
-     * <p>3239281273464326823</p>
+     * <p>841471F6-5D61-1331-8C38-2****B55</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>A collection of unsellable main orders.</p>
+     */
     @NameInMap("unsellableOrderList")
     public java.util.List<OrderRenderResult> unsellableOrderList;
 

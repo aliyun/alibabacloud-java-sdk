@@ -4,6 +4,9 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class ListCategoriesRequest extends TeaModel {
+    /**
+     * <p>Category query parameters</p>
+     */
     @NameInMap("body")
     public CategoryListQuery body;
 

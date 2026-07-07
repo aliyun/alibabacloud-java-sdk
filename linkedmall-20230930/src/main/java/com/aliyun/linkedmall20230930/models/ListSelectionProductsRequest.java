@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSelectionProductsRequest extends TeaModel {
     /**
+     * <p>The page number. The value must be 1 or greater.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListSelectionProductsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Valid values: 1 to 20.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,10 +25,11 @@ public class ListSelectionProductsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The ID of the purchaser.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>56****2304</p>
+     * <p>PID22000009</p>
      */
     @NameInMap("purchaserId")
     public String purchaserId;

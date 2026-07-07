@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RefundReason extends TeaModel {
     /**
+     * <p>Is upload credential required</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,16 +14,26 @@ public class RefundReason extends TeaModel {
     public Boolean proofRequired;
 
     /**
+     * <p>Reason text ID</p>
+     * 
      * <strong>example:</strong>
      * <p>47683</p>
      */
     @NameInMap("reasonTextId")
     public String reasonTextId;
 
+    /**
+     * <p>Reason text</p>
+     * 
+     * <strong>example:</strong>
+     * <p>不想要了</p>
+     */
     @NameInMap("reasonTips")
     public String reasonTips;
 
     /**
+     * <p>Is a message required</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class PurchaseOrderRenderQuery extends TeaModel {
     /**
+     * <p>The ID of the end buyer.&gt;Notice: Assign a unique ID to each buyer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,15 @@ public class PurchaseOrderRenderQuery extends TeaModel {
     public String buyerId;
 
     /**
+     * <p>Delivery address information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("deliveryAddress")
     public AddressInfo deliveryAddress;
 
     /**
+     * <p>Extended information.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -27,6 +31,10 @@ public class PurchaseOrderRenderQuery extends TeaModel {
     public java.util.Map<String, ?> extInfo;
 
     /**
+     * <p>A collection of products.</p>
+     * <blockquote>
+     * <p>A single purchase order can contain a maximum of 20 SKUs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      */
     @NameInMap("productList")

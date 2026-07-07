@@ -5,12 +5,20 @@ import com.aliyun.tea.*;
 
 public class LogisticsDetail extends TeaModel {
     /**
+     * <p>Time when the logistics event occurred</p>
+     * 
      * <strong>example:</strong>
-     * <p>2023-09-01 00:00:00</p>
+     * <p>2023-09-11T12:22:24.000+08:00</p>
      */
     @NameInMap("ocurrTimeStr")
     public String ocurrTimeStr;
 
+    /**
+     * <p>Description of the logistics event</p>
+     * 
+     * <strong>example:</strong>
+     * <p>已签收</p>
+     */
     @NameInMap("standerdDesc")
     public String standerdDesc;
 

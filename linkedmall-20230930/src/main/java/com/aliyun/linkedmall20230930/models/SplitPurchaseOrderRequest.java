@@ -4,6 +4,9 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class SplitPurchaseOrderRequest extends TeaModel {
+    /**
+     * <p>Input parameters for splitting and rendering a purchase order</p>
+     */
     @NameInMap("body")
     public PurchaseOrderRenderQuery body;
 

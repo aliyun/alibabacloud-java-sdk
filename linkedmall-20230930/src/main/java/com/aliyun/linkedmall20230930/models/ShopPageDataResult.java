@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ShopPageDataResult extends TeaModel {
     /**
+     * <p>Partner shops</p>
+     * 
      * <strong>example:</strong>
      * <p>12****01</p>
      */
@@ -12,44 +14,62 @@ public class ShopPageDataResult extends TeaModel {
     public java.util.List<CooperationShop> cooperationShops;
 
     /**
+     * <p>End time</p>
+     * 
      * <strong>example:</strong>
-     * <p>2023-09-01 00:00:00</p>
+     * <p>2023-09-11T12:22:24.000+08:00</p>
      */
     @NameInMap("endDate")
     public String endDate;
 
     /**
+     * <p>Purchaser ID</p>
+     * 
      * <strong>example:</strong>
-     * <p>56****2304</p>
+     * <p>PID56****2304</p>
      */
     @NameInMap("purchaserId")
     public String purchaserId;
 
     /**
+     * <p>Shop ID</p>
+     * 
      * <strong>example:</strong>
      * <p>22****09</p>
      */
     @NameInMap("shopId")
     public String shopId;
 
+    /**
+     * <p>Shop name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>儿童座椅分销店铺</p>
+     */
     @NameInMap("shopName")
     public String shopName;
 
     /**
+     * <p>Shop type</p>
+     * 
      * <strong>example:</strong>
-     * <p>Distribution</p>
+     * <p>DistributorQYG</p>
      */
     @NameInMap("shopType")
     public String shopType;
 
     /**
+     * <p>Start time</p>
+     * 
      * <strong>example:</strong>
-     * <p>2023-09-01 00:00:00</p>
+     * <p>2023-09-11T12:22:24.000+08:00</p>
      */
     @NameInMap("startDate")
     public String startDate;
 
     /**
+     * <p>Shop status</p>
+     * 
      * <strong>example:</strong>
      * <p>Working</p>
      */

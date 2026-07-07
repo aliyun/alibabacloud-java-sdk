@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GoodsShippingNoticeCreateCmd extends TeaModel {
     /**
+     * <p>Company code</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GoodsShippingNoticeCreateCmd extends TeaModel {
     public String cpCode;
 
     /**
+     * <p>Dispute ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,10 +25,11 @@ public class GoodsShippingNoticeCreateCmd extends TeaModel {
     public String disputeId;
 
     /**
+     * <p>Logistics tracking number</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>SF145****4351</p>
+     * <p>SF145****4353</p>
      */
     @NameInMap("logisticsNo")
     public String logisticsNo;

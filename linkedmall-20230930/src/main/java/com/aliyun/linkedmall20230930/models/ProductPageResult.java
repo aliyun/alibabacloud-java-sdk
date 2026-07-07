@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ProductPageResult extends TeaModel {
     /**
+     * <p>Current page number</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ProductPageResult extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Page size</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,10 +24,15 @@ public class ProductPageResult extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Collection of products</p>
+     */
     @NameInMap("products")
     public java.util.List<Product> products;
 
     /**
+     * <p>Request ID for the API call</p>
+     * 
      * <strong>example:</strong>
      * <p>3239281273464326823</p>
      */
@@ -33,6 +40,7 @@ public class ProductPageResult extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total count</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

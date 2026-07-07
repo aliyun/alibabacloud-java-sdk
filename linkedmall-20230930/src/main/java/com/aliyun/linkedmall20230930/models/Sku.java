@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Sku extends TeaModel {
     /**
+     * <p>69 barcode</p>
+     * 
      * <strong>example:</strong>
      * <p>6922454329176</p>
      */
@@ -12,26 +14,43 @@ public class Sku extends TeaModel {
     public String barcode;
 
     /**
+     * <p>Indicates whether the SKU is available for sale</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("canSell")
     public Boolean canSell;
 
+    /**
+     * <p>Reserved field</p>
+     */
     @NameInMap("discountRetailPrice")
     public Long discountRetailPrice;
 
     /**
+     * <p>Region code</p>
+     * 
      * <strong>example:</strong>
      * <p>110000</p>
      */
     @NameInMap("divisionCode")
     public String divisionCode;
 
+    /**
+     * <p>Fuzzy inventory availability</p>
+     * 
+     * <strong>example:</strong>
+     * <p>有货
+     * 无货
+     * 库存紧张</p>
+     */
     @NameInMap("fuzzyQuantity")
     public String fuzzyQuantity;
 
     /**
+     * <p>Strikethrough price, in cents</p>
+     * 
      * <strong>example:</strong>
      * <p>999900</p>
      */
@@ -39,6 +58,8 @@ public class Sku extends TeaModel {
     public Long markPrice;
 
     /**
+     * <p>SKU image URL</p>
+     * 
      * <strong>example:</strong>
      * <p>https:////img.alicdn.com/imgextra///img.alicdn.com/imgextra/i2/2216003305543/O1CN010DEQCX1qokFYGRfPE_!!2216003305543.png</p>
      */
@@ -46,6 +67,8 @@ public class Sku extends TeaModel {
     public String picUrl;
 
     /**
+     * <p>Suggested retail price, in cents</p>
+     * 
      * <strong>example:</strong>
      * <p>999900</p>
      */
@@ -53,6 +76,8 @@ public class Sku extends TeaModel {
     public Long platformPrice;
 
     /**
+     * <p>Distributor purchase price, in cents</p>
+     * 
      * <strong>example:</strong>
      * <p>19800</p>
      */
@@ -60,6 +85,8 @@ public class Sku extends TeaModel {
     public Long price;
 
     /**
+     * <p>Product ID</p>
+     * 
      * <strong>example:</strong>
      * <p>660460842235822080</p>
      */
@@ -67,6 +94,8 @@ public class Sku extends TeaModel {
     public String productId;
 
     /**
+     * <p>Available inventory. Note: This field is currently set to -1 for all SKUs and has no practical meaning.</p>
+     * 
      * <strong>example:</strong>
      * <p>-1</p>
      */
@@ -74,6 +103,8 @@ public class Sku extends TeaModel {
     public Long quantity;
 
     /**
+     * <p>SKU sort order</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -81,17 +112,22 @@ public class Sku extends TeaModel {
     public Long rankValue;
 
     /**
+     * <p>Shop ID</p>
+     * 
      * <strong>example:</strong>
      * <p>21000017</p>
      */
     @NameInMap("shopId")
     public String shopId;
 
+    /**
+     * <p>SKU note</p>
+     */
     @NameInMap("skuAlias")
     public String skuAlias;
 
     /**
-     * <p>skuId</p>
+     * <p>SKU ID</p>
      * 
      * <strong>example:</strong>
      * <p>660460842235822081</p>
@@ -100,24 +136,41 @@ public class Sku extends TeaModel {
     public String skuId;
 
     /**
-     * <p>sku</p>
+     * <p>SKU specifications</p>
      */
     @NameInMap("skuSpecs")
     public java.util.List<SkuSpec> skuSpecs;
 
+    /**
+     * <p>SKU sales specification code. Used by the frontend to filter SKUs</p>
+     * 
+     * <strong>example:</strong>
+     * <p>颜色分类:天蓝色</p>
+     */
     @NameInMap("skuSpecsCode")
     public String skuSpecsCode;
 
     /**
+     * <p>SKU control status</p>
+     * 
      * <strong>example:</strong>
      * <p>Online</p>
      */
     @NameInMap("skuStatus")
     public String skuStatus;
 
+    /**
+     * <p>Reserved field</p>
+     */
     @NameInMap("suggestedRetailPrice")
     public Long suggestedRetailPrice;
 
+    /**
+     * <p>SKU title. Note: We recommend that distributors build the customer-facing SKU title by concatenating the value or valueAlias field from the SkuSpec struct (use <code>valueAlias</code> if it is present). Do not use this field directly as the customer-facing SKU title.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>天蓝色</p>
+     */
     @NameInMap("title")
     public String title;
 

@@ -4,6 +4,9 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class SelectionGroupRemoveProductResponseBody extends TeaModel {
+    /**
+     * <p>A collection of IDs for the products that were successfully removed.</p>
+     */
     @NameInMap("productIds")
     public java.util.List<String> productIds;
 

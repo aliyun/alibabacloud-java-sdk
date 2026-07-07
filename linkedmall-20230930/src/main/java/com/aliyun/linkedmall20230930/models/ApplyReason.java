@@ -5,12 +5,20 @@ import com.aliyun.tea.*;
 
 public class ApplyReason extends TeaModel {
     /**
+     * <p>The reason ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>403769</p>
      */
     @NameInMap("reasonTextId")
     public Long reasonTextId;
 
+    /**
+     * <p>The reason text.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>不想要了</p>
+     */
     @NameInMap("reasonTips")
     public String reasonTips;
 

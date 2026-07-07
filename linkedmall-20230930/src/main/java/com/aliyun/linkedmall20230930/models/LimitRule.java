@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class LimitRule extends TeaModel {
     /**
+     * <p>Start time of validity</p>
+     * <blockquote>
+     * <p>UNIX timestamp in milliseconds</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>1724947200000</p>
      */
@@ -12,6 +17,11 @@ public class LimitRule extends TeaModel {
     public Long beginTime;
 
     /**
+     * <p>Period condition</p>
+     * <blockquote>
+     * <p>This field applies only when ruleType is UpperNumberPerUserPeriod.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>day</p>
      */
@@ -19,6 +29,11 @@ public class LimitRule extends TeaModel {
     public String condcase;
 
     /**
+     * <p>End time of validity</p>
+     * <blockquote>
+     * <p>UNIX timestamp in milliseconds</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>1724947200000</p>
      */
@@ -26,6 +41,11 @@ public class LimitRule extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>Purchase limit quantity</p>
+     * <blockquote>
+     * <p>If multiple purchase limit rules are active at the same time, the final limit is the minimum value.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,6 +53,8 @@ public class LimitRule extends TeaModel {
     public Integer limitNum;
 
     /**
+     * <p>Purchase limit type</p>
+     * 
      * <strong>example:</strong>
      * <p>UpperNumberPerUser</p>
      */

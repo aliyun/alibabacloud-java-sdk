@@ -4,10 +4,18 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class ProductSpecValue extends TeaModel {
+    /**
+     * <p>Specification value</p>
+     * 
+     * <strong>example:</strong>
+     * <p>白色</p>
+     */
     @NameInMap("value")
     public String value;
 
     /**
+     * <p>Specification value alias</p>
+     * 
      * <strong>example:</strong>
      * <p>秘色</p>
      */
@@ -15,6 +23,8 @@ public class ProductSpecValue extends TeaModel {
     public String valueAlias;
 
     /**
+     * <p>Rule value ID</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */

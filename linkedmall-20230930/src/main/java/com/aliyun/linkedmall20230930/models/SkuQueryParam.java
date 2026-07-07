@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SkuQueryParam extends TeaModel {
     /**
+     * <p>Quantity</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,7 @@ public class SkuQueryParam extends TeaModel {
     public Integer buyAmount;
 
     /**
+     * <p>Product ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

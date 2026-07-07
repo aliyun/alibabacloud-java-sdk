@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RefundFeeData extends TeaModel {
     /**
+     * <p>Maximum amount (cents)</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -12,6 +14,8 @@ public class RefundFeeData extends TeaModel {
     public Long maxRefundFee;
 
     /**
+     * <p>Minimum amount (cents)</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

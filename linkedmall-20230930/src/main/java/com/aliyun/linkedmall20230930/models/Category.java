@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Category extends TeaModel {
     /**
+     * <p>The ID of the category.</p>
+     * 
      * <strong>example:</strong>
      * <p>201792301</p>
      */
@@ -12,6 +14,8 @@ public class Category extends TeaModel {
     public Long categoryId;
 
     /**
+     * <p>Indicates whether the category is a leaf category.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -19,16 +23,26 @@ public class Category extends TeaModel {
     public Boolean isLeaf;
 
     /**
+     * <p>The level of the category.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("level")
     public Integer level;
 
+    /**
+     * <p>The name of the category.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>名称测试</p>
+     */
     @NameInMap("name")
     public String name;
 
     /**
+     * <p>The ID of the parent category.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */

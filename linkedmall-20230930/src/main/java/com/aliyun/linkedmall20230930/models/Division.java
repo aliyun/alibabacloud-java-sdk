@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Division extends TeaModel {
     /**
+     * <p>Address encoding</p>
+     * 
      * <strong>example:</strong>
      * <p>310000</p>
      */
@@ -12,16 +14,26 @@ public class Division extends TeaModel {
     public Long divisionCode;
 
     /**
+     * <p>Address Level</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
     @NameInMap("divisionLevel")
     public Long divisionLevel;
 
+    /**
+     * <p>Address Name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>上海</p>
+     */
     @NameInMap("divisionName")
     public String divisionName;
 
     /**
+     * <p>Parent ID</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -29,6 +41,8 @@ public class Division extends TeaModel {
     public Long parentId;
 
     /**
+     * <p>Address pinyin</p>
+     * 
      * <strong>example:</strong>
      * <p>shang hai</p>
      */

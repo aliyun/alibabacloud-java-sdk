@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ProductDTO extends TeaModel {
     /**
+     * <p>Product price (unit: cent)&gt;Notice: It is recommended to include this field.</notice></p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -12,6 +14,7 @@ public class ProductDTO extends TeaModel {
     public Long price;
 
     /**
+     * <p>Product ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class ProductDTO extends TeaModel {
     public String productId;
 
     /**
+     * <p>Purchaser ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class ProductDTO extends TeaModel {
     public String purchaserId;
 
     /**
+     * <p>Quantity</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

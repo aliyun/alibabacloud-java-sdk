@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ProductSaleInfo extends TeaModel {
     /**
+     * <p>Is sellable, calculated value</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,19 +14,32 @@ public class ProductSaleInfo extends TeaModel {
     public Boolean canSell;
 
     /**
+     * <p>Region code</p>
+     * 
      * <strong>example:</strong>
-     * <p>110000</p>
+     * <p>330106109</p>
      */
     @NameInMap("divisionCode")
     public String divisionCode;
 
+    /**
+     * <p>Fuzzy inventory quantity.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>有货</p>
+     */
     @NameInMap("fuzzyQuantity")
     public String fuzzyQuantity;
 
+    /**
+     * <p>Purchase limit configuration</p>
+     */
     @NameInMap("limitRules")
     public java.util.List<LimitRule> limitRules;
 
     /**
+     * <p>LM product ID</p>
+     * 
      * <strong>example:</strong>
      * <p>21000017-4580902812</p>
      */
@@ -32,6 +47,8 @@ public class ProductSaleInfo extends TeaModel {
     public String lmItemId;
 
     /**
+     * <p>Product ID</p>
+     * 
      * <strong>example:</strong>
      * <p>660460842235822080</p>
      */
@@ -39,6 +56,8 @@ public class ProductSaleInfo extends TeaModel {
     public String productId;
 
     /**
+     * <p>Product status</p>
+     * 
      * <strong>example:</strong>
      * <p>Online</p>
      */
@@ -46,6 +65,8 @@ public class ProductSaleInfo extends TeaModel {
     public String productStatus;
 
     /**
+     * <p>Inventory</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -53,6 +74,8 @@ public class ProductSaleInfo extends TeaModel {
     public Long quantity;
 
     /**
+     * <p>API request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>3239281273464326823</p>
      */
@@ -60,15 +83,26 @@ public class ProductSaleInfo extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Channel shop ID</p>
+     * 
      * <strong>example:</strong>
      * <p>21000017</p>
      */
     @NameInMap("shopId")
     public String shopId;
 
+    /**
+     * <p>SKU collection</p>
+     */
     @NameInMap("skus")
     public java.util.List<SkuSaleInfo> skus;
 
+    /**
+     * <p>Title</p>
+     * 
+     * <strong>example:</strong>
+     * <p>发财树</p>
+     */
     @NameInMap("title")
     public String title;
 

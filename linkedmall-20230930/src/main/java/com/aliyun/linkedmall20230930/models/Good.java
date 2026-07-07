@@ -4,10 +4,18 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class Good extends TeaModel {
+    /**
+     * <p>Product name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>儿童学习桌</p>
+     */
     @NameInMap("goodName")
     public String goodName;
 
     /**
+     * <p>Product ID</p>
+     * 
      * <strong>example:</strong>
      * <p>6600****6736</p>
      */
@@ -15,15 +23,29 @@ public class Good extends TeaModel {
     public String productId;
 
     /**
+     * <p>Quantity</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("quantity")
     public Integer quantity;
 
+    /**
+     * <p>SKU ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7232****2321</p>
+     */
     @NameInMap("skuId")
     public String skuId;
 
+    /**
+     * <p>SKU title</p>
+     * 
+     * <strong>example:</strong>
+     * <p>白色</p>
+     */
     @NameInMap("skuTitle")
     public String skuTitle;
 

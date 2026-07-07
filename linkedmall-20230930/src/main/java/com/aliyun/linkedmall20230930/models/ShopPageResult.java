@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ShopPageResult extends TeaModel {
     /**
+     * <p>API request ID</p>
+     * 
      * <strong>example:</strong>
-     * <p>3239281273464326823</p>
+     * <p>841471F6-5D61-1331-8C38-2****B55</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Shop collection</p>
+     */
     @NameInMap("shopList")
     public java.util.List<ShopPageDataResult> shopList;
 
     /**
+     * <p>Total count</p>
+     * 
      * <strong>example:</strong>
      * <p>24</p>
      */

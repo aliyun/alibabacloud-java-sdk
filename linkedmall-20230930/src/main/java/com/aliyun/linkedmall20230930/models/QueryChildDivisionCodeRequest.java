@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryChildDivisionCodeRequest extends TeaModel {
     /**
+     * <p>The parameters for querying child division codes.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

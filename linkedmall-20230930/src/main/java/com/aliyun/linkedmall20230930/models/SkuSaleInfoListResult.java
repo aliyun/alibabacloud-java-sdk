@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class SkuSaleInfoListResult extends TeaModel {
     /**
+     * <p>Request ID of the API call</p>
+     * 
      * <strong>example:</strong>
      * <p>3239281273464326823</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Collection of SKU inventory records</p>
+     */
     @NameInMap("skuSaleInfos")
     public java.util.List<SkuSaleInfo> skuSaleInfos;
 

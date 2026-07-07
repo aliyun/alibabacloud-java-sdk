@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryOrdersRequest extends TeaModel {
     /**
+     * <p>Contains the query parameters to retrieve a list of main orders.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

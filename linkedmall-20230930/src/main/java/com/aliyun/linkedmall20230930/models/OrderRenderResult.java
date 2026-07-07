@@ -5,21 +5,38 @@ import com.aliyun.tea.*;
 
 public class OrderRenderResult extends TeaModel {
     /**
+     * <p>Indicates whether the item can be sold.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("canSell")
     public Boolean canSell;
 
+    /**
+     * <p>The fulfillment information.</p>
+     */
     @NameInMap("deliveryInfoList")
     public java.util.List<DeliveryInfo> deliveryInfoList;
 
+    /**
+     * <p>The extension information.</p>
+     */
     @NameInMap("extInfo")
     public java.util.Map<String, ?> extInfo;
 
+    /**
+     * <p>The reason why the item is unavailable.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>库存为0</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>The list of products.</p>
+     */
     @NameInMap("productList")
     public java.util.List<OrderProductResult> productList;
 

@@ -4,10 +4,15 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class OrderLineResult extends TeaModel {
+    /**
+     * <p>A list of electronic vouchers.</p>
+     */
     @NameInMap("eticketInfos")
     public java.util.List<EticketInfo> eticketInfos;
 
     /**
+     * <p>The logistics status of the order line.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class OrderLineResult extends TeaModel {
     public String logisticsStatus;
 
     /**
+     * <p>The number of items.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +29,8 @@ public class OrderLineResult extends TeaModel {
     public String number;
 
     /**
+     * <p>The unique ID of the main order.</p>
+     * 
      * <strong>example:</strong>
      * <p>6692****5457</p>
      */
@@ -29,6 +38,8 @@ public class OrderLineResult extends TeaModel {
     public String orderId;
 
     /**
+     * <p>The unique ID of the order line.</p>
+     * 
      * <strong>example:</strong>
      * <p>6692****5458</p>
      */
@@ -36,6 +47,8 @@ public class OrderLineResult extends TeaModel {
     public String orderLineId;
 
     /**
+     * <p>The status of the order line.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -43,6 +56,8 @@ public class OrderLineResult extends TeaModel {
     public String orderLineStatus;
 
     /**
+     * <p>The payable amount for the order line.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -50,6 +65,8 @@ public class OrderLineResult extends TeaModel {
     public Long payFee;
 
     /**
+     * <p>The unique ID of the product.</p>
+     * 
      * <strong>example:</strong>
      * <p>6600****6736</p>
      */
@@ -57,17 +74,25 @@ public class OrderLineResult extends TeaModel {
     public String productId;
 
     /**
+     * <p>The URL of the product image.</p>
+     * 
      * <strong>example:</strong>
      * <p>//img.alicdn.com/imgextra/i4/2216003305543/O1CN01bip3Un1qokG0</p>
      */
     @NameInMap("productPic")
     public String productPic;
 
+    /**
+     * <p>The product name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>儿童学习桌</p>
+     */
     @NameInMap("productTitle")
     public String productTitle;
 
     /**
-     * <p>skuId</p>
+     * <p>The unique ID of the SKU.</p>
      * 
      * <strong>example:</strong>
      * <p>6600****6737</p>
@@ -75,6 +100,12 @@ public class OrderLineResult extends TeaModel {
     @NameInMap("skuId")
     public String skuId;
 
+    /**
+     * <p>The SKU name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>浅绿色</p>
+     */
     @NameInMap("skuTitle")
     public String skuTitle;
 

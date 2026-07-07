@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SkuSaleInfo extends TeaModel {
     /**
+     * <p>Reason for not being sellable</p>
+     * 
      * <strong>example:</strong>
      * <p>不可售</p>
      */
@@ -12,6 +14,8 @@ public class SkuSaleInfo extends TeaModel {
     public String canNotSellReason;
 
     /**
+     * <p>Indicates whether the SKU is sellable</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,16 +23,26 @@ public class SkuSaleInfo extends TeaModel {
     public Boolean canSell;
 
     /**
+     * <p>Area code</p>
+     * 
      * <strong>example:</strong>
-     * <p>110000</p>
+     * <p>330106109</p>
      */
     @NameInMap("divisionCode")
     public String divisionCode;
 
+    /**
+     * <p>Blur inventory availability</p>
+     * 
+     * <strong>example:</strong>
+     * <p>有货</p>
+     */
     @NameInMap("fuzzyQuantity")
     public String fuzzyQuantity;
 
     /**
+     * <p>Strikethrough price, in cents</p>
+     * 
      * <strong>example:</strong>
      * <p>999900</p>
      */
@@ -36,6 +50,8 @@ public class SkuSaleInfo extends TeaModel {
     public Long markPrice;
 
     /**
+     * <p>Distributor purchase price, in cents</p>
+     * 
      * <strong>example:</strong>
      * <p>19800</p>
      */
@@ -43,6 +59,8 @@ public class SkuSaleInfo extends TeaModel {
     public Long price;
 
     /**
+     * <p>Product ID</p>
+     * 
      * <strong>example:</strong>
      * <p>660460842235822080</p>
      */
@@ -50,6 +68,8 @@ public class SkuSaleInfo extends TeaModel {
     public String productId;
 
     /**
+     * <p>Available inventory</p>
+     * 
      * <strong>example:</strong>
      * <p>-1</p>
      */
@@ -57,6 +77,8 @@ public class SkuSaleInfo extends TeaModel {
     public Long quantity;
 
     /**
+     * <p>Shop ID</p>
+     * 
      * <strong>example:</strong>
      * <p>21000017</p>
      */
@@ -73,12 +95,20 @@ public class SkuSaleInfo extends TeaModel {
     public String skuId;
 
     /**
+     * <p>SKU control status</p>
+     * 
      * <strong>example:</strong>
      * <p>Online</p>
      */
     @NameInMap("skuStatus")
     public String skuStatus;
 
+    /**
+     * <p>SKU title</p>
+     * 
+     * <strong>example:</strong>
+     * <p>天蓝色</p>
+     */
     @NameInMap("title")
     public String title;
 

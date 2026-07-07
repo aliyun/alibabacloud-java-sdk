@@ -4,10 +4,14 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class OrderPageQuery extends TeaModel {
+    /**
+     * <p>Collection of primary order IDs</p>
+     */
     @NameInMap("orderIdList")
     public java.util.List<String> orderIdList;
 
     /**
+     * <p>Page number</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +21,7 @@ public class OrderPageQuery extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Quantity per page</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +31,8 @@ public class OrderPageQuery extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Purchase order ID</p>
+     * 
      * <strong>example:</strong>
      * <p>6692****5696</p>
      */

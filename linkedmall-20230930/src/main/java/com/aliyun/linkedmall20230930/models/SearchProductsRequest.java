@@ -4,13 +4,24 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class SearchProductsRequest extends TeaModel {
+    /**
+     * <p>Brand name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>绿植</p>
+     */
     @NameInMap("brandName")
     public String brandName;
 
+    /**
+     * <p>Collection of category IDs</p>
+     */
     @NameInMap("categoryIds")
     public java.util.List<String> categoryIds;
 
     /**
+     * <p>Creation end time</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-01-02 12:23:34
      * (yyyy-MM-dd HH:mm:ss)</p>
@@ -19,6 +30,8 @@ public class SearchProductsRequest extends TeaModel {
     public String createEndTime;
 
     /**
+     * <p>Creation start time</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-01-02 12:23:34
      * (yyyy-MM-dd HH:mm:ss)</p>
@@ -26,33 +39,63 @@ public class SearchProductsRequest extends TeaModel {
     @NameInMap("createStartTime")
     public String createStartTime;
 
+    /**
+     * <p>Upper limit of distribution purchase price</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100（单位：分）</p>
+     */
     @NameInMap("distributionHighPrice")
     public Long distributionHighPrice;
 
     /**
+     * <p>Upper limit of distribution premium rate</p>
+     * 
      * <strong>example:</strong>
      * <p>244（2.44%）</p>
      */
     @NameInMap("distributionHighPriceRatio")
     public Long distributionHighPriceRatio;
 
+    /**
+     * <p>Lower limit of distribution purchase price</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100（单位：分）</p>
+     */
     @NameInMap("distributionLowPrice")
     public Long distributionLowPrice;
 
     /**
+     * <p>Lower limit of distribution premium rate</p>
+     * 
      * <strong>example:</strong>
      * <p>133（1.33%）</p>
      */
     @NameInMap("distributionLowPriceRatio")
     public Long distributionLowPriceRatio;
 
+    /**
+     * <p>Upper limit of strikethrough price</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100（单位：分）</p>
+     */
     @NameInMap("highMarkPrice")
     public Long highMarkPrice;
 
+    /**
+     * <p>Upper limit of suggested retail price</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100（单位：分）</p>
+     */
     @NameInMap("highPrice")
     public Long highPrice;
 
     /**
+     * <p>Whether the product is in inventory</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -60,6 +103,8 @@ public class SearchProductsRequest extends TeaModel {
     public Boolean inGroup;
 
     /**
+     * <p>End time of the product’s entry period.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-01-02 12:23:34
      * (yyyy-MM-dd HH:mm:ss)</p>
@@ -68,6 +113,8 @@ public class SearchProductsRequest extends TeaModel {
     public String inGroupEndTime;
 
     /**
+     * <p>Inventory start time</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-01-02 12:23:34
      * (yyyy-MM-dd HH:mm:ss)</p>
@@ -76,6 +123,8 @@ public class SearchProductsRequest extends TeaModel {
     public String inGroupStartTime;
 
     /**
+     * <p>Inventory risk level</p>
+     * 
      * <strong>example:</strong>
      * <p>Low</p>
      */
@@ -83,19 +132,35 @@ public class SearchProductsRequest extends TeaModel {
     public String inventoryRiskLevel;
 
     /**
+     * <p>LM product ID</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx-xxxxx</p>
      */
     @NameInMap("lmItemId")
     public String lmItemId;
 
+    /**
+     * <p>Lower limit of strikethrough price</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100（单位：分）</p>
+     */
     @NameInMap("lowMarkPrice")
     public Long lowMarkPrice;
 
+    /**
+     * <p>Lower limit of suggested retail price</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100（单位：分）</p>
+     */
     @NameInMap("lowPrice")
     public Long lowPrice;
 
     /**
+     * <p>Modification end time</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-01-02 12:23:34
      * (yyyy-MM-dd HH:mm:ss)</p>
@@ -104,6 +169,8 @@ public class SearchProductsRequest extends TeaModel {
     public String modifyEndTime;
 
     /**
+     * <p>Modification start time</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-01-02 12:23:34
      * (yyyy-MM-dd HH:mm:ss)</p>
@@ -111,10 +178,28 @@ public class SearchProductsRequest extends TeaModel {
     @NameInMap("modifyStartTime")
     public String modifyStartTime;
 
+    /**
+     * <p>Sort field</p>
+     * <blockquote>
+     * <ul>
+     * <li>Used in combination with the sort direction field</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>soldQuantity（按销量排序，不填默认创建时间倒序)</p>
+     */
     @NameInMap("orderBy")
     public String orderBy;
 
     /**
+     * <p>Sort direction</p>
+     * <blockquote>
+     * <ul>
+     * <li>Used in combination with the sort field</li>
+     * </ul>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>ASC</p>
      */
@@ -122,6 +207,7 @@ public class SearchProductsRequest extends TeaModel {
     public String orderDirection;
 
     /**
+     * <p>Page number</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -131,6 +217,12 @@ public class SearchProductsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Page size</p>
+     * <blockquote>
+     * <ul>
+     * <li>Maximum of 20 items per page</li>
+     * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -140,23 +232,37 @@ public class SearchProductsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Source platform</p>
+     * 
      * <strong>example:</strong>
-     * <p>Taobao</p>
+     * <p>Taobao（来源淘宝）
+     * Tmall（来源天猫）
+     * Cbu（来源1688分销货盘）</p>
      */
     @NameInMap("platform")
     public String platform;
 
     /**
+     * <p>Product ID</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxxxx</p>
      */
     @NameInMap("productId")
     public String productId;
 
+    /**
+     * <p>Product name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>绿植</p>
+     */
     @NameInMap("productName")
     public String productName;
 
     /**
+     * <p>Product status</p>
+     * 
      * <strong>example:</strong>
      * <p>Sellable</p>
      */
@@ -164,6 +270,7 @@ public class SearchProductsRequest extends TeaModel {
     public String productStatus;
 
     /**
+     * <p>Purchaser ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -173,6 +280,16 @@ public class SearchProductsRequest extends TeaModel {
     public String purchaserId;
 
     /**
+     * <p>Tax rate</p>
+     * <blockquote>
+     * <ul>
+     * <li><p>Supports combining multiple tax rate enumeration values as request parameters. Use commas to separate them, for example: Rate0,Rate1.</p>
+     * </li>
+     * <li><p>HasRate cannot be combined with other enumeration values as request parameters.</p>
+     * </li>
+     * </ul>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>Rate0</p>
      */
@@ -180,6 +297,8 @@ public class SearchProductsRequest extends TeaModel {
     public String taxRate;
 
     /**
+     * <p>Sales pattern</p>
+     * 
      * <strong>example:</strong>
      * <p>JingXiao</p>
      */

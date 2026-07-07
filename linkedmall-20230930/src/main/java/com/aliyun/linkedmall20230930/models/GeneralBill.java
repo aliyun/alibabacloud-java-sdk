@@ -4,30 +4,57 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class GeneralBill extends TeaModel {
+    /**
+     * <p>bill ID</p>
+     */
     @NameInMap("billId")
     public String billId;
 
+    /**
+     * <p>billing cycle</p>
+     */
     @NameInMap("billPeriod")
     public String billPeriod;
 
+    /**
+     * <p>download URL for details</p>
+     */
     @NameInMap("downloadUrl")
     public java.util.List<String> downloadUrl;
 
+    /**
+     * <p>billing cycle End Time</p>
+     */
     @NameInMap("endTime")
     public String endTime;
 
+    /**
+     * <p>bill Creation Time</p>
+     */
     @NameInMap("gmtCreate")
     public String gmtCreate;
 
+    /**
+     * <p>bill Updated At</p>
+     */
     @NameInMap("gmtModified")
     public String gmtModified;
 
+    /**
+     * <p>shop ID</p>
+     */
     @NameInMap("shopId")
     public String shopId;
 
+    /**
+     * <p>shop Name</p>
+     */
     @NameInMap("shopName")
     public String shopName;
 
+    /**
+     * <p>billing cycle Start Time</p>
+     */
     @NameInMap("startTime")
     public String startTime;
 

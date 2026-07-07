@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class SkuSaleInfoListQuery extends TeaModel {
     /**
+     * <p>Region code. Use a five-level administrative division code, such as a town or subdistrict code.</p>
+     * 
      * <strong>example:</strong>
-     * <p>110000</p>
+     * <p>330106109</p>
      */
     @NameInMap("divisionCode")
     public String divisionCode;
 
     /**
+     * <p>Purchaser ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,10 @@ public class SkuSaleInfoListQuery extends TeaModel {
     public String purchaserId;
 
     /**
+     * <p>Product query parameters</p>
+     * <blockquote>
+     * <p>You can query up to 20 SKUs per request.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      */
     @NameInMap("skuQueryParams")

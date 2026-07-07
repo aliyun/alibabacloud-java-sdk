@@ -4,6 +4,9 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class SelectionGroupAddProductResponseBody extends TeaModel {
+    /**
+     * <p>List of product IDs successfully added</p>
+     */
     @NameInMap("productIds")
     public java.util.List<String> productIds;
 

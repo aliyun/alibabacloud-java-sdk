@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class OrderRenderProductDTO extends TeaModel {
     /**
+     * <p>Product ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,15 +15,17 @@ public class OrderRenderProductDTO extends TeaModel {
     public String productId;
 
     /**
+     * <p>Purchaser ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>56****2304</p>
+     * <p>PID56****2304</p>
      */
     @NameInMap("purchaserId")
     public String purchaserId;
 
     /**
+     * <p>Quantity</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

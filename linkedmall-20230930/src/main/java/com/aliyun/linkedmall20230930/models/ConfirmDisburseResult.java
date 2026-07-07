@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class ConfirmDisburseResult extends TeaModel {
     /**
+     * <p>API Request requestId</p>
+     * 
      * <strong>example:</strong>
-     * <p>3239281273464326823</p>
+     * <p>841471F6-5D61-1331-8C38-2****B55</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
+     * <p>Return Result of Confirm Delivery</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */

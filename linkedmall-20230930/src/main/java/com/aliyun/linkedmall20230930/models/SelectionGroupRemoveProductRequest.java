@@ -5,12 +5,19 @@ import com.aliyun.tea.*;
 
 public class SelectionGroupRemoveProductRequest extends TeaModel {
     /**
+     * <p>A list of IDs for the products to be removed from stock.</p>
+     * <blockquote>
+     * <ul>
+     * <li>A single call supports a maximum of 30 products.</li>
+     * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      */
     @NameInMap("productIds")
     public java.util.List<String> productIds;
 
     /**
+     * <p>The ID of the purchaser.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RefundOrderCmd extends TeaModel {
     /**
+     * <p>Refund reason ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,17 @@ public class RefundOrderCmd extends TeaModel {
     @NameInMap("applyReasonTextId")
     public Long applyReasonTextId;
 
+    /**
+     * <p>Refund reason text</p>
+     * 
+     * <strong>example:</strong>
+     * <p>不想要了</p>
+     */
     @NameInMap("applyReasonTips")
     public String applyReasonTips;
 
     /**
+     * <p>Number of items to return</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +34,7 @@ public class RefundOrderCmd extends TeaModel {
     public Integer applyRefundCount;
 
     /**
+     * <p>Refund amount in cents</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +44,9 @@ public class RefundOrderCmd extends TeaModel {
     public Long applyRefundFee;
 
     /**
+     * <p>Refund type
+     * 1: Refund only
+     * 3: Return and refund</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +56,10 @@ public class RefundOrderCmd extends TeaModel {
     public Integer bizClaimType;
 
     /**
+     * <p>Item status
+     * 4: Not shipped
+     * 1: Not received
+     * 2: Received</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,13 +68,23 @@ public class RefundOrderCmd extends TeaModel {
     @NameInMap("goodsStatus")
     public Integer goodsStatus;
 
+    /**
+     * <p>Customer message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>不想要了</p>
+     */
     @NameInMap("leaveMessage")
     public String leaveMessage;
 
+    /**
+     * <p>Collection of images</p>
+     */
     @NameInMap("leavePictureLists")
     public java.util.List<LeavePictureList> leavePictureLists;
 
     /**
+     * <p>Sub-distribution order ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

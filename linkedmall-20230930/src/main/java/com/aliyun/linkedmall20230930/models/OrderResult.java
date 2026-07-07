@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class OrderResult extends TeaModel {
     /**
+     * <p>The order creation time.</p>
+     * 
      * <strong>example:</strong>
-     * <p>2023-09-01T12:00:00.000Z</p>
+     * <p>2023-09-11T12:22:24.000+08:00</p>
      */
     @NameInMap("createDate")
     public String createDate;
 
     /**
+     * <p>The distributor ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>12****01</p>
      */
@@ -19,6 +23,8 @@ public class OrderResult extends TeaModel {
     public String distributorId;
 
     /**
+     * <p>The logistics status. Valid values: 1 (Awaiting Seller\&quot;s Shipment), 2 (Awaiting Buyer\&quot;s Confirmation), 3 (Received), 4 (Returned), 5 (Partially Received), 6 (Partially Shipped), and 8 (Logistics Order Not Created).</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class OrderResult extends TeaModel {
     public String logisticsStatus;
 
     /**
+     * <p>The order amount, in cents.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -33,6 +41,8 @@ public class OrderResult extends TeaModel {
     public Long orderAmount;
 
     /**
+     * <p>The reason the order was closed.</p>
+     * 
      * <strong>example:</strong>
      * <p>系统关单</p>
      */
@@ -40,16 +50,23 @@ public class OrderResult extends TeaModel {
     public String orderClosedReason;
 
     /**
+     * <p>The ID of the main order.</p>
+     * 
      * <strong>example:</strong>
      * <p>6692****5457</p>
      */
     @NameInMap("orderId")
     public String orderId;
 
+    /**
+     * <p>The list of sub-orders.</p>
+     */
     @NameInMap("orderLineList")
     public java.util.List<OrderLineResult> orderLineList;
 
     /**
+     * <p>The order status. Valid values: 1 (Pending Payment), 2 (Paid), 4 (Closed with Refund), 6 (Transaction Successful), and 8 (Closed).</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -57,8 +74,10 @@ public class OrderResult extends TeaModel {
     public String orderStatus;
 
     /**
+     * <p>The unique identifier for the request.</p>
+     * 
      * <strong>example:</strong>
-     * <p>D12***111</p>
+     * <p>841471F6-5D61-1331-8C38-2****B55</p>
      */
     @NameInMap("requestId")
     public String requestId;

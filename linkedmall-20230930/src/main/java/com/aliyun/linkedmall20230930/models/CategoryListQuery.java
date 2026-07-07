@@ -4,10 +4,15 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class CategoryListQuery extends TeaModel {
+    /**
+     * <p>Collection of category IDs</p>
+     */
     @NameInMap("categoryIds")
     public java.util.List<Long> categoryIds;
 
     /**
+     * <p>Parent category ID</p>
+     * 
      * <strong>example:</strong>
      * <p>5200001</p>
      */

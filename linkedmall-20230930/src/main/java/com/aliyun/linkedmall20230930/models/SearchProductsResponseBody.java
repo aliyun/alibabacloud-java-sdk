@@ -4,10 +4,15 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class SearchProductsResponseBody extends TeaModel {
+    /**
+     * <p>Product collection</p>
+     */
     @NameInMap("products")
     public java.util.List<SearchProductsResponseBodyProducts> products;
 
     /**
+     * <p>Total quantity</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -37,26 +42,44 @@ public class SearchProductsResponseBody extends TeaModel {
 
     public static class SearchProductsResponseBodyProductsCategoryChain extends TeaModel {
         /**
+         * <p>Category ID</p>
+         * 
          * <strong>example:</strong>
          * <p>201792301</p>
          */
         @NameInMap("categoryId")
         public Long categoryId;
 
+        /**
+         * <p>Is leaf node</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("isLeaf")
         public Boolean isLeaf;
 
         /**
+         * <p>Level</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("level")
         public Integer level;
 
+        /**
+         * <p>Category name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>名称测试</p>
+         */
         @NameInMap("name")
         public String name;
 
         /**
+         * <p>Parent class ID</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -111,26 +134,48 @@ public class SearchProductsResponseBody extends TeaModel {
     }
 
     public static class SearchProductsResponseBodyProducts extends TeaModel {
+        /**
+         * <p>Brand name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>绿植</p>
+         */
         @NameInMap("bandName")
         public String bandName;
 
+        /**
+         * <p>Reason for unsellable status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>库存不足</p>
+         */
         @NameInMap("canNotSellReason")
         public String canNotSellReason;
 
         /**
+         * <p>Whether the product is sellable (calculated value)</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("canSell")
         public Boolean canSell;
 
+        /**
+         * <p>Category</p>
+         */
         @NameInMap("categoryChain")
         public java.util.List<SearchProductsResponseBodyProductsCategoryChain> categoryChain;
 
+        /**
+         * <p>Billing cycle</p>
+         */
         @NameInMap("credit")
         public java.util.List<String> credit;
 
         /**
+         * <p>Price difference range</p>
+         * 
          * <strong>example:</strong>
          * <p>￥-9998.95 ~ ￥-9977.90</p>
          */
@@ -138,6 +183,8 @@ public class SearchProductsResponseBody extends TeaModel {
         public String diffPrice;
 
         /**
+         * <p>Distribution purchase price range</p>
+         * 
          * <strong>example:</strong>
          * <p>￥0.05 ~ ￥21.10</p>
          */
@@ -145,6 +192,8 @@ public class SearchProductsResponseBody extends TeaModel {
         public String distributionPrice;
 
         /**
+         * <p>Distribution premium rate range</p>
+         * 
          * <strong>example:</strong>
          * <p>-100.00% ~ -99.79%</p>
          */
@@ -152,13 +201,19 @@ public class SearchProductsResponseBody extends TeaModel {
         public String distributionPriceRatio;
 
         /**
+         * <p>Source platform</p>
+         * 
          * <strong>example:</strong>
-         * <p>Taobao</p>
+         * <p>Taobao（来源淘宝）
+         * Tmall（来源天猫）
+         * Cbu（来源1688分销货盘）</p>
          */
         @NameInMap("externalPlatformType")
         public String externalPlatformType;
 
         /**
+         * <p>Creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-01-02 12:23:34
          * (yyyy-MM-dd HH:mm:ss)</p>
@@ -167,6 +222,8 @@ public class SearchProductsResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>Last modified time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-01-02 12:23:34
          * (yyyy-MM-dd HH:mm:ss)</p>
@@ -175,6 +232,8 @@ public class SearchProductsResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>Whether the product is in inventory</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -182,6 +241,8 @@ public class SearchProductsResponseBody extends TeaModel {
         public Boolean inGroup;
 
         /**
+         * <p>Inventory time</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-01-02 12:23:34
          * (yyyy-MM-dd HH:mm:ss)</p>
@@ -190,6 +251,8 @@ public class SearchProductsResponseBody extends TeaModel {
         public String inGroupTime;
 
         /**
+         * <p>Inventory risk level</p>
+         * 
          * <strong>example:</strong>
          * <p>Low</p>
          */
@@ -197,6 +260,8 @@ public class SearchProductsResponseBody extends TeaModel {
         public String inventoryRiskLevel;
 
         /**
+         * <p>Invoice type</p>
+         * 
          * <strong>example:</strong>
          * <p>HasInvoice</p>
          */
@@ -204,6 +269,8 @@ public class SearchProductsResponseBody extends TeaModel {
         public String invoiceType;
 
         /**
+         * <p>LM product ID</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx-xxxxx</p>
          */
@@ -211,6 +278,8 @@ public class SearchProductsResponseBody extends TeaModel {
         public String lmItemId;
 
         /**
+         * <p>Product main image URL</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://img.alicdn.com/xxx.jpg">https://img.alicdn.com/xxx.jpg</a></p>
          */
@@ -218,6 +287,8 @@ public class SearchProductsResponseBody extends TeaModel {
         public String picUrl;
 
         /**
+         * <p>Suggested retail price range</p>
+         * 
          * <strong>example:</strong>
          * <p>￥9999.00 ~ ￥9999.00</p>
          */
@@ -225,6 +296,8 @@ public class SearchProductsResponseBody extends TeaModel {
         public String platformPrice;
 
         /**
+         * <p>Strikethrough price range</p>
+         * 
          * <strong>example:</strong>
          * <p>￥9999.00 ~ ￥9999.00</p>
          */
@@ -232,16 +305,26 @@ public class SearchProductsResponseBody extends TeaModel {
         public String platformReservePrice;
 
         /**
+         * <p>Product ID</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxxx</p>
          */
         @NameInMap("productId")
         public String productId;
 
+        /**
+         * <p>Product name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>绿植</p>
+         */
         @NameInMap("productName")
         public String productName;
 
         /**
+         * <p>Channel store name</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -249,6 +332,8 @@ public class SearchProductsResponseBody extends TeaModel {
         public String shopName;
 
         /**
+         * <p>Accumulated sales volume</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -256,16 +341,27 @@ public class SearchProductsResponseBody extends TeaModel {
         public String soldQuantity;
 
         /**
+         * <p>Tax code</p>
+         * 
          * <strong>example:</strong>
          * <p>3040203000000000000</p>
          */
         @NameInMap("taxCode")
         public String taxCode;
 
+        /**
+         * <p>Tax rate</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600（6%）
+         * -100（免税）</p>
+         */
         @NameInMap("taxRate")
         public Long taxRate;
 
         /**
+         * <p>Sales pattern</p>
+         * 
          * <strong>example:</strong>
          * <p>JingXiao</p>
          */

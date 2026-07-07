@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSelectionProductSaleInfosRequest extends TeaModel {
     /**
+     * <p>Parameters for querying product sales information in batches</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

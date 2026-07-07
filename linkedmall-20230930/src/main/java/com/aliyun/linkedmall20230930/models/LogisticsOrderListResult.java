@@ -4,12 +4,17 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class LogisticsOrderListResult extends TeaModel {
+    /**
+     * <p>Collection of logistics orders</p>
+     */
     @NameInMap("logisticsOrderList")
     public java.util.List<LogisticsOrderResult> logisticsOrderList;
 
     /**
+     * <p>Request ID for the API call</p>
+     * 
      * <strong>example:</strong>
-     * <p>3239281273464326823</p>
+     * <p>841471F6-5D61-1331-8C38-2****B55</p>
      */
     @NameInMap("requestId")
     public String requestId;

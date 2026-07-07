@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PurchaseOrderStatusResult extends TeaModel {
     /**
+     * <p>API request requestId</p>
+     * 
      * <strong>example:</strong>
      * <p>3239281273464326823</p>
      */
@@ -12,6 +14,8 @@ public class PurchaseOrderStatusResult extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Purchase order status</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

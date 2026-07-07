@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class LogisticsInformationData extends TeaModel {
     /**
+     * <p>The logistics status. A value of 2 indicates that the order is shipped and awaits the buyer\&quot;s confirmation of receipt.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class LogisticsInformationData extends TeaModel {
     public String logisticsStatus;
 
     /**
+     * <p>The time when the information was last updated, in yyyy-MM-dd HH:mm:ss format.</p>
+     * 
      * <strong>example:</strong>
      * <p>1713407100321</p>
      */
@@ -19,6 +23,8 @@ public class LogisticsInformationData extends TeaModel {
     public String modifiedTime;
 
     /**
+     * <p>The order ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6696070566****8593</p>
      */
@@ -26,6 +32,8 @@ public class LogisticsInformationData extends TeaModel {
     public String orderId;
 
     /**
+     * <p>The ID of the order line.</p>
+     * 
      * <strong>example:</strong>
      * <p>6692****5458</p>
      */
@@ -33,6 +41,8 @@ public class LogisticsInformationData extends TeaModel {
     public String orderLineId;
 
     /**
+     * <p>The external ID of the purchase order, provided upon creation.</p>
+     * 
      * <strong>example:</strong>
      * <p>233111</p>
      */
@@ -40,6 +50,8 @@ public class LogisticsInformationData extends TeaModel {
     public String outerPurchaseOrderId;
 
     /**
+     * <p>The ID of the purchaser.</p>
+     * 
      * <strong>example:</strong>
      * <p>PID22000009</p>
      */
@@ -47,16 +59,26 @@ public class LogisticsInformationData extends TeaModel {
     public String purchaserId;
 
     /**
+     * <p>The code of the logistics company.</p>
+     * 
      * <strong>example:</strong>
      * <p>SF</p>
      */
     @NameInMap("trackingCompanyCode")
     public String trackingCompanyCode;
 
+    /**
+     * <p>The name of the logistics company.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>顺丰快递</p>
+     */
     @NameInMap("trackingCompanyName")
     public String trackingCompanyName;
 
     /**
+     * <p>The tracking number.</p>
+     * 
      * <strong>example:</strong>
      * <p>SF198913131</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DistributionMaxRefundFee extends TeaModel {
     /**
+     * <p>Maximum refundable amount for this order</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -12,6 +14,8 @@ public class DistributionMaxRefundFee extends TeaModel {
     public Long maxRefundFee;
 
     /**
+     * <p>Minimum refundable amount for this order</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

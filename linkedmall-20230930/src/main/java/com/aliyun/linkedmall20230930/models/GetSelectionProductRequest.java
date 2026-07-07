@@ -5,17 +5,20 @@ import com.aliyun.tea.*;
 
 public class GetSelectionProductRequest extends TeaModel {
     /**
+     * <p>Region code (use a five-level township or subdistrict address code)</p>
+     * 
      * <strong>example:</strong>
-     * <p>110000</p>
+     * <p>330106109</p>
      */
     @NameInMap("divisionCode")
     public String divisionCode;
 
     /**
+     * <p>Purchaser ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>56****2304</p>
+     * <p>PID22000009</p>
      */
     @NameInMap("purchaserId")
     public String purchaserId;

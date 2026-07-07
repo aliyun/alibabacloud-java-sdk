@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RenderPurchaseOrderRequest extends TeaModel {
     /**
+     * <p>Render purchase order</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

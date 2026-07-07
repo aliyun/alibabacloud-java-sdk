@@ -4,16 +4,27 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class ProductSpec extends TeaModel {
+    /**
+     * <p>The name of the specification key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>颜色分类</p>
+     */
     @NameInMap("key")
     public String key;
 
     /**
+     * <p>Specification</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
     @NameInMap("keyId")
     public Long keyId;
 
+    /**
+     * <p>The values of the rule key.</p>
+     */
     @NameInMap("values")
     public java.util.List<ProductSpecValue> values;
 

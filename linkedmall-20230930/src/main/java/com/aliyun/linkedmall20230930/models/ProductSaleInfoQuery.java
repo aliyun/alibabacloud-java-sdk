@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ProductSaleInfoQuery extends TeaModel {
     /**
+     * <p>Distributor shop ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ProductSaleInfoQuery extends TeaModel {
     public String distributorShopId;
 
     /**
+     * <p>Area code</p>
+     * 
      * <strong>example:</strong>
      * <p>110000</p>
      */

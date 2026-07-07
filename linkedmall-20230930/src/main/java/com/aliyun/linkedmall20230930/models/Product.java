@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Product extends TeaModel {
     /**
+     * <p>The brand name.</p>
+     * 
      * <strong>example:</strong>
      * <p>Apple/苹果</p>
      */
@@ -12,86 +14,119 @@ public class Product extends TeaModel {
     public String brandName;
 
     /**
+     * <p>Indicates whether the product is available for sale. This is a calculated value.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("canSell")
     public Boolean canSell;
 
+    /**
+     * <p>The category chain.</p>
+     */
     @NameInMap("categoryChain")
     public java.util.List<Category> categoryChain;
 
     /**
+     * <p>The leaf category ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>201856501</p>
+     * <p>201****501</p>
      */
     @NameInMap("categoryLeafId")
     public Long categoryLeafId;
 
     /**
+     * <p>The product description URL.</p>
+     * 
      * <strong>example:</strong>
-     * <p><a href="https://img.alicdn.com/descpath/O1CN01wciRDp22AEU14435dsf34">https://img.alicdn.com/descpath/O1CN01wciRDp22AEU14435dsf34</a></p>
+     * <p><a href="https://img.alicdn.com/descpath/O1CN01wciRDp22AEU1*******f34">https://img.alicdn.com/descpath/O1CN01wciRDp22AEU1*******f34</a></p>
      */
     @NameInMap("descPath")
     public String descPath;
 
     /**
+     * <p>The region code.</p>
+     * 
      * <strong>example:</strong>
      * <p>110000</p>
      */
     @NameInMap("divisionCode")
     public String divisionCode;
 
+    /**
+     * <p>The product\&quot;s extended properties.</p>
+     */
     @NameInMap("extendProperties")
     public java.util.List<ProductExtendProperty> extendProperties;
 
     /**
+     * <p>The stock status.</p>
+     * 
      * <strong>example:</strong>
-     * <p>100+</p>
+     * <p>有货</p>
      */
     @NameInMap("fuzzyQuantity")
     public String fuzzyQuantity;
 
     /**
-     * <p>images</p>
+     * <p>The product images.</p>
      */
     @NameInMap("images")
     public java.util.List<String> images;
 
+    /**
+     * <p>The warehousing status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("inGroup")
     public Boolean inGroup;
 
+    /**
+     * <p>The purchase limit rules.</p>
+     */
     @NameInMap("limitRules")
     public java.util.List<LimitRule> limitRules;
 
     /**
+     * <p>The LM product ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>21000017-4580902812</p>
+     * <p>2100<strong><strong>7-458</strong></strong>812</p>
      */
     @NameInMap("lmItemId")
     public String lmItemId;
 
     /**
+     * <p>The main product image URL.</p>
+     * 
      * <strong>example:</strong>
-     * <p><a href="https://img.alicdn.com/imgextra/i3/2214281521988/O1CN01w4vomR1QYYEx6nyr5_!!2214281521988.jpg">https://img.alicdn.com/imgextra/i3/2214281521988/O1CN01w4vomR1QYYEx6nyr5_!!2214281521988.jpg</a></p>
+     * <p><a href="https://img.alicdn.com/imgextra/i3/221*******988/O1CN01w4vomR1QYYEx6nyr5_!!221******988.jpg">https://img.alicdn.com/imgextra/i3/221*******988/O1CN01w4vomR1QYYEx6nyr5_!!221******988.jpg</a></p>
      */
     @NameInMap("picUrl")
     public String picUrl;
 
     /**
+     * <p>The product ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>660460842235822080</p>
+     * <p>660460842******080</p>
      */
     @NameInMap("productId")
     public String productId;
 
     /**
-     * <p>productSpecs</p>
+     * <p>The product specifications.</p>
      */
     @NameInMap("productSpecs")
     public java.util.List<ProductSpec> productSpecs;
 
     /**
+     * <p>The product status.</p>
+     * 
      * <strong>example:</strong>
      * <p>Online</p>
      */
@@ -99,16 +134,28 @@ public class Product extends TeaModel {
     public String productStatus;
 
     /**
+     * <p>The product type.</p>
+     * 
      * <strong>example:</strong>
      * <p>Normal</p>
      */
     @NameInMap("productType")
     public String productType;
 
+    /**
+     * <p>The product attributes.</p>
+     */
     @NameInMap("properties")
     public java.util.List<ProductProperty> properties;
 
     /**
+     * <p>The inventory.</p>
+     * <blockquote>
+     * <ul>
+     * <li>This parameter is fixed at -1 and can be ignored.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>-1</p>
      */
@@ -116,29 +163,38 @@ public class Product extends TeaModel {
     public Long quantity;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>3239281273464326823</p>
+     * <p>3239281273******823</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The service promises.&gt;Notice:  Suppliers maintain all service promises. If a supplier fails to update this information in a timely manner, the service promise labels for some products may be inaccurate. Distributors should display this information to their customers with caution.</p>
+     */
     @NameInMap("servicePromises")
     public java.util.List<String> servicePromises;
 
     /**
+     * <p>The channel shop ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>21000017</p>
+     * <p>210*****7</p>
      */
     @NameInMap("shopId")
     public String shopId;
 
     /**
-     * <p>skus</p>
+     * <p>The product SKUs.</p>
      */
     @NameInMap("skus")
     public java.util.List<Sku> skus;
 
     /**
+     * <p>The quantity sold.</p>
+     * 
      * <strong>example:</strong>
      * <p>100+</p>
      */
@@ -146,19 +202,29 @@ public class Product extends TeaModel {
     public String soldQuantity;
 
     /**
+     * <p>The tax code.</p>
+     * 
      * <strong>example:</strong>
-     * <p>3040203000000000000</p>
+     * <p>3040203000*******000</p>
      */
     @NameInMap("taxCode")
     public String taxCode;
 
     /**
+     * <p>The tax rate.</p>
+     * 
      * <strong>example:</strong>
      * <p>600</p>
      */
     @NameInMap("taxRate")
     public Integer taxRate;
 
+    /**
+     * <p>The product title.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>发财树</p>
+     */
     @NameInMap("title")
     public String title;
 

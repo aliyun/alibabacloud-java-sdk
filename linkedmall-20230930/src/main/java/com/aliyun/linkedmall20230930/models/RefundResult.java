@@ -4,13 +4,24 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class RefundResult extends TeaModel {
+    /**
+     * <p>Current buyer\&quot;s refund request description</p>
+     * 
+     * <strong>example:</strong>
+     * <p>多拍不想要</p>
+     */
     @NameInMap("applyDisputeDesc")
     public String applyDisputeDesc;
 
+    /**
+     * <p>Request reason</p>
+     */
     @NameInMap("applyReason")
     public ApplyReason applyReason;
 
     /**
+     * <p>Order return method<br>1 – identity indicates refund only<br>3 – identity indicates return and refund</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -18,23 +29,35 @@ public class RefundResult extends TeaModel {
     public Integer bizClaimType;
 
     /**
+     * <p>Dispute creation time</p>
+     * 
      * <strong>example:</strong>
-     * <p>2023-09-02T00:00:00.000Z</p>
+     * <p>2023-09-15T19:23:59.000+08:00</p>
      */
     @NameInMap("disputeCreateTime")
     public String disputeCreateTime;
 
+    /**
+     * <p>Reverse request description</p>
+     * 
+     * <strong>example:</strong>
+     * <p>多拍不想要</p>
+     */
     @NameInMap("disputeDesc")
     public String disputeDesc;
 
     /**
+     * <p>Reverse process end time</p>
+     * 
      * <strong>example:</strong>
-     * <p>2023-09-02T12:00:00.000Z</p>
+     * <p>2023-09-15T19:23:59.000+08:00</p>
      */
     @NameInMap("disputeEndTime")
     public String disputeEndTime;
 
     /**
+     * <p>Reverse order ID</p>
+     * 
      * <strong>example:</strong>
      * <p>6693****4352</p>
      */
@@ -42,6 +65,8 @@ public class RefundResult extends TeaModel {
     public String disputeId;
 
     /**
+     * <p>Reverse order status<br>1 – Return pending<br>2 – Awaiting buyer return<br>3 – Awaiting merchant receipt<br>4 – Refund shutdown<br>5 – Refund succeeded<br>6 – Refund denied<br>17 – Canceling refund</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -49,6 +74,8 @@ public class RefundResult extends TeaModel {
     public Integer disputeStatus;
 
     /**
+     * <p>Main order ID</p>
+     * 
      * <strong>example:</strong>
      * <p>6692****5457</p>
      */
@@ -56,6 +83,8 @@ public class RefundResult extends TeaModel {
     public String orderId;
 
     /**
+     * <p>Sub-order ID</p>
+     * 
      * <strong>example:</strong>
      * <p>6692****5458</p>
      */
@@ -63,6 +92,8 @@ public class RefundResult extends TeaModel {
     public String orderLineId;
 
     /**
+     * <p>Order logistics status<br>1 – Not shipped → Awaiting seller shipment<br>2 – Shipped → Awaiting buyer confirmation of receipt<br>3 – Received → Transaction succeeded<br>6 – Partially shipping<br>8 – Logistics order not yet created</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -70,22 +101,41 @@ public class RefundResult extends TeaModel {
     public Integer orderLogisticsStatus;
 
     /**
+     * <p>Refund amount</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("refundFee")
     public Long refundFee;
 
+    /**
+     * <p>Refund period</p>
+     */
     @NameInMap("refundFeeData")
     public RefundFeeData refundFeeData;
 
+    /**
+     * <p>Merchant return address (available when disputeStatus=2, indicating the status is pending buyer return; save the return address during this status if needed)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>阿里云云谷</p>
+     */
     @NameInMap("refunderAddress")
     public String refunderAddress;
 
+    /**
+     * <p>Return recipient name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>赵先生</p>
+     */
     @NameInMap("refunderName")
     public String refunderName;
 
     /**
+     * <p>Return contact information</p>
+     * 
      * <strong>example:</strong>
      * <p>182****1334</p>
      */
@@ -93,6 +143,8 @@ public class RefundResult extends TeaModel {
     public String refunderTel;
 
     /**
+     * <p>Return address ZIP code</p>
+     * 
      * <strong>example:</strong>
      * <p>331001</p>
      */
@@ -100,6 +152,8 @@ public class RefundResult extends TeaModel {
     public String refunderZipCode;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>841471F6-5D61-1331-8C38-2****B55</p>
      */
@@ -107,18 +161,38 @@ public class RefundResult extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Return logistics status<br>0 – Return not initiated<br>1 – Awaiting pickup<br>2 – Package picked up<br>3 – In transit<br>4 – Out for delivery<br>5 – Delivered<br>6 – Delivery failed</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("returnGoodLogisticsStatus")
     public Integer returnGoodLogisticsStatus;
 
+    /**
+     * <p>Seller’s return approval message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>同意退款</p>
+     */
     @NameInMap("sellerAgreeMsg")
     public String sellerAgreeMsg;
 
+    /**
+     * <p>Merchant\&quot;s message explaining the denial</p>
+     * 
+     * <strong>example:</strong>
+     * <p>不同意退款</p>
+     */
     @NameInMap("sellerRefuseAgreementMessage")
     public String sellerRefuseAgreementMessage;
 
+    /**
+     * <p>Merchant denial reason</p>
+     * 
+     * <strong>example:</strong>
+     * <p>商品没问题，买家举证无效</p>
+     */
     @NameInMap("sellerRefuseReason")
     public String sellerRefuseReason;
 

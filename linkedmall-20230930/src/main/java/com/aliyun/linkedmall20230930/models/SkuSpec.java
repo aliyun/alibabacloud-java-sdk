@@ -4,20 +4,36 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class SkuSpec extends TeaModel {
+    /**
+     * <p>Specification key</p>
+     * 
+     * <strong>example:</strong>
+     * <p>颜色分类</p>
+     */
     @NameInMap("key")
     public String key;
 
     /**
+     * <p>Specification ID</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
     @NameInMap("keyId")
     public Long keyId;
 
+    /**
+     * <p>Specification value</p>
+     * 
+     * <strong>example:</strong>
+     * <p>天蓝色</p>
+     */
     @NameInMap("value")
     public String value;
 
     /**
+     * <p>Specification value alias (Recommendation: If this field is not empty (null), use its value as the frontend display specification; if this field is empty (null), use the value field as the frontend display specification.)</p>
+     * 
      * <strong>example:</strong>
      * <p>秘色</p>
      */
@@ -25,6 +41,8 @@ public class SkuSpec extends TeaModel {
     public String valueAlias;
 
     /**
+     * <p>Specification value ID</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */

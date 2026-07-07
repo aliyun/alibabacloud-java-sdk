@@ -4,16 +4,27 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class GeneralBillPageResult extends TeaModel {
+    /**
+     * <p>List of bills.</p>
+     */
     @NameInMap("generalBills")
     public java.util.List<GeneralBill> generalBills;
 
+    /**
+     * <p>Current page number.</p>
+     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>Page size.</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
     /**
+     * <p>API request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3239281273464326823</p>
      */
@@ -21,6 +32,8 @@ public class GeneralBillPageResult extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total count.</p>
+     * 
      * <strong>example:</strong>
      * <p>24</p>
      */

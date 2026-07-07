@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateGoodsShippingNoticeRequest extends TeaModel {
     /**
+     * <p>Submit shipping notice information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")
