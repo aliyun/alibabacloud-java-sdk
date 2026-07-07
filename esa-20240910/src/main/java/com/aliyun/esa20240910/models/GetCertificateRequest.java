@@ -15,7 +15,7 @@ public class GetCertificateRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The site ID. You can get this ID by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
+     * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to query the site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

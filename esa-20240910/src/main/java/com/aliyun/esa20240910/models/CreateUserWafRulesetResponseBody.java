@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateUserWafRulesetResponseBody extends TeaModel {
     /**
-     * <p>The WAF ruleset ID.</p>
+     * <p>The ID of the WAF ruleset.</p>
      * 
      * <strong>example:</strong>
      * <p>665d3af3621bccf3fe29e1a4</p>
@@ -23,7 +23,7 @@ public class CreateUserWafRulesetResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A list of rule IDs within the WAF ruleset.</p>
+     * <p>The list of rule IDs in the WAF ruleset.</p>
      */
     @NameInMap("RuleIds")
     public java.util.List<Long> ruleIds;

@@ -14,7 +14,7 @@ public class DescribePurgeTasksRequest extends TeaModel {
     public String content;
 
     /**
-     * <p>The end time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The end time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
      * <blockquote>
      * <p>The end time must be later than the start time.</p>
      * </blockquote>
@@ -45,6 +45,9 @@ public class DescribePurgeTasksRequest extends TeaModel {
 
     /**
      * <p>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <blockquote>
+     * <p>Notice: You must always specify SiteId. An error is reported if SiteId is not specified.</notice></p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>123456789****</p>
@@ -53,7 +56,7 @@ public class DescribePurgeTasksRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The start time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The start time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-11-16T05:33:00Z</p>
@@ -64,9 +67,9 @@ public class DescribePurgeTasksRequest extends TeaModel {
     /**
      * <p>The task execution status. Valid values:</p>
      * <ul>
-     * <li><strong>Complete</strong>: The task is complete.</li>
-     * <li><strong>Refreshing</strong>: The task is in progress.</li>
-     * <li><strong>Failed</strong>: The task failed.</li>
+     * <li><strong>Complete</strong>: Completed.</li>
+     * <li><strong>Refreshing</strong>: Refreshing.</li>
+     * <li><strong>Failed</strong>: Refresh failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -81,9 +84,9 @@ public class DescribePurgeTasksRequest extends TeaModel {
      * <li><strong>file</strong> (default): file refresh.</li>
      * <li><strong>cachetag</strong>: cache tag refresh.</li>
      * <li><strong>directory</strong>: directory refresh.</li>
-     * <li><strong>ignoreParams</strong>: parameter-stripped refresh.</li>
+     * <li><strong>ignoreParams</strong>: ignore parameters refresh.</li>
      * <li><strong>hostname</strong>: hostname refresh.</li>
-     * <li><strong>purgeall</strong>: refresh all cached content of the site.</li>
+     * <li><strong>purgeall</strong>: purge all cache under the site.</li>
      * </ul>
      * 
      * <strong>example:</strong>

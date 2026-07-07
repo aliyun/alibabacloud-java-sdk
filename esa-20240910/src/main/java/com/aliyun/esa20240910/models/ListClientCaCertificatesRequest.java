@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListClientCaCertificatesRequest extends TeaModel {
     /**
-     * <p>The page number. Valid values: 1 to 500.</p>
+     * <p>The page number to return. Valid values: 1 to 500.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListClientCaCertificatesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return per page. Valid values: 1 to 100. The default value is 20.</p>
+     * <p>The number of entries per page. Default value: 20. Maximum value: 100. Valid values: 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,7 +23,7 @@ public class ListClientCaCertificatesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The site ID. Call the <a href="~~ListSites~~">ListSites</a> operation to obtain this ID.</p>
+     * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListCertificatesByRecordRequest extends TeaModel {
     /**
-     * <p>Specifies whether to return certificate details. A value of <code>1</code> includes certificate details, whereas a value of <code>0</code> excludes them.</p>
+     * <p>Specifies whether to return certificate details.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>true</p>
      */
     @NameInMap("Detail")
     public Boolean detail;
@@ -24,7 +24,7 @@ public class ListCertificatesByRecordRequest extends TeaModel {
     public String recordName;
 
     /**
-     * <p>The site ID. To obtain this ID, call the <a href="~~ListSites~~">ListSites</a> operation.</p>
+     * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to query the site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,10 +34,10 @@ public class ListCertificatesByRecordRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>Specifies whether to return only valid certificates. A value of <code>1</code> returns only valid certificates, whereas <code>0</code> returns all matching certificates.</p>
+     * <p>Specifies whether to return only valid certificates.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>true</p>
      */
     @NameInMap("ValidOnly")
     public Boolean validOnly;

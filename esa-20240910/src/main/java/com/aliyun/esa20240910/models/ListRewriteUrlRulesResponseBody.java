@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListRewriteUrlRulesResponseBody extends TeaModel {
     /**
-     * <p>List of rewrite URL configurations.</p>
+     * <p>The list of URL rewrite configurations.</p>
      */
     @NameInMap("Configs")
     public java.util.List<ListRewriteUrlRulesResponseBodyConfigs> configs;
 
     /**
-     * <p>The current page number.</p>
+     * <p>The current page number, which is the same as the PageNumber request parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListRewriteUrlRulesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The size of the page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class ListRewriteUrlRulesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CB1A380B-09F0-41BB-280B-72F8FD6DA2FE</p>
@@ -38,7 +38,7 @@ public class ListRewriteUrlRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of items.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -47,7 +47,7 @@ public class ListRewriteUrlRulesResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>Total number of pages.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -110,7 +110,7 @@ public class ListRewriteUrlRulesResponseBody extends TeaModel {
 
     public static class ListRewriteUrlRulesResponseBodyConfigs extends TeaModel {
         /**
-         * <p>Configuration ID.</p>
+         * <p>The configuration ID.</p>
          * 
          * <strong>example:</strong>
          * <p>39538644977****</p>
@@ -119,10 +119,10 @@ public class ListRewriteUrlRulesResponseBody extends TeaModel {
         public Long configId;
 
         /**
-         * <p>Configuration type. Value range:</p>
+         * <p>The configuration type. Valid values:</p>
          * <ul>
-         * <li>global: Global configuration;</li>
-         * <li>rule: Rule configuration;</li>
+         * <li>global: global configuration.</li>
+         * <li>rule: rule configuration.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -132,7 +132,7 @@ public class ListRewriteUrlRulesResponseBody extends TeaModel {
         public String configType;
 
         /**
-         * <p>The rewritten query string.</p>
+         * <p>The query string after rewriting.</p>
          * 
          * <strong>example:</strong>
          * <p>example=123</p>
@@ -141,10 +141,10 @@ public class ListRewriteUrlRulesResponseBody extends TeaModel {
         public String queryString;
 
         /**
-         * <p>Query string rewrite type. Value range:</p>
+         * <p>The query string rewrite type. Valid values:</p>
          * <ul>
-         * <li>static: Static mode.</li>
-         * <li>dynamic: Dynamic mode.</li>
+         * <li>static: static pattern.</li>
+         * <li>dynamic: dynamic schema.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -154,10 +154,10 @@ public class ListRewriteUrlRulesResponseBody extends TeaModel {
         public String rewriteQueryStringType;
 
         /**
-         * <p>URI rewrite type. Value range:</p>
+         * <p>The path rewrite type. Valid values:</p>
          * <ul>
-         * <li>static: Static mode.</li>
-         * <li>dynamic: Dynamic mode.</li>
+         * <li>static: static pattern.</li>
+         * <li>dynamic: dynamic schema.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -167,10 +167,10 @@ public class ListRewriteUrlRulesResponseBody extends TeaModel {
         public String rewriteUriType;
 
         /**
-         * <p>Rule content, using conditional expressions to match user requests. Not required when adding a global configuration. There are two usage scenarios:</p>
+         * <p>The rule content, which uses a conditional expression to match user requests. You do not need to set this parameter when adding a global configuration. Two scenarios are supported:</p>
          * <ul>
-         * <li>Match all incoming requests: Set the value to true</li>
-         * <li>Match specific requests: Set the value to a custom expression, e.g., (http.host eq \&quot;video.example.com\&quot;)</li>
+         * <li>Match all incoming requests: set the value to true.</li>
+         * <li>Match specified requests: set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -180,10 +180,10 @@ public class ListRewriteUrlRulesResponseBody extends TeaModel {
         public String rule;
 
         /**
-         * <p>Rule switch. Not required when adding a global configuration. Value range:</p>
+         * <p>The rule switch. You do not need to set this parameter when adding a global configuration. Valid values:</p>
          * <ul>
-         * <li>on: Enabled.</li>
-         * <li>off: Disabled.</li>
+         * <li>on: enabled.</li>
+         * <li>off: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -193,7 +193,7 @@ public class ListRewriteUrlRulesResponseBody extends TeaModel {
         public String ruleEnable;
 
         /**
-         * <p>Rule name. Not required when adding a global configuration.</p>
+         * <p>The rule name. You do not need to set this parameter when adding a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -202,7 +202,7 @@ public class ListRewriteUrlRulesResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>Rule execution order. The smaller the value, the higher the priority.</p>
+         * <p>The rule execution order. A smaller value indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -211,7 +211,7 @@ public class ListRewriteUrlRulesResponseBody extends TeaModel {
         public Integer sequence;
 
         /**
-         * <p>Version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the effective version of the configuration, defaulting to version 0.</p>
+         * <p>The version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. The default value is version 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -220,7 +220,7 @@ public class ListRewriteUrlRulesResponseBody extends TeaModel {
         public Integer siteVersion;
 
         /**
-         * <p>Target URI after rewriting.</p>
+         * <p>The target URI after rewriting.</p>
          * 
          * <strong>example:</strong>
          * <p>/image.example.com/index.html</p>

@@ -32,7 +32,7 @@ public class ListKeylessServersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A list of keyless server configurations.</p>
+     * <p>The result array.</p>
      */
     @NameInMap("Result")
     public java.util.List<ListKeylessServersResponseBodyResult> result;
@@ -56,7 +56,7 @@ public class ListKeylessServersResponseBody extends TeaModel {
     public String siteName;
 
     /**
-     * <p>The total count.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>90</p>
@@ -127,7 +127,7 @@ public class ListKeylessServersResponseBody extends TeaModel {
 
     public static class ListKeylessServersResponseBodyResult extends TeaModel {
         /**
-         * <p>The CA certificate used to verify the server certificate of the keyless server. This parameter applies only when <code>Verify</code> is set to <code>true</code>.</p>
+         * <p>The CA certificate used to verify the Keyless server certificate. This parameter takes effect only when Verify is set to true.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE-----****</p>
@@ -136,7 +136,7 @@ public class ListKeylessServersResponseBody extends TeaModel {
         public String caCertificate;
 
         /**
-         * <p>The client certificate. This parameter must be provided with <code>ClientPrivateKey</code>.</p>
+         * <p>The client certificate. This parameter must be used together with the client private key.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE-----****</p>
@@ -145,7 +145,7 @@ public class ListKeylessServersResponseBody extends TeaModel {
         public String clientCertificate;
 
         /**
-         * <p>The client private key. This parameter must be provided with <code>ClientCertificate</code>.</p>
+         * <p>The client private key. This parameter must be used together with the client certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN RSA PRIVATE KEY-----****</p>
@@ -154,16 +154,16 @@ public class ListKeylessServersResponseBody extends TeaModel {
         public String clientPrivateKey;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The time follows the format YYYY-MM-DDTHH:MM:SS+08:00 in the UTC/GMT time zone.</p>
          * 
          * <strong>example:</strong>
-         * <p>2024-06-24 07:48:51</p>
+         * <p>2025-07-18T20:33:31+08:00</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The keyless server host name.</p>
+         * <p>The Keyless server hostname.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -172,7 +172,7 @@ public class ListKeylessServersResponseBody extends TeaModel {
         public String host;
 
         /**
-         * <p>The keyless server ID.</p>
+         * <p>Keyless server ID。</p>
          * 
          * <strong>example:</strong>
          * <p>babab9db65ee5efcca9f3d41d4b5****</p>
@@ -181,7 +181,7 @@ public class ListKeylessServersResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The keyless server name.</p>
+         * <p>The Keyless server name.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -190,7 +190,7 @@ public class ListKeylessServersResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The keyless server port. Valid values: 1 to 65535.</p>
+         * <p>The Keyless server port. Valid values: 1 to 65535.</p>
          * 
          * <strong>example:</strong>
          * <p>443</p>
@@ -199,16 +199,16 @@ public class ListKeylessServersResponseBody extends TeaModel {
         public Long port;
 
         /**
-         * <p>The update time.</p>
+         * <p>The update time. The time follows the format YYYY-MM-DDTHH:MM:SS+08:00 in the UTC/GMT time zone.</p>
          * 
          * <strong>example:</strong>
-         * <p>2024-07-20 06:18:42</p>
+         * <p>2025-07-18T20:33:31+08:00</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
 
         /**
-         * <p>Specifies whether to verify the server certificate of the keyless server. Defaults to false.</p>
+         * <p>Indicates whether to verify the Keyless server certificate. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetLoadBalancerResponseBody extends TeaModel {
     /**
-     * <p>The configuration for failover across pools.</p>
+     * <p>The cross-origin pool back-to-origin configuration.</p>
      */
     @NameInMap("AdaptiveRouting")
     public GetLoadBalancerResponseBodyAdaptiveRouting adaptiveRouting;
 
     /**
-     * <p>A list of default origin pool IDs.</p>
+     * <p>The list of default pool IDs.</p>
      */
     @NameInMap("DefaultPools")
     public java.util.List<Long> defaultPools;
@@ -28,10 +28,8 @@ public class GetLoadBalancerResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the load balancer is enabled.</p>
      * <ul>
-     * <li><p><code>true</code>: Enabled.</p>
-     * </li>
-     * <li><p><code>false</code>: Disabled.</p>
-     * </li>
+     * <li>true: Enabled.</li>
+     * <li>false: Not enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,7 +39,7 @@ public class GetLoadBalancerResponseBody extends TeaModel {
     public Boolean enabled;
 
     /**
-     * <p>The ID of the fallback pool. Routes traffic to this origin pool when all other origin pools are unavailable.</p>
+     * <p>The fallback pool ID. When all other pools are unavailable, traffic is redirected to this pool.</p>
      * 
      * <strong>example:</strong>
      * <p>96228666776****</p>
@@ -50,7 +48,7 @@ public class GetLoadBalancerResponseBody extends TeaModel {
     public Long fallbackPool;
 
     /**
-     * <p>The unique identifier for the load balancer.</p>
+     * <p>The unique ID of the load balancer.</p>
      * 
      * <strong>example:</strong>
      * <p>99867648760****</p>
@@ -59,7 +57,7 @@ public class GetLoadBalancerResponseBody extends TeaModel {
     public Long id;
 
     /**
-     * <p>The health check configuration.</p>
+     * <p>The monitor configuration.</p>
      */
     @NameInMap("Monitor")
     public GetLoadBalancerResponseBodyMonitor monitor;
@@ -74,13 +72,13 @@ public class GetLoadBalancerResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The weighted routing configuration, which controls the traffic distribution weight among origin pools.</p>
+     * <p>The weighted round-robin configuration, which controls the traffic distribution weight across different pools.</p>
      */
     @NameInMap("RandomSteering")
     public GetLoadBalancerResponseBodyRandomSteering randomSteering;
 
     /**
-     * <p>A map of regions to their corresponding origin pools.</p>
+     * <p>The pools mapped to primary regions.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -106,20 +104,18 @@ public class GetLoadBalancerResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A list of rule configurations that define behavior for specific conditions.</p>
+     * <p>The list of rule configurations that define behaviors under specific conditions.</p>
      */
     @NameInMap("Rules")
     public java.util.List<GetLoadBalancerResponseBodyRules> rules;
 
     /**
-     * <p>The session affinity policy. Valid values are:</p>
+     * <p>The session persistence setting. Valid values:</p>
      * <ul>
-     * <li><p><code>off</code>: Session affinity is disabled.</p>
-     * </li>
-     * <li><p><code>ip</code>: Session affinity is based on the client\&quot;s IP address.</p>
-     * </li>
-     * <li><p><code>cookie</code>: Session affinity is based on a cookie.</p>
-     * </li>
+     * <li>off: disabled.</li>
+     * <li>ip: IP-based session persistence.</li>
+     * <li>cookie: cookie-based session persistence.</li>
+     * <li>http_header: HTTP header-based session persistence.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -129,7 +125,7 @@ public class GetLoadBalancerResponseBody extends TeaModel {
     public String sessionAffinity;
 
     /**
-     * <p>The ID of the site for the load balancer.</p>
+     * <p>The ID of the site to which the load balancer belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>11591017874****</p>
@@ -147,7 +143,7 @@ public class GetLoadBalancerResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The steering policy.</p>
+     * <p>The load balancing policy.</p>
      * 
      * <strong>example:</strong>
      * <p>order</p>
@@ -156,7 +152,7 @@ public class GetLoadBalancerResponseBody extends TeaModel {
     public String steeringPolicy;
 
     /**
-     * <p>A map of sub-regions to their corresponding origin pools. To map multiple sub-regions to the same set of origin pools, concatenate their codes with commas to create the key.</p>
+     * <p>The pools mapped to secondary regions. When multiple secondary regions share the same set of pools, you can concatenate multiple secondary regions with commas as the key.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;AL,MO&quot;: [92298024898****],&quot;CN-SH,CN-SX,CN-SC&quot;:[92304347804****,92843536908****]}</p>
@@ -165,7 +161,7 @@ public class GetLoadBalancerResponseBody extends TeaModel {
     public Object subRegionPools;
 
     /**
-     * <p>The Time to Live (TTL) for the DNS record, in seconds. The default is 30.</p>
+     * <p>The TTL value, which specifies the time-to-live of the DNS record. Default value: 30 seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -324,12 +320,10 @@ public class GetLoadBalancerResponseBody extends TeaModel {
 
     public static class GetLoadBalancerResponseBodyAdaptiveRouting extends TeaModel {
         /**
-         * <p>Indicates whether failover across pools is enabled.</p>
+         * <p>Indicates whether failover across origin pools is enabled.</p>
          * <ul>
-         * <li><p><code>true</code>: Enabled.</p>
-         * </li>
-         * <li><p><code>false</code>: Disabled.</p>
-         * </li>
+         * <li>true: Enabled.</li>
+         * <li>false: Not enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -338,6 +332,12 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         @NameInMap("FailoverAcrossPools")
         public Boolean failoverAcrossPools;
 
+        /**
+         * <p>Specifies whether to retry the next IP address when back-to-origin fails and the origin server is a domain name that resolves to multiple IP addresses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("OriginLevelRetry")
         public Boolean originLevelRetry;
 
@@ -366,7 +366,7 @@ public class GetLoadBalancerResponseBody extends TeaModel {
 
     public static class GetLoadBalancerResponseBodyMonitor extends TeaModel {
         /**
-         * <p>The number of consecutive failed probes required to declare an origin unhealthy. For example, <code>5</code>.</p>
+         * <p>The number of consecutive failed probes required to consider the check failed, such as <code>5</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -375,7 +375,7 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         public Integer consecutiveDown;
 
         /**
-         * <p>The number of consecutive successful probes required to declare an origin healthy. For example, <code>3</code>.</p>
+         * <p>The number of consecutive successful probes required to consider the check successful, such as <code>3</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -384,7 +384,7 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         public Integer consecutiveUp;
 
         /**
-         * <p>The expected HTTP status codes for a successful response, such as 200 or 202.</p>
+         * <p>The expected status codes for a successful HTTP response, such as 200,202.</p>
          * 
          * <strong>example:</strong>
          * <p>200,202</p>
@@ -393,12 +393,10 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         public String expectedCodes;
 
         /**
-         * <p>Specifies whether the health check probe follows redirects.</p>
+         * <p>Indicates whether to follow redirects.</p>
          * <ul>
-         * <li><p><code>true</code>: Follows redirects.</p>
-         * </li>
-         * <li><p><code>false</code>: Does not follow redirects.</p>
-         * </li>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -408,7 +406,7 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         public Boolean followRedirects;
 
         /**
-         * <p>The HTTP headers to include in the health check request.</p>
+         * <p>The HTTP header information included in the probe request.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -422,7 +420,7 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         public Object header;
 
         /**
-         * <p>The interval for health checks, in seconds.</p>
+         * <p>The health check interval. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -431,7 +429,7 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         public Integer interval;
 
         /**
-         * <p>The method for the health check.</p>
+         * <p>The health check method.</p>
          * 
          * <strong>example:</strong>
          * <p>GET</p>
@@ -440,14 +438,11 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         public String method;
 
         /**
-         * <p>The region from which probes are sent. Default is <code>Global</code>. Valid values:</p>
+         * <p>The region where the probe nodes are located. Default value: Global.</p>
          * <ul>
-         * <li><p><code>Global</code>: From global locations.</p>
-         * </li>
-         * <li><p><code>ChineseMainland</code>: From locations within the Chinese Mainland.</p>
-         * </li>
-         * <li><p><code>OutsideChineseMainland</code>: From global locations outside of the Chinese Mainland.</p>
-         * </li>
+         * <li>Global: worldwide.</li>
+         * <li>ChineseMainland: the Chinese mainland.</li>
+         * <li>OutsideChineseMainland: worldwide (excluding the Chinese mainland).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -457,7 +452,7 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         public String monitoringRegion;
 
         /**
-         * <p>The path for the health check request.</p>
+         * <p>The path.</p>
          * 
          * <strong>example:</strong>
          * <p>/</p>
@@ -466,7 +461,7 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         public String path;
 
         /**
-         * <p>The destination port for the health check.</p>
+         * <p>The target port.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -475,7 +470,7 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The health check timeout, in seconds.</p>
+         * <p>The health check timeout period. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -484,7 +479,7 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         public Integer timeout;
 
         /**
-         * <p>The protocol used for health checks, such as HTTP. If set to <code>off</code>, health checks are disabled.</p>
+         * <p>The monitor protocol type, such as HTTP, used for health checks. A value of off indicates that no health check is performed.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP</p>
@@ -597,7 +592,7 @@ public class GetLoadBalancerResponseBody extends TeaModel {
 
     public static class GetLoadBalancerResponseBodyRandomSteering extends TeaModel {
         /**
-         * <p>The default weight for origin pools that do not have an individually assigned weight. The value must be an integer from 0 to 100.</p>
+         * <p>The default round-robin weight applied to all pools that do not have an individually specified weight. Valid values: 0 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -606,7 +601,7 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         public Integer defaultWeight;
 
         /**
-         * <p>A map of weights for individual origin pools, where the key is the origin pool ID and the value is its weight. The weight determines the traffic distribution ratio.</p>
+         * <p>The weight configuration for each backend server pool. The key is the pool ID and the value is the weight coefficient. The weight coefficient represents the relative proportion of traffic distribution.</p>
          */
         @NameInMap("PoolWeights")
         public java.util.Map<String, Integer> poolWeights;
@@ -636,7 +631,7 @@ public class GetLoadBalancerResponseBody extends TeaModel {
 
     public static class GetLoadBalancerResponseBodyRulesFixedResponse extends TeaModel {
         /**
-         * <p>The value for the <code>Content-Type</code> HTTP response header.</p>
+         * <p>The Content-Type field in the HTTP header.</p>
          * 
          * <strong>example:</strong>
          * <p>application/json</p>
@@ -645,7 +640,7 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         public String contentType;
 
         /**
-         * <p>The value for the <code>Location</code> HTTP response header.</p>
+         * <p>The location field in the HTTP response.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com/index.html">http://www.example.com/index.html</a></p>
@@ -654,7 +649,7 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         public String location;
 
         /**
-         * <p>The content of the response body.</p>
+         * <p>The response body value.</p>
          * 
          * <strong>example:</strong>
          * <p>Hello World.</p>
@@ -663,7 +658,7 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         public String messageBody;
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -712,13 +707,13 @@ public class GetLoadBalancerResponseBody extends TeaModel {
 
     public static class GetLoadBalancerResponseBodyRules extends TeaModel {
         /**
-         * <p>Specifies a fixed response to return when the rule matches.</p>
+         * <p>The fixed response content returned when the rule is matched.</p>
          */
         @NameInMap("FixedResponse")
         public GetLoadBalancerResponseBodyRulesFixedResponse fixedResponse;
 
         /**
-         * <p>A set of settings that override the primary load balancer configuration when this rule matches. Fields defined here take precedence over the primary configuration.</p>
+         * <p>The load balancing configuration overrides applied to matching requests. The configured fields override the corresponding fields in the load balancer configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -776,12 +771,10 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         public Object overrides;
 
         /**
-         * <p>The conditional expression used to match incoming requests. This parameter is not required for the global configuration.</p>
+         * <p>The rule content, which uses conditional expressions to match user requests. This parameter is not required when you add a global configuration. Two scenarios are supported:</p>
          * <ul>
-         * <li><p>To match all requests, set the value to <code>true</code>.</p>
-         * </li>
-         * <li><p>To match specific requests, use a custom expression. For example, <code>(http.host eq &quot;video.example.com&quot;)</code>.</p>
-         * </li>
+         * <li>Match all incoming requests: Set the value to true.</li>
+         * <li>Match specific requests: Set the value to a custom expression, such as (http.host eq \&quot;video.example.com\&quot;).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -791,12 +784,10 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         public String rule;
 
         /**
-         * <p>Indicates whether the rule is enabled. This parameter is not required for the global configuration. Valid values are:</p>
+         * <p>The rule switch. This parameter is not required when you add a global configuration. Valid values:</p>
          * <ul>
-         * <li><p><code>on</code>: Enabled.</p>
-         * </li>
-         * <li><p><code>off</code>: Disabled.</p>
-         * </li>
+         * <li>on: enabled.</li>
+         * <li>off: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -806,7 +797,7 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         public String ruleEnable;
 
         /**
-         * <p>The name of the rule. This parameter is not required when adding a global configuration.</p>
+         * <p>The rule name. This parameter is not required when you add a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>r2</p>
@@ -815,7 +806,7 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The execution priority of the rule. A higher value indicates a higher priority.</p>
+         * <p>The rule execution order. A larger value indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -824,12 +815,10 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         public Integer sequence;
 
         /**
-         * <p>Indicates whether to stop evaluating subsequent rules after this one matches.</p>
+         * <p>Indicates whether to terminate the execution of subsequent rules.</p>
          * <ul>
-         * <li><p><code>true</code>: Stop evaluation.</p>
-         * </li>
-         * <li><p><code>false</code>: Continues evaluation. (Default)</p>
-         * </li>
+         * <li>true: Yes.</li>
+         * <li>false: No. This is the default value.</li>
          * </ul>
          * 
          * <strong>example:</strong>

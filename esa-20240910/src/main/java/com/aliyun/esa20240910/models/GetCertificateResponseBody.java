@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCertificateResponseBody extends TeaModel {
     /**
-     * <p>The certificate content in PEM format.</p>
+     * <p>The certificate content.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE-----</p>
@@ -14,7 +14,7 @@ public class GetCertificateResponseBody extends TeaModel {
     public String certificate;
 
     /**
-     * <p>The unique ID for the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
@@ -23,7 +23,7 @@ public class GetCertificateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Detailed certificate information.</p>
+     * <p>The certificate information.</p>
      */
     @NameInMap("Result")
     public GetCertificateResponseBodyResult result;
@@ -110,7 +110,7 @@ public class GetCertificateResponseBody extends TeaModel {
 
     public static class GetCertificateResponseBodyResultDCV extends TeaModel {
         /**
-         * <p>The DCV ID.</p>
+         * <p>DCV ID。</p>
          * 
          * <strong>example:</strong>
          * <p>bababf7cdd1546a2ad04c0def1f4c980</p>
@@ -119,7 +119,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The DCV name. For DNS, this is the TXT record name. For HTTP, this is the URL.</p>
+         * <p>The DCV name. For the DNS type, this is the TXT record name. For the HTTP type, this is the URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com/.well-known/acme-challenge/pH20CqwS5L3ZnvkhI436DCzadKFuG7QcUcvB_4KsAow">http://www.example.com/.well-known/acme-challenge/pH20CqwS5L3ZnvkhI436DCzadKFuG7QcUcvB_4KsAow</a></p>
@@ -128,7 +128,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The status of the DCV check.</p>
+         * <p>The validation status.</p>
          * 
          * <strong>example:</strong>
          * <p>pending</p>
@@ -137,7 +137,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The DCV type. Valid values: <code>DNS</code> and <code>HTTP</code>.</p>
+         * <p>The DCV type. Valid values: DNS and HTTP.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP</p>
@@ -146,7 +146,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The value required for the DCV check. For a DNS check, this is the TXT record value. For an HTTP check, this is the content of the validation file.</p>
+         * <p>The DCV content.</p>
          * 
          * <strong>example:</strong>
          * <p>pH20CqwS5L3ZnvkhI436DCzadKFuG7QcUcvB_4KsAow.KfzYo4LH3EgOt7a73G-RqZkbR0eYtLfEUmtmqGmr4FQ</p>
@@ -203,7 +203,7 @@ public class GetCertificateResponseBody extends TeaModel {
 
     public static class GetCertificateResponseBodyResult extends TeaModel {
         /**
-         * <p>The error code for the certificate application process.</p>
+         * <p>The error code of the certificate application.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -212,7 +212,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public Long applyCode;
 
         /**
-         * <p>The error message for the certificate application process.</p>
+         * <p>The error message of the certificate application.</p>
          * 
          * <strong>example:</strong>
          * <p>canceled</p>
@@ -221,7 +221,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public String applyMessage;
 
         /**
-         * <p>The ID of the CAS certificate.</p>
+         * <p>The cloud certificate ID.</p>
          * 
          * <strong>example:</strong>
          * <p>30000478</p>
@@ -239,10 +239,10 @@ public class GetCertificateResponseBody extends TeaModel {
         public String commonName;
 
         /**
-         * <p>The time when the certificate record was created.</p>
+         * <p>The creation time. The time is in the YYYY-MM-DD HH:MM:SS format in the UTC/GMT time zone.</p>
          * 
          * <strong>example:</strong>
-         * <p>2020-05-12 02:00:53</p>
+         * <p>2026-07-01 07:25:23</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
@@ -281,7 +281,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public String issuer;
 
         /**
-         * <p>The issuer\&quot;s Common Name (CN).</p>
+         * <p>The certification authority.</p>
          * 
          * <strong>example:</strong>
          * <p>DigiCert Global Root CA</p>
@@ -290,7 +290,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public String issuerCN;
 
         /**
-         * <p>The Keyless server ID. This parameter is returned only when the value of <code>Type</code> is <code>keyless</code>.</p>
+         * <p>The Keyless server ID. This parameter is valid only when Type is set to keyless.</p>
          * 
          * <strong>example:</strong>
          * <p>baba39055622c008b90285a8838e****</p>
@@ -308,25 +308,25 @@ public class GetCertificateResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The end of the certificate\&quot;s validity period.</p>
+         * <p>The end time of the certificate validity period. The time is in the YYYY-MM-DD HH:MM:SS format in the UTC/GMT time zone.</p>
          * 
          * <strong>example:</strong>
-         * <p>2023-11-26T16:00:00Z</p>
+         * <p>2026-09-29 06:26:46</p>
          */
         @NameInMap("NotAfter")
         public String notAfter;
 
         /**
-         * <p>The start of the certificate\&quot;s validity period.</p>
+         * <p>The start time of the certificate validity period. The time is in the YYYY-MM-DD HH:MM:SS format in the UTC/GMT time zone.</p>
          * 
          * <strong>example:</strong>
-         * <p>2023-11-26T16:00:00Z</p>
+         * <p>2026-07-01 06:26:47</p>
          */
         @NameInMap("NotBefore")
         public String notBefore;
 
         /**
-         * <p>The algorithm of the certificate\&quot;s public key.</p>
+         * <p>The public key algorithm of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>ECDSA</p>
@@ -335,7 +335,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public String pubAlg;
 
         /**
-         * <p>The region where the certificate is stored.</p>
+         * <p>The region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -344,7 +344,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The Subject Alternative Name (SAN) field, which specifies the host names covered by the certificate.</p>
+         * <p>The Subject Alternative Name (SAN) of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com,*.example.com">www.example.com,*.example.com</a></p>
@@ -353,7 +353,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public String SAN;
 
         /**
-         * <p>The unique serial number assigned to the certificate by the issuer.</p>
+         * <p>The certificate serial number.</p>
          * 
          * <strong>example:</strong>
          * <p>babaded901474b9693acf530e0fb1daa</p>
@@ -362,7 +362,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public String serialNumber;
 
         /**
-         * <p>The algorithm used to sign the certificate.</p>
+         * <p>The signature algorithm of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>ECDSA-SHA1</p>
@@ -389,10 +389,10 @@ public class GetCertificateResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The time when the certificate record was last updated.</p>
+         * <p>The update time. The time is in the YYYY-MM-DD HH:MM:SS format in the UTC/GMT time zone.</p>
          * 
          * <strong>example:</strong>
-         * <p>2022-09-22 05:33:13</p>
+         * <p>2026-07-01 07:25:23</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

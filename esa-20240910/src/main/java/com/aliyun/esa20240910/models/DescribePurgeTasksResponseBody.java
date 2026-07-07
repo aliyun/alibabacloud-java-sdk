@@ -102,7 +102,7 @@ public class DescribePurgeTasksResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>The creation time, in ISO 8601 format (for example, 2024-01-01T00:00:00+Z).</p>
+         * <p>The creation time in ISO 8601 format (for example, 2024-01-01T00:00:00+Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2023-07-26T01:56:15Z</p>
@@ -129,13 +129,13 @@ public class DescribePurgeTasksResponseBody extends TeaModel {
         public String process;
 
         /**
-         * <p>The task status. Valid values:</p>
+         * <p>The status. Valid values:</p>
          * <ul>
-         * <li><p><strong>Complete</strong>: The task is complete.</p>
+         * <li><p><strong>Complete</strong>: Completed.</p>
          * </li>
-         * <li><p><strong>Refreshing</strong>: The task is in progress.</p>
+         * <li><p><strong>Refreshing</strong>: Refreshing.</p>
          * </li>
-         * <li><p><strong>Failed</strong>: The task failed.</p>
+         * <li><p><strong>Failed</strong>: Refresh failed.</p>
          * </li>
          * </ul>
          * 
@@ -160,9 +160,9 @@ public class DescribePurgeTasksResponseBody extends TeaModel {
          * <li><strong>file</strong> (default): file refresh.</li>
          * <li><strong>cachetag</strong>: cache tag refresh.</li>
          * <li><strong>directory</strong>: directory refresh.</li>
-         * <li><strong>ignoreParams</strong>: parameter-stripped refresh.</li>
+         * <li><strong>ignoreParams</strong>: ignore parameters refresh.</li>
          * <li><strong>hostname</strong>: hostname refresh.</li>
-         * <li><strong>purgeall</strong>: refresh all cached content of the site.</li>
+         * <li><strong>purgeall</strong>: purge all cache under the site.</li>
          * </ul>
          * 
          * <strong>example:</strong>

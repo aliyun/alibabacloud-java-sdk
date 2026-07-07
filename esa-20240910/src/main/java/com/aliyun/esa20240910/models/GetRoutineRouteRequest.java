@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRoutineRouteRequest extends TeaModel {
     /**
-     * <p>The ID of the configuration. Call the <a href="https://help.aliyun.com/document_detail/2879631.html">ListSiteRoutes</a> operation to get the ID.</p>
+     * <p>The configuration ID. You can call the <a href="https://help.aliyun.com/document_detail/2879631.html">ListSiteRoutes</a> operation to obtain the ConfigId.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetRoutineRouteRequest extends TeaModel {
     public Long configId;
 
     /**
-     * <p>The ID of the site. Call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to get the ID.</p>
+     * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

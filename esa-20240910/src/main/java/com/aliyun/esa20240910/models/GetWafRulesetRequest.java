@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetWafRulesetRequest extends TeaModel {
     /**
-     * <p>The ID of the WAF ruleset. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> operation.</p>
+     * <p>The ID of the WAF ruleset. You can call the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> operation to obtain the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10000001</p>
@@ -14,24 +14,16 @@ public class GetWafRulesetRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The execution phase of the WAF ruleset. Valid values:</p>
+     * <p>The WAF rule execution phase. Valid values:</p>
      * <ul>
-     * <li><p><code>http_whitelist</code>: A whitelist rule</p>
-     * </li>
-     * <li><p><code>http_custom</code>: A custom rule</p>
-     * </li>
-     * <li><p><code>http_managed</code>: A managed rule</p>
-     * </li>
-     * <li><p><code>http_anti_scan</code>: A scan protection rule</p>
-     * </li>
-     * <li><p><code>http_ratelimit</code>: A rate limit rule</p>
-     * </li>
-     * <li><p><code>ip_access_rule</code>: An IP access rule</p>
-     * </li>
-     * <li><p><code>http_bot</code>: A bot rule</p>
-     * </li>
-     * <li><p><code>http_security_level_rule</code>: A security rule</p>
-     * </li>
+     * <li>http_whitelist: whitelist rules</li>
+     * <li>http_custom: custom rules</li>
+     * <li>http_managed: managed rules</li>
+     * <li>http_anti_scan: scan protection rules</li>
+     * <li>http_ratelimit: rate limiting rules</li>
+     * <li>ip_access_rule: IP access rules</li>
+     * <li>http_bot: advanced mode bots</li>
+     * <li>http_security_level_rule: security rules</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,7 +33,7 @@ public class GetWafRulesetRequest extends TeaModel {
     public String phase;
 
     /**
-     * <p>The site ID. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

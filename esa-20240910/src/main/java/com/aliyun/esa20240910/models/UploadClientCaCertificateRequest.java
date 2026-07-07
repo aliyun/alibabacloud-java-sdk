@@ -24,7 +24,7 @@ public class UploadClientCaCertificateRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The website ID.</p>
+     * <p>The site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

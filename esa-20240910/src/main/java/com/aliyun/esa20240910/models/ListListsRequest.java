@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListListsRequest extends TeaModel {
     /**
-     * <p>Specifies the page number for paginated results.</p>
+     * <p>The page number for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListListsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Specifies the number of results to return per page.</p>
+     * <p>The number of entries per page for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,7 +23,7 @@ public class ListListsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>A JSON object containing query parameters to filter the results.</p>
+     * <p>The query parameters passed in JSON format, which contain various filter conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>ListLists</p>
@@ -62,7 +62,7 @@ public class ListListsRequest extends TeaModel {
 
     public static class ListListsRequestQueryArgs extends TeaModel {
         /**
-         * <p>If true, sorts the results in descending order.</p>
+         * <p>Specifies whether to sort the results in descending order.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -71,7 +71,7 @@ public class ListListsRequest extends TeaModel {
         public Boolean desc;
 
         /**
-         * <p>Filters by a partial match on the list description.</p>
+         * <p>The value used to fuzzy match list descriptions.</p>
          * 
          * <strong>example:</strong>
          * <p>a custom list</p>
@@ -80,7 +80,7 @@ public class ListListsRequest extends TeaModel {
         public String descriptionLike;
 
         /**
-         * <p>Filters by a partial match on the list ID.</p>
+         * <p>The value used to fuzzy match list IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>40000001</p>
@@ -89,7 +89,7 @@ public class ListListsRequest extends TeaModel {
         public String idLike;
 
         /**
-         * <p>Filters by a partial match on a list item.</p>
+         * <p>The value used to fuzzy match list content.</p>
          * 
          * <strong>example:</strong>
          * <p>10.1.1.1</p>
@@ -98,7 +98,7 @@ public class ListListsRequest extends TeaModel {
         public String itemLike;
 
         /**
-         * <p>Filters by the list kind.</p>
+         * <p>The kind of the custom list.</p>
          * 
          * <strong>example:</strong>
          * <p>ip</p>
@@ -107,7 +107,7 @@ public class ListListsRequest extends TeaModel {
         public String kind;
 
         /**
-         * <p>Filters by a partial match on both the list name and list items.</p>
+         * <p>The value used to fuzzy match both list content and list names simultaneously.</p>
          * 
          * <strong>example:</strong>
          * <p>10.1.1.1</p>
@@ -116,7 +116,7 @@ public class ListListsRequest extends TeaModel {
         public String nameItemLike;
 
         /**
-         * <p>Filters by a partial match on the list name.</p>
+         * <p>The value used to fuzzy match list names.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -125,7 +125,7 @@ public class ListListsRequest extends TeaModel {
         public String nameLike;
 
         /**
-         * <p>Specifies the sort field.</p>
+         * <p>The column by which to sort the results.</p>
          * 
          * <strong>example:</strong>
          * <p>id</p>

@@ -14,7 +14,7 @@ public class GetListResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the custom list.<a href="~~2850217~~"></a></p>
+     * <p>The ID of the custom list. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2850217.html">ListLists</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>40000001</p>
@@ -23,13 +23,13 @@ public class GetListResponseBody extends TeaModel {
     public Long id;
 
     /**
-     * <p>The items in the custom list, which are displayed as an array.</p>
+     * <p>The items of the custom list, displayed as an array.</p>
      */
     @NameInMap("Items")
     public java.util.List<String> items;
 
     /**
-     * <p>The type of the custom list.</p>
+     * <p>The kind of the custom list.</p>
      * 
      * <strong>example:</strong>
      * <p>ip</p>
@@ -57,7 +57,9 @@ public class GetListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The time when the custom list was last modified.</p>
+     * <p>The last update time of the custom list.</p>
+     * <p>Format: RFC 3339 / ISO 8601, UTC time zone (ending with Z).</p>
+     * <p>Example: 2026-06-10T14:23:45Z</p>
      * 
      * <strong>example:</strong>
      * <p>2024-01-01T00:00:00Z</p>

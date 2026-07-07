@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchCreateWafRulesResponseBody extends TeaModel {
     /**
-     * <p>An array of IDs for the newly created WAF rules. You can call the <a href="https://help.aliyun.com/document_detail/2878257.html">ListWafRules</a> operation to obtain the details of a specific rule.</p>
+     * <p>The IDs of the WAF rules. You can call the <a href="https://help.aliyun.com/document_detail/2878257.html">ListWafRules</a> operation to obtain the rule IDs.</p>
      */
     @NameInMap("Ids")
     public java.util.List<Long> ids;
@@ -20,7 +20,7 @@ public class BatchCreateWafRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the WAF ruleset. You can call the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> operation to obtain this ID.</p>
+     * <p>The ID of the WAF ruleset. You can call the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> operation to obtain the ruleset ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10000001</p>

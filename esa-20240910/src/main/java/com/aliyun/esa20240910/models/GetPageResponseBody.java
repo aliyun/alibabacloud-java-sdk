@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetPageResponseBody extends TeaModel {
     /**
-     * <p>The Base64-encoded content of the custom response page.</p>
+     * <p>The Base64-encoded response page content corresponding to the Content-Type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetPageResponseBody extends TeaModel {
     public String content;
 
     /**
-     * <p>The value for the page\&quot;s Content-Type HTTP header.</p>
+     * <p>The Content-Type field in the HTTP header.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class GetPageResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the custom response page.</p>
+     * <p>The ID of the custom response page. You can obtain this value by calling the <a href="https://help.aliyun.com/document_detail/2850223.html">ListPages</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>50000001</p>
@@ -71,13 +71,15 @@ public class GetPageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The sites to which the page is applied.</p>
+     * <p>The list of associated site IDs.</p>
      */
     @NameInMap("SiteIds")
     public java.util.List<Long> siteIds;
 
     /**
-     * <p>The time the custom response page was last modified.</p>
+     * <p>The last modification time of the custom response page.</p>
+     * <p>Format: RFC 3339 / ISO 8601, UTC time zone (ending with Z).</p>
+     * <p>Example: 2026-06-10T14:23:45Z</p>
      * 
      * <strong>example:</strong>
      * <p>2024-01-01T00:00:00Z</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListWafRulesetsResponseBody extends TeaModel {
     /**
-     * <p>The number of WAF rulesets used by the instance in this WAF phase.</p>
+     * <p>The number of WAF rulesets used by the instance in this WAF execution phase.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -41,13 +41,13 @@ public class ListWafRulesetsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A list of rulesets.</p>
+     * <p>The list of rulesets, including detailed information about each ruleset.</p>
      */
     @NameInMap("Rulesets")
     public java.util.List<ListWafRulesetsResponseBodyRulesets> rulesets;
 
     /**
-     * <p>The number of WAF rulesets used by the site in this WAF phase.</p>
+     * <p>The number of WAF rulesets used by the site in this WAF execution phase.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -56,7 +56,7 @@ public class ListWafRulesetsResponseBody extends TeaModel {
     public Long siteUsage;
 
     /**
-     * <p>The total number of entries returned after filtering.</p>
+     * <p>The total number of records after filtering.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -127,13 +127,13 @@ public class ListWafRulesetsResponseBody extends TeaModel {
 
     public static class ListWafRulesetsResponseBodyRulesets extends TeaModel {
         /**
-         * <p>A list of match fields.</p>
+         * <p>The list of match objects.</p>
          */
         @NameInMap("Fields")
         public java.util.List<String> fields;
 
         /**
-         * <p>The ID of the WAF ruleset. This value is returned by the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> operation.</p>
+         * <p>The ID of the WAF ruleset. You can call the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> operation to obtain the ruleset ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10000001</p>
@@ -151,24 +151,16 @@ public class ListWafRulesetsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The execution phase of the ruleset. Valid values are:</p>
+         * <p>The WAF rule execution phase. Valid values:</p>
          * <ul>
-         * <li><p><code>http_whitelist</code>: whitelist rule</p>
-         * </li>
-         * <li><p><code>http_custom</code>: custom rule</p>
-         * </li>
-         * <li><p><code>http_managed</code>: managed rule</p>
-         * </li>
-         * <li><p><code>http_anti_scan</code>: scan protection rule</p>
-         * </li>
-         * <li><p><code>http_ratelimit</code>: rate limiting rule</p>
-         * </li>
-         * <li><p><code>ip_access_rule</code>: IP access rule</p>
-         * </li>
-         * <li><p><code>http_bot</code>: advanced bot protection</p>
-         * </li>
-         * <li><p><code>http_security_level_rule</code>: security rule</p>
-         * </li>
+         * <li>http_whitelist: whitelist rules</li>
+         * <li>http_custom: custom rules</li>
+         * <li>http_managed: managed rules</li>
+         * <li>http_anti_scan: scan protection rules</li>
+         * <li>http_ratelimit: frequency control rules</li>
+         * <li>ip_access_rule: IP access rules</li>
+         * <li>http_bot: advanced mode bots</li>
+         * <li>http_security_level_rule: security rules</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -187,7 +179,7 @@ public class ListWafRulesetsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The protection target for the \&quot;http_bot\&quot; phase.</p>
+         * <p>The protection target type in http_bot.</p>
          * 
          * <strong>example:</strong>
          * <p>web</p>
@@ -196,13 +188,15 @@ public class ListWafRulesetsResponseBody extends TeaModel {
         public String target;
 
         /**
-         * <p>A list of rule types.</p>
+         * <p>The list of rule types.</p>
          */
         @NameInMap("Types")
         public java.util.List<String> types;
 
         /**
-         * <p>The time the ruleset was last modified.</p>
+         * <p>The last modification time of the ruleset.</p>
+         * <p>Format: RFC 3339 / ISO 8601, UTC time zone (ending with Z).</p>
+         * <p>Example: 2026-06-10T14:23:45Z</p>
          * 
          * <strong>example:</strong>
          * <p>2024-01-01T00:00:00Z</p>

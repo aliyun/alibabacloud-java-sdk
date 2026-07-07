@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetClientCaCertificateRequest extends TeaModel {
     /**
-     * <p>The ID of the certificate. You can get this ID by calling the <a href="https://help.aliyun.com/document_detail/2860651.html">ListClientCaCertificates</a> API.</p>
+     * <p>The certificate ID. You can call the <a href="https://help.aliyun.com/document_detail/2860651.html">ListClientCaCertificates</a> operation to obtain the certificate ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetClientCaCertificateRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The ID of the site. You can get this ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
+     * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

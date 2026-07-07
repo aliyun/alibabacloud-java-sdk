@@ -8,7 +8,7 @@ public class UpdateRoutineRouteRequest extends TeaModel {
      * <p>The bypass mode. Valid values:</p>
      * <ul>
      * <li>on: enabled</li>
-     * <li>off: disabled.</li>
+     * <li>off: disabled</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class UpdateRoutineRouteRequest extends TeaModel {
     public Long configId;
 
     /**
-     * <p>The fallback-to-origin switch. When enabled, if the function encounters an exception such as CPU usage exceeding the limit, the request falls back to the origin server. Valid values:</p>
+     * <p>The back-to-origin on exception switch. When enabled, if the function encounters an exception such as CPU usage exceeding the limit, the request is forwarded to the origin server. Valid values:</p>
      * <ul>
      * <li>on: Enabled.</li>
      * <li>off: Disabled.</li>
@@ -44,7 +44,7 @@ public class UpdateRoutineRouteRequest extends TeaModel {
      * <p>The route switch. Valid values:</p>
      * <ul>
      * <li>on: enabled</li>
-     * <li>off: disabled.</li>
+     * <li>off: disabled</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class UpdateRoutineRouteRequest extends TeaModel {
     public String routeName;
 
     /**
-     * <p>The name of the Edge Routine.</p>
+     * <p>The Edge Routine name.</p>
      * 
      * <strong>example:</strong>
      * <p>test-routine1</p>
@@ -81,7 +81,7 @@ public class UpdateRoutineRouteRequest extends TeaModel {
     public String rule;
 
     /**
-     * <p>The execution order of the rule.</p>
+     * <p>The rule execution order.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -100,7 +100,7 @@ public class UpdateRoutineRouteRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The Edge Routine timeout period. Valid values: 5 to 60.</p>
+     * <p>The Edge Routine timeout period. Valid values: 5 to 60. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>

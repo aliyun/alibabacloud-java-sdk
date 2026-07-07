@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListUrlObservationsResponseBody extends TeaModel {
     /**
-     * <p>The configurations of the feature.</p>
+     * <p>The configuration data.</p>
      */
     @NameInMap("Configs")
     public java.util.List<ListUrlObservationsResponseBodyConfigs> configs;
 
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The current page number, which is the same as the PageNumber request parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,7 +29,7 @@ public class ListUrlObservationsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
@@ -38,7 +38,7 @@ public class ListUrlObservationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -47,7 +47,7 @@ public class ListUrlObservationsResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The total number of pages returned.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -119,10 +119,10 @@ public class ListUrlObservationsResponseBody extends TeaModel {
         public Long configId;
 
         /**
-         * <p>SDK integration. Valid values:</p>
+         * <p>The SDK integration method. Valid values:</p>
          * <ul>
-         * <li><strong>automatic</strong></li>
-         * <li><strong>manual</strong></li>
+         * <li><strong>automatic</strong>: Automatic integration.</li>
+         * <li><strong>manual</strong>: Manual integration.</li>
          * </ul>
          * 
          * <strong>example:</strong>

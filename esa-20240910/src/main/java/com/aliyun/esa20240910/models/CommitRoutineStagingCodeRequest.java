@@ -14,7 +14,7 @@ public class CommitRoutineStagingCodeRequest extends TeaModel {
     public String codeDescription;
 
     /**
-     * <p>The deployment environment whose environment variable configuration is used. If you do not specify this parameter, environment variables are not used.</p>
+     * <p>The deployment environment. The environment variable configuration of the specified environment is used. If you do not specify this parameter, environment variables are not used.</p>
      * 
      * <strong>example:</strong>
      * <p>production</p>

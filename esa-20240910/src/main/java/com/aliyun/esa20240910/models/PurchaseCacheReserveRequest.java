@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class PurchaseCacheReserveRequest extends TeaModel {
     /**
-     * <p>Whether to automatically pay. The default value is false.</p>
+     * <p>Specifies whether to enable automatic payment. Default value: false. Valid values:</p>
      * <ul>
-     * <li>true: Automatically pay.</li>
-     * <li>false: Do not automatically pay.</li>
+     * <li>true: Enables automatic payment.</li>
+     * <li>false: Disables automatic payment.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class PurchaseCacheReserveRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>Whether to auto-renew:</p>
+     * <p>Specifies whether to enable auto-renewal. Valid values:</p>
      * <ul>
-     * <li>true: Auto-renew.</li>
-     * <li>false: Do not auto-renew.</li>
+     * <li>true: Enables auto-renewal.</li>
+     * <li>false: Disables auto-renewal.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,10 +31,9 @@ public class PurchaseCacheReserveRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>Billing type</p>
+     * <p>The billing type. Valid values:</p>
      * <ul>
-     * <li>PREPAY: Prepaid.</li>
-     * <li>POSTPAY: Postpaid.</li>
+     * <li>PREPAY: upfront.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,10 +43,10 @@ public class PurchaseCacheReserveRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>Cache retention region</p>
+     * <p>The cache reserve region.</p>
      * <ul>
-     * <li>HK: Hong Kong, China</li>
-     * <li>CN-beijing: Mainland China - Beijing</li>
+     * <li>HK: Hong Kong (China)</li>
+     * <li>CN-beijing: Chinese mainland - Beijing</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,7 +56,7 @@ public class PurchaseCacheReserveRequest extends TeaModel {
     public String crRegion;
 
     /**
-     * <p>Purchase period (unit: month).</p>
+     * <p>The purchase period. Unit: months.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -66,7 +65,7 @@ public class PurchaseCacheReserveRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>Cache retention specification (unit: GB).</p>
+     * <p>The cache reserve specification. Unit: GB.</p>
      * 
      * <strong>example:</strong>
      * <p>512000</p>

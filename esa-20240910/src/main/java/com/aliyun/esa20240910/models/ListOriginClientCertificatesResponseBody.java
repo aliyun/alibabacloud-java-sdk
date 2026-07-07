@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOriginClientCertificatesResponseBody extends TeaModel {
     /**
-     * <p>The page number. The default value is <strong>1</strong>.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +38,7 @@ public class ListOriginClientCertificatesResponseBody extends TeaModel {
     public java.util.List<ListOriginClientCertificatesResponseBodyResult> result;
 
     /**
-     * <p>The ID of the site.</p>
+     * <p>The site ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123456789****</p>
@@ -47,7 +47,7 @@ public class ListOriginClientCertificatesResponseBody extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The name of the site.</p>
+     * <p>The site name.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -136,7 +136,7 @@ public class ListOriginClientCertificatesResponseBody extends TeaModel {
         public String commonName;
 
         /**
-         * <p>The time when the certificate was created.</p>
+         * <p>The creation time. The time is in the YYYY-MM-DD HH:MM:SS format in the UTC/GMT time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-06-24 07:48:51</p>
@@ -154,13 +154,13 @@ public class ListOriginClientCertificatesResponseBody extends TeaModel {
         public String fingerprintSha256;
 
         /**
-         * <p>The hostnames bound to the certificate.</p>
+         * <p>The list of associated domain names.</p>
          */
         @NameInMap("Hostnames")
         public java.util.List<String> hostnames;
 
         /**
-         * <p>The ID of the certificate.</p>
+         * <p>The certificate ID.</p>
          * 
          * <strong>example:</strong>
          * <p>babaabcd****</p>
@@ -169,7 +169,7 @@ public class ListOriginClientCertificatesResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The issuer of the certificate.</p>
+         * <p>The certification authority.</p>
          * 
          * <strong>example:</strong>
          * <p>DigiCert</p>
@@ -178,7 +178,7 @@ public class ListOriginClientCertificatesResponseBody extends TeaModel {
         public String issuer;
 
         /**
-         * <p>The name of the certificate.</p>
+         * <p>The certificate name.</p>
          * 
          * <strong>example:</strong>
          * <p>yourCertName</p>
@@ -187,7 +187,7 @@ public class ListOriginClientCertificatesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The expiration date and time of the certificate.</p>
+         * <p>The end time of the certificate validity period. The time is in the YYYY-MM-DD HH:MM:SS format in the UTC/GMT time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-31 02:08:00</p>
@@ -196,7 +196,7 @@ public class ListOriginClientCertificatesResponseBody extends TeaModel {
         public String notAfter;
 
         /**
-         * <p>The beginning of the certificate\&quot;s validity period.</p>
+         * <p>The start time of the certificate validity period. The time is in the YYYY-MM-DD HH:MM:SS format in the UTC/GMT time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-31 02:08:00</p>
@@ -223,7 +223,7 @@ public class ListOriginClientCertificatesResponseBody extends TeaModel {
         public String SAN;
 
         /**
-         * <p>The serial number of the certificate.</p>
+         * <p>The certificate serial number.</p>
          * 
          * <strong>example:</strong>
          * <p>babaded901474b9693acf530e0fb1d**</p>
@@ -241,7 +241,7 @@ public class ListOriginClientCertificatesResponseBody extends TeaModel {
         public String signatureAlgorithm;
 
         /**
-         * <p>The status of the certificate.</p>
+         * <p>The certificate status.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -250,7 +250,7 @@ public class ListOriginClientCertificatesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The type of the certificate.</p>
+         * <p>The certificate type.</p>
          * 
          * <strong>example:</strong>
          * <p>upload</p>
@@ -259,7 +259,7 @@ public class ListOriginClientCertificatesResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The time when the certificate was last updated.</p>
+         * <p>The update time. The time is in the YYYY-MM-DD HH:MM:SS format in the UTC/GMT time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-07-20 06:18:42</p>

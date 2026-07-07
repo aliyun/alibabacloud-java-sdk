@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetWafRulesetResponseBody extends TeaModel {
     /**
-     * <p>The ID of the WAF ruleset. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> operation.</p>
+     * <p>The ID of the WAF ruleset. You can call the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> operation to obtain the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10000001</p>
@@ -24,24 +24,16 @@ public class GetWafRulesetResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The execution phase of the WAF ruleset. Valid values:</p>
+     * <p>The WAF rule execution phase. Valid values:</p>
      * <ul>
-     * <li><p><code>http_whitelist</code>: A whitelist rule</p>
-     * </li>
-     * <li><p><code>http_custom</code>: A custom rule</p>
-     * </li>
-     * <li><p><code>http_managed</code>: A managed rule</p>
-     * </li>
-     * <li><p><code>http_anti_scan</code>: A scan protection rule</p>
-     * </li>
-     * <li><p><code>http_ratelimit</code>: A rate limit rule</p>
-     * </li>
-     * <li><p><code>ip_access_rule</code>: An IP access rule</p>
-     * </li>
-     * <li><p><code>http_bot</code>: A bot rule</p>
-     * </li>
-     * <li><p><code>http_security_level_rule</code>: A security rule</p>
-     * </li>
+     * <li>http_whitelist: whitelist rules</li>
+     * <li>http_custom: custom rules</li>
+     * <li>http_managed: managed rules</li>
+     * <li>http_anti_scan: scan protection rules</li>
+     * <li>http_ratelimit: rate limiting rules</li>
+     * <li>ip_access_rule: IP access rules</li>
+     * <li>http_bot: advanced mode bots</li>
+     * <li>http_security_level_rule: security rules</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -67,7 +59,7 @@ public class GetWafRulesetResponseBody extends TeaModel {
     public java.util.List<WafRuleConfig> rules;
 
     /**
-     * <p>The shared configuration for rules within the ruleset.</p>
+     * <p>The shared configuration of rules in the ruleset.</p>
      */
     @NameInMap("Shared")
     public WafBatchRuleShared shared;
@@ -82,7 +74,9 @@ public class GetWafRulesetResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The time when the ruleset was last updated.</p>
+     * <p>The last modification time of the ruleset.</p>
+     * <p>Format: RFC 3339 / ISO 8601, UTC time zone (ending with Z).</p>
+     * <p>Example: 2026-06-10T14:23:45Z</p>
      * 
      * <strong>example:</strong>
      * <p>2024-01-01T00:00:00Z</p>

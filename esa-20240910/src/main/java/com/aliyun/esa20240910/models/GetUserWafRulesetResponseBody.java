@@ -14,7 +14,7 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The WAF rule set.</p>
+     * <p>The WAF ruleset.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -45,16 +45,12 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
 
     public static class GetUserWafRulesetResponseBodyRulesetRules extends TeaModel {
         /**
-         * <p>The action for the rule. Valid values:</p>
+         * <p>The action of the rule. Valid values:</p>
          * <ul>
-         * <li><p><code>deny</code>: Blocks the request.</p>
-         * </li>
-         * <li><p><code>monitor</code>: Monitors the request.</p>
-         * </li>
-         * <li><p><code>js</code>: Triggers a JS challenge.</p>
-         * </li>
-         * <li><p><code>captcha</code>: Triggers a CAPTCHA challenge.</p>
-         * </li>
+         * <li>deny: Block.</li>
+         * <li>monitor: Monitor.</li>
+         * <li>js: JavaScript Challenge.</li>
+         * <li>captcha: Slider challenge.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -64,7 +60,7 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
         public String action;
 
         /**
-         * <p>A list of WAF rule statistics fields.</p>
+         * <p>The list of statistics fields for the WAF rule.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;http.host&quot;]</p>
@@ -73,7 +69,7 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
         public java.util.List<String> characteristicsFields;
 
         /**
-         * <p>The WAF rule configuration.</p>
+         * <p>The configuration of the WAF rule.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -87,7 +83,7 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
         public WafRuleConfig config;
 
         /**
-         * <p>A list of WAF rule match fields.</p>
+         * <p>The list of match fields for the WAF rule.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;ip.src&quot;]</p>
@@ -96,7 +92,7 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
         public java.util.List<String> fields;
 
         /**
-         * <p>The ID of the WAF rule.</p>
+         * <p>The WAF rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>20000001</p>
@@ -114,24 +110,13 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The evaluation phase of the WAF rule. Valid values:</p>
+         * <p>The phase in which the WAF rule runs. Valid values:</p>
          * <ul>
-         * <li><p><code>http_whitelist</code>: A whitelist rule.</p>
-         * </li>
-         * <li><p><code>http_custom</code>: A custom rule.</p>
-         * </li>
-         * <li><p><code>http_managed</code>: A managed rule.</p>
-         * </li>
-         * <li><p><code>http_anti_scan</code>: A scan protection rule.</p>
-         * </li>
-         * <li><p><code>http_ratelimit</code>: A rate limiting rule.</p>
-         * </li>
-         * <li><p><code>ip_access_rule</code>: An IP access rule.</p>
-         * </li>
-         * <li><p><code>http_bot</code>: A bot management rule.</p>
-         * </li>
-         * <li><p><code>http_security_level_rule</code>: A security level rule.</p>
-         * </li>
+         * <li>http_whitelist: whitelist rule</li>
+         * <li>http_custom: custom rule</li>
+         * <li>http_managed: managed rule</li>
+         * <li>http_anti_scan: scan protection rule</li>
+         * <li>http_ratelimit: frequency control rule</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -150,7 +135,7 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
         public Long position;
 
         /**
-         * <p>The ID of the WAF rule set.</p>
+         * <p>The WAF ruleset ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10000001</p>
@@ -159,7 +144,7 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
         public Long rulesetId;
 
         /**
-         * <p>The skip mode for the WAF rule.</p>
+         * <p>The skip mode of the WAF rule.</p>
          * 
          * <strong>example:</strong>
          * <p>all</p>
@@ -177,7 +162,7 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The phases that the rule skips.</p>
+         * <p>The list of phases to skip for the WAF rule.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;http_custom&quot;]</p>
@@ -195,7 +180,9 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The time the WAF rule was last updated.</p>
+         * <p>The time when the WAF rule was last updated.</p>
+         * <p>Format: RFC 3339 / ISO 8601, UTC time zone (ending with Z).</p>
+         * <p>Example: 2025-07-07T15:00:00Z</p>
          * 
          * <strong>example:</strong>
          * <p>2025-07-07T15:00:00Z</p>
@@ -324,7 +311,7 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
 
     public static class GetUserWafRulesetResponseBodyRuleset extends TeaModel {
         /**
-         * <p>The description of the WAF rule set.</p>
+         * <p>The description of the WAF ruleset.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -333,7 +320,7 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The expression of the WAF rule set.</p>
+         * <p>The expression of the WAF ruleset.</p>
          * 
          * <strong>example:</strong>
          * <p>ip.src == 1.1.1.1</p>
@@ -342,7 +329,7 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
         public String expression;
 
         /**
-         * <p>The ID of the WAF rule set.</p>
+         * <p>The WAF ruleset ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10000001</p>
@@ -351,7 +338,7 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The name of the WAF rule set.</p>
+         * <p>The name of the WAF ruleset.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -360,24 +347,13 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The evaluation phase of the WAF rule set. Valid values:</p>
+         * <p>The phase in which the WAF rule runs. Valid values:</p>
          * <ul>
-         * <li><p><code>http_whitelist</code>: A whitelist rule.</p>
-         * </li>
-         * <li><p><code>http_custom</code>: A custom rule.</p>
-         * </li>
-         * <li><p><code>http_managed</code>: A managed rule.</p>
-         * </li>
-         * <li><p><code>http_anti_scan</code>: A scan protection rule.</p>
-         * </li>
-         * <li><p><code>http_ratelimit</code>: A rate limiting rule.</p>
-         * </li>
-         * <li><p><code>ip_access_rule</code>: An IP access rule.</p>
-         * </li>
-         * <li><p><code>http_bot</code>: A bot management rule.</p>
-         * </li>
-         * <li><p><code>http_security_level_rule</code>: A security level rule.</p>
-         * </li>
+         * <li>http_whitelist: whitelist rule</li>
+         * <li>http_custom: custom rule</li>
+         * <li>http_managed: managed rule</li>
+         * <li>http_anti_scan: scan protection rule</li>
+         * <li>http_ratelimit: frequency control rule</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -387,7 +363,7 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
         public String phase;
 
         /**
-         * <p>The position of the WAF rule set.</p>
+         * <p>The position of the WAF ruleset.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -396,7 +372,7 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
         public Long position;
 
         /**
-         * <p>A list of rules in the WAF rule set.</p>
+         * <p>The list of rule configurations in the WAF ruleset.</p>
          * 
          * <strong>example:</strong>
          * <p>[{}]</p>
@@ -405,7 +381,7 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
         public java.util.List<GetUserWafRulesetResponseBodyRulesetRules> rules;
 
         /**
-         * <p>The shared configuration of the WAF rule set.</p>
+         * <p>The shared configuration of the WAF ruleset.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -414,7 +390,7 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
         public WafBatchRuleShared shared;
 
         /**
-         * <p>The status of the WAF rule set.</p>
+         * <p>The status of the WAF ruleset.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>

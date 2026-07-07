@@ -110,7 +110,7 @@ public class GetClientCaCertificateResponseBody extends TeaModel {
 
     public static class GetClientCaCertificateResponseBodyResult extends TeaModel {
         /**
-         * <p>The common name (CN) of the certificate.</p>
+         * <p>The common name of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -119,7 +119,7 @@ public class GetClientCaCertificateResponseBody extends TeaModel {
         public String commonName;
 
         /**
-         * <p>The time of the certificate\&quot;s creation.</p>
+         * <p>The creation time. The time is in the YYYY-MM-DD HH:MM:SS format in the UTC/GMT time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-05 18:24:04</p>
@@ -129,6 +129,9 @@ public class GetClientCaCertificateResponseBody extends TeaModel {
 
         /**
          * <p>The SHA-256 fingerprint of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1dc5fc9af4eead2570c70d94b416130baeb6d4429b51fd3557379588456a****</p>
          */
         @NameInMap("FingerprintSha256")
         public String fingerprintSha256;
@@ -143,7 +146,7 @@ public class GetClientCaCertificateResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The issuer of the certificate.</p>
+         * <p>The certificate issuer.</p>
          * 
          * <strong>example:</strong>
          * <p>GlobalSign nv-sa</p>
@@ -161,7 +164,7 @@ public class GetClientCaCertificateResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The expiration date of the certificate.</p>
+         * <p>The end time of the certificate validity period. The time is in the YYYY-MM-DD HH:MM:SS format in the UTC/GMT time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-31 02:08:00</p>
@@ -170,7 +173,7 @@ public class GetClientCaCertificateResponseBody extends TeaModel {
         public String notAfter;
 
         /**
-         * <p>The start of the certificate\&quot;s validity period.</p>
+         * <p>The start time of the certificate validity period. The time is in the YYYY-MM-DD HH:MM:SS format in the UTC/GMT time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-31 02:08:00</p>
@@ -197,7 +200,10 @@ public class GetClientCaCertificateResponseBody extends TeaModel {
         public String SAN;
 
         /**
-         * <p>The serial number of the certificate.</p>
+         * <p>The certificate serial number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>babaded901474b9693acf530e0fb1d**</p>
          */
         @NameInMap("SerialNumber")
         public String serialNumber;
@@ -230,7 +236,7 @@ public class GetClientCaCertificateResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The time of the certificate\&quot;s last update.</p>
+         * <p>The update time. The time is in the YYYY-MM-DD HH:MM:SS format in the UTC/GMT time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-05 18:24:04</p>

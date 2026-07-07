@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetPageRequest extends TeaModel {
     /**
-     * <p>The ID of the custom response page. To obtain this ID, call the <a href="https://help.aliyun.com/document_detail/2850223.html">ListPages</a> API.</p>
+     * <p>The ID of the custom response page. You can obtain this value by calling the <a href="https://help.aliyun.com/document_detail/2850223.html">ListPages</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>50000001</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateListResponseBody extends TeaModel {
     /**
-     * <p>The ID of the custom list.<a href="~~2850217~~"></a></p>
+     * <p>The ID of the custom list. You can obtain this value by calling the <a href="https://help.aliyun.com/document_detail/2850217.html">ListLists</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>40000001</p>

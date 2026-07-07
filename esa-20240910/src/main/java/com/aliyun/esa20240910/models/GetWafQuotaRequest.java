@@ -5,16 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetWafQuotaRequest extends TeaModel {
     /**
-     * <p>The path of the WAF quota. Valid values:</p>
+     * <p>The paths of WAF quotas. Valid values:</p>
      * <ul>
-     * <li><p>managed_rules_group: The quota for managed rule groups.</p>
-     * </li>
-     * <li><p>list: The quota for custom lists.</p>
-     * </li>
-     * <li><p>page: The quota for custom response pages.</p>
-     * </li>
-     * <li><p>scene_policy: The quota for scene-based protection.</p>
-     * </li>
+     * <li>managed_rules_group: the quota for WAF managed rule groups.</li>
+     * <li>list: the quota for custom lists.</li>
+     * <li>page: the quota for custom response pages.</li>
+     * <li>scene_policy: the quota for scenario-specific protection rules.</li>
      * </ul>
      * 
      * <strong>example:</strong>

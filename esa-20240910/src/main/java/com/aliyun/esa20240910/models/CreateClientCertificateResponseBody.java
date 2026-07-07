@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateClientCertificateResponseBody extends TeaModel {
     /**
-     * <p>The ID of the CA certificate.</p>
+     * <p>The CA certificate ID.</p>
      * 
      * <strong>example:</strong>
      * <p>babaded901474b9693acf530e0fb1dbb</p>
@@ -23,7 +23,7 @@ public class CreateClientCertificateResponseBody extends TeaModel {
     public String certificate;
 
     /**
-     * <p>The Common Name of the certificate.</p>
+     * <p>The common name of the certificate.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -41,7 +41,7 @@ public class CreateClientCertificateResponseBody extends TeaModel {
     public String fingerprintSha256;
 
     /**
-     * <p>The certificate ID on ESA.</p>
+     * <p>The certificate ID.</p>
      * 
      * <strong>example:</strong>
      * <p>babaded901474b9693acf530e0fb1d95</p>
@@ -50,7 +50,7 @@ public class CreateClientCertificateResponseBody extends TeaModel {
     public String id;
 
     /**
-     * <p>The CA that issued the certificate.</p>
+     * <p>The certification authority that issued the certificate.</p>
      * 
      * <strong>example:</strong>
      * <p>ESA CA</p>
@@ -59,7 +59,7 @@ public class CreateClientCertificateResponseBody extends TeaModel {
     public String issuer;
 
     /**
-     * <p>The time when the certificate expires.</p>
+     * <p>The end time of the certificate validity period.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-12-01T02:12:49Z</p>
@@ -68,7 +68,7 @@ public class CreateClientCertificateResponseBody extends TeaModel {
     public String notAfter;
 
     /**
-     * <p>The time when the certificate takes effect.</p>
+     * <p>The start time of the certificate validity period.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-12-01T02:12:49Z</p>
@@ -95,7 +95,7 @@ public class CreateClientCertificateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The serial number of the certificate.</p>
+     * <p>The certificate serial number.</p>
      * 
      * <strong>example:</strong>
      * <p>babaded901474b9693acf530e0fb1daa</p>
@@ -113,7 +113,7 @@ public class CreateClientCertificateResponseBody extends TeaModel {
     public String signatureAlgorithm;
 
     /**
-     * <p>The status of the certificate.</p>
+     * <p>The certificate status.</p>
      * 
      * <strong>example:</strong>
      * <p>active</p>
@@ -122,7 +122,7 @@ public class CreateClientCertificateResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The validity period of the certificate. Unit: day.</p>
+     * <p>The validity period of the certificate.</p>
      * 
      * <strong>example:</strong>
      * <p>365</p>

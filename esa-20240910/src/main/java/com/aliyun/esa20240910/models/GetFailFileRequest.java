@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetFailFileRequest extends TeaModel {
     /**
-     * <p>The site ID. You can obtain this value by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
+     * <p>The site ID. You can obtain this by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>123456789****</p>
@@ -14,7 +14,7 @@ public class GetFailFileRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The ID of the file upload task.</p>
+     * <p>The file upload task ID. You can obtain this by calling the <a href="https://help.aliyun.com/document_detail/2850466.html">UploadFile</a> operation to create an upload task, or by calling the <a href="https://help.aliyun.com/document_detail/2851127.html">ListUploadTasks</a> operation to query existing tasks.</p>
      * 
      * <strong>example:</strong>
      * <p>1593805857882113</p>

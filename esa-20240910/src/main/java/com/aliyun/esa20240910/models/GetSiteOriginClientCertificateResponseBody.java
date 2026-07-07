@@ -23,7 +23,7 @@ public class GetSiteOriginClientCertificateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The certificate details.</p>
+     * <p>The certificate information.</p>
      */
     @NameInMap("Result")
     public GetSiteOriginClientCertificateResponseBodyResult result;
@@ -119,7 +119,7 @@ public class GetSiteOriginClientCertificateResponseBody extends TeaModel {
         public String commonName;
 
         /**
-         * <p>The time when the certificate record was created.</p>
+         * <p>The creation time. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-06-24 07:48:51</p>
@@ -146,7 +146,7 @@ public class GetSiteOriginClientCertificateResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The issuer of the certificate.</p>
+         * <p>The certification authority that issued the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>DigiCert</p>
@@ -164,7 +164,7 @@ public class GetSiteOriginClientCertificateResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The time after which the certificate is not valid.</p>
+         * <p>The end time of the certificate validity period. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-31 02:08:00</p>
@@ -173,7 +173,7 @@ public class GetSiteOriginClientCertificateResponseBody extends TeaModel {
         public String notAfter;
 
         /**
-         * <p>The time before which the certificate is not valid.</p>
+         * <p>The start time of the certificate validity period. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-31 02:08:00</p>
@@ -191,7 +191,7 @@ public class GetSiteOriginClientCertificateResponseBody extends TeaModel {
         public String pubkeyAlgorithm;
 
         /**
-         * <p>The subject alternative name (SAN) of the certificate.</p>
+         * <p>The Subject Alternative Name (SAN) of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com,*.example.com">www.example.com,*.example.com</a></p>
@@ -200,7 +200,7 @@ public class GetSiteOriginClientCertificateResponseBody extends TeaModel {
         public String SAN;
 
         /**
-         * <p>The serial number of the certificate.</p>
+         * <p>The certificate serial number.</p>
          * 
          * <strong>example:</strong>
          * <p>babab022c5e9b27bf9c64d7f4b16****</p>
@@ -236,7 +236,7 @@ public class GetSiteOriginClientCertificateResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The time when the certificate record was last updated.</p>
+         * <p>The update time. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-07-20 06:18:42</p>

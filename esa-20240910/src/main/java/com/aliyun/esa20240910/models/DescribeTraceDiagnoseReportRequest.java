@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTraceDiagnoseReportRequest extends TeaModel {
     /**
-     * <p>Diagnostic task ID.</p>
+     * <p>The diagnostic task ID. You must specify at least one of TraceId and TaskId. If neither is specified, the API returns an error.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxxxxxxx-x-x-xxxxxxxxxxxxxxx</p>
@@ -14,7 +14,7 @@ public class DescribeTraceDiagnoseReportRequest extends TeaModel {
     public String taskId;
 
     /**
-     * <p>Diagnostic trace ID.</p>
+     * <p>The diagnostic trace ID. You must specify at least one of TraceId and TaskId. If neither is specified, the API returns an error.</p>
      * 
      * <strong>example:</strong>
      * <p>0000xxxxxxxxxxxxxxxxxxxxxx75e</p>

@@ -5,7 +5,16 @@ import com.aliyun.tea.*;
 
 public class UpdatePageRequest extends TeaModel {
     /**
-     * <p>The Base64-encoded content for the response page, corresponding to the specified <code>ContentType</code>.</p>
+     * <p>The BASE64-encoded page content, which must be consistent with <code>ContentType</code>.</p>
+     * <p><strong>Encoding method</strong>:</p>
+     * <ol>
+     * <li>Convert the original page content to a UTF-8 byte string.</li>
+     * <li>Encode the byte string using standard BASE64 encoding.</li>
+     * </ol>
+     * <p><strong>Example</strong>: <code>&lt;html&gt;hello page&lt;/html&gt;</code> → <code>PGh0bWw+aGVsbG8gcGFnZTwvaHRtbD4=</code></p>
+     * <blockquote>
+     * <p>The maximum size limit is subject to the server-side custom page specification. If this parameter is not specified, the original page content is retained.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,13 +24,15 @@ public class UpdatePageRequest extends TeaModel {
     public String content;
 
     /**
-     * <p>The value for the Content-Type HTTP header. Examples:</p>
+     * <p>The MIME type of the page content, which is returned to the client as the HTTP <code>Content-Type</code> response header when a rule is matched.</p>
+     * <p><strong>Common values</strong>:</p>
      * <ul>
-     * <li><p>text/html</p>
-     * </li>
-     * <li><p>application/json</p>
-     * </li>
+     * <li><code>text/html</code>: HTML page</li>
+     * <li><code>application/json</code>: JSON response</li>
      * </ul>
+     * <blockquote>
+     * <p>The complete set of supported values is subject to the server-side specification. The actual format of <code>Content</code> must match this field. A mismatch may cause browser rendering issues.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +42,7 @@ public class UpdatePageRequest extends TeaModel {
     public String contentType;
 
     /**
-     * <p>The description of the custom response page.</p>
+     * <p>The description of the page after the update. This is used to identify the purpose of the page in the console list. This is an optional field. If this parameter is not specified, the original description is retained. The maximum field length is subject to the server-side limit.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +52,7 @@ public class UpdatePageRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the custom response page. Retrieve this ID by calling the <a href="https://help.aliyun.com/document_detail/2850223.html">ListPages</a> API.</p>
+     * <p>The ID of the custom response page. You can obtain this value by calling the <a href="https://help.aliyun.com/document_detail/2850223.html">ListPages</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +62,8 @@ public class UpdatePageRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The name of the custom response page.</p>
+     * <p>The name of the custom response page after the update.</p>
+     * <p><strong>Naming suggestion</strong>: Use a combination of letters, digits, and underscores (such as <code>blocked_page_v2</code>) for easy reference in rules. The character set, maximum length, and uniqueness constraints are subject to the server-side naming conventions for custom pages. If this parameter is not specified, the original name is retained.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,6 +72,14 @@ public class UpdatePageRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The list of site IDs associated with this page after the update. This parameter uses full overwrite semantics.</p>
+     * <ul>
+     * <li>You can obtain site IDs by calling the <code>ListSites</code> operation.</li>
+     * <li>Passing an empty list dissociates all sites from the page.</li>
+     * <li>Including a site ID that does not belong to your account returns an <code>InvalidParameter</code> error.</li>
+     * </ul>
+     */
     @NameInMap("SiteIds")
     public java.util.List<Long> siteIds;
 

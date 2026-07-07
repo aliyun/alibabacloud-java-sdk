@@ -5,49 +5,55 @@ import com.aliyun.tea.*;
 
 public class WafSiteSettings extends TeaModel {
     /**
-     * <p>Configuration for adding bot protection headers.</p>
+     * <p>The bot protection headers.</p>
      */
     @NameInMap("AddBotProtectionHeaders")
     public WafSiteSettingsAddBotProtectionHeaders addBotProtectionHeaders;
 
     /**
-     * <p>Configuration for adding security headers.</p>
+     * <p>The security headers.</p>
      */
     @NameInMap("AddSecurityHeaders")
     public WafSiteSettingsAddSecurityHeaders addSecurityHeaders;
 
     /**
-     * <p>The bandwidth abuse protection settings.</p>
+     * <p>The bandwidth abuse protection.</p>
      */
     @NameInMap("BandwidthAbuseProtection")
     public WafSiteSettingsBandwidthAbuseProtection bandwidthAbuseProtection;
 
     /**
-     * <p>The bot management settings.</p>
+     * <p>The bot management.</p>
      */
     @NameInMap("BotManagement")
     public WafSiteSettingsBotManagement botManagement;
 
     /**
-     * <p>Configuration for client IP identification.</p>
+     * <p>The client IP identification.</p>
      */
     @NameInMap("ClientIpIdentifier")
     public WafSiteSettingsClientIpIdentifier clientIpIdentifier;
 
     /**
-     * <p>Configuration for disabling the security module.</p>
+     * <p>The configuration for disabling the security module.</p>
      */
     @NameInMap("DisableSecurityModule")
     public WafSiteSettingsDisableSecurityModule disableSecurityModule;
 
     /**
-     * <p>Configuration for request body inspection.</p>
+     * <p>The request body inspection configuration. Controls the deep packet inspection behavior of WAF for HTTP request bodies. After this feature is enabled, content-based matching rules such as SQL injection and XSS detection take effect on request bodies.</p>
+     * <p>This structure can contain the following fields:</p>
+     * <ul>
+     * <li>Id: The unique identifier of the built-in inspection rule.</li>
+     * <li>SizeLimit: The maximum size of the request body to inspect.</li>
+     * <li>Action: The action to take when the request body exceeds the size limit.</li>
+     * </ul>
      */
     @NameInMap("RequestBodyInspection")
     public WafSiteSettingsRequestBodyInspection requestBodyInspection;
 
     /**
-     * <p>The security level settings.</p>
+     * <p>The security level.</p>
      */
     @NameInMap("SecurityLevel")
     public WafSiteSettingsSecurityLevel securityLevel;
@@ -123,7 +129,7 @@ public class WafSiteSettings extends TeaModel {
 
     public static class WafSiteSettingsAddBotProtectionHeaders extends TeaModel {
         /**
-         * <p>Specifies whether to add bot protection headers.</p>
+         * <p>The switch.</p>
          */
         @NameInMap("Enable")
         public Boolean enable;
@@ -145,7 +151,7 @@ public class WafSiteSettings extends TeaModel {
 
     public static class WafSiteSettingsAddSecurityHeaders extends TeaModel {
         /**
-         * <p>Specifies whether to add security headers.</p>
+         * <p>The switch.</p>
          */
         @NameInMap("Enable")
         public Boolean enable;
@@ -167,7 +173,7 @@ public class WafSiteSettings extends TeaModel {
 
     public static class WafSiteSettingsBandwidthAbuseProtection extends TeaModel {
         /**
-         * <p>The action to perform for the bandwidth abuse protection rule.</p>
+         * <p>The action of the bandwidth abuse protection rule.</p>
          * 
          * <strong>example:</strong>
          * <p>deny</p>
@@ -176,7 +182,7 @@ public class WafSiteSettings extends TeaModel {
         public String action;
 
         /**
-         * <p>The rule ID for bandwidth abuse protection.</p>
+         * <p>The ID of the bandwidth abuse protection rule.</p>
          * 
          * <strong>example:</strong>
          * <p>10000001</p>
@@ -185,7 +191,7 @@ public class WafSiteSettings extends TeaModel {
         public Long id;
 
         /**
-         * <p>The status of the bandwidth abuse protection rule. Valid values: <code>on</code> and <code>off</code>.</p>
+         * <p>The status of the bandwidth abuse protection rule.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -226,7 +232,7 @@ public class WafSiteSettings extends TeaModel {
 
     public static class WafSiteSettingsBotManagementDefiniteBots extends TeaModel {
         /**
-         * <p>The action to perform.</p>
+         * <p>The action.</p>
          * 
          * <strong>example:</strong>
          * <p>captcha</p>
@@ -268,7 +274,7 @@ public class WafSiteSettings extends TeaModel {
 
     public static class WafSiteSettingsBotManagementEffectOnStatic extends TeaModel {
         /**
-         * <p>Specifies whether to apply bot management to static resource requests.</p>
+         * <p>The switch.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -293,7 +299,7 @@ public class WafSiteSettings extends TeaModel {
 
     public static class WafSiteSettingsBotManagementJSDetection extends TeaModel {
         /**
-         * <p>Specifies whether to enable JavaScript detection.</p>
+         * <p>The switch.</p>
          */
         @NameInMap("Enable")
         public Boolean enable;
@@ -315,7 +321,7 @@ public class WafSiteSettings extends TeaModel {
 
     public static class WafSiteSettingsBotManagementLikelyBots extends TeaModel {
         /**
-         * <p>The action to perform.</p>
+         * <p>The action.</p>
          * 
          * <strong>example:</strong>
          * <p>deny</p>
@@ -357,7 +363,7 @@ public class WafSiteSettings extends TeaModel {
 
     public static class WafSiteSettingsBotManagementVerifiedBots extends TeaModel {
         /**
-         * <p>The action to perform.</p>
+         * <p>The action.</p>
          * 
          * <strong>example:</strong>
          * <p>bypass</p>
@@ -399,31 +405,31 @@ public class WafSiteSettings extends TeaModel {
 
     public static class WafSiteSettingsBotManagement extends TeaModel {
         /**
-         * <p>Configuration for traffic identified as a definite bot.</p>
+         * <p>The definite bots.</p>
          */
         @NameInMap("DefiniteBots")
         public WafSiteSettingsBotManagementDefiniteBots definiteBots;
 
         /**
-         * <p>Configuration to apply bot management to static resource requests.</p>
+         * <p>Specifies whether the rule applies to static resource requests.</p>
          */
         @NameInMap("EffectOnStatic")
         public WafSiteSettingsBotManagementEffectOnStatic effectOnStatic;
 
         /**
-         * <p>The JavaScript detection settings.</p>
+         * <p>The JavaScript detection.</p>
          */
         @NameInMap("JSDetection")
         public WafSiteSettingsBotManagementJSDetection JSDetection;
 
         /**
-         * <p>Configuration for traffic identified as a likely bot.</p>
+         * <p>The likely bots.</p>
          */
         @NameInMap("LikelyBots")
         public WafSiteSettingsBotManagementLikelyBots likelyBots;
 
         /**
-         * <p>Configuration for traffic identified as a verified bot.</p>
+         * <p>The verified bots.</p>
          */
         @NameInMap("VerifiedBots")
         public WafSiteSettingsBotManagementVerifiedBots verifiedBots;
@@ -477,7 +483,7 @@ public class WafSiteSettings extends TeaModel {
 
     public static class WafSiteSettingsClientIpIdentifier extends TeaModel {
         /**
-         * <p>An array of headers to check for the client IP address.</p>
+         * <p>The specified headers.</p>
          */
         @NameInMap("Headers")
         public java.util.List<String> headers;
@@ -516,7 +522,7 @@ public class WafSiteSettings extends TeaModel {
 
     public static class WafSiteSettingsDisableSecurityModule extends TeaModel {
         /**
-         * <p>Specifies whether to disable the security module. Set to <code>on</code> to disable.</p>
+         * <p>The status switch for disabling the security module.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -541,19 +547,42 @@ public class WafSiteSettings extends TeaModel {
 
     public static class WafSiteSettingsRequestBodyInspection extends TeaModel {
         /**
-         * <p>The action to perform when the request body size exceeds the limit.</p>
+         * <p>The action to take when the request body size exceeds SizeLimit.</p>
+         * <p>Common valid values (the complete list is determined by the server-side configuration):</p>
+         * <ul>
+         * <li>allow: allows the request without performing deep packet inspection on the portion that exceeds the limit.</li>
+         * </ul>
+         * <blockquote>
+         * <p>The complete enumeration is determined by the WAF server-side configuration.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>allow</p>
          */
         @NameInMap("Action")
         public String action;
 
         /**
-         * <p>The rule ID for request body inspection.</p>
+         * <p>The request body inspection rule ID, which is the unique identifier of the built-in rule. When request body inspection is enabled, the server uses this ID to associate the matching logic of the built-in inspection rule. The valid values are based on the built-in rule list of WAF.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000001</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
-         * <p>The size limit, in bytes, for inspecting the request body.</p>
+         * <p>The maximum size of the request body to inspect, in bytes.</p>
+         * <ul>
+         * <li>If the request body is less than or equal to this value, the entire content is subject to WAF matching.</li>
+         * <li>If the request body exceeds this value, the action specified in the Action field is taken, such as inspecting only the first N bytes, rejecting the request, or allowing the request.</li>
+         * </ul>
+         * <blockquote>
+         * <p>The valid value range and default value are determined by the WAF server-side configuration.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>16KB</p>
          */
         @NameInMap("SizeLimit")
         public String sizeLimit;
@@ -591,7 +620,7 @@ public class WafSiteSettings extends TeaModel {
 
     public static class WafSiteSettingsSecurityLevel extends TeaModel {
         /**
-         * <p>The security level.</p>
+         * <p>The security level value.</p>
          * 
          * <strong>example:</strong>
          * <p>low</p>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListSiteRoutesResponseBody extends TeaModel {
     /**
-     * <p>The list of returned configs.</p>
+     * <p>The configuration list in the response.</p>
      */
     @NameInMap("Configs")
     public java.util.List<ListSiteRoutesResponseBodyConfigs> configs;
 
     /**
-     * <p>The current page number.</p>
+     * <p>The current page number, which is the same as the PageNumber request parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListSiteRoutesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +38,7 @@ public class ListSiteRoutesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>16</p>
@@ -110,12 +110,10 @@ public class ListSiteRoutesResponseBody extends TeaModel {
 
     public static class ListSiteRoutesResponseBodyConfigs extends TeaModel {
         /**
-         * <p>Whether bypass mode is enabled. Valid values:</p>
+         * <p>The bypass mode. Valid values:</p>
          * <ul>
-         * <li><p>on: Enabled.</p>
-         * </li>
-         * <li><p>off: Disabled.</p>
-         * </li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,12 +132,10 @@ public class ListSiteRoutesResponseBody extends TeaModel {
         public Long configId;
 
         /**
-         * <p>The configuration type. Valid values:</p>
+         * <p>The configuration type. You can use this parameter to query global or rule configurations. Valid values:</p>
          * <ul>
-         * <li><p>global: Global configuration.</p>
-         * </li>
-         * <li><p>rule: Rule-based configuration.</p>
-         * </li>
+         * <li>global: Queries global configurations.</li>
+         * <li>rule: Queries rule configurations.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,12 +145,10 @@ public class ListSiteRoutesResponseBody extends TeaModel {
         public String configType;
 
         /**
-         * <p>Whether CDN fallback is enabled. Valid values:</p>
+         * <p>The CDN fallback. Valid values:</p>
          * <ul>
-         * <li><p>on: Enabled.</p>
-         * </li>
-         * <li><p>off: Disabled.</p>
-         * </li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -166,10 +160,8 @@ public class ListSiteRoutesResponseBody extends TeaModel {
         /**
          * <p>The configuration mode. Valid values:</p>
          * <ul>
-         * <li><p>simple: Simple mode.</p>
-         * </li>
-         * <li><p>custom: Custom mode.</p>
-         * </li>
+         * <li>simple: Simple mode.</li>
+         * <li>custom: Custom mode.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -179,12 +171,10 @@ public class ListSiteRoutesResponseBody extends TeaModel {
         public String mode;
 
         /**
-         * <p>Whether the route is enabled. Valid values:</p>
+         * <p>The route switch. Valid values:</p>
          * <ul>
-         * <li><p>on: Enabled.</p>
-         * </li>
-         * <li><p>off: Disabled.</p>
-         * </li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -203,7 +193,7 @@ public class ListSiteRoutesResponseBody extends TeaModel {
         public String routeName;
 
         /**
-         * <p>The routine name.</p>
+         * <p>The Edge Routine name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-routine1</p>
@@ -221,7 +211,7 @@ public class ListSiteRoutesResponseBody extends TeaModel {
         public String rule;
 
         /**
-         * <p>The rule execution sequence.</p>
+         * <p>The execution order of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -230,7 +220,7 @@ public class ListSiteRoutesResponseBody extends TeaModel {
         public Integer sequence;
 
         /**
-         * <p>The site version.</p>
+         * <p>The version number of the site.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -239,7 +229,7 @@ public class ListSiteRoutesResponseBody extends TeaModel {
         public Integer siteVersion;
 
         /**
-         * <p>The ER timeout.</p>
+         * <p>The Edge Routine timeout period, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>

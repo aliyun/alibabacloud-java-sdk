@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetKeylessServerResponseBody extends TeaModel {
     /**
-     * <p>The CA certificate used to verify the server certificate of the keyless server. This parameter applies only when Verify is set to true.</p>
+     * <p>The CA certificate used to verify the Keyless server certificate. This parameter takes effect only when Verify is set to true.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE-----****</p>
@@ -14,7 +14,7 @@ public class GetKeylessServerResponseBody extends TeaModel {
     public String caCertificate;
 
     /**
-     * <p>The client certificate. Must be provided as a pair with the client private key.</p>
+     * <p>The client certificate. This parameter must be used together with the client private key.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE-----****</p>
@@ -23,7 +23,7 @@ public class GetKeylessServerResponseBody extends TeaModel {
     public String clientCertificate;
 
     /**
-     * <p>The client private key. Must be provided as a pair with the client certificate.</p>
+     * <p>The client private key. This parameter must be used together with the client certificate.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN RSA PRIVATE KEY-----****</p>
@@ -32,16 +32,16 @@ public class GetKeylessServerResponseBody extends TeaModel {
     public String clientPrivateKey;
 
     /**
-     * <p>The creation time.</p>
+     * <p>The creation time. The time follows the format YYYY-MM-DDTHH:MM:SS+08:00 in the UTC/GMT time zone.</p>
      * 
      * <strong>example:</strong>
-     * <p>2024-03-11T01:23:21Z</p>
+     * <p>2025-07-18T20:33:31+08:00</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
     /**
-     * <p>The hostname of the keyless server.</p>
+     * <p>The Keyless server hostname.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -50,7 +50,7 @@ public class GetKeylessServerResponseBody extends TeaModel {
     public String host;
 
     /**
-     * <p>The keyless server ID.</p>
+     * <p>Keyless server ID。</p>
      * 
      * <strong>example:</strong>
      * <p>baba39055622c008b90285a8838e****</p>
@@ -59,7 +59,7 @@ public class GetKeylessServerResponseBody extends TeaModel {
     public String id;
 
     /**
-     * <p>The keyless server name.</p>
+     * <p>The Keyless server name.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -68,7 +68,7 @@ public class GetKeylessServerResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The port of the keyless server. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * <p>The Keyless server port. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>443</p>
@@ -104,16 +104,16 @@ public class GetKeylessServerResponseBody extends TeaModel {
     public String siteName;
 
     /**
-     * <p>The update time.</p>
+     * <p>The modification time. The time follows the format YYYY-MM-DDTHH:MM:SS+08:00 in the UTC/GMT time zone.</p>
      * 
      * <strong>example:</strong>
-     * <p>2025-03-13T02:13:28Z</p>
+     * <p>2025-07-18T20:33:31+08:00</p>
      */
     @NameInMap("UpdateTime")
     public String updateTime;
 
     /**
-     * <p>Indicates whether to verify the server certificate of the keyless server. The default value is false.</p>
+     * <p>Indicates whether to verify the Keyless server certificate. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

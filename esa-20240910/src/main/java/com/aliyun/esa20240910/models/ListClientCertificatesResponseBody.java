@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListClientCertificatesResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned entries.</p>
+     * <p>The page number of the returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -145,7 +145,7 @@ public class ListClientCertificatesResponseBody extends TeaModel {
         public String commonName;
 
         /**
-         * <p>The creation time of the certificate.</p>
+         * <p>The creation time. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-06-24 07:48:51</p>
@@ -155,6 +155,9 @@ public class ListClientCertificatesResponseBody extends TeaModel {
 
         /**
          * <p>The SHA-256 fingerprint of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1dc5fc9af4eead2570c70d94b416130baeb6d4429b51fd3557379588456a****</p>
          */
         @NameInMap("FingerprintSha256")
         public String fingerprintSha256;
@@ -169,7 +172,7 @@ public class ListClientCertificatesResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The certificate issuer.</p>
+         * <p>The authority that issued the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>GlobalSign nv-sa</p>
@@ -187,7 +190,7 @@ public class ListClientCertificatesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The time when the certificate expires.</p>
+         * <p>The end time of the certificate validity period. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-31 02:08:00</p>
@@ -196,7 +199,7 @@ public class ListClientCertificatesResponseBody extends TeaModel {
         public String notAfter;
 
         /**
-         * <p>The time when the certificate becomes valid.</p>
+         * <p>The start time of the certificate validity period. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-31 02:08:00</p>
@@ -214,7 +217,7 @@ public class ListClientCertificatesResponseBody extends TeaModel {
         public String pubkeyAlgorithm;
 
         /**
-         * <p>The subject alternative name (SAN) of the certificate.</p>
+         * <p>The Subject Alternative Name (SAN) of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com,*.example.com">www.example.com,*.example.com</a></p>
@@ -223,7 +226,10 @@ public class ListClientCertificatesResponseBody extends TeaModel {
         public String SAN;
 
         /**
-         * <p>The serial number of the certificate.</p>
+         * <p>The certificate serial number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>babaded901474b9693acf530e0fb1d**</p>
          */
         @NameInMap("SerialNumber")
         public String serialNumber;
@@ -256,7 +262,7 @@ public class ListClientCertificatesResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The last update time of the certificate.</p>
+         * <p>The update time. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-07-20 06:18:42</p>

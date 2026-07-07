@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateWafRuleResponseBody extends TeaModel {
     /**
-     * <p>The ID of the newly created WAF rule.</p>
+     * <p>The ID of the WAF rule. You can call the <a href="https://help.aliyun.com/document_detail/2878257.html">ListWafRules</a> operation to obtain the rule ID.</p>
      * 
      * <strong>example:</strong>
      * <p>20000001</p>
@@ -23,7 +23,7 @@ public class CreateWafRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the ruleset to which the new rule belongs.</p>
+     * <p>The ID of the WAF ruleset. You can call the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> operation to obtain the ruleset ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10000001</p>

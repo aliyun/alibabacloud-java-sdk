@@ -15,7 +15,7 @@ public class GetOriginClientCertificateRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The ID of the site. You can retrieve it by calling the <a href="~~ListSites~~">ListSites</a> API.</p>
+     * <p>The site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

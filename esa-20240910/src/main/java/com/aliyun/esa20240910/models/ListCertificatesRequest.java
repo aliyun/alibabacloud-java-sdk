@@ -14,7 +14,7 @@ public class ListCertificatesRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The page number to return.</p>
+     * <p>The page number of the data to return.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -23,7 +23,7 @@ public class ListCertificatesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of records per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,7 +32,7 @@ public class ListCertificatesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The site ID. To get this ID, call the <a href="~~ListSites~~">ListSites</a> API.</p>
+     * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to query the site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class ListCertificatesRequest extends TeaModel {
      * <p>Specifies whether to return only valid certificates.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>true</p>
      */
     @NameInMap("ValidOnly")
     public Boolean validOnly;

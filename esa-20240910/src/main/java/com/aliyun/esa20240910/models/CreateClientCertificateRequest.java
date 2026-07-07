@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateClientCertificateRequest extends TeaModel {
     /**
-     * <p>The certificate signing request (CSR).</p>
+     * <p>The certificate signing request (CSR) content.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE REQUEST-----</p>
@@ -14,7 +14,7 @@ public class CreateClientCertificateRequest extends TeaModel {
     public String CSR;
 
     /**
-     * <p>The type of the private key algorithm.</p>
+     * <p>The private key algorithm type. This parameter is required if CSR is not provided.</p>
      * 
      * <strong>example:</strong>
      * <p>RSA</p>
@@ -23,7 +23,7 @@ public class CreateClientCertificateRequest extends TeaModel {
     public String pkeyType;
 
     /**
-     * <p>The website ID.</p>
+     * <p>The site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class CreateClientCertificateRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The validity period of the certificate. Unit: day.</p>
+     * <p>The validity period of the certificate. Unit: days.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

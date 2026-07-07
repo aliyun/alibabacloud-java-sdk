@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLoadBalancerShrinkRequest extends TeaModel {
     /**
-     * <p>The configuration for failover across address pools.</p>
+     * <p>The cross-origin address pool back-to-origin configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class CreateLoadBalancerShrinkRequest extends TeaModel {
     public String adaptiveRoutingShrink;
 
     /**
-     * <p>A list of default address pool IDs.</p>
+     * <p>The list of default address pool IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,21 +24,19 @@ public class CreateLoadBalancerShrinkRequest extends TeaModel {
     public String defaultPoolsShrink;
 
     /**
-     * <p>A description of the Server Load Balancer.</p>
+     * <p>The description of the load balancer for management and identification purposes.</p>
      * 
      * <strong>example:</strong>
-     * <p>Test load balancer description</p>
+     * <p>Load Balancer Description</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>Specifies whether to enable the Server Load Balancer.</p>
+     * <p>Specifies whether the load balancer is enabled. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: Enabled.</p>
-     * </li>
-     * <li><p><code>false</code>: Disabled.</p>
-     * </li>
+     * <li>true: Enabled.</li>
+     * <li>false: Not enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,7 +46,7 @@ public class CreateLoadBalancerShrinkRequest extends TeaModel {
     public Boolean enabled;
 
     /**
-     * <p>The ID of the fallback pool. The system directs traffic to this pool when all other pools are unavailable.</p>
+     * <p>The fallback address pool ID. Traffic is directed to this pool when all other pools are unavailable.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,7 +66,7 @@ public class CreateLoadBalancerShrinkRequest extends TeaModel {
     public String monitorShrink;
 
     /**
-     * <p>The name of the Server Load Balancer. It must be a valid domain name and a subdomain of the site.</p>
+     * <p>The name of the load balancer. The name must be in a valid domain name format and must be a subdomain of the site.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -78,7 +76,7 @@ public class CreateLoadBalancerShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The configuration for weighted round-robin steering. This setting controls how the system distributes traffic across different address pools based on their weights.</p>
+     * <p>The weighted round-robin configuration that controls the traffic distribution weight across different address pools.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -87,7 +85,7 @@ public class CreateLoadBalancerShrinkRequest extends TeaModel {
     public String randomSteeringShrink;
 
     /**
-     * <p>The mapping of primary regions to address pools.</p>
+     * <p>The address pools mapped to primary regions.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -104,7 +102,7 @@ public class CreateLoadBalancerShrinkRequest extends TeaModel {
     public Object regionPools;
 
     /**
-     * <p>A list of rules to override the default traffic steering policy for specific requests.</p>
+     * <p>The rule information.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -121,14 +119,12 @@ public class CreateLoadBalancerShrinkRequest extends TeaModel {
     public String rulesShrink;
 
     /**
-     * <p>Specifies the session affinity policy, which consistently routes requests from the same client to the same origin server. Valid values:</p>
+     * <p>The session persistence mode. Valid values:</p>
      * <ul>
-     * <li><p><code>off</code>: Disables session affinity.</p>
-     * </li>
-     * <li><p><code>ip</code>: Routes requests based on the client\&quot;s IP address.</p>
-     * </li>
-     * <li><p><code>cookie</code>: Uses a cookie to maintain session affinity.</p>
-     * </li>
+     * <li>off: disabled.</li>
+     * <li>ip: IP-based session persistence.</li>
+     * <li>cookie: cookie-based session persistence.</li>
+     * <li>http_header: HTTP header-based session persistence.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -138,7 +134,7 @@ public class CreateLoadBalancerShrinkRequest extends TeaModel {
     public String sessionAffinity;
 
     /**
-     * <p>The site ID. Call the <a href="~~ListSites~~">ListSites</a> operation to obtain this ID.</p>
+     * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -148,14 +144,11 @@ public class CreateLoadBalancerShrinkRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The traffic steering policy, which determines how the system distributes traffic among the address pools. Valid values:</p>
+     * <p>The load balancing policy. Valid values:</p>
      * <ul>
-     * <li><p><code>geo</code>: Geographic routing.</p>
-     * </li>
-     * <li><p><code>random</code>: Weighted round-robin.</p>
-     * </li>
-     * <li><p><code>order</code>: Primary/standby.</p>
-     * </li>
+     * <li>geo: geo-based routing.</li>
+     * <li>random: weighted round-robin.</li>
+     * <li>order: primary/secondary mode.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -166,7 +159,7 @@ public class CreateLoadBalancerShrinkRequest extends TeaModel {
     public String steeringPolicy;
 
     /**
-     * <p>The mapping of secondary regions to address pools. To map multiple secondary regions to the same address pools, combine their region codes with commas to form the key.</p>
+     * <p>The address pools mapped to secondary regions. If multiple secondary regions share the same set of address pools, you can concatenate the secondary region names with commas as the key.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;AL,MO&quot;: [92298024898****],&quot;CN-SH,CN-SX,CN-SC&quot;:[92304347804****,92843536908****]}</p>
@@ -175,7 +168,7 @@ public class CreateLoadBalancerShrinkRequest extends TeaModel {
     public Object subRegionPools;
 
     /**
-     * <p>The time to live (TTL) for the DNS record, in seconds. The default value is 30. The value must be between 10 and 600.</p>
+     * <p>The TTL value, which specifies the time-to-live of the DNS record. Default value: 30 seconds. Valid values: 10 to 600.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>

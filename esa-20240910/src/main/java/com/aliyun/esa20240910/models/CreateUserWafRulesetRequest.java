@@ -14,7 +14,15 @@ public class CreateUserWafRulesetRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The expression for the WAF ruleset.</p>
+     * <p>The match expression of the WAF ruleset. Rules in this ruleset are evaluated only when a request matches this expression.</p>
+     * <p>Examples:</p>
+     * <ul>
+     * <li><code>http.host eq &quot;example.com&quot;</code> — Only requests with the host example.com enter this ruleset.</li>
+     * <li><code>starts_with(http.uri.path, &quot;/api/&quot;)</code> — Only requests with the /api/ prefix enter this ruleset.</li>
+     * </ul>
+     * <blockquote>
+     * <p>The complete expression syntax and available field set are subject to the server-side wirefilter dialect.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +43,7 @@ public class CreateUserWafRulesetRequest extends TeaModel {
 
     /**
      * <p>The name of the WAF ruleset.</p>
+     * <p><strong>Naming suggestion</strong>: Use a combination of letters, digits, and underscores for easy reference. The specific character set, maximum length, and uniqueness constraints are subject to the WAF ruleset service naming conventions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,25 +53,17 @@ public class CreateUserWafRulesetRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The execution phase of the WAF ruleset.</p>
+     * <p>The phase to which the WAF ruleset belongs. Valid values:</p>
      * <ul>
-     * <li><p><code>http_whitelist</code>: whitelist rule</p>
-     * </li>
-     * <li><p><code>http_custom</code>: custom rule</p>
-     * </li>
-     * <li><p><code>http_managed</code>: managed rule</p>
-     * </li>
-     * <li><p><code>http_anti_scan</code>: scan protection rule</p>
-     * </li>
-     * <li><p><code>http_ratelimit</code>: rate limiting rule</p>
-     * </li>
-     * <li><p><code>ip_access_rule</code>: IP access rule</p>
-     * </li>
-     * <li><p><code>http_bot</code>: advanced bot</p>
-     * </li>
-     * <li><p><code>http_security_level_rule</code>: security rule</p>
-     * </li>
+     * <li>http_whitelist: whitelist rules</li>
+     * <li>http_custom: custom rules</li>
+     * <li>http_managed: managed rules</li>
+     * <li>http_anti_scan: scan protection rules</li>
+     * <li>http_ratelimit: rate limiting rules</li>
      * </ul>
+     * <blockquote>
+     * <p>Note: The supported fields (Expression match fields, Action values, and others) vary by phase. For more information, refer to the rule configuration documentation for the corresponding phase.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,19 +73,32 @@ public class CreateUserWafRulesetRequest extends TeaModel {
     public String phase;
 
     /**
-     * <p>A list of rule configurations within the WAF ruleset.</p>
+     * <p>The list of rule configurations in the WAF ruleset. Each element corresponds to a rule.</p>
+     * <ul>
+     * <li>The field structure of each rule is subject to the <code>WafRuleConfig</code> data structure, which includes Expression, Action, Name, and other fields.</li>
+     * </ul>
      */
     @NameInMap("Rules")
     public java.util.List<WafRuleConfig> rules;
 
     /**
-     * <p>The shared configuration for WAF batch rules.</p>
+     * <p>The shared fields across multiple rules in this ruleset, such as a unified Action or Name prefix.</p>
+     * <blockquote>
+     * <p>The field structure is subject to the <code>WafBatchRuleShared</code> data structure. If you do not need to share properties, you can leave this parameter empty.</p>
+     * </blockquote>
      */
     @NameInMap("Shared")
     public WafBatchRuleShared shared;
 
     /**
-     * <p>The status of the WAF ruleset.</p>
+     * <p>The status of the WAF ruleset. Valid values:</p>
+     * <ul>
+     * <li>on: Enabled. The rules in the ruleset participate in matching and blocking.</li>
+     * <li>off: Disabled. The ruleset is retained but does not participate in matching.</li>
+     * </ul>
+     * <blockquote>
+     * <p>The complete set of valid values is subject to the server-side enum.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

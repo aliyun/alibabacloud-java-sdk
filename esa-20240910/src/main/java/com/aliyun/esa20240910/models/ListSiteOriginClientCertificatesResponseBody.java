@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSiteOriginClientCertificatesResponseBody extends TeaModel {
     /**
-     * <p>The page number. The default value is 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListSiteOriginClientCertificatesResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>1024</p>
@@ -136,7 +136,7 @@ public class ListSiteOriginClientCertificatesResponseBody extends TeaModel {
         public String commonName;
 
         /**
-         * <p>The time when the certificate was created.</p>
+         * <p>The creation time. The time is in the YYYY-MM-DD HH:MM:SS format in the UTC/GMT time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-06-24 07:48:51</p>
@@ -181,7 +181,7 @@ public class ListSiteOriginClientCertificatesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The end time of the certificate validity period.</p>
+         * <p>The end time of the certificate validity period. The time is in the YYYY-MM-DD HH:MM:SS format in the UTC/GMT time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-31 02:08:00</p>
@@ -190,7 +190,7 @@ public class ListSiteOriginClientCertificatesResponseBody extends TeaModel {
         public String notAfter;
 
         /**
-         * <p>The start time of the certificate validity period.</p>
+         * <p>The start time of the certificate validity period. The time is in the YYYY-MM-DD HH:MM:SS format in the UTC/GMT time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-31 02:08:00</p>
@@ -199,7 +199,7 @@ public class ListSiteOriginClientCertificatesResponseBody extends TeaModel {
         public String notBefore;
 
         /**
-         * <p>The public-key algorithm of the certificate.</p>
+         * <p>The public key algorithm of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>RSA</p>
@@ -208,7 +208,7 @@ public class ListSiteOriginClientCertificatesResponseBody extends TeaModel {
         public String pubkeyAlgorithm;
 
         /**
-         * <p>The subject alternative name (SAN) of the certificate.</p>
+         * <p>The Subject Alternative Name (SAN) of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com,*.example.com">www.example.com,*.example.com</a></p>
@@ -217,7 +217,7 @@ public class ListSiteOriginClientCertificatesResponseBody extends TeaModel {
         public String SAN;
 
         /**
-         * <p>The certificate serial number.</p>
+         * <p>The sequence number of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>babaded901474b9693acf530e0fb1d**</p>
@@ -253,7 +253,7 @@ public class ListSiteOriginClientCertificatesResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The time when the certificate was last updated.</p>
+         * <p>The update time. The time is in the YYYY-MM-DD HH:MM:SS format in the UTC/GMT time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-09-22 05:33:13</p>

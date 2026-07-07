@@ -14,7 +14,7 @@ public class ListPagesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on the current page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,7 +23,7 @@ public class ListPagesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>A list of custom response pages.</p>
+     * <p>The array of custom response pages. Each object in the array contains the details of a page.</p>
      */
     @NameInMap("Pages")
     public java.util.List<ListPagesResponseBodyPages> pages;
@@ -38,7 +38,7 @@ public class ListPagesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of custom response pages that match the filter criteria.</p>
+     * <p>The number of custom response pages after filtering.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -47,7 +47,7 @@ public class ListPagesResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The number of custom response pages that you have created.</p>
+     * <p>The number of custom response pages created by the user.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -110,7 +110,7 @@ public class ListPagesResponseBody extends TeaModel {
 
     public static class ListPagesResponseBodyPages extends TeaModel {
         /**
-         * <p>The Base64-encoded content of the custom response page.</p>
+         * <p>The Base64-encoded response page content corresponding to the Content-Type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class ListPagesResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>The value of the Content-Type header in the HTTP response.</p>
+         * <p>The Content-Type field in the HTTP header.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class ListPagesResponseBody extends TeaModel {
         public String contentType;
 
         /**
-         * <p>A custom description for the response page.</p>
+         * <p>The description of the custom response page.</p>
          * 
          * <strong>example:</strong>
          * <p>a custom deny page</p>
@@ -139,7 +139,7 @@ public class ListPagesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the custom response page.<a href="~~2850223~~"></a></p>
+         * <p>The ID of the custom response page. You can call the <a href="https://help.aliyun.com/document_detail/2850223.html">ListPages</a> operation to obtain the ID.</p>
          * 
          * <strong>example:</strong>
          * <p>50000001</p>
@@ -166,7 +166,9 @@ public class ListPagesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The time the custom response page was last updated.</p>
+         * <p>The time when the custom response page was last modified.</p>
+         * <p>Format: RFC 3339 / ISO 8601, UTC time zone (ending with Z).</p>
+         * <p>Example: 2026-06-10T14:23:45Z</p>
          * 
          * <strong>example:</strong>
          * <p>2024-01-01T00:00:00Z</p>

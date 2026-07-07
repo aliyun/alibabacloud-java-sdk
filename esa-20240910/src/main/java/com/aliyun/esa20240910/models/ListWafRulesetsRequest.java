@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListWafRulesetsRequest extends TeaModel {
     /**
-     * <p>The page number for pagination.</p>
+     * <p>The page number. Specifies the current page number for paging queries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListWafRulesetsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size. Specifies the number of records per page for paging queries.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,24 +23,16 @@ public class ListWafRulesetsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The execution phase for WAF rules.</p>
+     * <p>The WAF rule execution phase. Valid values:</p>
      * <ul>
-     * <li><p><code>http_whitelist</code>: whitelist rule</p>
-     * </li>
-     * <li><p><code>http_custom</code>: custom rule</p>
-     * </li>
-     * <li><p><code>http_managed</code>: managed rule</p>
-     * </li>
-     * <li><p><code>http_anti_scan</code>: scan protection rule</p>
-     * </li>
-     * <li><p><code>http_ratelimit</code>: rate-limiting rule</p>
-     * </li>
-     * <li><p><code>ip_access_rule</code>: IP access rule</p>
-     * </li>
-     * <li><p><code>http_bot</code>: bot rule</p>
-     * </li>
-     * <li><p><code>http_security_level_rule</code>: security rule</p>
-     * </li>
+     * <li>http_whitelist: whitelist rules</li>
+     * <li>http_custom: custom rules</li>
+     * <li>http_managed: managed rules</li>
+     * <li>http_anti_scan: scan protection rules</li>
+     * <li>http_ratelimit: frequency control rules</li>
+     * <li>ip_access_rule: IP access rules</li>
+     * <li>http_bot: advanced mode bots</li>
+     * <li>http_security_level_rule: security rules</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,7 +42,7 @@ public class ListWafRulesetsRequest extends TeaModel {
     public String phase;
 
     /**
-     * <p>A JSON object containing query parameters for filtering.</p>
+     * <p>The query parameters, passed in JSON format, including various filter conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>http_bot</p>
@@ -59,7 +51,7 @@ public class ListWafRulesetsRequest extends TeaModel {
     public ListWafRulesetsRequestQueryArgs queryArgs;
 
     /**
-     * <p>The ID of the site. Get this ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
+     * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -68,7 +60,7 @@ public class ListWafRulesetsRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The site\&quot;s configuration version. For sites with configuration version management enabled, use this parameter to specify the version. The default is 0.</p>
+     * <p>The version number of the site configuration. For sites with configuration version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -131,7 +123,7 @@ public class ListWafRulesetsRequest extends TeaModel {
 
     public static class ListWafRulesetsRequestQueryArgs extends TeaModel {
         /**
-         * <p>A keyword for a fuzzy search on the ID or name of a ruleset or rule.</p>
+         * <p>The fuzzy match string for the ruleset ID, ruleset name, rule ID, or rule name.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -140,13 +132,13 @@ public class ListWafRulesetsRequest extends TeaModel {
         public String anyLike;
 
         /**
-         * <p>Specifies whether to sort in descending order.</p>
+         * <p>Specifies whether to sort the results in descending order.</p>
          */
         @NameInMap("Desc")
         public Boolean desc;
 
         /**
-         * <p>A keyword for a fuzzy search on ruleset names.</p>
+         * <p>The fuzzy match string for the ruleset name.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -155,7 +147,7 @@ public class ListWafRulesetsRequest extends TeaModel {
         public String nameLike;
 
         /**
-         * <p>Specifies the field for sorting the results.</p>
+         * <p>The column by which to sort the results.</p>
          * 
          * <strong>example:</strong>
          * <p>id</p>

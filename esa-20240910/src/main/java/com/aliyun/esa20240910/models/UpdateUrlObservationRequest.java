@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateUrlObservationRequest extends TeaModel {
     /**
-     * <p>The ID of the configuration. You can call the <a href="~~ListUrlObservations~~">ListUrlObservations</a> operation to obtain the ID.</p>
+     * <p>The configuration ID. You can call the <a href="~~ListUrlObservations~~">ListUrlObservations</a> operation to obtain the configuration ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,10 @@ public class UpdateUrlObservationRequest extends TeaModel {
     public Long configId;
 
     /**
-     * <p>SDK integration. Valid values:</p>
+     * <p>The SDK integration method. Valid values:</p>
      * <ul>
-     * <li><strong>automatic</strong> (Recommended)</li>
-     * <li><strong>manual</strong></li>
+     * <li><strong>automatic</strong>: automatic integration.</li>
+     * <li><strong>manual</strong>: manual integration.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -29,7 +29,7 @@ public class UpdateUrlObservationRequest extends TeaModel {
     public String sdkType;
 
     /**
-     * <p>The website ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
+     * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

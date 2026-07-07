@@ -27,14 +27,10 @@ public class DescribeRatePlanPriceGapRequest extends TeaModel {
     public String orderType;
 
     /**
-     * <p>The specification change type. Valid values:</p>
-     * <ul>
-     * <li>DOWNGRADE: downgrade.</li>
-     * <li>UPGRADE: upgrade.</li>
-     * </ul>
+     * <p>The code of the target plan for the specification change.</p>
      * 
      * <strong>example:</strong>
-     * <p>UPGRADE</p>
+     * <p>standardplan</p>
      */
     @NameInMap("TargetPlanCode")
     public String targetPlanCode;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListListsShrinkRequest extends TeaModel {
     /**
-     * <p>Specifies the page number for paginated results.</p>
+     * <p>The page number for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListListsShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Specifies the number of results to return per page.</p>
+     * <p>The number of entries per page for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,7 +23,7 @@ public class ListListsShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>A JSON object containing query parameters to filter the results.</p>
+     * <p>The query parameters passed in JSON format, which contain various filter conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>ListLists</p>

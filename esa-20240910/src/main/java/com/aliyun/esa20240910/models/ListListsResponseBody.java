@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListListsResponseBody extends TeaModel {
     /**
-     * <p>The total number of items across all lists.</p>
+     * <p>The total item usage.</p>
      * 
      * <strong>example:</strong>
      * <p>5000</p>
@@ -14,7 +14,7 @@ public class ListListsResponseBody extends TeaModel {
     public Long itemsUsage;
 
     /**
-     * <p>A paginated array of lists.</p>
+     * <p>The array of list information, which contains the paginated list data.</p>
      */
     @NameInMap("Lists")
     public java.util.List<ListListsResponseBodyLists> lists;
@@ -29,7 +29,7 @@ public class ListListsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The page size.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -47,7 +47,7 @@ public class ListListsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of filtered records.</p>
+     * <p>The total number of records after filtering.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -56,7 +56,7 @@ public class ListListsResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The number of lists used by the account.</p>
+     * <p>The amount of usage consumed by the user.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -127,7 +127,7 @@ public class ListListsResponseBody extends TeaModel {
 
     public static class ListListsResponseBodyLists extends TeaModel {
         /**
-         * <p>The description of the list.</p>
+         * <p>The list description.</p>
          * 
          * <strong>example:</strong>
          * <p>a custom list</p>
@@ -136,7 +136,7 @@ public class ListListsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the custom list. To get this ID, call the <a href="https://help.aliyun.com/document_detail/2850217.html">ListLists</a> operation.</p>
+         * <p>The ID of the custom list. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2850217.html">ListLists</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>40000001</p>
@@ -154,7 +154,7 @@ public class ListListsResponseBody extends TeaModel {
         public String kind;
 
         /**
-         * <p>The number of items in the list.</p>
+         * <p>The length of the list content array, which indicates the number of items in the list.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -163,7 +163,7 @@ public class ListListsResponseBody extends TeaModel {
         public Long length;
 
         /**
-         * <p>The name of the list.</p>
+         * <p>The list name.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -172,7 +172,9 @@ public class ListListsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The time when the list was last updated.</p>
+         * <p>The time when the list was last modified.</p>
+         * <p>Format: RFC 3339 / ISO 8601, UTC time zone (ending with Z).</p>
+         * <p>Example: 2026-06-10T14:23:45Z</p>
          * 
          * <strong>example:</strong>
          * <p>2024-01-01T00:00:00Z</p>

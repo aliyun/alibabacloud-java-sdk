@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class SetClientCertificateHostnamesResponseBody extends TeaModel {
     /**
-     * <p>The list of bound hostnames.</p>
+     * <p>The list of domain names to associate.</p>
      */
     @NameInMap("Hostnames")
     public java.util.List<String> hostnames;
 
     /**
-     * <p>The ID of the client CA certificate.</p>
+     * <p>The client CA certificate ID.</p>
      * 
      * <strong>example:</strong>
      * <p>babab9db65ee5efcca9f3d41d4b50d**</p>
@@ -29,7 +29,7 @@ public class SetClientCertificateHostnamesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the site.</p>
+     * <p>The site ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123456789****</p>

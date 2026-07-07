@@ -105,7 +105,7 @@ public class DescribeRatePlanPriceGapResponseBody extends TeaModel {
         public String currency;
 
         /**
-         * <p>The order discount amount.</p>
+         * <p>The discount amount of the order.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

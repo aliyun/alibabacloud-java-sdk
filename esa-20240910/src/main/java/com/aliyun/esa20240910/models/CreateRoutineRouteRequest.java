@@ -8,7 +8,7 @@ public class CreateRoutineRouteRequest extends TeaModel {
      * <p>The bypass mode. Valid values:</p>
      * <ul>
      * <li>on: enabled</li>
-     * <li>off: disabled.</li>
+     * <li>off: disabled</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class CreateRoutineRouteRequest extends TeaModel {
     public String bypass;
 
     /**
-     * <p>The fallback-to-origin switch. When enabled, if the function encounters an exception such as CPU usage exceeding the limit, the request is forwarded to the origin server. Valid values:</p>
+     * <p>The back-to-origin on exception switch. When enabled, if the function encounters an exception such as CPU usage exceeding the limit, the request falls back to the origin server. Valid values:</p>
      * <ul>
      * <li>on: Enabled.</li>
      * <li>off: Disabled.</li>
@@ -34,7 +34,7 @@ public class CreateRoutineRouteRequest extends TeaModel {
      * <p>The route switch. Valid values:</p>
      * <ul>
      * <li>on: enabled</li>
-     * <li>off: disabled.</li>
+     * <li>off: disabled</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -94,7 +94,7 @@ public class CreateRoutineRouteRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The Edge Routine timeout period. Valid values: 5 to 60.</p>
+     * <p>The Edge Routine timeout period. Valid values: 5 to 60. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>

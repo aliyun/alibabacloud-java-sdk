@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRoutineRoutesRequest extends TeaModel {
     /**
-     * <p>The page number for a paging query. The value must be greater than or equal to 1.</p>
+     * <p>The page number for a paged query. The value must be greater than or equal to 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListRoutineRoutesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page for a paging query. Valid values: 1 to 500.</p>
+     * <p>The number of entries per page for a paged query. Valid values: 1 to 500.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

@@ -32,7 +32,7 @@ public class ListOriginCaCertificatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array of certificate objects that match the query.</p>
+     * <p>The result.</p>
      */
     @NameInMap("Result")
     public java.util.List<ListOriginCaCertificatesResponseBodyResult> result;
@@ -56,7 +56,7 @@ public class ListOriginCaCertificatesResponseBody extends TeaModel {
     public String siteName;
 
     /**
-     * <p>The total number of certificates that match the query.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -136,7 +136,7 @@ public class ListOriginCaCertificatesResponseBody extends TeaModel {
         public String commonName;
 
         /**
-         * <p>The time when the certificate was created.</p>
+         * <p>The creation time. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-06-24 07:48:51</p>
@@ -163,7 +163,7 @@ public class ListOriginCaCertificatesResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The issuer of the certificate.</p>
+         * <p>The certification authority.</p>
          * 
          * <strong>example:</strong>
          * <p>GlobalSign nv-sa</p>
@@ -181,7 +181,7 @@ public class ListOriginCaCertificatesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The expiration date of the certificate.</p>
+         * <p>The end time of the certificate validity period. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-31 02:08:00</p>
@@ -190,10 +190,10 @@ public class ListOriginCaCertificatesResponseBody extends TeaModel {
         public String notAfter;
 
         /**
-         * <p>The validity start date of the certificate.</p>
+         * <p>The start time of the certificate validity period. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</p>
          * 
          * <strong>example:</strong>
-         * <p>2023-11-26T16:00:00Z</p>
+         * <p>2023-11-26 16:00:00</p>
          */
         @NameInMap("NotBefore")
         public String notBefore;
@@ -217,7 +217,7 @@ public class ListOriginCaCertificatesResponseBody extends TeaModel {
         public String SAN;
 
         /**
-         * <p>The serial number of the certificate.</p>
+         * <p>The certificate serial number.</p>
          * 
          * <strong>example:</strong>
          * <p>babaded901474b9693acf530e0fb1d**</p>
@@ -253,7 +253,7 @@ public class ListOriginCaCertificatesResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The time when the certificate was last updated.</p>
+         * <p>The update time. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-07-20 06:18:42</p>

@@ -14,7 +14,7 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array of record details.</p>
+     * <p>The result array.</p>
      */
     @NameInMap("Result")
     public java.util.List<ListCertificatesByRecordResponseBodyResult> result;
@@ -38,7 +38,7 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
     public String siteName;
 
     /**
-     * <p>The total number of records.</p>
+     * <p>The total number of entries, which is the same as the number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>
@@ -93,7 +93,7 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
 
     public static class ListCertificatesByRecordResponseBodyResultCertificates extends TeaModel {
         /**
-         * <p>The ID of the Alibaba Cloud certificate.</p>
+         * <p>The cloud certificate ID.</p>
          * 
          * <strong>example:</strong>
          * <p>30000137</p>
@@ -111,7 +111,7 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
         public String commonName;
 
         /**
-         * <p>The time when the certificate was created.</p>
+         * <p>The creation time. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-02-28 06:17:11</p>
@@ -129,7 +129,7 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
         public String fingerprintSha256;
 
         /**
-         * <p>The ID of the certificate.</p>
+         * <p>The certificate ID.</p>
          * 
          * <strong>example:</strong>
          * <p>babab022c5e9b27bf9c64d7f4b1667f4</p>
@@ -138,7 +138,7 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The issuer of the certificate.</p>
+         * <p>The certificate issuer.</p>
          * 
          * <strong>example:</strong>
          * <p>GlobalSign nv-sa</p>
@@ -156,7 +156,7 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
         public String issuerCN;
 
         /**
-         * <p>The Keyless server ID. This parameter is valid only when <code>Type</code> is set to <code>keyless</code>.</p>
+         * <p>The Keyless server ID. This parameter is valid only when Type is set to keyless.</p>
          * 
          * <strong>example:</strong>
          * <p>baba39055622c008b90285a8838e****</p>
@@ -165,7 +165,7 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
         public String keyServerId;
 
         /**
-         * <p>The name of the certificate.</p>
+         * <p>The certificate name.</p>
          * 
          * <strong>example:</strong>
          * <p>yourCertName</p>
@@ -174,7 +174,7 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The date and time when the certificate expires.</p>
+         * <p>The end time of the certificate validity period. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-02-28 06:17:11</p>
@@ -183,7 +183,7 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
         public String notAfter;
 
         /**
-         * <p>The date and time when the certificate becomes valid.</p>
+         * <p>The start time of the certificate validity period. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-02-28 06:17:11</p>
@@ -201,7 +201,7 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
         public String pubAlg;
 
         /**
-         * <p>The region where the certificate is stored.</p>
+         * <p>The certificate store area.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -210,7 +210,7 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The Subject Alternative Names (SANs) of the certificate.</p>
+         * <p>The Subject Alternative Name (SAN) of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com,*.example.com">www.example.com,*.example.com</a></p>
@@ -219,7 +219,7 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
         public String SAN;
 
         /**
-         * <p>The serial number of the certificate.</p>
+         * <p>The certificate serial number.</p>
          * 
          * <strong>example:</strong>
          * <p>baba39055622c008b90285a8838ed09a</p>
@@ -237,7 +237,7 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
         public String sigAlg;
 
         /**
-         * <p>The status of the certificate.</p>
+         * <p>The certificate status.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -246,7 +246,7 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The type of the certificate. Valid values:</p>
+         * <p>The certificate type.</p>
          * 
          * <strong>example:</strong>
          * <p>free</p>
@@ -255,7 +255,7 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The time when the certificate was last updated.</p>
+         * <p>The update time. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-02-28 06:17:11</p>
@@ -424,7 +424,7 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
 
     public static class ListCertificatesByRecordResponseBodyResult extends TeaModel {
         /**
-         * <p>The number of certificate requests in progress.</p>
+         * <p>The number of certificates being applied for.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -433,13 +433,13 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
         public Long applylingCount;
 
         /**
-         * <p>A list of certificates matching the record.</p>
+         * <p>The list of certificates that match the record.</p>
          */
         @NameInMap("Certificates")
         public java.util.List<ListCertificatesByRecordResponseBodyResultCertificates> certificates;
 
         /**
-         * <p>The number of certificates matching the record.</p>
+         * <p>The number of certificates that match the record.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -457,7 +457,13 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
         public String recordName;
 
         /**
-         * <p>The certificate configuration status for the record. Valid values:</p>
+         * <p>The certificate configuration status of the record. Valid values:</p>
+         * <ul>
+         * <li>none: Not configured.</li>
+         * <li>configured: Configured.</li>
+         * <li>applying: Being applied for.</li>
+         * <li>failed: Application failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>none</p>

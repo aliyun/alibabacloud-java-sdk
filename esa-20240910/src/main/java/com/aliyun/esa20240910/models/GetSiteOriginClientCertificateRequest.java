@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSiteOriginClientCertificateRequest extends TeaModel {
     /**
-     * <p>The ID of the client certificate.</p>
+     * <p>The certificate ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetSiteOriginClientCertificateRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The ID of the site.</p>
+     * <p>The site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

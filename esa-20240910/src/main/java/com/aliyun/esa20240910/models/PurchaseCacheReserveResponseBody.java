@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PurchaseCacheReserveResponseBody extends TeaModel {
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>xcdn-ad*****s11w</p>
@@ -14,7 +14,7 @@ public class PurchaseCacheReserveResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Order ID.</p>
+     * <p>The order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>31223****11</p>
@@ -23,7 +23,7 @@ public class PurchaseCacheReserveResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>30423A7F-A83D-1E24-B80E-86DD25790758</p>

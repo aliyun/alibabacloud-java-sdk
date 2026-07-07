@@ -38,7 +38,7 @@ public class GetRoutineCodeVersionInfoResponseBody extends TeaModel {
     public GetRoutineCodeVersionInfoResponseBodyConfOptions confOptions;
 
     /**
-     * <p>The time when the code version was created.</p>
+     * <p>The time when the code version was created. The time follows the RFC 3339 standard in the UTC time zone.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-08-04T01:54:19Z</p>
@@ -47,7 +47,7 @@ public class GetRoutineCodeVersionInfoResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The additional information about the code version. The value is in JSON string format.</p>
+     * <p>The extra information of the code version. The value is in JSON string format.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -56,7 +56,7 @@ public class GetRoutineCodeVersionInfoResponseBody extends TeaModel {
     public String extraInfo;
 
     /**
-     * <p>Indicates whether the code version contains asset files.</p>
+     * <p>Indicates whether the code version contains Assets files.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
