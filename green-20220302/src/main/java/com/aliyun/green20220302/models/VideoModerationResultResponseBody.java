@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class VideoModerationResultResponseBody extends TeaModel {
     /**
-     * <p>The response code. A value of 200 indicates success.</p>
+     * <p>The return code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -20,7 +20,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
     public VideoModerationResultResponseBodyData data;
 
     /**
-     * <p>The response message.</p>
+     * <p>The return message.</p>
      * 
      * <strong>example:</strong>
      * <p>success finished</p>
@@ -94,7 +94,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>The number of times the label appears.</p>
+         * <p>The number of times the label was detected.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -134,9 +134,21 @@ public class VideoModerationResultResponseBody extends TeaModel {
     }
 
     public static class VideoModerationResultResponseBodyDataAudioResultSliceDetailsResultCustomizedHit extends TeaModel {
+        /**
+         * <p>The custom keywords.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fxxk</p>
+         */
         @NameInMap("KeyWords")
         public String keyWords;
 
+        /**
+         * <p>The name of the custom library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>备用词库02</p>
+         */
         @NameInMap("LibName")
         public String libName;
 
@@ -164,12 +176,30 @@ public class VideoModerationResultResponseBody extends TeaModel {
     }
 
     public static class VideoModerationResultResponseBodyDataAudioResultSliceDetailsResultRiskPositions extends TeaModel {
+        /**
+         * <p>The end position.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("EndPos")
         public Integer endPos;
 
+        /**
+         * <p>The detected sensitive word.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fxxk</p>
+         */
         @NameInMap("RiskWord")
         public String riskWord;
 
+        /**
+         * <p>The start position.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("StartPos")
         public Integer startPos;
 
@@ -205,24 +235,60 @@ public class VideoModerationResultResponseBody extends TeaModel {
     }
 
     public static class VideoModerationResultResponseBodyDataAudioResultSliceDetailsResult extends TeaModel {
+        /**
+         * <p>The confidence level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99.9</p>
+         */
         @NameInMap("Confidence")
         public Float confidence;
 
+        /**
+         * <p>The list of hit custom libraries.</p>
+         */
         @NameInMap("CustomizedHit")
         public java.util.List<VideoModerationResultResponseBodyDataAudioResultSliceDetailsResultCustomizedHit> customizedHit;
 
+        /**
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>疑似违禁内容</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>profanity</p>
+         */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <p>The risk level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
+         */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
+        /**
+         * <p>The list of risk positions.</p>
+         */
         @NameInMap("RiskPositions")
         public java.util.List<VideoModerationResultResponseBodyDataAudioResultSliceDetailsResultRiskPositions> riskPositions;
 
+        /**
+         * <p>The hit risk content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fxxk</p>
+         */
         @NameInMap("RiskWords")
         public String riskWords;
 
@@ -327,7 +393,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public String extend;
 
         /**
-         * <p>The violation labels that are hit.</p>
+         * <p>The violated labels that were hit.</p>
          * 
          * <strong>example:</strong>
          * <p>porn</p>
@@ -335,6 +401,9 @@ public class VideoModerationResultResponseBody extends TeaModel {
         @NameInMap("Labels")
         public String labels;
 
+        /**
+         * <p>The text detection result.</p>
+         */
         @NameInMap("Result")
         public java.util.List<VideoModerationResultResponseBodyDataAudioResultSliceDetailsResult> result;
 
@@ -367,7 +436,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public String riskTips;
 
         /**
-         * <p>The risk keywords that are hit.</p>
+         * <p>The risk keywords that were hit.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -613,7 +682,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public String contentProducer;
 
         /**
-         * <p>The name, ID, or code of the propagation platform. For services that provide artificial intelligence-generated content, this value can be the same as ContentProducer.</p>
+         * <p>The name, code, or identifier of the propagation platform. For services that provide artificial intelligence-generated content, this value can be the same as ContentProducer.</p>
          * 
          * <strong>example:</strong>
          * <p>001191******M000100Y43</p>
@@ -624,11 +693,11 @@ public class VideoModerationResultResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the content is generated by artificial intelligence (AI). Valid values:</p>
          * <ul>
-         * <li><p>1: The content is generated through artificial intelligence content generation.</p>
+         * <li><p>1: The content is AI-generated content (AIGC).</p>
          * </li>
-         * <li><p>2: (Propagation platforms only) The content may be generated through artificial intelligence content generation.</p>
+         * <li><p>2: (Propagation platforms only) The content may be AI-generated content generation.</p>
          * </li>
-         * <li><p>3: (Propagation platforms only) The content is suspected to be generated through artificial intelligence content generation.</p>
+         * <li><p>3: (Propagation platforms only) The content is suspected to be AI-generated content generation.</p>
          * </li>
          * </ul>
          * 
@@ -639,7 +708,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>The content production ID, which is the unique identifier used by the production platform to trace synthesized content.</p>
+         * <p>The content production ID, a unique identifier used by the production platform to trace synthesized content.</p>
          * 
          * <strong>example:</strong>
          * <p>123******456</p>
@@ -648,7 +717,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public String produceID;
 
         /**
-         * <p>The content propagation ID, which is the unique identifier assigned by the propagation platform to the propagated AI-generated content.</p>
+         * <p>The content propagation ID, a unique identifier assigned by the propagation platform to the distributed AI-generated content.</p>
          * 
          * <strong>example:</strong>
          * <p>123******456</p>
@@ -657,8 +726,8 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public String propagateID;
 
         /**
-         * <p>The reserved field.</p>
-         * <p>This field can store information used by the content generation service provider for self-initiated security protection to safeguard content and identifier integrity. A hashing mechanism based on ContentProducer and ProduceID can be used to securely store and verify critical information.</p>
+         * <p>A reserved field.</p>
+         * <p>This field can store information used by the content generation service provider for self-initiated security protection and content/identifier integrity assurance. A hashing mechanism based on ContentProducer and ProduceID can be used to securely store and verify critical information.</p>
          * 
          * <strong>example:</strong>
          * <p>d41d**********427e</p>
@@ -667,8 +736,8 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public String reservedCode1;
 
         /**
-         * <p>The reserved field.</p>
-         * <p>This field can be used by the content propagation service provider for self-initiated security protection to safeguard content and identifier integrity. A hashing mechanism based on ContentProducer and ProduceID can be used to securely store and verify critical information.</p>
+         * <p>A reserved field.</p>
+         * <p>This field can be used by the content propagation service provider for self-initiated security protection and content/identifier integrity assurance. A hashing mechanism based on ContentProducer and ProduceID can be used to securely store and verify critical information.</p>
          * 
          * <strong>example:</strong>
          * <p>d41d**********427e</p>
@@ -820,7 +889,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>The number of times the label appears.</p>
+         * <p>The number of times the label was detected.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -861,7 +930,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     public static class VideoModerationResultResponseBodyDataFrameResultFramesResultsCustomImage extends TeaModel {
         /**
-         * <p>The ID of the custom image that is hit.</p>
+         * <p>The ID of the hit custom image.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -870,7 +939,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The ID of the custom image library that is hit.</p>
+         * <p>The ID of the hit custom image library.</p>
          * 
          * <strong>example:</strong>
          * <p>12345678</p>
@@ -1044,7 +1113,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLocation location;
 
         /**
-         * <p>The logo identification information.</p>
+         * <p>The logo information.</p>
          */
         @NameInMap("Logo")
         public java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLogo> logo;
@@ -1150,7 +1219,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     public static class VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigure extends TeaModel {
         /**
-         * <p>The code of the recognized public figure.</p>
+         * <p>The code of the identified public figure.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx001</p>
@@ -1159,7 +1228,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public String figureId;
 
         /**
-         * <p>The name of the recognized public figure.</p>
+         * <p>The name of the identified public figure.</p>
          * 
          * <strong>example:</strong>
          * <p>张三</p>
@@ -1168,7 +1237,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public String figureName;
 
         /**
-         * <p>The location of the recognized public figure.</p>
+         * <p>The location of the identified public figure.</p>
          */
         @NameInMap("Location")
         public java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigureLocation> location;
@@ -1265,7 +1334,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     public static class VideoModerationResultResponseBodyDataFrameResultFramesResultsVlContent extends TeaModel {
         /**
-         * <p>The output text from the foundation model.</p>
+         * <p>The output text from the large model.</p>
          * 
          * <strong>example:</strong>
          * <p>in the picture XXX</p>
@@ -1290,19 +1359,19 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     public static class VideoModerationResultResponseBodyDataFrameResultFramesResults extends TeaModel {
         /**
-         * <p>The custom image library information that is hit. This field is returned only when a custom image library is hit.</p>
+         * <p>The custom image library information returned when a custom image library is hit.</p>
          */
         @NameInMap("CustomImage")
         public java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResultsCustomImage> customImage;
 
         /**
-         * <p>The logo information returned when the video contains a logo.</p>
+         * <p>The logo information returned when a logo is detected in the video.</p>
          */
         @NameInMap("LogoData")
         public java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoData> logoData;
 
         /**
-         * <p>The recognized public figure codes returned when the video contains specific public figures.</p>
+         * <p>The identified public figure codes returned when the video contains specific public figures.</p>
          */
         @NameInMap("PublicFigure")
         public java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigure> publicFigure;
@@ -1323,13 +1392,13 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public String service;
 
         /**
-         * <p>The text information in the image that is hit.</p>
+         * <p>The text information detected in the hit image.</p>
          */
         @NameInMap("TextInImage")
         public java.util.Map<String, ?> textInImage;
 
         /**
-         * <p>The foundation model result.</p>
+         * <p>The large model result.</p>
          */
         @NameInMap("VlContent")
         public VideoModerationResultResponseBodyDataFrameResultFramesResultsVlContent vlContent;
@@ -1433,7 +1502,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public String riskLevel;
 
         /**
-         * <p>The temporary URL of the captured frame image.</p>
+         * <p>The temporary access URL of the captured frame image.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://xxxx.abc.jpg">http://xxxx.abc.jpg</a></p>

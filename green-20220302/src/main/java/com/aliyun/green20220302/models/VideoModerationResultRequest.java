@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class VideoModerationResultRequest extends TeaModel {
     /**
-     * <p>The service code for video moderation.</p>
+     * <p>The ServiceCode for video moderation.</p>
      * 
      * <strong>example:</strong>
      * <p>videoDetection</p>
@@ -14,7 +14,7 @@ public class VideoModerationResultRequest extends TeaModel {
     public String service;
 
     /**
-     * <p>The parameter set required by the moderation service. taskId specifies the task ID of the moderation task to query. Only one taskId can be specified per request.</p>
+     * <p>The parameter set required by the moderation service. taskId specifies the taskId of the moderation task to query. Only one taskId can be specified per request.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;taskId&quot;:&quot;au_f_8PoWiZKoLbczp5HRn69VdT-1y8@U5&quot;}</p>
