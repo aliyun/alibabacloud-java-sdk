@@ -3,10 +3,8 @@ package com.aliyun.schedulerx320240624.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateJobResponseBody extends TeaModel {
+public class DeleteContactResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
-     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -14,42 +12,32 @@ public class UpdateJobResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The error message.</p>
-     * 
      * <strong>example:</strong>
-     * <p>Parameter error: content is null.</p>
+     * <p>Parameter check error</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</p>
-     * 
      * <strong>example:</strong>
-     * <p>3808cf26-dde2-4286-8503-b0a2cd4065a7</p>
+     * <p>2ECA6FC9-7557-5576-AF5F-FC3E7BCC9C21</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
-     * <ul>
-     * <li>true: The call was successful.</li>
-     * <li>false: The call failed.</li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
-    public static UpdateJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        UpdateJobResponseBody self = new UpdateJobResponseBody();
+    public static DeleteContactResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeleteContactResponseBody self = new DeleteContactResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public UpdateJobResponseBody setCode(Integer code) {
+    public DeleteContactResponseBody setCode(Integer code) {
         this.code = code;
         return this;
     }
@@ -57,7 +45,7 @@ public class UpdateJobResponseBody extends TeaModel {
         return this.code;
     }
 
-    public UpdateJobResponseBody setMessage(String message) {
+    public DeleteContactResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -65,7 +53,7 @@ public class UpdateJobResponseBody extends TeaModel {
         return this.message;
     }
 
-    public UpdateJobResponseBody setRequestId(String requestId) {
+    public DeleteContactResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -73,7 +61,7 @@ public class UpdateJobResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UpdateJobResponseBody setSuccess(Boolean success) {
+    public DeleteContactResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

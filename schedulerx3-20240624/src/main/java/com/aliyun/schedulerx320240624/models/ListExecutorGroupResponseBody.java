@@ -174,6 +174,9 @@ public class ListExecutorGroupResponseBody extends TeaModel {
         @NameInMap("CmsWorkspaceId")
         public String cmsWorkspaceId;
 
+        @NameInMap("CurrentJobs")
+        public Integer currentJobs;
+
         /**
          * <strong>example:</strong>
          * <p>my first workflow</p>
@@ -183,6 +186,9 @@ public class ListExecutorGroupResponseBody extends TeaModel {
 
         @NameInMap("IntegrationType")
         public String integrationType;
+
+        @NameInMap("MaxJobs")
+        public Integer maxJobs;
 
         /**
          * <strong>example:</strong>
@@ -277,6 +283,14 @@ public class ListExecutorGroupResponseBody extends TeaModel {
             return this.cmsWorkspaceId;
         }
 
+        public ListExecutorGroupResponseBodyDataRecords setCurrentJobs(Integer currentJobs) {
+            this.currentJobs = currentJobs;
+            return this;
+        }
+        public Integer getCurrentJobs() {
+            return this.currentJobs;
+        }
+
         public ListExecutorGroupResponseBodyDataRecords setDescription(String description) {
             this.description = description;
             return this;
@@ -291,6 +305,14 @@ public class ListExecutorGroupResponseBody extends TeaModel {
         }
         public String getIntegrationType() {
             return this.integrationType;
+        }
+
+        public ListExecutorGroupResponseBodyDataRecords setMaxJobs(Integer maxJobs) {
+            this.maxJobs = maxJobs;
+            return this;
+        }
+        public Integer getMaxJobs() {
+            return this.maxJobs;
         }
 
         public ListExecutorGroupResponseBodyDataRecords setName(String name) {

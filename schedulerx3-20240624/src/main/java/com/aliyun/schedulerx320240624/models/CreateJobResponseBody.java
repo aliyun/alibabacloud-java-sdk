@@ -31,7 +31,7 @@ public class CreateJobResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use this ID to troubleshoot issues.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>3835AA29-2298-5434-BC53-9CC377CDFD2C</p>

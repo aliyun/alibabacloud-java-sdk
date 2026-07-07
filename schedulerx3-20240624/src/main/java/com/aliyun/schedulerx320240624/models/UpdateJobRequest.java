@@ -15,7 +15,7 @@ public class UpdateJobRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The interval in seconds between retry attempts.</p>
+     * <p>The retry interval upon node failure.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -33,15 +33,7 @@ public class UpdateJobRequest extends TeaModel {
     public String calendar;
 
     /**
-     * <p>The client blocking strategy.</p>
-     * <ul>
-     * <li><p>1: Serial execution</p>
-     * </li>
-     * <li><p>2: Ignore later schedules</p>
-     * </li>
-     * <li><p>3: Overwrite earlier schedules</p>
-     * </li>
-     * </ul>
+     * <p>The child node IDs, separated by commas.</p>
      * 
      * <strong>example:</strong>
      * <p>1,2</p>
@@ -60,6 +52,8 @@ public class UpdateJobRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The dependency strategy.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -67,7 +61,7 @@ public class UpdateJobRequest extends TeaModel {
     public Integer dependentStrategy;
 
     /**
-     * <p>The job description.</p>
+     * <p>The node description.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -76,7 +70,12 @@ public class UpdateJobRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Notification contact configuration</p>
+     * <p>The client blocking strategy. Valid values:</p>
+     * <ul>
+     * <li>1: serial execution on a single machine</li>
+     * <li>2: ignore subsequent scheduling</li>
+     * <li>3: override previous scheduling</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -85,7 +84,7 @@ public class UpdateJobRequest extends TeaModel {
     public Integer executorBlockStrategy;
 
     /**
-     * <p>The job handler name.</p>
+     * <p>The JobHandler name.</p>
      * 
      * <strong>example:</strong>
      * <p>testJobVoidHandler</p>
@@ -94,7 +93,7 @@ public class UpdateJobRequest extends TeaModel {
     public String jobHandler;
 
     /**
-     * <p>The job ID.</p>
+     * <p>The node ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -104,7 +103,7 @@ public class UpdateJobRequest extends TeaModel {
     public Long jobId;
 
     /**
-     * <p>The maximum number of retries for a failed job.</p>
+     * <p>The maximum number of retry attempts upon node failure.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -113,9 +112,9 @@ public class UpdateJobRequest extends TeaModel {
     public Integer maxAttempt;
 
     /**
-     * <p>The maximum number of concurrent job instances.</p>
+     * <p>The maximum number of concurrent instances of the node.</p>
      * <blockquote>
-     * <p>This parameter defines the maximum number of instances for a single job that can run concurrently. A value of <code>1</code> prevents duplicate execution. If this limit is exceeded, the scheduler skips the current job.</p>
+     * <p>The maximum number of instances that can run at the same time for the same node. A value of 1 indicates that repeated execution is not allowed. If the concurrency limit is exceeded, the current scheduling is skipped.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -125,7 +124,7 @@ public class UpdateJobRequest extends TeaModel {
     public Integer maxConcurrency;
 
     /**
-     * <p>The job name.</p>
+     * <p>The node name.</p>
      * 
      * <strong>example:</strong>
      * <p>test-job</p>
@@ -134,22 +133,19 @@ public class UpdateJobRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Time zone</p>
-     * <blockquote>
-     * <p>The default is the time zone of the SchedulerX server.</p>
-     * </blockquote>
+     * <p>The notification configuration.</p>
      */
     @NameInMap("NoticeConfig")
     public UpdateJobRequestNoticeConfig noticeConfig;
 
     /**
-     * <p>Notification configuration</p>
+     * <p>The notification contact configuration.</p>
      */
     @NameInMap("NoticeContacts")
     public java.util.List<UpdateJobRequestNoticeContacts> noticeContacts;
 
     /**
-     * <p>The job parameters.</p>
+     * <p>The node parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -158,16 +154,12 @@ public class UpdateJobRequest extends TeaModel {
     public String parameters;
 
     /**
-     * <p>The job execution priority. Valid values:</p>
+     * <p>The execution priority of the node. Valid values:</p>
      * <ul>
-     * <li><p><code>1</code>: Low</p>
-     * </li>
-     * <li><p><code>5</code>: Medium</p>
-     * </li>
-     * <li><p><code>10</code>: High</p>
-     * </li>
-     * <li><p><code>15</code>: Very High</p>
-     * </li>
+     * <li>1: low</li>
+     * <li>5: medium</li>
+     * <li>10: high</li>
+     * <li>15: very high</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -177,24 +169,16 @@ public class UpdateJobRequest extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>The routing strategy. Valid values:</p>
+     * <p>The routing policy. Valid values:</p>
      * <ul>
-     * <li><p><code>1</code>: round-robin</p>
-     * </li>
-     * <li><p><code>2</code>: random</p>
-     * </li>
-     * <li><p><code>3</code>: first</p>
-     * </li>
-     * <li><p><code>4</code>: last</p>
-     * </li>
-     * <li><p><code>5</code>: least frequently used</p>
-     * </li>
-     * <li><p><code>6</code>: least recently used</p>
-     * </li>
-     * <li><p><code>7</code>: consistent hashing</p>
-     * </li>
-     * <li><p><code>8</code>: sharded broadcast</p>
-     * </li>
+     * <li>1: round robin</li>
+     * <li>2: random</li>
+     * <li>3: first</li>
+     * <li>4: last</li>
+     * <li>5: least frequently used</li>
+     * <li>6: least recently used</li>
+     * <li>7: consistent hashing</li>
+     * <li>8: shard broadcast</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -204,7 +188,7 @@ public class UpdateJobRequest extends TeaModel {
     public Integer routeStrategy;
 
     /**
-     * <p>The script content for non-BEAN jobs.</p>
+     * <p>The script for non-BEAN nodes. Use this field to configure the script.</p>
      * 
      * <strong>example:</strong>
      * <p>echo &quot;hello world&quot;</p>
@@ -213,7 +197,7 @@ public class UpdateJobRequest extends TeaModel {
     public String script;
 
     /**
-     * <p>The type of the start time.</p>
+     * <p>The scheduling start time.</p>
      * 
      * <strong>example:</strong>
      * <p>1716902187</p>
@@ -222,17 +206,7 @@ public class UpdateJobRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The task execution priority. The following values are supported:</p>
-     * <ul>
-     * <li><p>1: Low</p>
-     * </li>
-     * <li><p>5: Medium</p>
-     * </li>
-     * <li><p>10: High</p>
-     * </li>
-     * <li><p>15: Very High</p>
-     * </li>
-     * </ul>
+     * <p>The start time type.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -241,18 +215,13 @@ public class UpdateJobRequest extends TeaModel {
     public String startTimeType;
 
     /**
-     * <p>The time expression. The expression format depends on the <code>TimeType</code>.</p>
+     * <p>The time expression. Set the time expression based on the selected time type.</p>
      * <ul>
-     * <li><p><code>none</code>: Leave this parameter empty.</p>
-     * </li>
-     * <li><p><code>cron</code>: Specify a standard cron expression. Online validation is supported.</p>
-     * </li>
-     * <li><p><code>api</code>: Leave this parameter empty.</p>
-     * </li>
-     * <li><p><code>fixed_rate</code>: An integer that represents a fixed interval in seconds. For example, <code>30</code> triggers the job every 30 seconds.</p>
-     * </li>
-     * <li><p><code>one_time</code>: A single execution time, specified in the <code>yyyy-MM-dd HH:mm:ss</code> format or as a timestamp in milliseconds. For example, &quot;2022-10-10 10:10:00&quot;.</p>
-     * </li>
+     * <li>none: No value is required.</li>
+     * <li>cron: Specify a standard cron expression. Online verification is supported.</li>
+     * <li>api: No value is required.</li>
+     * <li>fixed_rate: Specify a fixed frequency value in seconds. For example, 30 indicates that the node is triggered every 30 seconds.</li>
+     * <li>one_time: Specify a scheduling time in the yyyy-MM-dd HH:mm:ss format or a timestamp in milliseconds. For example, &quot;2022-10-10 10:10:00&quot;.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -264,16 +233,11 @@ public class UpdateJobRequest extends TeaModel {
     /**
      * <p>The time type. Valid values:</p>
      * <ul>
-     * <li><p><code>-1</code>: none</p>
-     * </li>
-     * <li><p><code>1</code>: cron</p>
-     * </li>
-     * <li><p><code>3</code>: fixed_rate</p>
-     * </li>
-     * <li><p><code>5</code>: one_time</p>
-     * </li>
-     * <li><p><code>100</code>: api</p>
-     * </li>
+     * <li>-1: none</li>
+     * <li>1: cron</li>
+     * <li>3: fix_rate</li>
+     * <li>5: one_time</li>
+     * <li>100: api</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -283,7 +247,10 @@ public class UpdateJobRequest extends TeaModel {
     public Integer timeType;
 
     /**
-     * <p>The start time of the schedule.</p>
+     * <p>The time zone.</p>
+     * <blockquote>
+     * <p>By default, the time zone of the SchedulerX server is used.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>Hongkong</p>
@@ -292,7 +259,7 @@ public class UpdateJobRequest extends TeaModel {
     public String timezone;
 
     /**
-     * <p>The ID of the child job. Separate multiple IDs with a comma.</p>
+     * <p>The node weight.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -522,22 +489,21 @@ public class UpdateJobRequest extends TeaModel {
 
     public static class UpdateJobRequestNoticeConfig extends TeaModel {
         /**
-         * <p>The threshold, in seconds, for a job to be considered as finishing early.</p>
-         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
         @NameInMap("EndEarly")
         public Integer endEarly;
 
-        /**
-         * <p>Indicates whether to enable an alarm when a job finishes earlier than expected. Set to <code>true</code> to enable the alarm, or <code>false</code> to disable it.</p>
-         */
         @NameInMap("EndEarlyEnable")
         public Boolean endEarlyEnable;
 
         /**
-         * <p>Indicates whether to enable the failure alarm. Set to <code>true</code> to enable the alarm, or <code>false</code> to disable it.</p>
+         * <p>Specifies whether to enable the failure alerting switch. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -546,7 +512,10 @@ public class UpdateJobRequest extends TeaModel {
         public Boolean failEnable;
 
         /**
-         * <p>The number of consecutive failures required to trigger a failure alarm.</p>
+         * <p>The number of consecutive failures.</p>
+         * <blockquote>
+         * <p>An alert is sent only when the number of consecutive failures exceeds the configured value.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -555,7 +524,11 @@ public class UpdateJobRequest extends TeaModel {
         public Integer failLimitTimes;
 
         /**
-         * <p>Indicates whether to enable an alarm if no workers are available. Set to <code>true</code> to enable the alarm, or <code>false</code> to disable it.</p>
+         * <p>Specifies whether to enable the no-available-machine alerting switch. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -564,12 +537,16 @@ public class UpdateJobRequest extends TeaModel {
         public Boolean missWorkerEnable;
 
         /**
-         * <p>The notification channel. Valid values:
-         * \- <code>sms</code>: sms
-         * \- <code>phone</code>: voice call
-         * \- <code>mail</code>: email
-         * \- <code>webhook</code>: webhook
-         * \&gt; You can specify multiple channels, separated by commas.</p>
+         * <p>The notification channel. Valid values:</p>
+         * <ul>
+         * <li>sms: text message</li>
+         * <li>phone: phone call</li>
+         * <li>mail: email</li>
+         * <li>webhook: webhook<blockquote>
+         * <p>Separate multiple notification channels with commas.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>webhook,sms,mail,phone</p>
@@ -578,7 +555,11 @@ public class UpdateJobRequest extends TeaModel {
         public String sendChannel;
 
         /**
-         * <p>Indicates whether to enable success notifications. Set to <code>true</code> to enable notifications, or <code>false</code> to disable them.</p>
+         * <p>Specifies whether to enable the success notification switch. Valid values:</p>
+         * <ul>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -587,7 +568,7 @@ public class UpdateJobRequest extends TeaModel {
         public Boolean successNotice;
 
         /**
-         * <p>The job execution timeout in seconds.</p>
+         * <p>The node execution timeout period, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>90</p>
@@ -596,7 +577,13 @@ public class UpdateJobRequest extends TeaModel {
         public Long timeout;
 
         /**
-         * <p>Indicates whether to enable the timeout alarm. Set to <code>true</code> to enable the alarm, or <code>false</code> to disable it.</p>
+         * <p>Specifies whether to enable timeout alerting. Valid values:</p>
+         * <ul>
+         * <li><p>true: Enabled.</p>
+         * </li>
+         * <li><p>false: Disabled.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -605,7 +592,11 @@ public class UpdateJobRequest extends TeaModel {
         public Boolean timeoutEnable;
 
         /**
-         * <p>Indicates whether to terminate a timed-out job. Set to <code>true</code> to terminate the job, or <code>false</code> to let it continue.</p>
+         * <p>Specifies whether to enable the timeout termination switch for the current trigger. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -702,8 +693,10 @@ public class UpdateJobRequest extends TeaModel {
 
     public static class UpdateJobRequestNoticeContacts extends TeaModel {
         /**
-         * <p>The contact type.
-         * \&gt; Default value: 1.</p>
+         * <p>The contact type. </p>
+         * <blockquote>
+         * <p>Default configurations: 1.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1</p>
