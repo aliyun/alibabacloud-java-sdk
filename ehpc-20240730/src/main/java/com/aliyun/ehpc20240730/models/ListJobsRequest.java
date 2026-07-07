@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class ListJobsRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> to query the cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,10 +22,10 @@ public class ListJobsRequest extends TeaModel {
     public ListJobsRequestJobFilter jobFilter;
 
     /**
-     * <p>The page number of the page to return.</p>
+     * <p>The page number of the list.</p>
      * <ul>
-     * <li>Pages start from page 1.</li>
-     * <li>Default value: 1</li>
+     * <li>Minimum value: 1.</li>
+     * <li>Default value: 1.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,10 +35,10 @@ public class ListJobsRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page when using paged query. Paging is applied to the results.</p>
      * <ul>
      * <li>Maximum value: 50.</li>
-     * <li>Default value: 10</li>
+     * <li>Default value: 10.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -86,7 +86,7 @@ public class ListJobsRequest extends TeaModel {
 
     public static class ListJobsRequestJobFilterDiagnosis extends TeaModel {
         /**
-         * <p>Job diagnosis threshold comparator.</p>
+         * <p>The comparison operator for the job diagnostic threshold.</p>
          * 
          * <strong>example:</strong>
          * <p>greater</p>
@@ -95,7 +95,7 @@ public class ListJobsRequest extends TeaModel {
         public String operator;
 
         /**
-         * <p>Job diagnosis and analysis metrics</p>
+         * <p>The job diagnostic analysis metric.</p>
          * 
          * <strong>example:</strong>
          * <p>run_duration</p>
@@ -104,7 +104,7 @@ public class ListJobsRequest extends TeaModel {
         public String option;
 
         /**
-         * <p>Job diagnosis threshold.</p>
+         * <p>The job diagnostic threshold.</p>
          * 
          * <strong>example:</strong>
          * <p>24</p>
@@ -145,10 +145,10 @@ public class ListJobsRequest extends TeaModel {
 
     public static class ListJobsRequestJobFilterSortBy extends TeaModel {
         /**
-         * <p>The order in which jobs are sorted based on their execution time. Valid values:</p>
+         * <p>Sorts jobs by execution time. Valid values:</p>
          * <ul>
-         * <li>asc: in ascending order.</li>
-         * <li>desc: in descending order.</li>
+         * <li>asc: ascending order.</li>
+         * <li>desc: descending order.</li>
          * </ul>
          * <p>Default value: desc.</p>
          * 
@@ -159,10 +159,10 @@ public class ListJobsRequest extends TeaModel {
         public String executeOrder;
 
         /**
-         * <p>The order in which jobs are sorted based on their queuing time. Valid values:</p>
+         * <p>Sorts jobs by queue wait time. Valid values:</p>
          * <ul>
-         * <li>asc: in ascending order.</li>
-         * <li>desc: in descending order.</li>
+         * <li>asc: ascending order.</li>
+         * <li>desc: descending order.</li>
          * </ul>
          * <p>Default value: desc.</p>
          * 
@@ -173,10 +173,10 @@ public class ListJobsRequest extends TeaModel {
         public String pendOrder;
 
         /**
-         * <p>The order in which jobs are sorted based on their submitting time. Valid values:</p>
+         * <p>Sorts jobs by submission time. Valid values:</p>
          * <ul>
-         * <li>asc: in ascending order.</li>
-         * <li>desc: in descending order.</li>
+         * <li>asc: ascending order.</li>
+         * <li>desc: descending order.</li>
          * </ul>
          * <p>Default value: desc.</p>
          * 
@@ -219,7 +219,7 @@ public class ListJobsRequest extends TeaModel {
 
     public static class ListJobsRequestJobFilter extends TeaModel {
         /**
-         * <p>The time when the job was last updated. The value is a UNIX timestamp representing the number of seconds that have elapsed since 1970-01-01T00:00:00Z.</p>
+         * <p>The last update time of the job. The value is a UNIX timestamp representing the number of seconds that have elapsed since 1970-01-01T00:00:00Z.</p>
          * 
          * <strong>example:</strong>
          * <p>1724123085</p>
@@ -228,7 +228,7 @@ public class ListJobsRequest extends TeaModel {
         public String createTimeEnd;
 
         /**
-         * <p>The time when the job started. The value is a UNIX timestamp representing the number of seconds that have elapsed since 1970-01-01T00:00:00Z.</p>
+         * <p>The start time of the job. The value is a UNIX timestamp representing the number of seconds that have elapsed since 1970-01-01T00:00:00Z.</p>
          * 
          * <strong>example:</strong>
          * <p>1724122486</p>
@@ -237,7 +237,7 @@ public class ListJobsRequest extends TeaModel {
         public String createTimeStart;
 
         /**
-         * <p>Job diagnosis and analysis list.</p>
+         * <p>The job diagnostic analysis list.</p>
          */
         @NameInMap("Diagnosis")
         public java.util.List<ListJobsRequestJobFilterDiagnosis> diagnosis;
@@ -254,9 +254,9 @@ public class ListJobsRequest extends TeaModel {
         /**
          * <p>The job status. Valid values:</p>
          * <ul>
-         * <li>all: returns all jobs.</li>
-         * <li>finished: returns completed jobs.</li>
-         * <li>notfinish: returns uncompleted jobs.</li>
+         * <li>all: all statuses.</li>
+         * <li>finished: completed.</li>
+         * <li>notfinish: not completed.</li>
          * </ul>
          * <p>Default value: all.</p>
          * 
@@ -267,25 +267,25 @@ public class ListJobsRequest extends TeaModel {
         public String jobStatus;
 
         /**
-         * <p>The compute nodes that run the jobs.</p>
+         * <p>The list of compute nodes that run the jobs.</p>
          */
         @NameInMap("Nodes")
         public java.util.List<String> nodes;
 
         /**
-         * <p>The queues to which the jobs belong.</p>
+         * <p>The list of queues that run the jobs.</p>
          */
         @NameInMap("Queues")
         public java.util.List<String> queues;
 
         /**
-         * <p>The result sorting configurations.</p>
+         * <p>The sorting configuration for the job list.</p>
          */
         @NameInMap("SortBy")
         public ListJobsRequestJobFilterSortBy sortBy;
 
         /**
-         * <p>The users that run the jobs.</p>
+         * <p>The list of users who run the jobs.</p>
          */
         @NameInMap("Users")
         public java.util.List<String> users;

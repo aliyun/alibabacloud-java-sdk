@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListClustersShrinkRequest extends TeaModel {
     /**
-     * <p>The cluster IDs. You can specify up to 20 IDs.</p>
+     * <p>The IDs of the clusters to query. Valid values of N: 0 to 20.</p>
      */
     @NameInMap("ClusterIds")
     public String clusterIdsShrink;
 
     /**
-     * <p>The cluster names. You can specify up to 20 names.</p>
+     * <p>The names of the clusters to query. Valid values of N: 0 to 20.</p>
      */
     @NameInMap("ClusterNames")
     public String clusterNamesShrink;
 
     /**
-     * <p>The page number of the page to return. Default value: 1.</p>
+     * <p>The page number of the list. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -26,7 +26,7 @@ public class ListClustersShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 10 to 100. Default value: 10</p>
+     * <p>The number of entries per page in a paged query. Settings the number of rows per page for paging. Valid values: 10 to 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

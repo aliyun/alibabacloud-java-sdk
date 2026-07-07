@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class CreateNodesShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> to obtain the cluster ID.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> to query the cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ehpc-hz-FYUr32****</p>
@@ -15,19 +15,19 @@ public class CreateNodesShrinkRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>Specifies the hardware configuration of the compute node.</p>
+     * <p>The hardware configuration of the compute nodes.</p>
      */
     @NameInMap("ComputeNode")
     public String computeNodeShrink;
 
     /**
-     * <p>The number of compute nodes to add. Valid values: 1 to 99. The value of MinCount must be less than the value of Count.</p>
+     * <p>The number of compute nodes to add. Valid values: 1 to 99. The value must be greater than MinCount.</p>
      * <ul>
-     * <li><p>If the ECS inventory is less than MinCount, the operation fails.</p>
+     * <li><p>If the available ECS inventory is less than MinCount, the node creation fails.</p>
      * </li>
-     * <li><p>If the ECS inventory is between MinCount and Count, the number of nodes specified by MinCount is added.</p>
+     * <li><p>If the available ECS inventory is greater than or equal to MinCount but less than Count, nodes are added based on the number specified by MinCount.</p>
      * </li>
-     * <li><p>If the ECS inventory is greater than Count, the number of nodes specified by Count is added.</p>
+     * <li><p>If the available ECS inventory is greater than or equal to Count, nodes are added based on the number specified by Count.</p>
      * </li>
      * </ul>
      * 
@@ -38,7 +38,8 @@ public class CreateNodesShrinkRequest extends TeaModel {
     public Integer count;
 
     /**
-     * <p>The ID of the deployment set. You can call the <a href="https://help.aliyun.com/document_detail/91313.html">DescribeDeploymentSets</a> operation to obtain the ID. Only deployment sets that use the low-latency network policy are supported.</p>
+     * <p>The ID of the deployment set.
+     * You can call <a href="https://help.aliyun.com/document_detail/91313.html">DescribeDeploymentSets</a> to query the deployment set ID. Only deployment sets that use the low network latency strategy are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>ds-bp1frxuzdg87zh4pzq****</p>
@@ -47,12 +48,10 @@ public class CreateNodesShrinkRequest extends TeaModel {
     public String deploymentSetId;
 
     /**
-     * <p>Specifies the network type for communication between compute nodes. Valid values:</p>
+     * <p>The network type for communication between compute nodes. Valid values:</p>
      * <ul>
-     * <li><p>vpc</p>
-     * </li>
-     * <li><p>eRDMA</p>
-     * </li>
+     * <li>vpc</li>
+     * <li>eRDMA</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,7 +61,7 @@ public class CreateNodesShrinkRequest extends TeaModel {
     public String HPCInterConnect;
 
     /**
-     * <p>The hostname prefix for the compute nodes in the queue.</p>
+     * <p>The hostname prefix of the compute nodes in the queue.</p>
      * 
      * <strong>example:</strong>
      * <p>compute</p>
@@ -79,14 +78,11 @@ public class CreateNodesShrinkRequest extends TeaModel {
     @NameInMap("HostnameSuffix")
     public String hostnameSuffix;
 
-    /**
-     * <p>The ID of the reserved node pool.</p>
-     */
     @NameInMap("Hostnames")
     public String hostnamesShrink;
 
     /**
-     * <p>Specifies whether deletion protection is enabled for the compute node.</p>
+     * <p>Specifies whether deletion protection is enabled for the compute nodes.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -111,7 +107,7 @@ public class CreateNodesShrinkRequest extends TeaModel {
     public String queueName;
 
     /**
-     * <p>The name of the authorized instance role to be attached to the compute nodes in the queue.</p>
+     * <p>The name of the RAM role attached to the compute nodes in the queue.</p>
      * 
      * <strong>example:</strong>
      * <p>AliyunServiceRoleForOOSBandwidthScheduler</p>
@@ -129,7 +125,7 @@ public class CreateNodesShrinkRequest extends TeaModel {
     public String reservedNodePoolId;
 
     /**
-     * <p>The ID of the vSwitch.</p>
+     * <p>The vSwitch ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-bp1lfcjbfb099rrjn****</p>

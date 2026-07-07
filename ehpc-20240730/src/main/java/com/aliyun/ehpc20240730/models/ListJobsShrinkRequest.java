@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class ListJobsShrinkRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> to query the cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,10 +22,10 @@ public class ListJobsShrinkRequest extends TeaModel {
     public String jobFilterShrink;
 
     /**
-     * <p>The page number of the page to return.</p>
+     * <p>The page number of the list.</p>
      * <ul>
-     * <li>Pages start from page 1.</li>
-     * <li>Default value: 1</li>
+     * <li>Minimum value: 1.</li>
+     * <li>Default value: 1.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,10 +35,10 @@ public class ListJobsShrinkRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page when using paged query. Paging is applied to the results.</p>
      * <ul>
      * <li>Maximum value: 50.</li>
-     * <li>Default value: 10</li>
+     * <li>Default value: 10.</li>
      * </ul>
      * 
      * <strong>example:</strong>

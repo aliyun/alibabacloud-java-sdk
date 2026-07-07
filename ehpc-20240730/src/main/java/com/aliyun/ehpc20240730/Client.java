@@ -9,6 +9,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("eu-central-1", "ehpc.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "ehpc.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "ehpc.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-wuhan-lr", "ehpc.cn-wuhan-lr.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "ehpc.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "ehpc.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "ehpc.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "ehpc.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "ehpc.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "ehpc.cn-heyuan.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "ehpc.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "ehpc.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "ehpc.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-beijing", "ehpc.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "ehpc.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "ehpc.ap-southeast-2.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "ehpc.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "ehpc.ap-northeast-1.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("ehpc", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -420,7 +440,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a batch of compute nodes for an E-HPC cluster.</p>
+     * <p>Creates compute nodes for an Elastic High Performance Computing (E-HPC) cluster in a batch.</p>
      * 
      * @param tmpReq CreateNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -514,7 +534,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a batch of compute nodes for an E-HPC cluster.</p>
+     * <p>Creates compute nodes for an Elastic High Performance Computing (E-HPC) cluster in a batch.</p>
      * 
      * @param request CreateNodesRequest
      * @return CreateNodesResponse
@@ -1774,7 +1794,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all clusters of a user in each region.</p>
+     * <p>Queries the list of all clusters in each region under your account.</p>
      * 
      * @param tmpReq ListClustersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1828,7 +1848,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all clusters of a user in each region.</p>
+     * <p>Queries the list of all clusters in each region under your account.</p>
      * 
      * @param request ListClustersRequest
      * @return ListClustersResponse
@@ -1974,7 +1994,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the jobs in a cluster.</p>
+     * <p>Queries the list of jobs in a specified cluster.</p>
      * 
      * @param tmpReq ListJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2024,7 +2044,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the jobs in a cluster.</p>
+     * <p>Queries the list of jobs in a specified cluster.</p>
      * 
      * @param request ListJobsRequest
      * @return ListJobsResponse

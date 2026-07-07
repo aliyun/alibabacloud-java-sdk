@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListJobsResponseBody extends TeaModel {
     /**
-     * <p>The jobs.</p>
+     * <p>The job list.</p>
      */
     @NameInMap("Jobs")
     public java.util.List<ListJobsResponseBodyJobs> jobs;
 
     /**
-     * <p>The page number. Default value: 1</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListJobsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 10</p>
+     * <p>The number of entries per page set for the paged query. Paging settings apply. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -38,10 +38,10 @@ public class ListJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the command was run and the result was obtained. Valid values:</p>
      * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false: The request failed.</li>
+     * <li>true: Succeeded.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,7 +114,7 @@ public class ListJobsResponseBody extends TeaModel {
 
     public static class ListJobsResponseBodyJobsJobSpecResources extends TeaModel {
         /**
-         * <p>The number of vCPUs that were used to run the job.</p>
+         * <p>The number of CPU cores used to run the job.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -123,7 +123,7 @@ public class ListJobsResponseBody extends TeaModel {
         public String cores;
 
         /**
-         * <p>The number of GPUs that were used to run the job.</p>
+         * <p>The number of GPUs used to run the job.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -132,7 +132,7 @@ public class ListJobsResponseBody extends TeaModel {
         public String gpus;
 
         /**
-         * <p>The size of memory that was used to run the job.</p>
+         * <p>The memory size used to run the job.</p>
          * 
          * <strong>example:</strong>
          * <p>1536MB</p>
@@ -141,7 +141,7 @@ public class ListJobsResponseBody extends TeaModel {
         public String memory;
 
         /**
-         * <p>The number of compute nodes that were used to run the job.</p>
+         * <p>The number of compute nodes that run the job.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -190,7 +190,7 @@ public class ListJobsResponseBody extends TeaModel {
 
     public static class ListJobsResponseBodyJobsJobSpecResourcesActualOccupied extends TeaModel {
         /**
-         * <p>Number of CPU cores.</p>
+         * <p>The number of CPU cores.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -199,7 +199,7 @@ public class ListJobsResponseBody extends TeaModel {
         public String cores;
 
         /**
-         * <p>Number of CPUs</p>
+         * <p>The number of GPUs.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -208,7 +208,7 @@ public class ListJobsResponseBody extends TeaModel {
         public String gpus;
 
         /**
-         * <p>Number of memory.</p>
+         * <p>The memory size.</p>
          * 
          * <strong>example:</strong>
          * <p>982MB</p>
@@ -217,7 +217,7 @@ public class ListJobsResponseBody extends TeaModel {
         public String memory;
 
         /**
-         * <p>Number of compute nodes.</p>
+         * <p>The number of compute nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -275,7 +275,7 @@ public class ListJobsResponseBody extends TeaModel {
         public String arrayJobId;
 
         /**
-         * <p>The ID of the job in the array.</p>
+         * <p>The array sub-job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -284,10 +284,10 @@ public class ListJobsResponseBody extends TeaModel {
         public String arrayJobSubId;
 
         /**
-         * <p>The queue format of the job.</p>
+         * <p>The array job format.</p>
          * <ul>
-         * <li>If the job is not in a queue, the output is empty.</li>
-         * <li>The format is X-Y:Z. X indicates the first index, Y indicates the final index, and Z indicates the step size. For example, 2-7:2 indicates three sub-jobs numbered 2, 4, and 6.</li>
+         * <li>If the job is not an array job, the output is empty.</li>
+         * <li>The format is X-Y:Z, where X is the first index, Y is the last index, and Z is the step size. For example, 2-7:2 indicates that the array job contains three sub-jobs numbered 2, 4, and 6.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -315,7 +315,7 @@ public class ListJobsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The queue name.</p>
+         * <p>The name of the queue that runs the job.</p>
          * 
          * <strong>example:</strong>
          * <p>comp</p>
@@ -324,7 +324,7 @@ public class ListJobsResponseBody extends TeaModel {
         public String jobQueue;
 
         /**
-         * <p>The time when the job was last updated.</p>
+         * <p>The last update time of the job.</p>
          * 
          * <strong>example:</strong>
          * <p>1724123085</p>
@@ -333,7 +333,7 @@ public class ListJobsResponseBody extends TeaModel {
         public String lastModifyTime;
 
         /**
-         * <p>The compute nodes that were used to run the job.</p>
+         * <p>The list of compute nodes that run the job.</p>
          * 
          * <strong>example:</strong>
          * <p>compute[002,005,003]</p>
@@ -342,7 +342,7 @@ public class ListJobsResponseBody extends TeaModel {
         public String nodeList;
 
         /**
-         * <p>The job priority. Valid values: 0 to 9. A larger value indicates a higher priority.</p>
+         * <p>The priority of the job. Valid values: 0 to 9. A larger value indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -351,19 +351,19 @@ public class ListJobsResponseBody extends TeaModel {
         public String priority;
 
         /**
-         * <p>The information about the resources required to run the job.</p>
+         * <p>The resource information required to run the job.</p>
          */
         @NameInMap("Resources")
         public ListJobsResponseBodyJobsJobSpecResources resources;
 
         /**
-         * <p>Actual resource usage of the job program</p>
+         * <p>The resources actually occupied by the job.</p>
          */
         @NameInMap("ResourcesActualOccupied")
         public ListJobsResponseBodyJobsJobSpecResourcesActualOccupied resourcesActualOccupied;
 
         /**
-         * <p>The user that ran the job.</p>
+         * <p>The username of the user who runs the job.</p>
          * 
          * <strong>example:</strong>
          * <p>testuser1</p>
@@ -372,7 +372,7 @@ public class ListJobsResponseBody extends TeaModel {
         public String runasUser;
 
         /**
-         * <p>Job start time.</p>
+         * <p>The start time of the job.</p>
          * 
          * <strong>example:</strong>
          * <p>1724122486</p>
@@ -381,12 +381,12 @@ public class ListJobsResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The job state. Valid values: (PBS cluster and Slurm cluster)</p>
+         * <p>The job status. Valid values: (PBS cluster/Slurm cluster)</p>
          * <ul>
-         * <li>FINISHED/Completed</li>
-         * <li>RUNNING/Running</li>
-         * <li>QUEUED/Pending</li>
-         * <li>FAILED/Failed</li>
+         * <li>FINISHED/Completed: completed.</li>
+         * <li>RUNNING/Running: running.</li>
+         * <li>QUEUED/Pending: queued and waiting.</li>
+         * <li>FAILED/Failed: failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -396,7 +396,7 @@ public class ListJobsResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The error output path.</p>
+         * <p>The standard error output path.</p>
          * 
          * <strong>example:</strong>
          * <p>./Temp</p>
@@ -414,7 +414,7 @@ public class ListJobsResponseBody extends TeaModel {
         public String stdoutPath;
 
         /**
-         * <p>The time when the job was submitted.</p>
+         * <p>The submission time of the job.</p>
          * 
          * <strong>example:</strong>
          * <p>1724122486</p>
@@ -423,7 +423,7 @@ public class ListJobsResponseBody extends TeaModel {
         public String submitTime;
 
         /**
-         * <p>The variables of the job.</p>
+         * <p>The list of job variables.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;PBS_O_SHELL&quot;:&quot;/bin/bash&quot;, 	&quot;PBS_O_HOST&quot;:&quot;manager&quot;, 	&quot;PBS_O_SYSTEM&quot;:&quot;Linux&quot;, 	&quot;PBS_O_LANG&quot;:&quot;en_US.UTF-8&quot;, 	&quot;PBS_O_QUEUE&quot;:&quot;workq&quot;}</p>
@@ -593,7 +593,7 @@ public class ListJobsResponseBody extends TeaModel {
         public String jobName;
 
         /**
-         * <p>The job configurations.</p>
+         * <p>The job configuration.</p>
          */
         @NameInMap("JobSpec")
         public ListJobsResponseBodyJobsJobSpec jobSpec;
