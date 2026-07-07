@@ -53,6 +53,9 @@ public class GetOAuth2CredentialProviderResponseBody extends TeaModel {
         @NameInMap("OAuth2ProviderConfig")
         public OAuth2ProviderConfig OAuth2ProviderConfig;
 
+        @NameInMap("OAuthType")
+        public String OAuthType;
+
         @NameInMap("TokenVaultName")
         public String tokenVaultName;
 
@@ -118,6 +121,14 @@ public class GetOAuth2CredentialProviderResponseBody extends TeaModel {
         }
         public OAuth2ProviderConfig getOAuth2ProviderConfig() {
             return this.OAuth2ProviderConfig;
+        }
+
+        public GetOAuth2CredentialProviderResponseBodyOAuth2CredentialProvider setOAuthType(String OAuthType) {
+            this.OAuthType = OAuthType;
+            return this;
+        }
+        public String getOAuthType() {
+            return this.OAuthType;
         }
 
         public GetOAuth2CredentialProviderResponseBodyOAuth2CredentialProvider setTokenVaultName(String tokenVaultName) {

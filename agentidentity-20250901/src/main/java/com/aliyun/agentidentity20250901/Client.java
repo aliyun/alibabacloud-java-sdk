@@ -337,6 +337,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("OAuth2ProviderConfig", request.OAuth2ProviderConfigShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.OAuthType)) {
+            body.put("OAuthType", request.OAuthType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tokenVaultName)) {
             body.put("TokenVaultName", request.tokenVaultName);
         }
@@ -2201,8 +2205,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetUserResponse getUserWithOptions(GetUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("UserId", request.userId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
             body.put("UserName", request.userName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userPoolId)) {
+            body.put("UserPoolId", request.userPoolId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userPoolName)) {

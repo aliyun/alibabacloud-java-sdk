@@ -19,6 +19,9 @@ public class CreateOAuth2CredentialProviderShrinkRequest extends TeaModel {
     @NameInMap("OAuth2ProviderConfig")
     public String OAuth2ProviderConfigShrink;
 
+    @NameInMap("OAuthType")
+    public String OAuthType;
+
     @NameInMap("TokenVaultName")
     public String tokenVaultName;
 
@@ -65,6 +68,14 @@ public class CreateOAuth2CredentialProviderShrinkRequest extends TeaModel {
     }
     public String getOAuth2ProviderConfigShrink() {
         return this.OAuth2ProviderConfigShrink;
+    }
+
+    public CreateOAuth2CredentialProviderShrinkRequest setOAuthType(String OAuthType) {
+        this.OAuthType = OAuthType;
+        return this;
+    }
+    public String getOAuthType() {
+        return this.OAuthType;
     }
 
     public CreateOAuth2CredentialProviderShrinkRequest setTokenVaultName(String tokenVaultName) {
