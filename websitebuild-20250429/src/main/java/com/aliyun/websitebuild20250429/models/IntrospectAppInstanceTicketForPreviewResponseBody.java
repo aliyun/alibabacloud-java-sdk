@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel {
     /**
-     * <p>The details about the access deny.</p>
+     * <p>Detailed reason for access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -23,7 +23,7 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
     public Boolean allowRetry;
 
     /**
-     * <p>The application name.</p>
+     * <p>App Name.</p>
      * 
      * <strong>example:</strong>
      * <p>or</p>
@@ -32,7 +32,7 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
     public String appName;
 
     /**
-     * <p>The dynamic fault code.</p>
+     * <p>Dynamic error code.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -41,9 +41,9 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
     public String dynamicCode;
 
     /**
-     * <p>The dynamic fault message, which is used to replace the <code>%s</code> variable in the <strong>ErrMessage</strong> return parameter.</p>
+     * <p>Dynamic error message used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> error message.  </p>
      * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the value of the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the provided request parameter <strong>DtsJobId</strong> is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,13 +53,13 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
     public String dynamicMessage;
 
     /**
-     * <p>The fault parameters.</p>
+     * <p>Returned error parameters</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>The response object.</p>
+     * <p>Returned object.</p>
      */
     @NameInMap("Module")
     public IntrospectAppInstanceTicketForPreviewResponseBodyModule module;
@@ -74,7 +74,7 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
     public String requestId;
 
     /**
-     * <p>The fault code.</p>
+     * <p>Error code</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -83,7 +83,7 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
     public String rootErrorCode;
 
     /**
-     * <p>The root fault message.</p>
+     * <p>Abnormal message</p>
      * 
      * <strong>example:</strong>
      * <p>系统异常</p>
@@ -92,7 +92,7 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
     public String rootErrorMsg;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>Reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -195,7 +195,7 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
 
     public static class IntrospectAppInstanceTicketForPreviewResponseBodyModule extends TeaModel {
         /**
-         * <p>The time when the access token expires.</p>
+         * <p>Access token time-to-live (TTL)</p>
          * 
          * <strong>example:</strong>
          * <p>2025-12-18T22:30:00+08:00</p>
@@ -204,7 +204,7 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
         public String accessTokenExpiresAt;
 
         /**
-         * <p>The time when the access token was issued.</p>
+         * <p>Access token issue Time</p>
          * 
          * <strong>example:</strong>
          * <p>2025-12-18T22:30:00+08:00</p>
@@ -213,7 +213,7 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
         public String accessTokenIssuedAt;
 
         /**
-         * <p>The access token value.</p>
+         * <p>Access token value</p>
          * 
          * <strong>example:</strong>
          * <p>2108341e17661121129745384e79f9</p>
@@ -231,7 +231,7 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
         public String aliyunPk;
 
         /**
-         * <p>The extension properties.</p>
+         * <p>Extension property</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -240,7 +240,7 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
         public String attributes;
 
         /**
-         * <p>The authorization code type.</p>
+         * <p>Authorization code Type</p>
          * 
          * <strong>example:</strong>
          * <p>authorization_code</p>
@@ -258,7 +258,7 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
         public String bid;
 
         /**
-         * <p>The parent Alibaba Cloud account ID.</p>
+         * <p>Parent Alibaba Cloud PK</p>
          * 
          * <strong>example:</strong>
          * <p>12343131221311</p>
@@ -267,7 +267,7 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
         public String parentPk;
 
         /**
-         * <p>The time when the refresh token expires.</p>
+         * <p>Time-to-live (TTL) of the refresh token</p>
          * 
          * <strong>example:</strong>
          * <p>1768619049924</p>
@@ -276,7 +276,7 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
         public String refreshTokenExpiresAt;
 
         /**
-         * <p>The time when the refresh token was issued.</p>
+         * <p>Refresh token issue Time</p>
          * 
          * <strong>example:</strong>
          * <p>1768619049924</p>
@@ -285,7 +285,7 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
         public String refreshTokenIssuedAt;
 
         /**
-         * <p>The refresh token value.</p>
+         * <p>Refresh token value</p>
          * 
          * <strong>example:</strong>
          * <p>be9750d595b6cd7c93a80b46</p>
@@ -294,7 +294,7 @@ public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel 
         public String refreshTokenValue;
 
         /**
-         * <p>The external unique identifier.</p>
+         * <p>Externally Unique</p>
          * 
          * <strong>example:</strong>
          * <p>hdm_33be9750d595b6cd7c93a80b46734b22</p>

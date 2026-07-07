@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAppInstanceDomainsResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial.</p>
+     * <p>The detailed reason why access was denied.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether a retry is allowed.</p>
+     * <p>Indicates whether retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -41,9 +41,9 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message, which is used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> response parameter.</p>
+     * <p>The dynamic error message, which is used to replace the <code>%s</code> in the <strong>ErrMessage</strong> return parameter.</p>
      * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the value of the <strong>DtsJobId</strong> request parameter is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,13 +53,13 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters.</p>
+     * <p>The error parameters returned.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>The maximum number of entries to return per query.</p>
+     * <p>The maximum number of entries per query.</p>
      * <p>Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
@@ -75,7 +75,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
     public ListAppInstanceDomainsResponseBodyModule module;
 
     /**
-     * <p>The token for the next query. This parameter is empty if there are no more results.</p>
+     * <p>The token for the next query. This parameter is empty if no more results exist.</p>
      * 
      * <strong>example:</strong>
      * <p>dw+qdTi1EjVSWX/INJdYNw==</p>
@@ -102,7 +102,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
      * <p>系统异常</p>
@@ -230,7 +230,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
 
     public static class ListAppInstanceDomainsResponseBodyModuleDataCertificate extends TeaModel {
         /**
-         * <p>The certificate name.</p>
+         * <p>The name of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>2024</p>
@@ -239,7 +239,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public String certificateName;
 
         /**
-         * <p>The certificate status.</p>
+         * <p>The status of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>ACTIVE</p>
@@ -248,7 +248,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public String certificateStatus;
 
         /**
-         * <p>The certificate type.</p>
+         * <p>The type of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>self-signed</p>
@@ -300,6 +300,140 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         }
         public String getEndTime() {
             return this.endTime;
+        }
+
+    }
+
+    public static class ListAppInstanceDomainsResponseBodyModuleDataDnsConflictRecords extends TeaModel {
+        @NameInMap("Host")
+        public String host;
+
+        @NameInMap("RecordType")
+        public String recordType;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListAppInstanceDomainsResponseBodyModuleDataDnsConflictRecords build(java.util.Map<String, ?> map) throws Exception {
+            ListAppInstanceDomainsResponseBodyModuleDataDnsConflictRecords self = new ListAppInstanceDomainsResponseBodyModuleDataDnsConflictRecords();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAppInstanceDomainsResponseBodyModuleDataDnsConflictRecords setHost(String host) {
+            this.host = host;
+            return this;
+        }
+        public String getHost() {
+            return this.host;
+        }
+
+        public ListAppInstanceDomainsResponseBodyModuleDataDnsConflictRecords setRecordType(String recordType) {
+            this.recordType = recordType;
+            return this;
+        }
+        public String getRecordType() {
+            return this.recordType;
+        }
+
+        public ListAppInstanceDomainsResponseBodyModuleDataDnsConflictRecords setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public ListAppInstanceDomainsResponseBodyModuleDataDnsConflictRecords setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class ListAppInstanceDomainsResponseBodyModuleDataDnsConflict extends TeaModel {
+        @NameInMap("CanAutoResolve")
+        public Boolean canAutoResolve;
+
+        @NameInMap("HasConflict")
+        public Boolean hasConflict;
+
+        @NameInMap("Message")
+        public String message;
+
+        @NameInMap("Records")
+        public java.util.List<ListAppInstanceDomainsResponseBodyModuleDataDnsConflictRecords> records;
+
+        public static ListAppInstanceDomainsResponseBodyModuleDataDnsConflict build(java.util.Map<String, ?> map) throws Exception {
+            ListAppInstanceDomainsResponseBodyModuleDataDnsConflict self = new ListAppInstanceDomainsResponseBodyModuleDataDnsConflict();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAppInstanceDomainsResponseBodyModuleDataDnsConflict setCanAutoResolve(Boolean canAutoResolve) {
+            this.canAutoResolve = canAutoResolve;
+            return this;
+        }
+        public Boolean getCanAutoResolve() {
+            return this.canAutoResolve;
+        }
+
+        public ListAppInstanceDomainsResponseBodyModuleDataDnsConflict setHasConflict(Boolean hasConflict) {
+            this.hasConflict = hasConflict;
+            return this;
+        }
+        public Boolean getHasConflict() {
+            return this.hasConflict;
+        }
+
+        public ListAppInstanceDomainsResponseBodyModuleDataDnsConflict setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+        public ListAppInstanceDomainsResponseBodyModuleDataDnsConflict setRecords(java.util.List<ListAppInstanceDomainsResponseBodyModuleDataDnsConflictRecords> records) {
+            this.records = records;
+            return this;
+        }
+        public java.util.List<ListAppInstanceDomainsResponseBodyModuleDataDnsConflictRecords> getRecords() {
+            return this.records;
+        }
+
+    }
+
+    public static class ListAppInstanceDomainsResponseBodyModuleDataMigration extends TeaModel {
+        @NameInMap("MigrationStatus")
+        public String migrationStatus;
+
+        @NameInMap("PreviousDomain")
+        public Object previousDomain;
+
+        public static ListAppInstanceDomainsResponseBodyModuleDataMigration build(java.util.Map<String, ?> map) throws Exception {
+            ListAppInstanceDomainsResponseBodyModuleDataMigration self = new ListAppInstanceDomainsResponseBodyModuleDataMigration();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAppInstanceDomainsResponseBodyModuleDataMigration setMigrationStatus(String migrationStatus) {
+            this.migrationStatus = migrationStatus;
+            return this;
+        }
+        public String getMigrationStatus() {
+            return this.migrationStatus;
+        }
+
+        public ListAppInstanceDomainsResponseBodyModuleDataMigration setPreviousDomain(Object previousDomain) {
+            this.previousDomain = previousDomain;
+            return this;
+        }
+        public Object getPreviousDomain() {
+            return this.previousDomain;
         }
 
     }
@@ -662,19 +796,22 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
 
     public static class ListAppInstanceDomainsResponseBodyModuleData extends TeaModel {
         /**
-         * <p>The SSL certificate information of the domain name.</p>
+         * <p>The domain name SSL certificate information.</p>
          */
         @NameInMap("Certificate")
         public ListAppInstanceDomainsResponseBodyModuleDataCertificate certificate;
 
         /**
-         * <p>The time when the instance was created. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The instance creation time. Format: yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>1683256054000</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
+
+        @NameInMap("DnsConflict")
+        public ListAppInstanceDomainsResponseBodyModuleDataDnsConflict dnsConflict;
 
         /**
          * <p>The domain name.</p>
@@ -684,6 +821,9 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
          */
         @NameInMap("DomainName")
         public String domainName;
+
+        @NameInMap("Migration")
+        public ListAppInstanceDomainsResponseBodyModuleDataMigration migration;
 
         /**
          * <p>The overall binding status.</p>
@@ -739,12 +879,28 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             return this.createTime;
         }
 
+        public ListAppInstanceDomainsResponseBodyModuleData setDnsConflict(ListAppInstanceDomainsResponseBodyModuleDataDnsConflict dnsConflict) {
+            this.dnsConflict = dnsConflict;
+            return this;
+        }
+        public ListAppInstanceDomainsResponseBodyModuleDataDnsConflict getDnsConflict() {
+            return this.dnsConflict;
+        }
+
         public ListAppInstanceDomainsResponseBodyModuleData setDomainName(String domainName) {
             this.domainName = domainName;
             return this;
         }
         public String getDomainName() {
             return this.domainName;
+        }
+
+        public ListAppInstanceDomainsResponseBodyModuleData setMigration(ListAppInstanceDomainsResponseBodyModuleDataMigration migration) {
+            this.migration = migration;
+            return this;
+        }
+        public ListAppInstanceDomainsResponseBodyModuleDataMigration getMigration() {
+            return this.migration;
         }
 
         public ListAppInstanceDomainsResponseBodyModuleData setOverallStatus(String overallStatus) {
@@ -791,7 +947,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
 
     public static class ListAppInstanceDomainsResponseBodyModuleNextCertificate extends TeaModel {
         /**
-         * <p>The certificate name.</p>
+         * <p>The name of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>jfztkg202502</p>
@@ -800,7 +956,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public String certificateName;
 
         /**
-         * <p>The certificate status.</p>
+         * <p>The status of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>ACTIVE</p>
@@ -809,7 +965,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public String certificateStatus;
 
         /**
-         * <p>The certificate type.</p>
+         * <p>The type of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>Server</p>
@@ -865,6 +1021,129 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
 
     }
 
+    public static class ListAppInstanceDomainsResponseBodyModuleNextDnsConflictRecords extends TeaModel {
+        @NameInMap("Host")
+        public String host;
+
+        @NameInMap("RecordType")
+        public String recordType;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListAppInstanceDomainsResponseBodyModuleNextDnsConflictRecords build(java.util.Map<String, ?> map) throws Exception {
+            ListAppInstanceDomainsResponseBodyModuleNextDnsConflictRecords self = new ListAppInstanceDomainsResponseBodyModuleNextDnsConflictRecords();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAppInstanceDomainsResponseBodyModuleNextDnsConflictRecords setHost(String host) {
+            this.host = host;
+            return this;
+        }
+        public String getHost() {
+            return this.host;
+        }
+
+        public ListAppInstanceDomainsResponseBodyModuleNextDnsConflictRecords setRecordType(String recordType) {
+            this.recordType = recordType;
+            return this;
+        }
+        public String getRecordType() {
+            return this.recordType;
+        }
+
+        public ListAppInstanceDomainsResponseBodyModuleNextDnsConflictRecords setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class ListAppInstanceDomainsResponseBodyModuleNextDnsConflict extends TeaModel {
+        @NameInMap("CanAutoResolve")
+        public Boolean canAutoResolve;
+
+        @NameInMap("HasConflict")
+        public Boolean hasConflict;
+
+        @NameInMap("Message")
+        public String message;
+
+        @NameInMap("Records")
+        public java.util.List<ListAppInstanceDomainsResponseBodyModuleNextDnsConflictRecords> records;
+
+        public static ListAppInstanceDomainsResponseBodyModuleNextDnsConflict build(java.util.Map<String, ?> map) throws Exception {
+            ListAppInstanceDomainsResponseBodyModuleNextDnsConflict self = new ListAppInstanceDomainsResponseBodyModuleNextDnsConflict();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAppInstanceDomainsResponseBodyModuleNextDnsConflict setCanAutoResolve(Boolean canAutoResolve) {
+            this.canAutoResolve = canAutoResolve;
+            return this;
+        }
+        public Boolean getCanAutoResolve() {
+            return this.canAutoResolve;
+        }
+
+        public ListAppInstanceDomainsResponseBodyModuleNextDnsConflict setHasConflict(Boolean hasConflict) {
+            this.hasConflict = hasConflict;
+            return this;
+        }
+        public Boolean getHasConflict() {
+            return this.hasConflict;
+        }
+
+        public ListAppInstanceDomainsResponseBodyModuleNextDnsConflict setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+        public ListAppInstanceDomainsResponseBodyModuleNextDnsConflict setRecords(java.util.List<ListAppInstanceDomainsResponseBodyModuleNextDnsConflictRecords> records) {
+            this.records = records;
+            return this;
+        }
+        public java.util.List<ListAppInstanceDomainsResponseBodyModuleNextDnsConflictRecords> getRecords() {
+            return this.records;
+        }
+
+    }
+
+    public static class ListAppInstanceDomainsResponseBodyModuleNextMigration extends TeaModel {
+        @NameInMap("MigrationStatus")
+        public String migrationStatus;
+
+        @NameInMap("PreviousDomain")
+        public Object previousDomain;
+
+        public static ListAppInstanceDomainsResponseBodyModuleNextMigration build(java.util.Map<String, ?> map) throws Exception {
+            ListAppInstanceDomainsResponseBodyModuleNextMigration self = new ListAppInstanceDomainsResponseBodyModuleNextMigration();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAppInstanceDomainsResponseBodyModuleNextMigration setMigrationStatus(String migrationStatus) {
+            this.migrationStatus = migrationStatus;
+            return this;
+        }
+        public String getMigrationStatus() {
+            return this.migrationStatus;
+        }
+
+        public ListAppInstanceDomainsResponseBodyModuleNextMigration setPreviousDomain(Object previousDomain) {
+            this.previousDomain = previousDomain;
+            return this;
+        }
+        public Object getPreviousDomain() {
+            return this.previousDomain;
+        }
+
+    }
+
     public static class ListAppInstanceDomainsResponseBodyModuleNextOwnership extends TeaModel {
         /**
          * <p>The account owner type. Valid values: CURRENT and OTHER.</p>
@@ -883,6 +1162,9 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
          */
         @NameInMap("Provider")
         public String provider;
+
+        @NameInMap("RootDomain")
+        public String rootDomain;
 
         public static ListAppInstanceDomainsResponseBodyModuleNextOwnership build(java.util.Map<String, ?> map) throws Exception {
             ListAppInstanceDomainsResponseBodyModuleNextOwnership self = new ListAppInstanceDomainsResponseBodyModuleNextOwnership();
@@ -903,6 +1185,14 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         }
         public String getProvider() {
             return this.provider;
+        }
+
+        public ListAppInstanceDomainsResponseBodyModuleNextOwnership setRootDomain(String rootDomain) {
+            this.rootDomain = rootDomain;
+            return this;
+        }
+        public String getRootDomain() {
+            return this.rootDomain;
         }
 
     }
@@ -1156,6 +1446,9 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         @NameInMap("VerificationStatus")
         public String verificationStatus;
 
+        @NameInMap("VerificationStatusCode")
+        public String verificationStatusCode;
+
         public static ListAppInstanceDomainsResponseBodyModuleNextVerification build(java.util.Map<String, ?> map) throws Exception {
             ListAppInstanceDomainsResponseBodyModuleNextVerification self = new ListAppInstanceDomainsResponseBodyModuleNextVerification();
             return TeaModel.build(map, self);
@@ -1185,23 +1478,34 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             return this.verificationStatus;
         }
 
+        public ListAppInstanceDomainsResponseBodyModuleNextVerification setVerificationStatusCode(String verificationStatusCode) {
+            this.verificationStatusCode = verificationStatusCode;
+            return this;
+        }
+        public String getVerificationStatusCode() {
+            return this.verificationStatusCode;
+        }
+
     }
 
     public static class ListAppInstanceDomainsResponseBodyModuleNext extends TeaModel {
         /**
-         * <p>The SSL certificate information of the domain name.</p>
+         * <p>The domain name SSL certificate information.</p>
          */
         @NameInMap("Certificate")
         public ListAppInstanceDomainsResponseBodyModuleNextCertificate certificate;
 
         /**
-         * <p>The time when the instance was created. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The instance creation time. Format: yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>1741572465000</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
+
+        @NameInMap("DnsConflict")
+        public ListAppInstanceDomainsResponseBodyModuleNextDnsConflict dnsConflict;
 
         /**
          * <p>The domain name.</p>
@@ -1211,6 +1515,9 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
          */
         @NameInMap("DomainName")
         public String domainName;
+
+        @NameInMap("Migration")
+        public ListAppInstanceDomainsResponseBodyModuleNextMigration migration;
 
         /**
          * <p>The overall binding status.</p>
@@ -1266,12 +1573,28 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             return this.createTime;
         }
 
+        public ListAppInstanceDomainsResponseBodyModuleNext setDnsConflict(ListAppInstanceDomainsResponseBodyModuleNextDnsConflict dnsConflict) {
+            this.dnsConflict = dnsConflict;
+            return this;
+        }
+        public ListAppInstanceDomainsResponseBodyModuleNextDnsConflict getDnsConflict() {
+            return this.dnsConflict;
+        }
+
         public ListAppInstanceDomainsResponseBodyModuleNext setDomainName(String domainName) {
             this.domainName = domainName;
             return this;
         }
         public String getDomainName() {
             return this.domainName;
+        }
+
+        public ListAppInstanceDomainsResponseBodyModuleNext setMigration(ListAppInstanceDomainsResponseBodyModuleNextMigration migration) {
+            this.migration = migration;
+            return this;
+        }
+        public ListAppInstanceDomainsResponseBodyModuleNextMigration getMigration() {
+            return this.migration;
         }
 
         public ListAppInstanceDomainsResponseBodyModuleNext setOverallStatus(String overallStatus) {
@@ -1327,7 +1650,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public Integer currentPageNum;
 
         /**
-         * <p>The query results.</p>
+         * <p>The request results.</p>
          */
         @NameInMap("Data")
         public java.util.List<ListAppInstanceDomainsResponseBodyModuleData> data;
@@ -1360,7 +1683,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public Boolean prePage;
 
         /**
-         * <p>In addition to pagination limits, the server processes up to 1,000 recent records per query. If the results exceed 1,000 records, <strong>ResultLimit</strong> is <strong>true</strong>. In this case, narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+         * <p>The server processes up to 1000 recent records beyond the pagination limit. If the results exceed 1000 entries, <strong>ResultLimit</strong> is <strong>true</strong>, and you must narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
          */
         @NameInMap("ResultLimit")
         public Boolean resultLimit;

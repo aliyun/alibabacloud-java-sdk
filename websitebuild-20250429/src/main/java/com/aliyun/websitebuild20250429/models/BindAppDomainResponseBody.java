@@ -43,7 +43,7 @@ public class BindAppDomainResponseBody extends TeaModel {
     /**
      * <p>The dynamic error message, which is used to replace the <strong>%s</strong> placeholder in the <strong>ErrMessage</strong> response element.</p>
      * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the value of the <strong>DtsJobId</strong> request parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -59,13 +59,13 @@ public class BindAppDomainResponseBody extends TeaModel {
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>The data table module.</p>
+     * <p>The data table module. Valid values:</p>
      * <ul>
      * <li><p>ABTest: experiment data table</p>
      * </li>
      * <li><p>ExperimentTool: experiment tool table</p>
      * </li>
-     * <li><p>DataDiagnosis: data modeling diagnostics.</p>
+     * <li><p>DataDiagnosis: data modeling diagnostics</p>
      * </li>
      * </ul>
      */
@@ -201,7 +201,114 @@ public class BindAppDomainResponseBody extends TeaModel {
         return this.synchro;
     }
 
+    public static class BindAppDomainResponseBodyModuleDnsConflictRecords extends TeaModel {
+        @NameInMap("Host")
+        public String host;
+
+        @NameInMap("RecordType")
+        public String recordType;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static BindAppDomainResponseBodyModuleDnsConflictRecords build(java.util.Map<String, ?> map) throws Exception {
+            BindAppDomainResponseBodyModuleDnsConflictRecords self = new BindAppDomainResponseBodyModuleDnsConflictRecords();
+            return TeaModel.build(map, self);
+        }
+
+        public BindAppDomainResponseBodyModuleDnsConflictRecords setHost(String host) {
+            this.host = host;
+            return this;
+        }
+        public String getHost() {
+            return this.host;
+        }
+
+        public BindAppDomainResponseBodyModuleDnsConflictRecords setRecordType(String recordType) {
+            this.recordType = recordType;
+            return this;
+        }
+        public String getRecordType() {
+            return this.recordType;
+        }
+
+        public BindAppDomainResponseBodyModuleDnsConflictRecords setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public BindAppDomainResponseBodyModuleDnsConflictRecords setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class BindAppDomainResponseBodyModuleDnsConflict extends TeaModel {
+        @NameInMap("CanAutoResolve")
+        public Boolean canAutoResolve;
+
+        @NameInMap("HasConflict")
+        public Boolean hasConflict;
+
+        @NameInMap("Message")
+        public String message;
+
+        @NameInMap("Records")
+        public java.util.List<BindAppDomainResponseBodyModuleDnsConflictRecords> records;
+
+        public static BindAppDomainResponseBodyModuleDnsConflict build(java.util.Map<String, ?> map) throws Exception {
+            BindAppDomainResponseBodyModuleDnsConflict self = new BindAppDomainResponseBodyModuleDnsConflict();
+            return TeaModel.build(map, self);
+        }
+
+        public BindAppDomainResponseBodyModuleDnsConflict setCanAutoResolve(Boolean canAutoResolve) {
+            this.canAutoResolve = canAutoResolve;
+            return this;
+        }
+        public Boolean getCanAutoResolve() {
+            return this.canAutoResolve;
+        }
+
+        public BindAppDomainResponseBodyModuleDnsConflict setHasConflict(Boolean hasConflict) {
+            this.hasConflict = hasConflict;
+            return this;
+        }
+        public Boolean getHasConflict() {
+            return this.hasConflict;
+        }
+
+        public BindAppDomainResponseBodyModuleDnsConflict setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+        public BindAppDomainResponseBodyModuleDnsConflict setRecords(java.util.List<BindAppDomainResponseBodyModuleDnsConflictRecords> records) {
+            this.records = records;
+            return this;
+        }
+        public java.util.List<BindAppDomainResponseBodyModuleDnsConflictRecords> getRecords() {
+            return this.records;
+        }
+
+    }
+
     public static class BindAppDomainResponseBodyModule extends TeaModel {
+        @NameInMap("DnsConflict")
+        public BindAppDomainResponseBodyModuleDnsConflict dnsConflict;
+
         /**
          * <p>Indicates whether the request is successful.</p>
          * 
@@ -214,6 +321,14 @@ public class BindAppDomainResponseBody extends TeaModel {
         public static BindAppDomainResponseBodyModule build(java.util.Map<String, ?> map) throws Exception {
             BindAppDomainResponseBodyModule self = new BindAppDomainResponseBodyModule();
             return TeaModel.build(map, self);
+        }
+
+        public BindAppDomainResponseBodyModule setDnsConflict(BindAppDomainResponseBodyModuleDnsConflict dnsConflict) {
+            this.dnsConflict = dnsConflict;
+            return this;
+        }
+        public BindAppDomainResponseBodyModuleDnsConflict getDnsConflict() {
+            return this.dnsConflict;
         }
 
         public BindAppDomainResponseBodyModule setSuccess(Boolean success) {

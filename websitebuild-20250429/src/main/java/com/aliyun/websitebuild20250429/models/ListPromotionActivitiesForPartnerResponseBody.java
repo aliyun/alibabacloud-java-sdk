@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
     /**
-     * <p>The access denied detail.</p>
+     * <p>The access denied details.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -272,7 +272,7 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The creator.</p>
+         * <p>The user who created the activity.</p>
          * 
          * <strong>example:</strong>
          * <p>onlinehoztestrolebasicallow1755461756261068111(300216315676902267)</p>
@@ -281,7 +281,7 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
         public String createdBy;
 
         /**
-         * <p>The eligibility configuration (JSON).</p>
+         * <p>The eligibility configuration in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -299,7 +299,7 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
         public String endDate;
 
         /**
-         * <p>The offer configuration (JSON).</p>
+         * <p>The offer configuration in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -353,7 +353,7 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
         public Long totalQuota;
 
         /**
-         * <p>The touchpoint configuration (JSON).</p>
+         * <p>The touchpoint configuration in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -547,7 +547,7 @@ public class ListPromotionActivitiesForPartnerResponseBody extends TeaModel {
         public java.util.List<ListPromotionActivitiesForPartnerResponseBodyModuleActivities> activities;
 
         /**
-         * <p>The total count.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>

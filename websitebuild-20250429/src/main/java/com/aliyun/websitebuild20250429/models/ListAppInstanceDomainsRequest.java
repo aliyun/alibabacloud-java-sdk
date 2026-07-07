@@ -17,7 +17,7 @@ public class ListAppInstanceDomainsRequest extends TeaModel {
     public String domainKeyword;
 
     /**
-     * <p>The maximum number of entries to return per query.</p>
+     * <p>The maximum number of entries per query.</p>
      * <p>Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class ListAppInstanceDomainsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query. This parameter is empty if there are no more results.</p>
+     * <p>The token for the next query. This parameter is empty if no more results exist.</p>
      * 
      * <strong>example:</strong>
      * <p>0l45bkwM022Dt+rOvPi/oQ==</p>
@@ -36,7 +36,7 @@ public class ListAppInstanceDomainsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The field by which to sort the results.</p>
+     * <p>The field used for sorting.</p>
      * 
      * <strong>example:</strong>
      * <p>CreationTime</p>
@@ -45,7 +45,7 @@ public class ListAppInstanceDomainsRequest extends TeaModel {
     public String orderColumn;
 
     /**
-     * <p>The sort order. Valid values: ASC and DESC.</p>
+     * <p>The sort type. Valid values: ASC and DESC.</p>
      * 
      * <strong>example:</strong>
      * <p>BUY</p>
