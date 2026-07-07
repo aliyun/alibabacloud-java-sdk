@@ -8,7 +8,7 @@ public class RunAgentTaskResponseBody extends TeaModel {
      * <p>The status code of the operation.</p>
      * 
      * <strong>example:</strong>
-     * <p>For example, &quot;200&quot; indicates success.</p>
+     * <p>例如 &quot;200&quot; 表示成功。</p>
      */
     @NameInMap("Code")
     public String code;
@@ -94,13 +94,18 @@ public class RunAgentTaskResponseBody extends TeaModel {
     public static class RunAgentTaskResponseBodyTasks extends TeaModel {
         /**
          * <p>The current status of the task. Valid values:</p>
-         * <ul>
-         * <li>PENDING: The task is being created.</li>
-         * <li>RUNNING: The task is running.</li>
-         * <li>COMPLETED: The task is completed.</li>
-         * <li>FAILED: The task failed.</li>
-         * <li>TIMEOUT: The task execution timed out.</li>
-         * </ul>
+         * <p>PENDING: The task is being created.</p>
+         * <p>RUNNING: The task is running.</p>
+         * <p>COMPLETED: The task is completed.</p>
+         * <p>FAILED: The task failed.</p>
+         * <p>TIMEOUT: The task timed out.</p>
+         * <p>CALL_FOR_USER: The task is waiting for user action.</p>
+         * <p>PAUSING: The task is being paused.</p>
+         * <p>PAUSED: The task is paused.</p>
+         * <p>CANCELLING: The task is being canceled.</p>
+         * <p>CANCELED: The task is canceled.</p>
+         * <p>STOPPED: The task is stopped.</p>
+         * <p>TIMEOUT: The task timed out.</p>
          * 
          * <strong>example:</strong>
          * <p>COMPLETED</p>
@@ -126,6 +131,12 @@ public class RunAgentTaskResponseBody extends TeaModel {
         @NameInMap("RunningAt")
         public String runningAt;
 
+        /**
+         * <p>The session ID. Tasks with the same session ID share context.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ses-260702-21bh****。</p>
+         */
         @NameInMap("SessionId")
         public String sessionId;
 
@@ -142,7 +153,7 @@ public class RunAgentTaskResponseBody extends TeaModel {
          * <p>The user instruction in natural language. The Agent performs operations based on this instruction.</p>
          * 
          * <strong>example:</strong>
-         * <p>Download DingTalk from App Store</p>
+         * <p>去应用宝下载钉钉</p>
          */
         @NameInMap("UserPrompt")
         public String userPrompt;

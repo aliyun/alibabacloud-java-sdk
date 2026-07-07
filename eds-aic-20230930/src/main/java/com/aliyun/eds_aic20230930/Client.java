@@ -31,6 +31,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Activates an edge agent device.</p>
+     * 
+     * @param request ActivateEdgeMobileAgentRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ActivateEdgeMobileAgentResponse
+     */
+    public ActivateEdgeMobileAgentResponse activateEdgeMobileAgentWithOptions(ActivateEdgeMobileAgentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceClass)) {
+            query.put("DeviceClass", request.deviceClass);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceId)) {
+            query.put("DeviceId", request.deviceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceMeta)) {
+            query.put("DeviceMeta", request.deviceMeta);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.licenseKey)) {
+            query.put("LicenseKey", request.licenseKey);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ActivateEdgeMobileAgent"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ActivateEdgeMobileAgentResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Activates an edge agent device.</p>
+     * 
+     * @param request ActivateEdgeMobileAgentRequest
+     * @return ActivateEdgeMobileAgentResponse
+     */
+    public ActivateEdgeMobileAgentResponse activateEdgeMobileAgent(ActivateEdgeMobileAgentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.activateEdgeMobileAgentWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <ul>
      * <li>You can attach to an ADB key pair only to cloud phone instances in the Running state.</li>
@@ -1274,6 +1330,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateCustomImageResponse createCustomImage(CreateCustomImageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createCustomImageWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of the Cloud Phone product.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Places an order to purchase an edge smart gateway agent package.</p>
+     * 
+     * @param request CreateEdgeMobileAgentPackageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateEdgeMobileAgentPackageResponse
+     */
+    public CreateEdgeMobileAgentPackageResponse createEdgeMobileAgentPackageWithOptions(CreateEdgeMobileAgentPackageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
+            query.put("AutoPay", request.autoPay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
+            query.put("AutoRenew", request.autoRenew);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
+            query.put("BizRegionId", request.bizRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceClass)) {
+            query.put("DeviceClass", request.deviceClass);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            query.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.periodUnit)) {
+            query.put("PeriodUnit", request.periodUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promotionId)) {
+            query.put("PromotionId", request.promotionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.quantity)) {
+            query.put("Quantity", request.quantity);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateEdgeMobileAgentPackage"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateEdgeMobileAgentPackageResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of the Cloud Phone product.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Places an order to purchase an edge smart gateway agent package.</p>
+     * 
+     * @param request CreateEdgeMobileAgentPackageRequest
+     * @return CreateEdgeMobileAgentPackageResponse
+     */
+    public CreateEdgeMobileAgentPackageResponse createEdgeMobileAgentPackage(CreateEdgeMobileAgentPackageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createEdgeMobileAgentPackageWithOptions(request, runtime);
     }
 
     /**
@@ -2826,6 +2964,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeDisplayConfigResponse describeDisplayConfig(DescribeDisplayConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDisplayConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of edge agent packages.</p>
+     * 
+     * @param request DescribeEdgeMobileAgentPackagesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeEdgeMobileAgentPackagesResponse
+     */
+    public DescribeEdgeMobileAgentPackagesResponse describeEdgeMobileAgentPackagesWithOptions(DescribeEdgeMobileAgentPackagesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceClass)) {
+            query.put("DeviceClass", request.deviceClass);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.licenseKeys)) {
+            query.put("LicenseKeys", request.licenseKeys);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.packageIds)) {
+            query.put("PackageIds", request.packageIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeEdgeMobileAgentPackages"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeEdgeMobileAgentPackagesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of edge agent packages.</p>
+     * 
+     * @param request DescribeEdgeMobileAgentPackagesRequest
+     * @return DescribeEdgeMobileAgentPackagesResponse
+     */
+    public DescribeEdgeMobileAgentPackagesResponse describeEdgeMobileAgentPackages(DescribeEdgeMobileAgentPackagesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeEdgeMobileAgentPackagesWithOptions(request, runtime);
     }
 
     /**
@@ -5774,6 +5976,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Refreshes model authentication tokens.</p>
+     * 
+     * @param request RefreshAuthTokensRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RefreshAuthTokensResponse
+     */
+    public RefreshAuthTokensResponse refreshAuthTokensWithOptions(RefreshAuthTokensRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.expireSeconds)) {
+            query.put("ExpireSeconds", request.expireSeconds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
+            query.put("InstanceIds", request.instanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.licenseKeys)) {
+            query.put("LicenseKeys", request.licenseKeys);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RefreshAuthTokens"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RefreshAuthTokensResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Refreshes model authentication tokens.</p>
+     * 
+     * @param request RefreshAuthTokensRequest
+     * @return RefreshAuthTokensResponse
+     */
+    public RefreshAuthTokensResponse refreshAuthTokens(RefreshAuthTokensRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.refreshAuthTokensWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Renews subscription Cloud Phone instance groups. If a subscription instance group expires, the system automatically deletes the instance group and its instances after 15 days. You cannot recover deleted resources. Renew your instance groups promptly to prevent resource loss.</p>
      * 
      * @param request RenewAndroidInstanceGroupsRequest
@@ -6086,7 +6340,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Triggers an Agent on Mobile nodes to execute an AI automation task.</p>
+     * <p>Triggers an Agent to execute an AI automation task on Mobile nodes.</p>
      * 
      * @param request RunAgentTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6146,7 +6400,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Triggers an Agent on Mobile nodes to execute an AI automation task.</p>
+     * <p>Triggers an Agent to execute an AI automation task on Mobile nodes.</p>
      * 
      * @param request RunAgentTaskRequest
      * @return RunAgentTaskResponse
