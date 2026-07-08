@@ -7,8 +7,10 @@ public class ListPoliciesResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the next query is required.</p>
      * <ul>
-     * <li>If the value of this parameter is empty (<code>&quot;NextToken&quot;: &quot;&quot;</code>), all results are returned, and the next query is not required.</li>
-     * <li>If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.</li>
+     * <li><p>If the value of this parameter is empty (<code>&quot;NextToken&quot;: &quot;&quot;</code>), all results are returned, and the next query is not required.</p>
+     * </li>
+     * <li><p>If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -101,8 +103,10 @@ public class ListPoliciesResponseBody extends TeaModel {
         /**
          * <p>The mode of the Tag Policy feature. Valid values:</p>
          * <ul>
-         * <li>USER: single-account mode</li>
-         * <li>RD: multi-account mode</li>
+         * <li><p>USER: single-account mode</p>
+         * </li>
+         * <li><p>RD: multi-account mode</p>
+         * </li>
          * </ul>
          * <p>For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.</p>
          * 

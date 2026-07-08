@@ -24,7 +24,7 @@ public class DeleteTagRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p> Only <code>cn-hangzhou</code> is supported.</p>
+     * <p>Only <code>cn-hangzhou</code> is supported.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

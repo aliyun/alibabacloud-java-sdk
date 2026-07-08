@@ -26,9 +26,6 @@ public class ListTagValuesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The information of the tag values.</p>
-     */
     @NameInMap("Values")
     public ListTagValuesResponseBodyValues values;
 

@@ -11,7 +11,7 @@ public class GetEffectivePolicyRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. Set the value to cn-shanghai.</p>
+     * <p>The region ID. Only <code>cn-shanghai</code> is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -26,9 +26,9 @@ public class GetEffectivePolicyRequest extends TeaModel {
     public java.util.List<String> tagKeys;
 
     /**
-     * <p>The ID of the object.</p>
+     * <p>The ID of the target object.</p>
      * <blockquote>
-     * <p> If you use the Tag Policy feature in single-account mode, this parameter is optional. If you use the Tag Policy feature in multi-account mode, this feature is required.</p>
+     * <p>This parameter is optional in Single-Account Mode and required in Multi-Account Mode.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -38,15 +38,19 @@ public class GetEffectivePolicyRequest extends TeaModel {
     public String targetId;
 
     /**
-     * <p>The type of the object. Valid values:</p>
+     * <p>The type of the target object. Valid values:</p>
      * <ul>
-     * <li>USER: the current logon account. This value is available if you use the Tag Policy feature in single-account mode.</li>
-     * <li>ROOT: the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
-     * <li>FOLDER: a folder other than the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
-     * <li>ACCOUNT: a member in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
+     * <li><p>USER: queries the effective policy for the current logon account. This value applies only to Single-Account Mode.</p>
+     * </li>
+     * <li><p>ROOT: queries the effective policy for the Root Folder in a Resource Directory. This value applies only to Multi-Account Mode.</p>
+     * </li>
+     * <li><p>FOLDER: queries the effective policy for a Folder in a Resource Directory. This value applies only to Multi-Account Mode.</p>
+     * </li>
+     * <li><p>ACCOUNT: queries the effective policy for a Member in a Resource Directory. This value applies only to Multi-Account Mode.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you use the Tag Policy feature in single-account mode, this parameter is optional. If you use the Tag Policy feature in multi-account mode, this feature is required. The value of this parameter is not case-sensitive.</p>
+     * <p>This parameter is optional in Single-Account Mode and required in Multi-Account Mode. The value is case-insensitive.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

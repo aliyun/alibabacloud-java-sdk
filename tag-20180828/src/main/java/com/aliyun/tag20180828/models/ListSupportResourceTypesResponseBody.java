@@ -12,7 +12,7 @@ public class ListSupportResourceTypesResponseBody extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>AAAAAYws9fJ0Ur4MGm****</p>
+     * <p>AAAAAYws9fJ0Ur4MGm</p>
      */
     @NameInMap("NextToken")
     public String nextToken;

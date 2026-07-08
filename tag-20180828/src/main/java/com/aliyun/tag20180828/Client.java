@@ -42,7 +42,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-zhangjiakou-na62-a01", "tag.aliyuncs.com"),
             new TeaPair("cn-zhengzhou-nebula-1", "tag.cn-qingdao-nebula.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "tag.cn-shenzhen-cloudstone.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "tag.aliyuncs.com")
+            new TeaPair("rus-west-1-pop", "tag.aliyuncs.com"),
+            new TeaPair("us-east-1", "tag.us-east-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "tag.me-east-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "tag.me-central-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "tag.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "tag.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-jva", "tag.cn-zhengzhou-jva.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "tag.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "tag.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "tag.cn-shenzhen-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "tag.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "tag.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "tag.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-nanjing", "tag.cn-nanjing.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "tag.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "tag.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "tag.cn-heyuan.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "tag.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "tag.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-fuzhou", "tag.cn-fuzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "tag.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "tag.cn-beijing-finance-1.aliyuncs.com"),
+            new TeaPair("cn-beijing", "tag.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "tag.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "tag.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "tag.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "tag.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "tag.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "tag.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "tag.ap-northeast-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("tag", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -67,7 +96,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * This topic provides an example on how to call the API operation to attach the tag policy with an ID of <code>p-de62a0bf400e4b69****</code> to the current logon account. In this example, the Tag Policy feature in single-account mode is used.</p>
      * 
      * <b>summary</b> : 
-     * <p>绑定策略</p>
+     * <p>Attaches a tag policy to an object.</p>
      * 
      * @param request AttachPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -127,7 +156,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * This topic provides an example on how to call the API operation to attach the tag policy with an ID of <code>p-de62a0bf400e4b69****</code> to the current logon account. In this example, the Tag Policy feature in single-account mode is used.</p>
      * 
      * <b>summary</b> : 
-     * <p>绑定策略</p>
+     * <p>Attaches a tag policy to an object.</p>
      * 
      * @param request AttachPolicyRequest
      * @return AttachPolicyResponse
@@ -139,7 +168,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>校验CreatedBy开通状态</p>
+     * <p>Checks whether the createdby tag is enabled.</p>
      * 
      * @param request CheckCreatedByEnabledRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -187,7 +216,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>校验CreatedBy开通状态</p>
+     * <p>Checks whether the createdby tag is enabled.</p>
      * 
      * @param request CheckCreatedByEnabledRequest
      * @return CheckCreatedByEnabledResponse
@@ -199,7 +228,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关闭CreatedBy服务</p>
+     * <p>Disables createdby tags.</p>
      * 
      * @param request CloseCreatedByRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -247,7 +276,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关闭CreatedBy服务</p>
+     * <p>Disables createdby tags.</p>
      * 
      * @param request CloseCreatedByRequest
      * @return CloseCreatedByResponse
@@ -259,7 +288,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates associated resource tagging rules.</p>
+     * <p>Creates associated resource tag rules.</p>
      * 
      * @param request CreateAssociatedResourceRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -307,7 +336,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates associated resource tagging rules.</p>
+     * <p>Creates associated resource tag rules.</p>
      * 
      * @param request CreateAssociatedResourceRulesRequest
      * @return CreateAssociatedResourceRulesResponse
@@ -812,8 +841,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>After you disable a tag policy, all bound tag policies are automatically unbound.</p>
+     * 
      * <b>summary</b> : 
-     * <p>关闭策略</p>
+     * <p>Disables a control policy.</p>
      * 
      * @param request DisablePolicyTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -868,8 +901,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>After you disable a tag policy, all bound tag policies are automatically unbound.</p>
+     * 
      * <b>summary</b> : 
-     * <p>关闭策略</p>
+     * <p>Disables a control policy.</p>
      * 
      * @param request DisablePolicyTypeRequest
      * @return DisablePolicyTypeResponse
@@ -880,8 +917,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>You can enable the single-account mode or multi-account mode for tag policies:</p>
+     * <ul>
+     * <li>Single-account mode: If the current logon account is an independent Alibaba Cloud account, the single-account mode for tag policies is enabled to manage resources within the scope of the single account.</li>
+     * <li>Multi-account mode: If the current logon account is the management account of a resource directory, the multi-account mode for tag policies is enabled to manage resources within the scope of the resource directory.<blockquote>
+     * <p>Members of a resource directory cannot enable the tag policy feature.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>开通策略</p>
+     * <p>Enables the tag policy feature.</p>
      * 
      * @param request EnablePolicyTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -936,8 +984,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>You can enable the single-account mode or multi-account mode for tag policies:</p>
+     * <ul>
+     * <li>Single-account mode: If the current logon account is an independent Alibaba Cloud account, the single-account mode for tag policies is enabled to manage resources within the scope of the single account.</li>
+     * <li>Multi-account mode: If the current logon account is the management account of a resource directory, the multi-account mode for tag policies is enabled to manage resources within the scope of the resource directory.<blockquote>
+     * <p>Members of a resource directory cannot enable the tag policy feature.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>开通策略</p>
+     * <p>Enables the tag policy feature.</p>
      * 
      * @param request EnablePolicyTypeRequest
      * @return EnablePolicyTypeResponse
@@ -953,7 +1012,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * This topic provides an example on how to call this API operation to generate a resource non-compliance report for the current logon account. In this example, the Tag Policy feature in single-account mode is used.</p>
      * 
      * <b>summary</b> : 
-     * <p>生成规则检测报告</p>
+     * <p>Generates a resource non-compliance report.</p>
      * 
      * @param request GenerateConfigRuleReportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1013,7 +1072,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * This topic provides an example on how to call this API operation to generate a resource non-compliance report for the current logon account. In this example, the Tag Policy feature in single-account mode is used.</p>
      * 
      * <b>summary</b> : 
-     * <p>生成规则检测报告</p>
+     * <p>Generates a resource non-compliance report.</p>
      * 
      * @param request GenerateConfigRuleReportRequest
      * @return GenerateConfigRuleReportResponse
@@ -1029,7 +1088,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * This topic provides an example on how to call this API operation to query the basic information of the resource non-compliance report that is last generated for the current logon account. In this example, the Tag Policy feature in single-account mode is used. The response shows that the ID of the report is <code>crp-ao0786618088006c****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the basic information of the resource non-compliance report that is last generated.</p>
+     * <p>Queries the basic information about the latest resource non-compliance report.</p>
      * 
      * @param request GetConfigRuleReportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1089,7 +1148,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * This topic provides an example on how to call this API operation to query the basic information of the resource non-compliance report that is last generated for the current logon account. In this example, the Tag Policy feature in single-account mode is used. The response shows that the ID of the report is <code>crp-ao0786618088006c****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the basic information of the resource non-compliance report that is last generated.</p>
+     * <p>Queries the basic information about the latest resource non-compliance report.</p>
      * 
      * @param request GetConfigRuleReportRequest
      * @return GetConfigRuleReportResponse
@@ -1101,12 +1160,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the effective tag policy for the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the effective tag policy for the Root folder, a folder other than the Root folder, or a member in the resource directory. You can also use a member of a resource directory to call this API operation to query the effective tag policy for the member. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
-     * An effective tag policy is obtained based on tag policy inheritance. For more information, see <a href="https://help.aliyun.com/document_detail/417435.html">Inheritance of a tag policy and calculation of an effective tag policy</a>.
-     * This topic provides an example on how to call the API operation to query the effective tag policy for the current logon account. In this example, the Tag Policy feature in single-account mode is used.</p>
+     * <h3>Usage notes</h3>
+     * <p>In Single-Account Mode, the current logon account can query its own effective policy. In Multi-Account Mode, the Management Account of a Resource Directory can query the effective policy for the Root Folder, a Folder, or a Member. A Member can also query its own effective policy. For more information about tag policy modes, see <a href="https://help.aliyun.com/document_detail/417434.html">Tag policy modes</a>.
+     * Tag policy inheritance determines the effective policy. For more information, see <a href="https://help.aliyun.com/document_detail/417435.html">Tag policy inheritance and effective policy calculation</a>.
+     * This topic provides an example of how to query the effective policy for the current logon account in Single-Account Mode.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about the effective policy.</p>
+     * <p>Retrieves the effective policy for a specified object.</p>
      * 
      * @param request GetEffectivePolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1162,12 +1222,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you use the Tag Policy feature in single-account mode, you can use the current logon account to call this API operation to query the effective tag policy for the account. If you use the Tag Policy feature in multi-account mode, you can use the management account of a resource directory to call this API operation to query the effective tag policy for the Root folder, a folder other than the Root folder, or a member in the resource directory. You can also use a member of a resource directory to call this API operation to query the effective tag policy for the member. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
-     * An effective tag policy is obtained based on tag policy inheritance. For more information, see <a href="https://help.aliyun.com/document_detail/417435.html">Inheritance of a tag policy and calculation of an effective tag policy</a>.
-     * This topic provides an example on how to call the API operation to query the effective tag policy for the current logon account. In this example, the Tag Policy feature in single-account mode is used.</p>
+     * <h3>Usage notes</h3>
+     * <p>In Single-Account Mode, the current logon account can query its own effective policy. In Multi-Account Mode, the Management Account of a Resource Directory can query the effective policy for the Root Folder, a Folder, or a Member. A Member can also query its own effective policy. For more information about tag policy modes, see <a href="https://help.aliyun.com/document_detail/417434.html">Tag policy modes</a>.
+     * Tag policy inheritance determines the effective policy. For more information, see <a href="https://help.aliyun.com/document_detail/417435.html">Tag policy inheritance and effective policy calculation</a>.
+     * This topic provides an example of how to query the effective policy for the current logon account in Single-Account Mode.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about the effective policy.</p>
+     * <p>Retrieves the effective policy for a specified object.</p>
      * 
      * @param request GetEffectivePolicyRequest
      * @return GetEffectivePolicyResponse
@@ -1319,7 +1380,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Search the rules for associated resources that the user has set up.</p>
+     * <p>Retrieves a list of associated resource rules.</p>
      * 
      * @param request ListAssociatedResourceRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1379,7 +1440,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Search the rules for associated resources that the user has set up.</p>
+     * <p>Retrieves a list of associated resource rules.</p>
      * 
      * @param request ListAssociatedResourceRulesRequest
      * @return ListAssociatedResourceRulesResponse
@@ -1487,7 +1548,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * This topic provides an example on how to call the API operation to query all tag policies that are created for the current logon account. In this example, the Tag Policy feature in single-account mode is used. The response shows that two tag policies are created.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries tag policies.</p>
+     * <p>Queries a list of tag policies.</p>
      * 
      * @param request ListPoliciesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1555,7 +1616,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * This topic provides an example on how to call the API operation to query all tag policies that are created for the current logon account. In this example, the Tag Policy feature in single-account mode is used. The response shows that two tag policies are created.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries tag policies.</p>
+     * <p>Queries a list of tag policies.</p>
      * 
      * @param request ListPoliciesRequest
      * @return ListPoliciesResponse
@@ -1571,7 +1632,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * This topic provides an example on how to call the API operation to query the tag policies that are attached to the current logon account. In this example, the Tag Policy feature in single-account mode is used. The response shows that only one tag policy is attached to the current logon account.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the tag policies that are attached to an object.</p>
+     * <p>Queries a list of tag policies that are attached to an object.</p>
      * 
      * @param request ListPoliciesForTargetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1635,7 +1696,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * This topic provides an example on how to call the API operation to query the tag policies that are attached to the current logon account. In this example, the Tag Policy feature in single-account mode is used. The response shows that only one tag policy is attached to the current logon account.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the tag policies that are attached to an object.</p>
+     * <p>Queries a list of tag policies that are attached to an object.</p>
      * 
      * @param request ListPoliciesForTargetRequest
      * @return ListPoliciesForTargetResponse
@@ -2485,7 +2546,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update the rule for tagging associated resources.</p>
+     * <p>Updates an Associated Resource Tag Rule.</p>
      * 
      * @param request UpdateAssociatedResourceRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2545,7 +2606,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update the rule for tagging associated resources.</p>
+     * <p>Updates an Associated Resource Tag Rule.</p>
      * 
      * @param request UpdateAssociatedResourceRuleRequest
      * @return UpdateAssociatedResourceRuleResponse

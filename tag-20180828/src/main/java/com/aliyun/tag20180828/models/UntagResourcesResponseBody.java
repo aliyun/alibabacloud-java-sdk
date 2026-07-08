@@ -4,17 +4,6 @@ package com.aliyun.tag20180828.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesResponseBody extends TeaModel {
-    /**
-     * <p>The information about the resources from which tags fail to be removed.</p>
-     * <blockquote>
-     * </blockquote>
-     * <ul>
-     * <li><p>If tags are removed from all resources, the value of FailedResources is empty.</p>
-     * </li>
-     * <li><p>If tags fail to be removed from some or all resources, the value of FailedResources contains the detailed information about the resources.</p>
-     * </li>
-     * </ul>
-     */
     @NameInMap("FailedResources")
     public UntagResourcesResponseBodyFailedResources failedResources;
 
@@ -49,21 +38,9 @@ public class UntagResourcesResponseBody extends TeaModel {
     }
 
     public static class UntagResourcesResponseBodyFailedResourcesFailedResourceResult extends TeaModel {
-        /**
-         * <p>The error code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>InvalidResourceId.NotFound</p>
-         */
         @NameInMap("Code")
         public String code;
 
-        /**
-         * <p>The error message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>The specified ResourceIds are not found in our records.</p>
-         */
         @NameInMap("Message")
         public String message;
 
@@ -91,18 +68,9 @@ public class UntagResourcesResponseBody extends TeaModel {
     }
 
     public static class UntagResourcesResponseBodyFailedResourcesFailedResource extends TeaModel {
-        /**
-         * <p>The ARN of the resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>arn:acs:ecs:cn-hangzhou:123456789****:instance/i-xxxxxxxxxx1</p>
-         */
         @NameInMap("ResourceARN")
         public String resourceARN;
 
-        /**
-         * <p>The information about the error.</p>
-         */
         @NameInMap("Result")
         public UntagResourcesResponseBodyFailedResourcesFailedResourceResult result;
 

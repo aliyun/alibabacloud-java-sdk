@@ -4,17 +4,6 @@ package com.aliyun.tag20180828.models;
 import com.aliyun.tea.*;
 
 public class TagResourcesResponseBody extends TeaModel {
-    /**
-     * <p>The information about the resources to which tags fail to be added.</p>
-     * <blockquote>
-     * </blockquote>
-     * <ul>
-     * <li><p>If tags are added to all resources, the value of <code>FailedResources</code> is empty.</p>
-     * </li>
-     * <li><p>If tags fail to be added to some or all resources, the value of <code>FailedResources</code> contains the detailed information about the resources.</p>
-     * </li>
-     * </ul>
-     */
     @NameInMap("FailedResources")
     public TagResourcesResponseBodyFailedResources failedResources;
 
@@ -49,21 +38,9 @@ public class TagResourcesResponseBody extends TeaModel {
     }
 
     public static class TagResourcesResponseBodyFailedResourcesFailedResourceResult extends TeaModel {
-        /**
-         * <p>The error code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>InvalidResourceId.NotFound</p>
-         */
         @NameInMap("Code")
         public String code;
 
-        /**
-         * <p>The error message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>The specified ResourceIds are not found in our records.</p>
-         */
         @NameInMap("Message")
         public String message;
 
@@ -91,18 +68,9 @@ public class TagResourcesResponseBody extends TeaModel {
     }
 
     public static class TagResourcesResponseBodyFailedResourcesFailedResource extends TeaModel {
-        /**
-         * <p>The ARN of the resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>arn:acs:vpc:cn-hangzhou:123456789****:vpc/vpc-bp19dd90tkt6tz7wu****</p>
-         */
         @NameInMap("ResourceARN")
         public String resourceARN;
 
-        /**
-         * <p>The information about the error.</p>
-         */
         @NameInMap("Result")
         public TagResourcesResponseBodyFailedResourcesFailedResourceResult result;
 

@@ -13,8 +13,10 @@ public class ListConfigRulesForTargetResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the next query is required.</p>
      * <ul>
-     * <li>If the value of this parameter is empty (<code>&quot;NextToken&quot;: &quot;&quot;</code>), all results are returned, and the next query is not required.</li>
-     * <li>If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.</li>
+     * <li><p>If the value of this parameter is empty (<code>&quot;NextToken&quot;: &quot;&quot;</code>), all results are returned, and the next query is not required.</p>
+     * </li>
+     * <li><p>If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,7 +68,7 @@ public class ListConfigRulesForTargetResponseBody extends TeaModel {
          * <p>The ID of the account group.</p>
          * <p>You can use the ID to query the content of the related resource non-compliance report in Cloud Config.</p>
          * <blockquote>
-         * <p> This parameter is returned only if you use the Tag Policy feature in multi-account mode.</p>
+         * <p>This parameter is returned only if you use the Tag Policy feature in multi-account mode.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -87,8 +89,10 @@ public class ListConfigRulesForTargetResponseBody extends TeaModel {
         /**
          * <p>The use scenario of the tag policy. Valid values:</p>
          * <ul>
-         * <li>tags: enables tags with specified tag values to be added to resources.</li>
-         * <li>rg_inherit: enables resources in a resource group to automatically inherit tags from the resource group.</li>
+         * <li><p>tags: enables tags with specified tag values to be added to resources.</p>
+         * </li>
+         * <li><p>rg_inherit: enables resources in a resource group to automatically inherit tags from the resource group.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -100,8 +104,10 @@ public class ListConfigRulesForTargetResponseBody extends TeaModel {
         /**
          * <p>Indicates whether automatic remediation is enabled. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -140,10 +146,14 @@ public class ListConfigRulesForTargetResponseBody extends TeaModel {
         /**
          * <p>The type of the object. Valid values:</p>
          * <ul>
-         * <li>USER: the current logon account. This value is available if you use the Tag Policy feature in single-account mode.</li>
-         * <li>ROOT: the Root folder in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
-         * <li>FOLDER: a folder other than the Root folder in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
-         * <li>ACCOUNT: a member in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
+         * <li><p>USER: the current logon account. This value is available if you use the Tag Policy feature in single-account mode.</p>
+         * </li>
+         * <li><p>ROOT: the Root folder in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</p>
+         * </li>
+         * <li><p>FOLDER: a folder other than the Root folder in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</p>
+         * </li>
+         * <li><p>ACCOUNT: a member in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

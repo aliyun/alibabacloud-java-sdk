@@ -14,6 +14,9 @@ public class DisablePolicyTypeRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID.</p>
+     * <p>Set the value to <code>cn-shanghai</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */

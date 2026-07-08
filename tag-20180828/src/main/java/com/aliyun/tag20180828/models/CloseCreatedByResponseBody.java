@@ -5,8 +5,10 @@ import com.aliyun.tea.*;
 
 public class CloseCreatedByResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>AECFE0F2-CEC3-5D16-BE4C-E2F95083D063</p>
+     * <p>AECFE0F2-CEC3-5D16-BE4C-E2F95083****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

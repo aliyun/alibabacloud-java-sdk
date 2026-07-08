@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class CheckCreatedByEnabledResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the createdby tag is enabled. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,8 +18,10 @@ public class CheckCreatedByEnabledResponseBody extends TeaModel {
     public Boolean openStatus;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>682DD9E1-F530-5D14-A839-A6787FA82B74</p>
+     * <p>682DD9E1-F530-5D14-A839-A6787FA8****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

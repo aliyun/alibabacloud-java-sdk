@@ -4,17 +4,16 @@ package com.aliyun.tag20180828.models;
 import com.aliyun.tea.*;
 
 public class ListTagKeysResponseBody extends TeaModel {
-    /**
-     * <p>The information of the tag keys.</p>
-     */
     @NameInMap("Keys")
     public ListTagKeysResponseBodyKeys keys;
 
     /**
      * <p>Indicates whether the next query is required. The value of this parameter may be empty.</p>
      * <ul>
-     * <li>If the value of this parameter is empty (<code>&quot;NextToken&quot;: &quot;&quot;</code>), all results are returned, and the next query is not required.</li>
-     * <li>If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.</li>
+     * <li><p>If the value of this parameter is empty (<code>&quot;NextToken&quot;: &quot;&quot;</code>), all results are returned, and the next query is not required.</p>
+     * </li>
+     * <li><p>If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,34 +61,12 @@ public class ListTagKeysResponseBody extends TeaModel {
     }
 
     public static class ListTagKeysResponseBodyKeysKey extends TeaModel {
-        /**
-         * <p>The type of the resource tag. Valid values:</p>
-         * <ul>
-         * <li>custom</li>
-         * <li>system</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>custom</p>
-         */
         @NameInMap("Category")
         public String category;
 
-        /**
-         * <p>The description of the tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Business team</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>team</p>
-         */
         @NameInMap("Key")
         public String key;
 

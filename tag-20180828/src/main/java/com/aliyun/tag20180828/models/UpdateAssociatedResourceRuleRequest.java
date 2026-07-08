@@ -14,7 +14,7 @@ public class UpdateAssociatedResourceRuleRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The ID of the region.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -26,8 +26,8 @@ public class UpdateAssociatedResourceRuleRequest extends TeaModel {
     public String resourceOwnerAccount;
 
     /**
-     * <p>The setting name of the associated resource tag rule.</p>
-     * <p>For specific values, see the <strong>Rule Setting Name</strong> column in <a href="https://help.aliyun.com/document_detail/2586330.html">Resources that Support Associated Resource Tag Settings</a>.</p>
+     * <p>The name of the Associated Resource Tag Rule setting.</p>
+     * <p>For valid values, see the <strong>Setting Name</strong> column in <a href="https://help.aliyun.com/document_detail/2586330.html">Resources that support the Associated Resource Tag Rule feature</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,10 +37,12 @@ public class UpdateAssociatedResourceRuleRequest extends TeaModel {
     public String settingName;
 
     /**
-     * <p>Indicates whether to enable the associated resource tag rule. Values:</p>
+     * <p>The status of the Associated Resource Tag Rule. Valid values:</p>
      * <ul>
-     * <li>Enable: Enabled.</li>
-     * <li>Disable: Disabled.</li>
+     * <li><p>Enable: The rule is enabled.</p>
+     * </li>
+     * <li><p>Disable: The rule is disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,7 +52,7 @@ public class UpdateAssociatedResourceRuleRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>List of tag keys affected by the associated resource tag rule.</p>
+     * <p>A list of tag keys for the Associated Resource Tag Rule.</p>
      */
     @NameInMap("TagKeys")
     public java.util.List<String> tagKeys;

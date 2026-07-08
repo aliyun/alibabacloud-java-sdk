@@ -10,12 +10,15 @@ public class ListTagKeysRequest extends TeaModel {
     /**
      * <p>The type of the resource tags. This parameter specifies a filter condition for the query. Valid values:</p>
      * <ul>
-     * <li>all (default value)</li>
-     * <li>custom</li>
-     * <li>system</li>
+     * <li><p>all (default value)</p>
+     * </li>
+     * <li><p>custom</p>
+     * </li>
+     * <li><p>system</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> The value of this parameter is not case-sensitive.</p>
+     * <p>The value of this parameter is not case-sensitive.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -27,8 +30,10 @@ public class ListTagKeysRequest extends TeaModel {
     /**
      * <p>The type of the query. Valid values:</p>
      * <ul>
-     * <li>EQUAL (default): exact match</li>
-     * <li>PREFIX: prefix-based fuzzy match</li>
+     * <li><p>EQUAL (default): exact match</p>
+     * </li>
+     * <li><p>PREFIX: prefix-based fuzzy match</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,11 +70,13 @@ public class ListTagKeysRequest extends TeaModel {
     /**
      * <p>The category of the tags. This parameter specifies a filter condition for the query. Valid values:</p>
      * <ul>
-     * <li>ResourceTag: resource tags, including custom and system tags. This is the default value.</li>
-     * <li>MetaTag: preset tags.</li>
+     * <li><p>ResourceTag: resource tags, including custom and system tags. This is the default value.</p>
+     * </li>
+     * <li><p>MetaTag: preset tags.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> The value of this parameter is not case-sensitive.</p>
+     * <p>The value of this parameter is not case-sensitive.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -96,8 +103,10 @@ public class ListTagKeysRequest extends TeaModel {
      * <p>The resource type. This parameter specifies a filter condition for the query.</p>
      * <p>Format: <code>ALIYUN::${ProductCode}::${ResourceType}</code>. All letters in the value of this parameter must be in uppercase.</p>
      * <ul>
-     * <li><code>ProductCode</code>: the service code. You can set this field to a value obtained from the response of the <a href="https://help.aliyun.com/document_detail/2330915.html">ListSupportResourceTypes</a> operation.</li>
-     * <li><code>ResourceType</code>: the resource type. You can set this field to a value obtained from the response of the <a href="https://help.aliyun.com/document_detail/2330915.html">ListSupportResourceTypes</a> operation.</li>
+     * <li><p><code>ProductCode</code>: the service code. You can set this field to a value obtained from the response of the <a href="https://help.aliyun.com/document_detail/2330915.html">ListSupportResourceTypes</a> operation.</p>
+     * </li>
+     * <li><p><code>ResourceType</code>: the resource type. You can set this field to a value obtained from the response of the <a href="https://help.aliyun.com/document_detail/2330915.html">ListSupportResourceTypes</a> operation.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

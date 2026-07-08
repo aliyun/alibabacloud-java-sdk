@@ -53,13 +53,17 @@ public class ListPoliciesForTargetRequest extends TeaModel {
     /**
      * <p>The type of the object. This parameter specifies a filter condition for the query. Valid values:</p>
      * <ul>
-     * <li>USER: the current logon account. This value is available if you use the Tag Policy feature in single-account mode.</li>
-     * <li>ROOT: the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
-     * <li>FOLDER: a folder other than the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
-     * <li>ACCOUNT: a member in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
+     * <li><p>USER: the current logon account. This value is available if you use the Tag Policy feature in single-account mode.</p>
+     * </li>
+     * <li><p>ROOT: the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</p>
+     * </li>
+     * <li><p>FOLDER: a folder other than the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</p>
+     * </li>
+     * <li><p>ACCOUNT: a member in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> The value of this parameter is not case-sensitive.</p>
+     * <p>The value of this parameter is not case-sensitive.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

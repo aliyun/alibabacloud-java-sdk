@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAssociatedResourceRulesRequest extends TeaModel {
     /**
-     * <p>The associated resource tagging rules that you want to create.</p>
+     * <p>A list of associated resource tag rules.</p>
      */
     @NameInMap("CreateRulesList")
     public java.util.List<CreateAssociatedResourceRulesRequestCreateRulesList> createRulesList;
@@ -78,8 +78,8 @@ public class CreateAssociatedResourceRulesRequest extends TeaModel {
         public String existingStatus;
 
         /**
-         * <p>The name of the associated resource tagging rule.</p>
-         * <p>For more information, see the <strong>Rule Name</strong> column in <a href="https://help.aliyun.com/document_detail/2586330.html">Resource types that support the Associated Resource Tagging feature</a>.</p>
+         * <p>The setting name of the associated resource tag rule.</p>
+         * <p>For valid values, see the <strong>Setting name</strong> column in <a href="https://help.aliyun.com/document_detail/2586330.html">Resources that support associated resource tagging</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -89,10 +89,12 @@ public class CreateAssociatedResourceRulesRequest extends TeaModel {
         public String settingName;
 
         /**
-         * <p>Specifies whether to enable the associated resource tagging rule. Valid values:</p>
+         * <p>Specifies whether to enable the associated resource tag rule. Valid values:</p>
          * <ul>
-         * <li>Enable (default)</li>
-         * <li>Disable</li>
+         * <li><p>Enable (default): The rule is enabled.</p>
+         * </li>
+         * <li><p>Disable: The rule is disabled.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -103,7 +105,7 @@ public class CreateAssociatedResourceRulesRequest extends TeaModel {
         public String status;
 
         /**
-         * <p>The tag keys to which the associated resource tagging rule applies.</p>
+         * <p>The tag keys to which the rule applies.</p>
          */
         @NameInMap("TagKeys")
         public java.util.List<String> tagKeys;

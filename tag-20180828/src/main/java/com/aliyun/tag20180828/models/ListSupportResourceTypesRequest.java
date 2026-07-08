@@ -18,7 +18,7 @@ public class ListSupportResourceTypesRequest extends TeaModel {
      * <p>The token that is used to start the next query.</p>
      * 
      * <strong>example:</strong>
-     * <p>AAAAAYws9fJ0Ur4MGm/5OkDoW/Y3wDNwUdssyKODK****</p>
+     * <p>AAAAAYws9fJ0Ur4MGm/5OkDoW/Y3wDNwUdssyKODK+myOlBL</p>
      */
     @NameInMap("NextToken")
     public String nextToken;

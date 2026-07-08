@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAssociatedResourceRuleResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>94E16BB6-3FB6-1297-B5B2-ED2250F437CD</p>

@@ -32,8 +32,10 @@ public class ListConfigRulesForTargetRequest extends TeaModel {
     /**
      * <p>The use scenario of the tag policy. This parameter specifies a filter condition for the query. Valid values:</p>
      * <ul>
-     * <li>tags: enables tags with specified tag values to be added to resources.</li>
-     * <li>rg_inherit: enables resources in a resource group to automatically inherit tags from the resource group.</li>
+     * <li><p>tags: enables tags with specified tag values to be added to resources.</p>
+     * </li>
+     * <li><p>rg_inherit: enables resources in a resource group to automatically inherit tags from the resource group.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,13 +77,17 @@ public class ListConfigRulesForTargetRequest extends TeaModel {
     /**
      * <p>The type of the object. This parameter specifies a filter condition for the query. Valid values:</p>
      * <ul>
-     * <li>USER: the current logon account. This value is available if you use the Tag Policy feature in single-account mode.</li>
-     * <li>ROOT: the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
-     * <li>FOLDER: a folder other than the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
-     * <li>ACCOUNT: a member in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
+     * <li><p>USER: the current logon account. This value is available if you use the Tag Policy feature in single-account mode.</p>
+     * </li>
+     * <li><p>ROOT: the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</p>
+     * </li>
+     * <li><p>FOLDER: a folder other than the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</p>
+     * </li>
+     * <li><p>ACCOUNT: a member in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> The value of this parameter is not case-sensitive.</p>
+     * <p>The value of this parameter is not case-sensitive.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -93,12 +99,14 @@ public class ListConfigRulesForTargetRequest extends TeaModel {
     /**
      * <p>The mode of the Tag Policy feature. This parameter specifies a filter condition for the query. Valid values:</p>
      * <ul>
-     * <li>USER: single-account mode</li>
-     * <li>RD: multi-account mode</li>
+     * <li><p>USER: single-account mode</p>
+     * </li>
+     * <li><p>RD: multi-account mode</p>
+     * </li>
      * </ul>
      * <p>For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.</p>
      * <blockquote>
-     * <p> The value of this parameter is not case-sensitive.</p>
+     * <p>The value of this parameter is not case-sensitive.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

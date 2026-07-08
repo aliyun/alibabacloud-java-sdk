@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListAssociatedResourceRulesResponseBody extends TeaModel {
     /**
-     * <p>Determine if there is a token for the next query based on <code>NextToken</code>. Values:</p>
+     * <p>You can use the <code>NextToken</code> parameter to determine whether there is a token that can be used to start the next query. Valid values:</p>
      * <ul>
-     * <li>If <code>NextToken</code> is empty, it indicates there is no next query.</li>
-     * <li>If <code>NextToken</code> has a value, that value is the token for the next query start.</li>
+     * <li><p>If <code>NextToken</code> is empty, no next query is performed.</p>
+     * </li>
+     * <li><p>If a value is returned for <code>NextToken</code>, the value is the token that is used for the next query.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,7 +21,7 @@ public class ListAssociatedResourceRulesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6E27F22C-EDA3-132E-A53F-77DE3BC2343D</p>
@@ -28,7 +30,7 @@ public class ListAssociatedResourceRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>List of associated resource tag rules.</p>
+     * <p>A list of associated resource rules.</p>
      */
     @NameInMap("Rules")
     public java.util.List<ListAssociatedResourceRulesResponseBodyRules> rules;
@@ -67,7 +69,7 @@ public class ListAssociatedResourceRulesResponseBody extends TeaModel {
         public String existingStatus;
 
         /**
-         * <p>Setting name of the associated resource tag rule.</p>
+         * <p>The name of the associated resource rule.</p>
          * 
          * <strong>example:</strong>
          * <p>rule:UpdateLoadBalancerZones-UpdateLoadBalancerAddressTypeConfig-TagAlb:Alb-LoadBalancer:Vpc-Eip</p>
@@ -76,11 +78,7 @@ public class ListAssociatedResourceRulesResponseBody extends TeaModel {
         public String settingName;
 
         /**
-         * <p>Whether the associated resource tag rule is enabled. Values:</p>
-         * <ul>
-         * <li>Enable: Enabled.</li>
-         * <li>Disable: Disabled.</li>
-         * </ul>
+         * <p>The status of the associated resource rule. Valid values: <code>Enable</code> and <code>Disable</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>Disable/Enable</p>
@@ -89,7 +87,7 @@ public class ListAssociatedResourceRulesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>List of tag keys for the associated resource tag rule.</p>
+         * <p>The Tag Keys to which the rule applies.</p>
          */
         @NameInMap("TagKeys")
         public java.util.List<String> tagKeys;

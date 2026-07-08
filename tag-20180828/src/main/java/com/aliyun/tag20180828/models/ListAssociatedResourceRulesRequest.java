@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAssociatedResourceRulesRequest extends TeaModel {
     /**
-     * <p>Number of data entries to display per page during pagination.</p>
-     * <p>Default value: 50. Maximum value: 100.</p>
+     * <p>The number of entries to return on each page.</p>
+     * <p>Default Value: 50. Maximum Value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -15,7 +15,7 @@ public class ListAssociatedResourceRulesRequest extends TeaModel {
     public Integer maxResult;
 
     /**
-     * <p>Token for the next query start.</p>
+     * <p>The token returned from a previous call to retrieve the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a****</p>
@@ -30,7 +30,7 @@ public class ListAssociatedResourceRulesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Region ID.</p>
+     * <p>The Region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -42,16 +42,18 @@ public class ListAssociatedResourceRulesRequest extends TeaModel {
     public String resourceOwnerAccount;
 
     /**
-     * <p>Setting name of the associated resource tag rule.</p>
+     * <p>The names of the associated resource rules.</p>
      */
     @NameInMap("SettingName")
     public java.util.List<String> settingName;
 
     /**
-     * <p>Whether the associated resource tag rule is enabled. Values:</p>
+     * <p>The status of the associated resource rules to query. Valid values:</p>
      * <ul>
-     * <li>Enable: Enabled.</li>
-     * <li>Disable: Disabled.</li>
+     * <li><p>Enable: The rule is enabled.</p>
+     * </li>
+     * <li><p>Disable: The rule is disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
