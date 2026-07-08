@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitImageGenerationJobResponseBody extends TeaModel {
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>3B0E1A586AAC29742247</strong></strong></strong></p>
      */
@@ -12,6 +14,8 @@ public class SubmitImageGenerationJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
      */

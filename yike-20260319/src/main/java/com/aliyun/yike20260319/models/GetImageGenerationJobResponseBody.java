@@ -4,10 +4,15 @@ package com.aliyun.yike20260319.models;
 import com.aliyun.tea.*;
 
 public class GetImageGenerationJobResponseBody extends TeaModel {
+    /**
+     * <p>The image generation task.</p>
+     */
     @NameInMap("ImageGenerationJob")
     public GetImageGenerationJobResponseBodyImageGenerationJob imageGenerationJob;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
      */
@@ -37,6 +42,8 @@ public class GetImageGenerationJobResponseBody extends TeaModel {
 
     public static class GetImageGenerationJobResponseBodyImageGenerationJob extends TeaModel {
         /**
+         * <p>The video aspect ratio.</p>
+         * 
          * <strong>example:</strong>
          * <p>16:9</p>
          */
@@ -44,6 +51,8 @@ public class GetImageGenerationJobResponseBody extends TeaModel {
         public String aspectRatio;
 
         /**
+         * <p>The error message. This parameter is of the String type and is returned when the task is in the Failed state.</p>
+         * 
          * <strong>example:</strong>
          * <p>Input file not found.</p>
          */
@@ -51,6 +60,8 @@ public class GetImageGenerationJobResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The task input.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;Prompt&quot;:&quot;图1在篮球场上，用图2来了个灌篮&quot;}</p>
          */
@@ -58,6 +69,8 @@ public class GetImageGenerationJobResponseBody extends TeaModel {
         public String input;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>fdc7f121056249c2b64e04bba27bcc8c</p>
          */
@@ -65,6 +78,8 @@ public class GetImageGenerationJobResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The task feature configuration. No configuration is required at this time.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -72,6 +87,8 @@ public class GetImageGenerationJobResponseBody extends TeaModel {
         public String jobParameters;
 
         /**
+         * <p>The task type.</p>
+         * 
          * <strong>example:</strong>
          * <p>text_to_image</p>
          */
@@ -79,6 +96,8 @@ public class GetImageGenerationJobResponseBody extends TeaModel {
         public String jobType;
 
         /**
+         * <p>The model name.</p>
+         * 
          * <strong>example:</strong>
          * <p>wan2.7-image</p>
          */
@@ -86,6 +105,8 @@ public class GetImageGenerationJobResponseBody extends TeaModel {
         public String model;
 
         /**
+         * <p>The number of generated images.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -93,6 +114,15 @@ public class GetImageGenerationJobResponseBody extends TeaModel {
         public String n;
 
         /**
+         * <p>The generation result in JSON string format. Fields:</p>
+         * <ul>
+         * <li>Medias: a list of media information (Media objects). Fields of a Media object:<ul>
+         * <li>MediaId: String. The media asset ID.</li>
+         * <li>OutputUrl: String. The media URL (with authentication string).</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;Medias&quot;:[{&quot;MediaId&quot;:&quot;<em><strong>e3700761971f19c32e7e7d5496</strong></em>&quot;,&quot;OutputUrl&quot;:&quot;https://<strong>bucket</strong>.oss-ap-southeast-1.aliyuncs.com/xxx.prd&quot;}]}</p>
          */
@@ -100,6 +130,8 @@ public class GetImageGenerationJobResponseBody extends TeaModel {
         public String output;
 
         /**
+         * <p>The resolution of the generated video.</p>
+         * 
          * <strong>example:</strong>
          * <p>1K</p>
          */
@@ -107,6 +139,8 @@ public class GetImageGenerationJobResponseBody extends TeaModel {
         public String resolution;
 
         /**
+         * <p>The scenario type. Currently only <code>general</code> is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>general</p>
          */
@@ -114,6 +148,15 @@ public class GetImageGenerationJobResponseBody extends TeaModel {
         public String scene;
 
         /**
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li>Created: The task is created.</li>
+         * <li>Queuing: The task is queuing.</li>
+         * <li>Executing: The task is being executed.</li>
+         * <li>Finished: The task is completed.</li>
+         * <li>Failed: The task failed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Executing</p>
          */
@@ -121,6 +164,8 @@ public class GetImageGenerationJobResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The custom business information.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */

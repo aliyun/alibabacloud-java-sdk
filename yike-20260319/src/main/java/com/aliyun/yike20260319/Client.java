@@ -467,11 +467,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>该API用于根据提供的文本内容及其它参数（如数字人信息、应用场景类型等）生成一段由虚拟人物口播的视频。用户需指定文本类型（原始稿或口播稿）、成片尺寸与清晰度等关键配置项，并可选择是否添加字幕或指定输出语言种类。此外，支持通过<code>UserData</code>字段传递自定义参数，在回调时原样返回。</p>
+     * <h2>Request description</h2>
+     * <p>This API generates a video narrated by a virtual human based on the provided text content and other parameters such as digital human information and common scenario type. You must specify key configuration items including the text type (original script or narration script), output dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. Additionally, you can pass custom parameters through the <code>UserData</code> field, which are returned as-is in the callback.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询图片生成任务</p>
+     * <p>Queries an image generation task.</p>
      * 
      * @param request GetImageGenerationJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -503,11 +503,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>该API用于根据提供的文本内容及其它参数（如数字人信息、应用场景类型等）生成一段由虚拟人物口播的视频。用户需指定文本类型（原始稿或口播稿）、成片尺寸与清晰度等关键配置项，并可选择是否添加字幕或指定输出语言种类。此外，支持通过<code>UserData</code>字段传递自定义参数，在回调时原样返回。</p>
+     * <h2>Request description</h2>
+     * <p>This API generates a video narrated by a virtual human based on the provided text content and other parameters such as digital human information and common scenario type. You must specify key configuration items including the text type (original script or narration script), output dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. Additionally, you can pass custom parameters through the <code>UserData</code> field, which are returned as-is in the callback.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询图片生成任务</p>
+     * <p>Queries an image generation task.</p>
      * 
      * @param request GetImageGenerationJobRequest
      * @return GetImageGenerationJobResponse
@@ -519,7 +519,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询视频生成任务</p>
+     * <p>Queries an AI video generation task.</p>
      * 
      * @param request GetVideoGenerationJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -555,7 +555,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询视频生成任务</p>
+     * <p>Queries an AI video generation task.</p>
      * 
      * @param request GetVideoGenerationJobRequest
      * @return GetVideoGenerationJobResponse
@@ -1415,11 +1415,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>该API用于根据提供的文本内容及其它参数（如数字人信息、应用场景类型等）生成一段由虚拟人物口播的视频。用户需指定文本类型（原始稿或口播稿）、成片尺寸与清晰度等关键配置项，并可选择是否添加字幕或指定输出语言种类。此外，支持通过<code>UserData</code>字段传递自定义参数，在回调时原样返回。</p>
+     * <h2>Operation description</h2>
+     * <p>This API operation generates a video in which a virtual human delivers a spoken narration based on the provided text content and other parameters such as digital human information and common scenarios type. You must specify key configuration items including the text type (original script or narration script), output dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. In addition, you can pass custom parameters through the UserData field, which are returned as-is in the callback.</p>
      * 
      * <b>summary</b> : 
-     * <p>提交图像生成接口</p>
+     * <p>Submits an image generation task.</p>
      * 
      * @param request SubmitImageGenerationJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1487,11 +1487,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>该API用于根据提供的文本内容及其它参数（如数字人信息、应用场景类型等）生成一段由虚拟人物口播的视频。用户需指定文本类型（原始稿或口播稿）、成片尺寸与清晰度等关键配置项，并可选择是否添加字幕或指定输出语言种类。此外，支持通过<code>UserData</code>字段传递自定义参数，在回调时原样返回。</p>
+     * <h2>Operation description</h2>
+     * <p>This API operation generates a video in which a virtual human delivers a spoken narration based on the provided text content and other parameters such as digital human information and common scenarios type. You must specify key configuration items including the text type (original script or narration script), output dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. In addition, you can pass custom parameters through the UserData field, which are returned as-is in the callback.</p>
      * 
      * <b>summary</b> : 
-     * <p>提交图像生成接口</p>
+     * <p>Submits an image generation task.</p>
      * 
      * @param request SubmitImageGenerationJobRequest
      * @return SubmitImageGenerationJobResponse
@@ -1503,11 +1503,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>该API用于根据提供的文本内容及其它参数（如数字人信息、应用场景类型等）生成一段由虚拟人物口播的视频。用户需指定文本类型（原始稿或口播稿）、成片尺寸与清晰度等关键配置项，并可选择是否添加字幕或指定输出语言种类。此外，支持通过<code>UserData</code>字段传递自定义参数，在回调时原样返回。</p>
+     * <h2>Request description</h2>
+     * <p>This API operation generates a video featuring a virtual human narration based on the provided text content and other parameters such as digital human information and common scenarios type. You must specify key configuration items including the text type (original script or narration script), output dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. In addition, you can pass custom parameters through the <code>UserData</code> field, which are returned as-is in the callback.</p>
      * 
      * <b>summary</b> : 
-     * <p>提交视频生成接口</p>
+     * <p>Submits a video generation task.</p>
      * 
      * @param request SubmitVideoGenerationJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1579,11 +1579,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>该API用于根据提供的文本内容及其它参数（如数字人信息、应用场景类型等）生成一段由虚拟人物口播的视频。用户需指定文本类型（原始稿或口播稿）、成片尺寸与清晰度等关键配置项，并可选择是否添加字幕或指定输出语言种类。此外，支持通过<code>UserData</code>字段传递自定义参数，在回调时原样返回。</p>
+     * <h2>Request description</h2>
+     * <p>This API operation generates a video featuring a virtual human narration based on the provided text content and other parameters such as digital human information and common scenarios type. You must specify key configuration items including the text type (original script or narration script), output dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. In addition, you can pass custom parameters through the <code>UserData</code> field, which are returned as-is in the callback.</p>
      * 
      * <b>summary</b> : 
-     * <p>提交视频生成接口</p>
+     * <p>Submits a video generation task.</p>
      * 
      * @param request SubmitVideoGenerationJobRequest
      * @return SubmitVideoGenerationJobResponse
@@ -1651,11 +1651,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>This API operation generates a video featuring a virtual human delivering an oral broadcast based on the provided text content and other parameters such as digital human information and common scenario type. You must specify key configuration items including the text type (raw script or oral broadcast script), video dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. In addition, you can pass custom parameters through the <code>UserData</code> field, which are returned as-is in the callback.</p>
+     * <h2>Description</h2>
+     * <p>This operation generates a video in which a virtual human delivers an oral broadcast based on the provided text content and other parameters such as digital human information and application scenario type. You must specify key configuration items including the text type (raw script or oral broadcast script), video dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. In addition, you can use the <code>UserData</code> field to pass custom parameters, which are returned as-is in the callback.
+     * Common scenarios: influencer product promotion, knowledge explanation, and similar video scenarios.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an intelligent video production task for a digital human oral broadcasting scenario. This task is applicable to video scenarios such as influencer product promotion and knowledge sharing.</p>
+     * <p>Creates an intelligent video production task for a digital human oral broadcasting scenario. This operation is applicable to video scenarios such as influencer product promotion and knowledge explanation.</p>
      * 
      * @param request SubmitYikeAvatarNarratorJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1691,11 +1692,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>This API operation generates a video featuring a virtual human delivering an oral broadcast based on the provided text content and other parameters such as digital human information and common scenario type. You must specify key configuration items including the text type (raw script or oral broadcast script), video dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. In addition, you can pass custom parameters through the <code>UserData</code> field, which are returned as-is in the callback.</p>
+     * <h2>Description</h2>
+     * <p>This operation generates a video in which a virtual human delivers an oral broadcast based on the provided text content and other parameters such as digital human information and application scenario type. You must specify key configuration items including the text type (raw script or oral broadcast script), video dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. In addition, you can use the <code>UserData</code> field to pass custom parameters, which are returned as-is in the callback.
+     * Common scenarios: influencer product promotion, knowledge explanation, and similar video scenarios.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an intelligent video production task for a digital human oral broadcasting scenario. This task is applicable to video scenarios such as influencer product promotion and knowledge sharing.</p>
+     * <p>Creates an intelligent video production task for a digital human oral broadcasting scenario. This operation is applicable to video scenarios such as influencer product promotion and knowledge explanation.</p>
      * 
      * @param request SubmitYikeAvatarNarratorJobRequest
      * @return SubmitYikeAvatarNarratorJobResponse
@@ -1839,8 +1841,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NarrationVoiceId", request.narrationVoiceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.needCaption)) {
+            query.put("NeedCaption", request.needCaption);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resolution)) {
             query.put("Resolution", request.resolution);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shotPromptLang)) {
+            query.put("ShotPromptLang", request.shotPromptLang);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.shotPromptMode)) {
@@ -1963,7 +1973,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an intelligent video generation task for a voiceover-only scenario (without a digital human). This task is applicable to video scenarios such as product showcases and news broadcasts.</p>
+     * <p>Creates an intelligent video generation task for a voice-over-only scenario (without a digital human). This task is applicable to video scenarios such as product showcasing and news broadcasting.</p>
      * 
      * @param request SubmitYikeVoiceNarratorJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1999,7 +2009,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an intelligent video generation task for a voiceover-only scenario (without a digital human). This task is applicable to video scenarios such as product showcases and news broadcasts.</p>
+     * <p>Creates an intelligent video generation task for a voice-over-only scenario (without a digital human). This task is applicable to video scenarios such as product showcasing and news broadcasting.</p>
      * 
      * @param request SubmitYikeVoiceNarratorJobRequest
      * @return SubmitYikeVoiceNarratorJobResponse

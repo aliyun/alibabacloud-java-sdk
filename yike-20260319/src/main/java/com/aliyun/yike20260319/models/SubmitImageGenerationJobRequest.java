@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitImageGenerationJobRequest extends TeaModel {
     /**
+     * <p>The aspect ratio. Valid values: 16:9 (default), 9:16, 4:3, 3:4, and 1:1.</p>
+     * 
      * <strong>example:</strong>
      * <p>4:3</p>
      */
@@ -12,6 +14,8 @@ public class SubmitImageGenerationJobRequest extends TeaModel {
     public String aspectRatio;
 
     /**
+     * <p>The idempotency parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>3e761e9d11edba640c42a1b7</strong></strong></p>
      */
@@ -19,6 +23,15 @@ public class SubmitImageGenerationJobRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The task input. This is a JSON string that contains the following fields:</p>
+     * <ul>
+     * <li>Prompt: String. Required. The prompt.</li>
+     * <li>Medias: the media list. Required when the task type is <code>image_to_image</code>. A maximum of 9 items are supported.<blockquote>
+     * <p>The Media struct contains: Type, the media type, String, valid value: image. URL, the media download URL, String.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;Bucket\&quot;:\&quot;dbj-app-prod\&quot;,\&quot;Location\&quot;:\&quot;oss-cn-hangzhou\&quot;,\&quot;Object\&quot;:\&quot;classpal/1767838045280pzmgnvwe.mp4\&quot;}</p>
      */
@@ -26,6 +39,8 @@ public class SubmitImageGenerationJobRequest extends TeaModel {
     public String input;
 
     /**
+     * <p>The task feature parameters. This is a JSON string. No configuration is required at this time.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -33,6 +48,12 @@ public class SubmitImageGenerationJobRequest extends TeaModel {
     public String jobParameters;
 
     /**
+     * <p>The type of the generation task. Valid values:</p>
+     * <ul>
+     * <li>text_to_image: text-to-image.</li>
+     * <li>image_to_image: image-to-image.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>text_to_image</p>
      */
@@ -40,6 +61,8 @@ public class SubmitImageGenerationJobRequest extends TeaModel {
     public String jobType;
 
     /**
+     * <p>The model name.</p>
+     * 
      * <strong>example:</strong>
      * <p>wan2.7-image</p>
      */
@@ -47,6 +70,8 @@ public class SubmitImageGenerationJobRequest extends TeaModel {
     public String model;
 
     /**
+     * <p>The number of images. Valid values: 1 to 4. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -54,6 +79,8 @@ public class SubmitImageGenerationJobRequest extends TeaModel {
     public String n;
 
     /**
+     * <p>The resolution. Valid values: 1K (default), 2K, and 4K.</p>
+     * 
      * <strong>example:</strong>
      * <p>720P</p>
      */
@@ -61,6 +88,8 @@ public class SubmitImageGenerationJobRequest extends TeaModel {
     public String resolution;
 
     /**
+     * <p>The scenario. This is an enumeration type. Currently, only <code>general</code> is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>general</p>
      */
@@ -68,6 +97,8 @@ public class SubmitImageGenerationJobRequest extends TeaModel {
     public String scene;
 
     /**
+     * <p>The user business data in JSON format.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;env&quot;:&quot;prd&quot;}</p>
      */

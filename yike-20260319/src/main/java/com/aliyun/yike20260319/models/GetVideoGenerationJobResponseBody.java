@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetVideoGenerationJobResponseBody extends TeaModel {
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The video generation task.</p>
+     */
     @NameInMap("VideoGenerationJob")
     public GetVideoGenerationJobResponseBodyVideoGenerationJob videoGenerationJob;
 
@@ -37,6 +42,8 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
 
     public static class GetVideoGenerationJobResponseBodyVideoGenerationJob extends TeaModel {
         /**
+         * <p>The aspect ratio.</p>
+         * 
          * <strong>example:</strong>
          * <p>16:9</p>
          */
@@ -44,6 +51,8 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
         public String aspectRatio;
 
         /**
+         * <p>The video duration. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -51,6 +60,8 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
         public String duration;
 
         /**
+         * <p>The error message. This parameter is returned when the task is in the Failed state.</p>
+         * 
          * <strong>example:</strong>
          * <p>Input file not found.</p>
          */
@@ -58,6 +69,8 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The task input.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;Prompt&quot;:&quot;图1在篮球场上，用图2来了个灌篮&quot;,&quot;Medias&quot;:[{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;<a href="https://xxx/xxx.jpg%22%7D,%7B%22Type%22:%22image%22,%22Url%22:%22https://xxx/xxx.jpg%22%7D%5D%7D">https://xxx/xxx.jpg&quot;},{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;https://xxx/xxx.jpg&quot;}]}</a></p>
          */
@@ -65,6 +78,8 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
         public String input;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>fdc7f121056249c2b64e04bba27bcc8c</p>
          */
@@ -72,6 +87,8 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The task feature configuration. This parameter does not need to be set.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -79,6 +96,8 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
         public String jobParameters;
 
         /**
+         * <p>The task type.</p>
+         * 
          * <strong>example:</strong>
          * <p>first_last_frame</p>
          */
@@ -86,6 +105,8 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
         public String jobType;
 
         /**
+         * <p>The model name.</p>
+         * 
          * <strong>example:</strong>
          * <p>happyhorse-1.1</p>
          */
@@ -93,6 +114,8 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
         public String model;
 
         /**
+         * <p>The number of generated videos.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -100,6 +123,11 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
         public Integer n;
 
         /**
+         * <p>The output result in JsonString format. The following fields are included:</p>
+         * <p>Medias: a list of media information (Media objects). The Media object contains the following fields:
+         * MediaId: String. The media asset ID.
+         * OutputUrl: String. The media URL (with the authentication string).</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;Medias\&quot;:[{\&quot;MediaId\&quot;:\&quot;<em><strong><strong>470732171f1bfcaf7f6d44</strong></strong></em>\&quot;,\&quot;OutputUrl\&quot;:\&quot;<a href="https://xxxxxxx/.../xxxxx.mp4?Expires=xxxx&OSSAccessKeyId=xxx&Signature=xxxx%5C%5C%22%7D%5D%7D">https://xxxxxxx/.../xxxxx.mp4?Expires=xxxx&amp;OSSAccessKeyId=xxx&amp;Signature=xxxx\\&quot;}]}</a></p>
          */
@@ -107,6 +135,8 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
         public String output;
 
         /**
+         * <p>The resolution.</p>
+         * 
          * <strong>example:</strong>
          * <p>720P</p>
          */
@@ -114,6 +144,8 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
         public String resolution;
 
         /**
+         * <p>The scene type. Currently, only general is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>general</p>
          */
@@ -121,6 +153,15 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
         public String scene;
 
         /**
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li>Created: The task is created.</li>
+         * <li>Queuing: The task is queuing.</li>
+         * <li>Executing: The task is being executed.</li>
+         * <li>Finished: The task is completed.</li>
+         * <li>Failed: The task failed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Executing</p>
          */
@@ -128,6 +169,8 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The user business information.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */

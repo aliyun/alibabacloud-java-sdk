@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetImageGenerationJobRequest extends TeaModel {
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>68ca759e798b40b4903b255*******</p>
      */
