@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class WithdrawFlowRequest extends TeaModel {
     /**
+     * <p>The connection flow ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class WithdrawFlowRequest extends TeaModel {
     public String flowId;
 
     /**
+     * <p>The connection flow version.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

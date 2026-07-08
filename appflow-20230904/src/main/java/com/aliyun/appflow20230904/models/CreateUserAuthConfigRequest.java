@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateUserAuthConfigRequest extends TeaModel {
     /**
+     * <p>The authentication information.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateUserAuthConfigRequest extends TeaModel {
     public String authConfig;
 
     /**
+     * <p>The name of the credential.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class CreateUserAuthConfigRequest extends TeaModel {
     public String authConfigName;
 
     /**
+     * <p>The type of the credential.</p>
+     * 
      * <strong>example:</strong>
      * <p>DingdingAccessToken</p>
      */
@@ -30,6 +34,7 @@ public class CreateUserAuthConfigRequest extends TeaModel {
     public String authType;
 
     /**
+     * <p>The ID of the connector.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,8 @@ public class CreateUserAuthConfigRequest extends TeaModel {
     public String connectorId;
 
     /**
+     * <p>The version of the connector.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

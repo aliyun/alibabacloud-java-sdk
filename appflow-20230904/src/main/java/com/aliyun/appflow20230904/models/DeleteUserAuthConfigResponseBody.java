@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteUserAuthConfigResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6C38D3F9-B340-5230-B108-77E675452733</p>

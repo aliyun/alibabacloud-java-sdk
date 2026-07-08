@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GenerateUserSessionTokenRequest extends TeaModel {
     /**
-     * <p>AI Assistant ID</p>
+     * <p>RDS Copilot ID</p>
      * 
      * <strong>example:</strong>
      * <p>cb-069d508f9ab341b1****</p>
@@ -14,7 +14,7 @@ public class GenerateUserSessionTokenRequest extends TeaModel {
     public String chatbotId;
 
     /**
-     * <p>Expiration Time, in seconds, default 24 hours</p>
+     * <p>Time-to-live (TTL) in seconds. Default is 24 hours.</p>
      * 
      * <strong>example:</strong>
      * <p>6000</p>
@@ -35,7 +35,7 @@ public class GenerateUserSessionTokenRequest extends TeaModel {
     public String integrateId;
 
     /**
-     * <p>User Avatar (URL)</p>
+     * <p>Profile picture (URL)</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://xxxx.com/xxx">https://xxxx.com/xxx</a></p>
@@ -54,7 +54,7 @@ public class GenerateUserSessionTokenRequest extends TeaModel {
     public String userId;
 
     /**
-     * <p>User Nickname</p>
+     * <p>Nickname</p>
      * 
      * <strong>example:</strong>
      * <p>testxxx</p>

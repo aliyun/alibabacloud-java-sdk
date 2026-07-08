@@ -8,7 +8,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("cn-hangzhou", "appflow.cn-hangzhou.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("appflow", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -27,8 +30,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a flow or a flow version.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建连接流</p>
+     * <p>Creates a flow.</p>
      * 
      * @param request CreateFlowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -87,8 +93,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a flow or a flow version.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建连接流</p>
+     * <p>Creates a flow.</p>
      * 
      * @param request CreateFlowRequest
      * @return CreateFlowResponse
@@ -99,8 +108,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a connection flow or a connection flow version.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建用户鉴权凭证</p>
+     * <p>Creates a user authentication credential.</p>
      * 
      * @param request CreateUserAuthConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -147,8 +159,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a connection flow or a connection flow version.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建用户鉴权凭证</p>
+     * <p>Creates a user authentication credential.</p>
      * 
      * @param request CreateUserAuthConfigRequest
      * @return CreateUserAuthConfigResponse
@@ -160,7 +175,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除连接流</p>
+     * <p>Deletes a connection flow.</p>
      * 
      * @param request DeleteFlowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -196,7 +211,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除连接流</p>
+     * <p>Deletes a connection flow.</p>
      * 
      * @param request DeleteFlowRequest
      * @return DeleteFlowResponse
@@ -207,8 +222,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a connection flow or a connection flow version.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除用户鉴权凭证</p>
+     * <p>Deletes a user authentication credential.</p>
      * 
      * @param request DeleteUserAuthConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -247,8 +265,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a connection flow or a connection flow version.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除用户鉴权凭证</p>
+     * <p>Deletes a user authentication credential.</p>
      * 
      * @param request DeleteUserAuthConfigRequest
      * @return DeleteUserAuthConfigResponse
@@ -260,7 +281,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>禁用连接流</p>
+     * <p>Disables a flow.</p>
      * 
      * @param request DisableFlowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -296,7 +317,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>禁用连接流</p>
+     * <p>Disables a flow.</p>
      * 
      * @param request DisableFlowRequest
      * @return DisableFlowResponse
@@ -308,7 +329,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启用连接流</p>
+     * <p>Enables a flow.</p>
      * 
      * @param request EnableFlowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -344,7 +365,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启用连接流</p>
+     * <p>Enables a flow.</p>
      * 
      * @param request EnableFlowRequest
      * @return EnableFlowResponse
@@ -356,7 +377,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Generate Login Session Token</p>
+     * <p>Generates a logon session token.</p>
      * 
      * @param request GenerateUserSessionTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -412,7 +433,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Generate Login Session Token</p>
+     * <p>Generates a logon session token.</p>
      * 
      * @param request GenerateUserSessionTokenRequest
      * @return GenerateUserSessionTokenResponse
@@ -424,7 +445,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取连接流详情</p>
+     * <p>Queries the details of a flow.</p>
      * 
      * @param request GetFlowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -460,7 +481,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取连接流详情</p>
+     * <p>Queries the details of a flow.</p>
      * 
      * @param request GetFlowRequest
      * @return GetFlowResponse
@@ -471,8 +492,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation gets the details of a specified credential.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取用户鉴权凭证详情</p>
+     * <p>Gets the details of a user authentication credential.</p>
      * 
      * @param request GetUserAuthConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -511,8 +535,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation gets the details of a specified credential.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取用户鉴权凭证详情</p>
+     * <p>Gets the details of a user authentication credential.</p>
      * 
      * @param request GetUserAuthConfigRequest
      * @return GetUserAuthConfigResponse
@@ -524,7 +551,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>运行连接器的执行动作</p>
+     * <p>Invokes a connector action.</p>
      * 
      * @param tmpReq InvokeActionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -614,7 +641,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>运行连接器的执行动作</p>
+     * <p>Invokes a connector action.</p>
      * 
      * @param request InvokeActionRequest
      * @return InvokeActionResponse
@@ -626,7 +653,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>发布连接流</p>
+     * <p>Launches a flow.</p>
      * 
      * @param request LaunchFlowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -674,7 +701,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>发布连接流</p>
+     * <p>Launches a flow.</p>
      * 
      * @param request LaunchFlowRequest
      * @return LaunchFlowResponse
@@ -685,8 +712,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a connector flow or a connector flow version.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取用户鉴权凭证列表</p>
+     * <p>Retrieves a list of connector flows.</p>
+     * 
+     * @param request ListFlowsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListFlowsResponse
+     */
+    public ListFlowsResponse listFlowsWithOptions(ListFlowsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
+            query.put("Filter", request.filter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListFlows"),
+            new TeaPair("version", "2023-09-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListFlowsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a connector flow or a connector flow version.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves a list of connector flows.</p>
+     * 
+     * @param request ListFlowsRequest
+     * @return ListFlowsResponse
+     */
+    public ListFlowsResponse listFlows(ListFlowsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listFlowsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation retrieves user auth configs that match specified filters.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists user authentication credentials.</p>
      * 
      * @param request ListUserAuthConfigsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -737,8 +829,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation retrieves user auth configs that match specified filters.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取用户鉴权凭证列表</p>
+     * <p>Lists user authentication credentials.</p>
      * 
      * @param request ListUserAuthConfigsRequest
      * @return ListUserAuthConfigsResponse
@@ -750,7 +845,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新连接流</p>
+     * <p>Updates a connection flow.</p>
      * 
      * @param request UpdateFlowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -802,7 +897,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新连接流</p>
+     * <p>Updates a connection flow.</p>
      * 
      * @param request UpdateFlowRequest
      * @return UpdateFlowResponse
@@ -813,8 +908,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the configuration of a specific user authentication credential.</p>
+     * 
      * <b>summary</b> : 
-     * <p>编辑用户鉴权凭证</p>
+     * <p>Updates a user authentication credential.</p>
      * 
      * @param request UpdateUserAuthConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -861,8 +959,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the configuration of a specific user authentication credential.</p>
+     * 
      * <b>summary</b> : 
-     * <p>编辑用户鉴权凭证</p>
+     * <p>Updates a user authentication credential.</p>
      * 
      * @param request UpdateUserAuthConfigRequest
      * @return UpdateUserAuthConfigResponse
@@ -874,7 +975,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>下线连接流</p>
+     * <p>Withdraws a connection flow.</p>
      * 
      * @param request WithdrawFlowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -910,7 +1011,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>下线连接流</p>
+     * <p>Withdraws a connection flow.</p>
      * 
      * @param request WithdrawFlowRequest
      * @return WithdrawFlowResponse

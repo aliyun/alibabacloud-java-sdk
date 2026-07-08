@@ -4,10 +4,18 @@ package com.aliyun.appflow20230904.models;
 import com.aliyun.tea.*;
 
 public class CreateFlowRequest extends TeaModel {
+    /**
+     * <p>The description of the flow.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>在钉钉中使用OpenClaw(MoltBot、MoltBot)</p>
+     */
     @NameInMap("FlowDesc")
     public String flowDesc;
 
     /**
+     * <p>The ID of the flow. This parameter is required when you update a flow or create a new flow version.</p>
+     * 
      * <strong>example:</strong>
      * <p>flow-647da8e366a74d1cab6e</p>
      */
@@ -15,24 +23,57 @@ public class CreateFlowRequest extends TeaModel {
     public String flowId;
 
     /**
+     * <p>The name of the flow.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>企业微信自建应用大模型自动回复</p>
      */
     @NameInMap("FlowName")
     public String flowName;
 
+    /**
+     * <p>The content of the template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *   &quot;FormatVersion&quot;: &quot;appflow-2025-07-01&quot;,
+     *   &quot;Nodes&quot;: [</p>
+     * <pre><code> ]
+     * </code></pre>
+     * <p>}</p>
+     */
     @NameInMap("FlowTemplate")
     public String flowTemplate;
 
+    /**
+     * <p>The publication status of the flow: True for published, False for unpublished.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("LaunchStatus")
     public Boolean launchStatus;
 
+    /**
+     * <p>The parameters for the template.</p>
+     * <p>You can specify up to 200 parameters.</p>
+     * <blockquote>
+     * <p>This parameter is optional. If you use this parameter, you must specify both ParameterKey and ParameterValue for each entry.</p>
+     * </blockquote>
+     */
     @NameInMap("Parameters")
     public java.util.List<CreateFlowRequestParameters> parameters;
 
+    /**
+     * <p>The object tags to which the rule applies. You can specify multiple tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateFlowRequestTag> tag;
 
     /**
+     * <p>The ID of the template. Specify this parameter when you create a flow from a template in the Template Center.</p>
+     * 
      * <strong>example:</strong>
      * <p>tl-715d93e708b546b7b464</p>
      */
@@ -110,6 +151,13 @@ public class CreateFlowRequest extends TeaModel {
 
     public static class CreateFlowRequestParameters extends TeaModel {
         /**
+         * <p>The name of a parameter defined in the template. If no parameter name or value is specified, ROS uses the default value defined in the template.</p>
+         * <p>The maximum value of N is 200.<br>
+         * The name must be 1 to 128 characters in length, cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <blockquote>
+         * <p>Parameters is optional. If you specify Parameters, you must specify both Parameters.N.ParameterKey and Parameters.N.ParameterValue.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>dingdingAuthId</p>
          */
@@ -117,8 +165,10 @@ public class CreateFlowRequest extends TeaModel {
         public String parameterKey;
 
         /**
+         * <p>The value for the parameter.</p>
+         * 
          * <strong>example:</strong>
-         * <p>uac-cdd8e1cfde534b4db482</p>
+         * <p>uac-xxxxxxx</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;
@@ -147,9 +197,24 @@ public class CreateFlowRequest extends TeaModel {
     }
 
     public static class CreateFlowRequestTag extends TeaModel {
+        /**
+         * <p>The tag key. You can filter the cluster list by tag. You can specify up to 20 tag pairs. The number N in each tag pair must be unique and a consecutive integer starting from 1. The value corresponding to <code>Tag.N.Key</code> is <code>Tag.N.Value</code>.</p>
+         * <blockquote>
+         * <p>The tag key can be up to 64 characters long and cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateBy</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The authentication content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhangsan</p>
+         */
         @NameInMap("Value")
         public String value;
 

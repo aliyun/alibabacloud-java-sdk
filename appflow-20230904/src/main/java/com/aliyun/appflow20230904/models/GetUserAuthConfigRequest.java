@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetUserAuthConfigRequest extends TeaModel {
     /**
+     * <p>The credential ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetUserAuthConfigRequest extends TeaModel {
     public String authConfigId;
 
     /**
+     * <p>The connector ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class GetUserAuthConfigRequest extends TeaModel {
     public String connectorId;
 
     /**
+     * <p>The connector version.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

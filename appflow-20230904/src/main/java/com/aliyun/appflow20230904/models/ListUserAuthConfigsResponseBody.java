@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListUserAuthConfigsResponseBody extends TeaModel {
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,6 +14,8 @@ public class ListUserAuthConfigsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token for the next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAVY3rYiv9VoUJQSiCitgjgRBp055u+7M/ZFoi7I0NZHJj8bgHiGAwZWnCMJPepC+WQbLSjoLewJIqkMQqvaJO7M=</p>
      */
@@ -28,12 +32,17 @@ public class ListUserAuthConfigsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The user authentication credentials.</p>
+     */
     @NameInMap("UserAuthConfigs")
     public java.util.List<ListUserAuthConfigsResponseBodyUserAuthConfigs> userAuthConfigs;
 
@@ -84,6 +93,8 @@ public class ListUserAuthConfigsResponseBody extends TeaModel {
 
     public static class ListUserAuthConfigsResponseBodyUserAuthConfigs extends TeaModel {
         /**
+         * <p>The credential ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>uac-xxxxxxxx</p>
          */
@@ -91,6 +102,8 @@ public class ListUserAuthConfigsResponseBody extends TeaModel {
         public String authConfigId;
 
         /**
+         * <p>The credential name.</p>
+         * 
          * <strong>example:</strong>
          * <p>name</p>
          */
@@ -98,6 +111,8 @@ public class ListUserAuthConfigsResponseBody extends TeaModel {
         public String authConfigName;
 
         /**
+         * <p>The authentication type.</p>
+         * 
          * <strong>example:</strong>
          * <p>ApiKey</p>
          */
@@ -105,6 +120,8 @@ public class ListUserAuthConfigsResponseBody extends TeaModel {
         public String authType;
 
         /**
+         * <p>The ID of the connector.</p>
+         * 
          * <strong>example:</strong>
          * <p>connector-xxxxxxxxx</p>
          */
@@ -112,6 +129,8 @@ public class ListUserAuthConfigsResponseBody extends TeaModel {
         public String connectorId;
 
         /**
+         * <p>The version of the connector.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -119,6 +138,8 @@ public class ListUserAuthConfigsResponseBody extends TeaModel {
         public String connectorVersion;
 
         /**
+         * <p>The number of connection flows that use this credential.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -126,6 +147,8 @@ public class ListUserAuthConfigsResponseBody extends TeaModel {
         public Integer flowCount;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-04-01 14:22:33</p>
          */
@@ -133,6 +156,8 @@ public class ListUserAuthConfigsResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The last modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-04-01 14:22:33</p>
          */

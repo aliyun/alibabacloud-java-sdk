@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateFlowResponseBody extends TeaModel {
     /**
+     * <p>The information of the newly created product returned when the call succeeds.</p>
+     * 
      * <strong>example:</strong>
      * <p>flow-9691a04fc7f94525aac1</p>
      */
@@ -12,7 +14,7 @@ public class CreateFlowResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>32F02021-11D2-5196-BC85-72890E9AA090</p>

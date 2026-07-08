@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateUserAuthConfigResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>83C6468F-3D68-5791-860E-29AB8FCACC73</p>

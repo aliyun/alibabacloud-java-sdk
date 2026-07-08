@@ -4,11 +4,14 @@ package com.aliyun.appflow20230904.models;
 import com.aliyun.tea.*;
 
 public class GetFlowResponseBody extends TeaModel {
+    /**
+     * <p>The flow object.</p>
+     */
     @NameInMap("Flow")
     public GetFlowResponseBodyFlow flow;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B6E1E38D-011F-5368-ADD8-4DC278254AA3</p>
@@ -39,6 +42,8 @@ public class GetFlowResponseBody extends TeaModel {
 
     public static class GetFlowResponseBodyFlowFlowNodes extends TeaModel {
         /**
+         * <p>The authentication credentials of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;authconfigId\&quot;:\&quot;uac-xxxxxxxxx\&quot;}</p>
          */
@@ -46,6 +51,8 @@ public class GetFlowResponseBody extends TeaModel {
         public String authMetadata;
 
         /**
+         * <p>The connector ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>connector-xxx24b139c62</p>
          */
@@ -53,6 +60,8 @@ public class GetFlowResponseBody extends TeaModel {
         public String connectorId;
 
         /**
+         * <p>The connector version.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -60,6 +69,8 @@ public class GetFlowResponseBody extends TeaModel {
         public String connectorVersion;
 
         /**
+         * <p>The flow ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>flow-856cb84b309747e48b43</p>
          */
@@ -67,6 +78,8 @@ public class GetFlowResponseBody extends TeaModel {
         public String flowId;
 
         /**
+         * <p>The flow version.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -74,6 +87,8 @@ public class GetFlowResponseBody extends TeaModel {
         public String flowVersion;
 
         /**
+         * <p>The metadata of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -81,6 +96,8 @@ public class GetFlowResponseBody extends TeaModel {
         public String inputSchema;
 
         /**
+         * <p>The node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>fn-xxxxxxxx</p>
          */
@@ -88,6 +105,8 @@ public class GetFlowResponseBody extends TeaModel {
         public String nodeId;
 
         /**
+         * <p>The node key.</p>
+         * 
          * <strong>example:</strong>
          * <p>Node1</p>
          */
@@ -95,6 +114,8 @@ public class GetFlowResponseBody extends TeaModel {
         public String nodeKey;
 
         /**
+         * <p>The node name.</p>
+         * 
          * <strong>example:</strong>
          * <p>NotifyMessage_1</p>
          */
@@ -102,6 +123,8 @@ public class GetFlowResponseBody extends TeaModel {
         public String nodeName;
 
         /**
+         * <p>The node type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Trigger</p>
          */
@@ -109,6 +132,8 @@ public class GetFlowResponseBody extends TeaModel {
         public String nodeType;
 
         /**
+         * <p>The ID of the previous node.</p>
+         * 
          * <strong>example:</strong>
          * <p>fn-xxxxx,fn-yyyyyy</p>
          */
@@ -116,6 +141,8 @@ public class GetFlowResponseBody extends TeaModel {
         public String prevNodeId;
 
         /**
+         * <p>The ID of the trigger or action.</p>
+         * 
          * <strong>example:</strong>
          * <p>trigger-xxxxxxxxxx</p>
          */
@@ -123,6 +150,8 @@ public class GetFlowResponseBody extends TeaModel {
         public String refId;
 
         /**
+         * <p>The trigger or action version.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -130,6 +159,8 @@ public class GetFlowResponseBody extends TeaModel {
         public String refVersion;
 
         /**
+         * <p>The webhook URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>https://{uid}.computenest.aliyun.com/webhook/xxxxxxxx</p>
          */
@@ -257,6 +288,8 @@ public class GetFlowResponseBody extends TeaModel {
 
     public static class GetFlowResponseBodyFlowTags extends TeaModel {
         /**
+         * <p>The tag key. The value can be up to 64 characters in length.</p>
+         * 
          * <strong>example:</strong>
          * <p>Environment</p>
          */
@@ -264,6 +297,8 @@ public class GetFlowResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>pre</p>
          */
@@ -295,29 +330,53 @@ public class GetFlowResponseBody extends TeaModel {
 
     public static class GetFlowResponseBodyFlow extends TeaModel {
         /**
+         * <p>Indicates whether the flow is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("Enabled")
         public String enabled;
 
+        /**
+         * <p>The flow description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>以AI卡片形式发送至钉钉群聊，如果想要支持私聊，请使用同时支持群聊&amp;私聊的模版</p>
+         */
         @NameInMap("FlowDesc")
         public String flowDesc;
 
         /**
+         * <p>The flow ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>flow-xxxxxxxx</p>
          */
         @NameInMap("FlowId")
         public String flowId;
 
+        /**
+         * <p>The flow name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>微信连接流1</p>
+         */
         @NameInMap("FlowName")
         public String flowName;
 
+        /**
+         * <p>The list of nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>连接流节点信息</p>
+         */
         @NameInMap("FlowNodes")
         public java.util.List<GetFlowResponseBodyFlowFlowNodes> flowNodes;
 
         /**
+         * <p>The flow template content.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *   &quot;FormatVersion&quot;: &quot;appflow-2025-07-01&quot;,
@@ -330,6 +389,8 @@ public class GetFlowResponseBody extends TeaModel {
         public String flowTemplate;
 
         /**
+         * <p>The flow version.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -337,6 +398,8 @@ public class GetFlowResponseBody extends TeaModel {
         public String flowVersion;
 
         /**
+         * <p>The flow version status.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -344,6 +407,8 @@ public class GetFlowResponseBody extends TeaModel {
         public String flowVersionStatus;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-07-30T02:13:22Z</p>
          */
@@ -351,12 +416,17 @@ public class GetFlowResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The last modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-11-13T02:11:56Z</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>A list of tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<GetFlowResponseBodyFlowTags> tags;
 

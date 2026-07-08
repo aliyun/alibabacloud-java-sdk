@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class WithdrawFlowResponseBody extends TeaModel {
     /**
+     * <p>The returned data.</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
@@ -12,7 +14,7 @@ public class WithdrawFlowResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>39B608FB-906F-51CF-AD82-7EFE46C0D56A</p>

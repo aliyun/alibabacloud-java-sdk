@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateUserAuthConfigResponseBody extends TeaModel {
     /**
+     * <p>The ID of the user credential.</p>
+     * 
      * <strong>example:</strong>
      * <p>uac-a2253c40486c40c1b910</p>
      */
@@ -12,7 +14,7 @@ public class CreateUserAuthConfigResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>249048A1-7FF7-5D2E-A322-695420112094</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListUserAuthConfigsRequest extends TeaModel {
     /**
+     * <p>The authentication type.</p>
+     * 
      * <strong>example:</strong>
      * <p>QQBotAccessToken</p>
      */
@@ -12,6 +14,7 @@ public class ListUserAuthConfigsRequest extends TeaModel {
     public String authType;
 
     /**
+     * <p>The ID of the connector.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,16 +24,23 @@ public class ListUserAuthConfigsRequest extends TeaModel {
     public String connectorId;
 
     /**
+     * <p>The version of the connector.</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
     @NameInMap("ConnectorVersion")
     public String connectorVersion;
 
+    /**
+     * <p>The query conditions.</p>
+     */
     @NameInMap("Filter")
     public java.util.List<ListUserAuthConfigsRequestFilter> filter;
 
     /**
+     * <p>The maximum number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -38,6 +48,8 @@ public class ListUserAuthConfigsRequest extends TeaModel {
     public String maxResults;
 
     /**
+     * <p>The pagination token for the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAVY3rYiv9VoUJQSiCitgjgQu5rMgGgvUoNWg8LykhA85j8bgHiGAwZWnCMJPepC+WWc0DK5hx1qIycMHVWP2AjQ=</p>
      */
@@ -99,12 +111,17 @@ public class ListUserAuthConfigsRequest extends TeaModel {
 
     public static class ListUserAuthConfigsRequestFilter extends TeaModel {
         /**
+         * <p>The name of the filter field.</p>
+         * 
          * <strong>example:</strong>
          * <p>AuthConfigName</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The list of filter values. The valid range for N is 1 to 10.</p>
+         */
         @NameInMap("Values")
         public java.util.List<String> values;
 

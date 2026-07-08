@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateUserAuthConfigRequest extends TeaModel {
     /**
+     * <p>The user authentication credential, provided as a JSON string.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;apiKey\&quot;: \&quot;************\&quot;}</p>
      */
@@ -12,6 +14,7 @@ public class UpdateUserAuthConfigRequest extends TeaModel {
     public String authConfig;
 
     /**
+     * <p>The ID of the credential.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class UpdateUserAuthConfigRequest extends TeaModel {
     public String authConfigId;
 
     /**
+     * <p>The name of the credential.</p>
+     * 
      * <strong>example:</strong>
      * <p>name</p>
      */
@@ -28,6 +33,7 @@ public class UpdateUserAuthConfigRequest extends TeaModel {
     public String authConfigName;
 
     /**
+     * <p>The ID of the connector.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +43,8 @@ public class UpdateUserAuthConfigRequest extends TeaModel {
     public String connectorId;
 
     /**
+     * <p>The connector version.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

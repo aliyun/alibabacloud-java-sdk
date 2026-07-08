@@ -14,7 +14,7 @@ public class GenerateUserSessionTokenResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Token.</p>
+     * <p>Token</p>
      * 
      * <strong>example:</strong>
      * <p>960f499au184m7****</p>

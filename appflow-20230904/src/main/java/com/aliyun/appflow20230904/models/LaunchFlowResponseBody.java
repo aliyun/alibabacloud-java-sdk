@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class LaunchFlowResponseBody extends TeaModel {
     /**
+     * <p>The returned object.</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
@@ -12,7 +14,7 @@ public class LaunchFlowResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>965C0149-B68B-5A0C-AEA8-48DAEC7779BD</p>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteUserAuthConfigRequest extends TeaModel {
     /**
+     * <p>The credential ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteUserAuthConfigRequest extends TeaModel {
     public String authConfigId;
 
     /**
+     * <p>The ID of the connector.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class DeleteUserAuthConfigRequest extends TeaModel {
     public String connectorId;
 
     /**
+     * <p>The connector name.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */

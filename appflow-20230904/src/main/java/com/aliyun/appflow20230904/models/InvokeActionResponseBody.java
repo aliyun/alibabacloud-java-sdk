@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InvokeActionResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>346E5EE9-D5FE-56A0-B3E2-A43E0F67302A</p>
@@ -13,6 +13,9 @@ public class InvokeActionResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The execution result.</p>
+     */
     @NameInMap("Result")
     public InvokeActionResponseBodyResult result;
 
@@ -39,6 +42,8 @@ public class InvokeActionResponseBody extends TeaModel {
 
     public static class InvokeActionResponseBodyResult extends TeaModel {
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>The provided parameter xxx is invalid.</p>
          */
@@ -46,6 +51,8 @@ public class InvokeActionResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The output of the action.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *   &quot;output&quot;: {
@@ -64,6 +71,8 @@ public class InvokeActionResponseBody extends TeaModel {
         public Object output;
 
         /**
+         * <p>The execution status.</p>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING、COMPLETED</p>
          */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DisableFlowRequest extends TeaModel {
     /**
+     * <p>The flow ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DisableFlowRequest extends TeaModel {
     public String flowId;
 
     /**
+     * <p>The flow version.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

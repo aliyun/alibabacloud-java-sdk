@@ -5,16 +5,25 @@ import com.aliyun.tea.*;
 
 public class UpdateFlowRequest extends TeaModel {
     /**
+     * <p>Specifies whether the connection flow is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Enabled")
     public Boolean enabled;
 
+    /**
+     * <p>The description of the connection flow.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>新建流程</p>
+     */
     @NameInMap("FlowDesc")
     public String flowDesc;
 
     /**
+     * <p>The ID of the connection flow.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,10 +32,18 @@ public class UpdateFlowRequest extends TeaModel {
     @NameInMap("FlowId")
     public String flowId;
 
+    /**
+     * <p>The name of the connection flow.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>新建流程</p>
+     */
     @NameInMap("FlowName")
     public String flowName;
 
     /**
+     * <p>The template of the connection flow.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *   &quot;FormatVersion&quot;: &quot;appflow-2025-07-01&quot;,
@@ -39,6 +56,8 @@ public class UpdateFlowRequest extends TeaModel {
     public String flowTemplate;
 
     /**
+     * <p>The version of the connection flow.</p>
+     * 
      * <strong>example:</strong>
      * <p>9</p>
      */

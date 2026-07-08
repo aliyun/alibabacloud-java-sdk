@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetUserAuthConfigResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>458CB9FE-8C71-58A8-AD49-97EF28D58FAB</p>
@@ -13,6 +13,9 @@ public class GetUserAuthConfigResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Contains the credential details.</p>
+     */
     @NameInMap("UserAuthConfig")
     public GetUserAuthConfigResponseBodyUserAuthConfig userAuthConfig;
 
@@ -39,6 +42,8 @@ public class GetUserAuthConfigResponseBody extends TeaModel {
 
     public static class GetUserAuthConfigResponseBodyUserAuthConfig extends TeaModel {
         /**
+         * <p>The auth config, specified as a JSON string.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;apiKey&quot;:\&quot;xxxxxxxxxx\&quot;}</p>
          */
@@ -46,6 +51,8 @@ public class GetUserAuthConfigResponseBody extends TeaModel {
         public String authConfig;
 
         /**
+         * <p>The credential ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>uac-111111111</p>
          */
@@ -53,6 +60,8 @@ public class GetUserAuthConfigResponseBody extends TeaModel {
         public String authConfigId;
 
         /**
+         * <p>The credential name.</p>
+         * 
          * <strong>example:</strong>
          * <p>dingtlak_name</p>
          */
@@ -60,6 +69,8 @@ public class GetUserAuthConfigResponseBody extends TeaModel {
         public String authConfigName;
 
         /**
+         * <p>The authentication type.</p>
+         * 
          * <strong>example:</strong>
          * <p>ApiKey</p>
          */
@@ -67,6 +78,8 @@ public class GetUserAuthConfigResponseBody extends TeaModel {
         public String authType;
 
         /**
+         * <p>The connector ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>connector-172176821387</p>
          */
@@ -74,6 +87,8 @@ public class GetUserAuthConfigResponseBody extends TeaModel {
         public String connectorId;
 
         /**
+         * <p>The connector version.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

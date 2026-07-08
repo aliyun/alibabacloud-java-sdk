@@ -4,10 +4,17 @@ package com.aliyun.appflow20230904.models;
 import com.aliyun.tea.*;
 
 public class LaunchFlowRequest extends TeaModel {
+    /**
+     * <p>The description of the flow.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>公司管理群内定期消息提醒</p>
+     */
     @NameInMap("FlowDesc")
     public String flowDesc;
 
     /**
+     * <p>The ID of the flow.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,10 +23,18 @@ public class LaunchFlowRequest extends TeaModel {
     @NameInMap("FlowId")
     public String flowId;
 
+    /**
+     * <p>The name of the flow.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>通过飞书使用OpenClaw——多模态</p>
+     */
     @NameInMap("FlowName")
     public String flowName;
 
     /**
+     * <p>The template of the flow.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *   &quot;FormatVersion&quot;: &quot;appflow-2025-07-01&quot;,
@@ -32,6 +47,8 @@ public class LaunchFlowRequest extends TeaModel {
     public String flowTemplate;
 
     /**
+     * <p>The version of the flow.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

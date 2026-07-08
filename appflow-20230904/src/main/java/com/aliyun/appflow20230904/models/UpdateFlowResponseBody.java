@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateFlowResponseBody extends TeaModel {
     /**
+     * <p>The data returned by the operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
@@ -12,7 +14,7 @@ public class UpdateFlowResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>A053FC9D-AB9D-5258-9355-8FA57EE888C0</p>

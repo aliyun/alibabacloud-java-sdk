@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class InvokeActionRequest extends TeaModel {
     /**
+     * <p>The action ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,19 +15,28 @@ public class InvokeActionRequest extends TeaModel {
     public String actionId;
 
     /**
+     * <p>The action version.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("ActionVersion")
     public String actionVersion;
 
+    /**
+     * <p>The authentication information for the action.</p>
+     */
     @NameInMap("AuthConfig")
     public InvokeActionRequestAuthConfig authConfig;
 
+    /**
+     * <p>The request body for the action.</p>
+     */
     @NameInMap("Body")
     public java.util.Map<String, ?> body;
 
     /**
+     * <p>The connector ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,22 +46,35 @@ public class InvokeActionRequest extends TeaModel {
     public String connectorId;
 
     /**
+     * <p>The connector version.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("ConnectorVersion")
     public String connectorVersion;
 
+    /**
+     * <p>The request header parameters for the action.</p>
+     */
     @NameInMap("Headers")
     public java.util.Map<String, String> headers;
 
+    /**
+     * <p>The path parameters for the action.</p>
+     */
     @NameInMap("Path")
     public java.util.Map<String, String> path;
 
+    /**
+     * <p>The query parameters for the action.</p>
+     */
     @NameInMap("Query")
     public java.util.Map<String, String> query;
 
     /**
+     * <p>Specifies whether to use streaming output.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -145,6 +168,8 @@ public class InvokeActionRequest extends TeaModel {
 
     public static class InvokeActionRequestAuthConfig extends TeaModel {
         /**
+         * <p>The type of authentication information.</p>
+         * 
          * <strong>example:</strong>
          * <p>raw</p>
          */
@@ -152,6 +177,8 @@ public class InvokeActionRequest extends TeaModel {
         public String type;
 
         /**
+         * <p>The authentication content. Its value is a raw JSON object or a credential ID, as determined by the <code>Type</code> parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;AppId&quot;:&quot;xxxx&quot;,&quot;AppSecret&quot;:&quot;sk-xxx&quot;}</p>
          */
