@@ -112,19 +112,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is used to create an address book, including IPv4 address book, ECS tag address book, IPv6 address book, domain address book, and ACK address book.</p>
-     * <h2>QPS Limit</h2>
-     * <p>The single-user QPS limit for this API operation is 10 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please make calls appropriately.</p>
+     * <p>This operation creates an address book, including IPv4 address books, ECS tag-based address books, IPv6 address books, domain name address books, and ACK address books.</p>
+     * <h2>Rate limit</h2>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation at an appropriate frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Create an address book, including IPv4 address book, ECS tag address book, IPv6 address book, domain address book, and ACK address book.</p>
+     * <p>Creates an address book, including IPv4 address books, ECS tag-based address books, IPv6 address books, domain name address books, and ACK address books.</p>
      * 
-     * @param request AddAddressBookRequest
+     * @param tmpReq AddAddressBookRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddAddressBookResponse
      */
-    public AddAddressBookResponse addAddressBookWithOptions(AddAddressBookRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public AddAddressBookResponse addAddressBookWithOptions(AddAddressBookRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AddAddressBookShrinkRequest request = new AddAddressBookShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.assetMemberUids)) {
+            request.assetMemberUidsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.assetMemberUids, "AssetMemberUids", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.assetRegionResourceTypes)) {
+            request.assetRegionResourceTypesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.assetRegionResourceTypes, "AssetRegionResourceTypes", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.ackClusterConnectorId)) {
             query.put("AckClusterConnectorId", request.ackClusterConnectorId);
@@ -140,6 +150,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.addressList)) {
             query.put("AddressList", request.addressList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.assetMemberUidsShrink)) {
+            query.put("AssetMemberUids", request.assetMemberUidsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.assetRegionResourceTypesShrink)) {
+            query.put("AssetRegionResourceTypes", request.assetRegionResourceTypesShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.autoAddTagEcs)) {
@@ -193,12 +211,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is used to create an address book, including IPv4 address book, ECS tag address book, IPv6 address book, domain address book, and ACK address book.</p>
-     * <h2>QPS Limit</h2>
-     * <p>The single-user QPS limit for this API operation is 10 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please make calls appropriately.</p>
+     * <p>This operation creates an address book, including IPv4 address books, ECS tag-based address books, IPv6 address books, domain name address books, and ACK address books.</p>
+     * <h2>Rate limit</h2>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation at an appropriate frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Create an address book, including IPv4 address book, ECS tag address book, IPv6 address book, domain address book, and ACK address book.</p>
+     * <p>Creates an address book, including IPv4 address books, ECS tag-based address books, IPv6 address books, domain name address books, and ACK address books.</p>
      * 
      * @param request AddAddressBookRequest
      * @return AddAddressBookResponse
@@ -4348,10 +4366,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>QPS limit</h2>
-     * <p>The queries per second (QPS) limit for this API is 10 for each user. If you exceed this limit, API calls are throttled, which may affect your business. We recommend that you call the API at a reasonable rate.</p>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation as needed.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the Access Control List (ACL) whitelist.</p>
+     * <p>Retrieves the ACL whitelist.</p>
      * 
      * @param request DescribeAclWhitelistRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4388,10 +4406,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>QPS limit</h2>
-     * <p>The queries per second (QPS) limit for this API is 10 for each user. If you exceed this limit, API calls are throttled, which may affect your business. We recommend that you call the API at a reasonable rate.</p>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation as needed.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the Access Control List (ACL) whitelist.</p>
+     * <p>Retrieves the ACL whitelist.</p>
      * 
      * @param request DescribeAclWhitelistRequest
      * @return DescribeAclWhitelistResponse
@@ -4403,20 +4421,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Use this API to query the details of an access control policy address book.</p>
+     * <p>This operation is used to query the details of access control policy address books.</p>
      * <h2>QPS limit</h2>
-     * <p>The per-user QPS limit for this API is 10. Exceeding this limit throttles your API calls and may impact your business. Plan your calls accordingly.</p>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries address books in a batch.</p>
+     * <p>Queries address books in batches.</p>
      * 
-     * @param request DescribeAddressBookRequest
+     * @param tmpReq DescribeAddressBookRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAddressBookResponse
      */
-    public DescribeAddressBookResponse describeAddressBookWithOptions(DescribeAddressBookRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public DescribeAddressBookResponse describeAddressBookWithOptions(DescribeAddressBookRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DescribeAddressBookShrinkRequest request = new DescribeAddressBookShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.assetMemberUids)) {
+            request.assetMemberUidsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.assetMemberUids, "AssetMemberUids", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.assetMemberUidsShrink)) {
+            query.put("AssetMemberUids", request.assetMemberUidsShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.containPort)) {
             query.put("ContainPort", request.containPort);
         }
@@ -4464,12 +4492,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Use this API to query the details of an access control policy address book.</p>
+     * <p>This operation is used to query the details of access control policy address books.</p>
      * <h2>QPS limit</h2>
-     * <p>The per-user QPS limit for this API is 10. Exceeding this limit throttles your API calls and may impact your business. Plan your calls accordingly.</p>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries address books in a batch.</p>
+     * <p>Queries address books in batches.</p>
      * 
      * @param request DescribeAddressBookRequest
      * @return DescribeAddressBookResponse
@@ -5782,7 +5810,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取总流量趋势</p>
+     * <p>Queries the traffic trend of a firewall.</p>
      * 
      * @param request DescribeFirewallTrafficTrendRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5822,7 +5850,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取总流量趋势</p>
+     * <p>Queries the traffic trend of a firewall.</p>
      * 
      * @param request DescribeFirewallTrafficTrendRequest
      * @return DescribeFirewallTrafficTrendResponse
@@ -15109,19 +15137,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API is used to modify an address book.</p>
-     * <h2>QPS Limit</h2>
-     * <p>The single-user QPS limit for this API is 10 requests per second. Exceeding this limit will result in API throttling, which may affect your business. Please make calls responsibly.</p>
+     * <p>This operation is used to modify an address book.</p>
+     * <h2>QPS limit</h2>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modify an address book.</p>
+     * <p>Modifies an address book.</p>
      * 
-     * @param request ModifyAddressBookRequest
+     * @param tmpReq ModifyAddressBookRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyAddressBookResponse
      */
-    public ModifyAddressBookResponse modifyAddressBookWithOptions(ModifyAddressBookRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ModifyAddressBookResponse modifyAddressBookWithOptions(ModifyAddressBookRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifyAddressBookShrinkRequest request = new ModifyAddressBookShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.assetMemberUids)) {
+            request.assetMemberUidsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.assetMemberUids, "AssetMemberUids", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.assetRegionResourceTypes)) {
+            request.assetRegionResourceTypesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.assetRegionResourceTypes, "AssetRegionResourceTypes", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.ackLabels)) {
             query.put("AckLabels", request.ackLabels);
@@ -15133,6 +15171,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.addressList)) {
             query.put("AddressList", request.addressList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.assetMemberUidsShrink)) {
+            query.put("AssetMemberUids", request.assetMemberUidsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.assetRegionResourceTypesShrink)) {
+            query.put("AssetRegionResourceTypes", request.assetRegionResourceTypesShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.autoAddTagEcs)) {
@@ -15190,12 +15236,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API is used to modify an address book.</p>
-     * <h2>QPS Limit</h2>
-     * <p>The single-user QPS limit for this API is 10 requests per second. Exceeding this limit will result in API throttling, which may affect your business. Please make calls responsibly.</p>
+     * <p>This operation is used to modify an address book.</p>
+     * <h2>QPS limit</h2>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modify an address book.</p>
+     * <p>Modifies an address book.</p>
      * 
      * @param request ModifyAddressBookRequest
      * @return ModifyAddressBookResponse

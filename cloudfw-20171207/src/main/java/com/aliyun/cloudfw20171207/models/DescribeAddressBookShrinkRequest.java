@@ -3,12 +3,12 @@ package com.aliyun.cloudfw20171207.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeAddressBookRequest extends TeaModel {
+public class DescribeAddressBookShrinkRequest extends TeaModel {
     /**
      * <p>The list of member accounts for the asset address book.</p>
      */
     @NameInMap("AssetMemberUids")
-    public java.util.List<Long> assetMemberUids;
+    public String assetMemberUidsShrink;
 
     /**
      * <p>Queries address books that contain the specified port. This parameter takes effect only when the <strong>GroupType</strong> parameter is set to <strong>port</strong>.</p>
@@ -82,20 +82,20 @@ public class DescribeAddressBookRequest extends TeaModel {
     @NameInMap("Query")
     public String query;
 
-    public static DescribeAddressBookRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeAddressBookRequest self = new DescribeAddressBookRequest();
+    public static DescribeAddressBookShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribeAddressBookShrinkRequest self = new DescribeAddressBookShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeAddressBookRequest setAssetMemberUids(java.util.List<Long> assetMemberUids) {
-        this.assetMemberUids = assetMemberUids;
+    public DescribeAddressBookShrinkRequest setAssetMemberUidsShrink(String assetMemberUidsShrink) {
+        this.assetMemberUidsShrink = assetMemberUidsShrink;
         return this;
     }
-    public java.util.List<Long> getAssetMemberUids() {
-        return this.assetMemberUids;
+    public String getAssetMemberUidsShrink() {
+        return this.assetMemberUidsShrink;
     }
 
-    public DescribeAddressBookRequest setContainPort(String containPort) {
+    public DescribeAddressBookShrinkRequest setContainPort(String containPort) {
         this.containPort = containPort;
         return this;
     }
@@ -103,7 +103,7 @@ public class DescribeAddressBookRequest extends TeaModel {
         return this.containPort;
     }
 
-    public DescribeAddressBookRequest setCurrentPage(String currentPage) {
+    public DescribeAddressBookShrinkRequest setCurrentPage(String currentPage) {
         this.currentPage = currentPage;
         return this;
     }
@@ -111,7 +111,7 @@ public class DescribeAddressBookRequest extends TeaModel {
         return this.currentPage;
     }
 
-    public DescribeAddressBookRequest setGroupType(String groupType) {
+    public DescribeAddressBookShrinkRequest setGroupType(String groupType) {
         this.groupType = groupType;
         return this;
     }
@@ -119,7 +119,7 @@ public class DescribeAddressBookRequest extends TeaModel {
         return this.groupType;
     }
 
-    public DescribeAddressBookRequest setGroupUuid(String groupUuid) {
+    public DescribeAddressBookShrinkRequest setGroupUuid(String groupUuid) {
         this.groupUuid = groupUuid;
         return this;
     }
@@ -127,7 +127,7 @@ public class DescribeAddressBookRequest extends TeaModel {
         return this.groupUuid;
     }
 
-    public DescribeAddressBookRequest setLang(String lang) {
+    public DescribeAddressBookShrinkRequest setLang(String lang) {
         this.lang = lang;
         return this;
     }
@@ -135,7 +135,7 @@ public class DescribeAddressBookRequest extends TeaModel {
         return this.lang;
     }
 
-    public DescribeAddressBookRequest setPageSize(String pageSize) {
+    public DescribeAddressBookShrinkRequest setPageSize(String pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -143,7 +143,7 @@ public class DescribeAddressBookRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeAddressBookRequest setQuery(String query) {
+    public DescribeAddressBookShrinkRequest setQuery(String query) {
         this.query = query;
         return this;
     }

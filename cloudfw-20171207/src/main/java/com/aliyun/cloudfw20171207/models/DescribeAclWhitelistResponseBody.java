@@ -7,10 +7,8 @@ public class DescribeAclWhitelistResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the whitelist is enabled. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: enabled</p>
-     * </li>
-     * <li><p><strong>false</strong>: disabled</p>
-     * </li>
+     * <li><strong>true</strong>: Enabled.</li>
+     * <li><strong>false</strong>: Not enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,12 +18,10 @@ public class DescribeAclWhitelistResponseBody extends TeaModel {
     public Boolean domainGroupUseDns;
 
     /**
-     * <p>Indicates whether DNS is supported for domain names in NAT scenarios. Valid values:</p>
+     * <p>Indicates whether domain name DNS is supported in NAT scenarios. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: supported</p>
-     * </li>
-     * <li><p><strong>false</strong>: not supported</p>
-     * </li>
+     * <li><strong>true</strong>: Supported.</li>
+     * <li><strong>false</strong>: Not supported.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,7 +31,7 @@ public class DescribeAclWhitelistResponseBody extends TeaModel {
     public Boolean natDomainGroupUseDns;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7D45133B-DBC0-506B-9DF9-AB0735D3****</p>
@@ -46,10 +42,8 @@ public class DescribeAclWhitelistResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the message type is supported. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: supported</p>
-     * </li>
-     * <li><p><strong>false</strong>: not supported</p>
-     * </li>
+     * <li><strong>true</strong>: Supported.</li>
+     * <li><strong>false</strong>: Not supported.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -59,12 +53,10 @@ public class DescribeAclWhitelistResponseBody extends TeaModel {
     public Boolean supportMessageType;
 
     /**
-     * <p>Indicates whether DNS is supported for domain names in VPC scenarios. Valid values:</p>
+     * <p>Indicates whether domain name DNS is supported in VPC scenarios. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: supported</p>
-     * </li>
-     * <li><p><strong>false</strong>: not supported</p>
-     * </li>
+     * <li><strong>true</strong>: Supported.</li>
+     * <li><strong>false</strong>: Not supported.</li>
      * </ul>
      * 
      * <strong>example:</strong>

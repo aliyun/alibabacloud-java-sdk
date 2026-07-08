@@ -82,7 +82,13 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
         public String classId;
 
         /**
-         * <p>The risk level.</p>
+         * <p>The risk level. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: no risk.</li>
+         * <li><strong>1</strong>: low risk.</li>
+         * <li><strong>2</strong>: medium risk.</li>
+         * <li><strong>3</strong>: high risk.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -343,7 +349,7 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
         public String totalBytes;
 
         /**
-         * <p>The instance ID of the VPC.</p>
+         * <p>The VPC instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-9dp16jgwgyvn****</p>

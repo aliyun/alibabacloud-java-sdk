@@ -16,7 +16,7 @@ public class ModifyNatFirewallControlPolicyPositionRequest extends TeaModel {
 
     /**
      * <p>The traffic direction of the access control policy.</p>
-     * <p>Valid value:</p>
+     * <p>Valid values:</p>
      * <ul>
      * <li><strong>out</strong>: outbound traffic.</li>
      * </ul>
@@ -28,12 +28,10 @@ public class ModifyNatFirewallControlPolicyPositionRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>The language of the response message. Valid values:</p>
+     * <p>The language of the content within the response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese</p>
-     * </li>
-     * <li><p><strong>en</strong>: English</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +41,7 @@ public class ModifyNatFirewallControlPolicyPositionRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the NAT Gateway.</p>
+     * <p>The NAT gateway ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,12 +51,11 @@ public class ModifyNatFirewallControlPolicyPositionRequest extends TeaModel {
     public String natGatewayId;
 
     /**
-     * <p>The new priority for the IPv4 access control policy of the NAT firewall.
-     * Priorities are represented by numbers. A smaller number indicates a higher priority. The value 1 indicates the highest priority.</p>
+     * <p>The policy priority for the NAT firewall IPv4 access control policy. A value of 1 indicates the highest priority. A larger value indicates a lower priority.</p>
      * <blockquote>
-     * <p>The new priority must be within the range of existing priorities for IPv4 policies of the NAT firewall. Otherwise, the call fails.</p>
+     * <p>The policy priority value must be within the range of existing NAT firewall IPv4 policy priorities. Otherwise, an error occurs when you call this operation.</p>
      * </blockquote>
-     * <p>Before calling this operation, call the DescribeNatFirewallPolicyPriorUsed operation to query the priority range of existing IPv4 policies for the specified traffic direction of the NAT firewall.</p>
+     * <p>Before you call this operation, call DescribeNatFirewallPolicyPriorUsed to query the priority range of IPv4 policies for the specified traffic direction of the NAT firewall.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

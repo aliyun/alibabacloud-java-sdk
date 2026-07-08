@@ -4,20 +4,30 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeFirewallTrafficTrendResponseBody extends TeaModel {
+    /**
+     * <p>The returned data list.</p>
+     */
     @NameInMap("DataList")
     public java.util.List<DescribeFirewallTrafficTrendResponseBodyDataList> dataList;
 
     /**
+     * <p>The timestamp when the peak total traffic occurred. The value is a UNIX timestamp. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1758470400</p>
      */
     @NameInMap("MaxBandwidthTime")
     public Long maxBandwidthTime;
 
+    /**
+     * <p>The traffic distribution at the time of peak total traffic.</p>
+     */
     @NameInMap("MaxBandwidthTimeBps")
     public DescribeFirewallTrafficTrendResponseBodyMaxBandwidthTimeBps maxBandwidthTimeBps;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4E7F94C7-781F-5192-86CF-DB085****</p>
      */
@@ -63,6 +73,8 @@ public class DescribeFirewallTrafficTrendResponseBody extends TeaModel {
 
     public static class DescribeFirewallTrafficTrendResponseBodyDataList extends TeaModel {
         /**
+         * <p>The Internet firewall traffic.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -70,6 +82,8 @@ public class DescribeFirewallTrafficTrendResponseBody extends TeaModel {
         public Long internetBps;
 
         /**
+         * <p>The NAT firewall traffic.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -77,6 +91,9 @@ public class DescribeFirewallTrafficTrendResponseBody extends TeaModel {
         public Long natBps;
 
         /**
+         * <p>The time when the traffic occurred. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>If the data at this point in time has not been processed, the values of all other fields are -1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1758470400</p>
          */
@@ -84,6 +101,8 @@ public class DescribeFirewallTrafficTrendResponseBody extends TeaModel {
         public Long time;
 
         /**
+         * <p>The total firewall traffic.</p>
+         * 
          * <strong>example:</strong>
          * <p>300</p>
          */
@@ -91,6 +110,8 @@ public class DescribeFirewallTrafficTrendResponseBody extends TeaModel {
         public Long totalBps;
 
         /**
+         * <p>The VPC firewall traffic.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -146,6 +167,8 @@ public class DescribeFirewallTrafficTrendResponseBody extends TeaModel {
 
     public static class DescribeFirewallTrafficTrendResponseBodyMaxBandwidthTimeBps extends TeaModel {
         /**
+         * <p>The Internet firewall traffic at the time of peak total traffic.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -153,6 +176,8 @@ public class DescribeFirewallTrafficTrendResponseBody extends TeaModel {
         public Long internetBps;
 
         /**
+         * <p>The NAT firewall traffic at the time of peak total traffic.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -160,6 +185,8 @@ public class DescribeFirewallTrafficTrendResponseBody extends TeaModel {
         public Long natBps;
 
         /**
+         * <p>The peak total traffic.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -167,6 +194,8 @@ public class DescribeFirewallTrafficTrendResponseBody extends TeaModel {
         public Long totalBps;
 
         /**
+         * <p>The VPC firewall traffic at the time of peak total traffic.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyNatFirewallControlPolicyPositionResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>68617208-F5F7-5B44-BB1E-*****</p>
