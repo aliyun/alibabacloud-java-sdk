@@ -14639,6 +14639,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Retrieves the traffic trend of a virtual private cloud (VPC) firewall.</p>
+     * 
+     * @param request DescribeVpcFirewallTrafficTrendRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeVpcFirewallTrafficTrendResponse
+     */
+    public DescribeVpcFirewallTrafficTrendResponse describeVpcFirewallTrafficTrendWithOptions(DescribeVpcFirewallTrafficTrendRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.peerVpcId)) {
+            query.put("PeerVpcId", request.peerVpcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.privateIP)) {
+            query.put("PrivateIP", request.privateIP);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("VpcId", request.vpcId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeVpcFirewallTrafficTrend"),
+            new TeaPair("version", "2017-12-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVpcFirewallTrafficTrendResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the traffic trend of a virtual private cloud (VPC) firewall.</p>
+     * 
+     * @param request DescribeVpcFirewallTrafficTrendRequest
+     * @return DescribeVpcFirewallTrafficTrendResponse
+     */
+    public DescribeVpcFirewallTrafficTrendResponse describeVpcFirewallTrafficTrend(DescribeVpcFirewallTrafficTrendRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeVpcFirewallTrafficTrendWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Describes the available zones for a VPC firewall.</p>
      * 
      * @param request DescribeVpcFirewallZoneRequest
