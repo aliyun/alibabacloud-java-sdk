@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class SubmitEnterpriseVocAnalysisTaskResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The template validation results.</p>
+     */
     @NameInMap("Data")
     public SubmitEnterpriseVocAnalysisTaskResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class SubmitEnterpriseVocAnalysisTaskResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class SubmitEnterpriseVocAnalysisTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -36,6 +47,8 @@ public class SubmitEnterpriseVocAnalysisTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. A value of \<code>true\\</code> indicates success, and \<code>false\\</code> indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class SubmitEnterpriseVocAnalysisTaskResponseBody extends TeaModel {
 
     public static class SubmitEnterpriseVocAnalysisTaskResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxxx</p>
          */

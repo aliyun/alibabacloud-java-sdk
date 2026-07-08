@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteDatasetDocumentRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the dataset. Choose either DatasetId or DatasetName.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DeleteDatasetDocumentRequest extends TeaModel {
     public Long datasetId;
 
     /**
+     * <p>Dataset name</p>
+     * 
      * <strong>example:</strong>
      * <p>数据集名称</p>
      */
@@ -19,6 +23,8 @@ public class DeleteDatasetDocumentRequest extends TeaModel {
     public String datasetName;
 
     /**
+     * <p>The user-specified unique ID of the document.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -26,6 +32,8 @@ public class DeleteDatasetDocumentRequest extends TeaModel {
     public String docId;
 
     /**
+     * <p>The internal unique identifier of the document.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -33,6 +41,7 @@ public class DeleteDatasetDocumentRequest extends TeaModel {
     public String docUuid;
 
     /**
+     * <p>The unique identifier of the Alibaba Cloud Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Get workspaceId</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

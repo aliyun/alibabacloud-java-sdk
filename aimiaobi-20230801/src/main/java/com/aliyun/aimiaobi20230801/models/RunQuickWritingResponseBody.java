@@ -5,19 +5,29 @@ import com.aliyun.tea.*;
 
 public class RunQuickWritingResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the response package has ended.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("End")
     public Boolean end;
 
+    /**
+     * <p>Response header</p>
+     */
     @NameInMap("Header")
     public RunQuickWritingResponseBodyHeader header;
 
+    /**
+     * <p>Response body</p>
+     */
     @NameInMap("Payload")
     public RunQuickWritingResponseBodyPayload payload;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */
@@ -63,6 +73,8 @@ public class RunQuickWritingResponseBody extends TeaModel {
 
     public static class RunQuickWritingResponseBodyHeader extends TeaModel {
         /**
+         * <p>Error code</p>
+         * 
          * <strong>example:</strong>
          * <p>错误码</p>
          */
@@ -70,6 +82,8 @@ public class RunQuickWritingResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>Error message</p>
+         * 
          * <strong>example:</strong>
          * <p>错误信息</p>
          */
@@ -77,6 +91,8 @@ public class RunQuickWritingResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>SSE event. task-started: started, task-finished: finished, task-failed: failed.</p>
+         * 
          * <strong>example:</strong>
          * <p>task-started</p>
          */
@@ -84,6 +100,8 @@ public class RunQuickWritingResponseBody extends TeaModel {
         public String event;
 
         /**
+         * <p>Session ID</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
@@ -91,6 +109,8 @@ public class RunQuickWritingResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>HTTP response code</p>
+         * 
          * <strong>example:</strong>
          * <p>400</p>
          */
@@ -98,6 +118,8 @@ public class RunQuickWritingResponseBody extends TeaModel {
         public Integer statusCode;
 
         /**
+         * <p>Task ID</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
@@ -105,6 +127,8 @@ public class RunQuickWritingResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>Trace ID</p>
+         * 
          * <strong>example:</strong>
          * <p>全链路ID</p>
          */
@@ -176,6 +200,8 @@ public class RunQuickWritingResponseBody extends TeaModel {
 
     public static class RunQuickWritingResponseBodyPayloadOutput extends TeaModel {
         /**
+         * <p>Text generation result</p>
+         * 
          * <strong>example:</strong>
          * <p>文本生成结果</p>
          */
@@ -199,6 +225,8 @@ public class RunQuickWritingResponseBody extends TeaModel {
 
     public static class RunQuickWritingResponseBodyPayloadUsage extends TeaModel {
         /**
+         * <p>Number of input tokens used</p>
+         * 
          * <strong>example:</strong>
          * <p>78</p>
          */
@@ -206,6 +234,8 @@ public class RunQuickWritingResponseBody extends TeaModel {
         public Long inputTokens;
 
         /**
+         * <p>Number of output tokens</p>
+         * 
          * <strong>example:</strong>
          * <p>34</p>
          */
@@ -213,6 +243,8 @@ public class RunQuickWritingResponseBody extends TeaModel {
         public Long outputTokens;
 
         /**
+         * <p>Total number of tokens</p>
+         * 
          * <strong>example:</strong>
          * <p>38</p>
          */
@@ -251,9 +283,15 @@ public class RunQuickWritingResponseBody extends TeaModel {
     }
 
     public static class RunQuickWritingResponseBodyPayload extends TeaModel {
+        /**
+         * <p>Output</p>
+         */
         @NameInMap("Output")
         public RunQuickWritingResponseBodyPayloadOutput output;
 
+        /**
+         * <p>Token usage information</p>
+         */
         @NameInMap("Usage")
         public RunQuickWritingResponseBodyPayloadUsage usage;
 

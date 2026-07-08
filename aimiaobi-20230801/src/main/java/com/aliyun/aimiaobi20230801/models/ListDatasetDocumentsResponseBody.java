@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListDatasetDocumentsResponseBody extends TeaModel {
     /**
+     * <p>The status code for the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>A list of documents.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListDatasetDocumentsResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>A detailed message about the request status.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The token used to retrieve the next page of results. This field appears only when more results are available.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -36,6 +47,8 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -43,6 +56,8 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries returned per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -50,6 +65,8 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The unique request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -57,6 +74,8 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. A value of <code>true</code> indicates success, and <code>false</code> indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -64,6 +83,8 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of matching documents.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -157,6 +178,8 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
 
     public static class ListDatasetDocumentsResponseBodyDataMultimodalMedias extends TeaModel {
         /**
+         * <p>The URL of the image or video file.</p>
+         * 
          * <strong>example:</strong>
          * <p>图片或视频文件地址</p>
          */
@@ -164,6 +187,8 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
         public String fileUrl;
 
         /**
+         * <p>The unique ID of the multimodal media.</p>
+         * 
          * <strong>example:</strong>
          * <p>多模态数据唯一标识</p>
          */
@@ -171,6 +196,8 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
         public String mediaId;
 
         /**
+         * <p>The type of the multimodal media.</p>
+         * 
          * <strong>example:</strong>
          * <p>多模态数据类型</p>
          */
@@ -210,6 +237,8 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
 
     public static class ListDatasetDocumentsResponseBodyData extends TeaModel {
         /**
+         * <p>The unique ID of the category.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -217,6 +246,8 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
         public String categoryUuid;
 
         /**
+         * <p>The content of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -224,16 +255,26 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>The creation time of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-04-14 19:59:53</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The creator of the document.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CreateUser")
         public String createUser;
 
         /**
+         * <p>Indicates whether multimodal indexing is disabled for this document.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -241,6 +282,8 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
         public Boolean disableHandleMultimodalMedia;
 
         /**
+         * <p>The user-specified unique document ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -248,6 +291,8 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
         public String docId;
 
         /**
+         * <p>The type of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */
@@ -255,6 +300,8 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
         public String docType;
 
         /**
+         * <p>The unique internal document ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>内部文档唯一ID</p>
          */
@@ -262,6 +309,8 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
         public String docUuid;
 
         /**
+         * <p>Extension field 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -269,6 +318,8 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
         public String extend1;
 
         /**
+         * <p>Extension field 2.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -276,16 +327,23 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
         public String extend2;
 
         /**
+         * <p>Extension field 3.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
         @NameInMap("Extend3")
         public String extend3;
 
+        /**
+         * <p>A list of multimodal media items associated with the document.</p>
+         */
         @NameInMap("MultimodalMedias")
         public java.util.List<ListDatasetDocumentsResponseBodyDataMultimodalMedias> multimodalMedias;
 
         /**
+         * <p>The publication time of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-01-01 00:00:00</p>
          */
@@ -293,6 +351,8 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
         public String pubTime;
 
         /**
+         * <p>The source of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>来源</p>
          */
@@ -300,6 +360,8 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
         public String sourceFrom;
 
         /**
+         * <p>The build status of the document index.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -307,16 +369,23 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
         public Integer status;
 
         /**
+         * <p>The summary of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
         @NameInMap("Summary")
         public String summary;
 
+        /**
+         * <p>A list of tags associated with the document.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<String> tags;
 
         /**
+         * <p>The title of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -324,17 +393,25 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>The last update time of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-04-14 19:59:53</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <p>The user who last updated the document.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("UpdateUser")
         public String updateUser;
 
         /**
-         * <p>url</p>
+         * <p>The URL of the document.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xxx/xx">https://xxx/xx</a></p>

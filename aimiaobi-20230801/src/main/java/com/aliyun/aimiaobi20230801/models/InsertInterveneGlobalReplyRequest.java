@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class InsertInterveneGlobalReplyRequest extends TeaModel {
     /**
+     * <p>Unique identifier of the workspace: <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,6 +14,9 @@ public class InsertInterveneGlobalReplyRequest extends TeaModel {
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>List of reply content</p>
+     */
     @NameInMap("ReplyMessagList")
     public java.util.List<InsertInterveneGlobalReplyRequestReplyMessagList> replyMessagList;
 
@@ -38,9 +42,21 @@ public class InsertInterveneGlobalReplyRequest extends TeaModel {
     }
 
     public static class InsertInterveneGlobalReplyRequestReplyMessagList extends TeaModel {
+        /**
+         * <p>Reply content</p>
+         * 
+         * <strong>example:</strong>
+         * <p>抱歉，问题我无法回答</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>Reply type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>全局回复的类型</p>
+         */
         @NameInMap("ReplyType")
         public String replyType;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitVideoAuditResponseBody extends TeaModel {
     /**
-     * <p>业务处理结果状态码</p>
+     * <p>Business status code</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,13 +14,13 @@ public class SubmitVideoAuditResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>视频审校任务提交后的返回数据</p>
+     * <p>Submitted task result data</p>
      */
     @NameInMap("Data")
     public SubmitVideoAuditResponseBodyData data;
 
     /**
-     * <p>HTTP响应状态码</p>
+     * <p>HTTP status code</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class SubmitVideoAuditResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>业务处理结果描述信息</p>
+     * <p>Return message</p>
      * 
      * <strong>example:</strong>
      * <p>任务提交成功</p>
@@ -38,7 +38,7 @@ public class SubmitVideoAuditResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>本次API请求的唯一标识</p>
+     * <p>Request ID</p>
      * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
@@ -47,7 +47,7 @@ public class SubmitVideoAuditResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>请求是否处理成功</p>
+     * <p>Is successful</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class SubmitVideoAuditResponseBody extends TeaModel {
 
     public static class SubmitVideoAuditResponseBodyData extends TeaModel {
         /**
-         * <p>视频审校任务的唯一标识，可用于后续查询任务状态和结果</p>
+         * <p>Task ID</p>
          * 
          * <strong>example:</strong>
          * <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>

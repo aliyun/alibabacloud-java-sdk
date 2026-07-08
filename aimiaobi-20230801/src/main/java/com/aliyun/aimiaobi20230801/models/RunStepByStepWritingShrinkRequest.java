@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RunStepByStepWritingShrinkRequest extends TeaModel {
     /**
+     * <p>The ID of the original conversation when regenerating content.</p>
+     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */
@@ -12,6 +14,7 @@ public class RunStepByStepWritingShrinkRequest extends TeaModel {
     public String originSessionId;
 
     /**
+     * <p>The prompt.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,10 +23,15 @@ public class RunStepByStepWritingShrinkRequest extends TeaModel {
     @NameInMap("Prompt")
     public String prompt;
 
+    /**
+     * <p>The reference article data for writing.</p>
+     */
     @NameInMap("ReferenceData")
     public String referenceDataShrink;
 
     /**
+     * <p>The ID of a single-turn conversation.</p>
+     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */
@@ -31,6 +39,11 @@ public class RunStepByStepWritingShrinkRequest extends TeaModel {
     public String sessionId;
 
     /**
+     * <p>The task ID. You can reuse the same task ID for a multi-turn conversation.</p>
+     * <blockquote>
+     * <p>By default, you do not need to specify this parameter. The system automatically generates a task ID. If you specify the same TaskId for subsequent tasks, the tasks are considered part of the same conversation group.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */
@@ -38,6 +51,7 @@ public class RunStepByStepWritingShrinkRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The unique ID of the Alibaba Cloud Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Obtain a Workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +60,9 @@ public class RunStepByStepWritingShrinkRequest extends TeaModel {
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
+    /**
+     * <p>The writing configuration.</p>
+     */
     @NameInMap("WritingConfig")
     public String writingConfigShrink;
 

@@ -4,16 +4,27 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunStyleFeatureAnalysisResponseBody extends TeaModel {
+    /**
+     * <p>Whether the output is complete. True indicates completion.</p>
+     */
     @NameInMap("End")
     public Boolean end;
 
+    /**
+     * <p>The streaming output header, containing general return information.</p>
+     */
     @NameInMap("Header")
     public RunStyleFeatureAnalysisResponseBodyHeader header;
 
+    /**
+     * <p>The payload of the response, in JSON structure</p>
+     */
     @NameInMap("Payload")
     public RunStyleFeatureAnalysisResponseBodyPayload payload;
 
     /**
+     * <p>Unique request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>d3be9981-ca2d-4e17-bf31-1c0a628e9f99</p>
      */
@@ -59,6 +70,8 @@ public class RunStyleFeatureAnalysisResponseBody extends TeaModel {
 
     public static class RunStyleFeatureAnalysisResponseBodyHeader extends TeaModel {
         /**
+         * <p>Error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>403</p>
          */
@@ -66,6 +79,8 @@ public class RunStyleFeatureAnalysisResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>Error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>Pop sign mismatch, please check.</p>
          */
@@ -73,6 +88,8 @@ public class RunStyleFeatureAnalysisResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>Event type.</p>
+         * 
          * <strong>example:</strong>
          * <p>result-generated</p>
          */
@@ -80,6 +97,8 @@ public class RunStyleFeatureAnalysisResponseBody extends TeaModel {
         public String event;
 
         /**
+         * <p>Event description.</p>
+         * 
          * <strong>example:</strong>
          * <p>模型生成事件</p>
          */
@@ -87,6 +106,8 @@ public class RunStyleFeatureAnalysisResponseBody extends TeaModel {
         public String eventInfo;
 
         /**
+         * <p>Session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3cd10828-0e42-471c-8f1a-931cde20b035</p>
          */
@@ -94,6 +115,8 @@ public class RunStyleFeatureAnalysisResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>Task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>d3be9981-ca2d-4e17-bf31-1c0a628e9f99</p>
          */
@@ -101,6 +124,8 @@ public class RunStyleFeatureAnalysisResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>Trace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2150451a17191950923411783e2927</p>
          */
@@ -172,6 +197,8 @@ public class RunStyleFeatureAnalysisResponseBody extends TeaModel {
 
     public static class RunStyleFeatureAnalysisResponseBodyPayloadOutput extends TeaModel {
         /**
+         * <p>Output content.</p>
+         * 
          * <strong>example:</strong>
          * <p>这是测试输出</p>
          */
@@ -195,6 +222,8 @@ public class RunStyleFeatureAnalysisResponseBody extends TeaModel {
 
     public static class RunStyleFeatureAnalysisResponseBodyPayloadUsage extends TeaModel {
         /**
+         * <p>Input Tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -202,6 +231,8 @@ public class RunStyleFeatureAnalysisResponseBody extends TeaModel {
         public Long inputTokens;
 
         /**
+         * <p>Output Tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -209,6 +240,8 @@ public class RunStyleFeatureAnalysisResponseBody extends TeaModel {
         public Long outputTokens;
 
         /**
+         * <p>Total Tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -247,9 +280,15 @@ public class RunStyleFeatureAnalysisResponseBody extends TeaModel {
     }
 
     public static class RunStyleFeatureAnalysisResponseBodyPayload extends TeaModel {
+        /**
+         * <p>Output content object.</p>
+         */
         @NameInMap("Output")
         public RunStyleFeatureAnalysisResponseBodyPayloadOutput output;
 
+        /**
+         * <p>Large Language Model (LLM) token usage information.</p>
+         */
         @NameInMap("Usage")
         public RunStyleFeatureAnalysisResponseBodyPayloadUsage usage;
 

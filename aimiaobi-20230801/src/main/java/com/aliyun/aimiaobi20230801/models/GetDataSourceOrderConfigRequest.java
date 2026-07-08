@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDataSourceOrderConfigRequest extends TeaModel {
     /**
+     * <p>Unique identifier for the workspace: <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,15 @@ public class GetDataSourceOrderConfigRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>When productCode=miaosou, this corresponds to Miaosou: generation technology. Possible values:</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li><p>copilotPrecise</p>
+     * </li>
+     * <li><p>copilotReference</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>copilotPrecise</p>
      */
@@ -21,6 +31,13 @@ public class GetDataSourceOrderConfigRequest extends TeaModel {
     public String generateTechnology;
 
     /**
+     * <p>Configuration type. Possible values:</p>
+     * <ul>
+     * <li><p>miaobi</p>
+     * </li>
+     * <li><p>miaosou</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListDataPermissionsRequest extends TeaModel {
     /**
+     * <p>The unique ID of the data.</p>
+     * <ul>
+     * <li>Example for a dataset: SystemSearch.QuarkCommonNews</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>SystemSearch.QuarkCommonNews</p>
      */
@@ -12,6 +17,11 @@ public class ListDataPermissionsRequest extends TeaModel {
     public String dataId;
 
     /**
+     * <p>The data type.</p>
+     * <ul>
+     * <li>dataset: a dataset</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>dataset</p>
      */
@@ -19,6 +29,8 @@ public class ListDataPermissionsRequest extends TeaModel {
     public String dataType;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +38,8 @@ public class ListDataPermissionsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -33,6 +47,7 @@ public class ListDataPermissionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The unique ID of the Alibaba Cloud Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2587495.html">Get a workspaceId</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

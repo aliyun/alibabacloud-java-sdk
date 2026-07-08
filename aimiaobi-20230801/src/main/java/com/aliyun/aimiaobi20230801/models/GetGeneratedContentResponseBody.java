@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetGeneratedContentResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business data</p>
+     */
     @NameInMap("Data")
     public GetGeneratedContentResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetGeneratedContentResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class GetGeneratedContentResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -36,6 +47,8 @@ public class GetGeneratedContentResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded. true indicates success. false indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -96,20 +109,36 @@ public class GetGeneratedContentResponseBody extends TeaModel {
     }
 
     public static class GetGeneratedContentResponseBodyData extends TeaModel {
+        /**
+         * <p>Rich text content</p>
+         * 
+         * <strong>example:</strong>
+         * <p>杭州亚运会</p>
+         */
         @NameInMap("Content")
         public String content;
 
         /**
+         * <p>Content generation domain. Valid values: media (news) and government (government services)</p>
+         * 
          * <strong>example:</strong>
          * <p>media</p>
          */
         @NameInMap("ContentDomain")
         public String contentDomain;
 
+        /**
+         * <p>Plain text content</p>
+         * 
+         * <strong>example:</strong>
+         * <p>杭州亚运会</p>
+         */
         @NameInMap("ContentText")
         public String contentText;
 
         /**
+         * <p>Creation time</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-04 11:46:07</p>
          */
@@ -117,13 +146,17 @@ public class GetGeneratedContentResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Creator</p>
+         * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>&quot;1&quot;</p>
          */
         @NameInMap("CreateUser")
         public String createUser;
 
         /**
+         * <p>Device ID</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -131,35 +164,68 @@ public class GetGeneratedContentResponseBody extends TeaModel {
         public String deviceId;
 
         /**
+         * <p>Document ID</p>
+         * 
          * <strong>example:</strong>
          * <p>86</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>List of words to ignore during content audit (JSON string)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;[{}]&quot;</p>
+         */
         @NameInMap("IgnoreContentAuditWords")
         public String ignoreContentAuditWords;
 
+        /**
+         * <p>Keywords</p>
+         */
         @NameInMap("KeywordList")
         public java.util.List<String> keywordList;
 
+        /**
+         * <p>Keywords (string format)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[\&quot;教师\&quot;,\&quot;乡村\&quot;]</p>
+         */
         @NameInMap("Keywords")
         public String keywords;
 
+        /**
+         * <p>Last prompt used to generate this content</p>
+         * 
+         * <strong>example:</strong>
+         * <p>创作xxx文章</p>
+         */
         @NameInMap("Prompt")
         public String prompt;
 
         /**
+         * <p>Session task ID</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>Title</p>
+         * 
+         * <strong>example:</strong>
+         * <p>杭州亚运会</p>
+         */
         @NameInMap("Title")
         public String title;
 
         /**
+         * <p>Update time</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-04 11:46:07</p>
          */
@@ -167,13 +233,17 @@ public class GetGeneratedContentResponseBody extends TeaModel {
         public String updateTime;
 
         /**
+         * <p>Updater</p>
+         * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>&quot;1&quot;</p>
          */
         @NameInMap("UpdateUser")
         public String updateUser;
 
         /**
+         * <p>UUID for traceability</p>
+         * 
          * <strong>example:</strong>
          * <p>0961a514-2e26-4aa6-b22b-f592d145fe47</p>
          */

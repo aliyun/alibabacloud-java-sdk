@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class SubmitTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business data</p>
+     */
     @NameInMap("Data")
     public SubmitTopicSelectionPerspectiveAnalysisTaskResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class SubmitTopicSelectionPerspectiveAnalysisTaskResponseBody extends Tea
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class SubmitTopicSelectionPerspectiveAnalysisTaskResponseBody extends Tea
     public String message;
 
     /**
+     * <p>Unique request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -36,6 +47,8 @@ public class SubmitTopicSelectionPerspectiveAnalysisTaskResponseBody extends Tea
     public String requestId;
 
     /**
+     * <p>Success or failure: true for success, false for failure</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class SubmitTopicSelectionPerspectiveAnalysisTaskResponseBody extends Tea
 
     public static class SubmitTopicSelectionPerspectiveAnalysisTaskResponseBodyData extends TeaModel {
         /**
+         * <p>Unique task ID</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
@@ -104,6 +119,8 @@ public class SubmitTopicSelectionPerspectiveAnalysisTaskResponseBody extends Tea
         public String taskId;
 
         /**
+         * <p>Task name</p>
+         * 
          * <strong>example:</strong>
          * <p>任务名称</p>
          */

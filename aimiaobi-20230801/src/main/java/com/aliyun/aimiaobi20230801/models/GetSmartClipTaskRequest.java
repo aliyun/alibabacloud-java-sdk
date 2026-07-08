@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetSmartClipTaskRequest extends TeaModel {
     /**
+     * <p>Unique identifier of the task.</p>
+     * <blockquote>
+     * <p>You do not need to specify TaskId. The system generates it automatically. If you use the same TaskId for multiple tasks, those tasks belong to the same conversation group.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,7 @@ public class GetSmartClipTaskRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>Unique identifier of your Alibaba Cloud Model Studio workspace. To get the workspace ID, see <a href="https://help.aliyun.com/document_detail/2782167.html">Get the workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

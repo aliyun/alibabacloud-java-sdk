@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListEnterprisePptTemplatesResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
@@ -12,16 +14,23 @@ public class ListEnterprisePptTemplatesResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("Current")
     public Integer current;
 
+    /**
+     * <p>An array of enterprise-specific PPT template objects.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListEnterprisePptTemplatesResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class ListEnterprisePptTemplatesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The maximum number of results per page, as specified in the request. Note: This parameter is not yet in effect.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -36,6 +47,8 @@ public class ListEnterprisePptTemplatesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -43,6 +56,8 @@ public class ListEnterprisePptTemplatesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The token for the next page of results. An empty value indicates that no more data is available. Note: This parameter is not yet in effect.</p>
+     * 
      * <strong>example:</strong>
      * <p>CAESGgoSChAKDGNvbXBsZXRlVGltZRABCgQiAggAGAAiQAoJANEQ4AACjMDLgAAADFTNzMyZDMwMzAzMDM4NzA3MjZjN2E2NDYyNzUzODMxMzY3ODM0NmIzNTZkNjc=</p>
      */
@@ -50,6 +65,8 @@ public class ListEnterprisePptTemplatesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The unique request ID. Provide this ID when you contact technical support.</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -57,6 +74,8 @@ public class ListEnterprisePptTemplatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The number of entries returned on the current page (the \&quot;page size\&quot;).</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -64,6 +83,8 @@ public class ListEnterprisePptTemplatesResponseBody extends TeaModel {
     public Integer size;
 
     /**
+     * <p>Indicates whether the request succeeded. <code>true</code> indicates success, and <code>false</code> indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -71,6 +92,8 @@ public class ListEnterprisePptTemplatesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of entries that match the query.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -172,6 +195,8 @@ public class ListEnterprisePptTemplatesResponseBody extends TeaModel {
 
     public static class ListEnterprisePptTemplatesResponseBodyData extends TeaModel {
         /**
+         * <p>The URL of the cover image.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://xxx.com/a.png">http://xxx.com/a.png</a></p>
          */
@@ -179,7 +204,7 @@ public class ListEnterprisePptTemplatesResponseBody extends TeaModel {
         public String coverImg;
 
         /**
-         * <p>ID</p>
+         * <p>The ID of the template.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

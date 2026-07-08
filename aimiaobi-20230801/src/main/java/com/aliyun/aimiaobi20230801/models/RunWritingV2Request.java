@@ -4,10 +4,15 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunWritingV2Request extends TeaModel {
+    /**
+     * <p>A list of articles to use as references. <strong>Note:</strong> When you provide this parameter, web search is disabled, overriding the <code>UseSearch</code> and <code>SearchSources</code> parameters.</p>
+     */
     @NameInMap("Articles")
     public java.util.List<RunWritingV2RequestArticles> articles;
 
     /**
+     * <p>Specifies whether to enable step-by-step writing. For more information, see the <code>Step</code> parameter description.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -15,68 +20,148 @@ public class RunWritingV2Request extends TeaModel {
     public Boolean distributeWriting;
 
     /**
+     * <p>The number of articles to write. If you request multiple articles, the system returns them concurrently, each with a unique session ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
     @NameInMap("GcNumberSize")
     public Integer gcNumberSize;
 
+    /**
+     * <p>A string that specifies the desired article length. Examples: &quot;about 300 words&quot;, &quot;about 600 words&quot;, &quot;about 1,000 words&quot;, or &quot;about 2,000 words&quot;.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2000字左右</p>
+     */
     @NameInMap("GcNumberSizeTag")
     public String gcNumberSizeTag;
 
+    /**
+     * <p>A list of keywords used for both search and writing.</p>
+     */
     @NameInMap("Keywords")
     public java.util.List<String> keywords;
 
     /**
+     * <p>The output language for the article.</p>
+     * <ul>
+     * <li><p><code>en</code>: English</p>
+     * </li>
+     * <li><p><code>zh</code>: Chinese</p>
+     * </li>
+     * <li><p>Other languages or specific style requirements can also be specified.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
     @NameInMap("Language")
     public String language;
 
+    /**
+     * <p>A list of article snippets.</p>
+     */
     @NameInMap("MiniDocs")
     public java.util.List<RunWritingV2RequestMiniDocs> miniDocs;
 
+    /**
+     * <p>A list of outlines for step-by-step writing.</p>
+     */
     @NameInMap("OutlineList")
     public java.util.List<WritingOutline> outlineList;
 
+    /**
+     * <p>A list of outlines for step-by-step writing. This parameter is deprecated. Use <code>OutlineList</code> instead.</p>
+     */
     @NameInMap("Outlines")
     public java.util.List<RunWritingV2RequestOutlines> outlines;
 
+    /**
+     * <p>The writing prompt. You must provide either <code>Prompt</code> or <code>WritingParams</code>. For more information, see the description of the <code>PromptMode</code> parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>提示词</p>
+     */
     @NameInMap("Prompt")
     public String prompt;
 
     /**
+     * <p>The prompt mode. Valid values: <code>Template</code> (template mode) and <code>PE</code> (advanced PE mode).</p>
+     * <ol>
+     * <li><p>If this parameter is omitted, you must provide the <code>Prompt</code> parameter. We recommend that the prompt includes the topic, length, requirements, and prohibitions.</p>
+     * </li>
+     * <li><p>If <code>PromptMode</code> is set to <code>Template</code>, you must provide <code>WritingParams</code>, which is a dictionary of string key-value pairs. For the required schema, see the <code>.Data.TemplateDefine[].Fields</code> field in the response of the <a href="https://help.aliyun.com/document_detail/2922609.html">ListWritingStyles</a> operation.</p>
+     * </li>
+     * <li><p>If <code>PromptMode</code> is set to <code>PE</code>, you must pass <code>WritingParams</code> with the following two fields:</p>
+     * <ol>
+     * <li><p><code>topic</code>: Required. The topic to write about.</p>
+     * </li>
+     * <li><p><code>prompt</code>: Optional. Any additional custom prompts or writing requirements.</p>
+     * </li>
+     * </ol>
+     * </li>
+     * </ol>
+     * 
      * <strong>example:</strong>
      * <p>Template</p>
      */
     @NameInMap("PromptMode")
     public String promptMode;
 
+    /**
+     * <p>A list of specified search sources to use.</p>
+     */
     @NameInMap("SearchSources")
     public java.util.List<RunWritingV2RequestSearchSources> searchSources;
 
     /**
+     * <p>The ID of a single-turn conversation. This parameter is deprecated and its use is discouraged.</p>
+     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */
     @NameInMap("SessionId")
     public String sessionId;
 
+    /**
+     * <p>The source tracing method. Currently, only <code>modelSourceTrace</code> is supported. If set to <code>modelSourceTrace</code>, the model adds citation markers (for example, <code>[[1]]</code>) to the end of each cited snippet in the generated text. The citation index starts at 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>modelSourceTrace</p>
+     */
     @NameInMap("SourceTraceMethod")
     public String sourceTraceMethod;
 
     /**
+     * <p>The step for step-by-step writing. Valid values:</p>
+     * <ul>
+     * <li><p><code>OutlineGenerate</code>: Outline generation</p>
+     * </li>
+     * <li><p><code>Writing</code>: Article writing</p>
+     * </li>
+     * </ul>
+     * <p>When <code>DistributeWriting</code> is <code>true</code>, the default flow for step-by-step writing is to first generate an outline and then write the content based on it.</p>
+     * 
      * <strong>example:</strong>
      * <p>Writing</p>
      */
     @NameInMap("Step")
     public String step;
 
+    /**
+     * <p>A list of summarization objects, used for step-by-step writing.</p>
+     */
     @NameInMap("Summarization")
     public java.util.List<RunWritingV2RequestSummarization> summarization;
 
     /**
+     * <p>The unique ID of the task. You can reuse the same task ID for a multi-turn conversation.</p>
+     * <blockquote>
+     * <p>The system automatically generates a <code>TaskId</code> if you do not specify one. Reusing the same <code>TaskId</code> for subsequent requests groups them into a single conversation.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */
@@ -84,6 +169,8 @@ public class RunWritingV2Request extends TeaModel {
     public String taskId;
 
     /**
+     * <p>Specifies whether to enable web search. If <code>true</code>, the system uses its built-in web search feature. Default: <code>false</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -91,6 +178,7 @@ public class RunWritingV2Request extends TeaModel {
     public Boolean useSearch;
 
     /**
+     * <p>The unique ID of the Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Obtain a Workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -99,16 +187,27 @@ public class RunWritingV2Request extends TeaModel {
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
+    /**
+     * <p>The parameters for template-based writing, provided as a dictionary of string key-value pairs. You must provide either <code>Prompt</code> or <code>WritingParams</code>. For more information, see the description of the <code>PromptMode</code> parameter.</p>
+     */
     @NameInMap("WritingParams")
     public java.util.Map<String, String> writingParams;
 
     /**
+     * <p>The writing scene. Valid values: <code>government</code> (government affairs), <code>media</code>, <code>market</code> (marketing), <code>office</code>, and <code>custom</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>media</p>
      */
     @NameInMap("WritingScene")
     public String writingScene;
 
+    /**
+     * <p>The writing style. For a list of supported styles, see <a href="https://help.aliyun.com/document_detail/2922609.html">ListWritingStyles</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>新闻评论</p>
+     */
     @NameInMap("WritingStyle")
     public String writingStyle;
 
@@ -294,10 +393,18 @@ public class RunWritingV2Request extends TeaModel {
     }
 
     public static class RunWritingV2RequestArticles extends TeaModel {
+        /**
+         * <p>The content of the article.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>文章内容</p>
+         */
         @NameInMap("Content")
         public String content;
 
         /**
+         * <p>The publication time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-11-25 14:25:59</p>
          */
@@ -305,19 +412,35 @@ public class RunWritingV2Request extends TeaModel {
         public String pubTime;
 
         /**
+         * <p>The name of the search source.</p>
+         * 
          * <strong>example:</strong>
          * <p>QuarkCommonNews</p>
          */
         @NameInMap("SearchSourceName")
         public String searchSourceName;
 
+        /**
+         * <p>The source of the article.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>新华社</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>The title of the article.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>文章标题</p>
+         */
         @NameInMap("Title")
         public String title;
 
         /**
+         * <p>The URL of the article.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://www.example.com/aaa.docx">https://www.example.com/aaa.docx</a></p>
          */
@@ -380,13 +503,27 @@ public class RunWritingV2Request extends TeaModel {
     }
 
     public static class RunWritingV2RequestMiniDocs extends TeaModel {
+        /**
+         * <p>The content of the snippet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>片段内容</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The index of the article snippet in the referenced article.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>索引</p>
+         */
         @NameInMap("Index")
         public String index;
 
         /**
+         * <p>Specifies whether to prioritize this snippet.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -425,12 +562,30 @@ public class RunWritingV2Request extends TeaModel {
     }
 
     public static class RunWritingV2RequestOutlinesArticles extends TeaModel {
+        /**
+         * <p>The content of the article.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>正文内容</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The title of the article.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>标题</p>
+         */
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <p>The URL of the article.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>文章URL</p>
+         */
         @NameInMap("Url")
         public String url;
 
@@ -466,9 +621,18 @@ public class RunWritingV2Request extends TeaModel {
     }
 
     public static class RunWritingV2RequestOutlines extends TeaModel {
+        /**
+         * <p>A list of articles referenced by the outline.</p>
+         */
         @NameInMap("Articles")
         public java.util.List<RunWritingV2RequestOutlinesArticles> articles;
 
+        /**
+         * <p>The outline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>大纲</p>
+         */
         @NameInMap("Outline")
         public String outline;
 
@@ -497,6 +661,8 @@ public class RunWritingV2Request extends TeaModel {
 
     public static class RunWritingV2RequestSearchSources extends TeaModel {
         /**
+         * <p>The type of search source. Valid values: <code>SystemSearch</code> (built-in system search), <code>CustomSemanticSearch</code> (search of a custom semantic index), and <code>ThirdSearch</code> (search through a third-party API).</p>
+         * 
          * <strong>example:</strong>
          * <p>SystemSearch</p>
          */
@@ -504,12 +670,20 @@ public class RunWritingV2Request extends TeaModel {
         public String code;
 
         /**
+         * <p>The unique identifier of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>QuarkCommonNews</p>
          */
         @NameInMap("DatasetName")
         public String datasetName;
 
+        /**
+         * <p>The description of the search source. This parameter is deprecated and has no effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>互联网搜索</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -545,9 +719,21 @@ public class RunWritingV2Request extends TeaModel {
     }
 
     public static class RunWritingV2RequestSummarization extends TeaModel {
+        /**
+         * <p>The name of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>事件名称</p>
+         */
         @NameInMap("Event")
         public String event;
 
+        /**
+         * <p>The summary of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>事件摘编</p>
+         */
         @NameInMap("Message")
         public String message;
 

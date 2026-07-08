@@ -5,22 +5,29 @@ import com.aliyun.tea.*;
 
 public class SubmitCustomHotTopicBroadcastJobShrinkRequest extends TeaModel {
     /**
+     * <p>The configuration for the news broadcast job.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("HotTopicBroadcastConfig")
     public String hotTopicBroadcastConfigShrink;
 
     /**
+     * <p>The version of the hot topic.</p>
+     * 
      * <strong>example:</strong>
      * <p>热点版本</p>
      */
     @NameInMap("HotTopicVersion")
     public String hotTopicVersion;
 
+    /**
+     * <p>The topic filter.</p>
+     */
     @NameInMap("Topics")
     public String topicsShrink;
 
     /**
+     * <p>The unique identifier of the Alibaba Cloud Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Get a workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

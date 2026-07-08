@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetBiddingRemainLimitNumResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business data</p>
+     */
     @NameInMap("Data")
     public GetBiddingRemainLimitNumResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetBiddingRemainLimitNumResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Fault message</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -38,6 +47,8 @@ public class GetBiddingRemainLimitNumResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Is successful: true for success, false for failure</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -99,6 +110,8 @@ public class GetBiddingRemainLimitNumResponseBody extends TeaModel {
 
     public static class GetBiddingRemainLimitNumResponseBodyData extends TeaModel {
         /**
+         * <p>Remaining quantity</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

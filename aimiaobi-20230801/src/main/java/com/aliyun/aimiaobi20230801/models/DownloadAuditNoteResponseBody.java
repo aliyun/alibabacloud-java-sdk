@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DownloadAuditNoteResponseBody extends TeaModel {
     /**
+     * <p>Status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>DataNotExists</p>
      */
@@ -12,6 +14,8 @@ public class DownloadAuditNoteResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Download link for the destination rule library.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://download.xxx.yyy.zzz">http://download.xxx.yyy.zzz</a></p>
      */
@@ -19,6 +23,8 @@ public class DownloadAuditNoteResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class DownloadAuditNoteResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error description.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -42,6 +50,8 @@ public class DownloadAuditNoteResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

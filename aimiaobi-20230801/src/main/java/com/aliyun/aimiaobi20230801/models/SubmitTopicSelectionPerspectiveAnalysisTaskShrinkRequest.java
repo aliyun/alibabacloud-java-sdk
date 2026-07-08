@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitTopicSelectionPerspectiveAnalysisTaskShrinkRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the workspace: <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,15 @@ public class SubmitTopicSelectionPerspectiveAnalysisTaskShrinkRequest extends Te
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>The list of documents to be analyzed. (Provide at least one of documents or topic)</p>
+     */
     @NameInMap("Documents")
     public String documentsShrink;
 
     /**
+     * <p>The topic selection perspective tasks to be analyzed. By default, this parameter is empty, which means all tasks are analyzed. (TopicSummary: Topic event summary, HotViewPoints: Hot topic selection perspectives, TimedViewPoints: Timeliness topic selection perspectives, WebReviewPoints: Online review topic selection perspectives, FreshViewPoints: Novel topic selection perspectives)</p>
+     * 
      * <strong>example:</strong>
      * <p>TimedViewPoints</p>
      */
@@ -24,6 +30,8 @@ public class SubmitTopicSelectionPerspectiveAnalysisTaskShrinkRequest extends Te
     public String perspectiveTypesShrink;
 
     /**
+     * <p>The name of the topic to be analyzed. (Provide at least one of documents or topic)</p>
+     * 
      * <strong>example:</strong>
      * <p>待分析的主题名（documents与topic二者至少传一个）</p>
      */

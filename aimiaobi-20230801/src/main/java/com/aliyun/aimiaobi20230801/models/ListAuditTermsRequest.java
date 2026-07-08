@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAuditTermsRequest extends TeaModel {
     /**
+     * <p>Maximum number of records to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,16 +14,22 @@ public class ListAuditTermsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Token for the next page.</p>
+     * 
      * <strong>example:</strong>
      * <p>XXXX</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>Dictionary name. Optional. Defaults to Default if not specified.</p>
+     */
     @NameInMap("TermsName")
     public String termsName;
 
     /**
+     * <p>Unique identifier of the Alibaba Cloud Model Studio workspace. Get your <a href="https://help.aliyun.com/document_detail/2782167.html">Workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

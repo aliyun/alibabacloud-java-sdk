@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExportHotTopicPlanningProposalsRequest extends TeaModel {
     /**
+     * <p>Unique identifier of the workspace: <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ExportHotTopicPlanningProposalsRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>Custom viewpoint ID. Use this parameter for custom viewpoint topic planning.</p>
+     * 
      * <strong>example:</strong>
      * <p>025c6cee437741368098b790c90166f8</p>
      */
@@ -21,16 +24,28 @@ public class ExportHotTopicPlanningProposalsRequest extends TeaModel {
     public java.util.List<String> customViewPointIds;
 
     /**
+     * <p>Document export format</p>
+     * <ul>
+     * <li><p>word: Export as a Word document</p>
+     * </li>
+     * <li><p>xmind: Export as an XMind file</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>导出文档类型，word:导出为word,xmind:导处为xmind</p>
+     * <p>word</p>
      */
     @NameInMap("ExportType")
     public String exportType;
 
+    /**
+     * <p>Filter topic planning documents by title</p>
+     */
     @NameInMap("Titles")
     public java.util.List<String> titles;
 
     /**
+     * <p>Hot list topic</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +55,7 @@ public class ExportHotTopicPlanningProposalsRequest extends TeaModel {
     public String topic;
 
     /**
+     * <p>Hot list source</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,8 +65,22 @@ public class ExportHotTopicPlanningProposalsRequest extends TeaModel {
     public String topicSource;
 
     /**
+     * <p>Topic planning type</p>
+     * <ul>
+     * <li><p>CustomViewPoints: Custom viewpoint</p>
+     * </li>
+     * <li><p>HotViewPoints: Popular viewpoint</p>
+     * </li>
+     * <li><p>TimedViewPoints: Time-sensitive viewpoint</p>
+     * </li>
+     * <li><p>WebReviewPoints: Public viewpoint</p>
+     * </li>
+     * <li><p>FreshViewPoints: Fresh viewpoint</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>选题策划类型：CustomViewPoints:自定义视角，HotViewPoints:热门视角、TimedViewPoints:时效性视角、WebReviewPoints:网友视角、FreshViewPoints:新颖视角</p>
+     * <p>CustomViewPoints</p>
      */
     @NameInMap("ViewPointType")
     public String viewPointType;

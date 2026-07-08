@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListHotTopicsRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the business space.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListHotTopicsRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The end of the creation time filter range (inclusive). The value must be in the <code>yyyy-MM-dd HH:mm:ss</code> format.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-06-04 23:59:59</p>
      */
@@ -21,6 +24,8 @@ public class ListHotTopicsRequest extends TeaModel {
     public String createTimeEnd;
 
     /**
+     * <p>The start of the creation time filter range (inclusive). The value must be in the <code>yyyy-MM-dd HH:mm:ss</code> format.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-06-01 00:00:00</p>
      */
@@ -28,6 +33,8 @@ public class ListHotTopicsRequest extends TeaModel {
     public String createTimeStart;
 
     /**
+     * <p>Filters the results by a custom business field. The service performs an exact keyword match on this field. The value can be up to 255 characters long.</p>
+     * 
      * <strong>example:</strong>
      * <p>biz-tag-001</p>
      */
@@ -35,6 +42,8 @@ public class ListHotTopicsRequest extends TeaModel {
     public String customField;
 
     /**
+     * <p>The maximum number of results to return for a single request. If this parameter is not specified, the service uses a default value.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -42,16 +51,23 @@ public class ListHotTopicsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token used to retrieve the next page of results. If you do not specify this parameter, the service returns the first page of results. You can get this token from the <code>NextToken</code> response parameter of the previous request.</p>
+     * 
      * <strong>example:</strong>
      * <p>下一页的token</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>A list of topic IDs.</p>
+     */
     @NameInMap("TopicIds")
     public java.util.List<String> topicIds;
 
     /**
+     * <p>The keywords for a full-text search on hot topics.</p>
+     * 
      * <strong>example:</strong>
      * <p>根据热榜主题全文检索</p>
      */
@@ -59,23 +75,33 @@ public class ListHotTopicsRequest extends TeaModel {
     public String topicQuery;
 
     /**
+     * <p>Filters the results by hot topic source. For a list of supported hot topic sources, call the <code>ListHotSources</code> operation.</p>
+     * <p><code>Aggregation</code>: represents the aggregated list of national hot topics.</p>
+     * 
      * <strong>example:</strong>
-     * <p>热榜源筛选，支持的热榜源。热榜源详见API：ListHotSources</p>
+     * <p>Quark</p>
      */
     @NameInMap("TopicSource")
     public String topicSource;
 
     /**
+     * <p>Filters the results by data version.</p>
+     * 
      * <strong>example:</strong>
      * <p>数据版本筛选</p>
      */
     @NameInMap("TopicVersion")
     public String topicVersion;
 
+    /**
+     * <p>Filters the results by hot topic.</p>
+     */
     @NameInMap("Topics")
     public java.util.List<String> topics;
 
     /**
+     * <p>Specifies whether to include news in the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetDeepWriteTaskResultResponseBody extends TeaModel {
     /**
+     * <p>Error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>DataNotExists</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The task response object.</p>
+     */
     @NameInMap("Data")
     public GetDeepWriteTaskResultResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>400</p>
      */
@@ -22,6 +29,8 @@ public class GetDeepWriteTaskResultResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>错误消息</p>
      */
@@ -37,6 +46,9 @@ public class GetDeepWriteTaskResultResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -95,6 +107,8 @@ public class GetDeepWriteTaskResultResponseBody extends TeaModel {
 
     public static class GetDeepWriteTaskResultResponseBodyData extends TeaModel {
         /**
+         * <p>The download URL for the task result.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://aimiaobi-service-pre-hangzhou.oss-cn-hangzhou.aliyuncs.com/aimiaobi/deep-write-workspace/142***1/dbaaebd1-eb1b-41e8-9b99-******-result.zip?Expire=1111">https://aimiaobi-service-pre-hangzhou.oss-cn-hangzhou.aliyuncs.com/aimiaobi/deep-write-workspace/142***1/dbaaebd1-eb1b-41e8-9b99-******-result.zip?Expire=1111</a></p>
          */
@@ -102,6 +116,8 @@ public class GetDeepWriteTaskResultResponseBody extends TeaModel {
         public String artifactUrl;
 
         /**
+         * <p>Task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>f8707efa-c30e-407f-a611-50871aa68952</p>
          */

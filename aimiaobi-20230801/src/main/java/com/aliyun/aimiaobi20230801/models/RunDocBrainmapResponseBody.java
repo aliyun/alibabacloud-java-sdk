@@ -4,13 +4,21 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunDocBrainmapResponseBody extends TeaModel {
+    /**
+     * <p>Response header.</p>
+     */
     @NameInMap("Header")
     public RunDocBrainmapResponseBodyHeader header;
 
+    /**
+     * <p>Response payload.</p>
+     */
     @NameInMap("Payload")
     public RunDocBrainmapResponseBodyPayload payload;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -48,6 +56,8 @@ public class RunDocBrainmapResponseBody extends TeaModel {
 
     public static class RunDocBrainmapResponseBodyHeader extends TeaModel {
         /**
+         * <p>Error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -55,6 +65,8 @@ public class RunDocBrainmapResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>Error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -62,16 +74,26 @@ public class RunDocBrainmapResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>Event type.</p>
+         * 
          * <strong>example:</strong>
          * <p>task-failed</p>
          */
         @NameInMap("Event")
         public String event;
 
+        /**
+         * <p>Event description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>模型生成事件</p>
+         */
         @NameInMap("EventInfo")
         public String eventInfo;
 
         /**
+         * <p>Session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>07181f55-2311-48af-8048-132a77dee020</p>
          */
@@ -79,6 +101,8 @@ public class RunDocBrainmapResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>Task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>161816</p>
          */
@@ -86,6 +110,8 @@ public class RunDocBrainmapResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>Trace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>6427cdf4-2ffe-4d05-b0ef-c4adceea90f4</p>
          */
@@ -157,6 +183,8 @@ public class RunDocBrainmapResponseBody extends TeaModel {
 
     public static class RunDocBrainmapResponseBodyPayloadOutput extends TeaModel {
         /**
+         * <p>Mind map content in JSON format.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;xxxx&quot;:&quot;xxx&quot;}</p>
          */
@@ -180,6 +208,8 @@ public class RunDocBrainmapResponseBody extends TeaModel {
 
     public static class RunDocBrainmapResponseBodyPayloadUsage extends TeaModel {
         /**
+         * <p>Number of input tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>65</p>
          */
@@ -187,6 +217,8 @@ public class RunDocBrainmapResponseBody extends TeaModel {
         public Long inputTokens;
 
         /**
+         * <p>Number of output tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -194,6 +226,8 @@ public class RunDocBrainmapResponseBody extends TeaModel {
         public Long outputTokens;
 
         /**
+         * <p>Total number of tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>165</p>
          */
@@ -232,9 +266,15 @@ public class RunDocBrainmapResponseBody extends TeaModel {
     }
 
     public static class RunDocBrainmapResponseBodyPayload extends TeaModel {
+        /**
+         * <p>Output data.</p>
+         */
         @NameInMap("Output")
         public RunDocBrainmapResponseBodyPayloadOutput output;
 
+        /**
+         * <p>Token usage statistics.</p>
+         */
         @NameInMap("Usage")
         public RunDocBrainmapResponseBodyPayloadUsage usage;
 

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListCustomViewPointsResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The business data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListCustomViewPointsResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListCustomViewPointsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The maximum number of results returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>60</p>
      */
@@ -29,6 +38,8 @@ public class ListCustomViewPointsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The error description.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -36,6 +47,8 @@ public class ListCustomViewPointsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The token for the next page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>下一页的token</p>
      */
@@ -43,6 +56,8 @@ public class ListCustomViewPointsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The unique identifier of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -50,6 +65,8 @@ public class ListCustomViewPointsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. \<code>true\\</code>: The request was successful. \<code>false\\</code>: The request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -57,6 +74,8 @@ public class ListCustomViewPointsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>73</p>
      */
@@ -142,6 +161,8 @@ public class ListCustomViewPointsResponseBody extends TeaModel {
 
     public static class ListCustomViewPointsResponseBodyDataViewPointsOutlines extends TeaModel {
         /**
+         * <p>The outline.</p>
+         * 
          * <strong>example:</strong>
          * <p>大纲</p>
          */
@@ -149,6 +170,8 @@ public class ListCustomViewPointsResponseBody extends TeaModel {
         public String outline;
 
         /**
+         * <p>The summary of the outline.</p>
+         * 
          * <strong>example:</strong>
          * <p>大纲摘要</p>
          */
@@ -179,10 +202,15 @@ public class ListCustomViewPointsResponseBody extends TeaModel {
     }
 
     public static class ListCustomViewPointsResponseBodyDataViewPoints extends TeaModel {
+        /**
+         * <p>The outline.</p>
+         */
         @NameInMap("Outlines")
         public java.util.List<ListCustomViewPointsResponseBodyDataViewPointsOutlines> outlines;
 
         /**
+         * <p>The generated viewpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>视角</p>
          */
@@ -190,6 +218,8 @@ public class ListCustomViewPointsResponseBody extends TeaModel {
         public String point;
 
         /**
+         * <p>The summary.</p>
+         * 
          * <strong>example:</strong>
          * <p>摘要</p>
          */
@@ -229,6 +259,8 @@ public class ListCustomViewPointsResponseBody extends TeaModel {
 
     public static class ListCustomViewPointsResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the asynchronous task that analyzes the custom viewpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>2323ac73e174428a98c91097a59c67e0</p>
          */
@@ -236,6 +268,8 @@ public class ListCustomViewPointsResponseBody extends TeaModel {
         public String asyncTaskId;
 
         /**
+         * <p>The viewpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>观点</p>
          */
@@ -243,6 +277,8 @@ public class ListCustomViewPointsResponseBody extends TeaModel {
         public String attitude;
 
         /**
+         * <p>The time when the viewpoint was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-08-15 16:18:59</p>
          */
@@ -250,6 +286,8 @@ public class ListCustomViewPointsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The ID of the user who created the viewpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -257,6 +295,8 @@ public class ListCustomViewPointsResponseBody extends TeaModel {
         public String createUser;
 
         /**
+         * <p>The ID of the custom viewpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>709806dd051042d5ab9de8bdbb3a64ca</p>
          */
@@ -264,6 +304,8 @@ public class ListCustomViewPointsResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The task execution status. Valid values: PENDING, RUNNING, SUCCEEDED, SUSPENDED, FAILED, and CANCELED.</p>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
@@ -271,6 +313,8 @@ public class ListCustomViewPointsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The error message for the task execution.</p>
+         * 
          * <strong>example:</strong>
          * <p>参数校验失败</p>
          */
@@ -278,12 +322,17 @@ public class ListCustomViewPointsResponseBody extends TeaModel {
         public String taskErrorMessage;
 
         /**
+         * <p>The task execution status. 0: PENDING, 1: RUNNING, 2: SUCCEEDED, 3: PAUSED, 4: FAILED (retriable), 5: FAILED (non-retriable), 6: CANCELED.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("TaskStatus")
         public Integer taskStatus;
 
+        /**
+         * <p>A list of topic selection viewpoints.</p>
+         */
         @NameInMap("ViewPoints")
         public java.util.List<ListCustomViewPointsResponseBodyDataViewPoints> viewPoints;
 

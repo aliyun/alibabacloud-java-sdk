@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExportAnalysisTagDetailByTaskIdResponseBody extends TeaModel {
     /**
+     * <p>Status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
@@ -12,6 +14,8 @@ public class ExportAnalysisTagDetailByTaskIdResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Temporary accessible URL (expires in 1 hour).</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://www.example.com/xxx.xlsx">http://www.example.com/xxx.xlsx</a></p>
      */
@@ -19,6 +23,8 @@ public class ExportAnalysisTagDetailByTaskIdResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class ExportAnalysisTagDetailByTaskIdResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error description.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -33,6 +41,8 @@ public class ExportAnalysisTagDetailByTaskIdResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Unique request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -40,6 +50,8 @@ public class ExportAnalysisTagDetailByTaskIdResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful: true for success, false for failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

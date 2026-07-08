@@ -4,16 +4,24 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class UploadBookRequest extends TeaModel {
+    /**
+     * <p>Folder ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("CategoryId")
     public String categoryId;
 
     /**
+     * <p>Documents</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Docs")
     public java.util.List<UploadBookRequestDocs> docs;
 
     /**
+     * <p>Unique identifier of your Alibaba Cloud Model Studio workspace. <a href="https://help.aliyun.com/document_detail/2782167.html">Get your workspace ID</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,10 +60,18 @@ public class UploadBookRequest extends TeaModel {
     }
 
     public static class UploadBookRequestDocs extends TeaModel {
+        /**
+         * <p>Document name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>文档1.pdf</p>
+         */
         @NameInMap("DocName")
         public String docName;
 
         /**
+         * <p>File URL</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://xxx/ccc.pdf">http://xxx/ccc.pdf</a></p>
          */

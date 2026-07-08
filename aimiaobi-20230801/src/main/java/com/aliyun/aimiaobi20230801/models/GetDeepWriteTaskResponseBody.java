@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetDeepWriteTaskResponseBody extends TeaModel {
     /**
+     * <p>error code</p>
+     * 
      * <strong>example:</strong>
      * <p>DataNotExists</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Task response object</p>
+     */
     @NameInMap("Data")
     public GetDeepWriteTaskResponseBodyData data;
 
     /**
+     * <p>HTTP error code</p>
+     * 
      * <strong>example:</strong>
      * <p>400</p>
      */
@@ -22,6 +29,8 @@ public class GetDeepWriteTaskResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>错误消息</p>
      */
@@ -38,6 +47,8 @@ public class GetDeepWriteTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -98,10 +109,18 @@ public class GetDeepWriteTaskResponseBody extends TeaModel {
     }
 
     public static class GetDeepWriteTaskResponseBodyData extends TeaModel {
+        /**
+         * <p>User\&quot;s question</p>
+         * 
+         * <strong>example:</strong>
+         * <p>北京2025年新能源汽车发展趋势</p>
+         */
         @NameInMap("Input")
         public String input;
 
         /**
+         * <p>Task status</p>
+         * 
          * <strong>example:</strong>
          * <p>queued</p>
          */
@@ -109,6 +128,8 @@ public class GetDeepWriteTaskResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>Task ID</p>
+         * 
          * <strong>example:</strong>
          * <p>a2267372-6042-46a4-aab0-1670dfc38c94</p>
          */

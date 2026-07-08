@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SaveOrUpdateOssConfigRequest extends TeaModel {
     /**
+     * <p>The name of the OSS bucket.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -12,6 +14,8 @@ public class SaveOrUpdateOssConfigRequest extends TeaModel {
     public String bucketName;
 
     /**
+     * <p>The endpoint of OSS.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss-cn-shanghai.aliyuncs.com</p>
      */
@@ -19,6 +23,7 @@ public class SaveOrUpdateOssConfigRequest extends TeaModel {
     public String endPoint;
 
     /**
+     * <p>The unique ID of the Alibaba Cloud Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Get a workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

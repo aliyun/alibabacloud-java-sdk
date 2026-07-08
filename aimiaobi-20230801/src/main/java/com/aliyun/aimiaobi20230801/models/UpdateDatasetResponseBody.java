@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpdateDatasetResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The business data.</p>
+     */
     @NameInMap("Data")
     public UpdateDatasetResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class UpdateDatasetResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class UpdateDatasetResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -36,6 +47,8 @@ public class UpdateDatasetResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. A value of true indicates success. A value of false indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class UpdateDatasetResponseBody extends TeaModel {
 
     public static class UpdateDatasetResponseBodyDataNewsArticleResultsData extends TeaModel {
         /**
+         * <p>The content.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章内容</p>
          */
@@ -104,6 +119,8 @@ public class UpdateDatasetResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>The publishing time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-11-12 15:12:14</p>
          */
@@ -111,6 +128,8 @@ public class UpdateDatasetResponseBody extends TeaModel {
         public String pubTime;
 
         /**
+         * <p>The source.</p>
+         * 
          * <strong>example:</strong>
          * <p>央视网</p>
          */
@@ -118,6 +137,8 @@ public class UpdateDatasetResponseBody extends TeaModel {
         public String source;
 
         /**
+         * <p>The article summary.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章摘要</p>
          */
@@ -125,6 +146,8 @@ public class UpdateDatasetResponseBody extends TeaModel {
         public String summary;
 
         /**
+         * <p>The title.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章标题</p>
          */
@@ -132,6 +155,8 @@ public class UpdateDatasetResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>The article URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://www.example.com/aaa.docx">https://www.example.com/aaa.docx</a></p>
          */
@@ -195,6 +220,8 @@ public class UpdateDatasetResponseBody extends TeaModel {
 
     public static class UpdateDatasetResponseBodyDataNewsArticleResults extends TeaModel {
         /**
+         * <p>The status code.</p>
+         * 
          * <strong>example:</strong>
          * <p>NoData</p>
          */
@@ -202,16 +229,23 @@ public class UpdateDatasetResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("Current")
         public Integer current;
 
+        /**
+         * <p>The list of articles.</p>
+         */
         @NameInMap("Data")
         public java.util.List<UpdateDatasetResponseBodyDataNewsArticleResultsData> data;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -219,6 +253,8 @@ public class UpdateDatasetResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>The number of records per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -226,6 +262,8 @@ public class UpdateDatasetResponseBody extends TeaModel {
         public Integer size;
 
         /**
+         * <p>The total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -289,6 +327,8 @@ public class UpdateDatasetResponseBody extends TeaModel {
 
     public static class UpdateDatasetResponseBodyData extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-11-12 21:46:24</p>
          */
@@ -296,6 +336,8 @@ public class UpdateDatasetResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -303,6 +345,8 @@ public class UpdateDatasetResponseBody extends TeaModel {
         public String createUser;
 
         /**
+         * <p>The display name of the dataset.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -310,6 +354,8 @@ public class UpdateDatasetResponseBody extends TeaModel {
         public String datasetDescription;
 
         /**
+         * <p>The dataset ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -317,6 +363,8 @@ public class UpdateDatasetResponseBody extends TeaModel {
         public Long datasetId;
 
         /**
+         * <p>The dataset name.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -324,16 +372,23 @@ public class UpdateDatasetResponseBody extends TeaModel {
         public String datasetName;
 
         /**
+         * <p>The dataset type.</p>
+         * 
          * <strong>example:</strong>
          * <p>CustomSemanticSearch</p>
          */
         @NameInMap("DatasetType")
         public String datasetType;
 
+        /**
+         * <p>The list of articles.</p>
+         */
         @NameInMap("NewsArticleResults")
         public java.util.List<UpdateDatasetResponseBodyDataNewsArticleResults> newsArticleResults;
 
         /**
+         * <p>Indicates whether search is enabled for the dataset.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

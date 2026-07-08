@@ -4,12 +4,27 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class TopicSelection extends TeaModel {
+    /**
+     * <p>A list of topic outlines.</p>
+     */
     @NameInMap("Outlines")
     public java.util.List<TopicSelectionOutlines> outlines;
 
+    /**
+     * <p>The perspective of the topic.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>选题视角</p>
+     */
     @NameInMap("Point")
     public String point;
 
+    /**
+     * <p>The summary of the topic.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>摘要</p>
+     */
     @NameInMap("Summary")
     public String summary;
 
@@ -43,9 +58,21 @@ public class TopicSelection extends TeaModel {
     }
 
     public static class TopicSelectionOutlines extends TeaModel {
+        /**
+         * <p>The topic outline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>大纲</p>
+         */
         @NameInMap("Outline")
         public String outline;
 
+        /**
+         * <p>The summary of the outline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>摘要</p>
+         */
         @NameInMap("Summary")
         public String summary;
 

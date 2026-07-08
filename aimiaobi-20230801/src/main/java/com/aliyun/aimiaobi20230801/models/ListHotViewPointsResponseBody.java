@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListHotViewPointsResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business Data</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListHotViewPointsResponseBodyData> data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListHotViewPointsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Maximum number of return results</p>
+     * 
      * <strong>example:</strong>
      * <p>67</p>
      */
@@ -29,6 +38,8 @@ public class ListHotViewPointsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Fault description</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -36,6 +47,8 @@ public class ListHotViewPointsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Token for the next page</p>
+     * 
      * <strong>example:</strong>
      * <p>下一页的token</p>
      */
@@ -43,6 +56,8 @@ public class ListHotViewPointsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Request UUID</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -50,6 +65,8 @@ public class ListHotViewPointsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation succeeded: true for success, false for failure</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -57,6 +74,8 @@ public class ListHotViewPointsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Total count</p>
+     * 
      * <strong>example:</strong>
      * <p>70</p>
      */
@@ -142,6 +161,8 @@ public class ListHotViewPointsResponseBody extends TeaModel {
 
     public static class ListHotViewPointsResponseBodyDataNews extends TeaModel {
         /**
+         * <p>Author</p>
+         * 
          * <strong>example:</strong>
          * <p>作者</p>
          */
@@ -149,6 +170,8 @@ public class ListHotViewPointsResponseBody extends TeaModel {
         public String author;
 
         /**
+         * <p>Content</p>
+         * 
          * <strong>example:</strong>
          * <p>文章内容</p>
          */
@@ -156,6 +179,8 @@ public class ListHotViewPointsResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>External UUID of the article</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxxx</p>
          */
@@ -163,6 +188,8 @@ public class ListHotViewPointsResponseBody extends TeaModel {
         public String docId;
 
         /**
+         * <p>Unique ID of the article</p>
+         * 
          * <strong>example:</strong>
          * <p>123456</p>
          */
@@ -170,6 +197,8 @@ public class ListHotViewPointsResponseBody extends TeaModel {
         public String docUuid;
 
         /**
+         * <p>URLs of article images</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://www.example.com/aaa.png">https://www.example.com/aaa.png</a></p>
          */
@@ -177,6 +206,8 @@ public class ListHotViewPointsResponseBody extends TeaModel {
         public java.util.List<String> imageUrls;
 
         /**
+         * <p>Published At. Format: YYYY-MM-dd HH:mm:ss</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-22 10:29:00</p>
          */
@@ -184,6 +215,8 @@ public class ListHotViewPointsResponseBody extends TeaModel {
         public String pubTime;
 
         /**
+         * <p>Source</p>
+         * 
          * <strong>example:</strong>
          * <p>新浪</p>
          */
@@ -191,6 +224,8 @@ public class ListHotViewPointsResponseBody extends TeaModel {
         public String source;
 
         /**
+         * <p>summary</p>
+         * 
          * <strong>example:</strong>
          * <p>文章摘要</p>
          */
@@ -198,6 +233,8 @@ public class ListHotViewPointsResponseBody extends TeaModel {
         public String summary;
 
         /**
+         * <p>tags</p>
+         * 
          * <strong>example:</strong>
          * <p>[&quot;标签1&quot;,&quot;标签2&quot;]</p>
          */
@@ -205,6 +242,8 @@ public class ListHotViewPointsResponseBody extends TeaModel {
         public java.util.List<String> tags;
 
         /**
+         * <p>title</p>
+         * 
          * <strong>example:</strong>
          * <p>文章标题</p>
          */
@@ -212,6 +251,8 @@ public class ListHotViewPointsResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>topic</p>
+         * 
          * <strong>example:</strong>
          * <p>文章主题</p>
          */
@@ -219,6 +260,8 @@ public class ListHotViewPointsResponseBody extends TeaModel {
         public String topic;
 
         /**
+         * <p>Article URL</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://www.example.com/aaa.docx">https://www.example.com/aaa.docx</a></p>
          */
@@ -330,6 +373,8 @@ public class ListHotViewPointsResponseBody extends TeaModel {
 
     public static class ListHotViewPointsResponseBodyDataViewPointsOutlines extends TeaModel {
         /**
+         * <p>Outline</p>
+         * 
          * <strong>example:</strong>
          * <p>大纲</p>
          */
@@ -337,6 +382,8 @@ public class ListHotViewPointsResponseBody extends TeaModel {
         public String outline;
 
         /**
+         * <p>Outline summary</p>
+         * 
          * <strong>example:</strong>
          * <p>大纲摘要</p>
          */
@@ -367,10 +414,15 @@ public class ListHotViewPointsResponseBody extends TeaModel {
     }
 
     public static class ListHotViewPointsResponseBodyDataViewPoints extends TeaModel {
+        /**
+         * <p>Outline</p>
+         */
         @NameInMap("Outlines")
         public java.util.List<ListHotViewPointsResponseBodyDataViewPointsOutlines> outlines;
 
         /**
+         * <p>Generated point</p>
+         * 
          * <strong>example:</strong>
          * <p>视角</p>
          */
@@ -378,6 +430,8 @@ public class ListHotViewPointsResponseBody extends TeaModel {
         public String point;
 
         /**
+         * <p>Summary</p>
+         * 
          * <strong>example:</strong>
          * <p>摘要</p>
          */
@@ -417,6 +471,8 @@ public class ListHotViewPointsResponseBody extends TeaModel {
 
     public static class ListHotViewPointsResponseBodyData extends TeaModel {
         /**
+         * <p>Current viewpoint</p>
+         * 
          * <strong>example:</strong>
          * <p>当前观点</p>
          */
@@ -424,22 +480,32 @@ public class ListHotViewPointsResponseBody extends TeaModel {
         public String attitude;
 
         /**
+         * <p>Attitude Type</p>
+         * 
          * <strong>example:</strong>
          * <p>观点类型</p>
          */
         @NameInMap("AttitudeType")
         public String attitudeType;
 
+        /**
+         * <p>List of related news articles</p>
+         */
         @NameInMap("News")
         public java.util.List<ListHotViewPointsResponseBodyDataNews> news;
 
         /**
+         * <p>Current viewpoint ratio</p>
+         * 
          * <strong>example:</strong>
          * <p>当前观点占比</p>
          */
         @NameInMap("Ratio")
         public String ratio;
 
+        /**
+         * <p>List of topic viewpoints</p>
+         */
         @NameInMap("ViewPoints")
         public java.util.List<ListHotViewPointsResponseBodyDataViewPoints> viewPoints;
 

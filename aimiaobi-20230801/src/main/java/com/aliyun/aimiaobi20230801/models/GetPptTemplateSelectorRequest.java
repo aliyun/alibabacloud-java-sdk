@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetPptTemplateSelectorRequest extends TeaModel {
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>lm-xxxx</p>
      */

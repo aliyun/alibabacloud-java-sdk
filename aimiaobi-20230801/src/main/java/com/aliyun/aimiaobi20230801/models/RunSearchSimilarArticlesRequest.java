@@ -4,20 +4,32 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunSearchSimilarArticlesRequest extends TeaModel {
+    /**
+     * <p>Communication configuration parameters.</p>
+     */
     @NameInMap("ChatConfig")
     public RunSearchSimilarArticlesRequestChatConfig chatConfig;
 
     /**
+     * <p>Document type.</p>
+     * 
      * <strong>example:</strong>
      * <p>html</p>
      */
     @NameInMap("DocType")
     public String docType;
 
+    /**
+     * <p>Article title.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>标题</p>
+     */
     @NameInMap("Title")
     public String title;
 
     /**
+     * <p>Article URL.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +39,7 @@ public class RunSearchSimilarArticlesRequest extends TeaModel {
     public String url;
 
     /**
+     * <p>Unique identifier of the Alibaba Cloud Model Studio workspace. To get this ID, see <a href="https://help.aliyun.com/document_detail/2782167.html">Get the workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -82,15 +95,37 @@ public class RunSearchSimilarArticlesRequest extends TeaModel {
 
     public static class RunSearchSimilarArticlesRequestChatConfigSearchParamSearchSources extends TeaModel {
         /**
+         * <p>Search source type:</p>
+         * <ul>
+         * <li><p>SystemSearch: Built-in system search.</p>
+         * </li>
+         * <li><p>CustomSemanticSearch: Custom semantic index search.</p>
+         * </li>
+         * <li><p>ThirdSearch: Third-party API search.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SystemSearch</p>
          */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>Unique identifier of the search source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>QuarkCommonNews</p>
+         */
         @NameInMap("DatasetName")
         public String datasetName;
 
+        /**
+         * <p>Search source name (optional).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>互联网搜索</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -126,42 +161,102 @@ public class RunSearchSimilarArticlesRequest extends TeaModel {
     }
 
     public static class RunSearchSimilarArticlesRequestChatConfigSearchParam extends TeaModel {
+        /**
+         * <p>Category UUID</p>
+         */
         @NameInMap("CategoryUuids")
         public java.util.List<String> categoryUuids;
 
+        /**
+         * <p>Creation Time cutoff, in UNIX timestamp format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
+         */
         @NameInMap("CreateTimeEnd")
         public Long createTimeEnd;
 
+        /**
+         * <p>Start Creation Time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
+         */
         @NameInMap("CreateTimeStart")
         public Long createTimeStart;
 
+        /**
+         * <p>Document ID</p>
+         */
         @NameInMap("DocIds")
         public java.util.List<String> docIds;
 
+        /**
+         * <p>Document types: text, image, video, audio, pdf, word, ppt, etc.</p>
+         */
         @NameInMap("DocTypes")
         public java.util.List<String> docTypes;
 
+        /**
+         * <p>Document UUID</p>
+         */
         @NameInMap("DocUuids")
         public java.util.List<String> docUuids;
 
+        /**
+         * <p>End Time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>Extension Field 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend1")
         public String extend1;
 
+        /**
+         * <p>Extension Field 2</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend2")
         public String extend2;
 
+        /**
+         * <p>Extension Field 3</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend3")
         public String extend3;
 
+        /**
+         * <p>Search sources.</p>
+         */
         @NameInMap("SearchSources")
         public java.util.List<RunSearchSimilarArticlesRequestChatConfigSearchParamSearchSources> searchSources;
 
+        /**
+         * <p>Start Time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1725983999999</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <p>Tag Name</p>
+         */
         @NameInMap("Tags")
         public java.util.List<String> tags;
 
@@ -277,6 +372,9 @@ public class RunSearchSimilarArticlesRequest extends TeaModel {
     }
 
     public static class RunSearchSimilarArticlesRequestChatConfig extends TeaModel {
+        /**
+         * <p>Search configuration parameters.</p>
+         */
         @NameInMap("SearchParam")
         public RunSearchSimilarArticlesRequestChatConfigSearchParam searchParam;
 

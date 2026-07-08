@@ -5,26 +5,41 @@ import com.aliyun.tea.*;
 
 public class GenerateViewPointResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GenerateViewPointResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response message. The value is <code>successful</code> on success, or an error message on failure.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The unique request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>94512A33-8EC1-5452-A793-5C91F18ED2F0</p>
      */
@@ -32,6 +47,8 @@ public class GenerateViewPointResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. A value of <code>true</code> indicates success, and <code>false</code> indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -92,6 +109,12 @@ public class GenerateViewPointResponseBody extends TeaModel {
     }
 
     public static class GenerateViewPointResponseBodyData extends TeaModel {
+        /**
+         * <p>The viewpoint text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>视角</p>
+         */
         @NameInMap("Point")
         public String point;
 

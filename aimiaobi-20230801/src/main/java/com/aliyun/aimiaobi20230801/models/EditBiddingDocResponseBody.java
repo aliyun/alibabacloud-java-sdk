@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class EditBiddingDocResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The business data.</p>
+     */
     @NameInMap("Data")
     public EditBiddingDocResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class EditBiddingDocResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -38,6 +47,8 @@ public class EditBiddingDocResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. A value of \<code>true\\</code> indicates success and \<code>false\\</code> indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +110,8 @@ public class EditBiddingDocResponseBody extends TeaModel {
 
     public static class EditBiddingDocResponseBodyData extends TeaModel {
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */

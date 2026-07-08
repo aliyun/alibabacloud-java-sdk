@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetInterveneTemplateFileUrlResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetInterveneTemplateFileUrlResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetInterveneTemplateFileUrlResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +38,8 @@ public class GetInterveneTemplateFileUrlResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>DA021073-17CE-5CCF-9FEB-93226C766887</p>
      */
@@ -36,6 +47,8 @@ public class GetInterveneTemplateFileUrlResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. \<code>true\\</code> indicates success. \<code>false\\</code> indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -100,6 +113,8 @@ public class GetInterveneTemplateFileUrlResponseBody extends TeaModel {
         public Integer code;
 
         /**
+         * <p>The URL of the template file.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://xxx/xxx.xls">http://xxx/xxx.xls</a></p>
          */

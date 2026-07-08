@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class BindPptArtifactRequest extends TeaModel {
     /**
+     * <p>The artifact ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +22,7 @@ public class BindPptArtifactRequest extends TeaModel {
     public String externalUserId;
 
     /**
+     * <p>The task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +35,8 @@ public class BindPptArtifactRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p><a href="https://help.aliyun.com/document_detail/2782167.html">The workspace ID.</a></p>
+     * 
      * <strong>example:</strong>
      * <p>llm-xgpt3m25qdosdjr3</p>
      */

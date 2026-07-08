@@ -4,10 +4,20 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class SubmitCustomSourceTopicAnalysisRequest extends TeaModel {
+    /**
+     * <p>The types of analysis for hot topic selection. Multiple values are supported. If you omit this parameter, the service analyzes all types by default. If you pass an empty array, the service performs only clustering and skips the analysis of hot topics for selection.
+     * <code>HotViewPoints</code>: Analyzes perspectives on hot topics.
+     * <code>WebReviewPoints</code>: Analyzes user viewpoints. This requires comments.
+     * <code>TimedViewPoints</code>: Analyzes perspectives on timeliness.
+     * <code>FreshViewPoints</code>: Analyzes novel perspectives.
+     * <code>TopicSummary</code>: Summarizes news content.</p>
+     */
     @NameInMap("AnalysisTypes")
     public java.util.List<String> analysisTypes;
 
     /**
+     * <p>The file type. Valid values: <code>json</code> (JSON array) and <code>jsonLine</code> (JSON Lines).</p>
+     * 
      * <strong>example:</strong>
      * <p>json</p>
      */
@@ -15,6 +25,8 @@ public class SubmitCustomSourceTopicAnalysisRequest extends TeaModel {
     public String fileType;
 
     /**
+     * <p>The file URL. You must specify either <code>FileUrl</code> or <code>News</code>. For details on the file structure, see the description of the <code>News</code> parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://www.example.com/xxx.json">http://www.example.com/xxx.json</a></p>
      */
@@ -22,19 +34,29 @@ public class SubmitCustomSourceTopicAnalysisRequest extends TeaModel {
     public String fileUrl;
 
     /**
+     * <p>The maximum number of topics to analyze. By default, the service sorts clustered news by count in descending order and analyzes the top 50 topics. The maximum value is 200.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
     @NameInMap("MaxTopicSize")
     public Integer maxTopicSize;
 
+    /**
+     * <p>A list of news articles. You must specify either <code>News</code> or <code>FileUrl</code>.</p>
+     */
     @NameInMap("News")
     public java.util.List<SubmitCustomSourceTopicAnalysisRequestNews> news;
 
+    /**
+     * <p>A list of topics.</p>
+     */
     @NameInMap("Topics")
     public java.util.List<SubmitCustomSourceTopicAnalysisRequestTopics> topics;
 
     /**
+     * <p>The URL of the file that contains the topic list. The file must be in JSON Lines format, with each line representing a single JSON object.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://www.example.com/xxx.jsonline">http://www.example.com/xxx.jsonline</a></p>
      */
@@ -42,6 +64,7 @@ public class SubmitCustomSourceTopicAnalysisRequest extends TeaModel {
     public String topicsFileUrl;
 
     /**
+     * <p><a href="https://help.aliyun.com/document_detail/2782167.html">The Model Studio workspace ID.</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -120,6 +143,12 @@ public class SubmitCustomSourceTopicAnalysisRequest extends TeaModel {
     }
 
     public static class SubmitCustomSourceTopicAnalysisRequestNewsComments extends TeaModel {
+        /**
+         * <p>The comment text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>评论内容</p>
+         */
         @NameInMap("Text")
         public String text;
 
@@ -139,26 +168,51 @@ public class SubmitCustomSourceTopicAnalysisRequest extends TeaModel {
     }
 
     public static class SubmitCustomSourceTopicAnalysisRequestNews extends TeaModel {
+        /**
+         * <p>A list of comments.</p>
+         */
         @NameInMap("Comments")
         public java.util.List<SubmitCustomSourceTopicAnalysisRequestNewsComments> comments;
 
+        /**
+         * <p>The content of the news article.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>新闻正文</p>
+         */
         @NameInMap("Content")
         public String content;
 
         /**
+         * <p>The publication time. The format must be <code>YYYY-MM-dd HH:mm:ss</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-22 10:29:00</p>
          */
         @NameInMap("PubTime")
         public String pubTime;
 
+        /**
+         * <p>The source of the news article.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>百度</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>The title of the news article.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>新闻标题</p>
+         */
         @NameInMap("Title")
         public String title;
 
         /**
+         * <p>The URL of the news article.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com/xxx.html">http://www.example.com/xxx.html</a></p>
          */
@@ -222,16 +276,23 @@ public class SubmitCustomSourceTopicAnalysisRequest extends TeaModel {
 
     public static class SubmitCustomSourceTopicAnalysisRequestTopics extends TeaModel {
         /**
+         * <p>A custom field. You can use this field to filter results when you call the <code>ListHotTopics</code> operation.</p>
+         * 
          * <strong>example:</strong>
-         * <p>biz-tag-001</p>
+         * <p>xxx</p>
          */
         @NameInMap("CustomField")
         public String customField;
 
+        /**
+         * <p>A list of news articles.</p>
+         */
         @NameInMap("News")
         public java.util.List<HottopicNews> news;
 
         /**
+         * <p>The topic name.</p>
+         * 
          * <strong>example:</strong>
          * <p>话题名称</p>
          */
@@ -239,6 +300,8 @@ public class SubmitCustomSourceTopicAnalysisRequest extends TeaModel {
         public String topic;
 
         /**
+         * <p>The URL of the topic. This value is passed through to the <code>ListHotTopics</code> response without being processed.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://www.example.com/topic/123">https://www.example.com/topic/123</a></p>
          */

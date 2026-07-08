@@ -5,23 +5,40 @@ import com.aliyun.tea.*;
 
 public class AsyncEditTimelineResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business data</p>
+     */
     @NameInMap("Data")
     public AsyncEditTimelineResponseBodyData data;
 
+    /**
+     * <p>HTTP status code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Error description</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>Request ID</p>
      * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
@@ -29,6 +46,12 @@ public class AsyncEditTimelineResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request succeeded</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -86,10 +109,18 @@ public class AsyncEditTimelineResponseBody extends TeaModel {
     }
 
     public static class AsyncEditTimelineResponseBodyData extends TeaModel {
+        /**
+         * <p>Response message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>一些建议信息</p>
+         */
         @NameInMap("Message")
         public String message;
 
         /**
+         * <p>Unique task ID</p>
+         * 
          * <strong>example:</strong>
          * <p>51e4efd1908242eb93ca9bbb7fc4359d</p>
          */

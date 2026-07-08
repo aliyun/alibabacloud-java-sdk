@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetPropertiesResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>DataNotExists</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business data</p>
+     */
     @NameInMap("Data")
     public GetPropertiesResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,13 +29,17 @@ public class GetPropertiesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error description</p>
+     * 
      * <strong>example:</strong>
-     * <p>success</p>
+     * <p>数据不存在</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Unique request identifier</p>
+     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */
@@ -36,6 +47,8 @@ public class GetPropertiesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether successful: true for success, false for failure</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,12 +110,20 @@ public class GetPropertiesResponseBody extends TeaModel {
 
     public static class GetPropertiesResponseBodyDataConsoleConfig extends TeaModel {
         /**
+         * <p>Prompt content</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
         @NameInMap("TipContent")
         public String tipContent;
 
+        /**
+         * <p>Title</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AI妙笔</p>
+         */
         @NameInMap("Title")
         public String title;
 
@@ -131,6 +152,8 @@ public class GetPropertiesResponseBody extends TeaModel {
 
     public static class GetPropertiesResponseBodyDataIntelligentSearchConfigCopilotPreciseSearchSources extends TeaModel {
         /**
+         * <p>Unique identifier for the dataset: code+datasetName</p>
+         * 
          * <strong>example:</strong>
          * <p>x</p>
          */
@@ -138,6 +161,8 @@ public class GetPropertiesResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>Unique identifier for the dataset: code+datasetName</p>
+         * 
          * <strong>example:</strong>
          * <p>x</p>
          */
@@ -145,6 +170,8 @@ public class GetPropertiesResponseBody extends TeaModel {
         public String datasetName;
 
         /**
+         * <p>Search source name: Chinese</p>
+         * 
          * <strong>example:</strong>
          * <p>x</p>
          */
@@ -184,6 +211,8 @@ public class GetPropertiesResponseBody extends TeaModel {
 
     public static class GetPropertiesResponseBodyDataIntelligentSearchConfigSearchSamplesArticles extends TeaModel {
         /**
+         * <p>Whether manually selected when passed from the frontend</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -191,6 +220,8 @@ public class GetPropertiesResponseBody extends TeaModel {
         public Boolean select;
 
         /**
+         * <p>Whether it is a starred article</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -198,6 +229,8 @@ public class GetPropertiesResponseBody extends TeaModel {
         public Boolean stared;
 
         /**
+         * <p>Title</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -205,6 +238,8 @@ public class GetPropertiesResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>Article URL</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://xxx.com">http://xxx.com</a></p>
          */
@@ -251,10 +286,15 @@ public class GetPropertiesResponseBody extends TeaModel {
     }
 
     public static class GetPropertiesResponseBodyDataIntelligentSearchConfigSearchSamples extends TeaModel {
+        /**
+         * <p>Article list</p>
+         */
         @NameInMap("Articles")
         public java.util.List<GetPropertiesResponseBodyDataIntelligentSearchConfigSearchSamplesArticles> articles;
 
         /**
+         * <p>Prompt</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -262,6 +302,8 @@ public class GetPropertiesResponseBody extends TeaModel {
         public String prompt;
 
         /**
+         * <p>Generated content</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -301,6 +343,8 @@ public class GetPropertiesResponseBody extends TeaModel {
 
     public static class GetPropertiesResponseBodyDataIntelligentSearchConfigSearchSources extends TeaModel {
         /**
+         * <p>Unique identifier for the dataset: code+datasetName</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -308,6 +352,8 @@ public class GetPropertiesResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>Unique identifier for the dataset: code+datasetName</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -315,6 +361,8 @@ public class GetPropertiesResponseBody extends TeaModel {
         public String datasetName;
 
         /**
+         * <p>Search source name: Chinese</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -353,19 +401,30 @@ public class GetPropertiesResponseBody extends TeaModel {
     }
 
     public static class GetPropertiesResponseBodyDataIntelligentSearchConfig extends TeaModel {
+        /**
+         * <p>Miaosou: Search source configuration</p>
+         */
         @NameInMap("CopilotPreciseSearchSources")
         public java.util.List<GetPropertiesResponseBodyDataIntelligentSearchConfigCopilotPreciseSearchSources> copilotPreciseSearchSources;
 
         /**
+         * <p>Homepage product description</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
         @NameInMap("ProductDescription")
         public String productDescription;
 
+        /**
+         * <p>Intelligent search recommendations</p>
+         */
         @NameInMap("SearchSamples")
         public java.util.List<GetPropertiesResponseBodyDataIntelligentSearchConfigSearchSamples> searchSamples;
 
+        /**
+         * <p>Search source list</p>
+         */
         @NameInMap("SearchSources")
         public java.util.List<GetPropertiesResponseBodyDataIntelligentSearchConfigSearchSources> searchSources;
 
@@ -410,6 +469,8 @@ public class GetPropertiesResponseBody extends TeaModel {
 
     public static class GetPropertiesResponseBodyDataMiaosouConfigModelInfos extends TeaModel {
         /**
+         * <p>Model ID</p>
+         * 
          * <strong>example:</strong>
          * <p>quanmiao-max</p>
          */
@@ -417,6 +478,8 @@ public class GetPropertiesResponseBody extends TeaModel {
         public String modelId;
 
         /**
+         * <p>Model name</p>
+         * 
          * <strong>example:</strong>
          * <p>全妙-Max</p>
          */
@@ -448,16 +511,23 @@ public class GetPropertiesResponseBody extends TeaModel {
 
     public static class GetPropertiesResponseBodyDataMiaosouConfig extends TeaModel {
         /**
+         * <p>The number of active documents in the dataset.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("MaxDocSize")
         public Long maxDocSize;
 
+        /**
+         * <p>Model list supported by intelligent search</p>
+         */
         @NameInMap("ModelInfos")
         public java.util.List<GetPropertiesResponseBodyDataMiaosouConfigModelInfos> modelInfos;
 
         /**
+         * <p>Number of documents used in the dataset</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -496,12 +566,30 @@ public class GetPropertiesResponseBody extends TeaModel {
     }
 
     public static class GetPropertiesResponseBodyDataSearchSourceList extends TeaModel {
+        /**
+         * <p>Search source type: corresponds to (SystemSearch: system-built-in search, CustomSemanticSearch: custom semantic index search, ThirdSearch: third-party API search)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SystemSearch</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>Unique identifier for the data source</p>
+         * 
+         * <strong>example:</strong>
+         * <p>QuarkCommonNews</p>
+         */
         @NameInMap("DatasetName")
         public String datasetName;
 
+        /**
+         * <p>Search source description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>互联网检索</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -537,10 +625,18 @@ public class GetPropertiesResponseBody extends TeaModel {
     }
 
     public static class GetPropertiesResponseBodyDataSearchSources extends TeaModel {
+        /**
+         * <p>Search source name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>夸克通用搜索</p>
+         */
         @NameInMap("Label")
         public String label;
 
         /**
+         * <p>Search source code</p>
+         * 
          * <strong>example:</strong>
          * <p>SystemSearch</p>
          */
@@ -572,6 +668,8 @@ public class GetPropertiesResponseBody extends TeaModel {
 
     public static class GetPropertiesResponseBodyDataUserInfo extends TeaModel {
         /**
+         * <p>Unique identifier for the workspace</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -579,6 +677,8 @@ public class GetPropertiesResponseBody extends TeaModel {
         public String agentId;
 
         /**
+         * <p>Unique identifier for the tenant</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -586,6 +686,8 @@ public class GetPropertiesResponseBody extends TeaModel {
         public String tenantId;
 
         /**
+         * <p>User ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -593,6 +695,8 @@ public class GetPropertiesResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>Username</p>
+         * 
          * <strong>example:</strong>
          * <p>admin</p>
          */
@@ -640,6 +744,8 @@ public class GetPropertiesResponseBody extends TeaModel {
 
     public static class GetPropertiesResponseBodyDataWanxiangImageSizeConfig extends TeaModel {
         /**
+         * <p>Image aspect ratio</p>
+         * 
          * <strong>example:</strong>
          * <p>1:1</p>
          */
@@ -647,6 +753,8 @@ public class GetPropertiesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Image size in pixels</p>
+         * 
          * <strong>example:</strong>
          * <p>1024*1024</p>
          */
@@ -677,10 +785,18 @@ public class GetPropertiesResponseBody extends TeaModel {
     }
 
     public static class GetPropertiesResponseBodyDataWanxiangImageStyleConfig extends TeaModel {
+        /**
+         * <p>Style name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>默认</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>Style image URL</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://img.alicdn.com/imgextra/i4/O1CN01RzKicz1W0YWzYkWcK_!!6000000002726-2-tps-132-104.png">https://img.alicdn.com/imgextra/i4/O1CN01RzKicz1W0YWzYkWcK_!!6000000002726-2-tps-132-104.png</a></p>
          */
@@ -688,6 +804,8 @@ public class GetPropertiesResponseBody extends TeaModel {
         public String pic;
 
         /**
+         * <p>Style code</p>
+         * 
          * <strong>example:</strong>
          * <auto>
          */
@@ -726,40 +844,72 @@ public class GetPropertiesResponseBody extends TeaModel {
     }
 
     public static class GetPropertiesResponseBodyData extends TeaModel {
+        /**
+         * <p>Call configuration</p>
+         */
         @NameInMap("ChatConfig")
         public java.util.Map<String, ?> chatConfig;
 
+        /**
+         * <p>Console configuration</p>
+         */
         @NameInMap("ConsoleConfig")
         public GetPropertiesResponseBodyDataConsoleConfig consoleConfig;
 
+        /**
+         * <p>General configurations map</p>
+         */
         @NameInMap("GeneralConfigMap")
         public java.util.Map<String, ?> generalConfigMap;
 
+        /**
+         * <p>Intelligent search configuration</p>
+         */
         @NameInMap("IntelligentSearchConfig")
         public GetPropertiesResponseBodyDataIntelligentSearchConfig intelligentSearchConfig;
 
+        /**
+         * <p>Miaosou configuration</p>
+         */
         @NameInMap("MiaosouConfig")
         public GetPropertiesResponseBodyDataMiaosouConfig miaosouConfig;
 
+        /**
+         * <p>Specified search source list</p>
+         */
         @NameInMap("SearchSourceList")
         public java.util.List<GetPropertiesResponseBodyDataSearchSourceList> searchSourceList;
 
+        /**
+         * <p>Search source dropdown list</p>
+         */
         @NameInMap("SearchSources")
         public java.util.List<GetPropertiesResponseBodyDataSearchSources> searchSources;
 
         /**
+         * <p>Whether SLR is authorized</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("SlrAuthorized")
         public Boolean slrAuthorized;
 
+        /**
+         * <p>User configuration</p>
+         */
         @NameInMap("UserInfo")
         public GetPropertiesResponseBodyDataUserInfo userInfo;
 
+        /**
+         * <p>Wanxiang images</p>
+         */
         @NameInMap("WanxiangImageSizeConfig")
         public java.util.List<GetPropertiesResponseBodyDataWanxiangImageSizeConfig> wanxiangImageSizeConfig;
 
+        /**
+         * <p>Wanxiang image style configuration</p>
+         */
         @NameInMap("WanxiangImageStyleConfig")
         public java.util.List<GetPropertiesResponseBodyDataWanxiangImageStyleConfig> wanxiangImageStyleConfig;
 

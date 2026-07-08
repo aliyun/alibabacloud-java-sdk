@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AsyncCreateClipsTimeLineShrinkRequest extends TeaModel {
     /**
+     * <p>Supplementary material information to help generate the voiceover script</p>
+     * 
      * <strong>example:</strong>
      * <p>素材附加信息</p>
      */
@@ -12,6 +14,8 @@ public class AsyncCreateClipsTimeLineShrinkRequest extends TeaModel {
     public String additionalContent;
 
     /**
+     * <p>Custom voiceover content</p>
+     * 
      * <strong>example:</strong>
      * <p>自定义口播内容</p>
      */
@@ -22,6 +26,8 @@ public class AsyncCreateClipsTimeLineShrinkRequest extends TeaModel {
     public String highLightConfigShrink;
 
     /**
+     * <p>Enable mimicry capability</p>
+     * 
      * <strong>example:</strong>
      * <p>默认开启</p>
      */
@@ -29,6 +35,8 @@ public class AsyncCreateClipsTimeLineShrinkRequest extends TeaModel {
     public Boolean noRefVideo;
 
     /**
+     * <p>Prompt for processing</p>
+     * 
      * <strong>example:</strong>
      * <p>口播内容是乌镇旅游宣传广告，口播内容时长约为1分钟，开头要描述乌镇是千年文化传承的江南水乡，之后要体现乌镇的传统手工艺、美食和美景，最后要号召大家来乌镇旅游</p>
      */
@@ -43,6 +51,7 @@ public class AsyncCreateClipsTimeLineShrinkRequest extends TeaModel {
     public Boolean recommendAudio;
 
     /**
+     * <p>Unique task ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,6 +70,7 @@ public class AsyncCreateClipsTimeLineShrinkRequest extends TeaModel {
     public Integer timelineScene;
 
     /**
+     * <p><a href="https://help.aliyun.com/document_detail/2782167.html">Model Studio workspace ID</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

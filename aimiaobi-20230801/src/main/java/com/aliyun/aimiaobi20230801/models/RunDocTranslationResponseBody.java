@@ -4,13 +4,21 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunDocTranslationResponseBody extends TeaModel {
+    /**
+     * <p>Response header</p>
+     */
     @NameInMap("Header")
     public RunDocTranslationResponseBodyHeader header;
 
+    /**
+     * <p>Response body</p>
+     */
     @NameInMap("Payload")
     public RunDocTranslationResponseBodyPayload payload;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -48,6 +56,8 @@ public class RunDocTranslationResponseBody extends TeaModel {
 
     public static class RunDocTranslationResponseBodyHeader extends TeaModel {
         /**
+         * <p>Error code</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -55,6 +65,8 @@ public class RunDocTranslationResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>Error code message</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -62,16 +74,26 @@ public class RunDocTranslationResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>Event type</p>
+         * 
          * <strong>example:</strong>
          * <p>task-started</p>
          */
         @NameInMap("Event")
         public String event;
 
+        /**
+         * <p>Event description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>模型生成事件</p>
+         */
         @NameInMap("EventInfo")
         public String eventInfo;
 
         /**
+         * <p>Session ID</p>
+         * 
          * <strong>example:</strong>
          * <p>411c4dfa-2168-4379-a902-675d67f453f8</p>
          */
@@ -79,6 +101,8 @@ public class RunDocTranslationResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>Task ID</p>
+         * 
          * <strong>example:</strong>
          * <p>50a1cc8e-717e-4a2b-a76b-dc9734a8564b</p>
          */
@@ -86,6 +110,8 @@ public class RunDocTranslationResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>Trace ID</p>
+         * 
          * <strong>example:</strong>
          * <p>ebd19b12-0cae-488f-9e41-5a1c825f545b</p>
          */
@@ -156,6 +182,12 @@ public class RunDocTranslationResponseBody extends TeaModel {
     }
 
     public static class RunDocTranslationResponseBodyPayloadOutput extends TeaModel {
+        /**
+         * <p>Translated content</p>
+         * 
+         * <strong>example:</strong>
+         * <p>翻译内容</p>
+         */
         @NameInMap("Content")
         public String content;
 
@@ -176,6 +208,8 @@ public class RunDocTranslationResponseBody extends TeaModel {
 
     public static class RunDocTranslationResponseBodyPayloadUsage extends TeaModel {
         /**
+         * <p>Number of tokens used for input</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -183,6 +217,8 @@ public class RunDocTranslationResponseBody extends TeaModel {
         public Long inputTokens;
 
         /**
+         * <p>Number of tokens used for output</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -190,6 +226,8 @@ public class RunDocTranslationResponseBody extends TeaModel {
         public Long outputTokens;
 
         /**
+         * <p>Total number of tokens used for this call</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -228,9 +266,15 @@ public class RunDocTranslationResponseBody extends TeaModel {
     }
 
     public static class RunDocTranslationResponseBodyPayload extends TeaModel {
+        /**
+         * <p>Outputs</p>
+         */
         @NameInMap("Output")
         public RunDocTranslationResponseBodyPayloadOutput output;
 
+        /**
+         * <p>Token usage</p>
+         */
         @NameInMap("Usage")
         public RunDocTranslationResponseBodyPayloadUsage usage;
 

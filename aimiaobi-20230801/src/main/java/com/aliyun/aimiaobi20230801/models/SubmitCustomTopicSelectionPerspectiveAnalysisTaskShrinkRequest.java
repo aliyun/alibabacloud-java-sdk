@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitCustomTopicSelectionPerspectiveAnalysisTaskShrinkRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,14 @@ public class SubmitCustomTopicSelectionPerspectiveAnalysisTaskShrinkRequest exte
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>The list of documents to be analyzed.</p>
+     */
     @NameInMap("Documents")
     public String documentsShrink;
 
     /**
+     * <p>The input prompt for custom perspectives.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +31,8 @@ public class SubmitCustomTopicSelectionPerspectiveAnalysisTaskShrinkRequest exte
     public String prompt;
 
     /**
+     * <p>The name of the topic to be analyzed.</p>
+     * 
      * <strong>example:</strong>
      * <p>待分析的主题名（documents与topic二者至少传一个）</p>
      */

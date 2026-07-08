@@ -4,28 +4,60 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunTitleGenerationResponseBody extends TeaModel {
+    /**
+     * <p>Status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AccessForbid</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Response header.</p>
+     */
     @NameInMap("Header")
     public RunTitleGenerationResponseBodyHeader header;
 
+    /**
+     * <p>HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
+    /**
+     * <p>Error description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>数据不存在</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Response body.</p>
+     */
     @NameInMap("Payload")
     public RunTitleGenerationResponseBodyPayload payload;
 
     /**
+     * <p>Unique request identifier.</p>
+     * 
      * <strong>example:</strong>
      * <p>94512A33-8EC1-5452-A793-5C91F18ED2F0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Whether the operation was successful: true for success, false for failure.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -92,6 +124,8 @@ public class RunTitleGenerationResponseBody extends TeaModel {
 
     public static class RunTitleGenerationResponseBodyHeader extends TeaModel {
         /**
+         * <p>Error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>AccessForbid</p>
          */
@@ -99,6 +133,8 @@ public class RunTitleGenerationResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>Error code message.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -106,6 +142,8 @@ public class RunTitleGenerationResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>SSE event.</p>
+         * 
          * <strong>example:</strong>
          * <p>task-failed</p>
          */
@@ -113,16 +151,26 @@ public class RunTitleGenerationResponseBody extends TeaModel {
         public String event;
 
         /**
+         * <p>Session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
         @NameInMap("SessionId")
         public String sessionId;
 
+        /**
+         * <p>Status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
+         */
         @NameInMap("StatusCode")
         public Integer statusCode;
 
         /**
+         * <p>Task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>50a1cc8e-717e-4a2b-a76b-dc9734a8564b</p>
          */
@@ -130,6 +178,8 @@ public class RunTitleGenerationResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>Full link ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>0a3d448f17000139741898287e0eb3</p>
          */
@@ -201,6 +251,8 @@ public class RunTitleGenerationResponseBody extends TeaModel {
 
     public static class RunTitleGenerationResponseBodyPayloadOutput extends TeaModel {
         /**
+         * <p>Article title.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -224,6 +276,8 @@ public class RunTitleGenerationResponseBody extends TeaModel {
 
     public static class RunTitleGenerationResponseBodyPayloadUsage extends TeaModel {
         /**
+         * <p>Number of tokens used for input.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -231,6 +285,8 @@ public class RunTitleGenerationResponseBody extends TeaModel {
         public Long inputTokens;
 
         /**
+         * <p>Number of tokens used for output.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -238,6 +294,8 @@ public class RunTitleGenerationResponseBody extends TeaModel {
         public Long outputTokens;
 
         /**
+         * <p>Total number of tokens used for this call.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -276,9 +334,15 @@ public class RunTitleGenerationResponseBody extends TeaModel {
     }
 
     public static class RunTitleGenerationResponseBodyPayload extends TeaModel {
+        /**
+         * <p>Outputs.</p>
+         */
         @NameInMap("Output")
         public RunTitleGenerationResponseBodyPayloadOutput output;
 
+        /**
+         * <p>Token usage.</p>
+         */
         @NameInMap("Usage")
         public RunTitleGenerationResponseBodyPayloadUsage usage;
 

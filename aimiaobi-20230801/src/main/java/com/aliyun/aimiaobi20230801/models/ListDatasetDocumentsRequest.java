@@ -4,16 +4,33 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class ListDatasetDocumentsRequest extends TeaModel {
+    /**
+     * <p>The unique IDs of the categories.</p>
+     */
     @NameInMap("CategoryUuids")
     public java.util.List<String> categoryUuids;
 
+    /**
+     * <p>The end of the creation time range, specified as a Unix timestamp in milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>111</p>
+     */
     @NameInMap("CreateTimeEnd")
     public Long createTimeEnd;
 
+    /**
+     * <p>The start of the creation time range, specified as a Unix timestamp in milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>111</p>
+     */
     @NameInMap("CreateTimeStart")
     public Long createTimeStart;
 
     /**
+     * <p>Deprecated.</p>
+     * 
      * <strong>example:</strong>
      * <p>xx</p>
      */
@@ -21,6 +38,8 @@ public class ListDatasetDocumentsRequest extends TeaModel {
     public String datasetDescription;
 
     /**
+     * <p>The unique ID of the dataset. You must specify either this parameter or <code>DatasetName</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -28,44 +47,105 @@ public class ListDatasetDocumentsRequest extends TeaModel {
     public Long datasetId;
 
     /**
+     * <p>The name of the dataset.</p>
+     * 
      * <strong>example:</strong>
      * <p>数据集名称</p>
      */
     @NameInMap("DatasetName")
     public String datasetName;
 
+    /**
+     * <p>An array of document IDs.</p>
+     */
     @NameInMap("DocIds")
     public java.util.List<String> docIds;
 
     /**
+     * <p>The type of the document. Valid values:</p>
+     * <ul>
+     * <li><p><code>plainText</code>: Plain text.</p>
+     * </li>
+     * <li><p><code>richText</code>: Rich text.</p>
+     * </li>
+     * <li><p><code>text</code>: A text file.</p>
+     * </li>
+     * <li><p><code>pdf</code>: A PDF file.</p>
+     * </li>
+     * <li><p><code>word</code>: A Word file.</p>
+     * </li>
+     * <li><p><code>image</code>: An image file.</p>
+     * </li>
+     * <li><p><code>video</code>: A video file.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>text</p>
      */
     @NameInMap("DocType")
     public String docType;
 
+    /**
+     * <p>The unique IDs of the documents.</p>
+     */
     @NameInMap("DocUuids")
     public java.util.List<String> docUuids;
 
+    /**
+     * <p>The end time, specified as a Unix timestamp in milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1111</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>The fields to exclude from the response. Valid value:</p>
+     * <ul>
+     * <li><code>content</code>: The document content.</li>
+     * </ul>
+     */
     @NameInMap("ExcludeFields")
     public java.util.List<String> excludeFields;
 
+    /**
+     * <p>A custom extension field.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xx</p>
+     */
     @NameInMap("Extend1")
     public String extend1;
 
+    /**
+     * <p>A custom extension field.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xx</p>
+     */
     @NameInMap("Extend2")
     public String extend2;
 
+    /**
+     * <p>A custom extension field.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xx</p>
+     */
     @NameInMap("Extend3")
     public String extend3;
 
+    /**
+     * <p>The fields to include in the response.</p>
+     */
     @NameInMap("IncludeFields")
     public java.util.List<String> includeFields;
 
     /**
+     * <p>A token to retrieve the next page of results. This parameter is required when you retrieve more than 10,000 entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -73,6 +153,8 @@ public class ListDatasetDocumentsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -80,6 +162,8 @@ public class ListDatasetDocumentsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -87,29 +171,61 @@ public class ListDatasetDocumentsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The search query.</p>
+     * 
      * <strong>example:</strong>
      * <p>搜索条件</p>
      */
     @NameInMap("Query")
     public String query;
 
+    /**
+     * <p>The start time, specified as a Unix timestamp in milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>111</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 
     /**
+     * <p>The status of the document. Valid values:</p>
+     * <ul>
+     * <li><p><code>1</code>: Document created.</p>
+     * </li>
+     * <li><p><code>2</code>: Text index built.</p>
+     * </li>
+     * <li><p><code>3</code>: Multimodal index built.</p>
+     * </li>
+     * <li><p><code>100</code>: Full build complete.</p>
+     * </li>
+     * <li><p><code>0</code>: Build failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
     @NameInMap("Status")
     public Integer status;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<String> tags;
 
+    /**
+     * <p>The title.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("Title")
     public String title;
 
     /**
+     * <p>The unique ID of the Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Get workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

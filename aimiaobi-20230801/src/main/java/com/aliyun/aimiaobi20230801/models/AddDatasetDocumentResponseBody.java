@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class AddDatasetDocumentResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The business data.</p>
+     */
     @NameInMap("Data")
     public AddDatasetDocumentResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class AddDatasetDocumentResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error description.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class AddDatasetDocumentResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -36,6 +47,8 @@ public class AddDatasetDocumentResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. A value of true indicates success. A value of false indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,13 +110,17 @@ public class AddDatasetDocumentResponseBody extends TeaModel {
 
     public static class AddDatasetDocumentResponseBodyData extends TeaModel {
         /**
+         * <p>The unique business ID of the document.</p>
+         * 
          * <strong>example:</strong>
-         * <p>文档业务唯一标识</p>
+         * <p>xxx</p>
          */
         @NameInMap("DocId")
         public String docId;
 
         /**
+         * <p>The unique system ID of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>8df2d69d63a247b6b52ff455b2d426b6</p>
          */
@@ -111,16 +128,38 @@ public class AddDatasetDocumentResponseBody extends TeaModel {
         public String docUuid;
 
         /**
+         * <p>The error code for the exception.</p>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>错误信息</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
+         * <p>The status.</p>
+         * <ul>
+         * <li><p>1: created</p>
+         * </li>
+         * <li><p>2: text index built</p>
+         * </li>
+         * <li><p>3: multimodal index built</p>
+         * </li>
+         * <li><p>100: full build completed</p>
+         * </li>
+         * <li><p>0: failed</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

@@ -4,16 +4,25 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunKeywordsExtractionGenerationRequest extends TeaModel {
+    /**
+     * <p>Custom prompt.</p>
+     */
     @NameInMap("Prompt")
     public String prompt;
 
     /**
+     * <p>Data required for generation.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ReferenceData")
     public RunKeywordsExtractionGenerationRequestReferenceData referenceData;
 
     /**
+     * <p>The unique identifier for the associated creation article.</p>
+     * <blockquote>
+     * <p>TaskId is not required by default; the system automatically generates it. If subsequent tasks use the same TaskId, they belong to the same conversation group.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -21,6 +30,7 @@ public class RunKeywordsExtractionGenerationRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The unique identifier for the Alibaba Cloud Model Studio workspace. Obtain the <a href="https://help.aliyun.com/document_detail/2782167.html">Workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,6 +78,7 @@ public class RunKeywordsExtractionGenerationRequest extends TeaModel {
 
     public static class RunKeywordsExtractionGenerationRequestReferenceData extends TeaModel {
         /**
+         * <p>List of content.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Contents")

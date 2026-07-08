@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class RunPptOutlineGenerationResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response header.</p>
+     */
     @NameInMap("Header")
     public RunPptOutlineGenerationResponseBodyHeader header;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,16 +29,23 @@ public class RunPptOutlineGenerationResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
+     * <p>The message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The response body.</p>
+     */
     @NameInMap("Payload")
     public RunPptOutlineGenerationResponseBodyPayload payload;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>F2F366D6-E9FE-1006-BB70-2C650896AAB5</p>
      */
@@ -39,6 +53,8 @@ public class RunPptOutlineGenerationResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. \<code>true\\</code>: The request was successful. \<code>false\\</code>: The request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -108,6 +124,8 @@ public class RunPptOutlineGenerationResponseBody extends TeaModel {
 
     public static class RunPptOutlineGenerationResponseBodyHeader extends TeaModel {
         /**
+         * <p>The error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */
@@ -115,6 +133,8 @@ public class RunPptOutlineGenerationResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -122,6 +142,8 @@ public class RunPptOutlineGenerationResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The SSE event. \<code>task-started\\</code>: The task starts. \<code>task-finished\\</code>: The task is complete. \<code>task-failed\\</code>: The task failed.</p>
+         * 
          * <strong>example:</strong>
          * <p>task-started</p>
          */
@@ -129,6 +151,8 @@ public class RunPptOutlineGenerationResponseBody extends TeaModel {
         public String event;
 
         /**
+         * <p>The session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1a3d7c9f-3a6d-4e49-b176-2d8721a27397</p>
          */
@@ -136,6 +160,8 @@ public class RunPptOutlineGenerationResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>The status code.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -143,6 +169,8 @@ public class RunPptOutlineGenerationResponseBody extends TeaModel {
         public Integer statusCode;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>8996314ce5514867943c71935e6a45af</p>
          */
@@ -150,6 +178,8 @@ public class RunPptOutlineGenerationResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The trace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>0bc1ec3a17435601877224179ecc8a</p>
          */
@@ -220,6 +250,12 @@ public class RunPptOutlineGenerationResponseBody extends TeaModel {
     }
 
     public static class RunPptOutlineGenerationResponseBodyPayloadOutput extends TeaModel {
+        /**
+         * <p>The output content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>文本生成结果</p>
+         */
         @NameInMap("Text")
         public String text;
 
@@ -239,6 +275,9 @@ public class RunPptOutlineGenerationResponseBody extends TeaModel {
     }
 
     public static class RunPptOutlineGenerationResponseBodyPayload extends TeaModel {
+        /**
+         * <p>The output.</p>
+         */
         @NameInMap("Output")
         public RunPptOutlineGenerationResponseBodyPayloadOutput output;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteGeneratedContentResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>DataNotExists</p>
      */
@@ -12,6 +14,8 @@ public class DeleteGeneratedContentResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Business data</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class DeleteGeneratedContentResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,13 +32,17 @@ public class DeleteGeneratedContentResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
-     * <p>success</p>
+     * <p>数据不存在</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Unique identifier of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */
@@ -40,6 +50,8 @@ public class DeleteGeneratedContentResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation succeeded. true indicates success. false indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

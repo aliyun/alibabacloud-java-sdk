@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAuditNotePostProcessingStatusResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class GetAuditNotePostProcessingStatusResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The returned data.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -21,6 +24,8 @@ public class GetAuditNotePostProcessingStatusResponseBody extends TeaModel {
     public GetAuditNotePostProcessingStatusResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -28,6 +33,7 @@ public class GetAuditNotePostProcessingStatusResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error details.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,6 +53,7 @@ public class GetAuditNotePostProcessingStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -110,6 +117,8 @@ public class GetAuditNotePostProcessingStatusResponseBody extends TeaModel {
 
     public static class GetAuditNotePostProcessingStatusResponseBodyData extends TeaModel {
         /**
+         * <p>The time when the post-processing task was completed. The format is YYYY-MM-DD HH:mm:ss.</p>
+         * 
          * <strong>example:</strong>
          * <p>1970-01-01 23:34:45</p>
          */
@@ -117,6 +126,8 @@ public class GetAuditNotePostProcessingStatusResponseBody extends TeaModel {
         public String completionTime;
 
         /**
+         * <p>The time when the post-processing task was created. The format is YYYY-MM-DD HH:mm:ss.</p>
+         * 
          * <strong>example:</strong>
          * <p>1970-01-01 12:34:56</p>
          */
@@ -124,6 +135,8 @@ public class GetAuditNotePostProcessingStatusResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The error message. This is returned only when the post-processing task fails.</p>
+         * 
          * <strong>example:</strong>
          * <p>error</p>
          */
@@ -131,6 +144,8 @@ public class GetAuditNotePostProcessingStatusResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The ID of the rule library. The default value in the current version is &quot;Default&quot;.</p>
+         * 
          * <strong>example:</strong>
          * <p>Default</p>
          */
@@ -138,6 +153,8 @@ public class GetAuditNotePostProcessingStatusResponseBody extends TeaModel {
         public String noteId;
 
         /**
+         * <p>The number of lines that have been post-processed.</p>
+         * 
          * <strong>example:</strong>
          * <p>233</p>
          */
@@ -145,6 +162,8 @@ public class GetAuditNotePostProcessingStatusResponseBody extends TeaModel {
         public Integer processedLines;
 
         /**
+         * <p>The status of the post-processing task. Valid values: PENDING, RUNNING, SUCCEEDED, and FAILED.</p>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
@@ -152,6 +171,8 @@ public class GetAuditNotePostProcessingStatusResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The total number of lines in the structured rule library.</p>
+         * 
          * <strong>example:</strong>
          * <p>666</p>
          */

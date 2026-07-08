@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTimedViewAttitudeRequest extends TeaModel {
     /**
+     * <p>UUID of the workspace: AgentKey</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListTimedViewAttitudeRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>Maximum number of Return Results</p>
+     * 
      * <strong>example:</strong>
      * <p>53</p>
      */
@@ -21,13 +24,16 @@ public class ListTimedViewAttitudeRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Token for the next page</p>
+     * 
      * <strong>example:</strong>
-     * <p>下一页的token</p>
+     * <p>下一页的Token</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
+     * <p>Hotlist topic</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +43,7 @@ public class ListTimedViewAttitudeRequest extends TeaModel {
     public String topic;
 
     /**
+     * <p>Hotlist source</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteDocsResponseBody extends TeaModel {
     /**
+     * <p>Internal error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -12,6 +14,8 @@ public class DeleteDocsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class DeleteDocsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Return message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -26,6 +32,8 @@ public class DeleteDocsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2C565EDD-E624-5FED-8565-0A9CB0C8CC46</p>
      */
@@ -33,6 +41,8 @@ public class DeleteDocsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

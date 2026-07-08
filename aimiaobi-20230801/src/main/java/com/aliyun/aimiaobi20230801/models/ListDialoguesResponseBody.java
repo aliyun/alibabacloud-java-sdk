@@ -5,23 +5,32 @@ import com.aliyun.tea.*;
 
 public class ListDialoguesResponseBody extends TeaModel {
     /**
+     * <p>Status code.</p>
+     * 
      * <strong>example:</strong>
-     * <p>NoData</p>
+     * <p>successful</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
+     * <p>Page number of the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("Current")
     public Integer current;
 
+    /**
+     * <p>List of generation history records.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListDialoguesResponseBodyData> data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,13 +38,17 @@ public class ListDialoguesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
-     * <p>success</p>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Unique identifier for the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -43,6 +56,8 @@ public class ListDialoguesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Number of items per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -50,6 +65,8 @@ public class ListDialoguesResponseBody extends TeaModel {
     public Integer size;
 
     /**
+     * <p>Indicates whether the operation succeeded. A value of true indicates success. A value of false indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -57,6 +74,8 @@ public class ListDialoguesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -142,6 +161,8 @@ public class ListDialoguesResponseBody extends TeaModel {
 
     public static class ListDialoguesResponseBodyData extends TeaModel {
         /**
+         * <p>Model output.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -149,6 +170,8 @@ public class ListDialoguesResponseBody extends TeaModel {
         public String bot;
 
         /**
+         * <p>Creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-04 11:46:07</p>
          */
@@ -156,6 +179,8 @@ public class ListDialoguesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -163,6 +188,8 @@ public class ListDialoguesResponseBody extends TeaModel {
         public String createUser;
 
         /**
+         * <p>Generation type. Valid values: 1 (creation) and 2 (intelligent search). Default value: 2.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -170,6 +197,8 @@ public class ListDialoguesResponseBody extends TeaModel {
         public Integer dialogueType;
 
         /**
+         * <p>Task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -177,6 +206,8 @@ public class ListDialoguesResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>User input.</p>
+         * 
          * <strong>example:</strong>
          * <p>x</p>
          */

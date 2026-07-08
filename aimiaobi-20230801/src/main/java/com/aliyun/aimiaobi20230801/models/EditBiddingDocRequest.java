@@ -4,10 +4,18 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class EditBiddingDocRequest extends TeaModel {
+    /**
+     * <p>The text content.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>标书内容</p>
+     */
     @NameInMap("Content")
     public String content;
 
     /**
+     * <p>The format.</p>
+     * 
      * <strong>example:</strong>
      * <p>html
      * markdown</p>
@@ -16,6 +24,8 @@ public class EditBiddingDocRequest extends TeaModel {
     public String contentFormat;
 
     /**
+     * <p>The content type.</p>
+     * 
      * <strong>example:</strong>
      * <p>outline
      * bidding</p>
@@ -24,6 +34,8 @@ public class EditBiddingDocRequest extends TeaModel {
     public String contentType;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0dbf1055f8a2475d99904c3b76a0ffba</p>
      */
@@ -31,6 +43,8 @@ public class EditBiddingDocRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p><a href="https://help.aliyun.com/document_detail/2782167.html">The workspace ID.</a></p>
+     * 
      * <strong>example:</strong>
      * <p>llm-xx</p>
      */

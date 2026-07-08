@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class InsertInterveneRuleRequest extends TeaModel {
     /**
+     * <p>Unique identifier of the workspace: <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,6 +14,9 @@ public class InsertInterveneRuleRequest extends TeaModel {
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>Intervention rule configuration</p>
+     */
     @NameInMap("InterveneRuleConfig")
     public InsertInterveneRuleRequestInterveneRuleConfig interveneRuleConfig;
 
@@ -39,16 +43,26 @@ public class InsertInterveneRuleRequest extends TeaModel {
 
     public static class InsertInterveneRuleRequestInterveneRuleConfigAnswerConfig extends TeaModel {
         /**
+         * <p>Answer type</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("AnswerType")
         public Integer answerType;
 
+        /**
+         * <p>Answer content</p>
+         * 
+         * <strong>example:</strong>
+         * <p>抱歉我无法回答</p>
+         */
         @NameInMap("Message")
         public String message;
 
         /**
+         * <p>Namespace</p>
+         * 
          * <strong>example:</strong>
          * <p>namespace_qa_query</p>
          */
@@ -88,6 +102,8 @@ public class InsertInterveneRuleRequest extends TeaModel {
 
     public static class InsertInterveneRuleRequestInterveneRuleConfigEffectConfig extends TeaModel {
         /**
+         * <p>Activation type</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -95,6 +111,8 @@ public class InsertInterveneRuleRequest extends TeaModel {
         public Integer effectType;
 
         /**
+         * <p>End time</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-28 06:04:29</p>
          */
@@ -102,6 +120,8 @@ public class InsertInterveneRuleRequest extends TeaModel {
         public String endTime;
 
         /**
+         * <p>Start time</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-28 06:04:29</p>
          */
@@ -141,7 +161,7 @@ public class InsertInterveneRuleRequest extends TeaModel {
 
     public static class InsertInterveneRuleRequestInterveneRuleConfigInterveneConfigList extends TeaModel {
         /**
-         * <p>id</p>
+         * <p>ID</p>
          * 
          * <strong>example:</strong>
          * <p>37249</p>
@@ -150,12 +170,20 @@ public class InsertInterveneRuleRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Operation type</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("OperationType")
         public Integer operationType;
 
+        /**
+         * <p>Intervention query configuration</p>
+         * 
+         * <strong>example:</strong>
+         * <p>早上好</p>
+         */
         @NameInMap("Query")
         public String query;
 
@@ -191,26 +219,42 @@ public class InsertInterveneRuleRequest extends TeaModel {
     }
 
     public static class InsertInterveneRuleRequestInterveneRuleConfig extends TeaModel {
+        /**
+         * <p>Answer configuration</p>
+         */
         @NameInMap("AnswerConfig")
         public java.util.List<InsertInterveneRuleRequestInterveneRuleConfigAnswerConfig> answerConfig;
 
+        /**
+         * <p>Activation configuration</p>
+         */
         @NameInMap("EffectConfig")
         public InsertInterveneRuleRequestInterveneRuleConfigEffectConfig effectConfig;
 
+        /**
+         * <p>Intervention configuration list</p>
+         */
         @NameInMap("InterveneConfigList")
         public java.util.List<InsertInterveneRuleRequestInterveneRuleConfigInterveneConfigList> interveneConfigList;
 
         /**
+         * <p>Intervention type</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("InterveneType")
         public Integer interveneType;
 
+        /**
+         * <p>Namespace list</p>
+         */
         @NameInMap("NamespaceList")
         public java.util.List<String> namespaceList;
 
         /**
+         * <p>Rule ID</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -218,6 +262,8 @@ public class InsertInterveneRuleRequest extends TeaModel {
         public Long ruleId;
 
         /**
+         * <p>Rule name</p>
+         * 
          * <strong>example:</strong>
          * <p>tf-test-rule</p>
          */

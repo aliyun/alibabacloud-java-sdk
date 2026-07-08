@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryVideoAuditResultResponseBody extends TeaModel {
     /**
-     * <p>业务处理结果状态码</p>
+     * <p>Business status code</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,13 +14,13 @@ public class QueryVideoAuditResultResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>视频审校的详细结果</p>
+     * <p>Video audit result data</p>
      */
     @NameInMap("Data")
     public QueryVideoAuditResultResponseBodyData data;
 
     /**
-     * <p>HTTP响应状态码</p>
+     * <p>HTTP status code</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class QueryVideoAuditResultResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>业务处理结果描述信息</p>
+     * <p>Return message</p>
      * 
      * <strong>example:</strong>
      * <p>查询成功</p>
@@ -38,7 +38,7 @@ public class QueryVideoAuditResultResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>本次API请求的唯一标识</p>
+     * <p>Request ID</p>
      * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
@@ -47,7 +47,7 @@ public class QueryVideoAuditResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>请求是否处理成功</p>
+     * <p>Is successful</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class QueryVideoAuditResultResponseBody extends TeaModel {
 
     public static class QueryVideoAuditResultResponseBodyDataImageUrls extends TeaModel {
         /**
-         * <p>图片ID，与AliyunImageAuditResult中的dataId对应</p>
+         * <p>Image ID (Associate with Results[].DataId to get audit result information)</p>
          * 
          * <strong>example:</strong>
          * <p>img001</p>
@@ -119,6 +119,8 @@ public class QueryVideoAuditResultResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>Timestamp (milliseconds)</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -126,6 +128,8 @@ public class QueryVideoAuditResultResponseBody extends TeaModel {
         public Double timestamp;
 
         /**
+         * <p>Image URL</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/image1.jpg">https://example.com/image1.jpg</a></p>
          */
@@ -165,7 +169,7 @@ public class QueryVideoAuditResultResponseBody extends TeaModel {
 
     public static class QueryVideoAuditResultResponseBodyDataResultsResult extends TeaModel {
         /**
-         * <p>0到100分，保留到小数点后2位，部分标签无置信分</p>
+         * <p>From 0 to 100, retained to 2 decimal places. Some labels do not have a confidence score.</p>
          * 
          * <strong>example:</strong>
          * <p>99.5</p>
@@ -174,7 +178,7 @@ public class QueryVideoAuditResultResponseBody extends TeaModel {
         public Float confidence;
 
         /**
-         * <p>Label字段的解释说明</p>
+         * <p>Explanation of the Label field</p>
          * 
          * <strong>example:</strong>
          * <p>未检测出风险</p>
@@ -183,7 +187,13 @@ public class QueryVideoAuditResultResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>图片内容检测运算后返回的标签，如：nonLabel（未检测出风险）</p>
+         * <p>Risk label</p>
+         * <p>The label of the image content review result. For example: nonLabel (no risk detected).</p>
+         * <p>The label can also be a risk level that is determined by the high-risk and low-risk thresholds that you set. Valid return values are:
+         * ● high: high risk
+         * ● medium: medium risk
+         * ● low: low risk
+         * ● none: no risk detected</p>
          * 
          * <strong>example:</strong>
          * <p>nonLabel</p>
@@ -224,7 +234,7 @@ public class QueryVideoAuditResultResponseBody extends TeaModel {
 
     public static class QueryVideoAuditResultResponseBodyDataResults extends TeaModel {
         /**
-         * <p>对应图片的ID，与ImageUrl中的id字段对应</p>
+         * <p>Image ID (Associate with ImageUrls[].Id to get image information)</p>
          * 
          * <strong>example:</strong>
          * <p>d411ed15e8fc154fd0ef5addabfee04b</p>
@@ -233,7 +243,7 @@ public class QueryVideoAuditResultResponseBody extends TeaModel {
         public String dataId;
 
         /**
-         * <p>审核请求ID</p>
+         * <p>Request ID</p>
          * 
          * <strong>example:</strong>
          * <p>B5D1CF9E-0404-51E3-A28E-A5C7D95B6C71</p>
@@ -242,13 +252,23 @@ public class QueryVideoAuditResultResponseBody extends TeaModel {
         public String reqId;
 
         /**
-         * <p>图片检测的风险标签、置信分等参数结果</p>
+         * <p>Detection results</p>
          */
         @NameInMap("Result")
         public java.util.List<QueryVideoAuditResultResponseBodyDataResultsResult> result;
 
         /**
-         * <p>风险等级：high(高风险)、medium(中风险)、low(低风险)、none(未检测到风险)</p>
+         * <p>Risk level</p>
+         * <ul>
+         * <li><p>high: High risk</p>
+         * </li>
+         * <li><p>medium: Medium risk</p>
+         * </li>
+         * <li><p>low: Low risk</p>
+         * </li>
+         * <li><p>none: No risk</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>none</p>
@@ -297,7 +317,7 @@ public class QueryVideoAuditResultResponseBody extends TeaModel {
 
     public static class QueryVideoAuditResultResponseBodyData extends TeaModel {
         /**
-         * <p>视频总时长（秒）</p>
+         * <p>Video duration</p>
          * 
          * <strong>example:</strong>
          * <p>120.5</p>
@@ -306,13 +326,16 @@ public class QueryVideoAuditResultResponseBody extends TeaModel {
         public Double duration;
 
         /**
-         * <p>任务执行失败时的错误信息</p>
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>错误信息</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
-         * <p>视频帧率（FPS）</p>
+         * <p>Video frame rate</p>
          * 
          * <strong>example:</strong>
          * <p>30.0</p>
@@ -321,7 +344,7 @@ public class QueryVideoAuditResultResponseBody extends TeaModel {
         public Double fps;
 
         /**
-         * <p>已经完成审核的帧数</p>
+         * <p>Frames audited</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>
@@ -330,7 +353,7 @@ public class QueryVideoAuditResultResponseBody extends TeaModel {
         public Integer frameAudited;
 
         /**
-         * <p>视频高度（像素）</p>
+         * <p>Video height</p>
          * 
          * <strong>example:</strong>
          * <p>1080</p>
@@ -339,19 +362,19 @@ public class QueryVideoAuditResultResponseBody extends TeaModel {
         public Integer height;
 
         /**
-         * <p>抽取的图片URL列表</p>
+         * <p>Image URL list</p>
          */
         @NameInMap("ImageUrls")
         public java.util.List<QueryVideoAuditResultResponseBodyDataImageUrls> imageUrls;
 
         /**
-         * <p>图片审核结果详情</p>
+         * <p>Audit results list</p>
          */
         @NameInMap("Results")
         public java.util.List<QueryVideoAuditResultResponseBodyDataResults> results;
 
         /**
-         * <p>任务状态：PENDING(待执行)、RUNNING(执行中)、SUCCESSED(成功)、FAILED(失败)、CANCELED(取消)</p>
+         * <p>Task status (PENDING: Queued, RUNNING: In progress, SUCCESSED: Successful, FAILED: Failed, CANCELED: Task canceled)</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESSED</p>
@@ -360,7 +383,7 @@ public class QueryVideoAuditResultResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>视频审校的文本结果</p>
+         * <p>Reviewed text</p>
          * 
          * <strong>example:</strong>
          * <p>视频审核完成</p>
@@ -369,7 +392,7 @@ public class QueryVideoAuditResultResponseBody extends TeaModel {
         public String text;
 
         /**
-         * <p>需要审核的视频帧总数</p>
+         * <p>Frames to audit</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>
@@ -378,7 +401,7 @@ public class QueryVideoAuditResultResponseBody extends TeaModel {
         public Integer totalFrameAudit;
 
         /**
-         * <p>视频总帧数</p>
+         * <p>Total frames</p>
          * 
          * <strong>example:</strong>
          * <p>3615</p>
@@ -387,7 +410,7 @@ public class QueryVideoAuditResultResponseBody extends TeaModel {
         public Integer totalFrames;
 
         /**
-         * <p>检测到的视频分镜总数</p>
+         * <p>Total shots</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -396,7 +419,7 @@ public class QueryVideoAuditResultResponseBody extends TeaModel {
         public Integer totalShots;
 
         /**
-         * <p>被审核的视频文件Key</p>
+         * <p>Video FileKey</p>
          * 
          * <strong>example:</strong>
          * <p>video/test.mp4</p>
@@ -405,7 +428,7 @@ public class QueryVideoAuditResultResponseBody extends TeaModel {
         public String videoFileKey;
 
         /**
-         * <p>被审核的视频URL地址</p>
+         * <p>Video URL</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/video.mp4">https://example.com/video.mp4</a></p>
@@ -414,7 +437,7 @@ public class QueryVideoAuditResultResponseBody extends TeaModel {
         public String videoUrl;
 
         /**
-         * <p>视频宽度（像素）</p>
+         * <p>Video width</p>
          * 
          * <strong>example:</strong>
          * <p>1920</p>

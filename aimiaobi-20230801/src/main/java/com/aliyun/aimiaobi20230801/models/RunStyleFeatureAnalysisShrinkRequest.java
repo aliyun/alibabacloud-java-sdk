@@ -4,13 +4,20 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunStyleFeatureAnalysisShrinkRequest extends TeaModel {
+    /**
+     * <p>A collection of custom content texts.</p>
+     */
     @NameInMap("Contents")
     public String contentsShrink;
 
+    /**
+     * <p>A collection of Material Library IDs.</p>
+     */
     @NameInMap("MaterialIds")
     public String materialIdsShrink;
 
     /**
+     * <p>The unique identifier of the Alibaba Cloud Model Studio workspace. Get the <a href="https://help.aliyun.com/document_detail/2782167.html">workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

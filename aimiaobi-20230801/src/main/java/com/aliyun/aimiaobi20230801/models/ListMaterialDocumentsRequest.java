@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMaterialDocumentsRequest extends TeaModel {
     /**
+     * <p>Unique identifier for the workspace: <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,18 @@ public class ListMaterialDocumentsRequest extends TeaModel {
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>Full-text search of document content</p>
+     * 
+     * <strong>example:</strong>
+     * <p>新闻内容</p>
+     */
     @NameInMap("Content")
     public String content;
 
     /**
+     * <p>Creation time - end range. Format: yyyy-MM-dd HH:mm:ss</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-03-18 02:00:00</p>
      */
@@ -24,6 +33,8 @@ public class ListMaterialDocumentsRequest extends TeaModel {
     public String createTimeEnd;
 
     /**
+     * <p>Creation time - start range. Format: yyyy-MM-dd HH:mm:ss</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-02-19 07:28:11</p>
      */
@@ -31,6 +42,8 @@ public class ListMaterialDocumentsRequest extends TeaModel {
     public String createTimeStart;
 
     /**
+     * <p>Current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -38,6 +51,8 @@ public class ListMaterialDocumentsRequest extends TeaModel {
     public Integer current;
 
     /**
+     * <p>Document type (html: web page, plainText: plain text, image: image, pdf: pdf, word: word, excel: excel, csv: csv, jsonLine: jsonLine)</p>
+     * 
      * <strong>example:</strong>
      * <p>jsonLine</p>
      */
@@ -45,6 +60,8 @@ public class ListMaterialDocumentsRequest extends TeaModel {
     public String docType;
 
     /**
+     * <p>Document type list (html: web page, plainText: plain text, image: image, pdf: pdf, word: word, excel: excel, csv: csv, jsonLine: jsonLine)</p>
+     * 
      * <strong>example:</strong>
      * <p>excel</p>
      */
@@ -52,6 +69,8 @@ public class ListMaterialDocumentsRequest extends TeaModel {
     public java.util.List<String> docTypeList;
 
     /**
+     * <p>Generate a public URL for the file.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -59,19 +78,32 @@ public class ListMaterialDocumentsRequest extends TeaModel {
     public Boolean generatePublicUrl;
 
     /**
+     * <p>Material primary key ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>69</p>
      */
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>Document keywords.</p>
+     */
     @NameInMap("Keywords")
     public java.util.List<String> keywords;
 
+    /**
+     * <p>Supports comprehensive queries for title, content, and content.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>小猫</p>
+     */
     @NameInMap("Query")
     public String query;
 
     /**
+     * <p>Share property: 0: personal private, 1: shared within the workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -79,16 +111,26 @@ public class ListMaterialDocumentsRequest extends TeaModel {
     public Integer shareAttr;
 
     /**
+     * <p>Number of items per page. Default is 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("Size")
     public Integer size;
 
+    /**
+     * <p>Performs a full-text search on material titles.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>新闻标题</p>
+     */
     @NameInMap("Title")
     public String title;
 
     /**
+     * <p>Update time - end range. Format: yyyy-MM-dd HH:mm:ss</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-03-18 03:00:00</p>
      */
@@ -96,6 +138,8 @@ public class ListMaterialDocumentsRequest extends TeaModel {
     public String updateTimeEnd;
 
     /**
+     * <p>Update time - start range. Format: yyyy-MM-dd HH:mm:ss</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-03-18 02:00:00</p>
      */

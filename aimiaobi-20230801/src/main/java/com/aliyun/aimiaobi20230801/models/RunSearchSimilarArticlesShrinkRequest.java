@@ -4,20 +4,32 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunSearchSimilarArticlesShrinkRequest extends TeaModel {
+    /**
+     * <p>Communication configuration parameters.</p>
+     */
     @NameInMap("ChatConfig")
     public String chatConfigShrink;
 
     /**
+     * <p>Document type.</p>
+     * 
      * <strong>example:</strong>
      * <p>html</p>
      */
     @NameInMap("DocType")
     public String docType;
 
+    /**
+     * <p>Article title.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>标题</p>
+     */
     @NameInMap("Title")
     public String title;
 
     /**
+     * <p>Article URL.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +39,7 @@ public class RunSearchSimilarArticlesShrinkRequest extends TeaModel {
     public String url;
 
     /**
+     * <p>Unique identifier of the Alibaba Cloud Model Studio workspace. To get this ID, see <a href="https://help.aliyun.com/document_detail/2782167.html">Get the workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDatasetsRequest extends TeaModel {
     /**
+     * <p>A keyword within the dataset description to filter results.</p>
+     * 
      * <strong>example:</strong>
      * <p>xx</p>
      */
@@ -12,6 +14,8 @@ public class ListDatasetsRequest extends TeaModel {
     public String datasetDescription;
 
     /**
+     * <p>The dataset ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ListDatasetsRequest extends TeaModel {
     public Long datasetId;
 
     /**
+     * <p>The dataset name. The name must be globally unique.</p>
+     * 
      * <strong>example:</strong>
      * <p>businessDataset</p>
      */
@@ -26,6 +32,8 @@ public class ListDatasetsRequest extends TeaModel {
     public String datasetName;
 
     /**
+     * <p>The dataset type.</p>
+     * 
      * <strong>example:</strong>
      * <p>CustomSemanticSearch</p>
      */
@@ -33,16 +41,23 @@ public class ListDatasetsRequest extends TeaModel {
     public String datasetType;
 
     /**
+     * <p>The end of the creation time range.</p>
+     * 
      * <strong>example:</strong>
      * <p>创建时间-结束</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>Specifies whether to return configuration and usage information. Default value: false.</p>
+     */
     @NameInMap("IncludeConfig")
     public Boolean includeConfig;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -50,6 +65,8 @@ public class ListDatasetsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -57,6 +74,8 @@ public class ListDatasetsRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>Specifies the dataset search setting.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -64,6 +83,8 @@ public class ListDatasetsRequest extends TeaModel {
     public Integer searchDatasetEnable;
 
     /**
+     * <p>The start of the creation time range.</p>
+     * 
      * <strong>example:</strong>
      * <p>创建时间-开始</p>
      */
@@ -71,6 +92,7 @@ public class ListDatasetsRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The unique ID of the Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Get workspaceId</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

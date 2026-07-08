@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListTopicRecommendEventListResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>List of hot spot events</p>
+     */
     @NameInMap("Data")
     public java.util.List<String> data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListTopicRecommendEventListResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Maximum number of records returned</p>
+     * 
      * <strong>example:</strong>
      * <p>71</p>
      */
@@ -29,6 +38,8 @@ public class ListTopicRecommendEventListResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Error description</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -36,6 +47,8 @@ public class ListTopicRecommendEventListResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Next page token</p>
+     * 
      * <strong>example:</strong>
      * <p>x\&quot;x\&quot;x</p>
      */
@@ -43,6 +56,8 @@ public class ListTopicRecommendEventListResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Unique request identifier</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -50,6 +65,8 @@ public class ListTopicRecommendEventListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the request was successful: true for success, false for failure</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -57,6 +74,8 @@ public class ListTopicRecommendEventListResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Total number of records</p>
+     * 
      * <strong>example:</strong>
      * <p>60</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetFileContentLengthRequest extends TeaModel {
     /**
+     * <p>Document name</p>
+     * 
      * <strong>example:</strong>
      * <p>test.pdf</p>
      */
@@ -12,6 +14,8 @@ public class GetFileContentLengthRequest extends TeaModel {
     public String docName;
 
     /**
+     * <p>File URL</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://xxx/test.pdf">https://xxx/test.pdf</a></p>
      */
@@ -19,6 +23,7 @@ public class GetFileContentLengthRequest extends TeaModel {
     public String fileUrl;
 
     /**
+     * <p>The unique identifier of an Alibaba Cloud Model Studio workspace. Get your <a href="https://help.aliyun.com/document_detail/2782167.html">workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

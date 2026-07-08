@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPptTemplatesRequest extends TeaModel {
     /**
+     * <p>The career ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,16 +14,26 @@ public class ListPptTemplatesRequest extends TeaModel {
     public Integer careerId;
 
     /**
+     * <p>The color ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("ColourId")
     public Integer colourId;
 
+    /**
+     * <p>The maximum number of results to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>暂不支持修改，固定为10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
+     * <p>The token used to retrieve the next page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>+CBOXvu2YLxC6DOua8Qupg==</p>
      */
@@ -29,6 +41,8 @@ public class ListPptTemplatesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The template scenario ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7</p>
      */
@@ -36,6 +50,8 @@ public class ListPptTemplatesRequest extends TeaModel {
     public Integer sceneId;
 
     /**
+     * <p>The style ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -43,6 +59,8 @@ public class ListPptTemplatesRequest extends TeaModel {
     public Integer styleId;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm-xx</p>
      */

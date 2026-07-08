@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetDatasetDocumentResponseBody extends TeaModel {
     /**
+     * <p>Status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business data.</p>
+     */
     @NameInMap("Data")
     public GetDatasetDocumentResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Unique identifier of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -36,6 +47,8 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation succeeded. true means success. false means failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -96,12 +109,30 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
     }
 
     public static class GetDatasetDocumentResponseBodyDataMetadataAsrSentences extends TeaModel {
+        /**
+         * <p>End time in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>Start time in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <p>ASR text content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("Text")
         public String text;
 
@@ -137,9 +168,21 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
     }
 
     public static class GetDatasetDocumentResponseBodyDataMetadataKeyValues extends TeaModel {
+        /**
+         * <p>Parameter Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>Parameter value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -167,12 +210,30 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
     }
 
     public static class GetDatasetDocumentResponseBodyDataMetadataVideoShots extends TeaModel {
+        /**
+         * <p>End time of the video shard in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>Start time of the video shard in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <p>Content of the video shard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("Text")
         public String text;
 
@@ -208,15 +269,30 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
     }
 
     public static class GetDatasetDocumentResponseBodyDataMetadata extends TeaModel {
+        /**
+         * <p>ASR results.</p>
+         */
         @NameInMap("AsrSentences")
         public java.util.List<GetDatasetDocumentResponseBodyDataMetadataAsrSentences> asrSentences;
 
+        /**
+         * <p>Key-value structure metadata</p>
+         */
         @NameInMap("KeyValues")
         public java.util.List<GetDatasetDocumentResponseBodyDataMetadataKeyValues> keyValues;
 
+        /**
+         * <p>Metadata for the document dimension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Text")
         public String text;
 
+        /**
+         * <p>Video sharding information.</p>
+         */
         @NameInMap("VideoShots")
         public java.util.List<GetDatasetDocumentResponseBodyDataMetadataVideoShots> videoShots;
 
@@ -260,13 +336,27 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
     }
 
     public static class GetDatasetDocumentResponseBodyData extends TeaModel {
+        /**
+         * <p>Category UUID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("CategoryUuid")
         public String categoryUuid;
 
+        /**
+         * <p>Content of the article.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>文章内容</p>
+         */
         @NameInMap("Content")
         public String content;
 
         /**
+         * <p>Whether this record is indexed in the multimodal index library.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -274,35 +364,68 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
         public Boolean disableHandleMultimodalMedia;
 
         /**
+         * <p>User-side unique ID of the document.</p>
+         * 
          * <strong>example:</strong>
-         * <p>用户指定的文档唯一ID</p>
+         * <p>xxx</p>
          */
         @NameInMap("DocId")
         public String docId;
 
+        /**
+         * <p>Document type. For example, video or image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>video</p>
+         */
         @NameInMap("DocType")
         public String docType;
 
         /**
+         * <p>Unique ID of the document in the document system.</p>
+         * 
          * <strong>example:</strong>
-         * <p>内部文档唯一ID</p>
+         * <p>xxx</p>
          */
         @NameInMap("DocUuid")
         public String docUuid;
 
+        /**
+         * <p>Extension field 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend1")
         public String extend1;
 
+        /**
+         * <p>Extension field 2</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend2")
         public String extend2;
 
+        /**
+         * <p>Extension field 3</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend3")
         public String extend3;
 
+        /**
+         * <p>Dictionary information.</p>
+         */
         @NameInMap("Metadata")
         public GetDatasetDocumentResponseBodyDataMetadata metadata;
 
         /**
+         * <p>Publication time in yyyy-MM-dd HH:mm:ss format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-05-14 08:54:33</p>
          */
@@ -310,29 +433,50 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
         public String pubTime;
 
         /**
+         * <p>Source of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>来源</p>
          */
         @NameInMap("SourceFrom")
         public String sourceFrom;
 
+        /**
+         * <p>Document status. 100 means success. 0 means failure. 1 means indexing or queued.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
         /**
+         * <p>Summary of the article.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章摘要</p>
          */
         @NameInMap("Summary")
         public String summary;
 
+        /**
+         * <p>Tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<String> tags;
 
+        /**
+         * <p>Title of the document.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>文档标题</p>
+         */
         @NameInMap("Title")
         public String title;
 
         /**
+         * <p>URL of the article.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>
          */

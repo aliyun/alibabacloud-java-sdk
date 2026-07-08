@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The business data.</p>
+     */
     @NameInMap("Data")
     public GetTopicSelectionPerspectiveAnalysisTaskResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
     public Integer httpStatusCode;
 
     /**
+     * <p>The error description.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
     public String message;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -36,6 +47,8 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. A value of true indicates success. A value of false indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
 
     public static class GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataFreshViewPointsResultAttitudesViewPointsOutlines extends TeaModel {
         /**
+         * <p>The outline.</p>
+         * 
          * <strong>example:</strong>
          * <p>大纲</p>
          */
@@ -104,6 +119,8 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         public String outline;
 
         /**
+         * <p>The summary of the outline.</p>
+         * 
          * <strong>example:</strong>
          * <p>大纲摘要</p>
          */
@@ -134,10 +151,15 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
     }
 
     public static class GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataFreshViewPointsResultAttitudesViewPoints extends TeaModel {
+        /**
+         * <p>The outline.</p>
+         */
         @NameInMap("Outlines")
         public java.util.List<GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataFreshViewPointsResultAttitudesViewPointsOutlines> outlines;
 
         /**
+         * <p>The generated perspective.</p>
+         * 
          * <strong>example:</strong>
          * <p>视角</p>
          */
@@ -145,6 +167,8 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         public String point;
 
         /**
+         * <p>The summary.</p>
+         * 
          * <strong>example:</strong>
          * <p>摘要</p>
          */
@@ -184,6 +208,8 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
 
     public static class GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataFreshViewPointsResultAttitudes extends TeaModel {
         /**
+         * <p>The current viewpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>当前观点</p>
          */
@@ -191,6 +217,8 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         public String attitude;
 
         /**
+         * <p>The type of the viewpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>观点类型</p>
          */
@@ -198,12 +226,17 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         public String attitudeType;
 
         /**
+         * <p>The proportion of the current viewpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>当前观点占比</p>
          */
         @NameInMap("Ratio")
         public String ratio;
 
+        /**
+         * <p>A list of topic selection perspectives.</p>
+         */
         @NameInMap("ViewPoints")
         public java.util.List<GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataFreshViewPointsResultAttitudesViewPoints> viewPoints;
 
@@ -247,6 +280,9 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
     }
 
     public static class GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataFreshViewPointsResult extends TeaModel {
+        /**
+         * <p>A list of viewpoints for novel topic selection perspectives.</p>
+         */
         @NameInMap("Attitudes")
         public java.util.List<GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataFreshViewPointsResultAttitudes> attitudes;
 
@@ -266,13 +302,27 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
     }
 
     public static class GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataHotViewPointsResultAttitudesNews extends TeaModel {
+        /**
+         * <p>The news content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Content</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The time when the article was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-05-08 02:23:01</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
+         * <p>The custom unique ID of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>9957175DEDCF49C5ACF7A956B4FD67B2</p>
          */
@@ -280,45 +330,83 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         public String docId;
 
         /**
+         * <p>The unique ID of the article.</p>
+         * 
          * <strong>example:</strong>
-         * <p>123456</p>
+         * <p>&quot;123456&quot;</p>
          */
         @NameInMap("DocUuid")
         public String docUuid;
 
         /**
+         * <p>The URLs of the images in the article.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://www.example.com/aaa.png">https://www.example.com/aaa.png</a></p>
          */
         @NameInMap("ImageUrls")
         public java.util.List<String> imageUrls;
 
+        /**
+         * <p>The time when the article was published.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-05-08 02:23:02</p>
+         */
         @NameInMap("PubTime")
         public String pubTime;
 
+        /**
+         * <p>The source of the news.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>夸克</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>The summary of the news.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>新闻摘要</p>
+         */
         @NameInMap("Summary")
         public String summary;
 
         /**
+         * <p>The tags.</p>
+         * 
          * <strong>example:</strong>
          * <p>[&quot;标签1&quot;,&quot;标签2&quot;]</p>
          */
         @NameInMap("Tags")
         public java.util.List<String> tags;
 
+        /**
+         * <p>The title of the news.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>新闻标题</p>
+         */
         @NameInMap("Title")
         public String title;
 
         /**
+         * <p>The topic of the article.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章主题</p>
          */
         @NameInMap("Topic")
         public String topic;
 
+        /**
+         * <p>The URL of the news.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">http://www.example.com</a></p>
+         */
         @NameInMap("Url")
         public String url;
 
@@ -427,6 +515,8 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
 
     public static class GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataHotViewPointsResultAttitudesViewPointsOutlines extends TeaModel {
         /**
+         * <p>The outline.</p>
+         * 
          * <strong>example:</strong>
          * <p>大纲</p>
          */
@@ -434,6 +524,8 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         public String outline;
 
         /**
+         * <p>The summary of the outline.</p>
+         * 
          * <strong>example:</strong>
          * <p>大纲摘要</p>
          */
@@ -464,10 +556,15 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
     }
 
     public static class GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataHotViewPointsResultAttitudesViewPoints extends TeaModel {
+        /**
+         * <p>The outline.</p>
+         */
         @NameInMap("Outlines")
         public java.util.List<GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataHotViewPointsResultAttitudesViewPointsOutlines> outlines;
 
         /**
+         * <p>The generated perspective.</p>
+         * 
          * <strong>example:</strong>
          * <p>视角</p>
          */
@@ -475,6 +572,8 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         public String point;
 
         /**
+         * <p>The summary.</p>
+         * 
          * <strong>example:</strong>
          * <p>摘要</p>
          */
@@ -514,6 +613,8 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
 
     public static class GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataHotViewPointsResultAttitudes extends TeaModel {
         /**
+         * <p>The current viewpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>当前观点</p>
          */
@@ -521,22 +622,32 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         public String attitude;
 
         /**
+         * <p>The type of the viewpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>观点类型</p>
          */
         @NameInMap("AttitudeType")
         public String attitudeType;
 
+        /**
+         * <p>A list of related news.</p>
+         */
         @NameInMap("News")
         public java.util.List<GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataHotViewPointsResultAttitudesNews> news;
 
         /**
+         * <p>The proportion of the current viewpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>当前观点占比</p>
          */
         @NameInMap("Ratio")
         public String ratio;
 
+        /**
+         * <p>A list of topic selection perspectives.</p>
+         */
         @NameInMap("ViewPoints")
         public java.util.List<GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataHotViewPointsResultAttitudesViewPoints> viewPoints;
 
@@ -588,6 +699,9 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
     }
 
     public static class GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataHotViewPointsResult extends TeaModel {
+        /**
+         * <p>A list of viewpoints for hot topic selection perspectives.</p>
+         */
         @NameInMap("Attitudes")
         public java.util.List<GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataHotViewPointsResultAttitudes> attitudes;
 
@@ -608,6 +722,8 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
 
     public static class GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataTimedViewPointsResultAttitudesViewPointsOutlines extends TeaModel {
         /**
+         * <p>The outline.</p>
+         * 
          * <strong>example:</strong>
          * <p>大纲</p>
          */
@@ -615,6 +731,8 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         public String outline;
 
         /**
+         * <p>The summary of the outline.</p>
+         * 
          * <strong>example:</strong>
          * <p>大纲摘要</p>
          */
@@ -645,10 +763,15 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
     }
 
     public static class GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataTimedViewPointsResultAttitudesViewPoints extends TeaModel {
+        /**
+         * <p>The outline.</p>
+         */
         @NameInMap("Outlines")
         public java.util.List<GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataTimedViewPointsResultAttitudesViewPointsOutlines> outlines;
 
         /**
+         * <p>The generated perspective.</p>
+         * 
          * <strong>example:</strong>
          * <p>视角</p>
          */
@@ -656,6 +779,8 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         public String point;
 
         /**
+         * <p>The summary.</p>
+         * 
          * <strong>example:</strong>
          * <p>摘要</p>
          */
@@ -695,6 +820,8 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
 
     public static class GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataTimedViewPointsResultAttitudes extends TeaModel {
         /**
+         * <p>The current viewpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>当前观点</p>
          */
@@ -702,6 +829,8 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         public String attitude;
 
         /**
+         * <p>The type of the viewpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>观点类型</p>
          */
@@ -709,6 +838,8 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         public String attitudeType;
 
         /**
+         * <p>The time when the viewpoint was published.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-22 10:29</p>
          */
@@ -716,6 +847,8 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         public String pubTime;
 
         /**
+         * <p>The proportion of the current viewpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>当前观点占比</p>
          */
@@ -723,6 +856,8 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         public String ratio;
 
         /**
+         * <p>The source of the news.</p>
+         * 
          * <strong>example:</strong>
          * <p>新浪</p>
          */
@@ -730,6 +865,8 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         public String source;
 
         /**
+         * <p>The current viewpoint. This is the same as the news title.</p>
+         * 
          * <strong>example:</strong>
          * <p>标题</p>
          */
@@ -737,12 +874,17 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         public String title;
 
         /**
+         * <p>The URL of the news.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com/news/1.html">http://www.example.com/news/1.html</a></p>
          */
         @NameInMap("Url")
         public String url;
 
+        /**
+         * <p>A list of topic selection perspectives.</p>
+         */
         @NameInMap("ViewPoints")
         public java.util.List<GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataTimedViewPointsResultAttitudesViewPoints> viewPoints;
 
@@ -818,6 +960,9 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
     }
 
     public static class GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataTimedViewPointsResult extends TeaModel {
+        /**
+         * <p>A list of viewpoints for time-sensitive topic selection perspectives.</p>
+         */
         @NameInMap("Attitudes")
         public java.util.List<GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataTimedViewPointsResultAttitudes> attitudes;
 
@@ -837,13 +982,27 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
     }
 
     public static class GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataTopicSummaryResultSummariesDocList extends TeaModel {
+        /**
+         * <p>The source of the article.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>头条</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>The title of the article.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>标题</p>
+         */
         @NameInMap("Title")
         public String title;
 
         /**
+         * <p>The URL of the article.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">http://www.example.com</a></p>
          */
@@ -882,10 +1041,15 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
     }
 
     public static class GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataTopicSummaryResultSummaries extends TeaModel {
+        /**
+         * <p>The articles referenced to generate the summary for this title.</p>
+         */
         @NameInMap("DocList")
         public java.util.List<GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataTopicSummaryResultSummariesDocList> docList;
 
         /**
+         * <p>The summary.</p>
+         * 
          * <strong>example:</strong>
          * <p>摘要</p>
          */
@@ -893,6 +1057,8 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         public String summary;
 
         /**
+         * <p>The title.</p>
+         * 
          * <strong>example:</strong>
          * <p>标题</p>
          */
@@ -931,6 +1097,9 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
     }
 
     public static class GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataTopicSummaryResult extends TeaModel {
+        /**
+         * <p>A list of summaries.</p>
+         */
         @NameInMap("Summaries")
         public java.util.List<GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataTopicSummaryResultSummaries> summaries;
 
@@ -951,6 +1120,8 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
 
     public static class GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataWebReviewPointsResultAttitudesComments extends TeaModel {
         /**
+         * <p>The source.</p>
+         * 
          * <strong>example:</strong>
          * <p>来源</p>
          */
@@ -958,13 +1129,17 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         public String source;
 
         /**
+         * <p>The content.</p>
+         * 
          * <strong>example:</strong>
-         * <p>评论内容</p>
+         * <p>内容</p>
          */
         @NameInMap("Text")
         public String text;
 
         /**
+         * <p>The title.</p>
+         * 
          * <strong>example:</strong>
          * <p>标题</p>
          */
@@ -972,15 +1147,19 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         public String title;
 
         /**
+         * <p>The URL where the comment is located.</p>
+         * 
          * <strong>example:</strong>
-         * <p>当前评论所属的URL</p>
+         * <p>当前所属的URL</p>
          */
         @NameInMap("Url")
         public String url;
 
         /**
+         * <p>The username.</p>
+         * 
          * <strong>example:</strong>
-         * <p>评论用户名</p>
+         * <p>用户名</p>
          */
         @NameInMap("Username")
         public String username;
@@ -1034,6 +1213,8 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
 
     public static class GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataWebReviewPointsResultAttitudesViewPointsOutlines extends TeaModel {
         /**
+         * <p>The outline.</p>
+         * 
          * <strong>example:</strong>
          * <p>大纲</p>
          */
@@ -1041,6 +1222,8 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         public String outline;
 
         /**
+         * <p>The summary of the outline.</p>
+         * 
          * <strong>example:</strong>
          * <p>大纲摘要</p>
          */
@@ -1071,10 +1254,15 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
     }
 
     public static class GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataWebReviewPointsResultAttitudesViewPoints extends TeaModel {
+        /**
+         * <p>The outline.</p>
+         */
         @NameInMap("Outlines")
         public java.util.List<GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataWebReviewPointsResultAttitudesViewPointsOutlines> outlines;
 
         /**
+         * <p>The generated perspective.</p>
+         * 
          * <strong>example:</strong>
          * <p>视角</p>
          */
@@ -1082,6 +1270,8 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         public String point;
 
         /**
+         * <p>The summary.</p>
+         * 
          * <strong>example:</strong>
          * <p>摘要</p>
          */
@@ -1121,6 +1311,8 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
 
     public static class GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataWebReviewPointsResultAttitudes extends TeaModel {
         /**
+         * <p>The current viewpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>当前观点</p>
          */
@@ -1128,22 +1320,32 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         public String attitude;
 
         /**
+         * <p>The type of the viewpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>观点类型</p>
          */
         @NameInMap("AttitudeType")
         public String attitudeType;
 
+        /**
+         * <p>A list of user comments.</p>
+         */
         @NameInMap("Comments")
         public java.util.List<GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataWebReviewPointsResultAttitudesComments> comments;
 
         /**
+         * <p>The proportion of the current viewpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>当前观点占比</p>
          */
         @NameInMap("Ratio")
         public String ratio;
 
+        /**
+         * <p>A list of topic selection perspectives.</p>
+         */
         @NameInMap("ViewPoints")
         public java.util.List<GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataWebReviewPointsResultAttitudesViewPoints> viewPoints;
 
@@ -1195,6 +1397,9 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
     }
 
     public static class GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataWebReviewPointsResult extends TeaModel {
+        /**
+         * <p>A list of viewpoints from online reviews for topic selection.</p>
+         */
         @NameInMap("Attitudes")
         public java.util.List<GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataWebReviewPointsResultAttitudes> attitudes;
 
@@ -1215,38 +1420,59 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
 
     public static class GetTopicSelectionPerspectiveAnalysisTaskResponseBodyData extends TeaModel {
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>错误信息</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The analysis result of novel topic selection perspectives.</p>
+         */
         @NameInMap("FreshViewPointsResult")
         public GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataFreshViewPointsResult freshViewPointsResult;
 
+        /**
+         * <p>The analysis result of hot topic selection perspectives.</p>
+         */
         @NameInMap("HotViewPointsResult")
         public GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataHotViewPointsResult hotViewPointsResult;
 
         /**
+         * <p>The status of the task. Valid values: PENDING, RUNNING, SUCCESSED, SUSPENDED, FAILED, and CANCELED.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUSPENDED</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The analysis result of time-sensitive topic selection perspectives.</p>
+         */
         @NameInMap("TimedViewPointsResult")
         public GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataTimedViewPointsResult timedViewPointsResult;
 
         /**
+         * <p>The hot spot topic event.</p>
+         * 
          * <strong>example:</strong>
          * <p>热点主题事件</p>
          */
         @NameInMap("Topic")
         public String topic;
 
+        /**
+         * <p>The summary of the hot spot topic event.</p>
+         */
         @NameInMap("TopicSummaryResult")
         public GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataTopicSummaryResult topicSummaryResult;
 
+        /**
+         * <p>The analysis result of online review topic selection perspectives.</p>
+         */
         @NameInMap("WebReviewPointsResult")
         public GetTopicSelectionPerspectiveAnalysisTaskResponseBodyDataWebReviewPointsResult webReviewPointsResult;
 

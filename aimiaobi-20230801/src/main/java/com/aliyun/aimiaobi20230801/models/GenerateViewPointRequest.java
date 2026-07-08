@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GenerateViewPointRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,6 +14,9 @@ public class GenerateViewPointRequest extends TeaModel {
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>The context data.</p>
+     */
     @NameInMap("ReferenceData")
     public GenerateViewPointRequestReferenceData referenceData;
 
@@ -38,6 +42,9 @@ public class GenerateViewPointRequest extends TeaModel {
     }
 
     public static class GenerateViewPointRequestReferenceData extends TeaModel {
+        /**
+         * <p>The article snippets.</p>
+         */
         @NameInMap("MiniDoc")
         public java.util.List<String> miniDoc;
 

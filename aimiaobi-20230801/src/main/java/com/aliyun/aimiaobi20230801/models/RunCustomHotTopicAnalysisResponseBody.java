@@ -4,13 +4,21 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunCustomHotTopicAnalysisResponseBody extends TeaModel {
+    /**
+     * <p>The response header.</p>
+     */
     @NameInMap("Header")
     public RunCustomHotTopicAnalysisResponseBodyHeader header;
 
+    /**
+     * <p>The response body.</p>
+     */
     @NameInMap("Payload")
     public RunCustomHotTopicAnalysisResponseBodyPayload payload;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */
@@ -48,6 +56,8 @@ public class RunCustomHotTopicAnalysisResponseBody extends TeaModel {
 
     public static class RunCustomHotTopicAnalysisResponseBodyHeader extends TeaModel {
         /**
+         * <p>The error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>错误码</p>
          */
@@ -55,6 +65,8 @@ public class RunCustomHotTopicAnalysisResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>错误信息</p>
          */
@@ -62,6 +74,8 @@ public class RunCustomHotTopicAnalysisResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The Server-Sent Events (SSE) event. Valid values: task-started: The task starts. task-finished: The task is complete. task-failed: The task failed.</p>
+         * 
          * <strong>example:</strong>
          * <p>task-started</p>
          */
@@ -69,6 +83,8 @@ public class RunCustomHotTopicAnalysisResponseBody extends TeaModel {
         public String event;
 
         /**
+         * <p>The parent session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
@@ -76,6 +92,8 @@ public class RunCustomHotTopicAnalysisResponseBody extends TeaModel {
         public String originSessionId;
 
         /**
+         * <p>The session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
@@ -83,6 +101,8 @@ public class RunCustomHotTopicAnalysisResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
@@ -90,6 +110,8 @@ public class RunCustomHotTopicAnalysisResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The trace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>全链路ID</p>
          */
@@ -161,6 +183,8 @@ public class RunCustomHotTopicAnalysisResponseBody extends TeaModel {
 
     public static class RunCustomHotTopicAnalysisResponseBodyPayloadOutputArticles extends TeaModel {
         /**
+         * <p>The author.</p>
+         * 
          * <strong>example:</strong>
          * <p>作者</p>
          */
@@ -168,6 +192,8 @@ public class RunCustomHotTopicAnalysisResponseBody extends TeaModel {
         public String author;
 
         /**
+         * <p>The content.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章内容</p>
          */
@@ -175,6 +201,8 @@ public class RunCustomHotTopicAnalysisResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>The custom unique ID of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>文档-自定义的唯一ID</p>
          */
@@ -182,6 +210,8 @@ public class RunCustomHotTopicAnalysisResponseBody extends TeaModel {
         public String docId;
 
         /**
+         * <p>The internal unique ID of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>a2103fcfbd5441f1991c72f8834833e3</p>
          */
@@ -189,6 +219,8 @@ public class RunCustomHotTopicAnalysisResponseBody extends TeaModel {
         public String docUuid;
 
         /**
+         * <p>The publication time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-08-27 14:50:47</p>
          */
@@ -196,6 +228,8 @@ public class RunCustomHotTopicAnalysisResponseBody extends TeaModel {
         public String pubTime;
 
         /**
+         * <p>The source.</p>
+         * 
          * <strong>example:</strong>
          * <p>央视网</p>
          */
@@ -203,6 +237,8 @@ public class RunCustomHotTopicAnalysisResponseBody extends TeaModel {
         public String source;
 
         /**
+         * <p>The article summary.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章摘要</p>
          */
@@ -210,6 +246,8 @@ public class RunCustomHotTopicAnalysisResponseBody extends TeaModel {
         public String summary;
 
         /**
+         * <p>The tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章标签</p>
          */
@@ -217,6 +255,8 @@ public class RunCustomHotTopicAnalysisResponseBody extends TeaModel {
         public String tag;
 
         /**
+         * <p>The title.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章标题</p>
          */
@@ -224,6 +264,8 @@ public class RunCustomHotTopicAnalysisResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>The URL of the article.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://www.example.com/aaa.docx">https://www.example.com/aaa.docx</a></p>
          */
@@ -318,13 +360,21 @@ public class RunCustomHotTopicAnalysisResponseBody extends TeaModel {
     }
 
     public static class RunCustomHotTopicAnalysisResponseBodyPayloadOutput extends TeaModel {
+        /**
+         * <p>The reference articles.</p>
+         */
         @NameInMap("Articles")
         public java.util.List<RunCustomHotTopicAnalysisResponseBodyPayloadOutputArticles> articles;
 
+        /**
+         * <p>The list of follow-up questions.</p>
+         */
         @NameInMap("AskUser")
         public java.util.List<String> askUser;
 
         /**
+         * <p>The ID of the asynchronous task.</p>
+         * 
          * <strong>example:</strong>
          * <p>异步任务ID</p>
          */
@@ -332,6 +382,8 @@ public class RunCustomHotTopicAnalysisResponseBody extends TeaModel {
         public String asyncTaskId;
 
         /**
+         * <p>The custom perspective for topic selection.</p>
+         * 
          * <strong>example:</strong>
          * <p>自定义选题视角</p>
          */
@@ -339,6 +391,8 @@ public class RunCustomHotTopicAnalysisResponseBody extends TeaModel {
         public String attitude;
 
         /**
+         * <p>The rewritten query.</p>
+         * 
          * <strong>example:</strong>
          * <p>大模型改变世界</p>
          */
@@ -346,6 +400,8 @@ public class RunCustomHotTopicAnalysisResponseBody extends TeaModel {
         public String searchQuery;
 
         /**
+         * <p>The text generation result.</p>
+         * 
          * <strong>example:</strong>
          * <p>文本生成结果</p>
          */
@@ -353,6 +409,8 @@ public class RunCustomHotTopicAnalysisResponseBody extends TeaModel {
         public String text;
 
         /**
+         * <p>The topic ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>话题ID</p>
          */
@@ -424,6 +482,8 @@ public class RunCustomHotTopicAnalysisResponseBody extends TeaModel {
 
     public static class RunCustomHotTopicAnalysisResponseBodyPayloadUsage extends TeaModel {
         /**
+         * <p>The number of tokens used for the input.</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
@@ -431,6 +491,8 @@ public class RunCustomHotTopicAnalysisResponseBody extends TeaModel {
         public Long inputTokens;
 
         /**
+         * <p>The number of tokens for the output.</p>
+         * 
          * <strong>example:</strong>
          * <p>13</p>
          */
@@ -438,6 +500,8 @@ public class RunCustomHotTopicAnalysisResponseBody extends TeaModel {
         public Long outputTokens;
 
         /**
+         * <p>The total number of tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>73</p>
          */
@@ -476,9 +540,15 @@ public class RunCustomHotTopicAnalysisResponseBody extends TeaModel {
     }
 
     public static class RunCustomHotTopicAnalysisResponseBodyPayload extends TeaModel {
+        /**
+         * <p>The output.</p>
+         */
         @NameInMap("Output")
         public RunCustomHotTopicAnalysisResponseBodyPayloadOutput output;
 
+        /**
+         * <p>The token usage.</p>
+         */
         @NameInMap("Usage")
         public RunCustomHotTopicAnalysisResponseBodyPayloadUsage usage;
 

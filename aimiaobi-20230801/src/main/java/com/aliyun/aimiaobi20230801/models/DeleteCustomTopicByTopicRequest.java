@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCustomTopicByTopicRequest extends TeaModel {
     /**
+     * <p>Workspace unique identifier: <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteCustomTopicByTopicRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>Custom topic</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

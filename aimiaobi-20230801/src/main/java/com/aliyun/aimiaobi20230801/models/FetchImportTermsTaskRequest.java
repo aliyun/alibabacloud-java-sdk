@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class FetchImportTermsTaskRequest extends TeaModel {
     /**
+     * <p>The FileKey of the file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class FetchImportTermsTaskRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The unique identifier of the Alibaba Cloud Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Get a workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

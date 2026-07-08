@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListEnterprisePptTemplatesRequest extends TeaModel {
     /**
+     * <p>The maximum number of results to return per page. Note: This parameter is not yet in effect.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -12,6 +14,8 @@ public class ListEnterprisePptTemplatesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token for the next page of results. Note: This parameter is not yet in effect.</p>
+     * 
      * <strong>example:</strong>
      * <p>XXXX</p>
      */
@@ -19,6 +23,8 @@ public class ListEnterprisePptTemplatesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The number of entries to skip (the \&quot;offset\&quot;). Note: This parameter is not yet in effect.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +32,8 @@ public class ListEnterprisePptTemplatesRequest extends TeaModel {
     public Integer skip;
 
     /**
+     * <p>The ID of the workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm-xx</p>
      */

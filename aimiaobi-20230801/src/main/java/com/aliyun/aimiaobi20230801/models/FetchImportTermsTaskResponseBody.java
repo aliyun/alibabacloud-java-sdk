@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class FetchImportTermsTaskResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>DataNotExists</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The business data.</p>
+     */
     @NameInMap("Data")
     public FetchImportTermsTaskResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class FetchImportTermsTaskResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -38,6 +47,8 @@ public class FetchImportTermsTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +110,8 @@ public class FetchImportTermsTaskResponseBody extends TeaModel {
 
     public static class FetchImportTermsTaskResponseBodyData extends TeaModel {
         /**
+         * <p>The execution status of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>PENDING-待执行、RUNNING-执行中、SUCCESSED-成功、SUSPENDED-暂停、FAILED-失败、CANCELLED-取消</p>
          */

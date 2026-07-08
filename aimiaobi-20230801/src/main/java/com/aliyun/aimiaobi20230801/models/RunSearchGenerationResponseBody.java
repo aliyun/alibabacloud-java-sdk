@@ -4,13 +4,21 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunSearchGenerationResponseBody extends TeaModel {
+    /**
+     * <p>Response header.</p>
+     */
     @NameInMap("Header")
     public RunSearchGenerationResponseBodyHeader header;
 
+    /**
+     * <p>Response body.</p>
+     */
     @NameInMap("Payload")
     public RunSearchGenerationResponseBodyPayload payload;
 
     /**
+     * <p>Unique request identifier.</p>
+     * 
      * <strong>example:</strong>
      * <p>xx</p>
      */
@@ -48,6 +56,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
     public static class RunSearchGenerationResponseBodyHeader extends TeaModel {
         /**
+         * <p>Error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>AccessForbid</p>
          */
@@ -55,6 +65,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>Error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -62,6 +74,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>SSE event.</p>
+         * 
          * <strong>example:</strong>
          * <p>task-failed</p>
          */
@@ -69,6 +83,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String event;
 
         /**
+         * <p>Event description.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -76,6 +92,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String eventInfo;
 
         /**
+         * <p>Source session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
@@ -83,6 +101,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String originSessionId;
 
         /**
+         * <p>Response time, in milliseconds (ms).</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -90,6 +110,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Long responseTime;
 
         /**
+         * <p>Conversation ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>x</p>
          */
@@ -97,6 +119,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>Task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>x</p>
          */
@@ -104,6 +128,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>Full link ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -190,10 +216,18 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentAudioSearchResultSearchResultArticle extends TeaModel {
+        /**
+         * <p>Unique category identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("CategoryUuid")
         public String categoryUuid;
 
         /**
+         * <p>ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -201,22 +235,44 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String docId;
 
         /**
+         * <p>UUID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
         @NameInMap("DocUuid")
         public String docUuid;
 
+        /**
+         * <p>Extension field 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend1")
         public String extend1;
 
+        /**
+         * <p>Extension field 2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend2")
         public String extend2;
 
+        /**
+         * <p>Extension field 3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend3")
         public String extend3;
 
         /**
+         * <p>Search source.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -224,16 +280,23 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String searchSourceName;
 
         /**
+         * <p>Summary.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
         @NameInMap("Summary")
         public String summary;
 
+        /**
+         * <p>List of tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<String> tags;
 
         /**
+         * <p>Title.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -241,6 +304,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://xxx">http://xxx</a></p>
          */
@@ -344,6 +409,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentAudioSearchResultSearchResultClipInfos extends TeaModel {
         /**
+         * <p>Start position.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -351,6 +418,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Double from;
 
         /**
+         * <p>Threshold.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9</p>
          */
@@ -358,6 +427,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Double score;
 
         /**
+         * <p>Text content.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -365,6 +436,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String text;
 
         /**
+         * <p>End position.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -372,6 +445,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Double to;
 
         /**
+         * <p>Text type.</p>
+         * 
          * <strong>example:</strong>
          * <p>asr</p>
          */
@@ -426,13 +501,21 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentAudioSearchResultSearchResult extends TeaModel {
+        /**
+         * <p>Associated document.</p>
+         */
         @NameInMap("Article")
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentAudioSearchResultSearchResultArticle article;
 
+        /**
+         * <p>List of matching segments.</p>
+         */
         @NameInMap("ClipInfos")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentAudioSearchResultSearchResultClipInfos> clipInfos;
 
         /**
+         * <p>URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://xxx">http://xxx</a></p>
          */
@@ -440,6 +523,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String fileUrl;
 
         /**
+         * <p>ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -447,6 +532,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String mediaId;
 
         /**
+         * <p>Unique traceability identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -501,6 +588,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentAudioSearchResult extends TeaModel {
+        /**
+         * <p>Voice search result.</p>
+         */
         @NameInMap("SearchResult")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentAudioSearchResultSearchResult> searchResult;
 
@@ -520,10 +610,18 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsAudioSearchResultSearchResultArticle extends TeaModel {
+        /**
+         * <p>Category identity</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("CategoryUuid")
         public String categoryUuid;
 
         /**
+         * <p>docId</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -531,45 +629,86 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String docId;
 
         /**
+         * <p>docUuid</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
         @NameInMap("DocUuid")
         public String docUuid;
 
+        /**
+         * <p>Extension field 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend1")
         public String extend1;
 
+        /**
+         * <p>Extension field 2</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend2")
         public String extend2;
 
+        /**
+         * <p>Extension field 3</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend3")
         public String extend3;
 
+        /**
+         * <p>Unique identifier of the dataset</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("SearchSource")
         public String searchSource;
 
         /**
+         * <p>Search source</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
         @NameInMap("SearchSourceName")
         public String searchSourceName;
 
+        /**
+         * <p>The type of the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("SearchSourceType")
         public String searchSourceType;
 
         /**
+         * <p>Summary</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
         @NameInMap("Summary")
         public String summary;
 
+        /**
+         * <p>Tag name</p>
+         */
         @NameInMap("Tags")
         public java.util.List<String> tags;
 
         /**
+         * <p>Title</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -577,6 +716,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>The URL of the article.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://xx">http://xx</a></p>
          */
@@ -696,6 +837,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsAudioSearchResultSearchResultClipInfos extends TeaModel {
         /**
+         * <p>Start position</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -703,6 +846,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Double from;
 
         /**
+         * <p>The threshold.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -710,6 +855,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Double score;
 
         /**
+         * <p>Text content</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -717,6 +864,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String text;
 
         /**
+         * <p>The end position.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -724,6 +873,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Double to;
 
         /**
+         * <p>Type</p>
+         * 
          * <strong>example:</strong>
          * <p>asr</p>
          */
@@ -778,13 +929,21 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsAudioSearchResultSearchResult extends TeaModel {
+        /**
+         * <p>Corresponding document</p>
+         */
         @NameInMap("Article")
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsAudioSearchResultSearchResultArticle article;
 
+        /**
+         * <p>List of matching information</p>
+         */
         @NameInMap("ClipInfos")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsAudioSearchResultSearchResultClipInfos> clipInfos;
 
         /**
+         * <p>URL</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://xx">http://xx</a></p>
          */
@@ -792,6 +951,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String fileUrl;
 
         /**
+         * <p>The ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -839,16 +1000,23 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsAudioSearchResult extends TeaModel {
         /**
+         * <p>Current page</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("Current")
         public Integer current;
 
+        /**
+         * <p>Audio search results</p>
+         */
         @NameInMap("SearchResult")
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsAudioSearchResultSearchResult searchResult;
 
         /**
+         * <p>Size</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -856,6 +1024,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Integer size;
 
         /**
+         * <p>Total count</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -902,10 +1072,18 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsImageSearchResultSearchResultArticle extends TeaModel {
+        /**
+         * <p>Unique category identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("CategoryUuid")
         public String categoryUuid;
 
         /**
+         * <p>Custom unique document ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -913,45 +1091,86 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String docId;
 
         /**
+         * <p>Internal unique document identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
         @NameInMap("DocUuid")
         public String docUuid;
 
+        /**
+         * <p>Extension field 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend1")
         public String extend1;
 
+        /**
+         * <p>Extension field 2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend2")
         public String extend2;
 
+        /**
+         * <p>Extension field 3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend3")
         public String extend3;
 
+        /**
+         * <p>Dataset unique identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("SearchSource")
         public String searchSource;
 
         /**
+         * <p>Search source name.</p>
+         * 
          * <strong>example:</strong>
          * <p>互联网搜索</p>
          */
         @NameInMap("SearchSourceName")
         public String searchSourceName;
 
+        /**
+         * <p>Dataset type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("SearchSourceType")
         public String searchSourceType;
 
         /**
+         * <p>Summary.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
         @NameInMap("Summary")
         public String summary;
 
+        /**
+         * <p>Tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<String> tags;
 
         /**
+         * <p>Title.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -959,6 +1178,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>Article URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -1077,10 +1298,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsImageSearchResultSearchResult extends TeaModel {
+        /**
+         * <p>Article.</p>
+         */
         @NameInMap("Article")
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsImageSearchResultSearchResultArticle article;
 
         /**
+         * <p>File URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -1088,6 +1314,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String fileUrl;
 
         /**
+         * <p>Unique multimodal data identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -1127,16 +1355,23 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsImageSearchResult extends TeaModel {
         /**
+         * <p>Current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("Current")
         public Integer current;
 
+        /**
+         * <p>List of search results.</p>
+         */
         @NameInMap("SearchResult")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsImageSearchResultSearchResult> searchResult;
 
         /**
+         * <p>Records per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -1144,6 +1379,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Integer size;
 
         /**
+         * <p>Total records.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -1191,6 +1428,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsTextSearchResultSearchResultMultimodalMedias extends TeaModel {
         /**
+         * <p>The URL of the file.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -1198,6 +1437,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String fileUrl;
 
         /**
+         * <p>The unique ID of the multimodal data.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -1205,6 +1446,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String mediaId;
 
         /**
+         * <p>Multimodal data file type. Valid values:</p>
+         * <ul>
+         * <li><p>video: Video.</p>
+         * </li>
+         * <li><p>image: Image.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>image</p>
          */
@@ -1243,10 +1492,18 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsTextSearchResultSearchResult extends TeaModel {
+        /**
+         * <p>Category unique identifier</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("CategoryUuid")
         public String categoryUuid;
 
         /**
+         * <p>The custom unique ID of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -1254,25 +1511,50 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String docId;
 
         /**
+         * <p>Unique identifier for internal documents.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
         @NameInMap("DocUuid")
         public String docUuid;
 
+        /**
+         * <p>Extension field 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend1")
         public String extend1;
 
+        /**
+         * <p>Extension field 2</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend2")
         public String extend2;
 
+        /**
+         * <p>Extension field 3</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend3")
         public String extend3;
 
+        /**
+         * <p>A list of multimodal information.</p>
+         */
         @NameInMap("MultimodalMedias")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsTextSearchResultSearchResultMultimodalMedias> multimodalMedias;
 
         /**
+         * <p>Publication time, in the format yyyy-MM-dd HH:mm:ss</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-04-04 08:39:09</p>
          */
@@ -1280,6 +1562,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String pubTime;
 
         /**
+         * <p>The unique identifier of the search source. This is the same as searchSource.datasetName.</p>
+         * 
          * <strong>example:</strong>
          * <p>QuarkCommonNews</p>
          */
@@ -1287,6 +1571,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String searchSource;
 
         /**
+         * <p>The name of the search source.</p>
+         * 
          * <strong>example:</strong>
          * <p>互联网搜索</p>
          */
@@ -1294,6 +1580,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String searchSourceName;
 
         /**
+         * <p>Search source type, same as searchSource.code.</p>
+         * 
          * <strong>example:</strong>
          * <p>SystemSearch</p>
          */
@@ -1301,16 +1589,23 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String searchSourceType;
 
         /**
+         * <p>Summary</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
         @NameInMap("Summary")
         public String summary;
 
+        /**
+         * <p>Tags</p>
+         */
         @NameInMap("Tags")
         public java.util.List<String> tags;
 
         /**
+         * <p>Title</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -1318,6 +1613,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>Article URL</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -1453,16 +1750,23 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsTextSearchResult extends TeaModel {
         /**
+         * <p>Current page number</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("Current")
         public Integer current;
 
+        /**
+         * <p>Search results list</p>
+         */
         @NameInMap("SearchResult")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsTextSearchResultSearchResult> searchResult;
 
         /**
+         * <p>Number of records per page</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -1470,6 +1774,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Integer size;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -1516,10 +1822,18 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsVideoSearchResultSearchResultArticle extends TeaModel {
+        /**
+         * <p>Category</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("CategoryUuid")
         public String categoryUuid;
 
         /**
+         * <p>Document: a custom unique ID</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -1527,45 +1841,86 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String docId;
 
         /**
+         * <p>The unique identifier of the internal document.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
         @NameInMap("DocUuid")
         public String docUuid;
 
+        /**
+         * <p>Extension field 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend1")
         public String extend1;
 
+        /**
+         * <p>Extension field 2</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend2")
         public String extend2;
 
+        /**
+         * <p>Extension field 3</p>
+         * 
+         * <strong>example:</strong>
+         * <p>x</p>
+         */
         @NameInMap("Extend3")
         public String extend3;
 
+        /**
+         * <p>The unique identifier of the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("SearchSource")
         public String searchSource;
 
         /**
+         * <p>The name of the search source.</p>
+         * 
          * <strong>example:</strong>
          * <p>互联网搜索</p>
          */
         @NameInMap("SearchSourceName")
         public String searchSourceName;
 
+        /**
+         * <p>Dataset type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("SearchSourceType")
         public String searchSourceType;
 
         /**
+         * <p>Summary</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
         @NameInMap("Summary")
         public String summary;
 
+        /**
+         * <p>Tags</p>
+         */
         @NameInMap("Tags")
         public java.util.List<String> tags;
 
         /**
+         * <p>Title</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -1573,6 +1928,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>The URL of the article.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -1692,6 +2049,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsVideoSearchResultSearchResultClipInfos extends TeaModel {
         /**
+         * <p>Start time</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -1699,6 +2058,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Double from;
 
         /**
+         * <p>Reference confidence level</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9</p>
          */
@@ -1706,6 +2067,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Double score;
 
         /**
+         * <p>Corresponding text, such as ASR transcription results.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -1713,6 +2076,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String text;
 
         /**
+         * <p>End time</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -1720,6 +2085,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Double to;
 
         /**
+         * <p>Text type, such as ASR.</p>
+         * 
          * <strong>example:</strong>
          * <p>asr</p>
          */
@@ -1774,13 +2141,21 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsVideoSearchResultSearchResult extends TeaModel {
+        /**
+         * <p>Article</p>
+         */
         @NameInMap("Article")
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsVideoSearchResultSearchResultArticle article;
 
+        /**
+         * <p>A list of matching information.</p>
+         */
         @NameInMap("ClipInfos")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsVideoSearchResultSearchResultClipInfos> clipInfos;
 
         /**
+         * <p>The URL of the file.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -1788,6 +2163,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String fileUrl;
 
         /**
+         * <p>Unique identifier for the multimodal data</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -1835,16 +2212,23 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsVideoSearchResult extends TeaModel {
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("Current")
         public Integer current;
 
+        /**
+         * <p>Search results</p>
+         */
         @NameInMap("SearchResult")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsVideoSearchResultSearchResult> searchResult;
 
         /**
+         * <p>Number of records per page</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -1852,6 +2236,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Integer size;
 
         /**
+         * <p>Total records</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -1898,22 +2284,36 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopics extends TeaModel {
+        /**
+         * <p>Audio result</p>
+         */
         @NameInMap("AudioSearchResult")
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsAudioSearchResult audioSearchResult;
 
+        /**
+         * <p>Image search result.</p>
+         */
         @NameInMap("ImageSearchResult")
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsImageSearchResult imageSearchResult;
 
+        /**
+         * <p>Document search results</p>
+         */
         @NameInMap("TextSearchResult")
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsTextSearchResult textSearchResult;
 
         /**
+         * <p>Topic.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
         @NameInMap("Topic")
         public String topic;
 
+        /**
+         * <p>Video search results</p>
+         */
         @NameInMap("VideoSearchResult")
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsVideoSearchResult videoSearchResult;
 
@@ -1965,10 +2365,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResult extends TeaModel {
+        /**
+         * <p>List of clusters.</p>
+         */
         @NameInMap("ClusterTopics")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopics> clusterTopics;
 
         /**
+         * <p>Indicates whether the current agent has finished generating.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -1976,6 +2381,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Boolean generateFinished;
 
         /**
+         * <p>Text result.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -2015,6 +2422,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentExcerptResultSearchResultMultimodalMedias extends TeaModel {
         /**
+         * <p>File URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -2022,6 +2431,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String fileUrl;
 
         /**
+         * <p>Unique multimodal data identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -2029,6 +2440,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String mediaId;
 
         /**
+         * <p>Multimodal file type. Valid values:</p>
+         * <ul>
+         * <li><p>video: video</p>
+         * </li>
+         * <li><p>image: image</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>image</p>
          */
@@ -2068,6 +2487,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentExcerptResultSearchResultTextGenerateMultimodalMediaListMultimodalMediaListArticle extends TeaModel {
         /**
+         * <p>Custom unique document ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -2075,6 +2496,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String docId;
 
         /**
+         * <p>Internal unique document identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -2082,13 +2505,17 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String docUuid;
 
         /**
+         * <p>Search source name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>互联网搜索</p>
          */
         @NameInMap("SearchSourceName")
         public String searchSourceName;
 
         /**
+         * <p>Title.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -2096,6 +2523,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>Article URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -2150,10 +2579,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentExcerptResultSearchResultTextGenerateMultimodalMediaListMultimodalMediaList extends TeaModel {
+        /**
+         * <p>Article.</p>
+         */
         @NameInMap("Article")
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentExcerptResultSearchResultTextGenerateMultimodalMediaListMultimodalMediaListArticle article;
 
         /**
+         * <p>File URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -2161,6 +2595,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String fileUrl;
 
         /**
+         * <p>Unique multimodal data identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -2168,6 +2604,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String mediaId;
 
         /**
+         * <p>Multimodal file type. Valid values: video, image.</p>
+         * 
          * <strong>example:</strong>
          * <p>image</p>
          */
@@ -2215,6 +2653,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentExcerptResultSearchResultTextGenerateMultimodalMediaList extends TeaModel {
         /**
+         * <p>Internal unique document identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -2222,16 +2662,23 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String docUuid;
 
         /**
+         * <p>End position.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("End")
         public Integer end;
 
+        /**
+         * <p>List of multimodal data.</p>
+         */
         @NameInMap("MultimodalMediaList")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentExcerptResultSearchResultTextGenerateMultimodalMediaListMultimodalMediaList> multimodalMediaList;
 
         /**
+         * <p>Start position.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -2278,13 +2725,24 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentExcerptResultSearchResult extends TeaModel {
+        /**
+         * <p>Unique category identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("CategoryUuid")
         public String categoryUuid;
 
+        /**
+         * <p>List of chunks.</p>
+         */
         @NameInMap("Chunks")
         public java.util.List<String> chunks;
 
         /**
+         * <p>Body.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -2292,6 +2750,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>Custom unique document ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -2299,6 +2759,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String docId;
 
         /**
+         * <p>Internal unique document identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -2306,25 +2768,50 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String docUuid;
 
         /**
+         * <p>Content answered with original sentences.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
         @NameInMap("Excerpt")
         public String excerpt;
 
+        /**
+         * <p>Extension field 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend1")
         public String extend1;
 
+        /**
+         * <p>Extension field 2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend2")
         public String extend2;
 
+        /**
+         * <p>Extension field 3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend3")
         public String extend3;
 
+        /**
+         * <p>List of multimodal information items.</p>
+         */
         @NameInMap("MultimodalMedias")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentExcerptResultSearchResultMultimodalMedias> multimodalMedias;
 
         /**
+         * <p>Publication time. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-04-04 08:39:09</p>
          */
@@ -2332,6 +2819,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String pubTime;
 
         /**
+         * <p>Confidence score. For reference only.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.99</p>
          */
@@ -2339,6 +2828,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Float score;
 
         /**
+         * <p>Search source unique identifier. Same as searchSource.datasetName.</p>
+         * 
          * <strong>example:</strong>
          * <p>QuarkCommonNews</p>
          */
@@ -2346,6 +2837,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String searchSource;
 
         /**
+         * <p>Search source name.</p>
+         * 
          * <strong>example:</strong>
          * <p>互联网搜索</p>
          */
@@ -2353,6 +2846,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String searchSourceName;
 
         /**
+         * <p>Search source type. Same as searchSource.code.</p>
+         * 
          * <strong>example:</strong>
          * <p>SystemSearch</p>
          */
@@ -2360,6 +2855,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String searchSourceType;
 
         /**
+         * <p>Indicates whether it is a reference.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -2367,19 +2864,29 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Boolean select;
 
         /**
+         * <p>Summary.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
         @NameInMap("Summary")
         public String summary;
 
+        /**
+         * <p>Tag name.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<String> tags;
 
+        /**
+         * <p>List of accompanying images.</p>
+         */
         @NameInMap("TextGenerateMultimodalMediaList")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentExcerptResultSearchResultTextGenerateMultimodalMediaList> textGenerateMultimodalMediaList;
 
         /**
+         * <p>Title.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -2387,6 +2894,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>Traceability ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -2394,6 +2903,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Integer traceabilityId;
 
         /**
+         * <p>Article URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -2585,6 +3096,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentExcerptResult extends TeaModel {
         /**
+         * <p>Indicates whether the current agent has finished generating.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -2592,19 +3105,38 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Boolean generateFinished;
 
         /**
+         * <p>Detailedness of the response:</p>
+         * <ul>
+         * <li><p>concise: Concise (default)</p>
+         * </li>
+         * <li><p>enhance: Enhanced</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>concise</p>
          */
         @NameInMap("GenerateLevel")
         public String generateLevel;
 
+        /**
+         * <p>Deep thinking content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("ReasonTextGenerate")
         public String reasonTextGenerate;
 
+        /**
+         * <p>List of search results.</p>
+         */
         @NameInMap("SearchResult")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentExcerptResultSearchResult> searchResult;
 
         /**
+         * <p>Generated text.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -2659,10 +3191,18 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentImageSearchResultSearchResultArticle extends TeaModel {
+        /**
+         * <p>Unique category identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("CategoryUuid")
         public String categoryUuid;
 
         /**
+         * <p>Custom unique document ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -2670,22 +3210,44 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String docId;
 
         /**
+         * <p>Internal unique document identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
         @NameInMap("DocUuid")
         public String docUuid;
 
+        /**
+         * <p>Extension field 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend1")
         public String extend1;
 
+        /**
+         * <p>Extension field 2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend2")
         public String extend2;
 
+        /**
+         * <p>Extension field 3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend3")
         public String extend3;
 
         /**
+         * <p>Search source name.</p>
+         * 
          * <strong>example:</strong>
          * <p>互联网搜索</p>
          */
@@ -2693,16 +3255,23 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String searchSourceName;
 
         /**
+         * <p>Article summary.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
         @NameInMap("Summary")
         public String summary;
 
+        /**
+         * <p>Tag name.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<String> tags;
 
         /**
+         * <p>Title.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -2710,6 +3279,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>Article URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -2812,10 +3383,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentImageSearchResultSearchResult extends TeaModel {
+        /**
+         * <p>Article.</p>
+         */
         @NameInMap("Article")
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentImageSearchResultSearchResultArticle article;
 
         /**
+         * <p>File URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -2823,6 +3399,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String fileUrl;
 
         /**
+         * <p>Media data unique identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -2830,6 +3408,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String mediaId;
 
         /**
+         * <p>Unique traceability identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -2876,6 +3456,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentImageSearchResult extends TeaModel {
+        /**
+         * <p>List of search results.</p>
+         */
         @NameInMap("SearchResult")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentImageSearchResultSearchResult> searchResult;
 
@@ -2895,10 +3478,18 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentNewsElementResultNewsElementArticleListArticle extends TeaModel {
+        /**
+         * <p>Unique category identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("CategoryUuid")
         public String categoryUuid;
 
         /**
+         * <p>Body.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -2906,6 +3497,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>Custom unique document ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -2913,22 +3506,44 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String docId;
 
         /**
+         * <p>Internal unique document identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
         @NameInMap("DocUuid")
         public String docUuid;
 
+        /**
+         * <p>Extension field 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend1")
         public String extend1;
 
+        /**
+         * <p>Extension field 2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend2")
         public String extend2;
 
+        /**
+         * <p>Extension field 3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend3")
         public String extend3;
 
         /**
+         * <p>Publication time. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-04-04 08:39:09</p>
          */
@@ -2936,6 +3551,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String pubTime;
 
         /**
+         * <p>Confidence score. For reference only.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.99</p>
          */
@@ -2943,6 +3560,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Float score;
 
         /**
+         * <p>Search source unique identifier. Same as searchSource.datasetName.</p>
+         * 
          * <strong>example:</strong>
          * <p>QuarkCommonNews</p>
          */
@@ -2950,6 +3569,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String searchSource;
 
         /**
+         * <p>Search source name.</p>
+         * 
          * <strong>example:</strong>
          * <p>互联网搜索</p>
          */
@@ -2957,6 +3578,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String searchSourceName;
 
         /**
+         * <p>Search source type. Same as searchSource.code.</p>
+         * 
          * <strong>example:</strong>
          * <p>SystemSearch</p>
          */
@@ -2964,6 +3587,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String searchSourceType;
 
         /**
+         * <p>Indicates whether it is a reference.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -2971,16 +3596,23 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Boolean select;
 
         /**
+         * <p>Summary.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
         @NameInMap("Summary")
         public String summary;
 
+        /**
+         * <p>Tag name.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<String> tags;
 
         /**
+         * <p>Title.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -2988,6 +3620,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>Article URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -3138,12 +3772,21 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentNewsElementResultNewsElementArticleListNewsElementListEvent extends TeaModel {
+        /**
+         * <p>List of causes.</p>
+         */
         @NameInMap("CauseList")
         public java.util.List<String> causeList;
 
+        /**
+         * <p>List of processes.</p>
+         */
         @NameInMap("ProcessList")
         public java.util.List<String> processList;
 
+        /**
+         * <p>List of results.</p>
+         */
         @NameInMap("ResultList")
         public java.util.List<String> resultList;
 
@@ -3180,6 +3823,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentNewsElementResultNewsElementArticleListNewsElementList extends TeaModel {
         /**
+         * <p>Event.</p>
+         * 
          * <strong>example:</strong>
          * <p>task-started</p>
          */
@@ -3187,6 +3832,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentNewsElementResultNewsElementArticleListNewsElementListEvent event;
 
         /**
+         * <p>Location.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -3194,6 +3841,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String location;
 
         /**
+         * <p>People.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -3201,6 +3850,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String people;
 
         /**
+         * <p>Time.</p>
+         * 
          * <strong>example:</strong>
          * <p>时间</p>
          */
@@ -3247,13 +3898,21 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentNewsElementResultNewsElementArticleList extends TeaModel {
+        /**
+         * <p>Article.</p>
+         */
         @NameInMap("Article")
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentNewsElementResultNewsElementArticleListArticle article;
 
+        /**
+         * <p>List of news items.</p>
+         */
         @NameInMap("NewsElementList")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentNewsElementResultNewsElementArticleListNewsElementList> newsElementList;
 
         /**
+         * <p>Generated text content.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -3293,16 +3952,23 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentNewsElementResult extends TeaModel {
         /**
+         * <p>Indicates whether the current agent has finished generating.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("GenerateFinished")
         public Boolean generateFinished;
 
+        /**
+         * <p>List of news extractions.</p>
+         */
         @NameInMap("NewsElementArticleList")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentNewsElementResultNewsElementArticleList> newsElementArticleList;
 
         /**
+         * <p>Generated text content.</p>
+         * 
          * <strong>example:</strong>
          * <p>x</p>
          */
@@ -3342,6 +4008,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultGenerateTraceabilityCoordinatesGenerateCoordinate extends TeaModel {
         /**
+         * <p>Number, starting from 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -3349,6 +4017,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Integer x;
 
         /**
+         * <p>Start position.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -3356,6 +4026,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Integer y;
 
         /**
+         * <p>End position.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -3395,6 +4067,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultGenerateTraceabilityCoordinatesNewsCoordinate extends TeaModel {
         /**
+         * <p>Media asset type.</p>
+         * 
          * <strong>example:</strong>
          * <p>image</p>
          */
@@ -3402,6 +4076,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String mediaType;
 
         /**
+         * <p>Number, starting from 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -3409,6 +4085,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Integer x;
 
         /**
+         * <p>Start position.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -3416,6 +4094,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Integer y;
 
         /**
+         * <p>End position.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -3462,9 +4142,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultGenerateTraceabilityCoordinates extends TeaModel {
+        /**
+         * <p>Coordinates of the generated document block.</p>
+         */
         @NameInMap("GenerateCoordinate")
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultGenerateTraceabilityCoordinatesGenerateCoordinate generateCoordinate;
 
+        /**
+         * <p>Coordinates of the reference document block.</p>
+         */
         @NameInMap("NewsCoordinate")
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultGenerateTraceabilityCoordinatesNewsCoordinate newsCoordinate;
 
@@ -3492,10 +4178,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultGenerateTraceability extends TeaModel {
+        /**
+         * <p>List of traceability locations.</p>
+         */
         @NameInMap("Coordinates")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultGenerateTraceabilityCoordinates> coordinates;
 
         /**
+         * <p>Overall traceability relevance.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9</p>
          */
@@ -3527,6 +4218,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultMultimodalSearchResultListSearchResultArticle extends TeaModel {
         /**
+         * <p>Custom unique document ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -3534,6 +4227,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String docId;
 
         /**
+         * <p>Internal unique document identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -3541,6 +4236,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String docUuid;
 
         /**
+         * <p>Search source name.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -3548,6 +4245,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String searchSourceName;
 
         /**
+         * <p>Summary.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -3555,6 +4254,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String summary;
 
         /**
+         * <p>Title.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -3562,6 +4263,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>Article URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -3625,6 +4328,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultMultimodalSearchResultListSearchResultClipInfos extends TeaModel {
         /**
+         * <p>Start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -3632,6 +4337,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Double from;
 
         /**
+         * <p>Confidence score. For reference only.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.1</p>
          */
@@ -3639,6 +4346,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Double score;
 
         /**
+         * <p>Corresponding text, such as ASR transcription.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -3646,6 +4355,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String text;
 
         /**
+         * <p>End time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -3653,6 +4364,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Double to;
 
         /**
+         * <p>Type. Example: asr.</p>
+         * 
          * <strong>example:</strong>
          * <p>asr</p>
          */
@@ -3707,13 +4420,21 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultMultimodalSearchResultListSearchResult extends TeaModel {
+        /**
+         * <p>Article.</p>
+         */
         @NameInMap("Article")
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultMultimodalSearchResultListSearchResultArticle article;
 
+        /**
+         * <p>List of matching segments.</p>
+         */
         @NameInMap("ClipInfos")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultMultimodalSearchResultListSearchResultClipInfos> clipInfos;
 
         /**
+         * <p>File URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -3721,6 +4442,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String fileUrl;
 
         /**
+         * <p>Media asset ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -3728,6 +4451,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String mediaId;
 
         /**
+         * <p>Multimodal file type. Valid values: video, image.</p>
+         * 
          * <strong>example:</strong>
          * <p>image</p>
          */
@@ -3783,6 +4508,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultMultimodalSearchResultList extends TeaModel {
         /**
+         * <p>Current page.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -3790,16 +4517,23 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Integer current;
 
         /**
+         * <p>Search query.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
         @NameInMap("SearchQuery")
         public String searchQuery;
 
+        /**
+         * <p>List of search results.</p>
+         */
         @NameInMap("SearchResult")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultMultimodalSearchResultListSearchResult> searchResult;
 
         /**
+         * <p>Search type.</p>
+         * 
          * <strong>example:</strong>
          * <p>realtime</p>
          */
@@ -3807,6 +4541,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String searchType;
 
         /**
+         * <p>Items per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -3814,6 +4550,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Integer size;
 
         /**
+         * <p>Timeline date.</p>
+         * 
          * <strong>example:</strong>
          * <p>时间脉络-时间</p>
          */
@@ -3821,6 +4559,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String timelineDateStr;
 
         /**
+         * <p>Total items.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -3891,13 +4631,24 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultReferenceList extends TeaModel {
+        /**
+         * <p>Category unique identifier</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("CategoryUuid")
         public String categoryUuid;
 
+        /**
+         * <p>List of chunks.</p>
+         */
         @NameInMap("Chunks")
         public java.util.List<String> chunks;
 
         /**
+         * <p>Body.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -3905,6 +4656,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>Custom unique document ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -3912,22 +4665,44 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String docId;
 
         /**
+         * <p>Internal unique document identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
         @NameInMap("DocUuid")
         public String docUuid;
 
+        /**
+         * <p>Extension field 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend1")
         public String extend1;
 
+        /**
+         * <p>Extension field 2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend2")
         public String extend2;
 
+        /**
+         * <p>Extension field 3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend3")
         public String extend3;
 
         /**
+         * <p>Publication time. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-04-04 08:39:09</p>
          */
@@ -3935,6 +4710,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String pubTime;
 
         /**
+         * <p>Confidence score. For reference only.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.99</p>
          */
@@ -3942,6 +4719,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Float score;
 
         /**
+         * <p>Search source unique identifier. Same as searchSource.datasetName.</p>
+         * 
          * <strong>example:</strong>
          * <p>QuarkCommonNews</p>
          */
@@ -3949,6 +4728,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String searchSource;
 
         /**
+         * <p>Search source name.</p>
+         * 
          * <strong>example:</strong>
          * <p>互联网搜索</p>
          */
@@ -3956,6 +4737,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String searchSourceName;
 
         /**
+         * <p>Search source type. Same as searchSource.code.</p>
+         * 
          * <strong>example:</strong>
          * <p>SystemSearch</p>
          */
@@ -3963,6 +4746,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String searchSourceType;
 
         /**
+         * <p>Indicates whether it is a reference.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -3970,6 +4755,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Boolean select;
 
         /**
+         * <p>Source.</p>
+         * 
          * <strong>example:</strong>
          * <p>新华社</p>
          */
@@ -3977,16 +4764,23 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String source;
 
         /**
+         * <p>Summary.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
         @NameInMap("Summary")
         public String summary;
 
+        /**
+         * <p>Tag name.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<String> tags;
 
         /**
+         * <p>Title.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -3994,6 +4788,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>Traceability ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -4001,6 +4797,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Integer traceabilityId;
 
         /**
+         * <p>Article URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -4176,6 +4974,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultTextGenerateMultimodalMediaListMultimodalMediaListArticle extends TeaModel {
         /**
+         * <p>Custom unique document ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -4183,6 +4983,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String docId;
 
         /**
+         * <p>Internal unique document identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -4190,6 +4992,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String docUuid;
 
         /**
+         * <p>Search source name.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -4197,6 +5001,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String searchSourceName;
 
         /**
+         * <p>Summary.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -4204,6 +5010,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String summary;
 
         /**
+         * <p>Title.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -4211,6 +5019,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>Article URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -4273,10 +5083,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultTextGenerateMultimodalMediaListMultimodalMediaList extends TeaModel {
+        /**
+         * <p>Article.</p>
+         */
         @NameInMap("Article")
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultTextGenerateMultimodalMediaListMultimodalMediaListArticle article;
 
         /**
+         * <p>File URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -4284,6 +5099,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String fileUrl;
 
         /**
+         * <p>Media asset ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -4291,6 +5108,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String mediaId;
 
         /**
+         * <p>Multimodal file type. Valid values: video, image.</p>
+         * 
          * <strong>example:</strong>
          * <p>image</p>
          */
@@ -4338,16 +5157,23 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultTextGenerateMultimodalMediaList extends TeaModel {
         /**
+         * <p>End position.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("End")
         public Integer end;
 
+        /**
+         * <p>List of multimodal data.</p>
+         */
         @NameInMap("MultimodalMediaList")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultTextGenerateMultimodalMediaListMultimodalMediaList> multimodalMediaList;
 
         /**
+         * <p>Start position.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -4387,6 +5213,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResult extends TeaModel {
         /**
+         * <p>Indicates whether the current agent has finished generating.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -4394,31 +5222,59 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Boolean generateFinished;
 
         /**
+         * <p>Detailedness of the response:</p>
+         * <ul>
+         * <li><p>concise: Concise (default)</p>
+         * </li>
+         * <li><p>enhance: Enhanced</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>concise</p>
          */
         @NameInMap("GenerateLevel")
         public String generateLevel;
 
+        /**
+         * <p>Traceability information.</p>
+         */
         @NameInMap("GenerateTraceability")
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultGenerateTraceability generateTraceability;
 
+        /**
+         * <p>List of multimodal search results.</p>
+         */
         @NameInMap("MultimodalSearchResultList")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultMultimodalSearchResultList> multimodalSearchResultList;
 
+        /**
+         * <p>Deep thinking content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("ReasonTextGenerate")
         public String reasonTextGenerate;
 
+        /**
+         * <p>List of reference articles.</p>
+         */
         @NameInMap("ReferenceList")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultReferenceList> referenceList;
 
         /**
+         * <p>Text generation result.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
         @NameInMap("TextGenerate")
         public String textGenerate;
 
+        /**
+         * <p>List of accompanying images.</p>
+         */
         @NameInMap("TextGenerateMultimodalMediaList")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultTextGenerateMultimodalMediaList> textGenerateMultimodalMediaList;
 
@@ -4494,10 +5350,18 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResultSearchResult extends TeaModel {
+        /**
+         * <p>Unique category identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("CategoryUuid")
         public String categoryUuid;
 
         /**
+         * <p>Body.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -4505,6 +5369,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>Unique document business identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -4512,22 +5378,44 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String docId;
 
         /**
+         * <p>System internal unique document identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
         @NameInMap("DocUuid")
         public String docUuid;
 
+        /**
+         * <p>Extension field 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend1")
         public String extend1;
 
+        /**
+         * <p>Extension field 2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend2")
         public String extend2;
 
+        /**
+         * <p>Extension field 3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend3")
         public String extend3;
 
         /**
+         * <p>Publication time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-11-25 14:25:59</p>
          */
@@ -4535,6 +5423,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String pubTime;
 
         /**
+         * <p>Data source unique identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>QuarkCommonNews</p>
          */
@@ -4542,6 +5432,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String searchSource;
 
         /**
+         * <p>Data source description.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -4549,6 +5441,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String searchSourceName;
 
         /**
+         * <p>Data source type.</p>
+         * 
          * <strong>example:</strong>
          * <p>SystemSearch</p>
          */
@@ -4556,16 +5450,23 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String searchSourceType;
 
         /**
+         * <p>Summary.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
         @NameInMap("Summary")
         public String summary;
 
+        /**
+         * <p>Tag name.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<String> tags;
 
         /**
+         * <p>Title.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -4573,6 +5474,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>Unique traceability identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -4580,6 +5483,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String traceabilityId;
 
         /**
+         * <p>URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -4722,15 +5627,36 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResult extends TeaModel {
+        /**
+         * <p>Current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Current")
         public Integer current;
 
+        /**
+         * <p>The structure of the search result.</p>
+         */
         @NameInMap("SearchResult")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResultSearchResult> searchResult;
 
+        /**
+         * <p>Current page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Size")
         public Integer size;
 
+        /**
+         * <p>Total count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Total")
         public Integer total;
 
@@ -4775,6 +5701,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultGenerateTraceabilityCoordinatesGenerateCoordinate extends TeaModel {
         /**
+         * <p>Number, starting from 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -4782,6 +5710,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Integer x;
 
         /**
+         * <p>Start position.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -4789,6 +5719,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Integer y;
 
         /**
+         * <p>End position.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -4828,6 +5760,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultGenerateTraceabilityCoordinatesNewsCoordinate extends TeaModel {
         /**
+         * <p>Media asset type.</p>
+         * 
          * <strong>example:</strong>
          * <p>image</p>
          */
@@ -4835,6 +5769,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String mediaType;
 
         /**
+         * <p>Number, starting from 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -4842,6 +5778,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Integer x;
 
         /**
+         * <p>Start position.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -4849,6 +5787,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Integer y;
 
         /**
+         * <p>End position.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -4895,9 +5835,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultGenerateTraceabilityCoordinates extends TeaModel {
+        /**
+         * <p>Coordinates of the generated document block.</p>
+         */
         @NameInMap("GenerateCoordinate")
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultGenerateTraceabilityCoordinatesGenerateCoordinate generateCoordinate;
 
+        /**
+         * <p>Coordinates of the reference article.</p>
+         */
         @NameInMap("NewsCoordinate")
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultGenerateTraceabilityCoordinatesNewsCoordinate newsCoordinate;
 
@@ -4925,10 +5871,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultGenerateTraceability extends TeaModel {
+        /**
+         * <p>Traceability location.</p>
+         */
         @NameInMap("Coordinates")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultGenerateTraceabilityCoordinates> coordinates;
 
         /**
+         * <p>Relevance score.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9</p>
          */
@@ -4960,6 +5911,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultMultimodalSearchResultListSearchResultArticle extends TeaModel {
         /**
+         * <p>Custom unique document ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -4967,6 +5920,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String docId;
 
         /**
+         * <p>Internal unique document identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -4974,6 +5929,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String docUuid;
 
         /**
+         * <p>Search source name.</p>
+         * 
          * <strong>example:</strong>
          * <p>互联网搜索</p>
          */
@@ -4981,6 +5938,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String searchSourceName;
 
         /**
+         * <p>Summary.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -4988,6 +5947,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String summary;
 
         /**
+         * <p>Title.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -4995,6 +5956,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>Article URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -5058,6 +6021,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultMultimodalSearchResultListSearchResultClipInfos extends TeaModel {
         /**
+         * <p>Start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -5065,6 +6030,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Double from;
 
         /**
+         * <p>Confidence score. For reference only.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.99</p>
          */
@@ -5072,6 +6039,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Double score;
 
         /**
+         * <p>Corresponding text, such as ASR transcription.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -5079,6 +6048,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String text;
 
         /**
+         * <p>End time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -5086,6 +6057,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Double to;
 
         /**
+         * <p>Type. Example: asr.</p>
+         * 
          * <strong>example:</strong>
          * <p>asr</p>
          */
@@ -5140,13 +6113,21 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultMultimodalSearchResultListSearchResult extends TeaModel {
+        /**
+         * <p>Article.</p>
+         */
         @NameInMap("Article")
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultMultimodalSearchResultListSearchResultArticle article;
 
+        /**
+         * <p>List of matching segments.</p>
+         */
         @NameInMap("ClipInfos")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultMultimodalSearchResultListSearchResultClipInfos> clipInfos;
 
         /**
+         * <p>File URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -5154,6 +6135,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String fileUrl;
 
         /**
+         * <p>Unique multimodal data identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -5161,6 +6144,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String mediaId;
 
         /**
+         * <p>Multimodal file type. Valid values: video, image.</p>
+         * 
          * <strong>example:</strong>
          * <p>image</p>
          */
@@ -5215,10 +6200,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultMultimodalSearchResultList extends TeaModel {
+        /**
+         * <p>List of search results.</p>
+         */
         @NameInMap("SearchResult")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultMultimodalSearchResultListSearchResult> searchResult;
 
         /**
+         * <p>Date string.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-09-11</p>
          */
@@ -5249,13 +6239,24 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultReferenceList extends TeaModel {
+        /**
+         * <p>Unique category identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("CategoryUuid")
         public String categoryUuid;
 
+        /**
+         * <p>List of chunks.</p>
+         */
         @NameInMap("Chunks")
         public java.util.List<String> chunks;
 
         /**
+         * <p>Body.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -5263,6 +6264,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>Custom unique document ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -5270,22 +6273,44 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String docId;
 
         /**
+         * <p>Internal unique document identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
         @NameInMap("DocUuid")
         public String docUuid;
 
+        /**
+         * <p>Extension field 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend1")
         public String extend1;
 
+        /**
+         * <p>Extension field 2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend2")
         public String extend2;
 
+        /**
+         * <p>Extension field 3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend3")
         public String extend3;
 
         /**
+         * <p>Publication time. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-04-04 08:39:09</p>
          */
@@ -5293,6 +6318,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String pubTime;
 
         /**
+         * <p>Confidence score. For reference only.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.99</p>
          */
@@ -5300,6 +6327,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Float score;
 
         /**
+         * <p>Search source unique identifier. Same as searchSource.datasetName.</p>
+         * 
          * <strong>example:</strong>
          * <p>QuarkCommonNews</p>
          */
@@ -5307,6 +6336,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String searchSource;
 
         /**
+         * <p>Search source name.</p>
+         * 
          * <strong>example:</strong>
          * <p>互联网搜索</p>
          */
@@ -5314,6 +6345,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String searchSourceName;
 
         /**
+         * <p>Search source type. Same as searchSource.code.</p>
+         * 
          * <strong>example:</strong>
          * <p>SystemSearch</p>
          */
@@ -5321,6 +6354,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String searchSourceType;
 
         /**
+         * <p>Selection status.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -5328,6 +6363,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Boolean select;
 
         /**
+         * <p>Source.</p>
+         * 
          * <strong>example:</strong>
          * <p>新华社</p>
          */
@@ -5335,16 +6372,23 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String source;
 
         /**
+         * <p>Summary.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
         @NameInMap("Summary")
         public String summary;
 
+        /**
+         * <p>Tag name.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<String> tags;
 
         /**
+         * <p>Title.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -5352,6 +6396,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>Traceability ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -5359,6 +6405,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Integer traceabilityId;
 
         /**
+         * <p>Article URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -5534,6 +6582,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultTextGenerateMultimodalMediaListMultimodalMediaListArticle extends TeaModel {
         /**
+         * <p>Custom unique document ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -5541,6 +6591,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String docId;
 
         /**
+         * <p>Internal unique document identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -5548,6 +6600,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String docUuid;
 
         /**
+         * <p>Search source name.</p>
+         * 
          * <strong>example:</strong>
          * <p>互联网搜索</p>
          */
@@ -5555,6 +6609,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String searchSourceName;
 
         /**
+         * <p>Summary.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -5562,6 +6618,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String summary;
 
         /**
+         * <p>Title.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxx</p>
          */
@@ -5569,6 +6627,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>Article URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -5631,10 +6691,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultTextGenerateMultimodalMediaListMultimodalMediaList extends TeaModel {
+        /**
+         * <p>Article.</p>
+         */
         @NameInMap("Article")
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultTextGenerateMultimodalMediaListMultimodalMediaListArticle article;
 
         /**
+         * <p>File URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -5642,6 +6707,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String fileUrl;
 
         /**
+         * <p>Unique multimodal data identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -5649,6 +6716,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String mediaId;
 
         /**
+         * <p>Multimodal file type. Valid values: video, image.</p>
+         * 
          * <strong>example:</strong>
          * <p>image</p>
          */
@@ -5696,16 +6765,23 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultTextGenerateMultimodalMediaList extends TeaModel {
         /**
+         * <p>End position.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("End")
         public Integer end;
 
+        /**
+         * <p>List of multimodal data.</p>
+         */
         @NameInMap("MultimodalMediaList")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultTextGenerateMultimodalMediaListMultimodalMediaList> multimodalMediaList;
 
         /**
+         * <p>Start position.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -5745,31 +6821,53 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResult extends TeaModel {
         /**
+         * <p>Indicates whether the current agent has finished generating.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("GenerateFinished")
         public Boolean generateFinished;
 
+        /**
+         * <p>Traceability information.</p>
+         */
         @NameInMap("GenerateTraceability")
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultGenerateTraceability generateTraceability;
 
+        /**
+         * <p>List of multimodal search results.</p>
+         */
         @NameInMap("MultimodalSearchResultList")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultMultimodalSearchResultList> multimodalSearchResultList;
 
+        /**
+         * <p>Deep thinking content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("ReasonTextGenerate")
         public String reasonTextGenerate;
 
+        /**
+         * <p>List of reference articles.</p>
+         */
         @NameInMap("ReferenceList")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultReferenceList> referenceList;
 
         /**
+         * <p>Text generation result.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
         @NameInMap("TextGenerate")
         public String textGenerate;
 
+        /**
+         * <p>List of accompanying images.</p>
+         */
         @NameInMap("TextGenerateMultimodalMediaList")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultTextGenerateMultimodalMediaList> textGenerateMultimodalMediaList;
 
@@ -5837,10 +6935,18 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentVideoSearchResultSearchResultArticle extends TeaModel {
+        /**
+         * <p>Unique category identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("CategoryUuid")
         public String categoryUuid;
 
         /**
+         * <p>Custom unique document ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -5848,22 +6954,44 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String docId;
 
         /**
+         * <p>Internal unique document identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
         @NameInMap("DocUuid")
         public String docUuid;
 
+        /**
+         * <p>Extension field 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend1")
         public String extend1;
 
+        /**
+         * <p>Extension field 2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend2")
         public String extend2;
 
+        /**
+         * <p>Extension field 3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend3")
         public String extend3;
 
         /**
+         * <p>Search source name.</p>
+         * 
          * <strong>example:</strong>
          * <p>互联网搜索</p>
          */
@@ -5871,16 +6999,23 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String searchSourceName;
 
         /**
+         * <p>Summary.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
         @NameInMap("Summary")
         public String summary;
 
+        /**
+         * <p>Tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<String> tags;
 
         /**
+         * <p>Title.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -5888,6 +7023,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>Article URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -5991,6 +7128,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentVideoSearchResultSearchResultClipInfos extends TeaModel {
         /**
+         * <p>Start time of the segment.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -5998,6 +7137,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Double from;
 
         /**
+         * <p>Confidence score. For reference only.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.8</p>
          */
@@ -6005,6 +7146,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Double score;
 
         /**
+         * <p>Corresponding text, such as ASR transcription.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -6012,6 +7155,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String text;
 
         /**
+         * <p>End time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -6019,6 +7164,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Double to;
 
         /**
+         * <p>Type. Example: asr.</p>
+         * 
          * <strong>example:</strong>
          * <p>asr</p>
          */
@@ -6073,13 +7220,21 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentVideoSearchResultSearchResult extends TeaModel {
+        /**
+         * <p>Article.</p>
+         */
         @NameInMap("Article")
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentVideoSearchResultSearchResultArticle article;
 
+        /**
+         * <p>List of matching segments.</p>
+         */
         @NameInMap("ClipInfos")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentVideoSearchResultSearchResultClipInfos> clipInfos;
 
         /**
+         * <p>File URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -6087,6 +7242,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String fileUrl;
 
         /**
+         * <p>Unique multimodal data identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -6094,6 +7251,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String mediaId;
 
         /**
+         * <p>Unique traceability identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -6148,6 +7307,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentVideoSearchResult extends TeaModel {
+        /**
+         * <p>List of search results.</p>
+         */
         @NameInMap("SearchResult")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentVideoSearchResultSearchResult> searchResult;
 
@@ -6167,30 +7329,57 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContent extends TeaModel {
+        /**
+         * <p>Voice search result.</p>
+         */
         @NameInMap("AudioSearchResult")
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentAudioSearchResult audioSearchResult;
 
+        /**
+         * <p>Clustering result.</p>
+         */
         @NameInMap("ClusterTopicResult")
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResult clusterTopicResult;
 
+        /**
+         * <p>Result of answering with original sentences.</p>
+         */
         @NameInMap("ExcerptResult")
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentExcerptResult excerptResult;
 
+        /**
+         * <p>Image search result.</p>
+         */
         @NameInMap("ImageSearchResult")
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentImageSearchResult imageSearchResult;
 
+        /**
+         * <p>News extraction result.</p>
+         */
         @NameInMap("NewsElementResult")
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentNewsElementResult newsElementResult;
 
+        /**
+         * <p>Summarized answer.</p>
+         */
         @NameInMap("TextGenerateResult")
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResult textGenerateResult;
 
+        /**
+         * <p>Text document search result.</p>
+         */
         @NameInMap("TextSearchResult")
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResult textSearchResult;
 
+        /**
+         * <p>Result of summarizing by time.</p>
+         */
         @NameInMap("TimelineResult")
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResult timelineResult;
 
+        /**
+         * <p>Video search result.</p>
+         */
         @NameInMap("VideoSearchResult")
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentVideoSearchResult videoSearchResult;
 
@@ -6274,18 +7463,48 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextTokenCalculate extends TeaModel {
+        /**
+         * <p>First token time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("FirstTokenTime")
         public Float firstTokenTime;
 
+        /**
+         * <p>Average number of tokens output per second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("OutputAvgTime")
         public Float outputAvgTime;
 
+        /**
+         * <p>Search time cost.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SearchTime")
         public Float searchTime;
 
+        /**
+         * <p>Total time cost.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Time")
         public Float time;
 
+        /**
+         * <p>Total number of tokens.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalTokens")
         public Long totalTokens;
 
@@ -6338,45 +7557,74 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContext extends TeaModel {
         /**
+         * <p>Follow-up question.</p>
+         * 
          * <strong>example:</strong>
          * <p>您想了解关于xx的哪些信息？</p>
          */
         @NameInMap("AskUser")
         public String askUser;
 
+        /**
+         * <p>List of recommended keywords for follow-up questions.</p>
+         */
         @NameInMap("AskUserKeywords")
         public java.util.List<String> askUserKeywords;
 
         /**
+         * <p>Current step in the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>start</p>
          */
         @NameInMap("CurrentStep")
         public String currentStep;
 
+        /**
+         * <p>Generated content.</p>
+         */
         @NameInMap("GeneratedContent")
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContent generatedContent;
 
+        /**
+         * <p>Model ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("ModelId")
         public String modelId;
 
         /**
+         * <p>Next step: think, search, or generate.</p>
+         * 
          * <strong>example:</strong>
          * <p>search</p>
          */
         @NameInMap("NextStep")
         public String nextStep;
 
+        /**
+         * <p>Generation - list of recommendations.</p>
+         */
         @NameInMap("RecommendSearchQueryList")
         public java.util.List<String> recommendSearchQueryList;
 
+        /**
+         * <p>Reasoning - list of query understanding keywords.</p>
+         */
         @NameInMap("SearchKeywords")
         public java.util.List<String> searchKeywords;
 
+        /**
+         * <p>List of text search queries.</p>
+         */
         @NameInMap("SearchQueryList")
         public java.util.List<String> searchQueryList;
 
         /**
+         * <p>Reasoning - data type to supplement: searchQuery.</p>
+         * 
          * <strong>example:</strong>
          * <p>searchQuery</p>
          */
@@ -6384,12 +7632,17 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String supplementDataType;
 
         /**
+         * <p>Reasoning - whether supplementation is needed.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("SupplementEnable")
         public Boolean supplementEnable;
 
+        /**
+         * <p>Runtime performance statistics.</p>
+         */
         @NameInMap("TokenCalculate")
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextTokenCalculate tokenCalculate;
 
@@ -6497,6 +7750,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContext extends TeaModel {
+        /**
+         * <p>Business context.</p>
+         */
         @NameInMap("BizContext")
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContext bizContext;
 
@@ -6517,6 +7773,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
     public static class RunSearchGenerationResponseBodyPayloadOutputMessagesSearchResultAudios extends TeaModel {
         /**
+         * <p>ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -6540,6 +7798,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
     public static class RunSearchGenerationResponseBodyPayloadOutputMessagesSearchResultImages extends TeaModel {
         /**
+         * <p>ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -6563,6 +7823,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
     public static class RunSearchGenerationResponseBodyPayloadOutputMessagesSearchResultTexts extends TeaModel {
         /**
+         * <p>ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -6586,6 +7848,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
     public static class RunSearchGenerationResponseBodyPayloadOutputMessagesSearchResultVideos extends TeaModel {
         /**
+         * <p>ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -6608,22 +7872,36 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputMessagesSearchResult extends TeaModel {
+        /**
+         * <p>List of audio results.</p>
+         */
         @NameInMap("Audios")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputMessagesSearchResultAudios> audios;
 
+        /**
+         * <p>List of image searches.</p>
+         */
         @NameInMap("Images")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputMessagesSearchResultImages> images;
 
         /**
+         * <p>Multimodal search query.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
         @NameInMap("MultimodalSearchQuery")
         public String multimodalSearchQuery;
 
+        /**
+         * <p>List of text searches.</p>
+         */
         @NameInMap("Texts")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputMessagesSearchResultTexts> texts;
 
+        /**
+         * <p>List of video results.</p>
+         */
         @NameInMap("Videos")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputMessagesSearchResultVideos> videos;
 
@@ -6675,20 +7953,30 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutputMessages extends TeaModel {
+        /**
+         * <p>Indicates whether clarification is needed.</p>
+         */
         @NameInMap("Clarifications")
         public Boolean clarifications;
 
         /**
+         * <p>Generated text.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>Indicates whether the current node has finished.</p>
+         */
         @NameInMap("GenerateFinished")
         public Boolean generateFinished;
 
         /**
+         * <p>Node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -6696,22 +7984,46 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>Node code:</p>
+         * <ul>
+         * <li><p>generateStartStatement</p>
+         * </li>
+         * <li><p>generateSearchQueries</p>
+         * </li>
+         * <li><p>multiSearch</p>
+         * </li>
+         * <li><p>readSearchResult</p>
+         * </li>
+         * <li><p>reflection</p>
+         * </li>
+         * <li><p>generate</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>generateStartStatement</p>
          */
         @NameInMap("NodeCode")
         public String nodeCode;
 
+        /**
+         * <p>List of search queries.</p>
+         */
         @NameInMap("SearchQueries")
         public java.util.List<String> searchQueries;
 
         /**
+         * <p>Current node search query.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
         @NameInMap("SearchQuery")
         public String searchQuery;
 
+        /**
+         * <p>Search result.</p>
+         */
         @NameInMap("SearchResult")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputMessagesSearchResult> searchResult;
 
@@ -6787,9 +8099,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayloadOutput extends TeaModel {
+        /**
+         * <p>Context data.</p>
+         */
         @NameInMap("AgentContext")
         public RunSearchGenerationResponseBodyPayloadOutputAgentContext agentContext;
 
+        /**
+         * <p>List of messages in research mode.</p>
+         */
         @NameInMap("Messages")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputMessages> messages;
 
@@ -6818,6 +8136,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
     public static class RunSearchGenerationResponseBodyPayloadUsage extends TeaModel {
         /**
+         * <p>The number of input tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -6825,6 +8145,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Long inputTokens;
 
         /**
+         * <p>The number of output tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -6832,6 +8154,8 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public Long outputTokens;
 
         /**
+         * <p>Total token count</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -6870,9 +8194,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     }
 
     public static class RunSearchGenerationResponseBodyPayload extends TeaModel {
+        /**
+         * <p>Outputs.</p>
+         */
         @NameInMap("Output")
         public RunSearchGenerationResponseBodyPayloadOutput output;
 
+        /**
+         * <p>Token usage.</p>
+         */
         @NameInMap("Usage")
         public RunSearchGenerationResponseBodyPayloadUsage usage;
 

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListInterveneRulesResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
-     * <p>0</p>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business data</p>
+     */
     @NameInMap("Data")
     public ListInterveneRulesResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListInterveneRulesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class ListInterveneRulesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Unique request identifier</p>
+     * 
      * <strong>example:</strong>
      * <p>DA021073-17CE-5CCF-9FEB-93226C766887</p>
      */
@@ -36,6 +47,8 @@ public class ListInterveneRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation succeeded: true for success, false for failure</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,16 +110,26 @@ public class ListInterveneRulesResponseBody extends TeaModel {
 
     public static class ListInterveneRulesResponseBodyDataInterveneRuleListAnswerConfig extends TeaModel {
         /**
+         * <p>Answer type</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("AnswerType")
         public Integer answerType;
 
+        /**
+         * <p>Answer content</p>
+         * 
+         * <strong>example:</strong>
+         * <p>抱歉我无法回答</p>
+         */
         @NameInMap("Message")
         public String message;
 
         /**
+         * <p>Namespace</p>
+         * 
          * <strong>example:</strong>
          * <p>namespace_qa_query</p>
          */
@@ -145,10 +168,15 @@ public class ListInterveneRulesResponseBody extends TeaModel {
     }
 
     public static class ListInterveneRulesResponseBodyDataInterveneRuleList extends TeaModel {
+        /**
+         * <p>Answer configuration</p>
+         */
         @NameInMap("AnswerConfig")
         public java.util.List<ListInterveneRulesResponseBodyDataInterveneRuleListAnswerConfig> answerConfig;
 
         /**
+         * <p>Creation time</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-06-05 15:17:01</p>
          */
@@ -156,6 +184,8 @@ public class ListInterveneRulesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Effective time</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-04-03 02:42:01</p>
          */
@@ -163,16 +193,23 @@ public class ListInterveneRulesResponseBody extends TeaModel {
         public String effectTime;
 
         /**
+         * <p>Intervention type</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("InterveneType")
         public Integer interveneType;
 
+        /**
+         * <p>List of namespaces</p>
+         */
         @NameInMap("NamespaceList")
         public java.util.List<String> namespaceList;
 
         /**
+         * <p>Rule ID</p>
+         * 
          * <strong>example:</strong>
          * <p>mr-iuo9pi9w555phfbb</p>
          */
@@ -180,6 +217,8 @@ public class ListInterveneRulesResponseBody extends TeaModel {
         public Long ruleId;
 
         /**
+         * <p>Rule name</p>
+         * 
          * <strong>example:</strong>
          * <p>ruletest</p>
          */
@@ -250,20 +289,33 @@ public class ListInterveneRulesResponseBody extends TeaModel {
     }
 
     public static class ListInterveneRulesResponseBodyData extends TeaModel {
+        /**
+         * <p>Status code returned by the intervention service</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("Code")
         public Integer code;
 
         /**
+         * <p>Number of items</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>List of rules</p>
+         */
         @NameInMap("InterveneRuleList")
         public java.util.List<ListInterveneRulesResponseBodyDataInterveneRuleList> interveneRuleList;
 
         /**
+         * <p>Page number</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -271,6 +323,8 @@ public class ListInterveneRulesResponseBody extends TeaModel {
         public Integer pageIndex;
 
         /**
+         * <p>Page size</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

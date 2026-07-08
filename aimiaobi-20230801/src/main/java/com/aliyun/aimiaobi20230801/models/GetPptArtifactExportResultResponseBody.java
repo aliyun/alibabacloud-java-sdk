@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetPptArtifactExportResultResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>DataNotExists</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetPptArtifactExportResultResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>400</p>
      */
@@ -22,6 +29,8 @@ public class GetPptArtifactExportResultResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>错误消息</p>
      */
@@ -29,7 +38,7 @@ public class GetPptArtifactExportResultResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxxx</p>
@@ -38,6 +47,8 @@ public class GetPptArtifactExportResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -98,6 +109,9 @@ public class GetPptArtifactExportResultResponseBody extends TeaModel {
     }
 
     public static class GetPptArtifactExportResultResponseBodyData extends TeaModel {
+        /**
+         * <p>The links to the exported files.</p>
+         */
         @NameInMap("ExportFileLink")
         public java.util.List<String> exportFileLink;
 

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTopicSelectionPerspectiveAnalysisTaskRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,11 @@ public class GetTopicSelectionPerspectiveAnalysisTaskRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The unique ID of the task.</p>
+     * <blockquote>
+     * <p>This parameter is optional. The system automatically generates a task ID. If subsequent tasks have the same TaskId, they are considered part of the same conversation.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>c9f226b02cca4f42a84c5e955c39dfd2</p>
      */

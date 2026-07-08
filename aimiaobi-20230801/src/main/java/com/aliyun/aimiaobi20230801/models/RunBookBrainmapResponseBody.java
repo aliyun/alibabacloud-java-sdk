@@ -4,14 +4,20 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunBookBrainmapResponseBody extends TeaModel {
+    /**
+     * <p>The response header.</p>
+     */
     @NameInMap("Header")
     public RunBookBrainmapResponseBodyHeader header;
 
+    /**
+     * <p>The response payload.</p>
+     */
     @NameInMap("Payload")
     public RunBookBrainmapResponseBodyPayload payload;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
@@ -50,6 +56,8 @@ public class RunBookBrainmapResponseBody extends TeaModel {
 
     public static class RunBookBrainmapResponseBodyHeader extends TeaModel {
         /**
+         * <p>The error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */
@@ -57,6 +65,8 @@ public class RunBookBrainmapResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -64,16 +74,26 @@ public class RunBookBrainmapResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The event type.</p>
+         * 
          * <strong>example:</strong>
          * <p>task-failed</p>
          */
         @NameInMap("Event")
         public String event;
 
+        /**
+         * <p>The event description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>模型生成事件</p>
+         */
         @NameInMap("EventInfo")
         public String eventInfo;
 
         /**
+         * <p>The session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3cd10828-0e42-471c-8f1a-931cde20b035</p>
          */
@@ -81,6 +101,8 @@ public class RunBookBrainmapResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
@@ -88,6 +110,8 @@ public class RunBookBrainmapResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The trace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>0bc1409b17210096103458421ec62e</p>
          */
@@ -159,6 +183,8 @@ public class RunBookBrainmapResponseBody extends TeaModel {
 
     public static class RunBookBrainmapResponseBodyPayloadOutput extends TeaModel {
         /**
+         * <p>The mind map content.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;xxxx&quot;:&quot;xxx&quot;}</p>
          */
@@ -182,6 +208,8 @@ public class RunBookBrainmapResponseBody extends TeaModel {
 
     public static class RunBookBrainmapResponseBodyPayloadUsage extends TeaModel {
         /**
+         * <p>The input token count.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -189,6 +217,8 @@ public class RunBookBrainmapResponseBody extends TeaModel {
         public Long inputTokens;
 
         /**
+         * <p>The output token count.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -196,6 +226,8 @@ public class RunBookBrainmapResponseBody extends TeaModel {
         public Long outputTokens;
 
         /**
+         * <p>The total token count.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -234,9 +266,15 @@ public class RunBookBrainmapResponseBody extends TeaModel {
     }
 
     public static class RunBookBrainmapResponseBodyPayload extends TeaModel {
+        /**
+         * <p>The generated output.</p>
+         */
         @NameInMap("Output")
         public RunBookBrainmapResponseBodyPayloadOutput output;
 
+        /**
+         * <p>Details about token usage.</p>
+         */
         @NameInMap("Usage")
         public RunBookBrainmapResponseBodyPayloadUsage usage;
 

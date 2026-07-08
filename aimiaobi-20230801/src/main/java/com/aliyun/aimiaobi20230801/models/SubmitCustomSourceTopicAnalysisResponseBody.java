@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class SubmitCustomSourceTopicAnalysisResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned by the operation.</p>
+     */
     @NameInMap("Data")
     public SubmitCustomSourceTopicAnalysisResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class SubmitCustomSourceTopicAnalysisResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The message that describes the error.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class SubmitCustomSourceTopicAnalysisResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -36,6 +47,8 @@ public class SubmitCustomSourceTopicAnalysisResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. A value of <code>true</code> indicates success. A value of <code>false</code> indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class SubmitCustomSourceTopicAnalysisResponseBody extends TeaModel {
 
     public static class SubmitCustomSourceTopicAnalysisResponseBodyData extends TeaModel {
         /**
+         * <p>The unique ID of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
@@ -104,6 +119,8 @@ public class SubmitCustomSourceTopicAnalysisResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The name of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>任务名称</p>
          */

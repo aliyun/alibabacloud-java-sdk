@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAuditContentErrorTypesRequest extends TeaModel {
     /**
+     * <p>Maximum number of records</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -12,6 +14,8 @@ public class ListAuditContentErrorTypesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Token for the next page</p>
+     * 
      * <strong>example:</strong>
      * <p>cEoBWREAXdxaOyjq/cqAbg==</p>
      */
@@ -19,6 +23,8 @@ public class ListAuditContentErrorTypesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p><a href="https://help.aliyun.com/document_detail/2782167.html">Workspace ID</a></p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx</p>
      */

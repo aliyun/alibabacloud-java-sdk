@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RunDocSmartCardRequest extends TeaModel {
     /**
+     * <p>The document ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,13 +14,26 @@ public class RunDocSmartCardRequest extends TeaModel {
     @NameInMap("DocId")
     public String docId;
 
+    /**
+     * <p>The name of the custom model.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>quanmiao-max、quanmiao-plus</p>
+     */
     @NameInMap("ModelName")
     public String modelName;
 
+    /**
+     * <p>The prompt.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>自定义提示词</p>
+     */
     @NameInMap("Prompt")
     public String prompt;
 
     /**
+     * <p>The session ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +43,7 @@ public class RunDocSmartCardRequest extends TeaModel {
     public String sessionId;
 
     /**
+     * <p>The unique ID of the Alibaba Cloud Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Get a Workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

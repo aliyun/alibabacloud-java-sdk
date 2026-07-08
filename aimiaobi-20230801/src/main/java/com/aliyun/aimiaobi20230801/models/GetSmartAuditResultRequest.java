@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetSmartAuditResultRequest extends TeaModel {
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */
@@ -12,6 +14,8 @@ public class GetSmartAuditResultRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The <a href="https://help.aliyun.com/document_detail/2782167.html">workspace ID</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm-xx</p>
      */

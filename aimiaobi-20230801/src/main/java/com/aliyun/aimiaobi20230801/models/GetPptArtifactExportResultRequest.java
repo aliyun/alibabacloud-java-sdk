@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetPptArtifactExportResultRequest extends TeaModel {
     /**
+     * <p>The ID of the export task.</p>
+     * 
      * <strong>example:</strong>
      * <p>15aeb61b-cdeb-4b70-94d7-99518040647e</p>
      */
@@ -19,6 +21,8 @@ public class GetPptArtifactExportResultRequest extends TeaModel {
     public String externalUserId;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm-xxxx</p>
      */

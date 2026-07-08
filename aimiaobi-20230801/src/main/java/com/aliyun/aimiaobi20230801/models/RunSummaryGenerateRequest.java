@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RunSummaryGenerateRequest extends TeaModel {
     /**
+     * <p>Content to summarize.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class RunSummaryGenerateRequest extends TeaModel {
     public String content;
 
     /**
+     * <p>Custom prompt for summary generation.</p>
+     * 
      * <strong>example:</strong>
      * <p>请为上述内容生成一段摘要，字数在100~200字以内。</p>
      */
@@ -21,6 +24,7 @@ public class RunSummaryGenerateRequest extends TeaModel {
     public String prompt;
 
     /**
+     * <p>Unique identifier of the Alibaba Cloud Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

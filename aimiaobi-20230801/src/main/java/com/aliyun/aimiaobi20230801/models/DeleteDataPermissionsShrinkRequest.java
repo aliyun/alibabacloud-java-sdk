@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteDataPermissionsShrinkRequest extends TeaModel {
     /**
+     * <p>The permission IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Ids")
     public String idsShrink;
 
     /**
+     * <p>The unique ID of the Alibaba Cloud Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2587495.html">Get a workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

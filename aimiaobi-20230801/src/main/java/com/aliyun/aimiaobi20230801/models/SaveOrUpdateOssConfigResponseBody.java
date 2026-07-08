@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class SaveOrUpdateOssConfigResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>DataNotExists</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The business data.</p>
+     */
     @NameInMap("Data")
     public SaveOrUpdateOssConfigResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class SaveOrUpdateOssConfigResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,7 +38,7 @@ public class SaveOrUpdateOssConfigResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>F2F366D6-E9FE-1006-BB70-2C650896AAB5</p>
@@ -38,6 +47,8 @@ public class SaveOrUpdateOssConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. \<code>true\\</code> indicates success. \<code>false\\</code> indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +110,8 @@ public class SaveOrUpdateOssConfigResponseBody extends TeaModel {
 
     public static class SaveOrUpdateOssConfigResponseBodyData extends TeaModel {
         /**
+         * <p>The name of the OSS bucket.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -106,6 +119,8 @@ public class SaveOrUpdateOssConfigResponseBody extends TeaModel {
         public String bucketName;
 
         /**
+         * <p>Indicates whether the OSS configuration is active. \<code>1\\</code>: The configuration is active. \<code>0\\</code>: The configuration is inactive.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -113,6 +128,8 @@ public class SaveOrUpdateOssConfigResponseBody extends TeaModel {
         public String enable;
 
         /**
+         * <p>The endpoint of OSS.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss-cn-shanghai.aliyuncs.com</p>
          */

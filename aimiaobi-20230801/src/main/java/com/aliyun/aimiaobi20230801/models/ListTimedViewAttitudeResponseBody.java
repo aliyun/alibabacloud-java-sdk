@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListTimedViewAttitudeResponseBody extends TeaModel {
     /**
+     * <p>Status Code</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business Data</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListTimedViewAttitudeResponseBodyData> data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListTimedViewAttitudeResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Maximum number of return results</p>
+     * 
      * <strong>example:</strong>
      * <p>15</p>
      */
@@ -29,6 +38,8 @@ public class ListTimedViewAttitudeResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Fault description</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -36,6 +47,8 @@ public class ListTimedViewAttitudeResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Token for the next page</p>
+     * 
      * <strong>example:</strong>
      * <p>下一页的token</p>
      */
@@ -43,6 +56,8 @@ public class ListTimedViewAttitudeResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Request UUID</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -50,6 +65,8 @@ public class ListTimedViewAttitudeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation succeeded: true for success, false for failure</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -57,6 +74,8 @@ public class ListTimedViewAttitudeResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Total count</p>
+     * 
      * <strong>example:</strong>
      * <p>58</p>
      */
@@ -142,6 +161,8 @@ public class ListTimedViewAttitudeResponseBody extends TeaModel {
 
     public static class ListTimedViewAttitudeResponseBodyDataViewPointsOutlines extends TeaModel {
         /**
+         * <p>outline</p>
+         * 
          * <strong>example:</strong>
          * <p>大纲</p>
          */
@@ -149,6 +170,8 @@ public class ListTimedViewAttitudeResponseBody extends TeaModel {
         public String outline;
 
         /**
+         * <p>outline summary</p>
+         * 
          * <strong>example:</strong>
          * <p>大纲摘要</p>
          */
@@ -179,10 +202,15 @@ public class ListTimedViewAttitudeResponseBody extends TeaModel {
     }
 
     public static class ListTimedViewAttitudeResponseBodyDataViewPoints extends TeaModel {
+        /**
+         * <p>outlines</p>
+         */
         @NameInMap("Outlines")
         public java.util.List<ListTimedViewAttitudeResponseBodyDataViewPointsOutlines> outlines;
 
         /**
+         * <p>generated point</p>
+         * 
          * <strong>example:</strong>
          * <p>视角</p>
          */
@@ -190,6 +218,8 @@ public class ListTimedViewAttitudeResponseBody extends TeaModel {
         public String point;
 
         /**
+         * <p>Summary</p>
+         * 
          * <strong>example:</strong>
          * <p>摘要</p>
          */
@@ -229,6 +259,8 @@ public class ListTimedViewAttitudeResponseBody extends TeaModel {
 
     public static class ListTimedViewAttitudeResponseBodyData extends TeaModel {
         /**
+         * <p>current attitude</p>
+         * 
          * <strong>example:</strong>
          * <p>当前观点</p>
          */
@@ -236,6 +268,8 @@ public class ListTimedViewAttitudeResponseBody extends TeaModel {
         public String attitude;
 
         /**
+         * <p>Attitude Type</p>
+         * 
          * <strong>example:</strong>
          * <p>观点类型</p>
          */
@@ -243,6 +277,8 @@ public class ListTimedViewAttitudeResponseBody extends TeaModel {
         public String attitudeType;
 
         /**
+         * <p>Published At</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-22 10:29</p>
          */
@@ -250,6 +286,8 @@ public class ListTimedViewAttitudeResponseBody extends TeaModel {
         public String pubTime;
 
         /**
+         * <p>Proportion of the current attitude</p>
+         * 
          * <strong>example:</strong>
          * <p>当前观点占比</p>
          */
@@ -257,6 +295,8 @@ public class ListTimedViewAttitudeResponseBody extends TeaModel {
         public String ratio;
 
         /**
+         * <p>News Source</p>
+         * 
          * <strong>example:</strong>
          * <p>新浪</p>
          */
@@ -264,6 +304,8 @@ public class ListTimedViewAttitudeResponseBody extends TeaModel {
         public String source;
 
         /**
+         * <p>Current attitude, equivalent to the news title</p>
+         * 
          * <strong>example:</strong>
          * <p>标题</p>
          */
@@ -271,12 +313,17 @@ public class ListTimedViewAttitudeResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>News URL</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com/news/1.html">http://www.example.com/news/1.html</a></p>
          */
         @NameInMap("Url")
         public String url;
 
+        /**
+         * <p>List of topic perspectives</p>
+         */
         @NameInMap("ViewPoints")
         public java.util.List<ListTimedViewAttitudeResponseBodyDataViewPoints> viewPoints;
 

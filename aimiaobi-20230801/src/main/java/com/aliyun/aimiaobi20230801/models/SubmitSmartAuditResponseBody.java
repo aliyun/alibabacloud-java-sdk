@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class SubmitSmartAuditResponseBody extends TeaModel {
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>DataNotExists</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Task response object</p>
+     */
     @NameInMap("Data")
     public SubmitSmartAuditResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>400</p>
      */
@@ -22,6 +29,8 @@ public class SubmitSmartAuditResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>错误消息</p>
      */
@@ -29,7 +38,7 @@ public class SubmitSmartAuditResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>Request ID</p>
      * 
      * <strong>example:</strong>
      * <p>xxxxx</p>
@@ -38,6 +47,8 @@ public class SubmitSmartAuditResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +110,8 @@ public class SubmitSmartAuditResponseBody extends TeaModel {
 
     public static class SubmitSmartAuditResponseBodyData extends TeaModel {
         /**
+         * <p>Task ID</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxx</p>
          */

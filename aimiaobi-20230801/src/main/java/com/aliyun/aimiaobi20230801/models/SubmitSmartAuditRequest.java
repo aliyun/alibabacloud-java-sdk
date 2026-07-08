@@ -4,28 +4,57 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class SubmitSmartAuditRequest extends TeaModel {
+    /**
+     * <p>Parameters for image audit</p>
+     */
     @NameInMap("ImageUrlList")
     public java.util.List<SubmitSmartAuditRequestImageUrlList> imageUrlList;
 
+    /**
+     * <p>Rule library ID for rule-based auditing (default: Default)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>note_1_486</p>
+     */
     @NameInMap("NoteId")
     public String noteId;
 
+    /**
+     * <p>List of sub-audit codes</p>
+     */
     @NameInMap("SubCodes")
     public java.util.List<String> subCodes;
 
+    /**
+     * <p>Word library name for dictionary-based auditing (default: Default)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Default</p>
+     */
     @NameInMap("TermsName")
     public String termsName;
 
+    /**
+     * <p>Content to be audited</p>
+     * 
+     * <strong>example:</strong>
+     * <p>“你好呀”</p>
+     */
     @NameInMap("Text")
     public String text;
 
     /**
+     * <p><a href="https://help.aliyun.com/document_detail/2782167.html">Workspace ID</a></p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
+    /**
+     * <p>Parameters for image audit (deprecated; use ImageUrlList instead)</p>
+     */
     @NameInMap("imageUrls")
     public java.util.List<SubmitSmartAuditRequestImageUrls> imageUrls;
 
@@ -91,9 +120,21 @@ public class SubmitSmartAuditRequest extends TeaModel {
     }
 
     public static class SubmitSmartAuditRequestImageUrlList extends TeaModel {
+        /**
+         * <p>Unique image identifier</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The URL can be a web link or a base64-encoded string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com/xxx.png">http://www.example.com/xxx.png</a></p>
+         */
         @NameInMap("Url")
         public String url;
 
@@ -121,9 +162,21 @@ public class SubmitSmartAuditRequest extends TeaModel {
     }
 
     public static class SubmitSmartAuditRequestImageUrls extends TeaModel {
+        /**
+         * <p>Unique image identifier</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3HAZTv62M0vkyz5B</p>
+         */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <p>The URL can be a web link or a base64-encoded string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.example.com/xxx.jpg">https://www.example.com/xxx.jpg</a></p>
+         */
         @NameInMap("url")
         public String url;
 

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class FetchParseDocumentLayoutTaskResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business data</p>
+     */
     @NameInMap("Data")
     public FetchParseDocumentLayoutTaskResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class FetchParseDocumentLayoutTaskResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -38,6 +47,8 @@ public class FetchParseDocumentLayoutTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -98,19 +109,53 @@ public class FetchParseDocumentLayoutTaskResponseBody extends TeaModel {
     }
 
     public static class FetchParseDocumentLayoutTaskResponseBodyDataLayoutResultElements extends TeaModel {
+        /**
+         * <p>Content</p>
+         * 
+         * <strong>example:</strong>
+         * <p>一、本月主要工作进展\n</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>For headings, content with heading numbers removed</p>
+         * 
+         * <strong>example:</strong>
+         * <p>本月主要工作进展</p>
+         */
         @NameInMap("FormatContent")
         public String formatContent;
 
         /**
+         * <p>Index order of each element</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("Index")
         public Float index;
 
+        /**
+         * <p>Type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>支持的类型如下
+         *     HEADING(&quot;标题&quot;),
+         *     H1(&quot;一级标题&quot;),
+         *     H2(&quot;二级标题&quot;),
+         *     H3(&quot;三级标题&quot;),
+         *     H4(&quot;四级标题&quot;),
+         *     H5(&quot;五级标题&quot;),
+         *     H6(&quot;六级标题&quot;),
+         *     PARAGRAPH(&quot;段落&quot;),
+         *     SIGNATURE(&quot;落款&quot;),
+         *     FOOTNOTE(&quot;脚注&quot;),
+         *     TABLE(&quot;表格&quot;),
+         *     CODE_BLOCK(&quot;代码块&quot;),
+         *     ATTACHMENT(&quot;附件&quot;),
+         *     BLOCKQUOTE(&quot;引用&quot;);</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -154,6 +199,9 @@ public class FetchParseDocumentLayoutTaskResponseBody extends TeaModel {
     }
 
     public static class FetchParseDocumentLayoutTaskResponseBodyDataLayoutResult extends TeaModel {
+        /**
+         * <p>Returned element data</p>
+         */
         @NameInMap("Elements")
         public java.util.List<FetchParseDocumentLayoutTaskResponseBodyDataLayoutResultElements> elements;
 
@@ -173,9 +221,18 @@ public class FetchParseDocumentLayoutTaskResponseBody extends TeaModel {
     }
 
     public static class FetchParseDocumentLayoutTaskResponseBodyData extends TeaModel {
+        /**
+         * <p>Structured content after formatting</p>
+         */
         @NameInMap("LayoutResult")
         public FetchParseDocumentLayoutTaskResponseBodyDataLayoutResult layoutResult;
 
+        /**
+         * <p>Task status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PENDING-待执行、RUNNING-执行中、SUCCESSED-成功、SUSPENDED-暂停、FAILED-失败、CANCELLED-取消</p>
+         */
         @NameInMap("TaskStats")
         public String taskStats;
 

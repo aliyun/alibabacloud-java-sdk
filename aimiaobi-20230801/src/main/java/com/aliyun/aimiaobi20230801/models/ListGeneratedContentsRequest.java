@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGeneratedContentsRequest extends TeaModel {
     /**
+     * <p>Workspace ID: <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,22 @@ public class ListGeneratedContentsRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>Content domain (content category)</p>
+     * <ul>
+     * <li><p>media: Media writing</p>
+     * </li>
+     * <li><p>government: Government document writing</p>
+     * </li>
+     * <li><p>office: Office writing</p>
+     * </li>
+     * <li><p>market: Marketing writing</p>
+     * </li>
+     * <li><p>custom: Custom writing</p>
+     * </li>
+     * <li><p>commentGenerate: Opinion generation</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>media</p>
      */
@@ -21,26 +38,66 @@ public class ListGeneratedContentsRequest extends TeaModel {
     public String contentDomain;
 
     /**
+     * <p>Page number</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("Current")
     public Integer current;
 
+    /**
+     * <p>Data type filter</p>
+     * <ul>
+     * <li><p>plainText: Plain text</p>
+     * </li>
+     * <li><p>richText: Rich text</p>
+     * </li>
+     * <li><p>html: HTML</p>
+     * </li>
+     * <li><p>pdf: PDF</p>
+     * </li>
+     * <li><p>word: Word</p>
+     * </li>
+     * <li><p>excel: Excel</p>
+     * </li>
+     * <li><p>csv: CSV</p>
+     * </li>
+     * <li><p>image: Image</p>
+     * </li>
+     * <li><p>video: Video</p>
+     * </li>
+     * <li><p>audio: Audio</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>plainText</p>
+     */
     @NameInMap("DataType")
     public String dataType;
 
     /**
+     * <p>End time</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-04 11:46:07</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>Search keyword: Supports fuzzy search on titles and content</p>
+     * 
+     * <strong>example:</strong>
+     * <p>检索Query</p>
+     */
     @NameInMap("Query")
     public String query;
 
     /**
+     * <p>Items per page. Default is 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -48,15 +105,32 @@ public class ListGeneratedContentsRequest extends TeaModel {
     public Integer size;
 
     /**
+     * <p>Start time</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-04 11:46:07</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>Task ID</p>
+     * <blockquote>
+     * <p>You do not need to specify TaskId. The system generates it automatically. If you use the same TaskId for multiple tasks, those tasks belong to the same conversation.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>task-03d46184ee7d8749</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <p>Title text</p>
+     * 
+     * <strong>example:</strong>
+     * <p>杭州亚运会</p>
+     */
     @NameInMap("Title")
     public String title;
 

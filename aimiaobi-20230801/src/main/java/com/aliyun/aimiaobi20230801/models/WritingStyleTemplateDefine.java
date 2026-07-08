@@ -32,17 +32,9 @@ public class WritingStyleTemplateDefine extends TeaModel {
     }
 
     public static class WritingStyleTemplateDefineExample extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>topic</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <strong>example:</strong>
-         * <p>123</p>
-         */
         @NameInMap("Value")
         public String value;
 

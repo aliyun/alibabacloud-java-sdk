@@ -4,9 +4,15 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunDocSmartCardResponseBody extends TeaModel {
+    /**
+     * <p>The response header.</p>
+     */
     @NameInMap("Header")
     public RunDocSmartCardResponseBodyHeader header;
 
+    /**
+     * <p>The response body.</p>
+     */
     @NameInMap("Payload")
     public RunDocSmartCardResponseBodyPayload payload;
 
@@ -50,6 +56,8 @@ public class RunDocSmartCardResponseBody extends TeaModel {
 
     public static class RunDocSmartCardResponseBodyHeader extends TeaModel {
         /**
+         * <p>The error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -57,6 +65,8 @@ public class RunDocSmartCardResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -64,16 +74,26 @@ public class RunDocSmartCardResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The event type.</p>
+         * 
          * <strong>example:</strong>
          * <p>finished</p>
          */
         @NameInMap("Event")
         public String event;
 
+        /**
+         * <p>The event description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>模型生成事件</p>
+         */
         @NameInMap("EventInfo")
         public String eventInfo;
 
         /**
+         * <p>The unique ID of the session.</p>
+         * 
          * <strong>example:</strong>
          * <p>07181f55-2311-48af-8048-132a77dee020</p>
          */
@@ -81,6 +101,8 @@ public class RunDocSmartCardResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>8d55b429d7c6d321fcff54823e8d317b</p>
          */
@@ -88,6 +110,8 @@ public class RunDocSmartCardResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The trace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>0abb781c17337107444473701ed7c3</p>
          */
@@ -158,9 +182,18 @@ public class RunDocSmartCardResponseBody extends TeaModel {
     }
 
     public static class RunDocSmartCardResponseBodyPayloadOutput extends TeaModel {
+        /**
+         * <p>The title of the card.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>标题内容</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>An array of card tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<String> tags;
 
@@ -189,6 +222,8 @@ public class RunDocSmartCardResponseBody extends TeaModel {
 
     public static class RunDocSmartCardResponseBodyPayloadUsage extends TeaModel {
         /**
+         * <p>The number of tokens used for the input.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -196,6 +231,8 @@ public class RunDocSmartCardResponseBody extends TeaModel {
         public Long inputTokens;
 
         /**
+         * <p>The number of tokens for the output.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -203,6 +240,8 @@ public class RunDocSmartCardResponseBody extends TeaModel {
         public Long outputTokens;
 
         /**
+         * <p>The total number of tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>101</p>
          */
@@ -241,9 +280,15 @@ public class RunDocSmartCardResponseBody extends TeaModel {
     }
 
     public static class RunDocSmartCardResponseBodyPayload extends TeaModel {
+        /**
+         * <p>The output object.</p>
+         */
         @NameInMap("Output")
         public RunDocSmartCardResponseBodyPayloadOutput output;
 
+        /**
+         * <p>The token usage.</p>
+         */
         @NameInMap("Usage")
         public RunDocSmartCardResponseBodyPayloadUsage usage;
 

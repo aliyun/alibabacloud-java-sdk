@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListInterveneCntResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
-     * <p>0</p>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business data</p>
+     */
     @NameInMap("Data")
     public ListInterveneCntResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListInterveneCntResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class ListInterveneCntResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Unique request identifier</p>
+     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */
@@ -36,6 +47,8 @@ public class ListInterveneCntResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates success: true for success, false for failure</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -96,13 +109,24 @@ public class ListInterveneCntResponseBody extends TeaModel {
     }
 
     public static class ListInterveneCntResponseBodyData extends TeaModel {
+        /**
+         * <p>List of count information</p>
+         */
         @NameInMap("CntList")
         public java.util.List<?> cntList;
 
+        /**
+         * <p>Intervention service status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("Code")
         public Integer code;
 
         /**
+         * <p>Total number of pages</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -110,6 +134,8 @@ public class ListInterveneCntResponseBody extends TeaModel {
         public Integer pageCnt;
 
         /**
+         * <p>Page number</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -117,6 +143,8 @@ public class ListInterveneCntResponseBody extends TeaModel {
         public Integer pageIndex;
 
         /**
+         * <p>Page size</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

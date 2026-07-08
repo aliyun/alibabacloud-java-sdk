@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class SubmitAsyncTaskResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
-     * <p>DataNotExists</p>
+     * <p>successful</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public SubmitAsyncTaskResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,13 +29,17 @@ public class SubmitAsyncTaskResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
-     * <p>success</p>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */
@@ -36,6 +47,8 @@ public class SubmitAsyncTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. A value of true indicates success, and a value of false indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,13 +110,17 @@ public class SubmitAsyncTaskResponseBody extends TeaModel {
 
     public static class SubmitAsyncTaskResponseBodyData extends TeaModel {
         /**
+         * <p>The unique task ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
+         * <p>xxxx</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
+         * <p>The intermediate result.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -111,6 +128,8 @@ public class SubmitAsyncTaskResponseBody extends TeaModel {
         public Object taskIntermediateResult;
 
         /**
+         * <p>The task name.</p>
+         * 
          * <strong>example:</strong>
          * <p>任务名称</p>
          */

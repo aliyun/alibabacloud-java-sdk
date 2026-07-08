@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class AsyncUploadTenderDocResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business data</p>
+     */
     @NameInMap("Data")
     public AsyncUploadTenderDocResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class AsyncUploadTenderDocResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error description</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -38,6 +47,8 @@ public class AsyncUploadTenderDocResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Success: true for success, false for failure</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +110,8 @@ public class AsyncUploadTenderDocResponseBody extends TeaModel {
 
     public static class AsyncUploadTenderDocResponseBodyData extends TeaModel {
         /**
+         * <p>Task ID</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */

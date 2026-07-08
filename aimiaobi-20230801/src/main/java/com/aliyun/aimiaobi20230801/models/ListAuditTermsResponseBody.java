@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListAuditTermsResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>DataNotExists</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business data</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListAuditTermsResponseBodyData> data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListAuditTermsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Maximum number of results returned</p>
+     * 
      * <strong>example:</strong>
      * <p>77</p>
      */
@@ -29,6 +38,8 @@ public class ListAuditTermsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Error description</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -36,6 +47,8 @@ public class ListAuditTermsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Token for the next page</p>
+     * 
      * <strong>example:</strong>
      * <p>x\&quot;x\&quot;x</p>
      */
@@ -52,6 +65,8 @@ public class ListAuditTermsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -59,6 +74,8 @@ public class ListAuditTermsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Total count</p>
+     * 
      * <strong>example:</strong>
      * <p>58</p>
      */
@@ -143,10 +160,15 @@ public class ListAuditTermsResponseBody extends TeaModel {
     }
 
     public static class ListAuditTermsResponseBodyData extends TeaModel {
+        /**
+         * <p>Exception statements</p>
+         */
         @NameInMap("ExceptionWord")
         public java.util.List<String> exceptionWord;
 
         /**
+         * <p>Task primary key ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -154,6 +176,8 @@ public class ListAuditTermsResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>Keyword</p>
+         * 
          * <strong>example:</strong>
          * <p>龘</p>
          */
@@ -161,6 +185,8 @@ public class ListAuditTermsResponseBody extends TeaModel {
         public String keyword;
 
         /**
+         * <p>Suggested word</p>
+         * 
          * <strong>example:</strong>
          * <p>龘(dá)</p>
          */
@@ -168,12 +194,17 @@ public class ListAuditTermsResponseBody extends TeaModel {
         public String suggestWord;
 
         /**
+         * <p>Audit basis</p>
+         * 
          * <strong>example:</strong>
          * <p>龙行龘龘出自四库本《玉篇》23龙部第8字，文字释义为群龙腾飞的样子，昂扬而热烈。</p>
          */
         @NameInMap("TermsDesc")
         public String termsDesc;
 
+        /**
+         * <p>Dictionary name</p>
+         */
         @NameInMap("TermsName")
         public String termsName;
 

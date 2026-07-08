@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class AsyncUploadVideoResponseBody extends TeaModel {
     /**
+     * <p>The status code returned for the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The business data.</p>
+     */
     @NameInMap("Data")
     public AsyncUploadVideoResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class AsyncUploadVideoResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -38,6 +47,8 @@ public class AsyncUploadVideoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. \<code>true\\</code> indicates success. \<code>false\\</code> indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +110,8 @@ public class AsyncUploadVideoResponseBody extends TeaModel {
 
     public static class AsyncUploadVideoResponseBodyDataVideoInfos extends TeaModel {
         /**
+         * <p>Additional information about the video.</p>
+         * 
          * <strong>example:</strong>
          * <p>视频中有一个房子</p>
          */
@@ -106,6 +119,8 @@ public class AsyncUploadVideoResponseBody extends TeaModel {
         public String videoExtraInfo;
 
         /**
+         * <p>The video ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>60616fad41b171f0bb4b4531948c0102</p>
          */
@@ -113,6 +128,8 @@ public class AsyncUploadVideoResponseBody extends TeaModel {
         public String videoId;
 
         /**
+         * <p>The name of the video.</p>
+         * 
          * <strong>example:</strong>
          * <p>123.mp4</p>
          */
@@ -120,6 +137,8 @@ public class AsyncUploadVideoResponseBody extends TeaModel {
         public String videoName;
 
         /**
+         * <p>The video URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://123.mp4">http://123.mp4</a></p>
          */
@@ -167,12 +186,17 @@ public class AsyncUploadVideoResponseBody extends TeaModel {
 
     public static class AsyncUploadVideoResponseBodyData extends TeaModel {
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>Information about the videos.</p>
+         */
         @NameInMap("VideoInfos")
         public java.util.List<AsyncUploadVideoResponseBodyDataVideoInfos> videoInfos;
 

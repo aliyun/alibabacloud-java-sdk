@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SaveMaterialDocumentResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>DataNotExists</p>
      */
@@ -12,6 +14,8 @@ public class SaveMaterialDocumentResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Business data</p>
+     * 
      * <strong>example:</strong>
      * <p>12</p>
      */
@@ -19,6 +23,8 @@ public class SaveMaterialDocumentResponseBody extends TeaModel {
     public Long data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class SaveMaterialDocumentResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error description</p>
+     * 
      * <strong>example:</strong>
      * <p>数据不存在</p>
      */
@@ -33,6 +41,8 @@ public class SaveMaterialDocumentResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Unique request identifier</p>
+     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */
@@ -40,6 +50,8 @@ public class SaveMaterialDocumentResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Is successful: true for success, false for failure</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

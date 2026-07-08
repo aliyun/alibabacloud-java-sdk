@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class RunVideoScriptGenerateResponseBody extends TeaModel {
     /**
+     * <p>The status code. A value of 200 indicates a normal response. This field is returned when the \<code>Content-Type\\</code> is \<code>json\\</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>NoPermission</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response header.</p>
+     */
     @NameInMap("Header")
     public RunVideoScriptGenerateResponseBodyHeader header;
 
     /**
+     * <p>The HTTP status code. This field is returned when the \<code>Content-Type\\</code> is \<code>json\\</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>403</p>
      */
@@ -22,16 +29,23 @@ public class RunVideoScriptGenerateResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
+     * <p>The error description. This field is returned when the \<code>Content-Type\\</code> is \<code>json\\</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>You are not authorized to perform this action.</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The response body.</p>
+     */
     @NameInMap("Payload")
     public RunVideoScriptGenerateResponseBodyPayload payload;
 
     /**
+     * <p>The unique ID of the request. This field is returned when the \<code>Content-Type\\</code> is \<code>json\\</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>F2F366D6-E9FE-1006-BB70-2C650896AAB5</p>
      */
@@ -39,6 +53,8 @@ public class RunVideoScriptGenerateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. \<code>true\\</code> indicates success. \<code>false\\</code> indicates failure. This field is returned when the \<code>Content-Type\\</code> is \<code>json\\</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -108,16 +124,26 @@ public class RunVideoScriptGenerateResponseBody extends TeaModel {
 
     public static class RunVideoScriptGenerateResponseBodyHeader extends TeaModel {
         /**
+         * <p>The error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>ScriptNumberExceed</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The error message returned when the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>脚本篇数超限</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
+         * <p>The event name.</p>
+         * 
          * <strong>example:</strong>
          * <p>result-generated</p>
          */
@@ -125,6 +151,8 @@ public class RunVideoScriptGenerateResponseBody extends TeaModel {
         public String event;
 
         /**
+         * <p>The session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
@@ -132,6 +160,8 @@ public class RunVideoScriptGenerateResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>The status code.</p>
+         * 
          * <strong>example:</strong>
          * <p>400</p>
          */
@@ -139,6 +169,8 @@ public class RunVideoScriptGenerateResponseBody extends TeaModel {
         public Integer statusCode;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>b057f2fa-2277-477b-babf-cbc062307828</p>
          */
@@ -146,6 +178,8 @@ public class RunVideoScriptGenerateResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The trace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2150451a17191950923411783e2927</p>
          */
@@ -216,6 +250,12 @@ public class RunVideoScriptGenerateResponseBody extends TeaModel {
     }
 
     public static class RunVideoScriptGenerateResponseBodyPayloadOutput extends TeaModel {
+        /**
+         * <p>The text generation result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>大家好，我是[xxx]。今天带大家走进黄山，感受奇松、怪石、云海、温泉的绝美风光。首站迎客松，800年历史，枝干如臂，热情迎接每一位游客。接着登光明顶，360度全景尽收眼底。再探秘西海大峡谷，体验原始自然的震撼。最后，在温泉中放松身心，享受旅途的美好。希望这次旅行能给你留下难忘的记忆。我是[你的名字]，感谢观看，我们下次再见！&quot;,&quot;91522b25a4f440189320c9ede8ae6c85&quot;:&quot;大家好，我是[您的名字]，今天带大家探索黄山的奇妙之旅。首先，我们将见到黄山的象征——迎客松，感受它800年的历史与欢迎。随后攀登光明顶，迎接壮丽的日出；漫步西海大峡谷，体验险峻之美；最后，在温泉中放松身心。希望这次旅行能让你爱上黄山。谢谢观看！&quot;,&quot;1c23af4a899e4b908bdcffa7d8d0ddc9&quot;:&quot;大家好，欢迎来到黄山！这里以奇松、怪石、云海、温泉四绝闻名。从云谷寺开始，感受古朴氛围；挑战百步云梯，体验攀登乐趣；漫步西海大峡谷，领略壮丽景色；最后在玉屏楼迎接日出，享受心灵的宁静。希望这次旅行给你留下美好回忆！</p>
+         */
         @NameInMap("Text")
         public String text;
 
@@ -236,6 +276,8 @@ public class RunVideoScriptGenerateResponseBody extends TeaModel {
 
     public static class RunVideoScriptGenerateResponseBodyPayloadUsage extends TeaModel {
         /**
+         * <p>The number of tokens used for the input.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -243,6 +285,8 @@ public class RunVideoScriptGenerateResponseBody extends TeaModel {
         public Long inputTokens;
 
         /**
+         * <p>The number of tokens for the output.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -250,6 +294,8 @@ public class RunVideoScriptGenerateResponseBody extends TeaModel {
         public Long outputTokens;
 
         /**
+         * <p>The total number of tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -288,9 +334,15 @@ public class RunVideoScriptGenerateResponseBody extends TeaModel {
     }
 
     public static class RunVideoScriptGenerateResponseBodyPayload extends TeaModel {
+        /**
+         * <p>The output content object.</p>
+         */
         @NameInMap("Output")
         public RunVideoScriptGenerateResponseBodyPayloadOutput output;
 
+        /**
+         * <p>The token usage.</p>
+         */
         @NameInMap("Usage")
         public RunVideoScriptGenerateResponseBodyPayloadUsage usage;
 

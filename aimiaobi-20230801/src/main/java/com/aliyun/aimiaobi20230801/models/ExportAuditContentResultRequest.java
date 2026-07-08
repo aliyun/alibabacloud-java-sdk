@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExportAuditContentResultRequest extends TeaModel {
     /**
+     * <p>The ID of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>7AA2AE16-D873-5C5F-9708-15396C382EB1</p>
      */
@@ -12,6 +14,8 @@ public class ExportAuditContentResultRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p><a href="https://help.aliyun.com/document_detail/2782167.html">The ID of the workspace.</a></p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx</p>
      */

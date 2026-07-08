@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListDataPermissionsResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListDataPermissionsResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListDataPermissionsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class ListDataPermissionsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -36,6 +47,8 @@ public class ListDataPermissionsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -43,6 +56,8 @@ public class ListDataPermissionsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -50,6 +65,8 @@ public class ListDataPermissionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. \<code>true\\</code> indicates success and \<code>false\\</code> indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -57,6 +74,8 @@ public class ListDataPermissionsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -142,6 +161,8 @@ public class ListDataPermissionsResponseBody extends TeaModel {
 
     public static class ListDataPermissionsResponseBodyData extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-11-12 21:46:24</p>
          */
@@ -149,6 +170,8 @@ public class ListDataPermissionsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -156,6 +179,11 @@ public class ListDataPermissionsResponseBody extends TeaModel {
         public String createUser;
 
         /**
+         * <p>The unique ID of the data.</p>
+         * <ul>
+         * <li>Example for a dataset: SystemSearch.QuarkCommonNews</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SystemSearch.QuarkCommonNews</p>
          */
@@ -163,6 +191,11 @@ public class ListDataPermissionsResponseBody extends TeaModel {
         public String dataId;
 
         /**
+         * <p>The data type.</p>
+         * <ul>
+         * <li>dataset: a dataset</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -170,6 +203,8 @@ public class ListDataPermissionsResponseBody extends TeaModel {
         public String dataType;
 
         /**
+         * <p>The primary key ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -177,6 +212,8 @@ public class ListDataPermissionsResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The permission type. The default value is \<code>read\\</code>, which means read-only.</p>
+         * 
          * <strong>example:</strong>
          * <p>read</p>
          */
@@ -184,6 +221,8 @@ public class ListDataPermissionsResponseBody extends TeaModel {
         public String permission;
 
         /**
+         * <p>The unique ID of the user with the permission.</p>
+         * 
          * <strong>example:</strong>
          * <p>CustomSemanticSearch</p>
          */
@@ -191,6 +230,8 @@ public class ListDataPermissionsResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>The name of the user with the permission.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */

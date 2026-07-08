@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GenerateExportWordTaskResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Response body</p>
+     */
     @NameInMap("Data")
     public GenerateExportWordTaskResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GenerateExportWordTaskResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class GenerateExportWordTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Unique request identifier</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -36,6 +47,8 @@ public class GenerateExportWordTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates success: true for success, false for failure</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class GenerateExportWordTaskResponseBody extends TeaModel {
 
     public static class GenerateExportWordTaskResponseBodyData extends TeaModel {
         /**
+         * <p>Task ID</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */

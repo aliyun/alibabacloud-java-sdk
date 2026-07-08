@@ -4,26 +4,53 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunDocSummaryRequest extends TeaModel {
+    /**
+     * <p>Purge the current cache</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("CleanCache")
     public Boolean cleanCache;
 
     /**
+     * <p>Document ID</p>
+     * 
      * <strong>example:</strong>
      * <p>12345</p>
      */
     @NameInMap("DocId")
     public String docId;
 
+    /**
+     * <p>Custom model name specified by the User</p>
+     * 
+     * <strong>example:</strong>
+     * <p>quanmiao-max、quanmiao-plus</p>
+     */
     @NameInMap("ModelName")
     public String modelName;
 
+    /**
+     * <p>Custom requirements</p>
+     * 
+     * <strong>example:</strong>
+     * <p>请总结一下这篇文档</p>
+     */
     @NameInMap("Query")
     public String query;
 
+    /**
+     * <p>Content to be summarized</p>
+     * 
+     * <strong>example:</strong>
+     * <p>要总结的内容</p>
+     */
     @NameInMap("RecommendContent")
     public String recommendContent;
 
     /**
+     * <p>Conversation ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +60,7 @@ public class RunDocSummaryRequest extends TeaModel {
     public String sessionId;
 
     /**
+     * <p>Alibaba Cloud Model Studio workspace ID. For more information about how to obtain it, see <a href="https://help.aliyun.com/document_detail/2587495.html">How to use a workspace</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

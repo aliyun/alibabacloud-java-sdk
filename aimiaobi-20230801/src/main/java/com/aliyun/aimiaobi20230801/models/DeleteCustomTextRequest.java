@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCustomTextRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,17 @@ public class DeleteCustomTextRequest extends TeaModel {
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>The commodity code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>商品code</p>
+     */
     @NameInMap("CommodityCode")
     public String commodityCode;
 
     /**
+     * <p>The primary key ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

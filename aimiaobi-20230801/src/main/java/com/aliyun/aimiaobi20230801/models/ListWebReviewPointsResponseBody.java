@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListWebReviewPointsResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business Data</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListWebReviewPointsResponseBodyData> data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListWebReviewPointsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Maximum number of return results</p>
+     * 
      * <strong>example:</strong>
      * <p>79</p>
      */
@@ -29,6 +38,8 @@ public class ListWebReviewPointsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Fault description</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -36,6 +47,8 @@ public class ListWebReviewPointsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Token for the next page</p>
+     * 
      * <strong>example:</strong>
      * <p>下一页的token</p>
      */
@@ -43,6 +56,8 @@ public class ListWebReviewPointsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Request UUID</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -50,6 +65,8 @@ public class ListWebReviewPointsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation succeeded: true for success, false for failure</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -57,6 +74,8 @@ public class ListWebReviewPointsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Total count</p>
+     * 
      * <strong>example:</strong>
      * <p>32</p>
      */
@@ -142,6 +161,8 @@ public class ListWebReviewPointsResponseBody extends TeaModel {
 
     public static class ListWebReviewPointsResponseBodyDataComments extends TeaModel {
         /**
+         * <p>Source</p>
+         * 
          * <strong>example:</strong>
          * <p>来源</p>
          */
@@ -149,13 +170,17 @@ public class ListWebReviewPointsResponseBody extends TeaModel {
         public String source;
 
         /**
+         * <p>Content</p>
+         * 
          * <strong>example:</strong>
-         * <p>评论内容</p>
+         * <p>内容</p>
          */
         @NameInMap("Text")
         public String text;
 
         /**
+         * <p>title</p>
+         * 
          * <strong>example:</strong>
          * <p>标题</p>
          */
@@ -163,15 +188,19 @@ public class ListWebReviewPointsResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>Current URL</p>
+         * 
          * <strong>example:</strong>
-         * <p>当前评论所属的URL</p>
+         * <p>当前所属的URL</p>
          */
         @NameInMap("Url")
         public String url;
 
         /**
+         * <p>username</p>
+         * 
          * <strong>example:</strong>
-         * <p>评论用户名</p>
+         * <p>用户名</p>
          */
         @NameInMap("Username")
         public String username;
@@ -225,6 +254,8 @@ public class ListWebReviewPointsResponseBody extends TeaModel {
 
     public static class ListWebReviewPointsResponseBodyDataViewPointsOutlines extends TeaModel {
         /**
+         * <p>Outline</p>
+         * 
          * <strong>example:</strong>
          * <p>大纲</p>
          */
@@ -232,6 +263,8 @@ public class ListWebReviewPointsResponseBody extends TeaModel {
         public String outline;
 
         /**
+         * <p>Outline summary</p>
+         * 
          * <strong>example:</strong>
          * <p>大纲摘要</p>
          */
@@ -262,10 +295,15 @@ public class ListWebReviewPointsResponseBody extends TeaModel {
     }
 
     public static class ListWebReviewPointsResponseBodyDataViewPoints extends TeaModel {
+        /**
+         * <p>Outline</p>
+         */
         @NameInMap("Outlines")
         public java.util.List<ListWebReviewPointsResponseBodyDataViewPointsOutlines> outlines;
 
         /**
+         * <p>Generated point</p>
+         * 
          * <strong>example:</strong>
          * <p>视角</p>
          */
@@ -273,6 +311,8 @@ public class ListWebReviewPointsResponseBody extends TeaModel {
         public String point;
 
         /**
+         * <p>Summary</p>
+         * 
          * <strong>example:</strong>
          * <p>摘要</p>
          */
@@ -312,6 +352,8 @@ public class ListWebReviewPointsResponseBody extends TeaModel {
 
     public static class ListWebReviewPointsResponseBodyData extends TeaModel {
         /**
+         * <p>Current viewpoint</p>
+         * 
          * <strong>example:</strong>
          * <p>当前观点</p>
          */
@@ -319,22 +361,32 @@ public class ListWebReviewPointsResponseBody extends TeaModel {
         public String attitude;
 
         /**
+         * <p>Viewpoint type</p>
+         * 
          * <strong>example:</strong>
          * <p>观点类型</p>
          */
         @NameInMap("AttitudeType")
         public String attitudeType;
 
+        /**
+         * <p>List of user opinions</p>
+         */
         @NameInMap("Comments")
         public java.util.List<ListWebReviewPointsResponseBodyDataComments> comments;
 
         /**
+         * <p>Proportion of the current opinion</p>
+         * 
          * <strong>example:</strong>
          * <p>当前观点占比</p>
          */
         @NameInMap("Ratio")
         public String ratio;
 
+        /**
+         * <p>List of topic perspectives</p>
+         */
         @NameInMap("ViewPoints")
         public java.util.List<ListWebReviewPointsResponseBodyDataViewPoints> viewPoints;
 

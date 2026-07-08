@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteCustomTopicByTopicResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
@@ -12,6 +14,8 @@ public class DeleteCustomTopicByTopicResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Business data</p>
+     * 
      * <strong>example:</strong>
      * <p>33</p>
      */
@@ -19,6 +23,8 @@ public class DeleteCustomTopicByTopicResponseBody extends TeaModel {
     public Integer data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class DeleteCustomTopicByTopicResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Fault description</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -33,6 +41,8 @@ public class DeleteCustomTopicByTopicResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request unique identifier</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -40,6 +50,8 @@ public class DeleteCustomTopicByTopicResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Is successful: true for success, false for failure</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

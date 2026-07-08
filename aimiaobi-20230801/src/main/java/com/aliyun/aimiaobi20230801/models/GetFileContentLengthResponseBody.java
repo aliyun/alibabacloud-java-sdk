@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetFileContentLengthResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business data</p>
+     */
     @NameInMap("Data")
     public GetFileContentLengthResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetFileContentLengthResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class GetFileContentLengthResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Unique request identifier</p>
+     * 
      * <strong>example:</strong>
      * <p>DD656AF9-0839-521A-A3D2-F320009F9C87</p>
      */
@@ -36,6 +47,8 @@ public class GetFileContentLengthResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation succeeded. true means success. false means failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -97,6 +110,8 @@ public class GetFileContentLengthResponseBody extends TeaModel {
 
     public static class GetFileContentLengthResponseBodyData extends TeaModel {
         /**
+         * <p>File length</p>
+         * 
          * <strong>example:</strong>
          * <p>1024</p>
          */

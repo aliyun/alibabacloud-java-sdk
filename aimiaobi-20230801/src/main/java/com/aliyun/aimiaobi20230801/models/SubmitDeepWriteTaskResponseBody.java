@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class SubmitDeepWriteTaskResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>DataNotExists</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The task response object.</p>
+     */
     @NameInMap("Data")
     public SubmitDeepWriteTaskResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>400</p>
      */
@@ -22,6 +29,8 @@ public class SubmitDeepWriteTaskResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>错误消息</p>
      */
@@ -29,7 +38,7 @@ public class SubmitDeepWriteTaskResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxxx</p>
@@ -38,6 +47,8 @@ public class SubmitDeepWriteTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +110,8 @@ public class SubmitDeepWriteTaskResponseBody extends TeaModel {
 
     public static class SubmitDeepWriteTaskResponseBodyData extends TeaModel {
         /**
+         * <p>The status of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>queued</p>
          */
@@ -106,6 +119,8 @@ public class SubmitDeepWriteTaskResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xbabac91-fdad-44d6-95ce-******</p>
          */

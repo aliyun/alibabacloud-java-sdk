@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListBiddingDocRequest extends TeaModel {
     /**
+     * <p>End creation time, in timestamp format.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-03-18 02:00:00</p>
      */
@@ -12,6 +14,8 @@ public class ListBiddingDocRequest extends TeaModel {
     public String createTimeEnd;
 
     /**
+     * <p>Start creation time, in timestamp format.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-02-19 07:28:11</p>
      */
@@ -19,6 +23,8 @@ public class ListBiddingDocRequest extends TeaModel {
     public String createTimeStart;
 
     /**
+     * <p>Current page number</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class ListBiddingDocRequest extends TeaModel {
     public Integer current;
 
     /**
+     * <p>Deprecated</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -33,6 +41,8 @@ public class ListBiddingDocRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Deprecated</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -40,6 +50,8 @@ public class ListBiddingDocRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Number of items per page. Default is 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -47,16 +59,26 @@ public class ListBiddingDocRequest extends TeaModel {
     public Integer size;
 
     /**
+     * <p>Deprecated</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
     @NameInMap("Skip")
     public Integer skip;
 
+    /**
+     * <p>Defines the task name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>任务名称</p>
+     */
     @NameInMap("TaskName")
     public String taskName;
 
     /**
+     * <p>Task status</p>
+     * 
      * <strong>example:</strong>
      * <p>0-waiting、1-running、2-success、3-pause、4-fail</p>
      */
@@ -64,6 +86,8 @@ public class ListBiddingDocRequest extends TeaModel {
     public Integer taskStatus;
 
     /**
+     * <p><a href="https://help.aliyun.com/document_detail/2782167.html">Workspace ID</a></p>
+     * 
      * <strong>example:</strong>
      * <p>llm-xx</p>
      */

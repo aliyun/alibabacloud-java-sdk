@@ -5,23 +5,40 @@ import com.aliyun.tea.*;
 
 public class AsyncCreateClipsTimeLineResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business data</p>
+     */
     @NameInMap("Data")
     public AsyncCreateClipsTimeLineResponseBodyData data;
 
+    /**
+     * <p>HTTP status code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Error message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>Request ID</p>
      * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
@@ -29,6 +46,12 @@ public class AsyncCreateClipsTimeLineResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Operation result: true indicates success. false indicates failure.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -87,6 +110,8 @@ public class AsyncCreateClipsTimeLineResponseBody extends TeaModel {
 
     public static class AsyncCreateClipsTimeLineResponseBodyData extends TeaModel {
         /**
+         * <p>Task ID</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */

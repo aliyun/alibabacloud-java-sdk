@@ -4,10 +4,17 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class AsyncEditTimelineRequest extends TeaModel {
+    /**
+     * <p>Enable automatic clip adjustment</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AutoClips")
     public Boolean autoClips;
 
     /**
+     * <p>Unique identifier of the task</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,12 +24,14 @@ public class AsyncEditTimelineRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>Array structure of video editing timelines</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Timelines")
     public java.util.List<AsyncEditTimelineRequestTimelines> timelines;
 
     /**
+     * <p><a href="https://help.aliyun.com/document_detail/2782167.html">Model Studio workspace ID</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,27 +78,81 @@ public class AsyncEditTimelineRequest extends TeaModel {
     }
 
     public static class AsyncEditTimelineRequestTimelinesClips extends TeaModel {
+        /**
+         * <p>Clip ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123jjdax
+         * 新增可为空</p>
+         */
         @NameInMap("ClipId")
         public String clipId;
 
+        /**
+         * <p>Segmented voice-over script</p>
+         * 
+         * <strong>example:</strong>
+         * <p>口播文案分段
+         * 不可为空</p>
+         */
         @NameInMap("ContentInner")
         public String contentInner;
 
+        /**
+         * <p>Start time, in seconds. Deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0
+         * 不可为空</p>
+         */
         @NameInMap("In")
         public Integer in;
 
+        /**
+         * <p>Clip start time, in milliseconds</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.45</p>
+         */
         @NameInMap("InEx")
         public Float inEx;
 
+        /**
+         * <p>End time, in seconds. Deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5
+         * 不可为空</p>
+         */
         @NameInMap("Out")
         public Integer out;
 
+        /**
+         * <p>Clip end time, in milliseconds</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.66</p>
+         */
         @NameInMap("OutEx")
         public Float outEx;
 
+        /**
+         * <p>Video ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7036227ae3ab71efbb4a6733a68f0102
+         * 不可为空</p>
+         */
         @NameInMap("VideoId")
         public String videoId;
 
+        /**
+         * <p>Video name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123.mp4
+         * 不可为空</p>
+         */
         @NameInMap("VideoName")
         public String videoName;
 
@@ -166,11 +229,19 @@ public class AsyncEditTimelineRequest extends TeaModel {
 
     public static class AsyncEditTimelineRequestTimelines extends TeaModel {
         /**
+         * <p>Array of video clips</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Clips")
         public java.util.List<AsyncEditTimelineRequestTimelinesClips> clips;
 
+        /**
+         * <p>Timeline ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sdfjhks
+         * 新增可为空</p>
+         */
         @NameInMap("TimelineId")
         public String timelineId;
 

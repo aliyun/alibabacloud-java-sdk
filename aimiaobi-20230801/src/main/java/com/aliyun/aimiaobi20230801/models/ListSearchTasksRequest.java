@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListSearchTasksRequest extends TeaModel {
     /**
+     * <p>Task type</p>
+     * 
      * <strong>example:</strong>
      * <p>24</p>
      */
@@ -12,6 +14,8 @@ public class ListSearchTasksRequest extends TeaModel {
     public java.util.List<Integer> dialogueTypes;
 
     /**
+     * <p>Current page number</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ListSearchTasksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Number of items per page. Default is 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +32,7 @@ public class ListSearchTasksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The unique identifier of the Alibaba Cloud Model Studio workspace. For more information, see <a href="">Obtain workspaceId</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

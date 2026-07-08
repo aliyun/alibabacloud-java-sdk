@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetDatasetRequest extends TeaModel {
     /**
+     * <p>The ID of the dataset. You must specify either this parameter or \<code>DatasetName\\</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class GetDatasetRequest extends TeaModel {
     public Long datasetId;
 
     /**
+     * <p>The name of the dataset. The name must be globally unique.</p>
+     * 
      * <strong>example:</strong>
      * <p>businessDataset</p>
      */
@@ -19,6 +23,7 @@ public class GetDatasetRequest extends TeaModel {
     public String datasetName;
 
     /**
+     * <p>The unique ID of the Alibaba Cloud Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Obtain a workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

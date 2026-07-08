@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAuditNoteProcessingStatusRequest extends TeaModel {
     /**
+     * <p>Task ID returned by the SubmitAuditNote operation. Save this ID securely. It uniquely identifies your custom rule library task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetAuditNoteProcessingStatusRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>Unique identifier of your Model Studio workspace. To get this ID, see <a href="https://help.aliyun.com/document_detail/2782167.html">Workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DeletePptArtifactResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>DataNotExists</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response object.</p>
+     */
     @NameInMap("Data")
     public DeletePptArtifactResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>400</p>
      */
@@ -22,6 +29,8 @@ public class DeletePptArtifactResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>错误消息</p>
      */
@@ -38,6 +47,8 @@ public class DeletePptArtifactResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +110,8 @@ public class DeletePptArtifactResponseBody extends TeaModel {
 
     public static class DeletePptArtifactResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the PPT work.</p>
+         * 
          * <strong>example:</strong>
          * <p>5233498</p>
          */

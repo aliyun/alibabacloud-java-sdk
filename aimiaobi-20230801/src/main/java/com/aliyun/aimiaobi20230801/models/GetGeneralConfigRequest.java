@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetGeneralConfigRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the configuration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetGeneralConfigRequest extends TeaModel {
     public String configKey;
 
     /**
+     * <p>The unique identifier of the Model Studio workspace. For more information, see <a href="">Get workspaceId</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

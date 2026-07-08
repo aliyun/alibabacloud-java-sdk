@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListGeneralConfigsRequest extends TeaModel {
     /**
+     * <p>The current page number. The default value is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListGeneralConfigsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,7 @@ public class ListGeneralConfigsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The unique identifier of the Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Get a workspaceId</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

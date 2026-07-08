@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class UploadDocResponseBody extends TeaModel {
     /**
+     * <p>Internal error code</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Document information</p>
+     */
     @NameInMap("Data")
     public UploadDocResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class UploadDocResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error description</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -38,6 +47,8 @@ public class UploadDocResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation succeeded</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -98,9 +109,15 @@ public class UploadDocResponseBody extends TeaModel {
     }
 
     public static class UploadDocResponseBodyData extends TeaModel {
+        /**
+         * <p>Array of successfully uploaded document IDs</p>
+         */
         @NameInMap("DocIds")
         public java.util.List<String> docIds;
 
+        /**
+         * <p>Document IDs that could not be uploaded because they already exist</p>
+         */
         @NameInMap("ExistedIds")
         public java.util.List<String> existedIds;
 

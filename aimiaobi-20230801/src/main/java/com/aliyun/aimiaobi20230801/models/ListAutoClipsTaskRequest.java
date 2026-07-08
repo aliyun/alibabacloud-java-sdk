@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAutoClipsTaskRequest extends TeaModel {
     /**
+     * <p>The task end time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-03-18 02:00:00</p>
      */
@@ -12,6 +14,8 @@ public class ListAutoClipsTaskRequest extends TeaModel {
     public String createTimeEnd;
 
     /**
+     * <p>The start time of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-02-19 07:28:11</p>
      */
@@ -19,6 +23,8 @@ public class ListAutoClipsTaskRequest extends TeaModel {
     public String createTimeStart;
 
     /**
+     * <p>Page number</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class ListAutoClipsTaskRequest extends TeaModel {
     public Integer current;
 
     /**
+     * <p>Deprecated</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -33,6 +41,8 @@ public class ListAutoClipsTaskRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Deprecated</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -40,6 +50,8 @@ public class ListAutoClipsTaskRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Number of items per page. Default is 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -47,6 +59,8 @@ public class ListAutoClipsTaskRequest extends TeaModel {
     public Integer size;
 
     /**
+     * <p>Deprecated</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -54,6 +68,8 @@ public class ListAutoClipsTaskRequest extends TeaModel {
     public Integer skip;
 
     /**
+     * <p>Task name</p>
+     * 
      * <strong>example:</strong>
      * <p>task001</p>
      */
@@ -61,6 +77,8 @@ public class ListAutoClipsTaskRequest extends TeaModel {
     public String taskName;
 
     /**
+     * <p>Task status</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -68,6 +86,8 @@ public class ListAutoClipsTaskRequest extends TeaModel {
     public Integer taskStatus;
 
     /**
+     * <p>Task type</p>
+     * 
      * <strong>example:</strong>
      * <p>type001</p>
      */
@@ -75,6 +95,8 @@ public class ListAutoClipsTaskRequest extends TeaModel {
     public String taskType;
 
     /**
+     * <p>Model Studio workspace</p>
+     * 
      * <strong>example:</strong>
      * <p>llm-2setzb9x4ewsd</p>
      */

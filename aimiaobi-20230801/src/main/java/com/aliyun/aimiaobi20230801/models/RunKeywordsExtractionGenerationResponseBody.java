@@ -4,13 +4,21 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunKeywordsExtractionGenerationResponseBody extends TeaModel {
+    /**
+     * <p>Response header.</p>
+     */
     @NameInMap("Header")
     public RunKeywordsExtractionGenerationResponseBodyHeader header;
 
+    /**
+     * <p>Response body.</p>
+     */
     @NameInMap("Payload")
     public RunKeywordsExtractionGenerationResponseBodyPayload payload;
 
     /**
+     * <p>Unique request identifier.</p>
+     * 
      * <strong>example:</strong>
      * <p>419F3FBE-5C8D-5949-AC29-E9615235D15A</p>
      */
@@ -48,6 +56,8 @@ public class RunKeywordsExtractionGenerationResponseBody extends TeaModel {
 
     public static class RunKeywordsExtractionGenerationResponseBodyHeader extends TeaModel {
         /**
+         * <p>Error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>AccessForbid</p>
          */
@@ -55,6 +65,8 @@ public class RunKeywordsExtractionGenerationResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>Error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -62,6 +74,8 @@ public class RunKeywordsExtractionGenerationResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>SSE event.</p>
+         * 
          * <strong>example:</strong>
          * <p>task-failed</p>
          */
@@ -69,6 +83,8 @@ public class RunKeywordsExtractionGenerationResponseBody extends TeaModel {
         public String event;
 
         /**
+         * <p>Session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1a3d7c9f-3a6d-4e49-b176-2d8721a27397</p>
          */
@@ -76,6 +92,8 @@ public class RunKeywordsExtractionGenerationResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>Task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>8d55b429d7c6d321fcff54823e8d317b</p>
          */
@@ -83,6 +101,8 @@ public class RunKeywordsExtractionGenerationResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>Trace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>210bc4e817219607963985396de8bd</p>
          */
@@ -146,6 +166,8 @@ public class RunKeywordsExtractionGenerationResponseBody extends TeaModel {
 
     public static class RunKeywordsExtractionGenerationResponseBodyPayloadOutput extends TeaModel {
         /**
+         * <p>Text generation result.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -169,6 +191,8 @@ public class RunKeywordsExtractionGenerationResponseBody extends TeaModel {
 
     public static class RunKeywordsExtractionGenerationResponseBodyPayloadUsage extends TeaModel {
         /**
+         * <p>Number of input tokens used.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -176,6 +200,8 @@ public class RunKeywordsExtractionGenerationResponseBody extends TeaModel {
         public Long inputTokens;
 
         /**
+         * <p>Number of output tokens used.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -183,6 +209,8 @@ public class RunKeywordsExtractionGenerationResponseBody extends TeaModel {
         public Long outputTokens;
 
         /**
+         * <p>Total number of tokens used in this call.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -221,9 +249,15 @@ public class RunKeywordsExtractionGenerationResponseBody extends TeaModel {
     }
 
     public static class RunKeywordsExtractionGenerationResponseBodyPayload extends TeaModel {
+        /**
+         * <p>Outputs.</p>
+         */
         @NameInMap("Output")
         public RunKeywordsExtractionGenerationResponseBodyPayloadOutput output;
 
+        /**
+         * <p>Token usage.</p>
+         */
         @NameInMap("Usage")
         public RunKeywordsExtractionGenerationResponseBodyPayloadUsage usage;
 

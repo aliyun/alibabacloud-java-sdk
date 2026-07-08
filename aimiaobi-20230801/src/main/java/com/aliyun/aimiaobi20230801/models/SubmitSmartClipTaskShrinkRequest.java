@@ -4,23 +4,37 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class SubmitSmartClipTaskShrinkRequest extends TeaModel {
+    /**
+     * <p>Video editing configuration.</p>
+     */
     @NameInMap("EditingConfig")
     public String editingConfigShrink;
 
+    /**
+     * <p>Additional extended parameters. These parameters merge with InputConfig, OutputConfig, and EditingConfig.</p>
+     */
     @NameInMap("ExtendParam")
     public String extendParam;
 
     /**
+     * <p>Input configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InputConfig")
     public String inputConfigShrink;
 
+    /**
+     * <p>Output configuration.</p>
+     */
     @NameInMap("OutputConfig")
     public String outputConfigShrink;
 
     /**
+     * <p>Alibaba Cloud Model Studio workspace ID. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">workspace ID</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>业务空间ID</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;

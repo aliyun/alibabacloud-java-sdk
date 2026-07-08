@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetInterveneRuleDetailResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business data</p>
+     */
     @NameInMap("Data")
     public GetInterveneRuleDetailResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetInterveneRuleDetailResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class GetInterveneRuleDetailResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Unique request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>428DCC0D-3C63-5306-BD1B-124396AB97BE</p>
      */
@@ -36,6 +47,8 @@ public class GetInterveneRuleDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates success: true for success, false for failure</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,16 +110,26 @@ public class GetInterveneRuleDetailResponseBody extends TeaModel {
 
     public static class GetInterveneRuleDetailResponseBodyDataInterveneRuleDetailAnswerConfig extends TeaModel {
         /**
+         * <p>Answer type</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("AnswerType")
         public Integer answerType;
 
+        /**
+         * <p>Answer content</p>
+         * 
+         * <strong>example:</strong>
+         * <p>早上好</p>
+         */
         @NameInMap("Message")
         public String message;
 
         /**
+         * <p>Namespace</p>
+         * 
          * <strong>example:</strong>
          * <p>namespace_qa_query</p>
          */
@@ -146,6 +169,8 @@ public class GetInterveneRuleDetailResponseBody extends TeaModel {
 
     public static class GetInterveneRuleDetailResponseBodyDataInterveneRuleDetailEffectConfig extends TeaModel {
         /**
+         * <p>Activation type</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -153,6 +178,8 @@ public class GetInterveneRuleDetailResponseBody extends TeaModel {
         public Integer effectType;
 
         /**
+         * <p>End time</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-11-25 14:21:15</p>
          */
@@ -160,6 +187,8 @@ public class GetInterveneRuleDetailResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>Start time</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-11-25 14:21:15</p>
          */
@@ -198,29 +227,48 @@ public class GetInterveneRuleDetailResponseBody extends TeaModel {
     }
 
     public static class GetInterveneRuleDetailResponseBodyDataInterveneRuleDetail extends TeaModel {
+        /**
+         * <p>Answer configuration</p>
+         */
         @NameInMap("AnswerConfig")
         public java.util.List<GetInterveneRuleDetailResponseBodyDataInterveneRuleDetailAnswerConfig> answerConfig;
 
+        /**
+         * <p>Activation configuration</p>
+         */
         @NameInMap("EffectConfig")
         public GetInterveneRuleDetailResponseBodyDataInterveneRuleDetailEffectConfig effectConfig;
 
         /**
+         * <p>Intervention type</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("InterveneType")
         public Integer interveneType;
 
+        /**
+         * <p>Namespace list</p>
+         */
         @NameInMap("NamespaceList")
         public java.util.List<String> namespaceList;
 
         /**
+         * <p>Rule ID</p>
+         * 
          * <strong>example:</strong>
          * <p>100418</p>
          */
         @NameInMap("RuleId")
         public Long ruleId;
 
+        /**
+         * <p>Rule name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>规则001</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
@@ -283,6 +331,9 @@ public class GetInterveneRuleDetailResponseBody extends TeaModel {
         @NameInMap("Code")
         public Integer code;
 
+        /**
+         * <p>Structure of the rule details</p>
+         */
         @NameInMap("InterveneRuleDetail")
         public GetInterveneRuleDetailResponseBodyDataInterveneRuleDetail interveneRuleDetail;
 

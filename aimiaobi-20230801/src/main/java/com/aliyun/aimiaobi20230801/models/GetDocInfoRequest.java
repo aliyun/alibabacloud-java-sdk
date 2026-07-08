@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetDocInfoRequest extends TeaModel {
     /**
+     * <p>The category where the document is stored.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -12,6 +14,7 @@ public class GetDocInfoRequest extends TeaModel {
     public String categoryId;
 
     /**
+     * <p>The document ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class GetDocInfoRequest extends TeaModel {
     public String docId;
 
     /**
+     * <p>The unique identifier of the workspace in Alibaba Cloud Model Studio. For instructions on how to obtain a workspace ID, see <a href="https://help.aliyun.com/document_detail/2782167.html">Obtain a Workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

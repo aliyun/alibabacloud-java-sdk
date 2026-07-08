@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteFactAuditUrlRequest extends TeaModel {
     /**
+     * <p>The URL of the audit information source you want to delete. The provided URL must match the result from GetFactAuditUrl for successful deletion.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteFactAuditUrlRequest extends TeaModel {
     public String url;
 
     /**
+     * <p>The unique identifier of the Alibaba Cloud Model Studio workspace. Get the <a href="https://help.aliyun.com/document_detail/2782167.html">workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

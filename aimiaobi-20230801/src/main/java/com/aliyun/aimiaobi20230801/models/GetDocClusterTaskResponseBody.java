@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetDocClusterTaskResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The business data.</p>
+     */
     @NameInMap("Data")
     public GetDocClusterTaskResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetDocClusterTaskResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error description.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class GetDocClusterTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -36,6 +47,8 @@ public class GetDocClusterTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. \<code>true\\</code>: The request was successful. \<code>false\\</code>: The request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -96,10 +109,15 @@ public class GetDocClusterTaskResponseBody extends TeaModel {
     }
 
     public static class GetDocClusterTaskResponseBodyDataTopics extends TeaModel {
+        /**
+         * <p>A list of document IDs for the clustering topic.</p>
+         */
         @NameInMap("DocIds")
         public java.util.List<String> docIds;
 
         /**
+         * <p>The summary of the clustering topic.</p>
+         * 
          * <strong>example:</strong>
          * <p>聚类主题摘要</p>
          */
@@ -107,6 +125,8 @@ public class GetDocClusterTaskResponseBody extends TeaModel {
         public String summary;
 
         /**
+         * <p>The name of the clustering topic.</p>
+         * 
          * <strong>example:</strong>
          * <p>聚类主题名</p>
          */
@@ -146,6 +166,8 @@ public class GetDocClusterTaskResponseBody extends TeaModel {
 
     public static class GetDocClusterTaskResponseBodyData extends TeaModel {
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>错误信息</p>
          */
@@ -153,12 +175,17 @@ public class GetDocClusterTaskResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The status of the task. Valid values: PENDING (to be executed), RUNNING (executing), SUCCESSED (successful), SUSPENDED (paused), FAILED (failed), and CANCELED (canceled).</p>
+         * 
          * <strong>example:</strong>
          * <p>PENDING</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>A list of clustering topics.</p>
+         */
         @NameInMap("Topics")
         public java.util.List<GetDocClusterTaskResponseBodyDataTopics> topics;
 

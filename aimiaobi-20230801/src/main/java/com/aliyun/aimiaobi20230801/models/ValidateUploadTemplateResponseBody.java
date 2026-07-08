@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ValidateUploadTemplateResponseBody extends TeaModel {
     /**
+     * <p>Status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Template validation result.</p>
+     */
     @NameInMap("Data")
     public ValidateUploadTemplateResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ValidateUploadTemplateResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class ValidateUploadTemplateResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Unique request identifier.</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -36,6 +47,8 @@ public class ValidateUploadTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Operation status. Returns true on success. Returns false on failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class ValidateUploadTemplateResponseBody extends TeaModel {
 
     public static class ValidateUploadTemplateResponseBodyData extends TeaModel {
         /**
+         * <p>Number of comments.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -104,6 +119,8 @@ public class ValidateUploadTemplateResponseBody extends TeaModel {
         public Integer commentCount;
 
         /**
+         * <p>Number of dialogues.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -111,6 +128,8 @@ public class ValidateUploadTemplateResponseBody extends TeaModel {
         public Integer dialogueCount;
 
         /**
+         * <p>Total count.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */

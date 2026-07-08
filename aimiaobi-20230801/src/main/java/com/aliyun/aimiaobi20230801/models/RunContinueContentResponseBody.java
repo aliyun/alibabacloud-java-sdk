@@ -4,16 +4,27 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunContinueContentResponseBody extends TeaModel {
+    /**
+     * <p>Is output complete? True indicates completion.</p>
+     */
     @NameInMap("End")
     public Boolean end;
 
+    /**
+     * <p>Streaming output header, contains general return information.</p>
+     */
     @NameInMap("Header")
     public RunContinueContentResponseBodyHeader header;
 
+    /**
+     * <p>Payload of the returned result, JSON structure.</p>
+     */
     @NameInMap("Payload")
     public RunContinueContentResponseBodyPayload payload;
 
     /**
+     * <p>Unique request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>d3be9981-ca2d-4e17-bf31-1c0a628e9f99</p>
      */
@@ -59,6 +70,8 @@ public class RunContinueContentResponseBody extends TeaModel {
 
     public static class RunContinueContentResponseBodyHeader extends TeaModel {
         /**
+         * <p>Abnormal error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>403</p>
          */
@@ -66,6 +79,8 @@ public class RunContinueContentResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>Abnormal error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>Pop sign mismatch, please check.</p>
          */
@@ -73,6 +88,8 @@ public class RunContinueContentResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>Event type.</p>
+         * 
          * <strong>example:</strong>
          * <p>result-generated</p>
          */
@@ -80,6 +97,8 @@ public class RunContinueContentResponseBody extends TeaModel {
         public String event;
 
         /**
+         * <p>Event description.</p>
+         * 
          * <strong>example:</strong>
          * <p>模型生成事件</p>
          */
@@ -87,6 +106,8 @@ public class RunContinueContentResponseBody extends TeaModel {
         public String eventInfo;
 
         /**
+         * <p>Session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3cd10828-0e42-471c-8f1a-931cde20b035</p>
          */
@@ -94,6 +115,8 @@ public class RunContinueContentResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>Generation task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>d3be9981-ca2d-4e17-bf31-1c0a628e9f99</p>
          */
@@ -101,6 +124,8 @@ public class RunContinueContentResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>Trace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2150451a17191950923411783e2927</p>
          */
@@ -172,6 +197,8 @@ public class RunContinueContentResponseBody extends TeaModel {
 
     public static class RunContinueContentResponseBodyPayloadOutput extends TeaModel {
         /**
+         * <p>Output content.</p>
+         * 
          * <strong>example:</strong>
          * <p>这是测试输出</p>
          */
@@ -195,6 +222,8 @@ public class RunContinueContentResponseBody extends TeaModel {
 
     public static class RunContinueContentResponseBodyPayloadUsage extends TeaModel {
         /**
+         * <p>Number of input tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -202,6 +231,8 @@ public class RunContinueContentResponseBody extends TeaModel {
         public Long inputTokens;
 
         /**
+         * <p>Number of output tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -209,6 +240,8 @@ public class RunContinueContentResponseBody extends TeaModel {
         public Long outputTokens;
 
         /**
+         * <p>Total number of tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -247,9 +280,15 @@ public class RunContinueContentResponseBody extends TeaModel {
     }
 
     public static class RunContinueContentResponseBodyPayload extends TeaModel {
+        /**
+         * <p>Output content object.</p>
+         */
         @NameInMap("Output")
         public RunContinueContentResponseBodyPayloadOutput output;
 
+        /**
+         * <p>Large Language Model (LLM) token usage information.</p>
+         */
         @NameInMap("Usage")
         public RunContinueContentResponseBodyPayloadUsage usage;
 

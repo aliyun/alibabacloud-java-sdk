@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetInterveneImportTaskInfoResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetInterveneImportTaskInfoResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetInterveneImportTaskInfoResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -29,6 +38,8 @@ public class GetInterveneImportTaskInfoResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -36,6 +47,8 @@ public class GetInterveneImportTaskInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. A value of \<code>true\\</code> indicates success, and a value of \<code>false\\</code> indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class GetInterveneImportTaskInfoResponseBody extends TeaModel {
 
     public static class GetInterveneImportTaskInfoResponseBodyDataStatus extends TeaModel {
         /**
+         * <p>The information about the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -104,6 +119,8 @@ public class GetInterveneImportTaskInfoResponseBody extends TeaModel {
         public String msg;
 
         /**
+         * <p>The completion percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
@@ -111,6 +128,8 @@ public class GetInterveneImportTaskInfoResponseBody extends TeaModel {
         public Integer percentage;
 
         /**
+         * <p>The status of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -118,6 +137,8 @@ public class GetInterveneImportTaskInfoResponseBody extends TeaModel {
         public Integer status;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>41405255</p>
          */
@@ -125,6 +146,8 @@ public class GetInterveneImportTaskInfoResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The name of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>ft-task-20190101m8rnK</p>
          */
@@ -182,6 +205,9 @@ public class GetInterveneImportTaskInfoResponseBody extends TeaModel {
         @NameInMap("Code")
         public Integer code;
 
+        /**
+         * <p>The status information of the task.</p>
+         */
         @NameInMap("Status")
         public GetInterveneImportTaskInfoResponseBodyDataStatus status;
 

@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateGeneratedContentResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
-     * <p>DataNotExists</p>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
+     * <p>The returned data.</p>
+     * 
      * <strong>example:</strong>
      * <p>42</p>
      */
@@ -19,6 +23,8 @@ public class CreateGeneratedContentResponseBody extends TeaModel {
     public Long data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,13 +32,17 @@ public class CreateGeneratedContentResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
-     * <p>数据不存在</p>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The unique identifier of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */
@@ -40,6 +50,8 @@ public class CreateGeneratedContentResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. A value of \<code>true\\</code> indicates success. A value of \<code>false\\</code> indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

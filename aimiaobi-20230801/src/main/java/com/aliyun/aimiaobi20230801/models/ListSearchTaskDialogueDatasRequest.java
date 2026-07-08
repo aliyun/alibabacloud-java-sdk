@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListSearchTaskDialogueDatasRequest extends TeaModel {
     /**
+     * <p>Indicates whether to include the main content.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class ListSearchTaskDialogueDatasRequest extends TeaModel {
     public Boolean includeContent;
 
     /**
+     * <p>The type of data to search.</p>
+     * 
      * <strong>example:</strong>
      * <p>text</p>
      */
@@ -19,6 +23,8 @@ public class ListSearchTaskDialogueDatasRequest extends TeaModel {
     public String multimodalSearchType;
 
     /**
+     * <p>The unique identifier of the historical dialogue. This is the source of all original materials.</p>
+     * 
      * <strong>example:</strong>
      * <p>xx</p>
      */
@@ -26,6 +32,8 @@ public class ListSearchTaskDialogueDatasRequest extends TeaModel {
     public String originalSessionId;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,6 +41,8 @@ public class ListSearchTaskDialogueDatasRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. The default value is 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -40,6 +50,8 @@ public class ListSearchTaskDialogueDatasRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The query conditions.</p>
+     * 
      * <strong>example:</strong>
      * <p>xx</p>
      */
@@ -47,6 +59,8 @@ public class ListSearchTaskDialogueDatasRequest extends TeaModel {
     public String query;
 
     /**
+     * <p>The type of search agent.</p>
+     * 
      * <strong>example:</strong>
      * <p>ClusterGenerate</p>
      */
@@ -54,6 +68,8 @@ public class ListSearchTaskDialogueDatasRequest extends TeaModel {
     public String searchModel;
 
     /**
+     * <p>The data under the search agent classification.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -61,6 +77,7 @@ public class ListSearchTaskDialogueDatasRequest extends TeaModel {
     public String searchModelDataValue;
 
     /**
+     * <p>The unique identifier of the historical dialogue. This is the source of reference materials.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,6 +87,11 @@ public class ListSearchTaskDialogueDatasRequest extends TeaModel {
     public String sessionId;
 
     /**
+     * <p>The unique identifier of the task.</p>
+     * <blockquote>
+     * <p>You do not need to specify this parameter. The system automatically generates a task ID. If you specify the same task ID for multiple tasks, the tasks are considered part of the same dialogue group.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -77,6 +99,7 @@ public class ListSearchTaskDialogueDatasRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The unique identifier of the Alibaba Cloud Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Get a workspaceId</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

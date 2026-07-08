@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateDatasetResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The business data.</p>
+     */
     @NameInMap("Data")
     public CreateDatasetResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class CreateDatasetResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class CreateDatasetResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -36,6 +47,8 @@ public class CreateDatasetResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. A value of true indicates success. A value of false indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class CreateDatasetResponseBody extends TeaModel {
 
     public static class CreateDatasetResponseBodyData extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-11-12 21:46:24</p>
          */
@@ -104,6 +119,8 @@ public class CreateDatasetResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -111,6 +128,8 @@ public class CreateDatasetResponseBody extends TeaModel {
         public String createUser;
 
         /**
+         * <p>The display name of the dataset.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -118,6 +137,8 @@ public class CreateDatasetResponseBody extends TeaModel {
         public String datasetDescription;
 
         /**
+         * <p>The dataset ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -125,6 +146,8 @@ public class CreateDatasetResponseBody extends TeaModel {
         public Long datasetId;
 
         /**
+         * <p>The dataset name.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -132,6 +155,8 @@ public class CreateDatasetResponseBody extends TeaModel {
         public String datasetName;
 
         /**
+         * <p>The dataset type.</p>
+         * 
          * <strong>example:</strong>
          * <p>CustomSemanticSearch</p>
          */
@@ -139,6 +164,8 @@ public class CreateDatasetResponseBody extends TeaModel {
         public String datasetType;
 
         /**
+         * <p>The dataset search switch.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

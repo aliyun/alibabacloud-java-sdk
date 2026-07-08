@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListIntervenesResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The business data.</p>
+     */
     @NameInMap("Data")
     public ListIntervenesResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListIntervenesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error description.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class ListIntervenesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>428DCC0D-3C63-5306-BD1B-124396AB97BE</p>
      */
@@ -36,6 +47,8 @@ public class ListIntervenesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. True for success, false for failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,7 +110,7 @@ public class ListIntervenesResponseBody extends TeaModel {
 
     public static class ListIntervenesResponseBodyDataInterveneList extends TeaModel {
         /**
-         * <p>id</p>
+         * <p>The ID.</p>
          * 
          * <strong>example:</strong>
          * <p>36559</p>
@@ -105,6 +118,12 @@ public class ListIntervenesResponseBody extends TeaModel {
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The intervention query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>伊家楼</p>
+         */
         @NameInMap("Query")
         public String query;
 
@@ -135,10 +154,15 @@ public class ListIntervenesResponseBody extends TeaModel {
         @NameInMap("Code")
         public Integer code;
 
+        /**
+         * <p>The list of intervention items.</p>
+         */
         @NameInMap("InterveneList")
         public java.util.List<ListIntervenesResponseBodyDataInterveneList> interveneList;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -146,6 +170,8 @@ public class ListIntervenesResponseBody extends TeaModel {
         public Integer pageIndex;
 
         /**
+         * <p>The page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -153,6 +179,8 @@ public class ListIntervenesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of pages.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

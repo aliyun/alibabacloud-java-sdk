@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAutoClipsTaskResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -12,16 +14,23 @@ public class ListAutoClipsTaskResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Page number</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("Current")
     public Integer current;
 
+    /**
+     * <p>Business data</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListAutoClipsTaskResponseBodyData> data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class ListAutoClipsTaskResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Deprecated</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -36,6 +47,8 @@ public class ListAutoClipsTaskResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -43,6 +56,8 @@ public class ListAutoClipsTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Deprecated</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -50,7 +65,7 @@ public class ListAutoClipsTaskResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Id of the request</p>
+     * <p>Request ID</p>
      * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
@@ -59,6 +74,8 @@ public class ListAutoClipsTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Number of items per page</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -66,6 +83,8 @@ public class ListAutoClipsTaskResponseBody extends TeaModel {
     public Integer size;
 
     /**
+     * <p>Indicates whether the request succeeded. true means success. false means failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -73,6 +92,8 @@ public class ListAutoClipsTaskResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Total number of records</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -80,6 +101,8 @@ public class ListAutoClipsTaskResponseBody extends TeaModel {
     public Integer total;
 
     /**
+     * <p>Deprecated</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -189,6 +212,8 @@ public class ListAutoClipsTaskResponseBody extends TeaModel {
 
     public static class ListAutoClipsTaskResponseBodyData extends TeaModel {
         /**
+         * <p>Start time of task creation</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-18 02:00:00</p>
          */
@@ -196,16 +221,26 @@ public class ListAutoClipsTaskResponseBody extends TeaModel {
         public String createTimeStart;
 
         /**
+         * <p>Task ID</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>Task name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>任务名称</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
         /**
+         * <p>Task status</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -224,6 +259,8 @@ public class ListAutoClipsTaskResponseBody extends TeaModel {
         public String taskStep;
 
         /**
+         * <p>Task type</p>
+         * 
          * <strong>example:</strong>
          * <p>type001</p>
          */

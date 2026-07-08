@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ValidateUploadTemplateRequest extends TeaModel {
     /**
+     * <p>File key.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ValidateUploadTemplateRequest extends TeaModel {
     public String fileKey;
 
     /**
+     * <p>Task type. Valid values: lightAppSass (SaaS page call) or sdkBatchTask (SDK batch task).</p>
+     * 
      * <strong>example:</strong>
      * <p>lightAppSass</p>
      */
@@ -21,6 +24,7 @@ public class ValidateUploadTemplateRequest extends TeaModel {
     public String taskType;
 
     /**
+     * <p>Template type. Valid values: Content (content asset template) or PositiveSample (positive sample template).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class ValidateUploadTemplateRequest extends TeaModel {
     public String templateType;
 
     /**
+     * <p>Unique identifier of your Alibaba Cloud Model Studio workspace. To get this ID, see <a href="https://help.aliyun.com/document_detail/2782167.html">Workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListBuildConfigsResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business data</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListBuildConfigsResponseBodyData> data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListBuildConfigsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -29,6 +38,8 @@ public class ListBuildConfigsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Unique request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>DA021073-17CE-5CCF-9FEB-93226C766887</p>
      */
@@ -36,6 +47,8 @@ public class ListBuildConfigsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation succeeded. true indicates success. false indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -96,9 +109,21 @@ public class ListBuildConfigsResponseBody extends TeaModel {
     }
 
     public static class ListBuildConfigsResponseBodyDataKeywords extends TeaModel {
+        /**
+         * <p>Description of the preset tag</p>
+         * 
+         * <strong>example:</strong>
+         * <p>新闻内容</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Key of the preset tag</p>
+         * 
+         * <strong>example:</strong>
+         * <p>新闻内容</p>
+         */
         @NameInMap("Key")
         public String key;
 
@@ -127,6 +152,8 @@ public class ListBuildConfigsResponseBody extends TeaModel {
 
     public static class ListBuildConfigsResponseBodyData extends TeaModel {
         /**
+         * <p>Indicates whether the preset is built-in</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -134,6 +161,8 @@ public class ListBuildConfigsResponseBody extends TeaModel {
         public Boolean buildIn;
 
         /**
+         * <p>Creation time</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-04-11 06:14:07</p>
          */
@@ -141,29 +170,50 @@ public class ListBuildConfigsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Creator</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("CreateUser")
         public String createUser;
 
+        /**
+         * <p>Primary key ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>主键ID，内置配置（buildIn=true）无该字段</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>List of available values for the tag</p>
+         */
         @NameInMap("Keywords")
         public java.util.List<ListBuildConfigsResponseBodyDataKeywords> keywords;
 
         /**
+         * <p>Tag key</p>
+         * 
          * <strong>example:</strong>
          * <p>writingStyle</p>
          */
         @NameInMap("Tag")
         public String tag;
 
+        /**
+         * <p>Tag description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>文体</p>
+         */
         @NameInMap("TagDescription")
         public String tagDescription;
 
         /**
+         * <p>Content category. Valid values: media or government.</p>
+         * 
          * <strong>example:</strong>
          * <p>media</p>
          */
@@ -171,6 +221,8 @@ public class ListBuildConfigsResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>Last update time</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-04-11 06:14:07</p>
          */
@@ -178,6 +230,8 @@ public class ListBuildConfigsResponseBody extends TeaModel {
         public String updateTime;
 
         /**
+         * <p>Last updater</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

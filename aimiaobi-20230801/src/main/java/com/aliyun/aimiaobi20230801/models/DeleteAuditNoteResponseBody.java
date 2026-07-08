@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteAuditNoteResponseBody extends TeaModel {
     /**
+     * <p>status code</p>
+     * 
      * <strong>example:</strong>
      * <p>DataNotExists</p>
      */
@@ -12,6 +14,8 @@ public class DeleteAuditNoteResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Deletion result. If deletion is successful, &quot;SUCCESSED&quot; is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESSED</p>
      * 
@@ -22,6 +26,8 @@ public class DeleteAuditNoteResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +35,8 @@ public class DeleteAuditNoteResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error description</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -45,6 +53,8 @@ public class DeleteAuditNoteResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether this request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCustomTextRequest extends TeaModel {
     /**
+     * <p>Unique identifier of the workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListCustomTextRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>Commodity code.</p>
+     * 
      * <strong>example:</strong>
      * <p>商品code</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExportGeneratedContentRequest extends TeaModel {
     /**
+     * <p>Workspace identity: <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ExportGeneratedContentRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>Document identity</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

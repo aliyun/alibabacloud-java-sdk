@@ -12,6 +12,8 @@ public class ListPptArtifactsRequest extends TeaModel {
     public String externalUserId;
 
     /**
+     * <p>The number of data entries to query in this request (deprecated).</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -19,16 +21,26 @@ public class ListPptArtifactsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token for the next page.</p>
+     * 
      * <strong>example:</strong>
      * <p>cEoBWREAXdxaOyjq/cqAbg==</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The search keyword for the work name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>数字时代的营销策划与文案创作</p>
+     */
     @NameInMap("Query")
     public String query;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm-az2xxxx</p>
      */

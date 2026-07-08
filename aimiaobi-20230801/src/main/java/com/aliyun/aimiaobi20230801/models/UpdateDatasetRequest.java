@@ -11,10 +11,15 @@ public class UpdateDatasetRequest extends TeaModel {
     @NameInMap("AccessLevel")
     public String accessLevel;
 
+    /**
+     * <p>The configurations for a third-party search dataset.</p>
+     */
     @NameInMap("DatasetConfig")
     public UpdateDatasetRequestDatasetConfig datasetConfig;
 
     /**
+     * <p>The description of the dataset.</p>
+     * 
      * <strong>example:</strong>
      * <p>企业自定义数据集</p>
      */
@@ -22,6 +27,8 @@ public class UpdateDatasetRequest extends TeaModel {
     public String datasetDescription;
 
     /**
+     * <p>The dataset ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -29,6 +36,8 @@ public class UpdateDatasetRequest extends TeaModel {
     public Long datasetId;
 
     /**
+     * <p>Specifies whether to enable search for the dataset.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -36,6 +45,7 @@ public class UpdateDatasetRequest extends TeaModel {
     public Integer searchDatasetEnable;
 
     /**
+     * <p>The unique identifier of the Alibaba Cloud Model Studio workspace. For more information, see <a href="">Get a workspaceId</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -98,15 +108,39 @@ public class UpdateDatasetRequest extends TeaModel {
     }
 
     public static class UpdateDatasetRequestDatasetConfigSearchSourceConfig extends TeaModel {
+        /**
+         * <p>Specifies whether the key-value pairs in metadata are used for generation. Default: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("MetadataKeyValueGenerateEnable")
         public Boolean metadataKeyValueGenerateEnable;
 
+        /**
+         * <p>Specifies whether the key-value pairs in metadata are included in searches. Default: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("MetadataKeyValueSearchEnable")
         public Boolean metadataKeyValueSearchEnable;
 
+        /**
+         * <p>Specifies whether tags are used for generation. Default: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("TagGenerateEnable")
         public Boolean tagGenerateEnable;
 
+        /**
+         * <p>Specifies whether tags are included in searches. Default: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("TagSearchEnable")
         public Boolean tagSearchEnable;
 
@@ -151,6 +185,8 @@ public class UpdateDatasetRequest extends TeaModel {
 
     public static class UpdateDatasetRequestDatasetConfigSearchSourceConfigsSearchSourceRequestConfigHeaders extends TeaModel {
         /**
+         * <p>The parameter name.</p>
+         * 
          * <strong>example:</strong>
          * <p>参数名称</p>
          */
@@ -158,6 +194,8 @@ public class UpdateDatasetRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The parameter value.</p>
+         * 
          * <strong>example:</strong>
          * <p>参数值</p>
          */
@@ -165,6 +203,8 @@ public class UpdateDatasetRequest extends TeaModel {
         public String value;
 
         /**
+         * <p>This parameter is valid only when ValueType is set to time.</p>
+         * 
          * <strong>example:</strong>
          * <p>valueType = time 时有效</p>
          */
@@ -172,8 +212,10 @@ public class UpdateDatasetRequest extends TeaModel {
         public String valueFormat;
 
         /**
+         * <p>The data type of the parameter value. Default: string.</p>
+         * 
          * <strong>example:</strong>
-         * <p>参数值数据类型: 默认string</p>
+         * <p>参数值数据类型：默认string</p>
          */
         @NameInMap("ValueType")
         public String valueType;
@@ -219,6 +261,8 @@ public class UpdateDatasetRequest extends TeaModel {
 
     public static class UpdateDatasetRequestDatasetConfigSearchSourceConfigsSearchSourceRequestConfigParams extends TeaModel {
         /**
+         * <p>The parameter name.</p>
+         * 
          * <strong>example:</strong>
          * <p>参数名称</p>
          */
@@ -226,6 +270,8 @@ public class UpdateDatasetRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The parameter value.</p>
+         * 
          * <strong>example:</strong>
          * <p>参数值</p>
          */
@@ -233,6 +279,8 @@ public class UpdateDatasetRequest extends TeaModel {
         public String value;
 
         /**
+         * <p>This parameter is valid only when ValueType is set to time.</p>
+         * 
          * <strong>example:</strong>
          * <p>valueType = time 时有效</p>
          */
@@ -240,8 +288,10 @@ public class UpdateDatasetRequest extends TeaModel {
         public String valueFormat;
 
         /**
+         * <p>The data type of the parameter value. Default: string.</p>
+         * 
          * <strong>example:</strong>
-         * <p>参数值数据类型: 默认string</p>
+         * <p>参数值数据类型：默认string</p>
          */
         @NameInMap("ValueType")
         public String valueType;
@@ -287,6 +337,8 @@ public class UpdateDatasetRequest extends TeaModel {
 
     public static class UpdateDatasetRequestDatasetConfigSearchSourceConfigsSearchSourceRequestConfig extends TeaModel {
         /**
+         * <p>The request body.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -294,26 +346,38 @@ public class UpdateDatasetRequest extends TeaModel {
         public String body;
 
         /**
+         * <p>The connection timeout period, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>3000</p>
          */
         @NameInMap("ConnectTimeout")
         public Integer connectTimeout;
 
+        /**
+         * <p>The HTTP request headers.</p>
+         */
         @NameInMap("Headers")
         public java.util.List<UpdateDatasetRequestDatasetConfigSearchSourceConfigsSearchSourceRequestConfigHeaders> headers;
 
         /**
+         * <p>The request method.</p>
+         * 
          * <strong>example:</strong>
          * <p>请求方式</p>
          */
         @NameInMap("Method")
         public String method;
 
+        /**
+         * <p>The request path parameters.</p>
+         */
         @NameInMap("Params")
         public java.util.List<UpdateDatasetRequestDatasetConfigSearchSourceConfigsSearchSourceRequestConfigParams> params;
 
         /**
+         * <p>Specifies whether to enable path parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -321,6 +385,8 @@ public class UpdateDatasetRequest extends TeaModel {
         public Boolean pathParamsEnable;
 
         /**
+         * <p>The read timeout period, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>3000</p>
          */
@@ -328,6 +394,8 @@ public class UpdateDatasetRequest extends TeaModel {
         public Integer socketTimeout;
 
         /**
+         * <p>The API URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>api地址</p>
          */
@@ -407,6 +475,8 @@ public class UpdateDatasetRequest extends TeaModel {
 
     public static class UpdateDatasetRequestDatasetConfigSearchSourceConfigsSearchSourceResponseConfigJqNodesJqNodesJqNodes extends TeaModel {
         /**
+         * <p>The node key.</p>
+         * 
          * <strong>example:</strong>
          * <p>title</p>
          */
@@ -414,6 +484,8 @@ public class UpdateDatasetRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The node path.</p>
+         * 
          * <strong>example:</strong>
          * <p>.title</p>
          */
@@ -421,6 +493,8 @@ public class UpdateDatasetRequest extends TeaModel {
         public String path;
 
         /**
+         * <p>The type.</p>
+         * 
          * <strong>example:</strong>
          * <p>string</p>
          */
@@ -459,10 +533,15 @@ public class UpdateDatasetRequest extends TeaModel {
     }
 
     public static class UpdateDatasetRequestDatasetConfigSearchSourceConfigsSearchSourceResponseConfigJqNodesJqNodes extends TeaModel {
+        /**
+         * <p>The child node configuration.</p>
+         */
         @NameInMap("JqNodes")
         public java.util.List<UpdateDatasetRequestDatasetConfigSearchSourceConfigsSearchSourceResponseConfigJqNodesJqNodesJqNodes> jqNodes;
 
         /**
+         * <p>The node key.</p>
+         * 
          * <strong>example:</strong>
          * <p>title</p>
          */
@@ -470,6 +549,8 @@ public class UpdateDatasetRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The node path.</p>
+         * 
          * <strong>example:</strong>
          * <p>.title</p>
          */
@@ -477,6 +558,8 @@ public class UpdateDatasetRequest extends TeaModel {
         public String path;
 
         /**
+         * <p>The type.</p>
+         * 
          * <strong>example:</strong>
          * <p>string</p>
          */
@@ -523,10 +606,15 @@ public class UpdateDatasetRequest extends TeaModel {
     }
 
     public static class UpdateDatasetRequestDatasetConfigSearchSourceConfigsSearchSourceResponseConfigJqNodes extends TeaModel {
+        /**
+         * <p>The child node configuration.</p>
+         */
         @NameInMap("JqNodes")
         public java.util.List<UpdateDatasetRequestDatasetConfigSearchSourceConfigsSearchSourceResponseConfigJqNodesJqNodes> jqNodes;
 
         /**
+         * <p>The node key.</p>
+         * 
          * <strong>example:</strong>
          * <p>节点key</p>
          */
@@ -534,6 +622,8 @@ public class UpdateDatasetRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The node path.</p>
+         * 
          * <strong>example:</strong>
          * <p>节点路径</p>
          */
@@ -541,6 +631,8 @@ public class UpdateDatasetRequest extends TeaModel {
         public String path;
 
         /**
+         * <p>The data type of the node. Valid values: string, number, list, object, and base.</p>
+         * 
          * <strong>example:</strong>
          * <p>节点数据类型：string number list object base</p>
          */
@@ -587,6 +679,9 @@ public class UpdateDatasetRequest extends TeaModel {
     }
 
     public static class UpdateDatasetRequestDatasetConfigSearchSourceConfigsSearchSourceResponseConfig extends TeaModel {
+        /**
+         * <p>The node configuration.</p>
+         */
         @NameInMap("JqNodes")
         public java.util.List<UpdateDatasetRequestDatasetConfigSearchSourceConfigsSearchSourceResponseConfigJqNodes> jqNodes;
 
@@ -607,19 +702,29 @@ public class UpdateDatasetRequest extends TeaModel {
 
     public static class UpdateDatasetRequestDatasetConfigSearchSourceConfigs extends TeaModel {
         /**
+         * <p>A searchable keyword used to verify availability.</p>
+         * 
          * <strong>example:</strong>
          * <p>可以搜索到的关键词，用来验证是否可用</p>
          */
         @NameInMap("DemoQuery")
         public String demoQuery;
 
+        /**
+         * <p>The API request configuration.</p>
+         */
         @NameInMap("SearchSourceRequestConfig")
         public UpdateDatasetRequestDatasetConfigSearchSourceConfigsSearchSourceRequestConfig searchSourceRequestConfig;
 
+        /**
+         * <p>The API response configuration.</p>
+         */
         @NameInMap("SearchSourceResponseConfig")
         public UpdateDatasetRequestDatasetConfigSearchSourceConfigsSearchSourceResponseConfig searchSourceResponseConfig;
 
         /**
+         * <p>The default number of data entries for requests and responses.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -666,9 +771,15 @@ public class UpdateDatasetRequest extends TeaModel {
     }
 
     public static class UpdateDatasetRequestDatasetConfig extends TeaModel {
+        /**
+         * <p>The dataset configuration items.</p>
+         */
         @NameInMap("SearchSourceConfig")
         public UpdateDatasetRequestDatasetConfigSearchSourceConfig searchSourceConfig;
 
+        /**
+         * <p>Third-party search: API definition.</p>
+         */
         @NameInMap("SearchSourceConfigs")
         public java.util.List<UpdateDatasetRequestDatasetConfigSearchSourceConfigs> searchSourceConfigs;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CancelAuditTaskResponseBody extends TeaModel {
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>DataNotExists</p>
      */
@@ -12,6 +14,8 @@ public class CancelAuditTaskResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Indicates whether the audit task was canceled successfully</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class CancelAuditTaskResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>400</p>
      */
@@ -26,6 +32,8 @@ public class CancelAuditTaskResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>错误消息</p>
      */
@@ -33,7 +41,7 @@ public class CancelAuditTaskResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>xxxxx</p>
@@ -42,6 +50,8 @@ public class CancelAuditTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

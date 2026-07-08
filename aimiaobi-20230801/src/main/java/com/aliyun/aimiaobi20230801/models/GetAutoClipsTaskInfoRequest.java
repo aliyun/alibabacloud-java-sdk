@@ -4,13 +4,26 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class GetAutoClipsTaskInfoRequest extends TeaModel {
+    /**
+     * <p>Show video understanding results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("ShowAnalysisResults")
     public Boolean showAnalysisResults;
 
+    /**
+     * <p>Show video source information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("ShowResourceInfo")
     public Boolean showResourceInfo;
 
     /**
+     * <p>Unique ID of the task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,7 +33,11 @@ public class GetAutoClipsTaskInfoRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p><a href="https://help.aliyun.com/document_detail/2782167.html">Workspace</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>百炼工作空间Id</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;

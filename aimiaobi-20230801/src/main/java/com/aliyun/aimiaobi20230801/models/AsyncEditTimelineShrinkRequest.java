@@ -4,10 +4,17 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class AsyncEditTimelineShrinkRequest extends TeaModel {
+    /**
+     * <p>Enable automatic clip adjustment</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AutoClips")
     public Boolean autoClips;
 
     /**
+     * <p>Unique identifier of the task</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,12 +24,14 @@ public class AsyncEditTimelineShrinkRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>Array structure of video editing timelines</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Timelines")
     public String timelinesShrink;
 
     /**
+     * <p><a href="https://help.aliyun.com/document_detail/2782167.html">Model Studio workspace ID</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

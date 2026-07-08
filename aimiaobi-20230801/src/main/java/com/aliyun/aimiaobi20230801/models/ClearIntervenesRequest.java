@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ClearIntervenesRequest extends TeaModel {
     /**
+     * <p>Unique identifier of the workspace: <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

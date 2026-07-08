@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateDatasetDocumentRequest extends TeaModel {
     /**
+     * <p>Unique identifier of the dataset.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class UpdateDatasetDocumentRequest extends TeaModel {
     public Long datasetId;
 
     /**
+     * <p>Name of the dataset.</p>
+     * 
      * <strong>example:</strong>
      * <p>数据集名称</p>
      */
@@ -19,12 +23,15 @@ public class UpdateDatasetDocumentRequest extends TeaModel {
     public String datasetName;
 
     /**
+     * <p>The document to update.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Document")
     public UpdateDatasetDocumentRequestDocument document;
 
     /**
+     * <p>Unique identifier of the Alibaba Cloud Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Get the workspace ID</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx</p>
      */
@@ -69,36 +76,69 @@ public class UpdateDatasetDocumentRequest extends TeaModel {
     }
 
     public static class UpdateDatasetDocumentRequestDocument extends TeaModel {
+        /**
+         * <p>UUID of the category</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("CategoryUuid")
         public String categoryUuid;
 
         /**
+         * <p>User-defined unique ID for the document.</p>
+         * 
          * <strong>example:</strong>
-         * <p>用户指定的文档唯一ID</p>
+         * <p>xxx</p>
          */
         @NameInMap("DocId")
         public String docId;
 
         /**
+         * <p>Unique ID of the document in the system.</p>
+         * 
          * <strong>example:</strong>
-         * <p>内部文档唯一ID</p>
+         * <p>xxx</p>
          */
         @NameInMap("DocUuid")
         public String docUuid;
 
+        /**
+         * <p>Extension field 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("Extend1")
         public String extend1;
 
+        /**
+         * <p>Extension field 2</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
+         */
         @NameInMap("Extend2")
         public String extend2;
 
+        /**
+         * <p>Extension field 3</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("Extend3")
         public String extend3;
 
+        /**
+         * <p>Tags</p>
+         */
         @NameInMap("Tags")
         public java.util.List<String> tags;
 
         /**
+         * <p>Document title.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */

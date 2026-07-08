@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class SearchDatasetDocumentsResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data.</p>
+     */
     @NameInMap("Data")
     public SearchDatasetDocumentsResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class SearchDatasetDocumentsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The status message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class SearchDatasetDocumentsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -36,6 +47,8 @@ public class SearchDatasetDocumentsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates if the request succeeded (<code>true</code>) or failed (<code>false</code>).</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -96,9 +109,21 @@ public class SearchDatasetDocumentsResponseBody extends TeaModel {
     }
 
     public static class SearchDatasetDocumentsResponseBodyDataDocumentsChunkInfos extends TeaModel {
+        /**
+         * <p>The content of the chunk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Chunk")
         public String chunk;
 
+        /**
+         * <p>The relevance score of the chunk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.77</p>
+         */
         @NameInMap("Score")
         public Double score;
 
@@ -126,16 +151,33 @@ public class SearchDatasetDocumentsResponseBody extends TeaModel {
     }
 
     public static class SearchDatasetDocumentsResponseBodyDataDocuments extends TeaModel {
+        /**
+         * <p>The unique identifier for the category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("CategoryUuid")
         public String categoryUuid;
 
+        /**
+         * <p>The content of the relevant chunk. This field is returned only in <code>chunk</code> mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Chunk")
         public String chunk;
 
+        /**
+         * <p>A list of relevant chunks from the document. This field is returned only in <code>document</code> mode.</p>
+         */
         @NameInMap("ChunkInfos")
         public java.util.List<SearchDatasetDocumentsResponseBodyDataDocumentsChunkInfos> chunkInfos;
 
         /**
+         * <p>The content of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -143,51 +185,107 @@ public class SearchDatasetDocumentsResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>The user-defined unique ID for the document.</p>
+         * 
          * <strong>example:</strong>
-         * <p>用户指定的文档唯一ID</p>
+         * <p>xx</p>
          */
         @NameInMap("DocId")
         public String docId;
 
+        /**
+         * <p>The document type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
+         */
         @NameInMap("DocType")
         public String docType;
 
         /**
+         * <p>The unique system ID of the document.</p>
+         * 
          * <strong>example:</strong>
-         * <p>内部文档唯一ID</p>
+         * <p>xxx</p>
          */
         @NameInMap("DocUuid")
         public String docUuid;
 
+        /**
+         * <p>Custom extension field 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend1")
         public String extend1;
 
+        /**
+         * <p>Custom extension field 2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend2")
         public String extend2;
 
+        /**
+         * <p>Custom extension field 3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend3")
         public String extend3;
 
         /**
+         * <p>The publication time, in <code>yyyy-MM-dd HH:mm:ss</code> format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-12-09 17:09:40</p>
          */
         @NameInMap("PubTime")
         public String pubTime;
 
+        /**
+         * <p>The relevance score.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
+         */
         @NameInMap("Score")
         public Double score;
 
+        /**
+         * <p>The unique identifier for the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("SearchSource")
         public String searchSource;
 
+        /**
+         * <p>The name of the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("SearchSourceName")
         public String searchSourceName;
 
+        /**
+         * <p>The dataset type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("SearchSourceType")
         public String searchSourceType;
 
         /**
+         * <p>The source of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>来源</p>
          */
@@ -195,16 +293,23 @@ public class SearchDatasetDocumentsResponseBody extends TeaModel {
         public String sourceFrom;
 
         /**
+         * <p>The summary of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章摘要</p>
          */
         @NameInMap("Summary")
         public String summary;
 
+        /**
+         * <p>A list of tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<String> tags;
 
         /**
+         * <p>The title of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -212,6 +317,8 @@ public class SearchDatasetDocumentsResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>The URL of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -386,6 +493,9 @@ public class SearchDatasetDocumentsResponseBody extends TeaModel {
     }
 
     public static class SearchDatasetDocumentsResponseBodyData extends TeaModel {
+        /**
+         * <p>The document list.</p>
+         */
         @NameInMap("Documents")
         public java.util.List<SearchDatasetDocumentsResponseBodyDataDocuments> documents;
 

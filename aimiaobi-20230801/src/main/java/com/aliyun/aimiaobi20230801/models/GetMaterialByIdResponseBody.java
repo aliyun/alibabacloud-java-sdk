@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetMaterialByIdResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>DataNotExists</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business data</p>
+     */
     @NameInMap("Data")
     public GetMaterialByIdResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetMaterialByIdResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error description</p>
+     * 
      * <strong>example:</strong>
      * <p>数据不存在</p>
      */
@@ -29,6 +38,8 @@ public class GetMaterialByIdResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Unique request identifier</p>
+     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */
@@ -36,6 +47,8 @@ public class GetMaterialByIdResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates success: true for success, false for failure</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -96,10 +109,18 @@ public class GetMaterialByIdResponseBody extends TeaModel {
     }
 
     public static class GetMaterialByIdResponseBodyData extends TeaModel {
+        /**
+         * <p>Author</p>
+         * 
+         * <strong>example:</strong>
+         * <p>文档作者</p>
+         */
         @NameInMap("Author")
         public String author;
 
         /**
+         * <p>Creation time</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-21 11:34:19</p>
          */
@@ -107,16 +128,23 @@ public class GetMaterialByIdResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Creator user ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("CreateUser")
         public String createUser;
 
+        /**
+         * <p>Document tags used for classification and other purposes. Separate multiple keywords with commas.</p>
+         */
         @NameInMap("DocKeywords")
         public java.util.List<String> docKeywords;
 
         /**
+         * <p>Document type, such as pdf, word, url, or image</p>
+         * 
          * <strong>example:</strong>
          * <p>pdf</p>
          */
@@ -124,16 +152,26 @@ public class GetMaterialByIdResponseBody extends TeaModel {
         public String docType;
 
         /**
+         * <p>URL uploaded by an external customer. Used only for record keeping.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://www.example.com">https://www.example.com</a></p>
          */
         @NameInMap("ExternalUrl")
         public String externalUrl;
 
+        /**
+         * <p>Web page content</p>
+         * 
+         * <strong>example:</strong>
+         * <p>网页内容</p>
+         */
         @NameInMap("HtmlContent")
         public String htmlContent;
 
         /**
+         * <p>Primary key</p>
+         * 
          * <strong>example:</strong>
          * <p>32</p>
          */
@@ -141,6 +179,8 @@ public class GetMaterialByIdResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>Publication time</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-04-11 06:14:07</p>
          */
@@ -148,6 +188,8 @@ public class GetMaterialByIdResponseBody extends TeaModel {
         public String pubTime;
 
         /**
+         * <p>Temporary public URL</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://www.example.com">https://www.example.com</a></p>
          */
@@ -155,6 +197,8 @@ public class GetMaterialByIdResponseBody extends TeaModel {
         public String publicUrl;
 
         /**
+         * <p>Sharing attribute stored as bit flags. The first bit indicates sharing within the workspace, the second bit indicates sharing within the tenant, and the third bit indicates system-wide sharing.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -162,25 +206,53 @@ public class GetMaterialByIdResponseBody extends TeaModel {
         public Integer shareAttr;
 
         /**
+         * <p>Document source, such as user_upload, search, or viewpoint</p>
+         * 
          * <strong>example:</strong>
          * <p>user_upload</p>
          */
         @NameInMap("SrcFrom")
         public String srcFrom;
 
+        /**
+         * <p>Document summary</p>
+         * 
+         * <strong>example:</strong>
+         * <p>文档摘要</p>
+         */
         @NameInMap("Summary")
         public String summary;
 
+        /**
+         * <p>Parsed text content. Empty for images.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>文本内容</p>
+         */
         @NameInMap("TextContent")
         public String textContent;
 
+        /**
+         * <p>Base64-encoded thumbnail for image documents</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Base64编码的缩略图</p>
+         */
         @NameInMap("ThumbnailInBase64")
         public String thumbnailInBase64;
 
+        /**
+         * <p>Document title</p>
+         * 
+         * <strong>example:</strong>
+         * <p>文档标题</p>
+         */
         @NameInMap("Title")
         public String title;
 
         /**
+         * <p>Modification time</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-04-08 19:33:01</p>
          */
@@ -188,6 +260,8 @@ public class GetMaterialByIdResponseBody extends TeaModel {
         public String updateTime;
 
         /**
+         * <p>Modifier user ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -195,6 +269,8 @@ public class GetMaterialByIdResponseBody extends TeaModel {
         public String updateUser;
 
         /**
+         * <p>Internal document storage URL</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://www.example.com">https://www.example.com</a></p>
          */

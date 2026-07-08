@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConfirmAndPostProcessAuditNoteRequest extends TeaModel {
     /**
+     * <p>The TaskId obtained from the SubmitAuditNote interface. This is the unique identifier for the custom rule library task index. Store it securely when using it.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ConfirmAndPostProcessAuditNoteRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>Alibaba Cloud Model Studio workspace unique identifier: Get <a href="https://help.aliyun.com/document_detail/2782167.html">Workspace ID</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

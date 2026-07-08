@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTopicViewPointRecommendEventListRequest extends TeaModel {
     /**
+     * <p>Unique identifier for the workspace: <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListTopicViewPointRecommendEventListRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>Hot spot event ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -21,6 +24,8 @@ public class ListTopicViewPointRecommendEventListRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>Maximum number of results to return. Defaults to 5.</p>
+     * 
      * <strong>example:</strong>
      * <p>66</p>
      */
@@ -28,6 +33,8 @@ public class ListTopicViewPointRecommendEventListRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Token for the next page.</p>
+     * 
      * <strong>example:</strong>
      * <p>下一页的token</p>
      */

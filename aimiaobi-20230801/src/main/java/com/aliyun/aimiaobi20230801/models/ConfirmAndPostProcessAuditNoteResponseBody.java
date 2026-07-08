@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ConfirmAndPostProcessAuditNoteResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>DataNotExists</p>
      */
@@ -12,6 +14,8 @@ public class ConfirmAndPostProcessAuditNoteResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The task ID obtained after confirming the use of this parsing result. It is consistent with the input parameter, returned here for your convenience.</p>
+     * 
      * <strong>example:</strong>
      * <p>33</p>
      */
@@ -19,6 +23,8 @@ public class ConfirmAndPostProcessAuditNoteResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class ConfirmAndPostProcessAuditNoteResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error description</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -42,6 +50,8 @@ public class ConfirmAndPostProcessAuditNoteResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates if the request was successful</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

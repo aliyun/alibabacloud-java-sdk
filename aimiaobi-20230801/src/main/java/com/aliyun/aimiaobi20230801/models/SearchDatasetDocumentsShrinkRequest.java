@@ -4,16 +4,27 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class SearchDatasetDocumentsShrinkRequest extends TeaModel {
+    /**
+     * <p>A list of category UUIDs for filtering.</p>
+     */
     @NameInMap("CategoryUuids")
     public String categoryUuidsShrink;
 
+    /**
+     * <p>The end time for document creation, specified as a Unix timestamp.</p>
+     */
     @NameInMap("CreateTimeEnd")
     public Long createTimeEnd;
 
+    /**
+     * <p>The start time for document creation, specified as a Unix timestamp.</p>
+     */
     @NameInMap("CreateTimeStart")
     public Long createTimeStart;
 
     /**
+     * <p>The ID of the dataset. You must specify either <code>DatasetId</code> or <code>DatasetName</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,38 +32,62 @@ public class SearchDatasetDocumentsShrinkRequest extends TeaModel {
     public Long datasetId;
 
     /**
+     * <p>The name of the dataset.</p>
+     * 
      * <strong>example:</strong>
      * <p>数据集名称</p>
      */
     @NameInMap("DatasetName")
     public String datasetName;
 
+    /**
+     * <p>A list of document IDs for filtering.</p>
+     */
     @NameInMap("DocIds")
     public String docIdsShrink;
 
+    /**
+     * <p>A list of document types for filtering.</p>
+     */
     @NameInMap("DocTypes")
     public String docTypesShrink;
 
+    /**
+     * <p>A list of document UUIDs for filtering.</p>
+     */
     @NameInMap("DocUuids")
     public String docUuidsShrink;
 
+    /**
+     * <p>The end of the time range for filtering, specified as a Unix timestamp.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
+     * <p>A business parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>业务参数</p>
      */
     @NameInMap("Extend1")
     public String extend1;
 
+    /**
+     * <p>A reserved business parameter.</p>
+     */
     @NameInMap("Extend2")
     public String extend2;
 
+    /**
+     * <p>A reserved business parameter.</p>
+     */
     @NameInMap("Extend3")
     public String extend3;
 
     /**
+     * <p>Specifies whether to include the document content in the search results. The default value is <code>false</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -60,6 +95,8 @@ public class SearchDatasetDocumentsShrinkRequest extends TeaModel {
     public Boolean includeContent;
 
     /**
+     * <p>The number of documents to return per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -67,6 +104,7 @@ public class SearchDatasetDocumentsShrinkRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The search query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -75,16 +113,26 @@ public class SearchDatasetDocumentsShrinkRequest extends TeaModel {
     @NameInMap("Query")
     public String query;
 
+    /**
+     * <p>The search mode.</p>
+     */
     @NameInMap("SearchMode")
     public String searchMode;
 
+    /**
+     * <p>The start of the time range for filtering, specified as a Unix timestamp.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 
+    /**
+     * <p>A list of tags for filtering.</p>
+     */
     @NameInMap("Tags")
     public String tagsShrink;
 
     /**
+     * <p>The ID of the Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Get workspaceId</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

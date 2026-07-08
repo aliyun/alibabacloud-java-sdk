@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetHotTopicBroadcastResponseBody extends TeaModel {
     /**
+     * <p>status code</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business Data</p>
+     */
     @NameInMap("Data")
     public GetHotTopicBroadcastResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Fault description</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request UUID</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -36,6 +47,8 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>is successful: true indicates Succeeded, false indicates failed</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
 
     public static class GetHotTopicBroadcastResponseBodyDataDataImages extends TeaModel {
         /**
+         * <p>URL link</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com/a.png">http://www.example.com/a.png</a></p>
          */
@@ -120,15 +135,19 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
 
     public static class GetHotTopicBroadcastResponseBodyDataDataNewsComments extends TeaModel {
         /**
+         * <p>Content</p>
+         * 
          * <strong>example:</strong>
-         * <p>评论内容</p>
+         * <p>内容</p>
          */
         @NameInMap("Text")
         public String text;
 
         /**
+         * <p>Username</p>
+         * 
          * <strong>example:</strong>
-         * <p>评论用户名</p>
+         * <p>用户名</p>
          */
         @NameInMap("Username")
         public String username;
@@ -157,39 +176,75 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
     }
 
     public static class GetHotTopicBroadcastResponseBodyDataDataNews extends TeaModel {
+        /**
+         * <p>Model categorization result</p>
+         * 
+         * <strong>example:</strong>
+         * <p>科技</p>
+         */
         @NameInMap("AnalysisCategory")
         public String analysisCategory;
 
         /**
+         * <p>aggregated hot spot name</p>
+         * 
          * <strong>example:</strong>
          * <p>聚合后热点名称</p>
          */
         @NameInMap("AnalysisTopic")
         public String analysisTopic;
 
+        /**
+         * <p>Author</p>
+         * 
+         * <strong>example:</strong>
+         * <p>作者</p>
+         */
         @NameInMap("Author")
         public String author;
 
+        /**
+         * <p>Categorization</p>
+         */
         @NameInMap("Category")
         public java.util.List<String> category;
 
+        /**
+         * <p>News content</p>
+         */
         @NameInMap("Comments")
         public java.util.List<GetHotTopicBroadcastResponseBodyDataDataNewsComments> comments;
 
+        /**
+         * <p>News content</p>
+         * 
+         * <strong>example:</strong>
+         * <p>新闻内容</p>
+         */
         @NameInMap("Content")
         public String content;
 
         /**
+         * <p>Ingestion time</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-06-13 08:45:05</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>Source</p>
+         * 
+         * <strong>example:</strong>
+         * <p>夸克</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
         /**
+         * <p>Date of entry</p>
+         * 
          * <strong>example:</strong>
          * <p>2024111110</p>
          */
@@ -197,12 +252,17 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
         public String dt;
 
         /**
+         * <p>original hot spot name</p>
+         * 
          * <strong>example:</strong>
          * <p>原始热点名称</p>
          */
         @NameInMap("HotTopic")
         public String hotTopic;
 
+        /**
+         * <p>Image list</p>
+         */
         @NameInMap("ImgList")
         public java.util.List<String> imgList;
 
@@ -216,6 +276,8 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
         public String logo;
 
         /**
+         * <p>Published At</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-10 12:12:00</p>
          */
@@ -223,16 +285,26 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
         public String pubTime;
 
         /**
+         * <p>Summary</p>
+         * 
          * <strong>example:</strong>
          * <p>摘要</p>
          */
         @NameInMap("Summary")
         public String summary;
 
+        /**
+         * <p>title</p>
+         * 
+         * <strong>example:</strong>
+         * <p>标题</p>
+         */
         @NameInMap("Title")
         public String title;
 
         /**
+         * <p>news URL</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com/a.png">http://www.example.com/a.png</a></p>
          */
@@ -240,6 +312,8 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
         public String url;
 
         /**
+         * <p>Primary key ID</p>
+         * 
          * <strong>example:</strong>
          * <p>主键ID</p>
          */
@@ -247,6 +321,8 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
         public String uuid;
 
         /**
+         * <p>website</p>
+         * 
          * <strong>example:</strong>
          * <p>网站</p>
          */
@@ -406,6 +482,8 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
 
     public static class GetHotTopicBroadcastResponseBodyDataDataSummarySummaries extends TeaModel {
         /**
+         * <p>Summary</p>
+         * 
          * <strong>example:</strong>
          * <p>摘要</p>
          */
@@ -413,6 +491,8 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
         public String summary;
 
         /**
+         * <p>title</p>
+         * 
          * <strong>example:</strong>
          * <p>标题</p>
          */
@@ -444,6 +524,8 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
 
     public static class GetHotTopicBroadcastResponseBodyDataDataSummary extends TeaModel {
         /**
+         * <p>Number of input tokens used to generate this summary</p>
+         * 
          * <strong>example:</strong>
          * <p>17</p>
          */
@@ -451,12 +533,17 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
         public Integer inputToken;
 
         /**
+         * <p>Number of output tokens used to generate this summary</p>
+         * 
          * <strong>example:</strong>
          * <p>41</p>
          */
         @NameInMap("OutputToken")
         public Integer outputToken;
 
+        /**
+         * <p>List of structured summaries</p>
+         */
         @NameInMap("Summaries")
         public java.util.List<GetHotTopicBroadcastResponseBodyDataDataSummarySummaries> summaries;
 
@@ -493,6 +580,8 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
 
     public static class GetHotTopicBroadcastResponseBodyDataData extends TeaModel {
         /**
+         * <p>Hot topic category</p>
+         * 
          * <strong>example:</strong>
          * <p>热点话题分类</p>
          */
@@ -500,6 +589,8 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
         public String category;
 
         /**
+         * <p>Creation Time</p>
+         * 
          * <strong>example:</strong>
          * <p>创建时间</p>
          */
@@ -507,6 +598,8 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Custom hotness value</p>
+         * 
          * <strong>example:</strong>
          * <p>34.7905341705522</p>
          */
@@ -514,6 +607,8 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
         public Double customHotValue;
 
         /**
+         * <p>Custom text summarization of the hot spot topic</p>
+         * 
          * <strong>example:</strong>
          * <p>自定义热点话题文本摘要</p>
          */
@@ -521,6 +616,8 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
         public String customTextSummary;
 
         /**
+         * <p>Name of the hot spot topic</p>
+         * 
          * <strong>example:</strong>
          * <p>热点话题名称</p>
          */
@@ -528,6 +625,8 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
         public String hotTopic;
 
         /**
+         * <p>hot spot topic summary Version</p>
+         * 
          * <strong>example:</strong>
          * <p>热点话题摘要版本</p>
          */
@@ -535,6 +634,8 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
         public String hotTopicVersion;
 
         /**
+         * <p>Hotness value</p>
+         * 
          * <strong>example:</strong>
          * <p>1.4120480606282884</p>
          */
@@ -542,48 +643,80 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
         public Double hotValue;
 
         /**
+         * <p>hot spot topic ID</p>
+         * 
          * <strong>example:</strong>
          * <p>热点话题ID</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>List of hot spot topic images</p>
+         */
         @NameInMap("Images")
         public java.util.List<GetHotTopicBroadcastResponseBodyDataDataImages> images;
 
         /**
+         * <p>Input Token</p>
+         * 
          * <strong>example:</strong>
          * <p>29</p>
          */
         @NameInMap("InputToken")
         public Integer inputToken;
 
+        /**
+         * <p>List of Regions associated with the hot spot</p>
+         */
         @NameInMap("Locations")
         public java.util.List<String> locations;
 
+        /**
+         * <p>Article List</p>
+         */
         @NameInMap("News")
         public java.util.List<GetHotTopicBroadcastResponseBodyDataDataNews> news;
 
         /**
+         * <p>Output Token</p>
+         * 
          * <strong>example:</strong>
          * <p>22</p>
          */
         @NameInMap("OutputToken")
         public Integer outputToken;
 
+        /**
+         * <p>Published At</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-08-01 12:00:00</p>
+         */
         @NameInMap("PubTime")
         public String pubTime;
 
+        /**
+         * <p>Structured summary of hot spot topics</p>
+         */
         @NameInMap("Summary")
         public GetHotTopicBroadcastResponseBodyDataDataSummary summary;
 
         /**
+         * <p>Text summary of the hot topic</p>
+         * 
          * <strong>example:</strong>
          * <p>热点话题文本摘要</p>
          */
         @NameInMap("TextSummary")
         public String textSummary;
 
+        /**
+         * <p>Hot list URL</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com/a.html">http://www.example.com/a.html</a></p>
+         */
         @NameInMap("Url")
         public String url;
 
@@ -732,6 +865,8 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
 
     public static class GetHotTopicBroadcastResponseBodyDataTotalTokenInfo extends TeaModel {
         /**
+         * <p>Total number of hot spots</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -739,6 +874,8 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
         public Integer hotTopicCount;
 
         /**
+         * <p>Estimated number of input tokens</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -746,6 +883,8 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
         public Integer inputTokens;
 
         /**
+         * <p>Estimated number of output tokens</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -753,6 +892,8 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
         public Integer outputTokens;
 
         /**
+         * <p>Estimated total word count</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -799,16 +940,24 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
     }
 
     public static class GetHotTopicBroadcastResponseBodyData extends TeaModel {
+        /**
+         * <p>List of hot spot bulletins</p>
+         */
         @NameInMap("Data")
         public java.util.List<GetHotTopicBroadcastResponseBodyDataData> data;
 
         /**
+         * <p>Total count</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
+        /**
+         * <p>Estimated total number of tokens required for generation</p>
+         */
         @NameInMap("TotalTokenInfo")
         public GetHotTopicBroadcastResponseBodyDataTotalTokenInfo totalTokenInfo;
 

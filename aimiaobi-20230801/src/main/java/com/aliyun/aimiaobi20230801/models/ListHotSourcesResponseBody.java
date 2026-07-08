@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListHotSourcesResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Third-party source list</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListHotSourcesResponseBodyData> data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListHotSourcesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Maximum number of results returned</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -29,6 +38,8 @@ public class ListHotSourcesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Fault description</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -36,6 +47,8 @@ public class ListHotSourcesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Next page token</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxxx</p>
      */
@@ -43,6 +56,8 @@ public class ListHotSourcesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Request UUID</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -50,6 +65,8 @@ public class ListHotSourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation succeeded: true for success, false for failure</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -57,6 +74,8 @@ public class ListHotSourcesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Total number of records</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -142,6 +161,8 @@ public class ListHotSourcesResponseBody extends TeaModel {
 
     public static class ListHotSourcesResponseBodyData extends TeaModel {
         /**
+         * <p>Hot ranking source description</p>
+         * 
          * <strong>example:</strong>
          * <p>热榜源描述</p>
          */
@@ -149,6 +170,8 @@ public class ListHotSourcesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>Whether to display in the console</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -156,6 +179,8 @@ public class ListHotSourcesResponseBody extends TeaModel {
         public Boolean show;
 
         /**
+         * <p>Sorting value</p>
+         * 
          * <strong>example:</strong>
          * <p>86</p>
          */
@@ -163,6 +188,8 @@ public class ListHotSourcesResponseBody extends TeaModel {
         public Integer sort;
 
         /**
+         * <p>Hot ranking source identity</p>
+         * 
          * <strong>example:</strong>
          * <p>热榜源标识</p>
          */

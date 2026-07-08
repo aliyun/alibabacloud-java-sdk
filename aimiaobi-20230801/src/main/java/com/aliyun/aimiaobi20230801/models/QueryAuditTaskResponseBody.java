@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class QueryAuditTaskResponseBody extends TeaModel {
     /**
+     * <p>error code</p>
+     * 
      * <strong>example:</strong>
      * <p>DataNotExists</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Asynchronous task object</p>
+     */
     @NameInMap("Data")
     public QueryAuditTaskResponseBodyData data;
 
     /**
+     * <p>HTTP error code</p>
+     * 
      * <strong>example:</strong>
      * <p>400</p>
      */
@@ -22,6 +29,8 @@ public class QueryAuditTaskResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>error message</p>
+     * 
      * <strong>example:</strong>
      * <p>错误消息</p>
      */
@@ -38,6 +47,8 @@ public class QueryAuditTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +110,8 @@ public class QueryAuditTaskResponseBody extends TeaModel {
 
     public static class QueryAuditTaskResponseBodyDataResponseHeader extends TeaModel {
         /**
+         * <p>error code</p>
+         * 
          * <strong>example:</strong>
          * <p>DataNotExists</p>
          */
@@ -106,6 +119,8 @@ public class QueryAuditTaskResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>error message</p>
+         * 
          * <strong>example:</strong>
          * <p>数据不存在</p>
          */
@@ -113,6 +128,8 @@ public class QueryAuditTaskResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>Event</p>
+         * 
          * <strong>example:</strong>
          * <p>task-failed</p>
          */
@@ -120,6 +137,8 @@ public class QueryAuditTaskResponseBody extends TeaModel {
         public String event;
 
         /**
+         * <p>Unique conversation ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>49eab783-9172-487a-b9df-c6372c47392c</p>
          */
@@ -127,6 +146,8 @@ public class QueryAuditTaskResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>Unique multi-turn conversation ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>896b733535274d28b1a61c78bc145217</p>
          */
@@ -182,6 +203,8 @@ public class QueryAuditTaskResponseBody extends TeaModel {
 
     public static class QueryAuditTaskResponseBodyDataResponsePayloadOutput extends TeaModel {
         /**
+         * <p>Final response result (JSON array structure)</p>
+         * 
          * <strong>example:</strong>
          * <p>x\&quot;x\&quot;x</p>
          */
@@ -205,6 +228,8 @@ public class QueryAuditTaskResponseBody extends TeaModel {
 
     public static class QueryAuditTaskResponseBodyDataResponsePayloadUsage extends TeaModel {
         /**
+         * <p>Input tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -212,6 +237,8 @@ public class QueryAuditTaskResponseBody extends TeaModel {
         public Integer inputTokens;
 
         /**
+         * <p>Output tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -219,6 +246,8 @@ public class QueryAuditTaskResponseBody extends TeaModel {
         public Integer outputTokens;
 
         /**
+         * <p>Total tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>300</p>
          */
@@ -257,9 +286,15 @@ public class QueryAuditTaskResponseBody extends TeaModel {
     }
 
     public static class QueryAuditTaskResponseBodyDataResponsePayload extends TeaModel {
+        /**
+         * <p>response body</p>
+         */
         @NameInMap("Output")
         public QueryAuditTaskResponseBodyDataResponsePayloadOutput output;
 
+        /**
+         * <p>usage</p>
+         */
         @NameInMap("Usage")
         public QueryAuditTaskResponseBodyDataResponsePayloadUsage usage;
 
@@ -287,9 +322,15 @@ public class QueryAuditTaskResponseBody extends TeaModel {
     }
 
     public static class QueryAuditTaskResponseBodyDataResponse extends TeaModel {
+        /**
+         * <p>Audit response header</p>
+         */
         @NameInMap("Header")
         public QueryAuditTaskResponseBodyDataResponseHeader header;
 
+        /**
+         * <p>response body</p>
+         */
         @NameInMap("Payload")
         public QueryAuditTaskResponseBodyDataResponsePayload payload;
 
@@ -318,6 +359,8 @@ public class QueryAuditTaskResponseBody extends TeaModel {
 
     public static class QueryAuditTaskResponseBodyData extends TeaModel {
         /**
+         * <p>Audit time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-05-13 12:12:12</p>
          */
@@ -325,19 +368,32 @@ public class QueryAuditTaskResponseBody extends TeaModel {
         public String auditTime;
 
         /**
+         * <p>Original text at the time of audit.</p>
+         * 
          * <strong>example:</strong>
          * <p>审核时的原文</p>
          */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>Formatted content at the time of audit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>格式化的审核时的内容</p>
+         */
         @NameInMap("HtmlContent")
         public String htmlContent;
 
+        /**
+         * <p>Audit results.</p>
+         */
         @NameInMap("Response")
         public QueryAuditTaskResponseBodyDataResponse response;
 
         /**
+         * <p>Task execution status: PENDING: pending, RUNNING: running, SUCCESSED: successful, SUSPENDED: paused, FAILED: failed, CANCELLED: canceled</p>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
@@ -345,12 +401,20 @@ public class QueryAuditTaskResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>Task execution status: 0: pending, 1: running, 2: successful, 3: paused, 4: failed, 6: canceled</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("TaskStatus")
         public Integer taskStatus;
 
+        /**
+         * <p>Content title</p>
+         * 
+         * <strong>example:</strong>
+         * <p>内容标题</p>
+         */
         @NameInMap("Title")
         public String title;
 

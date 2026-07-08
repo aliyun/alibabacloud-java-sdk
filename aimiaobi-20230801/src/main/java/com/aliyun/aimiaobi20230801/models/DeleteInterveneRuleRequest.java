@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteInterveneRuleRequest extends TeaModel {
     /**
+     * <p>Unique identifier of the workspace: <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DeleteInterveneRuleRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>Rule ID</p>
+     * 
      * <strong>example:</strong>
      * <p>12345</p>
      */

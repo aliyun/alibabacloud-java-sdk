@@ -4,17 +4,26 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunCommentGenerationResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the response is complete.</p>
+     */
     @NameInMap("End")
     public Boolean end;
 
+    /**
+     * <p>Response header.</p>
+     */
     @NameInMap("Header")
     public RunCommentGenerationResponseBodyHeader header;
 
+    /**
+     * <p>Response body.</p>
+     */
     @NameInMap("Payload")
     public RunCommentGenerationResponseBodyPayload payload;
 
     /**
-     * <p>Id of the request</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
@@ -61,16 +70,26 @@ public class RunCommentGenerationResponseBody extends TeaModel {
 
     public static class RunCommentGenerationResponseBodyHeader extends TeaModel {
         /**
+         * <p>Event name.</p>
+         * 
          * <strong>example:</strong>
          * <p>result-generated</p>
          */
         @NameInMap("Event")
         public String event;
 
+        /**
+         * <p>Event description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>可空</p>
+         */
         @NameInMap("EventInfo")
         public String eventInfo;
 
         /**
+         * <p>Request ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
          */
@@ -78,6 +97,8 @@ public class RunCommentGenerationResponseBody extends TeaModel {
         public String requestId;
 
         /**
+         * <p>Session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
@@ -85,6 +106,8 @@ public class RunCommentGenerationResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>Task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
@@ -92,6 +115,8 @@ public class RunCommentGenerationResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>Trace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>0bd58ea2-dc38-45da-ac02-17f05cb9040b</p>
          */
@@ -154,6 +179,12 @@ public class RunCommentGenerationResponseBody extends TeaModel {
     }
 
     public static class RunCommentGenerationResponseBodyPayloadOutput extends TeaModel {
+        /**
+         * <p>Generated comment text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>评论内容</p>
+         */
         @NameInMap("Text")
         public String text;
 
@@ -174,6 +205,8 @@ public class RunCommentGenerationResponseBody extends TeaModel {
 
     public static class RunCommentGenerationResponseBodyPayloadUsage extends TeaModel {
         /**
+         * <p>Number of input tokens used.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -181,6 +214,8 @@ public class RunCommentGenerationResponseBody extends TeaModel {
         public Long inputTokens;
 
         /**
+         * <p>Number of output tokens used.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -188,6 +223,8 @@ public class RunCommentGenerationResponseBody extends TeaModel {
         public Long outputTokens;
 
         /**
+         * <p>Total number of tokens used.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -226,9 +263,15 @@ public class RunCommentGenerationResponseBody extends TeaModel {
     }
 
     public static class RunCommentGenerationResponseBodyPayload extends TeaModel {
+        /**
+         * <p>Output data.</p>
+         */
         @NameInMap("Output")
         public RunCommentGenerationResponseBodyPayloadOutput output;
 
+        /**
+         * <p>Token usage.</p>
+         */
         @NameInMap("Usage")
         public RunCommentGenerationResponseBodyPayloadUsage usage;
 

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CancelDeepWriteTaskResponseBody extends TeaModel {
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>DataNotExists</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Task response object</p>
+     */
     @NameInMap("Data")
     public CancelDeepWriteTaskResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>400</p>
      */
@@ -22,6 +29,8 @@ public class CancelDeepWriteTaskResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>错误消息</p>
      */
@@ -29,7 +38,7 @@ public class CancelDeepWriteTaskResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>Request ID</p>
      * 
      * <strong>example:</strong>
      * <p>xxxxx</p>
@@ -38,6 +47,8 @@ public class CancelDeepWriteTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -98,10 +109,18 @@ public class CancelDeepWriteTaskResponseBody extends TeaModel {
     }
 
     public static class CancelDeepWriteTaskResponseBodyData extends TeaModel {
+        /**
+         * <p>User query</p>
+         * 
+         * <strong>example:</strong>
+         * <p>北京2025年新能源汽车发展趋势</p>
+         */
         @NameInMap("Input")
         public String input;
 
         /**
+         * <p>Task status</p>
+         * 
          * <strong>example:</strong>
          * <p>cancelled</p>
          */
@@ -109,6 +128,8 @@ public class CancelDeepWriteTaskResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>Task ID</p>
+         * 
          * <strong>example:</strong>
          * <p>xbabac91-fdad-44d6-95ce-******</p>
          */

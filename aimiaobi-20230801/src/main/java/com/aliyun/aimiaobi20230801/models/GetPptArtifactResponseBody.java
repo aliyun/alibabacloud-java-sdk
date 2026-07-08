@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetPptArtifactResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>DataNotExists</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The task response object.</p>
+     */
     @NameInMap("Data")
     public GetPptArtifactResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>400</p>
      */
@@ -22,6 +29,8 @@ public class GetPptArtifactResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>错误消息</p>
      */
@@ -29,7 +38,7 @@ public class GetPptArtifactResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxxx</p>
@@ -38,6 +47,8 @@ public class GetPptArtifactResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +110,8 @@ public class GetPptArtifactResponseBody extends TeaModel {
 
     public static class GetPptArtifactResponseBodyDataFileAttr extends TeaModel {
         /**
+         * <p>The file name.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx.pptx</p>
          */
@@ -106,6 +119,8 @@ public class GetPptArtifactResponseBody extends TeaModel {
         public String fileName;
 
         /**
+         * <p>The height.</p>
+         * 
          * <strong>example:</strong>
          * <p>600</p>
          */
@@ -113,6 +128,8 @@ public class GetPptArtifactResponseBody extends TeaModel {
         public Integer height;
 
         /**
+         * <p>The temporary access URL for the file. The URL expires in one hour.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com/xxx.pptx">http://www.example.com/xxx.pptx</a></p>
          */
@@ -120,6 +137,8 @@ public class GetPptArtifactResponseBody extends TeaModel {
         public String tmpUrl;
 
         /**
+         * <p>The width.</p>
+         * 
          * <strong>example:</strong>
          * <p>800</p>
          */
@@ -167,16 +186,23 @@ public class GetPptArtifactResponseBody extends TeaModel {
 
     public static class GetPptArtifactResponseBodyData extends TeaModel {
         /**
+         * <p>The time when the resource was last updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-11-25 11:40:50</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The file properties.</p>
+         */
         @NameInMap("FileAttr")
         public GetPptArtifactResponseBodyDataFileAttr fileAttr;
 
         /**
+         * <p>The storage path of the file in the backend.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss://default/oss-bucket-name/aimiaobi/2021/07/01/1625126400000/1.docx</p>
          */
@@ -184,16 +210,26 @@ public class GetPptArtifactResponseBody extends TeaModel {
         public String fileKey;
 
         /**
+         * <p>The unique ID of the artifact.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>内容标题</p>
+         */
         @NameInMap("Title")
         public String title;
 
         /**
+         * <p>The time when the artifact was last updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-11-25 11:40:50</p>
          */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RunBookSmartCardRequest extends TeaModel {
     /**
+     * <p>Document ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class RunBookSmartCardRequest extends TeaModel {
     public String docId;
 
     /**
+     * <p>Session ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class RunBookSmartCardRequest extends TeaModel {
     public String sessionId;
 
     /**
+     * <p>Unique identifier of the Alibaba Cloud Model Studio workspace. To get this ID, see <a href="https://help.aliyun.com/document_detail/2782167.html">Workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

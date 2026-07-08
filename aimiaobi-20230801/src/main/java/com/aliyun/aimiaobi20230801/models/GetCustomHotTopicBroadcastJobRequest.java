@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetCustomHotTopicBroadcastJobRequest extends TeaModel {
     /**
+     * <p>The unique ID of the task.</p>
+     * <blockquote>
+     * <p>Tasks that use the same TaskId belong to the same conversation group.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,7 @@ public class GetCustomHotTopicBroadcastJobRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The unique ID of the Alibaba Cloud Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDatasetRequest extends TeaModel {
     /**
+     * <p>Unique identifier of the dataset</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteDatasetRequest extends TeaModel {
     public Long datasetId;
 
     /**
+     * <p>Unique identifier of Alibaba Cloud Model Studio workspace: <a href="https://help.aliyun.com/document_detail/2782167.html">Get workspaceId</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

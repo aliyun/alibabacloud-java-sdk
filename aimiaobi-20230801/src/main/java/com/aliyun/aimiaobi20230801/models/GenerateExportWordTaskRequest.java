@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GenerateExportWordTaskRequest extends TeaModel {
     /**
+     * <p>Unique identifier of the workspace: AgentKey</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GenerateExportWordTaskRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>Unique identifier of the document</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

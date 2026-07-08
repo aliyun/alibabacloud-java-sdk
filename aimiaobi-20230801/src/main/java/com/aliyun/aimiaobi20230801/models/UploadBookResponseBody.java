@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class UploadBookResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business data</p>
+     */
     @NameInMap("Data")
     public UploadBookResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class UploadBookResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,7 +38,7 @@ public class UploadBookResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>Request ID</p>
      * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
@@ -38,6 +47,8 @@ public class UploadBookResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Operation result. Set to true for success. Set to false for failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -98,9 +109,15 @@ public class UploadBookResponseBody extends TeaModel {
     }
 
     public static class UploadBookResponseBodyData extends TeaModel {
+        /**
+         * <p>Document IDs</p>
+         */
         @NameInMap("DocIds")
         public java.util.List<String> docIds;
 
+        /**
+         * <p>IDs of duplicate documents</p>
+         */
         @NameInMap("ExistedIds")
         public java.util.List<String> existedIds;
 

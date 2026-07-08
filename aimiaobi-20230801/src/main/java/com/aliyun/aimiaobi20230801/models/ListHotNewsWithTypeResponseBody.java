@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListHotNewsWithTypeResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
-     * <p>DataNotExists</p>
+     * <p>successful</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The business data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListHotNewsWithTypeResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,13 +29,17 @@ public class ListHotNewsWithTypeResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error description.</p>
+     * 
      * <strong>example:</strong>
-     * <p>数据不存在</p>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */
@@ -36,6 +47,12 @@ public class ListHotNewsWithTypeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -96,48 +113,105 @@ public class ListHotNewsWithTypeResponseBody extends TeaModel {
     }
 
     public static class ListHotNewsWithTypeResponseBodyDataNews extends TeaModel {
+        /**
+         * <p>The author.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>作者名称</p>
+         */
         @NameInMap("Author")
         public String author;
 
+        /**
+         * <p>The content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>新闻内容</p>
+         */
         @NameInMap("Content")
         public String content;
 
         /**
+         * <p>The unique identifier of the internal document.</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
         @NameInMap("DocUuid")
         public String docUuid;
 
+        /**
+         * <p>The image URLs.</p>
+         */
         @NameInMap("ImageUrls")
         public java.util.List<String> imageUrls;
 
         /**
+         * <p>The publish time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-04-11 06:14:07</p>
          */
         @NameInMap("PubTime")
         public String pubTime;
 
+        /**
+         * <p>The search source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>新浪热榜</p>
+         */
         @NameInMap("SearchSource")
         public String searchSource;
 
+        /**
+         * <p>The search source name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>新浪热榜</p>
+         */
         @NameInMap("SearchSourceName")
         public String searchSourceName;
 
+        /**
+         * <p>The source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>新浪新闻综合</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>The article summary.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>摘要</p>
+         */
         @NameInMap("Summary")
         public String summary;
 
+        /**
+         * <p>The tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>社会</p>
+         */
         @NameInMap("Tag")
         public String tag;
 
+        /**
+         * <p>The title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>新闻标题</p>
+         */
         @NameInMap("Title")
         public String title;
 
         /**
+         * <p>The system update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-10-14 14:30:00</p>
          */
@@ -145,8 +219,10 @@ public class ListHotNewsWithTypeResponseBody extends TeaModel {
         public String updateTime;
 
         /**
+         * <p>The article URL.</p>
+         * 
          * <strong>example:</strong>
-         * <p><a href="http://xxxxx/xxx">http://xxxxx/xxx</a></p>
+         * <p><a href="http://www.example.com/a.html">http://www.example.com/a.html</a></p>
          */
         @NameInMap("Url")
         public String url;
@@ -263,20 +339,38 @@ public class ListHotNewsWithTypeResponseBody extends TeaModel {
     }
 
     public static class ListHotNewsWithTypeResponseBodyData extends TeaModel {
+        /**
+         * <p>The news list.</p>
+         */
         @NameInMap("News")
         public java.util.List<ListHotNewsWithTypeResponseBodyDataNews> news;
 
         /**
+         * <p>The news category. Valid values:</p>
+         * <ul>
+         * <li>society: social current affairs.</li>
+         * <li>person: people news.</li>
+         * <li>government: government affairs.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>society</p>
          */
         @NameInMap("NewsType")
         public String newsType;
 
+        /**
+         * <p>The news category name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>社会时事</p>
+         */
         @NameInMap("NewsTypeName")
         public String newsTypeName;
 
         /**
+         * <p>The total number of pages.</p>
+         * 
          * <strong>example:</strong>
          * <p>77</p>
          */

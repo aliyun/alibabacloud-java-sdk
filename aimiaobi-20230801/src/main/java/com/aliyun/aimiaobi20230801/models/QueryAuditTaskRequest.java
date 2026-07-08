@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryAuditTaskRequest extends TeaModel {
     /**
+     * <p>Article ID (Choose either task ID or article ID)</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx</p>
      */
@@ -12,6 +14,8 @@ public class QueryAuditTaskRequest extends TeaModel {
     public String articleId;
 
     /**
+     * <p>Audit task ID (Choose either task ID or article ID)</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -19,6 +23,8 @@ public class QueryAuditTaskRequest extends TeaModel {
     public String contentAuditTaskId;
 
     /**
+     * <p><a href="https://help.aliyun.com/document_detail/2782167.html">workspace ID</a></p>
+     * 
      * <strong>example:</strong>
      * <p>llm-xxxx</p>
      */

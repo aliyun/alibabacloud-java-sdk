@@ -5,22 +5,29 @@ import com.aliyun.tea.*;
 
 public class SubmitCustomHotTopicBroadcastJobRequest extends TeaModel {
     /**
+     * <p>The configuration for the news broadcast job.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("HotTopicBroadcastConfig")
     public SubmitCustomHotTopicBroadcastJobRequestHotTopicBroadcastConfig hotTopicBroadcastConfig;
 
     /**
+     * <p>The version of the hot topic.</p>
+     * 
      * <strong>example:</strong>
      * <p>热点版本</p>
      */
     @NameInMap("HotTopicVersion")
     public String hotTopicVersion;
 
+    /**
+     * <p>The topic filter.</p>
+     */
     @NameInMap("Topics")
     public java.util.List<String> topics;
 
     /**
+     * <p>The unique identifier of the Alibaba Cloud Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Get a workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,6 +75,8 @@ public class SubmitCustomHotTopicBroadcastJobRequest extends TeaModel {
 
     public static class SubmitCustomHotTopicBroadcastJobRequestHotTopicBroadcastConfigStepForCustomSummaryStyleConfig extends TeaModel {
         /**
+         * <p>The number of images in the summary.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -75,6 +84,8 @@ public class SubmitCustomHotTopicBroadcastJobRequest extends TeaModel {
         public Integer summaryImageCount;
 
         /**
+         * <p>The summary model.</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen-max</p>
          */
@@ -82,6 +93,8 @@ public class SubmitCustomHotTopicBroadcastJobRequest extends TeaModel {
         public String summaryModel;
 
         /**
+         * <p>The custom prompt for the summary.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxx</p>
          */
@@ -121,6 +134,8 @@ public class SubmitCustomHotTopicBroadcastJobRequest extends TeaModel {
 
     public static class SubmitCustomHotTopicBroadcastJobRequestHotTopicBroadcastConfigStepForNewsBroadcastContentConfigCustomHotValueWeights extends TeaModel {
         /**
+         * <p>The key of the dimension.</p>
+         * 
          * <strong>example:</strong>
          * <p>views</p>
          */
@@ -128,6 +143,8 @@ public class SubmitCustomHotTopicBroadcastJobRequest extends TeaModel {
         public String dimension;
 
         /**
+         * <p>The name of the dimension.</p>
+         * 
          * <strong>example:</strong>
          * <p>维度名称</p>
          */
@@ -135,6 +152,8 @@ public class SubmitCustomHotTopicBroadcastJobRequest extends TeaModel {
         public String dimensionName;
 
         /**
+         * <p>The weight.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -174,16 +193,23 @@ public class SubmitCustomHotTopicBroadcastJobRequest extends TeaModel {
 
     public static class SubmitCustomHotTopicBroadcastJobRequestHotTopicBroadcastConfigStepForNewsBroadcastContentConfig extends TeaModel {
         /**
+         * <p>The list of selected channels.</p>
+         * 
          * <strong>example:</strong>
          * <p>[&quot;科技&quot;,&quot;经济&quot;,&quot;时政&quot;,&quot;娱乐&quot;]</p>
          */
         @NameInMap("Categories")
         public java.util.List<String> categories;
 
+        /**
+         * <p>The custom weights for hot topics.</p>
+         */
         @NameInMap("CustomHotValueWeights")
         public java.util.List<SubmitCustomHotTopicBroadcastJobRequestHotTopicBroadcastConfigStepForNewsBroadcastContentConfigCustomHotValueWeights> customHotValueWeights;
 
         /**
+         * <p>The number of topics.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -223,12 +249,14 @@ public class SubmitCustomHotTopicBroadcastJobRequest extends TeaModel {
 
     public static class SubmitCustomHotTopicBroadcastJobRequestHotTopicBroadcastConfig extends TeaModel {
         /**
+         * <p>The configuration for the custom output style.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("StepForCustomSummaryStyleConfig")
         public SubmitCustomHotTopicBroadcastJobRequestHotTopicBroadcastConfigStepForCustomSummaryStyleConfig stepForCustomSummaryStyleConfig;
 
         /**
+         * <p>The configuration for the broadcast content.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("StepForNewsBroadcastContentConfig")

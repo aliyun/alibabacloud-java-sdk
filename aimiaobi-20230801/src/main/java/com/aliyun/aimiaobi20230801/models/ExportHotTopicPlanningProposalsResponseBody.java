@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExportHotTopicPlanningProposalsResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
@@ -12,6 +14,8 @@ public class ExportHotTopicPlanningProposalsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Publicly accessible URL. Expires in one hour.</p>
+     * 
      * <strong>example:</strong>
      * <p>业务数据</p>
      */
@@ -19,6 +23,8 @@ public class ExportHotTopicPlanningProposalsResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class ExportHotTopicPlanningProposalsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -33,6 +41,8 @@ public class ExportHotTopicPlanningProposalsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Unique request identifier</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -40,6 +50,8 @@ public class ExportHotTopicPlanningProposalsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Operation status. Set to true for success or false for failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

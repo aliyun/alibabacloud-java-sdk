@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CancelDeepWriteTaskRequest extends TeaModel {
     /**
+     * <p>Task ID</p>
+     * 
      * <strong>example:</strong>
      * <p>xbabac91-fdad-44d6-95ce-******</p>
      */
@@ -12,6 +14,8 @@ public class CancelDeepWriteTaskRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p><a href="https://help.aliyun.com/document_detail/2782167.html">Workspace ID</a></p>
+     * 
      * <strong>example:</strong>
      * <p>llm-xxxxx</p>
      */

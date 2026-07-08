@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitDocClusterTaskShrinkRequest extends TeaModel {
     /**
+     * <p>The unique ID of the workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,15 @@ public class SubmitDocClusterTaskShrinkRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>A list of documents.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Documents")
     public String documentsShrink;
 
     /**
+     * <p>The character limit for the generated cluster summary.</p>
+     * 
      * <strong>example:</strong>
      * <p>49</p>
      */
@@ -27,6 +31,8 @@ public class SubmitDocClusterTaskShrinkRequest extends TeaModel {
     public Integer summaryLength;
 
     /**
+     * <p>The character limit for the generated cluster title.</p>
+     * 
      * <strong>example:</strong>
      * <p>69</p>
      */
@@ -34,6 +40,8 @@ public class SubmitDocClusterTaskShrinkRequest extends TeaModel {
     public Integer titleLength;
 
     /**
+     * <p>The maximum number of clusters.</p>
+     * 
      * <strong>example:</strong>
      * <p>15</p>
      */

@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetEnterpriseVocAnalysisTaskRequest extends TeaModel {
     /**
+     * <p>The unique ID of the task.</p>
+     * <blockquote>
+     * <p>You do not need to specify this parameter. The system automatically generates a TaskId. If you specify the same TaskId for subsequent tasks, the tasks are considered part of the same conversation group.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,7 @@ public class GetEnterpriseVocAnalysisTaskRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The unique ID of the Alibaba Cloud Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Get a workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExportAuditContentResultResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -12,6 +14,8 @@ public class ExportAuditContentResultResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>A publicly accessible URL for the exported Word file (.docx). The URL is valid for one hour.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://www.example.com/xxx.docx">http://www.example.com/xxx.docx</a></p>
      */
@@ -19,6 +23,8 @@ public class ExportAuditContentResultResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class ExportAuditContentResultResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -33,7 +41,7 @@ public class ExportAuditContentResultResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>94512A33-8EC1-5452-A793-5C91F18ED2F0</p>
@@ -42,6 +50,8 @@ public class ExportAuditContentResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

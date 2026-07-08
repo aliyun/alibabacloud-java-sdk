@@ -4,14 +4,20 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunBookIntroductionResponseBody extends TeaModel {
+    /**
+     * <p>The response header.</p>
+     */
     @NameInMap("Header")
     public RunBookIntroductionResponseBodyHeader header;
 
+    /**
+     * <p>The payload.</p>
+     */
     @NameInMap("Payload")
     public RunBookIntroductionResponseBodyPayload payload;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
@@ -50,6 +56,8 @@ public class RunBookIntroductionResponseBody extends TeaModel {
 
     public static class RunBookIntroductionResponseBodyHeader extends TeaModel {
         /**
+         * <p>The error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -57,6 +65,8 @@ public class RunBookIntroductionResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -64,6 +74,8 @@ public class RunBookIntroductionResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The event type.</p>
+         * 
          * <strong>example:</strong>
          * <p>finished</p>
          */
@@ -71,6 +83,8 @@ public class RunBookIntroductionResponseBody extends TeaModel {
         public String event;
 
         /**
+         * <p>The event description.</p>
+         * 
          * <strong>example:</strong>
          * <p>模型生成事件</p>
          */
@@ -78,6 +92,8 @@ public class RunBookIntroductionResponseBody extends TeaModel {
         public String eventInfo;
 
         /**
+         * <p>The session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>411c4dfa-2168-4379-a902-675d67f453f8</p>
          */
@@ -85,6 +101,8 @@ public class RunBookIntroductionResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>d3be9981-ca2d-4e17-bf31-1c0a628e9f99</p>
          */
@@ -92,6 +110,8 @@ public class RunBookIntroductionResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The trace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>46e5c2b5-0877-4f09-bd91-ab0cf314e48b</p>
          */
@@ -163,6 +183,8 @@ public class RunBookIntroductionResponseBody extends TeaModel {
 
     public static class RunBookIntroductionResponseBodyPayloadOutputIntroductionsBlocks extends TeaModel {
         /**
+         * <p>The start timestamp of the content block.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -170,6 +192,8 @@ public class RunBookIntroductionResponseBody extends TeaModel {
         public Long beginTime;
 
         /**
+         * <p>The end timestamp of the content block.</p>
+         * 
          * <strong>example:</strong>
          * <p>1200</p>
          */
@@ -177,6 +201,8 @@ public class RunBookIntroductionResponseBody extends TeaModel {
         public Long endTime;
 
         /**
+         * <p>The height of the content block.</p>
+         * 
          * <strong>example:</strong>
          * <p>600</p>
          */
@@ -184,6 +210,8 @@ public class RunBookIntroductionResponseBody extends TeaModel {
         public Integer height;
 
         /**
+         * <p>The ID of the page where the content block is located.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -191,6 +219,8 @@ public class RunBookIntroductionResponseBody extends TeaModel {
         public Integer pageId;
 
         /**
+         * <p>The width of the content block.</p>
+         * 
          * <strong>example:</strong>
          * <p>600</p>
          */
@@ -198,6 +228,8 @@ public class RunBookIntroductionResponseBody extends TeaModel {
         public Integer width;
 
         /**
+         * <p>The x-coordinate of the content block\&quot;s top-left corner on the page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -205,6 +237,8 @@ public class RunBookIntroductionResponseBody extends TeaModel {
         public Integer x;
 
         /**
+         * <p>The y-coordinate of the content block\&quot;s top-left corner on the page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -275,10 +309,15 @@ public class RunBookIntroductionResponseBody extends TeaModel {
     }
 
     public static class RunBookIntroductionResponseBodyPayloadOutputIntroductions extends TeaModel {
+        /**
+         * <p>A list of content blocks within this section.</p>
+         */
         @NameInMap("Blocks")
         public java.util.List<RunBookIntroductionResponseBodyPayloadOutputIntroductionsBlocks> blocks;
 
         /**
+         * <p>A summary of this section.</p>
+         * 
          * <strong>example:</strong>
          * <p>本段摘要内容</p>
          */
@@ -286,6 +325,8 @@ public class RunBookIntroductionResponseBody extends TeaModel {
         public String summary;
 
         /**
+         * <p>The title of this section.</p>
+         * 
          * <strong>example:</strong>
          * <p>本段标题内容</p>
          */
@@ -324,10 +365,15 @@ public class RunBookIntroductionResponseBody extends TeaModel {
     }
 
     public static class RunBookIntroductionResponseBodyPayloadOutput extends TeaModel {
+        /**
+         * <p>A list of generated introductions for each part of the book.</p>
+         */
         @NameInMap("Introductions")
         public java.util.List<RunBookIntroductionResponseBodyPayloadOutputIntroductions> introductions;
 
         /**
+         * <p>The book\&quot;s key points.</p>
+         * 
          * <strong>example:</strong>
          * <p>卖点内容</p>
          */
@@ -335,6 +381,8 @@ public class RunBookIntroductionResponseBody extends TeaModel {
         public String keyPoint;
 
         /**
+         * <p>The book summary.</p>
+         * 
          * <strong>example:</strong>
          * <p>简介内容</p>
          */
@@ -374,6 +422,8 @@ public class RunBookIntroductionResponseBody extends TeaModel {
 
     public static class RunBookIntroductionResponseBodyPayloadUsage extends TeaModel {
         /**
+         * <p>The number of input tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -381,6 +431,8 @@ public class RunBookIntroductionResponseBody extends TeaModel {
         public Long inputTokens;
 
         /**
+         * <p>The number of output tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -388,6 +440,8 @@ public class RunBookIntroductionResponseBody extends TeaModel {
         public Long outputTokens;
 
         /**
+         * <p>The total number of tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -426,9 +480,15 @@ public class RunBookIntroductionResponseBody extends TeaModel {
     }
 
     public static class RunBookIntroductionResponseBodyPayload extends TeaModel {
+        /**
+         * <p>The generated content.</p>
+         */
         @NameInMap("Output")
         public RunBookIntroductionResponseBodyPayloadOutput output;
 
+        /**
+         * <p>Token usage details for the request.</p>
+         */
         @NameInMap("Usage")
         public RunBookIntroductionResponseBodyPayloadUsage usage;
 

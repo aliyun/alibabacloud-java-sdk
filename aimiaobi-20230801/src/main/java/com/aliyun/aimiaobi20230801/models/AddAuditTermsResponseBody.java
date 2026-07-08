@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddAuditTermsResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>DataNotExists</p>
      */
@@ -12,6 +14,8 @@ public class AddAuditTermsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Business data (whether the update succeeded). This field is deprecated. Use DataV1 to get the primary key ID instead.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class AddAuditTermsResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>ID of the added dictionary term</p>
+     * 
      * <strong>example:</strong>
      * <p>返回添加的实体信息</p>
      */
@@ -26,6 +32,8 @@ public class AddAuditTermsResponseBody extends TeaModel {
     public AddAuditTermsResponseBodyDataV1 dataV1;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -33,6 +41,8 @@ public class AddAuditTermsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -40,7 +50,7 @@ public class AddAuditTermsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>F2F366D6-E9FE-1006-BB70-2C650896AAB5</p>
@@ -49,6 +59,8 @@ public class AddAuditTermsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the request succeeded</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -118,6 +130,8 @@ public class AddAuditTermsResponseBody extends TeaModel {
 
     public static class AddAuditTermsResponseBodyDataV1 extends TeaModel {
         /**
+         * <p>ID</p>
+         * 
          * <strong>example:</strong>
          * <p>562fe4163a59d7bcb44bfdde4e3d5046</p>
          */

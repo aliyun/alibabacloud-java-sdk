@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitDocClusterTaskRequest extends TeaModel {
     /**
+     * <p>The unique ID of the workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,15 @@ public class SubmitDocClusterTaskRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>A list of documents.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Documents")
     public java.util.List<SubmitDocClusterTaskRequestDocuments> documents;
 
     /**
+     * <p>The character limit for the generated cluster summary.</p>
+     * 
      * <strong>example:</strong>
      * <p>49</p>
      */
@@ -27,6 +31,8 @@ public class SubmitDocClusterTaskRequest extends TeaModel {
     public Integer summaryLength;
 
     /**
+     * <p>The character limit for the generated cluster title.</p>
+     * 
      * <strong>example:</strong>
      * <p>69</p>
      */
@@ -34,6 +40,8 @@ public class SubmitDocClusterTaskRequest extends TeaModel {
     public Integer titleLength;
 
     /**
+     * <p>The maximum number of clusters.</p>
+     * 
      * <strong>example:</strong>
      * <p>15</p>
      */
@@ -87,6 +95,7 @@ public class SubmitDocClusterTaskRequest extends TeaModel {
 
     public static class SubmitDocClusterTaskRequestDocuments extends TeaModel {
         /**
+         * <p>The content of the document.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -96,6 +105,8 @@ public class SubmitDocClusterTaskRequest extends TeaModel {
         public String content;
 
         /**
+         * <p>The document ID. It is used to identify the document in the returned cluster results. If you do not provide an ID for any document, the array index is used instead. An error is reported if you provide IDs for only some of the documents.</p>
+         * 
          * <strong>example:</strong>
          * <p>文档ID。用于在返回聚类文章时标识文章。如果文章列表中都不传则使用数组索引作为ID。如果部分传则会报错</p>
          */
@@ -103,6 +114,8 @@ public class SubmitDocClusterTaskRequest extends TeaModel {
         public String docId;
 
         /**
+         * <p>The title of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>文档标题</p>
          */

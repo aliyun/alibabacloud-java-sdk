@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ImportInterveneFileResponseBody extends TeaModel {
     /**
+     * <p>Status code.</p>
+     * 
      * <strong>example:</strong>
-     * <p>0</p>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business data.</p>
+     */
     @NameInMap("Data")
     public ImportInterveneFileResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ImportInterveneFileResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class ImportInterveneFileResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Unique request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */
@@ -36,6 +47,8 @@ public class ImportInterveneFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation succeeded. Set to true for success or false for failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -96,15 +109,26 @@ public class ImportInterveneFileResponseBody extends TeaModel {
     }
 
     public static class ImportInterveneFileResponseBodyData extends TeaModel {
+        /**
+         * <p>Intervention status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("Code")
         public Integer code;
 
+        /**
+         * <p>List of failed index IDs.</p>
+         */
         @NameInMap("FailIdList")
         public java.util.List<String> failIdList;
 
         /**
+         * <p>Task ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
+         * <p>&quot;3f7045e099474ba28ceca1b4eb6d6e21&quot;</p>
          */
         @NameInMap("TaskId")
         public String taskId;

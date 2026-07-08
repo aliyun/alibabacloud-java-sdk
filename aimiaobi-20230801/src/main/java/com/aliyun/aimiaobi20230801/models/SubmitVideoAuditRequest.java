@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitVideoAuditRequest extends TeaModel {
     /**
-     * <p>扩展参数JSON字符串</p>
+     * <p>Extension parameters</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,16 +14,16 @@ public class SubmitVideoAuditRequest extends TeaModel {
     public String ext;
 
     /**
-     * <p>OSS文件Key，与url参数二选一</p>
+     * <p>Unique file identity within the Miaobi system (choose either FileKey or URL)</p>
      * 
      * <strong>example:</strong>
-     * <p>video/test.mp4</p>
+     * <p>oss://default/xxx/video/test.mp4</p>
      */
     @NameInMap("FileKey")
     public String fileKey;
 
     /**
-     * <p>抽帧间隔时间（秒）</p>
+     * <p>Snapshot interval</p>
      * 
      * <strong>example:</strong>
      * <p>1.0</p>
@@ -32,7 +32,7 @@ public class SubmitVideoAuditRequest extends TeaModel {
     public Double snapshotInterval;
 
     /**
-     * <p>视频URL地址，与fileKey参数二选一</p>
+     * <p>Video URL (choose either FileKey or URL)</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/video.mp4">https://example.com/video.mp4</a></p>
@@ -41,6 +41,7 @@ public class SubmitVideoAuditRequest extends TeaModel {
     public String url;
 
     /**
+     * <p>Workspace ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

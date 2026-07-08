@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateGeneratedContentRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,28 +15,53 @@ public class CreateGeneratedContentRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The body of the content, in rich text format.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>杭州亚运会</p>
      */
     @NameInMap("Content")
     public String content;
 
     /**
+     * <p>The domain for content generation.</p>
+     * 
      * <strong>example:</strong>
      * <p>government</p>
      */
     @NameInMap("ContentDomain")
     public String contentDomain;
 
+    /**
+     * <p>The body of the content, in plain text format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>杭州亚运会</p>
+     */
     @NameInMap("ContentText")
     public String contentText;
 
+    /**
+     * <p>The keywords.</p>
+     */
     @NameInMap("Keywords")
     public java.util.List<String> keywords;
 
+    /**
+     * <p>The last generated prompt.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>创作xxx文章</p>
+     */
     @NameInMap("Prompt")
     public String prompt;
 
     /**
+     * <p>The unique identifier of the task.</p>
+     * <blockquote>
+     * <p>The system automatically generates a task ID. You do not need to specify this parameter. If you specify the same task ID for multiple tasks, they are grouped into a single conversation.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,12 +71,18 @@ public class CreateGeneratedContentRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The title.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>杭州亚运会</p>
      */
     @NameInMap("Title")
     public String title;
 
     /**
+     * <p>The traceability UUID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx</p>
      */

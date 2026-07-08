@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetBiddingRemainLimitNumRequest extends TeaModel {
     /**
+     * <p>API name</p>
+     * 
      * <strong>example:</strong>
      * <p>asyncUploadTenderDoc</p>
      */
@@ -12,6 +14,8 @@ public class GetBiddingRemainLimitNumRequest extends TeaModel {
     public String apiName;
 
     /**
+     * <p><a href="https://help.aliyun.com/document_detail/2782167.html">Workspace ID</a></p>
+     * 
      * <strong>example:</strong>
      * <p>llm-xx</p>
      */

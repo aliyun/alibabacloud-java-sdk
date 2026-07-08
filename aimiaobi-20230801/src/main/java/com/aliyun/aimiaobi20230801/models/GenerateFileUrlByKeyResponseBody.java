@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class GenerateFileUrlByKeyResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
-     * <p>NoData</p>
+     * <p>successful</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
+     * <p>Business data</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://www.example.com/a.txt">https://www.example.com/a.txt</a></p>
      */
@@ -19,6 +23,8 @@ public class GenerateFileUrlByKeyResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,13 +32,17 @@ public class GenerateFileUrlByKeyResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Fault description</p>
+     * 
      * <strong>example:</strong>
-     * <p>success</p>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Unique request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -40,6 +50,8 @@ public class GenerateFileUrlByKeyResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Is successful: true for success, false for failure</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

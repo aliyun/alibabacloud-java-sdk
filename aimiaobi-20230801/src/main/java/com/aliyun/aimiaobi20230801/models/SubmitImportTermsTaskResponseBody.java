@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class SubmitImportTermsTaskResponseBody extends TeaModel {
     /**
+     * <p>Status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>DataNotExists</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business data.</p>
+     */
     @NameInMap("Data")
     public SubmitImportTermsTaskResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class SubmitImportTermsTaskResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error description.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -38,6 +47,8 @@ public class SubmitImportTermsTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether this request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +110,8 @@ public class SubmitImportTermsTaskResponseBody extends TeaModel {
 
     public static class SubmitImportTermsTaskResponseBodyData extends TeaModel {
         /**
+         * <p>Task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */

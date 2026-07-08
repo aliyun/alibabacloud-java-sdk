@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class CancelAsyncTaskResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
-     * <p>200</p>
+     * <p>successful</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
+     * <p>Business-related data</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class CancelAsyncTaskResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,13 +32,17 @@ public class CancelAsyncTaskResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>A description of the error.</p>
+     * 
      * <strong>example:</strong>
-     * <p>Success</p>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>FB698445-61DA-5361-BF73-1C5F1157E888</p>
      */
@@ -40,6 +50,8 @@ public class CancelAsyncTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. A value of true indicates that the request was successful. A value of false indicates that the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

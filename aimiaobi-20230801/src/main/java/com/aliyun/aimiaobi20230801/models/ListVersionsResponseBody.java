@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListVersionsResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>DataNotExists</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business data</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListVersionsResponseBodyData> data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListVersionsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>数据不存在</p>
      */
@@ -29,6 +38,8 @@ public class ListVersionsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */
@@ -36,6 +47,8 @@ public class ListVersionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates success: true for success, false for failure</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class ListVersionsResponseBody extends TeaModel {
 
     public static class ListVersionsResponseBodyData extends TeaModel {
         /**
+         * <p>Concurrency</p>
+         * 
          * <strong>example:</strong>
          * <p>43</p>
          */
@@ -104,6 +119,8 @@ public class ListVersionsResponseBody extends TeaModel {
         public Integer concurrentCount;
 
         /**
+         * <p>Service expiration time</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-04-23 02:00:34</p>
          */
@@ -111,6 +128,8 @@ public class ListVersionsResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>Number of instances</p>
+         * 
          * <strong>example:</strong>
          * <p>55</p>
          */
@@ -118,6 +137,8 @@ public class ListVersionsResponseBody extends TeaModel {
         public Integer instanceCount;
 
         /**
+         * <p>Instance ID</p>
+         * 
          * <strong>example:</strong>
          * <p>ga-bp12pismsw4v3tzhf62p1</p>
          */
@@ -125,6 +146,8 @@ public class ListVersionsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Order ID</p>
+         * 
          * <strong>example:</strong>
          * <p>7</p>
          */
@@ -132,6 +155,8 @@ public class ListVersionsResponseBody extends TeaModel {
         public Long orderId;
 
         /**
+         * <p>Version type (TRIAL: trial edition, STANDARD: Standard Edition, CUSTOMIZE: custom edition)</p>
+         * 
          * <strong>example:</strong>
          * <p>CUSTOMIZE</p>
          */
@@ -139,6 +164,8 @@ public class ListVersionsResponseBody extends TeaModel {
         public String productType;
 
         /**
+         * <p>Trial edition quota</p>
+         * 
          * <strong>example:</strong>
          * <p>13</p>
          */
@@ -146,6 +173,8 @@ public class ListVersionsResponseBody extends TeaModel {
         public Integer quota;
 
         /**
+         * <p>Service start time</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-05-27 04:11:00</p>
          */
@@ -153,16 +182,26 @@ public class ListVersionsResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>Trial edition usage count</p>
+         * 
          * <strong>example:</strong>
          * <p>65</p>
          */
         @NameInMap("UseQuota")
         public Integer useQuota;
 
+        /**
+         * <p>Version details</p>
+         * 
+         * <strong>example:</strong>
+         * <p>标准版-公共并发：1并发</p>
+         */
         @NameInMap("VersionDetail")
         public String versionDetail;
 
         /**
+         * <p>Version</p>
+         * 
          * <strong>example:</strong>
          * <p>试用版</p>
          */
@@ -170,6 +209,8 @@ public class ListVersionsResponseBody extends TeaModel {
         public String versionName;
 
         /**
+         * <p>Validity status: 0 indicates active, 1 indicates expired (go to the renewal page), and 2 indicates unavailable (go to the purchase page)</p>
+         * 
          * <strong>example:</strong>
          * <p>87</p>
          */

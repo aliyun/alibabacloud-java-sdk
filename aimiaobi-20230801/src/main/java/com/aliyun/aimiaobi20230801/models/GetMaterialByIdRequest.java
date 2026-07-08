@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMaterialByIdRequest extends TeaModel {
     /**
+     * <p>Unique identifier of the workspace: <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetMaterialByIdRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>Primary key ID of the task</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

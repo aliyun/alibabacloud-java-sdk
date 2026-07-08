@@ -12,6 +12,8 @@ public class GetPptConfigRequest extends TeaModel {
     public String externalUserId;
 
     /**
+     * <p><a href="https://help.aliyun.com/document_detail/2782167.html">Workspace ID</a></p>
+     * 
      * <strong>example:</strong>
      * <p>llm-az2gglkjauwnnhpq</p>
      */

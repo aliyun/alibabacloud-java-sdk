@@ -4,14 +4,20 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunMultiDocIntroductionResponseBody extends TeaModel {
+    /**
+     * <p>Response header.</p>
+     */
     @NameInMap("Header")
     public RunMultiDocIntroductionResponseBodyHeader header;
 
+    /**
+     * <p>Response body.</p>
+     */
     @NameInMap("Payload")
     public RunMultiDocIntroductionResponseBodyPayload payload;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
@@ -50,6 +56,8 @@ public class RunMultiDocIntroductionResponseBody extends TeaModel {
 
     public static class RunMultiDocIntroductionResponseBodyHeader extends TeaModel {
         /**
+         * <p>Error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -57,6 +65,8 @@ public class RunMultiDocIntroductionResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>Error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>Message does not exist.</p>
          */
@@ -64,16 +74,26 @@ public class RunMultiDocIntroductionResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>Server-sent event (SSE) type.</p>
+         * 
          * <strong>example:</strong>
          * <p>finished</p>
          */
         @NameInMap("Event")
         public String event;
 
+        /**
+         * <p>Event description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>模型生成事件</p>
+         */
         @NameInMap("EventInfo")
         public String eventInfo;
 
         /**
+         * <p>Session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>92e16ccb-92b6-4894-abbf-fc6e2929a0df</p>
          */
@@ -81,6 +101,8 @@ public class RunMultiDocIntroductionResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>Task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>b057f2fa-2277-477b-babf-cbc062307828</p>
          */
@@ -88,6 +110,8 @@ public class RunMultiDocIntroductionResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>End-to-end trace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>46e5c2b5-0877-4f09-bd91-ab0cf314e48b</p>
          */
@@ -158,9 +182,21 @@ public class RunMultiDocIntroductionResponseBody extends TeaModel {
     }
 
     public static class RunMultiDocIntroductionResponseBodyPayloadOutputKeyPoints extends TeaModel {
+        /**
+         * <p>Key point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>关键点信息</p>
+         */
         @NameInMap("KeyPoint")
         public String keyPoint;
 
+        /**
+         * <p>Source of the information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>信息来源</p>
+         */
         @NameInMap("Source")
         public String source;
 
@@ -188,9 +224,18 @@ public class RunMultiDocIntroductionResponseBody extends TeaModel {
     }
 
     public static class RunMultiDocIntroductionResponseBodyPayloadOutput extends TeaModel {
+        /**
+         * <p>Key point information.</p>
+         */
         @NameInMap("KeyPoints")
         public java.util.List<RunMultiDocIntroductionResponseBodyPayloadOutputKeyPoints> keyPoints;
 
+        /**
+         * <p>Outline-style summary.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>大纲摘要内容</p>
+         */
         @NameInMap("Summary")
         public String summary;
 
@@ -219,6 +264,8 @@ public class RunMultiDocIntroductionResponseBody extends TeaModel {
 
     public static class RunMultiDocIntroductionResponseBodyPayloadUsage extends TeaModel {
         /**
+         * <p>Number of input tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>65</p>
          */
@@ -226,6 +273,8 @@ public class RunMultiDocIntroductionResponseBody extends TeaModel {
         public Long inputTokens;
 
         /**
+         * <p>Number of output tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -233,6 +282,8 @@ public class RunMultiDocIntroductionResponseBody extends TeaModel {
         public Long outputTokens;
 
         /**
+         * <p>Total number of tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>165</p>
          */
@@ -271,9 +322,15 @@ public class RunMultiDocIntroductionResponseBody extends TeaModel {
     }
 
     public static class RunMultiDocIntroductionResponseBodyPayload extends TeaModel {
+        /**
+         * <p>Output data.</p>
+         */
         @NameInMap("Output")
         public RunMultiDocIntroductionResponseBodyPayloadOutput output;
 
+        /**
+         * <p>Token usage.</p>
+         */
         @NameInMap("Usage")
         public RunMultiDocIntroductionResponseBodyPayloadUsage usage;
 

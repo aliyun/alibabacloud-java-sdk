@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UploadDocRequest extends TeaModel {
     /**
+     * <p>Folder where the document resides. If no value is provided, it defaults to &quot;default&quot;.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -12,12 +14,14 @@ public class UploadDocRequest extends TeaModel {
     public String categoryId;
 
     /**
+     * <p>Document</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Docs")
     public java.util.List<UploadDocRequestDocs> docs;
 
     /**
+     * <p>Unique identifier (UUID) of the Alibaba Cloud Model Studio workspace: obtain the <a href="https://help.aliyun.com/document_detail/2587495.html">Workspace ID</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,12 +61,17 @@ public class UploadDocRequest extends TeaModel {
 
     public static class UploadDocRequestDocs extends TeaModel {
         /**
+         * <p>document Name</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>文档1.pdf</p>
          */
         @NameInMap("DocName")
         public String docName;
 
         /**
+         * <p>file URL</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

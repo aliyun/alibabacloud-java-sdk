@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class RunCommentGenerationShrinkRequest extends TeaModel {
     /**
+     * <p>Set to true to allow emoji in comments. Default is false.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("AllowEmoji")
     public Boolean allowEmoji;
 
+    /**
+     * <p>Additional instructions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>不要输出额外其他信息</p>
+     */
     @NameInMap("ExtraInfo")
     public String extraInfo;
 
     /**
+     * <p>Length of each comment in characters.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -22,6 +32,16 @@ public class RunCommentGenerationShrinkRequest extends TeaModel {
     public String length;
 
     /**
+     * <p>Length distribution.</p>
+     * <p>Valid keys:</p>
+     * <ul>
+     * <li><p>short (up to 20 characters)</p>
+     * </li>
+     * <li><p>medium (20–50 characters)</p>
+     * </li>
+     * <li><p>long (50–100 characters)</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,10 +50,17 @@ public class RunCommentGenerationShrinkRequest extends TeaModel {
     @NameInMap("LengthRange")
     public String lengthRangeShrink;
 
+    /**
+     * <p>ID of the model to use.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>quanmiao-max、quanmiao-plus</p>
+     */
     @NameInMap("ModelId")
     public String modelId;
 
     /**
+     * <p>Number of comments to generate.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,6 +70,16 @@ public class RunCommentGenerationShrinkRequest extends TeaModel {
     public String numComments;
 
     /**
+     * <p>Sentiment distribution.</p>
+     * <p>Valid keys:</p>
+     * <ul>
+     * <li><p>positive</p>
+     * </li>
+     * <li><p>neutral</p>
+     * </li>
+     * <li><p>negative</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,19 +88,49 @@ public class RunCommentGenerationShrinkRequest extends TeaModel {
     @NameInMap("Sentiment")
     public String sentimentShrink;
 
+    /**
+     * <p>Session ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
+     */
     @NameInMap("SessionId")
     public String sessionId;
 
     /**
+     * <p>Article to comment on.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ps5是sony新一代的游戏机，他创新性的...</p>
      */
     @NameInMap("SourceMaterial")
     public String sourceMaterial;
 
+    /**
+     * <p>Tone of the comments.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>积极正面</p>
+     */
     @NameInMap("Style")
     public String style;
 
     /**
+     * <p>Comment type.</p>
+     * <p>Valid keys:</p>
+     * <ul>
+     * <li><p>emotion (expresses emotion)</p>
+     * </li>
+     * <li><p>opinion (states an opinion)</p>
+     * </li>
+     * <li><p>interaction (encourages interaction)</p>
+     * </li>
+     * <li><p>experience (shares experience)</p>
+     * </li>
+     * <li><p>humor (uses humor)</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,6 +140,7 @@ public class RunCommentGenerationShrinkRequest extends TeaModel {
     public String typeShrink;
 
     /**
+     * <p>Path parameter. The unique identifier of your Alibaba Cloud Model Studio workspace. To get this ID, see <a href="https://help.aliyun.com/document_detail/2782167.html">Get the workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

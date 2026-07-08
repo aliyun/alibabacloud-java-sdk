@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetStyleLearningResultResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The business data.</p>
+     */
     @NameInMap("Data")
     public GetStyleLearningResultResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetStyleLearningResultResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class GetStyleLearningResultResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -36,6 +47,8 @@ public class GetStyleLearningResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. \<code>true\\</code> indicates success. \<code>false\\</code> indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class GetStyleLearningResultResponseBody extends TeaModel {
 
     public static class GetStyleLearningResultResponseBodyDataContentList extends TeaModel {
         /**
+         * <p>The content.</p>
+         * 
          * <strong>example:</strong>
          * <p>内容</p>
          */
@@ -104,6 +119,8 @@ public class GetStyleLearningResultResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>The time when the content was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>创建时间</p>
          */
@@ -111,6 +128,8 @@ public class GetStyleLearningResultResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The user who created the content.</p>
+         * 
          * <strong>example:</strong>
          * <p>创建用户</p>
          */
@@ -118,6 +137,8 @@ public class GetStyleLearningResultResponseBody extends TeaModel {
         public String createUser;
 
         /**
+         * <p>The primary key ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -125,6 +146,8 @@ public class GetStyleLearningResultResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The title.</p>
+         * 
          * <strong>example:</strong>
          * <p>标题</p>
          */
@@ -132,6 +155,8 @@ public class GetStyleLearningResultResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>The time when the content was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>修改时间</p>
          */
@@ -139,6 +164,8 @@ public class GetStyleLearningResultResponseBody extends TeaModel {
         public String updateTime;
 
         /**
+         * <p>The user who last modified the content.</p>
+         * 
          * <strong>example:</strong>
          * <p>修改用户</p>
          */
@@ -210,6 +237,8 @@ public class GetStyleLearningResultResponseBody extends TeaModel {
 
     public static class GetStyleLearningResultResponseBodyDataMaterialInfoList extends TeaModel {
         /**
+         * <p>The author.</p>
+         * 
          * <strong>example:</strong>
          * <p>作者</p>
          */
@@ -217,6 +246,8 @@ public class GetStyleLearningResultResponseBody extends TeaModel {
         public String author;
 
         /**
+         * <p>The time when the material was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>创建时间</p>
          */
@@ -224,6 +255,8 @@ public class GetStyleLearningResultResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The ID of the user who created the material.</p>
+         * 
          * <strong>example:</strong>
          * <p>创建用户ID</p>
          */
@@ -231,16 +264,23 @@ public class GetStyleLearningResultResponseBody extends TeaModel {
         public String createUser;
 
         /**
+         * <p>The name of the user who created the material.</p>
+         * 
          * <strong>example:</strong>
          * <p>创建用户姓名</p>
          */
         @NameInMap("CreateUserName")
         public String createUserName;
 
+        /**
+         * <p>The document tags used for purposes such as categorization. Separate keywords with commas.</p>
+         */
         @NameInMap("DocKeywords")
         public java.util.List<String> docKeywords;
 
         /**
+         * <p>The document type. Valid values: pdf, word, url, and image.</p>
+         * 
          * <strong>example:</strong>
          * <p>文档类型，pdf、word、url、image</p>
          */
@@ -248,6 +288,8 @@ public class GetStyleLearningResultResponseBody extends TeaModel {
         public String docType;
 
         /**
+         * <p>The URL of the file uploaded by the customer. This is for record-keeping only.</p>
+         * 
          * <strong>example:</strong>
          * <p>外部客户上传的URL，仅用作记录保存</p>
          */
@@ -255,6 +297,8 @@ public class GetStyleLearningResultResponseBody extends TeaModel {
         public String externalUrl;
 
         /**
+         * <p>The length of the file content.</p>
+         * 
          * <strong>example:</strong>
          * <p>41</p>
          */
@@ -262,6 +306,8 @@ public class GetStyleLearningResultResponseBody extends TeaModel {
         public Integer fileLength;
 
         /**
+         * <p>The raw HTML content after parsing.</p>
+         * 
          * <strong>example:</strong>
          * <p>解析后的原始html内容</p>
          */
@@ -269,6 +315,8 @@ public class GetStyleLearningResultResponseBody extends TeaModel {
         public String htmlContent;
 
         /**
+         * <p>The primary key.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -276,6 +324,8 @@ public class GetStyleLearningResultResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The publishing time.</p>
+         * 
          * <strong>example:</strong>
          * <p>发布时间</p>
          */
@@ -283,6 +333,8 @@ public class GetStyleLearningResultResponseBody extends TeaModel {
         public String pubTime;
 
         /**
+         * <p>A temporary public URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>临时的对外公开的URL</p>
          */
@@ -290,6 +342,8 @@ public class GetStyleLearningResultResponseBody extends TeaModel {
         public String publicUrl;
 
         /**
+         * <p>The sharing property, stored as a bitmask. The first bit indicates sharing within the workspace, the second within the tenant, and the third system-wide.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -297,6 +351,8 @@ public class GetStyleLearningResultResponseBody extends TeaModel {
         public Integer shareAttr;
 
         /**
+         * <p>The source of the document. Valid values: user_upload, search, and viewpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>文档来源，user_upload、search、viewpoint</p>
          */
@@ -304,6 +360,8 @@ public class GetStyleLearningResultResponseBody extends TeaModel {
         public String srcFrom;
 
         /**
+         * <p>The document summary.</p>
+         * 
          * <strong>example:</strong>
          * <p>文档摘要</p>
          */
@@ -311,6 +369,8 @@ public class GetStyleLearningResultResponseBody extends TeaModel {
         public String summary;
 
         /**
+         * <p>The parsed text content. This is empty for images.</p>
+         * 
          * <strong>example:</strong>
          * <p>解析后的文本内容，对于图片来说为空</p>
          */
@@ -318,6 +378,8 @@ public class GetStyleLearningResultResponseBody extends TeaModel {
         public String textContent;
 
         /**
+         * <p>The Base64-encoded thumbnail for image documents.</p>
+         * 
          * <strong>example:</strong>
          * <p>图片文档类型的Base64缩略图</p>
          */
@@ -325,6 +387,8 @@ public class GetStyleLearningResultResponseBody extends TeaModel {
         public String thumbnailInBase64;
 
         /**
+         * <p>The document title.</p>
+         * 
          * <strong>example:</strong>
          * <p>文档标题</p>
          */
@@ -332,6 +396,8 @@ public class GetStyleLearningResultResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>The time when the material was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>修改时间</p>
          */
@@ -339,6 +405,8 @@ public class GetStyleLearningResultResponseBody extends TeaModel {
         public String updateTime;
 
         /**
+         * <p>The ID of the user who last modified the material.</p>
+         * 
          * <strong>example:</strong>
          * <p>修改用户ID</p>
          */
@@ -346,6 +414,8 @@ public class GetStyleLearningResultResponseBody extends TeaModel {
         public String updateUser;
 
         /**
+         * <p>The name of the user who last modified the material.</p>
+         * 
          * <strong>example:</strong>
          * <p>修改用户姓名</p>
          */
@@ -353,6 +423,8 @@ public class GetStyleLearningResultResponseBody extends TeaModel {
         public String updateUserName;
 
         /**
+         * <p>The internal storage URL of the document. It supports multiple protocols, such as \<code>http\\://\\</code>, \<code>file://\\</code>, and \<code>ftp\\://\\</code>. This URL is for long-term storage of uploaded files and is deleted on expiration.</p>
+         * 
          * <strong>example:</strong>
          * <p>内部文档保存的URL，支持多协议，http://,file://,ftp://:客户上传时保存到内部存储的URL、长期保存、到期删除</p>
          */
@@ -544,32 +616,50 @@ public class GetStyleLearningResultResponseBody extends TeaModel {
 
     public static class GetStyleLearningResultResponseBodyData extends TeaModel {
         /**
+         * <p>The content generated by AIGC.</p>
+         * 
          * <strong>example:</strong>
          * <p>AIGC 生成的内容</p>
          */
         @NameInMap("AigcResult")
         public String aigcResult;
 
+        /**
+         * <p>A list of custom content entities.</p>
+         */
         @NameInMap("ContentList")
         public java.util.List<GetStyleLearningResultResponseBodyDataContentList> contentList;
 
+        /**
+         * <p>A list of custom content IDs.</p>
+         */
         @NameInMap("CustomTextIdList")
         public java.util.List<Long> customTextIdList;
 
         /**
+         * <p>The ID of the style learning analysis result.</p>
+         * 
          * <strong>example:</strong>
          * <p>33</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>A list of material IDs.</p>
+         */
         @NameInMap("MaterialIdList")
         public java.util.List<Long> materialIdList;
 
+        /**
+         * <p>A list of detailed information about the materials.</p>
+         */
         @NameInMap("MaterialInfoList")
         public java.util.List<GetStyleLearningResultResponseBodyDataMaterialInfoList> materialInfoList;
 
         /**
+         * <p>The user-revised content.</p>
+         * 
          * <strong>example:</strong>
          * <p>用户修订后内容</p>
          */
@@ -577,13 +667,17 @@ public class GetStyleLearningResultResponseBody extends TeaModel {
         public String rewriteResult;
 
         /**
+         * <p>The user-revised content.</p>
+         * 
          * <strong>example:</strong>
-         * <p>文体风格名称</p>
+         * <p>用户修订后内容</p>
          */
         @NameInMap("StyleName")
         public String styleName;
 
         /**
+         * <p>The ID of the style analysis task.</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */

@@ -4,10 +4,17 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunDocIntroductionRequest extends TeaModel {
+    /**
+     * <p>Purge cache</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("CleanCache")
     public Boolean cleanCache;
 
     /**
+     * <p>Document ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,16 +23,35 @@ public class RunDocIntroductionRequest extends TeaModel {
     @NameInMap("DocId")
     public String docId;
 
+    /**
+     * <p>Custom requirements for the document summary</p>
+     * 
+     * <strong>example:</strong>
+     * <p>用英文输出</p>
+     */
     @NameInMap("IntroductionPrompt")
     public String introductionPrompt;
 
+    /**
+     * <p>Custom requirements for key points</p>
+     * 
+     * <strong>example:</strong>
+     * <p>用英文输出</p>
+     */
     @NameInMap("KeyPointPrompt")
     public String keyPointPrompt;
 
+    /**
+     * <p>User-defined model name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>quanmiao-max、quanmiao-plus</p>
+     */
     @NameInMap("ModelName")
     public String modelName;
 
     /**
+     * <p>Conversation ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,10 +60,17 @@ public class RunDocIntroductionRequest extends TeaModel {
     @NameInMap("SessionId")
     public String sessionId;
 
+    /**
+     * <p>Custom requirements for the summary content</p>
+     * 
+     * <strong>example:</strong>
+     * <p>用英文输出</p>
+     */
     @NameInMap("SummaryPrompt")
     public String summaryPrompt;
 
     /**
+     * <p>Unique identifier (UUID) of the Alibaba Cloud Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2587495.html">Workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +79,12 @@ public class RunDocIntroductionRequest extends TeaModel {
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
+    /**
+     * <p>Content to generate the summary from. If not empty, this value takes precedence over docId.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>要进行导读的内容</p>
+     */
     @NameInMap("referenceContent")
     public String referenceContent;
 

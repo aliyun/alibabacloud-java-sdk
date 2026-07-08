@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetDeepWriteTaskResultRequest extends TeaModel {
     /**
+     * <p>Task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xbabac91-fdad-44d6-95ce-******</p>
      */
@@ -12,6 +14,8 @@ public class GetDeepWriteTaskResultRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p><a href="https://help.aliyun.com/document_detail/2782167.html">Workspace ID</a></p>
+     * 
      * <strong>example:</strong>
      * <p>llm-1setzb9xb8m11vrc</p>
      */

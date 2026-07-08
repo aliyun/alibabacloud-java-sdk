@@ -11,10 +11,18 @@ public class DeletePptArtifactRequest extends TeaModel {
     @NameInMap("ExternalUserId")
     public String externalUserId;
 
+    /**
+     * <p>The ID of the PPT work.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>53245</p>
+     */
     @NameInMap("PptArtifactId")
     public String pptArtifactId;
 
     /**
+     * <p>The ID of the workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm-xx</p>
      */

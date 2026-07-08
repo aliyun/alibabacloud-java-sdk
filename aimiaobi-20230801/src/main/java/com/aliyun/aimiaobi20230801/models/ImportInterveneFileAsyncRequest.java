@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImportInterveneFileAsyncRequest extends TeaModel {
     /**
+     * <p>Unique identifier of the workspace: <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ImportInterveneFileAsyncRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>Name of the uploaded file</p>
+     * 
      * <strong>example:</strong>
      * <p>import.xls</p>
      */
@@ -21,6 +24,8 @@ public class ImportInterveneFileAsyncRequest extends TeaModel {
     public String docName;
 
     /**
+     * <p>OSS key of the file</p>
+     * 
      * <strong>example:</strong>
      * <p>import.xls</p>
      */
@@ -28,6 +33,8 @@ public class ImportInterveneFileAsyncRequest extends TeaModel {
     public String fileKey;
 
     /**
+     * <p>File URL</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://xxx/import.xls">https://xxx/import.xls</a></p>
      */

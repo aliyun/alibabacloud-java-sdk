@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteDocsShrinkRequest extends TeaModel {
     /**
+     * <p>Document ID array.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DocIds")
     public String docIdsShrink;
 
     /**
+     * <p>Unique identifier for the Alibaba Cloud Model Studio workspace. Get the <a href="https://help.aliyun.com/document_detail/2782167.html">workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

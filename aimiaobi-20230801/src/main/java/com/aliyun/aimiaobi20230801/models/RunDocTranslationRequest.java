@@ -4,23 +4,44 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunDocTranslationRequest extends TeaModel {
+    /**
+     * <p>Clear the current cache?</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("CleanCache")
     public Boolean cleanCache;
 
     /**
+     * <p>Document ID</p>
+     * 
      * <strong>example:</strong>
      * <p>12345</p>
      */
     @NameInMap("DocId")
     public String docId;
 
+    /**
+     * <p>User-defined model name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>quanmiao-max、quanmiao-plus</p>
+     */
     @NameInMap("ModelName")
     public String modelName;
 
+    /**
+     * <p>Content to be translated</p>
+     * 
+     * <strong>example:</strong>
+     * <p>要翻译的内容</p>
+     */
     @NameInMap("RecommendContent")
     public String recommendContent;
 
     /**
+     * <p>Session ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,14 +51,25 @@ public class RunDocTranslationRequest extends TeaModel {
     public String sessionId;
 
     /**
+     * <p>Translation type</p>
+     * 
      * <strong>example:</strong>
      * <p>toChinese
-     * toEnglish</p>
+     * toEnglish
+     * toJapenese
+     * toRussian
+     * toFrench
+     * toGerman
+     * toItalian
+     * toKorean
+     * toSpanish
+     * toPortuguese</p>
      */
     @NameInMap("TransType")
     public String transType;
 
     /**
+     * <p>Alibaba Cloud Model Studio workspace unique identifier. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Get the Workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetClipsBuildInResourceResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public GetClipsBuildInResourceResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetClipsBuildInResourceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The message returned for the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -38,6 +47,8 @@ public class GetClipsBuildInResourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. A value of true means the request was successful. A value of false means the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -98,9 +109,19 @@ public class GetClipsBuildInResourceResponseBody extends TeaModel {
     }
 
     public static class GetClipsBuildInResourceResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of resources.</p>
+         */
         @NameInMap("ResourceList")
         public java.util.List<String> resourceList;
 
+        /**
+         * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0 - 音色
+         * 1- 背景音</p>
+         */
         @NameInMap("ResourceType")
         public Integer resourceType;
 

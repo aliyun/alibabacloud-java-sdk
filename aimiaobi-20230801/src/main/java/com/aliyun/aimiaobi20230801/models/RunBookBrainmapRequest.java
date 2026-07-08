@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RunBookBrainmapRequest extends TeaModel {
     /**
+     * <p>Specifies whether to clear the cache. The default is <code>false</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,7 @@ public class RunBookBrainmapRequest extends TeaModel {
     public Boolean cleanCache;
 
     /**
+     * <p>The document ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class RunBookBrainmapRequest extends TeaModel {
     public String docId;
 
     /**
+     * <p>The number of nodes on the second level of the mind map.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -28,6 +33,8 @@ public class RunBookBrainmapRequest extends TeaModel {
     public Integer nodeNumber;
 
     /**
+     * <p>A prompt with additional instructions.</p>
+     * 
      * <strong>example:</strong>
      * <p>按英文输出</p>
      */
@@ -42,6 +49,7 @@ public class RunBookBrainmapRequest extends TeaModel {
     public Integer responseFormat;
 
     /**
+     * <p>The session ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,6 +59,8 @@ public class RunBookBrainmapRequest extends TeaModel {
     public String sessionId;
 
     /**
+     * <p>The number of words per node.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -58,6 +68,7 @@ public class RunBookBrainmapRequest extends TeaModel {
     public Integer wordNumber;
 
     /**
+     * <p>The unique identifier for the Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class FetchImageTaskRequest extends TeaModel {
     /**
+     * <p>Unique identifier of the workspace: <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class FetchImageTaskRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>Article task ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class FetchImageTaskRequest extends TeaModel {
     public String articleTaskId;
 
     /**
+     * <p>List of task IDs</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

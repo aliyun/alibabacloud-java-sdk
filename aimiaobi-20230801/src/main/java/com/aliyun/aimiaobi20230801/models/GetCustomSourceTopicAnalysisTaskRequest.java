@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCustomSourceTopicAnalysisTaskRequest extends TeaModel {
     /**
+     * <p>The unique ID of the task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetCustomSourceTopicAnalysisTaskRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The unique identifier of the workspace. It is the AgentKey.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

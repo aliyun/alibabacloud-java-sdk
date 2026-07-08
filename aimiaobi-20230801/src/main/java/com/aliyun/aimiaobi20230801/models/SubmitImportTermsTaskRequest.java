@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitImportTermsTaskRequest extends TeaModel {
     /**
+     * <p>File Key.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,14 @@ public class SubmitImportTermsTaskRequest extends TeaModel {
     @NameInMap("FileKey")
     public String fileKey;
 
+    /**
+     * <p>Dictionary name. Optional. If not specified, the default is Default.</p>
+     */
     @NameInMap("TermsName")
     public String termsName;
 
     /**
+     * <p>Alibaba Cloud Model Studio unique workspace identifier: For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class InsertInterveneGlobalReplyResponseBody extends TeaModel {
     /**
+     * <p>status code</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business data</p>
+     */
     @NameInMap("Data")
     public InsertInterveneGlobalReplyResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class InsertInterveneGlobalReplyResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error description</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +38,8 @@ public class InsertInterveneGlobalReplyResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Unique request identifier</p>
+     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */
@@ -36,6 +47,8 @@ public class InsertInterveneGlobalReplyResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether successful: true for success, false for failure</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,10 +112,15 @@ public class InsertInterveneGlobalReplyResponseBody extends TeaModel {
         @NameInMap("Code")
         public Integer code;
 
+        /**
+         * <p>List of failed index IDs</p>
+         */
         @NameInMap("FailIdList")
         public java.util.List<String> failIdList;
 
         /**
+         * <p>Task ID</p>
+         * 
          * <strong>example:</strong>
          * <p>4829</p>
          */

@@ -4,10 +4,14 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class DeleteAuditTermsRequest extends TeaModel {
+    /**
+     * <p>List of rule IDs for user logon audit terms to delete.</p>
+     */
     @NameInMap("IdList")
     public java.util.List<Long> idList;
 
     /**
+     * <p>Unique identifier for the Alibaba Cloud Model Studio workspace. Get the <a href="https://help.aliyun.com/document_detail/2782167.html">Workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

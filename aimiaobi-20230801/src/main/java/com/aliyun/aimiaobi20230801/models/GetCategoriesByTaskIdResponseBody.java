@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetCategoriesByTaskIdResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>A list of classification objects.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetCategoriesByTaskIdResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetCategoriesByTaskIdResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class GetCategoriesByTaskIdResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -36,6 +47,8 @@ public class GetCategoriesByTaskIdResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values: \<code>true\\</code> and \<code>false\\</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -96,6 +109,12 @@ public class GetCategoriesByTaskIdResponseBody extends TeaModel {
     }
 
     public static class GetCategoriesByTaskIdResponseBodyDataChildren extends TeaModel {
+        /**
+         * <p>The name of the sub-classification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>类别1-1</p>
+         */
         @NameInMap("Category")
         public String category;
 
@@ -115,13 +134,24 @@ public class GetCategoriesByTaskIdResponseBody extends TeaModel {
     }
 
     public static class GetCategoriesByTaskIdResponseBodyData extends TeaModel {
+        /**
+         * <p>The name of the classification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>类别1</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>A list of sub-classifications.</p>
+         */
         @NameInMap("Children")
         public java.util.List<GetCategoriesByTaskIdResponseBodyDataChildren> children;
 
         /**
+         * <p>The number of Voice of the Customer (VOC) entries in this classification.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */

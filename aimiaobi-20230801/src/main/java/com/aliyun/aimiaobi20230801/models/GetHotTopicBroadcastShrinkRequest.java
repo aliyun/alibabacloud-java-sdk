@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetHotTopicBroadcastShrinkRequest extends TeaModel {
     /**
+     * <p>Whether to compute the total token count</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,6 +14,8 @@ public class GetHotTopicBroadcastShrinkRequest extends TeaModel {
     public Boolean calcTotalToken;
 
     /**
+     * <p>categorization Filter</p>
+     * 
      * <strong>example:</strong>
      * <p>分类筛选</p>
      */
@@ -19,6 +23,8 @@ public class GetHotTopicBroadcastShrinkRequest extends TeaModel {
     public String category;
 
     /**
+     * <p>Current page number</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,35 +32,62 @@ public class GetHotTopicBroadcastShrinkRequest extends TeaModel {
     public Integer current;
 
     /**
+     * <p>hot spot Version</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-10-11_13</p>
      */
     @NameInMap("HotTopicVersion")
     public String hotTopicVersion;
 
+    /**
+     * <p>Full-text index for hot spot Regions (when this parameter is present, current does not take effect)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>重庆 成都 浙江 杭州</p>
+     */
     @NameInMap("LocationQuery")
     public String locationQuery;
 
+    /**
+     * <p>List of Regions for news retrieval (keyword filtering)</p>
+     */
     @NameInMap("Locations")
     public String locationsShrink;
 
+    /**
+     * <p>Full-text index (full-text retrieval for title, hot spot summary, and Region) (when this parameter is present, current does not take effect)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>重庆新闻</p>
+     */
     @NameInMap("Query")
     public String query;
 
     /**
+     * <p>Page size</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
     @NameInMap("Size")
     public Integer size;
 
+    /**
+     * <p>Custom output style configuration</p>
+     */
     @NameInMap("StepForCustomSummaryStyleConfig")
     public String stepForCustomSummaryStyleConfigShrink;
 
+    /**
+     * <p>Hot Spot News Broadcast Content Configuration</p>
+     */
     @NameInMap("StepForNewsBroadcastContentConfig")
     public String stepForNewsBroadcastContentConfigShrink;
 
     /**
+     * <p>topic Filter</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;主题1&quot;,&quot;主题2&quot;]</p>
      */
@@ -62,6 +95,7 @@ public class GetHotTopicBroadcastShrinkRequest extends TeaModel {
     public String topicsShrink;
 
     /**
+     * <p>UUID of the Alibaba Cloud Model Studio workspace: obtain the <a href="https://help.aliyun.com/document_detail/2587495.html">Workspace ID</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

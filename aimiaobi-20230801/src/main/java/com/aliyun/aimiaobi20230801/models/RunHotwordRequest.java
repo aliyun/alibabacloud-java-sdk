@@ -5,22 +5,44 @@ import com.aliyun.tea.*;
 
 public class RunHotwordRequest extends TeaModel {
     /**
+     * <p>Document ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>84ufBYEeLMZOjRFo84HJ7ySL3Efr55</p>
      */
     @NameInMap("DocId")
     public String docId;
 
+    /**
+     * <p>Name of the custom model.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>quanmiao-max、quanmiao-plus</p>
+     */
     @NameInMap("ModelName")
     public String modelName;
 
+    /**
+     * <p>Prompt.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>提示词</p>
+     */
     @NameInMap("Prompt")
     public String prompt;
 
+    /**
+     * <p>Document content to extract hotwords from. If not empty, extract hotwords from this content. If empty, extract hotwords using the DocId.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>关联内容</p>
+     */
     @NameInMap("ReferenceContent")
     public String referenceContent;
 
     /**
+     * <p>Session ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>e32a1a3f-1f7e-41dd-b888-ef1d91b96d1e</p>
      */
@@ -28,6 +50,7 @@ public class RunHotwordRequest extends TeaModel {
     public String sessionId;
 
     /**
+     * <p>Unique identifier of the Alibaba Cloud Model Studio workspace. To get this ID, see <a href="https://help.aliyun.com/document_detail/2782167.html">Workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class AsyncWritingBiddingDocRequest extends TeaModel {
     /**
+     * <p>The name of the bidding company.</p>
+     * 
      * <strong>example:</strong>
      * <p>comany name</p>
      */
     @NameInMap("CompanyKeyword")
     public String companyKeyword;
 
+    /**
+     * <p>The prompt.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>自定义观点的输入Prompt</p>
+     */
     @NameInMap("Prompt")
     public String prompt;
 
     /**
+     * <p>The unique ID of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>7AA2AE16-D873-5C5F-9708-15396C382EB1</p>
      */
@@ -22,6 +32,8 @@ public class AsyncWritingBiddingDocRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p><a href="https://help.aliyun.com/document_detail/2782167.html">The ID of the workspace.</a></p>
+     * 
      * <strong>example:</strong>
      * <p>llm-xx</p>
      */

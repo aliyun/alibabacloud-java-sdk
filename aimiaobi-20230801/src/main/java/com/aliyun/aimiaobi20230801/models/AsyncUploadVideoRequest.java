@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class AsyncUploadVideoRequest extends TeaModel {
     /**
+     * <p>Shot segmentation threshold. A smaller value increases sensitivity. Valid range is 1 to 10. Default value is 3.</p>
+     * 
      * <strong>example:</strong>
-     * <p>3</p>
+     * <p>3.0</p>
      */
     @NameInMap("AdaptiveThreshold")
     public Float adaptiveThreshold;
 
     /**
+     * <p>The prompt for video understanding.</p>
+     * 
      * <strong>example:</strong>
      * <p>重点理解视频中的风景信息</p>
      */
@@ -19,25 +23,36 @@ public class AsyncUploadVideoRequest extends TeaModel {
     public String anlysisPrompt;
 
     /**
+     * <p>The similarity threshold for character recognition.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.7</p>
      */
     @NameInMap("FaceIdentitySimilarityMinScore")
     public Double faceIdentitySimilarityMinScore;
 
+    /**
+     * <p>Information about the reference video.</p>
+     */
     @NameInMap("ReferenceVideo")
     public AsyncUploadVideoRequestReferenceVideo referenceVideo;
 
+    /**
+     * <p>Removes captions from the material.</p>
+     */
     @NameInMap("RemoveSubtitle")
     public Boolean removeSubtitle;
 
     /**
+     * <p>The structure of the video editing materials.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SourceVideos")
     public java.util.List<AsyncUploadVideoRequestSourceVideos> sourceVideos;
 
     /**
+     * <p>The time interval for video understanding shots.</p>
+     * 
      * <strong>example:</strong>
      * <p>默认1</p>
      */
@@ -45,6 +60,8 @@ public class AsyncUploadVideoRequest extends TeaModel {
     public Integer splitInterval;
 
     /**
+     * <p>Job name</p>
+     * 
      * <strong>example:</strong>
      * <p>task001</p>
      */
@@ -52,16 +69,23 @@ public class AsyncUploadVideoRequest extends TeaModel {
     public String taskName;
 
     /**
+     * <p>Task Type</p>
+     * 
      * <strong>example:</strong>
      * <p>type001</p>
      */
     @NameInMap("TaskType")
     public String taskType;
 
+    /**
+     * <p>Face information of the roles.</p>
+     */
     @NameInMap("VideoRoles")
     public java.util.List<AsyncUploadVideoRequestVideoRoles> videoRoles;
 
     /**
+     * <p>The number of frames sampled from a single shot for character matching.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -69,6 +93,7 @@ public class AsyncUploadVideoRequest extends TeaModel {
     public Integer videoShotFaceIdentityCount;
 
     /**
+     * <p><a href="https://help.aliyun.com/document_detail/2782167.html">The ID of the Alibaba Cloud Model Studio workspace.</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -180,6 +205,8 @@ public class AsyncUploadVideoRequest extends TeaModel {
 
     public static class AsyncUploadVideoRequestReferenceVideo extends TeaModel {
         /**
+         * <p>Additional information for video understanding.</p>
+         * 
          * <strong>example:</strong>
          * <p>手机cpu采用3纳米技术</p>
          */
@@ -187,6 +214,8 @@ public class AsyncUploadVideoRequest extends TeaModel {
         public String videoExtraInfo;
 
         /**
+         * <p>The name of the reference video.</p>
+         * 
          * <strong>example:</strong>
          * <p>refvideo.mp4</p>
          */
@@ -194,6 +223,8 @@ public class AsyncUploadVideoRequest extends TeaModel {
         public String videoName;
 
         /**
+         * <p>The URL of the video.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://viapi-customer-pop.oss-cn-shanghai.aliyuncs.com/d71e_208334498220521996_51298e0a909d457693166eb883768c7a">http://viapi-customer-pop.oss-cn-shanghai.aliyuncs.com/d71e_208334498220521996_51298e0a909d457693166eb883768c7a</a></p>
          */
@@ -233,6 +264,8 @@ public class AsyncUploadVideoRequest extends TeaModel {
 
     public static class AsyncUploadVideoRequestSourceVideos extends TeaModel {
         /**
+         * <p>Additional description of the video.</p>
+         * 
          * <strong>example:</strong>
          * <p>视频中有一个房子</p>
          */
@@ -240,6 +273,7 @@ public class AsyncUploadVideoRequest extends TeaModel {
         public String videoExtraInfo;
 
         /**
+         * <p>The name of the video.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -249,6 +283,7 @@ public class AsyncUploadVideoRequest extends TeaModel {
         public String videoName;
 
         /**
+         * <p>The URL of the video.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -291,6 +326,8 @@ public class AsyncUploadVideoRequest extends TeaModel {
 
     public static class AsyncUploadVideoRequestVideoRolesRoleUrls extends TeaModel {
         /**
+         * <p>The file name of the role\&quot;s facial image.</p>
+         * 
          * <strong>example:</strong>
          * <p>王小明.jpeg</p>
          */
@@ -298,6 +335,8 @@ public class AsyncUploadVideoRequest extends TeaModel {
         public String roleFileName;
 
         /**
+         * <p>The public URL of the role\&quot;s facial image.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://xxx/xxx.jpeg">http://xxx/xxx.jpeg</a></p>
          */
@@ -329,6 +368,8 @@ public class AsyncUploadVideoRequest extends TeaModel {
 
     public static class AsyncUploadVideoRequestVideoRoles extends TeaModel {
         /**
+         * <p>Information about the role.</p>
+         * 
          * <strong>example:</strong>
          * <p>李晓明是一位警察</p>
          */
@@ -336,12 +377,17 @@ public class AsyncUploadVideoRequest extends TeaModel {
         public String roleInfo;
 
         /**
+         * <p>The name of the role.</p>
+         * 
          * <strong>example:</strong>
          * <p>李晓明</p>
          */
         @NameInMap("RoleName")
         public String roleName;
 
+        /**
+         * <p>The URLs of the role photos.</p>
+         */
         @NameInMap("RoleUrls")
         public java.util.List<AsyncUploadVideoRequestVideoRolesRoleUrls> roleUrls;
 

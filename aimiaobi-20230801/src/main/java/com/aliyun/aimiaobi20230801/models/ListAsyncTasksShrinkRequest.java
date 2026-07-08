@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAsyncTasksShrinkRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the workspace: <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListAsyncTasksShrinkRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The end of the time range to query task creation times. Format: YYYY-MM-DD HH:mm:ss.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-03-18 02:00:00</p>
      */
@@ -21,6 +24,8 @@ public class ListAsyncTasksShrinkRequest extends TeaModel {
     public String createTimeEnd;
 
     /**
+     * <p>The start of the time range to query task creation times. Format: YYYY-MM-DD HH:mm:ss.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-02-19 07:28:11</p>
      */
@@ -28,6 +33,8 @@ public class ListAsyncTasksShrinkRequest extends TeaModel {
     public String createTimeStart;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -35,6 +42,8 @@ public class ListAsyncTasksShrinkRequest extends TeaModel {
     public Integer current;
 
     /**
+     * <p>The number of entries per page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -42,28 +51,50 @@ public class ListAsyncTasksShrinkRequest extends TeaModel {
     public Integer size;
 
     /**
+     * <p>A term query for the task code.</p>
+     * 
      * <strong>example:</strong>
      * <p>MaterialDocumentUpload</p>
      */
     @NameInMap("TaskCode")
     public String taskCode;
 
+    /**
+     * <p>A term query for the task name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>任务名称</p>
+     */
     @NameInMap("TaskName")
     public String taskName;
 
     /**
+     * <p>A term query for the task status. Valid values: 0 (Pending), 1 (Running), 2 (Succeeded), 3 (Paused), 4 (Failed and retriable), 5 (Failed and not retriable), and 6 (Canceled).</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("TaskStatus")
     public Integer taskStatus;
 
+    /**
+     * <p>A term query for a list of task statuses. Valid values: 0 (Pending), 1 (Running), 2 (Succeeded), 3 (Paused), 4 (Failed and retriable), 5 (Failed and not retriable), and 6 (Canceled).</p>
+     */
     @NameInMap("TaskStatusList")
     public String taskStatusListShrink;
 
+    /**
+     * <p>A term query for the task type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>暂无</p>
+     */
     @NameInMap("TaskType")
     public String taskType;
 
+    /**
+     * <p>A term query for a list of task types.</p>
+     */
     @NameInMap("TaskTypeList")
     public String taskTypeListShrink;
 

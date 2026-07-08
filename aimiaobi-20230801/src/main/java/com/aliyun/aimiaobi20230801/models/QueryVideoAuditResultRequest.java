@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryVideoAuditResultRequest extends TeaModel {
     /**
-     * <p>视频审校任务的唯一标识，长度固定32位</p>
+     * <p>Task ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,7 @@ public class QueryVideoAuditResultRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>Workspace ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

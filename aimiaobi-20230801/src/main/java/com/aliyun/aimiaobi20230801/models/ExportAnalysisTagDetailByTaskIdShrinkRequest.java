@@ -4,10 +4,17 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class ExportAnalysisTagDetailByTaskIdShrinkRequest extends TeaModel {
+    /**
+     * <p>Category filter list.</p>
+     */
     @NameInMap("Categories")
     public String categoriesShrink;
 
     /**
+     * <p>Unique task ID.</p>
+     * <blockquote>
+     * <p>By default, do not specify TaskId. The system automatically generates it. If subsequent tasks use the same TaskId, they belong to the same conversation group.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +24,7 @@ public class ExportAnalysisTagDetailByTaskIdShrinkRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>Unique identifier for Alibaba Cloud Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Get Workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

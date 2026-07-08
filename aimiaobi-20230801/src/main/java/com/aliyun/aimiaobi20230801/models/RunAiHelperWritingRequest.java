@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RunAiHelperWritingRequest extends TeaModel {
     /**
+     * <p>Specifies whether to generate the text step by step.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,6 +14,7 @@ public class RunAiHelperWritingRequest extends TeaModel {
     public Boolean distributeWriting;
 
     /**
+     * <p>The prompt, which specifies the subject for the AI to write about.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class RunAiHelperWritingRequest extends TeaModel {
     public String prompt;
 
     /**
+     * <p>The prompt pattern. For example, PE indicates the advanced pattern and Template indicates the template pattern.</p>
+     * 
      * <strong>example:</strong>
      * <p>Template</p>
      */
@@ -28,6 +33,7 @@ public class RunAiHelperWritingRequest extends TeaModel {
     public String promptMode;
 
     /**
+     * <p>The <a href="https://help.aliyun.com/document_detail/2782167.html">workspace</a> ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +43,8 @@ public class RunAiHelperWritingRequest extends TeaModel {
     public String workspaceId;
 
     /**
+     * <p>The writing parameters from the previous form, specified as key-value pairs.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;wordCount&quot;: &quot;1000&quot;, &quot;tone&quot;: &quot;formal&quot;}</p>
      */
@@ -44,7 +52,7 @@ public class RunAiHelperWritingRequest extends TeaModel {
     public java.util.Map<String, String> writingParams;
 
     /**
-     * <p>写作场景：government(政务)、media(传媒)、market(营销)、office(办公)、custom(自定义)</p>
+     * <p>The writing scenario. Valid values: government, media, market, office, and custom.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,11 +62,11 @@ public class RunAiHelperWritingRequest extends TeaModel {
     public String writingScene;
 
     /**
-     * <p>写作文体唯一标识KEY，可通过ListWritingStyles接口获取对应写作场景下的文体列表</p>
+     * <p>The unique key for the writing style. Call the <a href="https://help.aliyun.com/document_detail/2922609.html">ListWritingStyles</a> operation to get a list of styles for the specified scenario.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>news_article</p>
+     * <p>通知</p>
      */
     @NameInMap("WritingStyle")
     public String writingStyle;

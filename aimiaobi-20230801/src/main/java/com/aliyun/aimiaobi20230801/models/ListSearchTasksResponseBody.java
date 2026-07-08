@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListSearchTasksResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business data</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListSearchTasksResponseBodyData> data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListSearchTasksResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Fault description</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class ListSearchTasksResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Current page number</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -36,6 +47,8 @@ public class ListSearchTasksResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Number of records per page</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -43,6 +56,8 @@ public class ListSearchTasksResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Unique request identifier</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -50,6 +65,8 @@ public class ListSearchTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. True for success, false for failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -57,6 +74,8 @@ public class ListSearchTasksResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Total number of records</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -142,6 +161,8 @@ public class ListSearchTasksResponseBody extends TeaModel {
 
     public static class ListSearchTasksResponseBodyData extends TeaModel {
         /**
+         * <p>Creation time</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-11-25 11:40:50</p>
          */
@@ -149,6 +170,8 @@ public class ListSearchTasksResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Task type</p>
+         * 
          * <strong>example:</strong>
          * <p>24</p>
          */
@@ -156,6 +179,8 @@ public class ListSearchTasksResponseBody extends TeaModel {
         public Integer dialogueType;
 
         /**
+         * <p>Unique task identifier</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxx</p>
          */
@@ -163,6 +188,8 @@ public class ListSearchTasksResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>Task name</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -170,6 +197,8 @@ public class ListSearchTasksResponseBody extends TeaModel {
         public String taskName;
 
         /**
+         * <p>Modification time</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-11-25 11:40:50</p>
          */
@@ -177,6 +206,8 @@ public class ListSearchTasksResponseBody extends TeaModel {
         public String updateTime;
 
         /**
+         * <p>Creator name</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxx</p>
          */

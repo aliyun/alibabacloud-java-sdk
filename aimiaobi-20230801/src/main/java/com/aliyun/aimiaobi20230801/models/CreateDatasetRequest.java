@@ -11,17 +11,23 @@ public class CreateDatasetRequest extends TeaModel {
     @NameInMap("AccessLevel")
     public String accessLevel;
 
+    /**
+     * <p>The dataset search configuration.</p>
+     */
     @NameInMap("DatasetConfig")
     public CreateDatasetRequestDatasetConfig datasetConfig;
 
     /**
+     * <p>The description of the dataset. This is the display name in the console. Use a human-readable name.</p>
+     * 
      * <strong>example:</strong>
-     * <p>企业自定义数据集</p>
+     * <p>企业知识库</p>
      */
     @NameInMap("DatasetDescription")
     public String datasetDescription;
 
     /**
+     * <p>The name of the dataset. The name must be globally unique.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,16 +37,35 @@ public class CreateDatasetRequest extends TeaModel {
     public String datasetName;
 
     /**
+     * <p>The type of the dataset. Valid values:</p>
+     * <ul>
+     * <li><p>CustomSemanticSearch: A custom semantic index. This is the default value. Upload documents to build the dataset.</p>
+     * </li>
+     * <li><p>ThirdSearch: A third-party search source (API). Configure your own search API.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>CustomSemanticSearch</p>
      */
     @NameInMap("DatasetType")
     public String datasetType;
 
+    /**
+     * <p>Dataset index configuration.</p>
+     */
     @NameInMap("DocumentHandleConfig")
     public CreateDatasetRequestDocumentHandleConfig documentHandleConfig;
 
     /**
+     * <p>The invocation method. Currently, only portal is supported, which indicates an invocation from the console.</p>
+     * <ul>
+     * <li><p>If left empty: When DatasetType is ThirdSearch, datasetConfig.SearchSourceConfigs (third-party API definition) is required.</p>
+     * </li>
+     * <li><p>If set to portal: When DatasetType is ThirdSearch, the system initializes a SearchSourceConfigs (third-party API demo) example by default for your reference.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>portal</p>
      */
@@ -48,6 +73,18 @@ public class CreateDatasetRequest extends TeaModel {
     public String invokeType;
 
     /**
+     * <p>The dataset search switch. Valid values:</p>
+     * <ul>
+     * <li><p>0: Disabled for all.</p>
+     * </li>
+     * <li><p>1: Visible only to Miao Search.</p>
+     * </li>
+     * <li><p>2: Visible only to Miao Bi.</p>
+     * </li>
+     * <li><p>3: Visible to both Miao Search and Miao Bi. This is the default value.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -55,6 +92,7 @@ public class CreateDatasetRequest extends TeaModel {
     public Integer searchDatasetEnable;
 
     /**
+     * <p>The unique ID of the Alibaba Cloud Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Obtain a workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -141,15 +179,39 @@ public class CreateDatasetRequest extends TeaModel {
     }
 
     public static class CreateDatasetRequestDatasetConfigSearchSourceConfig extends TeaModel {
+        /**
+         * <p>Specifies whether the metadata key-value pairs are used in generation. The default value is true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("MetadataKeyValueGenerateEnable")
         public Boolean metadataKeyValueGenerateEnable;
 
+        /**
+         * <p>Specifies whether the metadata key-value pairs are used in searches. The default value is true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("MetadataKeyValueSearchEnable")
         public Boolean metadataKeyValueSearchEnable;
 
+        /**
+         * <p>Specifies whether tags are used in generation. The default value is true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("TagGenerateEnable")
         public Boolean tagGenerateEnable;
 
+        /**
+         * <p>Specifies whether tags are used in searches. The default value is true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("TagSearchEnable")
         public Boolean tagSearchEnable;
 
@@ -194,6 +256,8 @@ public class CreateDatasetRequest extends TeaModel {
 
     public static class CreateDatasetRequestDatasetConfigSearchSourceConfigsSearchSourceRequestConfigHeaders extends TeaModel {
         /**
+         * <p>The parameter name.</p>
+         * 
          * <strong>example:</strong>
          * <p>参数名称</p>
          */
@@ -201,6 +265,8 @@ public class CreateDatasetRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The parameter value.</p>
+         * 
          * <strong>example:</strong>
          * <p>参数值</p>
          */
@@ -208,6 +274,8 @@ public class CreateDatasetRequest extends TeaModel {
         public String value;
 
         /**
+         * <p>This parameter is valid only when ValueType is set to time.</p>
+         * 
          * <strong>example:</strong>
          * <p>valueType = time 时有效</p>
          */
@@ -215,8 +283,10 @@ public class CreateDatasetRequest extends TeaModel {
         public String valueFormat;
 
         /**
+         * <p>The data type of the parameter value. The default value is string.</p>
+         * 
          * <strong>example:</strong>
-         * <p>参数值数据类型: 默认string</p>
+         * <p>参数值数据类型：默认string</p>
          */
         @NameInMap("ValueType")
         public String valueType;
@@ -262,6 +332,8 @@ public class CreateDatasetRequest extends TeaModel {
 
     public static class CreateDatasetRequestDatasetConfigSearchSourceConfigsSearchSourceRequestConfigParams extends TeaModel {
         /**
+         * <p>The parameter name.</p>
+         * 
          * <strong>example:</strong>
          * <p>参数名称</p>
          */
@@ -269,6 +341,8 @@ public class CreateDatasetRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The parameter value.</p>
+         * 
          * <strong>example:</strong>
          * <p>参数值</p>
          */
@@ -276,6 +350,8 @@ public class CreateDatasetRequest extends TeaModel {
         public String value;
 
         /**
+         * <p>This parameter is valid only when ValueType is set to time.</p>
+         * 
          * <strong>example:</strong>
          * <p>valueType = time 时有效</p>
          */
@@ -283,8 +359,10 @@ public class CreateDatasetRequest extends TeaModel {
         public String valueFormat;
 
         /**
+         * <p>The data type of the parameter value. The default value is string.</p>
+         * 
          * <strong>example:</strong>
-         * <p>参数值数据类型: 默认string</p>
+         * <p>参数值数据类型：默认string</p>
          */
         @NameInMap("ValueType")
         public String valueType;
@@ -330,6 +408,8 @@ public class CreateDatasetRequest extends TeaModel {
 
     public static class CreateDatasetRequestDatasetConfigSearchSourceConfigsSearchSourceRequestConfig extends TeaModel {
         /**
+         * <p>The request body.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -337,26 +417,38 @@ public class CreateDatasetRequest extends TeaModel {
         public String body;
 
         /**
+         * <p>The connection timeout period, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>3000</p>
          */
         @NameInMap("ConnectTimeout")
         public Integer connectTimeout;
 
+        /**
+         * <p>The HTTP request headers.</p>
+         */
         @NameInMap("Headers")
         public java.util.List<CreateDatasetRequestDatasetConfigSearchSourceConfigsSearchSourceRequestConfigHeaders> headers;
 
         /**
+         * <p>The request method.</p>
+         * 
          * <strong>example:</strong>
          * <p>请求方式</p>
          */
         @NameInMap("Method")
         public String method;
 
+        /**
+         * <p>The request path parameters.</p>
+         */
         @NameInMap("Params")
         public java.util.List<CreateDatasetRequestDatasetConfigSearchSourceConfigsSearchSourceRequestConfigParams> params;
 
         /**
+         * <p>Specifies whether to enable path parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -364,6 +456,8 @@ public class CreateDatasetRequest extends TeaModel {
         public Boolean pathParamsEnable;
 
         /**
+         * <p>The read timeout period, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>3000</p>
          */
@@ -371,6 +465,8 @@ public class CreateDatasetRequest extends TeaModel {
         public Integer socketTimeout;
 
         /**
+         * <p>The API URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>api地址</p>
          */
@@ -450,16 +546,26 @@ public class CreateDatasetRequest extends TeaModel {
 
     public static class CreateDatasetRequestDatasetConfigSearchSourceConfigsSearchSourceResponseConfigJqNodesJqNodesJqNodes extends TeaModel {
         /**
+         * <p>The node key.</p>
+         * 
          * <strong>example:</strong>
          * <p>title</p>
          */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The node path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>节点路径</p>
+         */
         @NameInMap("Path")
         public String path;
 
         /**
+         * <p>The type.</p>
+         * 
          * <strong>example:</strong>
          * <p>string</p>
          */
@@ -498,20 +604,33 @@ public class CreateDatasetRequest extends TeaModel {
     }
 
     public static class CreateDatasetRequestDatasetConfigSearchSourceConfigsSearchSourceResponseConfigJqNodesJqNodes extends TeaModel {
+        /**
+         * <p>Child node configuration.</p>
+         */
         @NameInMap("JqNodes")
         public java.util.List<CreateDatasetRequestDatasetConfigSearchSourceConfigsSearchSourceResponseConfigJqNodesJqNodesJqNodes> jqNodes;
 
         /**
+         * <p>The node key.</p>
+         * 
          * <strong>example:</strong>
          * <p>title</p>
          */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>节点路径</p>
+         */
         @NameInMap("Path")
         public String path;
 
         /**
+         * <p>The type.</p>
+         * 
          * <strong>example:</strong>
          * <p>string</p>
          */
@@ -558,10 +677,15 @@ public class CreateDatasetRequest extends TeaModel {
     }
 
     public static class CreateDatasetRequestDatasetConfigSearchSourceConfigsSearchSourceResponseConfigJqNodes extends TeaModel {
+        /**
+         * <p>Child node configuration.</p>
+         */
         @NameInMap("JqNodes")
         public java.util.List<CreateDatasetRequestDatasetConfigSearchSourceConfigsSearchSourceResponseConfigJqNodesJqNodes> jqNodes;
 
         /**
+         * <p>The node key.</p>
+         * 
          * <strong>example:</strong>
          * <p>节点key</p>
          */
@@ -569,6 +693,8 @@ public class CreateDatasetRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The node path.</p>
+         * 
          * <strong>example:</strong>
          * <p>节点路径</p>
          */
@@ -576,6 +702,8 @@ public class CreateDatasetRequest extends TeaModel {
         public String path;
 
         /**
+         * <p>The data type of the node. Valid values: string, number, list, object, and base.</p>
+         * 
          * <strong>example:</strong>
          * <p>节点数据类型：string number list object base</p>
          */
@@ -622,6 +750,9 @@ public class CreateDatasetRequest extends TeaModel {
     }
 
     public static class CreateDatasetRequestDatasetConfigSearchSourceConfigsSearchSourceResponseConfig extends TeaModel {
+        /**
+         * <p>Node configuration.</p>
+         */
         @NameInMap("JqNodes")
         public java.util.List<CreateDatasetRequestDatasetConfigSearchSourceConfigsSearchSourceResponseConfigJqNodes> jqNodes;
 
@@ -642,19 +773,29 @@ public class CreateDatasetRequest extends TeaModel {
 
     public static class CreateDatasetRequestDatasetConfigSearchSourceConfigs extends TeaModel {
         /**
+         * <p>A searchable keyword used to verify availability.</p>
+         * 
          * <strong>example:</strong>
          * <p>可以搜索到的关键词，用来验证是否可用</p>
          */
         @NameInMap("DemoQuery")
         public String demoQuery;
 
+        /**
+         * <p>API request configuration.</p>
+         */
         @NameInMap("SearchSourceRequestConfig")
         public CreateDatasetRequestDatasetConfigSearchSourceConfigsSearchSourceRequestConfig searchSourceRequestConfig;
 
+        /**
+         * <p>API response configuration.</p>
+         */
         @NameInMap("SearchSourceResponseConfig")
         public CreateDatasetRequestDatasetConfigSearchSourceConfigsSearchSourceResponseConfig searchSourceResponseConfig;
 
         /**
+         * <p>The default limit on the number of data entries for requests and responses.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -701,9 +842,15 @@ public class CreateDatasetRequest extends TeaModel {
     }
 
     public static class CreateDatasetRequestDatasetConfig extends TeaModel {
+        /**
+         * <p>Dataset configuration items.</p>
+         */
         @NameInMap("SearchSourceConfig")
         public CreateDatasetRequestDatasetConfigSearchSourceConfig searchSourceConfig;
 
+        /**
+         * <p>Third-party search: API definition.</p>
+         */
         @NameInMap("SearchSourceConfigs")
         public java.util.List<CreateDatasetRequestDatasetConfigSearchSourceConfigs> searchSourceConfigs;
 
@@ -732,6 +879,14 @@ public class CreateDatasetRequest extends TeaModel {
 
     public static class CreateDatasetRequestDocumentHandleConfig extends TeaModel {
         /**
+         * <p>Disables the processing logic for multimedia files.</p>
+         * <ul>
+         * <li><p>true: Disables multimodal (image and video) indexing. Only text is indexed and searched.</p>
+         * </li>
+         * <li><p>false: Enables multimodal (text, image, and video) indexing. This setting takes effect only after you activate ApsaraVideo and grant authorization in system administration. If you set this to false but authorization is not granted, image and video indexing is automatically skipped. This is the default value.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */

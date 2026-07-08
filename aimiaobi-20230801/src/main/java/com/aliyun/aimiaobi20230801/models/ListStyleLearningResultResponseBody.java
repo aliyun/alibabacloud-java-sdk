@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListStyleLearningResultResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
@@ -12,16 +14,23 @@ public class ListStyleLearningResultResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Page number</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("Current")
     public Integer current;
 
+    /**
+     * <p>List of style learning analysis results</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListStyleLearningResultResponseBodyData> data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class ListStyleLearningResultResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -36,6 +47,8 @@ public class ListStyleLearningResultResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Unique request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -43,6 +56,8 @@ public class ListStyleLearningResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Number of items per page</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -50,6 +65,8 @@ public class ListStyleLearningResultResponseBody extends TeaModel {
     public Integer size;
 
     /**
+     * <p>Indicates success. Returns true on success and false on failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -57,6 +74,8 @@ public class ListStyleLearningResultResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Total number of items</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -142,6 +161,8 @@ public class ListStyleLearningResultResponseBody extends TeaModel {
 
     public static class ListStyleLearningResultResponseBodyData extends TeaModel {
         /**
+         * <p>AIGC-generated content</p>
+         * 
          * <strong>example:</strong>
          * <p>AIGC 生成的内容</p>
          */
@@ -149,6 +170,8 @@ public class ListStyleLearningResultResponseBody extends TeaModel {
         public String aigcResult;
 
         /**
+         * <p>ID of the style learning analysis result</p>
+         * 
          * <strong>example:</strong>
          * <p>70</p>
          */
@@ -156,6 +179,8 @@ public class ListStyleLearningResultResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>Revised content</p>
+         * 
          * <strong>example:</strong>
          * <p>用户修订后内容</p>
          */
@@ -163,6 +188,8 @@ public class ListStyleLearningResultResponseBody extends TeaModel {
         public String rewriteResult;
 
         /**
+         * <p>Style name</p>
+         * 
          * <strong>example:</strong>
          * <p>文体风格名称</p>
          */
@@ -170,6 +197,8 @@ public class ListStyleLearningResultResponseBody extends TeaModel {
         public String styleName;
 
         /**
+         * <p>Task ID used for style analysis</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetAuditNoteProcessingStatusResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>DataNotExists</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Response data</p>
+     */
     @NameInMap("Data")
     public GetAuditNoteProcessingStatusResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetAuditNoteProcessingStatusResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,7 +38,7 @@ public class GetAuditNoteProcessingStatusResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>Request ID</p>
      * 
      * <strong>example:</strong>
      * <p>F2F366D6-E9FE-1006-BB70-2C650896AAB5</p>
@@ -38,6 +47,8 @@ public class GetAuditNoteProcessingStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +110,8 @@ public class GetAuditNoteProcessingStatusResponseBody extends TeaModel {
 
     public static class GetAuditNoteProcessingStatusResponseBodyData extends TeaModel {
         /**
+         * <p>OSS path where the parsed rule library is stored</p>
+         * 
          * <strong>example:</strong>
          * <p>oss://default/path/to/audit/note</p>
          */
@@ -106,6 +119,8 @@ public class GetAuditNoteProcessingStatusResponseBody extends TeaModel {
         public String fileKey;
 
         /**
+         * <p>Size of the rule library file, in bytes</p>
+         * 
          * <strong>example:</strong>
          * <p>504</p>
          */
@@ -113,6 +128,8 @@ public class GetAuditNoteProcessingStatusResponseBody extends TeaModel {
         public Long fileSize;
 
         /**
+         * <p>Name of the parsed rule library</p>
+         * 
          * <strong>example:</strong>
          * <p>错题本2025-07-07_解析结果</p>
          */
@@ -120,6 +137,8 @@ public class GetAuditNoteProcessingStatusResponseBody extends TeaModel {
         public String noteName;
 
         /**
+         * <p>Task status. Valid values: PENDING, RUNNING, SUCCESSED, or FAILED</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESSED</p>
          */
@@ -127,6 +146,8 @@ public class GetAuditNoteProcessingStatusResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>Task ID. Unique identifier for this task.</p>
+         * 
          * <strong>example:</strong>
          * <p>111_Default_20250708142918</p>
          */
@@ -134,6 +155,8 @@ public class GetAuditNoteProcessingStatusResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>Update time</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-11-25 11:40:50</p>
          */

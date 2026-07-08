@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDataPermissionsRequest extends TeaModel {
     /**
+     * <p>A unique identifier for the permission.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateDataPermissionsRequest extends TeaModel {
     public String dataId;
 
     /**
+     * <p>The permission type. Currently, only \<code>dataset\\</code> is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,12 +25,14 @@ public class CreateDataPermissionsRequest extends TeaModel {
     public String dataType;
 
     /**
+     * <p>The users to whom you want to assign permissions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("PermissionUserInfos")
     public java.util.List<CreateDataPermissionsRequestPermissionUserInfos> permissionUserInfos;
 
     /**
+     * <p>The unique identifier of the Alibaba Cloud Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2587495.html">Get workspaceId</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -76,6 +80,13 @@ public class CreateDataPermissionsRequest extends TeaModel {
 
     public static class CreateDataPermissionsRequestPermissionUserInfos extends TeaModel {
         /**
+         * <p>The user ID.</p>
+         * <ul>
+         * <li><p>For a RAM user: The ID of the RAM user.</p>
+         * </li>
+         * <li><p>For a role user: The user identity in the format AssumedRoleUser${roleId}.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -85,6 +96,8 @@ public class CreateDataPermissionsRequest extends TeaModel {
         public String permissionUserId;
 
         /**
+         * <p>The username.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */

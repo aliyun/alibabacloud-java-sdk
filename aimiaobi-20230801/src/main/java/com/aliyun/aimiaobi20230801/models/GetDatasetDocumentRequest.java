@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetDatasetDocumentRequest extends TeaModel {
     /**
+     * <p>Unique identifier of the dataset.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class GetDatasetDocumentRequest extends TeaModel {
     public Long datasetId;
 
     /**
+     * <p>Name of the dataset.</p>
+     * 
      * <strong>example:</strong>
      * <p>数据集名称</p>
      */
@@ -19,6 +23,8 @@ public class GetDatasetDocumentRequest extends TeaModel {
     public String datasetName;
 
     /**
+     * <p>User-defined unique ID of the document.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -26,16 +32,22 @@ public class GetDatasetDocumentRequest extends TeaModel {
     public String docId;
 
     /**
+     * <p>Internal unique identifier of the document.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
     @NameInMap("DocUuid")
     public String docUuid;
 
+    /**
+     * <p>List of fields to include in the response.</p>
+     */
     @NameInMap("IncludeFields")
     public java.util.List<String> includeFields;
 
     /**
+     * <p>Unique identifier of your Alibaba Cloud Model Studio workspace. <a href="https://help.aliyun.com/document_detail/2782167.html">Get the workspace ID</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

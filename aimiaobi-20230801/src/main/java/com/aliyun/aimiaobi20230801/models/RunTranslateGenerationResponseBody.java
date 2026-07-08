@@ -4,13 +4,21 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunTranslateGenerationResponseBody extends TeaModel {
+    /**
+     * <p>Response header</p>
+     */
     @NameInMap("Header")
     public RunTranslateGenerationResponseBodyHeader header;
 
+    /**
+     * <p>Response body</p>
+     */
     @NameInMap("Payload")
     public RunTranslateGenerationResponseBodyPayload payload;
 
     /**
+     * <p>The unique request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DA021073-17CE-5CCF-9FEB-93226C766887</p>
      */
@@ -48,6 +56,8 @@ public class RunTranslateGenerationResponseBody extends TeaModel {
 
     public static class RunTranslateGenerationResponseBodyHeader extends TeaModel {
         /**
+         * <p>The error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>AccessForbid</p>
          */
@@ -55,6 +65,8 @@ public class RunTranslateGenerationResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -62,6 +74,8 @@ public class RunTranslateGenerationResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The Server-Sent Events (SSE) event.</p>
+         * 
          * <strong>example:</strong>
          * <p>task-failed</p>
          */
@@ -69,6 +83,8 @@ public class RunTranslateGenerationResponseBody extends TeaModel {
         public String event;
 
         /**
+         * <p>The session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>91C2B2B8-7D12-4A8D-A724-1E576D30C096</p>
          */
@@ -76,6 +92,8 @@ public class RunTranslateGenerationResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
@@ -83,6 +101,8 @@ public class RunTranslateGenerationResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The trace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>0abb781d17146157564845243e20b5</p>
          */
@@ -146,6 +166,8 @@ public class RunTranslateGenerationResponseBody extends TeaModel {
 
     public static class RunTranslateGenerationResponseBodyPayloadOutput extends TeaModel {
         /**
+         * <p>The text generation result.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -169,6 +191,8 @@ public class RunTranslateGenerationResponseBody extends TeaModel {
 
     public static class RunTranslateGenerationResponseBodyPayloadUsage extends TeaModel {
         /**
+         * <p>The number of tokens used for the input.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -176,6 +200,8 @@ public class RunTranslateGenerationResponseBody extends TeaModel {
         public Long inputTokens;
 
         /**
+         * <p>The number of tokens used for the output.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -183,6 +209,8 @@ public class RunTranslateGenerationResponseBody extends TeaModel {
         public Long outputTokens;
 
         /**
+         * <p>The total number of tokens used in the call.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -221,9 +249,15 @@ public class RunTranslateGenerationResponseBody extends TeaModel {
     }
 
     public static class RunTranslateGenerationResponseBodyPayload extends TeaModel {
+        /**
+         * <p>Output data</p>
+         */
         @NameInMap("Output")
         public RunTranslateGenerationResponseBodyPayloadOutput output;
 
+        /**
+         * <p>Token usage information</p>
+         */
         @NameInMap("Usage")
         public RunTranslateGenerationResponseBodyPayloadUsage usage;
 

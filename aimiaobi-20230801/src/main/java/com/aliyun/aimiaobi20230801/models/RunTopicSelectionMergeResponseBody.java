@@ -5,19 +5,29 @@ import com.aliyun.tea.*;
 
 public class RunTopicSelectionMergeResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the response packet is complete</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("End")
     public Boolean end;
 
+    /**
+     * <p>Response header</p>
+     */
     @NameInMap("Header")
     public RunTopicSelectionMergeResponseBodyHeader header;
 
+    /**
+     * <p>Response body</p>
+     */
     @NameInMap("Payload")
     public RunTopicSelectionMergeResponseBodyPayload payload;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */
@@ -63,6 +73,8 @@ public class RunTopicSelectionMergeResponseBody extends TeaModel {
 
     public static class RunTopicSelectionMergeResponseBodyHeader extends TeaModel {
         /**
+         * <p>Error code</p>
+         * 
          * <strong>example:</strong>
          * <p>错误码</p>
          */
@@ -70,6 +82,8 @@ public class RunTopicSelectionMergeResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>Error message</p>
+         * 
          * <strong>example:</strong>
          * <p>错误信息</p>
          */
@@ -77,6 +91,8 @@ public class RunTopicSelectionMergeResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>SSE event. Values: task-started, task-finished, or task-failed</p>
+         * 
          * <strong>example:</strong>
          * <p>task-started</p>
          */
@@ -84,6 +100,8 @@ public class RunTopicSelectionMergeResponseBody extends TeaModel {
         public String event;
 
         /**
+         * <p>Parent session ID</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
@@ -91,6 +109,8 @@ public class RunTopicSelectionMergeResponseBody extends TeaModel {
         public String originSessionId;
 
         /**
+         * <p>Session ID</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
@@ -98,6 +118,8 @@ public class RunTopicSelectionMergeResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>HTTP status code</p>
+         * 
          * <strong>example:</strong>
          * <p>400</p>
          */
@@ -105,6 +127,8 @@ public class RunTopicSelectionMergeResponseBody extends TeaModel {
         public Integer statusCode;
 
         /**
+         * <p>Task ID</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
@@ -112,6 +136,8 @@ public class RunTopicSelectionMergeResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>End-to-end trace ID</p>
+         * 
          * <strong>example:</strong>
          * <p>全链路ID</p>
          */
@@ -191,12 +217,17 @@ public class RunTopicSelectionMergeResponseBody extends TeaModel {
 
     public static class RunTopicSelectionMergeResponseBodyPayloadOutput extends TeaModel {
         /**
+         * <p>Text generation result</p>
+         * 
          * <strong>example:</strong>
          * <p>文本生成结果</p>
          */
         @NameInMap("Text")
         public String text;
 
+        /**
+         * <p>Merged topic selection object</p>
+         */
         @NameInMap("Topic")
         public TopicSelection topic;
 
@@ -225,6 +256,8 @@ public class RunTopicSelectionMergeResponseBody extends TeaModel {
 
     public static class RunTopicSelectionMergeResponseBodyPayloadUsage extends TeaModel {
         /**
+         * <p>Number of input tokens</p>
+         * 
          * <strong>example:</strong>
          * <p>78</p>
          */
@@ -232,16 +265,23 @@ public class RunTopicSelectionMergeResponseBody extends TeaModel {
         public Long inputTokens;
 
         /**
+         * <p>Number of output tokens used</p>
+         * 
          * <strong>example:</strong>
          * <p>34</p>
          */
         @NameInMap("OutputTokens")
         public Long outputTokens;
 
+        /**
+         * <p>Detailed token consumption</p>
+         */
         @NameInMap("TokenMap")
         public java.util.Map<String, Long> tokenMap;
 
         /**
+         * <p>Total number of tokens used in this call</p>
+         * 
          * <strong>example:</strong>
          * <p>38</p>
          */
@@ -288,9 +328,15 @@ public class RunTopicSelectionMergeResponseBody extends TeaModel {
     }
 
     public static class RunTopicSelectionMergeResponseBodyPayload extends TeaModel {
+        /**
+         * <p>Output</p>
+         */
         @NameInMap("Output")
         public RunTopicSelectionMergeResponseBodyPayloadOutput output;
 
+        /**
+         * <p>Token usage</p>
+         */
         @NameInMap("Usage")
         public RunTopicSelectionMergeResponseBodyPayloadUsage usage;
 

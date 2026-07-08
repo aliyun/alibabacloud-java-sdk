@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetSmartAuditResultResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>DataNotExists</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The review result.</p>
+     */
     @NameInMap("Data")
     public GetSmartAuditResultResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>400</p>
      */
@@ -22,6 +29,8 @@ public class GetSmartAuditResultResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>错误消息</p>
      */
@@ -29,7 +38,7 @@ public class GetSmartAuditResultResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxxx</p>
@@ -38,6 +47,8 @@ public class GetSmartAuditResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -98,13 +109,27 @@ public class GetSmartAuditResultResponseBody extends TeaModel {
     }
 
     public static class GetSmartAuditResultResponseBodyDataErrorItemDetails extends TeaModel {
+        /**
+         * <p>The unique ID of the review item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>审核项唯一标识。</p>
+         */
         @NameInMap("CheckId")
         public String checkId;
 
+        /**
+         * <p>The original text segment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>原文片段</p>
+         */
         @NameInMap("Context")
         public String context;
 
         /**
+         * <p>The offset index of the incorrect word within the context.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -112,6 +137,8 @@ public class GetSmartAuditResultResponseBody extends TeaModel {
         public Integer contextOffset;
 
         /**
+         * <p>The error level. 1: critical, 2: warning, 3: notice, 4: suggestion.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -119,6 +146,8 @@ public class GetSmartAuditResultResponseBody extends TeaModel {
         public Integer errorLevel;
 
         /**
+         * <p>The incorrect word.</p>
+         * 
          * <strong>example:</strong>
          * <p>”xxx“</p>
          */
@@ -126,26 +155,44 @@ public class GetSmartAuditResultResponseBody extends TeaModel {
         public String errorWord;
 
         /**
+         * <p>The primary error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>ContentAccuracy</p>
          */
         @NameInMap("MajorCode")
         public String majorCode;
 
+        /**
+         * <p>The description of the primary error.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>内容准确性</p>
+         */
         @NameInMap("MajorCodeDesc")
         public String majorCodeDesc;
 
         /**
+         * <p>The offset index of the incorrect word in the full text.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("Offset")
         public Integer offset;
 
+        /**
+         * <p>The error description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>中文双引号应成对正确使用，先左双引号，后右双引号</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
         /**
+         * <p>The suggested correction.</p>
+         * 
          * <strong>example:</strong>
          * <p>“xxx”</p>
          */
@@ -153,15 +200,29 @@ public class GetSmartAuditResultResponseBody extends TeaModel {
         public String rightWord;
 
         /**
+         * <p>The sub-error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>PunctuationError</p>
          */
         @NameInMap("SubClassCode")
         public String subClassCode;
 
+        /**
+         * <p>The description of the sub-error.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>标点符号错误</p>
+         */
         @NameInMap("SubClassDesc")
         public String subClassDesc;
 
+        /**
+         * <p>In an image review scenario, this is the public URL of the image that triggered the review.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com/xxxx.jpg">http://www.example.com/xxxx.jpg</a></p>
+         */
         @NameInMap("Url")
         public String url;
 
@@ -277,13 +338,24 @@ public class GetSmartAuditResultResponseBody extends TeaModel {
     }
 
     public static class GetSmartAuditResultResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of review error details.</p>
+         */
         @NameInMap("ErrorItemDetails")
         public java.util.List<GetSmartAuditResultResponseBodyDataErrorItemDetails> errorItemDetails;
 
+        /**
+         * <p>If the final status is not SUCCESSED, read this error message to identify the fault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>审核被取消</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
+         * <p>The task execution status. Valid values: PENDING, RUNNING, SUCCESSED, SUSPENDED, FAILED, and CANCELLED.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESSED</p>
          */

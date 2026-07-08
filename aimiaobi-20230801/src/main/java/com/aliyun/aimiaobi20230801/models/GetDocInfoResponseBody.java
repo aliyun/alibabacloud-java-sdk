@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetDocInfoResponseBody extends TeaModel {
     /**
+     * <p>The internal error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public GetDocInfoResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetDocInfoResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +38,8 @@ public class GetDocInfoResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -36,6 +47,8 @@ public class GetDocInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. A value of <code>true</code> indicates success, and <code>false</code> indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -135,6 +148,8 @@ public class GetDocInfoResponseBody extends TeaModel {
 
     public static class GetDocInfoResponseBodyData extends TeaModel {
         /**
+         * <p>The category where the document is stored.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -142,6 +157,8 @@ public class GetDocInfoResponseBody extends TeaModel {
         public String categoryId;
 
         /**
+         * <p>The document name.</p>
+         * 
          * <strong>example:</strong>
          * <p>電視廣播2020年報</p>
          */
@@ -149,6 +166,8 @@ public class GetDocInfoResponseBody extends TeaModel {
         public String docName;
 
         /**
+         * <p>The document type.</p>
+         * 
          * <strong>example:</strong>
          * <p>pdf</p>
          */
@@ -156,6 +175,8 @@ public class GetDocInfoResponseBody extends TeaModel {
         public String docType;
 
         /**
+         * <p>The URL of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://xxx/xxx.pdf">http://xxx/xxx.pdf</a></p>
          */
@@ -166,19 +187,26 @@ public class GetDocInfoResponseBody extends TeaModel {
         public GetDocInfoResponseBodyDataPageInfo pageInfo;
 
         /**
+         * <p>The task status.</p>
+         * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>1和0，当状态为1时 表示获取文档成功，用户可进行生成文档摘要、生脑图等操作</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
+         * <p>The status message.</p>
+         * 
          * <strong>example:</strong>
          * <p>导入成功</p>
          */
         @NameInMap("StatusMessage")
         public String statusMessage;
 
+        /**
+         * <p>Text transcripts from the video\&quot;s audio.</p>
+         */
         @NameInMap("VideoContents")
         public java.util.List<String> videoContents;
 

@@ -4,13 +4,21 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
+    /**
+     * <p>The list of articles.</p>
+     */
     @NameInMap("Articles")
     public java.util.List<ListSearchTaskDialogueDatasResponseBodyArticles> articles;
 
+    /**
+     * <p>The list of audio files.</p>
+     */
     @NameInMap("Audios")
     public java.util.List<ListSearchTaskDialogueDatasResponseBodyAudios> audios;
 
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
@@ -18,16 +26,23 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The list of images.</p>
+     */
     @NameInMap("Images")
     public java.util.List<ListSearchTaskDialogueDatasResponseBodyImages> images;
 
     /**
+     * <p>The error description.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -35,6 +50,8 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -42,6 +59,8 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of records on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -49,6 +68,8 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Indicates whether real-time search is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -56,6 +77,8 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
     public Boolean realtimeSearch;
 
     /**
+     * <p>The unique identifier of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -63,6 +86,8 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The search type.</p>
+     * 
      * <strong>example:</strong>
      * <p>realtime</p>
      */
@@ -70,6 +95,8 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
     public String searchType;
 
     /**
+     * <p>Indicates whether the request was successful. A value of true indicates success, and a value of false indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -77,12 +104,17 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The list of videos.</p>
+     */
     @NameInMap("Videos")
     public java.util.List<ListSearchTaskDialogueDatasResponseBodyVideos> videos;
 
@@ -205,6 +237,8 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
 
     public static class ListSearchTaskDialogueDatasResponseBodyArticlesMultimodalMedias extends TeaModel {
         /**
+         * <p>The URL of the image or video file.</p>
+         * 
          * <strong>example:</strong>
          * <p>图片或视频文件地址</p>
          */
@@ -212,6 +246,8 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
         public String fileUrl;
 
         /**
+         * <p>The unique identifier of the multi-modal data.</p>
+         * 
          * <strong>example:</strong>
          * <p>多模态数据唯一标识</p>
          */
@@ -219,6 +255,8 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
         public String mediaId;
 
         /**
+         * <p>The type of the multi-modal data.</p>
+         * 
          * <strong>example:</strong>
          * <p>多模态数据类型</p>
          */
@@ -258,6 +296,8 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
 
     public static class ListSearchTaskDialogueDatasResponseBodyArticles extends TeaModel {
         /**
+         * <p>The author.</p>
+         * 
          * <strong>example:</strong>
          * <p>作者</p>
          */
@@ -265,6 +305,8 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
         public String author;
 
         /**
+         * <p>The unique identifier of the category.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -272,6 +314,8 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
         public String categoryUuid;
 
         /**
+         * <p>The content.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章内容</p>
          */
@@ -279,6 +323,8 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>The custom unique ID of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>文档-自定义的唯一ID</p>
          */
@@ -286,6 +332,8 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
         public String docId;
 
         /**
+         * <p>The document type.</p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */
@@ -293,6 +341,8 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
         public String docType;
 
         /**
+         * <p>The internal unique identifier of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -300,6 +350,8 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
         public String docUuid;
 
         /**
+         * <p>Extension field 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -307,6 +359,8 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
         public String extend1;
 
         /**
+         * <p>Extension field 2.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -314,16 +368,23 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
         public String extend2;
 
         /**
+         * <p>Extension field 3.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
         @NameInMap("Extend3")
         public String extend3;
 
+        /**
+         * <p>The multi-modal information.</p>
+         */
         @NameInMap("MultimodalMedias")
         public java.util.List<ListSearchTaskDialogueDatasResponseBodyArticlesMultimodalMedias> multimodalMedias;
 
         /**
+         * <p>The publication time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-11-25 14:25:59</p>
          */
@@ -331,6 +392,8 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
         public String pubTime;
 
         /**
+         * <p>The source.</p>
+         * 
          * <strong>example:</strong>
          * <p>新华社</p>
          */
@@ -338,6 +401,8 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
         public String source;
 
         /**
+         * <p>The summary of the article.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章摘要</p>
          */
@@ -345,6 +410,8 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
         public String summary;
 
         /**
+         * <p>The title.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章标题</p>
          */
@@ -352,6 +419,8 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>The URL of the article.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://www.example.com/aaa.docx">https://www.example.com/aaa.docx</a></p>
          */
@@ -487,6 +556,8 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
 
     public static class ListSearchTaskDialogueDatasResponseBodyAudios extends TeaModel {
         /**
+         * <p>The URL of the image or video file.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://xxx">http://xxx</a></p>
          */
@@ -494,6 +565,8 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
         public String fileUrl;
 
         /**
+         * <p>The unique identifier of the multi-modal data.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxx</p>
          */
@@ -525,6 +598,8 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
 
     public static class ListSearchTaskDialogueDatasResponseBodyImages extends TeaModel {
         /**
+         * <p>The URL of the image or video file.</p>
+         * 
          * <strong>example:</strong>
          * <p>图片或视频文件地址</p>
          */
@@ -532,6 +607,8 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
         public String fileUrl;
 
         /**
+         * <p>The unique identifier of the multi-modal data.</p>
+         * 
          * <strong>example:</strong>
          * <p>多模态数据唯一标识</p>
          */
@@ -539,6 +616,8 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
         public String mediaId;
 
         /**
+         * <p>The type of the multi-modal data.</p>
+         * 
          * <strong>example:</strong>
          * <p>多模态数据类型</p>
          */
@@ -578,6 +657,8 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
 
     public static class ListSearchTaskDialogueDatasResponseBodyVideos extends TeaModel {
         /**
+         * <p>The URL of the image or video file.</p>
+         * 
          * <strong>example:</strong>
          * <p>图片或视频文件地址</p>
          */
@@ -585,6 +666,8 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
         public String fileUrl;
 
         /**
+         * <p>The unique identifier of the multi-modal data.</p>
+         * 
          * <strong>example:</strong>
          * <p>多模态数据唯一标识</p>
          */
@@ -592,6 +675,8 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
         public String mediaId;
 
         /**
+         * <p>The type of the multi-modal data.</p>
+         * 
          * <strong>example:</strong>
          * <p>多模态数据类型</p>
          */

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListDocsResponseBody extends TeaModel {
     /**
+     * <p>Return code.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>List of returned data results.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListDocsResponseBodyData> data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListDocsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Maximum number of results returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -29,6 +38,8 @@ public class ListDocsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Return message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -36,6 +47,8 @@ public class ListDocsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Next page token.</p>
+     * 
      * <strong>example:</strong>
      * <p>CAESGgoSChAKDGNvbXBsZXRlVGltZRABCgQiAggAGAAiQAoJANEQ4mYAAAAACjMDLgAAADFTNzMyZDMwMzAzMDM4NzA3MjZjN2E2NDYyNzUzODMxMzY3ODM0NmIzNTZkNjc=</p>
      */
@@ -43,6 +56,8 @@ public class ListDocsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -50,6 +65,8 @@ public class ListDocsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -57,6 +74,8 @@ public class ListDocsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>70</p>
      */
@@ -142,6 +161,8 @@ public class ListDocsResponseBody extends TeaModel {
 
     public static class ListDocsResponseBodyData extends TeaModel {
         /**
+         * <p>Document folder.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -149,6 +170,8 @@ public class ListDocsResponseBody extends TeaModel {
         public String categoryId;
 
         /**
+         * <p>Creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-04 11:46:07</p>
          */
@@ -156,16 +179,26 @@ public class ListDocsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>Document ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>12345</p>
          */
         @NameInMap("DocId")
         public String docId;
 
+        /**
+         * <p>Document name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>标题093</p>
+         */
         @NameInMap("DocName")
         public String docName;
 
         /**
+         * <p>Document type.</p>
+         * 
          * <strong>example:</strong>
          * <p>pdf</p>
          */
@@ -173,12 +206,20 @@ public class ListDocsResponseBody extends TeaModel {
         public String docType;
 
         /**
+         * <p>Status.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>Status message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>导入完成</p>
+         */
         @NameInMap("StatusMessage")
         public String statusMessage;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RunWritingRequest extends TeaModel {
     /**
+     * <p>The ID of the original conversation to use for regeneration.</p>
+     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */
@@ -12,6 +14,7 @@ public class RunWritingRequest extends TeaModel {
     public String originSessionId;
 
     /**
+     * <p>The prompt.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,10 +23,15 @@ public class RunWritingRequest extends TeaModel {
     @NameInMap("Prompt")
     public String prompt;
 
+    /**
+     * <p>The reference article data for writing.</p>
+     */
     @NameInMap("ReferenceData")
     public RunWritingRequestReferenceData referenceData;
 
     /**
+     * <p>The ID of a single-turn conversation.</p>
+     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */
@@ -31,6 +39,11 @@ public class RunWritingRequest extends TeaModel {
     public String sessionId;
 
     /**
+     * <p>The ID of the task. You can reuse the same task ID in a multi-turn conversation.</p>
+     * <blockquote>
+     * <p>You do not need to specify TaskId. The system generates one automatically. If you use the same TaskId for multiple tasks, they are grouped into a single conversation.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */
@@ -38,6 +51,7 @@ public class RunWritingRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The unique ID of the Alibaba Cloud Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Get a Workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +60,9 @@ public class RunWritingRequest extends TeaModel {
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
+    /**
+     * <p>The writing configuration.</p>
+     */
     @NameInMap("WritingConfig")
     public RunWritingRequestWritingConfig writingConfig;
 
@@ -112,6 +129,8 @@ public class RunWritingRequest extends TeaModel {
 
     public static class RunWritingRequestReferenceDataArticles extends TeaModel {
         /**
+         * <p>The author.</p>
+         * 
          * <strong>example:</strong>
          * <p>作者</p>
          */
@@ -119,6 +138,8 @@ public class RunWritingRequest extends TeaModel {
         public String author;
 
         /**
+         * <p>The content.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章内容</p>
          */
@@ -126,6 +147,8 @@ public class RunWritingRequest extends TeaModel {
         public String content;
 
         /**
+         * <p>The custom unique ID of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>文档-自定义的唯一ID</p>
          */
@@ -133,6 +156,8 @@ public class RunWritingRequest extends TeaModel {
         public String docId;
 
         /**
+         * <p>The internal unique ID of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>2124ca4d48a542d788aa86151e1a8c8b</p>
          */
@@ -140,6 +165,8 @@ public class RunWritingRequest extends TeaModel {
         public String docUuid;
 
         /**
+         * <p>The publication time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-08-28 11:38:28</p>
          */
@@ -147,6 +174,8 @@ public class RunWritingRequest extends TeaModel {
         public String pubTime;
 
         /**
+         * <p>The source.</p>
+         * 
          * <strong>example:</strong>
          * <p>央视网</p>
          */
@@ -154,6 +183,8 @@ public class RunWritingRequest extends TeaModel {
         public String source;
 
         /**
+         * <p>The article summary.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章摘要</p>
          */
@@ -161,6 +192,8 @@ public class RunWritingRequest extends TeaModel {
         public String summary;
 
         /**
+         * <p>The tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章标签</p>
          */
@@ -168,6 +201,8 @@ public class RunWritingRequest extends TeaModel {
         public String tag;
 
         /**
+         * <p>The title.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章标题</p>
          */
@@ -175,6 +210,8 @@ public class RunWritingRequest extends TeaModel {
         public String title;
 
         /**
+         * <p>The URL of the article.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://www.example.com/aaa.docx">https://www.example.com/aaa.docx</a></p>
          */
@@ -269,6 +306,9 @@ public class RunWritingRequest extends TeaModel {
     }
 
     public static class RunWritingRequestReferenceData extends TeaModel {
+        /**
+         * <p>The reference article data for writing.</p>
+         */
         @NameInMap("Articles")
         public java.util.List<RunWritingRequestReferenceDataArticles> articles;
 
@@ -289,6 +329,8 @@ public class RunWritingRequest extends TeaModel {
 
     public static class RunWritingRequestWritingConfigPromptTag extends TeaModel {
         /**
+         * <p>Necessary tips.</p>
+         * 
          * <strong>example:</strong>
          * <p>必要提示</p>
          */
@@ -296,6 +338,8 @@ public class RunWritingRequest extends TeaModel {
         public String necessaryTips;
 
         /**
+         * <p>The stance.</p>
+         * 
          * <strong>example:</strong>
          * <p>立场</p>
          */
@@ -303,6 +347,8 @@ public class RunWritingRequest extends TeaModel {
         public String position;
 
         /**
+         * <p>Negative keywords.</p>
+         * 
          * <strong>example:</strong>
          * <p>反向词</p>
          */
@@ -310,6 +356,8 @@ public class RunWritingRequest extends TeaModel {
         public String reverseWords;
 
         /**
+         * <p>The theme.</p>
+         * 
          * <strong>example:</strong>
          * <p>主题</p>
          */
@@ -357,6 +405,8 @@ public class RunWritingRequest extends TeaModel {
 
     public static class RunWritingRequestWritingConfigTags extends TeaModel {
         /**
+         * <p>The value of the option.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -364,6 +414,8 @@ public class RunWritingRequest extends TeaModel {
         public String keyword;
 
         /**
+         * <p>The tag of the option. Example: gcNumberSizeTag=10.</p>
+         * 
          * <strong>example:</strong>
          * <p>gcNumberSizeTag</p>
          */
@@ -395,19 +447,37 @@ public class RunWritingRequest extends TeaModel {
 
     public static class RunWritingRequestWritingConfig extends TeaModel {
         /**
+         * <p>The writing domain.</p>
+         * <ul>
+         * <li><p>media: Media</p>
+         * </li>
+         * <li><p>government: Government</p>
+         * </li>
+         * <li><p>market: Marketing</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>写作领域，media:传媒,government:政务,market:营销</p>
+         * <p>media</p>
          */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The prompt assistant.</p>
+         */
         @NameInMap("PromptTag")
         public RunWritingRequestWritingConfigPromptTag promptTag;
 
+        /**
+         * <p>Control parameters for writing, such as the style, length, and output language.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<RunWritingRequestWritingConfigTags> tags;
 
         /**
+         * <p>Specifies whether to automatically add reference materials.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

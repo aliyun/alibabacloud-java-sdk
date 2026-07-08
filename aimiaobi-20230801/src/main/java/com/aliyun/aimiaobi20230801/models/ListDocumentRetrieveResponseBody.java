@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDocumentRetrieveResponseBody extends TeaModel {
     /**
+     * <p>Status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -12,6 +14,8 @@ public class ListDocumentRetrieveResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Business data.</p>
+     * 
      * <strong>example:</strong>
      * <p>data</p>
      */
@@ -19,6 +23,8 @@ public class ListDocumentRetrieveResponseBody extends TeaModel {
     public java.util.List<ListDocumentRetrieveResponseBodyData> data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class ListDocumentRetrieveResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Maximum number of records returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>71</p>
      */
@@ -33,6 +41,8 @@ public class ListDocumentRetrieveResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -40,6 +50,8 @@ public class ListDocumentRetrieveResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Token for the next page.</p>
+     * 
      * <strong>example:</strong>
      * <p>cEoBWREAXdxaOyjq/cqAbg==</p>
      */
@@ -47,7 +59,7 @@ public class ListDocumentRetrieveResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>F2F366D6-E9FE-1006-BB70-2C650896AAB5</p>
@@ -56,6 +68,8 @@ public class ListDocumentRetrieveResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation succeeded. A value of true indicates success. A value of false indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -63,6 +77,8 @@ public class ListDocumentRetrieveResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Total count.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -148,6 +164,8 @@ public class ListDocumentRetrieveResponseBody extends TeaModel {
 
     public static class ListDocumentRetrieveResponseBodyData extends TeaModel {
         /**
+         * <p>Main text.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章正文</p>
          */
@@ -155,6 +173,8 @@ public class ListDocumentRetrieveResponseBody extends TeaModel {
         public String essay;
 
         /**
+         * <p>Issuing agency.</p>
+         * 
          * <strong>example:</strong>
          * <p>发布机构</p>
          */
@@ -162,6 +182,8 @@ public class ListDocumentRetrieveResponseBody extends TeaModel {
         public String issuingAuthority;
 
         /**
+         * <p>URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章链接</p>
          */
@@ -169,6 +191,8 @@ public class ListDocumentRetrieveResponseBody extends TeaModel {
         public String link;
 
         /**
+         * <p>Publication date.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-02-01</p>
          */
@@ -176,6 +200,8 @@ public class ListDocumentRetrieveResponseBody extends TeaModel {
         public String publicationDate;
 
         /**
+         * <p>Title.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章标题</p>
          */

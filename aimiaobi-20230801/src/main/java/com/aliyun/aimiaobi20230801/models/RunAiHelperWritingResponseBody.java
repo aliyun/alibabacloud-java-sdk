@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RunAiHelperWritingResponseBody extends TeaModel {
     /**
-     * <p>业务处理结果状态码</p>
+     * <p>The business status code.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -14,13 +14,13 @@ public class RunAiHelperWritingResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>流式响应的头部信息，包含事件类型、状态码等元数据</p>
+     * <p>The Server-Sent Events (SSE) response header.</p>
      */
     @NameInMap("Header")
     public RunAiHelperWritingResponseBodyHeader header;
 
     /**
-     * <p>HTTP响应状态码</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class RunAiHelperWritingResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>业务处理结果描述信息</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -38,13 +38,13 @@ public class RunAiHelperWritingResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>包含写作输出内容和Token使用量统计</p>
+     * <p>The response payload.</p>
      */
     @NameInMap("Payload")
     public RunAiHelperWritingResponseBodyPayload payload;
 
     /**
-     * <p>本次API请求的唯一标识</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
@@ -53,7 +53,7 @@ public class RunAiHelperWritingResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>请求是否处理成功</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -124,7 +124,7 @@ public class RunAiHelperWritingResponseBody extends TeaModel {
 
     public static class RunAiHelperWritingResponseBodyHeader extends TeaModel {
         /**
-         * <p>请求错误时的错误码</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>InvalidParameter</p>
@@ -133,7 +133,7 @@ public class RunAiHelperWritingResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>请求错误时的详细错误信息</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>参数错误</p>
@@ -142,7 +142,7 @@ public class RunAiHelperWritingResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>SSE事件类型，如：result-generated(生成结果)、task-finished(任务完成)</p>
+         * <p>The event type.</p>
          * 
          * <strong>example:</strong>
          * <p>result-generated</p>
@@ -151,7 +151,7 @@ public class RunAiHelperWritingResponseBody extends TeaModel {
         public String event;
 
         /**
-         * <p>当前写作会话的唯一标识</p>
+         * <p>The session ID.</p>
          * 
          * <strong>example:</strong>
          * <p>session-xxxxx</p>
@@ -160,7 +160,7 @@ public class RunAiHelperWritingResponseBody extends TeaModel {
         public String sessionId;
 
         /**
-         * <p>HTTP状态码</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -169,7 +169,7 @@ public class RunAiHelperWritingResponseBody extends TeaModel {
         public Integer statusCode;
 
         /**
-         * <p>写作任务的唯一标识</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>task-xxxxx</p>
@@ -178,7 +178,7 @@ public class RunAiHelperWritingResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>用于问题排查的链路追踪标识</p>
+         * <p>Trace ID</p>
          * 
          * <strong>example:</strong>
          * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
@@ -251,7 +251,7 @@ public class RunAiHelperWritingResponseBody extends TeaModel {
 
     public static class RunAiHelperWritingResponseBodyPayloadOutput extends TeaModel {
         /**
-         * <p>AI生成的文章内容，流式返回时为增量文本</p>
+         * <p>The generated text.</p>
          * 
          * <strong>example:</strong>
          * <p>人工智能正在深刻改变我们的生活...</p>
@@ -260,7 +260,7 @@ public class RunAiHelperWritingResponseBody extends TeaModel {
         public String text;
 
         /**
-         * <p>返回的写作参数键值对</p>
+         * <p>The writing parameters for the AI-assisted writing.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;wordCount&quot;: &quot;1000&quot;}</p>
@@ -293,7 +293,7 @@ public class RunAiHelperWritingResponseBody extends TeaModel {
 
     public static class RunAiHelperWritingResponseBodyPayloadUsage extends TeaModel {
         /**
-         * <p>输入内容消耗的Token数量</p>
+         * <p>The number of input tokens.</p>
          * 
          * <strong>example:</strong>
          * <p>256</p>
@@ -302,7 +302,7 @@ public class RunAiHelperWritingResponseBody extends TeaModel {
         public Long inputTokens;
 
         /**
-         * <p>生成内容消耗的Token数量</p>
+         * <p>The number of output tokens.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>
@@ -311,7 +311,7 @@ public class RunAiHelperWritingResponseBody extends TeaModel {
         public Long outputTokens;
 
         /**
-         * <p>输入和输出Token的总和</p>
+         * <p>The total number of tokens.</p>
          * 
          * <strong>example:</strong>
          * <p>1280</p>
@@ -352,13 +352,13 @@ public class RunAiHelperWritingResponseBody extends TeaModel {
 
     public static class RunAiHelperWritingResponseBodyPayload extends TeaModel {
         /**
-         * <p>AI生成的写作内容</p>
+         * <p>The output content.</p>
          */
         @NameInMap("Output")
         public RunAiHelperWritingResponseBodyPayloadOutput output;
 
         /**
-         * <p>本次请求的Token消耗统计</p>
+         * <p>The token usage.</p>
          */
         @NameInMap("Usage")
         public RunAiHelperWritingResponseBodyPayloadUsage usage;

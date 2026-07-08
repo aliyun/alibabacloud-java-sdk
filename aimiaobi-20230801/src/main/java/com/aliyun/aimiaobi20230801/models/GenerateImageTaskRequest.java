@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GenerateImageTaskRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GenerateImageTaskRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The task ID of the article. If you do not have one, you can assign a universally unique identifier (UUID).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,12 +25,14 @@ public class GenerateImageTaskRequest extends TeaModel {
     public String articleTaskId;
 
     /**
+     * <p>The content of the paragraphs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ParagraphList")
     public java.util.List<GenerateImageTaskRequestParagraphList> paragraphList;
 
     /**
+     * <p>The size of the image to generate.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,10 +42,11 @@ public class GenerateImageTaskRequest extends TeaModel {
     public String size;
 
     /**
+     * <p>The style.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <auto>
+     * <p>\&quot;<auto>\&quot;</p>
      */
     @NameInMap("Style")
     public String style;
@@ -93,6 +98,7 @@ public class GenerateImageTaskRequest extends TeaModel {
 
     public static class GenerateImageTaskRequestParagraphList extends TeaModel {
         /**
+         * <p>The content of the paragraph.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +108,7 @@ public class GenerateImageTaskRequest extends TeaModel {
         public String content;
 
         /**
+         * <p>The paragraph ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,6 +118,11 @@ public class GenerateImageTaskRequest extends TeaModel {
         public Long id;
 
         /**
+         * <p>The unique ID of the task.</p>
+         * <blockquote>
+         * <p>By default, you do not need to specify this parameter. The system automatically generates a task ID. If you specify the same TaskId for subsequent tasks, these tasks are considered part of the same conversation group.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>e1be065b-adc3-435e-bd01-1c18c5ed75d3</p>
          */
@@ -118,6 +130,22 @@ public class GenerateImageTaskRequest extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The current status of the task.</p>
+         * <ul>
+         * <li><p>PENDING: The task is in the queue.</p>
+         * </li>
+         * <li><p>RUNNING: The task is in progress.</p>
+         * </li>
+         * <li><p>SUSPENDED: The task is suspended.</p>
+         * </li>
+         * <li><p>SUCCEEDED: The task was successful.</p>
+         * </li>
+         * <li><p>FAILED: The task failed.</p>
+         * </li>
+         * <li><p>UNKNOWN: The task does not exist or its status is unknown.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESSED</p>
          */

@@ -5,16 +5,25 @@ import com.aliyun.tea.*;
 
 public class ListWritingStylesRequest extends TeaModel {
     /**
+     * <p>The maximum number of results to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>Pagination token</p>
+     * 
+     * <strong>example:</strong>
+     * <p>下一页token</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
+     * <p>Filters by writing scenario.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +33,7 @@ public class ListWritingStylesRequest extends TeaModel {
     public String scene;
 
     /**
+     * <p><a href="https://help.aliyun.com/document_detail/2782167.html">The workspace ID.</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

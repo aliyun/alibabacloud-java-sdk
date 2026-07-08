@@ -12,6 +12,8 @@ public class GetPptInfoRequest extends TeaModel {
     public String externalUserId;
 
     /**
+     * <p>The ID of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>1f178f22-ec52-467d-8489-eef4468x0240</p>
      */
@@ -19,6 +21,8 @@ public class GetPptInfoRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The ID of the workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm-2setzb9xb8mx6vss</p>
      */

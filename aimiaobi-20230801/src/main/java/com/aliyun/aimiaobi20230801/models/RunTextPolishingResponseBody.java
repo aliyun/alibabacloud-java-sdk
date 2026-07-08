@@ -4,13 +4,21 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunTextPolishingResponseBody extends TeaModel {
+    /**
+     * <p>Response header.</p>
+     */
     @NameInMap("Header")
     public RunTextPolishingResponseBodyHeader header;
 
+    /**
+     * <p>Response body.</p>
+     */
     @NameInMap("Payload")
     public RunTextPolishingResponseBodyPayload payload;
 
     /**
+     * <p>Unique request identifier.</p>
+     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */
@@ -48,6 +56,8 @@ public class RunTextPolishingResponseBody extends TeaModel {
 
     public static class RunTextPolishingResponseBodyHeader extends TeaModel {
         /**
+         * <p>Error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>错误码</p>
          */
@@ -55,6 +65,8 @@ public class RunTextPolishingResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>Error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>错误信息</p>
          */
@@ -62,6 +74,8 @@ public class RunTextPolishingResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The SSE event. \<code>task-started\\</code>: started. \<code>task-finished\\</code>: finished. \<code>task-failed\\</code>: failed.</p>
+         * 
          * <strong>example:</strong>
          * <p>task-started</p>
          */
@@ -69,6 +83,8 @@ public class RunTextPolishingResponseBody extends TeaModel {
         public String event;
 
         /**
+         * <p>Parent session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
@@ -76,6 +92,8 @@ public class RunTextPolishingResponseBody extends TeaModel {
         public String originSessionId;
 
         /**
+         * <p>Session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
@@ -83,6 +101,8 @@ public class RunTextPolishingResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>Task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
@@ -90,6 +110,8 @@ public class RunTextPolishingResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>End-to-end trace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>全链路ID</p>
          */
@@ -161,6 +183,8 @@ public class RunTextPolishingResponseBody extends TeaModel {
 
     public static class RunTextPolishingResponseBodyPayloadOutput extends TeaModel {
         /**
+         * <p>Text generation result.</p>
+         * 
          * <strong>example:</strong>
          * <p>文本生成结果</p>
          */
@@ -184,6 +208,8 @@ public class RunTextPolishingResponseBody extends TeaModel {
 
     public static class RunTextPolishingResponseBodyPayloadUsage extends TeaModel {
         /**
+         * <p>Number of tokens used for input.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -191,6 +217,8 @@ public class RunTextPolishingResponseBody extends TeaModel {
         public Long inputTokens;
 
         /**
+         * <p>Number of tokens used for output.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -198,6 +226,8 @@ public class RunTextPolishingResponseBody extends TeaModel {
         public Long outputTokens;
 
         /**
+         * <p>Total number of tokens used for this call.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -236,9 +266,15 @@ public class RunTextPolishingResponseBody extends TeaModel {
     }
 
     public static class RunTextPolishingResponseBodyPayload extends TeaModel {
+        /**
+         * <p>Output.</p>
+         */
         @NameInMap("Output")
         public RunTextPolishingResponseBodyPayloadOutput output;
 
+        /**
+         * <p>Token consumption.</p>
+         */
         @NameInMap("Usage")
         public RunTextPolishingResponseBodyPayloadUsage usage;
 

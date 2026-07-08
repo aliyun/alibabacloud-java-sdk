@@ -5,33 +5,50 @@ import com.aliyun.tea.*;
 
 public class ListAsyncTasksResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
-     * <p>200</p>
+     * <p>successful</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
+     * <p>The current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("Current")
     public Integer current;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListAsyncTasksResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The error description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>428DCC0D-3C63-5306-BD1B-124396AB97BE</p>
      */
@@ -39,6 +56,8 @@ public class ListAsyncTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The number of records per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -46,6 +65,8 @@ public class ListAsyncTasksResponseBody extends TeaModel {
     public Integer size;
 
     /**
+     * <p>Indicates whether the request was successful. true: The request was successful. false: The request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -53,6 +74,8 @@ public class ListAsyncTasksResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -138,6 +161,8 @@ public class ListAsyncTasksResponseBody extends TeaModel {
 
     public static class ListAsyncTasksResponseBodyData extends TeaModel {
         /**
+         * <p>The creation date.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-12-23 15:41:58</p>
          */
@@ -145,6 +170,8 @@ public class ListAsyncTasksResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>1111</p>
          */
@@ -152,6 +179,8 @@ public class ListAsyncTasksResponseBody extends TeaModel {
         public String createUser;
 
         /**
+         * <p>The primary key ID of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -159,6 +188,8 @@ public class ListAsyncTasksResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The task identifier, which specifies the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>MaterialDocumentUpload</p>
          */
@@ -166,6 +197,8 @@ public class ListAsyncTasksResponseBody extends TeaModel {
         public String taskCode;
 
         /**
+         * <p>The optional task definition configuration in JSON format. These parameters overwrite the system\&quot;s default configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -173,16 +206,26 @@ public class ListAsyncTasksResponseBody extends TeaModel {
         public String taskDefinition;
 
         /**
+         * <p>The actual end time of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-09 00:00:00</p>
          */
         @NameInMap("TaskEndTime")
         public String taskEndTime;
 
+        /**
+         * <p>The error message from the task execution for the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>系统内部错误</p>
+         */
         @NameInMap("TaskErrorMessage")
         public String taskErrorMessage;
 
         /**
+         * <p>The time when the task is scheduled to run. The system polls only for tasks that are due. If this parameter is empty, the task runs immediately.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-10-14 14:30:00</p>
          */
@@ -190,26 +233,44 @@ public class ListAsyncTasksResponseBody extends TeaModel {
         public String taskExecuteTime;
 
         /**
+         * <p>The unique task ID. It is equivalent to the Id parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The internal error message from the task execution. Sensitive information, such as exception stacks and internal thread stacks, is recorded here.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>系统错误</p>
+         */
         @NameInMap("TaskInnerErrorMessage")
         public String taskInnerErrorMessage;
 
         /**
+         * <p>The intermediate result of the task execution. If a task consists of multiple steps, the output of each step can be saved here. When the task resumes from a paused state, it can read this intermediate result and continue execution.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
         @NameInMap("TaskIntermediateResult")
         public String taskIntermediateResult;
 
+        /**
+         * <p>The task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>任务名</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
         /**
+         * <p>The input parameters for the task execution, in JSON format.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -217,6 +278,8 @@ public class ListAsyncTasksResponseBody extends TeaModel {
         public String taskParam;
 
         /**
+         * <p>The progress information of the task execution.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -224,6 +287,8 @@ public class ListAsyncTasksResponseBody extends TeaModel {
         public String taskProgressMessage;
 
         /**
+         * <p>The result information of the task execution.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -231,6 +296,8 @@ public class ListAsyncTasksResponseBody extends TeaModel {
         public String taskResult;
 
         /**
+         * <p>The number of times the task has been retried.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -238,6 +305,8 @@ public class ListAsyncTasksResponseBody extends TeaModel {
         public String taskRetryCount;
 
         /**
+         * <p>The actual start time of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-20 10:53:00</p>
          */
@@ -245,6 +314,8 @@ public class ListAsyncTasksResponseBody extends TeaModel {
         public String taskStartTime;
 
         /**
+         * <p>The execution status of the task. Valid values: 0 (Pending), 1 (Running), 2 (Succeeded), 3 (Paused), 4 (Failed and retriable), 5 (Failed and not retriable), 6 (Canceled).</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -252,6 +323,8 @@ public class ListAsyncTasksResponseBody extends TeaModel {
         public Integer taskStatus;
 
         /**
+         * <p>The task categories. Multiple categories are separated by commas.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -259,6 +332,8 @@ public class ListAsyncTasksResponseBody extends TeaModel {
         public String taskType;
 
         /**
+         * <p>The update date.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-02-16 10:29:16</p>
          */
@@ -266,6 +341,8 @@ public class ListAsyncTasksResponseBody extends TeaModel {
         public String updateTime;
 
         /**
+         * <p>The user who performed the update.</p>
+         * 
          * <strong>example:</strong>
          * <p>111</p>
          */

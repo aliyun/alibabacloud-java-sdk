@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetDataSourceOrderConfigResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
-     * <p>200</p>
+     * <p>successful</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business data</p>
+     */
     @NameInMap("Data")
     public GetDataSourceOrderConfigResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetDataSourceOrderConfigResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error description</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +38,8 @@ public class GetDataSourceOrderConfigResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Unique request identifier</p>
+     * 
      * <strong>example:</strong>
      * <p>428DCC0D-3C63-5306-BD1B-124396AB97BE</p>
      */
@@ -36,6 +47,8 @@ public class GetDataSourceOrderConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Is successful: true for success, false for failure</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,19 +110,32 @@ public class GetDataSourceOrderConfigResponseBody extends TeaModel {
 
     public static class GetDataSourceOrderConfigResponseBodyDataUserConfigDataSourceList extends TeaModel {
         /**
+         * <p>Code description</p>
+         * 
          * <strong>example:</strong>
          * <p>QuarkCommonNews</p>
          */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>Is enabled</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
+        /**
+         * <p>Display name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>夸克通用搜索</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>Quantity</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -117,6 +143,8 @@ public class GetDataSourceOrderConfigResponseBody extends TeaModel {
         public Integer number;
 
         /**
+         * <p>Type</p>
+         * 
          * <strong>example:</strong>
          * <p>SystemSearch</p>
          */
@@ -172,12 +200,17 @@ public class GetDataSourceOrderConfigResponseBody extends TeaModel {
 
     public static class GetDataSourceOrderConfigResponseBodyData extends TeaModel {
         /**
+         * <p>Maximum total document count</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("TotalDocSize")
         public Integer totalDocSize;
 
+        /**
+         * <p>List of user-configured data source weights</p>
+         */
         @NameInMap("UserConfigDataSourceList")
         public java.util.List<GetDataSourceOrderConfigResponseBodyDataUserConfigDataSourceList> userConfigDataSourceList;
 

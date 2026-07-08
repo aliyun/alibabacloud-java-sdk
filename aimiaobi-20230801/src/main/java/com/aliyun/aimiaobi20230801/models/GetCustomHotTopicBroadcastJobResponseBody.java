@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetCustomHotTopicBroadcastJobResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The business data.</p>
+     */
     @NameInMap("Data")
     public GetCustomHotTopicBroadcastJobResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetCustomHotTopicBroadcastJobResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error details.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class GetCustomHotTopicBroadcastJobResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -36,6 +47,8 @@ public class GetCustomHotTopicBroadcastJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class GetCustomHotTopicBroadcastJobResponseBody extends TeaModel {
 
     public static class GetCustomHotTopicBroadcastJobResponseBodyData extends TeaModel {
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>错误信息</p>
          */
@@ -104,6 +119,8 @@ public class GetCustomHotTopicBroadcastJobResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The version number of the hot topic.</p>
+         * 
          * <strong>example:</strong>
          * <p>热点话题版本号标识</p>
          */
@@ -111,6 +128,22 @@ public class GetCustomHotTopicBroadcastJobResponseBody extends TeaModel {
         public String hotTopicVersion;
 
         /**
+         * <p>The status of the task.</p>
+         * <ul>
+         * <li><p>PENDING: The task is pending.</p>
+         * </li>
+         * <li><p>RUNNING: The task is running.</p>
+         * </li>
+         * <li><p>SUCCESSED: The task is successful.</p>
+         * </li>
+         * <li><p>SUSPENDED: The task is paused.</p>
+         * </li>
+         * <li><p>FAILED: The task failed.</p>
+         * </li>
+         * <li><p>CANCELED: The task is canceled.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */

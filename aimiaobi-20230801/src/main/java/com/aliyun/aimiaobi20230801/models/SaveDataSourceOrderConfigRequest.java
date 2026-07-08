@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SaveDataSourceOrderConfigRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,15 @@ public class SaveDataSourceOrderConfigRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The generation technology for Miaosou. This parameter is valid only when \<code>ProductCode\\</code> is set to \<code>miaosou\\</code>.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li><p>copilotPrecise</p>
+     * </li>
+     * <li><p>copilotReference</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>copilotReference</p>
      */
@@ -21,6 +31,13 @@ public class SaveDataSourceOrderConfigRequest extends TeaModel {
     public String generateTechnology;
 
     /**
+     * <p>The product type. Valid values:</p>
+     * <ul>
+     * <li><p>miaobi</p>
+     * </li>
+     * <li><p>miaosou</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +47,7 @@ public class SaveDataSourceOrderConfigRequest extends TeaModel {
     public String productCode;
 
     /**
+     * <p>The data source configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserConfigDataSourceList")
@@ -74,6 +92,7 @@ public class SaveDataSourceOrderConfigRequest extends TeaModel {
 
     public static class SaveDataSourceOrderConfigRequestUserConfigDataSourceList extends TeaModel {
         /**
+         * <p>Code description</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -82,13 +101,23 @@ public class SaveDataSourceOrderConfigRequest extends TeaModel {
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>Specifies whether to enable the data source.</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
+        /**
+         * <p>The display name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>夸克通用搜索</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>Quantity</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -98,6 +127,7 @@ public class SaveDataSourceOrderConfigRequest extends TeaModel {
         public Integer number;
 
         /**
+         * <p>The type of the data source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GenerateViewPointShrinkRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,6 +14,9 @@ public class GenerateViewPointShrinkRequest extends TeaModel {
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>The context data.</p>
+     */
     @NameInMap("ReferenceData")
     public String referenceDataShrink;
 

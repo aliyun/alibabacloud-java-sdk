@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateGeneralConfigResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>DataNotExists</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Response data</p>
+     */
     @NameInMap("Data")
     public CreateGeneralConfigResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class CreateGeneralConfigResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>数据不存在</p>
      */
@@ -29,6 +38,8 @@ public class CreateGeneralConfigResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Unique request identifier</p>
+     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */
@@ -36,6 +47,8 @@ public class CreateGeneralConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates success: true for success, false for failure</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -97,6 +110,8 @@ public class CreateGeneralConfigResponseBody extends TeaModel {
 
     public static class CreateGeneralConfigResponseBodyData extends TeaModel {
         /**
+         * <p>Configuration description</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -104,6 +119,8 @@ public class CreateGeneralConfigResponseBody extends TeaModel {
         public String configDesc;
 
         /**
+         * <p>Unique identifier of the configuration item</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -111,6 +128,8 @@ public class CreateGeneralConfigResponseBody extends TeaModel {
         public String configKey;
 
         /**
+         * <p>Configuration value</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -118,6 +137,8 @@ public class CreateGeneralConfigResponseBody extends TeaModel {
         public String configValue;
 
         /**
+         * <p>Configuration type</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */

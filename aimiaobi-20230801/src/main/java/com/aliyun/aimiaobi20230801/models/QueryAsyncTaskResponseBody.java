@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class QueryAsyncTaskResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
-     * <p>Success</p>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business data</p>
+     */
     @NameInMap("Data")
     public QueryAsyncTaskResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class QueryAsyncTaskResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error description</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class QueryAsyncTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Unique request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>867C4ABE-4381-5BC2-9810-5A5F334F71CF</p>
      */
@@ -36,8 +47,10 @@ public class QueryAsyncTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Success status: true for success, false for failure.</p>
+     * 
      * <strong>example:</strong>
-     * <p>True</p>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -97,6 +110,8 @@ public class QueryAsyncTaskResponseBody extends TeaModel {
 
     public static class QueryAsyncTaskResponseBodyData extends TeaModel {
         /**
+         * <p>Creation date</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-07-25 14:34:33</p>
          */
@@ -104,13 +119,17 @@ public class QueryAsyncTaskResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Creator</p>
+         * 
          * <strong>example:</strong>
-         * <p>12121</p>
+         * <p>&quot;12121&quot;</p>
          */
         @NameInMap("CreateUser")
         public String createUser;
 
         /**
+         * <p>Task ID, indicates the specific task.</p>
+         * 
          * <strong>example:</strong>
          * <p>MaterialDocumentUpload</p>
          */
@@ -118,6 +137,8 @@ public class QueryAsyncTaskResponseBody extends TeaModel {
         public String taskCode;
 
         /**
+         * <p>Task execution error message</p>
+         * 
          * <strong>example:</strong>
          * <p>error</p>
          */
@@ -125,6 +146,8 @@ public class QueryAsyncTaskResponseBody extends TeaModel {
         public String taskErrorMessage;
 
         /**
+         * <p>Unique task ID</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
@@ -132,44 +155,62 @@ public class QueryAsyncTaskResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>Intermediate task execution result. When a task has multiple steps, save the output of each step here. When resuming from a pause, read the intermediate result and continue from there.</p>
+         * 
          * <strong>example:</strong>
-         * <p>{}</p>
+         * <p>&quot;{}&quot;</p>
          */
         @NameInMap("TaskIntermediateResult")
         public String taskIntermediateResult;
 
+        /**
+         * <p>Task name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>任务名称</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
         /**
+         * <p>Task execution input parameters, JSON format</p>
+         * 
          * <strong>example:</strong>
-         * <p>{&quot;fileKey&quot;:&quot;oss://default/xxxx/xxxx/xxx&quot;,&quot;fileName&quot;:&quot;xxxxx.doc&quot;}</p>
+         * <p>&quot;{\&quot;fileKey\&quot;:\&quot;oss://default/xxxx/xxxx/xxx\&quot;,\&quot;fileName\&quot;:\&quot;xxxxx.doc\&quot;}&quot;</p>
          */
         @NameInMap("TaskParam")
         public String taskParam;
 
         /**
+         * <p>Task execution progress message</p>
+         * 
          * <strong>example:</strong>
-         * <p>{}</p>
+         * <p>&quot;{}&quot;</p>
          */
         @NameInMap("TaskProgressMessage")
         public String taskProgressMessage;
 
         /**
+         * <p>Task execution result message</p>
+         * 
          * <strong>example:</strong>
-         * <p>{}</p>
+         * <p>&quot;{}&quot;</p>
          */
         @NameInMap("TaskResult")
         public String taskResult;
 
         /**
+         * <p>Number of task retries</p>
+         * 
          * <strong>example:</strong>
-         * <p>3</p>
+         * <p>&quot;3&quot;</p>
          */
         @NameInMap("TaskRetryCount")
         public String taskRetryCount;
 
         /**
+         * <p>Task execution status: 0-Pending, 1-Executing, 2-Execution successful, 3-Paused, 4-Execution failed (retryable), 5-Execution failed (not retryable), 6-Task canceled.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -177,6 +218,8 @@ public class QueryAsyncTaskResponseBody extends TeaModel {
         public Integer taskStatus;
 
         /**
+         * <p>Update date</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-04-27 18:07:43</p>
          */
@@ -184,8 +227,10 @@ public class QueryAsyncTaskResponseBody extends TeaModel {
         public String updateTime;
 
         /**
+         * <p>Updater</p>
+         * 
          * <strong>example:</strong>
-         * <p>12121</p>
+         * <p>&quot;12121&quot;</p>
          */
         @NameInMap("UpdateUser")
         public String updateUser;

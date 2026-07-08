@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AsyncUploadTenderDocRequest extends TeaModel {
     /**
+     * <p>File OSS key</p>
+     * 
      * <strong>example:</strong>
      * <p>oss://default/aimiaobi-service-prod/aimiaobi/materialDocument/1601892701595700_10169811/208757545922605632_yst-test_9eb7d7e1deb543d88e2d6f1c9df456ef.docx</p>
      */
@@ -12,6 +14,8 @@ public class AsyncUploadTenderDocRequest extends TeaModel {
     public String fileKey;
 
     /**
+     * <p>Tender document name</p>
+     * 
      * <strong>example:</strong>
      * <p>tender.pdf</p>
      */
@@ -19,6 +23,8 @@ public class AsyncUploadTenderDocRequest extends TeaModel {
     public String tenderDocName;
 
     /**
+     * <p><a href="https://help.aliyun.com/document_detail/2782167.html">Workspace ID</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm-az2gglkjauwnnhpq</p>
      */

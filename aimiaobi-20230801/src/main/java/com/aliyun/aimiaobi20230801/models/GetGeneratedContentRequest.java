@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetGeneratedContentRequest extends TeaModel {
     /**
+     * <p>Workspace ID: <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetGeneratedContentRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>Document ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

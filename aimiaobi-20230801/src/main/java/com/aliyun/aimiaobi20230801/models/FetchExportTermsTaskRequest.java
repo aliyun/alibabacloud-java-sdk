@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class FetchExportTermsTaskRequest extends TeaModel {
     /**
+     * <p>The task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class FetchExportTermsTaskRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The unique identifier of your Alibaba Cloud Model Studio workspace. To get your <a href="https://help.aliyun.com/document_detail/2782167.html">Workspace ID</a>, see the referenced document.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

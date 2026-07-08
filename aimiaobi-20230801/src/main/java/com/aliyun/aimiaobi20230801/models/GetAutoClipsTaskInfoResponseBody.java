@@ -5,23 +5,40 @@ import com.aliyun.tea.*;
 
 public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
     /**
+     * <p>Status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business data.</p>
+     */
     @NameInMap("Data")
     public GetAutoClipsTaskInfoResponseBodyData data;
 
+    /**
+     * <p>HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Error description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
@@ -29,6 +46,12 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the operation succeeded. A value of true indicates success. A value of false indicates failure.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -86,15 +109,39 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
     }
 
     public static class GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfosEndTime extends TeaModel {
+        /**
+         * <p>Hour.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Hour")
         public Integer hour;
 
+        /**
+         * <p>Millisecond.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("MillSecond")
         public Integer millSecond;
 
+        /**
+         * <p>Minute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Minute")
         public Integer minute;
 
+        /**
+         * <p>Second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("Second")
         public Integer second;
 
@@ -138,15 +185,39 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
     }
 
     public static class GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfosStartTime extends TeaModel {
+        /**
+         * <p>Hour.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Hour")
         public Integer hour;
 
+        /**
+         * <p>Millisecond.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("MillSecond")
         public Integer millSecond;
 
+        /**
+         * <p>Minute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Minute")
         public Integer minute;
 
+        /**
+         * <p>Second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("Second")
         public Integer second;
 
@@ -190,12 +261,24 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
     }
 
     public static class GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfos extends TeaModel {
+        /**
+         * <p>Content analysis</p>
+         * 
+         * <strong>example:</strong>
+         * <p>视频理解内容</p>
+         */
         @NameInMap("AnalysisContent")
         public String analysisContent;
 
+        /**
+         * <p>End time.</p>
+         */
         @NameInMap("EndTime")
         public GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfosEndTime endTime;
 
+        /**
+         * <p>Start time.</p>
+         */
         @NameInMap("StartTime")
         public GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfosStartTime startTime;
 
@@ -231,15 +314,36 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
     }
 
     public static class GetAutoClipsTaskInfoResponseBodyDataAnalysisResults extends TeaModel {
+        /**
+         * <p>List of shot information.</p>
+         */
         @NameInMap("LensInfos")
         public java.util.List<GetAutoClipsTaskInfoResponseBodyDataAnalysisResultsLensInfos> lensInfos;
 
+        /**
+         * <p>Video ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>975e1d91a8d057e132cc5d88e4d5b360</p>
+         */
         @NameInMap("MediaId")
         public String mediaId;
 
+        /**
+         * <p>Video name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>video001.mp4</p>
+         */
         @NameInMap("MediaName")
         public String mediaName;
 
+        /**
+         * <p>Video URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxx/xxx.mp4">http://xxx/xxx.mp4</a></p>
+         */
         @NameInMap("MediaUrl")
         public String mediaUrl;
 
@@ -283,10 +387,18 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
     }
 
     public static class GetAutoClipsTaskInfoResponseBodyDataColorWords extends TeaModel {
+        /**
+         * <p>Text content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>花字内容</p>
+         */
         @NameInMap("Content")
         public String content;
 
         /**
+         * <p>Visual effect of the decorative text.</p>
+         * 
          * <strong>example:</strong>
          * <p>CS0002-000008</p>
          */
@@ -294,6 +406,8 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         public String effectColorStyle;
 
         /**
+         * <p>Font size of the decorative text.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -301,6 +415,8 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         public Integer fontSize;
 
         /**
+         * <p>Start time of the decorative text in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -308,6 +424,8 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         public Integer timelineIn;
 
         /**
+         * <p>End time of the decorative text in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -315,6 +433,8 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         public Integer timelineOut;
 
         /**
+         * <p>X-coordinate of the decorative text.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.2</p>
          */
@@ -322,6 +442,8 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         public Float x;
 
         /**
+         * <p>Y-coordinate of the decorative text.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.5</p>
          */
@@ -392,12 +514,30 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
     }
 
     public static class GetAutoClipsTaskInfoResponseBodyDataReferenceVideo extends TeaModel {
+        /**
+         * <p>Video ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90ca686b11c371f08339752281ed0102</p>
+         */
         @NameInMap("VideoId")
         public String videoId;
 
+        /**
+         * <p>Video name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>video001.mp4</p>
+         */
         @NameInMap("VideoName")
         public String videoName;
 
+        /**
+         * <p>Video URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxx/xxx.mp4">http://xxx/xxx.mp4</a></p>
+         */
         @NameInMap("VideoUrl")
         public String videoUrl;
 
@@ -433,12 +573,30 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
     }
 
     public static class GetAutoClipsTaskInfoResponseBodyDataSourceVideos extends TeaModel {
+        /**
+         * <p>Video ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fdaswe</p>
+         */
         @NameInMap("VideoId")
         public String videoId;
 
+        /**
+         * <p>Video name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>video001.mp4</p>
+         */
         @NameInMap("VideoName")
         public String videoName;
 
+        /**
+         * <p>Video URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxx/xxx.mp4">http://xxx/xxx.mp4</a></p>
+         */
         @NameInMap("VideoUrl")
         public String videoUrl;
 
@@ -475,6 +633,8 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
 
     public static class GetAutoClipsTaskInfoResponseBodyDataStickers extends TeaModel {
         /**
+         * <p>Duration of the sticker display.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -482,6 +642,8 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         public Integer duration;
 
         /**
+         * <p>Height of the sticker</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -489,6 +651,8 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         public Integer dyncFrames;
 
         /**
+         * <p>Height of the sticker.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -496,6 +660,8 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         public Integer height;
 
         /**
+         * <p>Start time of the sticker in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -503,6 +669,8 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         public Integer timelineIn;
 
         /**
+         * <p>URL of the sticker GIF file.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://xxx/xxx.gif">http://xxx/xxx.gif</a></p>
          */
@@ -510,6 +678,8 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         public String url;
 
         /**
+         * <p>Width of the sticker.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -517,6 +687,8 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         public Integer width;
 
         /**
+         * <p>X-coordinate of the sticker position.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -524,6 +696,8 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         public Float x;
 
         /**
+         * <p>Y-coordinate of the sticker position.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -603,36 +777,62 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
 
     public static class GetAutoClipsTaskInfoResponseBodyDataTimelinesClips extends TeaModel {
         /**
+         * <p>ID of the clip.</p>
+         * 
          * <strong>example:</strong>
          * <p>20774ebd9abc71ef80486632b68f0102</p>
          */
         @NameInMap("ClipId")
         public String clipId;
 
+        /**
+         * <p>Segmented voiceover script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>口播分段内容</p>
+         */
         @NameInMap("ContentInner")
         public String contentInner;
 
         /**
+         * <p>Start time of the clip in seconds. This field is deprecated.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("In")
         public Integer in;
 
+        /**
+         * <p>Start time of the clip in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.33</p>
+         */
         @NameInMap("InEx")
         public Float inEx;
 
         /**
+         * <p>End time of the clip in seconds. This field is deprecated.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
         @NameInMap("Out")
         public Integer out;
 
+        /**
+         * <p>End time of the clip in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.45</p>
+         */
         @NameInMap("OutEx")
         public Float outEx;
 
         /**
+         * <p>ID of the video.</p>
+         * 
          * <strong>example:</strong>
          * <p>20774ebd9abc71ef80486632b68f0102</p>
          */
@@ -640,6 +840,8 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         public String videoId;
 
         /**
+         * <p>Name of the video.</p>
+         * 
          * <strong>example:</strong>
          * <p>123.mp4</p>
          */
@@ -718,13 +920,24 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
     }
 
     public static class GetAutoClipsTaskInfoResponseBodyDataTimelines extends TeaModel {
+        /**
+         * <p>Array of video clips.</p>
+         */
         @NameInMap("Clips")
         public java.util.List<GetAutoClipsTaskInfoResponseBodyDataTimelinesClips> clips;
 
+        /**
+         * <p>Voiceover script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>口播内容</p>
+         */
         @NameInMap("Content")
         public String content;
 
         /**
+         * <p>ID of the timeline.</p>
+         * 
          * <strong>example:</strong>
          * <p>20774ebd9abc71ef80486632b68f0102</p>
          */
@@ -763,31 +976,66 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
     }
 
     public static class GetAutoClipsTaskInfoResponseBodyData extends TeaModel {
+        /**
+         * <p>List of video understanding results.</p>
+         */
         @NameInMap("AnalysisResults")
         public java.util.List<GetAutoClipsTaskInfoResponseBodyDataAnalysisResults> analysisResults;
 
+        /**
+         * <p>Disable background music.</p>
+         */
         @NameInMap("CloseMusic")
         public Boolean closeMusic;
 
+        /**
+         * <p>Disable subtitles.</p>
+         */
         @NameInMap("CloseSubtitle")
         public Boolean closeSubtitle;
 
+        /**
+         * <p>Disable voiceover.</p>
+         */
         @NameInMap("CloseVoice")
         public Boolean closeVoice;
 
+        /**
+         * <p>URL of the closing credits video.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxx/xxx.mp4">http://xxx/xxx.mp4</a></p>
+         */
         @NameInMap("ClosingCreditsUrl")
         public String closingCreditsUrl;
 
+        /**
+         * <p>Array of decorative text elements.</p>
+         */
         @NameInMap("ColorWords")
         public java.util.List<GetAutoClipsTaskInfoResponseBodyDataColorWords> colorWords;
 
+        /**
+         * <p>Full voiceover script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>口播内容</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>Voice style for CosyVoice.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>longxian_normal</p>
+         */
         @NameInMap("CustomVoiceStyle")
         public String customVoiceStyle;
 
         /**
+         * <p>URL of the custom audio track file.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://xxx/xxx.mp4">http://xxx/xxx.mp4</a></p>
          */
@@ -795,22 +1043,44 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         public String customVoiceUrl;
 
         /**
+         * <p>Volume of the custom audio track.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("CustomVoiceVolume")
         public Integer customVoiceVolume;
 
+        /**
+         * <p>Error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>错误信息</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>ApsaraVideo timeline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>视频云格式timeline</p>
+         */
         @NameInMap("MediaCloudTimeline")
         public String mediaCloudTimeline;
 
+        /**
+         * <p>Recommended music style.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>国风</p>
+         */
         @NameInMap("MusicStyle")
         public String musicStyle;
 
         /**
+         * <p>URL of the background music.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://music.mp4">http://music.mp4</a></p>
          */
@@ -818,45 +1088,80 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         public String musicUrl;
 
         /**
+         * <p>Volume of the background music.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
         @NameInMap("MusicVolume")
         public Integer musicVolume;
 
+        /**
+         * <p>URL of the opening credits video.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxx/xxx.mp4">http://xxx/xxx.mp4</a></p>
+         */
         @NameInMap("OpeningCreditsUrl")
         public String openingCreditsUrl;
 
+        /**
+         * <p>File key of the output video.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://xxx/xxx.mp4</p>
+         */
         @NameInMap("OutputVideoFileKey")
         public String outputVideoFileKey;
 
         /**
+         * <p>URL of the final video.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://output.mp4">http://output.mp4</a></p>
          */
         @NameInMap("OutputVideoUrl")
         public String outputVideoUrl;
 
+        /**
+         * <p>Reference video information.</p>
+         */
         @NameInMap("ReferenceVideo")
         public GetAutoClipsTaskInfoResponseBodyDataReferenceVideo referenceVideo;
 
+        /**
+         * <p>List of video sources used for editing.</p>
+         */
         @NameInMap("SourceVideos")
         public java.util.List<GetAutoClipsTaskInfoResponseBodyDataSourceVideos> sourceVideos;
 
+        /**
+         * <p>Status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0-待执行、1-执行中、2-执行成功、3-暂停、4-执行失败-可重试、5-执行失败-不可重试,6-任务取消</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
         /**
+         * <p>Current step.</p>
+         * 
          * <strong>example:</strong>
          * <p>clips</p>
          */
         @NameInMap("Step")
         public String step;
 
+        /**
+         * <p>Array of stickers.</p>
+         */
         @NameInMap("Stickers")
         public java.util.List<GetAutoClipsTaskInfoResponseBodyDataStickers> stickers;
 
         /**
+         * <p>Font size of subtitles.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -864,19 +1169,32 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         public Integer subtitleFontSize;
 
         /**
+         * <p>Unique ID of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>e5a1a59c82d0454fad6454e8a04d0093</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>Array of voiceover timelines.</p>
+         */
         @NameInMap("Timelines")
         public java.util.List<GetAutoClipsTaskInfoResponseBodyDataTimelines> timelines;
 
+        /**
+         * <p>Voice style for voiceover.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>温柔女声</p>
+         */
         @NameInMap("VoiceStyle")
         public String voiceStyle;
 
         /**
+         * <p>Volume of the voiceover.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */

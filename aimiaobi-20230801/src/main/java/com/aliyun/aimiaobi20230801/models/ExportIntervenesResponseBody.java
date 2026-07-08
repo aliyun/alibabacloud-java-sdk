@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ExportIntervenesResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business data</p>
+     */
     @NameInMap("Data")
     public ExportIntervenesResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ExportIntervenesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class ExportIntervenesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Unique request identifier</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -36,6 +47,8 @@ public class ExportIntervenesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Success status: true for success, false for failure</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -100,6 +113,8 @@ public class ExportIntervenesResponseBody extends TeaModel {
         public Integer code;
 
         /**
+         * <p>File URL</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://xxx/xxx.xls">http://xxx/xxx.xls</a></p>
          */

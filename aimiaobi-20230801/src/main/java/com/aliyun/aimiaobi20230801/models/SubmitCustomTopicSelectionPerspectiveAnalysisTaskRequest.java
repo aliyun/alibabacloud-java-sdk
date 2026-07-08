@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,14 @@ public class SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequest extends Te
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>The list of documents to be analyzed.</p>
+     */
     @NameInMap("Documents")
     public java.util.List<SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequestDocuments> documents;
 
     /**
+     * <p>The input prompt for custom perspectives.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +31,8 @@ public class SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequest extends Te
     public String prompt;
 
     /**
+     * <p>The name of the topic to be analyzed.</p>
+     * 
      * <strong>example:</strong>
      * <p>待分析的主题名（documents与topic二者至少传一个）</p>
      */
@@ -71,6 +78,8 @@ public class SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequest extends Te
 
     public static class SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequestDocuments extends TeaModel {
         /**
+         * <p>The author.</p>
+         * 
          * <strong>example:</strong>
          * <p>作者</p>
          */
@@ -78,6 +87,7 @@ public class SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequest extends Te
         public String author;
 
         /**
+         * <p>The content.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +97,8 @@ public class SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequest extends Te
         public String content;
 
         /**
+         * <p>The publication time. Format: YYYY-MM-dd HH:mm:ss</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-22 10:29:00</p>
          */
@@ -94,6 +106,8 @@ public class SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequest extends Te
         public String pubTime;
 
         /**
+         * <p>The source of the article.</p>
+         * 
          * <strong>example:</strong>
          * <p>新浪</p>
          */
@@ -101,6 +115,8 @@ public class SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequest extends Te
         public String source;
 
         /**
+         * <p>The summary.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章摘要</p>
          */
@@ -108,6 +124,8 @@ public class SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequest extends Te
         public String summary;
 
         /**
+         * <p>The title.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章标题</p>
          */
@@ -115,6 +133,8 @@ public class SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequest extends Te
         public String title;
 
         /**
+         * <p>The URL of the article.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://www.example.com/aaa.docx">https://www.example.com/aaa.docx</a></p>
          */

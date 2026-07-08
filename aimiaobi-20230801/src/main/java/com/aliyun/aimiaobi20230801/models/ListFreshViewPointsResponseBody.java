@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListFreshViewPointsResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business Data</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListFreshViewPointsResponseBodyData> data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListFreshViewPointsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Maximum number of return results</p>
+     * 
      * <strong>example:</strong>
      * <p>94</p>
      */
@@ -29,6 +38,8 @@ public class ListFreshViewPointsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Fault description</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -36,6 +47,8 @@ public class ListFreshViewPointsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Token for the next page</p>
+     * 
      * <strong>example:</strong>
      * <p>下一页的token</p>
      */
@@ -43,6 +56,8 @@ public class ListFreshViewPointsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Request UUID</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -50,6 +65,8 @@ public class ListFreshViewPointsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation succeeded: true for success, false for failure</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -57,6 +74,8 @@ public class ListFreshViewPointsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Total count</p>
+     * 
      * <strong>example:</strong>
      * <p>26</p>
      */
@@ -142,6 +161,8 @@ public class ListFreshViewPointsResponseBody extends TeaModel {
 
     public static class ListFreshViewPointsResponseBodyDataOutlines extends TeaModel {
         /**
+         * <p>Outline</p>
+         * 
          * <strong>example:</strong>
          * <p>大纲</p>
          */
@@ -149,6 +170,8 @@ public class ListFreshViewPointsResponseBody extends TeaModel {
         public String outline;
 
         /**
+         * <p>Outline summary</p>
+         * 
          * <strong>example:</strong>
          * <p>大纲摘要</p>
          */
@@ -179,10 +202,15 @@ public class ListFreshViewPointsResponseBody extends TeaModel {
     }
 
     public static class ListFreshViewPointsResponseBodyData extends TeaModel {
+        /**
+         * <p>Outlines</p>
+         */
         @NameInMap("Outlines")
         public java.util.List<ListFreshViewPointsResponseBodyDataOutlines> outlines;
 
         /**
+         * <p>Generated perspective</p>
+         * 
          * <strong>example:</strong>
          * <p>视角</p>
          */
@@ -190,6 +218,8 @@ public class ListFreshViewPointsResponseBody extends TeaModel {
         public String point;
 
         /**
+         * <p>Summary</p>
+         * 
          * <strong>example:</strong>
          * <p>摘要</p>
          */

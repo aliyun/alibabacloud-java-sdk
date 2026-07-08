@@ -4,13 +4,21 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunCustomHotTopicViewPointAnalysisResponseBody extends TeaModel {
+    /**
+     * <p>Response header</p>
+     */
     @NameInMap("Header")
     public RunCustomHotTopicViewPointAnalysisResponseBodyHeader header;
 
+    /**
+     * <p>Response body</p>
+     */
     @NameInMap("Payload")
     public RunCustomHotTopicViewPointAnalysisResponseBodyPayload payload;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */
@@ -48,6 +56,8 @@ public class RunCustomHotTopicViewPointAnalysisResponseBody extends TeaModel {
 
     public static class RunCustomHotTopicViewPointAnalysisResponseBodyHeader extends TeaModel {
         /**
+         * <p>Error code</p>
+         * 
          * <strong>example:</strong>
          * <p>错误码</p>
          */
@@ -55,6 +65,8 @@ public class RunCustomHotTopicViewPointAnalysisResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>Error message</p>
+         * 
          * <strong>example:</strong>
          * <p>错误信息</p>
          */
@@ -62,6 +74,8 @@ public class RunCustomHotTopicViewPointAnalysisResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>Server-sent event. Valid values: task-started, task-finished, and task-failed.</p>
+         * 
          * <strong>example:</strong>
          * <p>task-started</p>
          */
@@ -69,6 +83,8 @@ public class RunCustomHotTopicViewPointAnalysisResponseBody extends TeaModel {
         public String event;
 
         /**
+         * <p>Parent session ID</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
@@ -76,6 +92,8 @@ public class RunCustomHotTopicViewPointAnalysisResponseBody extends TeaModel {
         public String originSessionId;
 
         /**
+         * <p>Session ID</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
@@ -83,6 +101,8 @@ public class RunCustomHotTopicViewPointAnalysisResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>Task ID</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
@@ -90,6 +110,8 @@ public class RunCustomHotTopicViewPointAnalysisResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>Trace ID</p>
+         * 
          * <strong>example:</strong>
          * <p>全链路ID</p>
          */
@@ -160,24 +182,66 @@ public class RunCustomHotTopicViewPointAnalysisResponseBody extends TeaModel {
     }
 
     public static class RunCustomHotTopicViewPointAnalysisResponseBodyPayloadOutputArticles extends TeaModel {
+        /**
+         * <p>Author</p>
+         * 
+         * <strong>example:</strong>
+         * <p>作者</p>
+         */
         @NameInMap("Author")
         public String author;
 
+        /**
+         * <p>Content</p>
+         * 
+         * <strong>example:</strong>
+         * <p>文章内容</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>Publish time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-09-10 14:17:53</p>
+         */
         @NameInMap("PubTime")
         public String pubTime;
 
+        /**
+         * <p>Source</p>
+         * 
+         * <strong>example:</strong>
+         * <p>央视网</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>Summary</p>
+         * 
+         * <strong>example:</strong>
+         * <p>文章摘要</p>
+         */
         @NameInMap("Summary")
         public String summary;
 
+        /**
+         * <p>Title</p>
+         * 
+         * <strong>example:</strong>
+         * <p>文章标题</p>
+         */
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <p>URL title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.example.com/aaa.docx">https://www.example.com/aaa.docx</a></p>
+         */
         @NameInMap("Url")
         public String url;
 
@@ -245,13 +309,21 @@ public class RunCustomHotTopicViewPointAnalysisResponseBody extends TeaModel {
     }
 
     public static class RunCustomHotTopicViewPointAnalysisResponseBodyPayloadOutput extends TeaModel {
+        /**
+         * <p>Reference article list</p>
+         */
         @NameInMap("Articles")
         public java.util.List<RunCustomHotTopicViewPointAnalysisResponseBodyPayloadOutputArticles> articles;
 
+        /**
+         * <p>Follow-up question list</p>
+         */
         @NameInMap("AskUser")
         public java.util.List<String> askUser;
 
         /**
+         * <p>Asynchronous task ID</p>
+         * 
          * <strong>example:</strong>
          * <p>异步任务ID</p>
          */
@@ -259,6 +331,8 @@ public class RunCustomHotTopicViewPointAnalysisResponseBody extends TeaModel {
         public String asyncTaskId;
 
         /**
+         * <p>Viewpoint of the custom hot topic generated by the model</p>
+         * 
          * <strong>example:</strong>
          * <p>模型生成的自定义选题视角的观点</p>
          */
@@ -266,6 +340,8 @@ public class RunCustomHotTopicViewPointAnalysisResponseBody extends TeaModel {
         public String attitude;
 
         /**
+         * <p>Custom viewpoint ID</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxxxx</p>
          */
@@ -273,6 +349,8 @@ public class RunCustomHotTopicViewPointAnalysisResponseBody extends TeaModel {
         public String customViewPointId;
 
         /**
+         * <p>Text generation result</p>
+         * 
          * <strong>example:</strong>
          * <p>文本生成结果</p>
          */
@@ -280,6 +358,8 @@ public class RunCustomHotTopicViewPointAnalysisResponseBody extends TeaModel {
         public String text;
 
         /**
+         * <p>Topic ID</p>
+         * 
          * <strong>example:</strong>
          * <p>话题ID</p>
          */
@@ -351,6 +431,8 @@ public class RunCustomHotTopicViewPointAnalysisResponseBody extends TeaModel {
 
     public static class RunCustomHotTopicViewPointAnalysisResponseBodyPayloadUsage extends TeaModel {
         /**
+         * <p>Number of input tokens</p>
+         * 
          * <strong>example:</strong>
          * <p>51</p>
          */
@@ -358,6 +440,8 @@ public class RunCustomHotTopicViewPointAnalysisResponseBody extends TeaModel {
         public Long inputTokens;
 
         /**
+         * <p>Number of output tokens</p>
+         * 
          * <strong>example:</strong>
          * <p>79</p>
          */
@@ -365,6 +449,8 @@ public class RunCustomHotTopicViewPointAnalysisResponseBody extends TeaModel {
         public Long outputTokens;
 
         /**
+         * <p>Total number of tokens</p>
+         * 
          * <strong>example:</strong>
          * <p>130</p>
          */
@@ -403,9 +489,21 @@ public class RunCustomHotTopicViewPointAnalysisResponseBody extends TeaModel {
     }
 
     public static class RunCustomHotTopicViewPointAnalysisResponseBodyPayload extends TeaModel {
+        /**
+         * <p>Outputs</p>
+         */
         @NameInMap("Output")
         public RunCustomHotTopicViewPointAnalysisResponseBodyPayloadOutput output;
 
+        /**
+         * <p>Whether the image is running on an ECS instance. Valid values:</p>
+         * <ul>
+         * <li><p>instance: The image is running and used by an ECS instance.</p>
+         * </li>
+         * <li><p>none: The image is idle and not currently used by any ECS instance.</p>
+         * </li>
+         * </ul>
+         */
         @NameInMap("Usage")
         public RunCustomHotTopicViewPointAnalysisResponseBodyPayloadUsage usage;
 

@@ -5,19 +5,29 @@ import com.aliyun.tea.*;
 
 public class ListDatasetsResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Configuration and usage details for custom semantic search datasets that use uploaded files as data sources.</p>
+     */
     @NameInMap("CustomSemanticSearchConfig")
     public ListDatasetsResponseBodyCustomSemanticSearchConfig customSemanticSearchConfig;
 
+    /**
+     * <p>An array of dataset objects.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListDatasetsResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -25,6 +35,8 @@ public class ListDatasetsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -32,6 +44,8 @@ public class ListDatasetsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -39,6 +53,8 @@ public class ListDatasetsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -46,6 +62,8 @@ public class ListDatasetsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The unique request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -53,16 +71,23 @@ public class ListDatasetsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values: <code>true</code> (success) and <code>false</code> (failure).</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>Configuration and usage details for API-integrated datasets.</p>
+     */
     @NameInMap("ThirdSearchConfig")
     public ListDatasetsResponseBodyThirdSearchConfig thirdSearchConfig;
 
     /**
+     * <p>The total number of datasets.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -164,6 +189,8 @@ public class ListDatasetsResponseBody extends TeaModel {
 
     public static class ListDatasetsResponseBodyCustomSemanticSearchConfig extends TeaModel {
         /**
+         * <p>The dataset quota.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -171,6 +198,8 @@ public class ListDatasetsResponseBody extends TeaModel {
         public Integer datasetQuota;
 
         /**
+         * <p>The number of datasets created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -178,6 +207,8 @@ public class ListDatasetsResponseBody extends TeaModel {
         public Integer datasetUsedQuota;
 
         /**
+         * <p>The document quota.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -185,6 +216,8 @@ public class ListDatasetsResponseBody extends TeaModel {
         public Long docQuota;
 
         /**
+         * <p>The used document quota.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -232,6 +265,8 @@ public class ListDatasetsResponseBody extends TeaModel {
 
     public static class ListDatasetsResponseBodyDataAdministrators extends TeaModel {
         /**
+         * <p>The administrator user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -239,6 +274,8 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>The administrator username.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -270,16 +307,23 @@ public class ListDatasetsResponseBody extends TeaModel {
 
     public static class ListDatasetsResponseBodyData extends TeaModel {
         /**
+         * <p>The dataset access level.</p>
+         * 
          * <strong>example:</strong>
          * <p>private</p>
          */
         @NameInMap("AccessLevel")
         public String accessLevel;
 
+        /**
+         * <p>The administrators of the dataset.</p>
+         */
         @NameInMap("Administrators")
         public java.util.List<ListDatasetsResponseBodyDataAdministrators> administrators;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-11-12 21:46:24</p>
          */
@@ -287,6 +331,8 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The creator of the dataset.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -294,6 +340,8 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String createUser;
 
         /**
+         * <p>The dataset description.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -301,6 +349,8 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String datasetDescription;
 
         /**
+         * <p>The dataset ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -308,6 +358,8 @@ public class ListDatasetsResponseBody extends TeaModel {
         public Long datasetId;
 
         /**
+         * <p>The dataset name.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -315,6 +367,8 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String datasetName;
 
         /**
+         * <p>The dataset type.</p>
+         * 
          * <strong>example:</strong>
          * <p>CustomSemanticSearch</p>
          */
@@ -322,6 +376,8 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String datasetType;
 
         /**
+         * <p>The number of documents uploaded to the dataset.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -329,6 +385,8 @@ public class ListDatasetsResponseBody extends TeaModel {
         public Long docUsedQuota;
 
         /**
+         * <p>Indicates whether search is enabled for the dataset.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -424,6 +482,8 @@ public class ListDatasetsResponseBody extends TeaModel {
 
     public static class ListDatasetsResponseBodyThirdSearchConfig extends TeaModel {
         /**
+         * <p>The dataset quota.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -431,6 +491,8 @@ public class ListDatasetsResponseBody extends TeaModel {
         public Integer datasetQuota;
 
         /**
+         * <p>The number of datasets created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

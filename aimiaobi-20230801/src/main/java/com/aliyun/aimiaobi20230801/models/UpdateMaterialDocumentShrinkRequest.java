@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateMaterialDocumentShrinkRequest extends TeaModel {
     /**
+     * <p>Unique identifier of the workspace: <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,13 +14,23 @@ public class UpdateMaterialDocumentShrinkRequest extends TeaModel {
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>Author</p>
+     * 
+     * <strong>example:</strong>
+     * <p>作者名称</p>
+     */
     @NameInMap("Author")
     public String author;
 
+    /**
+     * <p>Document tags for categorization</p>
+     */
     @NameInMap("DocKeywords")
     public String docKeywordsShrink;
 
     /**
+     * <p>Document type. Valid values: html, plainText, image, pdf, word, excel, csv, jsonLine</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,16 +40,25 @@ public class UpdateMaterialDocumentShrinkRequest extends TeaModel {
     public String docType;
 
     /**
+     * <p>URL uploaded by an external customer. Used only for record keeping</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://xxxxx/xxx">http://xxxxx/xxx</a></p>
      */
     @NameInMap("ExternalUrl")
     public String externalUrl;
 
+    /**
+     * <p>Formatted content</p>
+     * 
+     * <strong>example:</strong>
+     * <p>网页内容</p>
+     */
     @NameInMap("HtmlContent")
     public String htmlContent;
 
     /**
+     * <p>Primary key</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,6 +68,8 @@ public class UpdateMaterialDocumentShrinkRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>Publication time in yyyy-MM-dd HH:mm:ss format</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-04-11 06:14:07</p>
      */
@@ -58,6 +80,8 @@ public class UpdateMaterialDocumentShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Sharing attribute. Valid values: 0 (private), 1 (shared within the workspace)</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -65,22 +89,44 @@ public class UpdateMaterialDocumentShrinkRequest extends TeaModel {
     public Integer shareAttr;
 
     /**
+     * <p>Source of the document. Valid values: UserUpload, IntellijSearch, HotViewPoint</p>
+     * 
      * <strong>example:</strong>
      * <p>UserUpload</p>
      */
     @NameInMap("SrcFrom")
     public String srcFrom;
 
+    /**
+     * <p>Summary</p>
+     * 
+     * <strong>example:</strong>
+     * <p>摘要</p>
+     */
     @NameInMap("Summary")
     public String summary;
 
+    /**
+     * <p>Parsed text content. Empty for images</p>
+     * 
+     * <strong>example:</strong>
+     * <p>文本内容</p>
+     */
     @NameInMap("TextContent")
     public String textContent;
 
+    /**
+     * <p>Document title</p>
+     * 
+     * <strong>example:</strong>
+     * <p>标题</p>
+     */
     @NameInMap("Title")
     public String title;
 
     /**
+     * <p>URL of the material</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://xxxxx/xxx">http://xxxxx/xxx</a></p>
      */

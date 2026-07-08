@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitTopicSelectionPerspectiveAnalysisTaskRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the workspace: <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,15 @@ public class SubmitTopicSelectionPerspectiveAnalysisTaskRequest extends TeaModel
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>The list of documents to be analyzed. (Provide at least one of documents or topic)</p>
+     */
     @NameInMap("Documents")
     public java.util.List<SubmitTopicSelectionPerspectiveAnalysisTaskRequestDocuments> documents;
 
     /**
+     * <p>The topic selection perspective tasks to be analyzed. By default, this parameter is empty, which means all tasks are analyzed. (TopicSummary: Topic event summary, HotViewPoints: Hot topic selection perspectives, TimedViewPoints: Timeliness topic selection perspectives, WebReviewPoints: Online review topic selection perspectives, FreshViewPoints: Novel topic selection perspectives)</p>
+     * 
      * <strong>example:</strong>
      * <p>TimedViewPoints</p>
      */
@@ -24,6 +30,8 @@ public class SubmitTopicSelectionPerspectiveAnalysisTaskRequest extends TeaModel
     public java.util.List<String> perspectiveTypes;
 
     /**
+     * <p>The name of the topic to be analyzed. (Provide at least one of documents or topic)</p>
+     * 
      * <strong>example:</strong>
      * <p>待分析的主题名（documents与topic二者至少传一个）</p>
      */
@@ -68,9 +76,21 @@ public class SubmitTopicSelectionPerspectiveAnalysisTaskRequest extends TeaModel
     }
 
     public static class SubmitTopicSelectionPerspectiveAnalysisTaskRequestDocumentsComments extends TeaModel {
+        /**
+         * <p>Content</p>
+         * 
+         * <strong>example:</strong>
+         * <p>内容</p>
+         */
         @NameInMap("Text")
         public String text;
 
+        /**
+         * <p>Username</p>
+         * 
+         * <strong>example:</strong>
+         * <p>用户名</p>
+         */
         @NameInMap("Username")
         public String username;
 
@@ -99,16 +119,22 @@ public class SubmitTopicSelectionPerspectiveAnalysisTaskRequest extends TeaModel
 
     public static class SubmitTopicSelectionPerspectiveAnalysisTaskRequestDocuments extends TeaModel {
         /**
+         * <p>Author</p>
+         * 
          * <strong>example:</strong>
          * <p>作者</p>
          */
         @NameInMap("Author")
         public String author;
 
+        /**
+         * <p>Content list</p>
+         */
         @NameInMap("Comments")
         public java.util.List<SubmitTopicSelectionPerspectiveAnalysisTaskRequestDocumentsComments> comments;
 
         /**
+         * <p>Content</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -118,6 +144,8 @@ public class SubmitTopicSelectionPerspectiveAnalysisTaskRequest extends TeaModel
         public String content;
 
         /**
+         * <p>Publication time. Format: YYYY-MM-dd HH:mm:ss</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-22 10:29:00</p>
          */
@@ -125,6 +153,8 @@ public class SubmitTopicSelectionPerspectiveAnalysisTaskRequest extends TeaModel
         public String pubTime;
 
         /**
+         * <p>Article source</p>
+         * 
          * <strong>example:</strong>
          * <p>新浪</p>
          */
@@ -132,6 +162,8 @@ public class SubmitTopicSelectionPerspectiveAnalysisTaskRequest extends TeaModel
         public String source;
 
         /**
+         * <p>Summary</p>
+         * 
          * <strong>example:</strong>
          * <p>文章摘要</p>
          */
@@ -139,6 +171,8 @@ public class SubmitTopicSelectionPerspectiveAnalysisTaskRequest extends TeaModel
         public String summary;
 
         /**
+         * <p>Title</p>
+         * 
          * <strong>example:</strong>
          * <p>文章标题</p>
          */
@@ -146,6 +180,8 @@ public class SubmitTopicSelectionPerspectiveAnalysisTaskRequest extends TeaModel
         public String title;
 
         /**
+         * <p>Article URL</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://www.example.com/aaa.docx">https://www.example.com/aaa.docx</a></p>
          */

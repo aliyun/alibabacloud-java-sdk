@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DocumentExtractionResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
-     * <p>NoData</p>
+     * <p>successful</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business data</p>
+     */
     @NameInMap("Data")
     public java.util.List<DocumentExtractionResponseBodyData> data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,13 +29,17 @@ public class DocumentExtractionResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
-     * <p>success</p>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Unique request identifier</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -36,6 +47,8 @@ public class DocumentExtractionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates success: true for success, false for failure</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class DocumentExtractionResponseBody extends TeaModel {
 
     public static class DocumentExtractionResponseBodyData extends TeaModel {
         /**
+         * <p>Author</p>
+         * 
          * <strong>example:</strong>
          * <p>作者</p>
          */
@@ -104,6 +119,8 @@ public class DocumentExtractionResponseBody extends TeaModel {
         public String author;
 
         /**
+         * <p>Content</p>
+         * 
          * <strong>example:</strong>
          * <p>文章内容</p>
          */
@@ -111,6 +128,8 @@ public class DocumentExtractionResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>Custom unique ID for the document</p>
+         * 
          * <strong>example:</strong>
          * <p>文档-自定义的唯一ID</p>
          */
@@ -118,6 +137,8 @@ public class DocumentExtractionResponseBody extends TeaModel {
         public String docId;
 
         /**
+         * <p>Internal unique identifier for the document</p>
+         * 
          * <strong>example:</strong>
          * <p>8df2d69d63a247b6b52ff455b2d426b6</p>
          */
@@ -125,6 +146,8 @@ public class DocumentExtractionResponseBody extends TeaModel {
         public String docUuid;
 
         /**
+         * <p>Publication time</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-05-14 08:54:33</p>
          */
@@ -132,13 +155,17 @@ public class DocumentExtractionResponseBody extends TeaModel {
         public String pubTime;
 
         /**
+         * <p>Source</p>
+         * 
          * <strong>example:</strong>
-         * <p>央视网</p>
+         * <p>新闻来源</p>
          */
         @NameInMap("Source")
         public String source;
 
         /**
+         * <p>Article summary</p>
+         * 
          * <strong>example:</strong>
          * <p>文章摘要</p>
          */
@@ -146,6 +173,8 @@ public class DocumentExtractionResponseBody extends TeaModel {
         public String summary;
 
         /**
+         * <p>Tag</p>
+         * 
          * <strong>example:</strong>
          * <p>文章标签</p>
          */
@@ -153,6 +182,8 @@ public class DocumentExtractionResponseBody extends TeaModel {
         public String tag;
 
         /**
+         * <p>Title</p>
+         * 
          * <strong>example:</strong>
          * <p>文章标题</p>
          */
@@ -160,6 +191,8 @@ public class DocumentExtractionResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>Article URL</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://www.example.com/aaa.docx">https://www.example.com/aaa.docx</a></p>
          */

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DownloadBiddingDocResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business data</p>
+     */
     @NameInMap("Data")
     public DownloadBiddingDocResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class DownloadBiddingDocResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,7 +38,7 @@ public class DownloadBiddingDocResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>Request ID</p>
      * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
@@ -38,6 +47,8 @@ public class DownloadBiddingDocResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Operation result: true for success, false for failure</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +110,8 @@ public class DownloadBiddingDocResponseBody extends TeaModel {
 
     public static class DownloadBiddingDocResponseBodyData extends TeaModel {
         /**
+         * <p>Task ID</p>
+         * 
          * <strong>example:</strong>
          * <p>111_Default_20250708142918</p>
          */
@@ -106,6 +119,8 @@ public class DownloadBiddingDocResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>Document URL</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://www.example.com/aaa.docx">https://www.example.com/aaa.docx</a></p>
          */

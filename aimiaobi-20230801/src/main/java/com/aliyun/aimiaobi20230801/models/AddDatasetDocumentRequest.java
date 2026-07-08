@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddDatasetDocumentRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the dataset.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class AddDatasetDocumentRequest extends TeaModel {
     public Long datasetId;
 
     /**
+     * <p>The name of the dataset.</p>
+     * 
      * <strong>example:</strong>
      * <p>数据集名称</p>
      */
@@ -19,12 +23,14 @@ public class AddDatasetDocumentRequest extends TeaModel {
     public String datasetName;
 
     /**
+     * <p>The document.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Document")
     public AddDatasetDocumentRequestDocument document;
 
     /**
+     * <p>The unique identifier of the Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Obtain a workspaceId</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,12 +77,30 @@ public class AddDatasetDocumentRequest extends TeaModel {
     }
 
     public static class AddDatasetDocumentRequestDocumentMetadataAsrSentences extends TeaModel {
+        /**
+         * <p>The end time in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>The start time in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <p>The speech or caption information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("Text")
         public String text;
 
@@ -112,9 +136,21 @@ public class AddDatasetDocumentRequest extends TeaModel {
     }
 
     public static class AddDatasetDocumentRequestDocumentMetadataKeyValues extends TeaModel {
+        /**
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The parameter value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -142,12 +178,30 @@ public class AddDatasetDocumentRequest extends TeaModel {
     }
 
     public static class AddDatasetDocumentRequestDocumentMetadataVideoShots extends TeaModel {
+        /**
+         * <p>The end time in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>The start time in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <p>The text information from the video shot analysis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("Text")
         public String text;
 
@@ -183,15 +237,30 @@ public class AddDatasetDocumentRequest extends TeaModel {
     }
 
     public static class AddDatasetDocumentRequestDocumentMetadata extends TeaModel {
+        /**
+         * <p>The speech or caption information.</p>
+         */
         @NameInMap("AsrSentences")
         public java.util.List<AddDatasetDocumentRequestDocumentMetadataAsrSentences> asrSentences;
 
+        /**
+         * <p>The metadata in a key-value structure.</p>
+         */
         @NameInMap("KeyValues")
         public java.util.List<AddDatasetDocumentRequestDocumentMetadataKeyValues> keyValues;
 
+        /**
+         * <p>The description of the metadata. This field is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("Text")
         public String text;
 
+        /**
+         * <p>The video shot information.</p>
+         */
         @NameInMap("VideoShots")
         public java.util.List<AddDatasetDocumentRequestDocumentMetadataVideoShots> videoShots;
 
@@ -236,22 +305,34 @@ public class AddDatasetDocumentRequest extends TeaModel {
 
     public static class AddDatasetDocumentRequestDocumentMultimodalMedias extends TeaModel {
         /**
+         * <p>The URL of the file. The URL must be accessible over the public network.</p>
+         * 
          * <strong>example:</strong>
-         * <p>图片或视频文件地址</p>
+         * <p><a href="http://xxx">http://xxx</a></p>
          */
         @NameInMap("FileUrl")
         public String fileUrl;
 
         /**
+         * <p>The unique identifier of the multimodal data. The system automatically generates this ID. You do not need to specify this parameter.</p>
+         * 
          * <strong>example:</strong>
-         * <p>多模态数据唯一标识</p>
+         * <p>xxxx</p>
          */
         @NameInMap("MediaId")
         public String mediaId;
 
         /**
+         * <p>The type of the multimodal data.</p>
+         * <ul>
+         * <li><p>image: an image</p>
+         * </li>
+         * <li><p>video: a video</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>多模态数据类型</p>
+         * <p>image</p>
          */
         @NameInMap("MediaType")
         public String mediaType;
@@ -288,17 +369,27 @@ public class AddDatasetDocumentRequest extends TeaModel {
     }
 
     public static class AddDatasetDocumentRequestDocument extends TeaModel {
+        /**
+         * <p>The unique identifier of the category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("CategoryUuid")
         public String categoryUuid;
 
         /**
+         * <p>The content.</p>
+         * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>正文</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
+         * <p>Specifies whether to disable the indexing of multimodal data, such as images and videos, in the current record. The default value is true.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -306,61 +397,105 @@ public class AddDatasetDocumentRequest extends TeaModel {
         public Boolean disableHandleMultimodalMedia;
 
         /**
+         * <p>The unique business ID of the document.</p>
+         * 
          * <strong>example:</strong>
-         * <p>业务文档唯一ID</p>
+         * <p>xx</p>
          */
         @NameInMap("DocId")
         public String docId;
 
         /**
+         * <p>The type of the document.</p>
+         * <ul>
+         * <li><p>plainText: plain text. The content parameter is required.</p>
+         * </li>
+         * <li><p>richText: rich text in HTML format. The content parameter is required.</p>
+         * </li>
+         * <li><p>text: a text file. The url parameter is required.</p>
+         * </li>
+         * <li><p>pdf: a PDF file. The url parameter is required.</p>
+         * </li>
+         * <li><p>word: a Word document. The url parameter is required.</p>
+         * </li>
+         * <li><p>image: an image. The url parameter is required. Most common image formats are supported, such as GIF, PNG, JPG, and JPEG.</p>
+         * </li>
+         * <li><p>video: a video. The url parameter is required. Most common video formats are supported, such as MP4, AVI, WMV, and MOV.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>文档类型</p>
+         * <p>image</p>
          */
         @NameInMap("DocType")
         public String docType;
 
         /**
+         * <p>The unique system ID of the document. The system automatically generates this ID. You do not need to specify this parameter.</p>
+         * 
          * <strong>example:</strong>
-         * <p>内部文档唯一ID</p>
+         * <p>xxxx</p>
          */
         @NameInMap("DocUuid")
         public String docUuid;
 
         /**
+         * <p>Extension field 1.</p>
+         * 
          * <strong>example:</strong>
-         * <p>扩展字段1</p>
+         * <p>xxx</p>
          */
         @NameInMap("Extend1")
         public String extend1;
 
         /**
+         * <p>Extension field 2.</p>
+         * 
          * <strong>example:</strong>
-         * <p>扩展字段2</p>
+         * <p>xxxx</p>
          */
         @NameInMap("Extend2")
         public String extend2;
 
         /**
+         * <p>Extension field 3.</p>
+         * 
          * <strong>example:</strong>
-         * <p>扩展字段3</p>
+         * <p>xxx</p>
          */
         @NameInMap("Extend3")
         public String extend3;
 
+        /**
+         * <p>The metadata.</p>
+         */
         @NameInMap("Metadata")
         public AddDatasetDocumentRequestDocumentMetadata metadata;
 
         /**
+         * <p>Deprecated. This parameter is not available.</p>
+         * 
          * <strong>example:</strong>
-         * <p>模型名称 todo 商业化 仅个别账号可传入</p>
+         * <p>xxxx</p>
          */
         @NameInMap("MultimodalIndexName")
         public String multimodalIndexName;
 
+        /**
+         * <p>A list of multimodal data in the document.</p>
+         * <ul>
+         * <li><p>If a document, such as a rich text document, contains multimodal data like images or videos, you can pass the data using this parameter. This allows the data to be retrieved in search results.</p>
+         * </li>
+         * <li><p>If the document itself is multimodal data, leave this field empty and specify the data using the docType and url parameters.</p>
+         * </li>
+         * </ul>
+         */
         @NameInMap("MultimodalMedias")
         public java.util.List<AddDatasetDocumentRequestDocumentMultimodalMedias> multimodalMedias;
 
         /**
+         * <p>The publishing time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-12-09 13:35:40</p>
          */
@@ -368,32 +503,43 @@ public class AddDatasetDocumentRequest extends TeaModel {
         public String pubTime;
 
         /**
+         * <p>The source.</p>
+         * 
          * <strong>example:</strong>
-         * <p>来源</p>
+         * <p>xxx媒体</p>
          */
         @NameInMap("SourceFrom")
         public String sourceFrom;
 
         /**
+         * <p>The summary of the article.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章摘要</p>
          */
         @NameInMap("Summary")
         public String summary;
 
+        /**
+         * <p>The tag name.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<String> tags;
 
         /**
+         * <p>The title of the document.</p>
+         * 
          * <strong>example:</strong>
-         * <p><a href="mailto:xxxxx@xxxxx.com">xxxxx@xxxxx.com</a></p>
+         * <p>标题</p>
          */
         @NameInMap("Title")
         public String title;
 
         /**
+         * <p>The URL of the article. The URL must be accessible over the public network.</p>
+         * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p><a href="http://xxx">http://xxx</a></p>
          */
         @NameInMap("Url")
         public String url;

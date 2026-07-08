@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SearchNewsShrinkRequest extends TeaModel {
     /**
+     * <p>The unique ID of the workspace. For more information, see <a href="https://help.aliyun.com/document_detail/3027170.html">AgentKey</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class SearchNewsShrinkRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>Specifies whether to filter out results with empty content.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -21,6 +24,8 @@ public class SearchNewsShrinkRequest extends TeaModel {
     public Boolean filterNotNull;
 
     /**
+     * <p>Specifies whether to include the full text of the article.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -28,26 +33,35 @@ public class SearchNewsShrinkRequest extends TeaModel {
     public Boolean includeContent;
 
     /**
+     * <p>The page number. The default value is 1.</p>
+     * 
      * <strong>example:</strong>
-     * <p>81</p>
+     * <p>1</p>
      */
     @NameInMap("Page")
     public Integer page;
 
     /**
+     * <p>The number of records to return on each page. The default value is 10.</p>
+     * 
      * <strong>example:</strong>
-     * <p>35</p>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
+     * <p>The search query.</p>
+     * 
      * <strong>example:</strong>
      * <p>检索Query</p>
      */
     @NameInMap("Query")
     public String query;
 
+    /**
+     * <p>A list of search sources.</p>
+     */
     @NameInMap("SearchSources")
     public String searchSourcesShrink;
 

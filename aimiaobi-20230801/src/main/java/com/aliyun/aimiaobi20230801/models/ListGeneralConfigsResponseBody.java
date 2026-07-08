@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListGeneralConfigsResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The query results.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListGeneralConfigsResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListGeneralConfigsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The fault description.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class ListGeneralConfigsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -36,6 +47,8 @@ public class ListGeneralConfigsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -43,6 +56,8 @@ public class ListGeneralConfigsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The unique identifier of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -50,6 +65,8 @@ public class ListGeneralConfigsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. A value of \<code>true\\</code> indicates success. A value of \<code>false\\</code> indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -57,6 +74,8 @@ public class ListGeneralConfigsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -142,6 +161,8 @@ public class ListGeneralConfigsResponseBody extends TeaModel {
 
     public static class ListGeneralConfigsResponseBodyData extends TeaModel {
         /**
+         * <p>The description of the configuration item.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -149,6 +170,8 @@ public class ListGeneralConfigsResponseBody extends TeaModel {
         public String configDesc;
 
         /**
+         * <p>The unique identifier of the configuration item.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -156,6 +179,8 @@ public class ListGeneralConfigsResponseBody extends TeaModel {
         public String configKey;
 
         /**
+         * <p>The value of the configuration item.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -163,6 +188,8 @@ public class ListGeneralConfigsResponseBody extends TeaModel {
         public String configValue;
 
         /**
+         * <p>The type of the configuration item.</p>
+         * 
          * <strong>example:</strong>
          * <p>CustomSemanticSearch</p>
          */

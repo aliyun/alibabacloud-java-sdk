@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetStyleLearningResultRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetStyleLearningResultRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The ID of the style learning task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

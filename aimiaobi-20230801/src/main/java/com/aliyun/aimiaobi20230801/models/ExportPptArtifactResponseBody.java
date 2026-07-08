@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ExportPptArtifactResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>DataNotExists</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The export task details.</p>
+     */
     @NameInMap("Data")
     public ExportPptArtifactResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>400</p>
      */
@@ -22,6 +29,8 @@ public class ExportPptArtifactResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>错误消息</p>
      */
@@ -29,7 +38,7 @@ public class ExportPptArtifactResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxxx</p>
@@ -37,6 +46,9 @@ public class ExportPptArtifactResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Whether the request succeeded.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -95,6 +107,8 @@ public class ExportPptArtifactResponseBody extends TeaModel {
 
     public static class ExportPptArtifactResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the export task.</p>
+         * 
          * <strong>example:</strong>
          * <p>adb8146b-146b-4206-bd40-19f591e85293</p>
          */

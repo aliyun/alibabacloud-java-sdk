@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class InitiatePptCreationV2ResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>DataNotExists</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public InitiatePptCreationV2ResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>400</p>
      */
@@ -22,6 +29,8 @@ public class InitiatePptCreationV2ResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>错误消息</p>
      */
@@ -29,7 +38,7 @@ public class InitiatePptCreationV2ResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxxx</p>
@@ -38,6 +47,8 @@ public class InitiatePptCreationV2ResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +110,8 @@ public class InitiatePptCreationV2ResponseBody extends TeaModel {
 
     public static class InitiatePptCreationV2ResponseBodyData extends TeaModel {
         /**
+         * <p>An alert message related to service usage or status.</p>
+         * 
          * <strong>example:</strong>
          * <p>本月版本内的配送额度已经用尽，超额使用将走按量后付费，下个月配送额度将重新下发；请知晓</p>
          */
@@ -106,6 +119,8 @@ public class InitiatePptCreationV2ResponseBody extends TeaModel {
         public String alert;
 
         /**
+         * <p>The AppKey for initializing the front-end component.</p>
+         * 
          * <strong>example:</strong>
          * <p>S1X5ecouBztZelaQ</p>
          */
@@ -113,6 +128,8 @@ public class InitiatePptCreationV2ResponseBody extends TeaModel {
         public String appKey;
 
         /**
+         * <p>The ID of the export task.</p>
+         * 
          * <strong>example:</strong>
          * <p>66b25058-d735-47e5-a534-5da93453d3df</p>
          */
@@ -120,6 +137,8 @@ public class InitiatePptCreationV2ResponseBody extends TeaModel {
         public String exportTaskId;
 
         /**
+         * <p>The URL of the artifact cover.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://a.com/xxx.png">http://a.com/xxx.png</a></p>
          */
@@ -127,6 +146,8 @@ public class InitiatePptCreationV2ResponseBody extends TeaModel {
         public String pptArtifactCover;
 
         /**
+         * <p>The artifact ID. Use this ID to edit the artifact.</p>
+         * 
          * <strong>example:</strong>
          * <p>53059801</p>
          */
@@ -134,6 +155,8 @@ public class InitiatePptCreationV2ResponseBody extends TeaModel {
         public String pptArtifactId;
 
         /**
+         * <p>The process ID for creating the PPT, used to initialize the front-end component for artifact creation.</p>
+         * 
          * <strong>example:</strong>
          * <p>8485143</p>
          */
@@ -141,6 +164,8 @@ public class InitiatePptCreationV2ResponseBody extends TeaModel {
         public String pptProcessId;
 
         /**
+         * <p>The signature for initializing the front-end component.</p>
+         * 
          * <strong>example:</strong>
          * <p>dBBGvT0Toje5887Qw+/IwwMNYfk=</p>
          */

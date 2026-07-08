@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RunCustomHotTopicViewPointAnalysisRequest extends TeaModel {
     /**
+     * <p>Model follow-up question</p>
+     * 
      * <strong>example:</strong>
      * <p>模型反问</p>
      */
@@ -12,6 +14,7 @@ public class RunCustomHotTopicViewPointAnalysisRequest extends TeaModel {
     public String askUser;
 
     /**
+     * <p>Prompt for custom hot topic viewpoint analysis</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class RunCustomHotTopicViewPointAnalysisRequest extends TeaModel {
     public String prompt;
 
     /**
+     * <p>Rewritten query</p>
+     * 
      * <strong>example:</strong>
      * <p>改写后的Query</p>
      */
@@ -28,6 +33,8 @@ public class RunCustomHotTopicViewPointAnalysisRequest extends TeaModel {
     public String searchQuery;
 
     /**
+     * <p>Set to true to skip the follow-up question</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -35,6 +42,8 @@ public class RunCustomHotTopicViewPointAnalysisRequest extends TeaModel {
     public Boolean skipAskUser;
 
     /**
+     * <p>The hot topic for analysis</p>
+     * 
      * <strong>example:</strong>
      * <p>热点主题</p>
      */
@@ -42,6 +51,8 @@ public class RunCustomHotTopicViewPointAnalysisRequest extends TeaModel {
     public String topic;
 
     /**
+     * <p>Hot topic ID</p>
+     * 
      * <strong>example:</strong>
      * <p>热点主题ID</p>
      */
@@ -49,6 +60,8 @@ public class RunCustomHotTopicViewPointAnalysisRequest extends TeaModel {
     public String topicId;
 
     /**
+     * <p>Hot topic source</p>
+     * 
      * <strong>example:</strong>
      * <p>热点主题来源</p>
      */
@@ -56,6 +69,8 @@ public class RunCustomHotTopicViewPointAnalysisRequest extends TeaModel {
     public String topicSource;
 
     /**
+     * <p>Hot topic version</p>
+     * 
      * <strong>example:</strong>
      * <p>热点主题版本</p>
      */
@@ -63,6 +78,8 @@ public class RunCustomHotTopicViewPointAnalysisRequest extends TeaModel {
     public String topicVersion;
 
     /**
+     * <p>User feedback</p>
+     * 
      * <strong>example:</strong>
      * <p>用户反馈</p>
      */
@@ -70,6 +87,7 @@ public class RunCustomHotTopicViewPointAnalysisRequest extends TeaModel {
     public String userBack;
 
     /**
+     * <p>The unique identifier of the Alibaba Cloud Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Get the Workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

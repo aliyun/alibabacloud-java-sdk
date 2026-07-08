@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListInterveneImportTasksResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
-     * <p>DataNotExists</p>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business data</p>
+     */
     @NameInMap("Data")
     public ListInterveneImportTasksResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListInterveneImportTasksResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error description</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class ListInterveneImportTasksResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Unique request identifier</p>
+     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */
@@ -36,6 +47,8 @@ public class ListInterveneImportTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded: true for success, false for failure</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class ListInterveneImportTasksResponseBody extends TeaModel {
 
     public static class ListInterveneImportTasksResponseBodyDataStatusList extends TeaModel {
         /**
+         * <p>Task message</p>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */
@@ -104,6 +119,8 @@ public class ListInterveneImportTasksResponseBody extends TeaModel {
         public String msg;
 
         /**
+         * <p>Completion percentage</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -111,6 +128,8 @@ public class ListInterveneImportTasksResponseBody extends TeaModel {
         public Integer percentage;
 
         /**
+         * <p>Task status</p>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */
@@ -118,6 +137,8 @@ public class ListInterveneImportTasksResponseBody extends TeaModel {
         public Integer status;
 
         /**
+         * <p>Task ID</p>
+         * 
          * <strong>example:</strong>
          * <p>4854</p>
          */
@@ -125,6 +146,8 @@ public class ListInterveneImportTasksResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>Task name</p>
+         * 
          * <strong>example:</strong>
          * <p>12344454</p>
          */
@@ -179,10 +202,18 @@ public class ListInterveneImportTasksResponseBody extends TeaModel {
     }
 
     public static class ListInterveneImportTasksResponseBodyData extends TeaModel {
+        /**
+         * <p>Status code returned by the intervention service</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("Code")
         public Integer code;
 
         /**
+         * <p>Page number</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -190,16 +221,23 @@ public class ListInterveneImportTasksResponseBody extends TeaModel {
         public Integer pageIndex;
 
         /**
+         * <p>Page size</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>Task status information</p>
+         */
         @NameInMap("StatusList")
         public java.util.List<ListInterveneImportTasksResponseBodyDataStatusList> statusList;
 
         /**
+         * <p>Total number of pages</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */

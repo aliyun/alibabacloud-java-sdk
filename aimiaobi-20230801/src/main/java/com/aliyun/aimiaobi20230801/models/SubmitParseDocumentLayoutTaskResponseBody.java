@@ -29,8 +29,6 @@ public class SubmitParseDocumentLayoutTaskResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
-     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */

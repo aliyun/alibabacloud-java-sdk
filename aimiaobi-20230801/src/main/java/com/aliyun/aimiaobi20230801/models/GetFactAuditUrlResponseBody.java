@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetFactAuditUrlResponseBody extends TeaModel {
     /**
+     * <p>Status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>DataNotExists</p>
      */
@@ -12,12 +14,15 @@ public class GetFactAuditUrlResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>List of source URLs currently used for factuality audit. If the list is empty, the retrieval source is the entire network. If URLs are present, information is retrieved only from the configured URLs. To delete unnecessary source URLs, use the URLs from the response parameter as input for the DeleteFactAuditUrl API.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Data")
     public java.util.List<String> data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -25,6 +30,8 @@ public class GetFactAuditUrlResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error description.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -41,6 +48,8 @@ public class GetFactAuditUrlResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether this request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

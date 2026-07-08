@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GenerateImageTaskResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The business data.</p>
+     */
     @NameInMap("Data")
     public GenerateImageTaskResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GenerateImageTaskResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error description.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +38,8 @@ public class GenerateImageTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>F2F366D6-E9FE-1006-BB70-2C650896AAB5</p>
      */
@@ -36,6 +47,8 @@ public class GenerateImageTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. true: The request was successful. false: The request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class GenerateImageTaskResponseBody extends TeaModel {
 
     public static class GenerateImageTaskResponseBodyDataTaskList extends TeaModel {
         /**
+         * <p>The content of the paragraph.</p>
+         * 
          * <strong>example:</strong>
          * <p>一直忧伤的猫</p>
          */
@@ -104,6 +119,8 @@ public class GenerateImageTaskResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>The paragraph ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -111,6 +128,8 @@ public class GenerateImageTaskResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The unique ID of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>e1be065b-adc3-435e-bd01-1c18c5ed75d3</p>
          */
@@ -118,6 +137,8 @@ public class GenerateImageTaskResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The current status of the task. Valid values: SUCCEEDED, FAILED, CANCELED, PENDING, SUSPENDED, and RUNNING.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESSED</p>
          */
@@ -164,6 +185,9 @@ public class GenerateImageTaskResponseBody extends TeaModel {
     }
 
     public static class GenerateImageTaskResponseBodyData extends TeaModel {
+        /**
+         * <p>The information about the paragraph tasks. The tasks are associated based on the input paragraph IDs.</p>
+         */
         @NameInMap("TaskList")
         public java.util.List<GenerateImageTaskResponseBodyDataTaskList> taskList;
 

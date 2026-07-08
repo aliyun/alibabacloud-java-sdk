@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCustomViewPointsRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListCustomViewPointsRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The viewpoint to filter by.</p>
+     * 
      * <strong>example:</strong>
      * <p>观点</p>
      */
@@ -21,6 +24,8 @@ public class ListCustomViewPointsRequest extends TeaModel {
     public String attitude;
 
     /**
+     * <p>A list of viewpoints to filter by.</p>
+     * 
      * <strong>example:</strong>
      * <p>观点
      *      *</p>
@@ -29,6 +34,8 @@ public class ListCustomViewPointsRequest extends TeaModel {
     public java.util.List<String> attitudes;
 
     /**
+     * <p>The ID of the custom viewpoint.</p>
+     * 
      * <strong>example:</strong>
      * <p>461591f4880747f890702c1b90494d1a</p>
      */
@@ -36,6 +43,8 @@ public class ListCustomViewPointsRequest extends TeaModel {
     public String customViewPointId;
 
     /**
+     * <p>A list of custom viewpoint IDs.</p>
+     * 
      * <strong>example:</strong>
      * <p>7ece3d1212e04c9ca716ae2486228f3f</p>
      */
@@ -43,6 +52,8 @@ public class ListCustomViewPointsRequest extends TeaModel {
     public java.util.List<String> customViewPointIds;
 
     /**
+     * <p>The maximum number of results to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>52</p>
      */
@@ -50,6 +61,8 @@ public class ListCustomViewPointsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token for the next page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>下一页的token</p>
      */
@@ -57,6 +70,8 @@ public class ListCustomViewPointsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The topic of the hot list.</p>
+     * 
      * <strong>example:</strong>
      * <p>热榜主题</p>
      */
@@ -64,6 +79,8 @@ public class ListCustomViewPointsRequest extends TeaModel {
     public String topic;
 
     /**
+     * <p>The topic ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1d20ed14db0840efb1c7eaaf4d46352b</p>
      */

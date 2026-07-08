@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetPptTemplateSelectorResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>DataNotExists</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response object.</p>
+     */
     @NameInMap("Data")
     public GetPptTemplateSelectorResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>400</p>
      */
@@ -22,6 +29,8 @@ public class GetPptTemplateSelectorResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>错误消息</p>
      */
@@ -37,6 +46,9 @@ public class GetPptTemplateSelectorResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -95,6 +107,8 @@ public class GetPptTemplateSelectorResponseBody extends TeaModel {
 
     public static class GetPptTemplateSelectorResponseBodyDataCareer extends TeaModel {
         /**
+         * <p>The career ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -102,6 +116,8 @@ public class GetPptTemplateSelectorResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>Indicates whether the career is popular.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -109,6 +125,8 @@ public class GetPptTemplateSelectorResponseBody extends TeaModel {
         public Long isHot;
 
         /**
+         * <p>The career name.</p>
+         * 
          * <strong>example:</strong>
          * <p>教育培训</p>
          */
@@ -148,6 +166,8 @@ public class GetPptTemplateSelectorResponseBody extends TeaModel {
 
     public static class GetPptTemplateSelectorResponseBodyDataColour extends TeaModel {
         /**
+         * <p>The color value.</p>
+         * 
          * <strong>example:</strong>
          * <p>#FCC462</p>
          */
@@ -155,6 +175,8 @@ public class GetPptTemplateSelectorResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The color ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -162,6 +184,8 @@ public class GetPptTemplateSelectorResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The color name.</p>
+         * 
          * <strong>example:</strong>
          * <p>橙色</p>
          */
@@ -201,6 +225,8 @@ public class GetPptTemplateSelectorResponseBody extends TeaModel {
 
     public static class GetPptTemplateSelectorResponseBodyDataSuitScene extends TeaModel {
         /**
+         * <p>The scenario ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -208,6 +234,8 @@ public class GetPptTemplateSelectorResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The scenario name.</p>
+         * 
          * <strong>example:</strong>
          * <p>教育培训</p>
          */
@@ -239,6 +267,8 @@ public class GetPptTemplateSelectorResponseBody extends TeaModel {
 
     public static class GetPptTemplateSelectorResponseBodyDataSuitStyle extends TeaModel {
         /**
+         * <p>The style ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -246,6 +276,8 @@ public class GetPptTemplateSelectorResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The style name.</p>
+         * 
          * <strong>example:</strong>
          * <p>扁平简约</p>
          */
@@ -276,15 +308,27 @@ public class GetPptTemplateSelectorResponseBody extends TeaModel {
     }
 
     public static class GetPptTemplateSelectorResponseBodyData extends TeaModel {
+        /**
+         * <p>The careers.</p>
+         */
         @NameInMap("Career")
         public java.util.List<GetPptTemplateSelectorResponseBodyDataCareer> career;
 
+        /**
+         * <p>The colors.</p>
+         */
         @NameInMap("Colour")
         public java.util.List<GetPptTemplateSelectorResponseBodyDataColour> colour;
 
+        /**
+         * <p>The scenarios.</p>
+         */
         @NameInMap("SuitScene")
         public java.util.List<GetPptTemplateSelectorResponseBodyDataSuitScene> suitScene;
 
+        /**
+         * <p>The styles.</p>
+         */
         @NameInMap("SuitStyle")
         public java.util.List<GetPptTemplateSelectorResponseBodyDataSuitStyle> suitStyle;
 

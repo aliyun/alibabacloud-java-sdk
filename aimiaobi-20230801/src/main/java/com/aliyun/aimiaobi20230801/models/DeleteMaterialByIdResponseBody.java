@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteMaterialByIdResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>DataNotExists</p>
      */
@@ -12,6 +14,8 @@ public class DeleteMaterialByIdResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The data returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -19,6 +23,8 @@ public class DeleteMaterialByIdResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class DeleteMaterialByIdResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>数据不存在</p>
      */
@@ -33,6 +41,8 @@ public class DeleteMaterialByIdResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique identifier of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */
@@ -40,6 +50,8 @@ public class DeleteMaterialByIdResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. \<code>true\\</code> indicates success. \<code>false\\</code> indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

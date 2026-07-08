@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class InsertInterveneRuleResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
-     * <p>0</p>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business data</p>
+     */
     @NameInMap("Data")
     public InsertInterveneRuleResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class InsertInterveneRuleResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +38,8 @@ public class InsertInterveneRuleResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Unique request identifier</p>
+     * 
      * <strong>example:</strong>
      * <p>DD656AF9-0839-521A-A3D2-F320009F9C87</p>
      */
@@ -36,6 +47,8 @@ public class InsertInterveneRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates success: true for success, false for failure</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -96,10 +109,18 @@ public class InsertInterveneRuleResponseBody extends TeaModel {
     }
 
     public static class InsertInterveneRuleResponseBodyData extends TeaModel {
+        /**
+         * <p>Status code returned by the intervention service</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("Code")
         public Integer code;
 
         /**
+         * <p>Rule ID</p>
+         * 
          * <strong>example:</strong>
          * <p>12345</p>
          */

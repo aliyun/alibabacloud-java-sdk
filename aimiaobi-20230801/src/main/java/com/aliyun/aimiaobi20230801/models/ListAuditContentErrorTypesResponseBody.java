@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListAuditContentErrorTypesResponseBody extends TeaModel {
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>DataNotExists</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>List of audit dimensions</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListAuditContentErrorTypesResponseBodyData> data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListAuditContentErrorTypesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Maximum number of records returned in this response</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -29,12 +38,20 @@ public class ListAuditContentErrorTypesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Token for the next page</p>
+     * 
+     * <strong>example:</strong>
+     * <p>下一页的token</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -48,6 +65,8 @@ public class ListAuditContentErrorTypesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -55,6 +74,8 @@ public class ListAuditContentErrorTypesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Total number of records</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -140,12 +161,20 @@ public class ListAuditContentErrorTypesResponseBody extends TeaModel {
 
     public static class ListAuditContentErrorTypesResponseBodyDataSubClasses extends TeaModel {
         /**
+         * <p>Sub-audit dimension code</p>
+         * 
          * <strong>example:</strong>
          * <p>PunctuationError</p>
          */
         @NameInMap("ClassCode")
         public String classCode;
 
+        /**
+         * <p>Sub-audit dimension name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>标点符号错误</p>
+         */
         @NameInMap("ClassName")
         public String className;
 
@@ -174,15 +203,26 @@ public class ListAuditContentErrorTypesResponseBody extends TeaModel {
 
     public static class ListAuditContentErrorTypesResponseBodyData extends TeaModel {
         /**
+         * <p>Main audit dimension code</p>
+         * 
          * <strong>example:</strong>
          * <p>ContentAccuracy</p>
          */
         @NameInMap("MajorClassCode")
         public String majorClassCode;
 
+        /**
+         * <p>Sub-audit dimension name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>内容准确性</p>
+         */
         @NameInMap("MajorClassName")
         public String majorClassName;
 
+        /**
+         * <p>List of sub-audit dimensions</p>
+         */
         @NameInMap("SubClasses")
         public java.util.List<ListAuditContentErrorTypesResponseBodyDataSubClasses> subClasses;
 

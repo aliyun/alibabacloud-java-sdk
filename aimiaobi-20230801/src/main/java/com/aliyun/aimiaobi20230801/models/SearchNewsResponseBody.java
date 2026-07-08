@@ -5,23 +5,32 @@ import com.aliyun.tea.*;
 
 public class SearchNewsResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
-     * <p>NoData</p>
+     * <p>successful</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("Current")
     public Integer current;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<SearchNewsResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,13 +38,17 @@ public class SearchNewsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
-     * <p>success</p>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -43,6 +56,8 @@ public class SearchNewsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The number of records on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -50,6 +65,8 @@ public class SearchNewsResponseBody extends TeaModel {
     public Integer size;
 
     /**
+     * <p>Indicates whether the request was successful. A value of \<code>true\\</code> indicates success and a value of \<code>false\\</code> indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -57,6 +74,8 @@ public class SearchNewsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -142,6 +161,8 @@ public class SearchNewsResponseBody extends TeaModel {
 
     public static class SearchNewsResponseBodyData extends TeaModel {
         /**
+         * <p>The author of the article. This parameter may not be returned for some articles.</p>
+         * 
          * <strong>example:</strong>
          * <p>作者</p>
          */
@@ -149,6 +170,8 @@ public class SearchNewsResponseBody extends TeaModel {
         public String author;
 
         /**
+         * <p>The content of the article. This parameter is always returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章内容</p>
          */
@@ -156,16 +179,23 @@ public class SearchNewsResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>The unique ID of the internal document. This parameter is always returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>9a598b44c6444da5907b8ea68a5f82c4</p>
          */
         @NameInMap("DocUuid")
         public String docUuid;
 
+        /**
+         * <p>The URLs of the images. This parameter is deprecated and is no longer returned. Do not use it.</p>
+         */
         @NameInMap("ImageUrls")
         public java.util.List<String> imageUrls;
 
         /**
+         * <p>The time when the article was published. This parameter is always returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-18 06:46:22</p>
          */
@@ -173,6 +203,8 @@ public class SearchNewsResponseBody extends TeaModel {
         public String pubTime;
 
         /**
+         * <p>The ID of the internal search source. This parameter is always returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>QuarkCommonNews</p>
          */
@@ -180,6 +212,8 @@ public class SearchNewsResponseBody extends TeaModel {
         public String searchSource;
 
         /**
+         * <p>The name of the internal search source. This parameter is always returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>夸克检索</p>
          */
@@ -187,6 +221,8 @@ public class SearchNewsResponseBody extends TeaModel {
         public String searchSourceName;
 
         /**
+         * <p>The source of the article. This parameter may not be returned for some articles.</p>
+         * 
          * <strong>example:</strong>
          * <p>央视网</p>
          */
@@ -194,6 +230,8 @@ public class SearchNewsResponseBody extends TeaModel {
         public String source;
 
         /**
+         * <p>The summary of the article. This parameter may not be returned for some articles.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章摘要</p>
          */
@@ -201,6 +239,8 @@ public class SearchNewsResponseBody extends TeaModel {
         public String summary;
 
         /**
+         * <p>The tag of the article. This parameter may not be returned for some articles.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章标签</p>
          */
@@ -208,6 +248,8 @@ public class SearchNewsResponseBody extends TeaModel {
         public String tag;
 
         /**
+         * <p>The title of the article. This parameter is always returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章标题</p>
          */
@@ -215,6 +257,8 @@ public class SearchNewsResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>The time when the system was updated. This parameter is deprecated and is no longer returned. Do not use it.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-18 06:46:22</p>
          */
@@ -222,6 +266,8 @@ public class SearchNewsResponseBody extends TeaModel {
         public String updateTime;
 
         /**
+         * <p>The URL of the article. This parameter is always returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章URL</p>
          */

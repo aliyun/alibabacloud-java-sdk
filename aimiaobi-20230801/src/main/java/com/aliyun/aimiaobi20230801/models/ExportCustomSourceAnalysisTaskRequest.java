@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExportCustomSourceAnalysisTaskRequest extends TeaModel {
     /**
+     * <p>Export format type. Default is jsonLine. jsonline: Exports in jsonLine format. excel: Exports in Excel format.</p>
+     * 
      * <strong>example:</strong>
      * <p>jsonLine</p>
      */
@@ -12,6 +14,7 @@ public class ExportCustomSourceAnalysisTaskRequest extends TeaModel {
     public String exportType;
 
     /**
+     * <p>Unique ID for the task</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class ExportCustomSourceAnalysisTaskRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>Unique identifier for the workspace: AgentKey</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

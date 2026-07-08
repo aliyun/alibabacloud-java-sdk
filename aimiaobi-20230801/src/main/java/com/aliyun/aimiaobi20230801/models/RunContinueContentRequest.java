@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RunContinueContentRequest extends TeaModel {
     /**
+     * <p>Content to continue.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class RunContinueContentRequest extends TeaModel {
     public String content;
 
     /**
+     * <p>Unique identifier for the Alibaba Cloud Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Get the workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

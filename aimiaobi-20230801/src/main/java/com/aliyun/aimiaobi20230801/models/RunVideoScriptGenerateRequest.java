@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class RunVideoScriptGenerateRequest extends TeaModel {
     /**
+     * <p>The language of the generated script.
+     * Recommended values:</p>
+     * <p>zh-CN: Chinese</p>
+     * <p>en-US: English</p>
+     * <p>The default is Chinese.</p>
+     * 
      * <strong>example:</strong>
      * <p>en-US</p>
      */
@@ -12,12 +18,22 @@ public class RunVideoScriptGenerateRequest extends TeaModel {
     public String language;
 
     /**
+     * <p>The prompt for the video script.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>写一篇关于黄山旅游的脚本</p>
      */
     @NameInMap("Prompt")
     public String prompt;
 
     /**
+     * <p>The length of the script. Valid values:</p>
+     * <p>20\~75: 10 to 15 seconds of normal speaking time.</p>
+     * <p>75\~150: 15 to 30 seconds of normal speaking time.</p>
+     * <p>150\~300: Approximately 30 to 60 seconds of normal speaking time.</p>
+     * <p>\&gt;=300: 60 seconds or more of normal speaking time.</p>
+     * 
      * <strong>example:</strong>
      * <blockquote>
      * <p>=300</p>
@@ -27,6 +43,9 @@ public class RunVideoScriptGenerateRequest extends TeaModel {
     public String scriptLength;
 
     /**
+     * <p>The number of scripts to generate. The default is 1. You can generate a maximum of three scripts at a time.
+     * If you specify multiple scripts, the results are returned in parallel streams. The client distinguishes between the streams using different session IDs.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -34,6 +53,8 @@ public class RunVideoScriptGenerateRequest extends TeaModel {
     public Integer scriptNumber;
 
     /**
+     * <p>Specifies whether to use an internet search. If you set this to true, the system performs intention recognition and then searches the internet for relevant reference materials.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -41,6 +62,7 @@ public class RunVideoScriptGenerateRequest extends TeaModel {
     public Boolean useSearch;
 
     /**
+     * <p>The unique ID of the Alibaba Cloud Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Get a Workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

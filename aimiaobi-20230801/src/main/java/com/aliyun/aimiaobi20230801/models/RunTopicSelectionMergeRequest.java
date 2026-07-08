@@ -4,16 +4,24 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunTopicSelectionMergeRequest extends TeaModel {
+    /**
+     * <p>Custom merge prompt</p>
+     * 
+     * <strong>example:</strong>
+     * <p>请从xxxx的角度，分析xxxx事件</p>
+     */
     @NameInMap("Prompt")
     public String prompt;
 
     /**
+     * <p>List of topic perspectives to merge</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Topics")
     public java.util.List<TopicSelection> topics;
 
     /**
+     * <p><a href="https://help.aliyun.com/document_detail/2782167.html">Workspace ID</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

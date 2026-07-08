@@ -4,13 +4,21 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunSearchSimilarArticlesResponseBody extends TeaModel {
+    /**
+     * <p>Response header.</p>
+     */
     @NameInMap("Header")
     public RunSearchSimilarArticlesResponseBodyHeader header;
 
+    /**
+     * <p>Response body.</p>
+     */
     @NameInMap("Payload")
     public RunSearchSimilarArticlesResponseBodyPayload payload;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */
@@ -48,6 +56,8 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
 
     public static class RunSearchSimilarArticlesResponseBodyHeader extends TeaModel {
         /**
+         * <p>Error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>错误码</p>
          */
@@ -55,6 +65,8 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>Error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>错误信息</p>
          */
@@ -62,6 +74,8 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>Server-sent event. Valid values: task-started, task-finished, and task-failed.</p>
+         * 
          * <strong>example:</strong>
          * <p>task-started</p>
          */
@@ -72,6 +86,8 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
         public String eventInfo;
 
         /**
+         * <p>Session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
@@ -79,6 +95,8 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>Task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
@@ -141,48 +159,117 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
     }
 
     public static class RunSearchSimilarArticlesResponseBodyPayloadOutputArticles extends TeaModel {
+        /**
+         * <p>UUID of the category</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("CategoryUuid")
         public String categoryUuid;
 
+        /**
+         * <p>Custom unique document ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("DocId")
         public String docId;
 
+        /**
+         * <p>Document Type:  </p>
+         * <ul>
+         * <li>plainText: plain text; content is required  </li>
+         * <li>richText: rich text in HTML format; content is required  </li>
+         * <li>text: text file; url is required  </li>
+         * <li>pdf: url is required  </li>
+         * <li>word: url is required  </li>
+         * <li>image: Image; url is required. Supports most common image formats such as GIF, PNG, JPG, and JPEG  </li>
+         * <li>video: Video; url is required. Supports most common video formats such as MP4, AVI, WMV, and MOV</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
+         */
         @NameInMap("DocType")
         public String docType;
 
         /**
+         * <p>Article ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>a26c2c1</p>
          */
         @NameInMap("DocUuid")
         public String docUuid;
 
+        /**
+         * <p>Extension field 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend1")
         public String extend1;
 
+        /**
+         * <p>Extension field 2</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend2")
         public String extend2;
 
+        /**
+         * <p>Extension field 3</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend3")
         public String extend3;
 
         /**
+         * <p>Publication time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-01-16 18:07:22</p>
          */
         @NameInMap("PubTime")
         public String pubTime;
 
+        /**
+         * <p>Search source</p>
+         * 
+         * <strong>example:</strong>
+         * <p>QuarkCommonNews</p>
+         */
         @NameInMap("SearchSource")
         public String searchSource;
 
+        /**
+         * <p>Search source name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>互联网搜索</p>
+         */
         @NameInMap("SearchSourceName")
         public String searchSourceName;
 
+        /**
+         * <p>Type of dataset</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("SearchSourceType")
         public String searchSourceType;
 
         /**
+         * <p>Source website.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx.com</p>
          */
@@ -190,19 +277,32 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
         public String source;
 
         /**
+         * <p>Summary.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
         @NameInMap("Summary")
         public String summary;
 
+        /**
+         * <p>label</p>
+         */
         @NameInMap("Tags")
         public java.util.List<String> tags;
 
+        /**
+         * <p>Title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>标题</p>
+         */
         @NameInMap("Title")
         public String title;
 
         /**
+         * <p>URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://xxx">https://xxx</a></p>
          */
@@ -345,10 +445,15 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
     }
 
     public static class RunSearchSimilarArticlesResponseBodyPayloadOutput extends TeaModel {
+        /**
+         * <p>Article list.</p>
+         */
         @NameInMap("Articles")
         public java.util.List<RunSearchSimilarArticlesResponseBodyPayloadOutputArticles> articles;
 
         /**
+         * <p>Text generation result.</p>
+         * 
          * <strong>example:</strong>
          * <p>文本生成结果</p>
          */
@@ -380,6 +485,8 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
 
     public static class RunSearchSimilarArticlesResponseBodyPayloadUsage extends TeaModel {
         /**
+         * <p>Number of input tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>81</p>
          */
@@ -387,6 +494,8 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
         public Long inputTokens;
 
         /**
+         * <p>Number of output tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>9</p>
          */
@@ -394,6 +503,8 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
         public Long outputTokens;
 
         /**
+         * <p>Total number of tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -432,9 +543,16 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
     }
 
     public static class RunSearchSimilarArticlesResponseBodyPayload extends TeaModel {
+        /**
+         * <p>Output.</p>
+         */
         @NameInMap("Output")
         public RunSearchSimilarArticlesResponseBodyPayloadOutput output;
 
+        /**
+         * <p>instance: The image is running and used by an ECS instance.</p>
+         * <p>none: The image is idle and not used by any ECS instance.</p>
+         */
         @NameInMap("Usage")
         public RunSearchSimilarArticlesResponseBodyPayloadUsage usage;
 

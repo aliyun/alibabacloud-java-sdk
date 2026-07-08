@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitAuditNoteResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>DataNotExists</p>
      */
@@ -12,6 +14,8 @@ public class SubmitAuditNoteResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Task ID of this rule library submission. Use this ID in later API calls.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx_Default_89123748917</p>
      */
@@ -19,6 +23,8 @@ public class SubmitAuditNoteResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class SubmitAuditNoteResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -33,7 +41,7 @@ public class SubmitAuditNoteResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>F2F366D6-E9FE-1006-BB70-2C650896AAB5</p>
@@ -42,6 +50,8 @@ public class SubmitAuditNoteResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

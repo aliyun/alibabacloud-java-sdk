@@ -5,15 +5,23 @@ import com.aliyun.tea.*;
 
 public class RunDocWashingResponseBody extends TeaModel {
     /**
+     * <p>Is the response package finished?</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("End")
     public Boolean end;
 
+    /**
+     * <p>Response header</p>
+     */
     @NameInMap("Header")
     public RunDocWashingResponseBodyHeader header;
 
+    /**
+     * <p>Response body</p>
+     */
     @NameInMap("Payload")
     public RunDocWashingResponseBodyPayload payload;
 
@@ -65,16 +73,26 @@ public class RunDocWashingResponseBody extends TeaModel {
 
     public static class RunDocWashingResponseBodyHeader extends TeaModel {
         /**
+         * <p>Event type</p>
+         * 
          * <strong>example:</strong>
          * <p>task-finished</p>
          */
         @NameInMap("Event")
         public String event;
 
+        /**
+         * <p>Event description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>模型生成事件</p>
+         */
         @NameInMap("EventInfo")
         public String eventInfo;
 
         /**
+         * <p>Request ID</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
@@ -82,6 +100,8 @@ public class RunDocWashingResponseBody extends TeaModel {
         public String requestId;
 
         /**
+         * <p>Session ID</p>
+         * 
          * <strong>example:</strong>
          * <p>20247a52-23e2-46fb-943d-309cdee2bc6d</p>
          */
@@ -89,6 +109,8 @@ public class RunDocWashingResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>Task ID</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
@@ -96,6 +118,8 @@ public class RunDocWashingResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>Full link ID</p>
+         * 
          * <strong>example:</strong>
          * <p>2150451a17191950923411783e2927</p>
          */
@@ -158,6 +182,12 @@ public class RunDocWashingResponseBody extends TeaModel {
     }
 
     public static class RunDocWashingResponseBodyPayloadOutput extends TeaModel {
+        /**
+         * <p>Output content</p>
+         * 
+         * <strong>example:</strong>
+         * <p>文本生成结果</p>
+         */
         @NameInMap("Text")
         public String text;
 
@@ -178,6 +208,8 @@ public class RunDocWashingResponseBody extends TeaModel {
 
     public static class RunDocWashingResponseBodyPayloadUsage extends TeaModel {
         /**
+         * <p>Number of input tokens</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -185,6 +217,8 @@ public class RunDocWashingResponseBody extends TeaModel {
         public Long inputTokens;
 
         /**
+         * <p>Number of output tokens</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -192,6 +226,8 @@ public class RunDocWashingResponseBody extends TeaModel {
         public Long outputTokens;
 
         /**
+         * <p>Total number of tokens</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -230,9 +266,15 @@ public class RunDocWashingResponseBody extends TeaModel {
     }
 
     public static class RunDocWashingResponseBodyPayload extends TeaModel {
+        /**
+         * <p>Output</p>
+         */
         @NameInMap("Output")
         public RunDocWashingResponseBodyPayloadOutput output;
 
+        /**
+         * <p>Token consumption</p>
+         */
         @NameInMap("Usage")
         public RunDocWashingResponseBodyPayloadUsage usage;
 

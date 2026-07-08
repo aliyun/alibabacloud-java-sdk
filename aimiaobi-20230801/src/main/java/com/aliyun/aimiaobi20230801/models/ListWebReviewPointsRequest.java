@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListWebReviewPointsRequest extends TeaModel {
     /**
+     * <p>UUID of the workspace: AgentKey</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListWebReviewPointsRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>Maximum number of returned results</p>
+     * 
      * <strong>example:</strong>
      * <p>81</p>
      */
@@ -21,6 +24,8 @@ public class ListWebReviewPointsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Token for the next page</p>
+     * 
      * <strong>example:</strong>
      * <p>下一页的token</p>
      */
@@ -28,6 +33,7 @@ public class ListWebReviewPointsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Hotlist topic</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +43,7 @@ public class ListWebReviewPointsRequest extends TeaModel {
     public String topic;
 
     /**
+     * <p>Hotlist source</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

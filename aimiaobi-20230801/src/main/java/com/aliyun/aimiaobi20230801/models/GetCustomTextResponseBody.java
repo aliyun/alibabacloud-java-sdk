@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetCustomTextResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business data</p>
+     */
     @NameInMap("Data")
     public GetCustomTextResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetCustomTextResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Fault description</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class GetCustomTextResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Unique request identifier</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -36,6 +47,8 @@ public class GetCustomTextResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Is successful: true for success, false for failure</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class GetCustomTextResponseBody extends TeaModel {
 
     public static class GetCustomTextResponseBodyData extends TeaModel {
         /**
+         * <p>Content</p>
+         * 
          * <strong>example:</strong>
          * <p>内容</p>
          */
@@ -104,6 +119,8 @@ public class GetCustomTextResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>Creation time</p>
+         * 
          * <strong>example:</strong>
          * <p>创建时间</p>
          */
@@ -111,6 +128,8 @@ public class GetCustomTextResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Created by</p>
+         * 
          * <strong>example:</strong>
          * <p>创建用户</p>
          */
@@ -118,6 +137,8 @@ public class GetCustomTextResponseBody extends TeaModel {
         public String createUser;
 
         /**
+         * <p>Primary key ID</p>
+         * 
          * <strong>example:</strong>
          * <p>34</p>
          */
@@ -125,6 +146,8 @@ public class GetCustomTextResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>Title</p>
+         * 
          * <strong>example:</strong>
          * <p>标题</p>
          */
@@ -132,6 +155,8 @@ public class GetCustomTextResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>Update time</p>
+         * 
          * <strong>example:</strong>
          * <p>修改时间</p>
          */
@@ -139,6 +164,8 @@ public class GetCustomTextResponseBody extends TeaModel {
         public String updateTime;
 
         /**
+         * <p>Update user</p>
+         * 
          * <strong>example:</strong>
          * <p>修改用户</p>
          */

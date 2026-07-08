@@ -4,23 +4,37 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class SubmitSmartClipTaskRequest extends TeaModel {
+    /**
+     * <p>Video editing configuration.</p>
+     */
     @NameInMap("EditingConfig")
     public SubmitSmartClipTaskRequestEditingConfig editingConfig;
 
+    /**
+     * <p>Additional extended parameters. These parameters merge with InputConfig, OutputConfig, and EditingConfig.</p>
+     */
     @NameInMap("ExtendParam")
     public String extendParam;
 
     /**
+     * <p>Input configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InputConfig")
     public SubmitSmartClipTaskRequestInputConfig inputConfig;
 
+    /**
+     * <p>Output configuration.</p>
+     */
     @NameInMap("OutputConfig")
     public SubmitSmartClipTaskRequestOutputConfig outputConfig;
 
     /**
+     * <p>Alibaba Cloud Model Studio workspace ID. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">workspace ID</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>业务空间ID</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;
@@ -71,10 +85,24 @@ public class SubmitSmartClipTaskRequest extends TeaModel {
     }
 
     public static class SubmitSmartClipTaskRequestEditingConfigBackgroundMusicConfig extends TeaModel {
+        /**
+         * <p>Background music style. Default value: empty. If background music is already configured in InputConfig, this field does not take effect.
+         * Valid values:
+         * bgm-beauty: Fashion
+         * bgm-chinese-style: Chinese style
+         * bgm-cuisine: Food
+         * bgm-dynamic: Dynamic
+         * bgm-quirky: Quirky
+         * bgm-relaxing: Relaxing
+         * bgm-romantic: Romantic
+         * bgm-upbeat: Upbeat</p>
+         */
         @NameInMap("Style")
         public String style;
 
         /**
+         * <p>Volume of the background music. Valid values: 0 to 10.0.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.2</p>
          */
@@ -105,6 +133,9 @@ public class SubmitSmartClipTaskRequest extends TeaModel {
     }
 
     public static class SubmitSmartClipTaskRequestEditingConfigMediaConfig extends TeaModel {
+        /**
+         * <p>Volume of the video material. 0 means mute.</p>
+         */
         @NameInMap("Volume")
         public Double volume;
 
@@ -124,10 +155,24 @@ public class SubmitSmartClipTaskRequest extends TeaModel {
     }
 
     public static class SubmitSmartClipTaskRequestEditingConfigSpeechConfigAsrConfig extends TeaModel {
+        /**
+         * <p>Caption alignment.
+         * TopLeft: Top-left corner of the video.
+         * TopCenter: Top center of the vertical axis of the video.
+         * TopRight: Top-right corner of the video.
+         * CenterLeft: Left side of the horizontal center line of the video.
+         * CenterCenter: Center of the video.
+         * CenterRight: Right side of the horizontal center line of the video.
+         * BottomLeft: Bottom-left corner of the video.
+         * BottomCenter: Bottom center of the vertical axis of the video.
+         * BottomRight: Bottom-right corner of the video.</p>
+         */
         @NameInMap("Alignment")
         public String alignment;
 
         /**
+         * <p>Font of the caption text. For supported fonts, see the font list. Default font: SimSun.</p>
+         * 
          * <strong>example:</strong>
          * <p>SimSun</p>
          */
@@ -135,6 +180,8 @@ public class SubmitSmartClipTaskRequest extends TeaModel {
         public String font;
 
         /**
+         * <p>Color of the caption text. Format: # followed by a hexadecimal value. Example: #ffffff.</p>
+         * 
          * <strong>example:</strong>
          * <p>#ffffff</p>
          */
@@ -142,6 +189,8 @@ public class SubmitSmartClipTaskRequest extends TeaModel {
         public String fontColor;
 
         /**
+         * <p>Font size of the caption text. This size scales based on the source material size and the final output size. Default value: 0. Maximum value: 5000.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -149,15 +198,23 @@ public class SubmitSmartClipTaskRequest extends TeaModel {
         public String fontSize;
 
         /**
+         * <p>Letter spacing of the caption text, in pixels.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("Spacing")
         public String spacing;
 
+        /**
+         * <p>Horizontal distance from the top-left corner of the caption text to the top-left corner of the output video. You can specify this value as a percentage or in pixels. If the value is between 0 and 0.9999, it represents a percentage of the output video width. If the value is an integer greater than or equal to 2, it represents an absolute pixel value. Default value: 0. This coordinate scales based on the source material size and the final output size.</p>
+         */
         @NameInMap("X")
         public Float x;
 
+        /**
+         * <p>Vertical distance from the top-left corner of the caption text to the top-left corner of the output video. You can specify this value as a percentage or in pixels. If the value is between 0 and 0.9999, it represents a percentage of the output video height. If the value is an integer greater than or equal to 2, it represents an absolute pixel value. Default value: 0. This coordinate scales based on the source material size and the final output size.</p>
+         */
         @NameInMap("Y")
         public Float y;
 
@@ -225,23 +282,53 @@ public class SubmitSmartClipTaskRequest extends TeaModel {
     }
 
     public static class SubmitSmartClipTaskRequestEditingConfigSpeechConfig extends TeaModel {
+        /**
+         * <p>Caption parameter configuration.</p>
+         */
         @NameInMap("AsrConfig")
         public SubmitSmartClipTaskRequestEditingConfigSpeechConfigAsrConfig asrConfig;
 
         /**
+         * <p>Speech rate of the voiceover script.
+         * Valid values: -500 to 500. Default value: 0.
+         * The corresponding playback speed multipliers for [-500, 0, 500] are [0.5, 1.0, 2.0].
+         * Calculation method:
+         * For 0.8× speed: (1 - 1/0.8) / 0.002 = -125
+         * For 1.2× speed: (1 - 1/1.2) / 0.001 = 166
+         * Use coefficient 0.002 for speeds less than 1×.
+         * Use coefficient 0.001 for speeds greater than 1×.
+         * Round the result to the nearest integer.</p>
+         * <p>The calculation method is as follows:<br>
+         * 0.8× speed: (1 − 1/0.8)/0.002 = −125<br>
+         * 1.2× speed: (1 − 1/1.2)/0.001 = 166<br>
+         * When the speed is less than 1×, use a coefficient of 0.002.<br>
+         * When the speed is greater than 1×, use a coefficient of 0.001.<br>
+         * The actual algorithm result is approximated.<br><br><br><br><br></p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("SpeechRate")
         public Double speechRate;
 
+        /**
+         * <p>Voiceover style. Default value: empty. If both Voice and Style are specified, Voice takes precedence.
+         * Gentle: Gentle
+         * Serious: Serious
+         * Entertainment: Entertainment</p>
+         */
         @NameInMap("Style")
         public String style;
 
+        /**
+         * <p>Specify one or more voice styles for the voiceover, separated by commas. When multiple voices are specified, one is randomly selected for synthesis. For available voice styles, see <a href="https://help.aliyun.com/zh/ims/developer-reference/smart-voice-effect-example?spm=a2c4g.11186623.0.0.13091ee6Pw4Jqz">Smart Voice Effect Examples</a>. Example: &quot;zhimiao_emo,zhilun&quot;.</p>
+         */
         @NameInMap("Voice")
         public String voice;
 
         /**
+         * <p>Volume of the voiceover audio. Default value: 1. Valid values: 0 to 10.0. Decimal values are supported. Example: 0.5.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.5</p>
          */
@@ -297,6 +384,16 @@ public class SubmitSmartClipTaskRequest extends TeaModel {
 
     public static class SubmitSmartClipTaskRequestEditingConfigTitleConfig extends TeaModel {
         /**
+         * <p>TopLeft: Top-left corner of the video.
+         * TopCenter: Top center of the vertical axis of the video.
+         * TopRight: Top-right corner of the video.
+         * CenterLeft: Left side of the horizontal center line of the video.
+         * CenterCenter: Center of the video.
+         * CenterRight: Right side of the horizontal center line of the video.
+         * BottomLeft: Bottom-left corner of the video.
+         * BottomCenter: Bottom center of the vertical axis of the video.
+         * BottomRight: Bottom-right corner of the video.</p>
+         * 
          * <strong>example:</strong>
          * <p>TopLeft</p>
          */
@@ -304,6 +401,8 @@ public class SubmitSmartClipTaskRequest extends TeaModel {
         public String alignment;
 
         /**
+         * <p>Time when the title appears.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -311,6 +410,8 @@ public class SubmitSmartClipTaskRequest extends TeaModel {
         public Float timelineIn;
 
         /**
+         * <p>Time when the title disappears.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -318,6 +419,8 @@ public class SubmitSmartClipTaskRequest extends TeaModel {
         public Float timelineOut;
 
         /**
+         * <p>Horizontal distance from the top-left corner of the banner text to the top-left corner of the output video. You can specify this value as a percentage or in pixels. If the value is between 0 and 0.9999, it represents a percentage of the output video width. If the value is an integer greater than or equal to 2, it represents an absolute pixel value. Default value: 0. This coordinate scales based on the source material size and the final output size.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -325,6 +428,8 @@ public class SubmitSmartClipTaskRequest extends TeaModel {
         public Float x;
 
         /**
+         * <p>Vertical distance from the top-left corner of the banner text to the top-left corner of the output video. You can specify this value as a percentage or in pixels. If the value is between 0 and 0.9999, it represents a percentage of the output video height. If the value is an integer greater than or equal to 2, it represents an absolute pixel value. Default value: 0. This coordinate scales based on the source material size and the final output size.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -379,15 +484,27 @@ public class SubmitSmartClipTaskRequest extends TeaModel {
     }
 
     public static class SubmitSmartClipTaskRequestEditingConfig extends TeaModel {
+        /**
+         * <p>Background music configuration.</p>
+         */
         @NameInMap("BackgroundMusicConfig")
         public SubmitSmartClipTaskRequestEditingConfigBackgroundMusicConfig backgroundMusicConfig;
 
+        /**
+         * <p>Media configuration.</p>
+         */
         @NameInMap("MediaConfig")
         public SubmitSmartClipTaskRequestEditingConfigMediaConfig mediaConfig;
 
+        /**
+         * <p>Voiceover configuration.</p>
+         */
         @NameInMap("SpeechConfig")
         public SubmitSmartClipTaskRequestEditingConfigSpeechConfig speechConfig;
 
+        /**
+         * <p>Title configuration.</p>
+         */
         @NameInMap("TitleConfig")
         public SubmitSmartClipTaskRequestEditingConfigTitleConfig titleConfig;
 
@@ -432,6 +549,7 @@ public class SubmitSmartClipTaskRequest extends TeaModel {
 
     public static class SubmitSmartClipTaskRequestInputConfigBackgroundMusics extends TeaModel {
         /**
+         * <p>Background music ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -441,6 +559,10 @@ public class SubmitSmartClipTaskRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>ID type:
+         * materialId: Material Library reference ID
+         * fileKey: FileKey in Alibaba Cloud Model Studio
+         * url: Publicly accessible URL</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -474,6 +596,7 @@ public class SubmitSmartClipTaskRequest extends TeaModel {
 
     public static class SubmitSmartClipTaskRequestInputConfigStickersStickerId extends TeaModel {
         /**
+         * <p>Sticker ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -483,6 +606,10 @@ public class SubmitSmartClipTaskRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>ID type:
+         * materialId: Material Library reference ID
+         * fileKey: FileKey in Alibaba Cloud Model Studio
+         * url: Publicly accessible URL</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -516,6 +643,7 @@ public class SubmitSmartClipTaskRequest extends TeaModel {
 
     public static class SubmitSmartClipTaskRequestInputConfigStickers extends TeaModel {
         /**
+         * <p>Height of the sticker.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -525,12 +653,14 @@ public class SubmitSmartClipTaskRequest extends TeaModel {
         public Double height;
 
         /**
+         * <p>Sticker ID.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("StickerId")
         public SubmitSmartClipTaskRequestInputConfigStickersStickerId stickerId;
 
         /**
+         * <p>Width of the sticker.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -540,6 +670,7 @@ public class SubmitSmartClipTaskRequest extends TeaModel {
         public Double width;
 
         /**
+         * <p>X coordinate of the top-left corner of the sticker.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -549,6 +680,7 @@ public class SubmitSmartClipTaskRequest extends TeaModel {
         public Double x;
 
         /**
+         * <p>Y coordinate of the top-left corner of the sticker.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -606,6 +738,7 @@ public class SubmitSmartClipTaskRequest extends TeaModel {
 
     public static class SubmitSmartClipTaskRequestInputConfigVideoIds extends TeaModel {
         /**
+         * <p>Material ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -615,6 +748,10 @@ public class SubmitSmartClipTaskRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>ID type:
+         * materialId: Material Library reference ID
+         * fileKey: FileKey in Alibaba Cloud Model Studio
+         * url: Publicly accessible URL</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -647,19 +784,32 @@ public class SubmitSmartClipTaskRequest extends TeaModel {
     }
 
     public static class SubmitSmartClipTaskRequestInputConfig extends TeaModel {
+        /**
+         * <p>List of background music IDs.</p>
+         */
         @NameInMap("BackgroundMusics")
         public java.util.List<SubmitSmartClipTaskRequestInputConfigBackgroundMusics> backgroundMusics;
 
+        /**
+         * <p>List of voiceover script texts.</p>
+         */
         @NameInMap("SpeechTexts")
         public java.util.List<String> speechTexts;
 
+        /**
+         * <p>List of stickers.</p>
+         */
         @NameInMap("Stickers")
         public java.util.List<SubmitSmartClipTaskRequestInputConfigStickers> stickers;
 
+        /**
+         * <p>List of titles.</p>
+         */
         @NameInMap("Titles")
         public java.util.List<String> titles;
 
         /**
+         * <p>List of video material ID objects.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("VideoIds")
@@ -714,6 +864,8 @@ public class SubmitSmartClipTaskRequest extends TeaModel {
 
     public static class SubmitSmartClipTaskRequestOutputConfig extends TeaModel {
         /**
+         * <p>Number of output videos.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -721,6 +873,8 @@ public class SubmitSmartClipTaskRequest extends TeaModel {
         public Integer count;
 
         /**
+         * <p>Output file name. Must include {index}.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_{index}.mp4</p>
          */
@@ -728,6 +882,8 @@ public class SubmitSmartClipTaskRequest extends TeaModel {
         public String fileName;
 
         /**
+         * <p>Output video height.</p>
+         * 
          * <strong>example:</strong>
          * <p>1080</p>
          */
@@ -735,6 +891,8 @@ public class SubmitSmartClipTaskRequest extends TeaModel {
         public Integer height;
 
         /**
+         * <p>Maximum duration of the output video, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>120</p>
          */
@@ -742,6 +900,8 @@ public class SubmitSmartClipTaskRequest extends TeaModel {
         public Integer maxDuration;
 
         /**
+         * <p>Save to Content Management.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -749,6 +909,8 @@ public class SubmitSmartClipTaskRequest extends TeaModel {
         public Boolean saveToGeneratedContent;
 
         /**
+         * <p>Output video width.</p>
+         * 
          * <strong>example:</strong>
          * <p>1920</p>
          */

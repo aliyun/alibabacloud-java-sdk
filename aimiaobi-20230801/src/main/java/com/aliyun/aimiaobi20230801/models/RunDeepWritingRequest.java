@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RunDeepWritingRequest extends TeaModel {
     /**
+     * <p>The cursor, which is the ordinal number of the streaming event.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +14,8 @@ public class RunDeepWritingRequest extends TeaModel {
     public Integer cursor;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>95c2fbe6-5a20-4fc2-8a93-376ed05fbe13</p>
      */
@@ -19,6 +23,7 @@ public class RunDeepWritingRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The unique identifier of the Alibaba Cloud Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

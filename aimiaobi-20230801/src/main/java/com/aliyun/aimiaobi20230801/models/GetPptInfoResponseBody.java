@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetPptInfoResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>DataNotExists</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public GetPptInfoResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>400</p>
      */
@@ -22,6 +29,8 @@ public class GetPptInfoResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>错误消息</p>
      */
@@ -29,7 +38,7 @@ public class GetPptInfoResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxxx</p>
@@ -38,6 +47,8 @@ public class GetPptInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -98,10 +109,15 @@ public class GetPptInfoResponseBody extends TeaModel {
     }
 
     public static class GetPptInfoResponseBodyData extends TeaModel {
+        /**
+         * <p>Download links for the exported files.</p>
+         */
         @NameInMap("ExportFileLink")
         public java.util.List<String> exportFileLink;
 
         /**
+         * <p>The ID of the export task.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx-xxx-xx</p>
          */
@@ -109,6 +125,8 @@ public class GetPptInfoResponseBody extends TeaModel {
         public String exportTaskId;
 
         /**
+         * <p>The URL of the cover image for the PPT artifact.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://a.com/xxx.jpeg">http://a.com/xxx.jpeg</a></p>
          */
@@ -116,6 +134,8 @@ public class GetPptInfoResponseBody extends TeaModel {
         public String pptArtifactCover;
 
         /**
+         * <p>The ID of the PPT artifact.</p>
+         * 
          * <strong>example:</strong>
          * <p>5423431</p>
          */
@@ -123,6 +143,8 @@ public class GetPptInfoResponseBody extends TeaModel {
         public String pptArtifactId;
 
         /**
+         * <p>The ID of the PPT process.</p>
+         * 
          * <strong>example:</strong>
          * <p>11231232</p>
          */
@@ -130,6 +152,8 @@ public class GetPptInfoResponseBody extends TeaModel {
         public String pptProcessId;
 
         /**
+         * <p>The query for the PPT task.</p>
+         * 
          * <strong>example:</strong>
          * <p>关于班会主题的PPT</p>
          */
@@ -137,6 +161,8 @@ public class GetPptInfoResponseBody extends TeaModel {
         public String query;
 
         /**
+         * <p>The ID of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx-xxx-xx</p>
          */

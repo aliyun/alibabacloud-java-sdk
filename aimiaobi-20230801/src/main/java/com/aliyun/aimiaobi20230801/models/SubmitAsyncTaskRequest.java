@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitAsyncTaskRequest extends TeaModel {
     /**
+     * <p>The unique ID of the workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class SubmitAsyncTaskRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>For details on the task definition, see the task definition table.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class SubmitAsyncTaskRequest extends TeaModel {
     public String taskCode;
 
     /**
+     * <p>The time to run the task. By default, the task runs immediately. Format: YYYY-MM-DD HH:mm:ss</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-10-14 14:30:00</p>
      */
@@ -30,6 +34,8 @@ public class SubmitAsyncTaskRequest extends TeaModel {
     public String taskExecuteTime;
 
     /**
+     * <p>The name of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>任务名称</p>
      */
@@ -37,8 +43,10 @@ public class SubmitAsyncTaskRequest extends TeaModel {
     public String taskName;
 
     /**
+     * <p>The task parameters.</p>
+     * 
      * <strong>example:</strong>
-     * <p>任务提交参数</p>
+     * <p>{&quot;fileUrl&quot;:&quot;<a href="https://www.example.com/aaa.doc%22,%22fileName%22:%22%E6%96%87%E4%BB%B6%E5%90%8D%E7%A7%B0%22,%22shareAttr%22:1%7D">https://www.example.com/aaa.doc&quot;,&quot;fileName&quot;:&quot;文件名称&quot;,&quot;shareAttr&quot;:1}</a></p>
      */
     @NameInMap("TaskParam")
     public String taskParam;

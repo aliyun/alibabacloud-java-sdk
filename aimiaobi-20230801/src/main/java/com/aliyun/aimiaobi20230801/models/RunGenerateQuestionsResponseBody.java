@@ -4,14 +4,20 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunGenerateQuestionsResponseBody extends TeaModel {
+    /**
+     * <p>Response header</p>
+     */
     @NameInMap("Header")
     public RunGenerateQuestionsResponseBodyHeader header;
 
+    /**
+     * <p>Response body</p>
+     */
     @NameInMap("Payload")
     public RunGenerateQuestionsResponseBodyPayload payload;
 
     /**
-     * <p>Id of the request</p>
+     * <p>Request ID</p>
      * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
@@ -50,13 +56,17 @@ public class RunGenerateQuestionsResponseBody extends TeaModel {
 
     public static class RunGenerateQuestionsResponseBodyHeader extends TeaModel {
         /**
+         * <p>Error code</p>
+         * 
          * <strong>example:</strong>
-         * <p>200</p>
+         * <p>RateLimit</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
+         * <p>Error message returned when the call fails.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -64,16 +74,26 @@ public class RunGenerateQuestionsResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>Event name</p>
+         * 
          * <strong>example:</strong>
          * <p>finished</p>
          */
         @NameInMap("Event")
         public String event;
 
+        /**
+         * <p>Event description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>模型生成事件</p>
+         */
         @NameInMap("EventInfo")
         public String eventInfo;
 
         /**
+         * <p>Session ID</p>
+         * 
          * <strong>example:</strong>
          * <p>3cd10828-0e42-471c-8f1a-931cde20b035</p>
          */
@@ -81,6 +101,8 @@ public class RunGenerateQuestionsResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>Task ID</p>
+         * 
          * <strong>example:</strong>
          * <p>d3be9981-ca2d-4e17-bf31-1c0a628e9f99</p>
          */
@@ -88,6 +110,8 @@ public class RunGenerateQuestionsResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>Trace ID</p>
+         * 
          * <strong>example:</strong>
          * <p>0bc3b4b417362160345997589e5f6e</p>
          */
@@ -158,6 +182,12 @@ public class RunGenerateQuestionsResponseBody extends TeaModel {
     }
 
     public static class RunGenerateQuestionsResponseBodyPayloadOutput extends TeaModel {
+        /**
+         * <p>Question content</p>
+         * 
+         * <strong>example:</strong>
+         * <p>问题1\n问题2\n问题3\n</p>
+         */
         @NameInMap("Content")
         public String content;
 
@@ -178,6 +208,8 @@ public class RunGenerateQuestionsResponseBody extends TeaModel {
 
     public static class RunGenerateQuestionsResponseBodyPayloadUsage extends TeaModel {
         /**
+         * <p>Number of input tokens used</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -185,6 +217,8 @@ public class RunGenerateQuestionsResponseBody extends TeaModel {
         public Long inputTokens;
 
         /**
+         * <p>Number of output tokens</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -192,6 +226,8 @@ public class RunGenerateQuestionsResponseBody extends TeaModel {
         public Long outputTokens;
 
         /**
+         * <p>Total number of tokens</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -230,9 +266,15 @@ public class RunGenerateQuestionsResponseBody extends TeaModel {
     }
 
     public static class RunGenerateQuestionsResponseBodyPayload extends TeaModel {
+        /**
+         * <p>Outputs</p>
+         */
         @NameInMap("Output")
         public RunGenerateQuestionsResponseBodyPayloadOutput output;
 
+        /**
+         * <p>Token usage</p>
+         */
         @NameInMap("Usage")
         public RunGenerateQuestionsResponseBodyPayloadUsage usage;
 

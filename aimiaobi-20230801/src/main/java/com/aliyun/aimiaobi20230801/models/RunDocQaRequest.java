@@ -4,28 +4,54 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunDocQaRequest extends TeaModel {
+    /**
+     * <p>Array of folder IDs for filtering. This parameter takes effect only when SearchSource is set to fromIndexLib.</p>
+     */
     @NameInMap("CategoryIds")
     public java.util.List<String> categoryIds;
 
+    /**
+     * <p>Array of historical context content</p>
+     */
     @NameInMap("ConversationContexts")
     public java.util.List<RunDocQaRequestConversationContexts> conversationContexts;
 
+    /**
+     * <p>Array of multiple document IDs</p>
+     */
     @NameInMap("DocIds")
     public java.util.List<String> docIds;
 
+    /**
+     * <p>Custom model name defined by the User</p>
+     * 
+     * <strong>example:</strong>
+     * <p>quanmiao-max、quanmiao-plus</p>
+     */
     @NameInMap("ModelName")
     public String modelName;
 
     /**
+     * <p>Question</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>苹果16手机什么时候发布</p>
      */
     @NameInMap("Query")
     public String query;
 
+    /**
+     * <p>Associated content actively provided by the questioner</p>
+     * 
+     * <strong>example:</strong>
+     * <p>关联内容</p>
+     */
     @NameInMap("ReferenceContent")
     public String referenceContent;
 
     /**
+     * <p>Search source</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +61,7 @@ public class RunDocQaRequest extends TeaModel {
     public String searchSource;
 
     /**
+     * <p>Conversation ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +71,7 @@ public class RunDocQaRequest extends TeaModel {
     public String sessionId;
 
     /**
+     * <p>Alibaba Cloud Model Studio workspace ID. For details on how to obtain it, see <a href="https://help.aliyun.com/document_detail/2587495.html">How to Use Workspaces</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -130,10 +158,18 @@ public class RunDocQaRequest extends TeaModel {
     }
 
     public static class RunDocQaRequestConversationContexts extends TeaModel {
+        /**
+         * <p>Q&amp;A pair content</p>
+         * 
+         * <strong>example:</strong>
+         * <p>问答内容</p>
+         */
         @NameInMap("Content")
         public String content;
 
         /**
+         * <p>Role</p>
+         * 
          * <strong>example:</strong>
          * <p>user</p>
          */

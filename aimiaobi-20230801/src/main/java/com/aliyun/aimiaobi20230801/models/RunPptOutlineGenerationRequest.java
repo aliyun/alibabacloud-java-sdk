@@ -12,12 +12,17 @@ public class RunPptOutlineGenerationRequest extends TeaModel {
     public String externalUserId;
 
     /**
+     * <p>The user\&quot;s prompt.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>帮我生成一个消防安全主题的PPT</p>
      */
     @NameInMap("Prompt")
     public String prompt;
 
     /**
+     * <p>The unique identifier of the Alibaba Cloud Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Get a Workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

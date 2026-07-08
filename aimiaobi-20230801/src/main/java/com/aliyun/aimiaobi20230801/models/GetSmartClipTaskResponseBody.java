@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetSmartClipTaskResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Task response</p>
+     */
     @NameInMap("Data")
     public GetSmartClipTaskResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetSmartClipTaskResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error description</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class GetSmartClipTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Unique identifier of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -36,6 +47,8 @@ public class GetSmartClipTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation succeeded. true indicates success. false indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class GetSmartClipTaskResponseBody extends TeaModel {
 
     public static class GetSmartClipTaskResponseBodyDataSubJobsFileAttr extends TeaModel {
         /**
+         * <p>Video duration in seconds</p>
+         * 
          * <strong>example:</strong>
          * <p>120</p>
          */
@@ -104,6 +119,8 @@ public class GetSmartClipTaskResponseBody extends TeaModel {
         public Double duration;
 
         /**
+         * <p>Video file size</p>
+         * 
          * <strong>example:</strong>
          * <p>290804</p>
          */
@@ -111,6 +128,8 @@ public class GetSmartClipTaskResponseBody extends TeaModel {
         public String fileLength;
 
         /**
+         * <p>Video file name</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-12-12.mp4</p>
          */
@@ -118,6 +137,8 @@ public class GetSmartClipTaskResponseBody extends TeaModel {
         public String fileName;
 
         /**
+         * <p>Video height</p>
+         * 
          * <strong>example:</strong>
          * <p>1080</p>
          */
@@ -125,6 +146,8 @@ public class GetSmartClipTaskResponseBody extends TeaModel {
         public Integer height;
 
         /**
+         * <p>Temporary URL to access the video file. Expires in one hour.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com/tmp.mp4">http://www.example.com/tmp.mp4</a></p>
          */
@@ -132,6 +155,8 @@ public class GetSmartClipTaskResponseBody extends TeaModel {
         public String tmpUrl;
 
         /**
+         * <p>Video width</p>
+         * 
          * <strong>example:</strong>
          * <p>1920</p>
          */
@@ -195,16 +220,23 @@ public class GetSmartClipTaskResponseBody extends TeaModel {
 
     public static class GetSmartClipTaskResponseBodyDataSubJobs extends TeaModel {
         /**
+         * <p>Error message</p>
+         * 
          * <strong>example:</strong>
-         * <p>x\&quot;x\&quot;x\&quot;x</p>
+         * <p>文件名错误</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>File attributes</p>
+         */
         @NameInMap("FileAttr")
         public GetSmartClipTaskResponseBodyDataSubJobsFileAttr fileAttr;
 
         /**
+         * <p>File key</p>
+         * 
          * <strong>example:</strong>
          * <p>oss://default/bucket-name/path-xxx/xxx-1.mp4</p>
          */
@@ -212,6 +244,13 @@ public class GetSmartClipTaskResponseBody extends TeaModel {
         public String fileKey;
 
         /**
+         * <p>Subtask status:
+         * PENDING: Pending
+         * RUNNING: Running
+         * SUCCESSED: Succeeded
+         * FAILED: Failed
+         * CANCELED: Canceled</p>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
@@ -219,6 +258,8 @@ public class GetSmartClipTaskResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>Subtask ID</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxxx</p>
          */
@@ -273,16 +314,32 @@ public class GetSmartClipTaskResponseBody extends TeaModel {
     }
 
     public static class GetSmartClipTaskResponseBodyData extends TeaModel {
+        /**
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>错误信息</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
+         * <p>Task status:
+         * PENDING: Pending
+         * RUNNING: Running
+         * SUCCESSED: Succeeded
+         * FAILED: Failed
+         * CANCELED: Canceled</p>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>List of subtasks</p>
+         */
         @NameInMap("SubJobs")
         public java.util.List<GetSmartClipTaskResponseBodyDataSubJobs> subJobs;
 

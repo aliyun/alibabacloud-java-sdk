@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RunAbbreviationContentRequest extends TeaModel {
     /**
+     * <p>Content to abbreviate.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,14 @@ public class RunAbbreviationContentRequest extends TeaModel {
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <p>Custom prompt.</p>
+     */
     @NameInMap("Prompt")
     public String prompt;
 
     /**
+     * <p>Unique identifier for the Alibaba Cloud Model Studio workspace. Obtain the<a href="https://help.aliyun.com/document_detail/2782167.html"> Workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class InsertInterveneRuleShrinkRequest extends TeaModel {
     /**
+     * <p>Unique identifier of the workspace: <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,6 +14,9 @@ public class InsertInterveneRuleShrinkRequest extends TeaModel {
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>Intervention rule configuration</p>
+     */
     @NameInMap("InterveneRuleConfig")
     public String interveneRuleConfigShrink;
 

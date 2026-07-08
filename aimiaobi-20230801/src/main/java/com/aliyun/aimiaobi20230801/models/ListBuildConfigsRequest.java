@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListBuildConfigsRequest extends TeaModel {
     /**
+     * <p>Unique identifier of the workspace: <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,8 @@ public class ListBuildConfigsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Content category. Valid values: media or government.</p>
+     * 
      * <strong>example:</strong>
      * <p>media</p>
      */

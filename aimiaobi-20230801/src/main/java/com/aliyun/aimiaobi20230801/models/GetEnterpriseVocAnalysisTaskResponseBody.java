@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetEnterpriseVocAnalysisTaskResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The result of the enterprise VOC analysis.</p>
+     */
     @NameInMap("Data")
     public GetEnterpriseVocAnalysisTaskResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetEnterpriseVocAnalysisTaskResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error description.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class GetEnterpriseVocAnalysisTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -36,6 +47,8 @@ public class GetEnterpriseVocAnalysisTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. \<code>true\\</code> indicates success. \<code>false\\</code> indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class GetEnterpriseVocAnalysisTaskResponseBody extends TeaModel {
 
     public static class GetEnterpriseVocAnalysisTaskResponseBodyDataStatisticsOverviewFilterDimensionStatisticsTagValueCountStatistic extends TeaModel {
         /**
+         * <p>The tag name.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -104,6 +119,8 @@ public class GetEnterpriseVocAnalysisTaskResponseBody extends TeaModel {
         public String tagName;
 
         /**
+         * <p>The type of the tag mining task. Valid values: \<code>singleTagValue\\</code> (single tag), \<code>multiTagValues\\</code> (multiple tags), and \<code>summaryAndOverview\\</code> (summary and overview).</p>
+         * 
          * <strong>example:</strong>
          * <p>multiTagValues</p>
          */
@@ -111,6 +128,8 @@ public class GetEnterpriseVocAnalysisTaskResponseBody extends TeaModel {
         public String tagTaskType;
 
         /**
+         * <p>The number of tag values.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -149,6 +168,9 @@ public class GetEnterpriseVocAnalysisTaskResponseBody extends TeaModel {
     }
 
     public static class GetEnterpriseVocAnalysisTaskResponseBodyDataStatisticsOverviewFilterDimensionStatistics extends TeaModel {
+        /**
+         * <p>The statistics of tag value counts.</p>
+         */
         @NameInMap("TagValueCountStatistic")
         public java.util.List<GetEnterpriseVocAnalysisTaskResponseBodyDataStatisticsOverviewFilterDimensionStatisticsTagValueCountStatistic> tagValueCountStatistic;
 
@@ -169,6 +191,8 @@ public class GetEnterpriseVocAnalysisTaskResponseBody extends TeaModel {
 
     public static class GetEnterpriseVocAnalysisTaskResponseBodyDataStatisticsOverviewTagDimensionStatisticsTagValueCountStatistic extends TeaModel {
         /**
+         * <p>The tag name.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -176,6 +200,8 @@ public class GetEnterpriseVocAnalysisTaskResponseBody extends TeaModel {
         public String tagName;
 
         /**
+         * <p>The type of the tag mining task. Valid values: \<code>singleTagValue\\</code> (single tag), \<code>multiTagValues\\</code> (multiple tags), and \<code>summaryAndOverview\\</code> (summary and overview).</p>
+         * 
          * <strong>example:</strong>
          * <p>multiTagValues</p>
          */
@@ -183,6 +209,8 @@ public class GetEnterpriseVocAnalysisTaskResponseBody extends TeaModel {
         public String tagTaskType;
 
         /**
+         * <p>The number of tag values.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -221,6 +249,9 @@ public class GetEnterpriseVocAnalysisTaskResponseBody extends TeaModel {
     }
 
     public static class GetEnterpriseVocAnalysisTaskResponseBodyDataStatisticsOverviewTagDimensionStatistics extends TeaModel {
+        /**
+         * <p>The statistics of tag value counts.</p>
+         */
         @NameInMap("TagValueCountStatistic")
         public java.util.List<GetEnterpriseVocAnalysisTaskResponseBodyDataStatisticsOverviewTagDimensionStatisticsTagValueCountStatistic> tagValueCountStatistic;
 
@@ -241,15 +272,23 @@ public class GetEnterpriseVocAnalysisTaskResponseBody extends TeaModel {
 
     public static class GetEnterpriseVocAnalysisTaskResponseBodyDataStatisticsOverview extends TeaModel {
         /**
+         * <p>The total number of analyzed data entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The statistics of filter tags.</p>
+         */
         @NameInMap("FilterDimensionStatistics")
         public GetEnterpriseVocAnalysisTaskResponseBodyDataStatisticsOverviewFilterDimensionStatistics filterDimensionStatistics;
 
+        /**
+         * <p>The statistics of content tags.</p>
+         */
         @NameInMap("TagDimensionStatistics")
         public GetEnterpriseVocAnalysisTaskResponseBodyDataStatisticsOverviewTagDimensionStatistics tagDimensionStatistics;
 
@@ -286,6 +325,8 @@ public class GetEnterpriseVocAnalysisTaskResponseBody extends TeaModel {
 
     public static class GetEnterpriseVocAnalysisTaskResponseBodyDataUsage extends TeaModel {
         /**
+         * <p>The number of input tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -293,6 +334,8 @@ public class GetEnterpriseVocAnalysisTaskResponseBody extends TeaModel {
         public Long inputTokens;
 
         /**
+         * <p>The number of output tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -324,22 +367,32 @@ public class GetEnterpriseVocAnalysisTaskResponseBody extends TeaModel {
 
     public static class GetEnterpriseVocAnalysisTaskResponseBodyData extends TeaModel {
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>error</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The statistics overview.</p>
+         */
         @NameInMap("StatisticsOverview")
         public GetEnterpriseVocAnalysisTaskResponseBodyDataStatisticsOverview statisticsOverview;
 
         /**
+         * <p>The status of the task. Valid values: \<code>PENDING\\</code> (pending), \<code>RUNNING\\</code> (running), \<code>SUCCESSED\\</code> (successful), \<code>FAILED\\</code> (failed), and \<code>CANCELED\\</code> (canceled).</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESSED</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The usage statistics.</p>
+         */
         @NameInMap("Usage")
         public GetEnterpriseVocAnalysisTaskResponseBodyDataUsage usage;
 

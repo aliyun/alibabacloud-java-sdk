@@ -4,13 +4,21 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunDocQaResponseBody extends TeaModel {
+    /**
+     * <p>response header</p>
+     */
     @NameInMap("Header")
     public RunDocQaResponseBodyHeader header;
 
+    /**
+     * <p>response body</p>
+     */
     @NameInMap("Payload")
     public RunDocQaResponseBodyPayload payload;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -48,6 +56,8 @@ public class RunDocQaResponseBody extends TeaModel {
 
     public static class RunDocQaResponseBodyHeader extends TeaModel {
         /**
+         * <p>error code</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -55,6 +65,8 @@ public class RunDocQaResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>error message</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -62,16 +74,26 @@ public class RunDocQaResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>management event</p>
+         * 
          * <strong>example:</strong>
          * <p>task-started</p>
          */
         @NameInMap("Event")
         public String event;
 
+        /**
+         * <p>Description of the management event</p>
+         * 
+         * <strong>example:</strong>
+         * <p>模型生成事件</p>
+         */
         @NameInMap("EventInfo")
         public String eventInfo;
 
         /**
+         * <p>Session ID</p>
+         * 
          * <strong>example:</strong>
          * <p>f5517ee8-dbec-4dc8-bd0a-af084b5e3db1</p>
          */
@@ -79,6 +101,8 @@ public class RunDocQaResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>Job ID</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
@@ -86,6 +110,8 @@ public class RunDocQaResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>End-to-end trace ID</p>
+         * 
          * <strong>example:</strong>
          * <p>46e5c2b5-0877-4f09-bd91-ab0cf314e48b</p>
          */
@@ -157,6 +183,8 @@ public class RunDocQaResponseBody extends TeaModel {
 
     public static class RunDocQaResponseBodyPayloadOutputMediaUrlListClipInfos extends TeaModel {
         /**
+         * <p>Start time of the video segment</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -164,6 +192,8 @@ public class RunDocQaResponseBody extends TeaModel {
         public Double from;
 
         /**
+         * <p>End time of the video segment</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -194,10 +224,15 @@ public class RunDocQaResponseBody extends TeaModel {
     }
 
     public static class RunDocQaResponseBodyPayloadOutputMediaUrlList extends TeaModel {
+        /**
+         * <p>Array of related video time information</p>
+         */
         @NameInMap("ClipInfos")
         public java.util.List<RunDocQaResponseBodyPayloadOutputMediaUrlListClipInfos> clipInfos;
 
         /**
+         * <p>File URL</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://gw.alicdn.com/imgextra/i3/2775676850/O1CN01kdeffE20TM0E7wvpq_!!2775676850.jpg_q60.jpg">https://gw.alicdn.com/imgextra/i3/2775676850/O1CN01kdeffE20TM0E7wvpq_!!2775676850.jpg_q60.jpg</a></p>
          */
@@ -205,6 +240,8 @@ public class RunDocQaResponseBody extends TeaModel {
         public String fileUrl;
 
         /**
+         * <p>Media asset type</p>
+         * 
          * <strong>example:</strong>
          * <p>video</p>
          */
@@ -243,9 +280,21 @@ public class RunDocQaResponseBody extends TeaModel {
     }
 
     public static class RunDocQaResponseBodyPayloadOutputRecommends extends TeaModel {
+        /**
+         * <p>Title of the recommended content</p>
+         * 
+         * <strong>example:</strong>
+         * <p>标题内容</p>
+         */
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <p>URL of the recommended content</p>
+         * 
+         * <strong>example:</strong>
+         * <p>推荐内容url</p>
+         */
         @NameInMap("Url")
         public String url;
 
@@ -274,26 +323,44 @@ public class RunDocQaResponseBody extends TeaModel {
 
     public static class RunDocQaResponseBodyPayloadOutputReferences extends TeaModel {
         /**
+         * <p>Published At</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-08 18:00</p>
          */
         @NameInMap("PubTime")
         public String pubTime;
 
+        /**
+         * <p>Source</p>
+         * 
+         * <strong>example:</strong>
+         * <p>新浪新闻</p>
+         */
         @NameInMap("Source")
         public String source;
 
         /**
+         * <p>Source docId</p>
+         * 
          * <strong>example:</strong>
          * <p>123456</p>
          */
         @NameInMap("SourceDocId")
         public String sourceDocId;
 
+        /**
+         * <p>Title of the associated content</p>
+         * 
+         * <strong>example:</strong>
+         * <p>标题内容</p>
+         */
         @NameInMap("Title")
         public String title;
 
         /**
+         * <p>Article URL</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://xxxxx">http://xxxxx</a></p>
          */
@@ -348,25 +415,48 @@ public class RunDocQaResponseBody extends TeaModel {
     }
 
     public static class RunDocQaResponseBodyPayloadOutput extends TeaModel {
+        /**
+         * <p>Content of the response</p>
+         * 
+         * <strong>example:</strong>
+         * <p>回答内容</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>Response content after intervention</p>
+         * 
+         * <strong>example:</strong>
+         * <p>干预后的回答内容</p>
+         */
         @NameInMap("InterveneContent")
         public String interveneContent;
 
         /**
+         * <p>Indicates whether the request is rejected</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("IsReject")
         public Boolean isReject;
 
+        /**
+         * <p>List of multimodal resource information</p>
+         */
         @NameInMap("MediaUrlList")
         public java.util.List<RunDocQaResponseBodyPayloadOutputMediaUrlList> mediaUrlList;
 
+        /**
+         * <p>Array of recommended content</p>
+         */
         @NameInMap("Recommends")
         public java.util.List<RunDocQaResponseBodyPayloadOutputRecommends> recommends;
 
+        /**
+         * <p>Array of sources for the response content</p>
+         */
         @NameInMap("References")
         public java.util.List<RunDocQaResponseBodyPayloadOutputReferences> references;
 
@@ -427,6 +517,8 @@ public class RunDocQaResponseBody extends TeaModel {
 
     public static class RunDocQaResponseBodyPayloadUsage extends TeaModel {
         /**
+         * <p>Quantity of input tokens</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -434,6 +526,8 @@ public class RunDocQaResponseBody extends TeaModel {
         public Long inputTokens;
 
         /**
+         * <p>Number of tokens used in the output</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -441,6 +535,8 @@ public class RunDocQaResponseBody extends TeaModel {
         public Long outputTokens;
 
         /**
+         * <p>Total number of tokens</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -479,9 +575,15 @@ public class RunDocQaResponseBody extends TeaModel {
     }
 
     public static class RunDocQaResponseBodyPayload extends TeaModel {
+        /**
+         * <p>Outputs</p>
+         */
         @NameInMap("Output")
         public RunDocQaResponseBodyPayloadOutput output;
 
+        /**
+         * <p>token usage</p>
+         */
         @NameInMap("Usage")
         public RunDocQaResponseBodyPayloadUsage usage;
 

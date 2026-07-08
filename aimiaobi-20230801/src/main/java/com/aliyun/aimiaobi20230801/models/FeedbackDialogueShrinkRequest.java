@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class FeedbackDialogueShrinkRequest extends TeaModel {
     /**
+     * <p>The unique ID of the workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class FeedbackDialogueShrinkRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The feedback.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -21,6 +24,8 @@ public class FeedbackDialogueShrinkRequest extends TeaModel {
     public String customerResponse;
 
     /**
+     * <p>The generated content that is considered good.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -28,6 +33,8 @@ public class FeedbackDialogueShrinkRequest extends TeaModel {
     public String goodText;
 
     /**
+     * <p>The modified generated result.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -35,16 +42,22 @@ public class FeedbackDialogueShrinkRequest extends TeaModel {
     public String modifiedResponse;
 
     /**
+     * <p>thumbsDown: Dislike, thumbsUp: Like</p>
+     * 
      * <strong>example:</strong>
      * <p>thumbsDown</p>
      */
     @NameInMap("Rating")
     public String rating;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("RatingTags")
     public String ratingTagsShrink;
 
     /**
+     * <p>The ID of a single-turn conversation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,6 +67,8 @@ public class FeedbackDialogueShrinkRequest extends TeaModel {
     public String sessionId;
 
     /**
+     * <p>The ID of the page.</p>
+     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */

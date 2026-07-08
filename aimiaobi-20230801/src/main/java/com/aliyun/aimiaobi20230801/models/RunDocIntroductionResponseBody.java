@@ -4,13 +4,21 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunDocIntroductionResponseBody extends TeaModel {
+    /**
+     * <p>response header</p>
+     */
     @NameInMap("Header")
     public RunDocIntroductionResponseBodyHeader header;
 
+    /**
+     * <p>response body</p>
+     */
     @NameInMap("Payload")
     public RunDocIntroductionResponseBodyPayload payload;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>C9B5BEA6-E8C4-5861-BE37-D906D516510E</p>
      */
@@ -48,6 +56,8 @@ public class RunDocIntroductionResponseBody extends TeaModel {
 
     public static class RunDocIntroductionResponseBodyHeader extends TeaModel {
         /**
+         * <p>error code</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -55,6 +65,8 @@ public class RunDocIntroductionResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -62,16 +74,26 @@ public class RunDocIntroductionResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>Type of management event</p>
+         * 
          * <strong>example:</strong>
          * <p>task-started</p>
          */
         @NameInMap("Event")
         public String event;
 
+        /**
+         * <p>Description of the management event</p>
+         * 
+         * <strong>example:</strong>
+         * <p>模型生成事件</p>
+         */
         @NameInMap("EventInfo")
         public String eventInfo;
 
         /**
+         * <p>session ID</p>
+         * 
          * <strong>example:</strong>
          * <p>20247a52-23e2-46fb-943d-309cdee2bc6d</p>
          */
@@ -79,6 +101,8 @@ public class RunDocIntroductionResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>Job ID</p>
+         * 
          * <strong>example:</strong>
          * <p>8a9cecb7-6d20-32db-8823-5882c217b647</p>
          */
@@ -86,6 +110,8 @@ public class RunDocIntroductionResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>End-to-end trace ID</p>
+         * 
          * <strong>example:</strong>
          * <p>0bd58ea2-dc38-45da-ac02-17f05cb9040b</p>
          */
@@ -157,6 +183,8 @@ public class RunDocIntroductionResponseBody extends TeaModel {
 
     public static class RunDocIntroductionResponseBodyPayloadOutputIntroductionsBlocks extends TeaModel {
         /**
+         * <p>Start Time of the segment</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -164,6 +192,8 @@ public class RunDocIntroductionResponseBody extends TeaModel {
         public Long beginTime;
 
         /**
+         * <p>End Time of the segment</p>
+         * 
          * <strong>example:</strong>
          * <p>1200</p>
          */
@@ -171,6 +201,8 @@ public class RunDocIntroductionResponseBody extends TeaModel {
         public Long endTime;
 
         /**
+         * <p>Height of the text block</p>
+         * 
          * <strong>example:</strong>
          * <p>600</p>
          */
@@ -178,6 +210,8 @@ public class RunDocIntroductionResponseBody extends TeaModel {
         public Integer height;
 
         /**
+         * <p>Page number where the text block is located</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -185,6 +219,8 @@ public class RunDocIntroductionResponseBody extends TeaModel {
         public Integer pageId;
 
         /**
+         * <p>Width of the text block</p>
+         * 
          * <strong>example:</strong>
          * <p>600</p>
          */
@@ -192,6 +228,8 @@ public class RunDocIntroductionResponseBody extends TeaModel {
         public Integer width;
 
         /**
+         * <p>X coordinate of the top-left corner of the block</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -199,6 +237,8 @@ public class RunDocIntroductionResponseBody extends TeaModel {
         public Integer x;
 
         /**
+         * <p>Y coordinate of the top-left corner of the block</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -269,19 +309,36 @@ public class RunDocIntroductionResponseBody extends TeaModel {
     }
 
     public static class RunDocIntroductionResponseBodyPayloadOutputIntroductions extends TeaModel {
+        /**
+         * <p>Array of position information</p>
+         */
         @NameInMap("Blocks")
         public java.util.List<RunDocIntroductionResponseBodyPayloadOutputIntroductionsBlocks> blocks;
 
         /**
+         * <p>Starting page number of multiple text blocks</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("StartPageId")
         public Integer startPageId;
 
+        /**
+         * <p>Summary of this segment</p>
+         * 
+         * <strong>example:</strong>
+         * <p>本段摘要内容</p>
+         */
         @NameInMap("Summary")
         public String summary;
 
+        /**
+         * <p>Title of this segment</p>
+         * 
+         * <strong>example:</strong>
+         * <p>本段标题内容</p>
+         */
         @NameInMap("Title")
         public String title;
 
@@ -325,12 +382,27 @@ public class RunDocIntroductionResponseBody extends TeaModel {
     }
 
     public static class RunDocIntroductionResponseBodyPayloadOutput extends TeaModel {
+        /**
+         * <p>Array of segment introductions</p>
+         */
         @NameInMap("Introductions")
         public java.util.List<RunDocIntroductionResponseBodyPayloadOutputIntroductions> introductions;
 
+        /**
+         * <p>Key point content</p>
+         * 
+         * <strong>example:</strong>
+         * <p>要点1；要点2；</p>
+         */
         @NameInMap("KeyPoint")
         public String keyPoint;
 
+        /**
+         * <p>Outline summary</p>
+         * 
+         * <strong>example:</strong>
+         * <p>大纲摘要内容</p>
+         */
         @NameInMap("Summary")
         public String summary;
 
@@ -367,6 +439,8 @@ public class RunDocIntroductionResponseBody extends TeaModel {
 
     public static class RunDocIntroductionResponseBodyPayloadUsage extends TeaModel {
         /**
+         * <p>Input token quantity</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -374,6 +448,8 @@ public class RunDocIntroductionResponseBody extends TeaModel {
         public Long inputTokens;
 
         /**
+         * <p>Output token quantity</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -381,6 +457,8 @@ public class RunDocIntroductionResponseBody extends TeaModel {
         public Long outputTokens;
 
         /**
+         * <p>Total token quantity</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -419,9 +497,15 @@ public class RunDocIntroductionResponseBody extends TeaModel {
     }
 
     public static class RunDocIntroductionResponseBodyPayload extends TeaModel {
+        /**
+         * <p>Outputs</p>
+         */
         @NameInMap("Output")
         public RunDocIntroductionResponseBodyPayloadOutput output;
 
+        /**
+         * <p>token usage</p>
+         */
         @NameInMap("Usage")
         public RunDocIntroductionResponseBodyPayloadUsage usage;
 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class SubmitParseDocumentLayoutTaskRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>正文</p>
      */
     @NameInMap("Content")
     public String content;

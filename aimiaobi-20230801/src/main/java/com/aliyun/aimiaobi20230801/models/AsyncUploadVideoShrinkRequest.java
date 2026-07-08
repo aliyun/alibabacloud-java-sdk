@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class AsyncUploadVideoShrinkRequest extends TeaModel {
     /**
+     * <p>Shot segmentation threshold. A smaller value increases sensitivity. Valid range is 1 to 10. Default value is 3.</p>
+     * 
      * <strong>example:</strong>
-     * <p>3</p>
+     * <p>3.0</p>
      */
     @NameInMap("AdaptiveThreshold")
     public Float adaptiveThreshold;
 
     /**
+     * <p>The prompt for video understanding.</p>
+     * 
      * <strong>example:</strong>
      * <p>重点理解视频中的风景信息</p>
      */
@@ -19,25 +23,36 @@ public class AsyncUploadVideoShrinkRequest extends TeaModel {
     public String anlysisPrompt;
 
     /**
+     * <p>The similarity threshold for character recognition.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.7</p>
      */
     @NameInMap("FaceIdentitySimilarityMinScore")
     public Double faceIdentitySimilarityMinScore;
 
+    /**
+     * <p>Information about the reference video.</p>
+     */
     @NameInMap("ReferenceVideo")
     public String referenceVideoShrink;
 
+    /**
+     * <p>Removes captions from the material.</p>
+     */
     @NameInMap("RemoveSubtitle")
     public Boolean removeSubtitle;
 
     /**
+     * <p>The structure of the video editing materials.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SourceVideos")
     public String sourceVideosShrink;
 
     /**
+     * <p>The time interval for video understanding shots.</p>
+     * 
      * <strong>example:</strong>
      * <p>默认1</p>
      */
@@ -45,6 +60,8 @@ public class AsyncUploadVideoShrinkRequest extends TeaModel {
     public Integer splitInterval;
 
     /**
+     * <p>Job name</p>
+     * 
      * <strong>example:</strong>
      * <p>task001</p>
      */
@@ -52,16 +69,23 @@ public class AsyncUploadVideoShrinkRequest extends TeaModel {
     public String taskName;
 
     /**
+     * <p>Task Type</p>
+     * 
      * <strong>example:</strong>
      * <p>type001</p>
      */
     @NameInMap("TaskType")
     public String taskType;
 
+    /**
+     * <p>Face information of the roles.</p>
+     */
     @NameInMap("VideoRoles")
     public String videoRolesShrink;
 
     /**
+     * <p>The number of frames sampled from a single shot for character matching.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -69,6 +93,7 @@ public class AsyncUploadVideoShrinkRequest extends TeaModel {
     public Integer videoShotFaceIdentityCount;
 
     /**
+     * <p><a href="https://help.aliyun.com/document_detail/2782167.html">The ID of the Alibaba Cloud Model Studio workspace.</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

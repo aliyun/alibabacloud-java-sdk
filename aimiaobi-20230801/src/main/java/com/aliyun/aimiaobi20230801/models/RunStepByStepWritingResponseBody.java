@@ -4,13 +4,21 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunStepByStepWritingResponseBody extends TeaModel {
+    /**
+     * <p>The response header.</p>
+     */
     @NameInMap("Header")
     public RunStepByStepWritingResponseBodyHeader header;
 
+    /**
+     * <p>The response body.</p>
+     */
     @NameInMap("Payload")
     public RunStepByStepWritingResponseBodyPayload payload;
 
     /**
+     * <p>The unique request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */
@@ -48,6 +56,8 @@ public class RunStepByStepWritingResponseBody extends TeaModel {
 
     public static class RunStepByStepWritingResponseBodyHeader extends TeaModel {
         /**
+         * <p>The error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>错误码</p>
          */
@@ -55,6 +65,8 @@ public class RunStepByStepWritingResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>错误信息</p>
          */
@@ -62,6 +74,8 @@ public class RunStepByStepWritingResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The Server-Sent Events (SSE) event. \<code>task-started\\</code>: The task begins. \<code>task-finished\\</code>: The task is complete. \<code>task-failed\\</code>: The task failed.</p>
+         * 
          * <strong>example:</strong>
          * <p>task-started</p>
          */
@@ -69,6 +83,8 @@ public class RunStepByStepWritingResponseBody extends TeaModel {
         public String event;
 
         /**
+         * <p>The parent session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
@@ -76,6 +92,8 @@ public class RunStepByStepWritingResponseBody extends TeaModel {
         public String originSessionId;
 
         /**
+         * <p>The session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
@@ -83,6 +101,8 @@ public class RunStepByStepWritingResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
@@ -90,6 +110,8 @@ public class RunStepByStepWritingResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The full-link trace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>全链路ID</p>
          */
@@ -161,6 +183,8 @@ public class RunStepByStepWritingResponseBody extends TeaModel {
 
     public static class RunStepByStepWritingResponseBodyPayloadOutputArticles extends TeaModel {
         /**
+         * <p>The author.</p>
+         * 
          * <strong>example:</strong>
          * <p>作者</p>
          */
@@ -168,6 +192,8 @@ public class RunStepByStepWritingResponseBody extends TeaModel {
         public String author;
 
         /**
+         * <p>The content.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章内容</p>
          */
@@ -175,6 +201,8 @@ public class RunStepByStepWritingResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>The custom unique ID of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>文档-自定义的唯一ID</p>
          */
@@ -182,6 +210,8 @@ public class RunStepByStepWritingResponseBody extends TeaModel {
         public String docId;
 
         /**
+         * <p>The internal unique ID of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>f1da53894e784759946d22e2cb2b522a</p>
          */
@@ -189,6 +219,8 @@ public class RunStepByStepWritingResponseBody extends TeaModel {
         public String docUuid;
 
         /**
+         * <p>The URL of the original material.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">http://www.example.com</a></p>
          */
@@ -196,6 +228,8 @@ public class RunStepByStepWritingResponseBody extends TeaModel {
         public String mediaUrl;
 
         /**
+         * <p>The publication time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-09-10 14:17:53</p>
          */
@@ -203,6 +237,8 @@ public class RunStepByStepWritingResponseBody extends TeaModel {
         public String pubTime;
 
         /**
+         * <p>The source.</p>
+         * 
          * <strong>example:</strong>
          * <p>央视网</p>
          */
@@ -210,6 +246,8 @@ public class RunStepByStepWritingResponseBody extends TeaModel {
         public String source;
 
         /**
+         * <p>The article summary.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章摘要</p>
          */
@@ -217,6 +255,8 @@ public class RunStepByStepWritingResponseBody extends TeaModel {
         public String summary;
 
         /**
+         * <p>The tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章标签</p>
          */
@@ -224,6 +264,8 @@ public class RunStepByStepWritingResponseBody extends TeaModel {
         public String tag;
 
         /**
+         * <p>The title.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章标题</p>
          */
@@ -231,6 +273,8 @@ public class RunStepByStepWritingResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>The URL of the article.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://www.example.com/aaa.docx">https://www.example.com/aaa.docx</a></p>
          */
@@ -333,6 +377,9 @@ public class RunStepByStepWritingResponseBody extends TeaModel {
     }
 
     public static class RunStepByStepWritingResponseBodyPayloadOutputExtraOutput extends TeaModel {
+        /**
+         * <p>The list of summaries. This field is returned when summaries are generated step-by-step.</p>
+         */
         @NameInMap("summarization")
         public java.util.List<String> summarization;
 
@@ -352,13 +399,21 @@ public class RunStepByStepWritingResponseBody extends TeaModel {
     }
 
     public static class RunStepByStepWritingResponseBodyPayloadOutput extends TeaModel {
+        /**
+         * <p>The reference articles.</p>
+         */
         @NameInMap("Articles")
         public java.util.List<RunStepByStepWritingResponseBodyPayloadOutputArticles> articles;
 
+        /**
+         * <p>Extra output fields.</p>
+         */
         @NameInMap("ExtraOutput")
         public RunStepByStepWritingResponseBodyPayloadOutputExtraOutput extraOutput;
 
         /**
+         * <p>A list of segments after the article layout has been optimized.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章精排之后的片段</p>
          */
@@ -366,6 +421,8 @@ public class RunStepByStepWritingResponseBody extends TeaModel {
         public java.util.List<String> miniDoc;
 
         /**
+         * <p>The rewritten query.</p>
+         * 
          * <strong>example:</strong>
          * <p>大模型改变世界</p>
          */
@@ -373,6 +430,8 @@ public class RunStepByStepWritingResponseBody extends TeaModel {
         public String searchQuery;
 
         /**
+         * <p>The text generation result.</p>
+         * 
          * <strong>example:</strong>
          * <p>文本生成结果</p>
          */
@@ -428,6 +487,8 @@ public class RunStepByStepWritingResponseBody extends TeaModel {
 
     public static class RunStepByStepWritingResponseBodyPayloadUsage extends TeaModel {
         /**
+         * <p>The number of input tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>65</p>
          */
@@ -435,6 +496,8 @@ public class RunStepByStepWritingResponseBody extends TeaModel {
         public Long inputTokens;
 
         /**
+         * <p>The number of output tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
@@ -442,6 +505,8 @@ public class RunStepByStepWritingResponseBody extends TeaModel {
         public Long outputTokens;
 
         /**
+         * <p>The total number of tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>32</p>
          */
@@ -480,9 +545,15 @@ public class RunStepByStepWritingResponseBody extends TeaModel {
     }
 
     public static class RunStepByStepWritingResponseBodyPayload extends TeaModel {
+        /**
+         * <p>The output.</p>
+         */
         @NameInMap("Output")
         public RunStepByStepWritingResponseBodyPayloadOutput output;
 
+        /**
+         * <p>Information about token usage.</p>
+         */
         @NameInMap("Usage")
         public RunStepByStepWritingResponseBodyPayloadUsage usage;
 

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class FetchExportWordTaskResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public FetchExportWordTaskResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class FetchExportWordTaskResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class FetchExportWordTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -36,6 +47,8 @@ public class FetchExportWordTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. \<code>true\\</code>: successful. \<code>false\\</code>: failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,12 +110,20 @@ public class FetchExportWordTaskResponseBody extends TeaModel {
 
     public static class FetchExportWordTaskResponseBodyData extends TeaModel {
         /**
+         * <p>The file URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://xxx/xxx.xls">http://xxx/xxx.xls</a></p>
          */
         @NameInMap("FileUrl")
         public String fileUrl;
 
+        /**
+         * <p>The status of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PENDING-待执行、RUNNING-执行中、SUCCESSED-成功、SUSPENDED-暂停、FAILED-失败、CANCELLED-取消</p>
+         */
         @NameInMap("TaskStats")
         public String taskStats;
 

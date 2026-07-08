@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business data</p>
+     */
     @NameInMap("Data")
     public GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBody extends 
     public Integer httpStatusCode;
 
     /**
+     * <p>Error description</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBody extends 
     public String message;
 
     /**
+     * <p>Unique request identifier</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -36,6 +47,8 @@ public class GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBody extends 
     public String requestId;
 
     /**
+     * <p>Indicates success: true for success, false for failure</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBody extends 
 
     public static class GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBodyDataCustomViewPointsResultAttitudesViewPointsOutlines extends TeaModel {
         /**
+         * <p>Outline</p>
+         * 
          * <strong>example:</strong>
          * <p>大纲</p>
          */
@@ -104,6 +119,8 @@ public class GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBody extends 
         public String outline;
 
         /**
+         * <p>Outline summary</p>
+         * 
          * <strong>example:</strong>
          * <p>大纲摘要</p>
          */
@@ -134,10 +151,15 @@ public class GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBody extends 
     }
 
     public static class GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBodyDataCustomViewPointsResultAttitudesViewPoints extends TeaModel {
+        /**
+         * <p>Outline</p>
+         */
         @NameInMap("Outlines")
         public java.util.List<GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBodyDataCustomViewPointsResultAttitudesViewPointsOutlines> outlines;
 
         /**
+         * <p>Generated perspective</p>
+         * 
          * <strong>example:</strong>
          * <p>视角</p>
          */
@@ -145,6 +167,8 @@ public class GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBody extends 
         public String point;
 
         /**
+         * <p>Summary</p>
+         * 
          * <strong>example:</strong>
          * <p>摘要</p>
          */
@@ -184,6 +208,8 @@ public class GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBody extends 
 
     public static class GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBodyDataCustomViewPointsResultAttitudes extends TeaModel {
         /**
+         * <p>Current viewpoint</p>
+         * 
          * <strong>example:</strong>
          * <p>当前观点</p>
          */
@@ -191,6 +217,8 @@ public class GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBody extends 
         public String attitude;
 
         /**
+         * <p>Viewpoint type</p>
+         * 
          * <strong>example:</strong>
          * <p>观点类型</p>
          */
@@ -198,12 +226,17 @@ public class GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBody extends 
         public String attitudeType;
 
         /**
+         * <p>Proportion of the current viewpoint</p>
+         * 
          * <strong>example:</strong>
          * <p>当前观点占比</p>
          */
         @NameInMap("Ratio")
         public String ratio;
 
+        /**
+         * <p>List of topic selection perspectives</p>
+         */
         @NameInMap("ViewPoints")
         public java.util.List<GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBodyDataCustomViewPointsResultAttitudesViewPoints> viewPoints;
 
@@ -247,10 +280,15 @@ public class GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBody extends 
     }
 
     public static class GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBodyDataCustomViewPointsResult extends TeaModel {
+        /**
+         * <p>List of custom viewpoints. By default, the system generates one viewpoint based on the prompt input.</p>
+         */
         @NameInMap("Attitudes")
         public java.util.List<GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBodyDataCustomViewPointsResultAttitudes> attitudes;
 
         /**
+         * <p>Hot topic event</p>
+         * 
          * <strong>example:</strong>
          * <p>热点主题事件</p>
          */
@@ -281,10 +319,15 @@ public class GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBody extends 
     }
 
     public static class GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBodyData extends TeaModel {
+        /**
+         * <p>Result of the custom topic selection analysis task</p>
+         */
         @NameInMap("CustomViewPointsResult")
         public GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBodyDataCustomViewPointsResult customViewPointsResult;
 
         /**
+         * <p>Error message</p>
+         * 
          * <strong>example:</strong>
          * <p>错误信息</p>
          */
@@ -292,6 +335,8 @@ public class GetCustomTopicSelectionPerspectiveAnalysisTaskResponseBody extends 
         public String errorMessage;
 
         /**
+         * <p>Task status (PENDING: pending, RUNNING: running, SUCCESSED: succeeded, SUSPENDED: suspended, FAILED: failed, CANCELED: canceled)</p>
+         * 
          * <strong>example:</strong>
          * <p>FAILED</p>
          */

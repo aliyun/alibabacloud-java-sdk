@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitFactAuditUrlResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>DataNotExists</p>
      */
@@ -12,6 +14,8 @@ public class SubmitFactAuditUrlResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Confirmation that the URL was added successfully</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESSED</p>
      */
@@ -19,6 +23,8 @@ public class SubmitFactAuditUrlResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class SubmitFactAuditUrlResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -33,7 +41,7 @@ public class SubmitFactAuditUrlResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>Request ID</p>
      * 
      * <strong>example:</strong>
      * <p>F2F366D6-E9FE-1006-BB70-2C650896AAB5</p>
@@ -42,6 +50,8 @@ public class SubmitFactAuditUrlResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

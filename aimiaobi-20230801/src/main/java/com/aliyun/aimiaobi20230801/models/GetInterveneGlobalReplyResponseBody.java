@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetInterveneGlobalReplyResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business data</p>
+     */
     @NameInMap("Data")
     public GetInterveneGlobalReplyResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetInterveneGlobalReplyResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error description</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class GetInterveneGlobalReplyResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Unique request identifier</p>
+     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */
@@ -36,6 +47,8 @@ public class GetInterveneGlobalReplyResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates success: true for success, false for failure</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class GetInterveneGlobalReplyResponseBody extends TeaModel {
 
     public static class GetInterveneGlobalReplyResponseBodyDataReplyMessagList extends TeaModel {
         /**
+         * <p>Reply content</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -104,6 +119,8 @@ public class GetInterveneGlobalReplyResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>Reply type</p>
+         * 
          * <strong>example:</strong>
          * <p>namespace_qa_query</p>
          */
@@ -137,6 +154,9 @@ public class GetInterveneGlobalReplyResponseBody extends TeaModel {
         @NameInMap("Code")
         public Integer code;
 
+        /**
+         * <p>Reply message list</p>
+         */
         @NameInMap("ReplyMessagList")
         public java.util.List<GetInterveneGlobalReplyResponseBodyDataReplyMessagList> replyMessagList;
 

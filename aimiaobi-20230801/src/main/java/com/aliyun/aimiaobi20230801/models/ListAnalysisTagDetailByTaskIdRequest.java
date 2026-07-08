@@ -4,10 +4,15 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class ListAnalysisTagDetailByTaskIdRequest extends TeaModel {
+    /**
+     * <p>A list of categories for filtering.</p>
+     */
     @NameInMap("Categories")
     public java.util.List<String> categories;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListAnalysisTagDetailByTaskIdRequest extends TeaModel {
     public Integer current;
 
     /**
+     * <p>The maximum number of entries to return on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class ListAnalysisTagDetailByTaskIdRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token for the next page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>token-xxxx</p>
      */
@@ -29,6 +38,8 @@ public class ListAnalysisTagDetailByTaskIdRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The number of records to request.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -36,6 +47,10 @@ public class ListAnalysisTagDetailByTaskIdRequest extends TeaModel {
     public Integer size;
 
     /**
+     * <p>The unique ID of the task.</p>
+     * <blockquote>
+     * <p>This parameter is optional. The system automatically generates a task ID. If you specify the same TaskId for multiple tasks, the tasks are considered part of the same conversation.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,6 +60,7 @@ public class ListAnalysisTagDetailByTaskIdRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The unique ID of the Alibaba Cloud Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Get a Workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

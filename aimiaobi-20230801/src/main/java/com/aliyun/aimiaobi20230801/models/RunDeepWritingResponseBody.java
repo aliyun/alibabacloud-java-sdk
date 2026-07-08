@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class RunDeepWritingResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response header.</p>
+     */
     @NameInMap("Header")
     public RunDeepWritingResponseBodyHeader header;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,16 +29,23 @@ public class RunDeepWritingResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The response body.</p>
+     */
     @NameInMap("Payload")
     public RunDeepWritingResponseBodyPayload payload;
 
     /**
+     * <p>The unique request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>31AC01F1-88FB-5C4D-B6F5-E8BB136CD5A3</p>
      */
@@ -39,6 +53,8 @@ public class RunDeepWritingResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -108,16 +124,26 @@ public class RunDeepWritingResponseBody extends TeaModel {
 
     public static class RunDeepWritingResponseBodyHeader extends TeaModel {
         /**
+         * <p>The error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>403</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>错误消息</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
+         * <p>The Server-Sent Event (SSE).</p>
+         * 
          * <strong>example:</strong>
          * <p>response.output_item.done</p>
          */
@@ -125,6 +151,8 @@ public class RunDeepWritingResponseBody extends TeaModel {
         public String event;
 
         /**
+         * <p>The session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>c2e2e991-f96a-4fcc-9ff7-d0df46c6d232</p>
          */
@@ -132,6 +160,8 @@ public class RunDeepWritingResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>The HTTP status code.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -139,6 +169,8 @@ public class RunDeepWritingResponseBody extends TeaModel {
         public Integer statusCode;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>b84d31a5-44b2-4a35-9c6d-878d459c93d0</p>
          */
@@ -146,6 +178,8 @@ public class RunDeepWritingResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The trace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>FAB10D42-F081-557B-8DCB-D6FB7AAF100B</p>
          */
@@ -217,6 +251,8 @@ public class RunDeepWritingResponseBody extends TeaModel {
 
     public static class RunDeepWritingResponseBodyPayloadOutputItemContent extends TeaModel {
         /**
+         * <p>The text content that is output when the item type is \<code>message\\</code>.</p>
+         * 
          * <strong>example:</strong>
          * <TASK_DONE>
          */
@@ -224,6 +260,8 @@ public class RunDeepWritingResponseBody extends TeaModel {
         public String text;
 
         /**
+         * <p>When the item type is \<code>message\\</code>, the value of this field is \<code>output_text\\</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>output_text</p>
          */
@@ -255,32 +293,59 @@ public class RunDeepWritingResponseBody extends TeaModel {
 
     public static class RunDeepWritingResponseBodyPayloadOutputItem extends TeaModel {
         /**
+         * <p>The name of the agent that generated this item.</p>
+         * 
          * <strong>example:</strong>
          * <p>ProjectManager</p>
          */
         @NameInMap("Agent")
         public String agent;
 
+        /**
+         * <p>Parameter</p>
+         * 
+         * <strong>example:</strong>
+         * <p>item类型为function_call时，此字段有值，为调用函数的入参</p>
+         */
         @NameInMap("Arguments")
         public String arguments;
 
+        /**
+         * <p>This field has a value when the item type is \<code>message\\</code>. The value is a list of output content.</p>
+         */
         @NameInMap("Content")
         public java.util.List<RunDeepWritingResponseBodyPayloadOutputItemContent> content;
 
         /**
+         * <p>The unique ID of the item.</p>
+         * 
          * <strong>example:</strong>
          * <p>88f6ed9e85c4f9377378da23e6a370d1</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>item类型为function_call时，此字段有值，为调用的函数名字</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The item\&quot;s result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>item类型为function_call时，此字段有值，为调用的函数的输出</p>
+         */
         @NameInMap("Result")
         public String result;
 
         /**
+         * <p>The status of the item.</p>
+         * 
          * <strong>example:</strong>
          * <p>completed</p>
          */
@@ -288,6 +353,8 @@ public class RunDeepWritingResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The type of the item.</p>
+         * 
          * <strong>example:</strong>
          * <p>function_call</p>
          */
@@ -367,6 +434,8 @@ public class RunDeepWritingResponseBody extends TeaModel {
 
     public static class RunDeepWritingResponseBodyPayloadOutputResponse extends TeaModel {
         /**
+         * <p>The unique ID of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>b2dc224b38694e0b668020159a7c5732</p>
          */
@@ -374,6 +443,8 @@ public class RunDeepWritingResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The execution status of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>in_progress</p>
          */
@@ -404,26 +475,42 @@ public class RunDeepWritingResponseBody extends TeaModel {
     }
 
     public static class RunDeepWritingResponseBodyPayloadOutput extends TeaModel {
+        /**
+         * <p>The new output item for this event.</p>
+         */
         @NameInMap("Item")
         public RunDeepWritingResponseBodyPayloadOutputItem item;
 
         /**
+         * <p>The ordinal number of the new output item in this event.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("OutputIndex")
         public Integer outputIndex;
 
+        /**
+         * <p>The response body.</p>
+         */
         @NameInMap("Response")
         public RunDeepWritingResponseBodyPayloadOutputResponse response;
 
         /**
+         * <p>The ordinal number of the streaming event.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("SequenceNumber")
         public String sequenceNumber;
 
+        /**
+         * <p>The type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>同上级Event</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -475,6 +562,9 @@ public class RunDeepWritingResponseBody extends TeaModel {
     }
 
     public static class RunDeepWritingResponseBodyPayload extends TeaModel {
+        /**
+         * <p>The output.</p>
+         */
         @NameInMap("Output")
         public RunDeepWritingResponseBodyPayloadOutput output;
 

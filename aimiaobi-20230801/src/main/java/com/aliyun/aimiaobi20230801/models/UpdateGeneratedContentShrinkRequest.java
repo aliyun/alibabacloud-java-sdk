@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateGeneratedContentShrinkRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class UpdateGeneratedContentShrinkRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The body of the article in rich text format.</p>
+     * 
      * <strong>example:</strong>
      * <p>正文</p>
      */
@@ -21,6 +24,8 @@ public class UpdateGeneratedContentShrinkRequest extends TeaModel {
     public String content;
 
     /**
+     * <p>The body of the article in plain text format.</p>
+     * 
      * <strong>example:</strong>
      * <p>正文</p>
      */
@@ -28,6 +33,7 @@ public class UpdateGeneratedContentShrinkRequest extends TeaModel {
     public String contentText;
 
     /**
+     * <p>The unique identifier of the document.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,10 +42,15 @@ public class UpdateGeneratedContentShrinkRequest extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>The keywords.</p>
+     */
     @NameInMap("Keywords")
     public String keywordsShrink;
 
     /**
+     * <p>The last prompt that was used to generate the content.</p>
+     * 
      * <strong>example:</strong>
      * <p>创作xx文章</p>
      */
@@ -47,8 +58,10 @@ public class UpdateGeneratedContentShrinkRequest extends TeaModel {
     public String prompt;
 
     /**
+     * <p>The title.</p>
+     * 
      * <strong>example:</strong>
-     * <p>评论类文章</p>
+     * <p>文章名称</p>
      */
     @NameInMap("Title")
     public String title;

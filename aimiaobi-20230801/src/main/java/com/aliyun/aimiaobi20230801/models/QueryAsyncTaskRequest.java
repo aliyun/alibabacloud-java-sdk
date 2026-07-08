@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryAsyncTaskRequest extends TeaModel {
     /**
+     * <p>Unique ID of the workspace: <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,11 @@ public class QueryAsyncTaskRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>Unique task ID</p>
+     * <blockquote>
+     * <p>The system automatically generates the TaskId by default. If subsequent tasks use the same TaskId, they belong to the same conversation group.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */

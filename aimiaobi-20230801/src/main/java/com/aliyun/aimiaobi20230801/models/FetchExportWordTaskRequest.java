@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class FetchExportWordTaskRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class FetchExportWordTaskRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2e27abb32cb64f80a0c6e829b6c87a09</p>
      */

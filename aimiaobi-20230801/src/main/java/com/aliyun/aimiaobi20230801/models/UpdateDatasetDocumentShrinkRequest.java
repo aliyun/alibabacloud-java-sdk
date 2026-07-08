@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateDatasetDocumentShrinkRequest extends TeaModel {
     /**
+     * <p>Unique identifier of the dataset.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class UpdateDatasetDocumentShrinkRequest extends TeaModel {
     public Long datasetId;
 
     /**
+     * <p>Name of the dataset.</p>
+     * 
      * <strong>example:</strong>
      * <p>数据集名称</p>
      */
@@ -19,12 +23,15 @@ public class UpdateDatasetDocumentShrinkRequest extends TeaModel {
     public String datasetName;
 
     /**
+     * <p>The document to update.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Document")
     public String documentShrink;
 
     /**
+     * <p>Unique identifier of the Alibaba Cloud Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Get the workspace ID</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx</p>
      */

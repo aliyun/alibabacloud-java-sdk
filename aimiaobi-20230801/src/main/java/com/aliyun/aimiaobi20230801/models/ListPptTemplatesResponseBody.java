@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPptTemplatesResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
@@ -12,16 +14,23 @@ public class ListPptTemplatesResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("Current")
     public Integer current;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListPptTemplatesResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class ListPptTemplatesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The maximum number of results returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -36,6 +47,8 @@ public class ListPptTemplatesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -43,6 +56,8 @@ public class ListPptTemplatesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The token used to retrieve the next page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>+CBOXvu2YLxC6DOua8Qupg==</p>
      */
@@ -50,6 +65,8 @@ public class ListPptTemplatesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -57,6 +74,8 @@ public class ListPptTemplatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The number of entries per page. The default value is 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -64,6 +83,8 @@ public class ListPptTemplatesResponseBody extends TeaModel {
     public Integer size;
 
     /**
+     * <p>Indicates whether the request was successful. A value of \<code>true\\</code> indicates success and \<code>false\\</code> indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -71,6 +92,8 @@ public class ListPptTemplatesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -172,6 +195,8 @@ public class ListPptTemplatesResponseBody extends TeaModel {
 
     public static class ListPptTemplatesResponseBodyData extends TeaModel {
         /**
+         * <p>The template thumbnail.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://xxx.com/a.png">http://xxx.com/a.png</a></p>
          */
@@ -179,7 +204,7 @@ public class ListPptTemplatesResponseBody extends TeaModel {
         public String coverImg;
 
         /**
-         * <p>ID</p>
+         * <p>The ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

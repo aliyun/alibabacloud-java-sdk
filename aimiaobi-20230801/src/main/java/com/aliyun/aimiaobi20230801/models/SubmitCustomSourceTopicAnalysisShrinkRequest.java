@@ -4,10 +4,20 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class SubmitCustomSourceTopicAnalysisShrinkRequest extends TeaModel {
+    /**
+     * <p>The types of analysis for hot topic selection. Multiple values are supported. If you omit this parameter, the service analyzes all types by default. If you pass an empty array, the service performs only clustering and skips the analysis of hot topics for selection.
+     * <code>HotViewPoints</code>: Analyzes perspectives on hot topics.
+     * <code>WebReviewPoints</code>: Analyzes user viewpoints. This requires comments.
+     * <code>TimedViewPoints</code>: Analyzes perspectives on timeliness.
+     * <code>FreshViewPoints</code>: Analyzes novel perspectives.
+     * <code>TopicSummary</code>: Summarizes news content.</p>
+     */
     @NameInMap("AnalysisTypes")
     public String analysisTypesShrink;
 
     /**
+     * <p>The file type. Valid values: <code>json</code> (JSON array) and <code>jsonLine</code> (JSON Lines).</p>
+     * 
      * <strong>example:</strong>
      * <p>json</p>
      */
@@ -15,6 +25,8 @@ public class SubmitCustomSourceTopicAnalysisShrinkRequest extends TeaModel {
     public String fileType;
 
     /**
+     * <p>The file URL. You must specify either <code>FileUrl</code> or <code>News</code>. For details on the file structure, see the description of the <code>News</code> parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://www.example.com/xxx.json">http://www.example.com/xxx.json</a></p>
      */
@@ -22,19 +34,29 @@ public class SubmitCustomSourceTopicAnalysisShrinkRequest extends TeaModel {
     public String fileUrl;
 
     /**
+     * <p>The maximum number of topics to analyze. By default, the service sorts clustered news by count in descending order and analyzes the top 50 topics. The maximum value is 200.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
     @NameInMap("MaxTopicSize")
     public Integer maxTopicSize;
 
+    /**
+     * <p>A list of news articles. You must specify either <code>News</code> or <code>FileUrl</code>.</p>
+     */
     @NameInMap("News")
     public String newsShrink;
 
+    /**
+     * <p>A list of topics.</p>
+     */
     @NameInMap("Topics")
     public String topicsShrink;
 
     /**
+     * <p>The URL of the file that contains the topic list. The file must be in JSON Lines format, with each line representing a single JSON object.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://www.example.com/xxx.jsonline">http://www.example.com/xxx.jsonline</a></p>
      */
@@ -42,6 +64,7 @@ public class SubmitCustomSourceTopicAnalysisShrinkRequest extends TeaModel {
     public String topicsFileUrl;
 
     /**
+     * <p><a href="https://help.aliyun.com/document_detail/2782167.html">The Model Studio workspace ID.</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

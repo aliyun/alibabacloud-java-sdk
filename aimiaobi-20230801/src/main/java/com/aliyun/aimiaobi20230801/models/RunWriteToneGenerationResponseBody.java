@@ -4,13 +4,21 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunWriteToneGenerationResponseBody extends TeaModel {
+    /**
+     * <p>Response headers.</p>
+     */
     @NameInMap("Header")
     public RunWriteToneGenerationResponseBodyHeader header;
 
+    /**
+     * <p>Response body.</p>
+     */
     @NameInMap("Payload")
     public RunWriteToneGenerationResponseBodyPayload payload;
 
     /**
+     * <p>Unique request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FB698445-61DA-5361-BF73-1C5F1157E888</p>
      */
@@ -48,6 +56,8 @@ public class RunWriteToneGenerationResponseBody extends TeaModel {
 
     public static class RunWriteToneGenerationResponseBodyHeader extends TeaModel {
         /**
+         * <p>Error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>AccessForbid</p>
          */
@@ -55,6 +65,8 @@ public class RunWriteToneGenerationResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>Error message returned when the call fails.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -62,6 +74,8 @@ public class RunWriteToneGenerationResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>Server-sent event (SSE).</p>
+         * 
          * <strong>example:</strong>
          * <p>task-failed</p>
          */
@@ -69,6 +83,8 @@ public class RunWriteToneGenerationResponseBody extends TeaModel {
         public String event;
 
         /**
+         * <p>Session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>F1953EE6-157C-40DC-BBF1-87C98AC27C51</p>
          */
@@ -76,6 +92,8 @@ public class RunWriteToneGenerationResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>Task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>F1953EE6-157C-40DC-BBF1-87C98AC27C51</p>
          */
@@ -83,6 +101,8 @@ public class RunWriteToneGenerationResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>End-to-end trace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>F1953EE6-157C-40DC-BBF1-87C98AC27C51</p>
          */
@@ -146,6 +166,8 @@ public class RunWriteToneGenerationResponseBody extends TeaModel {
 
     public static class RunWriteToneGenerationResponseBodyPayloadOutput extends TeaModel {
         /**
+         * <p>Generated text.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -169,6 +191,8 @@ public class RunWriteToneGenerationResponseBody extends TeaModel {
 
     public static class RunWriteToneGenerationResponseBodyPayloadUsage extends TeaModel {
         /**
+         * <p>Number of input tokens used.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -176,6 +200,8 @@ public class RunWriteToneGenerationResponseBody extends TeaModel {
         public Long inputTokens;
 
         /**
+         * <p>Number of output tokens used.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -183,6 +209,8 @@ public class RunWriteToneGenerationResponseBody extends TeaModel {
         public Long outputTokens;
 
         /**
+         * <p>Total number of tokens used in this call.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -221,9 +249,15 @@ public class RunWriteToneGenerationResponseBody extends TeaModel {
     }
 
     public static class RunWriteToneGenerationResponseBodyPayload extends TeaModel {
+        /**
+         * <p>Output data.</p>
+         */
         @NameInMap("Output")
         public RunWriteToneGenerationResponseBodyPayloadOutput output;
 
+        /**
+         * <p>Token usage.</p>
+         */
         @NameInMap("Usage")
         public RunWriteToneGenerationResponseBodyPayloadUsage usage;
 

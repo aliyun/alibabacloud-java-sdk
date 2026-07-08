@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RunCustomHotTopicAnalysisRequest extends TeaModel {
     /**
+     * <p>The follow-up question from the model.</p>
+     * 
      * <strong>example:</strong>
      * <p>模型反问</p>
      */
@@ -12,6 +14,8 @@ public class RunCustomHotTopicAnalysisRequest extends TeaModel {
     public String askUser;
 
     /**
+     * <p>Specifies whether to forcibly analyze a duplicate topic and overwrite the existing analysis.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -19,6 +23,7 @@ public class RunCustomHotTopicAnalysisRequest extends TeaModel {
     public Boolean forceAnalysisExistsTopic;
 
     /**
+     * <p>The user\&quot;s input prompt.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,8 @@ public class RunCustomHotTopicAnalysisRequest extends TeaModel {
     public String prompt;
 
     /**
+     * <p>The unique ID for each request.</p>
+     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */
@@ -35,6 +42,11 @@ public class RunCustomHotTopicAnalysisRequest extends TeaModel {
     public String sessionId;
 
     /**
+     * <p>The unique ID for the entire conversation task.</p>
+     * <blockquote>
+     * <p>By default, you do not need to specify TaskId. The system automatically generates one. If you specify the same TaskId for subsequent tasks, the tasks are considered part of the same conversation group.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */
@@ -42,6 +54,8 @@ public class RunCustomHotTopicAnalysisRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The user\&quot;s input in response to the model\&quot;s follow-up question.</p>
+     * 
      * <strong>example:</strong>
      * <p>用户针对模型反问的输入</p>
      */
@@ -49,6 +63,7 @@ public class RunCustomHotTopicAnalysisRequest extends TeaModel {
     public String userBack;
 
     /**
+     * <p>The unique ID of the Alibaba Cloud Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Obtain a Workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

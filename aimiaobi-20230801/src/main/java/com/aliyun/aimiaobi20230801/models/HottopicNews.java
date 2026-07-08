@@ -4,16 +4,33 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class HottopicNews extends TeaModel {
+    /**
+     * <p>List of news comments</p>
+     */
     @NameInMap("Comments")
     public java.util.List<HottopicNewsComments> comments;
 
+    /**
+     * <p>News content</p>
+     * 
+     * <strong>example:</strong>
+     * <p>新闻内容xxx</p>
+     */
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <p>News title</p>
+     * 
+     * <strong>example:</strong>
+     * <p>新闻标题xxx</p>
+     */
     @NameInMap("Title")
     public String title;
 
     /**
+     * <p>News URL link</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://www.example.com/xxx.html">http://www.example.com/xxx.html</a></p>
      */
@@ -58,6 +75,12 @@ public class HottopicNews extends TeaModel {
     }
 
     public static class HottopicNewsComments extends TeaModel {
+        /**
+         * <p>News comment content</p>
+         * 
+         * <strong>example:</strong>
+         * <p>新闻评论内容</p>
+         */
         @NameInMap("Text")
         public String text;
 

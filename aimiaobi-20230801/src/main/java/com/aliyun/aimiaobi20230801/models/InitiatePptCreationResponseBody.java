@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class InitiatePptCreationResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>DataNotExists</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public InitiatePptCreationResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>400</p>
      */
@@ -22,6 +29,8 @@ public class InitiatePptCreationResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>错误消息</p>
      */
@@ -38,6 +47,8 @@ public class InitiatePptCreationResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,7 +110,7 @@ public class InitiatePptCreationResponseBody extends TeaModel {
 
     public static class InitiatePptCreationResponseBodyData extends TeaModel {
         /**
-         * <p>AppKey</p>
+         * <p>The AppKey.</p>
          * 
          * <strong>example:</strong>
          * <p>S1X5ecouBztZelaQ</p>
@@ -108,7 +119,7 @@ public class InitiatePptCreationResponseBody extends TeaModel {
         public String appKey;
 
         /**
-         * <p>Code</p>
+         * <p>The code.</p>
          * 
          * <strong>example:</strong>
          * <p>7dhqd2</p>

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListSearchTaskDialoguesResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListSearchTaskDialoguesResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListSearchTaskDialoguesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class ListSearchTaskDialoguesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The number of the page returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -36,6 +47,8 @@ public class ListSearchTaskDialoguesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries returned per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -43,6 +56,8 @@ public class ListSearchTaskDialoguesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -50,6 +65,8 @@ public class ListSearchTaskDialoguesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. \<code>true\\</code> indicates success. \<code>false\\</code> indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -57,6 +74,8 @@ public class ListSearchTaskDialoguesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -142,6 +161,8 @@ public class ListSearchTaskDialoguesResponseBody extends TeaModel {
 
     public static class ListSearchTaskDialoguesResponseBodyDataChatConfigSearchParamSearchSources extends TeaModel {
         /**
+         * <p>The type.</p>
+         * 
          * <strong>example:</strong>
          * <p>x\&quot;x</p>
          */
@@ -149,6 +170,8 @@ public class ListSearchTaskDialoguesResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The unique ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -156,6 +179,8 @@ public class ListSearchTaskDialoguesResponseBody extends TeaModel {
         public String datasetName;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>x</p>
          */
@@ -200,6 +225,9 @@ public class ListSearchTaskDialoguesResponseBody extends TeaModel {
         @NameInMap("MultimodalSearchTypes")
         public java.util.List<String> multimodalSearchTypes;
 
+        /**
+         * <p>The search sources.</p>
+         */
         @NameInMap("SearchSources")
         public java.util.List<ListSearchTaskDialoguesResponseBodyDataChatConfigSearchParamSearchSources> searchSources;
 
@@ -247,16 +275,23 @@ public class ListSearchTaskDialoguesResponseBody extends TeaModel {
 
     public static class ListSearchTaskDialoguesResponseBodyDataChatConfig extends TeaModel {
         /**
+         * <p>The request type.</p>
+         * 
          * <strong>example:</strong>
          * <p>24</p>
          */
         @NameInMap("DialogueType")
         public Integer dialogueType;
 
+        /**
+         * <p>Indicates whether the process is end-to-end.</p>
+         */
         @NameInMap("EndToEnd")
         public Boolean endToEnd;
 
         /**
+         * <p>The generation level.</p>
+         * 
          * <strong>example:</strong>
          * <p>concise</p>
          */
@@ -264,12 +299,17 @@ public class ListSearchTaskDialoguesResponseBody extends TeaModel {
         public String generateLevel;
 
         /**
+         * <p>The type of content generation.</p>
+         * 
          * <strong>example:</strong>
          * <p>copilotReference</p>
          */
         @NameInMap("GenerateTechnology")
         public String generateTechnology;
 
+        /**
+         * <p>The search type.</p>
+         */
         @NameInMap("SearchModels")
         public java.util.List<String> searchModels;
 
@@ -332,10 +372,15 @@ public class ListSearchTaskDialoguesResponseBody extends TeaModel {
     }
 
     public static class ListSearchTaskDialoguesResponseBodyData extends TeaModel {
+        /**
+         * <p>The configuration.</p>
+         */
         @NameInMap("ChatConfig")
         public ListSearchTaskDialoguesResponseBodyDataChatConfig chatConfig;
 
         /**
+         * <p>The time when the task was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-11-25 13:33:01</p>
          */
@@ -343,6 +388,8 @@ public class ListSearchTaskDialoguesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The type of generation.</p>
+         * 
          * <strong>example:</strong>
          * <p>24</p>
          */
@@ -350,6 +397,8 @@ public class ListSearchTaskDialoguesResponseBody extends TeaModel {
         public Integer dialogueType;
 
         /**
+         * <p>The generated content that the customer rated as good.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -357,6 +406,8 @@ public class ListSearchTaskDialoguesResponseBody extends TeaModel {
         public String goodText;
 
         /**
+         * <p>The original session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxx</p>
          */
@@ -364,6 +415,8 @@ public class ListSearchTaskDialoguesResponseBody extends TeaModel {
         public String originSessionId;
 
         /**
+         * <p>The input prompt.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -371,6 +424,8 @@ public class ListSearchTaskDialoguesResponseBody extends TeaModel {
         public String prompt;
 
         /**
+         * <p>The rating of the content, which can be Like or Dislike.</p>
+         * 
          * <strong>example:</strong>
          * <p>thumbsUp</p>
          */
@@ -378,6 +433,8 @@ public class ListSearchTaskDialoguesResponseBody extends TeaModel {
         public String rating;
 
         /**
+         * <p>The response body as a string.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -385,16 +442,23 @@ public class ListSearchTaskDialoguesResponseBody extends TeaModel {
         public String responseBodyStr;
 
         /**
+         * <p>The unique ID of a single-turn conversation.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxx</p>
          */
         @NameInMap("SessionId")
         public String sessionId;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<String> tags;
 
         /**
+         * <p>The unique ID of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxx</p>
          */
@@ -402,6 +466,8 @@ public class ListSearchTaskDialoguesResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The customer feedback.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */

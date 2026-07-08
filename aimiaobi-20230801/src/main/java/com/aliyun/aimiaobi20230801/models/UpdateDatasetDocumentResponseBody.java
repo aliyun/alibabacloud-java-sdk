@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpdateDatasetDocumentResponseBody extends TeaModel {
     /**
+     * <p>Status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business data.</p>
+     */
     @NameInMap("Data")
     public UpdateDatasetDocumentResponseBodyData data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class UpdateDatasetDocumentResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class UpdateDatasetDocumentResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -36,6 +47,8 @@ public class UpdateDatasetDocumentResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation succeeded. A value of true indicates success. A value of false indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -96,10 +109,18 @@ public class UpdateDatasetDocumentResponseBody extends TeaModel {
     }
 
     public static class UpdateDatasetDocumentResponseBodyData extends TeaModel {
+        /**
+         * <p>Category UUID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("CategoryUuid")
         public String categoryUuid;
 
         /**
+         * <p>User-defined unique ID for the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>用户指定的文档唯一ID</p>
          */
@@ -107,24 +128,53 @@ public class UpdateDatasetDocumentResponseBody extends TeaModel {
         public String docId;
 
         /**
+         * <p>Internal unique ID of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>内部文档唯一ID</p>
          */
         @NameInMap("DocUuid")
         public String docUuid;
 
+        /**
+         * <p>Extension field 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend1")
         public String extend1;
 
+        /**
+         * <p>Extension field 2</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend2")
         public String extend2;
 
+        /**
+         * <p>Extension field 3</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Extend3")
         public String extend3;
 
+        /**
+         * <p>Tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<String> tags;
 
+        /**
+         * <p>Document title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>文章标题</p>
+         */
         @NameInMap("Title")
         public String title;
 

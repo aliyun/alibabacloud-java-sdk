@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDataPermissionsShrinkRequest extends TeaModel {
     /**
+     * <p>A unique identifier for the permission.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateDataPermissionsShrinkRequest extends TeaModel {
     public String dataId;
 
     /**
+     * <p>The permission type. Currently, only \<code>dataset\\</code> is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,12 +25,14 @@ public class CreateDataPermissionsShrinkRequest extends TeaModel {
     public String dataType;
 
     /**
+     * <p>The users to whom you want to assign permissions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("PermissionUserInfos")
     public String permissionUserInfosShrink;
 
     /**
+     * <p>The unique identifier of the Alibaba Cloud Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2587495.html">Get workspaceId</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

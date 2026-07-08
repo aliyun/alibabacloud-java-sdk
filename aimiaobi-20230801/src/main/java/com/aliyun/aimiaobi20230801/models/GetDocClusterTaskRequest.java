@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDocClusterTaskRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,10 @@ public class GetDocClusterTaskRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The unique ID of the task.</p>
+     * <blockquote>
+     * <p>This parameter is optional. The system automatically generates a task ID. If subsequent tasks use the same task ID, they are considered part of the same conversation group.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GenerateUploadConfigRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class GenerateUploadConfigRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The file name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test.docx</p>
      */
@@ -21,10 +24,21 @@ public class GenerateUploadConfigRequest extends TeaModel {
     public String fileName;
 
     /**
+     * <p>The parent folder.</p>
+     * <ul>
+     * <li><p>materialDocument: The Material Library for AI Writing Assistant.</p>
+     * </li>
+     * <li><p>datasetUpload: The dataset for AI Search.</p>
+     * </li>
+     * <li><p>intervenes: Interventions.</p>
+     * </li>
+     * <li><p>temp: A temporary upload folder. Files in this folder are released periodically.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>datasetUpload</p>
+     * <p>dataset</p>
      */
     @NameInMap("ParentDir")
     public String parentDir;

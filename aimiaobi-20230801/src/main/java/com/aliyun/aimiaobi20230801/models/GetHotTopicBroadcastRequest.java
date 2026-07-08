@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetHotTopicBroadcastRequest extends TeaModel {
     /**
+     * <p>Whether to compute the total token count</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,6 +14,8 @@ public class GetHotTopicBroadcastRequest extends TeaModel {
     public Boolean calcTotalToken;
 
     /**
+     * <p>categorization Filter</p>
+     * 
      * <strong>example:</strong>
      * <p>分类筛选</p>
      */
@@ -19,6 +23,8 @@ public class GetHotTopicBroadcastRequest extends TeaModel {
     public String category;
 
     /**
+     * <p>Current page number</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,35 +32,62 @@ public class GetHotTopicBroadcastRequest extends TeaModel {
     public Integer current;
 
     /**
+     * <p>hot spot Version</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-10-11_13</p>
      */
     @NameInMap("HotTopicVersion")
     public String hotTopicVersion;
 
+    /**
+     * <p>Full-text index for hot spot Regions (when this parameter is present, current does not take effect)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>重庆 成都 浙江 杭州</p>
+     */
     @NameInMap("LocationQuery")
     public String locationQuery;
 
+    /**
+     * <p>List of Regions for news retrieval (keyword filtering)</p>
+     */
     @NameInMap("Locations")
     public java.util.List<String> locations;
 
+    /**
+     * <p>Full-text index (full-text retrieval for title, hot spot summary, and Region) (when this parameter is present, current does not take effect)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>重庆新闻</p>
+     */
     @NameInMap("Query")
     public String query;
 
     /**
+     * <p>Page size</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
     @NameInMap("Size")
     public Integer size;
 
+    /**
+     * <p>Custom output style configuration</p>
+     */
     @NameInMap("StepForCustomSummaryStyleConfig")
     public GetHotTopicBroadcastRequestStepForCustomSummaryStyleConfig stepForCustomSummaryStyleConfig;
 
+    /**
+     * <p>Hot Spot News Broadcast Content Configuration</p>
+     */
     @NameInMap("StepForNewsBroadcastContentConfig")
     public GetHotTopicBroadcastRequestStepForNewsBroadcastContentConfig stepForNewsBroadcastContentConfig;
 
     /**
+     * <p>topic Filter</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;主题1&quot;,&quot;主题2&quot;]</p>
      */
@@ -62,6 +95,7 @@ public class GetHotTopicBroadcastRequest extends TeaModel {
     public java.util.List<String> topics;
 
     /**
+     * <p>UUID of the Alibaba Cloud Model Studio workspace: obtain the <a href="https://help.aliyun.com/document_detail/2587495.html">Workspace ID</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -173,6 +207,8 @@ public class GetHotTopicBroadcastRequest extends TeaModel {
 
     public static class GetHotTopicBroadcastRequestStepForCustomSummaryStyleConfig extends TeaModel {
         /**
+         * <p>Summary – number of images</p>
+         * 
          * <strong>example:</strong>
          * <p>90</p>
          */
@@ -180,6 +216,8 @@ public class GetHotTopicBroadcastRequest extends TeaModel {
         public Integer summaryImageCount;
 
         /**
+         * <p>Summary model</p>
+         * 
          * <strong>example:</strong>
          * <p>摘要模型</p>
          */
@@ -187,6 +225,8 @@ public class GetHotTopicBroadcastRequest extends TeaModel {
         public String summaryModel;
 
         /**
+         * <p>Summary - Custom Prompt</p>
+         * 
          * <strong>example:</strong>
          * <p>摘要-自定义Prompt</p>
          */
@@ -226,6 +266,8 @@ public class GetHotTopicBroadcastRequest extends TeaModel {
 
     public static class GetHotTopicBroadcastRequestStepForNewsBroadcastContentConfigCustomHotValueWeights extends TeaModel {
         /**
+         * <p>Dimension key</p>
+         * 
          * <strong>example:</strong>
          * <p>views</p>
          */
@@ -233,6 +275,8 @@ public class GetHotTopicBroadcastRequest extends TeaModel {
         public String dimension;
 
         /**
+         * <p>weight</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -264,17 +308,24 @@ public class GetHotTopicBroadcastRequest extends TeaModel {
 
     public static class GetHotTopicBroadcastRequestStepForNewsBroadcastContentConfig extends TeaModel {
         /**
+         * <p>List of selected channels</p>
+         * 
          * <strong>example:</strong>
          * <p>[&quot;科技&quot;,&quot;经济&quot;,&quot;时政&quot;,&quot;娱乐&quot;]</p>
          */
         @NameInMap("Categories")
         public java.util.List<String> categories;
 
+        /**
+         * <p>Custom hot spot weight</p>
+         */
         @NameInMap("CustomHotValueWeights")
         @Deprecated
         public java.util.List<GetHotTopicBroadcastRequestStepForNewsBroadcastContentConfigCustomHotValueWeights> customHotValueWeights;
 
         /**
+         * <p>topic Quantity</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

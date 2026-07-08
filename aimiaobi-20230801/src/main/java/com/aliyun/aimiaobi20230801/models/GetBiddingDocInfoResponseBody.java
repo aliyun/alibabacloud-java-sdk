@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetBiddingDocInfoResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business data</p>
+     */
     @NameInMap("Data")
     public GetBiddingDocInfoResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetBiddingDocInfoResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error description</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -38,6 +47,8 @@ public class GetBiddingDocInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -98,10 +109,18 @@ public class GetBiddingDocInfoResponseBody extends TeaModel {
     }
 
     public static class GetBiddingDocInfoResponseBodyData extends TeaModel {
+        /**
+         * <p>Bidding document content</p>
+         * 
+         * <strong>example:</strong>
+         * <p>文章内容</p>
+         */
         @NameInMap("Content")
         public String content;
 
         /**
+         * <p>Format</p>
+         * 
          * <strong>example:</strong>
          * <p>markdown
          * html</p>
@@ -110,6 +129,8 @@ public class GetBiddingDocInfoResponseBody extends TeaModel {
         public String contentFormat;
 
         /**
+         * <p>File type.</p>
+         * 
          * <strong>example:</strong>
          * <p>outline
          * bidding</p>
@@ -118,6 +139,8 @@ public class GetBiddingDocInfoResponseBody extends TeaModel {
         public String contentType;
 
         /**
+         * <p>Task status</p>
+         * 
          * <strong>example:</strong>
          * <p>0-waiting、1-running、2-success、3-pause、4-fail</p>
          */
@@ -125,6 +148,8 @@ public class GetBiddingDocInfoResponseBody extends TeaModel {
         public Integer status;
 
         /**
+         * <p>Current status</p>
+         * 
          * <strong>example:</strong>
          * <p>analysis
          * writing</p>
@@ -133,6 +158,8 @@ public class GetBiddingDocInfoResponseBody extends TeaModel {
         public String step;
 
         /**
+         * <p>Task ID</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
@@ -140,6 +167,8 @@ public class GetBiddingDocInfoResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>Tender document URL</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://xxx">http://xxx</a></p>
          */
@@ -147,6 +176,8 @@ public class GetBiddingDocInfoResponseBody extends TeaModel {
         public String tenderDocUrl;
 
         /**
+         * <p>Tender document file type</p>
+         * 
          * <strong>example:</strong>
          * <p>pdf
          * docx</p>

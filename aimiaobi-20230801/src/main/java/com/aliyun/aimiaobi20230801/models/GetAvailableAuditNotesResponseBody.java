@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetAvailableAuditNotesResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>DataNotExists</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Response data</p>
+     */
     @NameInMap("Data")
     public GetAvailableAuditNotesResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetAvailableAuditNotesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -38,6 +47,8 @@ public class GetAvailableAuditNotesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +110,8 @@ public class GetAvailableAuditNotesResponseBody extends TeaModel {
 
     public static class GetAvailableAuditNotesResponseBodyData extends TeaModel {
         /**
+         * <p>Rule library file size in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>23333</p>
          */
@@ -106,6 +119,8 @@ public class GetAvailableAuditNotesResponseBody extends TeaModel {
         public Long fileSize;
 
         /**
+         * <p>Primary ID of the rule library storage.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -113,6 +128,8 @@ public class GetAvailableAuditNotesResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>Rule library ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>Default</p>
          */
@@ -120,6 +137,8 @@ public class GetAvailableAuditNotesResponseBody extends TeaModel {
         public String noteId;
 
         /**
+         * <p>Parsed rule library name.</p>
+         * 
          * <strong>example:</strong>
          * <p>错题本2025-07-07_解析结果</p>
          */
@@ -127,6 +146,8 @@ public class GetAvailableAuditNotesResponseBody extends TeaModel {
         public String noteName;
 
         /**
+         * <p>Rule library update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-07-07 11:56:30</p>
          */

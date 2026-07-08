@@ -5,18 +5,32 @@ import com.aliyun.tea.*;
 
 public class RunMultiDocIntroductionShrinkRequest extends TeaModel {
     /**
+     * <p>Array of document IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DocIds")
     public String docIdsShrink;
 
+    /**
+     * <p>Custom prompt for key points.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>请简明扼要</p>
+     */
     @NameInMap("KeyPointPrompt")
     public String keyPointPrompt;
 
+    /**
+     * <p>Name of the custom model to use.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>quanmiao-max、quanmiao-plus</p>
+     */
     @NameInMap("ModelName")
     public String modelName;
 
     /**
+     * <p>Session ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,10 +39,17 @@ public class RunMultiDocIntroductionShrinkRequest extends TeaModel {
     @NameInMap("SessionId")
     public String sessionId;
 
+    /**
+     * <p>Custom prompt for the summary.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>请简明扼要</p>
+     */
     @NameInMap("SummaryPrompt")
     public String summaryPrompt;
 
     /**
+     * <p>Unique identifier of the Alibaba Cloud Model Studio workspace. To get this ID, see <a href="https://help.aliyun.com/document_detail/2782167.html">Get the workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

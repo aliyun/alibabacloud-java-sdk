@@ -4,16 +4,30 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunWritingResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the current request is complete.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("End")
     public Boolean end;
 
+    /**
+     * <p>The response header.</p>
+     */
     @NameInMap("Header")
     public RunWritingResponseBodyHeader header;
 
+    /**
+     * <p>The response body.</p>
+     */
     @NameInMap("Payload")
     public RunWritingResponseBodyPayload payload;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */
@@ -59,6 +73,8 @@ public class RunWritingResponseBody extends TeaModel {
 
     public static class RunWritingResponseBodyHeader extends TeaModel {
         /**
+         * <p>The error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>错误码</p>
          */
@@ -66,6 +82,8 @@ public class RunWritingResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>错误信息</p>
          */
@@ -73,6 +91,8 @@ public class RunWritingResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The Server-Sent Events (SSE) event. Valid values: task-started (the task starts), task-finished (the task is complete), and task-failed (the task failed).</p>
+         * 
          * <strong>example:</strong>
          * <p>task-started</p>
          */
@@ -80,6 +100,8 @@ public class RunWritingResponseBody extends TeaModel {
         public String event;
 
         /**
+         * <p>The parent session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
@@ -87,6 +109,8 @@ public class RunWritingResponseBody extends TeaModel {
         public String originSessionId;
 
         /**
+         * <p>The session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
@@ -94,6 +118,8 @@ public class RunWritingResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>The HTTP status code.</p>
+         * 
          * <strong>example:</strong>
          * <p>400</p>
          */
@@ -101,6 +127,8 @@ public class RunWritingResponseBody extends TeaModel {
         public Integer statusCode;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
@@ -108,6 +136,8 @@ public class RunWritingResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The trace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>全链路ID</p>
          */
@@ -187,6 +217,8 @@ public class RunWritingResponseBody extends TeaModel {
 
     public static class RunWritingResponseBodyPayloadOutputArticles extends TeaModel {
         /**
+         * <p>The author.</p>
+         * 
          * <strong>example:</strong>
          * <p>作者</p>
          */
@@ -194,6 +226,8 @@ public class RunWritingResponseBody extends TeaModel {
         public String author;
 
         /**
+         * <p>The content.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章内容</p>
          */
@@ -201,6 +235,8 @@ public class RunWritingResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>The custom unique ID of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>文档-自定义的唯一ID</p>
          */
@@ -208,6 +244,8 @@ public class RunWritingResponseBody extends TeaModel {
         public String docId;
 
         /**
+         * <p>The internal unique ID of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>98229f6001cf4deeb1668191d4eccc75</p>
          */
@@ -215,6 +253,8 @@ public class RunWritingResponseBody extends TeaModel {
         public String docUuid;
 
         /**
+         * <p>The publication time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-08-28 11:38:28</p>
          */
@@ -222,6 +262,8 @@ public class RunWritingResponseBody extends TeaModel {
         public String pubTime;
 
         /**
+         * <p>The source.</p>
+         * 
          * <strong>example:</strong>
          * <p>央视网</p>
          */
@@ -229,6 +271,8 @@ public class RunWritingResponseBody extends TeaModel {
         public String source;
 
         /**
+         * <p>The article summary.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章摘要</p>
          */
@@ -236,6 +280,8 @@ public class RunWritingResponseBody extends TeaModel {
         public String summary;
 
         /**
+         * <p>The tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章标签</p>
          */
@@ -243,6 +289,8 @@ public class RunWritingResponseBody extends TeaModel {
         public String tag;
 
         /**
+         * <p>The title.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章标题</p>
          */
@@ -250,6 +298,8 @@ public class RunWritingResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>The URL of the article.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://www.example.com/aaa.docx">https://www.example.com/aaa.docx</a></p>
          */
@@ -344,10 +394,15 @@ public class RunWritingResponseBody extends TeaModel {
     }
 
     public static class RunWritingResponseBodyPayloadOutput extends TeaModel {
+        /**
+         * <p>The reference articles.</p>
+         */
         @NameInMap("Articles")
         public java.util.List<RunWritingResponseBodyPayloadOutputArticles> articles;
 
         /**
+         * <p>A list of refined segments from the article.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章精排之后的片段</p>
          */
@@ -355,6 +410,8 @@ public class RunWritingResponseBody extends TeaModel {
         public java.util.List<String> miniDoc;
 
         /**
+         * <p>The rewritten query.</p>
+         * 
          * <strong>example:</strong>
          * <p>大模型改变世界</p>
          */
@@ -362,6 +419,8 @@ public class RunWritingResponseBody extends TeaModel {
         public String searchQuery;
 
         /**
+         * <p>The generated text.</p>
+         * 
          * <strong>example:</strong>
          * <p>文本生成结果</p>
          */
@@ -409,6 +468,8 @@ public class RunWritingResponseBody extends TeaModel {
 
     public static class RunWritingResponseBodyPayloadUsage extends TeaModel {
         /**
+         * <p>The number of tokens used for the input.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -416,16 +477,23 @@ public class RunWritingResponseBody extends TeaModel {
         public Long inputTokens;
 
         /**
+         * <p>The number of tokens used for the output.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("OutputTokens")
         public Long outputTokens;
 
+        /**
+         * <p>The detailed token usage.</p>
+         */
         @NameInMap("TokenMap")
         public java.util.Map<String, Long> tokenMap;
 
         /**
+         * <p>The total number of tokens used in the current call.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -472,9 +540,15 @@ public class RunWritingResponseBody extends TeaModel {
     }
 
     public static class RunWritingResponseBodyPayload extends TeaModel {
+        /**
+         * <p>The output.</p>
+         */
         @NameInMap("Output")
         public RunWritingResponseBodyPayloadOutput output;
 
+        /**
+         * <p>The token usage.</p>
+         */
         @NameInMap("Usage")
         public RunWritingResponseBodyPayloadUsage usage;
 

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DocumentExtractionRequest extends TeaModel {
     /**
+     * <p>Unique identifier of the workspace: <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DocumentExtractionRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>List of URLs to extract.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Urls")

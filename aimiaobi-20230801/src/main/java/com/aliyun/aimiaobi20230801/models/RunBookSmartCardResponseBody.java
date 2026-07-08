@@ -4,14 +4,20 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunBookSmartCardResponseBody extends TeaModel {
+    /**
+     * <p>Response header.</p>
+     */
     @NameInMap("Header")
     public RunBookSmartCardResponseBodyHeader header;
 
+    /**
+     * <p>Response body.</p>
+     */
     @NameInMap("Payload")
     public RunBookSmartCardResponseBodyPayload payload;
 
     /**
-     * <p>Id of the request</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
@@ -50,6 +56,8 @@ public class RunBookSmartCardResponseBody extends TeaModel {
 
     public static class RunBookSmartCardResponseBodyHeader extends TeaModel {
         /**
+         * <p>Error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -57,6 +65,8 @@ public class RunBookSmartCardResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>Error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -64,16 +74,26 @@ public class RunBookSmartCardResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>Event type.</p>
+         * 
          * <strong>example:</strong>
          * <p>finished</p>
          */
         @NameInMap("Event")
         public String event;
 
+        /**
+         * <p>Event description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>模型生成事件</p>
+         */
         @NameInMap("EventInfo")
         public String eventInfo;
 
         /**
+         * <p>Session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
@@ -81,6 +101,8 @@ public class RunBookSmartCardResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>Task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
@@ -88,6 +110,8 @@ public class RunBookSmartCardResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>Trace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1a0e898717105546647125853d4f54</p>
          */
@@ -158,9 +182,18 @@ public class RunBookSmartCardResponseBody extends TeaModel {
     }
 
     public static class RunBookSmartCardResponseBodyPayloadOutput extends TeaModel {
+        /**
+         * <p>Card title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>卡片标题内容</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>Array of card tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<String> tags;
 
@@ -189,6 +222,8 @@ public class RunBookSmartCardResponseBody extends TeaModel {
 
     public static class RunBookSmartCardResponseBodyPayloadUsage extends TeaModel {
         /**
+         * <p>Number of input tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -196,6 +231,8 @@ public class RunBookSmartCardResponseBody extends TeaModel {
         public Long inputTokens;
 
         /**
+         * <p>Number of output tokens used.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -203,6 +240,8 @@ public class RunBookSmartCardResponseBody extends TeaModel {
         public Long outputTokens;
 
         /**
+         * <p>Total number of tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>101</p>
          */
@@ -241,9 +280,15 @@ public class RunBookSmartCardResponseBody extends TeaModel {
     }
 
     public static class RunBookSmartCardResponseBodyPayload extends TeaModel {
+        /**
+         * <p>Output object.</p>
+         */
         @NameInMap("Output")
         public RunBookSmartCardResponseBodyPayloadOutput output;
 
+        /**
+         * <p>Token usage.</p>
+         */
         @NameInMap("Usage")
         public RunBookSmartCardResponseBodyPayloadUsage usage;
 

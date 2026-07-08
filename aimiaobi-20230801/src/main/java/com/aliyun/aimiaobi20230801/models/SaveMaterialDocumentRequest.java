@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SaveMaterialDocumentRequest extends TeaModel {
     /**
+     * <p>Unique identifier for the workspace: <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,20 +14,32 @@ public class SaveMaterialDocumentRequest extends TeaModel {
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>Author</p>
+     * 
+     * <strong>example:</strong>
+     * <p>作者名称</p>
+     */
     @NameInMap("Author")
     public String author;
 
     /**
+     * <p>Is the material saved to both the private library and the shared library?</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("BothSavePrivateAndShare")
     public Boolean bothSavePrivateAndShare;
 
+    /**
+     * <p>Document tags used for classification, etc.</p>
+     */
     @NameInMap("DocKeywords")
     public java.util.List<String> docKeywords;
 
     /**
+     * <p>Document type (html: web page, plainText: plain text, image: image, pdf: pdf, word: word, excel: excel, csv: csv, jsonLine: jsonLine)</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,16 +49,26 @@ public class SaveMaterialDocumentRequest extends TeaModel {
     public String docType;
 
     /**
+     * <p>URL uploaded by external customers, used only for record keeping</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://xxxxx/xxx">http://xxxxx/xxx</a></p>
      */
     @NameInMap("ExternalUrl")
     public String externalUrl;
 
+    /**
+     * <p>Formatted content</p>
+     * 
+     * <strong>example:</strong>
+     * <p>网页内容</p>
+     */
     @NameInMap("HtmlContent")
     public String htmlContent;
 
     /**
+     * <p>Publication time, format: yyyy-MM-dd HH:mm:ss</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-04-11 06:14:07</p>
      */
@@ -53,6 +76,8 @@ public class SaveMaterialDocumentRequest extends TeaModel {
     public String pubTime;
 
     /**
+     * <p>Sharing attribute: 0: private, 1: shared within the workspace</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -60,22 +85,44 @@ public class SaveMaterialDocumentRequest extends TeaModel {
     public Integer shareAttr;
 
     /**
+     * <p>Document source (UserUpload: User Upload, IntellijSearch: Intelligent Search, HotViewPoint: Hot Viewpoint)</p>
+     * 
      * <strong>example:</strong>
      * <p>IntellijSearch</p>
      */
     @NameInMap("SrcFrom")
     public String srcFrom;
 
+    /**
+     * <p>Summary</p>
+     * 
+     * <strong>example:</strong>
+     * <p>摘要</p>
+     */
     @NameInMap("Summary")
     public String summary;
 
+    /**
+     * <p>Parsed text content, empty for images</p>
+     * 
+     * <strong>example:</strong>
+     * <p>文本内容</p>
+     */
     @NameInMap("TextContent")
     public String textContent;
 
+    /**
+     * <p>Document title</p>
+     * 
+     * <strong>example:</strong>
+     * <p>新闻标题</p>
+     */
     @NameInMap("Title")
     public String title;
 
     /**
+     * <p>URL of the material</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://xxxxx/xxx">http://xxxxx/xxx</a></p>
      */

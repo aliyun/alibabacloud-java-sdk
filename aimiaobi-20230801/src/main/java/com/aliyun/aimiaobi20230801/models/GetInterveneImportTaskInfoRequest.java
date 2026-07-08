@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInterveneImportTaskInfoRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,11 @@ public class GetInterveneImportTaskInfoRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The unique identifier of the task.</p>
+     * <blockquote>
+     * <p>This parameter is optional. The system automatically generates a task ID if you do not specify this parameter. Tasks that have the same \<code>TaskId\\</code> belong to the same conversation group.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>19162157</p>
      */

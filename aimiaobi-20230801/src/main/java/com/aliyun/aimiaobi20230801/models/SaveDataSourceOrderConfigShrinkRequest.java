@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SaveDataSourceOrderConfigShrinkRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,15 @@ public class SaveDataSourceOrderConfigShrinkRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The generation technology for Miaosou. This parameter is valid only when \<code>ProductCode\\</code> is set to \<code>miaosou\\</code>.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li><p>copilotPrecise</p>
+     * </li>
+     * <li><p>copilotReference</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>copilotReference</p>
      */
@@ -21,6 +31,13 @@ public class SaveDataSourceOrderConfigShrinkRequest extends TeaModel {
     public String generateTechnology;
 
     /**
+     * <p>The product type. Valid values:</p>
+     * <ul>
+     * <li><p>miaobi</p>
+     * </li>
+     * <li><p>miaosou</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +47,7 @@ public class SaveDataSourceOrderConfigShrinkRequest extends TeaModel {
     public String productCode;
 
     /**
+     * <p>The data source configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserConfigDataSourceList")

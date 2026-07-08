@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetDatasetResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The business data.</p>
+     */
     @NameInMap("Data")
     public GetDatasetResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetDatasetResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class GetDatasetResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -36,6 +47,8 @@ public class GetDatasetResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. A value of \<code>true\\</code> indicates success. A value of \<code>false\\</code> indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -96,15 +109,39 @@ public class GetDatasetResponseBody extends TeaModel {
     }
 
     public static class GetDatasetResponseBodyDataDatasetConfigSearchSourceConfig extends TeaModel {
+        /**
+         * <p>Specifies whether to include the key-value pairs of metadata in the generation. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("MetadataKeyValueGenerateEnable")
         public String metadataKeyValueGenerateEnable;
 
+        /**
+         * <p>Specifies whether to include the key-value pairs of metadata in the search. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("MetadataKeyValueSearchEnable")
         public String metadataKeyValueSearchEnable;
 
+        /**
+         * <p>Specifies whether to include tags in the generation. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("TagGenerateEnable")
         public String tagGenerateEnable;
 
+        /**
+         * <p>Specifies whether to include tags in the search. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("TagSearchEnable")
         public String tagSearchEnable;
 
@@ -149,6 +186,8 @@ public class GetDatasetResponseBody extends TeaModel {
 
     public static class GetDatasetResponseBodyDataDatasetConfigSearchSourceConfigsSearchSourceRequestConfigHeaders extends TeaModel {
         /**
+         * <p>The name of the parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>参数名称</p>
          */
@@ -156,6 +195,8 @@ public class GetDatasetResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The value of the parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>参数值</p>
          */
@@ -163,6 +204,8 @@ public class GetDatasetResponseBody extends TeaModel {
         public String value;
 
         /**
+         * <p>This parameter is valid only when \<code>ValueType\\</code> is set to \<code>time\\</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>valueType = time 时有效</p>
          */
@@ -170,8 +213,10 @@ public class GetDatasetResponseBody extends TeaModel {
         public String valueFormat;
 
         /**
+         * <p>The data type of the parameter value. Default value: string.</p>
+         * 
          * <strong>example:</strong>
-         * <p>参数值数据类型: 默认string</p>
+         * <p>参数值数据类型：默认string</p>
          */
         @NameInMap("ValueType")
         public String valueType;
@@ -217,6 +262,8 @@ public class GetDatasetResponseBody extends TeaModel {
 
     public static class GetDatasetResponseBodyDataDatasetConfigSearchSourceConfigsSearchSourceRequestConfigParams extends TeaModel {
         /**
+         * <p>The name of the parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>参数名称</p>
          */
@@ -224,6 +271,8 @@ public class GetDatasetResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The value of the parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>参数值</p>
          */
@@ -231,6 +280,8 @@ public class GetDatasetResponseBody extends TeaModel {
         public String value;
 
         /**
+         * <p>This parameter is valid only when \<code>ValueType\\</code> is set to \<code>time\\</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>valueType = time 时有效</p>
          */
@@ -238,8 +289,10 @@ public class GetDatasetResponseBody extends TeaModel {
         public String valueFormat;
 
         /**
+         * <p>The data type of the parameter value. Default value: string.</p>
+         * 
          * <strong>example:</strong>
-         * <p>参数值数据类型: 默认string</p>
+         * <p>参数值数据类型：默认string</p>
          */
         @NameInMap("ValueType")
         public String valueType;
@@ -285,33 +338,47 @@ public class GetDatasetResponseBody extends TeaModel {
 
     public static class GetDatasetResponseBodyDataDatasetConfigSearchSourceConfigsSearchSourceRequestConfig extends TeaModel {
         /**
+         * <p>The request body.</p>
+         * 
          * <strong>example:</strong>
-         * <p>{}</p>
+         * <p>请求body</p>
          */
         @NameInMap("Body")
         public String body;
 
         /**
+         * <p>The connection timeout period.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
         @NameInMap("ConnectTimeout")
         public Integer connectTimeout;
 
+        /**
+         * <p>The HTTP request headers.</p>
+         */
         @NameInMap("Headers")
         public java.util.List<GetDatasetResponseBodyDataDatasetConfigSearchSourceConfigsSearchSourceRequestConfigHeaders> headers;
 
         /**
+         * <p>The request method.</p>
+         * 
          * <strong>example:</strong>
          * <p>请求方式</p>
          */
         @NameInMap("Method")
         public String method;
 
+        /**
+         * <p>The request path parameters.</p>
+         */
         @NameInMap("Params")
         public java.util.List<GetDatasetResponseBodyDataDatasetConfigSearchSourceConfigsSearchSourceRequestConfigParams> params;
 
         /**
+         * <p>Specifies whether to enable path parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -319,6 +386,8 @@ public class GetDatasetResponseBody extends TeaModel {
         public Boolean pathParamsEnable;
 
         /**
+         * <p>The read timeout period.</p>
+         * 
          * <strong>example:</strong>
          * <p>78</p>
          */
@@ -326,6 +395,8 @@ public class GetDatasetResponseBody extends TeaModel {
         public Integer socketTimeout;
 
         /**
+         * <p>The API URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>api地址</p>
          */
@@ -405,6 +476,8 @@ public class GetDatasetResponseBody extends TeaModel {
 
     public static class GetDatasetResponseBodyDataDatasetConfigSearchSourceConfigsSearchSourceResponseConfigJqNodesJqNodesJqNodes extends TeaModel {
         /**
+         * <p>The key of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>title</p>
          */
@@ -412,6 +485,8 @@ public class GetDatasetResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The path of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>.title</p>
          */
@@ -419,6 +494,8 @@ public class GetDatasetResponseBody extends TeaModel {
         public String path;
 
         /**
+         * <p>The data type of the node. Valid values: string, number, list, object, and base.</p>
+         * 
          * <strong>example:</strong>
          * <p>string</p>
          */
@@ -457,10 +534,15 @@ public class GetDatasetResponseBody extends TeaModel {
     }
 
     public static class GetDatasetResponseBodyDataDatasetConfigSearchSourceConfigsSearchSourceResponseConfigJqNodesJqNodes extends TeaModel {
+        /**
+         * <p>The child node configurations.</p>
+         */
         @NameInMap("JqNodes")
         public java.util.List<GetDatasetResponseBodyDataDatasetConfigSearchSourceConfigsSearchSourceResponseConfigJqNodesJqNodesJqNodes> jqNodes;
 
         /**
+         * <p>The key of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>title</p>
          */
@@ -468,6 +550,8 @@ public class GetDatasetResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The path of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>.title</p>
          */
@@ -475,6 +559,8 @@ public class GetDatasetResponseBody extends TeaModel {
         public String path;
 
         /**
+         * <p>The data type of the node. Valid values: string, number, list, object, and base.</p>
+         * 
          * <strong>example:</strong>
          * <p>string</p>
          */
@@ -521,10 +607,15 @@ public class GetDatasetResponseBody extends TeaModel {
     }
 
     public static class GetDatasetResponseBodyDataDatasetConfigSearchSourceConfigsSearchSourceResponseConfigJqNodes extends TeaModel {
+        /**
+         * <p>The child node configurations.</p>
+         */
         @NameInMap("JqNodes")
         public java.util.List<GetDatasetResponseBodyDataDatasetConfigSearchSourceConfigsSearchSourceResponseConfigJqNodesJqNodes> jqNodes;
 
         /**
+         * <p>The key of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>节点key</p>
          */
@@ -532,6 +623,8 @@ public class GetDatasetResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The path of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>节点路径</p>
          */
@@ -539,6 +632,8 @@ public class GetDatasetResponseBody extends TeaModel {
         public String path;
 
         /**
+         * <p>The data type of the node. Valid values: string, number, list, object, and base.</p>
+         * 
          * <strong>example:</strong>
          * <p>节点数据类型：string number list object base</p>
          */
@@ -585,6 +680,9 @@ public class GetDatasetResponseBody extends TeaModel {
     }
 
     public static class GetDatasetResponseBodyDataDatasetConfigSearchSourceConfigsSearchSourceResponseConfig extends TeaModel {
+        /**
+         * <p>The node configurations.</p>
+         */
         @NameInMap("JqNodes")
         public java.util.List<GetDatasetResponseBodyDataDatasetConfigSearchSourceConfigsSearchSourceResponseConfigJqNodes> jqNodes;
 
@@ -605,19 +703,29 @@ public class GetDatasetResponseBody extends TeaModel {
 
     public static class GetDatasetResponseBodyDataDatasetConfigSearchSourceConfigs extends TeaModel {
         /**
+         * <p>A sample query keyword. This keyword is used to test whether the search source is available.</p>
+         * 
          * <strong>example:</strong>
          * <p>可以搜索到的关键词，用来验证是否可用</p>
          */
         @NameInMap("DemoQuery")
         public String demoQuery;
 
+        /**
+         * <p>The API request configuration.</p>
+         */
         @NameInMap("SearchSourceRequestConfig")
         public GetDatasetResponseBodyDataDatasetConfigSearchSourceConfigsSearchSourceRequestConfig searchSourceRequestConfig;
 
+        /**
+         * <p>The API response configuration.</p>
+         */
         @NameInMap("SearchSourceResponseConfig")
         public GetDatasetResponseBodyDataDatasetConfigSearchSourceConfigsSearchSourceResponseConfig searchSourceResponseConfig;
 
         /**
+         * <p>The default number of data entries for requests and responses.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -664,9 +772,15 @@ public class GetDatasetResponseBody extends TeaModel {
     }
 
     public static class GetDatasetResponseBodyDataDatasetConfig extends TeaModel {
+        /**
+         * <p>The configuration items for the dataset.</p>
+         */
         @NameInMap("SearchSourceConfig")
         public GetDatasetResponseBodyDataDatasetConfigSearchSourceConfig searchSourceConfig;
 
+        /**
+         * <p>Third-party search: API definition.</p>
+         */
         @NameInMap("SearchSourceConfigs")
         public java.util.List<GetDatasetResponseBodyDataDatasetConfigSearchSourceConfigs> searchSourceConfigs;
 
@@ -695,6 +809,8 @@ public class GetDatasetResponseBody extends TeaModel {
 
     public static class GetDatasetResponseBodyDataDocumentHandleConfig extends TeaModel {
         /**
+         * <p>Specifies whether to disable the processing logic for multimedia files. Default value: false.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -725,6 +841,8 @@ public class GetDatasetResponseBody extends TeaModel {
         public String accessLevel;
 
         /**
+         * <p>The time when the dataset was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-11-12 21:46:24</p>
          */
@@ -732,16 +850,23 @@ public class GetDatasetResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The user who created the dataset.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
         @NameInMap("CreateUser")
         public String createUser;
 
+        /**
+         * <p>The search configuration of the dataset.</p>
+         */
         @NameInMap("DatasetConfig")
         public GetDatasetResponseBodyDataDatasetConfig datasetConfig;
 
         /**
+         * <p>The display name of the dataset.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -749,6 +874,8 @@ public class GetDatasetResponseBody extends TeaModel {
         public String datasetDescription;
 
         /**
+         * <p>The ID of the dataset.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -756,6 +883,8 @@ public class GetDatasetResponseBody extends TeaModel {
         public Long datasetId;
 
         /**
+         * <p>The name of the dataset.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -763,16 +892,23 @@ public class GetDatasetResponseBody extends TeaModel {
         public String datasetName;
 
         /**
+         * <p>The type of the dataset.</p>
+         * 
          * <strong>example:</strong>
          * <p>CustomSemanticSearch</p>
          */
         @NameInMap("DatasetType")
         public String datasetType;
 
+        /**
+         * <p>The document processing configuration.</p>
+         */
         @NameInMap("DocumentHandleConfig")
         public GetDatasetResponseBodyDataDocumentHandleConfig documentHandleConfig;
 
         /**
+         * <p>The switch that enables or disables search for the dataset.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

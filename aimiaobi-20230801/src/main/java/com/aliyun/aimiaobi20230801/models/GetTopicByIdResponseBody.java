@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetTopicByIdResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business data</p>
+     */
     @NameInMap("Data")
     public GetTopicByIdResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetTopicByIdResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error description</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class GetTopicByIdResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Unique request identifier</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -36,6 +47,8 @@ public class GetTopicByIdResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation succeeded: true for success, false for failure</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -96,13 +109,27 @@ public class GetTopicByIdResponseBody extends TeaModel {
     }
 
     public static class GetTopicByIdResponseBodyDataStructureSummaryDocList extends TeaModel {
+        /**
+         * <p>Article source</p>
+         * 
+         * <strong>example:</strong>
+         * <p>头条</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>Article title</p>
+         * 
+         * <strong>example:</strong>
+         * <p>文章标题</p>
+         */
         @NameInMap("Title")
         public String title;
 
         /**
+         * <p>Article URL</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">http://www.example.com</a></p>
          */
@@ -141,10 +168,15 @@ public class GetTopicByIdResponseBody extends TeaModel {
     }
 
     public static class GetTopicByIdResponseBodyDataStructureSummary extends TeaModel {
+        /**
+         * <p>Articles referenced to generate the title summary</p>
+         */
         @NameInMap("DocList")
         public java.util.List<GetTopicByIdResponseBodyDataStructureSummaryDocList> docList;
 
         /**
+         * <p>Summary</p>
+         * 
          * <strong>example:</strong>
          * <p>摘要</p>
          */
@@ -152,6 +184,8 @@ public class GetTopicByIdResponseBody extends TeaModel {
         public String summary;
 
         /**
+         * <p>Title</p>
+         * 
          * <strong>example:</strong>
          * <p>标题</p>
          */
@@ -191,6 +225,8 @@ public class GetTopicByIdResponseBody extends TeaModel {
 
     public static class GetTopicByIdResponseBodyData extends TeaModel {
         /**
+         * <p>Asynchronous task ID (used in custom topic scenarios)</p>
+         * 
          * <strong>example:</strong>
          * <p>异步任务ID（自定义主题场景下使用）</p>
          */
@@ -198,6 +234,8 @@ public class GetTopicByIdResponseBody extends TeaModel {
         public String asyncTaskId;
 
         /**
+         * <p>Creator user ID (used in custom topic scenarios)</p>
+         * 
          * <strong>example:</strong>
          * <p>创建用户ID（自定义主题场景下使用）</p>
          */
@@ -205,6 +243,8 @@ public class GetTopicByIdResponseBody extends TeaModel {
         public String createUser;
 
         /**
+         * <p>Hotness value</p>
+         * 
          * <strong>example:</strong>
          * <p>43</p>
          */
@@ -212,6 +252,8 @@ public class GetTopicByIdResponseBody extends TeaModel {
         public Long hotValue;
 
         /**
+         * <p>Hot topic ID</p>
+         * 
          * <strong>example:</strong>
          * <p>热榜ID</p>
          */
@@ -219,16 +261,23 @@ public class GetTopicByIdResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>Asynchronous task status (used in custom event scenarios) (PENDING: pending, RUNNING: running, SUCCESSED: succeeded, SUSPENDED: suspended, FAILED: failed, CANCELED: canceled)</p>
+         * 
          * <strong>example:</strong>
          * <p>PENDING</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>List of structured topic summaries</p>
+         */
         @NameInMap("StructureSummary")
         public java.util.List<GetTopicByIdResponseBodyDataStructureSummary> structureSummary;
 
         /**
+         * <p>Hot topic summary</p>
+         * 
          * <strong>example:</strong>
          * <p>热榜摘要</p>
          */
@@ -236,6 +285,8 @@ public class GetTopicByIdResponseBody extends TeaModel {
         public String summary;
 
         /**
+         * <p>Error message for asynchronous task failure</p>
+         * 
          * <strong>example:</strong>
          * <p>异步任务失败错误信息</p>
          */
@@ -243,6 +294,8 @@ public class GetTopicByIdResponseBody extends TeaModel {
         public String taskErrorMessage;
 
         /**
+         * <p>Asynchronous task status. 0: pending, 1: running, 2: succeeded, 3: suspended (not used), 4: failed, 6: canceled (used in custom event scenarios).</p>
+         * 
          * <strong>example:</strong>
          * <p>14</p>
          */
@@ -250,6 +303,8 @@ public class GetTopicByIdResponseBody extends TeaModel {
         public Integer taskStatus;
 
         /**
+         * <p>Unique topic name</p>
+         * 
          * <strong>example:</strong>
          * <p>主题唯一名称</p>
          */
@@ -257,13 +312,31 @@ public class GetTopicByIdResponseBody extends TeaModel {
         public String topic;
 
         /**
+         * <p>Hot topic source. Supported sources:</p>
+         * <ul>
+         * <li><p>Toutiao: Toutiao</p>
+         * </li>
+         * <li><p>Quark: Quark</p>
+         * </li>
+         * <li><p>Baidu: Baidu</p>
+         * </li>
+         * <li><p>Sina: Sina</p>
+         * </li>
+         * <li><p>Custom: Custom</p>
+         * </li>
+         * <li><p>Aggregation: Hot Topic List</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>热榜源，目前支持的热榜源: Toutiao：头条、Quark：夸克、Baidu：百度、Sina：新浪。Custom：自定义、Aggregation：热点话题榜</p>
+         * <p>Toutiao</p>
          */
         @NameInMap("TopicSource")
         public String topicSource;
 
         /**
+         * <p>Data version</p>
+         * 
          * <strong>example:</strong>
          * <p>数据版本</p>
          */

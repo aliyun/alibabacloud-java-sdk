@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPptArtifactsResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
@@ -12,16 +14,23 @@ public class ListPptArtifactsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("Current")
     public Integer current;
 
+    /**
+     * <p>Indicates whether the deletion succeeded.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListPptArtifactsResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class ListPptArtifactsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The number of entries returned in this response.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -36,6 +47,8 @@ public class ListPptArtifactsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -43,6 +56,8 @@ public class ListPptArtifactsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The token for the next page.</p>
+     * 
      * <strong>example:</strong>
      * <p>cEoBWREAXdxaOyjq/cqAbg==</p>
      */
@@ -50,6 +65,8 @@ public class ListPptArtifactsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -57,6 +74,8 @@ public class ListPptArtifactsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The number of entries per page. The default is 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -64,6 +83,8 @@ public class ListPptArtifactsResponseBody extends TeaModel {
     public Integer size;
 
     /**
+     * <p>Indicates whether the request was successful. \<code>true\\</code> indicates success. \<code>false\\</code> indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -71,6 +92,8 @@ public class ListPptArtifactsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -171,10 +194,18 @@ public class ListPptArtifactsResponseBody extends TeaModel {
     }
 
     public static class ListPptArtifactsResponseBodyDataFileAttr extends TeaModel {
+        /**
+         * <p>The file name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>数字时代的营销策划与文案创作</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
         /**
+         * <p>The height.</p>
+         * 
          * <strong>example:</strong>
          * <p>500</p>
          */
@@ -182,6 +213,8 @@ public class ListPptArtifactsResponseBody extends TeaModel {
         public Integer height;
 
         /**
+         * <p>The preview image of the work file.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com/xxx.jpg">http://www.example.com/xxx.jpg</a></p>
          */
@@ -189,6 +222,8 @@ public class ListPptArtifactsResponseBody extends TeaModel {
         public String tmpUrl;
 
         /**
+         * <p>The width of the video.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -236,16 +271,23 @@ public class ListPptArtifactsResponseBody extends TeaModel {
 
     public static class ListPptArtifactsResponseBodyData extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-04 11:46:07</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The properties of the work file.</p>
+         */
         @NameInMap("FileAttr")
         public ListPptArtifactsResponseBodyDataFileAttr fileAttr;
 
         /**
+         * <p>The preview image of the work file.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com/xxx.jpg">http://www.example.com/xxx.jpg</a></p>
          */
@@ -253,16 +295,26 @@ public class ListPptArtifactsResponseBody extends TeaModel {
         public String fileKey;
 
         /**
+         * <p>The unique ID of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>作品标题</p>
+         */
         @NameInMap("Title")
         public String title;
 
         /**
+         * <p>The update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-04-14 19:59:53</p>
          */

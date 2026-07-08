@@ -8,7 +8,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("cn-beijing", "aimiaobi.cn-beijing.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("aimiaobi", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -28,7 +31,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>添加审核自定义词库记录</p>
+     * <p>Add a custom term to the audit dictionary.</p>
      * 
      * @param tmpReq AddAuditTermsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -86,7 +89,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>添加审核自定义词库记录</p>
+     * <p>Add a custom term to the audit dictionary.</p>
      * 
      * @param request AddAuditTermsRequest
      * @return AddAuditTermsResponse
@@ -98,7 +101,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>添加文档到数据集</p>
+     * <p>Adds a document to a data source.</p>
      * 
      * @param tmpReq AddDatasetDocumentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -148,7 +151,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>添加文档到数据集</p>
+     * <p>Adds a document to a data source.</p>
      * 
      * @param request AddDatasetDocumentRequest
      * @return AddDatasetDocumentResponse
@@ -160,7 +163,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>生成剪辑视频任务</p>
+     * <p>Generates a video clip.</p>
      * 
      * @param tmpReq AsyncCreateClipsTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -183,6 +186,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.adaptMode)) {
+            body.put("AdaptMode", request.adaptMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.alignment)) {
+            body.put("Alignment", request.alignment);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.closeMusic)) {
             body.put("CloseMusic", request.closeMusic);
         }
@@ -259,6 +270,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("TaskId", request.taskId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.textWidth)) {
+            body.put("TextWidth", request.textWidth);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.voiceStyle)) {
             body.put("VoiceStyle", request.voiceStyle);
         }
@@ -294,7 +309,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>生成剪辑视频任务</p>
+     * <p>Generates a video clip.</p>
      * 
      * @param request AsyncCreateClipsTaskRequest
      * @return AsyncCreateClipsTaskResponse
@@ -306,7 +321,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>智能剪辑timeline</p>
+     * <p>Creates a timeline for smart video editing.</p>
      * 
      * @param tmpReq AsyncCreateClipsTimeLineRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -376,7 +391,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>智能剪辑timeline</p>
+     * <p>Creates a timeline for smart video editing.</p>
      * 
      * @param request AsyncCreateClipsTimeLineRequest
      * @return AsyncCreateClipsTimeLineResponse
@@ -388,7 +403,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>编辑剪辑任务的timeline</p>
+     * <p>Edits the timeline of a video editing task.</p>
      * 
      * @param tmpReq AsyncEditTimelineRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -438,7 +453,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>编辑剪辑任务的timeline</p>
+     * <p>Edits the timeline of a video editing task.</p>
      * 
      * @param request AsyncEditTimelineRequest
      * @return AsyncEditTimelineResponse
@@ -450,7 +465,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>上传招标书文件</p>
+     * <p>Upload a tender document.</p>
      * 
      * @param request AsyncUploadTenderDocRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -490,7 +505,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>上传招标书文件</p>
+     * <p>Upload a tender document.</p>
      * 
      * @param request AsyncUploadTenderDocRequest
      * @return AsyncUploadTenderDocResponse
@@ -502,7 +517,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>上传剪辑素材</p>
+     * <p>Uploads video assets for editing.</p>
      * 
      * @param tmpReq AsyncUploadVideoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -592,7 +607,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>上传剪辑素材</p>
+     * <p>Uploads video assets for editing.</p>
      * 
      * @param request AsyncUploadVideoRequest
      * @return AsyncUploadVideoResponse
@@ -604,7 +619,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>标书写作接口</p>
+     * <p>An API for writing bidding documents.</p>
      * 
      * @param request AsyncWritingBiddingDocRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -648,7 +663,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>标书写作接口</p>
+     * <p>An API for writing bidding documents.</p>
      * 
      * @param request AsyncWritingBiddingDocRequest
      * @return AsyncWritingBiddingDocResponse
@@ -660,7 +675,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>绑定PPT作品信息</p>
+     * <p>Binds a PowerPoint (PPT) artifact.</p>
      * 
      * @param request BindPptArtifactRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -704,7 +719,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>绑定PPT作品信息</p>
+     * <p>Binds a PowerPoint (PPT) artifact.</p>
      * 
      * @param request BindPptArtifactRequest
      * @return BindPptArtifactResponse
@@ -716,7 +731,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消异步任务</p>
+     * <p>Cancels pending asynchronous tasks.</p>
      * 
      * @param request CancelAsyncTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -754,7 +769,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消异步任务</p>
+     * <p>Cancels pending asynchronous tasks.</p>
      * 
      * @param request CancelAsyncTaskRequest
      * @return CancelAsyncTaskResponse
@@ -766,7 +781,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消审核任务</p>
+     * <p>Cancel an audit task.</p>
      * 
      * @param request CancelAuditTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -806,7 +821,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消审核任务</p>
+     * <p>Cancel an audit task.</p>
      * 
      * @param request CancelAuditTaskRequest
      * @return CancelAuditTaskResponse
@@ -818,7 +833,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消深度写作任务</p>
+     * <p>Cancels a deep writing task.</p>
      * 
      * @param request CancelDeepWriteTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -854,7 +869,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消深度写作任务</p>
+     * <p>Cancels a deep writing task.</p>
      * 
      * @param request CancelDeepWriteTaskRequest
      * @return CancelDeepWriteTaskResponse
@@ -866,7 +881,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>清除所有干预内容</p>
+     * <p>Clears all intervention content.</p>
      * 
      * @param request ClearIntervenesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -898,7 +913,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>清除所有干预内容</p>
+     * <p>Clears all intervention content.</p>
      * 
      * @param request ClearIntervenesRequest
      * @return ClearIntervenesResponse
@@ -910,7 +925,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>是否将本次提交自定义规则库得到的解析结果用于审核任务。由于解析结果可能不满足用户需求，因此我们为您提供了该接口用于二次确认。如果对提交的规则库解析满意，则可以直接将本次提交任务的 TaskId 作为入参，系统会对您上传的规则库做后处理，使它可以被用于审核。反之，您可以重新调用 SubmitAuditNote 接口上传修改之后的规则库。</p>
+     * <p>This interface confirms whether the parsing results from your custom rule library submission are used for audit tasks. Because parsing results may not meet your requirements, use this interface to perform a second confirmation. If you are satisfied with the parsing of your submitted rule library, provide the TaskId from that submission as an input parameter. The system then post-processes your uploaded rule library and makes it available for auditing. Otherwise, invoke the SubmitAuditNote interface again to upload the modified rule library.</p>
      * 
      * @param request ConfirmAndPostProcessAuditNoteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -946,7 +961,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>是否将本次提交自定义规则库得到的解析结果用于审核任务。由于解析结果可能不满足用户需求，因此我们为您提供了该接口用于二次确认。如果对提交的规则库解析满意，则可以直接将本次提交任务的 TaskId 作为入参，系统会对您上传的规则库做后处理，使它可以被用于审核。反之，您可以重新调用 SubmitAuditNote 接口上传修改之后的规则库。</p>
+     * <p>This interface confirms whether the parsing results from your custom rule library submission are used for audit tasks. Because parsing results may not meet your requirements, use this interface to perform a second confirmation. If you are satisfied with the parsing of your submitted rule library, provide the TaskId from that submission as an input parameter. The system then post-processes your uploaded rule library and makes it available for auditing. Otherwise, invoke the SubmitAuditNote interface again to upload the modified rule library.</p>
      * 
      * @param request ConfirmAndPostProcessAuditNoteRequest
      * @return ConfirmAndPostProcessAuditNoteResponse
@@ -958,7 +973,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用户数据集权限-批量添加</p>
+     * <p>Batch add permissions:\
+     * \- Dataset permissions\</p>
      * 
      * @param tmpReq CreateDataPermissionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1008,7 +1024,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用户数据集权限-批量添加</p>
+     * <p>Batch add permissions:\
+     * \- Dataset permissions\</p>
      * 
      * @param request CreateDataPermissionsRequest
      * @return CreateDataPermissionsResponse
@@ -1020,7 +1037,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>数据集管理-创建</p>
+     * <p>Creates a dataset.</p>
      * 
      * @param tmpReq CreateDatasetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1094,7 +1111,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>数据集管理-创建</p>
+     * <p>Creates a dataset.</p>
      * 
      * @param request CreateDatasetRequest
      * @return CreateDatasetResponse
@@ -1106,7 +1123,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通用配置-创建</p>
+     * <p>General configurations — Create</p>
      * 
      * @param request CreateGeneralConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1146,7 +1163,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通用配置-创建</p>
+     * <p>General configurations — Create</p>
      * 
      * @param request CreateGeneralConfigRequest
      * @return CreateGeneralConfigResponse
@@ -1158,7 +1175,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>文档管理-创建</p>
+     * <p>Saves an article created in Miaobi. This operation supports rich text.</p>
      * 
      * @param tmpReq CreateGeneratedContentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1230,7 +1247,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>文档管理-创建</p>
+     * <p>Saves an article created in Miaobi. This operation supports rich text.</p>
      * 
      * @param request CreateGeneratedContentRequest
      * @return CreateGeneratedContentResponse
@@ -1242,7 +1259,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取授权token</p>
+     * <p>Creates a temporary token for the online inference API.</p>
      * 
      * @param request CreateTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1274,7 +1291,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取授权token</p>
+     * <p>Creates a temporary token for the online inference API.</p>
      * 
      * @param request CreateTokenRequest
      * @return CreateTokenResponse
@@ -1286,7 +1303,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除用户账户下所有可供审核使用的自定义规则库。删除后无法找回，如果您有对规则库存档的需求，请预先使用 DownloadAuditNote 接口保存需要的规则库。</p>
+     * <p>Deletes all custom rule libraries available for audit under the user account. This operation is irreversible. To archive rule libraries, use the DownloadAuditNote API to save them before deletion.</p>
      * 
      * @param request DeleteAuditNoteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1322,7 +1339,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除用户账户下所有可供审核使用的自定义规则库。删除后无法找回，如果您有对规则库存档的需求，请预先使用 DownloadAuditNote 接口保存需要的规则库。</p>
+     * <p>Deletes all custom rule libraries available for audit under the user account. This operation is irreversible. To archive rule libraries, use the DownloadAuditNote API to save them before deletion.</p>
      * 
      * @param request DeleteAuditNoteRequest
      * @return DeleteAuditNoteResponse
@@ -1334,7 +1351,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指定的词库记录</p>
+     * <p>Deletes specified term records.</p>
      * 
      * @param tmpReq DeleteAuditTermsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1376,7 +1393,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指定的词库记录</p>
+     * <p>Deletes specified term records.</p>
      * 
      * @param request DeleteAuditTermsRequest
      * @return DeleteAuditTermsResponse
@@ -1388,7 +1405,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除自定义文本</p>
+     * <p>Deletes a custom text.</p>
      * 
      * @param request DeleteCustomTextRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1430,7 +1447,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除自定义文本</p>
+     * <p>Deletes a custom text.</p>
      * 
      * @param request DeleteCustomTextRequest
      * @return DeleteCustomTextResponse
@@ -1442,7 +1459,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据主题删除自定义主题事件</p>
+     * <p>Delete a custom hot spot event by topic name.</p>
      * 
      * @param request DeleteCustomTopicByTopicRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1480,7 +1497,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据主题删除自定义主题事件</p>
+     * <p>Delete a custom hot spot event by topic name.</p>
      * 
      * @param request DeleteCustomTopicByTopicRequest
      * @return DeleteCustomTopicByTopicResponse
@@ -1492,7 +1509,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据自定义观点ID删除自定义观点</p>
+     * <p>Deletes a custom topic viewpoint by its ID.</p>
      * 
      * @param request DeleteCustomTopicViewPointByIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1530,7 +1547,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据自定义观点ID删除自定义观点</p>
+     * <p>Deletes a custom topic viewpoint by its ID.</p>
      * 
      * @param request DeleteCustomTopicViewPointByIdRequest
      * @return DeleteCustomTopicViewPointByIdResponse
@@ -1542,7 +1559,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用户数据集权限-批量删除</p>
+     * <p>Batch delete dataset permissions</p>
      * 
      * @param tmpReq DeleteDataPermissionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1584,7 +1601,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用户数据集权限-批量删除</p>
+     * <p>Batch delete dataset permissions</p>
      * 
      * @param request DeleteDataPermissionsRequest
      * @return DeleteDataPermissionsResponse
@@ -1596,7 +1613,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>数据集管理-删除</p>
+     * <p>Deletes a dataset from the data source.</p>
      * 
      * @param request DeleteDatasetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1632,7 +1649,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>数据集管理-删除</p>
+     * <p>Deletes a dataset from the data source.</p>
      * 
      * @param request DeleteDatasetRequest
      * @return DeleteDatasetResponse
@@ -1644,7 +1661,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除数据集文档</p>
+     * <p>Delete source documents.</p>
      * 
      * @param request DeleteDatasetDocumentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1692,7 +1709,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除数据集文档</p>
+     * <p>Delete source documents.</p>
      * 
      * @param request DeleteDatasetDocumentRequest
      * @return DeleteDatasetDocumentResponse
@@ -1704,7 +1721,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>妙读删除多个文档</p>
+     * <p>Deletes multiple documents.</p>
      * 
      * @param tmpReq DeleteDocsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1746,7 +1763,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>妙读删除多个文档</p>
+     * <p>Deletes multiple documents.</p>
      * 
      * @param request DeleteDocsRequest
      * @return DeleteDocsResponse
@@ -1758,7 +1775,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指定的用于事实性审核的 URL。</p>
+     * <p>Deletes the specified URL used for factuality audit.</p>
      * 
      * @param request DeleteFactAuditUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1794,7 +1811,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指定的用于事实性审核的 URL。</p>
+     * <p>Deletes the specified URL used for factuality audit.</p>
      * 
      * @param request DeleteFactAuditUrlRequest
      * @return DeleteFactAuditUrlResponse
@@ -1806,7 +1823,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通用配置-删除</p>
+     * <p>Deletes general configurations.</p>
      * 
      * @param request DeleteGeneralConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1842,7 +1859,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通用配置-删除</p>
+     * <p>Deletes general configurations.</p>
      * 
      * @param request DeleteGeneralConfigRequest
      * @return DeleteGeneralConfigResponse
@@ -1854,7 +1871,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>文档管理-删除。</p>
+     * <p>Deletes an article created in MiaoBi.</p>
      * 
      * @param request DeleteGeneratedContentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1896,7 +1913,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>文档管理-删除。</p>
+     * <p>Deletes an article created in MiaoBi.</p>
      * 
      * @param request DeleteGeneratedContentRequest
      * @return DeleteGeneratedContentResponse
@@ -1908,7 +1925,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除干预规则</p>
+     * <p>Deletes an intervention rule.</p>
      * 
      * @param request DeleteInterveneRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1946,7 +1963,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除干预规则</p>
+     * <p>Deletes an intervention rule.</p>
      * 
      * @param request DeleteInterveneRuleRequest
      * @return DeleteInterveneRuleResponse
@@ -1958,7 +1975,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据ID删除素材</p>
+     * <p>Deletes a material from the material library.</p>
      * 
      * @param request DeleteMaterialByIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1996,7 +2013,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据ID删除素材</p>
+     * <p>Deletes a material from the material library.</p>
      * 
      * @param request DeleteMaterialByIdRequest
      * @return DeleteMaterialByIdResponse
@@ -2007,8 +2024,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>This API operation uses the HTTP Server-Sent Events (SSE) protocol.</li>
+     * <li>The OpenAPI portal is not compatible with the SSE inference protocol. You cannot directly test this API operation in the portal. For more information about how to call this API operation using the software development kit (SDK) for Java or Python, see <a href="https://help.aliyun.com/zh/model-studio/ppt-generation-best-practices">PPT Generation Best practices</a>.</li>
+     * <li>To obtain the latest version of the asynchronous Java SDK, see <a href="https://api.aliyun.com/api-tools/sdk/AiMiaoBi?spm=a2c4g.11186623.0.0.4cd3170d7rccDC%5C&version=2023-08-01%5C&language=java-async-tea%5C&tab=primer-doc">this link</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除PPT作品</p>
+     * <p>Delete a PPT work</p>
      * 
      * @param request DeletePptArtifactRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2047,8 +2071,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>This API operation uses the HTTP Server-Sent Events (SSE) protocol.</li>
+     * <li>The OpenAPI portal is not compatible with the SSE inference protocol. You cannot directly test this API operation in the portal. For more information about how to call this API operation using the software development kit (SDK) for Java or Python, see <a href="https://help.aliyun.com/zh/model-studio/ppt-generation-best-practices">PPT Generation Best practices</a>.</li>
+     * <li>To obtain the latest version of the asynchronous Java SDK, see <a href="https://api.aliyun.com/api-tools/sdk/AiMiaoBi?spm=a2c4g.11186623.0.0.4cd3170d7rccDC%5C&version=2023-08-01%5C&language=java-async-tea%5C&tab=primer-doc">this link</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除PPT作品</p>
+     * <p>Delete a PPT work</p>
      * 
      * @param request DeletePptArtifactRequest
      * @return DeletePptArtifactResponse
@@ -2060,7 +2091,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指定自定义文体</p>
+     * <p>Deletes a specified custom style.</p>
      * 
      * @param request DeleteStyleLearningResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2098,7 +2129,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指定自定义文体</p>
+     * <p>Deletes a specified custom style.</p>
      * 
      * @param request DeleteStyleLearningResultRequest
      * @return DeleteStyleLearningResultResponse
@@ -2110,7 +2141,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>从链接中提取文档内容</p>
+     * <p>Extracts the content of documents from URLs.</p>
      * 
      * @param tmpReq DocumentExtractionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2154,7 +2185,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>从链接中提取文档内容</p>
+     * <p>Extracts the content of documents from URLs.</p>
      * 
      * @param request DocumentExtractionRequest
      * @return DocumentExtractionResponse
@@ -2166,7 +2197,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>您可以通过调用该接口下载结构化后的规则库，供您进行进一步处理。该接口同时拥有两个功能：下载未后处理的结构化规则库，或下载当前可用于审核的结构化规则库。具体使用方法，请参考入参说明。</p>
+     * <p>Call this API to download the structured rule library for further processing. You can use this API to download either the structured rule library before post-processing or the structured rule library currently available for auditing. For specific usage, see the input parameter descriptions.</p>
      * 
      * @param request DownloadAuditNoteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2206,7 +2237,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>您可以通过调用该接口下载结构化后的规则库，供您进行进一步处理。该接口同时拥有两个功能：下载未后处理的结构化规则库，或下载当前可用于审核的结构化规则库。具体使用方法，请参考入参说明。</p>
+     * <p>Call this API to download the structured rule library for further processing. You can use this API to download either the structured rule library before post-processing or the structured rule library currently available for auditing. For specific usage, see the input parameter descriptions.</p>
      * 
      * @param request DownloadAuditNoteRequest
      * @return DownloadAuditNoteResponse
@@ -2218,7 +2249,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>标书下载接口</p>
+     * <p>API for downloading bidding documents</p>
      * 
      * @param request DownloadBiddingDocRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2254,7 +2285,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>标书下载接口</p>
+     * <p>API for downloading bidding documents</p>
      * 
      * @param request DownloadBiddingDocRequest
      * @return DownloadBiddingDocResponse
@@ -2266,7 +2297,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>编辑审核自定义词库记录</p>
+     * <p>Edit custom audit term records.</p>
      * 
      * @param tmpReq EditAuditTermsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2324,7 +2355,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>编辑审核自定义词库记录</p>
+     * <p>Edit custom audit term records.</p>
      * 
      * @param request EditAuditTermsRequest
      * @return EditAuditTermsResponse
@@ -2336,7 +2367,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>编辑标书内容接口</p>
+     * <p>Edits the content of a bidding document.</p>
      * 
      * @param request EditBiddingDocRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2384,7 +2415,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>编辑标书内容接口</p>
+     * <p>Edits the content of a bidding document.</p>
      * 
      * @param request EditBiddingDocRequest
      * @return EditBiddingDocResponse
@@ -2396,7 +2427,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导出企业VOC分析任务明细列表</p>
+     * <p>Exports the tag details for a specified enterprise VOC analysis task.</p>
      * 
      * @param tmpReq ExportAnalysisTagDetailByTaskIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2442,7 +2473,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导出企业VOC分析任务明细列表</p>
+     * <p>Exports the tag details for a specified enterprise VOC analysis task.</p>
      * 
      * @param request ExportAnalysisTagDetailByTaskIdRequest
      * @return ExportAnalysisTagDetailByTaskIdResponse
@@ -2454,7 +2485,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导出智能审核报告</p>
+     * <p>Exports an automated review report.</p>
      * 
      * @param request ExportAuditContentResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2490,7 +2521,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导出智能审核报告</p>
+     * <p>Exports an automated review report.</p>
      * 
      * @param request ExportAuditContentResultRequest
      * @return ExportAuditContentResultResponse
@@ -2502,7 +2533,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导出-自定义数据源-选题视角分析任务结果</p>
+     * <p>Exports custom data source topic perspective analysis task results.</p>
      * 
      * @param request ExportCustomSourceAnalysisTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2542,7 +2573,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导出-自定义数据源-选题视角分析任务结果</p>
+     * <p>Exports custom data source topic perspective analysis task results.</p>
      * 
      * @param request ExportCustomSourceAnalysisTaskRequest
      * @return ExportCustomSourceAnalysisTaskResponse
@@ -2554,7 +2585,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>文档管理-导出。</p>
+     * <p>Exports the history of articles created in MiaoBi.</p>
      * 
      * @param request ExportGeneratedContentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2592,7 +2623,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>文档管理-导出。</p>
+     * <p>Exports the history of articles created in MiaoBi.</p>
      * 
      * @param request ExportGeneratedContentRequest
      * @return ExportGeneratedContentResponse
@@ -2604,7 +2635,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导出选题策划文档，响应为一个可公开访问的URL。一小时后失效</p>
+     * <p>Exports topic planning documents and provides a publicly accessible URL that expires in one hour.</p>
      * 
      * @param tmpReq ExportHotTopicPlanningProposalsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2672,7 +2703,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导出选题策划文档，响应为一个可公开访问的URL。一小时后失效</p>
+     * <p>Exports topic planning documents and provides a publicly accessible URL that expires in one hour.</p>
      * 
      * @param request ExportHotTopicPlanningProposalsRequest
      * @return ExportHotTopicPlanningProposalsResponse
@@ -2684,7 +2715,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导出所有干预内容</p>
+     * <p>Exports all interventions.</p>
      * 
      * @param request ExportIntervenesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2716,7 +2747,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导出所有干预内容</p>
+     * <p>Exports all interventions.</p>
      * 
      * @param request ExportIntervenesRequest
      * @return ExportIntervenesResponse
@@ -2728,7 +2759,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导出PPT作品</p>
+     * <p>Exports a PPT artifact.</p>
      * 
      * @param request ExportPptArtifactRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2780,7 +2811,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导出PPT作品</p>
+     * <p>Exports a PPT artifact.</p>
      * 
      * @param request ExportPptArtifactRequest
      * @return ExportPptArtifactResponse
@@ -2792,7 +2823,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>反馈某次生成的结果</p>
+     * <p>Provides feedback on the quality of the content that the model generates.</p>
      * 
      * @param tmpReq FeedbackDialogueRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2860,7 +2891,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>反馈某次生成的结果</p>
+     * <p>Provides feedback on the quality of the content that the model generates.</p>
      * 
      * @param request FeedbackDialogueRequest
      * @return FeedbackDialogueResponse
@@ -2872,7 +2903,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取词库导出任务结果</p>
+     * <p>Retrieves the results of a term library export task.</p>
      * 
      * @param request FetchExportTermsTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2908,7 +2939,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取词库导出任务结果</p>
+     * <p>Retrieves the results of a term library export task.</p>
      * 
      * @param request FetchExportTermsTaskRequest
      * @return FetchExportTermsTaskResponse
@@ -2920,7 +2951,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取异步导出文档任务结果</p>
+     * <p>Fetches the result of an asynchronous document export task.</p>
      * 
      * @param request FetchExportWordTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2958,7 +2989,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取异步导出文档任务结果</p>
+     * <p>Fetches the result of an asynchronous document export task.</p>
      * 
      * @param request FetchExportWordTaskRequest
      * @return FetchExportWordTaskResponse
@@ -2970,7 +3001,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取图片任务执行结果</p>
+     * <p>Retrieve the results of image generation tasks.</p>
      * 
      * @param tmpReq FetchImageTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3018,7 +3049,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取图片任务执行结果</p>
+     * <p>Retrieve the results of image generation tasks.</p>
      * 
      * @param request FetchImageTaskRequest
      * @return FetchImageTaskResponse
@@ -3030,7 +3061,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取导入词库任务结果</p>
+     * <p>Retrieves the result of a term import task.</p>
      * 
      * @param request FetchImportTermsTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3066,7 +3097,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取导入词库任务结果</p>
+     * <p>Retrieves the result of a term import task.</p>
      * 
      * @param request FetchImportTermsTaskRequest
      * @return FetchImportTermsTaskResponse
@@ -3078,7 +3109,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取排版任务结果</p>
+     * <p>Retrieve the layout task result.</p>
      * 
      * @param request FetchParseDocumentLayoutTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3114,7 +3145,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取排版任务结果</p>
+     * <p>Retrieve the layout task result.</p>
      * 
      * @param request FetchParseDocumentLayoutTaskRequest
      * @return FetchParseDocumentLayoutTaskResponse
@@ -3125,8 +3156,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The Quanmiao product supports iframe embedding. For details, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Integration: Quanmiao Public Cloud iframe Customization Guide</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>生成内容导出文档任务</p>
+     * <p>Start a task to export content as a Word document.</p>
      * 
      * @param request GenerateExportWordTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3163,8 +3197,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The Quanmiao product supports iframe embedding. For details, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Integration: Quanmiao Public Cloud iframe Customization Guide</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>生成内容导出文档任务</p>
+     * <p>Start a task to export content as a Word document.</p>
      * 
      * @param request GenerateExportWordTaskRequest
      * @return GenerateExportWordTaskResponse
@@ -3176,7 +3213,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>生成临时可访问的公开url</p>
+     * <p>Generate a temporary public URL.</p>
      * 
      * @param request GenerateFileUrlByKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3218,7 +3255,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>生成临时可访问的公开url</p>
+     * <p>Generate a temporary public URL.</p>
      * 
      * @param request GenerateFileUrlByKeyRequest
      * @return GenerateFileUrlByKeyResponse
@@ -3230,7 +3267,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>智能配图，图片生成任务</p>
+     * <p>Asynchronously generates an image from text.</p>
      * 
      * @param tmpReq GenerateImageTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3286,7 +3323,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>智能配图，图片生成任务</p>
+     * <p>Asynchronously generates an image from text.</p>
      * 
      * @param request GenerateImageTaskRequest
      * @return GenerateImageTaskResponse
@@ -3297,8 +3334,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API returns the address and credentials for file uploads. For more information, see <a href="https://help.aliyun.com/zh/oss/user-guide/form-upload?scm=20140722.H_31849._.OR_help-T_cn~zh-V_1">OSS Form Upload</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>生成上传配置</p>
+     * <p>Generates a file upload configuration.
+     * 1\. Call this API to obtain the upload configuration. The API returns the <code>PostUrl</code> (an internal OSS address for AI Writing Assistant), temporary OSS authentication information (<code>key</code>, <code>OSSAccessKeyId</code>, <code>Signature</code>, and <code>policy</code>), and the unique file identifier <code>fileKey</code>.
+     * 2\. The client uses the <code>PostUrl</code> and the temporary authentication information (<code>key</code>, <code>OSSAccessKeyId</code>, <code>Signature</code>, and <code>policy</code>) to upload the file.
+     * 3\. Use the <code>fileKey</code> to call subsequent APIs that require a <code>fileKey</code>, such as <code>GenerateFileUrlByKey</code>.</p>
      * 
      * @param request GenerateUploadConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3339,8 +3382,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API returns the address and credentials for file uploads. For more information, see <a href="https://help.aliyun.com/zh/oss/user-guide/form-upload?scm=20140722.H_31849._.OR_help-T_cn~zh-V_1">OSS Form Upload</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>生成上传配置</p>
+     * <p>Generates a file upload configuration.
+     * 1\. Call this API to obtain the upload configuration. The API returns the <code>PostUrl</code> (an internal OSS address for AI Writing Assistant), temporary OSS authentication information (<code>key</code>, <code>OSSAccessKeyId</code>, <code>Signature</code>, and <code>policy</code>), and the unique file identifier <code>fileKey</code>.
+     * 2\. The client uses the <code>PostUrl</code> and the temporary authentication information (<code>key</code>, <code>OSSAccessKeyId</code>, <code>Signature</code>, and <code>policy</code>) to upload the file.
+     * 3\. Use the <code>fileKey</code> to call subsequent APIs that require a <code>fileKey</code>, such as <code>GenerateFileUrlByKey</code>.</p>
      * 
      * @param request GenerateUploadConfigRequest
      * @return GenerateUploadConfigResponse
@@ -3352,7 +3401,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>视角生成</p>
+     * <p>Generates viewpoints from article snippets.</p>
      * 
      * @param tmpReq GenerateViewPointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3396,7 +3445,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>视角生成</p>
+     * <p>Generates viewpoints from article snippets.</p>
      * 
      * @param request GenerateViewPointRequest
      * @return GenerateViewPointResponse
@@ -3408,7 +3457,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询规则库后处理的进度。与 ConfirmAndPostProcessAuditNote 接口配合使用，供您查询当前后处理任务的状态。</p>
+     * <p>Queries the progress of a post-processing task for a rule library. Use this operation together with the ConfirmAndPostProcessAuditNote operation to check the status of the current post-processing task.</p>
      * 
      * @param request GetAuditNotePostProcessingStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3444,7 +3493,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询规则库后处理的进度。与 ConfirmAndPostProcessAuditNote 接口配合使用，供您查询当前后处理任务的状态。</p>
+     * <p>Queries the progress of a post-processing task for a rule library. Use this operation together with the ConfirmAndPostProcessAuditNote operation to check the status of the current post-processing task.</p>
      * 
      * @param request GetAuditNotePostProcessingStatusRequest
      * @return GetAuditNotePostProcessingStatusResponse
@@ -3456,7 +3505,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户上传规则库的处理状态。通过该接口，用户可以查询到当前规则库上传任务的状态，并获取到解析后的规则库文件大小、存储路径等信息。</p>
+     * <p>Checks the processing status of an uploaded rule library. This operation returns the current status of the upload task, the size of the parsed rule library file, and its storage path.</p>
      * 
      * @param request GetAuditNoteProcessingStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3492,7 +3541,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户上传规则库的处理状态。通过该接口，用户可以查询到当前规则库上传任务的状态，并获取到解析后的规则库文件大小、存储路径等信息。</p>
+     * <p>Checks the processing status of an uploaded rule library. This operation returns the current status of the upload task, the size of the parsed rule library file, and its storage path.</p>
      * 
      * @param request GetAuditNoteProcessingStatusRequest
      * @return GetAuditNoteProcessingStatusResponse
@@ -3504,7 +3553,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获得剪辑任务状态</p>
+     * <p>Retrieves the status of a video editing task.</p>
      * 
      * @param request GetAutoClipsTaskInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3548,7 +3597,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获得剪辑任务状态</p>
+     * <p>Retrieves the status of a video editing task.</p>
      * 
      * @param request GetAutoClipsTaskInfoRequest
      * @return GetAutoClipsTaskInfoResponse
@@ -3560,7 +3609,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户当前可供审核的规则库信息，只能查询到当前可用于审核的规则库。如果您想看到自定义规则库的具体内容，请使用 DownloadAuditNote 接口。</p>
+     * <p>Query the rule libraries that are currently available for audit. This operation returns only rule libraries that are active for auditing. To view the contents of a custom rule library, use the DownloadAuditNote API.</p>
      * 
      * @param request GetAvailableAuditNotesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3596,7 +3645,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户当前可供审核的规则库信息，只能查询到当前可用于审核的规则库。如果您想看到自定义规则库的具体内容，请使用 DownloadAuditNote 接口。</p>
+     * <p>Query the rule libraries that are currently available for audit. This operation returns only rule libraries that are active for auditing. To view the contents of a custom rule library, use the DownloadAuditNote API.</p>
      * 
      * @param request GetAvailableAuditNotesRequest
      * @return GetAvailableAuditNotesResponse
@@ -3608,7 +3657,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获得标书写作结果接口</p>
+     * <p>Retrieves the generation results of a bidding document.</p>
      * 
      * @param request GetBiddingDocInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3644,7 +3693,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获得标书写作结果接口</p>
+     * <p>Retrieves the generation results of a bidding document.</p>
      * 
      * @param request GetBiddingDocInfoRequest
      * @return GetBiddingDocInfoResponse
@@ -3656,7 +3705,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获得标书功能剩余额度</p>
+     * <p>Retrieve the remaining limit for the bidding feature.</p>
      * 
      * @param request GetBiddingRemainLimitNumRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3692,7 +3741,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获得标书功能剩余额度</p>
+     * <p>Retrieve the remaining limit for the bidding feature.</p>
      * 
      * @param request GetBiddingRemainLimitNumRequest
      * @return GetBiddingRemainLimitNumResponse
@@ -3704,7 +3753,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取某次标签挖掘结果分类</p>
+     * <p>Retrieves the classifications from a tag mining task.</p>
      * 
      * @param request GetCategoriesByTaskIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3740,7 +3789,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取某次标签挖掘结果分类</p>
+     * <p>Retrieves the classifications from a tag mining task.</p>
      * 
      * @param request GetCategoriesByTaskIdRequest
      * @return GetCategoriesByTaskIdResponse
@@ -3752,7 +3801,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获得智能混剪内置资源</p>
+     * <p>Retrieves the built-in resources for smart clipping.</p>
      * 
      * @param request GetClipsBuildInResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3788,7 +3837,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获得智能混剪内置资源</p>
+     * <p>Retrieves the built-in resources for smart clipping.</p>
      * 
      * @param request GetClipsBuildInResourceRequest
      * @return GetClipsBuildInResourceResponse
@@ -3800,7 +3849,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取自定义播报单任务结果</p>
+     * <p>Retrieves the result of a custom hot topic broadcast job.</p>
      * 
      * @param request GetCustomHotTopicBroadcastJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3836,7 +3885,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取自定义播报单任务结果</p>
+     * <p>Retrieves the result of a custom hot topic broadcast job.</p>
      * 
      * @param request GetCustomHotTopicBroadcastJobRequest
      * @return GetCustomHotTopicBroadcastJobResponse
@@ -3848,7 +3897,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取自定义数据源-选题视角分析任务结果</p>
+     * <p>Retrieves the results of a topic analysis task for a custom data source.</p>
      * 
      * @param request GetCustomSourceTopicAnalysisTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3884,7 +3933,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取自定义数据源-选题视角分析任务结果</p>
+     * <p>Retrieves the results of a topic analysis task for a custom data source.</p>
      * 
      * @param request GetCustomSourceTopicAnalysisTaskRequest
      * @return GetCustomSourceTopicAnalysisTaskResponse
@@ -3896,7 +3945,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取自定义文本</p>
+     * <p>Retrieve custom text.</p>
      * 
      * @param request GetCustomTextRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3938,7 +3987,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取自定义文本</p>
+     * <p>Retrieve custom text.</p>
      * 
      * @param request GetCustomTextRequest
      * @return GetCustomTextResponse
@@ -3950,7 +3999,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取自定义选题视角分析任务结果</p>
+     * <p>Retrieve the result of a custom topic selection perspective analysis task.</p>
      * 
      * @param request GetCustomTopicSelectionPerspectiveAnalysisTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3988,7 +4037,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取自定义选题视角分析任务结果</p>
+     * <p>Retrieve the result of a custom topic selection perspective analysis task.</p>
      * 
      * @param request GetCustomTopicSelectionPerspectiveAnalysisTaskRequest
      * @return GetCustomTopicSelectionPerspectiveAnalysisTaskResponse
@@ -4000,7 +4049,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取系统数据源配置和个人配置</p>
+     * <p>Retrieves configuration information for write data sources and general search data sources.</p>
      * 
      * @param request GetDataSourceOrderConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4042,7 +4091,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取系统数据源配置和个人配置</p>
+     * <p>Retrieves configuration information for write data sources and general search data sources.</p>
      * 
      * @param request GetDataSourceOrderConfigRequest
      * @return GetDataSourceOrderConfigResponse
@@ -4054,7 +4103,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>数据集管理-详情</p>
+     * <p>Data source management details.</p>
      * 
      * @param request GetDatasetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4094,7 +4143,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>数据集管理-详情</p>
+     * <p>Data source management details.</p>
      * 
      * @param request GetDatasetRequest
      * @return GetDatasetResponse
@@ -4106,7 +4155,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据集文档</p>
+     * <p>Retrieve the data source document.</p>
      * 
      * @param tmpReq GetDatasetDocumentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4164,7 +4213,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据集文档</p>
+     * <p>Retrieve the data source document.</p>
      * 
      * @param request GetDatasetDocumentRequest
      * @return GetDatasetDocumentResponse
@@ -4176,7 +4225,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询深度写作任务</p>
+     * <p>Queries deep writing tasks. You can use it to check the running status of a specific task.</p>
      * 
      * @param request GetDeepWriteTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4212,7 +4261,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询深度写作任务</p>
+     * <p>Queries deep writing tasks. You can use it to check the running status of a specific task.</p>
      * 
      * @param request GetDeepWriteTaskRequest
      * @return GetDeepWriteTaskResponse
@@ -4224,7 +4273,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询深度写作任务的结果</p>
+     * <p>Queries the result of a deep writing task. If the task is not complete, the operation returns its current status—such as queued, running, failed, or canceled. If the task is complete, the operation returns a URL that points to a compressed package of the task output that you can download.</p>
      * 
      * @param request GetDeepWriteTaskResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4260,7 +4309,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询深度写作任务的结果</p>
+     * <p>Queries the result of a deep writing task. If the task is not complete, the operation returns its current status—such as queued, running, failed, or canceled. If the task is complete, the operation returns a URL that points to a compressed package of the task output that you can download.</p>
      * 
      * @param request GetDeepWriteTaskResultRequest
      * @return GetDeepWriteTaskResultResponse
@@ -4272,7 +4321,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取文档聚合任务结果</p>
+     * <p>Retrieves the result of a content aggregation task.</p>
      * 
      * @param request GetDocClusterTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4310,7 +4359,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取文档聚合任务结果</p>
+     * <p>Retrieves the result of a content aggregation task.</p>
      * 
      * @param request GetDocClusterTaskRequest
      * @return GetDocClusterTaskResponse
@@ -4322,7 +4371,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>妙读获取文档信息</p>
+     * <p>Retrieves information about a document.</p>
      * 
      * @param request GetDocInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4362,7 +4411,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>妙读获取文档信息</p>
+     * <p>Retrieves information about a document.</p>
      * 
      * @param request GetDocInfoRequest
      * @return GetDocInfoResponse
@@ -4374,7 +4423,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取企业VOC分析任务结果</p>
+     * <p>Retrieves the result of an enterprise Voice of the Customer (VOC) analysis task.</p>
      * 
      * @param request GetEnterpriseVocAnalysisTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4410,7 +4459,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取企业VOC分析任务结果</p>
+     * <p>Retrieves the result of an enterprise Voice of the Customer (VOC) analysis task.</p>
      * 
      * @param request GetEnterpriseVocAnalysisTaskRequest
      * @return GetEnterpriseVocAnalysisTaskResponse
@@ -4422,7 +4471,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取当前正用于事实性审核的信源 URL。</p>
+     * <p>Retrieves the source URL that is currently used for factuality audit.</p>
      * 
      * @param request GetFactAuditUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4454,7 +4503,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取当前正用于事实性审核的信源 URL。</p>
+     * <p>Retrieves the source URL that is currently used for factuality audit.</p>
      * 
      * @param request GetFactAuditUrlRequest
      * @return GetFactAuditUrlResponse
@@ -4466,7 +4515,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>妙读获得文档字数</p>
+     * <p>MiaoRead calculates the word count for a document.</p>
      * 
      * @param request GetFileContentLengthRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4506,7 +4555,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>妙读获得文档字数</p>
+     * <p>MiaoRead calculates the word count for a document.</p>
      * 
      * @param request GetFileContentLengthRequest
      * @return GetFileContentLengthResponse
@@ -4518,7 +4567,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通用配置-查询</p>
+     * <p>Queries general configurations.</p>
      * 
      * @param request GetGeneralConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4554,7 +4603,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通用配置-查询</p>
+     * <p>Queries general configurations.</p>
      * 
      * @param request GetGeneralConfigRequest
      * @return GetGeneralConfigResponse
@@ -4566,7 +4615,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>文档管理-查询详情。</p>
+     * <p>Get generated content. Queries the history of articles generated in MiaoBi.</p>
      * 
      * @param request GetGeneratedContentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4604,7 +4653,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>文档管理-查询详情。</p>
+     * <p>Get generated content. Queries the history of articles generated in MiaoBi.</p>
      * 
      * @param request GetGeneratedContentRequest
      * @return GetGeneratedContentResponse
@@ -4616,7 +4665,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询新闻播报单</p>
+     * <p>Query news broadcast orders.</p>
      * 
      * @param tmpReq GetHotTopicBroadcastRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4710,7 +4759,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询新闻播报单</p>
+     * <p>Query news broadcast orders.</p>
      * 
      * @param request GetHotTopicBroadcastRequest
      * @return GetHotTopicBroadcastResponse
@@ -4722,7 +4771,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获得干预全局回复</p>
+     * <p>Retrieve the global intervention reply.</p>
      * 
      * @param request GetInterveneGlobalReplyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4754,7 +4803,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获得干预全局回复</p>
+     * <p>Retrieve the global intervention reply.</p>
      * 
      * @param request GetInterveneGlobalReplyRequest
      * @return GetInterveneGlobalReplyResponse
@@ -4766,7 +4815,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获得导入任务信息</p>
+     * <p>Gets information about an import task.</p>
      * 
      * @param request GetInterveneImportTaskInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4804,7 +4853,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获得导入任务信息</p>
+     * <p>Gets information about an import task.</p>
      * 
      * @param request GetInterveneImportTaskInfoRequest
      * @return GetInterveneImportTaskInfoResponse
@@ -4816,7 +4865,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获得干预项规则详情</p>
+     * <p>Retrieves the details of an intervention rule.</p>
      * 
      * @param request GetInterveneRuleDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4854,7 +4903,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获得干预项规则详情</p>
+     * <p>Retrieves the details of an intervention rule.</p>
      * 
      * @param request GetInterveneRuleDetailRequest
      * @return GetInterveneRuleDetailResponse
@@ -4866,7 +4915,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获得干预导入模版文件下载地址</p>
+     * <p>Retrieves the download URL for the intervention import template.</p>
      * 
      * @param request GetInterveneTemplateFileUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4898,7 +4947,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获得干预导入模版文件下载地址</p>
+     * <p>Retrieves the download URL for the intervention import template.</p>
      * 
      * @param request GetInterveneTemplateFileUrlRequest
      * @return GetInterveneTemplateFileUrlResponse
@@ -4910,7 +4959,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据ID获取素材内容</p>
+     * <p>Retrieves detailed information about a material from the Material Library.</p>
      * 
      * @param request GetMaterialByIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4948,7 +4997,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据ID获取素材内容</p>
+     * <p>Retrieves detailed information about a material from the Material Library.</p>
      * 
      * @param request GetMaterialByIdRequest
      * @return GetMaterialByIdResponse
@@ -4959,8 +5008,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Usage notes:</p>
+     * <ul>
+     * <li>This API uses the HTTP Server-Sent Events (SSE) protocol.</li>
+     * <li>The OpenAPI portal is not compatible with the SSE protocol and cannot be used for direct debugging. For examples of how to call the API using an SDK for Java or Python, see <a href="https://help.aliyun.com/zh/model-studio/ppt-generation-best-practices">PPT Generation Best practices</a>.</li>
+     * <li>To obtain the latest version of the asynchronous Java SDK, <a href="https://api.aliyun.com/api-tools/sdk/AiMiaoBi?spm=a2c4g.11186623.0.0.4cd3170d7rccDC%5C&version=2023-08-01%5C&language=java-async-tea%5C&tab=primer-doc">download it from the API portal</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询PPT作品信息</p>
+     * <p>Queries information about a PPT artifact.</p>
      * 
      * @param request GetPptArtifactRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4999,8 +5056,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Usage notes:</p>
+     * <ul>
+     * <li>This API uses the HTTP Server-Sent Events (SSE) protocol.</li>
+     * <li>The OpenAPI portal is not compatible with the SSE protocol and cannot be used for direct debugging. For examples of how to call the API using an SDK for Java or Python, see <a href="https://help.aliyun.com/zh/model-studio/ppt-generation-best-practices">PPT Generation Best practices</a>.</li>
+     * <li>To obtain the latest version of the asynchronous Java SDK, <a href="https://api.aliyun.com/api-tools/sdk/AiMiaoBi?spm=a2c4g.11186623.0.0.4cd3170d7rccDC%5C&version=2023-08-01%5C&language=java-async-tea%5C&tab=primer-doc">download it from the API portal</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询PPT作品信息</p>
+     * <p>Queries information about a PPT artifact.</p>
      * 
      * @param request GetPptArtifactRequest
      * @return GetPptArtifactResponse
@@ -5012,7 +5077,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询PPT导出任务的结果</p>
+     * <p>Retrieves the result of a PPT export task.</p>
      * 
      * @param request GetPptArtifactExportResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5052,7 +5117,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询PPT导出任务的结果</p>
+     * <p>Retrieves the result of a PPT export task.</p>
      * 
      * @param request GetPptArtifactExportResultRequest
      * @return GetPptArtifactExportResultResponse
@@ -5064,7 +5129,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取PPT组件的配置</p>
+     * <p>Retrieves the configuration of a PPT component.</p>
      * 
      * @param request GetPptConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5100,7 +5165,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取PPT组件的配置</p>
+     * <p>Retrieves the configuration of a PPT component.</p>
      * 
      * @param request GetPptConfigRequest
      * @return GetPptConfigResponse
@@ -5112,7 +5177,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询PPT任务信息</p>
+     * <p>Gets information about a PPT task.</p>
      * 
      * @param request GetPptInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5152,7 +5217,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询PPT任务信息</p>
+     * <p>Gets information about a PPT task.</p>
      * 
      * @param request GetPptInfoRequest
      * @return GetPptInfoResponse
@@ -5164,7 +5229,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询PPT模板筛选器</p>
+     * <p>Retrieves the filters for PowerPoint (PPT) templates.</p>
      * 
      * @param request GetPptTemplateSelectorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5196,7 +5261,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询PPT模板筛选器</p>
+     * <p>Retrieves the filters for PowerPoint (PPT) templates.</p>
      * 
      * @param request GetPptTemplateSelectorRequest
      * @return GetPptTemplateSelectorResponse
@@ -5208,7 +5273,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取当前用户的配置</p>
+     * <p>Retrieves configuration information, such as intelligent configuration styles and inference-related metadata configurations.</p>
      * 
      * @param request GetPropertiesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5240,7 +5305,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取当前用户的配置</p>
+     * <p>Retrieves configuration information, such as intelligent configuration styles and inference-related metadata configurations.</p>
      * 
      * @param request GetPropertiesRequest
      * @return GetPropertiesResponse
@@ -5252,7 +5317,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询智能审核结果</p>
+     * <p>Queries the result of an automated review.</p>
      * 
      * @param request GetSmartAuditResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5288,7 +5353,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询智能审核结果</p>
+     * <p>Queries the result of an automated review.</p>
      * 
      * @param request GetSmartAuditResultRequest
      * @return GetSmartAuditResultResponse
@@ -5300,7 +5365,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询一键成片剪辑任务</p>
+     * <p>Queries a one-click video editing task.</p>
      * 
      * @param request GetSmartClipTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5336,7 +5401,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询一键成片剪辑任务</p>
+     * <p>Queries a one-click video editing task.</p>
      * 
      * @param request GetSmartClipTaskRequest
      * @return GetSmartClipTaskResponse
@@ -5348,7 +5413,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取文体学习分析结果</p>
+     * <p>Retrieves the analysis result of a style learning task.</p>
      * 
      * @param request GetStyleLearningResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5386,7 +5451,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取文体学习分析结果</p>
+     * <p>Retrieves the analysis result of a style learning task.</p>
      * 
      * @param request GetStyleLearningResultRequest
      * @return GetStyleLearningResultResponse
@@ -5398,7 +5463,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据ID获取热点事件信息</p>
+     * <p>Retrieve hot topic event information by ID.</p>
      * 
      * @param request GetTopicByIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5436,7 +5501,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据ID获取热点事件信息</p>
+     * <p>Retrieve hot topic event information by ID.</p>
      * 
      * @param request GetTopicByIdRequest
      * @return GetTopicByIdResponse
@@ -5448,7 +5513,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取选题视角分析任务结果</p>
+     * <p>Retrieves the result of a topic selection perspective analysis task.</p>
      * 
      * @param request GetTopicSelectionPerspectiveAnalysisTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5486,7 +5551,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取选题视角分析任务结果</p>
+     * <p>Retrieves the result of a topic selection perspective analysis task.</p>
      * 
      * @param request GetTopicSelectionPerspectiveAnalysisTaskRequest
      * @return GetTopicSelectionPerspectiveAnalysisTaskResponse
@@ -5498,7 +5563,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导入干预文件</p>
+     * <p>Imports an intervention file.</p>
      * 
      * @param request ImportInterveneFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5544,7 +5609,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导入干预文件</p>
+     * <p>Imports an intervention file.</p>
      * 
      * @param request ImportInterveneFileRequest
      * @return ImportInterveneFileResponse
@@ -5556,7 +5621,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>异步导入干预文件</p>
+     * <p>Asynchronously import an intervention file.</p>
      * 
      * @param request ImportInterveneFileAsyncRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5602,7 +5667,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>异步导入干预文件</p>
+     * <p>Asynchronously import an intervention file.</p>
      * 
      * @param request ImportInterveneFileAsyncRequest
      * @return ImportInterveneFileAsyncResponse
@@ -5614,7 +5679,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>初始化PPT创建操作</p>
+     * <p>Important: This is a billable API operation.
+     * This API performs two operations:
+     * 1\. Returns the initialization code for the &quot;PPT Generation&quot; frontend component.
+     * 2\. Performs billing.</p>
      * 
      * @param request InitiatePptCreationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5658,7 +5726,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>初始化PPT创建操作</p>
+     * <p>Important: This is a billable API operation.
+     * This API performs two operations:
+     * 1\. Returns the initialization code for the &quot;PPT Generation&quot; frontend component.
+     * 2\. Performs billing.</p>
      * 
      * @param request InitiatePptCreationRequest
      * @return InitiatePptCreationResponse
@@ -5670,7 +5741,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>初始化PPT创建操作V2</p>
+     * <p>Starts a task to create a presentation.</p>
      * 
      * @param request InitiatePptCreationV2Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -5734,7 +5805,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>初始化PPT创建操作V2</p>
+     * <p>Starts a task to create a presentation.</p>
      * 
      * @param request InitiatePptCreationV2Request
      * @return InitiatePptCreationV2Response
@@ -5746,7 +5817,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>设置干预全局回复</p>
+     * <p>Sets global intervention replies.</p>
      * 
      * @param tmpReq InsertInterveneGlobalReplyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5790,7 +5861,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>设置干预全局回复</p>
+     * <p>Sets global intervention replies.</p>
      * 
      * @param request InsertInterveneGlobalReplyRequest
      * @return InsertInterveneGlobalReplyResponse
@@ -5802,7 +5873,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>插入干预规则</p>
+     * <p>Insert an intervention rule.</p>
      * 
      * @param tmpReq InsertInterveneRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5846,7 +5917,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>插入干预规则</p>
+     * <p>Insert an intervention rule.</p>
      * 
      * @param request InsertInterveneRuleRequest
      * @return InsertInterveneRuleResponse
@@ -5858,7 +5929,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>分页获取企业VOC分析任务明细列表</p>
+     * <p>Retrieves a paginated list of details for an enterprise Voice of the Customer (VOC) analysis task.</p>
      * 
      * @param tmpReq ListAnalysisTagDetailByTaskIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5920,7 +5991,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>分页获取企业VOC分析任务明细列表</p>
+     * <p>Retrieves a paginated list of details for an enterprise Voice of the Customer (VOC) analysis task.</p>
      * 
      * @param request ListAnalysisTagDetailByTaskIdRequest
      * @return ListAnalysisTagDetailByTaskIdResponse
@@ -5932,7 +6003,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询任务列表</p>
+     * <p>Retrieves a list of asynchronous tasks.</p>
      * 
      * @param tmpReq ListAsyncTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6016,7 +6087,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询任务列表</p>
+     * <p>Retrieves a list of asynchronous tasks.</p>
      * 
      * @param request ListAsyncTasksRequest
      * @return ListAsyncTasksResponse
@@ -6028,7 +6099,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取审核维度列表</p>
+     * <p>Retrieves a list of audit dimensions.</p>
      * 
      * @param request ListAuditContentErrorTypesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6068,7 +6139,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取审核维度列表</p>
+     * <p>Retrieves a list of audit dimensions.</p>
      * 
      * @param request ListAuditContentErrorTypesRequest
      * @return ListAuditContentErrorTypesResponse
@@ -6080,7 +6151,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取词库列表</p>
+     * <p>Retrieve a list of term libraries.</p>
      * 
      * @param request ListAuditTermsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6124,7 +6195,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取词库列表</p>
+     * <p>Retrieve a list of term libraries.</p>
      * 
      * @param request ListAuditTermsRequest
      * @return ListAuditTermsResponse
@@ -6136,7 +6207,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出智能混剪任务列表</p>
+     * <p>Lists smart video editing tasks.</p>
      * 
      * @param request ListAutoClipsTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6208,7 +6279,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出智能混剪任务列表</p>
+     * <p>Lists smart video editing tasks.</p>
      * 
      * @param request ListAutoClipsTaskRequest
      * @return ListAutoClipsTaskResponse
@@ -6220,7 +6291,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获得标书写作任务列表</p>
+     * <p>Retrieves the list of bidding document writing tasks.</p>
      * 
      * @param request ListBiddingDocRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6288,7 +6359,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获得标书写作任务列表</p>
+     * <p>Retrieves the list of bidding document writing tasks.</p>
      * 
      * @param request ListBiddingDocRequest
      * @return ListBiddingDocResponse
@@ -6300,7 +6371,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取系统自定义预设</p>
+     * <p>Retrieves the system-defined presets for the Generate Content workflow. These presets include options such as writing style, article length, output language, and the number of articles to generate.</p>
      * 
      * @param request ListBuildConfigsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6342,7 +6413,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取系统自定义预设</p>
+     * <p>Retrieves the system-defined presets for the Generate Content workflow. These presets include options such as writing style, article length, output language, and the number of articles to generate.</p>
      * 
      * @param request ListBuildConfigsRequest
      * @return ListBuildConfigsResponse
@@ -6354,7 +6425,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>自定义文本列表</p>
+     * <p>Retrieve a list of custom texts.</p>
      * 
      * @param request ListCustomTextRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6392,7 +6463,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>自定义文本列表</p>
+     * <p>Retrieve a list of custom texts.</p>
      * 
      * @param request ListCustomTextRequest
      * @return ListCustomTextResponse
@@ -6404,7 +6475,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>自定义视角列表</p>
+     * <p>Lists custom viewpoints.</p>
      * 
      * @param tmpReq ListCustomViewPointsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6480,7 +6551,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>自定义视角列表</p>
+     * <p>Lists custom viewpoints.</p>
      * 
      * @param request ListCustomViewPointsRequest
      * @return ListCustomViewPointsResponse
@@ -6492,7 +6563,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用户数据集权限-列表</p>
+     * <p>Permission to list datasets</p>
      * 
      * @param request ListDataPermissionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6540,7 +6611,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用户数据集权限-列表</p>
+     * <p>Permission to list datasets</p>
      * 
      * @param request ListDataPermissionsRequest
      * @return ListDataPermissionsResponse
@@ -6552,7 +6623,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询数据集文档列表</p>
+     * <p>Lists data source documents.</p>
      * 
      * @param tmpReq ListDatasetDocumentsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6702,7 +6773,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询数据集文档列表</p>
+     * <p>Lists data source documents.</p>
      * 
      * @param request ListDatasetDocumentsRequest
      * @return ListDatasetDocumentsResponse
@@ -6714,7 +6785,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>数据集管理-查询</p>
+     * <p>Data source management - query</p>
      * 
      * @param request ListDatasetsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6786,7 +6857,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>数据集管理-查询</p>
+     * <p>Data source management - query</p>
      * 
      * @param request ListDatasetsRequest
      * @return ListDatasetsResponse
@@ -6798,7 +6869,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>生成历史列表</p>
+     * <p>History of online inference scenarios.</p>
      * 
      * @param request ListDialoguesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6856,7 +6927,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>生成历史列表</p>
+     * <p>History of online inference scenarios.</p>
      * 
      * @param request ListDialoguesRequest
      * @return ListDialoguesResponse
@@ -6868,7 +6939,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>妙读获取文档列表</p>
+     * <p>Miàodú retrieves the list of documents.</p>
      * 
      * @param tmpReq ListDocsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6934,7 +7005,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>妙读获取文档列表</p>
+     * <p>Miàodú retrieves the list of documents.</p>
      * 
      * @param request ListDocsRequest
      * @return ListDocsResponse
@@ -6945,8 +7016,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The Quanmiao product supports iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Integration: Quanmiao Public Cloud iframe Customization Plan</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>公文检索</p>
+     * <p>Searches government document libraries based on complex conditions.</p>
      * 
      * @param request ListDocumentRetrieveRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7029,8 +7103,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The Quanmiao product supports iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Integration: Quanmiao Public Cloud iframe Customization Plan</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>公文检索</p>
+     * <p>Searches government document libraries based on complex conditions.</p>
      * 
      * @param request ListDocumentRetrieveRequest
      * @return ListDocumentRetrieveResponse
@@ -7041,8 +7118,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Quanmiao supports iframe integration. For details, see the <a href="https://help.aliyun.com/document_detail/3000990.html">Quanmiao Public Cloud iframe Customization Guide</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询PPT模板列表</p>
+     * <p>Lists the enterprise-specific PPT templates.</p>
      * 
      * @param request ListEnterprisePptTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7087,8 +7167,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Quanmiao supports iframe integration. For details, see the <a href="https://help.aliyun.com/document_detail/3000990.html">Quanmiao Public Cloud iframe Customization Guide</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询PPT模板列表</p>
+     * <p>Lists the enterprise-specific PPT templates.</p>
      * 
      * @param request ListEnterprisePptTemplatesRequest
      * @return ListEnterprisePptTemplatesResponse
@@ -7100,7 +7183,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新颖视角列表</p>
+     * <p>List of novel perspectives.</p>
      * 
      * @param request ListFreshViewPointsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7150,7 +7233,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新颖视角列表</p>
+     * <p>List of novel perspectives.</p>
      * 
      * @param request ListFreshViewPointsRequest
      * @return ListFreshViewPointsResponse
@@ -7162,7 +7245,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通用配置-列表</p>
+     * <p>Lists the general configurations.</p>
      * 
      * @param request ListGeneralConfigsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7202,7 +7285,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通用配置-列表</p>
+     * <p>Lists the general configurations.</p>
      * 
      * @param request ListGeneralConfigsRequest
      * @return ListGeneralConfigsResponse
@@ -7214,7 +7297,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>文档管理-列表。</p>
+     * <p>Retrieve a list of documents: Query the history of articles created in MiaoBi.</p>
      * 
      * @param request ListGeneratedContentsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7284,7 +7367,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>文档管理-列表。</p>
+     * <p>Retrieve a list of documents: Query the history of articles created in MiaoBi.</p>
      * 
      * @param request ListGeneratedContentsRequest
      * @return ListGeneratedContentsResponse
@@ -7296,7 +7379,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取分类的热点新闻</p>
+     * <p>Retrieves the list of trending topic hotspots.</p>
      * 
      * @param tmpReq ListHotNewsWithTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7352,7 +7435,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取分类的热点新闻</p>
+     * <p>Retrieves the list of trending topic hotspots.</p>
      * 
      * @param request ListHotNewsWithTypeRequest
      * @return ListHotNewsWithTypeResponse
@@ -7364,7 +7447,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取所有平台热榜源列表</p>
+     * <p>Retrieve the list of hot ranking sources for all platforms.</p>
      * 
      * @param request ListHotSourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7406,7 +7489,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取所有平台热榜源列表</p>
+     * <p>Retrieve the list of hot ranking sources for all platforms.</p>
      * 
      * @param request ListHotSourcesRequest
      * @return ListHotSourcesResponse
@@ -7418,7 +7501,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取热点事件列表</p>
+     * <p>Retrieves a list of trending topics.</p>
      * 
      * @param tmpReq ListHotTopicsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7506,7 +7589,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取热点事件列表</p>
+     * <p>Retrieves a list of trending topics.</p>
      * 
      * @param request ListHotTopicsRequest
      * @return ListHotTopicsResponse
@@ -7518,7 +7601,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>热门视角列表</p>
+     * <p>List of popular viewpoints.</p>
      * 
      * @param request ListHotViewPointsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7568,7 +7651,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>热门视角列表</p>
+     * <p>List of popular viewpoints.</p>
      * 
      * @param request ListHotViewPointsRequest
      * @return ListHotViewPointsResponse
@@ -7580,7 +7663,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获得干预项目数量列表</p>
+     * <p>Lists the number of intervention projects.</p>
      * 
      * @param request ListInterveneCntRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7622,7 +7705,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获得干预项目数量列表</p>
+     * <p>Lists the number of intervention projects.</p>
      * 
      * @param request ListInterveneCntRequest
      * @return ListInterveneCntResponse
@@ -7634,7 +7717,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获得导入任务列表</p>
+     * <p>Retrieve a list of import tasks.</p>
      * 
      * @param request ListInterveneImportTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7676,7 +7759,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获得导入任务列表</p>
+     * <p>Retrieve a list of import tasks.</p>
      * 
      * @param request ListInterveneImportTasksRequest
      * @return ListInterveneImportTasksResponse
@@ -7688,7 +7771,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获得干预规则列表</p>
+     * <p>Retrieves a list of intervention rules.</p>
      * 
      * @param request ListInterveneRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7730,7 +7813,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获得干预规则列表</p>
+     * <p>Retrieves a list of intervention rules.</p>
      * 
      * @param request ListInterveneRulesRequest
      * @return ListInterveneRulesResponse
@@ -7742,7 +7825,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获得干预项列表</p>
+     * <p>Retrieves the list of intervention items.</p>
      * 
      * @param request ListIntervenesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7796,7 +7879,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获得干预项列表</p>
+     * <p>Retrieves the list of intervention items.</p>
      * 
      * @param request ListIntervenesRequest
      * @return ListIntervenesResponse
@@ -7808,7 +7891,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询素材列表</p>
+     * <p>Retrieve the list of materials from the Material Library.</p>
      * 
      * @param tmpReq ListMaterialDocumentsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7912,7 +7995,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询素材列表</p>
+     * <p>Retrieve the list of materials from the Material Library.</p>
      * 
      * @param request ListMaterialDocumentsRequest
      * @return ListMaterialDocumentsResponse
@@ -7924,7 +8007,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取选题策划列表</p>
+     * <p>Retrieves a list of planning proposals.</p>
      * 
      * @param tmpReq ListPlanningProposalRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8004,7 +8087,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取选题策划列表</p>
+     * <p>Retrieves a list of planning proposals.</p>
      * 
      * @param request ListPlanningProposalRequest
      * @return ListPlanningProposalResponse
@@ -8016,7 +8099,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>PPT作品-列表</p>
+     * <p>Queries a list of PPT artifacts.</p>
      * 
      * @param request ListPptArtifactsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8066,7 +8149,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>PPT作品-列表</p>
+     * <p>Queries a list of PPT artifacts.</p>
      * 
      * @param request ListPptArtifactsRequest
      * @return ListPptArtifactsResponse
@@ -8078,7 +8161,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询PPT模板列表</p>
+     * <p>Queries a list of PowerPoint templates.</p>
      * 
      * @param request ListPptTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8136,7 +8219,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询PPT模板列表</p>
+     * <p>Queries a list of PowerPoint templates.</p>
      * 
      * @param request ListPptTemplatesRequest
      * @return ListPptTemplatesResponse
@@ -8148,7 +8231,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询搜索生成任务对话详情中数据列表</p>
+     * <p>Lists the dialogue data for a search generation task.</p>
      * 
      * @param request ListSearchTaskDialogueDatasRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8220,7 +8303,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询搜索生成任务对话详情中数据列表</p>
+     * <p>Lists the dialogue data for a search generation task.</p>
      * 
      * @param request ListSearchTaskDialogueDatasRequest
      * @return ListSearchTaskDialogueDatasResponse
@@ -8232,7 +8315,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询妙搜搜索生成任务详情列表</p>
+     * <p>Retrieves the task details for MiaoSou search generation tasks.</p>
      * 
      * @param request ListSearchTaskDialoguesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8276,7 +8359,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询妙搜搜索生成任务详情列表</p>
+     * <p>Retrieves the task details for MiaoSou search generation tasks.</p>
      * 
      * @param request ListSearchTaskDialoguesRequest
      * @return ListSearchTaskDialoguesResponse
@@ -8288,7 +8371,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询妙搜搜索生成历史任务列表</p>
+     * <p>Queries the list of historical tasks generated by Miaosou Search.</p>
      * 
      * @param tmpReq ListSearchTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8338,7 +8421,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询妙搜搜索生成历史任务列表</p>
+     * <p>Queries the list of historical tasks generated by Miaosou Search.</p>
      * 
      * @param request ListSearchTasksRequest
      * @return ListSearchTasksResponse
@@ -8349,8 +8432,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The Quanmiao product supports iframe embedding. For details, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Integration: Quanmiao Public Cloud iframe Customization Plan</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取文体学习分析结果列表</p>
+     * <p>Retrieves the list of style learning analysis results.</p>
      * 
      * @param request ListStyleLearningResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8391,8 +8477,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The Quanmiao product supports iframe embedding. For details, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Integration: Quanmiao Public Cloud iframe Customization Plan</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取文体学习分析结果列表</p>
+     * <p>Retrieves the list of style learning analysis results.</p>
      * 
      * @param request ListStyleLearningResultRequest
      * @return ListStyleLearningResultResponse
@@ -8404,7 +8493,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>时效性视角列表</p>
+     * <p>List of timeliness perspectives.</p>
      * 
      * @param request ListTimedViewAttitudeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8454,7 +8543,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>时效性视角列表</p>
+     * <p>List of timeliness perspectives.</p>
      * 
      * @param request ListTimedViewAttitudeRequest
      * @return ListTimedViewAttitudeResponse
@@ -8466,7 +8555,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取热点推荐事件</p>
+     * <p>Retrieve hot spot recommendation events.</p>
      * 
      * @param request ListTopicRecommendEventListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8508,7 +8597,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取热点推荐事件</p>
+     * <p>Retrieve hot spot recommendation events.</p>
      * 
      * @param request ListTopicRecommendEventListRequest
      * @return ListTopicRecommendEventListResponse
@@ -8520,7 +8609,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取主题事件推荐观点列表</p>
+     * <p>Retrieves recommended viewpoints for hot spot events.</p>
      * 
      * @param request ListTopicViewPointRecommendEventListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8566,7 +8655,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取主题事件推荐观点列表</p>
+     * <p>Retrieves recommended viewpoints for hot spot events.</p>
      * 
      * @param request ListTopicViewPointRecommendEventListRequest
      * @return ListTopicViewPointRecommendEventListResponse
@@ -8578,7 +8667,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取系统所有实例信息</p>
+     * <p>Retrieve version information for your purchased services.</p>
      * 
      * @param request ListVersionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8610,7 +8699,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取系统所有实例信息</p>
+     * <p>Retrieve version information for your purchased services.</p>
      * 
      * @param request ListVersionsRequest
      * @return ListVersionsResponse
@@ -8622,7 +8711,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>网友视角列表</p>
+     * <p>List of viewpoints from netizens.</p>
      * 
      * @param request ListWebReviewPointsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8672,7 +8761,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>网友视角列表</p>
+     * <p>List of viewpoints from netizens.</p>
      * 
      * @param request ListWebReviewPointsRequest
      * @return ListWebReviewPointsResponse
@@ -8684,7 +8773,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取文体列表</p>
+     * <p>Retrieves the list of writing styles.</p>
      * 
      * @param request ListWritingStylesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8730,7 +8819,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取文体列表</p>
+     * <p>Retrieves the list of writing styles.</p>
      * 
      * @param request ListWritingStylesRequest
      * @return ListWritingStylesResponse
@@ -8742,7 +8831,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据taskId查询异步任务状态</p>
+     * <p>Queries the details of submitted asynchronous task executions.</p>
      * 
      * @param request QueryAsyncTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8780,7 +8869,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据taskId查询异步任务状态</p>
+     * <p>Queries the details of submitted asynchronous task executions.</p>
      * 
      * @param request QueryAsyncTaskRequest
      * @return QueryAsyncTaskResponse
@@ -8792,7 +8881,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询审核结果</p>
+     * <p>Queries the results of an audit task.</p>
      * 
      * @param request QueryAuditTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8832,7 +8921,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询审核结果</p>
+     * <p>Queries the results of an audit task.</p>
      * 
      * @param request QueryAuditTaskRequest
      * @return QueryAuditTaskResponse
@@ -8844,10 +8933,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>根据任务ID查询视频审校结果，包含视频信息、分镜信息和审核结果</p>
+     * <p>Queries video audit results by task ID. The response includes video information, shot information, and audit results.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询视频审校结果</p>
+     * <p>Queries video audit results.</p>
      * 
      * @param request QueryVideoAuditResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8883,10 +8972,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>根据任务ID查询视频审校结果，包含视频信息、分镜信息和审核结果</p>
+     * <p>Queries video audit results by task ID. The response includes video information, shot information, and audit results.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询视频审校结果</p>
+     * <p>Queries video audit results.</p>
      * 
      * @param request QueryVideoAuditResultRequest
      * @return QueryVideoAuditResultResponse
@@ -8898,7 +8987,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>内容缩写</p>
+     * <p>Abbreviates the specified content.</p>
      * 
      * @param request RunAbbreviationContentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8938,7 +9027,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>内容缩写</p>
+     * <p>Abbreviates the specified content.</p>
      * 
      * @param request RunAbbreviationContentRequest
      * @return RunAbbreviationContentResponse
@@ -8949,8 +9038,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>QuanMiao products support iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">QuanMiao Public Cloud iframe Customization for Customer Onboarding</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>妙笔：AI助手写作</p>
+     * <p>MiaoBi: AI-assisted writing</p>
      * 
      * @param tmpReq RunAiHelperWritingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9011,8 +9103,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>QuanMiao products support iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">QuanMiao Public Cloud iframe Customization for Customer Onboarding</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>妙笔：AI助手写作</p>
+     * <p>MiaoBi: AI-assisted writing</p>
      * 
      * @param request RunAiHelperWritingRequest
      * @return RunAiHelperWritingResponse
@@ -9024,7 +9119,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>妙读生成书籍脑图</p>
+     * <p>Miaodu generates mind maps of books.</p>
      * 
      * @param request RunBookBrainmapRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9084,7 +9179,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>妙读生成书籍脑图</p>
+     * <p>Miaodu generates mind maps of books.</p>
      * 
      * @param request RunBookBrainmapRequest
      * @return RunBookBrainmapResponse
@@ -9096,7 +9191,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>书籍导读接口</p>
+     * <p>Extracts a summary, structured selling points, and hotwords from a book.</p>
      * 
      * @param request RunBookIntroductionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9148,7 +9243,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>书籍导读接口</p>
+     * <p>Extracts a summary, structured selling points, and hotwords from a book.</p>
      * 
      * @param request RunBookIntroductionRequest
      * @return RunBookIntroductionResponse
@@ -9160,7 +9255,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>书籍智能卡片接口</p>
+     * <p>A smart card interface for books.</p>
      * 
      * @param request RunBookSmartCardRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9200,7 +9295,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>书籍智能卡片接口</p>
+     * <p>A smart card interface for books.</p>
      * 
      * @param request RunBookSmartCardRequest
      * @return RunBookSmartCardResponse
@@ -9212,7 +9307,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>客户之声预测</p>
+     * <p>Predicts user comments for a specified article.</p>
      * 
      * @param tmpReq RunCommentGenerationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9302,7 +9397,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>客户之声预测</p>
+     * <p>Predicts user comments for a specified article.</p>
      * 
      * @param request RunCommentGenerationRequest
      * @return RunCommentGenerationResponse
@@ -9314,7 +9409,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>内容续写</p>
+     * <p>Continues generating content.</p>
      * 
      * @param request RunContinueContentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9350,7 +9445,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>内容续写</p>
+     * <p>Continues generating content.</p>
      * 
      * @param request RunContinueContentRequest
      * @return RunContinueContentResponse
@@ -9362,7 +9457,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>自定义热点话题分析</p>
+     * <p>Analyzes custom hot topics.</p>
      * 
      * @param request RunCustomHotTopicAnalysisRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9418,7 +9513,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>自定义热点话题分析</p>
+     * <p>Analyzes custom hot topics.</p>
      * 
      * @param request RunCustomHotTopicAnalysisRequest
      * @return RunCustomHotTopicAnalysisResponse
@@ -9430,7 +9525,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>自定义选题视角分析</p>
+     * <p>Perspective analysis of custom topics.</p>
      * 
      * @param request RunCustomHotTopicViewPointAnalysisRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9498,7 +9593,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>自定义选题视角分析</p>
+     * <p>Perspective analysis of custom topics.</p>
      * 
      * @param request RunCustomHotTopicViewPointAnalysisRequest
      * @return RunCustomHotTopicViewPointAnalysisResponse
@@ -9510,7 +9605,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>流式输出深度写作事件</p>
+     * <p>Queries deep writing events. The system returns detailed information about the task execution as a stream of Server-Sent Events (SSE).</p>
      * 
      * @param request RunDeepWritingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9550,7 +9645,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>流式输出深度写作事件</p>
+     * <p>Queries deep writing events. The system returns detailed information about the task execution as a stream of Server-Sent Events (SSE).</p>
      * 
      * @param request RunDeepWritingRequest
      * @return RunDeepWritingResponse
@@ -9562,7 +9657,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>妙读脑图生成接口</p>
+     * <p>Generate a three-level, multilingual mind map from an article or a book, with control over the number of second-level nodes and the word count of leaf nodes.</p>
      * 
      * @param request RunDocBrainmapRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9630,7 +9725,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>妙读脑图生成接口</p>
+     * <p>Generate a three-level, multilingual mind map from an article or a book, with control over the number of second-level nodes and the word count of leaf nodes.</p>
      * 
      * @param request RunDocBrainmapRequest
      * @return RunDocBrainmapResponse
@@ -9642,7 +9737,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>妙读文档导读接口</p>
+     * <p>Generates a summary for an article, video, or URL, including a full-text summary, key points, and a chapter overview (i.e., segmented content with summaries and abstracts for each segment). It also supports multilingual input and output. If the user only requires a full-text summary of an article, they can use the RunDocSummary API. For details, see <a href="https://help.aliyun.com/zh/model-studio/api-aimiaobi-2023-08-01-rundocsummary">https://help.aliyun.com/zh/model-studio/api-aimiaobi-2023-08-01-rundocsummary</a>.</p>
      * 
      * @param request RunDocIntroductionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9706,7 +9801,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>妙读文档导读接口</p>
+     * <p>Generates a summary for an article, video, or URL, including a full-text summary, key points, and a chapter overview (i.e., segmented content with summaries and abstracts for each segment). It also supports multilingual input and output. If the user only requires a full-text summary of an article, they can use the RunDocSummary API. For details, see <a href="https://help.aliyun.com/zh/model-studio/api-aimiaobi-2023-08-01-rundocsummary">https://help.aliyun.com/zh/model-studio/api-aimiaobi-2023-08-01-rundocsummary</a>.</p>
      * 
      * @param request RunDocIntroductionRequest
      * @return RunDocIntroductionResponse
@@ -9718,7 +9813,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>妙读问答接口</p>
+     * <p>Article Q&amp;A: For a natural language query, provide a textual answer within the specified article scope (accompanied by images if available) and display source attribution information.<br>Multimodal File Q&amp;A: For a natural language query, provide a textual answer within the specified multimodal file scope, along with relevant images, video segments, or text, and display source attribution information.</p>
      * 
      * @param tmpReq RunDocQaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9796,7 +9891,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>妙读问答接口</p>
+     * <p>Article Q&amp;A: For a natural language query, provide a textual answer within the specified article scope (accompanied by images if available) and display source attribution information.<br>Multimodal File Q&amp;A: For a natural language query, provide a textual answer within the specified multimodal file scope, along with relevant images, video segments, or text, and display source attribution information.</p>
      * 
      * @param request RunDocQaRequest
      * @return RunDocQaResponse
@@ -9808,7 +9903,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>文档智能卡片接口</p>
+     * <p>Automatically adds tags to selected text or a specified chat and generates a smart card note.</p>
      * 
      * @param request RunDocSmartCardRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9856,7 +9951,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>文档智能卡片接口</p>
+     * <p>Automatically adds tags to selected text or a specified chat and generates a smart card note.</p>
      * 
      * @param request RunDocSmartCardRequest
      * @return RunDocSmartCardResponse
@@ -9868,7 +9963,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>妙读文档总结摘要接口</p>
+     * <p>Generates a summary of an article, video, or URL—that is, a concise overview of the entire content. It also supports multilingual input and output.</p>
      * 
      * @param request RunDocSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9924,7 +10019,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>妙读文档总结摘要接口</p>
+     * <p>Generates a summary of an article, video, or URL—that is, a concise overview of the entire content. It also supports multilingual input and output.</p>
      * 
      * @param request RunDocSummaryRequest
      * @return RunDocSummaryResponse
@@ -9936,7 +10031,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>妙读文档翻译接口</p>
+     * <p>An API for document translation between English and Chinese.</p>
      * 
      * @param request RunDocTranslationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9992,7 +10087,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>妙读文档翻译接口</p>
+     * <p>An API for document translation between English and Chinese.</p>
      * 
      * @param request RunDocTranslationRequest
      * @return RunDocTranslationResponse
@@ -10004,7 +10099,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>文档改写</p>
+     * <p>Rewrites an article in a specified style.</p>
      * 
      * @param request RunDocWashingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10068,7 +10163,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>文档改写</p>
+     * <p>Rewrites an article in a specified style.</p>
      * 
      * @param request RunDocWashingRequest
      * @return RunDocWashingResponse
@@ -10080,7 +10175,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>内容扩写</p>
+     * <p>Expands content.</p>
      * 
      * @param request RunExpandContentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10120,7 +10215,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>内容扩写</p>
+     * <p>Expands content.</p>
      * 
      * @param request RunExpandContentRequest
      * @return RunExpandContentResponse
@@ -10132,7 +10227,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>妙读猜你想问接口</p>
+     * <p>Submits a query and returns several related queries.</p>
      * 
      * @param request RunGenerateQuestionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10180,7 +10275,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>妙读猜你想问接口</p>
+     * <p>Submits a query and returns several related queries.</p>
      * 
      * @param request RunGenerateQuestionsRequest
      * @return RunGenerateQuestionsResponse
@@ -10192,7 +10287,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>妙读文档关键词抽取接口</p>
+     * <p>Extract keywords from a specified document. Keywords are domain-specific professional terms or concepts that represent and identify a particular industry or field. They accurately describe and summarize the core content, key people, major events, or technical terms in that domain.</p>
      * 
      * @param request RunHotwordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10244,7 +10339,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>妙读文档关键词抽取接口</p>
+     * <p>Extract keywords from a specified document. Keywords are domain-specific professional terms or concepts that represent and identify a particular industry or field. They accurately describe and summarize the core content, key people, major events, or technical terms in that domain.</p>
      * 
      * @param request RunHotwordRequest
      * @return RunHotwordResponse
@@ -10256,7 +10351,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>AI妙笔-创作-抽取关键词</p>
+     * <p>Extracts and generates keywords using AMB.</p>
      * 
      * @param tmpReq RunKeywordsExtractionGenerationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10306,7 +10401,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>AI妙笔-创作-抽取关键词</p>
+     * <p>Extracts and generates keywords using AMB.</p>
      * 
      * @param request RunKeywordsExtractionGenerationRequest
      * @return RunKeywordsExtractionGenerationResponse
@@ -10318,7 +10413,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>文档批量导读</p>
+     * <p>Generate an outline-style summary for multiple documents, videos, or URLs. The summary includes a consolidated overview and key points. This operation supports multiple input and output languages.</p>
      * 
      * @param tmpReq RunMultiDocIntroductionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10376,7 +10471,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>文档批量导读</p>
+     * <p>Generate an outline-style summary for multiple documents, videos, or URLs. The summary includes a consolidated overview and key points. This operation supports multiple input and output languages.</p>
      * 
      * @param request RunMultiDocIntroductionRequest
      * @return RunMultiDocIntroductionResponse
@@ -10387,8 +10482,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Instructions:</p>
+     * <ul>
+     * <li>This API uses the HTTP Server-Sent Events (SSE) protocol.</li>
+     * <li>You cannot test this API directly in the OpenAPI Portal because the portal is not compatible with the SSE inference protocol. For examples of how to call the API using the SDK for Java or Python, see <a href="https://help.aliyun.com/en/model-studio/ppt-generation-best-practices">PPT Generation Best practices</a>.</li>
+     * <li>To obtain the latest version of the asynchronous Java SDK, <a href="https://api.aliyun.com/api-tools/sdk/AiMiaoBi?spm=a2c4g.11186623.0.0.4cd3170d7rccDC%5C&version=2023-08-01%5C&language=java-async-tea%5C&tab=primer-doc">click this link</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>流式输出PPT大纲</p>
+     * <p>Generates a PowerPoint outline.</p>
      * 
      * @param request RunPptOutlineGenerationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10427,8 +10530,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Instructions:</p>
+     * <ul>
+     * <li>This API uses the HTTP Server-Sent Events (SSE) protocol.</li>
+     * <li>You cannot test this API directly in the OpenAPI Portal because the portal is not compatible with the SSE inference protocol. For examples of how to call the API using the SDK for Java or Python, see <a href="https://help.aliyun.com/en/model-studio/ppt-generation-best-practices">PPT Generation Best practices</a>.</li>
+     * <li>To obtain the latest version of the asynchronous Java SDK, <a href="https://api.aliyun.com/api-tools/sdk/AiMiaoBi?spm=a2c4g.11186623.0.0.4cd3170d7rccDC%5C&version=2023-08-01%5C&language=java-async-tea%5C&tab=primer-doc">click this link</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>流式输出PPT大纲</p>
+     * <p>Generates a PowerPoint outline.</p>
      * 
      * @param request RunPptOutlineGenerationRequest
      * @return RunPptOutlineGenerationResponse
@@ -10439,8 +10550,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Access Instructions:</h3>
+     * <ul>
+     * <li>The OpenAPI portal is incompatible with the Server-Sent Events (SSE) inference protocol. Therefore, you cannot directly debug this operation. For an example of how to call the API using an SDK, see <a href="https://help.aliyun.com/zh/model-studio/best-practices-for-miaobi-api?spm=a2c4g.11186623.help-menu-2400256.d_1_12_6_2_1_0.39892421FntuI2%5C&scm=20140722.H_2844289._.OR_help-T_cn~zh-V_1">Miaobi Best Practices</a>.</li>
+     * <li>Click this <a href="https://api.aliyun.com/api-tools/sdk/AiMiaoBi?version=2023-08-01%5C&language=java-async-tea%5C&tab=primer-doc">link</a> to download the latest version of the Java asynchronous SDK.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>快速写作</p>
+     * <p>Enter writing instructions to quickly generate content.</p>
      * 
      * @param tmpReq RunQuickWritingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10497,8 +10615,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Access Instructions:</h3>
+     * <ul>
+     * <li>The OpenAPI portal is incompatible with the Server-Sent Events (SSE) inference protocol. Therefore, you cannot directly debug this operation. For an example of how to call the API using an SDK, see <a href="https://help.aliyun.com/zh/model-studio/best-practices-for-miaobi-api?spm=a2c4g.11186623.help-menu-2400256.d_1_12_6_2_1_0.39892421FntuI2%5C&scm=20140722.H_2844289._.OR_help-T_cn~zh-V_1">Miaobi Best Practices</a>.</li>
+     * <li>Click this <a href="https://api.aliyun.com/api-tools/sdk/AiMiaoBi?version=2023-08-01%5C&language=java-async-tea%5C&tab=primer-doc">link</a> to download the latest version of the Java asynchronous SDK.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>快速写作</p>
+     * <p>Enter writing instructions to quickly generate content.</p>
      * 
      * @param request RunQuickWritingRequest
      * @return RunQuickWritingResponse
@@ -10509,8 +10634,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Integration notes:</h3>
+     * <ul>
+     * <li>This API uses the HTTP Server-Sent Events (SSE) protocol.</li>
+     * <li>The OpenAPI console does not support SSE inference protocols and cannot be used for direct testing. For SDK-based integration examples (Java and Python), see the <a href="https://help.aliyun.com/zh/model-studio/user-guide/best-practices-for-miaosou-api/?spm=a2c4g.11186623.help-menu-2400256.d_1_3_3_2_1_2.42a64a34eIyBhn">Miaosou Best Practices</a> documentation.</li>
+     * <li>To obtain the latest version of the Java asynchronous SDK, click <a href="https://api.aliyun.com/api-tools/sdk/AiMiaoBi?version=2023-08-01%5C&language=java-async-tea%5C&tab=primer-doc">this link</a>.</li>
+     * </ul>
+     * <h3>Data sources for search:</h3>
+     * <p>Supports three dataset types. See the <a href="https://help.aliyun.com/zh/model-studio/user-guide/best-practices-for-miaosou-api/?spm=a2c4g.11186623.help-menu-2400256.d_1_3_3_2_1_2.42a64a34eIyBhn">Miaosou Best Practices</a> documentation for details.</p>
+     * <ul>
+     * <li>Built-in “Internet search” dataset: Supports open-domain text, images, and video (video is not yet available) from the Internet.</li>
+     * <li>Semantic (RAG) dataset: Manages enterprise private knowledge bases and supports text, images, video, and voice (voice is not yet available).</li>
+     * <li>Third-party API dataset: Integrates directly with your own enterprise search APIs.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>AI妙搜-智能搜索生成</p>
+     * <p>AI Miaosou – Intelligent Search Generation: This API delivers the search and generation capabilities of the Miaosou homepage. It supports general search and media asset search, along with features such as user query clarification, multimodal knowledge search, and multi-agent generation.
+     * – General Search: Performs semantic retrieval on centralized knowledge data and applies multi-agent post-processing to the results, such as summary generation, abstracting, and timeline summarization.
+     * – Media Asset Search: Conducts an exhaustive full-text search to retrieve highly relevant knowledge and supports multi-agent post-processing, such as clustering and news extraction.</p>
      * 
      * @param tmpReq RunSearchGenerationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10579,8 +10721,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Integration notes:</h3>
+     * <ul>
+     * <li>This API uses the HTTP Server-Sent Events (SSE) protocol.</li>
+     * <li>The OpenAPI console does not support SSE inference protocols and cannot be used for direct testing. For SDK-based integration examples (Java and Python), see the <a href="https://help.aliyun.com/zh/model-studio/user-guide/best-practices-for-miaosou-api/?spm=a2c4g.11186623.help-menu-2400256.d_1_3_3_2_1_2.42a64a34eIyBhn">Miaosou Best Practices</a> documentation.</li>
+     * <li>To obtain the latest version of the Java asynchronous SDK, click <a href="https://api.aliyun.com/api-tools/sdk/AiMiaoBi?version=2023-08-01%5C&language=java-async-tea%5C&tab=primer-doc">this link</a>.</li>
+     * </ul>
+     * <h3>Data sources for search:</h3>
+     * <p>Supports three dataset types. See the <a href="https://help.aliyun.com/zh/model-studio/user-guide/best-practices-for-miaosou-api/?spm=a2c4g.11186623.help-menu-2400256.d_1_3_3_2_1_2.42a64a34eIyBhn">Miaosou Best Practices</a> documentation for details.</p>
+     * <ul>
+     * <li>Built-in “Internet search” dataset: Supports open-domain text, images, and video (video is not yet available) from the Internet.</li>
+     * <li>Semantic (RAG) dataset: Manages enterprise private knowledge bases and supports text, images, video, and voice (voice is not yet available).</li>
+     * <li>Third-party API dataset: Integrates directly with your own enterprise search APIs.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>AI妙搜-智能搜索生成</p>
+     * <p>AI Miaosou – Intelligent Search Generation: This API delivers the search and generation capabilities of the Miaosou homepage. It supports general search and media asset search, along with features such as user query clarification, multimodal knowledge search, and multi-agent generation.
+     * – General Search: Performs semantic retrieval on centralized knowledge data and applies multi-agent post-processing to the results, such as summary generation, abstracting, and timeline summarization.
+     * – Media Asset Search: Conducts an exhaustive full-text search to retrieve highly relevant knowledge and supports multi-agent post-processing, such as clustering and news extraction.</p>
      * 
      * @param request RunSearchGenerationRequest
      * @return RunSearchGenerationResponse
@@ -10592,7 +10751,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>妙搜-文搜文</p>
+     * <p>Miao Search enables text-to-text search.</p>
      * 
      * @param tmpReq RunSearchSimilarArticlesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10646,7 +10805,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>妙搜-文搜文</p>
+     * <p>Miao Search enables text-to-text search.</p>
      * 
      * @param request RunSearchSimilarArticlesRequest
      * @return RunSearchSimilarArticlesResponse
@@ -10657,8 +10816,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The Quanmiao product supports iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Onboarding: Quanmiao Public Cloud iframe Customization</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创作-分步骤写作</p>
+     * <p>Writes content in a step-by-step pattern using an outline and summaries.</p>
      * 
      * @param tmpReq RunStepByStepWritingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10723,8 +10885,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The Quanmiao product supports iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Onboarding: Quanmiao Public Cloud iframe Customization</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创作-分步骤写作</p>
+     * <p>Writes content in a step-by-step pattern using an outline and summaries.</p>
      * 
      * @param request RunStepByStepWritingRequest
      * @return RunStepByStepWritingResponse
@@ -10735,8 +10900,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Quanmiao products support iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Integration: Quanmiao Public Cloud iframe Customization Solution</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>内容特点分析</p>
+     * <p>Analyzes the stylistic features of content.</p>
      * 
      * @param tmpReq RunStyleFeatureAnalysisRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10785,8 +10953,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Quanmiao products support iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Integration: Quanmiao Public Cloud iframe Customization Solution</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>内容特点分析</p>
+     * <p>Analyzes the stylistic features of content.</p>
      * 
      * @param request RunStyleFeatureAnalysisRequest
      * @return RunStyleFeatureAnalysisResponse
@@ -10798,7 +10969,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>内容摘要生成</p>
+     * <p>Generates a summary of content.</p>
      * 
      * @param request RunSummaryGenerateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10838,7 +11009,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>内容摘要生成</p>
+     * <p>Generates a summary of content.</p>
      * 
      * @param request RunSummaryGenerateRequest
      * @return RunSummaryGenerateResponse
@@ -10850,7 +11021,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创作-文本润色</p>
+     * <p>Polishes the specified text.</p>
      * 
      * @param request RunTextPolishingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10898,7 +11069,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创作-文本润色</p>
+     * <p>Polishes the specified text.</p>
      * 
      * @param request RunTextPolishingRequest
      * @return RunTextPolishingResponse
@@ -10910,7 +11081,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>妙笔：标题生成</p>
+     * <p>Miaobi generates titles.</p>
      * 
      * @param tmpReq RunTitleGenerationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10968,7 +11139,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>妙笔：标题生成</p>
+     * <p>Miaobi generates titles.</p>
      * 
      * @param request RunTitleGenerationRequest
      * @return RunTitleGenerationResponse
@@ -10979,8 +11150,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>All Miao products support iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Integration: Miao Public Cloud iFrame Customization Plan</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>妙策选题策划聚合</p>
+     * <p>Selects and aggregates topics for MiaoCe.</p>
      * 
      * @param tmpReq RunTopicSelectionMergeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11025,8 +11199,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>All Miao products support iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Integration: Miao Public Cloud iFrame Customization Plan</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>妙策选题策划聚合</p>
+     * <p>Selects and aggregates topics for MiaoCe.</p>
      * 
      * @param request RunTopicSelectionMergeRequest
      * @return RunTopicSelectionMergeResponse
@@ -11038,7 +11215,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>AI妙笔-创作-中英文翻译</p>
+     * <p>Translates text for content creation using AMB.</p>
      * 
      * @param tmpReq RunTranslateGenerationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11088,7 +11265,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>AI妙笔-创作-中英文翻译</p>
+     * <p>Translates text for content creation using AMB.</p>
      * 
      * @param request RunTranslateGenerationRequest
      * @return RunTranslateGenerationResponse
@@ -11100,7 +11277,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>AI生成视频剪辑脚本</p>
+     * <p>Generates video clip scripts using AI.</p>
      * 
      * @param request RunVideoScriptGenerateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11152,7 +11329,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>AI生成视频剪辑脚本</p>
+     * <p>Generates video clip scripts using AI.</p>
      * 
      * @param request RunVideoScriptGenerateRequest
      * @return RunVideoScriptGenerateResponse
@@ -11164,7 +11341,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>AI妙笔-创作-文风改写</p>
+     * <p>Calls AMB to rewrite text in a new tone.</p>
      * 
      * @param tmpReq RunWriteToneGenerationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11214,7 +11391,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>AI妙笔-创作-文风改写</p>
+     * <p>Calls AMB to rewrite text in a new tone.</p>
      * 
      * @param request RunWriteToneGenerationRequest
      * @return RunWriteToneGenerationResponse
@@ -11225,8 +11402,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API is deprecated. For more information, see <a href="https://help.aliyun.com/document_detail/2922606.html">RunWritingV2</a>.
+     * The Quanmiao product supports iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer integration: Quanmiao Public Cloud iframe customization</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>直接写作</p>
+     * <p>Direct writing.</p>
      * 
      * @param tmpReq RunWritingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11291,8 +11472,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API is deprecated. For more information, see <a href="https://help.aliyun.com/document_detail/2922606.html">RunWritingV2</a>.
+     * The Quanmiao product supports iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer integration: Quanmiao Public Cloud iframe customization</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>直接写作</p>
+     * <p>Direct writing.</p>
      * 
      * @param request RunWritingRequest
      * @return RunWritingResponse
@@ -11303,8 +11488,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>For instructions on embedding Quanmiao products using an iframe, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer integration_Quanmiao public cloud iframe customized solution</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>直接写作</p>
+     * <p>AI writing</p>
      * 
      * @param tmpReq RunWritingV2Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -11453,8 +11641,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>For instructions on embedding Quanmiao products using an iframe, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer integration_Quanmiao public cloud iframe customized solution</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>直接写作</p>
+     * <p>AI writing</p>
      * 
      * @param request RunWritingV2Request
      * @return RunWritingV2Response
@@ -11466,7 +11657,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>保存自定义文本</p>
+     * <p>Saves custom text.</p>
      * 
      * @param request SaveCustomTextRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11512,7 +11703,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>保存自定义文本</p>
+     * <p>Saves custom text.</p>
      * 
      * @param request SaveCustomTextRequest
      * @return SaveCustomTextResponse
@@ -11524,7 +11715,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>保存用户的信源配置</p>
+     * <p>Saves the data source configuration for content creation and general search.</p>
      * 
      * @param tmpReq SaveDataSourceOrderConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11576,7 +11767,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>保存用户的信源配置</p>
+     * <p>Saves the data source configuration for content creation and general search.</p>
      * 
      * @param request SaveDataSourceOrderConfigRequest
      * @return SaveDataSourceOrderConfigResponse
@@ -11588,7 +11779,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>保存素材</p>
+     * <p>Save material: Save material to the Material Library.</p>
      * 
      * @param tmpReq SaveMaterialDocumentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11680,7 +11871,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>保存素材</p>
+     * <p>Save material: Save material to the Material Library.</p>
      * 
      * @param request SaveMaterialDocumentRequest
      * @return SaveMaterialDocumentResponse
@@ -11692,7 +11883,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>配置oss访问参数</p>
+     * <p>Configuration: Cloud storage parameter settings</p>
      * 
      * @param request SaveOrUpdateOssConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11732,7 +11923,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>配置oss访问参数</p>
+     * <p>Configuration: Cloud storage parameter settings</p>
      * 
      * @param request SaveOrUpdateOssConfigRequest
      * @return SaveOrUpdateOssConfigResponse
@@ -11744,7 +11935,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>保存自定义文体</p>
+     * <p>Saves a custom writing style.</p>
      * 
      * @param tmpReq SaveStyleLearningResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11810,7 +12001,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>保存自定义文体</p>
+     * <p>Saves a custom writing style.</p>
      * 
      * @param request SaveStyleLearningResultRequest
      * @return SaveStyleLearningResultResponse
@@ -11822,7 +12013,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>搜索数据集文档</p>
+     * <p>Searches documents in a data source.</p>
      * 
      * @param tmpReq SearchDatasetDocumentsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11948,7 +12139,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>搜索数据集文档</p>
+     * <p>Searches documents in a data source.</p>
      * 
      * @param request SearchDatasetDocumentsRequest
      * @return SearchDatasetDocumentsResponse
@@ -11960,7 +12151,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新闻检索</p>
+     * <p>Searches for news based on your input. This feature is currently limited to web search.</p>
      * 
      * @param tmpReq SearchNewsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12024,7 +12215,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新闻检索</p>
+     * <p>Searches for news based on your input. This feature is currently limited to web search.</p>
      * 
      * @param request SearchNewsRequest
      * @return SearchNewsResponse
@@ -12036,7 +12227,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交异步任务</p>
+     * <p>Executes predefined asynchronous tasks.</p>
      * 
      * @param request SubmitAsyncTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12086,7 +12277,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交异步任务</p>
+     * <p>Executes predefined asynchronous tasks.</p>
      * 
      * @param request SubmitAsyncTaskRequest
      * @return SubmitAsyncTaskResponse
@@ -12097,8 +12288,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>All Model Studio products support iframe embedding. For details, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Integration: Model Studio Public Cloud iFrame Customization Guide</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>妙笔为您提供了与公有云“智能审校”模块中相同的上传自定义规则库的功能。由于鉴权限制，用户需要开通阿里云 OSS 服务后，将自定义规则库文件上传到 OSS 中，再使用该文件的 fileKey 作为入参才能顺利调用本接口。该接口在被调用后，会对用户的自定义规则库进行结构化处理，并生成一个 xlsx 格式的结构化解析结果。您可以调用 GetAuditNoteProcessingStatus 接口查询结构化处理状态，也可以调用 DownloadAuditNote 接口获取结构化之后的规则库。接口功能正在迭代中，预计会在未来使用可访问的文件 URL 作为入参。</p>
+     * <p>Model Studio provides the same feature as the Intelligent Proofreading module in Alibaba Cloud public cloud: uploading a custom rule library. Due to authentication restrictions, you must pass the file key (FileKey) of your custom rule library file as an input parameter to successfully call this API. After you call this API, Model Studio processes your custom rule library and returns a structured result in XLSX format. You can call GetAuditNoteProcessingStatus to check the processing status or call DownloadAuditNote to download the processed rule library. This API is under active development and will eventually accept a publicly accessible file URL instead of a FileKey.</p>
      * 
      * @param request SubmitAuditNoteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12137,8 +12331,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>All Model Studio products support iframe embedding. For details, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer Integration: Model Studio Public Cloud iFrame Customization Guide</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>妙笔为您提供了与公有云“智能审校”模块中相同的上传自定义规则库的功能。由于鉴权限制，用户需要开通阿里云 OSS 服务后，将自定义规则库文件上传到 OSS 中，再使用该文件的 fileKey 作为入参才能顺利调用本接口。该接口在被调用后，会对用户的自定义规则库进行结构化处理，并生成一个 xlsx 格式的结构化解析结果。您可以调用 GetAuditNoteProcessingStatus 接口查询结构化处理状态，也可以调用 DownloadAuditNote 接口获取结构化之后的规则库。接口功能正在迭代中，预计会在未来使用可访问的文件 URL 作为入参。</p>
+     * <p>Model Studio provides the same feature as the Intelligent Proofreading module in Alibaba Cloud public cloud: uploading a custom rule library. Due to authentication restrictions, you must pass the file key (FileKey) of your custom rule library file as an input parameter to successfully call this API. After you call this API, Model Studio processes your custom rule library and returns a structured result in XLSX format. You can call GetAuditNoteProcessingStatus to check the processing status or call DownloadAuditNote to download the processed rule library. This API is under active development and will eventually accept a publicly accessible file URL instead of a FileKey.</p>
      * 
      * @param request SubmitAuditNoteRequest
      * @return SubmitAuditNoteResponse
@@ -12149,8 +12346,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The Quanmiao product supports iframe embedding. For more information, see <a href="https://alidocs.dingtalk.com/i/nodes/m9bN7RYPWdyrPBREcyM6jDQ2VZd1wyK0?cid=116617178%3A898142682%5C&utm_source=im%5C&utm_scene=team_space%5C&iframeQuery=utm_medium%3Dim_card%26utm_source%3Dim%5C&utm_medium=im_card%5C&corpId=dingd8e1123006514592">Customer Integration: Quanmiao Public Cloud iframe Customization Plan</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>提交审核任务</p>
+     * <p>Submits an audit task.</p>
      * 
      * @param request SubmitAuditTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12197,8 +12397,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The Quanmiao product supports iframe embedding. For more information, see <a href="https://alidocs.dingtalk.com/i/nodes/m9bN7RYPWdyrPBREcyM6jDQ2VZd1wyK0?cid=116617178%3A898142682%5C&utm_source=im%5C&utm_scene=team_space%5C&iframeQuery=utm_medium%3Dim_card%26utm_source%3Dim%5C&utm_medium=im_card%5C&corpId=dingd8e1123006514592">Customer Integration: Quanmiao Public Cloud iframe Customization Plan</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>提交审核任务</p>
+     * <p>Submits an audit task.</p>
      * 
      * @param request SubmitAuditTaskRequest
      * @return SubmitAuditTaskResponse
@@ -12210,7 +12413,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交自定义播报单任务</p>
+     * <p>You can submit a custom broadcast list job.</p>
      * 
      * @param tmpReq SubmitCustomHotTopicBroadcastJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12264,7 +12467,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交自定义播报单任务</p>
+     * <p>You can submit a custom broadcast list job.</p>
      * 
      * @param request SubmitCustomHotTopicBroadcastJobRequest
      * @return SubmitCustomHotTopicBroadcastJobResponse
@@ -12276,7 +12479,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>从自定义数据源提交选题热点分析</p>
+     * <p>Submit topic trend analysis using a custom data source</p>
      * 
      * @param tmpReq SubmitCustomSourceTopicAnalysisRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12350,7 +12553,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>从自定义数据源提交选题热点分析</p>
+     * <p>Submit topic trend analysis using a custom data source</p>
      * 
      * @param request SubmitCustomSourceTopicAnalysisRequest
      * @return SubmitCustomSourceTopicAnalysisResponse
@@ -12362,7 +12565,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交自定义热点选题视角分析任务</p>
+     * <p>Submits a custom analysis task to analyze hot topic perspectives.</p>
      * 
      * @param tmpReq SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12414,7 +12617,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交自定义热点选题视角分析任务</p>
+     * <p>Submits a custom analysis task to analyze hot topic perspectives.</p>
      * 
      * @param request SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequest
      * @return SubmitCustomTopicSelectionPerspectiveAnalysisTaskResponse
@@ -12426,7 +12629,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交深度写作任务</p>
+     * <p>You can submit a deep writing task. You can provide information such as questions, instructions, and attachments, based on the topic you want to research or analyze. The system schedules and executes this task in the background.</p>
      * 
      * @param tmpReq SubmitDeepWriteTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12486,7 +12689,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交深度写作任务</p>
+     * <p>You can submit a deep writing task. You can provide information such as questions, instructions, and attachments, based on the topic you want to research or analyze. The system schedules and executes this task in the background.</p>
      * 
      * @param request SubmitDeepWriteTaskRequest
      * @return SubmitDeepWriteTaskResponse
@@ -12498,7 +12701,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交文档聚合任务</p>
+     * <p>Submits a content clustering task.</p>
      * 
      * @param tmpReq SubmitDocClusterTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12554,7 +12757,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交文档聚合任务</p>
+     * <p>Submits a content clustering task.</p>
      * 
      * @param request SubmitDocClusterTaskRequest
      * @return SubmitDocClusterTaskResponse
@@ -12566,7 +12769,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交VOC异步任务</p>
+     * <p>Submits a Voice of the Customer (VOC) asynchronous task.</p>
      * 
      * @param tmpReq SubmitEnterpriseVocAnalysisTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12652,7 +12855,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交VOC异步任务</p>
+     * <p>Submits a Voice of the Customer (VOC) asynchronous task.</p>
      * 
      * @param request SubmitEnterpriseVocAnalysisTaskRequest
      * @return SubmitEnterpriseVocAnalysisTaskResponse
@@ -12664,7 +12867,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导出词库任务</p>
+     * <p>Export task for a thesaurus</p>
      * 
      * @param request SubmitExportTermsTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12700,7 +12903,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导出词库任务</p>
+     * <p>Export task for a thesaurus</p>
      * 
      * @param request SubmitExportTermsTaskRequest
      * @return SubmitExportTermsTaskResponse
@@ -12712,7 +12915,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>妙笔为您提供了新的事实性审核能力，在联网搜索并判断正误的前提下，还支持用户自定义配置搜索来源 URL。</p>
+     * <p>MiaoBi provides a factuality audit capability that verifies facts using web search and supports custom configuration of search source URLs.</p>
      * 
      * @param request SubmitFactAuditUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12748,7 +12951,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>妙笔为您提供了新的事实性审核能力，在联网搜索并判断正误的前提下，还支持用户自定义配置搜索来源 URL。</p>
+     * <p>MiaoBi provides a factuality audit capability that verifies facts using web search and supports custom configuration of search source URLs.</p>
      * 
      * @param request SubmitFactAuditUrlRequest
      * @return SubmitFactAuditUrlResponse
@@ -12760,7 +12963,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交导入自定义词库任务</p>
+     * <p>Submit a custom dictionary import task.</p>
      * 
      * @param request SubmitImportTermsTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12800,7 +13003,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交导入自定义词库任务</p>
+     * <p>Submit a custom dictionary import task.</p>
      * 
      * @param request SubmitImportTermsTaskRequest
      * @return SubmitImportTermsTaskResponse
@@ -12861,8 +13064,371 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The Quanmiao product supports iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer integration: Quanmiao public cloud iframe customization guide</a>.</p>
+     * <h1>Supported audit types</h1>
+     * <h2>Audit category overview</h2>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Audit category</th>
+     * <th>Description</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>Content accuracy</td>
+     * <td>Errors due to phonetic or visual similarity; punctuation errors; misuse of Chinese structural particles (的/地/得); inappropriate word choice or syntax errors; incorrect personal names; incorrect place names; incorrect references; errors in proper nouns or terminology</td>
+     * </tr>
+     * <tr>
+     * <td>Formatting issues</td>
+     * <td>Inconsistent capitalization; numeric errors; nonstandard units of measurement; use of traditional Chinese characters</td>
+     * </tr>
+     * <tr>
+     * <td>Content structure issues</td>
+     * <td>Redundant text; repeated segments; logical contradictions; unfilled placeholders</td>
+     * </tr>
+     * <tr>
+     * <td>Political sensitivity issues</td>
+     * <td>Sensitive content or directional risks; name or sorting errors; conventional phrasing errors; nonstandard institutional names; misquoting important speeches; references to disgraced officials; mismatched name-title pairings; incorrect title expressions</td>
+     * </tr>
+     * <tr>
+     * <td>Security and compliance issues</td>
+     * <td>Violence or terrorism; pornography; prohibited content; insults; disgraced celebrities; personal privacy violations; reporting standard violations</td>
+     * </tr>
+     * <tr>
+     * <td>Legal errors</td>
+     * <td>Incorrect citation of laws and regulations; errors in legal provisions</td>
+     * </tr>
+     * <tr>
+     * <td>Other domain-specific errors</td>
+     * <td>Violations of advertising law; financial information errors; scientific or technical term errors</td>
+     * </tr>
+     * <tr>
+     * <td>Factuality check</td>
+     * <td>Factuality verification: correct or incorrect items</td>
+     * </tr>
+     * <tr>
+     * <td>Image audit</td>
+     * <td>Image content moderation</td>
+     * </tr>
+     * <tr>
+     * <td>Custom word library</td>
+     * <td>Custom word library audit</td>
+     * </tr>
+     * <tr>
+     * <td>Rule library audit</td>
+     * <td>Rule library audit</td>
+     * </tr>
+     * <tr>
+     * <td>English proofreading</td>
+     * <td>Terminology standardization; verb tense accuracy; punctuation and quotation marks; spelling and language variants; sentence structure and clarity; numeric and percentage formatting; standardized phrasing</td>
+     * </tr>
+     * </tbody></table>
+     * <hr>
+     * <h2>Sub-audit code values</h2>
+     * <h3>1. Content accuracy</h3>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Description</th>
+     * <th>Code</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>Phonetic or visual similarity errors</td>
+     * <td>PhoneticSimilarError</td>
+     * </tr>
+     * <tr>
+     * <td>Punctuation errors</td>
+     * <td>PunctuationError</td>
+     * </tr>
+     * <tr>
+     * <td>Misuse of Chinese structural particles (的/地/得)</td>
+     * <td>ParticleUsageError</td>
+     * </tr>
+     * <tr>
+     * <td>Inappropriate word choice or syntax errors</td>
+     * <td>WordError</td>
+     * </tr>
+     * <tr>
+     * <td>Incorrect personal names</td>
+     * <td>PersonNameError</td>
+     * </tr>
+     * <tr>
+     * <td>Incorrect place names</td>
+     * <td>LocationError</td>
+     * </tr>
+     * <tr>
+     * <td>Incorrect references</td>
+     * <td>ReferenceError</td>
+     * </tr>
+     * <tr>
+     * <td>Errors in proper nouns or terminology</td>
+     * <td>NounItemError</td>
+     * </tr>
+     * </tbody></table>
+     * <h3>2. Formatting issues</h3>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Description</th>
+     * <th>Code</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>Inconsistent capitalization</td>
+     * <td>CapitalizationError</td>
+     * </tr>
+     * <tr>
+     * <td>Numeric errors</td>
+     * <td>NumberError</td>
+     * </tr>
+     * <tr>
+     * <td>Nonstandard units of measurement</td>
+     * <td>UnitError</td>
+     * </tr>
+     * <tr>
+     * <td>Use of traditional Chinese characters</td>
+     * <td>TraditionalChineseError</td>
+     * </tr>
+     * </tbody></table>
+     * <h3>3. Content structure issues</h3>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Description</th>
+     * <th>Code</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>Redundant text</td>
+     * <td>WordRedundancy</td>
+     * </tr>
+     * <tr>
+     * <td>Repeated segments</td>
+     * <td>DuplicateError</td>
+     * </tr>
+     * <tr>
+     * <td>Logical contradictions</td>
+     * <td>LogicContradiction</td>
+     * </tr>
+     * <tr>
+     * <td>Unfilled placeholders</td>
+     * <td>PlaceholderNotFilled</td>
+     * </tr>
+     * </tbody></table>
+     * <h3>4. Political sensitivity issues</h3>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Description</th>
+     * <th>Code</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>Sensitive content or directional risks</td>
+     * <td>SensitiveContentRisk</td>
+     * </tr>
+     * <tr>
+     * <td>Name or sorting errors</td>
+     * <td>NameOrderError</td>
+     * </tr>
+     * <tr>
+     * <td>Conventional phrasing errors</td>
+     * <td>ConventionalExpressionError</td>
+     * </tr>
+     * <tr>
+     * <td>Nonstandard institutional names</td>
+     * <td>DepartmentNameError</td>
+     * </tr>
+     * <tr>
+     * <td>Misquoting important speeches</td>
+     * <td>ImportantSpeechError</td>
+     * </tr>
+     * <tr>
+     * <td>References to disgraced officials</td>
+     * <td>FallenOfficialError</td>
+     * </tr>
+     * <tr>
+     * <td>Mismatched name-title pairings</td>
+     * <td>LeaderTitleMatchError</td>
+     * </tr>
+     * <tr>
+     * <td>Incorrect title expressions</td>
+     * <td>TitleError</td>
+     * </tr>
+     * </tbody></table>
+     * <h3>5. Security and compliance issues</h3>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Description</th>
+     * <th>Code</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>Violence or terrorism</td>
+     * <td>ViolenceTerrorismError</td>
+     * </tr>
+     * <tr>
+     * <td>Pornography</td>
+     * <td>PornographyError</td>
+     * </tr>
+     * <tr>
+     * <td>Prohibited content</td>
+     * <td>ProhibitedContentError</td>
+     * </tr>
+     * <tr>
+     * <td>Insults</td>
+     * <td>InsultError</td>
+     * </tr>
+     * <tr>
+     * <td>Disgraced celebrities</td>
+     * <td>DisgracedArtistError</td>
+     * </tr>
+     * <tr>
+     * <td>Personal privacy violations</td>
+     * <td>PersonalPrivacyError</td>
+     * </tr>
+     * <tr>
+     * <td>Reporting standard violations</td>
+     * <td>ReportingStandardError</td>
+     * </tr>
+     * </tbody></table>
+     * <h3>6. Legal errors</h3>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Description</th>
+     * <th>Code</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>Incorrect citation of laws and regulations</td>
+     * <td>LegalReferenceError</td>
+     * </tr>
+     * <tr>
+     * <td>Errors in legal provisions</td>
+     * <td>LegalProvisionsError</td>
+     * </tr>
+     * </tbody></table>
+     * <h3>7. Other domain-specific errors</h3>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Description</th>
+     * <th>Code</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>Violations of advertising law</td>
+     * <td>AdvertisingProhibitedWordsError</td>
+     * </tr>
+     * <tr>
+     * <td>Financial information errors</td>
+     * <td>FinancialInformationError</td>
+     * </tr>
+     * <tr>
+     * <td>Scientific or technical term errors</td>
+     * <td>TechnicalTermError</td>
+     * </tr>
+     * </tbody></table>
+     * <h3>8. Factuality check</h3>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Description</th>
+     * <th>Code</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>Factuality verification – correct item</td>
+     * <td>CorrectFact</td>
+     * </tr>
+     * <tr>
+     * <td>Factuality verification – incorrect item</td>
+     * <td>WrongFactError</td>
+     * </tr>
+     * </tbody></table>
+     * <h3>9. Image audit</h3>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Description</th>
+     * <th>Code</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>Image audit</td>
+     * <td>ImageAudit</td>
+     * </tr>
+     * </tbody></table>
+     * <h3>10. Custom word library</h3>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Description</th>
+     * <th>Code</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>Custom word library</td>
+     * <td>WordLibrary</td>
+     * </tr>
+     * </tbody></table>
+     * <h3>11. Rule library audit</h3>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Description</th>
+     * <th>Code</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>Rule library audit</td>
+     * <td>WrongQuestionBook</td>
+     * </tr>
+     * </tbody></table>
+     * <h3>12. English proofreading</h3>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Description</th>
+     * <th>Code</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>Terminology standardization</td>
+     * <td>TerminologyNormalisation</td>
+     * </tr>
+     * <tr>
+     * <td>Verb tense accuracy</td>
+     * <td>VerbTenseAccuracy</td>
+     * </tr>
+     * <tr>
+     * <td>Punctuation and quotation marks</td>
+     * <td>PunctuationAndQuotationMarks</td>
+     * </tr>
+     * <tr>
+     * <td>Spelling and language variants</td>
+     * <td>SpellingAndLanguageVariety</td>
+     * </tr>
+     * <tr>
+     * <td>Sentence structure and clarity</td>
+     * <td>SentenceStructureAndClarity</td>
+     * </tr>
+     * <tr>
+     * <td>Numeric and percentage formatting</td>
+     * <td>NumericAndPercentageStyle</td>
+     * </tr>
+     * <tr>
+     * <td>Other standardized phrasing</td>
+     * <td>Others</td>
+     * </tr>
+     * </tbody></table>
+     * 
      * <b>summary</b> : 
-     * <p>提交智能审核</p>
+     * <p>Submit a smart audit request.</p>
      * 
      * @param tmpReq SubmitSmartAuditRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12931,8 +13497,371 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The Quanmiao product supports iframe embedding. For more information, see <a href="https://help.aliyun.com/document_detail/3000990.html">Customer integration: Quanmiao public cloud iframe customization guide</a>.</p>
+     * <h1>Supported audit types</h1>
+     * <h2>Audit category overview</h2>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Audit category</th>
+     * <th>Description</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>Content accuracy</td>
+     * <td>Errors due to phonetic or visual similarity; punctuation errors; misuse of Chinese structural particles (的/地/得); inappropriate word choice or syntax errors; incorrect personal names; incorrect place names; incorrect references; errors in proper nouns or terminology</td>
+     * </tr>
+     * <tr>
+     * <td>Formatting issues</td>
+     * <td>Inconsistent capitalization; numeric errors; nonstandard units of measurement; use of traditional Chinese characters</td>
+     * </tr>
+     * <tr>
+     * <td>Content structure issues</td>
+     * <td>Redundant text; repeated segments; logical contradictions; unfilled placeholders</td>
+     * </tr>
+     * <tr>
+     * <td>Political sensitivity issues</td>
+     * <td>Sensitive content or directional risks; name or sorting errors; conventional phrasing errors; nonstandard institutional names; misquoting important speeches; references to disgraced officials; mismatched name-title pairings; incorrect title expressions</td>
+     * </tr>
+     * <tr>
+     * <td>Security and compliance issues</td>
+     * <td>Violence or terrorism; pornography; prohibited content; insults; disgraced celebrities; personal privacy violations; reporting standard violations</td>
+     * </tr>
+     * <tr>
+     * <td>Legal errors</td>
+     * <td>Incorrect citation of laws and regulations; errors in legal provisions</td>
+     * </tr>
+     * <tr>
+     * <td>Other domain-specific errors</td>
+     * <td>Violations of advertising law; financial information errors; scientific or technical term errors</td>
+     * </tr>
+     * <tr>
+     * <td>Factuality check</td>
+     * <td>Factuality verification: correct or incorrect items</td>
+     * </tr>
+     * <tr>
+     * <td>Image audit</td>
+     * <td>Image content moderation</td>
+     * </tr>
+     * <tr>
+     * <td>Custom word library</td>
+     * <td>Custom word library audit</td>
+     * </tr>
+     * <tr>
+     * <td>Rule library audit</td>
+     * <td>Rule library audit</td>
+     * </tr>
+     * <tr>
+     * <td>English proofreading</td>
+     * <td>Terminology standardization; verb tense accuracy; punctuation and quotation marks; spelling and language variants; sentence structure and clarity; numeric and percentage formatting; standardized phrasing</td>
+     * </tr>
+     * </tbody></table>
+     * <hr>
+     * <h2>Sub-audit code values</h2>
+     * <h3>1. Content accuracy</h3>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Description</th>
+     * <th>Code</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>Phonetic or visual similarity errors</td>
+     * <td>PhoneticSimilarError</td>
+     * </tr>
+     * <tr>
+     * <td>Punctuation errors</td>
+     * <td>PunctuationError</td>
+     * </tr>
+     * <tr>
+     * <td>Misuse of Chinese structural particles (的/地/得)</td>
+     * <td>ParticleUsageError</td>
+     * </tr>
+     * <tr>
+     * <td>Inappropriate word choice or syntax errors</td>
+     * <td>WordError</td>
+     * </tr>
+     * <tr>
+     * <td>Incorrect personal names</td>
+     * <td>PersonNameError</td>
+     * </tr>
+     * <tr>
+     * <td>Incorrect place names</td>
+     * <td>LocationError</td>
+     * </tr>
+     * <tr>
+     * <td>Incorrect references</td>
+     * <td>ReferenceError</td>
+     * </tr>
+     * <tr>
+     * <td>Errors in proper nouns or terminology</td>
+     * <td>NounItemError</td>
+     * </tr>
+     * </tbody></table>
+     * <h3>2. Formatting issues</h3>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Description</th>
+     * <th>Code</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>Inconsistent capitalization</td>
+     * <td>CapitalizationError</td>
+     * </tr>
+     * <tr>
+     * <td>Numeric errors</td>
+     * <td>NumberError</td>
+     * </tr>
+     * <tr>
+     * <td>Nonstandard units of measurement</td>
+     * <td>UnitError</td>
+     * </tr>
+     * <tr>
+     * <td>Use of traditional Chinese characters</td>
+     * <td>TraditionalChineseError</td>
+     * </tr>
+     * </tbody></table>
+     * <h3>3. Content structure issues</h3>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Description</th>
+     * <th>Code</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>Redundant text</td>
+     * <td>WordRedundancy</td>
+     * </tr>
+     * <tr>
+     * <td>Repeated segments</td>
+     * <td>DuplicateError</td>
+     * </tr>
+     * <tr>
+     * <td>Logical contradictions</td>
+     * <td>LogicContradiction</td>
+     * </tr>
+     * <tr>
+     * <td>Unfilled placeholders</td>
+     * <td>PlaceholderNotFilled</td>
+     * </tr>
+     * </tbody></table>
+     * <h3>4. Political sensitivity issues</h3>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Description</th>
+     * <th>Code</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>Sensitive content or directional risks</td>
+     * <td>SensitiveContentRisk</td>
+     * </tr>
+     * <tr>
+     * <td>Name or sorting errors</td>
+     * <td>NameOrderError</td>
+     * </tr>
+     * <tr>
+     * <td>Conventional phrasing errors</td>
+     * <td>ConventionalExpressionError</td>
+     * </tr>
+     * <tr>
+     * <td>Nonstandard institutional names</td>
+     * <td>DepartmentNameError</td>
+     * </tr>
+     * <tr>
+     * <td>Misquoting important speeches</td>
+     * <td>ImportantSpeechError</td>
+     * </tr>
+     * <tr>
+     * <td>References to disgraced officials</td>
+     * <td>FallenOfficialError</td>
+     * </tr>
+     * <tr>
+     * <td>Mismatched name-title pairings</td>
+     * <td>LeaderTitleMatchError</td>
+     * </tr>
+     * <tr>
+     * <td>Incorrect title expressions</td>
+     * <td>TitleError</td>
+     * </tr>
+     * </tbody></table>
+     * <h3>5. Security and compliance issues</h3>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Description</th>
+     * <th>Code</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>Violence or terrorism</td>
+     * <td>ViolenceTerrorismError</td>
+     * </tr>
+     * <tr>
+     * <td>Pornography</td>
+     * <td>PornographyError</td>
+     * </tr>
+     * <tr>
+     * <td>Prohibited content</td>
+     * <td>ProhibitedContentError</td>
+     * </tr>
+     * <tr>
+     * <td>Insults</td>
+     * <td>InsultError</td>
+     * </tr>
+     * <tr>
+     * <td>Disgraced celebrities</td>
+     * <td>DisgracedArtistError</td>
+     * </tr>
+     * <tr>
+     * <td>Personal privacy violations</td>
+     * <td>PersonalPrivacyError</td>
+     * </tr>
+     * <tr>
+     * <td>Reporting standard violations</td>
+     * <td>ReportingStandardError</td>
+     * </tr>
+     * </tbody></table>
+     * <h3>6. Legal errors</h3>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Description</th>
+     * <th>Code</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>Incorrect citation of laws and regulations</td>
+     * <td>LegalReferenceError</td>
+     * </tr>
+     * <tr>
+     * <td>Errors in legal provisions</td>
+     * <td>LegalProvisionsError</td>
+     * </tr>
+     * </tbody></table>
+     * <h3>7. Other domain-specific errors</h3>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Description</th>
+     * <th>Code</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>Violations of advertising law</td>
+     * <td>AdvertisingProhibitedWordsError</td>
+     * </tr>
+     * <tr>
+     * <td>Financial information errors</td>
+     * <td>FinancialInformationError</td>
+     * </tr>
+     * <tr>
+     * <td>Scientific or technical term errors</td>
+     * <td>TechnicalTermError</td>
+     * </tr>
+     * </tbody></table>
+     * <h3>8. Factuality check</h3>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Description</th>
+     * <th>Code</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>Factuality verification – correct item</td>
+     * <td>CorrectFact</td>
+     * </tr>
+     * <tr>
+     * <td>Factuality verification – incorrect item</td>
+     * <td>WrongFactError</td>
+     * </tr>
+     * </tbody></table>
+     * <h3>9. Image audit</h3>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Description</th>
+     * <th>Code</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>Image audit</td>
+     * <td>ImageAudit</td>
+     * </tr>
+     * </tbody></table>
+     * <h3>10. Custom word library</h3>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Description</th>
+     * <th>Code</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>Custom word library</td>
+     * <td>WordLibrary</td>
+     * </tr>
+     * </tbody></table>
+     * <h3>11. Rule library audit</h3>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Description</th>
+     * <th>Code</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>Rule library audit</td>
+     * <td>WrongQuestionBook</td>
+     * </tr>
+     * </tbody></table>
+     * <h3>12. English proofreading</h3>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Description</th>
+     * <th>Code</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>Terminology standardization</td>
+     * <td>TerminologyNormalisation</td>
+     * </tr>
+     * <tr>
+     * <td>Verb tense accuracy</td>
+     * <td>VerbTenseAccuracy</td>
+     * </tr>
+     * <tr>
+     * <td>Punctuation and quotation marks</td>
+     * <td>PunctuationAndQuotationMarks</td>
+     * </tr>
+     * <tr>
+     * <td>Spelling and language variants</td>
+     * <td>SpellingAndLanguageVariety</td>
+     * </tr>
+     * <tr>
+     * <td>Sentence structure and clarity</td>
+     * <td>SentenceStructureAndClarity</td>
+     * </tr>
+     * <tr>
+     * <td>Numeric and percentage formatting</td>
+     * <td>NumericAndPercentageStyle</td>
+     * </tr>
+     * <tr>
+     * <td>Other standardized phrasing</td>
+     * <td>Others</td>
+     * </tr>
+     * </tbody></table>
+     * 
      * <b>summary</b> : 
-     * <p>提交智能审核</p>
+     * <p>Submit a smart audit request.</p>
      * 
      * @param request SubmitSmartAuditRequest
      * @return SubmitSmartAuditResponse
@@ -12944,7 +13873,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交一键成片剪辑任务</p>
+     * <p>Submits a one-click video editing task.</p>
      * 
      * @param tmpReq SubmitSmartClipTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13006,7 +13935,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交一键成片剪辑任务</p>
+     * <p>Submits a one-click video editing task.</p>
      * 
      * @param request SubmitSmartClipTaskRequest
      * @return SubmitSmartClipTaskResponse
@@ -13018,7 +13947,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交选题热点分析任务</p>
+     * <p>Submits a hot spot analysis task for topic selection.</p>
      * 
      * @param tmpReq SubmitTopicSelectionPerspectiveAnalysisTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13074,7 +14003,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交选题热点分析任务</p>
+     * <p>Submits a hot spot analysis task for topic selection.</p>
      * 
      * @param request SubmitTopicSelectionPerspectiveAnalysisTaskRequest
      * @return SubmitTopicSelectionPerspectiveAnalysisTaskResponse
@@ -13086,10 +14015,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>提交视频审校任务，支持传入fileKey或url，系统会对视频进行分镜检测、抽帧审核，返回任务ID</p>
+     * <p>Quanmiao products support iframe embedding. For more information, see <a href="https://alidocs.dingtalk.com/i/nodes/m9bN7RYPWdyrPBREcyM6jDQ2VZd1wyK0?cid=116617178%3A898142682%5C&utm_source=im%5C&utm_scene=team_space%5C&iframeQuery=utm_medium%3Dim_card%26utm_source%3Dim%5C&utm_medium=im_card%5C&corpId=dingd8e1123006514592">Customer Integration_Quanmiao Public Cloud iframe Customization Solution</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>提交视频审校</p>
+     * <p>Submits a video for review.</p>
      * 
      * @param request SubmitVideoAuditRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13137,10 +14066,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>提交视频审校任务，支持传入fileKey或url，系统会对视频进行分镜检测、抽帧审核，返回任务ID</p>
+     * <p>Quanmiao products support iframe embedding. For more information, see <a href="https://alidocs.dingtalk.com/i/nodes/m9bN7RYPWdyrPBREcyM6jDQ2VZd1wyK0?cid=116617178%3A898142682%5C&utm_source=im%5C&utm_scene=team_space%5C&iframeQuery=utm_medium%3Dim_card%26utm_source%3Dim%5C&utm_medium=im_card%5C&corpId=dingd8e1123006514592">Customer Integration_Quanmiao Public Cloud iframe Customization Solution</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>提交视频审校</p>
+     * <p>Submits a video for review.</p>
      * 
      * @param request SubmitVideoAuditRequest
      * @return SubmitVideoAuditResponse
@@ -13152,7 +14081,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新自定义文本</p>
+     * <p>Updates custom text.</p>
      * 
      * @param request UpdateCustomTextRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13202,7 +14131,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新自定义文本</p>
+     * <p>Updates custom text.</p>
      * 
      * @param request UpdateCustomTextRequest
      * @return UpdateCustomTextResponse
@@ -13214,7 +14143,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>数据集管理-更新</p>
+     * <p>This operation updates a data source.</p>
      * 
      * @param tmpReq UpdateDatasetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13272,7 +14201,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>数据集管理-更新</p>
+     * <p>This operation updates a data source.</p>
      * 
      * @param request UpdateDatasetRequest
      * @return UpdateDatasetResponse
@@ -13284,7 +14213,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改数据集文档</p>
+     * <p>Updates a document in a dataset.</p>
      * 
      * @param tmpReq UpdateDatasetDocumentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13334,7 +14263,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改数据集文档</p>
+     * <p>Updates a document in a dataset.</p>
      * 
      * @param request UpdateDatasetDocumentRequest
      * @return UpdateDatasetDocumentResponse
@@ -13346,7 +14275,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通用配置-更新</p>
+     * <p>Updates general configurations.</p>
      * 
      * @param request UpdateGeneralConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13386,7 +14315,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通用配置-更新</p>
+     * <p>Updates general configurations.</p>
      * 
      * @param request UpdateGeneralConfigRequest
      * @return UpdateGeneralConfigResponse
@@ -13398,7 +14327,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>文档管理-更新。</p>
+     * <p>Updates the history of an article created in AiMiaoBi.</p>
      * 
      * @param tmpReq UpdateGeneratedContentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13462,7 +14391,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>文档管理-更新。</p>
+     * <p>Updates the history of an article created in AiMiaoBi.</p>
      * 
      * @param request UpdateGeneratedContentRequest
      * @return UpdateGeneratedContentResponse
@@ -13474,7 +14403,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据ID更新素材</p>
+     * <p>Update a material in the Material Library.</p>
      * 
      * @param tmpReq UpdateMaterialDocumentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13570,7 +14499,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据ID更新素材</p>
+     * <p>Update a material in the Material Library.</p>
      * 
      * @param request UpdateMaterialDocumentRequest
      * @return UpdateMaterialDocumentResponse
@@ -13582,7 +14511,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>妙读上传书籍</p>
+     * <p>Use MiaoDu to upload books.</p>
      * 
      * @param tmpReq UploadBookRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13628,7 +14557,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>妙读上传书籍</p>
+     * <p>Use MiaoDu to upload books.</p>
      * 
      * @param request UploadBookRequest
      * @return UploadBookResponse
@@ -13639,8 +14568,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Document upload is implemented through asynchronous invocation. After the invocation, you must use the getDocInfo API to periodically check the document status. Only when the document status becomes 1 can you proceed with subsequent operations such as generating a document summary, creating a full-text mind map, summarizing Q&amp;A content, extracting keywords, or rewriting.</p>
+     * 
      * <b>summary</b> : 
-     * <p>妙读上传文档接口</p>
+     * <p>Upload document API for Miaodu.</p>
      * 
      * @param tmpReq UploadDocRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13685,8 +14617,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Document upload is implemented through asynchronous invocation. After the invocation, you must use the getDocInfo API to periodically check the document status. Only when the document status becomes 1 can you proceed with subsequent operations such as generating a document summary, creating a full-text mind map, summarizing Q&amp;A content, extracting keywords, or rewriting.</p>
+     * 
      * <b>summary</b> : 
-     * <p>妙读上传文档接口</p>
+     * <p>Upload document API for Miaodu.</p>
      * 
      * @param request UploadDocRequest
      * @return UploadDocResponse
@@ -13698,7 +14633,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>校验企业VOC上传模板</p>
+     * <p>Validates an enterprise VOC upload template.</p>
      * 
      * @param request ValidateUploadTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13742,7 +14677,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>校验企业VOC上传模板</p>
+     * <p>Validates an enterprise VOC upload template.</p>
      * 
      * @param request ValidateUploadTemplateRequest
      * @return ValidateUploadTemplateResponse

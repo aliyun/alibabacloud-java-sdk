@@ -5,22 +5,44 @@ import com.aliyun.tea.*;
 
 public class SubmitAuditTaskRequest extends TeaModel {
     /**
+     * <p>The ID of the article to be audited.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx</p>
      */
     @NameInMap("ArticleId")
     public String articleId;
 
+    /**
+     * <p>The content to be audited.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>待审核的内容</p>
+     */
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <p>The content to be audited, in HTML format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>待审核的内容（HTML格式）</p>
+     */
     @NameInMap("HtmlContent")
     public String htmlContent;
 
+    /**
+     * <p>The title of the article to be audited.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>审核时的文章标题</p>
+     */
     @NameInMap("Title")
     public String title;
 
     /**
+     * <p><a href="https://help.aliyun.com/document_detail/2782167.html">Workspace ID</a></p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx</p>
      */

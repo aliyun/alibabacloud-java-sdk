@@ -4,14 +4,20 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunHotwordResponseBody extends TeaModel {
+    /**
+     * <p>Response header.</p>
+     */
     @NameInMap("Header")
     public RunHotwordResponseBodyHeader header;
 
+    /**
+     * <p>Response body.</p>
+     */
     @NameInMap("Payload")
     public RunHotwordResponseBodyPayload payload;
 
     /**
-     * <p>Id of the request</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
@@ -50,6 +56,8 @@ public class RunHotwordResponseBody extends TeaModel {
 
     public static class RunHotwordResponseBodyHeader extends TeaModel {
         /**
+         * <p>Error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -57,6 +65,8 @@ public class RunHotwordResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>Error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -64,16 +74,26 @@ public class RunHotwordResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>Event type.</p>
+         * 
          * <strong>example:</strong>
          * <p>finished</p>
          */
         @NameInMap("Event")
         public String event;
 
+        /**
+         * <p>Event description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>模型生成事件</p>
+         */
         @NameInMap("EventInfo")
         public String eventInfo;
 
         /**
+         * <p>Session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>92e16ccb-92b6-4894-abbf-fc6e2929a0df</p>
          */
@@ -81,6 +101,8 @@ public class RunHotwordResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>Task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
@@ -88,6 +110,8 @@ public class RunHotwordResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>Trace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>0abb7e3217356108993888059ee72b</p>
          */
@@ -158,6 +182,12 @@ public class RunHotwordResponseBody extends TeaModel {
     }
 
     public static class RunHotwordResponseBodyPayloadOutput extends TeaModel {
+        /**
+         * <p>Hotword content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>全球影响,文化交流,孙悟空,动画改编</p>
+         */
         @NameInMap("Content")
         public String content;
 
@@ -178,6 +208,8 @@ public class RunHotwordResponseBody extends TeaModel {
 
     public static class RunHotwordResponseBodyPayloadUsage extends TeaModel {
         /**
+         * <p>Number of input tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -185,6 +217,8 @@ public class RunHotwordResponseBody extends TeaModel {
         public Long inputTokens;
 
         /**
+         * <p>Number of output tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -192,6 +226,8 @@ public class RunHotwordResponseBody extends TeaModel {
         public Long outputTokens;
 
         /**
+         * <p>Total number of tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>101</p>
          */
@@ -230,9 +266,15 @@ public class RunHotwordResponseBody extends TeaModel {
     }
 
     public static class RunHotwordResponseBodyPayload extends TeaModel {
+        /**
+         * <p>Output.</p>
+         */
         @NameInMap("Output")
         public RunHotwordResponseBodyPayloadOutput output;
 
+        /**
+         * <p>Token usage.</p>
+         */
         @NameInMap("Usage")
         public RunHotwordResponseBodyPayloadUsage usage;
 

@@ -4,10 +4,15 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunSearchGenerationRequest extends TeaModel {
+    /**
+     * <p>Context.</p>
+     */
     @NameInMap("AgentContext")
     public RunSearchGenerationRequestAgentContext agentContext;
 
     /**
+     * <p>Session configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -15,6 +20,8 @@ public class RunSearchGenerationRequest extends TeaModel {
     public RunSearchGenerationRequestChatConfig chatConfig;
 
     /**
+     * <p>Image URL. Used for image search and hybrid text-and-image (prompt) search generation.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://xxxx">http://xxxx</a></p>
      */
@@ -22,13 +29,23 @@ public class RunSearchGenerationRequest extends TeaModel {
     public String fileUrl;
 
     /**
+     * <p>Model ID:</p>
+     * <ul>
+     * <li><p>quanmiao-max: Quanmiao-Max</p>
+     * </li>
+     * <li><p>quanmiao-plus: Quanmiao-Plus</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>qwen-max-latest</p>
+     * <p>quanmiao-max</p>
      */
     @NameInMap("ModelId")
     public String modelId;
 
     /**
+     * <p>Original session identifier. Usually empty. When non-empty, it indicates that the current conversation is based on the referenced session. The system loads parameters and search results from that session and replaces the generated result. Use this for re-generation, changing data sources, or adding new agents.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -36,13 +53,20 @@ public class RunSearchGenerationRequest extends TeaModel {
     public String originalSessionId;
 
     /**
+     * <p>Search query.</p>
+     * 
      * <strong>example:</strong>
-     * <p>xxx</p>
+     * <p>杭州亚运会吉祥物是什么</p>
      */
     @NameInMap("Prompt")
     public String prompt;
 
     /**
+     * <p>Unique identifier for the session task.</p>
+     * <blockquote>
+     * <p>By default, you do not need to provide a TaskId. The system generates one automatically. If you specify the same TaskId in subsequent requests, those tasks are grouped into the same conversation.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>7AA2AE16-D873-5C5F-9708-15396C382EB1</p>
      */
@@ -50,6 +74,7 @@ public class RunSearchGenerationRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>ID of the Alibaba Cloud Model Studio workspace. To learn how to obtain this ID, see <a href="https://help.aliyun.com/document_detail/2782167.html">How to use workspaces</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -128,10 +153,15 @@ public class RunSearchGenerationRequest extends TeaModel {
     }
 
     public static class RunSearchGenerationRequestAgentContextBizContextMultimodalMediaSelectionTextSearchResultSearchResult extends TeaModel {
+        /**
+         * <p>Relevant chunks.</p>
+         */
         @NameInMap("Chunks")
         public java.util.List<String> chunks;
 
         /**
+         * <p>Content.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章内容</p>
          */
@@ -139,6 +169,8 @@ public class RunSearchGenerationRequest extends TeaModel {
         public String content;
 
         /**
+         * <p>Custom unique document ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>文档-自定义的唯一ID</p>
          */
@@ -146,6 +178,8 @@ public class RunSearchGenerationRequest extends TeaModel {
         public String docId;
 
         /**
+         * <p>Internal unique document identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -153,6 +187,8 @@ public class RunSearchGenerationRequest extends TeaModel {
         public String docUuid;
 
         /**
+         * <p>Publication time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-11-25 14:25:59</p>
          */
@@ -160,6 +196,8 @@ public class RunSearchGenerationRequest extends TeaModel {
         public String pubTime;
 
         /**
+         * <p>Relevance score.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -167,6 +205,8 @@ public class RunSearchGenerationRequest extends TeaModel {
         public Float score;
 
         /**
+         * <p>Unique identifier for the search source. Same as searchSource.datasetName.</p>
+         * 
          * <strong>example:</strong>
          * <p>QuarkCommonNews</p>
          */
@@ -174,6 +214,8 @@ public class RunSearchGenerationRequest extends TeaModel {
         public String searchSource;
 
         /**
+         * <p>Name of the search source.</p>
+         * 
          * <strong>example:</strong>
          * <p>互联网搜索</p>
          */
@@ -181,6 +223,8 @@ public class RunSearchGenerationRequest extends TeaModel {
         public String searchSourceName;
 
         /**
+         * <p>Search source type. Same as searchSource.code.</p>
+         * 
          * <strong>example:</strong>
          * <p>SystemSearch</p>
          */
@@ -188,6 +232,8 @@ public class RunSearchGenerationRequest extends TeaModel {
         public String searchSourceType;
 
         /**
+         * <p>Source.</p>
+         * 
          * <strong>example:</strong>
          * <p>新华社</p>
          */
@@ -195,6 +241,8 @@ public class RunSearchGenerationRequest extends TeaModel {
         public String source;
 
         /**
+         * <p>Article summary.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章摘要</p>
          */
@@ -202,6 +250,8 @@ public class RunSearchGenerationRequest extends TeaModel {
         public String summary;
 
         /**
+         * <p>Title.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章标题</p>
          */
@@ -209,6 +259,8 @@ public class RunSearchGenerationRequest extends TeaModel {
         public String title;
 
         /**
+         * <p>Article URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://www.example.com/aaa.docx">https://www.example.com/aaa.docx</a></p>
          */
@@ -327,6 +379,9 @@ public class RunSearchGenerationRequest extends TeaModel {
     }
 
     public static class RunSearchGenerationRequestAgentContextBizContextMultimodalMediaSelectionTextSearchResult extends TeaModel {
+        /**
+         * <p>List of text search results.</p>
+         */
         @NameInMap("SearchResult")
         public java.util.List<RunSearchGenerationRequestAgentContextBizContextMultimodalMediaSelectionTextSearchResultSearchResult> searchResult;
 
@@ -347,6 +402,8 @@ public class RunSearchGenerationRequest extends TeaModel {
 
     public static class RunSearchGenerationRequestAgentContextBizContextMultimodalMediaSelection extends TeaModel {
         /**
+         * <p>Unique identifier for the original session. Used to retrieve full results from that session. Required only for media asset search.</p>
+         * 
          * <strong>example:</strong>
          * <p>原始会话唯一标识：搜索结果取这个会话中的全量，目前仅媒资搜索场景需要</p>
          */
@@ -354,6 +411,8 @@ public class RunSearchGenerationRequest extends TeaModel {
         public String originalSessionId;
 
         /**
+         * <p>Used only for clustering. Pass ClusterGenerate when performing secondary clustering on cluster subtopics.</p>
+         * 
          * <strong>example:</strong>
          * <p>TextGenerate</p>
          */
@@ -361,6 +420,8 @@ public class RunSearchGenerationRequest extends TeaModel {
         public String searchModel;
 
         /**
+         * <p>When SearchModel = ClusterGenerate, enter the topic name for the subtopic. Include quotation marks if the original value has them.</p>
+         * 
          * <strong>example:</strong>
          * <p>分类1</p>
          */
@@ -368,6 +429,8 @@ public class RunSearchGenerationRequest extends TeaModel {
         public String searchModelDataValue;
 
         /**
+         * <p>The type of referenced data source. Valid values: ‒ all: Retrieves the full data from historical sessions. This value is supported only in clustering scenarios. ‒ selected: Retrieves data from textSearchResult during generation.</p>
+         * 
          * <strong>example:</strong>
          * <p>all</p>
          */
@@ -375,12 +438,17 @@ public class RunSearchGenerationRequest extends TeaModel {
         public String selectionType;
 
         /**
+         * <p>Unique identifier for the session used as reference during generation. Used for clustering in media asset search.</p>
+         * 
          * <strong>example:</strong>
          * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
          */
         @NameInMap("SessionId")
         public String sessionId;
 
+        /**
+         * <p>Text search results.</p>
+         */
         @NameInMap("TextSearchResult")
         public RunSearchGenerationRequestAgentContextBizContextMultimodalMediaSelectionTextSearchResult textSearchResult;
 
@@ -440,33 +508,84 @@ public class RunSearchGenerationRequest extends TeaModel {
     }
 
     public static class RunSearchGenerationRequestAgentContextBizContext extends TeaModel {
+        /**
+         * <p>Follow-up question.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>您想了解关于xx的哪些信息？</p>
+         */
         @NameInMap("AskUser")
         public String askUser;
 
+        /**
+         * <p>List of recommended keywords for follow-up questions.</p>
+         */
         @NameInMap("AskUserKeywords")
         public java.util.List<String> askUserKeywords;
 
+        /**
+         * <p>Current step.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>think</p>
+         */
         @NameInMap("CurrentStep")
         public String currentStep;
 
+        /**
+         * <p>User-provided or selected multimodal data.</p>
+         */
         @NameInMap("MultimodalMediaSelection")
         public RunSearchGenerationRequestAgentContextBizContextMultimodalMediaSelection multimodalMediaSelection;
 
+        /**
+         * <p>Next step.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>generate</p>
+         */
         @NameInMap("NextStep")
         public String nextStep;
 
+        /**
+         * <p>Skip follow-up questions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("SkipCurrentSupplement")
         public Boolean skipCurrentSupplement;
 
+        /**
+         * <p>Data type needed for reasoning: searchQuery.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>searchQuery</p>
+         */
         @NameInMap("SupplementDataType")
         public String supplementDataType;
 
+        /**
+         * <p>Specifies whether supplementation is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("SupplementEnable")
         public Boolean supplementEnable;
 
+        /**
+         * <p>User feedback to follow-up questions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>地点</p>
+         */
         @NameInMap("UserBack")
         public String userBack;
 
+        /**
+         * <p>List of keywords from user feedback to follow-up questions.</p>
+         */
         @NameInMap("UserBackKeywords")
         public java.util.List<String> userBackKeywords;
 
@@ -558,6 +677,9 @@ public class RunSearchGenerationRequest extends TeaModel {
     }
 
     public static class RunSearchGenerationRequestAgentContext extends TeaModel {
+        /**
+         * <p>Business context.</p>
+         */
         @NameInMap("BizContext")
         public RunSearchGenerationRequestAgentContextBizContext bizContext;
 
@@ -578,6 +700,16 @@ public class RunSearchGenerationRequest extends TeaModel {
 
     public static class RunSearchGenerationRequestChatConfigSearchParamSearchSources extends TeaModel {
         /**
+         * <p>Search source type:</p>
+         * <ul>
+         * <li><p>SystemSearch: Built-in system search</p>
+         * </li>
+         * <li><p>CustomSemanticSearch: Custom semantic index search</p>
+         * </li>
+         * <li><p>ThirdSearch: Third-party API search</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SystemSearch</p>
          */
@@ -585,6 +717,8 @@ public class RunSearchGenerationRequest extends TeaModel {
         public String code;
 
         /**
+         * <p>Unique identifier for the search source: matches the dataset name shown in the console, such as 4cb0eda3fad841758262dbe8d61191.</p>
+         * 
          * <strong>example:</strong>
          * <p>QuarkCommonNews</p>
          */
@@ -615,78 +749,138 @@ public class RunSearchGenerationRequest extends TeaModel {
     }
 
     public static class RunSearchGenerationRequestChatConfigSearchParam extends TeaModel {
+        /**
+         * <p>Unique category identifier.</p>
+         */
         @NameInMap("CategoryUuids")
         public java.util.List<String> categoryUuids;
 
+        /**
+         * <p>End creation time, in UNIX timestamp format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111111111111</p>
+         */
         @NameInMap("CreateTimeEnd")
         public Long createTimeEnd;
 
+        /**
+         * <p>Start creation time, in UNIX timestamp format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111111111111</p>
+         */
         @NameInMap("CreateTimeStart")
         public Long createTimeStart;
 
+        /**
+         * <p>Array of document IDs.</p>
+         */
         @NameInMap("DocIds")
         public java.util.List<String> docIds;
 
+        /**
+         * <p>Unique document identifier.</p>
+         */
         @NameInMap("DocUuids")
         public java.util.List<String> docUuids;
 
         /**
+         * <p>End time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1725983999999</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>Extension field 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("Extend1")
         public String extend1;
 
+        /**
+         * <p>Extension field 2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("Extend2")
         public String extend2;
 
+        /**
+         * <p>Extension field 3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("Extend3")
         public String extend3;
 
+        /**
+         * <p>Search scope list.</p>
+         */
         @NameInMap("MultimodalSearchTypes")
         public java.util.List<String> multimodalSearchTypes;
 
         /**
+         * <p>Voice search threshold: Applies only to custom data sources (range: 0 to 1).</p>
+         * 
          * <strong>example:</strong>
-         * <p>0.6</p>
+         * <p>0.66</p>
          */
         @NameInMap("SearchAudioMinScore")
         public Double searchAudioMinScore;
 
         /**
+         * <p>Image search threshold: Applies only to custom data sources (range: 0 to 1).</p>
+         * 
          * <strong>example:</strong>
-         * <p>0.6</p>
+         * <p>0.66</p>
          */
         @NameInMap("SearchImageMinScore")
         public Double searchImageMinScore;
 
+        /**
+         * <p>List of search sources.</p>
+         */
         @NameInMap("SearchSources")
         public java.util.List<RunSearchGenerationRequestChatConfigSearchParamSearchSources> searchSources;
 
         /**
+         * <p>Text search threshold: Applies only to custom data sources (range: 0 to 1).</p>
+         * 
          * <strong>example:</strong>
-         * <p>0.6</p>
+         * <p>0.66</p>
          */
         @NameInMap("SearchTextMinScore")
         public Double searchTextMinScore;
 
         /**
+         * <p>Video search threshold: Applies only to custom data sources (range: 0 to 1).</p>
+         * 
          * <strong>example:</strong>
-         * <p>0.6</p>
+         * <p>0.66</p>
          */
         @NameInMap("SearchVideoMinScore")
         public Double searchVideoMinScore;
 
         /**
+         * <p>Start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1725983999999</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <p>Tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<String> tags;
 
@@ -834,13 +1028,34 @@ public class RunSearchGenerationRequest extends TeaModel {
     }
 
     public static class RunSearchGenerationRequestChatConfig extends TeaModel {
+        /**
+         * <p>Enable deep thinking.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("EnableThinking")
         public Boolean enableThinking;
 
+        /**
+         * <p>List of generation options to skip.</p>
+         */
         @NameInMap("ExcludeGenerateOptions")
         public java.util.List<String> excludeGenerateOptions;
 
         /**
+         * <p>Detailedness of the response:</p>
+         * <ul>
+         * <li><p>concise: Concise (default)</p>
+         * </li>
+         * <li><p>enhance: Enhanced</p>
+         * </li>
+         * <li><p>free: Free-form</p>
+         * </li>
+         * <li><p>deepResearch: Research-level</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>concise</p>
          */
@@ -848,29 +1063,123 @@ public class RunSearchGenerationRequest extends TeaModel {
         public String generateLevel;
 
         /**
+         * <p>Generation technology:</p>
+         * <ul>
+         * <li><p>copilotReference: Q\&amp;A-style search</p>
+         * </li>
+         * <li><p>copilotPrecise: Pure search</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>copilotPrecise</p>
+         * <p>copilotReference</p>
          */
         @NameInMap("GenerateTechnology")
         public String generateTechnology;
 
         /**
+         * <p>Plain-text prompt template for Q\&amp;A-style search and summary generation. Must include variables {query} and {content}. Example:</p>
+         * <pre><code class="language-text"># Role
+         * You are an expert article retrieval and Q&amp;A assistant.
+         * 
+         * # Goal
+         * Answer or explain the user\\&quot;s question &quot;{query}&quot; using the retrieved articles.
+         * 
+         * # Constraints
+         * - Filter by knowledge date if the question mentions a specific date.
+         * - Structure responses clearly.
+         * - Keep responses concise.
+         * - Do not use external data or fabricate answers.
+         * - If unable to answer, respond in the appropriate language:
+         *   - Chinese: &quot;Unable to answer based on known information.&quot;
+         *   - English: &quot;Unable to answer based on the known information.&quot;
+         * 
+         * # Input
+         * ## Retrieved articles
+         * {content}
+         * </code></pre>
+         * 
          * <strong>example:</strong>
-         * <h1>角色 你是一个专业的文章检索和问答机器人，擅长文章检索和回答用户问题。  # 任务目标 请你根据检索到的相关文章，回答或表述用户问题“{query}”。  # 任务限制 - 如果用户问题中提到具体日期，请考虑知识日期做筛选。 - 生成内容结构条理。 - 生成内容尽量精简。 - 控制在30字以内 - 不要使用其他数据，不要杜撰。 - 如果不能回答用户问题，请输出对应语言的拒识文案:   - 中文：\&quot;根据已知信息无法回答。\&quot;   - 英文：\&quot;Unable to answer based on the known information.\&quot;  # 输入数据 ## 检索到的相关文章 {content}</h1>
+         * <h1>角色</h1>
+         * <p>你是一个专业的文章检索和问答专家，擅长文章检索和回答用户问题。</p>
+         * <h1>任务目标</h1>
+         * <p>请你根据检索到的相关文章，回答或表述用户问题“{query}”。</p>
+         * <h1>任务限制</h1>
+         * <ul>
+         * <li>如果用户问题中提到具体日期，请考虑知识日期做筛选。</li>
+         * <li>生成内容结构条理。</li>
+         * <li>生成内容尽量精简。</li>
+         * <li>不要使用其他数据，不要杜撰。</li>
+         * <li>如果不能回答用户问题，请输出对应语言的拒识文案:<ul>
+         * <li>中文：&quot;根据已知信息无法回答。&quot;</li>
+         * <li>英文：&quot;Unable to answer based on the known information.&quot;</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <h1>输入数据</h1>
+         * <h2>检索到的相关文章</h2>
+         * <p>{content}</p>
          */
         @NameInMap("ModelCustomPromptTemplate")
         public String modelCustomPromptTemplate;
 
         /**
+         * <p>Plain-text prompt template for Q\&amp;A-style search and summary generation. Must include variables {query} and {content}. Example:</p>
+         * <pre><code class="language-text"># Role
+         * You are an expert article retrieval and Q&amp;A assistant.
+         * 
+         * # Goal
+         * Answer or explain the user\\&quot;s question &quot;{query}&quot; using the retrieved articles and images.
+         * 
+         * # Constraints
+         * - Filter by knowledge date if the question mentions a specific date.
+         * - Structure responses clearly.
+         * - Keep responses concise.
+         * - Ignore article content if image content fully answers the question.
+         * - Do not use external data or fabricate answers.
+         * - If unable to answer, respond in the appropriate language:
+         *     - Chinese: &quot;Unable to answer based on known information.&quot;
+         *     - English: &quot;Unable to answer based on the known information.&quot;
+         * 
+         * # Input
+         * ## Retrieved articles
+         * {content}
+         * </code></pre>
+         * 
          * <strong>example:</strong>
-         * <h1>角色 你是一个专业的文章检索和问答机器人，擅长文章检索和回答用户问题。   # 任务目标 请你根据检索到的相关文章和图片，回答或表述用户问题“{query}”。  # 任务限制  - 如果用户问题中提到具体日期，请考虑知识日期做筛选。  - 生成内容结构条理。  - 生成内容尽量精简。  - 控制在30字以内。 - 如果图片内容可以回答，可以忽略文章内容。 - 不要使用其他数据，不要杜撰。  - 如果不能回答用户问题，请输出对应语言的拒识文案:    	- 中文：\&quot;根据已知信息无法回答。\&quot;    	- 英文：\&quot;Unable to answer based on the known information.\&quot;    # 输入数据  ## 检索到的相关文章  {content}</h1>
+         * <h1>角色</h1>
+         * <p>你是一个专业的文章检索和问答专家，擅长文章检索和回答用户问题。</p>
+         * <h1>任务目标</h1>
+         * <p>请你根据检索到的相关文章和图片，回答或表述用户问题“{query}”。</p>
+         * <h1>任务限制</h1>
+         * <ul>
+         * <li>如果用户问题中提到具体日期，请考虑知识日期做筛选。</li>
+         * <li>生成内容结构条理。</li>
+         * <li>生成内容尽量精简。</li>
+         * <li>如果图片内容可以回答，可以忽略文章内容。</li>
+         * <li>不要使用其他数据，不要杜撰。</li>
+         * <li>如果不能回答用户问题，请输出对应语言的拒识文案:<ul>
+         * <li>中文：&quot;根据已知信息无法回答。&quot;</li>
+         * <li>英文：&quot;Unable to answer based on the known information.&quot;</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <h1>输入数据</h1>
+         * <h2>检索到的相关文章</h2>
+         * <p>{content}</p>
          */
         @NameInMap("ModelCustomVlPromptTemplate")
         public String modelCustomVlPromptTemplate;
 
+        /**
+         * <p>List of search types.</p>
+         */
         @NameInMap("SearchModels")
         public java.util.List<String> searchModels;
 
+        /**
+         * <p>Search parameters.</p>
+         */
         @NameInMap("SearchParam")
         public RunSearchGenerationRequestChatConfigSearchParam searchParam;
 

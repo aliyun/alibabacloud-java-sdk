@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetCustomSourceTopicAnalysisTaskResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public GetCustomSourceTopicAnalysisTaskResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetCustomSourceTopicAnalysisTaskResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class GetCustomSourceTopicAnalysisTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -36,6 +47,8 @@ public class GetCustomSourceTopicAnalysisTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. \<code>true\\</code> indicates success and \<code>false\\</code> indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -96,10 +109,18 @@ public class GetCustomSourceTopicAnalysisTaskResponseBody extends TeaModel {
     }
 
     public static class GetCustomSourceTopicAnalysisTaskResponseBodyDataClusterResultsClusterNews extends TeaModel {
+        /**
+         * <p>The title of the news article.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>新闻标题</p>
+         */
         @NameInMap("Title")
         public String title;
 
         /**
+         * <p>The URL of the news article.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com/xxx.html">http://www.example.com/xxx.html</a></p>
          */
@@ -130,9 +151,18 @@ public class GetCustomSourceTopicAnalysisTaskResponseBody extends TeaModel {
     }
 
     public static class GetCustomSourceTopicAnalysisTaskResponseBodyDataClusterResults extends TeaModel {
+        /**
+         * <p>A list of aggregated news articles. The body text is not included.</p>
+         */
         @NameInMap("ClusterNews")
         public java.util.List<GetCustomSourceTopicAnalysisTaskResponseBodyDataClusterResultsClusterNews> clusterNews;
 
+        /**
+         * <p>The name of the aggregated topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>话题名称</p>
+         */
         @NameInMap("Topic")
         public String topic;
 
@@ -161,16 +191,23 @@ public class GetCustomSourceTopicAnalysisTaskResponseBody extends TeaModel {
 
     public static class GetCustomSourceTopicAnalysisTaskResponseBodyData extends TeaModel {
         /**
+         * <p>The number of documents after clustering.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
         @NameInMap("ClusterCount")
         public Integer clusterCount;
 
+        /**
+         * <p>A list of news aggregation results.</p>
+         */
         @NameInMap("ClusterResults")
         public java.util.List<GetCustomSourceTopicAnalysisTaskResponseBodyDataClusterResults> clusterResults;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>错误信息</p>
          */
@@ -178,6 +215,8 @@ public class GetCustomSourceTopicAnalysisTaskResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The maximum number of news articles in a cluster after aggregation.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -185,6 +224,8 @@ public class GetCustomSourceTopicAnalysisTaskResponseBody extends TeaModel {
         public Integer maxClusteredTopicNewsSize;
 
         /**
+         * <p>The number of news articles after the file is parsed.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -192,15 +233,27 @@ public class GetCustomSourceTopicAnalysisTaskResponseBody extends TeaModel {
         public Integer parsedNewsSize;
 
         /**
+         * <p>The status of the task. Valid values: \<code>PENDING\\</code>, \<code>RUNNING\\</code>, \<code>SUCCESSED\\</code>, \<code>FAILED\\</code>, and \<code>CANCELED\\</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESSED</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The total runtime in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("rt")
         public Long rt;
 
+        /**
+         * <p>The token usage. The possible billable items are:
+         * quanmiaoMax, quanmiaoPlus</p>
+         */
         @NameInMap("usages")
         public java.util.Map<String, Long> usages;
 

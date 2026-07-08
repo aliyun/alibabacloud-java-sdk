@@ -12,6 +12,8 @@ public class GetPptArtifactRequest extends TeaModel {
     public String externalUserId;
 
     /**
+     * <p>The ID of the PPT artifact.</p>
+     * 
      * <strong>example:</strong>
      * <p>5232136</p>
      */
@@ -19,6 +21,8 @@ public class GetPptArtifactRequest extends TeaModel {
     public Integer pptArtifactId;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm-az2gglxxxx</p>
      */

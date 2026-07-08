@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DeleteInterveneRuleResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
-     * <p>0</p>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Business data</p>
+     */
     @NameInMap("Data")
     public DeleteInterveneRuleResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class DeleteInterveneRuleResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error description</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class DeleteInterveneRuleResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Unique request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>94512A33-8EC1-5452-A793-5C91F18ED2F0</p>
      */
@@ -36,6 +47,8 @@ public class DeleteInterveneRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the operation was successful: true for success, false for failure</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -96,13 +109,24 @@ public class DeleteInterveneRuleResponseBody extends TeaModel {
     }
 
     public static class DeleteInterveneRuleResponseBodyData extends TeaModel {
+        /**
+         * <p>Status code returned by the intervention service</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("Code")
         public Integer code;
 
+        /**
+         * <p>List of failed index IDs</p>
+         */
         @NameInMap("FailIdList")
         public java.util.List<String> failIdList;
 
         /**
+         * <p>Task ID</p>
+         * 
          * <strong>example:</strong>
          * <p>dt-s50ntwtywb4y</p>
          */

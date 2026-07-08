@@ -4,10 +4,19 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class GetClipsBuildInResourceRequest extends TeaModel {
+    /**
+     * <p>The resource type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0 - 音色
+     * 1- 背景音</p>
+     */
     @NameInMap("ResourceType")
     public Integer resourceType;
 
     /**
+     * <p>The ID of the Alibaba Cloud Model Studio workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm-az2gglkjauwnnhpq</p>
      */

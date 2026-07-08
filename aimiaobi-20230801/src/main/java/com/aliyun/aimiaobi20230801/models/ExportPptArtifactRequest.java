@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExportPptArtifactRequest extends TeaModel {
     /**
+     * <p>Indicates if the exported artifact is editable.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class ExportPptArtifactRequest extends TeaModel {
     public Boolean edit;
 
     /**
+     * <p>The export file type.</p>
+     * 
      * <strong>example:</strong>
      * <p>ppt</p>
      */
@@ -26,6 +30,7 @@ public class ExportPptArtifactRequest extends TeaModel {
     public String externalUserId;
 
     /**
+     * <p>The ID of the PPT artifact.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +40,8 @@ public class ExportPptArtifactRequest extends TeaModel {
     public Long pptArtifactId;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm-xxxx</p>
      */
@@ -42,6 +49,8 @@ public class ExportPptArtifactRequest extends TeaModel {
     public String workspaceId;
 
     /**
+     * <p>Indicates if the exported file is compressed into a ZIP package.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

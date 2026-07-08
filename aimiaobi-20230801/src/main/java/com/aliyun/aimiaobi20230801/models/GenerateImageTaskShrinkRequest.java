@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GenerateImageTaskShrinkRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GenerateImageTaskShrinkRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The task ID of the article. If you do not have one, you can assign a universally unique identifier (UUID).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,12 +25,14 @@ public class GenerateImageTaskShrinkRequest extends TeaModel {
     public String articleTaskId;
 
     /**
+     * <p>The content of the paragraphs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ParagraphList")
     public String paragraphListShrink;
 
     /**
+     * <p>The size of the image to generate.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,10 +42,11 @@ public class GenerateImageTaskShrinkRequest extends TeaModel {
     public String size;
 
     /**
+     * <p>The style.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <auto>
+     * <p>\&quot;<auto>\&quot;</p>
      */
     @NameInMap("Style")
     public String style;

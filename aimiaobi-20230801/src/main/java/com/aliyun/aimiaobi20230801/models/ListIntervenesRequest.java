@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListIntervenesRequest extends TeaModel {
     /**
+     * <p>The unique identity of the workspace. For more information, see <a href="">AgentKey</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,18 @@ public class ListIntervenesRequest extends TeaModel {
     @NameInMap("AgentKey")
     public String agentKey;
 
+    /**
+     * <p>The intervention type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>干预类型</p>
+     */
     @NameInMap("InterveneType")
     public Integer interveneType;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -24,16 +33,26 @@ public class ListIntervenesRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>小猫</p>
+     */
     @NameInMap("Query")
     public String query;
 
     /**
+     * <p>The rule ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>mqtt_outRule_1679019634514</p>
      */

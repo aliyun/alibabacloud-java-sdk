@@ -4,14 +4,24 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class SubmitDeepWriteTaskRequest extends TeaModel {
+    /**
+     * <p>The agent orchestration options.</p>
+     */
     @NameInMap("AgentOrchestration")
     public SubmitDeepWriteTaskRequestAgentOrchestration agentOrchestration;
 
+    /**
+     * <p>A list of attachments.</p>
+     */
     @NameInMap("Files")
     public java.util.List<SubmitDeepWriteTaskRequestFiles> files;
 
     /**
+     * <p>The user\&quot;s question.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>北京2025年新能源汽车发展趋势</p>
      * 
      * <strong>if can be null:</strong>
      * <p>false</p>
@@ -19,10 +29,18 @@ public class SubmitDeepWriteTaskRequest extends TeaModel {
     @NameInMap("Input")
     public String input;
 
+    /**
+     * <p>The instructions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>请根据北京新能源汽车在汽车品牌、新车发布、能源等方面进行分析</p>
+     */
     @NameInMap("Instructions")
     public String instructions;
 
     /**
+     * <p><a href="https://help.aliyun.com/document_detail/2782167.html">The workspace ID.</a></p>
+     * 
      * <strong>example:</strong>
      * <p>llm-1setzb9xb8m11vrc</p>
      */
@@ -75,9 +93,21 @@ public class SubmitDeepWriteTaskRequest extends TeaModel {
     }
 
     public static class SubmitDeepWriteTaskRequestAgentOrchestrationDataAnalystAgent extends TeaModel {
+        /**
+         * <p>Specifies whether to enable retrieval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableSearch")
         public Boolean enableSearch;
 
+        /**
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DataAnalystAgent</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -105,6 +135,12 @@ public class SubmitDeepWriteTaskRequest extends TeaModel {
     }
 
     public static class SubmitDeepWriteTaskRequestAgentOrchestrationDataCollectorAgent extends TeaModel {
+        /**
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DataCollectorAgent</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -124,9 +160,18 @@ public class SubmitDeepWriteTaskRequest extends TeaModel {
     }
 
     public static class SubmitDeepWriteTaskRequestAgentOrchestrationReporterAgent extends TeaModel {
+        /**
+         * <p>Specifies whether to enable citations.</p>
+         */
         @NameInMap("EnableCitation")
         public Boolean enableCitation;
 
+        /**
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ReporterAgent</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -154,12 +199,21 @@ public class SubmitDeepWriteTaskRequest extends TeaModel {
     }
 
     public static class SubmitDeepWriteTaskRequestAgentOrchestration extends TeaModel {
+        /**
+         * <p>The data analysis agent.</p>
+         */
         @NameInMap("DataAnalystAgent")
         public SubmitDeepWriteTaskRequestAgentOrchestrationDataAnalystAgent dataAnalystAgent;
 
+        /**
+         * <p>The data collection agent.</p>
+         */
         @NameInMap("DataCollectorAgent")
         public SubmitDeepWriteTaskRequestAgentOrchestrationDataCollectorAgent dataCollectorAgent;
 
+        /**
+         * <p>The reporter agent.</p>
+         */
         @NameInMap("ReporterAgent")
         public SubmitDeepWriteTaskRequestAgentOrchestrationReporterAgent reporterAgent;
 
@@ -196,13 +250,17 @@ public class SubmitDeepWriteTaskRequest extends TeaModel {
 
     public static class SubmitDeepWriteTaskRequestFiles extends TeaModel {
         /**
+         * <p>A description of the attachment.</p>
+         * 
          * <strong>example:</strong>
-         * <p>附件的备注</p>
+         * <p>附件的说明</p>
          */
         @NameInMap("FileDescription")
         public String fileDescription;
 
         /**
+         * <p>The Object Storage Service (OSS) address of the attachment.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss://default/aimiaobi-poc/aimiaobi/deep-write-upload/1_1/xxx.txt</p>
          */
@@ -210,6 +268,8 @@ public class SubmitDeepWriteTaskRequest extends TeaModel {
         public String fileKey;
 
         /**
+         * <p>The name of the attachment.</p>
+         * 
          * <strong>example:</strong>
          * <p>附件的名称</p>
          */

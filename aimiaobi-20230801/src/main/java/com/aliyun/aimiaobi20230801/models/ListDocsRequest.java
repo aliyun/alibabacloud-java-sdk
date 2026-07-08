@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class ListDocsRequest extends TeaModel {
     /**
+     * <p>Document folder.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
     @NameInMap("CategoryId")
     public String categoryId;
 
+    /**
+     * <p>Document name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>企业2022年報</p>
+     */
     @NameInMap("DocName")
     public String docName;
 
     /**
+     * <p>Document type.</p>
+     * 
      * <strong>example:</strong>
      * <p>pdf</p>
      */
@@ -22,6 +32,8 @@ public class ListDocsRequest extends TeaModel {
     public String docType;
 
     /**
+     * <p>Maximum number of results returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -29,6 +41,8 @@ public class ListDocsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Next page token.</p>
+     * 
      * <strong>example:</strong>
      * <p>52a33dc83779f63641e16f5146cd7125</p>
      */
@@ -36,16 +50,22 @@ public class ListDocsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Skip n records for paging.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("Skip")
     public Integer skip;
 
+    /**
+     * <p>Document status list.</p>
+     */
     @NameInMap("Statuses")
     public java.util.List<Integer> statuses;
 
     /**
+     * <p>Alibaba Cloud Model Studio workspace ID. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">How to Use Workspaces</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

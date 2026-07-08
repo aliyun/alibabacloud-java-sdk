@@ -12,6 +12,7 @@ public class RunBookIntroductionRequest extends TeaModel {
     public Boolean cleanCache;
 
     /**
+     * <p>The document ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +22,8 @@ public class RunBookIntroductionRequest extends TeaModel {
     public String docId;
 
     /**
+     * <p>A custom prompt for extracting key points.</p>
+     * 
      * <strong>example:</strong>
      * <p>用英文输出</p>
      */
@@ -28,6 +31,7 @@ public class RunBookIntroductionRequest extends TeaModel {
     public String keyPointPrompt;
 
     /**
+     * <p>The session ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +41,8 @@ public class RunBookIntroductionRequest extends TeaModel {
     public String sessionId;
 
     /**
+     * <p>A custom prompt for generating the summary.</p>
+     * 
      * <strong>example:</strong>
      * <p>用英文输出</p>
      */
@@ -44,6 +50,7 @@ public class RunBookIntroductionRequest extends TeaModel {
     public String summaryPrompt;
 
     /**
+     * <p>The unique ID of the workspace in Model Studio (Bailian). For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Get your workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

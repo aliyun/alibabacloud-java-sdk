@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDialoguesRequest extends TeaModel {
     /**
+     * <p>Unique identifier for the workspace: <a href="https://help.aliyun.com/document_detail/2587494.html">AgentKey</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListDialoguesRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>Page number of the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +24,8 @@ public class ListDialoguesRequest extends TeaModel {
     public Integer current;
 
     /**
+     * <p>Generation type. Valid values: 1 (creation) and 2 (intelligent search). Default value: 2.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -28,6 +33,8 @@ public class ListDialoguesRequest extends TeaModel {
     public Integer dialogueType;
 
     /**
+     * <p>End time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-04 11:46:07</p>
      */
@@ -35,6 +42,8 @@ public class ListDialoguesRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>Number of items per page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -42,6 +51,8 @@ public class ListDialoguesRequest extends TeaModel {
     public Integer size;
 
     /**
+     * <p>Start time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-04 11:46:07</p>
      */
@@ -49,6 +60,11 @@ public class ListDialoguesRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>Unique identifier for the task.</p>
+     * <blockquote>
+     * <p>You do not need to specify TaskId. The system generates it automatically. If you use the same TaskId in later tasks, those tasks belong to the same conversation group.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */

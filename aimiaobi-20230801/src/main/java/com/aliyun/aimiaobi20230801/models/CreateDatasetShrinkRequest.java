@@ -11,17 +11,23 @@ public class CreateDatasetShrinkRequest extends TeaModel {
     @NameInMap("AccessLevel")
     public String accessLevel;
 
+    /**
+     * <p>The dataset search configuration.</p>
+     */
     @NameInMap("DatasetConfig")
     public String datasetConfigShrink;
 
     /**
+     * <p>The description of the dataset. This is the display name in the console. Use a human-readable name.</p>
+     * 
      * <strong>example:</strong>
-     * <p>企业自定义数据集</p>
+     * <p>企业知识库</p>
      */
     @NameInMap("DatasetDescription")
     public String datasetDescription;
 
     /**
+     * <p>The name of the dataset. The name must be globally unique.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,16 +37,35 @@ public class CreateDatasetShrinkRequest extends TeaModel {
     public String datasetName;
 
     /**
+     * <p>The type of the dataset. Valid values:</p>
+     * <ul>
+     * <li><p>CustomSemanticSearch: A custom semantic index. This is the default value. Upload documents to build the dataset.</p>
+     * </li>
+     * <li><p>ThirdSearch: A third-party search source (API). Configure your own search API.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>CustomSemanticSearch</p>
      */
     @NameInMap("DatasetType")
     public String datasetType;
 
+    /**
+     * <p>Dataset index configuration.</p>
+     */
     @NameInMap("DocumentHandleConfig")
     public String documentHandleConfigShrink;
 
     /**
+     * <p>The invocation method. Currently, only portal is supported, which indicates an invocation from the console.</p>
+     * <ul>
+     * <li><p>If left empty: When DatasetType is ThirdSearch, datasetConfig.SearchSourceConfigs (third-party API definition) is required.</p>
+     * </li>
+     * <li><p>If set to portal: When DatasetType is ThirdSearch, the system initializes a SearchSourceConfigs (third-party API demo) example by default for your reference.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>portal</p>
      */
@@ -48,6 +73,18 @@ public class CreateDatasetShrinkRequest extends TeaModel {
     public String invokeType;
 
     /**
+     * <p>The dataset search switch. Valid values:</p>
+     * <ul>
+     * <li><p>0: Disabled for all.</p>
+     * </li>
+     * <li><p>1: Visible only to Miao Search.</p>
+     * </li>
+     * <li><p>2: Visible only to Miao Bi.</p>
+     * </li>
+     * <li><p>3: Visible to both Miao Search and Miao Bi. This is the default value.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -55,6 +92,7 @@ public class CreateDatasetShrinkRequest extends TeaModel {
     public Integer searchDatasetEnable;
 
     /**
+     * <p>The unique ID of the Alibaba Cloud Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Obtain a workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

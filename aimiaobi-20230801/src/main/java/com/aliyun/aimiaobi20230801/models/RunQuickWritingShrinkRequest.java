@@ -4,19 +4,34 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunQuickWritingShrinkRequest extends TeaModel {
+    /**
+     * <p>Referenced articles</p>
+     * 
+     * <strong>example:</strong>
+     * <p>集合</p>
+     */
     @NameInMap("Articles")
     public String articlesShrink;
 
     /**
+     * <p>Other writing parameters. Choose either prompt or writingParams.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>请按英文输出</p>
      */
     @NameInMap("Prompt")
     public String prompt;
 
+    /**
+     * <p>Use the specified search source list.</p>
+     */
     @NameInMap("SearchSources")
     public String searchSourcesShrink;
 
     /**
+     * <p>Task ID. Reuse the same task ID for multi-turn conversations.</p>
+     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */
@@ -24,6 +39,7 @@ public class RunQuickWritingShrinkRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p><a href="https://help.aliyun.com/document_detail/2782167.html">Workspace ID</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

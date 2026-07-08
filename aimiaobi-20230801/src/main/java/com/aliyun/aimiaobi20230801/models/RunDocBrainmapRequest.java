@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RunDocBrainmapRequest extends TeaModel {
     /**
+     * <p>Indicates whether to clear the previous cache.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,7 @@ public class RunDocBrainmapRequest extends TeaModel {
     public Boolean cleanCache;
 
     /**
+     * <p>The document ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class RunDocBrainmapRequest extends TeaModel {
     public String docId;
 
     /**
+     * <p>The name of the model to use.</p>
+     * 
      * <strong>example:</strong>
      * <p>quanmiao-max、quanmiao-plus</p>
      */
@@ -28,6 +33,8 @@ public class RunDocBrainmapRequest extends TeaModel {
     public String modelName;
 
     /**
+     * <p>The number of nodes to generate at the second level of the mind map.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -35,6 +42,8 @@ public class RunDocBrainmapRequest extends TeaModel {
     public Integer nodeNumber;
 
     /**
+     * <p>A custom prompt to guide the mind map generation.</p>
+     * 
      * <strong>example:</strong>
      * <p>请按英文输出</p>
      */
@@ -49,6 +58,7 @@ public class RunDocBrainmapRequest extends TeaModel {
     public Integer responseFormat;
 
     /**
+     * <p>The session ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,6 +68,8 @@ public class RunDocBrainmapRequest extends TeaModel {
     public String sessionId;
 
     /**
+     * <p>The maximum number of words in each node.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -65,6 +77,8 @@ public class RunDocBrainmapRequest extends TeaModel {
     public Integer wordNumber;
 
     /**
+     * <p>The ID of the Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">How to use a workspace</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm-xxx</p>
      */
@@ -72,6 +86,8 @@ public class RunDocBrainmapRequest extends TeaModel {
     public String workspaceId;
 
     /**
+     * <p>The source content for generating the mind map. This parameter takes precedence over <code>DocId</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>要生成脑图的内容</p>
      */

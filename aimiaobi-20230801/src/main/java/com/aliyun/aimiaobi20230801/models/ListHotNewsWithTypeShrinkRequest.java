@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListHotNewsWithTypeShrinkRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the business space: <a href="https://help.aliyun.com/document_detail/3027170.html">AgentKey</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListHotNewsWithTypeShrinkRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,16 +24,33 @@ public class ListHotNewsWithTypeShrinkRequest extends TeaModel {
     public Integer current;
 
     /**
+     * <p>The news category. Valid values:</p>
+     * <ul>
+     * <li>society: social current affairs.</li>
+     * <li>person: people news.</li>
+     * <li>government: government affairs.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>society</p>
      */
     @NameInMap("NewsType")
     public String newsType;
 
+    /**
+     * <p>The list of news categories for multi-selection. Valid values:</p>
+     * <ul>
+     * <li>society: social current affairs.</li>
+     * <li>person: people news.</li>
+     * <li>government: government affairs.</li>
+     * </ul>
+     */
     @NameInMap("NewsTypes")
     public String newsTypesShrink;
 
     /**
+     * <p>The number of records per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

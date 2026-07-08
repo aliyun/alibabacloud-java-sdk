@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListMaterialDocumentsResponseBody extends TeaModel {
     /**
+     * <p>Status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>DataNotExists</p>
      */
@@ -12,16 +14,23 @@ public class ListMaterialDocumentsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("Current")
     public Integer current;
 
+    /**
+     * <p>List object.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListMaterialDocumentsResponseBodyData> data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class ListMaterialDocumentsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error description.</p>
+     * 
      * <strong>example:</strong>
      * <p>数据不存在</p>
      */
@@ -36,6 +47,8 @@ public class ListMaterialDocumentsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Unique request identity.</p>
+     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */
@@ -43,6 +56,8 @@ public class ListMaterialDocumentsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Number of records per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -50,6 +65,8 @@ public class ListMaterialDocumentsResponseBody extends TeaModel {
     public Integer size;
 
     /**
+     * <p>Is successful: true for success, false for failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -57,6 +74,8 @@ public class ListMaterialDocumentsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -141,21 +160,57 @@ public class ListMaterialDocumentsResponseBody extends TeaModel {
     }
 
     public static class ListMaterialDocumentsResponseBodyDataFileAttr extends TeaModel {
+        /**
+         * <p>Duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
+         */
         @NameInMap("Duration")
         public Double duration;
 
+        /**
+         * <p>File content length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1048576</p>
+         */
         @NameInMap("FileLength")
         public Long fileLength;
 
+        /**
+         * <p>File name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx.mp4</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <p>Video height.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
+         */
         @NameInMap("Height")
         public Integer height;
 
+        /**
+         * <p>File MIME type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image/png</p>
+         */
         @NameInMap("MimeType")
         public String mimeType;
 
+        /**
+         * <p>Video width.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Width")
         public Integer width;
 
@@ -215,10 +270,18 @@ public class ListMaterialDocumentsResponseBody extends TeaModel {
     }
 
     public static class ListMaterialDocumentsResponseBodyData extends TeaModel {
+        /**
+         * <p>Author.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>作者</p>
+         */
         @NameInMap("Author")
         public String author;
 
         /**
+         * <p>Creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-18 02:00:00</p>
          */
@@ -226,19 +289,32 @@ public class ListMaterialDocumentsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Creator user ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>&quot;1&quot;</p>
          */
         @NameInMap("CreateUser")
         public String createUser;
 
+        /**
+         * <p>Creator username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>创建用户名</p>
+         */
         @NameInMap("CreateUserName")
         public String createUserName;
 
+        /**
+         * <p>Document tags used for categorization. Separate keywords with commas.</p>
+         */
         @NameInMap("DocKeywords")
         public java.util.List<String> docKeywords;
 
         /**
+         * <p>Document type: pdf, word, url, or image.</p>
+         * 
          * <strong>example:</strong>
          * <p>pdf</p>
          */
@@ -246,22 +322,41 @@ public class ListMaterialDocumentsResponseBody extends TeaModel {
         public String docType;
 
         /**
+         * <p>URL uploaded by an external customer, used only for record keeping.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://www.example.com">https://www.example.com</a></p>
          */
         @NameInMap("ExternalUrl")
         public String externalUrl;
 
+        /**
+         * <p>Media file properties.</p>
+         */
         @NameInMap("FileAttr")
         public ListMaterialDocumentsResponseBodyDataFileAttr fileAttr;
 
+        /**
+         * <p>Unique file identity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://default/oss-bucket-name/aimiaobi/2021/07/01/1625126400000/1.docx</p>
+         */
         @NameInMap("FileKey")
         public String fileKey;
 
+        /**
+         * <p>Web page content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>网页内容</p>
+         */
         @NameInMap("HtmlContent")
         public String htmlContent;
 
         /**
+         * <p>Primary key.</p>
+         * 
          * <strong>example:</strong>
          * <p>35</p>
          */
@@ -269,6 +364,8 @@ public class ListMaterialDocumentsResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>Publish time. Format: yyyy-MM-dd HH:mm:ss</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-18 02:00:00</p>
          */
@@ -276,6 +373,8 @@ public class ListMaterialDocumentsResponseBody extends TeaModel {
         public String pubTime;
 
         /**
+         * <p>Temporary public URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://www.example.com">https://www.example.com</a></p>
          */
@@ -283,6 +382,8 @@ public class ListMaterialDocumentsResponseBody extends TeaModel {
         public String publicUrl;
 
         /**
+         * <p>Public property, stored by bit. The first bit indicates if it is shared within the workspace, the second bit indicates if it is shared within the tenant, and the third bit indicates if it is shared system-wide.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -290,25 +391,53 @@ public class ListMaterialDocumentsResponseBody extends TeaModel {
         public Integer shareAttr;
 
         /**
+         * <p>Document source: user_upload, search, or viewpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>user_upload</p>
          */
         @NameInMap("SrcFrom")
         public String srcFrom;
 
+        /**
+         * <p>Document summary.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>摘要</p>
+         */
         @NameInMap("Summary")
         public String summary;
 
+        /**
+         * <p>Parsed text content. This is empty for images.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>文档内容</p>
+         */
         @NameInMap("TextContent")
         public String textContent;
 
+        /**
+         * <p>Base64 thumbnail for image document types.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>base64编码的图像二进制数据</p>
+         */
         @NameInMap("ThumbnailInBase64")
         public String thumbnailInBase64;
 
+        /**
+         * <p>Document title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>文档标题</p>
+         */
         @NameInMap("Title")
         public String title;
 
         /**
+         * <p>Modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-18 02:00:00</p>
          */
@@ -316,16 +445,26 @@ public class ListMaterialDocumentsResponseBody extends TeaModel {
         public String updateTime;
 
         /**
+         * <p>Modifier user ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>&quot;1&quot;</p>
          */
         @NameInMap("UpdateUser")
         public String updateUser;
 
+        /**
+         * <p>The name of the user who updated the document.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>更新用户名</p>
+         */
         @NameInMap("UpdateUserName")
         public String updateUserName;
 
         /**
+         * <p>URL for internal document storage. Supports multiple protocols (http\://, file://, ftp\://). This URL is saved to internal storage when a customer uploads a file, stored long-term, and deleted upon expiration.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://www.example.com">https://www.example.com</a></p>
          */

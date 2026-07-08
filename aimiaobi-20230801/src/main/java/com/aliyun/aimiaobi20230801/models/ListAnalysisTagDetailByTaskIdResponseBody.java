@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListAnalysisTagDetailByTaskIdResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>NoData</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>A list of classification details from the tag mining task.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListAnalysisTagDetailByTaskIdResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListAnalysisTagDetailByTaskIdResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The maximum number of entries returned on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -29,6 +38,8 @@ public class ListAnalysisTagDetailByTaskIdResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -36,6 +47,8 @@ public class ListAnalysisTagDetailByTaskIdResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The token for the next page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>token-xxxx</p>
      */
@@ -43,6 +56,8 @@ public class ListAnalysisTagDetailByTaskIdResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1813ceee-7fe5-41b4-87e5-982a4d18cca5</p>
      */
@@ -50,6 +65,8 @@ public class ListAnalysisTagDetailByTaskIdResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. A value of true indicates success. A value of false indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -57,6 +74,8 @@ public class ListAnalysisTagDetailByTaskIdResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -142,6 +161,8 @@ public class ListAnalysisTagDetailByTaskIdResponseBody extends TeaModel {
 
     public static class ListAnalysisTagDetailByTaskIdResponseBodyDataContentTags extends TeaModel {
         /**
+         * <p>The summary.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -149,12 +170,17 @@ public class ListAnalysisTagDetailByTaskIdResponseBody extends TeaModel {
         public String summaryOverview;
 
         /**
+         * <p>The name of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
         @NameInMap("TagName")
         public String tagName;
 
+        /**
+         * <p>A list of tag values.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<String> tags;
 
@@ -191,16 +217,23 @@ public class ListAnalysisTagDetailByTaskIdResponseBody extends TeaModel {
 
     public static class ListAnalysisTagDetailByTaskIdResponseBodyData extends TeaModel {
         /**
+         * <p>The content of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>A list of tags applied to the content.</p>
+         */
         @NameInMap("ContentTags")
         public java.util.List<ListAnalysisTagDetailByTaskIdResponseBodyDataContentTags> contentTags;
 
         /**
+         * <p>The primary key ID of the data.</p>
+         * 
          * <strong>example:</strong>
          * <p>112</p>
          */
@@ -208,6 +241,8 @@ public class ListAnalysisTagDetailByTaskIdResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The type of the tag mining task. Valid values: \<code>singleTagValue\\</code>, \<code>multiTagValues\\</code>, and \<code>summaryAndOverview\\</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>summaryAndOverview</p>
          */
@@ -215,6 +250,8 @@ public class ListAnalysisTagDetailByTaskIdResponseBody extends TeaModel {
         public String tagTaskType;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RunStepByStepWritingRequest extends TeaModel {
     /**
+     * <p>The ID of the original conversation when regenerating content.</p>
+     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */
@@ -12,6 +14,7 @@ public class RunStepByStepWritingRequest extends TeaModel {
     public String originSessionId;
 
     /**
+     * <p>The prompt.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,10 +23,15 @@ public class RunStepByStepWritingRequest extends TeaModel {
     @NameInMap("Prompt")
     public String prompt;
 
+    /**
+     * <p>The reference article data for writing.</p>
+     */
     @NameInMap("ReferenceData")
     public RunStepByStepWritingRequestReferenceData referenceData;
 
     /**
+     * <p>The ID of a single-turn conversation.</p>
+     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */
@@ -31,6 +39,11 @@ public class RunStepByStepWritingRequest extends TeaModel {
     public String sessionId;
 
     /**
+     * <p>The task ID. You can reuse the same task ID for a multi-turn conversation.</p>
+     * <blockquote>
+     * <p>By default, you do not need to specify this parameter. The system automatically generates a task ID. If you specify the same TaskId for subsequent tasks, the tasks are considered part of the same conversation group.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>3f7045e099474ba28ceca1b4eb6d6e21</p>
      */
@@ -38,6 +51,7 @@ public class RunStepByStepWritingRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The unique ID of the Alibaba Cloud Model Studio workspace. For more information, see <a href="https://help.aliyun.com/document_detail/2782167.html">Obtain a Workspace ID</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +60,9 @@ public class RunStepByStepWritingRequest extends TeaModel {
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
+    /**
+     * <p>The writing configuration.</p>
+     */
     @NameInMap("WritingConfig")
     public RunStepByStepWritingRequestWritingConfig writingConfig;
 
@@ -112,6 +129,8 @@ public class RunStepByStepWritingRequest extends TeaModel {
 
     public static class RunStepByStepWritingRequestReferenceDataArticles extends TeaModel {
         /**
+         * <p>The author.</p>
+         * 
          * <strong>example:</strong>
          * <p>作者</p>
          */
@@ -119,6 +138,8 @@ public class RunStepByStepWritingRequest extends TeaModel {
         public String author;
 
         /**
+         * <p>The content.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章内容</p>
          */
@@ -126,6 +147,8 @@ public class RunStepByStepWritingRequest extends TeaModel {
         public String content;
 
         /**
+         * <p>The custom unique ID of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>文档-自定义的唯一ID</p>
          */
@@ -133,6 +156,8 @@ public class RunStepByStepWritingRequest extends TeaModel {
         public String docId;
 
         /**
+         * <p>The internal unique ID of the document.</p>
+         * 
          * <strong>example:</strong>
          * <p>8a20e007a6174522af4d6a2657d5526f</p>
          */
@@ -140,6 +165,8 @@ public class RunStepByStepWritingRequest extends TeaModel {
         public String docUuid;
 
         /**
+         * <p>The URL of the original material.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">http://www.example.com</a></p>
          */
@@ -147,6 +174,8 @@ public class RunStepByStepWritingRequest extends TeaModel {
         public String mediaUrl;
 
         /**
+         * <p>The publication time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-09-10 14:17:54</p>
          */
@@ -154,6 +183,8 @@ public class RunStepByStepWritingRequest extends TeaModel {
         public String pubTime;
 
         /**
+         * <p>The source.</p>
+         * 
          * <strong>example:</strong>
          * <p>央视网</p>
          */
@@ -161,6 +192,8 @@ public class RunStepByStepWritingRequest extends TeaModel {
         public String source;
 
         /**
+         * <p>The article summary.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章摘要</p>
          */
@@ -168,6 +201,8 @@ public class RunStepByStepWritingRequest extends TeaModel {
         public String summary;
 
         /**
+         * <p>The tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章标签</p>
          */
@@ -175,6 +210,8 @@ public class RunStepByStepWritingRequest extends TeaModel {
         public String tag;
 
         /**
+         * <p>The title.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章标题</p>
          */
@@ -182,6 +219,8 @@ public class RunStepByStepWritingRequest extends TeaModel {
         public String title;
 
         /**
+         * <p>The URL of the article.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://www.example.com/aaa.docx">https://www.example.com/aaa.docx</a></p>
          */
@@ -285,6 +324,8 @@ public class RunStepByStepWritingRequest extends TeaModel {
 
     public static class RunStepByStepWritingRequestReferenceDataOutlinesArticles extends TeaModel {
         /**
+         * <p>The article content.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章内容</p>
          */
@@ -292,6 +333,8 @@ public class RunStepByStepWritingRequest extends TeaModel {
         public String content;
 
         /**
+         * <p>The article title.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章标题</p>
          */
@@ -299,6 +342,8 @@ public class RunStepByStepWritingRequest extends TeaModel {
         public String title;
 
         /**
+         * <p>The article URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>文章链接</p>
          */
@@ -337,10 +382,15 @@ public class RunStepByStepWritingRequest extends TeaModel {
     }
 
     public static class RunStepByStepWritingRequestReferenceDataOutlines extends TeaModel {
+        /**
+         * <p>The specified data source for the outline.</p>
+         */
         @NameInMap("Articles")
         public java.util.List<RunStepByStepWritingRequestReferenceDataOutlinesArticles> articles;
 
         /**
+         * <p>The outline.</p>
+         * 
          * <strong>example:</strong>
          * <p>大纲</p>
          */
@@ -371,15 +421,27 @@ public class RunStepByStepWritingRequest extends TeaModel {
     }
 
     public static class RunStepByStepWritingRequestReferenceData extends TeaModel {
+        /**
+         * <p>The reference article data for writing.</p>
+         */
         @NameInMap("Articles")
         public java.util.List<RunStepByStepWritingRequestReferenceDataArticles> articles;
 
+        /**
+         * <p>The ranked article segments for subsequent model generation.</p>
+         */
         @NameInMap("MiniDoc")
         public java.util.List<String> miniDoc;
 
+        /**
+         * <p>The outline. You can specify a data source to generate the outline.</p>
+         */
         @NameInMap("Outlines")
         public java.util.List<RunStepByStepWritingRequestReferenceDataOutlines> outlines;
 
+        /**
+         * <p>The summary result from the Large Language Model (LLM).</p>
+         */
         @NameInMap("Summarization")
         public java.util.List<String> summarization;
 
@@ -424,6 +486,8 @@ public class RunStepByStepWritingRequest extends TeaModel {
 
     public static class RunStepByStepWritingRequestWritingConfigPromptTag extends TeaModel {
         /**
+         * <p>Necessary tips.</p>
+         * 
          * <strong>example:</strong>
          * <p>必要提示</p>
          */
@@ -431,6 +495,8 @@ public class RunStepByStepWritingRequest extends TeaModel {
         public String necessaryTips;
 
         /**
+         * <p>The position or stance.</p>
+         * 
          * <strong>example:</strong>
          * <p>立场</p>
          */
@@ -438,6 +504,8 @@ public class RunStepByStepWritingRequest extends TeaModel {
         public String position;
 
         /**
+         * <p>Reverse the words.</p>
+         * 
          * <strong>example:</strong>
          * <p>反向词</p>
          */
@@ -445,6 +513,8 @@ public class RunStepByStepWritingRequest extends TeaModel {
         public String reverseWords;
 
         /**
+         * <p>The theme.</p>
+         * 
          * <strong>example:</strong>
          * <p>主题</p>
          */
@@ -492,6 +562,8 @@ public class RunStepByStepWritingRequest extends TeaModel {
 
     public static class RunStepByStepWritingRequestWritingConfigTags extends TeaModel {
         /**
+         * <p>The value of the option.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -499,6 +571,8 @@ public class RunStepByStepWritingRequest extends TeaModel {
         public String keyword;
 
         /**
+         * <p>The tag of the option. For example, gcNumberSizeTag=10.</p>
+         * 
          * <strong>example:</strong>
          * <p>gcNumberSizeTag</p>
          */
@@ -530,39 +604,96 @@ public class RunStepByStepWritingRequest extends TeaModel {
 
     public static class RunStepByStepWritingRequestWritingConfig extends TeaModel {
         /**
+         * <p>The writing domain.</p>
+         * <ul>
+         * <li><p>media (default): Media writing.</p>
+         * </li>
+         * <li><p>government: Official document writing.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>media</p>
          */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The keywords. This affects article retrieval.</p>
+         */
         @NameInMap("Keywords")
         public java.util.List<String> keywords;
 
+        /**
+         * <p>The prompt assistant.</p>
+         */
         @NameInMap("PromptTag")
         public RunStepByStepWritingRequestWritingConfigPromptTag promptTag;
 
         /**
+         * <p>The step-by-step writing scenario.</p>
+         * <ul>
+         * <li><p>Scenarios supported for media writing: News Writing (default), News Commentary, and General Style.</p>
+         * </li>
+         * <li><p>Scenarios supported for official document writing: Notification (default), Announcement, Bulletin, Request for Instruction, Decision, Letter, and General Style.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>分步骤写作场景，传媒写作支持的写作场景:新闻写作(默认),新闻评论,通用文体，公文写作支持的写作场景:通知(默认),通告,通报,请示,决定,函,通用文体</p>
+         * <p>新闻写作</p>
          */
         @NameInMap("Scene")
         public String scene;
 
         /**
+         * <p>The writing step.</p>
+         * <ul>
+         * <li><p>Generate outline: OutlineGenerate</p>
+         * </li>
+         * <li><p>Generate summary: MiniDocSummary</p>
+         * </li>
+         * <li><p>Writing (default): Generate article</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Writing</p>
          */
         @NameInMap("Step")
         public String step;
 
+        /**
+         * <p>The return type of the summary result.<br></p>
+         * <ul>
+         * <li><p>Structure:
+         * Returns a JSON string in payload.output.text. Example format: <code>{&quot;event&quot;:&quot;{outline}&quot;,&quot;message&quot;:&quot;{message}&quot;}</code></p>
+         * </li>
+         * <li><p>Content: Returns only the plain text summary content in payload.output.text. Example format:
+         * `Outline: {outline}</p>
+         * </li>
+         * </ul>
+         * <p>{message}</p>
+         * <p> Outline: {outline}</p>
+         * <p>{message}`</p>
+         * <ul>
+         * <li>Event: Returns only the outline content itself in payload.output.text each time an outline is completed. Typically, six describes are returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Structure</p>
+         */
         @NameInMap("SummaryReturnType")
         public String summaryReturnType;
 
+        /**
+         * <p>Control parameters for writing, such as style, length, and output language.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<RunStepByStepWritingRequestWritingConfigTags> tags;
 
         /**
+         * <p>Specifies whether to automatically supplement materials.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
